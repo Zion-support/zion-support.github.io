@@ -1,65 +1,45 @@
 #!/bin/bash
 
-echo "🔧 Fixing all syntax errors in the codebase..."
+echo "Fixing all syntax errors in React components..."
 
-# Function to fix common syntax errors in a file
-fix_file_syntax() {
+# Function to fix syntax errors in a file
+fix_file() {
     local file="$1"
-    echo "🔨 Fixing syntax in: $file"
+    echo "Fixing: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Fix common syntax errors
-    sed -i 's/import React {/import React, {/g' "$file"
-    sed -i 's/import React from "react"/import React, { useState, useEffect } from "react"/g' "$file"
-    sed -i 's/interface AIConversation { id: string type:/interface AIConversation { id: string; type:/g' "$file"
-    sed -i 's/boolean,"/boolean;/g' "$file"
-    sed -i 's/string,}/string;}/g' "$file"
-    sed -i 's/boolean,}/boolean;}/g' "$file"
-    sed -i 's/number,}/number;}/g' "$file"
-    sed -i 's/React.FC: =/React.FC =/g' "$file"
-    sed -i 's/React.FC: = () => {,/React.FC = () => {/g' "$file"
-    sed -i 's/const \[setting,s,/const [settings,/g' "$file"
-    sed -i 's/fals,e,/false,/g' "$file"
-    sed -i 's/"normal,",/"normal",/g' "$file"
-    sed -i 's/false: }/false }/g' "$file"
-    sed -i 's/}  screenReader: boolean}/}/g' "$file"
-    sed -i 's/;  focusVisibl,;/;/g' "$file"
-    sed -i 's/e: boolean,;/e: boolean;/g' "$file"
-    sed -i 's/screenReade,;/screenReader;/g' "$file"
-    sed -i 's/r: boolean}/r: boolean}/g' "$file"
-    sed -i 's/const AccessibilityManager: React.FC = () => {,;/const AccessibilityManager: React.FC = () => {/g' "$file"
-    
-    echo "✅ Fixed: $file"
+    if [ -f "$file" ]; then
+        # Fix missing closing braces for functions/components
+        sed -i 's/^  );$/  );/' "$file"
+        sed -i '/^  );$/{ N; s/^  );\n  export default/  );\n};\n\nexport default/; }' "$file"
+        
+        # Fix missing closing braces before export statements
+        sed -i '/^export default/{ s/^export default/};\n\nexport default/; }' "$file"
+        
+        # Remove duplicate closing braces
+        sed -i '/^};$/{ N; s/^};\n};$/};/; }' "$file"
+        
+        # Fix missing semicolons after closing braces
+        sed -i 's/^  }$/  };/' "$file"
+        sed -i 's/^}$/};/' "$file"
+        
+        echo "Fixed: $file"
+    fi
 }
 
-# Find all TypeScript/JavaScript files with potential syntax errors
-files_to_fix=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .git | head -50)
-
-if [ -z "$files_to_fix" ]; then
-    echo "✅ No files to fix!"
-    exit 0
-fi
-
-echo "📁 Found $(echo "$files_to_fix" | wc -l) files to check"
-
-# Counter for fixed files
-fixed_count=0
-
-# Process each file
-for file in $files_to_fix; do
-    # Check if file has syntax errors
-    if grep -q "import React {" "$file" || grep -q "interface.*{" "$file" || grep -q "React.FC: =" "$file"; then
-        fix_file_syntax "$file"
-        ((fixed_count++))
-    fi
+# Fix all JSX and TSX files
+echo "Fixing syntax errors in components..."
+find src/components -name "*.jsx" -o -name "*.tsx" | while read file; do
+    fix_file "$file"
 done
 
-echo "🎉 Successfully fixed $fixed_count files with syntax errors!"
+echo "Fixing syntax errors in pages..."
+find src/pages -name "*.jsx" -o -name "*.tsx" | while read file; do
+    fix_file "$file"
+done
 
-# Clean up backup files
-echo "🧹 Cleaning up backup files..."
-find . -name "*.backup" -delete 2>/dev/null
+echo "Fixing syntax errors in other directories..."
+find src -name "*.jsx" -o -name "*.tsx" | grep -v -E "(components|pages)" | while read file; do
+    fix_file "$file"
+done
 
-echo "✨ Syntax error fixing complete!"
+echo "All syntax errors fixed!"

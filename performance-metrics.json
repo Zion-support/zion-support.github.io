@@ -1,10 +1,18 @@
-  "timestamp": "2025-09-03T20:00:06.726Z",
+{
+  "timestamp": "2025-09-04T01:39:40.369Z",
+  "timestamp": "2025-09-03T20:36:49.970Z",
   "bundleSize": {
     ".next": {
-      "size": 28534499,
-      "sizeMB": "27.21"
+      "size": 26960383,
+      "sizeMB": "25.71"
     },
     "node_modules": {
+      "size": 822948864,
+      "sizeMB": "784.83"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 26,
       "size": 0,
       "sizeMB": "0.00"
     }
@@ -19,32 +27,3 @@
   },
   "recommendations": []
 }
-[
-  {
-    "buildTime": "101.66ms",
-    "bundleSize": null,
-    "chunkCount": null,
-    "timestamp": "2025-06-29T04:25:36.759Z",
-    "warnings": [],
-    "errors": [],
-    "devServerHealth": "offline"
-  },
-  {
-    "buildTime": "67.93ms",
-    "bundleSize": null,
-    "chunkCount": null,
-    "timestamp": "2025-06-29T04:26:43.238Z",
-    "warnings": [],
-    "errors": [],
-    "devServerHealth": "offline"
-  },
-  {
-    "buildTime": "1296.60ms",
-    "bundleSize": "43.64 MB",
-    "chunkCount": 171,
-    "timestamp": "2025-06-29T04:45:16.879Z",
-    "warnings": [],
-    "errors": [],
-    "devServerHealth": "healthy"
-  }
-]

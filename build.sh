@@ -1,52 +1,21 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
-echo "Starting Netlify build process..."
+echo "Starting Netlify/Vite build process (npm) ..."
 
-# Check if we're in a Netlify environment
-if [ "$NETLIFY" = "true" ]; then
-  echo "Detected Netlify environment - using optimized build process..."
-  
-  # For Netlify, use a more conservative approach
-  echo "Installing dependencies with Netlify-optimized settings..."
-  yarn install --frozen-lockfile --network-timeout 60000
-  
+# Ensure we're in the workspace
+cd /workspace
+
+# Use npm consistently to mirror netlify.toml
+if [ "${NETLIFY:-false}" = "true" ]; then
+  echo "Detected Netlify environment - installing dependencies with npm ci..."
+  npm ci --ignore-scripts --no-audit
 else
-  echo "Local development environment detected - using full cleanup process..."
-  
-  # Clean everything for local development
-  echo "Cleaning previous installations..."
-  rm -rf node_modules
-  rm -rf .yarn-cache
-  rm -rf dist
-
-  # Clean yarn cache completely
-  echo "Cleaning yarn cache..."
-  yarn cache clean --all
-
-  # Install dependencies with retry logic for local development
-  echo "Installing dependencies..."
-  for i in {1..3}; do
-    echo "Attempt $i of 3..."
-    if yarn install --network-timeout 100000; then
-      echo "Dependencies installed successfully!"
-      break
-    else
-      echo "Installation failed, cleaning and retrying..."
-      rm -rf node_modules
-      rm -rf .yarn-cache
-      yarn cache clean --all
-      if [ $i -eq 3 ]; then
-        echo "All installation attempts failed!"
-        exit 1
-      fi
-    fi
-  done
+  echo "Local environment - cleaning and installing dependencies with npm ci..."
+  rm -rf node_modules dist .npm _cache .pnpm-store .yarn .yarn-cache
+  npm ci --ignore-scripts --no-audit
 fi
 
-# Build the project
-echo "Building project..."
-pnpm run build
-
+echo "Building project with npm run build:netlify ..."
+npm run build:netlify
 echo "Build completed successfully!"
-fi

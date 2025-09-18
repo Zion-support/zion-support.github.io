@@ -1,29 +1,27 @@
-"use client"
-import React from 'react'
-
-export default function AgentRiskMetrics2026Page() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Agent Risk Metrics 2026 (Preview)</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          Unified risk taxonomy, baseline metrics, and evaluation harnesses for autonomous agents.
-        </p>
-        <div className="mt-8 prose prose-invert">
-          <h2>In this report</h2>
-          <ul>
-            <li>Risk taxonomy across safety, compliance, reliability, and cost.</li>
-            <li>Baseline metrics and target thresholds for production operations.</li>
-            <li>Evaluation harnesses and golden datasets to measure progress.</li>
-            <li>Implementation patterns for dashboards and alerts.</li>
-          </ul>
-          <h2>Availability</h2>
+      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+        <a href="/updates" className="text-sm text-blue-300 hover:text-blue-200">← All updates</a>
+        <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Toolkit: Agent Risk Metrics (2026)</h1>
+        <p className="mt-4 text-lg text-gray-300">Standardized risk KPIs, dashboards, and incident review templates for agent systems.</p>
+        <div className="mt-8 space-y-6 text-gray-300">
           <p>
-            Download the preview today. Full report releases next quarter with expanded benchmarks.
+            This toolkit provides a practical set of key performance indicators, dashboards, and operational templates
+            to measure and manage risk for AI agents in production. Align stakeholders on a shared language for
+            reliability, safety, and cost performance.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Risk KPIs: task success rate, unsafe action rate, guardrail violations, MTTR</li>
+            <li>Dashboards: SLO status, incident trends, eval gate outcomes, rollback events</li>
+            <li>Templates: weekly risk reviews, incident retrospectives, change approval checklists</li>
+          </ul>
+          <p>
+            Pair with the Real-Time Evals Control Plane to automate gates and capture audit-ready evidence across the
+            release lifecycle.
           </p>
         </div>
       </div>
     </div>
   )
 }
-

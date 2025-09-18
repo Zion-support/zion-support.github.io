@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const web-development-chat: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">web-development-chat</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const WebDevelopmentChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+        <meta name="description" content="WebDevelopmentChat blog post" />
+      </Head>
+      
+      <main>
+        <h1>WebDevelopmentChat</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default web-development-chat;
+=======
+export default WebDevelopmentChat;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

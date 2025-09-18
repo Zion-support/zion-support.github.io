@@ -1,29 +1,12 @@
-
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 
-interface ProjectHeaderProps {
-  title: string;
-}
-
-export function ProjectHeader({ title }: ProjectHeaderProps) {
-  const navigate = useNavigate();
-  
+const ProjectHeader: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
-      <div className="flex items-center">
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className="mr-2"
-          onClick={() => navigate(-1)}
-        >
-          <ArrowLeft className="h-4 w-4 mr-1" />
-          Back
-        </Button>
-        <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ProjectHeader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default ProjectHeader;

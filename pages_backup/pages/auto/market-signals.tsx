@@ -1,41 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const MarketSignals: NextPage = () => {
+const market-signals: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>AI Market Signals Agent</title>
-        <meta name="description" content="Daily curated AI market signals." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">AI Market Signals Agent</h1>
-        <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
-        <div className="space-y-2">
-
-          <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
-          <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</Link></Link>
-
-
-
-
-
-
-
-
-
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>market-signals | Zion Tech Group</title>
+        <meta name="description" content="market-signals - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">market-signals</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </main>
+      </div>
     </div>
-  )
+  );
+};
 
-}
-export default MarketSignals;
-
-},
-export default MarketSignals,
-},
-},
-export default MarketSignals,
-},
-
+export default market-signals;

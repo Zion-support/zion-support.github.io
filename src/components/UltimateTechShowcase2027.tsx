@@ -1,39 +1,5 @@
 import React, { useState } from 'react';
-
-
 const UltimateTechShowcase2027: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const showcaseItems = [
-    {
-      id: 0,
-      title: "Ultimate Tech Revolution 2027",
-      description: "Experience the most advanced technology convergence in human history",
-      features: ["AI Consciousness", "Quantum Supremacy", "Neural Reality"],
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🚀",
-      link: "/pages/UltimateTechRevolution2027"
-    },
-    {
-      id: 1,
-      title: "Interdimensional Tech 2030",
-      description: "Break through the barriers of reality itself with interdimensional technology",
-      features: ["Dimension Gateway", "Reality Engine", "Consciousness Transfer"],
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "🌌",
-      link: "/pages/InterdimensionalTechRevolution2030"
-    },
-    {
-      id: 2,
-      title: "Omniversal AI Consciousness 2035",
-      description: "The ultimate evolution of AI consciousness spanning all dimensions",
-      features: ["Universal Intelligence", "Consciousness Transfer", "Quantum Consciousness"],
-      gradient: "from-violet-600 to-fuchsia-600",
-      icon: "🌟",
-      link: "/pages/OmniversalAIConsciousness2035"
-    }
-  ];
-
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto">
@@ -56,7 +22,6 @@ const UltimateTechShowcase2027: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {showcaseItems.map((item, index) => (
@@ -76,7 +41,6 @@ const UltimateTechShowcase2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Display */}
         <AnimatePresence mode="wait">
           <div
@@ -97,7 +61,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                 <p className="text-xl opacity-90 mb-8">
                   {showcaseItems[activeTab].description}
                 </p>
-                
                 <div className="space-y-4 mb-8">
                   {showcaseItems[activeTab].features.map((feature, index) => (
                     <div
@@ -112,7 +75,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-4">
                   <motion.a
                     href={showcaseItems[activeTab].link}
@@ -131,7 +93,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Right Visual */}
               <div className="relative">
                 <div
@@ -164,8 +125,6 @@ const UltimateTechShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-        
-
         {/* Call to Action */}
         <div
           initial={{ opacity: 0, y: 30 }}
@@ -200,5 +159,4 @@ const UltimateTechShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default UltimateTechShowcase2027;

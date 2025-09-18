@@ -1,3 +1,0 @@
-// formatters.ts
-// Utility functions
-

@@ -1,90 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousBusinessOperations() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-
-			title="AI‑Powered Autonomous Business Operations"
-			slug="ai-autonomous-business-operations"
-			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
-			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
-
-			pricePerMonthUSD={3500}
-			implementationWeeks="Implementation: 3–6 weeks"
-			roiNote="Average ROI 5–12x within 120 days"
-			features={[
-				"Autonomous KPI monitoring and anomaly detection"
-				"Agentic workflows for ticket triage, billing, collections, and renewals"
-				"Human-in-the-loop approvals and audit trails"
-				"Playbooks for incident response and customer recovery"
-				"Compliance logging and role-based access"
-
-				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-			]}
-			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
-
-			pricePerMonthUSD={3500  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 3–6 weeks"
-			roiNote="Average ROI 5–12x within 120 days"
-			features={[
-				"Autonomous KPI monitoring and anomaly detection"
-				"Agentic workflows for ticket triage, billing, collections, and renewals"
-				"Human-in-the-loop approvals and audit trails"
-				"Playbooks for incident response and customer recovery"
-				"Compliance logging and role-based access"
-
-				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-
-			]}
-			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
-		/>
-	)
+const ai-autonomous-business-operations: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-autonomous-business-operations | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-business-operations - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-autonomous-business-operations</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Healthcare", "Finance", "Retail"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default ai-autonomous-business-operations;

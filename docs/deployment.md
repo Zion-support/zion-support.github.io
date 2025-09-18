@@ -1,30 +1,31 @@
-<<<<<<< HEAD
 # Deployment Guide
 
 ## Production Build
 
-1. Build the application:
+1. Build the Next.js website (monorepo subdirectory `zion-website`):
 
 ```bash
-npm run build
+cd zion-website && npm ci --no-audit --no-fund && npm run build
 ```
 
-2. The build output will be in the `dist` directory
+2. The Netlify Next.js plugin will deploy from the `.next` output automatically.
 
 ## Deployment Options
 
 ### Netlify (Recommended)
 
 1. Connect your repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Deploy automatically on push to main branch
+2. Ensure the site Base directory is `zion-website` (configured in `netlify.toml`)
+3. Build command: `npm ci --no-audit --no-fund && npm run build` (from `zion-website`)
+4. Publish directory: `.next` (handled by `@netlify/plugin-nextjs`)
+5. Environment: Node `20.x` and `NETLIFY_USE_NPM=true` (see `netlify.toml`)
+6. Deploys will trigger automatically on push to `main`
 
 ### Vercel
 
 1. Import your repository to Vercel
 2. Set build command: `npm run build`
-3. Set output directory: `dist`
+3. Output is managed by Next.js; no manual `.next` publish required on Vercel
 4. Deploy
 
 ### Manual Deployment
@@ -51,7 +52,6 @@ VITE_APP_ENV=production
 ---
 
 _Generated automatically by Smart Documentation Generator_
-=======
 # Deployment Strategies and Processes
 
 This document outlines the deployment strategies and processes for the various components of the Zion platform.
@@ -172,4 +172,3 @@ The Next.js frontend application has two main deployment configurations:
 - **Zero-Downtime Deployments:** For critical services, aim for zero-downtime deployment strategies (e.g., blue-green deployments, rolling updates). The `.github/workflows/blue-green-deploy.yml` suggests this is already a consideration for some parts.
 
 _This document will continue to evolve. Create detailed playbooks for each environment and update this guide whenever deployment steps change._
->>>>>>> origin/auto/autonomy-17186719616

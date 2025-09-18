@@ -1,126 +1,14 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-export default function RevolutionarySuccessStoryBanner() {
+const RevolutionarySuccessStoryBanner: React.FC = () => {
   return (
-    <divdiv
-      className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 rounded-3xl p-8 mb-12 border border-emerald-400/30"
-    >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-green-500/20 to-teal-500/20"></div>
-      <div className="absolute inset-0 bg-black/10"></div>
-      
-      {/* Floating Success Icons */}
-      <divdiv
-          y: [0-10],
-          rotate: [050]
-        }}
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-6 right-6 text-4xl"
-      >
-        🎯
-      </divdiv>
-      
-      <divdiv
-          y: [010],
-          rotate: [0-50]
-        }}
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-        className="absolute bottom-6 left-6 text-4xl"
-      >
-        💰
-      </divdiv>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <divdiv
-          >
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              🏆 Revolutionary Success Story
-            </h2>
-            <p className="text-2xl text-emerald-100 mb-6 max-w-4xl mx-auto">
-              How a Fortune 500 Company Achieved $100M ROI in Just 18 Months
-            </p>
-          </divdiv>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <divdiv
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
-          >
-            <div className="text-6xl mb-4">💰</div>
-            <div className="text-4xl font-bold text-emerald-400 mb-2">$100M</div>
-            <div className="text-white font-semibold mb-2">Total ROI</div>
-            <div className="text-emerald-100 text-sm">18-month transformation period</div>
-          </divdiv>
-          
-          <divdiv
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
-          >
-            <div className="text-6xl mb-4">⚡</div>
-            <div className="text-4xl font-bold text-green-400 mb-2">300%</div>
-            <div className="text-white font-semibold mb-2">Efficiency Gain</div>
-            <div className="text-emerald-100 text-sm">Production throughput improvement</div>
-          </divdiv>
-          
-          <divdiv
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
-          >
-            <div className="text-6xl mb-4">🎯</div>
-            <div className="text-4xl font-bold text-teal-400 mb-2">95%</div>
-            <div className="text-white font-semibold mb-2">Quality Improvement</div>
-            <div className="text-emerald-100 text-sm">Defect reduction achieved</div>
-          </divdiv>
-        </div>
-        
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center">
-          <divdiv
-            className="mb-6"
-          >
-            <p className="text-xl text-emerald-100 mb-6 max-w-3xl mx-auto">
-              Discover the complete transformation journeyimplementation strategiesand lessons learned 
-              from this groundbreaking enterprise AI success story.
-            </p>
-          </divdiv>
-          
-          <divdiv
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <a 
-              href="/case-studies/ai-2025-global-enterprise-transformation-100000-roi"
-              className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              Read Full Case Study
-            </a>
-            <a 
-              href="/contact"
-              className="bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              Start Your Transformation
-            </a>
-          </divdiv>
-        </div>
-        
-        {/* Success Metrics Bar */}
-        <divdiv
-          className="mt-8 bg-white/20 rounded-full h-3 overflow-hidden"
-        >
-          <div className="h-full bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 rounded-full"></div>
-        </divdiv>
-        
-        <div className="mt-4 text-center">
-          <p className="text-emerald-100 text-sm">
-            <span className="font-semibold">Success Metrics:</span> 65% cost reduction • 300% efficiency gain • 95% quality improvement • $100M ROI
-          </p>
+          <h1 className="text-4xl font-bold mb-6">RevolutionarySuccessStoryBanner</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
-}
+  };
+export default RevolutionarySuccessStoryBanner;

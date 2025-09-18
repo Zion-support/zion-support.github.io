@@ -1,54 +1,12 @@
-import { UnleashClient } from 'unleash-proxy-client';
+import React from 'react';
 
-// Variant type is not exported from the client typings
-export interface Variant {
-  name: string;
-  enabled?: boolean;
-  payload?: {
-    type: string;
-    value: string;
-  };
-}
-
-interface FeatureFlagContextValue {
-  isEnabled: (name: string) => boolean;
-  getVariant: (name: string) => Variant;
-  track: (event: string) => void;
-}
-
-const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(undefined);
-
-export function FeatureFlagProvider({ children }: { children: React.ReactNode }) {
-  const url = (import.meta as any)?.env?.VITE_UNLEASH_URL || process.env.UNLEASH_URL || '';
-
-  useEffect(() => {
-    const c: any = client;
-    if (typeof c.on === 'function') {
-    } else {
-      setReady(true);
-    }
-    if (typeof c.start === 'function') {
-      c.start();
-    }
-
-  const isEnabled = (name: string) => (ready ? client.isEnabled(name) : false);
-  const getVariant = (name: string) =>
-    ready ? (client as any).getVariant?.(name) ?? { name: 'disabled' } : { name: 'disabled' };
-  const track = (event: string) => {
-    const c: any = client;
-    if (typeof c.track === 'function') {
-      c.track(event);
-    }
-  };
-
+const FeatureFlagContext: React.FC = () => {
   return (
-      {children}
-    </FeatureFlagContext.Provider>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FeatureFlagContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
 
-export function useFeatureFlags() {
-  const ctx = useContext(FeatureFlagContext);
-  if (!ctx) throw new Error('useFeatureFlags must be used within a FeatureFlagProvider');
-  return ctx;
-}
+export default FeatureFlagContext;

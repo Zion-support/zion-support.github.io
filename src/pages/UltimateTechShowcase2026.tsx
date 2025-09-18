@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Shield, Database, Cpu, Globe, Rocket } from 'lucide-react';
-
 const UltimateTechShowcase2026: React.FC = () => {
   const technologies = [
     {
@@ -55,7 +54,6 @@ const UltimateTechShowcase2026: React.FC = () => {
       applications: ["Space exploration", "Satellite management", "Interplanetary travel", "Resource mining"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -63,7 +61,6 @@ const UltimateTechShowcase2026: React.FC = () => {
         <meta name="description" content="Explore our ultimate showcase of revolutionary technologies: conscious AI, quantum-neural computing, multi-dimensional security, and consciousness transfer systems." />
         <meta name="keywords" content="revolutionary technology, conscious AI, quantum computing, cybersecurity, consciousness transfer, space technology" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <motion.div 
           className="text-center mb-16"
@@ -77,13 +74,11 @@ const UltimateTechShowcase2026: React.FC = () => {
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Experience the future of technology with our revolutionary suite of AI, quantum computing, and consciousness technologies that are reshaping reality itself.
           </p>
-          
           <div className="flex items-center justify-center gap-4 mb-8">
             <Zap className="w-8 h-8 text-yellow-400" />
             <span className="text-xl text-yellow-400 font-semibold">Next-Generation Technologies</span>
           </div>
         </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {technologies.map((tech, index) => (
             <motion.div
@@ -96,10 +91,8 @@ const UltimateTechShowcase2026: React.FC = () => {
               <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${tech.color} flex items-center justify-center text-white mb-6`}>
                 {tech.icon}
               </div>
-              
               <h3 className="text-2xl font-bold text-white mb-4">{tech.title}</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">{tech.description}</p>
-              
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                 <div className="grid grid-cols-2 gap-2">
@@ -111,7 +104,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Applications</h4>
                 <div className="flex flex-wrap gap-2">
@@ -122,7 +114,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
               <Link 
                 to="/pages/RevolutionaryAIServices2026" 
                 className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
@@ -132,7 +123,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         <motion.div 
           className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-purple-400/30 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -163,5 +153,4 @@ const UltimateTechShowcase2026: React.FC = () => {
     </div>
   );
 };
-
 export default UltimateTechShowcase2026;

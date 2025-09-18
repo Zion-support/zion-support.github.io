@@ -1,2 +1,22 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const GreenITPage = () => {; return (; <> <SEOHead title=\"Green IT - Zion Tech Group\" description=\"Our sustainability and green IT initiatives.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Green IT></div> <p className=\"text-gray-600\">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const GreenITPage = () => {; return (; <> <SEOHead title="Green IT - Zion Tech Group" description="Our sustainability and green IT initiatives." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Green IT></div> <p className="text-gray-600">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const green-it: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>green-it | Zion Tech Group</title>
+        <meta name="description" content="green-it - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">green-it</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default green-it;

@@ -1,28 +1,47 @@
+import React from 'react';
 
-export default function Page() {
-	return (
-		<div className="bg-black min-h-screen">
-			<div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-				<p className="text-sm text-blue-300">Blueprint • 2025-09-16</p>
-				<h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-					Trustworthy Model Routing (2026)
-				</h1>
-				<p className="mt-6 text-lg leading-8 text-gray-300">
-					Policy- and cost-aware routing with safety backstops, budget enforcement, and eval-driven
-					promotion criteria.
-				</p>
-				<div className="mt-10 grid gap-6">
-					<div className="rounded-2xl bg-white/5 p-6 text-gray-200">
-						<h2 className="text-xl font-semibold text-white">Highlights</h2>
-						<ul className="mt-3 list-disc pl-5 space-y-2 text-gray-300">
-							<li>Multi-objective routing: cost, quality, and safety</li>
-							<li>Shadow tests with automatic rollback triggers</li>
-							<li>Evidence bundles and auditability built-in</li>
-						</ul>
-					</div>
-					<a href="/updates" className="text-sm font-semibold text-blue-400 hover:text-blue-300">Back to updates →</a>
-				</div>
-			</div>
-		</div>
-	)
+export default function TrustworthyModelRoutingPage() {
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-4xl px-6 pt-24">
+        <div className="prose prose-invert max-w-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
+            Trustworthy Model Routing 2026
+          </h1>
+          
+          <div className="text-lg text-gray-300 mb-8">
+            Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Trustworthy Model Routing 2026 introduces advanced policy-as-code routing mechanisms for AI systems. 
+              This comprehensive framework enables safe, efficient, and cost-aware AI operations through 
+              evaluation gates, service level objectives, and intelligent decision making.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Policy-as-code routing with version control</li>
+              <li>• Real-time evaluation gates and quality checks</li>
+              <li>• Service level objectives (SLOs) and monitoring</li>
+              <li>• Cost-aware decision making and budget controls</li>
+              <li>• Audit-ready evidence and compliance reporting</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <h2 className="text-2xl font-semibold text-white mb-4">Implementation Guide</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Follow our step-by-step implementation guide to deploy trustworthy model routing in your AI systems. 
+              Includes code examples, configuration templates, and best practices for production deployment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

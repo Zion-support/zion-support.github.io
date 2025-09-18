@@ -1,69 +1,12 @@
+import React from 'react';
 
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-interface ContactFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
-
-export function ContactFields({ control }: ContactFieldsProps) {
+const ContactFields: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <FormField
-        control={control}
-        name="location"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Location</FormLabel>
-            <FormControl>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={control}
-        name="website"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Website</FormLabel>
-            <FormControl>
-              <Input placeholder="https://yourwebsite.com" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={control}
-        name="linkedin"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>LinkedIn</FormLabel>
-            <FormControl>
-              <Input placeholder="https://linkedin.com/in/username" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={control}
-        name="github"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>GitHub</FormLabel>
-            <FormControl>
-              <Input placeholder="https://github.com/username" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContactFields</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default ContactFields;

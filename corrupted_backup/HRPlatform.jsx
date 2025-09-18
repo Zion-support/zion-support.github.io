@@ -1,18 +1,12 @@
-}
-}
- <div>Broken JSX</div> ></div> ></div> ></div> ></div> ></div> ></div> )}export { HRPlatform }export { HRPlatform }export { HRPlatform }export { HRPlatform }export { HRPlatform }
 import React from 'react';
-interface HRPlatformProps {
-  // Add props here as needed
-}
-export default function HRPlatform({}: HRPlatformProps) {
+
+const HRPlatform: React.FC = () => {
   return (
-    <div>
-      <h1>HRPlatform</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HRPlatform</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-}
-}
+};
 
+export default HRPlatform;

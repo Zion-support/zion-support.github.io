@@ -1,1 +1,12 @@
-import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function AIPoweredEnterpriseSecurityAliasPage() { return ( <> <Head> <title>AI-Powered Enterprise Security | Zion Tech Group</title> <meta name="description" content="AI-driven threat detection and response for enterprise environments across endpoints,identity,and cloud." /> <link rel="canonical" href=""https": </Head> <ServiceLanding title="AI-Powered Enterprise Security" description="Modernize your SOC with AI detections,enrichment,and automated playbooks—see AI-Powered Cybersecurity." subtitle="Alias of AI-Powered Cybersecurity" pricePerMonthUSD={4999} implementationWeeks="3–6 weeks" roiNote="Reduce MTTD/MTTR and analyst toil" features={["Behavioral detections and UEBA","Threat intel enrichment and scoring","Automated containment and response","Identity-centric detections and hardening","Cloud posture and workload protections","Integrations with leading EDR/IDP/cloud security" ]} industries={["Finance","Healthcare","SaaS","Manufacturing"]} canonical=""https": /> </> )}
+import React from 'react';
+
+const ai-powered-enterprise-security: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ai-powered-enterprise-security</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ai-powered-enterprise-security;

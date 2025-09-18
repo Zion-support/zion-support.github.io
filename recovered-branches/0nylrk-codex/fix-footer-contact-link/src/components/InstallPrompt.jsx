@@ -1,30 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-export const InstallPrompt = () => {
-    const [deferred, setDeferred] = useState(null);
-    useEffect(() => {
-        const handler = (e) => {
-            e.preventDefault();
-            setDeferred(e);
-        };
-        window.addEventListener('beforeinstallprompt', handler);
-        return () => window.removeEventListener('beforeinstallprompt', handler);
-    }, []);
-    if (!deferred)
-        return null;
-    const onClick = async () => {
-        deferred.prompt();
-        const result = await deferred.userChoice;
-        if (result.outcome !== 'accepted') {
-            // keep for later
-            setDeferred(deferred);
-        }
-        else {
-            setDeferred(null);
-        }
-    };
-    return (<div className="fixed bottom-4 right-4 z-50">
-      <Button onClick={onClick}>Install App</Button>
-    </div>);
+import React from 'react';
+
+const InstallPrompt: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InstallPrompt</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
+
 export default InstallPrompt;

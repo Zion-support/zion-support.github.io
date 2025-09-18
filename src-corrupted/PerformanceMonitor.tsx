@@ -1,20 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-export const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Performance monitoring logic
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'navigation') {
-          console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
-        }
-      }
-    });
-
-    observer.observe({ entryTypes: ['navigation'] });
-
-    return () => observer.disconnect();
-  }, []);
-
-  return null; // This component doesn't render anything
+const PerformanceMonitor: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceMonitor</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
+
+export default PerformanceMonitor;

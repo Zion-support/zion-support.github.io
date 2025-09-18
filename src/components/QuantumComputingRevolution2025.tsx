@@ -1,62 +1,7 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-CpuZapAtomShieldTargetTrendingUpGlobeLock
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import React from 'react';
 const QuantumComputingRevolution2025: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeFeaturesetActiveFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveFeature(prev => (prev + 1) % 4);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const quantumFeatures = [
-    {
-      title: "Error-Corrected Quantum Computers",
-      description: "Breakthrough quantum error correction enabling stable quantum computation at scale",
-      icon: Cpu,
-      metrics: "99.99% Quantum Fidelity",
-      color: "from-blue-600 to-cyan-600"
-    },
-    {
-      title: "Quantum Supremacy Achievement",
-      description: "Quantum computers solving problems impossible for classical computers",
-      icon: Zap,
-      metrics: "10^18 Operations/Second",
-      color: "from-purple-600 to-pink-600"
-    },
-    {
-      title: "Quantum Internet Infrastructure",
-      description: "Global quantum communication network with unbreakable encryption",
-      icon: Globe,
-      metrics: "Instant Global Transfer",
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "Quantum-AI Fusion",
-      description: "Revolutionary combination of quantum computing and artificial intelligence",
-      icon: Atom,
-      metrics: "Exponential AI Acceleration",
-      color: "from-orange-600 to-red-600"
-    }
-  ];
-
-  const capabilities = [
-    { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" },
-    { icon: TrendingUptext: "Exponential Speed"description: "Millions of times faster processing" },
-    { icon: Shieldtext: "Quantum Advantage"description: "Solve impossible problems" },
-    { icon: Locktext: "Secure Communications"description: "Quantum key distribution" }
-  ];
-
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20"
     >
       {/* Quantum Background Effects */}
@@ -65,10 +10,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl animate-spin" style={{ animationDuration: '20s' }}></div>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -81,10 +25,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the dawn of the quantum era with our revolutionary quantum computing breakthroughs that are reshaping the boundaries of computational possibility.
           </p>
-        </divdiv>
-
+        </div>
         {/* Active Feature Showcase */}
-        <divdiv
+        <div
           key={activeFeature}
           className="mb-16"
         >
@@ -101,12 +44,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
-
+        </div>
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quantumFeatures.map((featureindex) => (
-            <divdiv
+            <div
               key={index}
               className={`group relative cursor-pointer ${activeFeature === index ? 'scale-105' : ''}`}
               onClick={() => setActiveFeature(index)}
@@ -123,18 +65,17 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{feature.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{feature.metrics}</div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
-
         {/* Quantum Capabilities */}
-        <divdiv
+        <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Quantum Computing Capabilities</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {capabilities.map((capabilityindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center"
               >
@@ -143,13 +84,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 </div>
                 <h3 className="text-white font-semibold mb-2">{capability.text}</h3>
                 <p className="text-gray-400 text-sm">{capability.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
-
+        </div>
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -170,10 +110,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-gray-400 mt-6 text-sm">
             Join the quantum revolution - Limited access to quantum computing resources
           </p>
-        </divdiv>
+        </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
-
 export default QuantumComputingRevolution2025;

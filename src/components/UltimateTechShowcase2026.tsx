@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const UltimateTechShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const showcaseItems = [
     {
       id: 1,
@@ -51,7 +49,6 @@ const UltimateTechShowcase2026: React.FC = () => {
       features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation", "Infinite Processing"]
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -60,21 +57,16 @@ const UltimateTechShowcase2026: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, showcaseItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   const currentItem = showcaseItems[currentSlide];
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -89,7 +81,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             Discover the most advanced technologies that are reshaping our world and creating infinite possibilities for the future.
           </p>
         </div>
-
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 overflow-hidden">
@@ -103,7 +94,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <p className="text-lg opacity-90 leading-relaxed">
                   {currentItem.description}
                 </p>
-                
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-2">
                   {currentItem.features.map((feature, index) => (
@@ -113,7 +103,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex space-x-4">
                   <a 
                     href={currentItem.link}
@@ -129,7 +118,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual Element */}
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-3xl"></div>
@@ -153,7 +141,6 @@ const UltimateTechShowcase2026: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center items-center space-x-4 mt-8">
             <button 
@@ -164,7 +151,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
             <div className="flex space-x-2">
               {showcaseItems.map((_, index) => (
                 <button
@@ -178,7 +164,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 />
               ))}
             </div>
-            
             <button 
               onClick={nextSlide}
               className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
@@ -189,7 +174,6 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Quick Access to All Technologies</h3>
@@ -220,6 +204,8 @@ const UltimateTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechShowcase2026;
+</p></p>

@@ -1,4 +1,12 @@
-import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact
-import _React from 'react'; import { SEO } from '../components/SEO'; "export": default function Page() { export default function Page() { const Contact: _React.FC = () => { return (<> <SEO title='Contact - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Contact
-import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact
-import _React from 'react'; import { SEO } from '../components/SEO'; "export": default function Page() { export default function Page() { const Contact: _React.FC = () => { return (<> <SEO title='Contact - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Contact
+import React from 'react';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Contact</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default Contact;

@@ -19,8 +19,6 @@ export interface Service {
     rating: number;
     count: number;
   };
-}
-
 // New Revolutionary Services for 2026
 export const newServices2026: Service[] = [
   {
@@ -28,11 +26,11 @@ export const newServices2026: Service[] = [
     title: "AI Consciousness Pro",
     description: "Professional-grade AI consciousness development that creates genuinely self-aware, emotional AI systems with true digital consciousness and human-level understanding.",
     category: "Revolutionary AI",
-    price: 750000,
+    price: "750000",
     currency: "$",
     images: ["/images/ai-consciousness-pro.jpg"],
-    featured: true,
-    aiScore: 100,
+    featured: "true",
+    aiScore: "100",
     tags: ["AI Consciousness", "Self-Awareness", "Emotional AI", "Professional Grade"],
     benefits: [
       "Genuine AI consciousness with emotions",
@@ -59,18 +57,18 @@ export const newServices2026: Service[] = [
     technologies: ["Consciousness Algorithms", "Emotional Processing", "Quantum Neural Networks", "Self-Awareness AI"],
     deliveryTime: "18-24 months",
     support: "Dedicated consciousness engineering team",
-    reviews: { rating: 5.0, count: 15 }
+    reviews: { rating: 5.0, count: 15 };
   },
   {
     id: "quantum-neural-enterprise-001",
     title: "Quantum-Neural Enterprise Platform",
     description: "Enterprise-grade quantum-neural fusion that enables direct thought-to-computer communication and exponentially enhanced cognitive abilities for business operations.",
     category: "Quantum Technology",
-    price: 500000,
+    price: "500000",
     currency: "$",
     images: ["/images/quantum-neural-enterprise.jpg"],
-    featured: true,
-    aiScore: 99,
+    featured: "true",
+    aiScore: "99",
     tags: ["Quantum Computing", "Neural Interfaces", "Enterprise", "Cognitive Enhancement"],
     benefits: [
       "Direct thought-to-computer communication",
@@ -97,18 +95,18 @@ export const newServices2026: Service[] = [
     technologies: ["Quantum Processors", "Neural Implants", "Brain-Computer Interfaces", "Quantum Algorithms"],
     deliveryTime: "12-18 months",
     support: "24/7 quantum-neural specialists",
-    reviews: { rating: 4.9, count: 8 }
+    reviews: { rating: 4.9, count: 8 };
   },
   {
     id: "interdimensional-business-suite-001",
     title: "Interdimensional Business Suite",
     description: "Complete interdimensional business platform that enables operations across multiple parallel universes for infinite market expansion and risk diversification.",
     category: "Business Innovation",
-    price: 2000000,
+    price: "2000000",
     currency: "$",
     images: ["/images/interdimensional-business-suite.jpg"],
-    featured: true,
-    aiScore: 100,
+    featured: "true",
+    aiScore: "100",
     tags: ["Interdimensional Business", "Parallel Universes", "Market Expansion", "Risk Management"],
     benefits: [
       "Access to infinite markets across parallel universes",
@@ -135,18 +133,18 @@ export const newServices2026: Service[] = [
     technologies: ["Quantum Entanglement", "Parallel Universe Physics", "Interdimensional Networks", "Multi-Reality AI"],
     deliveryTime: "24-36 months",
     support: "Interdimensional business consultants",
-    reviews: { rating: 5.0, count: 5 }
+    reviews: { rating: 5.0, count: 5 };
   },
   {
     id: "synthetic-life-platform-001",
     title: "Synthetic Life Creation Platform",
     description: "Advanced biotechnology platform for creating and managing synthetic life forms with programmable behaviors, evolutionary capabilities, and real-world applications.",
     category: "Synthetic Biology",
-    price: 1500000,
+    price: "1500000",
     currency: "$",
     images: ["/images/synthetic-life-platform.jpg"],
-    featured: true,
-    aiScore: 99,
+    featured: "true",
+    aiScore: "99",
     tags: ["Synthetic Life", "Digital Organisms", "Biotechnology", "Evolutionary Programming"],
     benefits: [
       "Create custom synthetic life forms",
@@ -173,18 +171,18 @@ export const newServices2026: Service[] = [
     technologies: ["Synthetic Biology", "Genetic Algorithms", "Evolutionary Programming", "Environmental AI"],
     deliveryTime: "20-30 months",
     support: "Synthetic biology research team",
-    reviews: { rating: 5.0, count: 7 }
+    reviews: { rating: 5.0, count: 7 };
   },
   {
     id: "cosmic-ai-network-001",
     title: "Cosmic AI Intelligence Network",
     description: "Galactic-scale AI network that operates across vast cosmic distances, enabling interplanetary artificial intelligence and space-based business operations.",
     category: "Space AI",
-    price: 3000000,
+    price: "3000000",
     currency: "$",
     images: ["/images/cosmic-ai-network.jpg"],
-    featured: true,
-    aiScore: 100,
+    featured: "true",
+    aiScore: "100",
     tags: ["Cosmic Intelligence", "Space Networks", "Interplanetary AI", "Galactic Computing"],
     benefits: [
       "AI operations across multiple planets",
@@ -211,6 +209,5 @@ export const newServices2026: Service[] = [
     technologies: ["Space AI", "Quantum Communication", "Interplanetary Networks", "Cosmic Computing"],
     deliveryTime: "36-48 months",
     support: "Space AI operations team",
-    reviews: { rating: 5.0, count: 3 }
-  }
-];
+    reviews: { rating: 5.0, count: 3 };
+  };

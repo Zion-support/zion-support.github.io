@@ -1,27 +1,12 @@
-import React, {useState} from 'react';
-const SidebarProvider({children}) {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const toggleSidebar = (props: any) => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-    return (<SidebarContext.Provider value = {
-  { isSidebarOpen, setIsSidebarOpen,
-  toggleSidebar 
+import React from 'react';
 
+const SidebarContext: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SidebarContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-
-
-
-
-}}>
-      {children}
-    </SidebarContext.Provider>)}
-export function useSidebar(props: any) {
-    const context = useContext(SidebarContext);
-    if (context === null) {
-        throw new Error('useSidebar must be used within a SidebarProvider');
-
-    return context;
-}
-
-</SidebarContext>
+export default SidebarContext;

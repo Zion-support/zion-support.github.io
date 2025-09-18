@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const posts = [
   { slug: 'ai-2026-autonomous-incident-response-blueprint', title: 'Autonomous Incident Response Blueprint (2026)', excerpt: 'Close the loop from detection to remediation with safe, auditable autonomy.' },
@@ -44,16 +45,8 @@ const posts = [
   ,{ slug: 'ai-2026-operationalizing-ai-safety-controls', title: 'Operationalizing AI Safety Controls (2026)', excerpt: 'Turn policies into runtime controls wired to SLOs and incidents.' }
 ]
 
-// Fresh posts (Sept 16, 2025)
-posts.unshift(
-  { slug: 'ai-2026-production-agent-postmortems-playbook', title: 'Production Agent Postmortems — Playbook (2026)', excerpt: 'Blameless, evidence‑driven postmortems that improve safety and speed.' },
-  { slug: 'ai-2026-agent-release-scorecards', title: 'Agent Release Scorecards — Evidence‑First (2026)', excerpt: 'Executive scorecards wired to SLOs, evals, incidents, and budgets.' },
-  { slug: 'ai-2026-agent-rollback-patterns', title: 'Agent Rollback Patterns — Safe Recovery (2026)', excerpt: 'Staged deploys, eval gates, evidence bundles, and containment for safe recovery.' }
-)
-
 // Newly added posts (Sept 2025)
 posts.unshift(
-  { slug: 'ai-2026-governed-agent-operations-checklist', title: 'Governed Agent Operations Checklist (2026)', excerpt: 'A pragmatic, audit-ready checklist for safe, observable agent ops.' },
   { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
   { slug: 'ai-2026-agent-safety-evidence-integration', title: 'Agent Safety Evidence Integration (2026)', excerpt: 'Unify evals, incidents, and policy events for audits.' },
   { slug: 'ai-2026-cost-aware-real-time-routing', title: 'Cost‑Aware Real‑Time Routing (2026)', excerpt: 'Balance latency, quality, and spend with policy‑driven routing.' },
@@ -77,11 +70,6 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Added in this change
 posts.unshift(
-  { slug: 'ai-2026-observable-slo-driven-routing', title: 'Observable, SLO‑Driven Routing (2026)', excerpt: 'Route by latency, quality, cost, and safety with live scorecards.' },
-  { slug: 'ai-2026-governed-runtime-rollback-strategies', title: 'Governed Runtime Rollback Strategies (2026)', excerpt: 'Safe, auditable rollbacks using eval gates and evidence bundles.' },
-  { slug: 'ai-2026-cost-aware-observability-blueprint', title: 'AI 2026: Cost‑Aware Observability Blueprint', excerpt: 'Unify traces, evals, and spend to keep systems fast and on budget.' },
-  { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
-  { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
   { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
   { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
 )
@@ -99,69 +87,31 @@ posts.unshift(
   { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
 )
 
-// New content (Sept 16, 2025) — Fresh posts
-posts.unshift(
-  { slug: 'ai-2026-governed-agent-slo-dashboards', title: 'Governed Agent SLO Dashboards (2026)', excerpt: 'Executive‑ready, governed SLOs wired to evals and incidents.' },
-  { slug: 'ai-2026-safe-agent-actions-blueprint', title: 'Safe Agent Actions — Blueprint (2026)', excerpt: 'Risk tiers, scoped creds, approvals, and runtime checks for tool use.' },
-  { slug: 'ai-2026-agent-release-health-scorecards', title: 'Agent Release Health Scorecards (2026)', excerpt: 'Traces, evals, policy events, and incidents as release health signals.' },
-  { slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'Secure Multi‑Agent Operations (2026)', excerpt: 'Operate multi‑agent systems safely with risk tiers and runtime controls.' }
-)
-
-// New content (Sept 16, 2025) — Additional (Autonomous Change Mgmt, Red Teaming, Compliance Evidence)
-posts.unshift(
-  { slug: 'ai-2026-autonomous-change-management-blueprint', title: 'Autonomous Change Management — Blueprint (2026)', excerpt: 'Design safe, auditable, and low‑risk change pipelines for agentic systems.' },
-  { slug: 'ai-2026-agent-red-teaming-playbook', title: 'Agent Red Teaming — Practical Playbook (2026)', excerpt: 'Continuously probe agents for jailbreaks, unsafe tool use, and policy gaps.' },
-  { slug: 'ai-2026-compliance-evidence-automation', title: 'Compliance Evidence Automation (2026)', excerpt: 'Automate policy checks and evidence capture to accelerate audits and approvals.' }
-)
-
 export default function BlogIndexPage() {
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Index: NextPage = () => {
+>>>>>>> origin/backup-main-20250918-004015
   return (
-    <UltraFuturisticBackground intensity="medium">
+    <div>
       <Head>
-        <title>Blog | Zion Tech Group</title>
-        <meta name="description" content="Insights on AI, cloud, automation, and platform engineering." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index blog post" />
       </Head>
+      
+      <main>
+        <h1>Index</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+<<<<<<< HEAD
+};
+=======
+};
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-            Insights & Guides
-          </h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* New: Agentic Evidence Graphs */}
-          <div key="ai-2026-agentic-evidence-graphs" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
-            <h2 className="text-white text-xl font-semibold mb-2">Agentic Evidence Graphs</h2>
-            <p className="text-gray-400 mb-4">Connect evals, traces, policy events, and incidents into an auditable graph.</p>
-            <Link href={`/blog/ai-2026-agentic-evidence-graphs`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-          </div>
-
-          {/* New: Governed Runtime Observability */}
-          <div key="ai-2026-governed-runtime-observability" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
-            <h2 className="text-white text-xl font-semibold mb-2">Governed Runtime Observability</h2>
-            <p className="text-gray-400 mb-4">Streaming metrics, governed traces, and evidence bundles for reliable autonomy.</p>
-            <Link href={`/blog/ai-2026-governed-runtime-observability`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-          </div>
-
-          {/* New: Reliable Agent Change Windows */}
-          <div key="ai-2026-reliable-agent-change-windows" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
-            <h2 className="text-white text-xl font-semibold mb-2">Reliable Agent Change Windows</h2>
-            <p className="text-gray-400 mb-4">Define and enforce safe change windows tied to SLOs and eval gates.</p>
-            <Link href={`/blog/ai-2026-reliable-agent-change-windows`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-          </div>
-          {posts.map((p) => (
-            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
-              <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
-              <p className="text-gray-400 mb-4">{p.excerpt}</p>
-              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-            </div>
-          ))}
-        </div>
-      </div>
-    </UltraFuturisticBackground>
-  )
-}
-
+export default Index;
+>>>>>>> origin/backup-main-20250918-004015

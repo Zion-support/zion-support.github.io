@@ -1,70 +1,12 @@
+import React from 'react';
 
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
-
-export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
+const PersonalInfoFields: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <FormField
-        control={control}
-        name="fullName"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Full Name</FormLabel>
-            <FormControl>
-              <Input placeholder="John Doe" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={control}
-        name="title"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Professional Title</FormLabel>
-            <FormControl>
-              <Input placeholder="Senior Software Engineer" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={control}
-        name="email"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Email</FormLabel>
-            <FormControl>
-              <Input type="email" placeholder="john@example.com" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={control}
-        name="phone"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Phone</FormLabel>
-            <FormControl>
-              <Input placeholder="+1 234 567 8900" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PersonalInfoFields</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default PersonalInfoFields;

@@ -1,33 +1,12 @@
+import React from 'react';
 
-import { Skill } from '@/types/resume';
-import { SkillCategory } from './SkillCategory';
-
-interface SkillsListProps {
-  skills: Skill[];
-      const category = skill.category || 'Other';
-      if (!acc[category]) {
-        acc[category] = [];
-      }
-      acc[category].push(skill);
-      return acc;
-  
-  if (Object.keys(skillsByCategory).length === 0) {
-    return null;
-  }
-  
+const SkillsList: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h3 className="text-md font-medium">Your Skills</h3>
-      
-      <div className="space-y-4">
-          <SkillCategory 
-            key={category} 
-            category={category} 
-            skills={categorySkills} 
-            onDelete={onDeleteSkill} 
-          />
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SkillsList</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
+
+export default SkillsList;

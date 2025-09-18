@@ -1,86 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-
-
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";
-import { QuoteFormSection } from "@/components/QuoteFormSection";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { PageHero } from "@/components/services/PageSections/PageHero";
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  
-  // Check for success parameter in URL
-  const success = searchParams.get("success");
-  
-  // Show success toast if redirected from successful payment
-  useEffect(() => {
-    if (success === "true") {
-      toast({
-      country.country.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .sort((a, b) => {
-      // First, sort by popular status
+const ITOnsiteServicesPage: React.FC = () => {
   return (
-    <AppLayout>
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-
-
-
-
-
-          {/* Hero Section with Features */}
-
-          <PageHero />;
-
-          {/* Country Selection Tabs */}
-          <div className="mb-12">
-
-            <CountryTabs
-            <CountryTabs 
-
-          {/* Hero Section with Features */}
-          <PageHero />
-          
-          {/* Country Selection Tabs */}
-          <div className="mb-12">
-            <CountryTabs 
-              popularCountries={popularCountries}
-              filteredCountries={filteredCountries}
-              handleCountrySelect={handleCountrySelect}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-          {/* Complete Pricing Table */}
-          <div id="pricing-table" className="my-16">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>
-              <p className="text-zion-slate-light mb-6">
-                Our per-incident prices include transportation costs and the first hour of onsite service.
-                Additional hours are billed separately at standard rates.
-              </p>
-            </div>
-      <GlobalServiceSection />
-      <TrustedBySection />
-      <QuoteFormSection />
-    </AppLayout>
-
-
-
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ITOnsiteServicesPage | Zion Tech Group</title>
+        <meta name="description" content="ITOnsiteServicesPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ITOnsiteServicesPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default ITOnsiteServicesPage;

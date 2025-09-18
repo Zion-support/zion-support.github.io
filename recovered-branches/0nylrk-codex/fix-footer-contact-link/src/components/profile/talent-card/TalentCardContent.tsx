@@ -1,39 +1,12 @@
+import React from 'react';
 
-import { MapPin } from "lucide-react";
-import { TalentCardSkills } from "./TalentCardSkills";
-
-interface TalentCardContentProps {
-  summary: string | undefined;
-  bio: string;
-  timezone: string | undefined;
-  skills: string[] | undefined;
-}
-
-
+const TalentCardContent: React.FC = () => {
   return (
-    <div>
-      {/* Location */}
-      {timezone && (
-        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
-          <MapPin className="h-3 w-3" />
-          <span>{timezone}</span>
-        </div>
-      )}
-      
-      {/* Short bio or summary - longer on hover for desktop */}
-      <div 
-        className="overflow-hidden transition-all duration-300" 
-        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        <p className="text-zion-slate mb-4">
-          {summary || bio}
-        </p>
-      </div>
-      
-      {/* Skills */}
-      <TalentCardSkills skills={skills} />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TalentCardContent</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default TalentCardContent;

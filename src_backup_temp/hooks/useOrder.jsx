@@ -1,5 +1,12 @@
-import {useQuery} from '@tanstack/react-query' export function useGetOrderQuery("props": "any) { return useQuery({ queryKey['order'", orderId], "queryFn": "async () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI",d}`) if (!res.ok) {throw new Error('Failed to fetch order')} return (await res.json())}, enabled !!orderI,d})}';`',',';';
-    ';`; ";
-import {useQuery} from &apos;@tanstack/react-query&apos; export function useGetOrderQuery($1) { return useQuery({ queryKey[&apos;order&apos;,orderId],queryFn: async () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) {throw new Error(&apos;Failed to fetch order&apos;)} return (await res.json())},enabled !!orderI,d})};`&apos;,&apos;,&apos;;`; &quot;;&apos;;&apos;;&apos;;&apos;;&apos;;
-const {useQuery} from "@tanstack/react-query" export function useGetOrderQuery($1) { return useQuery({ queryKey["order",orderId],queryFn: async () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) {throw new Error("Failed to fetch order")} return (await res.json())},enabled !orderI,d})};`",",";`; ";";";";";";'"`'"`
-import {useQuery} from '@tanstack/react-query' export function useGetOrderQuery(_) { return useQuery({ queryKey['order',orderId],queryFn: async () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) {throw new Error('Failed to fetch order')} return (await res.json())},enabled !!orderI,d})};`',',';`; ";';';';';';
+import React from 'react';
+
+const useOrder: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">useOrder</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default useOrder;

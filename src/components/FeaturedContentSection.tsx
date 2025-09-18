@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const FeaturedContentSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-
   const featuredContent = [
     {
       id: 'agent-safety-observability-2026',
@@ -187,7 +185,6 @@ const FeaturedContentSection: React.FC = () => {
       difficulty: 'Intermediate'
     }
   ];
-
   const industryInsights = [
     {
       title: 'Healthcare Revolution',
@@ -211,7 +208,6 @@ const FeaturedContentSection: React.FC = () => {
       metric: '+80% speed'
     }
   ];
-
   return (
     <div className="mb-16">
       {/* Main Featured Content */}
@@ -224,7 +220,6 @@ const FeaturedContentSection: React.FC = () => {
           Experience the most revolutionary AI breakthrough in human history! Post-quantum conscious AI systems achieving <span className="font-bold text-purple-600">2000% ROI</span> with genuine consciousness, emotional intelligence, and quantum-level processing.
         </p>
       </div>
-
       {/* Featured Content Cards */}
       <div className="grid lg:grid-cols-3 gap-8 mb-16">
         {featuredContent.map((content) => (
@@ -236,7 +231,6 @@ const FeaturedContentSection: React.FC = () => {
           >
             {/* Card Header */}
             <div className={`h-2 bg-gradient-to-r ${content.gradient}`}></div>
-            
             <div className="p-8">
               {/* Category and Meta */}
               <div className="flex items-center justify-between mb-4">
@@ -255,7 +249,6 @@ const FeaturedContentSection: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               {/* Icon and Title */}
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -266,10 +259,8 @@ const FeaturedContentSection: React.FC = () => {
                   <p className="text-sm text-gray-600">{content.subtitle}</p>
                 </div>
               </div>
-
               {/* Description */}
               <p className="text-gray-600 mb-6 leading-relaxed">{content.description}</p>
-
               {/* Features */}
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
@@ -282,7 +273,6 @@ const FeaturedContentSection: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-3 gap-2 mb-6">
                 {content.stats.map((stat, index) => (
@@ -292,7 +282,6 @@ const FeaturedContentSection: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* CTA Button */}
               <a
                 href={content.link}
@@ -301,20 +290,17 @@ const FeaturedContentSection: React.FC = () => {
                 Explore {content.title} →
               </a>
             </div>
-
             {/* Hover Effect Overlay */}
             <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
           </div>
         ))}
       </div>
-
       {/* Industry Insights Section */}
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Industry Impact Insights</h3>
           <p className="text-lg text-gray-600">See how our technologies are transforming different sectors</p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-6">
           {industryInsights.map((insight, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -336,7 +322,6 @@ const FeaturedContentSection: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
         <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
@@ -355,5 +340,4 @@ const FeaturedContentSection: React.FC = () => {
     </div>
   );
 };
-
 export default FeaturedContentSection;

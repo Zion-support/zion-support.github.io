@@ -1,212 +1,76 @@
 {
   "site": "https://example.com",
-  "updated": "2025-09-16T18:05:00.000Z",
+  "updated": "2025-09-17T07:13:14.110Z",
   "items": [
-    {
-      "title": "Incident Triage with Evaluation Gates — Field Guide (2026)",
-      "route": "/reports/ai-lab/articles/incident-triage-eval-gates-field-guide-1758127200000.md",
-      "date": 1758127200000
-    },
-    {
-      "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
-      "route": "/blog/cloud-native-automation",
-      "date": 1758023091430.071
-    },
     {
       "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
       "route": "/blog/cybersecurity-autonomous-systems",
-      "date": 1758023091430.071
-    },
-    {
-      "title": "GenAI 2025: Evidence‑Driven AI Governance | Zion Tech Group",
-      "route": "/blog/genai-2025-evidence-driven-ai-governance",
-      "date": 1758023091430.071
+      "date": 1758093165948.5427
     },
     {
       "title": "GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group",
       "route": "/blog/genai-2025-practical-compliance-patterns",
-      "date": 1758023091430.071
+      "date": 1758093165948.5427
     },
     {
       "title": "Blog | Zion Tech Group",
       "route": "/blog/",
-      "date": 1758023091430.071
+      "date": 1758093165948.5427
     },
     {
-      "title": "Quantum Security 2026: Readiness Checklist | Zion Tech Group",
-      "route": "/blog/quantum-security-2026",
-      "date": 1758023091430.071
-    },
-    {
-      "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
-      "route": "/blog/ai-2026-governed-tool-use-case-studies",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
-      "route": "/blog/ai-2026-operational-evals-blueprint",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Operational Risk Metrics for Agents | Zion Tech Group",
-      "route": "/blog/ai-2026-operational-risk-metrics-for-agents",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
-      "route": "/blog/ai-2026-operationalizing-agentic-workflows",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
-      "route": "/blog/ai-2026-production-evidence-hub-blueprint",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group",
-      "route": "/blog/ai-2026-real-time-evals-inference-guardrails",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Real-Time Retrieval Architectures",
-      "route": "/blog/ai-2026-real-time-retrieval-architectures",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
-      "route": "/blog/ai-2026-runtime-guardrails-blueprint",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Safety Evals Operational Checklist",
-      "route": "/blog/ai-2026-safety-evals-operational-checklist",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
-      "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
-      "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
-      "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
-      "route": "/blog/ai-2026-trustworthy-model-routing-starter",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion
-          Tech Group",
-      "route": "/blog/ai-automation-trends-2025",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
-      "route": "/blog/ai-roadmap-2026",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "Autonomous Evaluation Playbooks (2025) | Zion Tech Group",
-      "route": "/blog/autonomous-evaluation-playbooks-2025",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "Cloud Cost Optimization 2025: Modern FinOps Patterns | Zion Tech Group",
-      "route": "/blog/cloud-cost-optimization-2025",
-      "date": 1758023091429.071
-    },
-    {
-      "title": "5G Technology And Its Impact On IoT - Zion Tech Solutions",
-      "route": "/blog/5g-technology-and-its-impact-on-iot-chat",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "Not Found | Zion Tech Group",
-      "route": "/blog/[id]",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "{post.title}",
-      "route": "/blog/[slug]",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "Agentic CRM: Autonomous Revenue Workflows (2025) | Zion Tech Group",
+      "title": "Agentic CRM (2025): Autonomous Revenue Workflows | Zion Tech Group",
       "route": "/blog/agentic-crm-autonomous-revenue-workflows-2025",
-      "date": 1758023091428.071
+      "date": 1758093165947.5427
     },
     {
       "title": "Agentic Product Playbooks: Shipping Autonomous Workflows | Zion Tech Group",
       "route": "/blog/agentic-product-playbooks",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "Enterprise Automation Strategy 2025: Practical AI Patterns | Zion Tech Group",
-      "route": "/blog/ai-2025-enterprise-automation-strategy",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "AI 2026: Agent Observability Blueprint | Zion Tech Group",
-      "route": "/blog/ai-2026-agent-observability-blueprint",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "Agent Observability Scorecards (2026) | Zion Tech Group",
-      "route": "/blog/ai-2026-agent-observability-scorecards",
-      "date": 1758023091428.071
+      "date": 1758093165947.5427
     },
     {
       "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
       "route": "/blog/ai-2026-agent-platform-slos-best-practices",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
-      "route": "/blog/ai-2026-agent-safety-playbook",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "Agent Platform SLO Blueprint (2026) | Zion Tech Group",
-      "route": "/blog/ai-2026-agent-slo-blueprint",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "AI 2026: Agentic Workbench Productivity Blueprint",
-      "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "Cost-Aware Routing in Practice (2026) | Zion Tech Group",
-      "route": "/blog/ai-2026-cost-aware-routing-in-practice",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "AI 2026: Cost Optimization Blueprint",
-      "route": "/blog/ai-2026-cost-optimization-blueprint",
-      "date": 1758023091428.071
+      "date": 1758093165947.5427
     },
     {
       "title": "AI 2026: Edge Agents in Production",
       "route": "/blog/ai-2026-edge-agents-production-guide",
-      "date": 1758023091428.071
-    },
-    {
-      "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
-      "route": "/blog/ai-2026-evaluation-cookbook",
-      "date": 1758023091428.071
+      "date": 1758093165947.5427
     },
     {
       "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
       "route": "/blog/ai-2026-foundation-model-quality-engineering",
-      "date": 1758023091428.071
+      "date": 1758093165947.5427
+    },
+    {
+      "title": "AI 2026: Real-Time Retrieval Architectures",
+      "route": "/blog/ai-2026-real-time-retrieval-architectures",
+      "date": 1758093165947.5427
+    },
+    {
+      "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
+      "route": "/blog/ai-automation-trends-2025",
+      "date": 1758093165947.5427
+    },
+    {
+      "title": "Cloud Cost Optimization 2025: Modern FinOps Patterns | Zion Tech Group",
+      "route": "/blog/cloud-cost-optimization-2025",
+      "date": 1758093165947.5427
+    },
+    {
+      "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
+      "route": "/blog/cloud-native-automation",
+      "date": 1758093165947.5427
+    },
+    {
+      "title": "5G Technology And Its Impact On IoT - Zion Tech Solutions",
+      "route": "/blog/5g-technology-and-its-impact-on-iot-chat",
+      "date": 1758093165946.5427
+    },
+    {
+      "title": "{post.title}",
+      "route": "/blog/[slug]",
+      "date": 1758093165946.5427
     }
   ]
 }

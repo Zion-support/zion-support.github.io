@@ -1,73 +1,43 @@
 #!/bin/bash
 
-echo "🚀 Quick Merge Conflict Resolver"
-echo "================================"
+# Quick merge resolver for open PRs
+set -e
 
-# Navigate to workspace
-cd /workspace
+echo "🚀 Starting quick merge resolution..."
 
-# Check current status
-echo "📊 Current git status:"
-git status --short
+# Ensure we're on main
+git checkout main
+git pull origin main
 
-# Fetch all remote changes
-echo "📥 Fetching all remote changes..."
-git fetch --all
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | head -10)
 
-# Reset to remote main to resolve diverged commits
-echo "🔄 Resetting to remote main..."
-git reset --hard origin/main
+echo "📊 Processing branches: $BRANCHES"
 
-# Get all remote branches (excluding main)
-echo "🌿 Getting all remote branches..."
-branches=$(git branch -r | grep -v HEAD | grep -v "origin/main" | sed 's/origin\///' | head -20)
-
-echo "Found branches to process:"
-echo "$branches"
-
-# Process each branch
-for branch in $branches; do
-    echo "🔄 Processing branch: $branch"
+for branch in $BRANCHES; do
+    echo "🔄 Processing $branch..."
     
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-ff -m "Merge branch $branch into main" 2>/dev/null; then
+    # Try to merge
+    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
         echo "✅ Successfully merged $branch"
+        git commit -m "Merge $branch into main"
     else
-        echo "⚠️ Merge conflict in $branch, resolving..."
+        echo "⚠️  Conflicts in $branch, resolving..."
         
-        # Get conflicted files
-        conflicted_files=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$conflicted_files" ]; then
-            echo "Conflicted files: $conflicted_files"
-            
-            # Auto-resolve by choosing incoming version
-            for file in $conflicted_files; do
-                echo "🔧 Resolving conflicts in $file..."
-                git checkout --theirs "$file"
-                git add "$file"
-            done
-            
-            # Complete the merge
-            if git commit -m "Resolve merge conflicts in $branch"; then
-                echo "✅ Successfully resolved and merged $branch"
+        # Resolve conflicts by keeping main version for config files
+        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+        for file in $CONFLICTED_FILES; do
+            if [[ "$file" == "package.json" || "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
+                git checkout --ours "$file"
             else
-                echo "❌ Failed to resolve conflicts in $branch"
-                git merge --abort
+                git checkout --theirs "$file"
             fi
-        else
-            echo "❌ Failed to merge $branch"
-            git merge --abort
-        fi
+        done
+        
+        git add .
+        git commit -m "Resolve conflicts for $branch"
+        echo "✅ Resolved conflicts for $branch"
     fi
 done
 
-# Final status
-echo "📊 Final git status:"
-git status --short
-
-# Push changes
-echo "📤 Pushing changes to remote..."
-git push origin main
-
-echo "✅ Merge conflict resolution completed!"
+echo "🎉 Quick merge completed!"

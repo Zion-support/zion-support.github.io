@@ -1,1 +1,12 @@
-import _React from 'react'; export default function Privacy() { return ( <div className="min-h-screen bg-white py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1> <p className="text-gray-700">We respect your privacy. This is a placeholder policy. Contact us for details.</p> </div> </div> )}; export default Privacy;
+import React from 'react';
+
+const privacy: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">privacy</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default privacy;

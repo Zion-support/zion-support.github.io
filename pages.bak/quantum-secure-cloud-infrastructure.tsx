@@ -1,1 +1,12 @@
-import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function QuantumSecureCloudInfrastructurePage() { return ( <> <Head> <title>Quantum-Secure Cloud Infrastructure | Zion Tech Group</title> <meta name="description" content="Unbreakable quantum-resistant security for cloud workloads with post-quantum crypto,key management,and end-to-end policy controls." />" <link rel="canonical" href=""https": </Head> <ServiceLanding" title="Quantum-Secure Cloud Infrastructure description="Harden your cloud with quantum-resistant cryptography,hardware root-of-trust,confidential computing,and zero-trust service mesh. Delivered as a managed reference architecture with controls,observability,and compliance baked in."" subtitle="Post-quantum security foundations for mission-critical systems" pricePerMonthUSD={28999}" implementationWeeks="6–10 weeks roiNote="Reduce breach surface and compliance costs; future-proof against quantum threats" features={[Post-quantum TLS and key management (PQ-KMS)"," "Confidential computing with attestation and runtime policy",mTLS service mesh with identity-aware policies"," "Hardware-backed secrets and secure enclaves",Centralized audit with tamper-evident logs"," "Compliance mappings ("SOC": '2',"ISO": '27001',HIPAA,PCI)" ]}" industries={["Finance","Healthcare","Public Sector","SaaS"]}" canonical=""https": /> </> );"}
+import React from 'react';
+
+const quantum-secure-cloud-infrastructure: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">quantum-secure-cloud-infrastructure</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default quantum-secure-cloud-infrastructure;

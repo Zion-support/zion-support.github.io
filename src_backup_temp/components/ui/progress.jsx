@@ -1,30 +1,12 @@
-import {cn} from '../../lib/utils';
-;
-const Progress = React.forwardRef(({className, value, max = 100, ...props}, ref) => {;
-  const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
-  ;
-  return (;
-    <div;
-      ref={ref}
-      className={cn('relative w-full overflow-hidden bg-gray-200 rounded-full h-2', className)}
-      {...props}
-    >;
-      <div className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out";
-        style="{{{ "width": "`${percentage"}}"%` }}
-       />;
-    </div>;
-  );
-});
-;
-    >
-      <div className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out"
-        style="{{{ width: `${percentage}}"%` }}
-       />
+import React from 'react';
+
+const progress: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">progress</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-    );
-}
-    );
-Progress.displayName = 'Progress';
-;
-export {Progress};
-</div>
+  );
+};
+
+export default progress;

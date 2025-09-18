@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-
 const UltimateTechRevolution2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       id: 1,
@@ -72,7 +69,6 @@ const UltimateTechRevolution2026: React.FC = () => {
       stats: { enhancement: "500%", lifespan: "200+", intelligence: "300%", strength: "400%" }
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -80,7 +76,6 @@ const UltimateTechRevolution2026: React.FC = () => {
         <meta name="description" content="Experience the ultimate technological revolution of 2026: Consciousness Computing, Reality Manipulation, Transcendent AI Networks, and Evolutionary Enhancement Systems." />
         <link rel="canonical" href="https://ziontechgroup.com/pages/UltimateTechRevolution2026" />
       </Helmet>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
@@ -110,7 +105,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Technology Tabs */}
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -129,7 +123,6 @@ const UltimateTechRevolution2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Technology Details */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -148,7 +141,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                   <p className="text-xl mb-8 text-gray-300 leading-relaxed">
                     {technologies[activeTab].description}
                   </p>
-                  
                   <div className="mb-8">
                     <h3 className="text-2xl font-semibold mb-4 text-cyan-400">Revolutionary Features</h3>
                     <ul className="space-y-3">
@@ -161,7 +153,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="text-2xl font-semibold mb-4 text-purple-400">Applications</h3>
                   <div className="grid grid-cols-2 gap-4 mb-8">
@@ -174,7 +165,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   {/* Performance Stats */}
                   <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20">
                     <h4 className="text-xl font-semibold mb-4 text-yellow-400">Performance Metrics</h4>
@@ -187,7 +177,6 @@ const UltimateTechRevolution2026: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <div className="mt-6">
                     <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                       🚀 Experience This Technology
@@ -198,7 +187,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
         {/* Global Impact Section */}
         <div className="container mx-auto px-6 py-12">
           <motion.div
@@ -238,7 +226,6 @@ const UltimateTechRevolution2026: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Call to Action */}
         <div className="container mx-auto px-6 py-12 text-center">
           <motion.div
@@ -268,5 +255,4 @@ const UltimateTechRevolution2026: React.FC = () => {
     </>
   );
 };
-
 export default UltimateTechRevolution2026;

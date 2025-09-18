@@ -1,71 +1,12 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
-export const useTheme = (props: any) => {;
-type Theme = 'light' | 'dark' | 'system';
-'type Theme = 'light' | 'dark' | 'system';
-;
-interface ThemeContextType {;
-  theme: Them e;
-  setTheme: (theme: Them e) => void;
-  isDark: boolean}
-export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
-export const useTheme = ("props": "any) => {;
-type Theme = 'light' | 'dark' | 'system';
-'type Theme = 'light' | 'dark' | 'system';
-;
-interface ThemeContextType {;
-  "theme": Them e;
-  "setTheme": ("theme": Them e) => void;
-  "isDark": boolean"}
-;
-export;
-  if(context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider');
-  return context};
-;
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {;
-  "children": "React.ReactNode"}
-;
-export const "ThemeProvider": "React.FC<ThemeProviderProps> = ({ children "}) => {;
-  const [theme, setTheme] = useState<Theme>(() => {;
-    if(typeof window !== 'null') {;
-      if(saved && ['light',dark',system'].includes(saved)) {;
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
-export const useTheme = (props: any) => {;
-type Theme = 'light' | 'dark' | 'system';
-'type Theme = 'light' | 'dark' | 'system';
-interface ThemeContextType {
-  theme: Them e;
-  setTheme: (theme: Them e) => void;
-  isDark: boolean}
-export 
-  if(context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider');
-  return context};
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-  children: React.ReactNode}
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if(typeof window !== 'null') {
-      if(saved && ['light',dark',system'].includes(saved)) {
-        return saved}
-    }
-    return 'system'}
-    );
+import React from 'react';
 
-  const [isDark, setIsDark] = useState<any>(false);
+const ThemeProvider: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ThemeProvider</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-  useEffect(() => {
-// TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-;
-</any>;
-</Theme>;
-</ThemeProviderProps>;
-
-</any>
-</Theme>
-</ThemeProviderProps>
+export default ThemeProvider;

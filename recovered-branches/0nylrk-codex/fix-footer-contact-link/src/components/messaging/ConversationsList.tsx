@@ -1,95 +1,12 @@
+import React from 'react';
 
-  markAsRead: (conversationId: string) => Promise<void>;
-}
-
-export function ConversationsList({ 
-}: ConversationsListProps) {
+const ConversationsList: React.FC = () => {
   return (
-    <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
-      <div className="p-3 border-b border-zion-purple/20">
-        <h3 className="font-medium text-white">Conversations</h3>
-      </div>
-      {conversations.length === 0 ? (
-        <div className="p-8 text-center text-zion-slate">
-          <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />
-          <p>No conversations yet</p>
-          <p className="text-sm mt-1">
-            Start a conversation from a job or talent profile.
-          </p>
-        </div>
-      ) : (
-        <div>
-          {conversations.map((conversation) => (
-            <ConversationItem
-
-
-
-
-
-
-              }}
-            />;
-          ))}
-        </div>;
-      )}
-
-    </div>;
-  );
-}
-
-
-import {User} from 'lucide-react';
-import {Conversation} from '@/types / messaging';
-import {ConversationItem} from './ConversationItem';
-interface ConversationsListProps {
-  conversations: Conversation[],
-  active_conversation: Conversation | null,
-  setActiveConversation: (conversation: Conversation) => void,
-  markAsRead: (conversation_id: string) => Promise < void>;
-}
-export /**
- * ConversationsList - Function description
- */
-function ConversationsList() {
-  return (
-    <div className="w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto">;
-      <div className="p - 3 border - b border - zion - purple / 20">;
-        <h3 className="font - medium text - white">Conversations</h3>;
-      </div>;
-      {conversations.length === 0 ? (
-        <div className="p - 8 text - center text - zion - slate">;
-          <User className="h - 10 w - 10 mx - auto mb - 2 text - zion - purple / 40" />;
-          <p > No conversations yet</p>;
-          <p className="text - sm mt - 1">;
-            Start a conversation from a job or talent profile.;
-          </p>;
-        </div>) : (
-        <div>;
-          {conversations.map ((conversation) => (
-            <ConversationItem;
-              key={conversation.id}
-              conversation={conversation}
-              is_active={active_conversation?.id === conversation.id}
-              on_click={() => {
-                setActiveConversation (conversation);
-                markAsRead (conversation.id);
-              }}
-            />))}
-        </div>)}
-    </div>);
-}
-
-              key={conversation.id}
-              conversation={conversation}
-              isActive={activeConversation?.id === conversation.id}
-              onClick={() => {
-                setActiveConversation(conversation);
-                markAsRead(conversation.id);
-              }}
-            />
-          ))}
-        </div>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ConversationsList</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default ConversationsList;

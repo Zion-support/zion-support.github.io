@@ -1,99 +1,54 @@
-  children,
-  href,
-  onClick,
-  type = "button",
-  variant = "primary",
-  size = "md",
-  className = "",
-  disabled = false,
-  style,
-}) => {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from "react";
-import Link from "next/link";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-interface ButtonProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void;
-  type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "outline";
-  size?: "sm" | "md" | "lg";
-  className?: string;
-  disabled?: boolean;
-  style?: React && React.CSSProperties;
+const buttonVariants = cva(
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  href,
-  onClick,
-  type = "button",
-  variant = "primary",
-  size = "md",
-  className = "",
-  disabled = false,
-  style,
-}) => {
-  const baseClasses =
-    "px-4 py-2 rounded-md font-medium transition-colors duration-200";
-
-  const sizeClasses = {
-    sm: "px-3 py-1.5 text-sm",
-    md: "px-4 py-2 text-base",
-    lg: "px-6 py-3 text-lg",
-  };
-
-  const variantClasses = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
-    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
->>>>>>> origin/merged-prs
-  };
-  
-  const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-sm',
-    lg: 'px-6 py-3 text-base',
-    icon: 'w-10 h-10 p-0'
-  };
-  
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  
-  if (asChild) {
-    return <span className={classes}>{children}</span>;
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? "span" : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
   }
-  
-  return (
-    <button 
-      type={type} 
-      className={classes} 
-      onClick={onClick} 
-      disabled={disabled}
-      style={style}
->>>>>>> origin/merged-prs
-    >
-      {children}
-    </button>
->>>>>>> origin/merged-prs
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };

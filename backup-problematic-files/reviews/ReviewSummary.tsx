@@ -1,48 +1,12 @@
+import React from 'react';
 
-
-
-
- </div> </div> </div>) }
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
+const ReviewSummary: React.FC = () => {
   return (
-    <div className='enhanced-card flex items-center justify-between'>import React from 'react';
-import type { ReviewsSummary } from '../../types/reviews';
-import StarRating from './StarRating';
-import {Star} from 'lucide-react';
-type Props = {
-  summary: ReviewsSummary
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
-  return (
-    <div className='enhanced-card flex items-center justify-between'>
-      <div>
-        <div className='flex items-center gap-3'>
-          <span className='text-2xl font-semibold'>
-            {summary.averageRating.toFixed(1)}
-          </span>
-          <StarRating
-            value={Math.round(summary.averageRating)}
-            onChange={() => {}}
-            readOnly
-          />
-        </div>
-        <div className='text-sm text-gray-600 mt-1'>
-          <span className='mr-3'>{summary.totalReviews} reviews</span>          <span>{summary.totalCompletedProjects} completed projects</span>
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ReviewSummary</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-export default ReviewSummary;      <div>
-        <div className="flex items-center gap-3">
-          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
-          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
-        </div>
-        <div className="text-sm text-gray-600 mt-1">
-          <span className="mr-3">{summary.totalReviews} reviews</span>
-          <span>{summary.totalCompletedProjects} completed projects</span>
-        </div>
-      </div>
-    </div>
+};
 
-
-
+export default ReviewSummary;

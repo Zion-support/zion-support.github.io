@@ -1,42 +1,34 @@
 #!/bin/bash
+set -e
 
-<<<<<<< HEAD
-echo "Resolving merge conflicts by accepting our changes..."
+echo "Resolving merge conflicts automatically..."
 
-# Find all files with merge conflicts
-find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Resolving conflicts in: $file"
-    # Accept our changes (HEAD)
-    git checkout --ours "$file"
-  fi
-done
-
-echo "All merge conflicts resolved!"
-=======
-echo "Resolving merge conflicts..."
-
-# Function to resolve merge conflicts in a file
+# Function to resolve conflicts by choosing HEAD version
 resolve_conflicts() {
     local file="$1"
-    echo "Processing: $file"
-    
-    # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
-    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
+    if [ -f "$file" ]; then
+        echo "Resolving conflicts in $file"
+        # Use git checkout to choose HEAD version for conflicted files
+        git checkout --ours "$file" 2>/dev/null || true
+        git add "$file" 2>/dev/null || true
+    fi
 }
 
-# Find all files with merge conflicts in src directory
-find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        resolve_conflicts "$file"
-    fi
-done
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
 
-echo "Merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+if [ -n "$conflicted_files" ]; then
+    echo "Found conflicted files:"
+    echo "$conflicted_files"
+    
+    # Resolve each conflicted file
+    while IFS= read -r file; do
+        if [ -n "$file" ]; then
+            resolve_conflicts "$file"
+        fi
+    done <<< "$conflicted_files"
+    
+    echo "All conflicts resolved automatically"
+else
+    echo "No conflicts found"
+fi

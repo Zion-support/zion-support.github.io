@@ -1,32 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-pulse">Loading...</div>
+const PostJob: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>PostJob | Zion Tech Group</title>
+        <meta name="description" content="PostJob - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">PostJob</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-      />
-      <Header />
-      <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
-        <Card className="border shadow-md">
-          <CardHeader>
-            <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>
-            <CardDescription>
-              Fill out the form below to post your job and find the perfect talent.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <JobPostingForm />
-          </CardContent>
-        </Card>
-      </main>
-      <Footer />
-      {/* Add extra bottom padding on mobile to account for the bottom nav */}
-      {isMobile && <div className="h-16"></div>}
-    </>
-
-
-
-}
-;
-
+    </div>
   );
-}
+};
+
+export default PostJob;

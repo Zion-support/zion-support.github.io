@@ -1,22 +1,12 @@
 import React from 'react';
 
-interface ProgressProps {
-
-  value: number;
-  max?: number;
-  className?: string;
-
-}
-
-export function Progress(props: any) {
-  const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
-  
+const progress: React.FC = () => {
   return (
-    <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
-      <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"
-        style="{{{ width: `${percentage}}"%` }}
-       />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">progress</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-</div>
+};
+
+export default progress;

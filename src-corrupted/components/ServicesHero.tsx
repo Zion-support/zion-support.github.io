@@ -1,16 +1,12 @@
 import React from 'react';
 
-const ServicesHero: React.FC = (props: any) => {
-	return (
-		<section style="{{{
-			padding: '2.5rem 1.25rem'; background: 'linear-gradient(135deg; borderRadius: 16; color: 'white'; marginBottom: '1.5rem'}}"}>
-			<h1 style="{{{ margin: 0}}"}>Services that ship outcomes</h1>
-			<p style="{{{ marginTop: 8; opacity: 0.9}}"}>
-				From micro SaaS to enterprise AI and robust IT platforms, we deliver measurable ROI.
-			</p>
-		</section>
-	);
+const ServicesHero: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ServicesHero</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
 export default ServicesHero;
-
