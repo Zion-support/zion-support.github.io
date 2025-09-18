@@ -1,1 +1,198 @@
-import _React from 'react'; import Head from 'next/head'; import { MessageSquare,FileText,Users,CheckCircle } from 'lucide-react'; export default function AIServices() { const title = 'AI Services — Zion Tech Group'; const description = 'Cutting-edge AI solutions including autonomous systems,machine learning,natural language processing,and intelligent automation.'; const aiServices = [{ "title": 'AI-Powered Email Responder',"description": 'Automated email responses with sentiment analysis and intelligent categorization',"icon": 'MessageSquare',"features": [ 'Smart email categorization and prioritization','Automated response generation with personalization','Sentiment analysis and escalation triggers','Integration with CRM and helpdesk systems','Multi-language support and compliance' ],"pricing": '$2,500 - $8,000/month',"delivery": '2-3 weeks',"category": 'Communication AI' },{ "title": 'AI Content Creation Suite',"description": 'Comprehensive AI-powered content generation for marketing,social media,and documentation',"icon": 'FileText',"features": ['Automated blog posts and articles','Social media content generation','Product descriptions and marketing copy','Technical documentation creation','SEO-optimized content with keyword integration' ],"pricing": '$1,500 - $5,000/month',"delivery": '1-2 weeks',"category": 'Content AI' },{ "title": 'Intelligent Document Processing',"description": 'AI-powered document analysis,extraction,and processing for business automation',"icon": 'FileText',"features": ['Automated data extraction from PDFs and forms','Document classification and routing','OCR with 99%+ accuracy','Contract analysis and risk assessment','Compliance monitoring and reporting' ],"pricing": '$3,000 - $12,000/month',"delivery": '3-4 weeks',"category": 'Document AI' },{ "title": 'AI-Powered Talent Matching',"description": 'Advanced recruitment platform with AI-driven candidate screening and matching',"icon": 'Users',"features": ['Intelligent candidate screening and ranking','Skills matching and gap analysis','Automated interview scheduling','Cultural fit assessment','Predictive hiring analytics' ],"pricing": '$4,000 - $15,000/month',"delivery": '4-6 weeks',"category": 'HR AI' } ]; return ( <> <Head> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="icon" href="/favicon.ico" /> </Head> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white"> <main className="container mx-auto px-6 py-12"> <section className="text-center mb-16"> <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> AI Services </h1> <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> {description} </p> </section> <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8"> {aiServices.map((service,index) => ( <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"> <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6"> <service.icon className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3> <p className="text-slate-300 mb-6">{service.description}</p> <div className="space-y-2 mb-6"> {service.features.map((feature,idx) => ( <div key={idx} className="flex items-center text-sm text-slate-300"> <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /> {feature} </div> ))} </div> <div className="flex justify-between items-center text-sm"> <span className="text-cyan-400 font-medium">{service.pricing}</span> <span className="text-slate-400">{service.delivery}</span> </div> </div> ))} </div> </main> </div> </> )}
+import React from 'react';
+
+<<<<<<< HEAD
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
+
+const aiServices = [
+  {
+    title: 'AI Consciousness Evolution',
+    description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
+    icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    href: '/ai-consciousness-evolution-2029',
+    features: ['Emotional Intelligence', 'Consciousness Development', 'Ethical AI Framework']
+  },
+  {
+    title: 'AI Autonomous Research',
+    description: 'Self-directed AI research assistants for breakthrough discoveries',
+    icon: <Target className="w-8 h-8 text-purple-400" />,
+    href: '/ai-autonomous-research-assistant',
+    features: ['Independent Research', 'Data Analysis', 'Hypothesis Generation']
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'Predictive analytics for industrial equipment and systems',
+    icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    href: '/ai-predictive-maintenance-platform',
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Cost Optimization']
+  },
+  {
+    title: 'AI Content Personalization',
+    description: 'Dynamic content adaptation based on user behavior and preferences',
+    icon: <Users className="w-8 h-8 text-green-400" />,
+    href: '/ai-content-personalization-engine',
+    features: ['User Profiling', 'Dynamic Content', 'Engagement Optimization']
+  },
+  {
+    title: 'AI Autonomous Business Operations',
+    description: 'End-to-end automation of business processes and decision-making',
+    icon: <Rocket className="w-8 h-8 text-blue-400" />,
+    href: '/autonomous-business-operations-platform',
+    features: ['Process Automation', 'Decision Intelligence', 'Operational Efficiency']
+  },
+  {
+    title: 'AI Ethics & Governance',
+    description: 'Framework for responsible AI development and deployment',
+    icon: <Shield className="w-8 h-8 text-red-400" />,
+    href: '/ai-ethics-governance-framework',
+    features: ['Ethical Guidelines', 'Governance Framework', 'Compliance Monitoring']
+  }
+];
+
+export default function AIServices() {
+  return (
+    <QuantumHolographicMatrixBackground intensity={1.5}>
+      <Head>
+        <title>AI Services | Zion Tech Group</title>
+        <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+      </Head>
+
+      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <ServiceAds heading="Featured AI Services" subheading="Production-ready offerings with transparent pricing." items={featuredAIAds} />
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Services</h1>
+          <p className="text-xl text-gray-300">From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {tracks.map((t) => (
+            <div key={t.title} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
+              <div className="mb-4">{t.icon}</div>
+              <h3 className="text-white font-semibold mb-2">{t.title}</h3>
+              <p className="text-gray-400 text-sm">{t.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {packages.map((p) => (
+              <div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
+                <h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
+                <div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  {p.items.map((i) => (
+                    <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our AI Service Portfolio
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Comprehensive AI solutions designed to transform your business and accelerate innovation
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+                <div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
+                >
+                  <div className="mb-6">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <motion.a
+                    href={service.href}
+                    whileHover={{ x: 5 }}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </motion.a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  Schedule Consultation
+                </button>
+                <button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                >
+                  View Case Studies
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+=======
+const ai-services: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ai-services</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ai-services;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

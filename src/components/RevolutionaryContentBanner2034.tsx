@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentBanner2034: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white mb-12">
@@ -71,6 +70,5 @@ const RevolutionaryContentBanner2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default RevolutionaryContentBanner2034;

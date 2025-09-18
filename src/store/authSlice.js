@@ -23,11 +23,9 @@ export const loginUser = createAsyncThunk(
           }
         }, 1000);
       });
-
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -58,11 +56,9 @@ export const signupUser = createAsyncThunk(
           }
         }, 1000);
       });
-
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -92,7 +88,6 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-
       if (token && user) {
         return {
           user: JSON.parse(user),
@@ -148,7 +143,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Signup
     builder
       .addCase(signupUser.pending, (state) => {
@@ -166,7 +160,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Logout
     builder
       .addCase(logoutUser.pending, (state) => {
@@ -183,7 +176,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Check auth status
     builder
       .addCase(checkAuthStatus.pending, (state) => {

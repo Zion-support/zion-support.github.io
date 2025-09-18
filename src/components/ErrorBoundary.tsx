@@ -2,113 +2,42 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+  public state: State = {
+    hasError: false
+  };
 
-  static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to monitoring service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      });
-    }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Uncaught error:', error, errorInfo);
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  render() {
+  public render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="text-red-500 text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">
-                  <div className="text-red-600 font-bold">Error:</div>
-                  <div className="mb-2">{this.state.error.message}</div>
-                  <div className="text-red-600 font-bold">Stack Trace:</div>
-                  <div className="whitespace-pre-wrap">{this.state.error.stack}</div>
-                  {this.state.errorInfo && (
-                    <>
-                      <div className="text-red-600 font-bold mt-2">Component Stack:</div>
-                      <div className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</div>
-                    </>
-                  )}
-                </div>
-              </details>
-            )}
-            
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Try Again
-              </button>
-              <button
-                onClick={() => window.location.href = '/'}
-                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                Go Home
-              </button>
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold mb-6">Something went wrong</h1>
+              <p className="text-xl text-gray-300 mb-8">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               >
-                Reload Page
+                Refresh Page
               </button>
-            </div>
-            
-            <div className="mt-6 text-sm text-gray-500">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-2">
-                <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-blue-600 hover:text-blue-800 underline"
-                >
-                  support@ziontechgroup.com
-                </a>
-              </p>
             </div>
           </div>
         </div>

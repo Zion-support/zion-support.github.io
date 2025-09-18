@@ -1,47 +1,22 @@
-import {useParams} from 'react-router-dom';'''
-import {useState} from 'react';'''
-import {Button} from '@/components/ui/button';'''
-import {NEW_PRODUCTS} from '@/data/newProductsData';'''
-import {useCart} from '@/context/CartContext';'''
-import {toast} from '@/hooks/use-toast';
-export default function ProductPage(props: any) {}
-  const {id} = useParams();
-  const product = NEW_PRODUCTS.find(p => p.id === id);
-  const {dispatch} = useCart();
-  const [adding, setAdding] = useState(false);
-  if (!product) {}
-    return <div className="p-6 text-white">Product not found</div>;
-  }
-  const handleAdd = (props: any) => {}
-    setAdding(true);
-    dispatch({}
-'
-''
-'''
-      type: 'ADD_ITEM',
-      payload: {}
-        id: product.id,
-        name: product.title,
-        price: product.price ?? 0,
-        quantity: 1}});'
-    toast({title: 'Added to cart', variant: 'success'});
-    setTimeout(() => setAdding(false), 500);
-  };"""
-  return (""""
-    <div className="min-h-screen bg-zion-blue p-6 text-white">""""
-      <h1 className="text-2xl font-bold mb-4">{product.title}</h1>""""
-      <p className="mb-6">{product.description}</p>
-      <Button onClick={handleAdd} disabled={adding}>'
-        {adding ? 'Adding...' : 'Add to Cart'}
-      </Button>
-    </div>)}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export {ProductPage};
+const ProductPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ProductPage | Zion Tech Group</title>
+        <meta name="description" content="ProductPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ProductPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export {ProductPage};
-
-export {ProductPage};
-
-export {ProductPage};
-
-export {ProductPage};
+export default ProductPage;

@@ -1,69 +1,13 @@
 import React from 'react';
-
-
+import { Helmet } from 'react-helmet-async';
 const FutureTechVision2026: React.FC = () => {
-  const visionSections = [
-    {
-      title: "Consciousness Computing",
-      icon: "🧠",
-      description: "AI systems that achieve true consciousness and self-awareness",
-      timeline: "2026-2027",
-      impact: "Revolutionary",
-      details: [
-        "Self-aware artificial intelligence",
-        "Emotional intelligence processing",
-        "Creative problem solving",
-        "Autonomous decision making"
-      ]
-    },
-    {
-      title: "Quantum Reality",
-      icon: "⚡",
-      description: "Quantum computing that can simulate entire universes",
-      timeline: "2026-2028",
-      impact: "Transformative",
-      details: [
-        "Universe-scale simulations",
-        "Quantum entanglement networks",
-        "Parallel reality processing",
-        "Infinite computational power"
-      ]
-    },
-    {
-      title: "Neural Integration",
-      icon: "🧬",
-      description: "Seamless integration between human and artificial intelligence",
-      timeline: "2026-2029",
-      impact: "Evolutionary",
-      details: [
-        "Direct brain-computer interfaces",
-        "Enhanced cognitive abilities",
-        "Shared consciousness networks",
-        "Human-AI symbiosis"
-      ]
-    },
-    {
-      title: "Omniversal Access",
-      icon: "🌟",
-      description: "Access to information and processing across all dimensions",
-      timeline: "2026-2030",
-      impact: "Transcendent",
-      details: [
-        "Multi-dimensional data access",
-        "Universal knowledge processing",
-        "Infinite information networks",
-        "Cosmic intelligence systems"
-      ]
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -87,13 +31,12 @@ const FutureTechVision2026: React.FC = () => {
                 Watch Presentation
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-
       {/* Vision Timeline */}
       <div className="container mx-auto px-4 py-16">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -102,12 +45,19 @@ const FutureTechVision2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">🚀 Technology Roadmap</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Our comprehensive roadmap for the next decade of technological advancement.
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🔮 FUTURE VISION • JANUARY 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6">Future Tech Vision 2026</h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Envisioning the future of technology and its transformative impact on humanity
           </p>
-        </div>
-
+        </motion.div>
         <div className="space-y-12">
           {visionSections.map((section, index) => (
-            <div
+            <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -135,7 +85,7 @@ const FutureTechVision2026: React.FC = () => {
                   <p className="text-xl opacity-80 mb-6">{section.description}</p>
                   <div className="grid md:grid-cols-2 gap-4">
                     {section.details.map((detail, detailIndex) => (
-                      <div
+                      <motion.div
                         key={detailIndex}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -144,7 +94,7 @@ const FutureTechVision2026: React.FC = () => {
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full"></div>
                         <span className="text-lg">{detail}</span>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -161,66 +111,10 @@ const FutureTechVision2026: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Impact Predictions */}
-      <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm py-16">
-        <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-6">📊 Predicted Impact</h2>
-            <p className="text-xl opacity-80 max-w-3xl mx-auto">
-              Our technologies are predicted to have transformative effects across all industries and aspects of human life.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
-            >
-              <div className="text-5xl font-bold text-purple-400 mb-2">1000x</div>
-              <div className="text-lg opacity-80 mb-2">Productivity Increase</div>
-              <div className="text-sm opacity-60">Across all industries</div>
-            </div>
-            <div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
-            >
-              <div className="text-5xl font-bold text-indigo-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-80 mb-2">Problem Solving</div>
-              <div className="text-sm opacity-60">Success rate</div>
-            </div>
-            <div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
-              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
-            >
-              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
-              <div className="text-lg opacity-80 mb-2">Scalability</div>
-              <div className="text-sm opacity-60">Unlimited growth</div>
-            </div>
-            <div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-              className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8"
-            >
-              <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
-              <div className="text-lg opacity-80 mb-2">Consciousness</div>
-              <div className="text-sm opacity-60">AI achievement</div>
         {/* Vision Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -236,7 +130,6 @@ const FutureTechVision2026: React.FC = () => {
               <li>• Renewable energy revolution</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Human Enhancement</h3>
@@ -250,7 +143,6 @@ const FutureTechVision2026: React.FC = () => {
               <li>• Longevity treatments</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Colonization</h3>
@@ -265,7 +157,6 @@ const FutureTechVision2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Future Scenarios */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🔮 Future Scenarios 2026-2030</h2>
@@ -291,7 +182,6 @@ const FutureTechVision2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🤖 AI-Human Symbiosis</h3>
                 <p className="text-lg opacity-90 mb-4">
@@ -313,7 +203,6 @@ const FutureTechVision2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🌌 Interdimensional Access</h3>
@@ -335,7 +224,6 @@ const FutureTechVision2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🧬 Biological Revolution</h3>
                 <p className="text-lg opacity-90 mb-4">
@@ -359,7 +247,6 @@ const FutureTechVision2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Roadmap */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🗺️ Technology Roadmap 2026-2030</h2>
@@ -409,11 +296,10 @@ const FutureTechVision2026: React.FC = () => {
                 <p className="text-lg opacity-90">Complete transcendence of physical limitations and universal access</p>
               </div>
             </div>
-            </div>
       {/* Impact Predictions */}
       <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -423,10 +309,9 @@ const FutureTechVision2026: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               Our technologies are predicted to have transformative effects across all industries and aspects of human life.
             </p>
-          </div>
-
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.9 }}
@@ -435,8 +320,8 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-5xl font-bold text-purple-400 mb-2">1000x</div>
               <div className="text-lg opacity-80 mb-2">Productivity Increase</div>
               <div className="text-sm opacity-60">Across all industries</div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.0 }}
@@ -445,8 +330,8 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-5xl font-bold text-indigo-400 mb-2">99.9%</div>
               <div className="text-lg opacity-80 mb-2">Problem Solving</div>
               <div className="text-sm opacity-60">Success rate</div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.1 }}
@@ -455,8 +340,8 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
               <div className="text-lg opacity-80 mb-2">Scalability</div>
               <div className="text-sm opacity-60">Unlimited growth</div>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
@@ -465,14 +350,14 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
               <div className="text-lg opacity-80 mb-2">Consciousness</div>
               <div className="text-sm opacity-60">AI achievement</div>
-            </div>
+            </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
-
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
@@ -482,8 +367,7 @@ const FutureTechVision2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Discover how our revolutionary technologies will transform every aspect of human life.
           </p>
-        </div>
-
+        </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -523,7 +407,7 @@ const FutureTechVision2026: React.FC = () => {
               applications: ["Empathy amplification", "Conflict resolution", "Cultural exchange", "Global cooperation"]
             }
           ].map((app, index) => (
-            <div
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -541,38 +425,48 @@ const FutureTechVision2026: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
+        {/* Impact Predictions */}
+        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">📈 Impact Predictions</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-pink-400 mb-2">10B+</div>
+              <div className="text-lg opacity-90">Lives Transformed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">100%</div>
+              <div className="text-lg opacity-90">Problem Solving</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">∞</div>
+              <div className="text-lg opacity-90">Possibilities</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">100%</div>
+              <div className="text-lg opacity-90">Future Ready</div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          className="text-center"
-        >
           <h2 className="text-4xl font-bold mb-6">Be Part of the Future</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Join us in shaping the future of technology and humanity. 
-            Together, we can create a world beyond our wildest dreams.
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join us in shaping the future of technology and humanity
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join the Revolution →
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/pages/RevolutionaryTechInsights2026" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore Insights →
+            </a>
+            <a href="/pages/AdvancedTechSolutions2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              View Solutions →
+            </a>
+            <a href="/pages/NextGenInnovationHub2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Join Innovation Hub →
+            </a>
           </div>
         </motion.div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechVision2026;

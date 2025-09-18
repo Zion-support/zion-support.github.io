@@ -1,88 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function HealthcareAISolutions() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-			title="Healthcare AI Solutions"
-			slug="healthcare-ai-solutions"
-			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
-			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
-
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Reduce admin time 20–40% and improve throughput"
-			features={[
-				"Clinical note summarization and coding (CPT/ICD)"
-				"Diagnostic support with literature grounding"
-				"Prior auth automation and appeals drafts"
-				"Capacity forecasting and staffing optimization"
-				"HIPAA-compliant data pipelines and audit"
-
-				"EHR integrations: HL7/FHIR, Epic, Cerner"
-			]}
-			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-
-			pricePerMonthUSD={2999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Reduce admin time 20–40% and improve throughput"
-			features={[
-				"Clinical note summarization and coding (CPT/ICD)",
-				"Diagnostic support with literature grounding",
-				"Prior auth automation and appeals drafts",
-				"Capacity forecasting and staffing optimization",
-				"HIPAA-compliant data pipelines and audit",
-				"EHR integrations: HL7/FHIR, Epic, Cerner"
-
-			]}
-			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
-		/>
-	)
+const healthcare-ai-solutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>healthcare-ai-solutions | Zion Tech Group</title>
+        <meta name="description" content="healthcare-ai-solutions - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">healthcare-ai-solutions</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/healthcare-ai-solutions";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default healthcare-ai-solutions;

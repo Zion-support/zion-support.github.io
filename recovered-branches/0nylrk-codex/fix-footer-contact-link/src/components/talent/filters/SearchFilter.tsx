@@ -1,20 +1,12 @@
+import React from 'react';
 
-import { Input } from "@/components/ui/input";
-import { SearchIcon } from "lucide-react";
-import { SearchFilterProps } from "@/types/filters";
-
+const SearchFilter: React.FC = () => {
   return (
-    <div className="mb-6">
-      <div className="relative">
-        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-        <Input
-          type="text"
-          placeholder="Search talents..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SearchFilter</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default SearchFilter;

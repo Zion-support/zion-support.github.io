@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ContentItem = {
   id: string;
   title: string;
@@ -45,20 +46,12 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     tag: "Guide",
     date: "2025-09-15",
   },
-  {
-    id: "autonomous-support-agents-2026",
-    title: "AI 2026: Autonomous Customer Support Agents",
-    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
-    href: "/blog/ai-2026-autonomous-customer-support-agents",
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
-    tag: "Guide",
-    date: "2025-09-15",
-  },
+=======
+export const latestContent = [
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
   {
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
@@ -68,6 +61,17 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
@@ -160,38 +164,14 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+<<<<<<< HEAD
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
     tag: "Blueprint",
     date: "2025-09-15",
-  },
-  {
-    id: "ai-governance-2025",
-    title: "AI Governance Playbook 2025",
-    summary: "A practical guide to building safe, compliant AI systems at scale.",
-    href: "/resources/ai-governance-2025",
-    tag: "Guide",
-    date: "2025-09-10",
-  },
-  {
-    id: "quantum-edge-report",
-    title: "Quantum + Edge: 2026 Readiness Report",
-    summary: "Where quantum acceleration meets edge workloads—benchmarks and ROI models.",
-    href: "/resources/quantum-edge-readiness",
-    tag: "Report",
-    date: "2025-09-12",
-  },
-  {
-    id: "ai-security-blueprint",
-    title: "AI Security Blueprint",
-    summary: "Threat modeling, red teaming, and runtime defenses for agentic systems.",
-    href: "/resources/ai-security-blueprint",
-    tag: "Blueprint",
-    date: "2025-09-14",
   }
 ];
