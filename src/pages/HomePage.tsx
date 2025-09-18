@@ -1,181 +1,142 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Cloud, Brain, Shield, Zap, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function HomePage() {
-  const heroStats = [
-    { value: '200+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-400', icon: '🚀' },
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: '🛡️' },
-    { value: '21', label: 'Day Free Trials', color: 'text-blue-400', icon: '⏰' },
-    { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: '🤖' },
-  ];
-
-  const coreServices = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence for business transformation',
-      icon: <Brain className="w-8 h-8" />,
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      title: 'Cloud & Infrastructure',
-      description: 'Scalable cloud solutions for modern applications',
-      icon: <Cloud className="w-8 h-8" />,
-      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Serverless Architecture', 'DevOps Automation']
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Advanced security frameworks and threat protection',
-      icon: <Shield className="w-8 h-8" />,
-      features: ['Zero Trust Security', 'Penetration Testing', 'Compliance Auditing', 'Incident Response']
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'End-to-end business process modernization',
-      icon: <Zap className="w-8 h-8" />,
-      features: ['Process Automation', 'Legacy Modernization', 'API Integration', 'Data Migration']
-    }
-  ];
-
-  const technologies = [
-    { name: 'React & Next.js', icon: '⚛️' },
-    { name: 'Node.js & Python', icon: '🐍' },
-    { name: 'AWS & Azure', icon: '☁️' },
-    { name: 'Docker & Kubernetes', icon: '🐳' },
-    { name: 'TensorFlow & PyTorch', icon: '🤖' },
-    { name: 'Blockchain & Web3', icon: '⛓️' }
-  ];
-
+const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
-      
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Pioneering the Future of Technology with AI, Quantum Computing, and Advanced Solutions
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {heroStats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.icon}</div>
-                  <div className="text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="text-sm text-white/70">{stat.label}</div>
-                </div>
-              ))}
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => window.location.href = '/services'}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center"
+              <Link
+                to="/services"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105"
               >
-                Explore Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button
-                onClick={() => window.location.href = '/contact'}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center"
+                Explore Our Services
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition duration-300"
               >
-                Get Started Today
-                <Rocket className="w-5 h-5 ml-2" />
-              </button>
+                Get in Touch
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Services Section */}
-      <section className="py-20 px-6 bg-slate-800/30 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Core Service Categories</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to transform your business and drive innovation.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Cutting-Edge Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver innovative solutions that transform businesses and drive digital transformation
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreServices.map((service, index) => (
-              <div
-                key={service.title}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group"
-              >
-                <div className="text-cyan-400 mb-4 group-hover:text-purple-400 transition-colors duration-300">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-white/70 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-white/60">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI & Machine Learning</h3>
+              <p className="text-gray-600">
+                Advanced AI solutions that automate processes, enhance decision-making, and drive innovation across industries.
+              </p>
+            </div>
 
-      {/* Technologies Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Technologies We Master</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Cutting-edge technologies and frameworks to build scalable, modern applications.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
-              <div
-                key={tech.name}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
-              >
-                <div className="text-3xl mb-2">{tech.icon}</div>
-                <div className="text-sm text-white/80">{tech.name}</div>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-            ))}
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
+              <p className="text-gray-600">
+                Revolutionary quantum computing solutions that solve complex problems beyond classical computing capabilities.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cybersecurity</h3>
+              <p className="text-gray-600">
+                Comprehensive security solutions protecting your digital assets with cutting-edge threat detection and prevention.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Solutions</h3>
+              <p className="text-gray-600">
+                Scalable cloud infrastructure and services that enable seamless digital transformation and operational efficiency.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Data Analytics</h3>
+              <p className="text-gray-600">
+                Advanced analytics and business intelligence solutions that turn data into actionable insights and competitive advantage.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mobile Solutions</h3>
+              <p className="text-gray-600">
+                Innovative mobile applications and solutions that enhance user experience and drive business growth.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-blue-600/80 to-purple-600/80 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center">
-          <div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that have already revolutionized their operations with our cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => window.location.href = '/services'}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button
-                onClick={() => window.location.href = '/contact'}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center"
-              >
-                Get Started Today
-                <Rocket className="w-5 h-5 ml-2" />
-              </button>
-            </div>
-          </div>
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Join thousands of companies that have revolutionized their operations with our cutting-edge technology solutions.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-white text-blue-900 hover:bg-gray-100 font-semibold py-4 px-10 rounded-lg transition duration-300 transform hover:scale-105 inline-block"
+          >
+            Start Your Journey Today
+          </Link>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default HomePage;
