@@ -1,6 +1,7 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
-  publish = "dist"
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
@@ -14,12 +15,13 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-## No Next.js plugin needed for Vite SPA
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-## Functions directory not used for static Vite build
-#[functions]
-#  directory = "netlify/functions"
-#  node_bundler = "esbuild"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
