@@ -1,11 +1,6 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-import { motion } from 'framer-motion';
+
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">

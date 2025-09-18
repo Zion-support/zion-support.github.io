@@ -45,7 +45,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
       ],
       icon: '🌟',
       color: 'from-emerald-600 to-teal-600'
-    };
+    }
   };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
