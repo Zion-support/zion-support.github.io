@@ -1,3 +1,4 @@
+<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/safeStorage.ts.backup.backup.1758130389
 <<<<<<< HEAD
     } catch (error) {
       console.warn('localStorage not available:', error);
@@ -119,6 +120,8 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
+=======
+>>>>>>> 05fabbf610e8ccaf3f54e32b18aef1bf80799814:src/utils/safeStorage.ts
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -129,6 +132,7 @@ export const safeStorage = {
       return null;
     }
   },
+
   setItem: (key: string, value: string): void => {
     try {
       localStorage.setItem(key, value);
@@ -136,6 +140,7 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
     }
   },
+
   removeItem: (key: string): void => {
     try {
       localStorage.removeItem(key);
@@ -143,15 +148,17 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
     }
   },
+
   clear: (): void => {
     try {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
     }
-  };
+  }
 };
 
+<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/safeStorage.ts.backup.backup.1758130389
 export default safeStorage;
     try {
     } catch (error) {
@@ -164,3 +171,6 @@ export const safeStorage = {
     } catch (error) {
       console.warn('localStorage not available:', error);
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+export default safeStorage;
+>>>>>>> 05fabbf610e8ccaf3f54e32b18aef1bf80799814:src/utils/safeStorage.ts

@@ -399,223 +399,7 @@ content_index:
         payback: "3.8 months"
 
   newly_added_september_2025:
-    - id: "ai-2026-reliable-agent-rollouts-checklist"
-      type: "blog"
-      title: "AI 2026: Reliable Agent Rollouts — Practical Checklist"
-      file_path: "/content/blog/ai-2026-reliable-agent-rollouts-checklist.md"
-      url: "/blog/ai-2026-reliable-agent-rollouts-checklist"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Agents", "Reliability", "Evals", "Progressive Delivery", "2026"]
-      featured: true
-      is_new: true
-      reading_time: "8 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-    - id: "ai-2026-agent-billing-controls-blueprint"
-      type: "blog"
-      title: "AI 2026: Agentic Billing Controls — Budgets, Approvals, and Guardrails"
-      file_path: "/content/blog/ai-2026-agent-billing-controls-blueprint.md"
-      url: "/blog/ai-2026-agent-billing-controls-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["AI", "Cost", "Governance", "Budgets", "Approvals", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        budget_breaches: "-60%"
-        approval_lead_time: "-50%"
-        cost_slo_coverage: "100% gated"
-    - id: "ai-2026-agent-postmortems-field-guide"
-      type: "blog"
-      title: "AI 2026: Agent Postmortems — Field Guide to Fewer Repeat Incidents"
-      file_path: "/content/blog/ai-2026-agent-postmortems-field-guide.md"
-      url: "/blog/ai-2026-agent-postmortems-field-guide"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Incidents", "Postmortems", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      reading_time: "10 min read"
-      metrics:
-        repeat_incidents: "-40%"
-        remediation_lead_time: "-50%"
-        verification_evals: "wired"
-    - id: "ai-2026-real-world-eval-gates-case-studies"
-      type: "blog"
-      title: "AI 2026: Real-World Eval Gates — Case Studies from Production"
-      file_path: "/content/blog/ai-2026-real-world-eval-gates-case-studies.md"
-      url: "/blog/ai-2026-real-world-eval-gates-case-studies"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "CI/CD", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      reading_time: "13 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-    - id: "ai-2026-agentic-sandbox-patterns"
-      type: "blog"
-      title: "AI 2026: Agentic Sandbox Patterns"
-      file_path: "/content/blog/ai-2026-agentic-sandbox-patterns.md"
-      url: "/blog/ai-2026-agentic-sandbox-patterns"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Agents", "Security", "Sandboxing", "Policy-as-Code", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        reliability: "99.9%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "ai-2026-agent-safety-observability-blueprint"
-      type: "blog"
-      title: "AI 2026: Agent Safety & Observability Blueprint"
-      file_path: "/content/blog/ai-2026-agent-safety-observability-blueprint.md"
-      url: "/blog/ai-2026-agent-safety-observability-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Agents", "Observability", "Evals", "Safety", "Governance"]
-      featured: true
-      is_new: true
-      reading_time: "14 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "ai-2026-live-evals-in-production-practical-guide"
-      type: "blog"
-      title: "AI 2026: Live Evals in Production — Practical Guide"
-      file_path: "/content/blog/ai-2026-live-evals-in-production-practical-guide.md"
-      url: "/blog/ai-2026-live-evals-in-production-practical-guide"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Reliability", "Governance", "Observability", "2026"]
-      featured: true
-      is_new: true
-      reading_time: "14 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "agent-observability-starter-kit-2026"
-      type: "resource"
-      title: "Agent Observability Starter Kit 2026"
-      file_path: "/content/resources/agent-observability-starter-kit-2026.md"
-      url: "/resources/agent-observability-starter-kit-2026"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Observability", "Evals", "Policy-as-Code", "Reliability"]
-      featured: true
-      is_new: true
-      reading_time: "10 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        incident_mttr: "< 10 min"
-        approval_speed: "2x"
-    - id: "ai-2026-production-safety-checklist"
-      type: "blog"
-      title: "AI 2026: Production Safety Checklist"
-      file_path: "/content/blog/ai-2026-production-safety-checklist.md"
-      url: "/blog/ai-2026-production-safety-checklist"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Safety", "Change Management", "Reliability", "Evals", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        rollback_time: "< 5 min"
-        reliability: "99.9%"
-        audit_ready: true
-    - id: "ai-2026-evaluation-cookbook"
-      type: "blog"
-      title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
-      file_path: "/content/blog/ai-2026-evaluation-cookbook.md"
-      url: "/blog/ai-2026-evaluation-cookbook"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Reliability", "Policy-as-Code", "Observability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        coverage: "> 70% initial"
-        gate_pass_rate: "> 95%"
-        audit_ready: true
-    - id: "ai-2026-eval-gated-ci-cd-blueprint"
-      type: "blog"
-      title: "AI 2026: Eval‑Gated CI/CD Blueprint — Shipping Fast Without Breaking Things"
-      file_path: "/content/blog/ai-2026-eval-gated-ci-cd-blueprint.md"
-      url: "/blog/ai-2026-eval-gated-ci-cd-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-    - id: "ai-2026-agentic-observability-deep-dive"
-      type: "blog"
-      title: "AI 2026: Agentic Observability Deep Dive — Traces, Evals, and Safety Telemetry"
-      file_path: "/content/blog/ai-2026-agentic-observability-deep-dive.md"
-      url: "/blog/ai-2026-agentic-observability-deep-dive"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Observability", "Agents", "Evals", "Safety", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        latency_p95: "< 600ms"
-        citation_density: "> 0.9"
-        audit_ready: true
-    - id: "ai-2026-sovereign-ai-commerce"
-      type: "blog"
-      title: "AI 2026: Sovereign AI Commerce — Autonomous Marketplaces"
-      file_path: "/content/blog/ai-2026-sovereign-ai-commerce.md"
-      url: "/blog/ai-2026-sovereign-ai-commerce"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Autonomous Commerce", "Marketplaces", "Policy-as-Code", "Safety", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        settlement_speed: "3x"
-        incidents_reduction: "40%"
-        audit_ready: true
-    - id: "ai-2026-realtime-evals-at-scale"
-      type: "blog"
-      title: "AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates"
-      file_path: "/content/blog/ai-2026-realtime-evals-at-scale.md"
-      url: "/blog/ai-2026-realtime-evals-at-scale"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Evaluations", "Reliability", "Progressive Delivery", "Observability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        rollback_time: "< 5 min"
-        reliability: "99.9%"
-        error_budget: "guarded"
-    - id: "ai-2026-enterprise-rag-observability"
-      type: "blog"
-      title: "AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry"
-      file_path: "/content/blog/ai-2026-enterprise-rag-observability.md"
-      url: "/blog/ai-2026-enterprise-rag-observability"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["RAG", "Observability", "Evals", "Safety", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        latency_p95: "< 250ms"
-        citation_density: "> 0.9"
-        audit_ready: true
-    - id: "ai-2026-eval-driven-release-engineering"
+    - id: "ai-2026-evidence-driven-release-checklists"
       type: "blog"
       title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
       file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
@@ -689,6 +473,7 @@ content_index:
         incident_reduction: "40%"
         mttr: "< 10 min"
         cost_optimization: "20-40%"
+
     - id: "ai-2026-privacy-preserving-agents"
       type: "blog"
       title: "AI 2026: Privacy-Preserving Agents"
@@ -849,3 +634,28 @@ content_index:
         cost_savings: "60%"
         prediction_accuracy: "95%"
       reading_time: "18 min read"
+=======
+<<<<<<< HEAD
+      reading_time: "18 min read"
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-e453
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-7720
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015

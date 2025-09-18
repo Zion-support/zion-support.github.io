@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+// Example: Dynamic imports for better code splitting;
+const LazyComponent = React.lazy (() => import ('./LazyComponent'));
+;
+// Example: Route - based code splitting;
+const HomePage = React.lazy (() => import ('../pages / Home'));
+const AboutPage = React.lazy (() => import ('../pages / About'));
+;
+// Example: Component - based code splitting;

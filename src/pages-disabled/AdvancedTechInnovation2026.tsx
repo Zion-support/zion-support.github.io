@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/merge-new-content-1757989975
 const AdvancedTechInnovation2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>AdvancedTechInnovation2026 | Zion Tech Group</title>
@@ -16,7 +12,6 @@ const AdvancedTechInnovation2026: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">AdvancedTechInnovation2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -130,7 +125,6 @@ const AdvancedTechInnovation2026: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>

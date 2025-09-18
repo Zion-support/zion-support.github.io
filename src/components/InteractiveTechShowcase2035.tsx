@@ -45,7 +45,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
       ],
       icon: '🌟',
       color: 'from-emerald-600 to-teal-600'
-    };
+    }
   };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -59,27 +59,27 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </p>
         </div>
 
-        {/* Tab Navigation */};
+        {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-2 border border-gray-700/50">
             {Object.entries(technologies).map(([key, tech]) => (
               <button
-                key={key};
-                onClick={() => setActiveTab(key)};
+                  key={key}
+                  onClick={() => setActiveTab(key)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === key
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
                     : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
-                }`};
+                }`}
               >
                 <span className="mr-2">{tech.icon}</span>
-                {tech.title};
+                {tech.title}
               </button>
-            ))};
+            ))}
           </div>
         </div>
 
-        {/* Active Technology Display */};
+        {/* Active Technology Display */}
         <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-700/50 mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>

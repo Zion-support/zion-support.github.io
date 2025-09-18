@@ -1,0 +1,38 @@
+# Manual Merge Conflict Resolution Commands
+# Run these commands one by one in your terminal
+
+# 1. Check current status
+git status
+git branch --show-current
+
+# 2. Switch to main and pull latest
+git checkout main
+git pull origin main
+
+# 3. Check for existing conflicts
+git diff --name-only --diff-filter=U
+
+# 4. If conflicts exist, resolve them
+# For each conflicted file, run:
+# git checkout --ours <filename>
+# git add <filename>
+# git commit -m "Resolve conflicts"
+
+# 5. Get list of open PRs
+curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open | jq '.[] | {number: .number, head: .head.ref}'
+
+# 6. For each PR branch, merge it:
+# git fetch origin <branch-name>
+# git merge --no-commit --no-ff origin/<branch-name>
+
+# 7. If conflicts occur, resolve them:
+# git checkout --ours .
+# git add .
+# git commit -m "Merge <branch-name> - resolved conflicts"
+
+# 8. Push changes
+git push origin main
+
+# 9. Test build
+npm run build:netlify
+npm run health-check

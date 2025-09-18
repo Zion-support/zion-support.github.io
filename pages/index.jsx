@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import ContentShowcaseBanner2026 from '../src/components/ContentShowcaseBanner2026';
+=======
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import Layout from './components/Layout';
+const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
+>>>>>>> origin/backup-main-20250918-004015
 
 const Home = () => {
   return (
@@ -113,4 +120,8 @@ const Home = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home;
+>>>>>>> origin/backup-main-20250918-004015

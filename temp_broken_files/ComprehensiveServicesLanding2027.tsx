@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';cursor/fix-netlify-build-and-merge-to-main-a068
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -121,6 +125,7 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/pages/ComprehensiveServicesLanding2027.tsx
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -205,6 +210,10 @@ export default function ComprehensiveServicesLanding2027() {
     }
     return `$${price}`;
   };
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesLanding2027.tsx
+
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/pages/ComprehensiveServicesLanding2027.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -223,17 +232,12 @@ export default function ComprehensiveServicesLanding2027() {
               Comprehensive Services
             <br />
             <span className="text-white">Landing 2027</span>
-          </divh1>
-          
           <divp 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology services designed to 
             transform your business and drive innovation across every industry.
-          </divp>
-
           {/* Search Bar */}
-          <div 
             className="max-w-2xl mx-auto mb-8"
           >
             <div className="relative">
@@ -245,11 +249,6 @@ export default function ComprehensiveServicesLanding2027() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
               />
-            </div>
-          </div>
-
-          {/* Quick Stats */}
-          <div 
             className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -268,15 +267,9 @@ export default function ComprehensiveServicesLanding2027() {
               <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">24/7</div>
               <div className="text-purple-400 text-sm">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Category Navigation */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -286,13 +279,9 @@ export default function ComprehensiveServicesLanding2027() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Navigate through our comprehensive service categories to find the perfect 
               solution for your business needs.
-            </p>
-          </div>
-
           {/* Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              <button
                 key={category.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -306,12 +295,10 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
-              </button>
             ))}
       {/* Services Showcase */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -323,13 +310,9 @@ export default function ComprehensiveServicesLanding2027() {
                 ? 'Explore our complete portfolio of innovative services and solutions.'
                 : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               }
-            </p>
-          </div>
-
           {/* Services Grid */}
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
-              <div
                 key={service.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -390,9 +373,6 @@ export default function ComprehensiveServicesLanding2027() {
                         Get Quote
                         <ArrowRight className="w-4 h-4 ml-2" />
                 {/* Expanded Details */}
-                <div>
-                  {expandedService === service.id && (
-                    <div
                       className="border-t border-white/20 bg-white/5"
                     >
                       <div className="p-6">
@@ -434,30 +414,18 @@ export default function ComprehensiveServicesLanding2027() {
                                 • {service.roi} ROI guarantee<br />
                                 • {service.setupTime} rapid deployment<br />
                                 • 24/7 expert support
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
             ))}
             {/* No Results Message */}
             {filteredServices.length === 0 && (
-              <div 
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
-              </div>
             )}
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20"
@@ -497,24 +465,41 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-green-400 text-sm">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
-import React from 'react';
-
-const ComprehensiveServicesLanding2027: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">ComprehensiveServicesLanding2027</h1>
-          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
-};
-
-export default ComprehensiveServicesLanding2027;
+}
+// Helper component for DNA icon
+function Dna({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+  );
+}
+  Zap as ZapIconDup,
+  Shield as ShieldIconDup,
+  Cloud as CloudIconDup,
+  Brain as BrainIconDup,
+  Rocket as RocketIconDup,
+  Leaf as LeafIconDup
+          <divdiv 
+          </divdiv>
+          {/* Quick Stats */}
+          <divdiv 
+          </divdiv>
+          <divdiv 
+          </divdiv>
+              <divbutton
+              </divbutton>
+          <divdiv 
+          </divdiv>
+              <divdiv
+                <div>
+                  {expandedService === service.id && (
+                    <divdiv
+                    </divdiv>
+                  )}
+                </div>
+              </divdiv>
+              <divdiv 
+              </divdiv>
+          <divdiv 
+          </divdiv>

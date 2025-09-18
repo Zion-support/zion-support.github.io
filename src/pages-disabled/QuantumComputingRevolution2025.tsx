@@ -12,7 +12,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -55,4 +54,3 @@ export default QuantumComputingRevolution2025;
 };
 
 export default QuantumComputingRevolution2025;
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988

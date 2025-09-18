@@ -92,4 +92,8 @@ The build successfully created:
 - `dist/_headers` - Security headers
 - All other static assets
 
+<<<<<<< HEAD
 The build is production-ready and optimized for Netlify deployment.
+=======
+The build is production-ready and optimized for Netlify deployment.
+>>>>>>> origin/backup-main-20250918-004015

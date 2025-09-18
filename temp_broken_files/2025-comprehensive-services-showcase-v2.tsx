@@ -193,7 +193,6 @@ const function ComprehensiveServicesShowcase2025V2() { = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2025V2() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
             </a>
           </div>
         </div>

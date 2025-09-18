@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+import React from 'react';
+import SEO from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 
 interface CookieType {
   id: string;
@@ -9,11 +11,6 @@ interface CookieType {
   examples: string[];
   alwaysActive: boolean;
 }
-
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
 
 export default function Cookies() {
   return (
@@ -168,4 +165,3 @@ export default function Cookies() {
     </>
   );
 }
->>>>>>> origin/website-improvements-v2

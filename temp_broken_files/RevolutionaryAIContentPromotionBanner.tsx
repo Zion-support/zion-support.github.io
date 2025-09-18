@@ -3,7 +3,6 @@ import React from 'react';
 ArrowRightSparklesZapTrendingUpStar
 
 export default function RevolutionaryAIContentPromotionBanner() {
-=======
 const function RevolutionaryAIContentPromotionBanner() { = () => {
   return (
     <divsection
@@ -23,7 +22,6 @@ const function RevolutionaryAIContentPromotionBanner() { = () => {
         </div>
       </div>
     </div>
-=======
         </div>
       </div>
     </divsection>

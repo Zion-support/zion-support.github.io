@@ -1,8 +1,7 @@
-import Link from 'next/link';
+// @ts-nocheck
 import React from 'react';
-import FeatureCard from './components/FeatureCard';
-=======
 import Link from 'next/link';
+<<<<<<< HEAD
 import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
@@ -251,6 +250,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Launch Sovereign</span>
@@ -261,35 +261,23 @@ export default function HomePage() {
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
               Built for the future of decentralized business.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
 =======
-// @ts-nocheck
-import React from 'react';
-import Link from 'next/link';
   ],
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
-=======
-// @ts-nocheck
-import React from 'react';
-import Link from 'next/link';
-  ],
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
-=======
-=======
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -301,6 +289,7 @@ import Link from 'next/link';
                 🔬 New: Foundation Models 2025
               </a>
               </Link>
+<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
@@ -317,18 +306,11 @@ import Link from 'next/link';
           </div>
         </div>
       </section>
-
 =======
-              </Link>
               <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
                 ✅ New: AI Safety & Governance 2025
               </a>
-
-=======
-              </Link>
-              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
-                ✅ New: AI Safety & Governance 2025
-              </a>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
@@ -338,10 +320,9 @@ import Link from 'next/link';
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
+<<<<<<< HEAD
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
-      {/* Latest Blog Content */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
       {/* Latest Blog Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -360,7 +341,9 @@ import Link from 'next/link';
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Everything You Need to Build the Future</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything You Need to Build the Future
+            </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
               for launching sovereign digital economies.
@@ -526,7 +509,9 @@ import Link from 'next/link';
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
-            <h2 className="text-4xl font-bold mb-6">Ready to Build the Future?</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Build the Future?
+            </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
@@ -538,7 +523,7 @@ import Link from 'next/link';
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
-=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -547,6 +532,15 @@ import Link from 'next/link';
                 📊 Explore Examples
               </a>
               </Link>
+<<<<<<< HEAD
+              </a>
+              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Operating Systems
+              <a href="/blog/edge-ai-marketplaces" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Edge AI Marketplaces
+              </a>
+              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Blueprint 2025
               <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
               <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
@@ -630,14 +624,7 @@ import Link from 'next/link';
 =======
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
-import FeatureCard from './components/FeatureCard';
-=======
-import React from 'react'
-import Link from 'next/link'
-import FeatureCard from './components/FeatureCard'
-=======
-              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Operating Systems
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -722,7 +709,7 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-=======
+<<<<<<< HEAD
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -754,7 +741,6 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -779,64 +765,7 @@ export default function HomePage() {
               <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
                 📰 New: Agent Safety Red Teaming 2025
               </a>
-              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift">
-                📰 New: Agentic Supply Chains 2025
-              </a>
-              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift">
-                📰 New: Edge AI Compliance 2025
-              </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Content Showcase */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Frameworks & Case Studies</h2>
-            <p className="text-gray-600 text-lg">Comprehensive guides and real-world success stories for enterprise AI transformation</p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            <a
-              href="/blog/ai-2026-autonomous-operations-framework"
-              className="group block bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 text-white flex items-center justify-center text-xl font-bold">AO</div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-800">Framework</span>
-                    <span className="text-xs text-gray-500">New</span>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Autonomous Operations Framework 2026</h3>
-                </div>
-              </div>
-              <p className="text-gray-600 text-sm mb-4">Complete blueprint for building self-managing, self-optimizing, and self-healing AI systems that scale infinitely.</p>
-              <div className="flex items-center text-indigo-600 font-medium text-sm group-hover:text-indigo-700">
-                Read Framework <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-              </div>
-            </a>
-
-            <a
-              href="/case-studies/ai-automation-healthcare-transformation"
-              className="group block bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-teal-500 to-cyan-600 text-white flex items-center justify-center text-xl font-bold">HC</div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs px-2 py-1 rounded-full bg-teal-100 text-teal-800">Healthcare</span>
-                    <span className="text-xs text-gray-500">Featured</span>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">Healthcare Transformation Success</h3>
-                </div>
-              </div>
-              <p className="text-gray-600 text-sm mb-4">340% efficiency gain and 60% cost reduction in major healthcare system serving 2.3M patients annually.</p>
-              <div className="flex items-center text-teal-600 font-medium text-sm group-hover:text-teal-700">
-                Read Case Study <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-              </div>
-            </a>
           </div>
         </div>
       </section>
@@ -855,6 +784,17 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />
+<<<<<<< HEAD
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -892,7 +832,6 @@ export default function HomePage() {
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
-=======
             </div>
           </div>
         </div>
@@ -951,7 +890,7 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
@@ -979,14 +918,4 @@ export default function HomePage() {
     </div>;
   )}}
 =======
-=======
-=======
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
-=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

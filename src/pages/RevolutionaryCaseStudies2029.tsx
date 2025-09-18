@@ -111,7 +111,8 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       technologies: ["Cosmic Intelligence", "Universal Communication", "Interstellar Networking", "Galactic Connectivity"],
       testimonial: "The cosmic intelligence network has enabled communication with intelligent life forms across the galaxy. This is humanity's greatest achievement.",
       author: "Dr. Robert Kim, Chief Scientist, UniComm Corporation"
-    };
+    }
+  ];
   const getResultColor = (value: string) => {
     if (value.includes('∞') || value.includes('100%')) return 'text-green-400';
     if (value.includes('+')) return 'text-cyan-400';
@@ -134,18 +135,18 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
           </p>
         </div>
 
-        {/* Case Study Navigation */};
+        {/* Case Study Navigation */}
         <div className="mb-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {caseStudies.map((caseStudy, index) => (
               <button
-                key={caseStudy.id};
-                onClick={() => setSelectedCase(index)};
+                  key={caseStudy.id}
+                  onClick={() => setSelectedCase(index)}
                 className={`p-4 rounded-lg transition-all duration-300 ${
                   selectedCase === index
                     ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white scale-105'
                     : 'bg-white/10 hover:bg-white/20 text-white/80 hover:text-white'
-                }`};
+                }`}
               >
                 <div className="text-2xl mb-2">{caseStudy.industry === 'Manufacturing' ? '🏭' : 
                   caseStudy.industry === 'Healthcare' ? '🏥' :

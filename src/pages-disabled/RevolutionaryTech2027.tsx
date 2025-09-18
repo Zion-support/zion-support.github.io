@@ -164,7 +164,6 @@ const RevolutionaryTech2027: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
   );
   };
 export default RevolutionaryTech2027;

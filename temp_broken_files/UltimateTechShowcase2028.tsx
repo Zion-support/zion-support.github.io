@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const UltimateTechShowcase2028: React.FC = () => {
@@ -51,7 +50,6 @@ const UltimateTechShowcase2028: React.FC = () => {
               Schedule Demo
             </button>
           </div>
-=======
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">UltimateTechShowcase2028</h1>

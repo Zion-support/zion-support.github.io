@@ -36,7 +36,6 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { QuoteFormSection } from '@/components/QuoteFormSection';
 
-<<<<<<< HEAD
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
@@ -313,7 +312,6 @@ export default function CybersecurityServicesPage() {
                 <p className="text-muted-foreground text-sm">
                   Automated incident response and threat mitigation
                 </p>
-=======
 export default function CybersecurityServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -408,7 +406,6 @@ export default function CybersecurityServicesPage() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🔍</span>
->>>>>>> origin/website-improvements-v2
               </div>
               <h3 className="text-xl font-semibold mb-3">Penetration Testing</h3>
               <p className="text-gray-600 mb-4">
@@ -583,7 +580,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       {/* Contact Information Banner */}
       <div className="bg-white border-b border-gray-200">
@@ -1398,7 +1394,6 @@ export default function CybersecurityServicesPage() {
         </div>
       </div>
       <TrustedBySection />
-=======
       </section>
 
       {/* Contact Section */}
@@ -1420,7 +1415,6 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/website-improvements-v2
     </div>
   );
 }

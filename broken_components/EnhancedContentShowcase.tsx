@@ -98,7 +98,6 @@
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
           <motion.div
             key={slide.id}
             initial={{ opacity: 0, y: 30 }}
@@ -125,7 +124,6 @@
         {/* Main Showcase Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
->>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -227,7 +225,6 @@
                         </ul>
                       </div>
                     </div>
->>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
                   </div>
                 </div>
               </motion.div>
@@ -381,4 +378,3 @@
 };
 
 export default EnhancedContentShowcase;
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988

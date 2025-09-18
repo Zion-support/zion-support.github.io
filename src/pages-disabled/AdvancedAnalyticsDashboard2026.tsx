@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Users, DollarSign, Activity, Target, Zap, Globe } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> origin/merge-new-content-1757989975
 
 const AdvancedAnalyticsDashboard2026: React.FC = () => {
   const [selectedTimeframe, setSelectedTimeframe] = useState('7d');
@@ -68,7 +65,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="p-6">
         <div className="max-w-7xl mx-auto">
@@ -133,7 +129,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -160,13 +155,11 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
             <div
               key={index}
               className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30"
->>>>>>> origin/merge-new-content-1757989975
             >
               <h3 className="text-xl font-bold text-white mb-4">Revenue Trends</h3>
               <div className="h-64 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
                 <p className="text-gray-400">Chart visualization would go here</p>
               </div>
-<<<<<<< HEAD
             </motion.div>
 
             <motion.div
@@ -174,7 +167,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-=======
               <div className="text-3xl font-bold mb-2">{metric.value}</div>
               <div className="text-blue-200 text-sm">{metric.title}</div>
             </div>
@@ -332,7 +324,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
->>>>>>> origin/merge-new-content-1757989975
             >
               <h3 className="text-xl font-bold text-white mb-4">User Engagement</h3>
               <div className="h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
@@ -340,7 +331,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
 
           {/* Key Insights */}
           <motion.div
@@ -368,8 +358,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-=======
->>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>

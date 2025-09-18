@@ -20,7 +20,6 @@ import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
 import { Cpu, Database, Shield, TrendingUp, Users, Globe, ArrowRight, Network, Code, BarChart3 } from 'lucide-react';
->>>>>>> origin/backup-main-20250916-071805
 import SEOHead from '../components/SEOHead';
 import { Helmet } from 'react-helmet-async';
   Settings,

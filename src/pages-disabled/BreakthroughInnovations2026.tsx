@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 
->>>>>>> origin/merge-new-content-1757989975
 const BreakthroughInnovations2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>BreakthroughInnovations2026 | Zion Tech Group</title>
@@ -19,7 +15,6 @@ const BreakthroughInnovations2026: React.FC = () => {
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -238,7 +233,6 @@ const BreakthroughInnovations2026: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/merge-new-content-1757989975
     </div>
   );
 

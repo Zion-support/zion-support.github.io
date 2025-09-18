@@ -51,6 +51,10 @@ After running the complete script, you should see:
 
 ```
 🎉 COMPLETE MERGE RESOLUTION PROCESS FINISHED!
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
 ====
 
 📊 FINAL SUMMARY:

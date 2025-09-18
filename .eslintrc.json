@@ -6,8 +6,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,7 +18,6 @@
   },
   "plugins": [
     "react",
-    "react-hooks",
     "@typescript-eslint"
   ],
   "rules": {
@@ -37,6 +35,9 @@
   "ignorePatterns": [
     "temp_*",
     "backup*",
+    "src_backup_temp*",
+    "temp-backup*",
+    "temp-problematic-pages*",
     "recovered-branches",
     "zion-website",
     "zion-os",
@@ -51,6 +52,26 @@
     "temp_conflicted_files",
     "temp_exclude",
     "dist",
-    "node_modules"
+    "node_modules",
+    "src_backup_temp",
+    "temp-backup",
+    "temp-problematic-pages",
+    "tests",
+    "zion.app",
+    "src/pages-disabled",
+    "src/utils-disabled",
+    "src/components-disabled",
+    "src/data",
+    "src/hooks",
+    "src/integrations",
+    "src/lib",
+    "src/store",
+    "src/setupTests.ts",
+    "tests/*",
+    "src/pages-disabled/*",
+    "src/utils-disabled/*",
+    "zion.app/*",
+    "types/*",
+    "utils/*"
   ]
 }

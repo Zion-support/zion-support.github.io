@@ -70,14 +70,15 @@ export default function AppOptimizedLazy(): React.JSX.Element {
                     <div className="absolute top-0 left-0 w-full h-full">
                       {[...Array(50)].map((_, i) => (
                         <div
-                          key={i};
+                          key={i}
                           className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
                           style={{
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 3}s`}};
+                            animationDelay: `${Math.random() * 3}s`
+                          }}
                         />
-                      ))};
+                      ))}
                     </div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center space-x-3 mb-4">
@@ -192,4 +193,4 @@ export default function AppOptimizedLazy(): React.JSX.Element {
       </div>
     </Router>
   );
-};
+}
