@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -14,18 +13,15 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
     { id: 'cloud', name: 'Cloud Services', icon: '☁️' }
   ];
 
-=======
 import React from 'react';
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
   const caseStudies = [
     {
       id: 1,
       title: "Fortune 500 Manufacturing Revolution",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
-<<<<<<< HEAD
       category: "ai",
       challenge: "Inefficient production lines causing 40% waste and $50M annual losses",
       solution: "Implemented our Conscious AI Systems for autonomous production optimization",
@@ -201,7 +197,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Discover how our revolutionary technologies have transformed businesses across industries, delivering unprecedented results and measurable impact.
-=======
       challenge: "Inefficient production processes and high operational costs",
       solution: "Implemented autonomous AI agents and quantum processing systems",
       results: {
@@ -322,13 +317,11 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Discover how our cutting-edge AI solutions are transforming industries and delivering unprecedented results for businesses worldwide.
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
             </p>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -372,7 +365,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                 </div>
                 <div className={`px-3 py-1 bg-gradient-to-r ${study.color} text-white text-xs font-bold rounded-full`}>
                   {study.industry}
-=======
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -393,21 +385,18 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                 </div>
                 <div className={`px-3 py-1 bg-gradient-to-r ${study.color} text-white text-xs font-semibold rounded-full`}>
                   SUCCESS
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
                 </div>
               </div>
 
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
-<<<<<<< HEAD
                   <h4 className="text-lg font-semibold mb-2 text-red-300">Challenge:</h4>
                   <p className="text-sm opacity-80">{study.challenge}</p>
                 </div>
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold mb-2 text-green-300">Solution:</h4>
                   <p className="text-sm opacity-80">{study.solution}</p>
-=======
                   <h4 className="text-lg font-semibold mb-2 text-red-400">Challenge:</h4>
                   <p className="text-gray-300 text-sm">{study.challenge}</p>
                 </div>
@@ -418,12 +407,10 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold mb-2 text-blue-400">Description:</h4>
                   <p className="text-gray-300 text-sm">{study.description}</p>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
                 </div>
               </div>
 
               {/* Results */}
-<<<<<<< HEAD
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3 text-blue-300">Results:</h4>
                 <div className="grid grid-cols-2 gap-2">
@@ -449,7 +436,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-emerald-400">{study.metrics.team}</div>
                   <div className="text-xs opacity-75">Team Size</div>
-=======
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
                   <div className="text-2xl font-bold text-green-400">{study.results.efficiency}</div>
@@ -478,29 +464,23 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                       {tech}
                     </span>
                   ))}
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
                 </div>
               </div>
 
               {/* CTA */}
               <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-<<<<<<< HEAD
                 View Full Case Study →
-=======
                 View Detailed Case Study →
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
               </button>
             </div>
           ))}
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Statistics Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
           <h2 className="text-4xl font-bold mb-8">Our Impact in Numbers</h2>
-=======
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -508,7 +488,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <p className="text-xl opacity-90">Combined results across all our revolutionary AI implementations</p>
           </div>
           
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="text-5xl font-bold mb-2">500+</div>
@@ -522,15 +501,12 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               <div className="text-5xl font-bold mb-2">99.9%</div>
               <div className="text-lg opacity-90">Success Rate</div>
             </div>
-<<<<<<< HEAD
             <div>
               <div className="text-5xl font-bold mb-2">50+</div>
               <div className="text-lg opacity-90">Industries Served</div>
-=======
             <div className="text-center">
               <div className="text-5xl font-bold text-orange-400 mb-2">500+</div>
               <div className="text-lg opacity-80">Companies Transformed</div>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
             </div>
           </div>
         </div>

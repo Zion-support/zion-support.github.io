@@ -17,36 +17,36 @@
 }
 
 .high-contrast button,
-.high-contrast a {
+.high-contrast .btn {
   background-color: var(--bg-secondary) !important;
   color: var(--text-secondary) !important;
   border: 2px solid var(--border) !important;
 }
 
-.high-contrast button:hover,
-.high-contrast a:hover {
-  background-color: var(--accent) !important;
+.high-contrast a {
+  color: var(--accent) !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: var(--bg-secondary) !important;
   color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
 }
 
 /* Large Text Mode */
 .large-text {
-  font-size: 1.25rem;
+  font-size: 1.2rem !important;
 }
 
-.large-text h1 { font-size: 3rem; }
-.large-text h2 { font-size: 2.5rem; }
-.large-text h3 { font-size: 2rem; }
-.large-text h4 { font-size: 1.75rem; }
-.large-text h5 { font-size: 1.5rem; }
-.large-text h6 { font-size: 1.25rem; }
-
-.large-text p,
-.large-text span,
-.large-text div {
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
+.large-text h1 { font-size: 2.5rem !important; }
+.large-text h2 { font-size: 2rem !important; }
+.large-text h3 { font-size: 1.75rem !important; }
+.large-text h4 { font-size: 1.5rem !important; }
+.large-text h5 { font-size: 1.25rem !important; }
+.large-text h6 { font-size: 1.125rem !important; }
 
 /* Reduced Motion */
 .reduced-motion *,
@@ -58,59 +58,68 @@
   scroll-behavior: auto !important;
 }
 
-/* Focus Visible */
-.focus-visible *:focus {
-  outline: 3px solid #3b82f6 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
-}
-
-.focus-visible button:focus,
-.focus-visible a:focus {
-  outline: 3px solid #ffff00 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
-}
-
-/* Screen Reader Optimizations */
-.screen-reader-optimized {
+/* Screen Reader Mode */
+.screen-reader-mode {
+  /* Hide decorative elements */
+  .decoration,
+  .ornament,
+  .visual-only {
+    display: none !important;
+  }
+  
   /* Ensure proper heading hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+  }
+  
+  /* Improve focus indicators */
+  *:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* Ensure sufficient color contrast */
+  a {
+    text-decoration: underline !important;
+  }
 }
 
-.screen-reader-optimized .sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+/* Color Blind Mode */
+.color-blind-mode {
+  /* Use patterns and shapes instead of relying solely on color */
+  .status-success::before {
+    content: "✓ ";
+    font-weight: bold;
+  }
+  
+  .status-error::before {
+    content: "✗ ";
+    font-weight: bold;
+  }
+  
+  .status-warning::before {
+    content: "⚠ ";
+    font-weight: bold;
+  }
+  
+  /* Use different border styles */
+  .border-success {
+    border-style: solid !important;
+  }
+  
+  .border-error {
+    border-style: dashed !important;
+  }
+  
+  .border-warning {
+    border-style: dotted !important;
+  }
 }
 
-.screen-reader-optimized .sr-only:focus {
-  position: static !important;
-  width: auto !important;
-  height: auto !important;
-  padding: 0.5rem !important;
-  margin: 0 !important;
-  overflow: visible !important;
-  clip: auto !important;
-  white-space: normal !important;
-}
-
-/* Keyboard Navigation */
-.keyboard-navigation *:focus {
-  outline: 2px solid #3b82f6 !important;
-  outline-offset: 2px !important;
-}
-
-.keyboard-navigation button:focus,
-.keyboard-navigation a:focus {
-  background-color: #1e40af !important;
-  color: white !important;
-  transform: scale(1.05) !important;
+/* Focus Management */
+*:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
 }
 
 /* Skip Links */
@@ -123,83 +132,129 @@
   padding: 8px;
   text-decoration: none;
   z-index: 1000;
-  border-radius: 4px;
-  font-weight: bold;
 }
 
 .skip-link:focus {
   top: 6px;
 }
 
-/* Focus Management */
-.focus-trap {
+/* ARIA Live Regions */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast for form elements */
+.high-contrast input[type="text"],
+.high-contrast input[type="email"],
+.high-contrast input[type="password"],
+.high-contrast textarea,
+.high-contrast select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure sufficient spacing for touch targets */
+button,
+.btn,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 16px;
+}
+
+/* Improve readability */
+p, li, span, div {
+  line-height: 1.6;
+}
+
+/* Ensure proper contrast ratios */
+.text-muted {
+  color: #6b7280 !important;
+}
+
+.high-contrast .text-muted {
+  color: #ffffff !important;
+}
+
+/* Loading states */
+.loading {
   position: relative;
 }
 
-.focus-trap:focus-within {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* ARIA Live Regions */
-.aria-live {
+.loading::after {
+  content: "";
   position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-/* High Contrast Focus Indicators */
-.high-contrast .focus-visible *:focus {
-  outline: 3px solid #ffff00 !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Reduced Motion Focus Indicators */
-.reduced-motion .focus-visible *:focus {
-  outline: 2px solid #3b82f6 !important;
-  outline-offset: 2px !important;
-  box-shadow: none !important;
+/* Reduced motion version of loading animation */
+.reduced-motion .loading::after {
+  animation: none;
+  border: 2px solid #3498db;
 }
 
-/* Print Styles for Accessibility */
-@media print {
-  .sr-only {
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: visible !important;
-    clip: auto !important;
-    white-space: normal !important;
-  }
-  
-  .skip-link {
-    display: none !important;
-  }
+/* Ensure images have proper alt text styling */
+img:not([alt]) {
+  border: 2px dashed #ff0000;
 }
 
-/* Dark Mode Accessibility */
-@media (prefers-color-scheme: dark) {
-  .focus-visible *:focus {
-    outline-color: #60a5fa !important;
-  }
+/* Table accessibility */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-/* High DPI Display Support */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .focus-visible *:focus {
-    outline-width: 2px !important;
-  }
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
-/* Reduced Data Mode */
-@media (prefers-reduced-data: reduce) {
-  .reduced-motion * {
-    animation: none !important;
-    transition: none !important;
-  }
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
+
+.high-contrast th {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Ensure proper heading hierarchy */
+h1 { font-size: 2rem; font-weight: bold; }
+h2 { font-size: 1.5rem; font-weight: bold; }
+h3 { font-size: 1.25rem; font-weight: bold; }
+h4 { font-size: 1.125rem; font-weight: bold; }
+h5 { font-size: 1rem; font-weight: bold; }
+h6 { font-size: 0.875rem; font-weight: bold; }

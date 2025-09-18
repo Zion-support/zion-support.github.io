@@ -220,7 +220,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   ];
 
   return (
-=======
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -302,7 +301,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
             <div className="mb-8">
-=======
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
               </motion.div>
@@ -588,5 +586,4 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-=======
 export default RevolutionaryTechInsights2026;

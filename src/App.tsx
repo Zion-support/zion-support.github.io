@@ -4,6 +4,14 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
 import ScrollToTop from './ScrollToTop';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import AnalyticsDashboard from './components/AnalyticsDashboard';
+import './styles/accessibility.css';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
@@ -109,34 +117,42 @@ const baseRoutes = [
 
 export default function App(): React.JSX.Element {
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Router>
-          <Header />
-          <main className="min-h-screen">
-            <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/faq" element={<FAQPage />} />
-                <Route path="/privacy" element={<PrivacyPage />} />
-                <Route path="/terms" element={<TermsPage />} />
-                <Route path="/sitemap" element={<SitemapPage />} />
-                <Route path="/help" element={<HelpPage />} />
-                <Route path="/cookies" element={<CookiesPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/partners" element={<PartnersPage />} />
-                <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
-                <Route path="/pages/FutureInnovationLab2025" element={<FutureInnovationLab2025 />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </Router>
-      </ThemeProvider>
-    </WhitelabelProvider>
+    <EnhancedErrorBoundary>
+      <WhitelabelProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Router>
+            <Header />
+            <main className="min-h-screen">
+              <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/faq" element={<FAQPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/sitemap" element={<SitemapPage />} />
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/partners" element={<PartnersPage />} />
+                  <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
+                  <Route path="/pages/FutureInnovationLab2025" element={<FutureInnovationLab2025 />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <PerformanceOptimizer />
+            <AccessibilityEnhancer />
+            <PerformanceMonitor />
+            <SecurityEnhancer />
+            <UserExperienceEnhancer />
+            <AnalyticsDashboard />
+          </Router>
+        </ThemeProvider>
+      </WhitelabelProvider>
+    </EnhancedErrorBoundary>
   );
 }

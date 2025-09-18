@@ -232,7 +232,6 @@ export default function DeFiNexusPlatform() {
     </Layout>
   );
 }
-=======
 import React from "react";
 
 const function DeFiNexusPlatform() { = () => {

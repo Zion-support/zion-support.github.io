@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 const RevolutionaryTechBreakthrough2033: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-=======
             </button>
           </div>
           

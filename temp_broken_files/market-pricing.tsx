@@ -392,7 +392,6 @@
               >
                 Get Custom Quote
 import React from "react";
-=======
               </a>
             </div>
           </div>

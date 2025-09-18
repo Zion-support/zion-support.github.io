@@ -241,7 +241,6 @@ const QuantumRealityEngine2027: React.FC = () => {
                 <div className="flex items-center space-x-2 text-sm text-rose-300">
                   <span className="w-2 h-2 bg-rose-400 rounded-full"></span>
                   <span>Mind-Reality Bridge</span>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
                 </div>
               </div>
             </div>
@@ -276,7 +275,6 @@ const QuantumRealityEngine2027: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
             </button>
           </div>
         </div>

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 const ComprehensiveServicesShowcase2030: React.FC = () => {
   return (
@@ -13,7 +11,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesShowcase2030</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 
 const function ComprehensiveServicesShowcase2030() {: React.FC = () => {
   return (
@@ -22,8 +19,6 @@ const function ComprehensiveServicesShowcase2030() {: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2030() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -769,19 +764,15 @@ export default function ComprehensiveServicesShowcase2030() {
               </div>
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 };
 
 
 export default ComprehensiveServicesShowcase2030;
-=======
 };
 
 export default function ComprehensiveServicesShowcase2030() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

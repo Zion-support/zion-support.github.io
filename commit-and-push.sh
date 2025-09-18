@@ -19,4 +19,8 @@ These changes should resolve the Netlify build timeout issues."
 # Push to main branch
 git push origin main
 
+<<<<<<< HEAD
 echo "Changes committed and pushed successfully!"
+=======
+echo "Changes committed and pushed successfully!"
+>>>>>>> origin/backup-main-20250918-004015

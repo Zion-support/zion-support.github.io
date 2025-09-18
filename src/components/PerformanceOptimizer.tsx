@@ -1,62 +1,112 @@
 import React, { useEffect, useState } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0
-  });
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  renderTime: number;
+  networkLatency: number;
+}
+
+export default function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
-    // Simulate performance metrics collection
-    const updateMetrics = () => {
-      setMetrics({
-        loadTime: Math.random() * 100 + 50, // 50-150ms
-        renderTime: Math.random() * 50 + 10, // 10-60ms
-        memoryUsage: Math.random() * 50 + 20, // 20-70MB
-        bundleSize: Math.random() * 200 + 100 // 100-300KB
-      });
-    };
+    // Performance monitoring
+    const startTime = performance.now();
+    
+    // Monitor memory usage
+    const memoryInfo = (performance as any).memory;
+    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
+    
+    // Monitor network latency
+    const networkLatency = performance.getEntriesByType('navigation')[0]?.responseEnd - 
+                          performance.getEntriesByType('navigation')[0]?.requestStart || 0;
+    
+    // Calculate render time
+    const renderTime = performance.now() - startTime;
+    
+    setMetrics({
+      loadTime: performance.now(),
+      memoryUsage,
+      renderTime,
+      networkLatency
+    });
 
-    updateMetrics();
-    const interval = setInterval(updateMetrics, 5000);
-
-    return () => clearInterval(interval);
+    // Optimize performance
+    optimizePerformance();
   }, []);
 
-  return (
-    <div className="bg-gradient-to-r from-green-900/30 to-teal-900/30 rounded-2xl p-6 border border-green-500/20">
-      <h3 className="text-2xl font-bold mb-4 flex items-center text-green-400">
-        <span className="text-3xl mr-3">⚡</span>
-        Performance Optimizer
-      </h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">{metrics.loadTime.toFixed(0)}ms</div>
-          <div className="text-sm text-gray-300">Load Time</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-teal-400">{metrics.renderTime.toFixed(0)}ms</div>
-          <div className="text-sm text-gray-300">Render Time</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-cyan-400">{metrics.memoryUsage.toFixed(0)}MB</div>
-          <div className="text-sm text-gray-300">Memory Usage</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">{metrics.bundleSize.toFixed(0)}KB</div>
-          <div className="text-sm text-gray-300">Bundle Size</div>
+  const optimizePerformance = () => {
+    // Lazy load images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+
+    // Preload critical resources
+    const criticalResources = [
+      '/src/index.css',
+      '/src/main.tsx'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+
+    // Optimize scroll performance
+    let ticking = false;
+    const optimizeScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Throttled scroll handling
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', optimizeScroll, { passive: true });
+
+    setIsOptimized(true);
+  };
+
+  if (!isOptimized) {
+    return (
+      <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
+        <div className="flex items-center space-x-2">
+          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+          <span>Optimizing Performance...</span>
         </div>
       </div>
-      <div className="mt-4 text-center">
-        <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-semibold">
-          <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-          Optimized Performance
-        </div>
+    );
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
+      <div className="text-sm">
+        <div className="font-semibold">Performance Optimized</div>
+        {metrics && (
+          <div className="text-xs opacity-90">
+            Load: {metrics.loadTime.toFixed(0)}ms | 
+            Memory: {metrics.memoryUsage.toFixed(1)}MB | 
+            Network: {metrics.networkLatency.toFixed(0)}ms
+          </div>
+        )}
       </div>
     </div>
   );
-};
-
-export default PerformanceOptimizer;
+}

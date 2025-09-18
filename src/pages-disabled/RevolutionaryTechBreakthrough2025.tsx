@@ -38,7 +38,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Future</h3>
             <p className="text-blue-100">Next-generation solutions</p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-da36
           </div>
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Revolutionary Technology Breakthrough 2025
@@ -137,9 +136,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-de62
->>>>>>> cursor/create-and-deploy-new-content-da36
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
         </div>
       </div>
     </div>

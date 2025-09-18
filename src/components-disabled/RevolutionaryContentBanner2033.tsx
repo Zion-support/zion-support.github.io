@@ -40,48 +40,11 @@ const RevolutionaryContentBanner2033: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/RevolutionaryContentBanner2033.tsx.backup.1758060118
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default RevolutionaryContentBanner2033;
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
 export default RevolutionaryContentBanner2033;
-=======
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988:src/components/RevolutionaryContentBanner2033.tsx
 export default RevolutionaryContentBanner2033;
               The fusion of quantum mechanics and human consciousness
             </p>
             <a href="/pages/QuantumConsciousnessRevolution2033" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Experience Quantum Consciousness →
 export default RevolutionaryContentBanner2033;
-<<<<<<< HEAD:src/components/RevolutionaryContentBanner2033.tsx.backup.1758060118
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988:src/components/RevolutionaryContentBanner2033.tsx

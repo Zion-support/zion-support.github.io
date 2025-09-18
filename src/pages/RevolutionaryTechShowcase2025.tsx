@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
-=======
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,7 +17,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       title: "Conscious AI Systems",
       description: "Revolutionary AI that exhibits self-awareness and emotional intelligence, capable of understanding context and making autonomous decisions.",
       features: [
-<<<<<<< HEAD
         "Self-aware decision making",
         "Emotional intelligence processing",
         "Autonomous problem solving",
@@ -29,7 +25,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
       stats: { performance: "99.9%", accuracy: "98.5%", speed: "10x faster" }
-=======
         "Self-learning algorithms",
         "Emotional intelligence processing",
         "Autonomous decision making",
@@ -37,12 +32,10 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       ],
       icon: "🧠",
       gradient: "from-purple-600 to-pink-600"
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
     },
     {
       id: 2,
       title: "Quantum Neural Networks",
-<<<<<<< HEAD
       description: "Breakthrough quantum computing integrated with neural networks, enabling exponential processing power for complex problem solving.",
       features: [
         "Quantum superposition processing",
@@ -53,7 +46,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       icon: "⚛️",
       color: "from-cyan-600 to-blue-600",
       stats: { performance: "∞", accuracy: "100%", speed: "Exponential" }
-=======
       description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power and speed.",
       features: [
         "Quantum superposition processing",
@@ -63,12 +55,10 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       ],
       icon: "⚡",
       gradient: "from-cyan-600 to-blue-600"
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
     },
     {
       id: 3,
       title: "Interdimensional Computing",
-<<<<<<< HEAD
       description: "Revolutionary computing technology that operates across multiple dimensions, accessing infinite computational resources.",
       features: [
         "Multi-dimensional processing",
@@ -79,7 +69,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       icon: "🌌",
       color: "from-emerald-600 to-teal-600",
       stats: { performance: "∞", accuracy: "Perfect", speed: "Instant" }
-=======
       description: "Access computing resources across multiple dimensions, enabling infinite scalability and processing power.",
       features: [
         "Multi-dimensional processing",
@@ -89,7 +78,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       ],
       icon: "🌌",
       gradient: "from-emerald-600 to-teal-600"
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
     },
     {
       id: 4,
@@ -106,7 +94,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -130,7 +117,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
-=======
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -189,7 +175,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         </script>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -208,7 +193,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             >
               🌟 REVOLUTIONARY TECHNOLOGY • JANUARY 2025
             </motion.div>
-<<<<<<< HEAD
             <motion.h1
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -323,7 +307,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Dimensional Computing</h3>
               <p className="text-sm opacity-80">Multi-dimensional processing</p>
             </div>
-=======
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Revolutionary Tech Showcase 2025
             </h1>
@@ -360,10 +343,8 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                 </button>
               </motion.div>
             ))}
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </div>
 
-<<<<<<< HEAD
       {/* Call to Action */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -387,7 +368,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         </div>
       </motion.div>
     </div>
-=======
           {/* Interactive Demo Section */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -478,7 +458,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       </motion.div>
       </div>
     </>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
   );
 };
 

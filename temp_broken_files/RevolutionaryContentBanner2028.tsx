@@ -109,7 +109,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
             >
               Ultimate Revolution 2029 →
             </a>
-=======
         </div>
         {/* Main Content Carousel */}
         <div className="relative">

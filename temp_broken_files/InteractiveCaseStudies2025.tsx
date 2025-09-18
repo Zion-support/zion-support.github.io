@@ -182,7 +182,6 @@ const function InteractiveCaseStudies2025() { = () => {
           <h1 className="text-5xl font-bold mb-6">function InteractiveCaseStudies2025() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
-=======
                   </button>
                 </div>
               </div>

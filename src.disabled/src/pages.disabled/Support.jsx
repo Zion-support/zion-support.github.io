@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/backup-main-20250918-004015
 import React from 'react';
 
 const Support: React.FC = () => {
