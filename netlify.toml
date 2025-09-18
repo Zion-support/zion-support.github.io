@@ -1,12 +1,13 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
+  command = "corepack enable && yarn install --immutable --inline-builds && yarn run build:netlify"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_USE_NPM = "true"
+  NETLIFY_USE_NPM = "false"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
