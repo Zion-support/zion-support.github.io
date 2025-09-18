@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
 // Fallback simple tabs
 const Tabs = ({ children, defaultValue, onValueChange, className }) => <div className={className}>{children}</div>;
 const TabsList = ({ children, className }) => <div className={className}>{children}</div>;
 const TabsTrigger = ({ children, value, className, onClick }) => <button className={className} onClick={onClick}>{children}</button>;
 const TabsContent = ({ children, value, className }) => <div className={className}>{children}</div>;
-import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";
+import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "../data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 const categoryIcons = {

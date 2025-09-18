@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { ChatWidget } from "@/components/ChatWidget";
+import { useAuth } from "../hooks/useAuth";
+import { ChatWidget } from "../components/ChatWidget";
 import { useRouter } from "next/router";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import ImageWithRetry from "../components/ui/ImageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { Link } from 'react-router-dom';
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
-import { toast } from "@/hooks/use-toast";
-import { PaymentButton } from "@/components/transactions/PaymentButton";
-import { ProfileContact } from "@/components/profile/ProfileContact";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { MARKETPLACE_LISTINGS } from "../data/marketplaceData";
+import { toast } from "../hooks/use-toast";
+import { PaymentButton } from "../components/transactions/PaymentButton";
+import { ProfileContact } from "../components/profile/ProfileContact";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../components/ui/dialog";
 export default function ListingDetail() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.

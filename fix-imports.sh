@@ -1,22 +1,26 @@
 #!/bin/bash
 
-# Script to fix import paths in JSX files
-set -e
+# Fix @/components imports to relative imports
+echo "Fixing @/components imports..."
 
-echo "🔧 Fixing import paths in JSX files..."
-
-# Find all JSX files with @/ imports
-find src -name "*.jsx" -exec grep -l "@/components" {} \; | while read file; do
-    echo "🔧 Fixing imports in $file"
+# Find all files with @/components imports and fix them
+find /workspace/src -name "*.jsx" -o -name "*.tsx" | while read file; do
+    # Get the directory depth to determine the relative path
+    dir=$(dirname "$file")
+    depth=$(echo "$dir" | grep -o "/" | wc -l)
     
-    # Fix common import path issues
-    sed -i 's|@/components/header/Header|@/components/Header|g' "$file"
-    sed -i 's|@/components/Header/Header|@/components/Header|g' "$file"
-    sed -i 's|@/components/Footer/Footer|@/components/Footer|g' "$file"
-    sed -i 's|@/components/SEO/SEO|@/components/SEO|g' "$file"
-    sed -i 's|@/components/GradientHeading/GradientHeading|@/components/GradientHeading|g' "$file"
+    # Calculate the relative path back to src
+    relative_path=""
+    for ((i=3; i<=depth; i++)); do
+        relative_path="../$relative_path"
+    done
     
-    echo "✅ Fixed imports in $file"
+    # Replace @/components with the relative path
+    if grep -q 'from "@/components' "$file"; then
+        echo "Fixing imports in: $file"
+        sed -i "s|from \"@/components|from \"${relative_path}components|g" "$file"
+        sed -i "s|from '@/components|from \"${relative_path}components|g" "$file"
+    fi
 done
 
-echo "🎉 Import path fixes completed!"
+echo "Import fixes completed!"

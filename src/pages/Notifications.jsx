@@ -1,14 +1,14 @@
 import React from 'react';
-import { useNotifications } from "@/context/notifications/NotificationContext";
+import { useNotifications } from "../context/notifications/NotificationContext";
 import { formatDistanceToNow } from "date-fns";
 import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
-import { SEO } from "@/components/SEO";
+import { Button } from "../components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
+import { Badge } from "../components/ui/badge";
+import { Skeleton } from "../components/ui/skeleton";
+import { SEO } from "../components/SEO";
 import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 const getNotificationIcon = (type, className = "h-5 w-5") => {
     switch (type) {
         case 'message':

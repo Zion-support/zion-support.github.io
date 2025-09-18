@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../components/ui/card";
 import { Check, Sparkles, Users, Building, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
