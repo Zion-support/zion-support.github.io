@@ -1,99 +1,33 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import React from 'react'
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Research', href: '/research' },
-  { name: 'News', href: '/news' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' }
+const navLinks = [
+	{ name: 'About', href: '/about' },
+	{ name: 'Services', href: '/services' },
+	{ name: 'Solutions', href: '/solutions' },
+	{ name: 'Research', href: '/research' },
+	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
-
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Zion Tech Group</span>
-            <span className="text-xl font-bold text-white">Zion</span>
-          </a>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              {item.name}
-            </a>
-          ))}
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/contact" className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200">
-            Get Started
-          </a>
-        </div>
-      </nav>
-      
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden">
-          <div className="fixed inset-0 z-50" />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
-            <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Zion Tech Group</span>
-                <span className="text-xl font-bold text-white">Zion</span>
-              </a>
-              <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5 text-white"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-white/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/10"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="/contact"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-white/10"
-                  >
-                    Get Started
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </header>
-  )
+	return (
+		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+			<nav className="mx-auto max-w-7xl flex items-center justify-between p-4" aria-label="Global">
+				<a href="/" className="text-white font-bold">Zion</a>
+				<div className="hidden md:flex gap-x-6">
+					{navLinks.map((item) => (
+						<a key={item.name} href={item.href} className="relative inline-flex items-center gap-1 text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">
+							<span>{item.name}</span>
+							{(item as any).badge ? (
+								<span className="ml-1 rounded bg-blue-600 px-1.5 py-0.5 text-[10px] font-bold text-white">{(item as any).badge}</span>
+							) : null}
+						</a>
+					))}
+				</div>
+				<div className="hidden md:flex">
+					<a href="/contact" className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105">Get Started</a>
+				</div>
+			</nav>
+		</header>
+	)
 }

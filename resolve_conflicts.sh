@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing HEAD version
-    sed -i '/^=======/,/^>>>>>>>/d' "$file"
     sed -i '/^>>>>>>>/d' "$file"
     
     echo "Resolved: $file"
@@ -28,3 +26,8 @@ while read file; do
 done
 
 echo "Merge conflicts resolved!"
+=======
+echo "Starting merge conflict resolution..."
+
+# Find all files with merge conflicts
+echo "Finding files with merge conflicts..."

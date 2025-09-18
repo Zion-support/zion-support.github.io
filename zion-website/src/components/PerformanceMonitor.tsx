@@ -1,148 +1,150 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp: number
-  fid: number
-  cls: number
-  loadTime: number
-  memoryUsage?: number
-  connectionType?: string
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  fmp: number | null;
 }
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null
+  });
 
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      let lcpValue = 0
-      let fidValue = 0
-      let clsValue = 0
+    // Only run in browser
+    if (typeof window === 'undefined') return;
 
-      // Monitor Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry as PerformanceEntry & { startTime: number }
-            lcpValue = lcp.startTime
-            console.log('LCP:', lcpValue)
-          }
-        }
-      })
-
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
-          if (entry.entryType === 'first-input') {
-            const e = entry as PerformanceEventTiming
-            if (typeof e.processingStart === 'number') {
-              fidValue = e.processingStart - e.startTime
-              console.log('FID:', fidValue)
+    // Performance Observer for Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const metric = entry as PerformanceEntry & { value?: number };
+        
+        switch (entry.entryType) {
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: metric.value || entry.startTime }));
             }
-          }
-        }
-      })
-
-      fidObserver.observe({ entryTypes: ['first-input'] })
-
-      // Monitor Cumulative Layout Shift (CLS)
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
-          if (entry.entryType === 'layout-shift') {
-            const ls = entry as PerformanceEntry & { value?: number; hadRecentInput?: boolean }
-            if (!ls.hadRecentInput && typeof ls.value === 'number') {
-              clsValue += ls.value
-              console.log('CLS:', clsValue)
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: metric.value || entry.startTime }));
+            break;
+          case 'first-input':
+            setMetrics(prev => ({ ...prev, fid: metric.value || entry.processingStart - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ 
+                ...prev, 
+                cls: (prev.cls || 0) + ((entry as any).value || 0) 
+              }));
             }
-          }
-        }
-      })
-
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
-
-      // Monitor page load time and connection
-      const collectMetrics = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        const loadTime = navigation.loadEventEnd - navigation.fetchStart
-        
-        // Get connection info
-        const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection
-        
-        // Get memory usage if available
-        const memory = (performance as any).memory
-        
-        const performanceData: PerformanceMetrics = {
-          lcp: lcpValue,
-          fid: fidValue,
-          cls: clsValue,
-          loadTime,
-          connectionType: connection?.effectiveType || 'unknown',
-          memoryUsage: memory ? memory.usedJSHeapSize : undefined
-        }
-        
-        setMetrics(performanceData)
-        console.log('Performance Metrics:', performanceData)
-        
-        // Send to analytics service
-        if (process.env.NODE_ENV === 'production') {
-          fetch('/api/analytics/performance', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(performanceData),
-          }).catch(err => console.error('Failed to send performance metrics:', err))
+            break;
         }
       }
+    });
 
-      window.addEventListener('load', collectMetrics)
-      
-      // Also collect after a delay to ensure all metrics are captured
-      setTimeout(collectMetrics, 3000)
-
-      return () => {
-        lcpObserver.disconnect()
-        fidObserver.disconnect()
-        clsObserver.disconnect()
-        window.removeEventListener('load', collectMetrics)
-      }
+    // Observe different entry types
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported:', e);
     }
-  }, [])
 
-  // Performance debug panel (development only)
-  if (process.env.NODE_ENV === 'development' && metrics) {
-    return (
-      <div style={{
-        position: 'fixed',
-        bottom: 0,
-        right: 0,
-        background: 'rgba(0,0,0,0.9)',
-        color: 'white',
-        padding: '12px',
-        fontSize: '11px',
-        fontFamily: 'monospace',
-        zIndex: 9999,
-        borderTopLeftRadius: '8px',
-        minWidth: '200px'
-      }}>
-        <div style={{ fontWeight: 'bold', marginBottom: '8px', color: '#60a5fa' }}>
-          Performance Metrics
-        </div>
-        <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-        <div>FID: {metrics.fid.toFixed(0)}ms</div>
-        <div>CLS: {metrics.cls.toFixed(3)}</div>
-        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-        <div>Connection: {metrics.connectionType}</div>
-        {metrics.memoryUsage && (
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
-        )}
-      </div>
-    )
-  }
+    // TTFB measurement
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ 
+        ...prev, 
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+      }));
+    }
 
-  return null
+    // Send metrics to analytics
+    const sendMetrics = () => {
+      const validMetrics = Object.entries(metrics).filter(([_, value]) => value !== null);
+      if (validMetrics.length > 0) {
+        // Send to your analytics service
+        fetch('/api/analytics/performance', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            metrics: Object.fromEntries(validMetrics),
+            url: window.location.href,
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent
+          })
+        }).catch(console.error);
+      }
+    };
+
+    // Send metrics after a delay to ensure all metrics are collected
+    const timeoutId = setTimeout(sendMetrics, 5000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutId);
+    };
+  }, [metrics]);
+
+  // Development mode: show metrics in console
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  return null; // This component doesn't render anything
 }
+
+// Performance optimization utilities
+export const performanceUtils = {
+  // Lazy load images
+  lazyLoadImage: (img: HTMLImageElement, src: string) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          img.src = src;
+          observer.unobserve(img);
+        }
+      });
+    });
+    observer.observe(img);
+  },
+
+  // Preload critical resources
+  preloadResource: (href: string, as: string) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = href;
+    link.as = as;
+    document.head.appendChild(link);
+  },
+
+  // Defer non-critical JavaScript
+  deferScript: (src: string) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.defer = true;
+    document.head.appendChild(script);
+  },
+
+  // Optimize images
+  optimizeImage: (src: string, width?: number, quality: number = 80) => {
+    if (src.startsWith('http') && width) {
+      // Use Next.js Image Optimization if available
+      return `/api/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+    }
+    return src;
+  }
+};

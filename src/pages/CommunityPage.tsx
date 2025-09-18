@@ -1,60 +1,24 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
 
-export default function CommunityPage() {
+const CommunityPage: React.FC = () => {
   return (
-    <>
-      <SEO 
-        title="Community - Zion Tech Group" 
-        description="Join our vibrant community of tech professionals and innovators." 
-        keywords="community, tech professionals, networking, Zion Tech Group"
-        url="https://ziontechgroup.com/community"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Community</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Connect with like-minded professionals and innovators in our tech community
+    <div className="min-h-screen bg-gradient-to-br from-yellow-900 via-orange-900 to-red-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-8">Community</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Join our vibrant community of innovators and technologists.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
+            <p className="text-lg">
+              Connect with like-minded professionals, share knowledge, and 
+              collaborate on cutting-edge technology projects.
             </p>
           </div>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Forums</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Engage in discussions and share knowledge with community members
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  Join Forums
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Events</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Attend virtual and in-person events and meetups
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  View Events
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Collaborate on open source projects and initiatives
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  Browse Projects
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
-    </>
+      </div>
+    </div>
   );
-}
+};
+
+export default CommunityPage;

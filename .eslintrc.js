@@ -165,3 +165,21 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'spaced-comment': ['error', 'always'],
   },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'apps/',
+    'src/components-disabled/**/*',
+    'src/utils-disabled/**/*',
+    '**/components-disabled/**/*',
+    '**/utils-disabled/**/*'
+  ]
+};

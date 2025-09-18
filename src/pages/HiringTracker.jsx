@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {

@@ -1,19 +1,114 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ScrollToTop from './src/ScrollToTop';
+import Header from './src/Header';
+import Footer from './src/Footer';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import LoadingSpinner from './src/components/LoadingSpinner';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import './src/index.css';
 
-export default function App(): JSX.Element {
+// Lazy load the main page component for better performance
+const UltimateTechBreakthrough2026 = lazy(() => import('./src/pages/UltimateTechBreakthrough2026'));
+
+export default function App(): React.JSX.Element {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-        
-        <Footer />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <ScrollToTop />
+          <Header />
+          <main className="flex-grow">
+            <Suspense fallback={
+              <div className="container mx-auto px-4 py-8">
+                <LoadingSpinner size="lg" className="py-20" />
+              </div>
+            }>
+              <Routes>
+                <Route path="/" element={
+                  <div className="container mx-auto px-4 py-8">
+                    <div className="max-w-4xl mx-auto text-center">
+                      <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                        Welcome to Zion Tech Group
+                      </h1>
+                      <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Your trusted partner in AI and technology solutions. 
+                        We're revolutionizing the future with cutting-edge innovations.
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-6 mb-8">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Solutions</h3>
+                          <p className="text-gray-600">
+                            Advanced artificial intelligence systems that transform your business operations.
+                          </p>
+                        </div>
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-3">Tech Innovation</h3>
+                          <p className="text-gray-600">
+                            Next-generation technology solutions for the modern enterprise.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="space-x-4">
+                        <Link 
+                          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                          to="/pages/UltimateTechBreakthrough2026"
+                        >
+                          Explore Our Technology
+                        </Link>
+                        <Link 
+                          className="inline-block border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                          to="/contact"
+                        >
+                          Get in Touch
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                } />
+                <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
+                <Route path="/contact" element={
+                  <div className="container mx-auto px-4 py-8">
+                    <div className="max-w-2xl mx-auto text-center">
+                      <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+                      <p className="text-lg text-gray-600 mb-8">
+                        Ready to transform your business with our AI and technology solutions? 
+                        Get in touch with our team today.
+                      </p>
+                      <div className="bg-gray-50 p-8 rounded-lg">
+                        <p className="text-gray-700 mb-4">
+                          Email: contact@ziontechgroup.com
+                        </p>
+                        <p className="text-gray-700">
+                          Phone: +1 (555) 123-4567
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                } />
+                <Route path="*" element={
+                  <div className="container mx-auto px-4 py-8">
+                    <div className="max-w-2xl mx-auto text-center">
+                      <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Not Found</h1>
+                      <p className="text-lg text-gray-600 mb-8">
+                        The page you're looking for doesn't exist.
+                      </p>
+                      <Link 
+                        className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                        to="/"
+                      >
+                        Go Home
+                      </Link>
+                    </div>
+                  </div>
+                } />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+          <PerformanceMonitor />
+        </div>
+      </Router>
     </ErrorBoundary>
   );
 }
