@@ -1,6 +1,6 @@
 import React from 'react';
-import { SEO } from "../components/SEO";
-import { GradientHeading } from "../components/GradientHeading";
+import SEO from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 
 interface CookieType {
   id: string;
