@@ -1,8 +1,10 @@
-# Build outputs
+# Build artifacts
 dist/
 build/
 .next/
 out/
+
+# Dependencies
 node_modules/
 
 # Disabled/backup directories
@@ -12,105 +14,105 @@ zion-website/
 zion.app/
 zion_academy/
 zion-ai-assistant/
-token/
-dao/
-server/
-netlify/
-src-clean/
-apps/
-apps.backup/
-automation/
 backup/
 backups/
-backup-merge-conflicts/
 broken_components/
 broken_files_backup/
 app-disabled/
-app-minimal/
-api-backup/
 api.disabled/
 api.disabled.temp/
-recovered-branches/
+netlify/functions/
 
 # Generated files
-**/*.backup.*
-**/*.old.*
-**/*.disabled.*
-**/*.broken.*
-**/*.corrupted.*
-**/*.temp.*
-**/*.test.*
-**/*.spec.*
-**/*.config.*
-**/*.log
-**/*.lock
+*.min.js
+*.bundle.js
+*.chunk.js
 
-# Public assets
-public/
+# Static files
+public/sw.js
+static/
 
-# Reports and logs
-**/*-report*
-**/*-summary*
-**/*-logs*
-**/automation-reports/
-**/performance-reports/
-**/link-reports/
-**/monitoring/
+# Test artifacts
+coverage/
+.nyc_output/
 
-# Scripts and automation
-**/*.sh
-**/*.py
-**/*.cjs
-**/*.mjs
-**/scripts/
-**/automation/
-**/pm2-*
-**/fix-*
-**/clean-*
-**/batch-*
-**/merge-*
-**/resolve-*
-**/systematic-*
-**/ultimate-*
-**/structural-*
-**/quick-*
-**/comprehensive-*
-**/enhanced-*
-**/complete-*
-**/app-optimizer.*
-**/improve-*
-**/find-*
-**/git-ops.*
-**/pr-manager.*
-**/merge-strategy.*
-**/resolve-and-merge-*
-**/merge-all-*
-**/merge-prs.*
-**/pr-*
-**/batch_*
-**/check_*
-**/commit-*
-**/complete_*
-**/deploy-*
-**/fix_*
-**/git_*
-**/health-*
-**/quick-*
-**/run-*
-**/start-*
-**/test-*
-**/ultimate-*
+# IDE files
+.vscode/
+.idea/
 
-# Specific file patterns
-**/Dockerfile*
-**/docker-compose*
-**/ecosystem.config.*
-**/bundle-analyzer.config.*
-**/csp-config.*
-**/vite.config.*
-**/postcss.config.*
-**/playwright.config.*
-**/cypress.config.*
-**/jest.config.*
-**/jest.setup.*
-**/test-utils.*
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Specific problematic files
+zion-os.disabled/zion-os/.next/
+zion-os/.next/
+zion-website/next.config.js
+zion-website/tailwind.config.js
+zion-website/public/sw.js
+zion-os/postcss.config.js
+zion_academy/static/js/
+zion.app/automation/
