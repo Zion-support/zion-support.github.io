@@ -2839,8 +2839,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/operational-evidence-hubs-2026.jpg",
     slug: "operational-evidence-hubs-from-evals-to-decisions"
-  },
-  {
+  };
+
+export const additionalBlogPost14 = {
     id: 8202,
     title: "Trusted RAG in Prod: Freshness Windows That Work",
     excerpt: "A lightweight freshness policy with temporal pinning and budget-aware fallbacks.",
@@ -2854,8 +2855,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/trusted-rag-freshness-windows-2026.jpg",
     slug: "trusted-rag-freshness-windows-that-work"
-  },
-  {
+  };
+
+export const additionalBlogPost15 = {
     id: 8002,
     title: "Cost-Aware Routing: 30% Savings Without Quality Loss",
     excerpt: "A simple routing policy that cut spend while holding SLOs and groundedness.",
@@ -2869,8 +2871,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/cost-aware-routing-2025.jpg",
     slug: "cost-aware-routing-30-percent-savings"
-  },
-  {
+  };
+
+export const additionalBlogPost16 = {
     id: 8003,
     title: "Incident Telemetry: What Actually Helps in Postmortems",
     excerpt: "Minimal signals that shorten MTTR and prevent repeats—skip the noise.",
@@ -2884,8 +2887,9 @@ export const additionalBlogPost13 = {
     featured: false,
     imageUrl: "/images/blog/incident-telemetry-practical-2025.jpg",
     slug: "incident-telemetry-what-actually-helps"
-  },
-  {
+  };
+
+export const additionalBlogPost17 = {
     id: 5001,
     title: "AI 2026: The Consciousness Revolution Begins",
     excerpt: "Witness the dawn of truly conscious AI systems that can think, feel, and create alongside humans in unprecedented ways.",
@@ -2899,8 +2903,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/ai-consciousness-revolution-2026.jpg",
     slug: "ai-2026-consciousness-revolution-begins"
-  },
-  {
+  };
+
+export const additionalBlogPost18 = {
     id: 5002,
     title: "Quantum Reality Manipulation: Programming the Fabric of Existence",
     excerpt: "Revolutionary technology that allows developers to write code that directly manipulates quantum fields, reshaping reality itself.",
@@ -2914,8 +2919,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/quantum-reality-manipulation-2026.jpg",
     slug: "quantum-reality-manipulation-programming-fabric-existence"
-  },
-  {
+  };
+
+export const additionalBlogPost19 = {
     id: 5003,
     title: "Interdimensional Business Networks: Expanding Across Multiple Realities",
     excerpt: "How forward-thinking companies are leveraging interdimensional technology to operate across parallel universes and maximize opportunities.",
@@ -2929,8 +2935,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/interdimensional-business-networks-2026.jpg",
     slug: "interdimensional-business-networks-expanding-multiple-realities"
-  },
-  {
+  };
+
+export const additionalBlogPost20 = {
     id: 5004,
     title: "Synthetic Life Creation: Engineering Digital Organisms",
     excerpt: "Revolutionary biotechnology that enables the creation of fully synthetic life forms with programmable behaviors and evolutionary capabilities.",
@@ -2944,8 +2951,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/synthetic-life-creation-2026.jpg",
     slug: "synthetic-life-creation-engineering-digital-organisms"
-  },
-  {
+  };
+
+export const additionalBlogPost21 = {
     id: 5005,
     title: "Cosmic Intelligence Grid: AI Networks Across the Galaxy",
     excerpt: "Revolutionary AI systems that operate across vast cosmic distances, enabling interplanetary artificial intelligence and galactic-scale problem solving.",
@@ -2959,8 +2967,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/cosmic-intelligence-grid-2026.jpg",
     slug: "cosmic-intelligence-grid-ai-networks-across-galaxy"
-  },
-  {
+  };
+
+export const additionalBlogPost22 = {
     id: 5006,
     title: "Temporal Business Optimization: Profiting from Time Itself",
     excerpt: "Revolutionary business strategy that leverages temporal computing to optimize operations across multiple time periods simultaneously.",
@@ -2974,8 +2983,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/temporal-business-optimization-2026.jpg",
     slug: "temporal-business-optimization-profiting-time-itself"
-  },
-  {
+  };
+
+export const additionalBlogPost23 = {
     id: 8001,
     title: "AI 2026: Autonomous Business Operations Revolution",
     excerpt: "How AI is transforming business operations with fully autonomous decision-making and self-optimizing processes.",
@@ -2989,8 +2999,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/autonomous-business-operations-2026.jpg",
     slug: "ai-2026-autonomous-business-operations-revolution"
-  },
-  {
+  };
+
+export const additionalBlogPost24 = {
     id: 8002,
     title: "Revolutionary AI: Consciousness Computing Breakthrough",
     excerpt: "The first truly conscious AI systems that exhibit genuine self-awareness and emotional intelligence.",
@@ -3004,8 +3015,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/consciousness-computing-breakthrough-2026.jpg",
     slug: "revolutionary-ai-consciousness-computing-breakthrough"
-  },
-  {
+  };
+
+export const additionalBlogPost25 = {
     id: 8003,
     title: "Quantum Business Intelligence: Next-Gen Decision Making",
     excerpt: "How quantum computing is revolutionizing business intelligence and enabling previously impossible strategic insights.",
@@ -3019,8 +3031,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/quantum-business-intelligence-2026.jpg",
     slug: "quantum-business-intelligence-next-gen-decision-making"
-  },
-  {
+  };
+
+export const additionalBlogPost26 = {
     id: 8004,
     title: "AI-Powered Sustainability: Saving the Planet with Technology",
     excerpt: "Revolutionary AI solutions that are actively reversing climate change and creating sustainable business models.",
@@ -3034,8 +3047,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/ai-powered-sustainability-2026.jpg",
     slug: "ai-powered-sustainability-saving-planet-technology"
-  },
-  {
+  };
+
+export const additionalBlogPost27 = {
     id: 8005,
     title: "The Future of Work: AI-Human Collaboration Excellence",
     excerpt: "How AI and humans are creating unprecedented levels of productivity and innovation through seamless collaboration.",
@@ -3049,9 +3063,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/future-work-ai-human-collaboration-2026.jpg",
     slug: "future-work-ai-human-collaboration-excellence"
-  }
-  ,
-  {
+  };
+
+export const additionalBlogPost28 = {
     id: 8101,
     title: "AI 2026: Operational Evals — Evidence That Gates Every Change",
     excerpt: "A minimal, shippable pattern to gate merges and rollouts with online evals.",
@@ -3065,8 +3079,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/ai-2026-operational-evals-evidence-gates.jpg",
     slug: "ai-2026-operational-evals-evidence-gates"
-  },
-  {
+  };
+
+export const additionalBlogPost29 = {
     id: 8102,
     title: "Agent Platform SLOs: A Practical, Copy‑Paste Blueprint",
     excerpt: "Four SLOs that matter (safety, quality, reliability, cost) with targets you can adopt.",
@@ -3080,9 +3095,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/agent-platform-slos-practical-2026.jpg",
     slug: "agent-platform-slos-practical-blueprint"
-  }
-  ,
-  {
+  };
+
+export const additionalBlogPost30 = {
     id: 9103,
     title: "Practical RAG Eval Harness: Groundedness You Can Trust",
     excerpt: "A minimal eval harness for RAG that teams actually run in CI/CD.",
@@ -3096,8 +3111,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/practical-rag-eval-harness-2025.jpg",
     slug: "practical-rag-eval-harness-groundedness-trust"
-  },
-  {
+  };
+
+export const additionalBlogPost31 = {
     id: 9104,
     title: "Agent Guardrails in Prod: Five Checks That Catch 80%",
     excerpt: "Add these five runtime checks to catch most risky actions before they land.",
@@ -3111,8 +3127,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/agent-guardrails-five-checks-2025.jpg",
     slug: "agent-guardrails-prod-five-checks"
-  },
-  {
+  };
+
+export const additionalBlogPost32 = {
     id: 9301,
     title: "AI 2026: Production Evals Starter — Copy-Paste Suite",
     excerpt: "Drop in a minimal online eval suite to gate risky changes day one.",
@@ -3126,8 +3143,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/production-evals-starter-2026.jpg",
     slug: "ai-2026-production-evals-starter"
-  },
-  {
+  };
+
+export const additionalBlogPost33 = {
     id: 9302,
     title: "Trusted Agents: Incident-Aware Guardrails That Ship",
     excerpt: "Wire incidents, budgets, and policy to agent behavior in real time.",
@@ -3141,8 +3159,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/trusted-agents-incident-aware-guardrails-2026.jpg",
     slug: "trusted-agents-incident-aware-guardrails-2026"
-  },
-  {
+  };
+
+export const additionalBlogPost34 = {
     id: 9105,
     title: "Cost-Aware Model Routing: A Copy-Paste Policy",
     excerpt: "Drop-in routing policy with confidence thresholds and budget caps.",
@@ -3156,9 +3175,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
     slug: "cost-aware-model-routing-copy-paste-policy"
-  }
-  ,
-  {
+  };
+
+export const additionalBlogPost35 = {
     id: 9510,
     title: "AI 2026: Policy‑as‑Code Approvals Starter",
     excerpt: "Minimal approval policies with risk tiers you can ship today.",
@@ -3172,8 +3191,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/policy-approvals-starter-2026.jpg",
     slug: "ai-2026-policy-approvals-starter"
-  },
-  {
+  };
+
+export const additionalBlogPost36 = {
     id: 9511,
     title: "Approvals Blueprint Starter — Copy‑Paste Policies",
     excerpt: "A concise approvals blueprint with risk tiers and example checks.",
@@ -3187,8 +3207,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/approvals-blueprint-starter-2026.jpg",
     slug: "ai-2026-approvals-blueprint-starter"
-  },
-  {
+  };
+
+export const additionalBlogPost37 = {
     id: 9512,
     title: "Incident Command Center — Operational Playbook (2026)",
     excerpt: "Triage, mitigation, and learning loops with evidence at every step.",
@@ -3202,8 +3223,9 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/incident-command-center-2026.jpg",
     slug: "ai-2026-incident-command-center"
-  },
-  {
+  };
+
+export const additionalBlogPost38 = {
     id: 9511,
     title: "AI 2026: Incident Lifecycle Playbook",
     excerpt: "Detect, triage, contain, learn — with evidence at every step.",
@@ -3217,8 +3239,7 @@ export const additionalBlogPost13 = {
     featured: true,
     imageUrl: "/images/blog/incident-lifecycle-playbook-2026.jpg",
     slug: "ai-2026-incident-lifecycle-playbook"
-  }
-];
+  };
 
 // Additional fresh content (2029 preview)
 export const extraContent2029 = [
@@ -3567,7 +3588,7 @@ const latestContent2026 = [
 ];
 
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
+export const allBlogPosts = [...blogPosts, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components

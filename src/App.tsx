@@ -1,5 +1,5 @@
 
-import React, { lazy, useState, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Core pages
@@ -51,7 +51,7 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const [sidebarOpen, setSidebarOpen] = useState(false); // TODO: Implement sidebar functionality
   
   return (
               
