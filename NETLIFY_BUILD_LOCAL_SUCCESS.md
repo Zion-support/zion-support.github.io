@@ -1,3 +1,13 @@
+Netlify build validated locally on 2025-09-18
+
+- App: `zion-website`
+- Node: v22.16.0 (local), Netlify target: 20.x
+- Install: `npm ci` succeeded
+- Build: `next build` succeeded, static pages generated
+- Plugin: `@netlify/plugin-nextjs` present via `netlify.toml`
+
+Action: Commit and push to trigger Netlify to rebuild from `main`.
+
 # Netlify Build Local Verification
 
 - Date: 2025-09-18
