@@ -4,7 +4,7 @@
   publish = ".next"
   command_timeout = "30m"
 
-# Trigger Netlify build: no-op change on 2025-09-18T14:55:00Z
+# Trigger Netlify build: no-op change on 2025-09-18T15:22:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -224,4 +224,4 @@
 # Note: Next.js routing is handled by @netlify/plugin-nextjs
  
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T11:38:16Z
+# No-op: trigger deploy 2025-09-18T15:22:00Z
