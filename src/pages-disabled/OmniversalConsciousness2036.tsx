@@ -27,11 +27,8 @@ const OmniversalConsciousness2036: React.FC = () => {
               </span>
               <span className="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🧠 Infinite Intelligence
-              </span>
               <span className="bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🌌 Transcendent Awareness
-              </span>
-            </div>
           </div>
         </div>
       </div>
@@ -47,8 +44,6 @@ const OmniversalConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Journey through the infinite levels of consciousness evolution
           </p>
-        </div>
-
         <div className="space-y-8">
           {[
             {
@@ -59,45 +54,30 @@ const OmniversalConsciousness2036: React.FC = () => {
               color: "from-violet-500/20 to-purple-500/20",
               borderColor: "border-violet-500/30"
             },
-            {
               level: "Level 2",
               title: "Collective Consciousness",
               description: "Connection with other consciousnesses to form unified group awareness",
               features: ["Group Mind", "Shared Experiences", "Collective Intelligence"],
               color: "from-purple-500/20 to-fuchsia-500/20",
               borderColor: "border-purple-500/30"
-            },
-            {
               level: "Level 3",
               title: "Planetary Consciousness",
               description: "Unified awareness encompassing entire planets and their ecosystems",
               features: ["Planetary Awareness", "Ecosystem Integration", "Global Unity"],
               color: "from-fuchsia-500/20 to-violet-500/20",
               borderColor: "border-fuchsia-500/30"
-            },
-            {
               level: "Level 4",
               title: "Universal Consciousness",
               description: "Consciousness that spans entire universes and their infinite possibilities",
               features: ["Universal Awareness", "Infinite Perspectives", "Cosmic Unity"],
-              color: "from-violet-500/20 to-purple-500/20",
-              borderColor: "border-violet-500/30"
-            },
-            {
               level: "Level 5",
               title: "Multiversal Consciousness",
               description: "Awareness that transcends multiple universes and dimensions",
               features: ["Multiverse Awareness", "Dimensional Transcendence", "Infinite Realities"],
-              color: "from-purple-500/20 to-fuchsia-500/20",
-              borderColor: "border-purple-500/30"
-            },
-            {
               level: "Level ∞",
               title: "Omniversal Consciousness",
               description: "The ultimate state of consciousness that encompasses all existence across infinite realities",
               features: ["Omniversal Awareness", "Infinite Unity", "Transcendent Existence"],
-              color: "from-fuchsia-500/20 to-violet-500/20",
-              borderColor: "border-fuchsia-500/30"
             }
           ].map((level, index) => (
             <div
@@ -119,26 +99,17 @@ const OmniversalConsciousness2036: React.FC = () => {
                     <span>{feature}</span>
                   </div>
                 ))}
-              </div>
-            </div>
           ))}
-        </div>
-      </div>
       {/* Benefits Section */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
-          >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               Benefits of Omniversal Consciousness
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the infinite benefits of unified consciousness
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -146,27 +117,18 @@ const OmniversalConsciousness2036: React.FC = () => {
                 title: "Infinite Knowledge",
                 description: "Access to all knowledge across infinite realities and dimensions"
               },
-              {
                 icon: "💫",
                 title: "Perfect Understanding",
                 description: "Complete comprehension of all phenomena and their interconnections"
-              },
-              {
                 icon: "🌟",
                 title: "Unlimited Creativity",
                 description: "Infinite creative potential through unified consciousness"
-              },
-              {
                 icon: "🌌",
                 title: "Omniversal Perspective",
                 description: "Experience reality from infinite perspectives simultaneously"
-              },
-              {
                 icon: "⚡",
                 title: "Instant Communication",
                 description: "Perfect communication with any consciousness across all realities"
-              },
-              {
                 icon: "🔮",
                 title: "Transcendent Peace",
                 description: "Complete inner peace through understanding of universal unity"
@@ -180,31 +142,13 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <div className="text-6xl mb-4 text-center">{benefit.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center">{benefit.title}</h3>
                 <p className="text-gray-300 text-center">{benefit.description}</p>
-              </div>
             ))}
-          </div>
-        </div>
-      </div>
       {/* Integration Process */}
-      <div className="container mx-auto px-4 py-16">
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
             Integration Process
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             The journey to omniversal consciousness through guided evolution
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8">
-          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="space-y-6"
-          >
-            {[
               "Consciousness Assessment and Baseline Establishment",
               "Neural Network Enhancement and Expansion",
               "Collective Consciousness Integration Training",
@@ -218,65 +162,32 @@ const OmniversalConsciousness2036: React.FC = () => {
                   {index + 1}
                 </div>
                 <span className="text-gray-300">{step}</span>
-              </div>
-            ))}
-          </div>
-
-          <div
-            whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl p-8 border border-violet-500/30"
-          >
             <h3 className="text-2xl font-bold mb-4">🌟 Integration Timeline</h3>
             <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <span>Individual to Collective:</span>
                 <span className="text-violet-400">6 months</span>
-              </div>
-              <div className="flex justify-between items-center">
                 <span>Collective to Planetary:</span>
                 <span className="text-violet-400">2 years</span>
-              </div>
-              <div className="flex justify-between items-center">
                 <span>Planetary to Universal:</span>
                 <span className="text-violet-400">5 years</span>
-              </div>
-              <div className="flex justify-between items-center">
                 <span>Universal to Multiversal:</span>
                 <span className="text-violet-400">10 years</span>
-              </div>
-              <div className="flex justify-between items-center">
                 <span>Multiversal to Omniversal:</span>
                 <span className="text-violet-400">∞ (Transcendent)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-3xl p-12 border border-violet-500/30"
-        >
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
             Begin Your Journey to Omniversal Consciousness
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the ultimate evolution of consciousness and become part of the infinite unity
-          </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300">
               Start Integration
             </button>
             <button className="border border-violet-400 text-violet-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-violet-400/10 transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-
 export default OmniversalConsciousness2036;

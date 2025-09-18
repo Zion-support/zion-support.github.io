@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const TechTrendsBlog2027 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Posts', icon: '📚' },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🤖' },
@@ -12,7 +11,6 @@ const TechTrendsBlog2027 = () => {
     { id: 'space', name: 'Space Technology', icon: '🌌' },
     { id: 'consciousness', name: 'Consciousness AI', icon: '🧠' }
   ];
-
   const blogPosts = [
     {
       id: 1,
@@ -28,7 +26,6 @@ const TechTrendsBlog2027 = () => {
       image: "🧠",
       tags: ["AI", "Consciousness", "Future Tech", "Machine Learning"]
     },
-    {
       id: 2,
       title: "Quantum Computing Breakthrough: Solving Impossible Problems",
       excerpt: "Discover how quantum computing is solving problems that were previously considered impossible for classical computers.",
@@ -41,8 +38,6 @@ const TechTrendsBlog2027 = () => {
       likes: "6.5K",
       image: "⚛️",
       tags: ["Quantum Computing", "Technology", "Innovation", "Research"]
-    },
-    {
       id: 3,
       title: "Neural Interface Revolution: Connecting Mind and Machine",
       excerpt: "Learn about the latest developments in neural interface technology and how it's transforming human capabilities.",
@@ -55,8 +50,6 @@ const TechTrendsBlog2027 = () => {
       likes: "9.1K",
       image: "🧬",
       tags: ["Neural Interfaces", "BCI", "Technology", "Human Enhancement"]
-    },
-    {
       id: 4,
       title: "Space Technology 2027: Interstellar Travel Becomes Reality",
       excerpt: "Explore the revolutionary space technologies that are making interstellar travel and colonization possible.",
@@ -69,8 +62,6 @@ const TechTrendsBlog2027 = () => {
       likes: "12.3K",
       image: "🌌",
       tags: ["Space Technology", "Interstellar Travel", "Exploration", "Innovation"]
-    },
-    {
       id: 5,
       title: "Synthetic Intelligence: The Next Evolution of AI",
       excerpt: "Understand how synthetic intelligence is creating AI systems that transcend traditional limitations and capabilities.",
@@ -83,27 +74,19 @@ const TechTrendsBlog2027 = () => {
       likes: "11.7K",
       image: "🤖",
       tags: ["Synthetic Intelligence", "AI", "Consciousness", "Future Tech"]
-    },
-    {
       id: 6,
       title: "Quantum-Neural Fusion: The Future of Computing",
       excerpt: "Discover how the fusion of quantum computing and neural networks is creating unprecedented computational power.",
       content: "Quantum-neural fusion represents the convergence of two revolutionary technologies: quantum computing's exponential processing power and neural networks' pattern recognition capabilities. This fusion is creating systems that can process information in ways previously thought impossible...",
       author: "Dr. Maria Santos",
       date: "January 3, 2027",
-      category: "quantum",
-      readTime: "8 min read",
       views: "142K",
       likes: "8.9K",
-      image: "⚛️",
       tags: ["Quantum Computing", "Neural Networks", "Fusion Technology", "Computing"]
     }
-  ];
-
   const filteredPosts = activeCategory === 'all' 
     ? blogPosts 
     : blogPosts.filter(post => post.category === activeCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -132,12 +115,9 @@ const TechTrendsBlog2027 = () => {
               </a>
               <a href="#subscribe" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
                 Subscribe to Updates
-              </a>
-            </div>
           </motion.div>
         </div>
       </div>
-
       {/* Categories */}
       <section className="py-12">
         <div className="container mx-auto px-4">
@@ -157,21 +137,14 @@ const TechTrendsBlog2027 = () => {
                   {category.name}
                 </button>
               ))}
-            </div>
           </div>
-        </div>
       </section>
-
       {/* Blog Posts */}
       <section id="posts" className="py-20">
-        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Latest Blog Posts</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover the most insightful articles about technology trends, breakthroughs, and future innovations
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
               <motion.article
@@ -190,82 +163,58 @@ const TechTrendsBlog2027 = () => {
                     {categories.find(cat => cat.id === post.category)?.name}
                   </span>
                   <span className="text-xs opacity-70">{post.readTime}</span>
-                </div>
-
                 <h3 className="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors">
                   {post.title}
                 </h3>
-                
                 <p className="text-sm opacity-90 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {post.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="px-2 py-1 bg-white/10 rounded-full text-xs">
                       #{tag}
                     </span>
                   ))}
-                </div>
-
                 <div className="flex items-center justify-between text-sm opacity-70 mb-4">
                   <div className="flex items-center space-x-4">
                     <span>{post.views} views</span>
                     <span>{post.likes} likes</span>
                   </div>
                   <span>{post.date}</span>
-                </div>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-sm font-bold">
                       {post.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <span className="text-sm font-semibold">{post.author}</span>
-                  </div>
                   <button className="text-purple-300 hover:text-white transition-colors">
                     Read More →
                   </button>
-                </div>
               </motion.article>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Featured Post */}
       <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
-        <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
                   🌟 FEATURED POST
-                </div>
                 <h2 className="text-4xl font-bold mb-6">
                   The Complete Guide to Technology Trends 2027
                 </h2>
                 <p className="text-xl opacity-90 mb-8">
                   A comprehensive overview of all the major technology trends shaping 2027, 
                   from consciousness AI to quantum computing and beyond.
-                </p>
                 <div className="flex items-center space-x-6 mb-8">
                   <div className="text-center">
                     <div className="text-2xl font-bold">500K+</div>
                     <div className="text-sm opacity-80">Views</div>
-                  </div>
-                  <div className="text-center">
                     <div className="text-2xl font-bold">4.9</div>
                     <div className="text-sm opacity-80">Rating</div>
-                  </div>
-                  <div className="text-center">
                     <div className="text-2xl font-bold">25K</div>
                     <div className="text-sm opacity-80">Shares</div>
-                  </div>
-                </div>
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold text-lg">
                   Read Featured Post →
-                </button>
               </div>
               <div className="text-center">
                 <div className="text-8xl mb-4">📊</div>
@@ -277,27 +226,10 @@ const TechTrendsBlog2027 = () => {
                       <div className="w-32 bg-white/20 rounded-full h-2">
                         <div className="bg-purple-400 h-2 rounded-full" style={{ width: '95%' }}></div>
                       </div>
-                    </div>
-                    <div className="flex justify-between items-center">
                       <span>Quantum Computing</span>
-                      <div className="w-32 bg-white/20 rounded-full h-2">
                         <div className="bg-cyan-400 h-2 rounded-full" style={{ width: '88%' }}></div>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
                       <span>Neural Interfaces</span>
-                      <div className="w-32 bg-white/20 rounded-full h-2">
                         <div className="bg-emerald-400 h-2 rounded-full" style={{ width: '92%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Subscribe Section */}
       <section id="subscribe" className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -316,15 +248,9 @@ const TechTrendsBlog2027 = () => {
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Subscribe
               </button>
-            </div>
             <p className="text-sm opacity-70 mt-4">
               Join 50,000+ subscribers who trust our insights
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
-
 export default TechTrendsBlog2027;

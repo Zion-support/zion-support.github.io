@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
-import SEO from '../components/SEO';
-import { ContentShowcase } from '../components/ContentShowcase';
-import { ServicesHighlight } from '../components/ServicesHighlight';
+import { SEO } from '@/components/SEO';
+import { ContentShowcase } from '@/components/ContentShowcase';
+import { ServicesHighlight } from '@/components/ServicesHighlight';
 
 const EnhancedHome: React.FC = () => {
   return (
@@ -28,14 +28,11 @@ const EnhancedHome: React.FC = () => {
             
             <divp
               className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
-            >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics. 
               Empowering businesses to thrive in the digital age.
             </divp>
-            
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-            >
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105"
@@ -48,11 +45,8 @@ const EnhancedHome: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-            
             {/* Stats */}
-            <div
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            >
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (
@@ -65,7 +59,6 @@ const EnhancedHome: React.FC = () => {
                   </div>
                 );
               })}
-            </div>
           </div>
         </div>
       </section>
@@ -80,14 +73,12 @@ const EnhancedHome: React.FC = () => {
               From AI-powered automation to secure cloud infrastructure, we provide end-to-end 
               technology solutions that drive innovation and growth.
             </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center group"
-              >
                 <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
@@ -106,35 +97,20 @@ const EnhancedHome: React.FC = () => {
                 </Link>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               What Our Clients Say
-            </h2>
             <p className="text-xl text-gray-600">
               Don't just take our word for it - hear from the businesses we've transformed.
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-lg shadow-md p-6"
-              >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
                 <p className="text-gray-600 mb-6 italic">
                   "{testimonial.content}"
-                </p>
                 <div className="flex items-center">
                   <img
                     src={testimonial.avatar}
@@ -144,13 +120,6 @@ const EnhancedHome: React.FC = () => {
                   <div>
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>
                     <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Services Highlight */}
       <ServicesHighlight />
       {/* Content Showcase */}
@@ -168,23 +137,13 @@ const EnhancedHome: React.FC = () => {
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
               View Success Stories
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
-
-
-
 export default EnhancedHome;
 </div></div>

@@ -351,20 +351,6 @@
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="container mx-auto px-4 py-20 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
-          <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-            Dive deeper into our revolutionary technologies and discover how they can transform your business
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Start Your Journey →
-            </a>
-            <a href="/pages/NextGenTechShowcase2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
-              View All Innovations
-            </a>
-          </div>
         </div>
             <div className="text-4xl mb-3 text-center">{slide.image}</div>
             <h3 className="text-xl font-bold text-white mb-2 text-center">{slide.title}</h3>

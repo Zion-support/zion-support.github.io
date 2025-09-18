@@ -4,7 +4,6 @@ import { Search, Phone, Mail, MapPin, CheckCircle, ArrowRight, Brain, Zap, Shiel
 const InnovativeAIServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const aiServices = [
     {
       id: 1,
@@ -22,7 +21,6 @@ const InnovativeAIServices: React.FC = () => {
       },
       deliveryTime: "10-14 weeks"
     },
-    {
       id: 2,
       name: "Natural Language Processing Solutions",
       category: "NLP",
@@ -31,14 +29,7 @@ const InnovativeAIServices: React.FC = () => {
       features: ["Text classification", "Sentiment analysis", "Entity extraction", "Language translation"],
       benefits: ["Automated text processing", "Customer insight", "Content optimization", "Global reach"],
       targetAudience: ["E-commerce", "Media companies", "Customer service", "Global businesses"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      },
       deliveryTime: "12-16 weeks"
-    },
-    {
       id: 3,
       name: "Computer Vision & Image Recognition",
       category: "Computer Vision",
@@ -47,14 +38,7 @@ const InnovativeAIServices: React.FC = () => {
       features: ["Object detection", "Facial recognition", "Image classification", "Video analysis"],
       benefits: ["Automated visual tasks", "Security enhancement", "Quality control", "Process automation"],
       targetAudience: ["Manufacturing", "Security companies", "Healthcare", "Retail"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      },
       deliveryTime: "14-18 weeks"
-    },
-    {
       id: 4,
       name: "Predictive Analytics & Forecasting",
       category: "Predictive AI",
@@ -63,14 +47,6 @@ const InnovativeAIServices: React.FC = () => {
       features: ["Time series forecasting", "Demand prediction", "Risk modeling", "Scenario planning"],
       benefits: ["Better planning", "Risk mitigation", "Resource optimization", "Strategic advantage"],
       targetAudience: ["Financial services", "Supply chain", "Retail", "Manufacturing"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      },
-      deliveryTime: "12-16 weeks"
-    },
-    {
       id: 5,
       name: "AI-Powered Automation",
       category: "Automation",
@@ -79,14 +55,6 @@ const InnovativeAIServices: React.FC = () => {
       features: ["Process automation", "Workflow optimization", "Decision automation", "Integration APIs"],
       benefits: ["Cost reduction", "Efficiency improvement", "Error reduction", "Scalability"],
       targetAudience: ["Large enterprises", "Manufacturing", "Healthcare", "Finance"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      },
-      deliveryTime: "10-14 weeks"
-    },
-    {
       id: 6,
       name: "AI Chatbot & Virtual Assistants",
       category: "Conversational AI",
@@ -95,26 +63,17 @@ const InnovativeAIServices: React.FC = () => {
       features: ["Natural conversations", "Multi-language support", "Integration capabilities", "Analytics dashboard"],
       benefits: ["24/7 availability", "Cost reduction", "Customer satisfaction", "Scalable support"],
       targetAudience: ["Customer service", "E-commerce", "Healthcare", "Financial services"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      },
       deliveryTime: "8-12 weeks"
     }
   ];
-
   const categories = ['all', 'Analytics', 'NLP', 'Computer Vision', 'Predictive AI', 'Automation', 'Conversational AI'];
-
   const filteredServices = aiServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
     return matchesSearch && matchesCategory;
   });
-
   return (
     <div className="min-h-screen bg-zion-blue-dark text-white">
       <div className="bg-zion-blue-darker py-20">
@@ -151,11 +110,9 @@ const InnovativeAIServices: React.FC = () => {
                   </option>
                 ))}
               </select>
-            </div>
           </div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
@@ -166,17 +123,14 @@ const InnovativeAIServices: React.FC = () => {
                 </span>
                 <span className="px-3 py-1 bg-zion-blue-light/20 text-zion-slate-light text-sm rounded-full">
                   AI Solution
-                </span>
               </div>
               
               <h3 className="text-2xl font-bold mb-3 text-zion-cyan">
                 {service.name}
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {service.description}
               </p>
-              
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-2xl font-bold text-white">
@@ -184,14 +138,10 @@ const InnovativeAIServices: React.FC = () => {
                   </span>
                   <span className="text-zion-slate-light text-sm">
                     project
-                  </span>
                 </div>
                 <p className="text-zion-slate-light text-sm">
                   Delivery: {service.deliveryTime}
                 </p>
-              </div>
-              
-              <div className="mb-4">
                 <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
                 <ul className="space-y-1">
                   {service.features.map((feature, index) => (
@@ -201,20 +151,10 @@ const InnovativeAIServices: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-              
-              <div className="mb-4">
                 <h4 className="font-semibold text-zion-cyan mb-2">Benefits:</h4>
-                <ul className="space-y-1">
                   {service.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center text-zion-slate-light text-sm">
                       <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
               <div className="border-t border-zion-cyan/20 pt-4">
                 <div className="flex space-x-2">
                   <a
@@ -223,19 +163,10 @@ const InnovativeAIServices: React.FC = () => {
                   >
                     Get Quote
                   </a>
-                  <a
                     href={`tel:${service.contactInfo.phone}`}
                     className="bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan p-2 rounded-lg transition-colors duration-200"
-                  >
                     <Phone className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
           ))}
-        </div>
-      </div>
-
       <div className="bg-zion-blue-darker py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-zion-cyan">
@@ -243,26 +174,17 @@ const InnovativeAIServices: React.FC = () => {
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
             Transform your business with cutting-edge artificial intelligence solutions.
-          </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Call Us</h3>
               <p className="text-zion-slate-light">+1 302 464 0950</p>
-            </div>
-            <div className="text-center">
               <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Email Us</h3>
               <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="text-center">
               <MapPin className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
               <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://ziontechgroup.com"
@@ -270,17 +192,10 @@ const InnovativeAIServices: React.FC = () => {
             >
               Visit Our Website
             </a>
-            <a
               href="mailto:kleber@ziontechgroup.com?subject=AI Services Consultation"
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
               Schedule Consultation
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default InnovativeAIServices;

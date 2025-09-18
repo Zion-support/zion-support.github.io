@@ -5,7 +5,7 @@ const UltimateTechShowcase2027: React.FC = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -20,12 +20,12 @@ const UltimateTechShowcase2027: React.FC = () => {
               Explore the most advanced technologies that will reshape the future of humanity. 
               From AI consciousness to interdimensional travel, experience what's possible.
             </p>
-          </div>
+          </motion.div>
         </div>
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {showcaseItems.map((item, index) => (
-            <button
+            <motion.button
               key={item.id}
               onClick={() => setActiveTab(index)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -38,19 +38,15 @@ const UltimateTechShowcase2027: React.FC = () => {
             >
               <span className="mr-2">{item.icon}</span>
               {item.title.split(' ')[0]} {item.title.split(' ')[1]}
-            </button>
+            </motion.button>
           ))}
-        </div>
         {/* Content Display */}
         <AnimatePresence mode="wait">
-          <div
             key={activeTab}
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-          >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div>
@@ -63,7 +59,7 @@ const UltimateTechShowcase2027: React.FC = () => {
                 </p>
                 <div className="space-y-4 mb-8">
                   {showcaseItems[activeTab].features.map((feature, index) => (
-                    <div
+                    <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -72,7 +68,7 @@ const UltimateTechShowcase2027: React.FC = () => {
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-lg">{feature}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-4">
@@ -84,18 +80,14 @@ const UltimateTechShowcase2027: React.FC = () => {
                   >
                     Explore Technology →
                   </motion.a>
-                  <button
+                  <motion.button
                     className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
                     Watch Demo
-                  </button>
-                </div>
+                  </motion.button>
               </div>
               {/* Right Visual */}
               <div className="relative">
-                <div
+                <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -114,19 +106,14 @@ const UltimateTechShowcase2027: React.FC = () => {
                         <div className="text-sm font-semibold">Performance</div>
                         <div className="text-xs opacity-75">99.9% Uptime</div>
                       </div>
-                      <div className="bg-white/20 rounded-lg p-4">
                         <div className="text-2xl mb-2">🔒</div>
                         <div className="text-sm font-semibold">Security</div>
                         <div className="text-xs opacity-75">Quantum Safe</div>
-                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                </motion.div>
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -138,23 +125,12 @@ const UltimateTechShowcase2027: React.FC = () => {
             The future is here, and it's more incredible than you can imagine.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button
               className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
               Start Your Journey
-            </button>
-            <button
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
               Learn More
-            </button>
           </div>
-        </div>
-        </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );

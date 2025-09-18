@@ -16,7 +16,6 @@ const FutureTechSolutions2025: React.FC = () => {
             Experience the next generation of technology solutions that are redefining what's possible in the digital age.
           </p>
         </div>
-
         {/* Revolutionary Solutions Showcase */}
         <div className="grid md:grid-cols-2 gap-12 mb-20">
           <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-10 border border-blue-400/30 hover:scale-105 transition-all duration-500">
@@ -30,40 +29,21 @@ const FutureTechSolutions2025: React.FC = () => {
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-white">Self-healing infrastructure</span>
               </div>
-              <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
                 <span className="text-white">Predictive scaling</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
                 <span className="text-white">Continuous optimization</span>
-              </div>
             </div>
-          </div>
-
           <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-3xl p-10 border border-green-400/30 hover:scale-105 transition-all duration-500">
             <div className="text-6xl mb-6 text-center">🧬</div>
             <h2 className="text-3xl font-bold text-white mb-6 text-center">Bio-Digital Fusion</h2>
             <p className="text-green-200 text-lg mb-8">
               Revolutionary integration of biological and digital systems, enabling seamless interaction between organic and synthetic intelligence.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-white">Neural interface technology</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
                 <span className="text-white">Biological data processing</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
                 <span className="text-white">Enhanced cognitive abilities</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Advanced Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300">
@@ -71,77 +51,45 @@ const FutureTechSolutions2025: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-4 text-center">Quantum Edge Computing</h3>
             <p className="text-red-200 text-sm mb-6">
               Ultra-fast quantum processing at the edge, delivering real-time insights and instant decision-making capabilities.
-            </p>
             <div className="text-center">
               <span className="bg-red-500/30 text-red-200 px-3 py-1 rounded-full text-xs">1000x Faster</span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🌌</div>
             <h3 className="text-xl font-bold text-white mb-4 text-center">Holographic Interfaces</h3>
             <p className="text-purple-200 text-sm mb-6">
               Immersive 3D holographic interfaces that transform how we interact with digital systems and data.
-            </p>
-            <div className="text-center">
               <span className="bg-purple-500/30 text-purple-200 px-3 py-1 rounded-full text-xs">3D Immersion</span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🔮</div>
             <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Reality</h3>
             <p className="text-cyan-200 text-sm mb-6">
               AI systems that predict and simulate future scenarios with 99.9% accuracy across multiple dimensions.
-            </p>
-            <div className="text-center">
               <span className="bg-cyan-500/30 text-cyan-200 px-3 py-1 rounded-full text-xs">99.9% Accuracy</span>
-            </div>
-          </div>
-        </div>
-
         {/* Innovation Metrics */}
         <div className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-3xl p-12 border border-indigo-400/30 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">Innovation Impact Metrics</h2>
             <p className="text-xl text-indigo-200">
               Quantifying the transformative power of our future technology solutions
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">500%</div>
               <div className="text-white font-semibold mb-1">Productivity Increase</div>
               <div className="text-indigo-300 text-sm">Average improvement across all implementations</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-green-400 mb-2">99.9%</div>
               <div className="text-white font-semibold mb-1">Uptime Guarantee</div>
               <div className="text-indigo-300 text-sm">Continuous system availability</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">10x</div>
               <div className="text-white font-semibold mb-2">Cost Reduction</div>
               <div className="text-indigo-300 text-sm">Operational expense optimization</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-white font-semibold mb-1">Autonomous Operation</div>
               <div className="text-indigo-300 text-sm">Self-managing systems</div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Timeline */}
         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10 mb-20">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">Future Technology Timeline</h2>
             <p className="text-xl text-gray-300">
               Our roadmap for bringing tomorrow's technology to today's challenges
-            </p>
-          </div>
-
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-purple-500"></div>
             
@@ -156,75 +104,41 @@ const FutureTechSolutions2025: React.FC = () => {
                 </div>
                 <div className="w-8 h-8 bg-blue-500 rounded-full border-4 border-white flex items-center justify-center relative z-10">
                   <span className="text-white text-sm font-bold">1</span>
-                </div>
                 <div className="w-1/2 pl-8"></div>
-              </div>
-
-              <div className="flex items-center">
                 <div className="w-1/2 pr-8"></div>
                 <div className="w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center relative z-10">
                   <span className="text-white text-sm font-bold">2</span>
-                </div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-6">
                     <div className="text-green-200 text-sm mb-2">Q3 2025</div>
                     <h3 className="text-xl font-bold text-white mb-2">Neural Interface Beta</h3>
                     <p className="text-green-100 text-sm">Brain-computer interface pilot programs</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <div className="w-1/2 pr-8 text-right">
                   <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6">
                     <div className="text-purple-200 text-sm mb-2">Q4 2025</div>
                     <h3 className="text-xl font-bold text-white mb-2">Holographic Systems</h3>
                     <p className="text-purple-100 text-sm">3D holographic interface deployment</p>
-                  </div>
-                </div>
                 <div className="w-8 h-8 bg-purple-500 rounded-full border-4 border-white flex items-center justify-center relative z-10">
                   <span className="text-white text-sm font-bold">3</span>
-                </div>
-                <div className="w-1/2 pl-8"></div>
-              </div>
-
-              <div className="flex items-center">
-                <div className="w-1/2 pr-8"></div>
                 <div className="w-8 h-8 bg-orange-500 rounded-full border-4 border-white flex items-center justify-center relative z-10">
                   <span className="text-white text-sm font-bold">4</span>
-                </div>
-                <div className="w-1/2 pl-8">
                   <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-6">
                     <div className="text-orange-200 text-sm mb-2">Q1 2026</div>
                     <h3 className="text-xl font-bold text-white mb-2">Full Integration</h3>
                     <p className="text-orange-100 text-sm">Complete ecosystem deployment</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">Experience the Future Today</h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
               Join the technology revolution and be among the first to experience the most advanced solutions ever created.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-bold hover:bg-cyan-50 transition-colors">
                 Get Early Access
               </a>
               <a href="/pages/AdvancedTechInnovations2025" className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors">
                 Learn More
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechSolutions2025;

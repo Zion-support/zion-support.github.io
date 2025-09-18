@@ -63,22 +63,15 @@ const ai-services: React.FC = () => {
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               ))}
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business with AI?
               <p className="text-xl text-gray-400 mb-8">
                 Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <divbutton
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-                >
                   Schedule Consultation
-                <divbutton
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >
                   View Case Studies
     </>
   );

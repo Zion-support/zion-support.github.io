@@ -35,7 +35,6 @@ const AIContentGenerator: React.FC = () => {
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                       {type.description}
-                    </div>
                     <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
                       <span>{type.estimatedTime}</span>
                       <span className={`px-2 py-1 rounded ${
@@ -45,7 +44,6 @@ const AIContentGenerator: React.FC = () => {
                       }`}>
                         {type.complexity}
                       </span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -63,7 +61,6 @@ const AIContentGenerator: React.FC = () => {
               className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
               rows={4}
             />
-          </div>
           {/* Generate Button */}
           <button
             onClick={generateContent}
@@ -78,12 +75,10 @@ const AIContentGenerator: React.FC = () => {
               <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
                 <span>{currentStep}</span>
                 <span>{Math.round(generationProgress)}%</span>
-              </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                 <div
                   className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
                 />
-              </div>
             </div>
           )}
         </div>
@@ -95,17 +90,13 @@ const AIContentGenerator: React.FC = () => {
             </h3>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               {generatedContent.length} items generated
-            </div>
-          </div>
           {generatedContent.length === 0 ? (
             <div className="text-center py-12 text-gray-500 dark:text-gray-400">
               <div className="text-4xl mb-4">🤖</div>
               <div>No content generated yet. Select a type and enter a prompt to get started.</div>
-            </div>
           ) : (
             <div className="space-y-4">
               {generatedContent.map((content) => (
-                <div
                   key={content.id}
                   className="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
                 >
@@ -122,7 +113,6 @@ const AIContentGenerator: React.FC = () => {
                           {Math.round(content.quality)}% quality
                         </div>
                       </div>
-                    </div>
                     <div className="flex flex-wrap gap-1 mb-3">
                       {content.tags.map((tag) => (
                         <span
@@ -130,9 +120,7 @@ const AIContentGenerator: React.FC = () => {
                           className="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-200 rounded text-xs"
                         >
                           #{tag}
-                        </span>
                       ))}
-                    </div>
                     <div className="flex space-x-2">
                       <button
                         onClick={() => setSelectedContent(content)}
@@ -140,35 +128,20 @@ const AIContentGenerator: React.FC = () => {
                       >
                         View
                       </button>
-                      <button
                         onClick={() => copyToClipboard(content.content)}
                         className="px-3 py-1 bg-gray-600 text-white rounded text-sm hover:bg-gray-700 transition-colors"
-                      >
                         Copy
-                      </button>
-                      <button
                         onClick={() => downloadContent(content)}
                         className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700 transition-colors"
-                      >
                         Download
-                      </button>
-                    </div>
-                  </div>
                   {selectedContent?.id === content.id && (
                     <div className="p-4 border-t border-gray-200 dark:border-gray-600">
                       <div className="prose dark:prose-invert max-w-none">
                         <pre className="whitespace-pre-wrap text-sm text-gray-800 dark:text-gray-200">
                           {content.content}
                         </pre>
-                      </div>
-                    </div>
                   )}
-                </div>
               ))}
-            </div>
-          )}
-        </div>
-      </div>
     </div>
   );
 };

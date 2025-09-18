@@ -26,74 +26,54 @@ const ComprehensiveServices2028: React.FC = () => {
       ],
       gradient: "from-purple-500 to-pink-500"
     },
-    {
       icon: "Cloud",
       title: "Cloud & Infrastructure",
       description: "Scalable cloud solutions with quantum computing capabilities and infinite scalability.",
-      services: [
         "Quantum Cloud Computing",
         "Serverless Architecture",
         "Microservices Development",
         "Container Orchestration",
         "DevOps Automation",
         "Infrastructure as Code"
-      ],
       gradient: "from-blue-500 to-cyan-500"
-    },
-    {
       icon: "Shield",
       title: "Cybersecurity",
       description: "Quantum-enhanced security solutions with self-evolving threat detection and prevention.",
-      services: [
         "Quantum Encryption",
         "Zero-Trust Architecture",
         "Threat Intelligence",
         "Security Auditing",
         "Incident Response",
         "Compliance Management"
-      ],
       gradient: "from-red-500 to-orange-500"
-    },
-    {
       icon: "Smartphone",
       title: "Mobile Development",
       description: "Next-generation mobile applications with AI integration and neural interface support.",
-      services: [
         "iOS & Android Development",
         "Cross-Platform Solutions",
         "AI-Powered Mobile Apps",
         "Neural Interface Apps",
         "Mobile Security",
         "Performance Optimization"
-      ],
       gradient: "from-green-500 to-emerald-500"
-    },
-    {
       icon: "Code",
       title: "Software Development",
       description: "Custom software solutions built with cutting-edge technologies and quantum computing.",
-      services: [
         "Custom Software Development",
         "API Development & Integration",
         "Legacy System Modernization",
         "Performance Optimization",
         "Quality Assurance",
         "Technical Documentation"
-      ],
       gradient: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: "Code",
       title: "UI/UX Design",
       description: "Revolutionary user experience design with neural interface optimization and AI-driven personalization.",
-      services: [
         "Neural Interface Design",
         "AI-Powered UX",
         "Accessibility Design",
         "Design Systems",
         "User Research",
         "Prototyping & Testing"
-      ],
       gradient: "from-pink-500 to-rose-500"
     };
   const stats = [
@@ -105,7 +85,6 @@ const ComprehensiveServices2028: React.FC = () => {
     "Quantum Computing", "Neural Interfaces", "AI Consciousness", "Quantum Encryption",
     "Autonomous Systems", "Neural Networks", "Quantum AI", "Brain-Computer Interfaces",
     "Predictive Analytics", "Quantum Security", "Self-Evolving AI", "Infinite Scalability"
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */};
@@ -130,12 +109,10 @@ const ComprehensiveServices2028: React.FC = () => {
                 Tech Services
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our comprehensive suite of AI-powered services, 
               quantum computing solutions, and neural interface technologies.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }};
@@ -146,18 +123,11 @@ const ComprehensiveServices2028: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
                 className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
                 Get Consultation
-              </motion.button>
-            </div>
           </motion.div>
         </div>
       </div>
-
       {/* Stats Section */};
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +139,6 @@ const ComprehensiveServices2028: React.FC = () => {
                 animate={{ opacity: "1", y: 0 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 className="text-center"
-              >
                 <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6">
                   <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -178,44 +147,24 @@ const ComprehensiveServices2028: React.FC = () => {
               </motion.div>
             ))};
           </div>
-        </div>
-      </div>
-
       {/* Service Categories */};
       <div className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: "0", y: 20 }};
-            animate={{ opacity: "1", y: 0 }};
-            transition={{ duration: 0.8 }};
             className="text-center mb-16"
-          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology services powered by quantum computing, AI consciousness, and neural interfaces.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-              <motion.div
-                key={index};
-                initial={{ opacity: "0", y: 20 }};
-                animate={{ opacity: "1", y: 0 }};
-                transition={{ duration: 0.8, delay: index * 0.1 }};
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20"
-              >
                 <div className="flex items-center mb-6">
                   <div className={`p-3 bg-gradient-to-r ${category.gradient} rounded-lg mr-4`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                </div>
                 
                 <p className="text-gray-300 mb-6">{category.description}</p>
-                
                 <div className="space-y-3">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="flex items-center">
@@ -223,60 +172,23 @@ const ComprehensiveServices2028: React.FC = () => {
                       <span className="text-gray-300 text-sm">{service}</span>
                     </div>
                   ))};
-                </div>
-              </motion.div>
-            ))};
-          </div>
-        </div>
-      </div>
-
       {/* Technologies Section */};
       <div className="py-24 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: "0", y: 20 }};
-            animate={{ opacity: "1", y: 0 }};
-            transition={{ duration: 0.8 }};
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cutting-Edge Technologies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We leverage the most advanced technologies to deliver revolutionary solutions.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map((tech, index) => (
-              <motion.div
-                key={index};
                 initial={{ opacity: "0", scale: 0.8 }};
                 animate={{ opacity: "1", scale: 1 }};
                 transition={{ duration: 0.5, delay: index * 0.05 }};
                 className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-4 text-center border border-blue-500/20"
-              >
                 <span className="text-white font-semibold">{tech}</span>
-              </motion.div>
-            ))};
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */};
       <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: "0", y: 20 }};
-            animate={{ opacity: "1", y: 0 }};
-            transition={{ duration: 0.8 }};
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of organizations already leveraging our revolutionary technology services.
-            </p>
             <motion.button
               whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }};
@@ -285,9 +197,6 @@ const ComprehensiveServices2028: React.FC = () => {
               Start Your Project
               <ArrowRight className="w-6 h-6 ml-2" />
             </motion.button>
-          </motion.div>
-        </div>
-      </div>
     </div>
   );
   };

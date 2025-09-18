@@ -21,12 +21,10 @@ const NewContentBanner2025: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
             Revolutionary New Content & Services
           </h2>
-          
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover our latest breakthrough technologies, comprehensive services, and innovative solutions 
             that are reshaping the future of business and technology.
           </p>
-          
           {/* Feature highlights */}
           <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -34,18 +32,12 @@ const NewContentBanner2025: React.FC = () => {
               <h3 className="text-lg font-bold mb-2">Conscious AI Systems</h3>
               <p className="text-sm opacity-90">Revolutionary AI that thinks and feels independently</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-3xl mb-3">⚛️</div>
               <h3 className="text-lg font-bold mb-2">Quantum Computing</h3>
               <p className="text-sm opacity-90">Breakthrough quantum consciousness technology</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-3xl mb-3">🌌</div>
               <h3 className="text-lg font-bold mb-2">Interdimensional Tech</h3>
               <p className="text-sm opacity-90">Computing across multiple dimensions</p>
-            </div>
-          </div>
-          
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -54,37 +46,22 @@ const NewContentBanner2025: React.FC = () => {
             >
               Explore Breakthrough Tech →
             </a>
-            <a 
               href="/pages/ComprehensiveServices2025" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg backdrop-blur-sm"
-            >
               View All Services →
-            </a>
-          </div>
-          
           {/* Stats */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-2xl font-bold">500+</div>
               <div className="text-sm opacity-80">Projects Delivered</div>
-            </div>
-            <div className="text-center">
               <div className="text-2xl font-bold">99.5%</div>
               <div className="text-sm opacity-80">Success Rate</div>
-            </div>
-            <div className="text-center">
               <div className="text-2xl font-bold">24/7</div>
               <div className="text-sm opacity-80">Support Available</div>
-            </div>
-            <div className="text-center">
               <div className="text-2xl font-bold">50+</div>
               <div className="text-sm opacity-80">Countries Served</div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 };
-
 export default NewContentBanner2025;

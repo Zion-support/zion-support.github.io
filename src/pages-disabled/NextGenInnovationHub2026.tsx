@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet }  from 'react-helmet-async';
 import Header from '../Header';
-import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '@/components/EnhancedFooter';
 
 const NextGenInnovationHub2026: React.FC = () => {
   return (
@@ -24,7 +24,6 @@ const NextGenInnovationHub2026: React.FC = () => {
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
         </div>
-
         {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
@@ -36,37 +35,23 @@ const NextGenInnovationHub2026: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
               Explore AI →
             </button>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
-            <p className="text-gray-300 mb-6">
               Quantum computers solving impossible problems with unprecedented speed
-            </p>
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
               Learn More →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <div className="text-4xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
-            <p className="text-gray-300 mb-6">
               Direct brain-computer interfaces revolutionizing human-computer interaction
-            </p>
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
               Discover →
-            </button>
-          </div>
-        </div>
-
         {/* Innovation Showcase */};
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Innovation Showcase</h3>
             <p className="text-lg opacity-90">Experience the latest breakthroughs in technology</p>
-          </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-6">
               <h4 className="text-xl font-bold mb-4">Revolutionary AI Systems</h4>
@@ -82,36 +67,23 @@ const NextGenInnovationHub2026: React.FC = () => {
             </div>
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-xl p-6">
               <h4 className="text-xl font-bold mb-4">Quantum Breakthroughs</h4>
-              <p className="text-gray-300 mb-4">
                 Quantum computers achieving true supremacy and solving impossible problems.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• 1000+ qubit systems</li>
                 <li>• Quantum encryption</li>
                 <li>• Molecular simulations</li>
                 <li>• Optimization algorithms</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12">
             <h3 className="text-4xl font-bold mb-6">🚀 Ready to Innovate?</h3>
             <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
               Join the innovation revolution and be part of the future that's being created today
-            </p>
             <div className="flex flex-wrap justify-center gap-6">
               <button className="bg-white text-emerald-600 px-10 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg">
                 🚀 Start Innovating
               </button>
               <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
                 📞 Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

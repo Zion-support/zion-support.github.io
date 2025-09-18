@@ -1,14 +1,15 @@
-import React from 'react';
-const AIEnterpriseCopilot2025: React.FC = () => {
+import React from "react";
+
+const AIEnterpriseCopilot2025 = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIEnterpriseCopilot2025</h1>
-          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+          <h1 className="text-5xl font-bold mb-6">AIEnterpriseCopilot2025</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-  };
+};
 export default AIEnterpriseCopilot2025;

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedAnalytics: React.FC = () => {
   return (

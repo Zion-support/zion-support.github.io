@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltraQuantumHolographicBackgroundV4: React.FC = () => {
   return (

@@ -1,112 +1,58 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  renderTime: number;
-  networkLatency: number;
-}
-
-export default function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
-
+export const PerformanceOptimizer = () => {
   useEffect(() => {
-    // Performance monitoring
-    const startTime = performance.now();
-    
-    // Monitor memory usage
-    const memoryInfo = (performance as any).memory;
-    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
-    
-    // Monitor network latency
-    const networkLatency = performance.getEntriesByType('navigation')[0]?.responseEnd - 
-                          performance.getEntriesByType('navigation')[0]?.requestStart || 0;
-    
-    // Calculate render time
-    const renderTime = performance.now() - startTime;
-    
-    setMetrics({
-      loadTime: performance.now(),
-      memoryUsage,
-      renderTime,
-      networkLatency
-    });
-
-    // Optimize performance
-    optimizePerformance();
-  }, []);
-
-  const optimizePerformance = () => {
-    // Lazy load images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-
     // Preload critical resources
-    const criticalResources = [
-      '/src/index.css',
-      '/src/main.tsx'
-    ];
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.svg',
+        '/images/favicon.ico'
+      ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
-      document.head.appendChild(link);
-    });
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
 
-    // Optimize scroll performance
-    let ticking = false;
-    const optimizeScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Throttled scroll handling
-          ticking = false;
+    // Optimize font loading
+    const optimizeFontLoading = () => {
+      if ('fonts' in document) {
+        document.fonts.ready.then(() => {
+          document.documentElement.classList.add('fonts-loaded');
         });
-        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', optimizeScroll, { passive: true });
+    // Add performance monitoring
+    const addPerformanceMonitoring = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            if (perfData) {
+              console.log('Performance Metrics:', {
+                loadTime: perfData.loadEventEnd - perfData.loadEventStart,
+                domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                firstPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-paint')?.startTime,
+                firstContentfulPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint')?.startTime
+              });
+            }
+          }, 0);
+        });
+      }
+    };
 
-    setIsOptimized(true);
-  };
+    preloadCriticalResources();
+    optimizeFontLoading();
+    addPerformanceMonitoring();
+  }, []);
 
-  if (!isOptimized) {
-    return (
-      <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
-        <div className="flex items-center space-x-2">
-          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-          <span>Optimizing Performance...</span>
-        </div>
-      </div>
-    );
-  }
+  return null;
+};
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50">
-      <div className="text-sm">
-        <div className="font-semibold">Performance Optimized</div>
-        {metrics && (
-          <div className="text-xs opacity-90">
-            Load: {metrics.loadTime.toFixed(0)}ms | 
-            Memory: {metrics.memoryUsage.toFixed(1)}MB | 
-            Network: {metrics.networkLatency.toFixed(0)}ms
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
+export default PerformanceOptimizer;

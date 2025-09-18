@@ -27,9 +27,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
           </p>
         </div>
         {/* Solutions Navigation */}
-        <div
           className="mb-12"
-        >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {solutions.map((solutionindex) => (
               <button
@@ -47,7 +45,6 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 </div>
               </button>
             ))}
-          </div>
           {/* Solution Details */}
             <div
               key={activeSolution}
@@ -64,7 +61,6 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                       {solutions[activeSolution].description}
                     </p>
                   </div>
-                  <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
                     <div className="grid grid-cols-1 gap-3">
                       {solutions[activeSolution].features.map((featureindex) => (
@@ -74,8 +70,6 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
-                  <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Use Cases</h4>
                     <div className="flex flex-wrap gap-2">
                       {solutions[activeSolution].useCases.map((useCaseindex) => (
@@ -85,23 +79,13 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                         >
                           {useCase}
                         </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
                 {/* Right Column - Metrics & Visual */}
-                <div className="space-y-8">
-                  <div>
                     <h4 className="text-xl font-semibold text-white mb-6">Performance Metrics</h4>
                     <div className="grid grid-cols-2 gap-4">
                       {Object.entries(solutions[activeSolution].metrics).map(([keyvalue]index) => (
                         <div key={index} className="bg-white/10 rounded-2xl p-4 text-center">
                           <div className="text-2xl font-bold text-white mb-1">{value}</div>
                           <div className="text-gray-400 text-sm capitalize">{key}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/10">
                     <div className="text-center">
                       <div className={`w-20 h-20 bg-gradient-to-r ${solutions[activeSolution].color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -117,17 +101,10 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                         <Play className="w-4 h-4" />
                         View Demo
                       </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-        </div>
         {/* Industries Section */}
-        <div
           className="mb-16"
-        >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Trusted by Industry Leaders
           </h3>
@@ -136,48 +113,26 @@ const ComprehensiveAISolutions2026: React.FC = () => {
               <div
                 key={index}
                 className="text-center group"
-              >
                 <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <industry.icon className="w-8 h-8 text-white" />
-                </div>
                 <div className="text-2xl font-bold text-white mb-1">{industry.count}</div>
                 <div className="text-gray-400 text-sm">{industry.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* Testimonials */}
-        <div
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
             What Our Clients Say
-          </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <div
-                key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
-              >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
-                </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-blue-400 text-sm">{testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* Call to Action */}
-        <div
           className="text-center"
-        >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -190,15 +145,9 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 <Download className="w-5 h-5" />
                 Download Brochure
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
               <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
                 <Award className="w-5 h-5" />
                 Schedule Demo
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

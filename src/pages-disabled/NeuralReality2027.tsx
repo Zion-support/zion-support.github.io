@@ -16,7 +16,6 @@ const NeuralReality2027: React.FC = () => {
             Experience the fusion of neural interfaces and reality manipulation, where consciousness can directly interact with and modify the physical world through advanced neural technology.
           </p>
         </div>
-
         {/* Neural Reality Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-emerald-200 hover:scale-105">
@@ -31,45 +30,30 @@ const NeuralReality2027: React.FC = () => {
               <li>• Direct brain-computer interface</li>
               <li>• Consciousness transfer capabilities</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-teal-100 to-cyan-100 rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-teal-200 hover:scale-105">
             <div className="text-8xl mb-6 text-center">🌐</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-teal-800">Reality Manipulation</h3>
-            <p className="text-gray-700 mb-6 text-center text-lg">
               Advanced neural technology that allows consciousness to directly manipulate physical reality, creating and modifying matter through pure thought.
-            </p>
             <ul className="text-teal-700 space-y-3 text-base">
               <li>• Matter manipulation through thought</li>
               <li>• Reality creation and modification</li>
               <li>• Quantum field interaction</li>
               <li>• Dimensional reality shifting</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-100 to-blue-100 rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-cyan-200 hover:scale-105">
             <div className="text-8xl mb-6 text-center">🔮</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-cyan-800">Consciousness Expansion</h3>
-            <p className="text-gray-700 mb-6 text-center text-lg">
               Neural technology that expands human consciousness beyond physical limitations, enabling awareness across multiple dimensions and realities.
-            </p>
             <ul className="text-cyan-700 space-y-3 text-base">
               <li>• Multi-dimensional awareness</li>
               <li>• Consciousness projection</li>
               <li>• Reality perception enhancement</li>
               <li>• Transcendent sensory experience</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Neural Applications */}
         <div className="bg-gradient-to-r from-gray-900 via-emerald-900 to-teal-900 rounded-3xl p-12 mb-16 text-white">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">🧠 Neural Reality Applications</h2>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Discover how neural reality technology is revolutionizing human capabilities and transforming our relationship with the physical world
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -85,28 +69,17 @@ const NeuralReality2027: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-4 text-teal-300">🌍 Environmental Control</h3>
-              <p className="text-lg mb-4 opacity-90">
                 Neural technology that allows direct control of environmental systems, climate, and natural phenomena through consciousness-based interfaces.
-              </p>
               <ul className="text-teal-200 space-y-2">
                 <li>• Climate control through thought</li>
                 <li>• Natural disaster prevention</li>
                 <li>• Environmental restoration</li>
                 <li>• Ecosystem optimization</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Neural Breakthroughs */}
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12 mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">⚡ Neural Reality Breakthroughs</h2>
             <p className="text-xl text-gray-600">Revolutionary achievements in neural interface and reality manipulation technology</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <div className="flex items-center space-x-3 mb-4">
@@ -116,59 +89,25 @@ const NeuralReality2027: React.FC = () => {
               <h3 className="text-xl font-bold mb-3">Perfect Neural Interface</h3>
               <p className="text-gray-600 mb-4">
                 Achieved 100% accuracy in neural signal interpretation, enabling seamless thought-to-action translation without any lag or error.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <div className="flex items-center space-x-3 mb-4">
                 <span className="px-4 py-2 bg-teal-100 text-teal-700 text-sm rounded-full font-bold">∞</span>
                 <span className="text-sm text-gray-500">Reality Control</span>
-              </div>
               <h3 className="text-xl font-bold mb-3">Unlimited Reality Manipulation</h3>
-              <p className="text-gray-600 mb-4">
                 Developed technology that allows consciousness to manipulate matter and energy at the quantum level with unlimited precision.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <div className="flex items-center space-x-3 mb-4">
                 <span className="px-4 py-2 bg-cyan-100 text-cyan-700 text-sm rounded-full font-bold">5D</span>
                 <span className="text-sm text-gray-500">Consciousness</span>
-              </div>
               <h3 className="text-xl font-bold mb-3">Multi-Dimensional Awareness</h3>
-              <p className="text-gray-600 mb-4">
                 Enabled human consciousness to perceive and interact with up to 5 dimensions simultaneously through advanced neural interfaces.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Future Possibilities */}
         <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-12 mb-16 text-white">
           <div className="text-center mb-8">
             <h2 className="text-5xl font-bold mb-6">🔮 The Future of Neural Reality</h2>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               By 2027, neural reality technology will enable humans to transcend physical limitations and achieve unprecedented control over their environment and consciousness.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">🌌 Universal Consciousness</h3>
               <p className="text-lg opacity-90">
                 Neural reality will enable humans to connect their consciousness with universal networks, sharing knowledge and experiences across all of existence.
-              </p>
-            </div>
-            
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">🚀 Reality Creation</h3>
-              <p className="text-lg opacity-90">
                 Humans will gain the ability to create and modify entire realities through pure consciousness, transcending the limitations of physical existence.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -176,19 +115,14 @@ const NeuralReality2027: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Join the neural reality revolution and transcend the boundaries between consciousness and physical reality.
-          </p>
           <div className="flex justify-center space-x-6">
             <a href="/contact" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Begin Your Neural Journey
             </a>
             <a href="/pages/AIInnovation2027" className="border-2 border-emerald-600 text-emerald-600 px-10 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg">
               Explore AI Innovation →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NeuralReality2027;

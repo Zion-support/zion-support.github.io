@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = {
     ai: {
       title: 'AI Revolution 2026',
@@ -25,38 +24,28 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
       title: 'Quantum Computing',
       icon: '⚡',
       description: 'Unlock the power of quantum mechanics to solve problems that were previously impossible.',
-      features: [
         'Quantum Supremacy',
         'Parallel Processing',
         'Cryptographic Security',
         'Molecular Simulation',
         'Optimization Algorithms'
-      ],
-      stats: {
         processing: 'Exponential',
         security: 'Unbreakable',
         applications: 'Infinite'
-      }
-    },
     neural: {
       title: 'Neural Interfaces',
       icon: '🧬',
       description: 'Bridge the gap between mind and machine with direct neural communication systems.',
-      features: [
         'Brain-Computer Interface',
         'Thought Control',
         'Neural Feedback',
         'Memory Enhancement',
         'Cognitive Augmentation'
-      ],
-      stats: {
         connection: 'Direct',
         latency: '<1ms',
         safety: '100%'
-      }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -80,19 +69,14 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               </button>
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Learn More
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
           <p className="text-xl text-purple-200">Choose a technology to explore</p>
-        </div>
-
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(technologies).map(([key, tech]) => (
             <button
@@ -108,8 +92,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               {tech.title}
             </button>
           ))}
-        </div>
-
         {/* Active Technology Display */}
         {Object.entries(technologies).map(([key, tech]) => (
           activeTab === key && (
@@ -132,7 +114,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <h4 className="text-2xl font-semibold mb-6">Performance Stats:</h4>
                   {Object.entries(tech.stats).map(([statKey, value]) => (
@@ -143,13 +124,9 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                       </div>
                     </div>
                   ))}
-                </div>
               </div>
-            </div>
           )
         ))}
-      </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -161,15 +138,9 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
               Get Early Access
-            </button>
             <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
               Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2026;

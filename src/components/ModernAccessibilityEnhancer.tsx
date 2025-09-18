@@ -11,7 +11,6 @@ interface AccessibilitySettings {
 interface ModernAccessibilityEnhancerProps {
   showControls?: boolean;
   onSettingsChange?: (settings: AccessibilitySettings) => void;
-}
 const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = ({
   showControls = false,
   onSettingsChange
@@ -38,52 +37,38 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
     }
   }, []);
   // Save settings to localStorage
-  useEffect(() => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
     onSettingsChange?.(settings);
   }, [settings, onSettingsChange]);
   // Apply accessibility settings to document
-  useEffect(() => {
     const root = document.documentElement;
     // High contrast
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-    }
     // Large text
     if (settings.largeText) {
       root.classList.add('large-text');
-    } else {
       root.classList.remove('large-text');
-    }
     // Reduced motion
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
-    } else {
       root.classList.remove('reduced-motion');
-    }
     // Focus visible
     if (settings.focusVisible) {
       root.classList.add('focus-visible');
-    } else {
       root.classList.remove('focus-visible');
-    }
     // Screen reader optimizations
     if (settings.screenReader) {
       root.classList.add('screen-reader-optimized');
-    } else {
       root.classList.remove('screen-reader-optimized');
-    }
     // Keyboard navigation
     if (settings.keyboardNavigation) {
       root.classList.add('keyboard-navigation');
-    } else {
       root.classList.remove('keyboard-navigation');
-    }
   }, [settings]);
   // Detect screen reader usage
-  useEffect(() => {
     const detectScreenReader = () => {
       const isScreenReader = 
         window.speechSynthesis ||
@@ -94,18 +79,14 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
       setSettings(prev => ({ ...prev, screenReader: !!isScreenReader }));
     };
     detectScreenReader();
-  }, []);
   // Handle keyboard shortcuts
-  useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Alt + A to toggle accessibility panel
       if (event.altKey && event.key === 'a') {
         event.preventDefault();
         setIsVisible(prev => !prev);
-      }
       // Alt + 1-6 for quick settings
       if (event.altKey && event.key >= '1' && event.key <= '6') {
-        event.preventDefault();
         const settingKeys = [
           'highContrast',
           'largeText', 
@@ -118,14 +99,10 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
         if (settingKey) {
           setSettings(prev => ({ ...prev, [settingKey]: !prev[settingKey] }));
         }
-      }
-    };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({ ...prev, [key]: value }));
-  }, []);
   const resetSettings = useCallback(() => {
     setSettings({
       highContrast: false,
@@ -135,7 +112,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
       screenReader: false,
       keyboardNavigation: true
     });
-  }, []);
   if (!showControls) {
     return null;
   }
@@ -178,20 +154,14 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
                   />
                 </div>
               ))}
-            </div>
             <div className="mt-4 pt-4 border-t border-gray-700">
-              <button
                 onClick={resetSettings}
                 className="w-full text-xs bg-gray-600 hover:bg-gray-700 text-white py-2 px-3 rounded transition-colors"
-              >
                 Reset to Defaults
-              </button>
-            </div>
             <div className="mt-2 text-xs text-gray-400">
               <p>Keyboard shortcuts:</p>
               <p>Alt + A: Toggle panel</p>
               <p>Alt + 1-6: Toggle settings</p>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -215,18 +185,12 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
         >
           Skip to main content
         </a>
-        <a 
           href="#navigation" 
           className="skip-link absolute top-0 left-0 bg-blue-600 text-white p-2 z-50 transform -translate-y-full focus:translate-y-0 transition-transform mt-8"
-        >
           Skip to navigation
-        </a>
-        <a 
           href="#footer" 
           className="skip-link absolute top-0 left-0 bg-blue-600 text-white p-2 z-50 transform -translate-y-full focus:translate-y-0 transition-transform mt-16"
-        >
           Skip to footer
-        </a>
       </div>
     </>
   );

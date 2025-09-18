@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedServices2025: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const EnhancedServices2025: React.FC = () => {
   );
 };
 
-export default EnhancedServices2025;

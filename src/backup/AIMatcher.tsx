@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function AIMatcher() {
   return (
@@ -38,20 +38,12 @@ export default function AIMatcher() {
                       <h4 className="text-lg font-semibold text-white mb-2">Answer Questions</h4>
                       <p className="text-zion-slate-light text-sm">Tell us about your business needs and challenges</p>
                     </div>
-                    <div className="text-center">
-                      <div className="bg-zion-cyan text-zion-blue-dark w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-xl font-bold">2</span>
-                      </div>
                       <h4 className="text-lg font-semibold text-white mb-2">AI Analysis</h4>
                       <p className="text-zion-slate-light text-sm">Our AI analyzes your requirements and matches solutions</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-zion-cyan text-zion-blue-dark w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-xl font-bold">3</span>
-                      </div>
                       <h4 className="text-lg font-semibold text-white mb-2">Get Recommendations</h4>
                       <p className="text-zion-slate-light text-sm">Receive personalized AI solution recommendations</p>
-                    </div>
                   </div>
                 </div>
                 
@@ -59,10 +51,8 @@ export default function AIMatcher() {
                   <button className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan-light transition-colors">
                     Start AI Matching
                   </button>
-                </div>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </>

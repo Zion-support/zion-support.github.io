@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function ZionHireAI() {
   return (
@@ -32,27 +32,11 @@ export default function ZionHireAI() {
                 </button>
               </div>
               
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Talent Matching</h3>
-                <p className="text-zion-slate-light mb-4">
                   Intelligent matching of candidates to job requirements
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  Learn More
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Interview AI</h3>
-                <p className="text-zion-slate-light mb-4">
                   Automated interview scheduling and candidate assessment
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  Learn More
-                </button>
-              </div>
             </div>
-          </div>
         </div>
       </main>
     </>

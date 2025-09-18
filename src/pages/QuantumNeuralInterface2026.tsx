@@ -1,14 +1,14 @@
 import React from 'react';
+
 const QuantumNeuralInterface2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">QuantumNeuralInterface2026</h1>
-          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-6">QuantumNeuralInterface2026</h1>
+        <p className="text-xl opacity-90">Coming soon...</p>
       </div>
     </div>
   );
-  };
+};
+
 export default QuantumNeuralInterface2026;

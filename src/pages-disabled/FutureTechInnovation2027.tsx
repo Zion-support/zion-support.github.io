@@ -19,7 +19,6 @@ const FutureTechInnovation2027: React.FC = () => {
               From quantum consciousness to synthetic intelligence, discover what's possible.
             </p>
           </div>
-
           {/* Revolutionary Technologies Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -38,99 +37,71 @@ const FutureTechInnovation2027: React.FC = () => {
               <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
                 Explore Consciousness AI →
               </button>
-            </div>
-
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">⚡</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality</h3>
               <p className="text-cyan-100 mb-6 text-center leading-relaxed">
                 Quantum computing that transcends physical limitations, enabling us to 
                 manipulate reality itself through quantum mechanics.
-              </p>
               <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
                 <li>• Reality manipulation</li>
                 <li>• Quantum teleportation</li>
                 <li>• Parallel universe computing</li>
                 <li>• Time-space engineering</li>
-              </ul>
               <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
                 Enter Quantum Reality →
-              </button>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🧬</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Neural Evolution</h3>
               <p className="text-emerald-100 mb-6 text-center leading-relaxed">
                 Direct brain-computer interfaces that enable humans to evolve beyond 
                 biological limitations and achieve superhuman capabilities.
-              </p>
               <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
                 <li>• Enhanced cognitive abilities</li>
                 <li>• Memory augmentation</li>
                 <li>• Telepathic communication</li>
                 <li>• Biological immortality</li>
-              </ul>
               <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
                 Evolve Beyond Human →
-              </button>
-            </div>
-
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Universal Computing</h3>
               <p className="text-orange-100 mb-6 text-center leading-relaxed">
                 Computing systems that harness the power of entire galaxies, 
                 enabling us to solve problems of cosmic scale and complexity.
-              </p>
               <ul className="text-orange-200 space-y-2 mb-6 text-sm">
                 <li>• Galaxy-scale processing</li>
                 <li>• Universal problem solving</li>
                 <li>• Cosmic consciousness</li>
                 <li>• Reality simulation</li>
-              </ul>
               <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
                 Harness Universal Power →
-              </button>
-            </div>
-
             <div className="bg-gradient-to-br from-pink-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🌟</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Reality</h3>
               <p className="text-pink-100 mb-6 text-center leading-relaxed">
                 Completely synthetic realities that are indistinguishable from physical reality, 
                 enabling infinite possibilities and experiences.
-              </p>
               <ul className="text-pink-200 space-y-2 mb-6 text-sm">
                 <li>• Perfect reality simulation</li>
                 <li>• Infinite virtual worlds</li>
                 <li>• Synthetic consciousness</li>
                 <li>• Reality engineering</li>
-              </ul>
               <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
                 Create New Reality →
-              </button>
-            </div>
-
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🔮</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Temporal Technology</h3>
               <p className="text-indigo-100 mb-6 text-center leading-relaxed">
                 Time manipulation technology that allows us to navigate through 
                 different timelines and alter the course of history itself.
-              </p>
               <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
                 <li>• Time travel capabilities</li>
                 <li>• Timeline manipulation</li>
                 <li>• Temporal paradox solving</li>
                 <li>• Future prediction</li>
-              </ul>
               <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
                 Master Time →
-              </button>
-            </div>
-          </div>
-
           {/* Revolutionary Applications */}
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 mb-16">
             <div className="text-center mb-12">
@@ -140,9 +111,6 @@ const FutureTechInnovation2027: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These technologies are already transforming industries and creating new possibilities 
                 that were once considered science fiction.
-              </p>
-            </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-5xl mb-4">🏥</div>
@@ -152,57 +120,35 @@ const FutureTechInnovation2027: React.FC = () => {
                   while neural interfaces restore lost functions.
                 </p>
               </div>
-              <div className="text-center">
                 <div className="text-5xl mb-4">🚀</div>
                 <h3 className="text-xl font-bold mb-3">Space Exploration</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
                   Universal computing systems enabling interstellar travel and 
                   colonization of distant galaxies.
-                </p>
-              </div>
-              <div className="text-center">
                 <div className="text-5xl mb-4">🌍</div>
                 <h3 className="text-xl font-bold mb-3">Environmental Healing</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
                   Quantum reality manipulation reversing climate change and 
                   restoring ecosystems to perfect balance.
-                </p>
-              </div>
-              <div className="text-center">
                 <div className="text-5xl mb-4">🎓</div>
                 <h3 className="text-xl font-bold mb-3">Education Evolution</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
                   Synthetic reality classrooms where students experience history, 
                   science, and art in immersive detail.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Call to Action */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-12 mb-8">
               <h2 className="text-4xl font-bold mb-6 text-white">
                 🚀 Ready to Experience the Future?
-              </h2>
               <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
                 Join us in shaping the future of technology. Be among the first to experience 
                 these revolutionary innovations that will define the next decade.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg">
                   🌟 Start Your Journey
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all font-bold text-lg">
                   📚 Learn More
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechInnovation2027;

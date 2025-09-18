@@ -11,30 +11,22 @@ const RevolutionaryContentBanner: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       textColor: "text-white"
     },
-    {
       title: "🌟 Ultimate Tech Showcase 2026",
       description: "Experience the ultimate showcase of cutting-edge technology innovations for 2026",
       link: "/pages/UltimateTechShowcase2026",
       gradient: "from-cyan-600 to-blue-600",
-      textColor: "text-white"
-    },
-    {
       title: "🧪 Next-Gen Innovation Hub 2026",
       description: "Welcome to the world's most advanced innovation hub where the future is being created",
       link: "/pages/NextGenInnovationHub2026",
       gradient: "from-green-600 to-teal-600",
-      textColor: "text-white"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [banners.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
@@ -47,7 +39,6 @@ const RevolutionaryContentBanner: React.FC = () => {
           <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-indigo-500/30 rounded-full animate-pulse delay-3000"></div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -59,8 +50,6 @@ const RevolutionaryContentBanner: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Experience the most innovative and groundbreaking content that defines the future of technology
           </p>
-        </div>
-
         {/* Banner Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden rounded-2xl shadow-2xl">
@@ -87,8 +76,6 @@ const RevolutionaryContentBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {banners.map((_, index) => (
@@ -102,41 +89,7 @@ const RevolutionaryContentBanner: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
-        </div>
-
-        {/* Additional Content Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-3xl mb-4">🚀</div>
-            <h4 className="text-xl font-bold mb-2">Advanced AI Solutions</h4>
-            <p className="text-sm opacity-90 mb-4">Cutting-edge AI technologies for enterprise transformation</p>
-            <a href="/pages/AdvancedAISolutions2026" className="text-purple-300 hover:text-white transition-colors">
-              Learn More →
-            </a>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-3xl mb-4">⚛️</div>
-            <h4 className="text-xl font-bold mb-2">Quantum Computing</h4>
-            <p className="text-sm opacity-90 mb-4">Revolutionary quantum technologies for the future</p>
-            <a href="/pages/QuantumComputingRevolution2025" className="text-purple-300 hover:text-white transition-colors">
-              Explore →
-            </a>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-3xl mb-4">🧠</div>
-            <h4 className="text-xl font-bold mb-2">Neural Interfaces</h4>
-            <p className="text-sm opacity-90 mb-4">Next-generation brain-computer interfaces</p>
-            <a href="/pages/NeuralInterfaceRevolution2025" className="text-purple-300 hover:text-white transition-colors">
-              Discover →
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner;

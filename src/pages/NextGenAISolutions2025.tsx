@@ -17,5 +17,4 @@ const NextGenAISolutions2025: React.FC = () => {
   );
 
 };
-
 export default NextGenAISolutions2025;

@@ -18,7 +18,6 @@ const NextGenSpaceTech2031: React.FC = () => {
             interstellar travel, and cosmic exploration capabilities.
           </p>
         </div>
-
         {/* Revolutionary Space Technologies */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-transform duration-300">
@@ -31,75 +30,46 @@ const NextGenSpaceTech2031: React.FC = () => {
             <div className="flex items-center text-cyan-400 font-semibold">
               Launch to Stars →
             </div>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">Interstellar Colonies</h3>
-            <p className="text-gray-300 mb-6">
               Self-sustaining space colonies that can support human life 
               on any planet or moon in the galaxy.
-            </p>
             <div className="flex items-center text-purple-400 font-semibold">
               Colonize Space →
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Communication</h3>
-            <p className="text-gray-300 mb-6">
               Instantaneous communication across any distance in the universe 
               using quantum entanglement technology.
-            </p>
             <div className="flex items-center text-green-400 font-semibold">
               Connect Universally →
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🛸</div>
             <h3 className="text-2xl font-bold mb-4">Anti-Gravity Vehicles</h3>
-            <p className="text-gray-300 mb-6">
               Advanced spacecraft that manipulate gravitational fields 
               for effortless space travel and planetary exploration.
-            </p>
             <div className="flex items-center text-orange-400 font-semibold">
               Explore Planets →
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🌍</div>
             <h3 className="text-2xl font-bold mb-4">Terraforming Technology</h3>
-            <p className="text-gray-300 mb-6">
               Complete planetary transformation systems that can make 
               any celestial body habitable for human life.
-            </p>
             <div className="flex items-center text-indigo-400 font-semibold">
               Transform Worlds →
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-transform duration-300">
             <div className="text-5xl mb-4">🔭</div>
             <h3 className="text-2xl font-bold mb-4">Universal Observatory</h3>
-            <p className="text-gray-300 mb-6">
               Advanced space telescopes that can observe any point 
               in the universe with perfect clarity and detail.
-            </p>
             <div className="flex items-center text-pink-400 font-semibold">
               Discover Universe →
-            </div>
-          </div>
-        </div>
-
         {/* Space Mission Capabilities */}
         <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-blue-400/20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Space Capabilities</h2>
             <p className="text-xl text-gray-300">Explore the universe with unprecedented technology</p>
-          </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-cyan-400">Exploration Missions</h3>
@@ -108,91 +78,46 @@ const NextGenSpaceTech2031: React.FC = () => {
                   <span className="text-cyan-400 mr-3">✓</span>
                   Interstellar travel to any star system
                 </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-cyan-400 mr-3">✓</span>
                   Deep space exploration and mapping
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-cyan-400 mr-3">✓</span>
                   Alien life detection and contact
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-cyan-400 mr-3">✓</span>
                   Resource extraction from asteroids
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-cyan-400 mr-3">✓</span>
                   Black hole and neutron star study
-                </li>
               </ul>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold mb-6 text-purple-400">Colonization Technology</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center text-gray-300">
                   <span className="text-purple-400 mr-3">✓</span>
                   Self-sustaining space habitats
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-purple-400 mr-3">✓</span>
                   Atmospheric generation systems
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-purple-400 mr-3">✓</span>
                   Gravity manipulation technology
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-purple-400 mr-3">✓</span>
                   Advanced life support systems
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <span className="text-purple-400 mr-3">✓</span>
                   Interplanetary transportation networks
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Mission Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/20">
             <div className="text-5xl font-bold text-cyan-400 mb-2">1000+</div>
             <div className="text-lg text-gray-300">Planets Explored</div>
-          </div>
           <div className="text-center bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/20">
             <div className="text-5xl font-bold text-purple-400 mb-2">50+</div>
             <div className="text-lg text-gray-300">Colonies Established</div>
-          </div>
           <div className="text-center bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-400/20">
             <div className="text-5xl font-bold text-green-400 mb-2">∞</div>
             <div className="text-lg text-gray-300">Light Years Range</div>
-          </div>
           <div className="text-center bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/20">
             <div className="text-5xl font-bold text-orange-400 mb-2">99.9%</div>
             <div className="text-lg text-gray-300">Mission Success Rate</div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Universe?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the greatest space exploration mission in human history. 
             Discover new worlds, establish colonies, and unlock the secrets of the cosmos.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Launch Mission
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-12 py-4 rounded-lg text-xl font-bold hover:bg-cyan-400 hover:text-black transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NextGenSpaceTech2031;

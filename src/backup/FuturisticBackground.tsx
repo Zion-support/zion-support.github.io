@@ -22,15 +22,11 @@ export function FuturisticBackground() {
             }}
           />
         ))}
-      </div>
-      
       {/* Glowing Orbs */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-zion-purple/30 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/30 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-zion-blue/30 rounded-full blur-xl animate-pulse delay-2000"></div>
-      
       {/* Animated Lines */}
-      <div className="absolute inset-0">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -45,9 +41,7 @@ export function FuturisticBackground() {
             strokeWidth="0.1"
             fill="none"
             className="animate-dash"
-          />
         </svg>
-      </div>
     </div>
   );
 }

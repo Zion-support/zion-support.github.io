@@ -3,22 +3,6 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://zion.app'
   
-  // Static pages
-  const staticPages = [
-    '',
-    '/about',
-    '/services',
-    '/solutions',
-    '/contact',
-    '/blog',
-    '/case-studies',
-    '/resources',
-    '/tools',
-    '/ai-2025',
-    '/ai-2026',
-    '/quantum-ai-2026',
-    '/neural-interface-2026',
-    '/autonomous-systems-2026',
   ]
 
   // Blog posts (you can expand this with dynamic data)

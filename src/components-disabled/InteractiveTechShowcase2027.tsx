@@ -4,7 +4,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 'ai-revolution',
@@ -16,7 +15,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       bgColor: 'from-purple-600/30 to-pink-600/30',
       link: '/pages/NextGenAIRevolution2027'
     },
-    {
       id: 'quantum-computing',
       title: 'Quantum Computing Revolution 2027',
       description: '1000+ qubit quantum computers achieving true supremacy',
@@ -25,8 +23,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       borderColor: 'border-cyan-400',
       bgColor: 'from-cyan-600/30 to-blue-600/30',
       link: '/pages/QuantumComputingRevolution2027'
-    },
-    {
       id: 'neural-interface',
       title: 'Neural Interface Revolution 2027',
       description: 'Direct brain-computer communication and thought control',
@@ -36,8 +32,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       link: '/pages/NeuralInterfaceRevolution2027'
     };
-  const technologies = [
-    {
       id: "0",
       title: "Conscious AI Systems",
       icon: "🧠",
@@ -50,57 +44,42 @@ const InteractiveTechShowcase2027: React.FC = () => {
       ],
       gradient: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
-    },
-    {
       id: "1",
       title: "Quantum Neural Networks",
       icon: "⚡",
       description: "Quantum-enhanced AI that processes information at the speed of light",
-      features: [
         "Quantum Processing",
         "Instant Learning",
         "Parallel Computing",
         "Quantum Encryption"
-      ],
       gradient: "from-cyan-600 to-blue-600",
       link: "/pages/QuantumNeuralNetworks2027"
-    },
-    {
       id: "2",
       title: "Holographic Interfaces",
       icon: "🌟",
       description: "Three-dimensional interfaces that revolutionize human-computer interaction",
-      features: [
         "3D Visualization",
         "Gesture Control",
         "Thought Interface",
         "Real-time Rendering"
-      ],
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/UltimateTechShowcase2027"
-    },
-    {
       id: "3",
       title: "Molecular Manufacturing",
       icon: "⚗️",
       description: "Building the future atom by atom with perfect precision",
-      features: [
         "Atomic Precision",
         "Self-Assembly",
         "Material Innovation",
         "Sustainable Production"
-      ],
       gradient: "from-violet-600 to-fuchsia-600",
       link: "/pages/MolecularManufacturing2027"
-    };
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % technologies.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -108,7 +87,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
         setActiveTech(index);
         setIsAnimating(false);
       }, 300);
-    };
   };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -127,7 +105,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
         </div>
-
         {/* Tech Categories */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {techCategories.map((category, index) => (
@@ -149,18 +126,14 @@ const InteractiveTechShowcase2027: React.FC = () => {
               </div>
             </div>
           ))};
-        </div>
-
         {/* Interactive Tech Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {technologies.map((tech, index) => (
-            <div 
               key={tech.id};
               className={`bg-gradient-to-br ${tech.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 ${
                 index === activeTech ? 'ring-4 ring-white/50' : ''
               }`};
               onClick={() => handleTechClick(index)};
-            >
               <div className="text-4xl mb-4 text-center">{tech.icon}</div>
               <h3 className="text-lg font-bold mb-2 text-center">{tech.title}</h3>
               <p className="text-sm opacity-90 mb-4 text-center">{tech.description}</p>
@@ -170,19 +143,9 @@ const InteractiveTechShowcase2027: React.FC = () => {
                     <span className="text-xs font-semibold">{feature}</span>
                   </div>
                 ))};
-              </div>
-              <div className="text-center">
-                <a 
                   href={tech.link};
                   className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
-                >
                   Learn More →
-                </a>
-              </div>
-            </div>
-          ))};
-        </div>
-
         {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">
@@ -196,12 +159,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
                 📞 Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
-  };
 export default InteractiveTechShowcase2027;

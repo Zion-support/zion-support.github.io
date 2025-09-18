@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '@/components/EnhancedFooter';
 
 const QuantumRealityEngine2025: React.FC = () => {
   return (
@@ -21,7 +21,6 @@ const QuantumRealityEngine2025: React.FC = () => {
             The first system to achieve true quantum reality control.
           </p>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -36,37 +35,27 @@ const QuantumRealityEngine2025: React.FC = () => {
               <li>• Energy transformation</li>
               <li>• Space-time control</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Reality Simulation</h3>
             <p className="text-blue-100 mb-6 text-center">
               Create and manipulate entire realities with quantum precision
-            </p>
             <ul className="text-blue-200 space-y-2 text-sm">
               <li>• Virtual reality creation</li>
               <li>• Parallel universe access</li>
               <li>• Time manipulation</li>
               <li>• Dimension control</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Energy Mastery</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Complete control over all forms of energy and matter
-            </p>
             <ul className="text-indigo-200 space-y-2 text-sm">
               <li>• Zero-point energy</li>
               <li>• Dark energy control</li>
               <li>• Matter creation</li>
               <li>• Anti-matter synthesis</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Advanced Capabilities */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-8">Revolutionary Capabilities</h2>
@@ -79,47 +68,22 @@ const QuantumRealityEngine2025: React.FC = () => {
                   <p className="text-cyan-200">Advanced research into quantum mechanics and reality manipulation</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🌍</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Planetary Engineering</h3>
                   <p className="text-cyan-200">Transform entire planets and solar systems using quantum technology</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🚀</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Space Exploration</h3>
                   <p className="text-cyan-200">Instantaneous travel across the universe using quantum manipulation</p>
-                </div>
-              </div>
             </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🧬</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Biological Enhancement</h3>
                   <p className="text-cyan-200">Quantum-level enhancement of biological systems and consciousness</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🔮</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Future Prediction</h3>
                   <p className="text-cyan-200">Predict and manipulate future events using quantum probability</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">⚡</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Infinite Power</h3>
                   <p className="text-cyan-200">Unlimited energy generation and matter creation capabilities</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-2xl p-8">
@@ -127,46 +91,21 @@ const QuantumRealityEngine2025: React.FC = () => {
             <p className="text-cyan-200 mb-6">
               Advanced quantum field manipulation technology that allows control over the fundamental forces 
               of nature, enabling unprecedented manipulation of reality itself.
-            </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                 <span className="text-cyan-200">Electromagnetic field control</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                 <span className="text-cyan-200">Gravitational manipulation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                 <span className="text-cyan-200">Quantum entanglement</span>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Reality Creation Engine</h3>
             <p className="text-blue-200 mb-6">
               Revolutionary reality creation technology that can generate entire universes with custom 
               physical laws and parameters, enabling infinite possibilities.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                 <span className="text-blue-200">Custom physics laws</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                 <span className="text-blue-200">Infinite universes</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                 <span className="text-blue-200">Dimension control</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
@@ -174,22 +113,15 @@ const QuantumRealityEngine2025: React.FC = () => {
             <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
               Gain control over the fundamental forces of reality. Experience the power to create, 
               manipulate, and transform the universe itself.
-            </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-100 transition-colors">
                 Explore Technology
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-colors">
                 Learn More
-              </button>
-            </div>
-          </div>
-        </div>
       </main>
-
       <EnhancedFooter />
     </div>
   );
 };
-
 export default QuantumRealityEngine2025;

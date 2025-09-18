@@ -8,7 +8,6 @@ interface SEOHeadProps {
   canonical?: string;
   ogImage?: string;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
@@ -16,22 +15,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   ogImage = "/og-image.jpg"
 }) => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ]
-  };
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -43,25 +26,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={canonical} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
-      
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
       </script>
     </Helmet>
   );
 };
-
 export default SEOHead;

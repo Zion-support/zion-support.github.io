@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 const PerformanceOptimization: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <div className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +22,6 @@ const PerformanceOptimization: React.FC = () => {
             Experience blazing-fast load times and smooth interactions with our optimized technology stack.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Load Time */}
           <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
@@ -33,36 +30,21 @@ const PerformanceOptimization: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">0.8s</h3>
             <p className="text-gray-600">Average Load Time</p>
-          </div>
-
           {/* Performance Score */}
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📊</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">98</h3>
             <p className="text-gray-600">Performance Score</p>
-          </div>
-
           {/* Uptime */}
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🔄</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>
             <p className="text-gray-600">Uptime Guarantee</p>
-          </div>
-
           {/* CDN */}
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🌐</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">200+</h3>
             <p className="text-gray-600">CDN Locations</p>
-          </div>
-        </div>
-
         {/* Optimization Features */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Optimization Features</h3>
@@ -74,58 +56,18 @@ const PerformanceOptimization: React.FC = () => {
               <div>
                 <h4 className="font-semibold text-gray-900">Code Splitting</h4>
                 <p className="text-gray-600 text-sm">Load only what you need, when you need it</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm">✓</span>
-              </div>
-              <div>
                 <h4 className="font-semibold text-gray-900">Image Optimization</h4>
                 <p className="text-gray-600 text-sm">Automatically optimized and compressed images</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm">✓</span>
-              </div>
-              <div>
                 <h4 className="font-semibold text-gray-900">Lazy Loading</h4>
                 <p className="text-gray-600 text-sm">Load content as users scroll</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm">✓</span>
-              </div>
-              <div>
                 <h4 className="font-semibold text-gray-900">Caching</h4>
                 <p className="text-gray-600 text-sm">Intelligent caching for faster repeat visits</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm">✓</span>
-              </div>
-              <div>
                 <h4 className="font-semibold text-gray-900">Minification</h4>
                 <p className="text-gray-600 text-sm">Compressed CSS, JS, and HTML files</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-white text-sm">✓</span>
-              </div>
-              <div>
                 <h4 className="font-semibold text-gray-900">CDN Delivery</h4>
                 <p className="text-gray-600 text-sm">Global content delivery network</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default PerformanceOptimization;

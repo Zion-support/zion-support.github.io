@@ -34,36 +34,22 @@ const RevolutionaryTech2027: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30">
               <h2 className="text-2xl font-bold mb-4">Quantum Computing</h2>
-              <p className="text-gray-300 mb-6">
                 1000+ qubit quantum computers achieving true supremacy and solving previously impossible problems.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
                 <li>• Quantum Supremacy</li>
                 <li>• Cryptography Revolution</li>
                 <li>• Drug Discovery</li>
                 <li>• Climate Modeling</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </>
             </button>
-          </div>
-        </div>
-
         {/* Advanced Features Section */}
         <div className="bg-gradient-to-r from-fuchsia-600/20 to-violet-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Advanced 2027 Features</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover the most advanced technological capabilities that are redefining what's possible
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">🔮</div>
@@ -72,81 +58,39 @@ const RevolutionaryTech2027: React.FC = () => {
                   <p className="text-fuchsia-200">Model and predict future realities with 99.9% accuracy using quantum algorithms</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🌊</div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Neural Wave Synchronization</h3>
                   <p className="text-fuchsia-200">Synchronize human neural patterns with AI systems for seamless integration</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">⚛️</div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Quantum Entanglement Networks</h3>
                   <p className="text-fuchsia-200">Instantaneous communication across any distance using quantum entanglement</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🧬</div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">DNA Computing Integration</h3>
                   <p className="text-fuchsia-200">Process information using biological DNA as a computational medium</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🌍</div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Planetary Scale AI</h3>
                   <p className="text-fuchsia-200">AI systems that can process and understand entire planetary ecosystems</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🚀</div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Interstellar Communication</h3>
                   <p className="text-fuchsia-200">Real-time communication with civilizations across the galaxy</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Impact Section */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">📊 Technology Impact Metrics</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
               See the measurable impact of our revolutionary 2027 technologies
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-lg font-semibold mb-2">Accuracy Rate</div>
               <div className="text-indigo-200 text-sm">Quantum prediction algorithms</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-2">Processing Power</div>
               <div className="text-indigo-200 text-sm">Interdimensional computing</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">0ms</div>
               <div className="text-lg font-semibold mb-2">Latency</div>
               <div className="text-indigo-200 text-sm">Quantum entanglement networks</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
               <div className="text-lg font-semibold mb-2">Consciousness</div>
               <div className="text-indigo-200 text-sm">AI self-awareness level</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -156,13 +100,8 @@ const RevolutionaryTech2027: React.FC = () => {
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
-            </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
   };

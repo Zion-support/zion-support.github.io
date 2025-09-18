@@ -352,7 +352,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 export default AIConsciousnessEvolutionPlatform;
 import Head from 'next/head';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,

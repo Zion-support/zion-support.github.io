@@ -2,9 +2,6 @@ import React from 'react';
 
 const AIInnovationHub2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
             🤖 AI INNOVATION HUB 2026
@@ -16,7 +13,6 @@ const AIInnovationHub2026: React.FC = () => {
             Discover cutting-edge AI solutions, autonomous agents, and machine learning platforms that are revolutionizing industries worldwide.
           </p>
         </div>
-
         {/* Key Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8">
@@ -27,29 +23,16 @@ const AIInnovationHub2026: React.FC = () => {
             <p className="text-gray-600">
               Self-managing AI agents that can perform complex tasks, make decisions, and adapt to changing environments.
             </p>
-          </div>
-
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
               <span className="text-2xl">🔬</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Neural Networks</h3>
-            <p className="text-gray-600">
               Advanced deep learning models that can process vast amounts of data and identify complex patterns.
-            </p>
-          </div>
-
           <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-6">
               <span className="text-2xl">⚡</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Processing</h3>
-            <p className="text-gray-600">
               Lightning-fast AI processing capabilities that deliver instant insights and responses.
-            </p>
-          </div>
-        </div>
-
         {/* Use Cases */}
         <div className="bg-gray-50 rounded-2xl p-12 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Use Cases</h2>
@@ -62,61 +45,28 @@ const AIInnovationHub2026: React.FC = () => {
                 <li>• Personalized medicine</li>
                 <li>• Predictive analytics for patient outcomes</li>
               </ul>
-            </div>
-            <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Finance</h3>
-              <ul className="space-y-2 text-gray-600">
                 <li>• Fraud detection and prevention</li>
                 <li>• Algorithmic trading</li>
                 <li>• Risk assessment and management</li>
                 <li>• Customer service automation</li>
-              </ul>
-            </div>
-            <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Manufacturing</h3>
-              <ul className="space-y-2 text-gray-600">
                 <li>• Predictive maintenance</li>
                 <li>• Quality control and inspection</li>
                 <li>• Supply chain optimization</li>
                 <li>• Autonomous production systems</li>
-              </ul>
-            </div>
-            <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Transportation</h3>
-              <ul className="space-y-2 text-gray-600">
                 <li>• Autonomous vehicles</li>
                 <li>• Traffic optimization</li>
                 <li>• Route planning and logistics</li>
                 <li>• Predictive maintenance for fleets</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join thousands of companies already using our AI solutions to drive innovation and growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started Today
-            </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Schedule a Demo
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AIInnovationHub2026;

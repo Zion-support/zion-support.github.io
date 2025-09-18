@@ -4,7 +4,6 @@ import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Data
 const ComprehensiveServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   // Service data directly in the component
   const services = [
     {
@@ -18,7 +17,6 @@ const ComprehensiveServices: React.FC = () => {
       benefits: ["Data-driven decisions", "Improved efficiency", "Cost reduction", "Competitive advantage"],
       tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning"]
     },
-    {
       id: 2,
       name: "Cloud Migration & Optimization",
       category: "Cloud Services",
@@ -28,19 +26,14 @@ const ComprehensiveServices: React.FC = () => {
       features: ["AWS/Azure/GCP migration", "Performance optimization", "Cost optimization", "Security implementation"],
       benefits: ["Reduced infrastructure costs", "Improved scalability", "Enhanced security", "Better performance"],
       tags: ["Cloud", "Migration", "AWS", "Azure", "GCP"]
-    },
-    {
       id: 3,
       name: "Cybersecurity & Compliance",
       category: "Security",
       description: "Comprehensive cybersecurity solutions and compliance management",
       price: 3500,
-      pricingModel: "monthly",
       features: ["Threat detection", "Vulnerability assessment", "Compliance monitoring", "Incident response"],
       benefits: ["Protection against threats", "Regulatory compliance", "Risk mitigation", "Business continuity"],
       tags: ["Cybersecurity", "Compliance", "Security", "Risk Management"]
-    },
-    {
       id: 4,
       name: "Digital Transformation Consulting",
       category: "Consulting",
@@ -50,43 +43,33 @@ const ComprehensiveServices: React.FC = () => {
       features: ["Strategy development", "Process optimization", "Technology selection", "Change management"],
       benefits: ["Improved efficiency", "Cost savings", "Competitive advantage", "Future readiness"],
       tags: ["Digital Transformation", "Consulting", "Strategy", "Process Optimization"]
-    },
-    {
       id: 5,
       name: "Custom Software Development",
       category: "Development",
       description: "Tailored software solutions built to your specific business requirements",
       price: 85000,
-      pricingModel: "project-based",
       features: ["Custom applications", "Web development", "Mobile apps", "API development"],
       benefits: ["Tailored solutions", "Competitive advantage", "Scalability", "Integration"],
       tags: ["Software Development", "Custom Apps", "Web Development", "Mobile Apps"]
-    },
-    {
       id: 6,
       name: "Data Management & Governance",
       category: "Data Services",
       description: "Comprehensive data management, governance, and quality solutions",
       price: 1800,
-      pricingModel: "monthly",
       features: ["Data governance", "Quality management", "Master data management", "Data cataloging"],
       benefits: ["Data quality", "Compliance", "Efficiency", "Trust"],
       tags: ["Data Management", "Governance", "Quality", "Compliance"]
     }
   ];
-
   const categories = ['all', 'AI & Analytics', 'Cloud Services', 'Security', 'Consulting', 'Development', 'Data Services'];
-
   const filteredServices = services.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
     return matchesSearch && matchesCategory;
   });
-
   const formatPrice = (price: number, model: string) => {
     switch (model) {
       case 'monthly':
@@ -96,10 +79,7 @@ const ComprehensiveServices: React.FC = () => {
       case 'project-based':
         return `$${price.toLocaleString()}`;
       default:
-        return `$${price.toLocaleString()}`;
-    }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -114,7 +94,6 @@ const ComprehensiveServices: React.FC = () => {
           </p>
         </div>
       </div>
-
       {/* Search and Filter Section */}
       <div className="bg-slate-800 py-8 border-b border-slate-700">
         <div className="container mx-auto px-4">
@@ -130,7 +109,6 @@ const ComprehensiveServices: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500"
               />
             </div>
-
             {/* Category Filter */}
             <div>
               <select
@@ -144,11 +122,7 @@ const ComprehensiveServices: React.FC = () => {
                   </option>
                 ))}
               </select>
-            </div>
           </div>
-        </div>
-      </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,17 +137,11 @@ const ComprehensiveServices: React.FC = () => {
                 </div>
                 
                 <p className="text-slate-300 mb-4">{service.description}</p>
-                
                 <div className="mb-4">
                   <span className="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded-full mb-2">
                     {service.category}
-                  </span>
                   <span className="inline-block bg-slate-600 text-slate-300 text-xs px-2 py-1 rounded-full ml-2">
                     {service.pricingModel}
-                  </span>
-                </div>
-
-                <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                   <ul className="text-sm text-slate-300 space-y-1">
                     {service.features.slice(0, 3).map((feature, index) => (
@@ -183,40 +151,23 @@ const ComprehensiveServices: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                  <ul className="text-sm text-slate-300 space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, index) => (
-                      <li key={index} className="flex items-center">
                         <Zap className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.slice(0, 4).map((tag, index) => (
                     <span key={index} className="text-xs bg-slate-700 text-slate-300 px-2 py-1 rounded">
                       {tag}
                     </span>
                   ))}
-                </div>
-
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Get Started
                 </button>
               </div>
-            </div>
           ))}
-        </div>
-      </div>
-
       {/* Contact Section */}
       <div className="bg-slate-800 py-16 border-t border-slate-700">
-        <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Transform Your Business?
           </h2>
@@ -225,18 +176,12 @@ const ComprehensiveServices: React.FC = () => {
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-slate-300">+1 302 464 0950</p>
-            </div>
-            <div className="text-center">
               <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
               <p className="text-slate-300">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="text-center">
               <MapPin className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
           <div className="mt-8">
             <a 
               href="https://ziontechgroup.com" 
@@ -244,11 +189,7 @@ const ComprehensiveServices: React.FC = () => {
             >
               Visit Our Website
             </a>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default ComprehensiveServices;

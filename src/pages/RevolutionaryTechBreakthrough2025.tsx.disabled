@@ -281,12 +281,13 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
                   <div>• Universal knowledge access</div>
                 </div>
               </div>
->>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
             </div>
           </div>
         </div>
 
         {/* Impact Statistics */}
+<<<<<<< HEAD
+=======
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">📊 Revolutionary Impact</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -317,6 +318,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             <div className="text-5xl font-bold text-cyan-300 mb-2">∞</div>
             <div className="text-lg font-semibold mb-2">Dimensional Reach</div>
             <div className="text-sm text-cyan-200">Multi-dimensional processing</div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
@@ -333,11 +335,12 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-indigo-400 mb-2">100%</div>
             <div className="text-gray-300">Success Rate</div>
->>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
+=======
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready for the Breakthrough?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -349,6 +352,7 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Book Consultation
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         <div className="text-center bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready for the Breakthrough?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -360,7 +364,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </button>
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400/10 transition-all duration-300 font-semibold text-lg">
               📖 Read Documentation
->>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
             </button>
           </div>
         </div>

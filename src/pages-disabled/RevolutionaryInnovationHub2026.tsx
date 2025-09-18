@@ -17,7 +17,6 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
             converge to create solutions that were once thought impossible. Experience the future today.
           </p>
         </div>
-
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
@@ -33,84 +32,51 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
               <li>• Continuous learning capabilities</li>
               <li>• Predictive problem solving</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-800 to-pink-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
             <div className="text-5xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold mb-4">Cognitive Computing</h3>
-            <p className="text-gray-300 mb-6">
               Advanced cognitive systems that mimic human thought processes, 
               enabling natural language understanding and complex reasoning.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-300">
               <li>• Natural language processing</li>
               <li>• Emotional intelligence</li>
               <li>• Creative problem solving</li>
               <li>• Contextual understanding</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-green-800 to-emerald-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
             <div className="text-5xl mb-4">🌱</div>
             <h3 className="text-2xl font-bold mb-4">Sustainable Technology</h3>
-            <p className="text-gray-300 mb-6">
               Eco-friendly innovations that protect our planet while advancing 
               technology, creating a sustainable future for all.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-300">
               <li>• Carbon-neutral computing</li>
               <li>• Renewable energy systems</li>
               <li>• Biodegradable materials</li>
               <li>• Circular economy solutions</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-red-800 to-orange-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
             <div className="text-5xl mb-4">🔬</div>
             <h3 className="text-2xl font-bold mb-4">Biotech Revolution</h3>
-            <p className="text-gray-300 mb-6">
               Revolutionary biotechnology solutions that enhance human capabilities 
               and create new possibilities for health and longevity.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-300">
               <li>• Gene editing technologies</li>
               <li>• Regenerative medicine</li>
               <li>• Synthetic biology</li>
               <li>• Personalized healthcare</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-yellow-800 to-orange-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
             <div className="text-5xl mb-4">🌐</div>
             <h3 className="text-2xl font-bold mb-4">Digital Transformation</h3>
-            <p className="text-gray-300 mb-6">
               Complete digital transformation solutions that modernize businesses 
               and create new opportunities for growth and innovation.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-300">
               <li>• Cloud-native architectures</li>
               <li>• Microservices ecosystems</li>
               <li>• API-first strategies</li>
               <li>• Real-time analytics</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-800 to-purple-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
             <div className="text-5xl mb-4">🛡️</div>
             <h3 className="text-2xl font-bold mb-4">Cybersecurity Fortress</h3>
-            <p className="text-gray-300 mb-6">
               Advanced cybersecurity solutions that protect against evolving threats 
               and ensure the safety of digital assets and data.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-300">
               <li>• AI-powered threat detection</li>
               <li>• Zero-trust architectures</li>
               <li>• Quantum encryption</li>
               <li>• Behavioral analytics</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Innovation Showcase */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Featured Innovations</h2>
@@ -127,55 +93,34 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
             </div>
             <div className="bg-gradient-to-br from-green-900 to-blue-900 p-6 rounded-xl">
               <h3 className="text-2xl font-bold mb-4 text-emerald-400">Neural Interface 2.0</h3>
-              <p className="text-gray-300 mb-4">
                 Next-generation brain-computer interfaces that enable seamless 
                 communication between human consciousness and digital systems.
-              </p>
               <div className="flex items-center text-emerald-400">
                 <span className="text-sm font-semibold">FUTURE TECHNOLOGY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Success Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
             <div className="text-gray-300">Innovations Developed</div>
-          </div>
-          <div className="text-center">
             <div className="text-5xl font-bold text-purple-400 mb-2">50+</div>
             <div className="text-gray-300">Countries Served</div>
-          </div>
-          <div className="text-center">
             <div className="text-5xl font-bold text-green-400 mb-2">99.9%</div>
             <div className="text-gray-300">Success Rate</div>
-          </div>
-          <div className="text-center">
             <div className="text-5xl font-bold text-yellow-400 mb-2">24/7</div>
             <div className="text-gray-300">Innovation Support</div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the most innovative community on the planet. Together, we're building 
             the future, one breakthrough at a time.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Innovating
             </button>
-            </button>
-          </div>
         </motion.div>
       </div>
     </div>
   );
 };
-
-
 export default RevolutionaryInnovationHub2026;

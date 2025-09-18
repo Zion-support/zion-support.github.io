@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
@@ -12,7 +11,6 @@ const NewsletterSignup: React.FC = () => {
       setTimeout(() => setIsSubscribed(false), 3000);
     }
   };
-
   return (
     <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20">
       <div className="text-center">
@@ -45,13 +43,10 @@ const NewsletterSignup: React.FC = () => {
             </div>
           </form>
         )}
-        
         <p className="text-sm text-gray-400 mt-4">
           We respect your privacy. Unsubscribe at any time.
-        </p>
       </div>
     </div>
   );
 };
-
 export default NewsletterSignup;

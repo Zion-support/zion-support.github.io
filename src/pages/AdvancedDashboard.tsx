@@ -25,9 +25,9 @@ import {
   AlertTriangle,
   RefreshCw
 } from 'lucide-react';
-import { AdvancedPerformanceMonitor } from '../components/AdvancedPerformanceMonitor';
-import { AdvancedAnalyticsDashboard } from '../components/AdvancedAnalyticsDashboard';
-import { AIRecommendationEngine } from '../components/AIRecommendationEngine';
+import { AdvancedPerformanceMonitor } from '@/components/AdvancedPerformanceMonitor';
+import { AdvancedAnalyticsDashboard } from '@/components/AdvancedAnalyticsDashboard';
+import { AIRecommendationEngine } from '@/components/AIRecommendationEngine';
 
 interface DashboardTab {
   id: string;
@@ -36,11 +36,9 @@ interface DashboardTab {
   component: React.ReactNode;
   color: string;
 }
-
 export default function AdvancedDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   const dashboardTabs: DashboardTab[] = [
     {
       id: 'overview',
@@ -49,21 +47,16 @@ export default function AdvancedDashboard() {
       component: <OverviewTab />,
       color: 'text-blue-400'
     },
-    {
       id: 'performance',
       name: 'Performance Monitor',
       icon: <Activity className="w-5 h-5" />,
       component: <AdvancedPerformanceMonitor />,
       color: 'text-green-400'
-    },
-    {
       id: 'analytics',
       name: 'Analytics Dashboard',
       icon: <BarChart3 className="w-5 h-5" />,
       component: <AdvancedAnalyticsDashboard />,
       color: 'text-purple-400'
-    },
-    {
       id: 'recommendations',
       name: 'AI Recommendations',
       icon: <Brain className="w-5 h-5" />,
@@ -71,9 +64,7 @@ export default function AdvancedDashboard() {
       color: 'text-pink-400'
     }
   ];
-
   const activeTabData = dashboardTabs.find(tab => tab.id === activeTab);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Header */}
@@ -99,28 +90,19 @@ export default function AdvancedDashboard() {
                 <div>
                   <h1 className="text-2xl font-bold text-white">Zion Advanced Dashboard</h1>
                   <p className="text-sm text-gray-400">Comprehensive platform insights and analytics</p>
-                </div>
               </div>
             </div>
-
-            <div className="flex items-center space-x-4">
               <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center space-x-2 px-3 py-2 bg-green-600/20 rounded-lg">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-sm text-green-400 font-medium">System Healthy</span>
-                </div>
                 <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
                   <RefreshCw className="w-5 h-5 text-gray-400" />
                 </button>
-                <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
                   <Settings className="w-5 h-5 text-gray-400" />
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </motion.header>
-
       <div className="flex">
         {/* Sidebar */}
         <motion.aside
@@ -154,8 +136,6 @@ export default function AdvancedDashboard() {
                   </button>
                 ))}
               </nav>
-            </div>
-
             <div className="p-6 mt-auto">
               <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-4 border border-blue-500/30">
                 <h3 className="text-sm font-semibold text-white mb-2">Quick Stats</h3>
@@ -164,20 +144,11 @@ export default function AdvancedDashboard() {
                     <span className="text-gray-400">Active Users:</span>
                     <span className="text-green-400 font-medium">15,847</span>
                   </div>
-                  <div className="flex justify-between">
                     <span className="text-gray-400">System Load:</span>
                     <span className="text-yellow-400 font-medium">45%</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-gray-400">Uptime:</span>
                     <span className="text-blue-400 font-medium">99.99%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </motion.aside>
-
         {/* Main Content */}
         <main className="flex-1 lg:ml-0">
           <AnimatePresence mode="wait">
@@ -193,7 +164,6 @@ export default function AdvancedDashboard() {
           </AnimatePresence>
         </main>
       </div>
-
       {/* Sidebar Overlay */}
       {sidebarOpen && (
         <motion.div
@@ -206,8 +176,6 @@ export default function AdvancedDashboard() {
       )}
     </div>
   );
-}
-
 // Overview Tab Component
 function OverviewTab() {
   const [stats, setStats] = useState({
@@ -216,80 +184,50 @@ function OverviewTab() {
     systemHealth: 99.9,
     responseTime: 142
   });
-
   const quickActions = [
-    {
       title: 'Performance Report',
       description: 'Generate detailed performance analysis',
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'text-green-400',
       bgColor: 'bg-green-600/20',
       borderColor: 'border-green-500/30'
-    },
-    {
       title: 'Security Scan',
       description: 'Run comprehensive security assessment',
       icon: <Shield className="w-6 h-6" />,
       color: 'text-red-400',
       bgColor: 'bg-red-600/20',
       borderColor: 'border-red-500/30'
-    },
-    {
       title: 'Analytics Export',
       description: 'Export analytics data and reports',
       icon: <BarChart3 className="w-6 h-6" />,
       color: 'text-blue-400',
       bgColor: 'bg-blue-600/20',
       borderColor: 'border-blue-500/30'
-    },
-    {
       title: 'AI Recommendations',
       description: 'Get personalized service recommendations',
       icon: <Brain className="w-6 h-6" />,
       color: 'text-purple-400',
       bgColor: 'bg-purple-600/20',
       borderColor: 'border-purple-500/30'
-    }
-  ];
-
   const recentActivities = [
-    {
       action: 'System Performance Check',
       status: 'completed',
       time: '2 minutes ago',
       icon: <CheckCircle className="w-4 h-4" />,
-      color: 'text-green-400'
-    },
-    {
       action: 'Security Scan',
-      status: 'completed',
       time: '5 minutes ago',
       icon: <Shield className="w-4 h-4" />,
-      color: 'text-blue-400'
-    },
-    {
       action: 'Data Backup',
-      status: 'completed',
       time: '10 minutes ago',
-      icon: <CheckCircle className="w-4 h-4" />,
-      color: 'text-green-400'
-    },
-    {
       action: 'Analytics Update',
       status: 'in progress',
       time: '15 minutes ago',
       icon: <RefreshCw className="w-4 h-4 animate-spin" />,
       color: 'text-yellow-400'
-    }
-  ];
-
-  return (
     <div className="w-full max-w-7xl mx-auto p-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
         className="mb-8"
-      >
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
             Dashboard Overview
@@ -298,8 +236,6 @@ function OverviewTab() {
             Welcome to your comprehensive platform dashboard. Monitor performance, analyze data, 
             and get AI-powered insights all in one place.
           </p>
-        </div>
-
         {/* Key Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
@@ -310,78 +246,33 @@ function OverviewTab() {
             <div className="flex items-center justify-between mb-4">
               <div className="p-3 bg-blue-600/20 rounded-lg text-blue-400">
                 <Users className="w-6 h-6" />
-              </div>
               <span className="text-sm text-green-400 font-medium">+12.5%</span>
-            </div>
             <div className="space-y-1">
               <div className="text-2xl font-bold text-white">{stats.totalUsers.toLocaleString()}</div>
               <div className="text-sm text-gray-400">Total Users</div>
-            </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-600/50 transition-all duration-300"
-          >
-            <div className="flex items-center justify-between mb-4">
               <div className="p-3 bg-green-600/20 rounded-lg text-green-400">
                 <Activity className="w-6 h-6" />
-              </div>
               <span className="text-sm text-green-400 font-medium">+8.3%</span>
-            </div>
-            <div className="space-y-1">
               <div className="text-2xl font-bold text-white">{stats.activeSessions.toLocaleString()}</div>
               <div className="text-sm text-gray-400">Active Sessions</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-600/50 transition-all duration-300"
-          >
-            <div className="flex items-center justify-between mb-4">
               <div className="p-3 bg-yellow-600/20 rounded-lg text-yellow-400">
                 <Shield className="w-6 h-6" />
-              </div>
               <span className="text-sm text-green-400 font-medium">+0.1%</span>
-            </div>
-            <div className="space-y-1">
               <div className="text-2xl font-bold text-white">{stats.systemHealth}%</div>
               <div className="text-sm text-gray-400">System Health</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-gray-600/50 transition-all duration-300"
-          >
-            <div className="flex items-center justify-between mb-4">
               <div className="p-3 bg-purple-600/20 rounded-lg text-purple-400">
                 <Zap className="w-6 h-6" />
-              </div>
               <span className="text-sm text-green-400 font-medium">-5.2%</span>
-            </div>
-            <div className="space-y-1">
               <div className="text-2xl font-bold text-white">{stats.responseTime}ms</div>
               <div className="text-sm text-gray-400">Response Time</div>
-            </div>
-          </motion.div>
-        </div>
       </motion.div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
           className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6"
-        >
           <h3 className="text-xl font-bold text-white mb-6 flex items-center">
             <Target className="w-6 h-6 mr-2 text-blue-400" />
             Quick Actions
@@ -394,47 +285,27 @@ function OverviewTab() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`w-full p-4 rounded-lg border ${action.bgColor} ${action.borderColor} hover:opacity-80 transition-all duration-300 text-left`}
-              >
                 <div className="flex items-center space-x-3">
                   <div className={action.color}>
                     {action.icon}
-                  </div>
                   <div>
                     <div className="font-medium text-white">{action.title}</div>
                     <div className="text-sm text-gray-400">{action.description}</div>
-                  </div>
-                </div>
               </motion.button>
             ))}
-          </div>
         </motion.div>
-
         {/* Recent Activity */}
-        <motion.div
           initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6"
-        >
-          <h3 className="text-xl font-bold text-white mb-6 flex items-center">
             <Clock className="w-6 h-6 mr-2 text-green-400" />
             Recent Activity
-          </h3>
-          <div className="space-y-4">
             {recentActivities.map((activity, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 className="flex items-center space-x-3 p-3 bg-gray-800/50 rounded-lg"
-              >
                 <div className={activity.color}>
                   {activity.icon}
-                </div>
                 <div className="flex-1">
                   <div className="font-medium text-white">{activity.action}</div>
                   <div className="text-sm text-gray-400">{activity.time}</div>
-                </div>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   activity.status === 'completed' 
                     ? 'bg-green-600/20 text-green-400'
@@ -443,34 +314,15 @@ function OverviewTab() {
                   {activity.status}
                 </span>
               </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
       {/* System Status */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
         className="mt-8"
-      >
         <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-6">
-          <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               <div>
                 <h4 className="text-lg font-semibold text-white">System Status: All Systems Operational</h4>
                 <p className="text-sm text-gray-300">Last updated: {new Date().toLocaleTimeString()}</p>
-              </div>
-            </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-green-400">99.99%</div>
               <div className="text-sm text-gray-400">Uptime</div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-}

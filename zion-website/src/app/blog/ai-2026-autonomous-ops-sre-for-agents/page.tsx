@@ -1,11 +1,8 @@
 
-const page: React.FC = () => {
+export default function Page() {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="bg-black min-h-screen">
+      <h1>AI 2026 Autonomous Ops SRE for Agents</h1>
     </div>
   );
-};
-
-export default page;
+}

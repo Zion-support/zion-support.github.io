@@ -1,27 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-
-const RevolutionaryContentCarousel2027: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-=======
-  const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const getCurrentItems = () => {
-    switch (activeTab) {
-      case 'blog':
-        return REVOLUTIONARY_BLOG_POSTS_2027;
-      case 'case-studies':
-        return REVOLUTIONARY_CASE_STUDIES_2027;
-      case 'services':
-        return REVOLUTIONARY_SERVICES_2027;
-      default:
-        return REVOLUTIONARY_BLOG_POSTS_2027;
-    }
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentCarousel2027.tsx
   const slides = [
     {
       id: 1,
@@ -140,10 +116,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
   ];
   useEffect(() => {
     if (!isAutoPlaying) return;
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
-
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentCarousel2027.tsx
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
@@ -165,94 +137,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
   return (
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl overflow-hidden">
-      {/* Main Carousel */}
-      <div className="relative h-96 md:h-[500px]">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-all duration-500 ${
-              index === currentSlide
-                ? 'opacity-100 scale-100'
-                : index === (currentSlide - 1 + slides.length) % slides.length
-                ? 'opacity-0 scale-95 -translate-x-full'
-                : index === (currentSlide + 1) % slides.length
-                ? 'opacity-0 scale-95 translate-x-full'
-                : 'opacity-0 scale-95'
-            } ${isAnimating ? 'transition-all duration-300' : ''}`}
-          >
-            <div className={`h-full bg-gradient-to-r ${slide.color} flex items-center`}>
-              <div className="container mx-auto px-4 py-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  {/* Content */}
-                  <div className="text-white">
-                    <div className="flex items-center mb-4">
-                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mr-3">
-                        {slide.badge}
-                      </span>
-                      <span className="text-sm opacity-80">JANUARY 2027</span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h2>
-                    <p className="text-xl opacity-90 mb-4">{slide.subtitle}</p>
-                    <p className="text-lg opacity-80 mb-6">{slide.description}</p>
-                    
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {slide.features.map((feature, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <Link
-                      to={slide.link}
-                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
-                    >
-                      Explore Now →
-                    </Link>
-                  </div>
-                  
-=======
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT • 2027
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the future with our groundbreaking 2027 technology innovations
-          </p>
-        </div>
-        {/* Main Carousel */}
-        <div className="relative">
-          {/* Slide Container */}
-          <div className="relative h-[600px] rounded-2xl overflow-hidden">
-            {slides.map((slide, index) => (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 transition-all duration-1000 transform ${
-                  index === currentSlide
-                    ? 'translate-x-0 opacity-100 scale-100'
-                    : index === (currentSlide + 1) % slides.length
-                    ? 'translate-x-full opacity-0 scale-95'
-                    : index === (currentSlide - 1 + slides.length) % slides.length
-                    ? '-translate-x-full opacity-0 scale-95'
-                    : 'translate-x-full opacity-0 scale-95'
-                }`}
-              >
-                <div className={`h-full bg-gradient-to-br ${slide.bgColor} backdrop-blur-sm relative overflow-hidden`}>
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentCarousel2027.tsx
                   <div className="relative z-10 h-full flex items-center">
                     <div className="container mx-auto px-8">
                       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -320,46 +204,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-8 text-white`}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="text-8xl mb-6 text-center md:text-left">{item.image}</div>
-                        <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-                        <p className="text-xl opacity-90 mb-6">{item.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {item.features.map((feature, index) => (
-                            <span key={index} className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <a 
-                          href={item.link}
-                          className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                        >
-                          Explore {item.title} →
-                        </a>
-                      </div>
-                      <div className="hidden md:block">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                          <h4 className="text-xl font-bold mb-4">Key Features</h4>
-                          <ul className="space-y-2">
-                            {item.features.map((feature, index) => (
-                              <li key={index} className="flex items-center space-x-2">
-                                <span className="w-2 h-2 bg-white rounded-full"></span>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-=======
-              {currentItems.map((item, index) => (
-                <div key={item.id} className="w-1/3 flex-shrink-0 px-4">
-                  {renderItem(item)}
-                </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentCarousel2027.tsx
                         </div>
                       </div>
                     </div>
@@ -419,36 +263,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           </div>
           {/* Navigation Arrows */}
           <button
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-white scale-125'
-                : 'bg-white/50 hover:bg-white/75'
-            }`}
-          />
-        ))}
-      </div>
-
-=======
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentCarousel2027.tsx
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {contentItems.map((_, index) => (
@@ -461,35 +275,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             />
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
-
-        {/* Quick Access Grid */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {contentItems.map((item, index) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className={`bg-gradient-to-br ${item.gradient} rounded-lg p-4 text-white text-center hover:scale-105 transition-all duration-300 ${
-                index === currentSlide ? 'ring-2 ring-white' : ''
-              }`}
-            >
-              <div className="text-3xl mb-2">{item.image}</div>
-              <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
-            </a>
-          ))}
-=======
-        {/* View All Button */}
-        <div className="text-center mt-8">
-          <Link
-            to="/revolutionary-content-2027"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-          >
-            View All 2027 Content
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentCarousel2027.tsx
         </div>
       </div>
     </div>

@@ -24,26 +24,18 @@ const AITrendsInsights2025: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                 Watch Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
       {/* Key Trends Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
-          >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               🔮 Top AI Trends 2025
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore the most significant AI trends that will define the next decade of technological innovation.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => (
               <div
@@ -66,7 +58,6 @@ const AITrendsInsights2025: React.FC = () => {
                 <p className="text-gray-600 mb-4">{trend.description}</p>
                 <div className="text-sm text-purple-600 font-semibold mb-4">
                   Timeline: {trend.timeline}
-                </div>
                 <ul className="space-y-2">
                   {trend.details.map((detail, idx) => (
                     <li key={idx} className="text-sm text-gray-600 flex items-start">
@@ -77,41 +68,20 @@ const AITrendsInsights2025: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
       </section>
       {/* Case Studies Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               🏆 Success Stories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Real-world implementations of AI technologies delivering measurable business value.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{study.company}</h3>
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-700 mb-2">Challenge:</h4>
                   <p className="text-gray-600 text-sm">{study.challenge}</p>
-                </div>
-                <div className="mb-4">
                   <h4 className="font-semibold text-gray-700 mb-2">Solution:</h4>
                   <p className="text-gray-600 text-sm">{study.solution}</p>
-                </div>
-                <div className="mb-4">
                   <h4 className="font-semibold text-gray-700 mb-2">Results:</h4>
                   <ul className="space-y-1">
                     {study.results.map((result, idx) => (
@@ -121,42 +91,16 @@ const AITrendsInsights2025: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
                 <div className="text-sm text-purple-600 font-semibold">
                   Implementation: {study.timeline}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Insights Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               📊 Market Insights
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Data-driven insights into the AI market, technology adoption, and industry impact.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
             {insights.map((insight, index) => (
-              <div
-                key={index}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
                     {insight.category}
-                  </span>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{insight.title}</h3>
                 <p className="text-gray-600 mb-6">{insight.content}</p>
                 <div className="grid grid-cols-2 gap-4">
@@ -165,39 +109,18 @@ const AITrendsInsights2025: React.FC = () => {
                       <div className="text-2xl font-bold text-purple-600">{metric.value}</div>
                       <div className="text-sm text-gray-600">{metric.label}</div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <div
-            whileInView={{ opacity: 1, y: 0 }}
-          >
             <h2 className="text-4xl font-bold mb-6">
               Ready to Transform Your Business with AI?
-            </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
               Join thousands of companies already leveraging AI to drive innovation, efficiency, and growth.
-            </p>
-            <div className="flex justify-center space-x-4">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-lg">
                 Start Your AI Journey
-              </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg">
                 Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
-
-
 export default AITrendsInsights2025;

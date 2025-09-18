@@ -23,28 +23,19 @@ const UltimateContentBanner2025: React.FC = () => {
             <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Explore AI Revolution →
             </a>
-          </div>
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Breakthrough</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
               Revolutionary quantum computing that processes consciousness itself
-            </p>
             <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               Discover Breakthrough →
-            </a>
-          </div>
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center">Innovation Hub</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
               Discover and explore the most revolutionary technologies shaping humanity's future
-            </p>
             <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Innovation Hub →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );

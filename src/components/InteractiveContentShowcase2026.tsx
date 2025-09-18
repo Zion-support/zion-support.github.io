@@ -1,8 +1,6 @@
-import React, { useState }  from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
-
   const contentTabs = {
     consciousness: {
       title: 'AI Consciousness',
@@ -24,78 +22,55 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Personal AI companions with genuine personality',
           'Educational tutors with emotional intelligence',
           'Therapeutic AI for mental health support'
-        ];
-      };
     },
     quantum: {
       title: 'Quantum Reality',
       icon: '⚡',
       color: 'from-cyan-600 to-blue-600',
-      content: {
         title: 'Quantum Reality Manipulation',
         description: 'Quantum computers that can manipulate reality at the fundamental level, solving problems impossible for classical computers.',
-        features: [
           '1000+ logical qubits with error correction',
           'Quantum supremacy in practical applications',
           'Reality manipulation at quantum scale',
           'Molecular simulation and engineering',
           'Time-space control capabilities'
-        ],
-        applications: [
           'Drug discovery and molecular engineering',
           'Climate change solutions and optimization',
           'Space exploration and faster-than-light communication',
           'Financial modeling and risk analysis',
           'Cryptography and secure communications'
-        ];
-      };
-    },
     neural: {
       title: 'Neural Evolution',
       icon: '🧬',
       color: 'from-emerald-600 to-teal-600',
-      content: {
         title: 'Neural Interface Evolution',
         description: 'Direct brain-computer interfaces that enable thought-controlled technology and cognitive enhancement.',
-        features: [
           'Non-invasive brain-computer interfaces',
           'Thought-controlled devices and applications',
           'Neural feedback systems for learning',
           'Memory augmentation and enhancement',
           'Cognitive expansion capabilities'
-        ],
-        applications: [
           'Medical rehabilitation for paralysis patients',
           'Enhanced learning and education',
           'Gaming and entertainment experiences',
           'Professional training and skill development',
           'Communication for speech-impaired individuals'
-        ];
-      };
-    },
     synthetic: {
       title: 'Synthetic Intelligence',
       icon: '🌟',
       color: 'from-violet-600 to-fuchsia-600',
-      content: {
         title: 'Synthetic Intelligence Revolution',
         description: 'AI agents with synthetic consciousness and autonomous capabilities, creating new forms of intelligence.',
-        features: [
           'Autonomous AI agents with consciousness',
           'Synthetic consciousness and creativity',
           'Collective intelligence systems',
           'Creative synthesis and innovation',
           'Self-evolving AI architectures'
-        ],
-        applications: [
           'Autonomous business process management',
           'Creative AI for art and design',
           'Scientific research and discovery',
           'Social AI companions and assistants',
           'Autonomous space and exploration missions'
-        ];
-      };
-    };
   };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
@@ -107,7 +82,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
           Explore our revolutionary technologies through interactive demonstrations and detailed insights
         </p>
       </div>
-
       {/* Interactive Tabs */};
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {Object.entries(contentTabs).map(([key, tab]) => (
@@ -124,8 +98,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
             {tab.title};
           </button>
         ))};
-      </div>
-
       {/* Active Content Display */};
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
         <div className="grid md:grid-cols-2 gap-8">
@@ -140,11 +112,9 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </div>
             </div>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-              {contentTabs[activeTab as keyof typeof contentTabs].content.description};
             </p>
             
             <div className="space-y-6">
-              <div>
                 <h4 className="text-xl font-bold mb-4 text-cyan-400">Key Features</h4>
                 <ul className="space-y-2">
                   {contentTabs[activeTab as keyof typeof contentTabs].content.features.map((feature, index) => (
@@ -152,13 +122,9 @@ const InteractiveContentShowcase2026: React.FC = () => {
                       <span className="text-cyan-400 mt-1">•</span>
                       <span className="text-gray-200">{feature}</span>
                     </li>
-                  ))};
                 </ul>
-              </div>
-            </div>
           </div>
           
-          <div>
             <h4 className="text-xl font-bold mb-4 text-purple-400">Real-World Applications</h4>
             <div className="space-y-4">
               {contentTabs[activeTab as keyof typeof contentTabs].content.applications.map((application, index) => (
@@ -168,9 +134,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
                     <span className="text-gray-200">{application}</span>
                   </div>
                 </div>
-              ))};
-            </div>
-            
             <div className="mt-8">
               <a 
                 href={`/pages/${activeTab === 'consciousness' ? 'ConsciousnessComputing2026' : 
@@ -181,34 +144,22 @@ const InteractiveContentShowcase2026: React.FC = () => {
               >
                 Explore {contentTabs[activeTab as keyof typeof contentTabs].title} →
               </a>
-            </div>
-          </div>
         </div>
-      </div>
-
       {/* Call to Action */};
       <div className="text-center mt-12">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
         <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
           Join us in this revolutionary journey and be part of the most significant 
           technological advancement in human history.
-        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="/pages/RevolutionaryTechBreakthrough2026" 
             className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
-          >
             🌟 Experience All Technologies →
           </a>
-          <a 
             href="/pages/UltimateTechRevolution2026" 
             className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
-          >
             🚀 Ultimate Revolution →
-          </a>
-        </div>
-      </div>
     </div>
   );
-  };
 export default InteractiveContentShowcase2026;

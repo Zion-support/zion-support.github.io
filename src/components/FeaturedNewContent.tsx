@@ -12,7 +12,6 @@ const FeaturedNewContent: React.FC = () => {
       badge: "BREAKTHROUGH",
       features: ["Quantum Processing", "Holographic Reality", "Consciousness AI"];
     },
-    {
       title: "🌟 Next-Gen Innovation Hub 2025",
       description: "Pioneering future technologies that revolutionize industries",
       image: "⚡",
@@ -20,8 +19,6 @@ const FeaturedNewContent: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       badge: "INNOVATION",
       features: ["AI Systems", "Quantum Neural", "Holographic Tech"];
-    },
-    {
       title: "🌌 Interdimensional Tech 2035",
       description: "Computing power from parallel dimensions for unlimited processing",
       image: "🌌",
@@ -50,7 +47,6 @@ const FeaturedNewContent: React.FC = () => {
             Discover our latest breakthrough innovations that are reshaping the future of technology
           </p>
         </motion.div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
             <motion.div
@@ -80,8 +76,6 @@ const FeaturedNewContent: React.FC = () => {
                     <p className="text-gray-600 text-lg leading-relaxed">
                       {content.description};
                     </p>
-                  </div>
-
                   <div className="space-y-2 mb-8">
                     {content.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
@@ -89,8 +83,6 @@ const FeaturedNewContent: React.FC = () => {
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))};
-                  </div>
-
                   <motion.a
                     href={content.link};
                     whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }};
@@ -104,14 +96,8 @@ const FeaturedNewContent: React.FC = () => {
             </motion.div>
           ))};
         </div>
-
-        <motion.div
-          initial={{ opacity: "0", y: 30 }};
-          whileInView={{ opacity: "1", y: 0 }};
           transition={{ duration: 0.8, delay: 0.6 }};
-          viewport={{ once: true }};
           className="text-center mt-16"
-        >
           <motion.a
             href="/pages/ComprehensiveServices2025"
             whileHover={{ scale: 1.05 }};
@@ -120,7 +106,6 @@ const FeaturedNewContent: React.FC = () => {
           >
             🚀 View All Revolutionary Content
           </motion.a>
-        </motion.div>
       </div>
     </section>
   );

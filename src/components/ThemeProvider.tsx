@@ -1,14 +1,12 @@
 import React, { createContext, useContext, useEffect, useState }  from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
-
 interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
   isDark: boolean;
 }
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
@@ -18,15 +16,12 @@ export const useTheme = () => {
 };
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('dark');
-
   const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
     root.classList.add(isDark ? 'dark' : 'light');
   }, [isDark]);
-
   const value = {
     theme,
     setTheme,
@@ -37,4 +32,3 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       {children};
     </ThemeContext.Provider>
   );
-};

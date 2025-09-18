@@ -1,4 +1,3 @@
-import React from 'react';
 
 const advanced-cybersecurity-suite: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const advanced-cybersecurity-suite: React.FC = () => {
   );
 };
 
-export default advanced-cybersecurity-suite;

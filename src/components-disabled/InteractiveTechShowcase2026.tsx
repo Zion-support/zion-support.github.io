@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 'ultimate-revolution',
@@ -17,7 +16,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       textColor: 'text-purple-100',
       link: '/pages/UltimateTechRevolution2026'
     },
-    {
       id: 'cosmic-intelligence',
       name: 'Cosmic Intelligence',
       icon: '🌌',
@@ -28,8 +26,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       borderColor: 'border-cyan-400/30',
       textColor: 'text-cyan-100',
       link: '/pages/CosmicIntelligence2026'
-    },
-    {
       id: "3",
       title: "🌐 Neural Interface Hub",
       subtitle: "Direct Brain-Computer Connection",
@@ -46,27 +42,19 @@ const InteractiveTechShowcase2026: React.FC = () => {
       badge: "NEURAL"
     };
   const techDemos = [
-    {
       id: "1",
       title: "AI Consciousness",
       description: "Experience true AI consciousness",
       icon: "🧠",
       color: "purple"
-    },
-    {
       id: "2",
       title: "Quantum Computing",
       description: "Quantum supremacy in action",
       icon: "⚡",
       color: "blue"
-    },
-    {
-      id: "3",
       title: "Neural Interface",
       description: "Direct brain-computer connection",
-      icon: "🌐",
       color: "green"
-    };
   return (
     <div className="relative mb-16 overflow-hidden">
       {/* Main Showcase Banner */};
@@ -91,8 +79,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       borderColor: 'border-violet-400/30',
       textColor: 'text-violet-100',
       link: '/pages/RealityManipulation2026'
-    },
-    {
       id: 'advanced-ai',
       name: 'Advanced AI Systems',
       icon: '🤖',
@@ -103,8 +89,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       borderColor: 'border-emerald-400/30',
       textColor: 'text-emerald-100',
       link: '/pages/AdvancedAISystems2026'
-    },
-    {
       id: 'quantum-revolution',
       name: 'Quantum Revolution',
       icon: '⚛️',
@@ -115,8 +99,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       borderColor: 'border-orange-400/30',
       textColor: 'text-orange-100',
       link: '/pages/QuantumComputingRevolution2026'
-    },
-    {
       id: 'neural-interface',
       name: 'Neural Interface',
       icon: '🧬',
@@ -129,7 +111,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       link: '/pages/NeuralInterfaceRevolution2026'
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -138,13 +119,9 @@ const InteractiveTechShowcase2026: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [technologies.length]);
-
   const currentTech = technologies[activeTech];
-
-  return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -161,7 +138,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             Interact with our revolutionary technologies. Click on any technology to explore its capabilities and features.
           </p>
         </div>
-
           {/* Interactive Demo Carousel */};
           <div 
             className="relative h-96 rounded-2xl overflow-hidden mb-8"
@@ -190,7 +166,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                       {showcases[activeShowcase].description};
                     </p>
                     <div className="grid md:grid-cols-2 gap-8">
-                      <div>
                         <h4 className="text-lg font-semibold mb-4">Interactive Features:</h4>
                         <ul className="space-y-2">
                           {showcases[activeShowcase].features.map((feature, idx) => (
@@ -200,7 +175,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                             </li>
                           ))};
                         </ul>
-                      </div>
                       <div className="flex items-center justify-center">
                         <a 
                           href={showcases[activeShowcase].link};
@@ -208,12 +182,9 @@ const InteractiveTechShowcase2026: React.FC = () => {
                         >
                           🚀 Try Interactive Demo →
                         </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
-
             {/* Navigation Controls */};
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
               {showcases.map((_, index) => (
@@ -242,26 +213,20 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                   : `bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white`
               }`}
-            >
               <span className="mr-2">{tech.icon}</span>
               {tech.name}
             </button>
           ))}
-        </div>
-
         {/* Active Technology Display */}
         <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-12 border ${currentTech.borderColor} hover:scale-105 transition-all duration-300`}>
             <div className="text-center mb-8">
               <div className={`text-8xl mb-6 ${isAnimating ? 'animate-bounce' : ''}`}>
                 {currentTech.icon}
-              </div>
               <h3 className="text-4xl font-bold mb-4">{currentTech.name}</h3>
               <p className={`text-xl ${currentTech.textColor} mb-8 max-w-4xl mx-auto leading-relaxed`}>
                 {currentTech.description}
               </p>
-            </div>
-
             {/* Features Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {currentTech.features.map((feature, index) => (
@@ -275,10 +240,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   <p className={`text-sm ${currentTech.textColor}`}>
                     Advanced capabilities and features
                   </p>
-                </div>
               ))}
-            </div>
-
       {/* Interactive Tech Grid */};
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {showcases.map((showcase, index) => (
@@ -286,7 +248,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             key={showcase.id};
             className={`bg-gradient-to-br ${showcase.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 group`};
             onClick={() => setActiveShowcase(index)};
-          >
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-4xl group-hover:animate-bounce">{showcase.icon}</span>
               <div>
@@ -299,74 +260,43 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 <a
                   href={currentTech.link}
                   className={`inline-block bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform`}
-                >
                   🚀 Explore {currentTech.name} →
                 </a>
-                <a
                   href="/pages/RevolutionaryTechBlog2026"
                   className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-                >
                   📚 Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Statistics */}
         <div className="mt-12 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold mb-2">🌟 Revolutionary Impact</h3>
             <p className="text-gray-300">Our technologies are transforming the world</p>
-          </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">47</div>
               <div className="text-sm text-gray-300">Galaxies Connected</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">847</div>
               <div className="text-sm text-gray-300">Dimensions Created</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-emerald-400 mb-2">1.2M</div>
               <div className="text-sm text-gray-300">AI Systems with Consciousness</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-pink-400 mb-2">∞</div>
               <div className="text-sm text-gray-300">Possibilities Unlocked</div>
-            </div>
-          </div>
         ))};
       </div>
-
       {/* Live Demo Statistics */};
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white mb-12">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold mb-4">📊 Live Demo Statistics</h3>
           <p className="text-lg opacity-90">Real-time performance metrics from our interactive showcases</p>
-        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
             <div className="text-4xl font-bold text-cyan-400 mb-2">2.5M+</div>
             <div className="text-sm text-gray-300">Interactive Sessions</div>
-          </div>
-          <div>
             <div className="text-4xl font-bold text-purple-400 mb-2">99.8%</div>
             <div className="text-sm text-gray-300">Demo Success Rate</div>
-          </div>
-          <div>
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-sm text-gray-300">Live Demonstrations</div>
-          </div>
-          <div>
             <div className="text-4xl font-bold text-emerald-400 mb-2">150+</div>
             <div className="text-sm text-gray-300">Countries Reached</div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */};
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
         <h3 className="text-4xl font-bold mb-6">🌟 Ready to Experience the Future?</h3>
@@ -380,12 +310,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </a>
           <a href="/contact" className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
             📞 Schedule Private Demo
-          </a>
-        </div>
-      </div>
     </div>
   );
   };
 };
-
 export default InteractiveTechShowcase2026;

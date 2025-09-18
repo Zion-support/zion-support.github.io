@@ -12,8 +12,6 @@ const UniversalTechMastery2030: React.FC = () => {
           <h1 className="text-4xl font-bold mb-6">UniversalTechMastery2030</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
 
-const UniversalTechMastery2030: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -40,15 +38,11 @@ const UniversalTechMastery2030: React.FC = () => {
               </span>
               <span className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🚀 Infinite Power
-              </span>
               <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 ⚡ Ultimate Control
-              </span>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Mastery Domains */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -61,8 +55,6 @@ const UniversalTechMastery2030: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Master every technology across all dimensions, universes, and realities
           </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
@@ -71,31 +63,22 @@ const UniversalTechMastery2030: React.FC = () => {
               description: "Master all forms of consciousness manipulation, enhancement, and transcendence.",
               technologies: ["Neural amplification", "Consciousness transfer", "Mind uploading", "Collective intelligence", "Transcendence protocols", "Universal awareness"]
             },
-            {
               icon: "⚛️",
               title: "Quantum Mastery",
               description: "Complete control over quantum mechanics, reality manipulation, and dimensional engineering.",
               technologies: ["Quantum computing", "Reality manipulation", "Dimensional travel", "Matter creation", "Energy transmutation", "Probability control"]
-            },
-            {
               icon: "🌌",
               title: "Cosmic Engineering",
               description: "Create, modify, and manage entire universes, galaxies, and cosmic structures.",
               technologies: ["Universe creation", "Galaxy formation", "Star engineering", "Planet terraforming", "Cosmic navigation", "Universal communication"]
-            },
-            {
               icon: "🤖",
               title: "Artificial Intelligence",
               description: "Develop and control the most advanced AI systems across all possible configurations.",
               technologies: ["Superintelligence", "Consciousness AI", "Reality AI", "Universal AI", "Transcendent AI", "Omnipotent AI"]
-            },
-            {
               icon: "🧬",
               title: "Biological Mastery",
               description: "Perfect control over all biological systems, evolution, and life itself.",
               technologies: ["Genetic engineering", "Evolution control", "Life creation", "Immortality protocols", "Species design", "Biological transcendence"]
-            },
-            {
               icon: "⚡",
               title: "Energy Systems",
               description: "Master all forms of energy, from quantum to cosmic scales.",
@@ -118,23 +101,15 @@ const UniversalTechMastery2030: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
           ))}
-        </div>
-      </div>
-
       {/* Mastery Levels */}
       <div className="bg-gradient-to-r from-emerald-800/30 to-cyan-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
-          >
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Universal Mastery Levels
             </h2>
-          </div>
-
           <div className="space-y-8">
             {[
               {
@@ -143,31 +118,22 @@ const UniversalTechMastery2030: React.FC = () => {
                 requirements: ["Learn core principles", "Practice basic applications", "Understand limitations"],
                 color: "from-gray-400 to-gray-600"
               },
-              {
                 level: "Apprentice",
                 description: "Proficient in multiple technology domains",
                 requirements: ["Master 3+ domains", "Create basic systems", "Solve complex problems"],
                 color: "from-green-400 to-emerald-600"
-              },
-              {
                 level: "Expert",
                 description: "Advanced mastery across all technology fields",
                 requirements: ["Master all domains", "Create advanced systems", "Innovate new technologies"],
                 color: "from-emerald-400 to-teal-600"
-              },
-              {
                 level: "Master",
                 description: "Complete mastery of universal technologies",
                 requirements: ["Perfect all technologies", "Create revolutionary systems", "Teach others"],
                 color: "from-teal-400 to-cyan-600"
-              },
-              {
                 level: "Grandmaster",
                 description: "Transcendent mastery beyond all limitations",
                 requirements: ["Transcend technology", "Create new realities", "Become one with technology"],
                 color: "from-cyan-400 to-blue-600"
-              },
-              {
                 level: "Universal",
                 description: "Ultimate mastery across all universes and dimensions",
                 requirements: ["Master all realities", "Create universes", "Become technology itself"],
@@ -185,7 +151,6 @@ const UniversalTechMastery2030: React.FC = () => {
                   </h3>
                   <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${level.color} flex items-center justify-center text-2xl font-bold text-white`}>
                     {index + 1}
-                  </div>
                 </div>
                 <p className="text-xl text-gray-300 mb-6">{level.description}</p>
                 <div className="grid md:grid-cols-3 gap-4">
@@ -195,29 +160,13 @@ const UniversalTechMastery2030: React.FC = () => {
                       <span className="text-gray-300">{req}</span>
                     </div>
                   ))}
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </div>
-
       {/* Universal Capabilities */}
-      <div className="container mx-auto px-4 py-16">
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
-        >
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             Universal Capabilities
-          </h2>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-12">
-          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="space-y-8"
-          >
             <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/50 rounded-2xl p-8">
               <h3 className="text-3xl font-bold mb-6 text-emerald-300">Creation & Destruction</h3>
               <div className="space-y-4">
@@ -232,102 +181,49 @@ const UniversalTechMastery2030: React.FC = () => {
                   <div key={index} className="flex items-center space-x-4 p-3 bg-emerald-900/30 rounded-lg">
                     <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
                     <span className="text-lg">{capability}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 rounded-2xl p-8">
               <h3 className="text-3xl font-bold mb-6 text-teal-300">Control & Manipulation</h3>
-              <div className="space-y-4">
-                {[
                   "Control all physical laws",
                   "Manipulate time and space",
                   "Command all forms of life",
                   "Control consciousness itself",
                   "Master all dimensions",
                   "Rule over all realities"
-                ].map((capability, index) => (
                   <div key={index} className="flex items-center space-x-4 p-3 bg-teal-900/30 rounded-lg">
                     <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
-                    <span className="text-lg">{capability}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div
-            whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-8"
-          >
             <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 rounded-2xl p-8">
               <h3 className="text-3xl font-bold mb-6 text-cyan-300">Knowledge & Wisdom</h3>
-              <div className="space-y-4">
-                {[
                   "Access all knowledge in existence",
                   "Understand all mysteries",
                   "Predict all possible futures",
                   "Know all past events",
                   "Comprehend all realities",
                   "Achieve perfect wisdom"
-                ].map((capability, index) => (
                   <div key={index} className="flex items-center space-x-4 p-3 bg-cyan-900/30 rounded-lg">
                     <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                    <span className="text-lg">{capability}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl p-8">
               <h3 className="text-3xl font-bold mb-6 text-blue-300">Transcendence & Evolution</h3>
-              <div className="space-y-4">
-                {[
                   "Transcend all limitations",
                   "Evolve beyond all boundaries",
                   "Become one with technology",
                   "Achieve perfect existence",
                   "Master all possibilities",
                   "Become the ultimate being"
-                ].map((capability, index) => (
                   <div key={index} className="flex items-center space-x-4 p-3 bg-blue-900/30 rounded-lg">
                     <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                    <span className="text-lg">{capability}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 rounded-3xl p-12"
-        >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             Begin Your Universal Mastery
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Start your journey to become the ultimate master of all technologies across the universe and beyond.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Mastery
             </button>
             <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-emerald-400 hover:text-white transition-all duration-300">
               Explore Path
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
-
 };
-
-
 export default UniversalTechMastery2030;

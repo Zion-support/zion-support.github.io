@@ -9,7 +9,6 @@ interface SEOOptimizerProps {
   url?: string;
   type?: string;
 }
-
 const AdvancedSEOOptimizer2025: React.FC<SEOOptimizerProps> = ({
   title = "Zion Tech Group - Revolutionary AI & Technology Solutions 2025",
   description = "Leading the future of technology with revolutionary AI, quantum computing, neural interfaces, and interdimensional technology solutions. Transform your business with cutting-edge innovations.",
@@ -33,7 +32,6 @@ const AdvancedSEOOptimizer2025: React.FC<SEOOptimizerProps> = ({
       }
       meta.setAttribute('content', content);
     };
-
     // Update meta tags
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
@@ -48,19 +46,16 @@ const AdvancedSEOOptimizer2025: React.FC<SEOOptimizerProps> = ({
     updateMetaTag('og:url', url);
     updateMetaTag('og:type', type);
     updateMetaTag('og:site_name', 'Zion Tech Group');
-    
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', title);
     updateMetaTag('twitter:description', description);
     updateMetaTag('twitter:image', image);
-    
     // Additional SEO tags
     updateMetaTag('theme-color', '#6366f1');
     updateMetaTag('msapplication-TileColor', '#6366f1');
     updateMetaTag('apple-mobile-web-app-capable', 'yes');
     updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
-    
     // Structured data
     const structuredData = {
       "@context": "https://schema.org",
@@ -83,21 +78,15 @@ const AdvancedSEOOptimizer2025: React.FC<SEOOptimizerProps> = ({
         "@type": "Offer",
         "description": "Revolutionary AI and Technology Solutions",
         "category": "Technology Services"
-      }
-    };
-
     // Add structured data to page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(structuredData);
     document.head.appendChild(script);
-
     return () => {
       // Cleanup
       document.head.removeChild(script);
-    };
   }, [title, description, keywords, image, url, type]);
-
   return (
     <Helmet>
       <title>{title}</title>
@@ -113,22 +102,18 @@ const AdvancedSEOOptimizer2025: React.FC<SEOOptimizerProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
       {/* Additional SEO */}
       <meta name="theme-color" content="#6366f1" />
       <meta name="msapplication-TileColor" content="#6366f1" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -138,5 +123,4 @@ const AdvancedSEOOptimizer2025: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
 export default AdvancedSEOOptimizer2025;

@@ -21,23 +21,15 @@ const NextGenContentBanner2025: React.FC = () => {
             >
               🧠 AI Consciousness →
             </a>
-            <a 
               href="/pages/QuantumRealityEngine2025" 
               className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold text-center hover:scale-105 transform"
-            >
               ⚛️ Quantum Reality →
-            </a>
-            <a 
               href="/pages/NeuralRealityInterface2025" 
               className="bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-50 transition-all duration-300 font-semibold text-center hover:scale-105 transform"
-            >
               🧬 Neural Interface →
-            </a>
-          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default NextGenContentBanner2025;

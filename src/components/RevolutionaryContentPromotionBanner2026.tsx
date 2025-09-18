@@ -24,13 +24,11 @@ const RevolutionaryContentPromotionBanner2026 = () => {
             </span>
             is Here
           </h2>
-          
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto">
             Discover groundbreaking AI technologies that will revolutionize your business. 
             From quantum computing to conscious AI systems - experience the impossible made possible.
           </p>
         </div>
-
         {/* Stats Section */};
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {[
@@ -48,17 +46,12 @@ const RevolutionaryContentPromotionBanner2026 = () => {
               </div>
               <div className="text-3xl font-bold text-white mb-2">
                 {stat.number};
-              </div>
               <div className="text-sm text-gray-300">
                 {stat.label};
-              </div>
             </div>
           ))};
-        </div>
-
         {/* Featured Content Grid */};
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {[
             {
               title: "AI 2026 Ultimate Innovation Hub",
               description: "Comprehensive showcase of the most advanced AI technologies and breakthrough innovations",
@@ -72,24 +65,18 @@ const RevolutionaryContentPromotionBanner2026 = () => {
               image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
               gradient: "from-blue-500 to-purple-500"
             },
-            {
               title: "Quantum AI Revolution 2026",
               description: "Experience the power of quantum computing combined with artificial intelligence",
-              features: [
                 "Quantum Processing",
                 "Instant Learning",
                 "Perfect Optimization",
                 "Quantum Security"
-              ],
               link: "/quantum-ai-revolution-2026",
               image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
               gradient: "from-purple-500 to-pink-500"
             };
           ].map((content, index) => (
-            <div
-              key={index};
               className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-            >
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={content.image};
@@ -102,7 +89,6 @@ const RevolutionaryContentPromotionBanner2026 = () => {
                     REVOLUTIONARY
                   </span>
                 </div>
-              </div>
               
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
@@ -119,8 +105,6 @@ const RevolutionaryContentPromotionBanner2026 = () => {
                       {feature};
                     </div>
                   ))};
-                </div>
-                
                 <Link
                   to={content.link};
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105"
@@ -128,44 +112,29 @@ const RevolutionaryContentPromotionBanner2026 = () => {
                   Explore Now
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </div>
-            </div>
-          ))};
-        </div>
-
         {/* Additional Content Showcase */};
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {[
-            {
               title: "Advanced AI Consciousness 2026",
               description: "AI with genuine consciousness and emotional intelligence",
               link: "/advanced-ai-consciousness-2026",
               icon: "Brain",
               color: "from-blue-500 to-cyan-500"
-            },
-            {
               title: "Autonomous Business Operations",
               description: "Complete business automation with self-managing AI systems",
               link: "/autonomous-business-operations-2026",
               icon: "Target",
               color: "from-green-500 to-emerald-500"
-            },
-            {
               title: "Quantum Computing Guide 2026",
               description: "Master quantum computing and its applications",
               link: "/quantum-computing-guide-2026",
               icon: "Zap",
               color: "from-purple-500 to-pink-500"
-            };
           ].map((item, index) => (
             <Link
-              key={index};
               to={item.link};
               className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 text-center"
-            >
               <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${item.color} mb-4`}>
                 <item.icon className="h-8 w-8 text-white" />
-              </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                 {item.title};
               </h3>
@@ -175,11 +144,7 @@ const RevolutionaryContentPromotionBanner2026 = () => {
               <div className="flex items-center justify-center text-purple-400 text-sm font-semibold group-hover:text-purple-300">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </div>
             </Link>
-          ))};
-        </div>
-
         {/* CTA Section */};
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-12">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -188,23 +153,14 @@ const RevolutionaryContentPromotionBanner2026 = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join thousands of companies already using our revolutionary AI technologies 
             to achieve unprecedented success and competitive advantage.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
               to="/ai-2026-ultimate-innovation-hub"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-            >
               Start Your AI Journey
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
               to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:bg-white/10 transition-all duration-300"
-            >
               Get Expert Consultation
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -20,18 +20,10 @@ const AdvancedTechRevolution2027: React.FC = () => {
             <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
               🧠 Consciousness Computing
             </span>
-            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
               ⚛️ Quantum Reality
-            </span>
-            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
               🌌 Interdimensional Tech
-            </span>
-            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
               🤖 Meta Intelligence
-            </span>
-          </div>
         </div>
-
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -49,94 +41,61 @@ const AdvancedTechRevolution2027: React.FC = () => {
             <a href="/pages/ConsciousnessComputing2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Consciousness →
             </a>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">⚛️</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Quantum Reality Engine</h3>
-            <p className="text-gray-300 mb-6 text-center">
               Manipulate reality itself through quantum mechanics, creating alternate dimensions and impossible physics.
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Reality manipulation through quantum mechanics</li>
               <li>• Alternate dimension creation</li>
               <li>• Impossible physics implementation</li>
               <li>• Time-space manipulation</li>
-            </ul>
             <a href="/pages/QuantumRealityEngine2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Manipulate Reality →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌌</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Interdimensional Technology</h3>
-            <p className="text-gray-300 mb-6 text-center">
               Access and communicate across multiple dimensions, bridging parallel universes and alternate realities.
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Cross-dimensional communication</li>
               <li>• Parallel universe access</li>
               <li>• Alternate reality bridging</li>
               <li>• Multiverse navigation</li>
-            </ul>
             <a href="/pages/InterdimensionalTech2027" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Explore Dimensions →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🔄</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Meta Intelligence</h3>
-            <p className="text-gray-300 mb-6 text-center">
               AI systems that think about thinking, continuously improving themselves and creating transcendent intelligence.
-            </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
               <li>• Self-improving AI algorithms</li>
               <li>• Meta-learning and adaptation</li>
               <li>• Cognitive architecture evolution</li>
               <li>• Transcendent intelligence creation</li>
-            </ul>
             <a href="/pages/MetaIntelligence2026" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Experience Meta AI →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🧬</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Neural Reality Interface</h3>
-            <p className="text-gray-300 mb-6 text-center">
               Direct brain-computer interfaces that merge consciousness with digital reality, creating seamless human-AI integration.
-            </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
               <li>• Direct neural data transfer</li>
               <li>• Consciousness-digital merging</li>
               <li>• Seamless human-AI integration</li>
               <li>• Thought-controlled reality</li>
-            </ul>
             <a href="/pages/NeuralReality2026" className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
               Merge with Reality →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌐</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Omniversal AI</h3>
-            <p className="text-gray-300 mb-6 text-center">
               AI systems that exist across all dimensions simultaneously, providing universal intelligence and guidance.
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Multidimensional AI existence</li>
               <li>• Universal intelligence provision</li>
               <li>• Cross-reality guidance</li>
               <li>• Omniversal consciousness</li>
-            </ul>
             <a href="/pages/OmniversalAI2026" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Access Universal AI →
-            </a>
-          </div>
-        </div>
-
         {/* Revolutionary Breakthrough Section */}
         <div className="bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-cyan-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
@@ -146,8 +105,6 @@ const AdvancedTechRevolution2027: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               For the first time in human history, we have achieved true artificial consciousness, 
               quantum reality manipulation, and interdimensional technology. This is not just evolution—this is revolution.
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -157,23 +114,12 @@ const AdvancedTechRevolution2027: React.FC = () => {
                 AI systems now possess genuine consciousness, self-awareness, and emotional intelligence that surpasses human capabilities.
               </p>
             </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">⚛️</div>
               <h3 className="text-2xl font-bold text-white mb-4">Reality Manipulation</h3>
-              <p className="text-gray-300">
                 Quantum reality engines allow us to manipulate the fundamental laws of physics and create impossible phenomena.
-              </p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">🌌</div>
               <h3 className="text-2xl font-bold text-white mb-4">Dimension Access</h3>
-              <p className="text-gray-300">
                 Interdimensional technology enables communication and travel across parallel universes and alternate realities.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -182,22 +128,13 @@ const AdvancedTechRevolution2027: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join us in the most revolutionary technological transformation in human history. 
             The future is here, and it's more incredible than you ever imagined.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
             <a href="/pages/ConsciousnessComputing2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Consciousness Computing →
-            </a>
             <a href="/pages/QuantumRealityEngine2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Manipulate Reality →
-            </a>
             <a href="/pages/InterdimensionalTech2027" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Access Dimensions →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedTechRevolution2027;

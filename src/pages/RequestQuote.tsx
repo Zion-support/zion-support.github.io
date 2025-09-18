@@ -1,7 +1,6 @@
-
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function RequestQuote() {
   return (
@@ -128,94 +127,68 @@ export default function RequestQuote() {
                     name="projectDescription"
                     required
                     rows={6}
-                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg resize-none"
-                    placeholder="Describe your project requirements, goals, and any specific features you need..."
+                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
+                    placeholder="Describe your project requirements, timeline, and any specific needs..."
                   />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="budget" className="block text-zion-slate-light mb-2">
-                      Budget Range
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white rounded-lg"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="under-5k">Under $5,000</option>
-                      <option value="5k-10k">$5,000 - $10,000</option>
-                      <option value="10k-25k">$10,000 - $25,000</option>
-                      <option value="25k-50k">$25,000 - $50,000</option>
-                      <option value="50k-100k">$50,000 - $100,000</option>
-                      <option value="over-100k">Over $100,000</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="timeline" className="block text-zion-slate-light mb-2">
-                      Timeline
-                    </label>
-                    <select
-                      id="timeline"
-                      name="timeline"
-                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white rounded-lg"
-                    >
-                      <option value="">Select timeline</option>
-                      <option value="asap">ASAP</option>
-                      <option value="1-2-weeks">1-2 weeks</option>
-                      <option value="1-month">1 month</option>
-                      <option value="2-3-months">2-3 months</option>
-                      <option value="3-6-months">3-6 months</option>
-                      <option value="6-months-plus">6+ months</option>
-                    </select>
-                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="additionalInfo" className="block text-zion-slate-light mb-2">
-                    Additional Information
+                  <label htmlFor="budget" className="block text-zion-slate-light mb-2">
+                    Budget Range
                   </label>
-                  <textarea
-                    id="additionalInfo"
-                    name="additionalInfo"
-                    rows={4}
-                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg resize-none"
-                    placeholder="Any additional details, constraints, or questions you'd like us to know about..."
+                  <select
+                    id="budget"
+                    name="budget"
+                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white rounded-lg"
+                  >
+                    <option value="">Select budget range</option>
+                    <option value="under-10k">Under $10,000</option>
+                    <option value="10k-25k">$10,000 - $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="over-100k">Over $100,000</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="timeline" className="block text-zion-slate-light mb-2">
+                    Project Timeline
+                  </label>
+                  <select
+                    id="timeline"
+                    name="timeline"
+                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white rounded-lg"
+                  >
+                    <option value="">Select timeline</option>
+                    <option value="asap">ASAP</option>
+                    <option value="1-month">Within 1 month</option>
+                    <option value="3-months">Within 3 months</option>
+                    <option value="6-months">Within 6 months</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center">
+                  <input
+                    id="newsletter"
+                    name="newsletter"
+                    type="checkbox"
+                    className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 border-zion-blue-light rounded"
                   />
+                  <label htmlFor="newsletter" className="ml-2 block text-zion-slate-light">
+                    Subscribe to our newsletter for tech updates and insights
+                  </label>
                 </div>
 
                 <div className="text-center">
-                  <button 
-                    type="submit" 
-                    className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light px-12 py-4 rounded-lg font-semibold text-lg transition-colors"
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
                   >
-                    Submit Quote Request
+                    Request Quote
                   </button>
                 </div>
               </form>
-            </div>
-
-            <div className="mt-12 text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Need Immediate Assistance?</h2>
-              <p className="text-zion-slate-light mb-6">
-                For urgent inquiries or to speak with our team directly, contact us:
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950" 
-                  className="inline-block bg-zion-blue-dark border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-colors"
-                >
-                  Call +1 302 464 0950
-                </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="inline-block bg-zion-blue-dark border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-colors"
-                >
-                  Email Us
-                </a>
-              </div>
             </div>
           </div>
         </div>

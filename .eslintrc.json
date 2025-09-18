@@ -6,7 +6,9 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -18,60 +20,40 @@
   },
   "plugins": [
     "react",
+    "react-hooks",
     "@typescript-eslint"
   ],
   "rules": {
-    "react/no-unescaped-entities": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "warn",
-    "no-unused-vars": "warn",
-    "react/no-unknown-property": "off"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+    "no-unused-vars": "off"
   },
   "ignorePatterns": [
-    "temp_*",
-    "backup*",
-    "src_backup_temp*",
-    "temp-backup*",
-    "temp-problematic-pages*",
-    "recovered-branches",
-    "zion-website",
-    "zion-os",
-    "automation",
-    "tests.disabled",
-    "utils.disabled",
-    "pages.disabled*",
-    "pages._archive*",
-    "pages_backup*",
-    "temp_broken_files",
-    "temp_components*",
-    "temp_conflicted_files",
-    "temp_exclude",
-    "dist",
-    "node_modules",
-    "src_backup_temp",
-    "temp-backup",
-    "temp-problematic-pages",
-    "tests",
-    "zion.app",
-    "src/pages-disabled",
-    "src/utils-disabled",
-    "src/components-disabled",
-    "src/data",
-    "src/hooks",
-    "src/integrations",
-    "src/lib",
-    "src/store",
-    "src/setupTests.ts",
-    "tests/*",
-    "src/pages-disabled/*",
-    "src/utils-disabled/*",
-    "zion.app/*",
-    "types/*",
-    "utils/*"
+    "dist/",
+    ".next/",
+    "node_modules/",
+    "zion-os.disabled/",
+    "zion-os/",
+    "zion-website/",
+    "zion.app/",
+    "zion_academy/",
+    "*.backup",
+    "*.backup.*",
+    "*.min.js",
+    "*.bundle.js",
+    "*.chunk.js",
+    "sw.js",
+    "sw-*.js",
+    "service-worker.js",
+    "public/",
+    "static/",
+    "src/components-disabled/",
+    "src/utils-disabled/",
+    "src.disabled/",
+    "src.broken/",
+    "src.corrupted/",
+    "src-corrupted/",
+    "src-clean/",
+    "src_backup_temp/"
   ]
 }

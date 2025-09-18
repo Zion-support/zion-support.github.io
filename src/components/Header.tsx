@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Button } from './ui/button';
 // Sidebar context optional in this build
 const useSidebar = () => ({ isSidebarOpen: false, toggleSidebar: () => {} });
 import { 
@@ -31,36 +32,24 @@ export const Header: React.FC = () => {
   const theme = 'dark';
   const setTheme = (_: string) => {};
   const location = useLocation();
-
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   const closeMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
-  };
-
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 
       href: '#',
       dropdown: [
-
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
         { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems-platform', description: 'AI-powered business automation' },
         { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
@@ -70,47 +59,31 @@ export const Header: React.FC = () => {
         { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G enterprise deployment' }
       ]
     },
-    { 
       name: 'Solutions', 
       href: '/solutions',
-      dropdown: [
         { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
         { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
         { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
         { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
-      ]
-    },
-    { 
       name: 'Company', 
       href: '/about',
-      dropdown: [
         { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
         { name: 'Our Team', href: '/team', description: 'Meet our leadership and experts' },
         { name: 'Careers', href: '/careers', description: 'Join our growing team' },
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
-      ]
-    },
-    { 
       name: 'Resources', 
       href: '/blog',
-      dropdown: [
         { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
         { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' },
         { name: 'Help Center', href: '/help', description: 'Support and troubleshooting' },
         { name: 'Community', href: '/community', description: 'Connect with peers' }
-      ]
-    },
     { name: 'Contact', href: '/contact' }
-
   ];
-
   const isActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(href);
-  };
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -180,10 +153,8 @@ export const Header: React.FC = () => {
                     {item.name}
                   </Link>
                 )}
-              </div>
             ))}
           </nav>
-          
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
             {/* Theme toggle */}
@@ -197,8 +168,6 @@ export const Header: React.FC = () => {
             {/* Language selector */}
             <button className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200">
               <Globe className="w-5 h-5" />
-            </button>
-            
             {/* Auth buttons */}
             <div className="hidden md:flex items-center space-x-3">
               <Button variant="outline" size="sm" className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white">
@@ -206,18 +175,11 @@ export const Header: React.FC = () => {
               </Button>
               <Button size="sm" className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25">
                 Get Started
-              </Button>
             </div>
-            
             {/* Mobile menu button */}
-            <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
-            >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
           {/* Sidebar Toggle Button */}
           <button
             onClick={toggleSidebar}
@@ -226,78 +188,30 @@ export const Header: React.FC = () => {
           >
             <Menu className="w-6 h-6" />
           </button>
-
           {/* Mobile Menu Button */}
-          <button
             onClick={() => {}}
             className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden bg-zion-blue-dark/98 backdrop-blur-md border-t border-zion-cyan/20">
           <div className="px-4 py-6 space-y-4">
-            {navigationItems.map((item) => (
               <div key={item.name}>
-                {item.dropdown ? (
                   <div>
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
                       className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    
-                    {activeDropdown === item.name && (
                       <div className="ml-4 mt-2 space-y-2">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
                             className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
                             onClick={closeMenu}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
                     className={`block px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200 ${
                       isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : ''
-                    }`}
                     onClick={closeMenu}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-            
             {/* Mobile auth buttons */}
             <div className="pt-4 space-y-3">
               <Button variant="outline" className="w-full border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white">
-                Sign In
-              </Button>
               <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
       )}
     </header>
   );
 }
-
 export default Header;

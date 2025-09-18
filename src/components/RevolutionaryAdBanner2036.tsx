@@ -1,42 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "Quantum Consciousness AI",
-      subtitle: "AI that transcends human understanding",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Interdimensional Computing",
-      subtitle: "Computing across multiple dimensions",
-      icon: "🌌",
-      color: "from-blue-500 to-purple-500"
-    },
-    {
-      title: "Time Manipulation Tech",
-      subtitle: "Control the flow of time itself",
-      icon: "⏰",
-      color: "from-green-500 to-blue-500"
-    },
-    {
-      title: "Reality Engineering",
-      subtitle: "Shape reality to your will",
-      icon: "🔮",
-      color: "from-pink-500 to-red-500"
     }
   ];
-
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -64,16 +31,12 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               </a>
             </div>
           ))}
-        </div>
-        
         <div className="text-center mt-8">
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryAdBanner2036;

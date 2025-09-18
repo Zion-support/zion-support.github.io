@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([]);
-
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
@@ -12,7 +11,6 @@ export default function FAQ() {
         : [...prev, index]
     );
   };
-
   const faqData = [
     {
       category: "Getting Started",
@@ -21,86 +19,43 @@ export default function FAQ() {
           question: "What is Zion Tech Group?",
           answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented AI specialists, innovative companies, and cutting-edge technological solutions in one seamless ecosystem."
         },
-        {
           question: "How do I get started on Zion?",
           answer: "Getting started is easy! Simply create an account, complete your profile, and start exploring our marketplace. You can browse services, connect with talent, or showcase your own expertise."
-        },
-        {
           question: "Is Zion really free to use?",
           answer: "Yes! Zion is completely free to use. We believe in democratizing access to technology and removing barriers that prevent innovation from thriving."
         }
       ]
     },
-    {
       category: "For Talent & Creators",
-      items: [
-        {
           question: "How can I showcase my skills on Zion?",
           answer: "Create a comprehensive profile highlighting your expertise, upload your portfolio, and list your services. Our platform makes it easy for potential clients to discover and connect with you."
-        },
-        {
           question: "What types of professionals can join Zion?",
           answer: "We welcome all tech professionals including AI specialists, software developers, data scientists, cybersecurity experts, cloud architects, and many more. If you work in technology, Zion is for you."
-        },
-        {
           question: "How do I get paid for my services?",
           answer: "Zion provides secure payment processing and escrow services to ensure safe transactions. You'll receive payments directly to your account once projects are completed and approved."
-        }
-      ]
-    },
-    {
       category: "For Clients & Employers",
-      items: [
-        {
           question: "How do I find the right talent for my project?",
           answer: "Use our advanced search and filtering system to find professionals with the exact skills you need. You can review profiles, portfolios, and ratings to make informed decisions."
-        },
-        {
           question: "What types of projects can I post?",
           answer: "From AI development and web applications to cybersecurity audits and cloud migrations, you can post any technology-related project. Our diverse talent pool can handle projects of all sizes and complexities."
-        },
-        {
           question: "How does Zion ensure quality?",
           answer: "We implement a comprehensive vetting system including skill verification, portfolio reviews, and client feedback. Our rating system helps you identify top-performing professionals."
-        }
-      ]
-    },
-    {
       category: "Services & Equipment",
-      items: [
-        {
           question: "What services are available on Zion?",
           answer: "Zion offers a wide range of services including AI development, web and mobile development, cloud solutions, cybersecurity, data analytics, and much more. Our marketplace covers the full spectrum of technology services."
-        },
-        {
           question: "Can I buy or sell equipment on Zion?",
           answer: "Yes! Zion's marketplace includes both services and equipment. You can find everything from high-performance computing hardware to specialized AI development tools."
-        },
-        {
           question: "How do I know if a service provider is legitimate?",
           answer: "All providers on Zion undergo verification processes. Look for verified badges, read reviews, and check their portfolio. Our platform also provides dispute resolution if issues arise."
-        }
-      ]
-    },
-    {
       category: "Technical Support",
-      items: [
-        {
           question: "What if I encounter technical issues?",
           answer: "Our support team is available to help with any technical issues. You can reach us through live chat, email, or phone during business hours."
-        },
-        {
           question: "Is my data secure on Zion?",
           answer: "Absolutely. We implement enterprise-grade security measures to protect your data, including encryption, secure authentication, and regular security audits."
-        },
-        {
           question: "Can I integrate Zion with my existing tools?",
           answer: "Yes! Zion offers APIs and integration options to connect with your existing workflow tools, project management systems, and communication platforms."
-        }
-      ]
     }
   ];
-
   return (
     <>
       <SEO 
@@ -117,7 +72,6 @@ export default function FAQ() {
               Find answers to common questions about Zion's platform and services
             </p>
           </div>
-
           {/* Search Section */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
@@ -132,8 +86,6 @@ export default function FAQ() {
                 </svg>
               </button>
             </div>
-          </div>
-
           {/* FAQ Categories */}
           <div className="space-y-12">
             {faqData.map((category, categoryIndex) => (
@@ -171,21 +123,17 @@ export default function FAQ() {
                 </div>
               </div>
             ))}
-          </div>
-
           {/* Contact Support */}
           <div className="text-center mt-16">
             <h2 className="text-2xl font-bold text-white mb-4">Still Need Help?</h2>
             <p className="text-zion-slate-light mb-6">
               Can't find the answer you're looking for? Our support team is here to help.
-            </p>
             <a 
               href="/contact" 
               className="inline-block bg-zion-cyan text-zion-blue-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
             >
               Contact Support
             </a>
-          </div>
         </div>
       </main>
     </>

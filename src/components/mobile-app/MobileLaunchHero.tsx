@@ -16,7 +16,6 @@ export function MobileLaunchHero() {
           </button>
           <button className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold">
             Learn More
-          </button>
         </div>
       </div>
     </div>

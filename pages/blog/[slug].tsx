@@ -1,11 +1,3 @@
-import type { NextPage } from 'next';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/backup-main-20250918-004015
 
 const [slug]: NextPage = () => {
   return (
@@ -24,8 +16,4 @@ const [slug]: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-export default [slug];
-=======
-export default [slug];
->>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

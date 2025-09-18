@@ -1,6 +1,3 @@
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-b461
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
@@ -19,9 +16,6 @@ const InteractiveTechShowcase: React.FC = () => {
       name: "Revolutionary AI Consciousness",
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
       icon: "🧠",
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-1912
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -62,9 +56,6 @@ const InteractiveTechShowcase: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
@@ -197,9 +188,6 @@ const InteractiveTechShowcase: React.FC = () => {
         </div>
       </div>
 
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
       {/* Technology Comparison */}
       <div className="mt-16">
@@ -248,11 +236,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   </tr>
                 ))}
               </tbody>
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-            </table>cursor/fix-netlify-build-and-merge-to-main-a068
-========
-            </table>
->>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-e4b8
 import { motion } from 'framer-motion';
 
@@ -388,11 +371,6 @@ const InteractiveTechShowcase: React.FC = () => {
   }, [technologies.length]);
 
   const currentTech = technologies[activeTech];
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-
-  const currentTech = technologies[activeTech];
-========
->>>>>>> cursor/create-and-deploy-new-content-1912
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 
@@ -407,12 +385,6 @@ const InteractiveTechShowcase: React.FC = () => {
     }
   };
 
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-
-  const currentTech = technologies[activeTech];
-cursor/fix-netlify-build-and-merge-to-main-a068
-========
->>>>>>> cursor/create-and-deploy-new-content-5863
 
   const currentTech = technologies[activeTech];
 >>>>>>> cursor/create-and-deploy-new-content-01e2
@@ -491,11 +463,6 @@ cursor/fix-netlify-build-and-merge-to-main-a068
       color: "from-slate-600 to-gray-600",
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-      link: "/pages/AdvancedAnalyticsDashboard2026"cursor/fix-netlify-build-and-merge-to-main-a068
-========
-      link: "/pages/AdvancedAnalyticsDashboard2026"
->>>>>>> cursor/create-and-deploy-new-content-04f4
 >>>>>>> main
     }
   ];
@@ -592,11 +559,6 @@ cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
               Download Brochure
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-            </button>cursor/fix-netlify-build-and-merge-to-main-a068
-========
-            </button>
->>>>>>> cursor/create-and-deploy-new-content-f420
 >>>>>>> cursor/create-and-deploy-new-content-9601
 >>>>>>> cursor/create-and-deploy-new-content-01e2
 >>>>>>> main
@@ -780,9 +742,6 @@ cursor/fix-netlify-build-and-merge-to-main-a068
             </div>
           </div>
         ))}
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-b461
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
@@ -792,9 +751,6 @@ cursor/fix-netlify-build-and-merge-to-main-a068
 };
 
 export default InteractiveTechShowcase;
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 >>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -905,9 +861,6 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
@@ -935,9 +888,6 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 export default InteractiveTechShowcase;
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-========
->>>>>>> cursor/create-and-deploy-new-content-079e
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-1912
 >>>>>>> cursor/create-and-deploy-new-content-1c02
@@ -963,10 +913,6 @@ export default InteractiveTechShowcase;
           </div>
         </div>
 
-<<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-export default InteractiveTechShowcase;
-========
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2

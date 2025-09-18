@@ -6,12 +6,13 @@ interface CartItem {
   price: number;
   quantity: number;
   image?: string;
-};
+}
+
 interface CartState {
   items: CartItem[];
   total: number;
   itemCount: number;
-};
+}
 const initialState: CartState = {
   items: [],
   total: 0,
@@ -28,7 +29,7 @@ const cartSlice = createSlice({
         existingItem.quantity += action.payload.quantity;
       } else {
         state.items.push(action.payload);
-      };
+      }
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
@@ -43,14 +44,14 @@ const cartSlice = createSlice({
         item.quantity = action.payload.quantity;
         state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
         state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
-      };
+      }
     },
     clearCart: (state) => {
       state.items = [];
       state.total = 0;
       state.itemCount = 0;
-    };
-  };
+    }
+  }
 });
 
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;

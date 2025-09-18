@@ -20,7 +20,6 @@ const QuantumRealityEngine2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">
@@ -29,44 +28,30 @@ const QuantumRealityEngine2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Quantum Processing</h3>
             <p className="text-indigo-100 mb-4">
               Harness the power of quantum superposition for exponential processing capabilities
-            </p>
             <ul className="text-indigo-200 space-y-2">
               <li>• Parallel universe calculations</li>
               <li>• Quantum entanglement networks</li>
               <li>• Superposition processing</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-5xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">Reality Manipulation</h3>
             <p className="text-purple-100 mb-4">
               Advanced algorithms that can manipulate the fundamental fabric of reality
-            </p>
             <ul className="text-purple-200 space-y-2">
               <li>• Dimensional shifting</li>
               <li>• Reality reconstruction</li>
               <li>• Temporal manipulation</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
             <div className="text-5xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold mb-4">Consciousness Integration</h3>
             <p className="text-pink-100 mb-4">
               Connect human consciousness directly with quantum computing systems
-            </p>
             <ul className="text-pink-200 space-y-2">
               <li>• Neural quantum interfaces</li>
               <li>• Consciousness uploading</li>
               <li>• Mind-machine fusion</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">Ready to Experience Quantum Reality?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,12 +60,6 @@ const QuantumRealityEngine2026: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-export default QuantumRealityEngine2026;

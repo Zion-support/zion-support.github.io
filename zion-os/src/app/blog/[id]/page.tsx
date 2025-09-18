@@ -1,9 +1,3 @@
-import Link from 'next/link'
-import React from 'react'
-import { getPostById } from '../../../data/blog'
-
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = getPostById(params.id)
 
   if (!post) {
     return (

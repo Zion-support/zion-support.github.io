@@ -1,24 +1,54 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const TalentDirectory: React.FC = () => {
+const TalentDirectory = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-8">Talent Directory</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Discover top talent in AI, technology, and innovation.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
-            <p className="text-lg">
-              Connect with skilled professionals and experts in artificial intelligence, 
-              quantum computing, cybersecurity, and emerging technologies.
+    <>
+      <Helmet>
+        <title>Talent Directory - Zion Tech Group</title>
+        <meta name="description" content="Browse our comprehensive directory of technology talent. Find skilled professionals for your projects."/>
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Talent Directory</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover and connect with top technology professionals across all domains and experience levels.
             </p>
           </div>
+          
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
+              <p className="text-gray-600 mb-6">
+                Our talent directory is currently under development. Soon you'll be able to browse, search, and connect with verified technology professionals.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🔍</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Advanced Search</h3>
+                  <p className="text-gray-600 text-sm">
+                    Filter by skills, experience, location, and availability
+                  </p>
+                </div>
+                
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📋</span>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Detailed Profiles</h3>
+                    View portfolios, work history, and verified credentials
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">💬</span>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Direct Contact</h3>
+                    Message and connect with talent directly
+              </div>
+            </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-
 export default TalentDirectory;

@@ -106,7 +106,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
             "telephone": "+1-555-0123",
             "contactType": "customer service",
             "email": "info@ziontechgroup.com"
-          },
           "sameAs": [
             "https://twitter.com/ZionTechGroup",
             "https://linkedin.com/company/zion-tech-group",
@@ -120,28 +119,16 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         })}
       </script>
       {/* Structured Data - WebSite */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
           "description": fullDescription,
           "publisher": {
             "@type": "Organization",
             "name": "Zion Tech Group"
-          },
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
-        })}
-      </script>
       {/* Structured Data - BreadcrumbList */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
             {
@@ -151,8 +138,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
               "item": "https://ziontechgroup.com"
             }
           ]
-        })}
-      </script>
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

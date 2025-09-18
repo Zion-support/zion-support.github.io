@@ -78,11 +78,27 @@
     </script>
     
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="manifest" href="/manifest.json" />
     <title>Zion Tech Group - Revolutionary Technology Solutions</title>
     <meta name="description" content="Revolutionary technology solutions for the future" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const UserExperienceOptimizer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [animationPhase, setAnimationPhase] = useState(0);
-
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     const animationTimer = setInterval(() => {
@@ -15,7 +14,6 @@ const UserExperienceOptimizer: React.FC = () => {
       clearInterval(animationTimer);
     };
   }, []);
-
   return (
     <div className="enhanced-component">
       <div className="component-header">
@@ -33,20 +31,13 @@ const UserExperienceOptimizer: React.FC = () => {
             <h3>Performance</h3>
             <p>Optimized for speed and efficiency</p>
           </div>
-          <div className="feature-card">
             <div className="feature-icon">🎨</div>
             <h3>Design</h3>
             <p>Modern, responsive UI/UX</p>
-          </div>
-          <div className="feature-card">
             <div className="feature-icon">🔧</div>
             <h3>Functionality</h3>
             <p>Enhanced features and capabilities</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UserExperienceOptimizer;

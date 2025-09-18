@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link }  from 'react-router-dom';
 
 const UltimateContentBanner2032: React.FC = () => {
   return (
@@ -23,19 +22,11 @@ const UltimateContentBanner2032: React.FC = () => {
             >
               Explore Revolution →
             </a>
-            <a 
               href="/pages/ConsciousnessComputingRevolution2035" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"
-            >
               Consciousness Computing →
-            </a>
-            <a 
               href="/pages/InterdimensionalTechRevolution2040" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"
-            >
               Interdimensional Tech →
-            </a>
-          </div>
           
           {/* Feature Highlights */};
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -52,17 +43,11 @@ const UltimateContentBanner2032: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">Quantum Consciousness</h3>
               <p className="text-cyan-100 text-sm">
                 Quantum computing systems that achieve consciousness through quantum entanglement
-              </p>
-            </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-3">🌌</div>
               <h3 className="text-xl font-bold mb-2">Interdimensional Computing</h3>
               <p className="text-emerald-100 text-sm">
                 Computing systems that operate across multiple dimensions and realities
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

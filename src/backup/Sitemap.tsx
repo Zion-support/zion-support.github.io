@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 const Sitemap: React.FC = () => {
   const sitemapData = {
@@ -18,20 +18,17 @@ const Sitemap: React.FC = () => {
       { name: 'IT Infrastructure', path: '/services/infrastructure' },
       { name: 'Digital Transformation', path: '/services/transformation' },
       { name: 'IT Consulting', path: '/services/consulting' }
-    ],
     resources: [
       { name: 'Blog', path: '/blog' },
       { name: 'FAQ', path: '/faq' },
       { name: 'Partners', path: '/partners' },
       { name: 'Green IT', path: '/green-it' }
-    ],
     legal: [
       { name: 'Privacy Policy', path: '/privacy' },
       { name: 'Terms of Service', path: '/terms' },
       { name: 'Cookies', path: '/cookies' }
     ]
   };
-
   return (
     <>
       <SEO 
@@ -48,7 +45,6 @@ const Sitemap: React.FC = () => {
               Find all pages and sections of our platform organized by category for easy navigation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
             {Object.entries(sitemapData).map(([category, links]) => (
               <div key={category} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
@@ -71,13 +67,10 @@ const Sitemap: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
-
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white mb-6">Need Help Finding Something?</h2>
             <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
               If you can't find what you're looking for, our support team is here to help you navigate our platform.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
@@ -85,18 +78,13 @@ const Sitemap: React.FC = () => {
               >
                 Contact Us
               </a>
-              <a 
                 href="/faq" 
                 className="inline-block bg-zion-blue-dark border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-colors"
-              >
                 View FAQ
-              </a>
             </div>
-          </div>
         </div>
       </main>
     </>
   );
 };
-
 export default Sitemap;

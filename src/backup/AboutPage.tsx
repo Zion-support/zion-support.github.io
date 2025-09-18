@@ -8,57 +8,39 @@ export default function AboutPage() {
     { label: 'Happy Clients', value: '50+', icon: Users },
     { label: 'Team Members', value: '15+', icon: Users }
   ];
-
   const values = [
     {
       icon: Zap,
       title: 'Innovation',
       description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
     },
-    {
       icon: Shield,
       title: 'Quality',
       description: 'Every project we deliver meets the highest standards of quality, security, and performance that our clients expect.'
-    },
-    {
       icon: Users,
       title: 'Collaboration',
       description: 'We work closely with our clients, understanding their needs and building solutions that truly serve their business objectives.'
-    },
-    {
       icon: Globe,
       title: 'Global Reach',
       description: 'Our services are available worldwide, helping businesses across different industries and regions achieve digital transformation.'
     }
-  ];
-
   const teamMembers = [
-    {
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader with 5+ years of experience in technology and business transformation.',
       avatar: '👨‍💼'
-    },
-    {
       name: 'AI Team',
       role: 'AI Specialists',
       description: 'Expert team specializing in machine learning, natural language processing, and AI-powered solutions.',
       avatar: '🤖'
-    },
-    {
       name: 'Dev Team',
       role: 'Development Engineers',
       description: 'Skilled developers creating robust, scalable, and innovative software solutions.',
       avatar: '👨‍💻'
-    },
-    {
       name: 'Support Team',
       role: 'Customer Success',
       description: 'Dedicated professionals ensuring exceptional customer experience and support.',
       avatar: '🎯'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -86,9 +68,7 @@ export default function AboutPage() {
             We are a forward-thinking technology company dedicated to empowering businesses 
             with innovative AI, IT, and micro SAAS solutions that drive growth and efficiency.
           </p>
-        </div>
       </div>
-
       {/* Mission & Vision */}
       <div className="py-20 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
@@ -105,7 +85,6 @@ export default function AboutPage() {
               <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
                 We believe that every business deserves access to enterprise-grade technology 
                 solutions that were once only available to large corporations with massive budgets.
-              </p>
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-8 lg:p-12 backdrop-blur-md shadow-xl">
@@ -119,14 +98,8 @@ export default function AboutPage() {
                   in the digital age.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Stats */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
-        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
               Our Impact in Numbers
@@ -134,105 +107,53 @@ export default function AboutPage() {
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               We've helped businesses achieve remarkable results through our innovative solutions and dedicated support.
             </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-zion-cyan/25">
                   <stat.icon className="h-10 w-10 text-white" />
-                </div>
                 <div className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                   {stat.value}
-                </div>
                 <div className="text-lg text-slate-600 dark:text-slate-400 font-medium">
                   {stat.label}
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </div>
-
       {/* Values */}
-      <div className="py-20 bg-white dark:bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
               Our Core Values
-            </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
               These principles guide everything we do, from how we develop solutions to how we serve our clients.
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {values.map((value, index) => (
               <div key={index} className="group bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="h-8 w-8 text-white" />
-                </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                   {value.title}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Team Section */}
-      <div className="py-20 bg-slate-50 dark:bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
               Meet Our Team
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
               Our diverse team of experts brings together years of experience in technology, 
               business, and innovation to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {teamMembers.map((member, index) => (
-              <div key={index} className="text-center group">
                 <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-zion-cyan/25 text-4xl">
                   {member.avatar}
-                </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                   {member.name}
-                </h3>
                 <p className="text-zion-cyan font-medium mb-3">{member.role}</p>
                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                   {member.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border-t border-zion-purple/30 relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-zion-purple/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-8">
             Ready to Work Together?
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
             Let's discuss how our team can help transform your business with innovative 
             technology solutions tailored to your specific needs.
-          </p>
-          
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
               href="/contact"
@@ -242,21 +163,13 @@ export default function AboutPage() {
               Get Started Today
               <TrendingUp className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
-            <a
               href="tel:+13024640950"
               className="group inline-flex items-center gap-3 px-10 py-5 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-105 text-lg"
-            >
               Call +1 302 464 0950
-            </a>
-          </div>
-          
           <div className="mt-12 text-slate-700 dark:text-slate-300 space-y-2">
             <p className="text-lg">📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="text-lg">✉️ kleber@ziontechgroup.com</p>
             <p className="text-lg">🌐 <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline font-medium">ziontechgroup.com</a></p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

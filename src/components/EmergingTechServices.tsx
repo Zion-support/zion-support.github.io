@@ -9,7 +9,6 @@ export const EmergingTechServices = () => {
       pricing: '$10,000/month',
       category: 'Quantum Computing'
     },
-    {
       id: 2,
       name: 'Blockchain Enterprise Solutions',
       description: 'Enterprise-grade blockchain infrastructure',
@@ -17,7 +16,6 @@ export const EmergingTechServices = () => {
       category: 'Blockchain'
     }
   ];
-
   return (
     <div className="py-16 bg-gradient-to-r from-green-900 to-blue-900">
       <div className="max-w-7xl mx-auto px-4">
@@ -38,5 +36,4 @@ export const EmergingTechServices = () => {
     </div>
   );
 };
-
 export default EmergingTechServices;

@@ -1,35 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2035: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const features = [
     {
       icon: "🤖",
       title: "Conscious AI",
       description: "AI with genuine self-awareness and emotional intelligence"
     },
-    {
       icon: "⚛️",
       title: "Quantum Computing",
       description: "Exponential processing power through quantum mechanics"
-    },
-    {
       icon: "🧠",
       title: "Neural Interfaces",
       description: "Direct brain-computer communication and control"
-    },
-    {
       icon: "🌌",
       title: "Reality Manipulation",
       description: "Technology that can alter the fundamental laws of physics"
     }
   ];
-
   return (
     <div className={`bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
@@ -44,7 +35,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             Join thousands of companies already transforming their business with our revolutionary technologies
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {features.map((feature, index) => (
             <div 
@@ -57,8 +47,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
               <p className="text-white/80 text-sm text-center">{feature.description}</p>
             </div>
           ))}
-        </div>
-
         <div className="text-center">
           <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
@@ -71,13 +59,8 @@ const RevolutionaryAdBanner2035: React.FC = () => {
               </button>
               <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-600 transition-colors font-semibold text-lg">
                 Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryAdBanner2035;

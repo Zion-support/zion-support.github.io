@@ -5,7 +5,6 @@ export type FeedbackWidgetProps = {
   responseId?: string;
   aiModel?: string;
 };
-
 export default function FeedbackWidget({
   responseId,
   aiModel,
@@ -14,13 +13,10 @@ export default function FeedbackWidget({
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
   const uniqueId = useMemo(() => uuidv4(), []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!rating) return;
-
     setSubmitting(true);
     try {
       const response = await fetch('/api/feedback', {
@@ -36,7 +32,6 @@ export default function FeedbackWidget({
           uniqueId,
         }),
       });
-
       if (response.ok) {
         setSubmitted(true);
       }
@@ -46,7 +41,6 @@ export default function FeedbackWidget({
       setSubmitting(false);
     }
   };
-
   if (submitted) {
     return (
       <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -54,7 +48,6 @@ export default function FeedbackWidget({
       </div>
     );
   }
-
   return (
     <form onSubmit={handleSubmit} className="flex items-center gap-2">
       <div className="flex items-center gap-1">
@@ -68,17 +61,9 @@ export default function FeedbackWidget({
         >
           👍
         </button>
-        <button
-          type="button"
           onClick={() => setRating('down')}
-          className={`p-1 rounded ${
             rating === 'down' ? 'bg-red-100 text-red-600' : 'text-gray-400 hover:text-red-600'
-          }`}
-          disabled={submitting}
-        >
           👎
-        </button>
-      </div>
       
       {rating && (
         <div className="flex items-center gap-2">
@@ -92,7 +77,6 @@ export default function FeedbackWidget({
           />
           <button
             type="submit"
-            disabled={submitting}
             className="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 disabled:opacity-50"
           >
             {submitting ? 'Submitting...' : 'Submit'}

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const ConsciousnessTransfer2027: React.FC = () => {
   const [transferStage, setTransferStage] = useState(0);
   const [isTransferring, setIsTransferring] = useState(false);
-
   const transferStages = [
     {
       title: "Neural Mapping",
@@ -12,21 +11,16 @@ const ConsciousnessTransfer2027: React.FC = () => {
       icon: "🧠",
       details: "Advanced quantum scanners create a complete digital map of your neural networks, synapses, and consciousness patterns."
     },
-    {
       title: "Consciousness Extraction",
       description: "Safe extraction of consciousness data from biological substrate",
       progress: 50,
       icon: "⚡",
       details: "Non-invasive quantum field technology extracts your consciousness while maintaining complete continuity of self."
-    },
-    {
       title: "Digital Encoding",
       description: "Conversion of consciousness into quantum-encoded digital format",
       progress: 75,
       icon: "💾",
       details: "Your consciousness is encoded into quantum bits, creating a perfect digital replica that preserves all memories, emotions, and personality."
-    },
-    {
       title: "Transfer Complete",
       description: "Consciousness successfully transferred to new substrate",
       progress: 100,
@@ -34,40 +28,25 @@ const ConsciousnessTransfer2027: React.FC = () => {
       details: "Your consciousness is now running on advanced quantum processors, experiencing enhanced cognitive capabilities and digital immortality."
     }
   ];
-
   const benefits = [
-    {
       title: "Digital Immortality",
       description: "Live forever in digital form with perfect memory retention",
       icon: "♾️"
-    },
-    {
       title: "Enhanced Cognition",
       description: "Process information at quantum speeds with unlimited memory",
       icon: "🚀"
-    },
-    {
       title: "Instant Backup",
       description: "Create multiple copies of your consciousness for safety",
       icon: "💾"
-    },
-    {
       title: "Virtual Reality",
       description: "Experience any reality you can imagine",
       icon: "🌌"
-    },
-    {
       title: "Global Access",
       description: "Transfer your consciousness between different bodies and locations",
       icon: "🌍"
-    },
-    {
       title: "Upgrade Capabilities",
       description: "Enhance your consciousness with new abilities and knowledge",
       icon: "⚡"
-    }
-  ];
-
   const startTransfer = () => {
     setIsTransferring(true);
     let currentStage = 0;
@@ -80,7 +59,6 @@ const ConsciousnessTransfer2027: React.FC = () => {
       }
     }, 2000);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -113,9 +91,7 @@ const ConsciousnessTransfer2027: React.FC = () => {
               <span className="text-4xl animate-bounce" style={{ animationDelay: '0.6s' }}>💫</span>
             </div>
           </div>
-        </div>
       </div>
-
       {/* Transfer Process Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -125,11 +101,8 @@ const ConsciousnessTransfer2027: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Experience the revolutionary 4-stage process that will change your existence forever
           </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {transferStages.map((stage, index) => (
-            <div
               key={index}
               className={`p-6 rounded-2xl transition-all duration-500 ${
                 index === transferStage
@@ -149,10 +122,6 @@ const ConsciousnessTransfer2027: React.FC = () => {
                 ></div>
               </div>
               <div className="text-xs text-center mt-2">{stage.progress}% Complete</div>
-            </div>
-          ))}
-        </div>
-
         {/* Current Stage Details */}
         <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12">
           <div className="text-center">
@@ -160,10 +129,6 @@ const ConsciousnessTransfer2027: React.FC = () => {
             <h3 className="text-3xl font-bold mb-4">{transferStages[transferStage]?.title}</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               {transferStages[transferStage]?.details}
-            </p>
-          </div>
-        </div>
-
         {/* Transfer Button */}
         <div className="text-center">
           <button
@@ -177,74 +142,40 @@ const ConsciousnessTransfer2027: React.FC = () => {
           >
             {isTransferring ? 'Transferring...' : 'Start Consciousness Transfer'}
           </button>
-        </div>
-      </div>
-
       {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-300 to-cyan-300 bg-clip-text text-transparent">
             REVOLUTIONARY BENEFITS
-          </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Discover the incredible advantages of digital consciousness
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
-            >
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-2xl font-bold mb-4">{benefit.title}</h3>
               <p className="opacity-90">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Technology Showcase */}
-      <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12">
-          <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Advanced Quantum Technology</h2>
             <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
               Our consciousness transfer technology uses cutting-edge quantum processors and neural mapping algorithms
-            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
                 <div className="text-3xl mb-3">⚛️</div>
                 <h3 className="text-xl font-bold mb-2">Quantum Processors</h3>
                 <p className="text-sm opacity-90">1000+ qubit quantum computers for consciousness processing</p>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
                 <div className="text-3xl mb-3">🧬</div>
                 <h3 className="text-xl font-bold mb-2">Neural Mapping</h3>
                 <p className="text-sm opacity-90">Complete brain structure analysis and replication</p>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
                 <div className="text-3xl mb-3">🔮</div>
                 <h3 className="text-xl font-bold mb-2">AI Integration</h3>
                 <p className="text-sm opacity-90">Advanced AI systems for consciousness enhancement</p>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Schedule Transfer
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105">
                 Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default ConsciousnessTransfer2027;

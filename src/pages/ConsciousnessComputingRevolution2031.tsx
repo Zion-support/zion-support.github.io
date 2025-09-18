@@ -1,4 +1,3 @@
-import React from 'react';
 const ConsciousnessComputingRevolution2031: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">

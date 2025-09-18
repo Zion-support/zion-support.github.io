@@ -23,27 +23,19 @@ const AdvancedTechBanner2031: React.FC = () => {
               AI systems that surpass human intelligence
             </p>
             <div className="text-xs text-indigo-300">Available Now</div>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
             <div className="text-4xl mb-3">🌌</div>
             <h3 className="text-lg font-bold mb-2">Multiverse Computing</h3>
             <p className="text-purple-100 text-sm mb-4">
               Computing across infinite parallel universes
-            </p>
             <div className="text-xs text-purple-300">In Development</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 text-center">
             <div className="text-4xl mb-3">⚡</div>
             <h3 className="text-lg font-bold mb-2">Reality Engine</h3>
             <p className="text-pink-100 text-sm mb-4">
               Complete control over physical reality
-            </p>
             <div className="text-xs text-pink-300">Coming Soon</div>
-          </div>
-        </div>
-        
         <div className="text-center">
           <a 
             href="/pages/AdvancedTechShowcase2031" 
@@ -51,10 +43,8 @@ const AdvancedTechBanner2031: React.FC = () => {
           >
             🚀 Explore Advanced Tech 2031 →
           </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedTechBanner2031;

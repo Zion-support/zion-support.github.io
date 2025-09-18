@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ai-consciousness-evolution-platform: React.FC = () => {
   return (
@@ -19,4 +18,3 @@ const ai-consciousness-evolution-platform: React.FC = () => {
   );
 };
 
-export default ai-consciousness-evolution-platform;

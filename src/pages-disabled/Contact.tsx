@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '@/components/SEOHead';
 import { 
   Mail, 
   Phone, 
@@ -23,7 +23,6 @@ export default function Contact() {
     service: '',
     message: ''
   });
-
   // SEO structured data for the contact page
   const structuredData = {
     "@context": "https://schema.org",
@@ -51,7 +50,6 @@ export default function Contact() {
         "contactType": "customer service",
         "email": "kleber@ziontechgroup.com",
         "availableLanguage": "English"
-      },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
         "https://twitter.com/ziontechgroup",
@@ -59,28 +57,21 @@ export default function Contact() {
       ]
     }
   };
-
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     setIsSubmitted(true);
     setIsSubmitting(false);
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
@@ -98,24 +89,18 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-white">Email</h3>
                 <p className="text-gray-300">contact@ziontechgroup.com</p>
               </div>
-              <div>
                 <h3 className="text-lg font-semibold text-white">Phone</h3>
                 <p className="text-gray-300">+1 (555) 123-4567</p>
-              </div>
-              <div>
                 <h3 className="text-lg font-semibold text-white">Address</h3>
                 <p className="text-gray-300">
                   123 Tech Street<br />
                   Innovation City, IC 12345
                 </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
   );
 }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
       <SEOHead 
@@ -129,8 +114,6 @@ export default function Contact() {
             <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
             <p className="text-xl text-zion-slate-light">
               Ready to transform your business with AI and technology? Let's talk.
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -143,30 +126,18 @@ export default function Contact() {
                     <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
                   </div>
                 </div>
-                <div className="flex items-center">
                   <Phone className="w-6 h-6 text-zion-cyan mr-4" />
-                  <div>
                     <p className="text-white font-medium">Phone</p>
                     <p className="text-zion-slate-light">+1-302-464-0950</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-zion-cyan mr-4" />
-                  <div>
                     <p className="text-white font-medium">Address</p>
                     <p className="text-zion-slate-light">
                       364 E Main St STE 1008<br />
                       Middletown, DE 19709
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             
-            <div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div>
                     <label className="block text-sm font-medium text-white mb-2">
                       First Name
                     </label>
@@ -178,21 +149,9 @@ export default function Contact() {
                       required
                       className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-white mb-2">
                       Last Name
-                    </label>
-                    <input
-                      type="text"
                       name="lastName"
                       value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                    />
-                  </div>
-                </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-white mb-2">
@@ -206,30 +165,14 @@ export default function Contact() {
                     required
                     className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">
                     Company
-                  </label>
-                  <input
                     type="text"
                     name="company"
                     value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">
                     Service Interest
-                  </label>
                   <select
                     name="service"
                     value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   >
                     <option value="">Select a service</option>
                     <option value="ai-solutions">AI Solutions</option>
@@ -237,22 +180,12 @@ export default function Contact() {
                     <option value="consulting">Business Consulting</option>
                     <option value="other">Other</option>
                   </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">
                     Message
-                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
-                    onChange={handleChange}
                     rows={4}
-                    required
-                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   ></textarea>
-                </div>
-                
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -261,10 +194,4 @@ export default function Contact() {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  );
-}

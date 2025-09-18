@@ -8,4 +8,3 @@ const AccessibilityProvider: React.FC = () => {
     </div>
   );
 };
-

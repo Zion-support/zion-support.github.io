@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function TalentDirectory() {
   return (
@@ -32,27 +32,13 @@ export default function TalentDirectory() {
                 </button>
               </div>
               
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">AI Specialists</h3>
-                <p className="text-zion-slate-light mb-4">
                   Connect with AI experts and machine learning professionals
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                   Browse AI Experts
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Designers</h3>
-                <p className="text-zion-slate-light mb-4">
                   Discover creative designers and UX/UI professionals
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                   Browse Designers
-                </button>
-              </div>
             </div>
-          </div>
         </div>
       </main>
     </>

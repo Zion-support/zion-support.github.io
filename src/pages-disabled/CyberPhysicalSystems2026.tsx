@@ -17,7 +17,6 @@ const CyberPhysicalSystems2026: React.FC = () => {
             computing, networking, and physical processes for unprecedented automation and control
           </p>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -31,44 +30,24 @@ const CyberPhysicalSystems2026: React.FC = () => {
               <li>• Quality control automation</li>
               <li>• Energy optimization</li>
             </ul>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div className="text-6xl mb-6 text-center">🏙️</div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Smart Cities</h3>
-            <p className="text-gray-600 mb-6 text-center">
               Integrated urban systems that optimize traffic, energy, and public services through real-time data
-            </p>
-            <ul className="text-gray-600 space-y-2">
               <li>• Traffic management</li>
               <li>• Energy distribution</li>
               <li>• Public safety systems</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div className="text-6xl mb-6 text-center">🚗</div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Vehicles</h3>
-            <p className="text-gray-600 mb-6 text-center">
               Self-driving systems that navigate complex environments using advanced sensors and machine learning
-            </p>
-            <ul className="text-gray-600 space-y-2">
               <li>• Real-time decision making</li>
               <li>• Sensor fusion</li>
               <li>• V2X communication</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-slate-600 to-gray-600 rounded-3xl p-12 text-white mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Revolutionary CPS Technologies</h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Experience the future of cyber-physical systems with our cutting-edge solutions that are transforming industries
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-4">🧠 Digital Twin Technology</h3>
@@ -80,40 +59,15 @@ const CyberPhysicalSystems2026: React.FC = () => {
                   <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                   <span>Real-time synchronization</span>
                 </div>
-                <div className="flex items-center">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                   <span>Predictive modeling</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                   <span>Virtual testing environments</span>
-                </div>
               </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-4">🌐 Edge Computing</h3>
-              <p className="text-slate-100 mb-6">
                 Distributed computing infrastructure that processes data closer to the source for ultra-low latency
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                   <span>Sub-millisecond response times</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                   <span>Local data processing</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                   <span>Reduced bandwidth usage</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Industry Applications */}
         <div className="bg-white rounded-2xl p-12 shadow-xl mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industry Applications</h2>
@@ -122,48 +76,27 @@ const CyberPhysicalSystems2026: React.FC = () => {
               <div className="text-4xl mb-4">🏭</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Manufacturing</h3>
               <p className="text-gray-600 text-sm">Smart factories with autonomous production lines</p>
-            </div>
-            <div className="text-center">
               <div className="text-4xl mb-4">🏥</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Healthcare</h3>
               <p className="text-gray-600 text-sm">Medical devices with real-time monitoring</p>
-            </div>
-            <div className="text-center">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Energy</h3>
               <p className="text-gray-600 text-sm">Smart grids with intelligent distribution</p>
-            </div>
-            <div className="text-center">
               <div className="text-4xl mb-4">🌊</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Environment</h3>
               <p className="text-gray-600 text-sm">Environmental monitoring and control systems</p>
-            </div>
-          </div>
-        </div>
-
         {/* Impact Statistics */}
         <div className="bg-gradient-to-r from-slate-600/20 to-gray-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-slate-400/30">
           <h2 className="text-3xl font-bold text-center mb-12">CPS Impact 2026</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
               <div className="text-5xl font-bold text-slate-600 mb-2">40%</div>
               <div className="text-gray-600">Efficiency improvement</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-gray-600 mb-2">$3.2T</div>
               <div className="text-gray-600">Global market value</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-slate-600 mb-2">60%</div>
               <div className="text-gray-600">Cost reduction</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-gray-600 mb-2">99.9%</div>
               <div className="text-gray-600">System reliability</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -171,19 +104,14 @@ const CyberPhysicalSystems2026: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Partner with us to implement cutting-edge cyber-physical systems that will revolutionize your operations
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Get Started Today
             </a>
             <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-slate-600 text-slate-600 px-8 py-4 rounded-lg hover:bg-slate-50 transition-colors font-semibold text-lg">
               Learn More
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default CyberPhysicalSystems2026;

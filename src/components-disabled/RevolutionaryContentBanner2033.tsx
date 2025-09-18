@@ -9,7 +9,6 @@ const RevolutionaryContentBanner2033: React.FC = () => {
         <div className="flex items-center justify-center space-x-4 mb-6">
           <span className="text-4xl animate-bounce">🌟</span>
           <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2033</h3>
-          <span className="text-4xl animate-bounce">🌟</span>
         </div>
         <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
           Experience the most advanced technological breakthrough in human history. Discover revolutionary content on 
@@ -22,29 +21,19 @@ const RevolutionaryContentBanner2033: React.FC = () => {
           </a>
           <a href="/pages/RevolutionaryAIBreakthrough2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-pink-600 transition-all duration-300 font-bold border border-white/30 text-lg">
             🧠 AI Breakthrough →
-          </a>
           <a href="/pages/NextGenSpaceTech2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold border border-white/30 text-lg">
             🚀 Space Tech 2033 →
-          </a>
-        </div>
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/pages/UltimateTechRevolution2033" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105">
             🌟 NEW: 2033 Tech Showcase →
-          </a>
           <a href="/ultimate-showcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30 hover:scale-105">
             🚀 Explore All Content →
-          </a>
-        </div>
       </div>
     </div>
   );
 };
-
-export default RevolutionaryContentBanner2033;
-export default RevolutionaryContentBanner2033;
 export default RevolutionaryContentBanner2033;
               The fusion of quantum mechanics and human consciousness
             </p>
             <a href="/pages/QuantumConsciousnessRevolution2033" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Experience Quantum Consciousness →
-export default RevolutionaryContentBanner2033;

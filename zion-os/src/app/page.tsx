@@ -1,6 +1,3 @@
-import React from 'react'
-import Link from 'next/link'
-import FeatureCard from './components/FeatureCard'
 
 export default function HomePage() {
   const features = [
@@ -43,31 +40,6 @@ export default function HomePage() {
       ],
       gradient: 'bg-gradient-to-r from-purple-600 to-pink-600',
     },
-  ]
-
-  return (
-    <div className="min-h-screen">
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="gradient-text">Launch Sovereign</span>
-            <br />
-            <span className="text-white">AI-Powered Digital Economies</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/multiverse/launch" className="btn-primary hover-lift">
-              🚀 Launch Your Economy
-            </Link>
-            <Link href="/admin/instances" className="btn-secondary hover-lift">
-              📊 View Instances
-            </Link>
-            <Link href="/blog" className="btn-secondary hover-lift">
-              📰 Read the Blog
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -94,5 +66,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

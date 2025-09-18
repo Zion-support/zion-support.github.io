@@ -31,10 +31,7 @@ const AdvancedTechTrends2027: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-xl">
               📖 Learn More
-            </button>
-          </div>
         </motion.div>
-
         {/* Key Trends Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <motion.div
@@ -59,54 +56,35 @@ const AdvancedTechTrends2027: React.FC = () => {
               Explore Synthetic AI →
             </a>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-8xl mb-6 text-center">⚛️</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Quantum-Neural Fusion</h3>
             <p className="text-cyan-200 mb-8 text-center text-lg">
               Revolutionary convergence of quantum computing and neural networks for unprecedented processing power
-            </p>
             <ul className="text-cyan-300 space-y-3 text-sm mb-8">
               <li>• Quantum-enhanced neural processing</li>
               <li>• Exponential computation speed</li>
               <li>• Complex problem solving</li>
               <li>• Quantum machine learning</li>
               <li>• Hybrid quantum-classical systems</li>
-            </ul>
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Discover Fusion →
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-8xl mb-6 text-center">🧬</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Neural Interfaces</h3>
             <p className="text-emerald-200 mb-8 text-center text-lg">
               Direct brain-computer interfaces enabling seamless mind-machine communication
-            </p>
             <ul className="text-emerald-300 space-y-3 text-sm mb-8">
               <li>• Non-invasive BCI technology</li>
               <li>• Thought control systems</li>
               <li>• Neural feedback loops</li>
               <li>• Cognitive enhancement</li>
               <li>• Medical applications</li>
-            </ul>
             <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind →
-            </a>
-          </motion.div>
         </div>
-
         {/* Emerging Technologies */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🚀 Emerging Technologies 2027</h2>
@@ -126,57 +104,30 @@ const AdvancedTechTrends2027: React.FC = () => {
                 Explore Space →
               </a>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-6 border border-pink-400/30"
-            >
               <div className="text-6xl mb-4 text-center">🔬</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Biotech AI</h3>
               <p className="text-pink-200 mb-6 text-center">
                 AI-powered biotechnology revolutionizing healthcare and life sciences
-              </p>
               <a href="/pages/AdvancedBiotechAI2026" className="block w-full bg-white text-pink-600 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center text-sm">
                 Explore Biotech →
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30"
-            >
               <div className="text-6xl mb-4 text-center">🤖</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Advanced Robotics</h3>
               <p className="text-indigo-200 mb-6 text-center">
                 Next-generation robotics with human-like capabilities and intelligence
-              </p>
               <a href="/pages/AdvancedRobotics2026" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
                 Explore Robotics →
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-400/30"
-            >
               <div className="text-6xl mb-4 text-center">🔒</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Cybersecurity</h3>
               <p className="text-teal-200 mb-6 text-center">
                 Advanced cybersecurity solutions for the quantum age
-              </p>
               <a href="/pages/AdvancedCybersecuritySuite2026" className="block w-full bg-white text-teal-600 py-2 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center text-sm">
                 Explore Security →
-              </a>
-            </motion.div>
-          </div>
-        </div>
-
         {/* Technology Impact Stats */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-3xl p-16 mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">📊 Technology Impact 2027</h2>
@@ -186,17 +137,12 @@ const AdvancedTechTrends2027: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-2">AI Efficiency Gain</h3>
               <p className="text-purple-200">Expected productivity increase with advanced AI</p>
             </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-cyan-400 mb-4">10^20</div>
               <h3 className="text-2xl font-bold text-white mb-2">Quantum Speed</h3>
               <p className="text-cyan-200">Exponential processing power increase</p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-emerald-400 mb-4">99.99%</div>
               <h3 className="text-2xl font-bold text-white mb-2">Neural Accuracy</h3>
               <p className="text-emerald-200">Precision in brain-computer interfaces</p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-orange-400 mb-4">100+</div>
               <h3 className="text-2xl font-bold text-white mb-2">Space Missions</h3>
               <p className="text-orange-200">Active space exploration missions</p>
@@ -204,105 +150,63 @@ const AdvancedTechTrends2027: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="flex items-center space-x-3 mb-6">
               <span className="text-4xl">🧬</span>
-            </div>
             <p className="text-gray-300 mb-6 text-lg">
               Programmable biology is enabling the creation of living machines, 
               self-healing materials, and biological computers that surpass silicon.
-            </p>
             <div className="space-y-4">
               <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 p-4 rounded-lg">
                 <h3 className="text-white font-semibold mb-2">Living Factories</h3>
               </div>
-            </div>
-          </div>
-        </div>
-
         {/* Future Predictions */}
-        <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2027</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
-            >
               <h3 className="text-3xl font-bold text-white mb-6">AI-Human Collaboration</h3>
               <p className="text-purple-200 mb-6 text-lg">
                 By 2027, we expect to see seamless collaboration between humans and AI systems, 
                 with AI acting as intelligent partners rather than just tools.
-              </p>
               <ul className="text-purple-300 space-y-2">
                 <li>• AI assistants with human-like reasoning</li>
                 <li>• Collaborative decision-making systems</li>
                 <li>• Enhanced human creativity through AI</li>
                 <li>• Ethical AI governance frameworks</li>
               </ul>
-            </motion.div>
-
-            <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
-            >
               <h3 className="text-3xl font-bold text-white mb-6">Quantum Breakthroughs</h3>
               <p className="text-cyan-200 mb-6 text-lg">
                 Quantum computing will reach practical applications, solving problems 
                 that are currently impossible for classical computers.
-              </p>
               <ul className="text-cyan-300 space-y-2">
                 <li>• Quantum machine learning algorithms</li>
                 <li>• Quantum cryptography systems</li>
                 <li>• Molecular simulation breakthroughs</li>
                 <li>• Quantum internet infrastructure</li>
-              </ul>
-            </motion.div>
         {/* Emerging Technologies Section */}
         <div className="mb-16">
-            </div>
-          </div>
-        </div>
-
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
-        >
           <h2 className="text-6xl font-bold text-white mb-8">Ready to Shape the Future?</h2>
           <p className="text-2xl text-purple-100 mb-12 max-w-4xl mx-auto">
             Join us in exploring and implementing the most advanced technologies that will define 2027 and beyond
-          </p>
-          <div className="flex justify-center space-x-6">
             <a href="/pages/UltimateTechShowcase2025" className="bg-white text-purple-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
               🌟 Ultimate Tech Showcase
-            </a>
             <a href="/pages/RevolutionaryTechInsights2025" className="border-2 border-white text-white px-12 py-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-xl">
               🔮 Tech Insights
-            </a>
             <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
               🧠 Synthetic AI
-            </a>
               <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
                 Explore Solutions
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-              </button>
-            </div>
-          </div>
-        </motion.div>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
-
 export default AdvancedTechTrends2027;

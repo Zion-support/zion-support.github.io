@@ -36,12 +36,9 @@ const AdvancedTechInnovation2026: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 Learn More
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -57,31 +54,18 @@ const AdvancedTechInnovation2026: React.FC = () => {
                 <div className="text-lg font-semibold">{stat.label}</div>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-
       {/* Innovations Grid */}
       <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
-          >
             <h2 className="text-5xl font-bold mb-6">Revolutionary Innovations</h2>
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Discover the cutting-edge technologies that are transforming our world and creating 
               unprecedented opportunities for human advancement.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-12">
             {innovations.map((innovation, index) => (
-              <div
-                key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className={`bg-gradient-to-br ${innovation.gradient} p-8 rounded-2xl hover:scale-105 transition-all duration-300`}
-              >
                 <div className="text-6xl mb-6 text-center">{innovation.icon}</div>
                 <h3 className="text-3xl font-bold mb-4 text-center">{innovation.title}</h3>
                 <p className="text-lg opacity-90 mb-6 text-center">{innovation.description}</p>
@@ -93,44 +77,22 @@ const AdvancedTechInnovation2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="text-center">
                   <button className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                     Learn More →
                   </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
-          <div
-            whileInView={{ opacity: 1, y: 0 }}
-          >
             <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               Join us in exploring the next frontier of technology and be part of the revolution 
               that's reshaping our world.
-            </p>
-            <div className="flex justify-center space-x-4">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get Started Today
-              </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 Contact Our Team
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
-
 };
-
-
 export default AdvancedTechInnovation2026;

@@ -48,42 +48,27 @@ const AIInnovationHub2025: React.FC = () => {
               >
                 <Grid className="w-5 h-5" />
               </button>
-              <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-colors duration-300 ${
                   viewMode === 'list' ? 'bg-purple-600 text-white' : 'bg-white/10 text-gray-400 hover:bg-white/20'
-                }`}
-              >
                 <List className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-4 justify-center">
             {Object.entries(categories).map(([keycategory]) => (
-              <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center ${
                   activeCategory === key
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
                 <category.icon className="w-5 h-5 mr-2" />
                 {category.title}
-              </button>
             ))}
-          </div>
-        </div>
         {/* Content Grid */}
-        <div
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}
-        >
           {filteredInnovations.map((itemindex) => (
             <div
               key={item.id}
@@ -121,14 +106,11 @@ const AIInnovationHub2025: React.FC = () => {
                       {item.features.length > 2 && (
                         <span className="px-2 py-1 bg-white/20 rounded-full text-xs text-white">
                           +{item.features.length - 2} more
-                        </span>
                       )}
-                    </div>
                     {/* Meta Info */}
                     <div className="flex items-center justify-between text-sm text-gray-300 mb-4">
                       <span className={getDifficultyColor(item.difficulty)}>{item.difficulty}</span>
                       <span>{item.downloads} downloads</span>
-                    </div>
                     {/* Rating and Price */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -138,10 +120,6 @@ const AIInnovationHub2025: React.FC = () => {
                       <div className="text-right">
                         <div className="text-white font-semibold">{item.price}</div>
                         <div className="text-xs text-gray-300">{item.lastUpdated}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 {/* Hover Overlay */}
                 {hoveredItem === item.id && (
                   <div
@@ -155,24 +133,15 @@ const AIInnovationHub2025: React.FC = () => {
                       <button className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300 flex items-center">
                         <Download className="w-4 h-4 mr-2" />
                         Download
-                      </button>
-                    </div>
-                  </div>
                 )}
               </div>
-            </div>
           ))}
-        </div>
         {/* Load More */}
-        <div
           className="text-center mt-12"
-        >
           <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center mx-auto">
             <RefreshCw className="w-5 h-5 mr-2" />
             Load More Innovations
           </button>
-        </div>
-      </div>
     </div>
   );
 };

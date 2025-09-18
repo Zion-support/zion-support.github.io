@@ -33,9 +33,7 @@ const BreakthroughInnovations2026: React.FC = () => {
               Discover the most groundbreaking innovations that will fundamentally change how we understand technology, consciousness, and reality itself.
             </p>
           </div>
-        </div>
       </section>
-
       {/* Innovation Showcase */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -52,7 +50,6 @@ const BreakthroughInnovations2026: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 {innovations[activeInnovation].description}
               </p>
-
               {/* Features */}
               <div className="mb-8">
                 <h4 className="text-2xl font-bold mb-4 text-cyan-400">Key Features:</h4>
@@ -65,20 +62,12 @@ const BreakthroughInnovations2026: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Benefits */}
-              <div className="mb-8">
                 <h4 className="text-2xl font-bold mb-4 text-emerald-400">Benefits:</h4>
-                <div className="grid grid-cols-1 gap-3">
                   {innovations[activeInnovation].benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></div>
                       <span className="text-gray-300">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               {/* Applications */}
               <div>
                 <h4 className="text-2xl font-bold mb-4 text-purple-400">Applications:</h4>
@@ -90,25 +79,13 @@ const BreakthroughInnovations2026: React.FC = () => {
                     >
                       {app}
                     </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* Visual Representation */}
-            <div
               className="text-center"
-            >
               <div className={`bg-gradient-to-br ${innovations[activeInnovation].gradient} rounded-3xl p-16 shadow-2xl`}>
                 <div className="text-9xl mb-8 opacity-80">
                   {innovations[activeInnovation].icon}
-                </div>
                 <div className="text-3xl font-bold mb-4">2026 Innovation</div>
                 <div className="text-xl text-white/70">Revolutionary Technology</div>
-              </div>
-            </div>
-          </div>
-
           {/* Innovation Navigation */}
           <div className="flex justify-center space-x-6 mt-16">
             {innovations.map((innovation, index) => (
@@ -124,29 +101,14 @@ const BreakthroughInnovations2026: React.FC = () => {
                 {innovation.title.split(' ')[0]}
               </button>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* Innovation Grid */}
       <section className="py-20 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
-        <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-16"
-          >
             <h2 className="text-5xl font-bold mb-6">All Breakthrough Innovations</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our complete portfolio of revolutionary technologies that are reshaping the future.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {innovations.map((innovation, index) => (
               <div
-                key={innovation.id}
                 className={`bg-gradient-to-br ${innovation.gradient} rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer`}
-                onClick={() => setActiveInnovation(index)}
-              >
                 <div className="text-5xl mb-4 text-center">{innovation.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-center">{innovation.title}</h3>
                 <p className="text-white/90 mb-4 text-sm text-center">{innovation.description}</p>
@@ -154,89 +116,42 @@ const BreakthroughInnovations2026: React.FC = () => {
                   <span className="text-sm font-bold bg-white/20 px-3 py-1 rounded-full">
                     Breakthrough
                   </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Impact Statistics */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-16"
-          >
             <h2 className="text-5xl font-bold mb-6">Innovation Impact</h2>
             <p className="text-xl text-gray-300">Measurable impact of our breakthrough technologies</p>
-          </div>
-
           <div className="grid md:grid-cols-4 gap-8">
-            <div
               className="text-center bg-gradient-to-br from-emerald-600/30 to-teal-600/30 rounded-2xl p-8"
-            >
               <div className="text-6xl font-bold text-emerald-400 mb-4">10,000x</div>
               <div className="text-xl text-gray-300 mb-2">Performance Boost</div>
               <div className="text-sm text-gray-400">Exponential improvement in processing capabilities</div>
-            </div>
-
-            <div
               className="text-center bg-gradient-to-br from-purple-600/30 to-pink-600/30 rounded-2xl p-8"
-            >
               <div className="text-6xl font-bold text-purple-400 mb-4">∞</div>
               <div className="text-xl text-gray-300 mb-2">Possibilities</div>
               <div className="text-sm text-gray-400">Unlimited potential for innovation</div>
-            </div>
-
-            <div
               className="text-center bg-gradient-to-br from-cyan-600/30 to-blue-600/30 rounded-2xl p-8"
-            >
               <div className="text-6xl font-bold text-cyan-400 mb-4">100%</div>
               <div className="text-xl text-gray-300 mb-2">Revolutionary</div>
               <div className="text-sm text-gray-400">Complete paradigm shift in technology</div>
-            </div>
-
-            <div
               className="text-center bg-gradient-to-br from-orange-600/30 to-red-600/30 rounded-2xl p-8"
-            >
               <div className="text-6xl font-bold text-orange-400 mb-4">2026</div>
               <div className="text-xl text-gray-300 mb-2">Future Ready</div>
               <div className="text-sm text-gray-400">Next-generation technology today</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
-          <div
-          >
             <h2 className="text-5xl font-bold mb-6">Experience the Future Today</h2>
             <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
               Be among the first to experience these revolutionary breakthrough innovations that will change everything.
-            </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="/pages/UltimateTechRevolution2026"
                 className="inline-block bg-white text-indigo-600 px-12 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-xl hover:scale-105 transform shadow-2xl"
-              >
                 Explore All Innovations →
               </a>
-              <a
                 href="/pages/AdvancedAISystems2026"
                 className="inline-block border-2 border-white text-white px-12 py-4 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-bold text-xl"
-              >
                 Start Your Journey →
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
-
 };
-
-
 export default BreakthroughInnovations2026;

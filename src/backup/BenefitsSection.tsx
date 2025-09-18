@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { CheckCircle, Zap, Shield, Users, Globe, TrendingUp } from 'lucide-react';
-
 export function BenefitsSection() {
   const benefits = [
     {
@@ -9,33 +8,23 @@ export function BenefitsSection() {
       title: "Quality Assurance",
       description: "All services and talent are verified and quality-checked"
     },
-    {
       icon: Zap,
       title: "Fast Delivery",
       description: "Quick turnaround times for all projects and services"
-    },
-    {
       icon: Shield,
       title: "Secure Platform",
       description: "Enterprise-grade security for your business needs"
-    },
-    {
       icon: Users,
       title: "Expert Network",
       description: "Access to top-tier tech professionals worldwide"
-    },
-    {
       icon: Globe,
       title: "Global Reach",
       description: "Connect with talent and services from anywhere"
-    },
-    {
       icon: TrendingUp,
       title: "Scalable Solutions",
       description: "Grow your business with flexible, scalable services"
     }
   ];
-
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -47,7 +36,6 @@ export function BenefitsSection() {
             We provide the most comprehensive tech marketplace experience with unmatched quality, security, and innovation.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg text-center hover:transform hover:scale-105 transition-all duration-300">
@@ -62,7 +50,6 @@ export function BenefitsSection() {
               </p>
             </div>
           ))}
-        </div>
       </div>
     </section>
   );

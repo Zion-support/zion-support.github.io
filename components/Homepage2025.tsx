@@ -46,6 +46,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    },
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     // Newly added content (Sept 16, 2025)
     {
       title: 'Low‑Latency Agent Observability (2026)',
@@ -747,6 +750,12 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       </section>
 
       {/* Additional Content Sections - Components temporarily disabled */}
+
+      {/* Interactive Features Section */}
+      <InteractiveFeatures />
+
+      {/* Content Showcase Section */}
+      <ContentShowcase />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">

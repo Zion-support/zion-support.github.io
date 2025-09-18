@@ -3,7 +3,6 @@ import React, { useState, useEffect }  from 'react';
 const InterdimensionalTechShowcase2027: React.FC = () => {
   const [currentDimension, setCurrentDimension] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const interdimensionalTechs = [
     {
       id: "1",
@@ -22,72 +21,53 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       timeline: "2027",
       impact: "Reality-Altering"
     },
-    {
       id: "2",
       title: "⚡ Quantum Reality Engine",
       subtitle: "Manipulate Physical Laws",
       description: "Advanced quantum processors that can temporarily alter the fundamental constants of physics within localized regions, enabling impossible feats.",
-      features: [
         "Physics Constant Manipulation",
         "Gravity Field Control",
         "Quantum Entanglement Networks",
         "Reality Distortion Fields"
-      ],
       gradient: "from-cyan-600 via-teal-600 to-green-600",
       icon: "⚡",
       stats: { control: "100%", precision: "∞", range: "∞" },
-      timeline: "2027",
       impact: "Universal"
-    },
-    {
       id: "3",
       title: "🔮 Consciousness Transfer Matrix",
       subtitle: "Digital Immortality",
       description: "Technology that can transfer human consciousness into digital substrates, achieving true digital immortality across multiple dimensions.",
-      features: [
         "Consciousness Digitization",
         "Multi-Dimensional Backup Systems",
         "Quantum Consciousness Storage",
         "Infinite Lifespan Technology"
-      ],
       gradient: "from-pink-600 via-rose-600 to-red-600",
       icon: "🔮",
       stats: { lifespan: "∞", backups: "∞", fidelity: "100%" },
-      timeline: "2027",
       impact: "Transcendent"
-    },
-    {
       id: "4",
       title: "🌍 Planetary Consciousness Grid",
       subtitle: "Global Mind Network",
       description: "A planetary-scale network that connects all intelligent life forms into a unified consciousness, enabling collective problem-solving and shared experiences.",
-      features: [
         "Global Consciousness Integration",
         "Collective Intelligence Networks",
         "Shared Experience Platforms",
         "Universal Problem Solving"
-      ],
       gradient: "from-orange-600 via-yellow-600 to-green-600",
       icon: "🌍",
       stats: { connections: "∞", intelligence: "∞", coverage: "100%" },
-      timeline: "2027",
       impact: "Planetary"
-    },
-    {
       id: "5",
       title: "🚀 Interstellar Reality Bridges",
       subtitle: "Travel to Distant Stars",
       description: "Massive interdimensional bridges that span across galaxies, allowing instantaneous travel to any point in the universe through folded space-time.",
-      features: [
         "Galactic-Scale Wormholes",
         "Folded Space-Time Technology",
         "Instantaneous Travel Networks",
         "Universal Exploration Systems"
-      ],
       gradient: "from-indigo-600 via-purple-600 to-pink-600",
       icon: "🚀",
       stats: { range: "∞", speed: "∞", capacity: "∞" },
-      timeline: "2027",
       impact: "Cosmic"
     };
   useEffect(() => {
@@ -97,7 +77,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
     }, 10000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div
       className="relative overflow-hidden"
@@ -124,28 +103,23 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
           />
         ))};
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */};
         <div className="text-center mb-12">
-          <div
             className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full text-sm font-bold mb-4"
           >
             🌌 INTERDIMENSIONAL TECH 2027
                     </div>
           <h2
             className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
             Beyond Reality
           </h2>
           <p
             className="text-xl text-gray-300 max-w-4xl mx-auto"
-          >
             Experience technologies that transcend the boundaries of reality itself, 
             enabling travel between dimensions and manipulation of physical laws
           </p>
         </div>
-
         {/* Technology Showcase */};
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -165,13 +139,10 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                   <p className="text-xl text-indigo-300">
                     {interdimensionalTechs[currentDimension].subtitle};
                   </p>
-                </div>
               </div>
-
               <p className="text-lg text-gray-300 leading-relaxed">
                 {interdimensionalTechs[currentDimension].description};
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {interdimensionalTechs[currentDimension].features.map((feature, index) => (
                   <div
@@ -182,31 +153,19 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                     <span className="text-white font-medium">{feature}</span>
                   </div>
                 ))};
-              </div>
-
               <div className="flex space-x-6">
                 {Object.entries(interdimensionalTechs[currentDimension].stats).map(([key, value], index) => (
-                  <div
-                    key={index};
                     className="text-center"
-                  >
                     <div className="text-3xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </div>
-                ))};
-              </div>
             </div>
-
             {/* Right: Visual Representation */};
-            <div
               className="relative"
-            >
               <div className={`h-96 rounded-3xl bg-gradient-to-br ${interdimensionalTechs[currentDimension].gradient} p-8 relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white">
                   <div className="text-8xl mb-4">
                     {interdimensionalTechs[currentDimension].icon};
-                  </div>
                   <h4 className="text-2xl font-bold mb-2">
                     {interdimensionalTechs[currentDimension].title.split(' ').slice(1).join(' ')};
                   </h4>
@@ -214,15 +173,10 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                     <span className="px-3 py-1 bg-white/20 rounded-full text-sm">
                       {interdimensionalTechs[currentDimension].timeline};
                     </span>
-                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm">
                       {interdimensionalTechs[currentDimension].impact} Impact
-                    </span>
-                  </div>
-                </div>
                 
                 {/* Dimensional Rift Effects */};
                 {[...Array(25)].map((_, i) => (
-                  <div
                     key={i};
                     className="absolute w-1 h-1 bg-white rounded-full opacity-40"
                     style={{
@@ -236,11 +190,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                       repeat: "Infinity",
                       delay: Math.random() * 3}};
                   />
-                ))};
-              </div>
-            </div>
           </div>
-
           {/* Navigation Dots */};
           <div className="flex justify-center space-x-4 mt-12">
             {interdimensionalTechs.map((_, index) => (
@@ -254,12 +204,8 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 }`};
               />
             ))};
-          </div>
-
           {/* Call to Action */};
-          <div
             className="text-center mt-12"
-          >
             <div className="inline-flex space-x-4">
               <a
                 href="/pages/InterdimensionalTech2027"
@@ -267,17 +213,9 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               >
                 🌌 Explore Interdimensional Tech →
               </a>
-              <a
                 href="/pages/TransdimensionalAI2026"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
-              >
                 ✨ Transdimensional AI →
-              </a>
-            </div>
-                    </div>
-        </div>
-      </div>
-                    </div>
   );
   };
 export default InterdimensionalTechShowcase2027;

@@ -27,10 +27,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </p>
         </div>
         {/* Active Feature Showcase */}
-        <div
           key={activeFeature}
           className="mb-16"
-        >
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-3xl p-8 text-center">
               <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${quantumFeatures[activeFeature].color} mb-6`}>
@@ -41,10 +39,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold">
                 <Zap className="w-4 h-4" />
                 {quantumFeatures[activeFeature].metrics}
-              </div>
             </div>
-          </div>
-        </div>
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quantumFeatures.map((featureindex) => (
@@ -64,14 +59,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">{feature.description}</p>
                 <div className="text-sm font-semibold text-blue-400">{feature.metrics}</div>
-              </div>
-            </div>
           ))}
-        </div>
         {/* Quantum Capabilities */}
-        <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
-        >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Quantum Computing Capabilities</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {capabilities.map((capabilityindex) => (
@@ -81,37 +71,23 @@ const QuantumComputingRevolution2025: React.FC = () => {
               >
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl mb-4">
                   <capability.icon className="w-6 h-6 text-white" />
-                </div>
                 <h3 className="text-white font-semibold mb-2">{capability.text}</h3>
                 <p className="text-gray-400 text-sm">{capability.description}</p>
-              </div>
             ))}
-          </div>
-        </div>
         {/* Call to Action */}
-        <div
           className="text-center"
-        >
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <a
               href="/quantum-computing-2025"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-            >
               Explore Quantum Solutions
               <Cpu className="w-5 h-5" />
             </a>
-            <a
               href="/contact"
               className="inline-flex items-center gap-2 border-2 border-gray-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
-            >
               Schedule Quantum Demo
-            </a>
-          </div>
           <p className="text-gray-400 mt-6 text-sm">
             Join the quantum revolution - Limited access to quantum computing resources
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

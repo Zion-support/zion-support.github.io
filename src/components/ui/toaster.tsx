@@ -1,5 +1,4 @@
 
-
 export const ToastContainer: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -7,5 +6,4 @@ export const ToastContainer: React.FC = () => {
     </div>
   );
 };
-
 export const Toaster = ToastContainer;

@@ -15,7 +15,6 @@ const NewTechShowcase2025: React.FC = () => {
             Discover the latest breakthroughs in AI, quantum computing, and neural interfaces that are reshaping the future of technology.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI Innovation Hub */}
           <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
@@ -32,43 +31,18 @@ const NewTechShowcase2025: React.FC = () => {
             >
               Learn More →
             </a>
-          </div>
-
           {/* Quantum Computing Revolution */}
-          <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
               <span className="text-2xl">⚛️</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Revolution</h3>
-            <p className="text-gray-600 mb-6">
               Dive into the world of quantum computing and its potential to solve complex problems exponentially faster.
-            </p>
-            <a 
               href="/pages/QuantumComputingRevolution2026" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              Learn More →
-            </a>
-          </div>
-
           {/* Neural Interface Revolution */}
-          <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-6">
               <span className="text-2xl">🧠</span>
-            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Neural Interface</h3>
-            <p className="text-gray-600 mb-6">
               Experience the future of human-computer interaction through advanced neural interface technology.
-            </p>
-            <a 
               href="/pages/NeuralInterfaceRevolution2026" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              Learn More →
-            </a>
-          </div>
-        </div>
-
         <div className="text-center mt-12">
           <a 
             href="/contact" 
@@ -76,10 +50,8 @@ const NewTechShowcase2025: React.FC = () => {
           >
             Get Started with Our Solutions
           </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NewTechShowcase2025;

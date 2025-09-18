@@ -16,7 +16,6 @@ const NextGenSpaceTech2034: React.FC = () => {
             interstellar travel, terraforming, and cosmic exploration beyond our wildest dreams.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
@@ -33,43 +32,30 @@ const NextGenSpaceTech2034: React.FC = () => {
             <a href="/pages/InterstellarTravel2034" className="block w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center">
               Explore Interstellar Travel →
             </a>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌍</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Planetary Terraforming</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Transform inhospitable planets into habitable worlds
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Atmospheric engineering</li>
               <li>• Climate modification</li>
               <li>• Ecosystem creation</li>
               <li>• Resource generation</li>
-            </ul>
             <a href="/pages/PlanetaryTerraforming2034" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Learn Terraforming →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🛸</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Cosmic Exploration</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Discover new worlds and civilizations across the galaxy
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Deep space exploration</li>
               <li>• Alien civilization contact</li>
               <li>• Cosmic resource mining</li>
               <li>• Universal mapping</li>
-            </ul>
             <a href="/pages/CosmicExploration2034" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Start Exploration →
-            </a>
-          </div>
-        </div>
-
         <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 text-center relative overflow-hidden mb-16">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-purple-600/50 backdrop-blur-sm"></div>
           <div className="relative z-10">
@@ -77,7 +63,6 @@ const NextGenSpaceTech2034: React.FC = () => {
             <p className="text-2xl opacity-95 mb-8 max-w-4xl mx-auto">
               With our next-generation space technology, the entire universe becomes accessible. 
               Explore new worlds, discover alien civilizations, and expand human presence across the cosmos.
-            </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-2xl font-bold mb-4">🌌 Galaxy Exploration</h3>
@@ -88,37 +73,24 @@ const NextGenSpaceTech2034: React.FC = () => {
                   <li>• Dark matter mapping</li>
                 </ul>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-2xl font-bold mb-4">🔬 Scientific Discovery</h3>
                 <p className="text-sm mb-4">Conduct groundbreaking research in the depths of space</p>
-                <ul className="text-sm space-y-1">
                   <li>• Quantum physics experiments</li>
                   <li>• Life detection systems</li>
                   <li>• Energy harvesting technology</li>
-                </ul>
-              </div>
             </div>
-          </div>
-        </div>
-
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Cosmos?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join us in the greatest adventure in human history. The universe is vast, 
             and with our technology, it's all within reach.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/NextGenSpaceTech2034" className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
               Start Space Journey →
-            </a>
             <a href="/contact" className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg">
               Contact Space Team →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NextGenSpaceTech2034;

@@ -26,16 +26,10 @@ export const OrganizationSchema = {
     "https://linkedin.com/company/zionapp",
     "https://github.com/zion-holdings"
   ];
-  };
 export const WebSiteSchema = {
-  "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Zion App",
-  "url": "https://ziontechgroup.com",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://ziontechgroup.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
-  };
-  };
 export default StructuredData;

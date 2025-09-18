@@ -12,5 +12,4 @@ const GreenIT: React.FC = () => {
     </div>
   );
 };
-
 export default GreenIT;

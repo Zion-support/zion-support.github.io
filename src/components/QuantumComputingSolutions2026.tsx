@@ -18,11 +18,9 @@ const QuantumComputingSolutions2026: React.FC = () => {
                 y: [0-100],
                 x: [0Math.random() * 20 - 10],
                 opacity: [0.30.80.3],
-              }}
                 duration: 5 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
-              }}
             />
           ))}
         </div>
@@ -48,13 +46,9 @@ const QuantumComputingSolutions2026: React.FC = () => {
             Harness the power of quantum computing to solve the 'world', 's most complex problems. 
             From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
-        </div>
         {/* Benefits Grid */}
-        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
           {benefits.map((benefitindex) => (
-            <div
               key={index}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
             >
@@ -63,12 +57,8 @@ const QuantumComputingSolutions2026: React.FC = () => {
               <div className="text-lg font-semibold text-white mb-2">{benefit.title}</div>
               <div className="text-gray-300 text-sm">{benefit.description}</div>
             </div>
-          ))}
-        </div>
         {/* Solutions Grid */}
-        <div
           className="mb-16"
-        >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Quantum Solutions
           </h2>
@@ -87,7 +77,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">{solution.title}</h3>
                       <p className="text-cyan-400">{solution.subtitle}</p>
-                    </div>
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
@@ -97,104 +86,58 @@ const QuantumComputingSolutions2026: React.FC = () => {
                   <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-lg font-bold text-white">{solution.performance.speed}</div>
                     <div className="text-gray-400 text-sm">Faster</div>
-                  </div>
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-lg font-bold text-white">{solution.performance.accuracy}</div>
                     <div className="text-gray-400 text-sm">Accuracy</div>
-                  </div>
-                </div>
                 <div className="space-y-2">
                   {solution.features.slice(03).map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
-                    </div>
                   ))}
-                </div>
               </div>
             ))}
-          </div>
-        </div>
         {/* Detailed Solution View */}
-          <div
             key={activeSolution}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
-          >
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center mb-6">
                   <div className={`p-4 rounded-2xl bg-gradient-to-r ${solutions[activeSolution].color} mr-4`}>
                     <solutions[activeSolution].icon className="w-10 h-10 text-white" />
-                  </div>
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-2">{solutions[activeSolution].title}</h3>
                     <p className="text-cyan-400 text-lg">{solutions[activeSolution].subtitle}</p>
-                  </div>
-                </div>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {solutions[activeSolution].description}
-                </p>
                 <div className="space-y-3 mb-6">
                   {solutions[activeSolution].features.map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-white/5 rounded-lg">
                     <div className="text-2xl font-bold text-white">{solutions[activeSolution].performance.speed}</div>
                     <div className="text-gray-400">Performance Boost</div>
-                  </div>
-                  <div className="text-center p-4 bg-white/5 rounded-lg">
                     <div className="text-2xl font-bold text-white">{solutions[activeSolution].performance.accuracy}</div>
                     <div className="text-gray-400">Accuracy Rate</div>
-                  </div>
-                </div>
-              </div>
               <div className="relative">
                 <div className={`w-full h-80 bg-gradient-to-br ${solutions[activeSolution].color} rounded-2xl flex items-center justify-center`}>
                   <solutions[activeSolution].icon className="w-32 h-32 text-white opacity-80" />
-                </div>
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
                   <Sparkles className="w-12 h-12 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         {/* Industry Applications */}
-        <div
-          className="mb-16"
-        >
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
             Industry Applications
-          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industryindex) => (
-              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-              >
                 <div className="text-4xl mb-4">{industry.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{industry.name}</h3>
-                <div className="space-y-2">
                   {industry.applications.map((applicationappIndex) => (
                     <div key={appIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {application}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* CTA Section */}
-        <div
           className="text-center"
-        >
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready for the Quantum Future?
@@ -210,11 +153,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
               </button>
               <button className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                 Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

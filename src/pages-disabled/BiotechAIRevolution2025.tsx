@@ -17,7 +17,6 @@ const BiotechAIRevolution2025: React.FC = () => {
             personalized medicine, and revolutionary biological innovations
           </p>
         </div>
-
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Biotech AI Features */}
@@ -36,57 +35,37 @@ const BiotechAIRevolution2025: React.FC = () => {
                 <li>• Clinical trial optimization</li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30">
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-2xl font-bold text-white mb-4">Precision Medicine</h3>
-              <p className="text-gray-300 mb-4">
                 Personalized treatment approaches that analyze individual genetic profiles, 
                 lifestyle factors, and medical history to optimize therapeutic outcomes.
-              </p>
               <ul className="text-teal-200 space-y-2">
                 <li>• Genomic analysis and interpretation</li>
                 <li>• Personalized treatment protocols</li>
                 <li>• Biomarker identification</li>
                 <li>• Drug response prediction</li>
-              </ul>
-            </div>
-          </div>
-
           {/* Right Column - Biotech Applications */}
-          <div className="space-y-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">Neural Interface Medicine</h3>
-              <p className="text-gray-300 mb-4">
                 Advanced brain-computer interfaces that restore function to patients 
                 with neurological disorders and enhance human cognitive capabilities.
-              </p>
               <ul className="text-purple-200 space-y-2">
                 <li>• Neural signal interpretation</li>
                 <li>• Motor function restoration</li>
                 <li>• Cognitive enhancement</li>
                 <li>• Mental health monitoring</li>
-              </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30">
               <div className="text-4xl mb-4">🦠</div>
               <h3 className="text-2xl font-bold text-white mb-4">Synthetic Biology</h3>
-              <p className="text-gray-300 mb-4">
                 AI-designed biological systems that create new organisms, 
                 materials, and processes for medical and industrial applications.
-              </p>
               <ul className="text-rose-200 space-y-2">
                 <li>• Synthetic organism design</li>
                 <li>• Metabolic pathway optimization</li>
                 <li>• Biomanufacturing processes</li>
                 <li>• Environmental remediation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-emerald-900/50 to-teal-900/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-8">
@@ -99,32 +78,18 @@ const BiotechAIRevolution2025: React.FC = () => {
               <p className="text-gray-300">
                 Miniaturized diagnostic devices that perform complex biological 
                 analyses with AI-powered interpretation and real-time results.
-              </p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">🔬</div>
               <h3 className="text-xl font-bold text-white mb-4">CRISPR AI</h3>
-              <p className="text-gray-300">
                 AI-optimized gene editing systems that precisely modify DNA 
                 sequences with unprecedented accuracy and safety.
-              </p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">💊</div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Therapeutics</h3>
-              <p className="text-gray-300">
                 Intelligent drug delivery systems that adapt to patient needs, 
                 releasing medications at optimal times and dosages.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Medical Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Medical Breakthrough Applications
-          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl mb-4">🫀</div>
@@ -132,79 +97,44 @@ const BiotechAIRevolution2025: React.FC = () => {
               <p className="text-gray-300 text-sm">
                 AI-powered heart monitoring, early disease detection, 
                 and personalized cardiac treatment plans.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl mb-4">🧠</div>
               <h3 className="text-lg font-bold text-white mb-2">Neurology</h3>
-              <p className="text-gray-300 text-sm">
                 Advanced brain imaging analysis, neurological disorder 
                 diagnosis, and cognitive enhancement therapies.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl mb-4">🦴</div>
               <h3 className="text-lg font-bold text-white mb-2">Orthopedics</h3>
-              <p className="text-gray-300 text-sm">
                 AI-assisted surgical planning, prosthetic design, 
                 and rehabilitation monitoring systems.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl mb-4">👁️</div>
               <h3 className="text-lg font-bold text-white mb-2">Ophthalmology</h3>
-              <p className="text-gray-300 text-sm">
                 Retinal analysis, vision restoration, and 
                 personalized eye care treatment protocols.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-8">
             The Future of Biotechnology
-          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Longevity Medicine</h3>
-              <p className="text-gray-300 mb-4">
                 AI-driven approaches to extending human lifespan and healthspan, 
                 including cellular rejuvenation and age-reversal therapies.
-              </p>
-              <ul className="text-green-200 space-y-2">
                 <li>• Cellular aging reversal</li>
                 <li>• Organ regeneration</li>
                 <li>• Longevity biomarker tracking</li>
                 <li>• Personalized anti-aging protocols</li>
-              </ul>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Regenerative Medicine</h3>
-              <p className="text-gray-300 mb-4">
                 Advanced tissue engineering and organ replacement technologies 
                 that restore function to damaged or diseased body parts.
-              </p>
-              <ul className="text-teal-200 space-y-2">
                 <li>• 3D bioprinting of organs</li>
                 <li>• Stem cell therapy optimization</li>
                 <li>• Tissue regeneration protocols</li>
                 <li>• Organ transplant alternatives</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Transform Healthcare with AI
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the biotech revolution that's creating personalized, 
             precise, and powerful medical solutions for a healthier future.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/pages/AdvancedAISystems2026" 
@@ -212,17 +142,11 @@ const BiotechAIRevolution2025: React.FC = () => {
             >
               Explore Advanced AI →
             </a>
-            <a 
               href="/pages/NeuralInterfaceRevolution2026" 
               className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300 font-semibold text-lg"
-            >
               Learn About Neural Interfaces
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default BiotechAIRevolution2025;

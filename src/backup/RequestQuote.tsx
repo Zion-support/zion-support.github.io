@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function Signup() {
   return (
@@ -34,28 +34,12 @@ export default function Signup() {
                   />
                 </div>
                 
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">
                     Email Address
-                  </label>
-                  <input
                     type="email"
-                    className="w-full p-3 bg-zion-blue border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:border-zion-cyan"
                     placeholder="Enter your email"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">
                     Password
-                  </label>
-                  <input
                     type="password"
-                    className="w-full p-3 bg-zion-blue border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:border-zion-cyan"
                     placeholder="Create a password"
-                  />
-                </div>
-                
                 <button
                   type="submit"
                   className="w-full bg-zion-cyan text-zion-blue-dark py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
@@ -64,7 +48,6 @@ export default function Signup() {
                 </button>
               </form>
             </div>
-          </div>
         </div>
       </main>
     </>

@@ -46,8 +46,3 @@ export default {
   testEnvironmentOptions: {
     customExportConditions: ['node', 'node-addons']
   }
-<<<<<<< HEAD
-};
-=======
-};
->>>>>>> origin/backup-main-20250918-004015

@@ -36,21 +36,15 @@ const QuantumRealityManipulation2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
                 Watch Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Reality Manipulation Interface */}
-      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">🌌 Reality Manipulation Interface</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Control the fundamental forces of the universe through our revolutionary quantum reality manipulation system
           </p>
-        </div>
-
         <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-8 border border-cyan-400/30">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -63,65 +57,39 @@ const QuantumRealityManipulation2026: React.FC = () => {
                     <input type="range" min="0" max="100" defaultValue="50" className="flex-1" />
                     <span className="text-cyan-400 text-sm font-bold">50%</span>
                   </div>
-                  <div className="flex items-center space-x-4 mb-4">
                     <span className="text-white text-sm">Direction:</span>
                     <input type="range" min="0" max="360" defaultValue="0" className="flex-1" />
                     <span className="text-cyan-400 text-sm font-bold">0°</span>
-                  </div>
                   <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
                     Apply Changes
                   </button>
                 </div>
-
-                <div className="bg-black/50 rounded-2xl p-6">
                   <h4 className="text-lg font-semibold text-blue-400 mb-4">Electromagnetic Field</h4>
-                  <div className="flex items-center space-x-4 mb-4">
                     <span className="text-white text-sm">Frequency:</span>
                     <input type="range" min="0" max="100" defaultValue="75" className="flex-1" />
                     <span className="text-blue-400 text-sm font-bold">75%</span>
-                  </div>
-                  <div className="flex items-center space-x-4 mb-4">
                     <span className="text-white text-sm">Polarization:</span>
                     <input type="range" min="0" max="360" defaultValue="45" className="flex-1" />
                     <span className="text-blue-400 text-sm font-bold">45°</span>
-                  </div>
                   <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                    Apply Changes
-                  </button>
-                </div>
-
-                <div className="bg-black/50 rounded-2xl p-6">
                   <h4 className="text-lg font-semibold text-purple-400 mb-4">Quantum Vacuum</h4>
-                  <div className="flex items-center space-x-4 mb-4">
                     <span className="text-white text-sm">Energy Density:</span>
                     <input type="range" min="0" max="100" defaultValue="25" className="flex-1" />
                     <span className="text-purple-400 text-sm font-bold">25%</span>
-                  </div>
-                  <div className="flex items-center space-x-4 mb-4">
                     <span className="text-white text-sm">Fluctuation:</span>
                     <input type="range" min="0" max="100" defaultValue="60" className="flex-1" />
                     <span className="text-purple-400 text-sm font-bold">60%</span>
-                  </div>
                   <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                    Apply Changes
-                  </button>
-                </div>
               </div>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold text-white mb-6">Reality Visualization</h3>
               <div className="bg-black/50 rounded-2xl p-6 mb-6">
                 <div className="w-full h-64 bg-gradient-to-br from-cyan-900/50 to-blue-900/50 rounded-lg relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-6xl animate-pulse">🌌</div>
-                  </div>
                   <div className="absolute top-4 left-4 text-white text-sm">
                     <div>Quantum Field Strength: 75%</div>
                     <div>Reality Stability: 98.7%</div>
                     <div>Consciousness Integration: 99.2%</div>
-                  </div>
-                </div>
-              </div>
               <div className="grid grid-cols-2 gap-4">
                 <button 
                   onClick={() => setActiveReality('quantum')}
@@ -133,203 +101,114 @@ const QuantumRealityManipulation2026: React.FC = () => {
                 >
                   Quantum Reality
                 </button>
-                <button 
                   onClick={() => setActiveReality('classical')}
-                  className={`p-4 rounded-lg transition-all duration-300 ${
                     activeReality === 'classical' 
-                      ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white' 
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                >
                   Classical Reality
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Reality Manipulation Capabilities */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">⚡ Reality Manipulation Capabilities</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the incredible powers of quantum reality manipulation technology
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
             className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🌍</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Gravity Manipulation</h3>
             <p className="text-cyan-200 mb-6 text-center">
               Control gravitational fields to create anti-gravity, time dilation, and spatial distortions
-            </p>
             <ul className="text-cyan-300 space-y-2 text-sm">
               <li>• Anti-gravity generation</li>
               <li>• Time dilation control</li>
               <li>• Spatial compression</li>
               <li>• Wormhole creation</li>
             </ul>
-          </div>
-
-          <div
             className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Electromagnetic Control</h3>
             <p className="text-blue-200 mb-6 text-center">
               Manipulate electromagnetic fields to control light, energy, and matter at the quantum level
-            </p>
             <ul className="text-blue-300 space-y-2 text-sm">
               <li>• Light manipulation</li>
               <li>• Energy transmutation</li>
               <li>• Matter phase control</li>
               <li>• Quantum tunneling</li>
-            </ul>
-          </div>
-
-          <div
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Quantum Vacuum Engineering</h3>
             <p className="text-purple-200 mb-6 text-center">
               Engineer the quantum vacuum to create matter, energy, and new physical laws
-            </p>
             <ul className="text-purple-300 space-y-2 text-sm">
               <li>• Matter creation from vacuum</li>
               <li>• Energy generation</li>
               <li>• Physical law modification</li>
               <li>• Dimensional manipulation</li>
-            </ul>
-          </div>
-
-          <div
             className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Consciousness Integration</h3>
             <p className="text-emerald-200 mb-6 text-center">
               Integrate human consciousness with quantum fields for direct reality manipulation
-            </p>
             <ul className="text-emerald-300 space-y-2 text-sm">
               <li>• Thought-to-reality interface</li>
               <li>• Consciousness amplification</li>
               <li>• Collective reality shaping</li>
               <li>• Intention manifestation</li>
-            </ul>
-          </div>
-
-          <div
             className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:border-orange-400/60 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Space-Time Control</h3>
             <p className="text-orange-200 mb-6 text-center">
               Manipulate space-time itself for teleportation, time travel, and dimensional access
-            </p>
             <ul className="text-orange-300 space-y-2 text-sm">
               <li>• Instantaneous teleportation</li>
               <li>• Time travel capabilities</li>
               <li>• Dimensional portals</li>
               <li>• Parallel universe access</li>
-            </ul>
-          </div>
-
-          <div
             className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 hover:border-rose-400/60 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Reality Synthesis</h3>
             <p className="text-rose-200 mb-6 text-center">
               Create entirely new realities with custom physical laws and dimensions
-            </p>
             <ul className="text-rose-300 space-y-2 text-sm">
               <li>• Custom physical laws</li>
               <li>• New dimension creation</li>
               <li>• Reality simulation</li>
               <li>• Universe engineering</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* Quantum Field Visualization */}
       <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">🌌 Quantum Field Visualization</h2>
             <p className="text-xl text-gray-300">Real-time visualization of quantum field manipulations</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-black/50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Field Strength Distribution</h3>
               <div className="w-full h-64 bg-gradient-to-br from-cyan-900/50 to-blue-900/50 rounded-lg relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-8xl animate-spin">⚛️</div>
-                </div>
                 <div className="absolute top-4 left-4 text-cyan-400 text-sm font-mono">
                   <div>Quantum Field: Active</div>
                   <div>Entanglement: 99.7%</div>
                   <div>Coherence: 98.2%</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-black/50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Reality Stability Metrics</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-white">Quantum Coherence</span>
                   <span className="text-cyan-400 font-bold">98.2%</span>
-                </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full" style={{ width: '98.2%' }}></div>
-                </div>
-                <div className="flex justify-between items-center">
                   <span className="text-white">Field Stability</span>
                   <span className="text-blue-400 font-bold">99.1%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
                   <div className="bg-gradient-to-r from-blue-400 to-indigo-400 h-2 rounded-full" style={{ width: '99.1%' }}></div>
-                </div>
-                <div className="flex justify-between items-center">
                   <span className="text-white">Consciousness Sync</span>
                   <span className="text-purple-400 font-bold">97.8%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
                   <div className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style={{ width: '97.8%' }}></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12 text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Master the Fabric of Reality</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the quantum revolution and learn to manipulate the very fabric of reality itself through consciousness and quantum field engineering.
-          </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg">
               Start Manipulating Reality →
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
               Learn Quantum Physics
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
-
 };
-
-
 export default QuantumRealityManipulation2026;

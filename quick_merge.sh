@@ -1,28 +1,88 @@
 #!/bin/bash
 
-echo "=== Quick Merge and PR Resolution ==="
+<<<<<<< HEAD
+echo "Starting quick merge process..."
+=======
+<<<<<<< HEAD
+# Quick merge script
+cd /workspace
 
-# Add all changes
-git add .
+echo "Current directory: $(pwd)"
+echo "Current branch: $(git branch --show-current)"
 
-# Commit changes
-git commit -m "Resolve all merge conflicts and clean up code
+# Reset to clean state
+git reset --hard HEAD
 
-- Fixed merge conflicts in RevolutionaryTechShowcase2026.tsx
-- Resolved all remaining merge conflict markers  
-- Cleaned up syntax errors and malformed JSX
-- Ensured all components are functional and TypeScript compliant
-- Ready for merge to main branch"
+# Fetch all branches
+git fetch origin
 
-# Try to find open PRs
-echo "Checking for open PRs..."
-gh pr list --state open --json number,title,headRefName
-
-# Try to merge to main
-echo "Attempting to merge to main..."
+# Switch to main
 git checkout main
-git pull origin main
-git merge HEAD@{1} --no-ff -m "Merge resolved conflicts to main"
+
+# Merge the feature branch
+git merge cursor/create-and-deploy-new-content-96e6 --no-commit
+
+# Check for conflicts
+if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+    echo "Conflicts found, resolving automatically..."
+    git checkout --theirs .
+    git add .
+    git commit -m "Merge: Resolve conflicts automatically"
+else
+    echo "No conflicts found"
+    git commit -m "Merge: Add revolutionary new content and enhanced frontend advertising"
+fi
+
+# Push to main
 git push origin main
 
-echo "=== Merge completed ==="
+echo "Merge completed!"
+=======
+# Quick merge script for resolving conflicts and merging PRs
+echo "🚀 Quick Merge Script - Resolving Conflicts and Merging PRs"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+
+# Check current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo "Current branch: $CURRENT_BRANCH"
+
+# Check if there are uncommitted changes
+if [ -n "$(git status --porcelain)" ]; then
+    echo "Uncommitted changes found. Committing them..."
+    git add .
+    git commit -m "Add new AI content and promotional components before merge"
+fi
+
+<<<<<<< HEAD
+# Fetch latest changes
+echo "Fetching latest changes..."
+git fetch origin
+
+# Try to merge main
+echo "Attempting to merge main..."
+if git merge origin/main; then
+    echo "Merge successful!"
+else
+    echo "Merge conflicts detected. Resolving automatically..."
+    
+    # Resolve conflicts by keeping our changes
+    git checkout --ours .
+    git add .
+    git commit -m "Resolve merge conflicts - keeping our enhanced content"
+    
+    echo "Conflicts resolved!"
+fi
+
+# Push the branch
+echo "Pushing branch..."
+git push origin $CURRENT_BRANCH
+
+echo "Process completed successfully!"
+echo "Branch $CURRENT_BRANCH has been updated and pushed to remote."
+=======
+echo "📋 To check for other open PRs, visit: https://github.com/Zion-Holdings/zion.app/pulls"
+<<<<<<< HEAD
+>>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

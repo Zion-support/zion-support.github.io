@@ -2,15 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 import { getRecentPosts } from '../../data/blog'
 
-type PostListItem = {
-  id: string
-  title: string
-  excerpt: string
-  category: string
-  author: string
-  date: string
-  readTime: string
-  image?: string
 }
 
 export default function BlogIndexPage() {

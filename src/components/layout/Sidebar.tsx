@@ -42,7 +42,6 @@ interface SidebarProps {
   onClose?: () => void;
   className?: string;
 }
-
 const navigationSections = [
   {
     id: 'services',
@@ -57,65 +56,47 @@ const navigationSections = [
       { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' }
     ]
   },
-  {
     id: 'solutions',
     title: 'Solutions',
     icon: Building2,
-    items: [
       { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2, description: 'Large-scale business solutions' },
       { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket, description: 'Scalable startup solutions' },
       { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' },
       { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
       { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
       { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' }
-    ]
-  },
-  {
     id: 'company',
     title: 'Company',
-    icon: Building2,
-    items: [
       { name: 'About Us', href: '/about', icon: Building2, description: 'Learn about our company' },
       { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our expert team' },
       { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team' },
       { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
       { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
       { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' }
-    ]
   }
 ];
-
 const quickLinks = [
   { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
   { name: 'Schedule Call', href: '/contact', icon: Clock },
   { name: 'View Portfolio', href: '/case-studies', icon: Award },
   { name: 'Download Brochure', href: '/resources', icon: ArrowRight }
-];
-
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709'
 };
-
 export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProps) {
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionId) 
         ? prev.filter(id => id !== sectionId)
         : [...prev, sectionId]
     );
-  };
-
   const handleLinkClick = (href: string) => {
     if (onClose) onClose();
     // In a real app, you'd use router.push(href) here
     window.location.href = href;
-  };
-
-  return (
     <motion.aside
       initial={false}
       animate={{ x: isOpen ? 0 : -320 }}
@@ -139,8 +120,6 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
               ×
             </button>
           )}
-        </div>
-
         {/* Quick Links */}
         <div className="mb-8">
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>
@@ -163,8 +142,6 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
               );
             })}
           </div>
-        </div>
-
         {/* Navigation Sections */}
         <div className="space-y-6">
           {navigationSections.map((section) => {
@@ -173,10 +150,8 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
             
             return (
               <div key={section.id}>
-                <button
                   onClick={() => toggleSection(section.id)}
                   className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                >
                   <div className="flex items-center space-x-3">
                     <IconComponent className="w-5 h-5" />
                     <span className="font-medium">{section.title}</span>
@@ -186,7 +161,6 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
                   ) : (
                     <ChevronRight className="w-4 h-4" />
                   )}
-                </button>
                 {isExpanded && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -215,8 +189,6 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
               </div>
             );
           })}
-        </div>
-
         {/* Contact Info */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>
@@ -224,40 +196,21 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
             <div className="flex items-center space-x-3 text-sm text-gray-600">
               <Phone className="w-4 h-4 text-blue-600" />
               <span>{contactInfo.phone}</span>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-gray-600">
               <Mail className="w-4 h-4 text-blue-600" />
               <span className="truncate">{contactInfo.email}</span>
-            </div>
             <div className="flex items-start space-x-3 text-sm text-gray-600">
               <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />
               <span className="text-xs">{contactInfo.address}</span>
-            </div>
-          </div>
-        </div>
-
         {/* Trust Indicators */}
         <div className="mt-6 pt-6 border-t border-gray-200">
           <div className="grid grid-cols-2 gap-4">
             <div className="text-center">
               <div className="text-lg font-bold text-blue-600">99.9%</div>
               <div className="text-xs text-gray-500">Uptime</div>
-            </div>
-            <div className="text-center">
               <div className="text-lg font-bold text-green-600">500+</div>
               <div className="text-xs text-gray-500">Projects</div>
-            </div>
-            <div className="text-center">
               <div className="text-lg font-bold text-purple-600">50+</div>
               <div className="text-xs text-gray-500">Experts</div>
-            </div>
-            <div className="text-center">
               <div className="text-lg font-bold text-yellow-600">24/7</div>
               <div className="text-xs text-gray-500">Support</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </motion.aside>
-  );
-}

@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
 import React from \'react\';\''\'; import { IntegrationsHub } from \'@/components/integrations/IntegrationsHub\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />\"; <main className=\"min-h-screen bg-background\"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
 const React from "react";"""; import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };"""
 import _React from 'react';'''; import { IntegrationsHub } from '@/components/integrations/IntegrationsHub';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} return(); <ProtectedRoute adminOnly={true}> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <IntegrationsHub /> ></div> </ProtectedRoute>)} ; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage }; export { IntegrationsPage };
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
->>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

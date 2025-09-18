@@ -1,45 +1,57 @@
 import React from 'react';
-import { Helmet }  from 'react-helmet-async';
 const InterdimensionalTech2037: React.FC = () => {
+  const dimensions = [
+    {
+      number: "Dimension 1",
+      title: "Physical Reality",
+      description: "Our current three-dimensional space-time continuum",
+      icon: Globe,
+      color: "from-blue-400 to-cyan-500"
+    },
+      number: "Dimension 2", 
+      title: "Quantum Realm",
+      description: "Subatomic quantum field interactions and probabilities",
+      icon: Zap,
+      color: "from-purple-400 to-pink-500"
+      number: "Dimension 3",
+      title: "Consciousness Plane",
+      description: "Realm of pure thought and consciousness",
+      icon: Eye,
+      color: "from-green-400 to-blue-500"
+      number: "Dimension 4",
+      title: "Time Streams",
+      description: "Multiple temporal dimensions and parallel timelines",
+      icon: Compass,
+      color: "from-yellow-400 to-orange-500"
+      number: "Dimension 5+",
+      title: "Infinite Realities",
+      description: "Unlimited dimensions beyond human comprehension",
+      icon: Infinity,
+      color: "from-red-400 to-purple-500"
+    }
+  ];
+
+  const technologies = [
+      icon: Layers,
+      title: "Dimension Gateway",
+      description: "Portal technology for interdimensional travel and communication"
+      icon: Navigation,
+      title: "Reality Navigator",
+      description: "AI system for navigating between infinite realities"
+      icon: Target,
+      title: "Probability Manipulator",
+      description: "Technology to influence quantum probabilities across dimensions"
+      icon: Sparkles,
+      title: "Consciousness Bridge",
+      description: "Interface between physical and consciousness dimensions"
+  const applications = [
+    "Instantaneous travel between any dimensions or realities",
+    "Access to infinite knowledge from parallel universes",
+    "Ability to modify reality through dimensional manipulation",
+    "Communication with beings from other dimensions",
+    "Creation of new realities and dimensions",
+    "Transcendence of all physical and temporal limitations"
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      <Helmet>
-        <title>InterdimensionalTech2037 - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary technology and AI solutions for the future." />
-        <meta name="keywords" content="AI, technology, innovation, future, interdimensionaltech2037" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            InterdimensionalTech2037
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the latest innovations and breakthrough technologies in interdimensionaltech2037.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Explore Innovation
-            </button>
-            <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-              Learn More
-            </button>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Innovation</h3>
-            <p className="text-blue-100">Cutting-edge technology solutions</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Technology</h3>
-            <p className="text-blue-100">Revolutionary technological advances</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Future</h3>
-            <p className="text-blue-100">Next-generation solutions</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
   };

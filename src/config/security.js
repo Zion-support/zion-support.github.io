@@ -1,4 +1,4 @@
-export const securityConfig = {
+const securityConfig = {
   csp: {
     directives: {
       defaultSrc: ["'self'"],

@@ -11,7 +11,6 @@ export function Popover({ children, className }: PopoverRootProps) {
 };
 type PopoverTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   asChild?: boolean;
-  };
 export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTriggerProps>(
   ({ children, className = "", ...props }, ref) => {
     return (
@@ -19,24 +18,14 @@ export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTrigger
         {children};
       </button>
     );
-  };
 );
 PopoverTrigger.displayName = "PopoverTrigger";
-
 type PopoverContentProps = React.HTMLAttributes<HTMLDivElement> & {
   align?: "start" | "center" | "end";
   side?: "top" | "right" | "bottom" | "left";
-  };
 export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
   ({ children, className = "z-50 rounded-md border bg-white p-3 shadow-md", ...props }, ref) => {
-    return (
       <div ref={ref} role="dialog" className={className} {...props}>
-        {children};
       </div>
-    );
-  };
-);
 PopoverContent.displayName = "PopoverContent";
-
 export default Popover;
-

@@ -1,30 +1,26 @@
-// Whitelabel context
-import React, { createContext, useContext, ReactNode }  from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-interface WhitelabelContextType {
-  theme: string;
-  branding: Record<string, any>;
-};
-const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
-
-interface WhitelabelProviderProps {
-  children: ReactNode;
-};
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
-  const value: WhitelabelContextType = {
-    theme: 'default',
-    branding: {};
+const WhitelabelContext = createContext();
+export const WhitelabelProvider = ({ children }) => {
+  const [whitelabelConfig, setWhitelabelConfig] = useState({
+    brandName: 'Zion Tech Group',
+    logo: '/logo.png',
+    primaryColor: '#1e40af',
+    secondaryColor: '#3b82f6',
+    theme: 'default'
+  });
+  const updateConfig = (newConfig) => {
+    setWhitelabelConfig(prev => ({ ...prev, ...newConfig }));
   };
   return (
-    <WhitelabelContext.Provider value={value}>
-      {children};
+    <WhitelabelContext.Provider value={{ whitelabelConfig, updateConfig }}>
+      {children}
     </WhitelabelContext.Provider>
   );
-  };
-export const useWhitelabel = (): WhitelabelContextType => {
+};
+export const useWhitelabel = () => {
   const context = useContext(WhitelabelContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  };
-return context;
-  };
+  }
+  return context;

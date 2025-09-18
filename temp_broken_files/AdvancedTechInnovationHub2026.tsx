@@ -7,7 +7,6 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -27,12 +26,11 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Join the Hub
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Innovation Categories */}
       <div className="container mx-auto px-4 py-20">
-        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -40,11 +38,10 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Explore our cutting-edge research and development across multiple technology domains
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -66,10 +63,9 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Explore →
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Quantum Computing */}
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -91,10 +87,9 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Explore →
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Neural Interfaces */}
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -116,10 +111,9 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Explore →
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Biotechnology */}
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -141,10 +135,9 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Explore →
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Space Technology */}
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -166,10 +159,9 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Explore →
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Cybersecurity */}
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300"
           >
@@ -191,13 +183,12 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 Explore →
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Research Labs */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -205,10 +196,9 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               State-of-the-art research facilities where breakthrough innovations are born
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -218,9 +208,8 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-white/60">50+ Researchers</span>
                 <span className="text-sm text-green-400">Active</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -230,9 +219,8 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-white/60">25+ Researchers</span>
                 <span className="text-sm text-green-400">Active</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -242,9 +230,8 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-white/60">30+ Researchers</span>
                 <span className="text-sm text-green-400">Active</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -254,9 +241,8 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-white/60">40+ Researchers</span>
                 <span className="text-sm text-green-400">Active</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -266,9 +252,8 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-white/60">35+ Researchers</span>
                 <span className="text-sm text-green-400">Active</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -278,13 +263,12 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
                 <span className="text-sm text-white/60">45+ Researchers</span>
                 <span className="text-sm text-green-400">Active</span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       {/* Innovation Statistics */}
       <div className="container mx-auto px-4 py-20">
-        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -292,42 +276,34 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Our research and development efforts are making a real impact on the world
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-indigo-400 mb-2">500+</div>
             <div className="text-lg opacity-80">Active Projects</div>
-          </div>
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-purple-400 mb-2">200+</div>
             <div className="text-lg opacity-80">Research Papers</div>
-          </div>
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-pink-400 mb-2">50+</div>
             <div className="text-lg opacity-80">Patents Filed</div>
-          </div>
-          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="text-center"
           >
             <div className="text-5xl font-bold text-cyan-400 mb-2">1000+</div>
             <div className="text-lg opacity-80">Researchers</div>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30"
         >
@@ -343,7 +319,7 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
               Partner With Us
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

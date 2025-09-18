@@ -14,18 +14,10 @@ export function MobileFeatureShowcase() {
               Advanced AI capabilities built into every feature
             </p>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Real-time Sync</h3>
-            <p className="text-gray-600">
               Seamless synchronization across all your devices
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Secure</h3>
-            <p className="text-gray-600">
               Enterprise-grade security and privacy protection
-            </p>
-          </div>
         </div>
       </div>
     </div>

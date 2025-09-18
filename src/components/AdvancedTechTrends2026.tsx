@@ -40,15 +40,10 @@ const AdvancedTechTrends2026: React.FC = () => {
                     {trend.impact}
                   </span>
                   <TrendingUp className="w-5 h-5 text-green-400" />
-                </div>
               </div>
             </div>
           ))}
-        </div>
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
-        >
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Lead the Future?
@@ -62,10 +57,7 @@ const AdvancedTechTrends2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
                 Download Report
-              </button>
-            </div>
           </div>
-        </div>
       </div>
     </section>
   );

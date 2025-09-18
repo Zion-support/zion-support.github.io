@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/AIRevolutionaryBreakthrough2026.tsx
-import { Helmet } from 'react-helmet-async';
-import Header from '../Header';
-import Footer from '../Footer';
-import { Helmet } from 'react-helmet-async';
-import { Helmet } from 'react-helmet-async';
-import Header from '../Header';
-import Footer from '../Footer';
-import { Helmet } from 'react-helmet-async';cursor/fix-netlify-build-and-merge-to-main-a068
-
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Zap, Globe, Shield, Target, Users, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/pages/AIRevolutionaryBreakthrough2026.tsx
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -203,10 +189,6 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:temp_broken_files/AIRevolutionaryBreakthrough2026.tsx
-      </div>cursor/fix-netlify-build-and-merge-to-main-a068
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/pages/AIRevolutionaryBreakthrough2026.tsx
     </div>
   );
 };

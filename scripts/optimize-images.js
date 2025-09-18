@@ -126,8 +126,3 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 } catch (error) {
   console.error('❌ Image optimization failed:', error);
   process.exit(1);
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/backup-main-20250918-004015

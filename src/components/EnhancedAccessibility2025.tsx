@@ -9,9 +9,7 @@ const EnhancedAccessibility2025: React.FC = () => {
     keyboardNavigation: false,
     focusVisible: true
   });
-
   const [accessibilityScore, setAccessibilityScore] = useState(0);
-
   useEffect(() => {
     // Check for accessibility preferences
     const checkAccessibilityPreferences = () => {
@@ -20,12 +18,10 @@ const EnhancedAccessibility2025: React.FC = () => {
       
       // Check for high contrast preference
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-      
       // Check for screen reader (basic detection)
       const hasScreenReader = navigator.userAgent.includes('NVDA') || 
                              navigator.userAgent.includes('JAWS') ||
                              navigator.userAgent.includes('VoiceOver');
-      
       setAccessibilityFeatures(prev => ({
         ...prev,
         reducedMotion: prefersReducedMotion,
@@ -33,53 +29,35 @@ const EnhancedAccessibility2025: React.FC = () => {
         screenReader: hasScreenReader
       }));
     };
-
     checkAccessibilityPreferences();
-
     // Apply accessibility enhancements
     const applyAccessibilityEnhancements = () => {
       const root = document.documentElement;
-      
       if (accessibilityFeatures.highContrast) {
         root.classList.add('high-contrast');
       } else {
         root.classList.remove('high-contrast');
       }
-      
       if (accessibilityFeatures.largeText) {
         root.classList.add('large-text');
-      } else {
         root.classList.remove('large-text');
-      }
-      
       if (accessibilityFeatures.reducedMotion) {
         root.classList.add('reduced-motion');
-      } else {
         root.classList.remove('reduced-motion');
-      }
-    };
-
     applyAccessibilityEnhancements();
-
     // Calculate accessibility score
     const calculateAccessibilityScore = () => {
       let score = 0;
       const totalChecks = 6;
-      
       // Check for alt text on images
       const images = document.querySelectorAll('img');
       const imagesWithAlt = Array.from(images).filter(img => img.alt && img.alt.trim() !== '');
       if (images.length === 0 || imagesWithAlt.length === images.length) {
         score += 1;
-      }
-      
       // Check for proper heading structure
       const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
       const hasH1 = document.querySelector('h1');
       if (hasH1) {
-        score += 1;
-      }
-      
       // Check for form labels
       const inputs = document.querySelectorAll('input, textarea, select');
       const inputsWithLabels = Array.from(inputs).filter(input => {
@@ -87,38 +65,21 @@ const EnhancedAccessibility2025: React.FC = () => {
         return id && document.querySelector(`label[for="${id}"]`);
       });
       if (inputs.length === 0 || inputsWithLabels.length === inputs.length) {
-        score += 1;
-      }
-      
       // Check for focus management
       const focusableElements = document.querySelectorAll('button, a, input, textarea, select, [tabindex]');
       if (focusableElements.length > 0) {
-        score += 1;
-      }
-      
       // Check for ARIA attributes
       const elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby], [aria-describedby]');
       if (elementsWithAria.length > 0) {
-        score += 1;
-      }
-      
       // Check for color contrast (simplified)
       const hasGoodContrast = document.querySelectorAll('.text-white, .text-black, .text-gray-900, .text-gray-100').length > 0;
       if (hasGoodContrast) {
-        score += 1;
-      }
-      
       setAccessibilityScore(Math.round((score / totalChecks) * 100));
-    };
-
     calculateAccessibilityScore();
-
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         setAccessibilityFeatures(prev => ({ ...prev, keyboardNavigation: true }));
-      }
-      
       // Skip to main content
       if (event.key === 'Enter' && event.ctrlKey && event.altKey) {
         const main = document.querySelector('main');
@@ -126,39 +87,26 @@ const EnhancedAccessibility2025: React.FC = () => {
           main.focus();
           main.scrollIntoView({ behavior: 'smooth' });
         }
-      }
-    };
-
     document.addEventListener('keydown', handleKeyDown);
-
     // Add focus visible support
     const handleFocus = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       target.classList.add('focus-visible');
-    };
-
     const handleBlur = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
       target.classList.remove('focus-visible');
-    };
-
     document.addEventListener('focusin', handleFocus);
     document.addEventListener('focusout', handleBlur);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('focusin', handleFocus);
       document.removeEventListener('focusout', handleBlur);
-    };
   }, [accessibilityFeatures]);
-
   const toggleFeature = (feature: keyof typeof accessibilityFeatures) => {
     setAccessibilityFeatures(prev => ({
       ...prev,
       [feature]: !prev[feature]
     }));
   };
-
   return (
     <div className="fixed top-4 right-4 bg-gradient-to-r from-purple-900 to-pink-900 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
       <div className="flex items-center justify-between mb-3">
@@ -168,7 +116,6 @@ const EnhancedAccessibility2025: React.FC = () => {
           <span className="text-sm font-mono">{accessibilityScore}%</span>
         </div>
       </div>
-      
       <div className="space-y-2 text-sm">
         <div className="flex items-center justify-between">
           <span>High Contrast:</span>
@@ -182,58 +129,25 @@ const EnhancedAccessibility2025: React.FC = () => {
               accessibilityFeatures.highContrast ? 'translate-x-4' : 'translate-x-0.5'
             }`}></div>
           </button>
-        </div>
         
-        <div className="flex items-center justify-between">
           <span>Large Text:</span>
-          <button
             onClick={() => toggleFeature('largeText')}
-            className={`w-8 h-4 rounded-full transition-colors ${
               accessibilityFeatures.largeText ? 'bg-green-500' : 'bg-gray-600'
-            }`}
-          >
-            <div className={`w-3 h-3 bg-white rounded-full transition-transform ${
               accessibilityFeatures.largeText ? 'translate-x-4' : 'translate-x-0.5'
-            }`}></div>
-          </button>
-        </div>
-        
-        <div className="flex items-center justify-between">
           <span>Reduced Motion:</span>
-          <button
             onClick={() => toggleFeature('reducedMotion')}
-            className={`w-8 h-4 rounded-full transition-colors ${
               accessibilityFeatures.reducedMotion ? 'bg-green-500' : 'bg-gray-600'
-            }`}
-          >
-            <div className={`w-3 h-3 bg-white rounded-full transition-transform ${
               accessibilityFeatures.reducedMotion ? 'translate-x-4' : 'translate-x-0.5'
-            }`}></div>
-          </button>
-        </div>
-        
-        <div className="flex items-center justify-between">
           <span>Screen Reader:</span>
           <span className="text-xs">
             {accessibilityFeatures.screenReader ? 'Detected' : 'Not Detected'}
           </span>
-        </div>
-        
-        <div className="flex items-center justify-between">
           <span>Keyboard Nav:</span>
-          <span className="text-xs">
             {accessibilityFeatures.keyboardNavigation ? 'Active' : 'Inactive'}
-          </span>
-        </div>
-      </div>
-
       <div className="mt-3 pt-3 border-t border-gray-600">
         <div className="text-xs text-gray-300">
           Press Ctrl+Alt+Enter to skip to main content
-        </div>
-      </div>
     </div>
   );
 };
-
 export default EnhancedAccessibility2025;

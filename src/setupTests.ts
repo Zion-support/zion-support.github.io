@@ -17,7 +17,7 @@ global.ResizeObserver = class ResizeObserver {
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: "true",
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation(query => ({,
     matches: "false",
     media: "query",
     onchange: "null",
@@ -56,16 +56,16 @@ const originalError = console.error;
 const originalWarn = console.warn;
 
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args: any[]) => {,
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+      args[0].includes('Warning: ReactDOM.render is no longer supported'),
     ) {
       return;
     }
 originalError.call(console, ...args);
   };
-  console.warn = (...args: any[]) => {
+  console.warn = (...args: any[]) => {,
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('componentWillReceiveProps') ||

@@ -36,7 +36,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl'
-  };
   const renderSpinner = () => {
     switch (variant) {
       case 'dots':
@@ -54,13 +53,11 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
                   duration: 0.6,
                   repeat: Infinity,
                   delay: i * 0.2
-                }}
               />
             ))}
           </div>
         );
       case 'pulse':
-        return (
           <motion.div
             className={`${sizeClasses[size]} bg-blue-500 rounded-full`}
             animate={{
@@ -70,58 +67,25 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             transition={{
               duration: 1,
               repeat: Infinity
-            }}
           />
-        );
       case 'wave':
-        return (
-          <div className="flex space-x-1">
             {[0, 1, 2, 3, 4].map((i) => (
-              <motion.div
-                key={i}
                 className="w-1 bg-blue-500 rounded-full"
-                animate={{
                   height: ['20px', '40px', '20px']
-                }}
-                transition={{
-                  duration: 0.6,
-                  repeat: Infinity,
                   delay: i * 0.1
-                }}
-              />
-            ))}
-          </div>
-        );
       case 'spinner':
-        return (
-          <motion.div
             className={`${sizeClasses[size]} border-4 border-gray-300 border-t-blue-500 rounded-full`}
             animate={{ rotate: 360 }}
-            transition={{
-              duration: 1,
               repeat: Infinity,
               ease: 'linear'
-            }}
-          />
-        );
       default:
-        return (
-          <motion.div
             className={`${sizeClasses[size]} relative`}
-            animate={{ rotate: 360 }}
-            transition={{
               duration: 2,
-              repeat: Infinity,
-              ease: 'linear'
-            }}
           >
             <div className="absolute inset-0 border-4 border-transparent border-t-blue-500 border-r-blue-500 rounded-full"></div>
             <div className="absolute inset-2 border-4 border-transparent border-b-blue-400 border-l-blue-400 rounded-full"></div>
             <div className="absolute inset-4 border-4 border-transparent border-t-blue-300 border-r-blue-300 rounded-full"></div>
           </motion.div>
-        );
-    }
-  };
   return (
     <AnimatePresence>
       <motion.div
@@ -131,20 +95,15 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className={`flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 ${className}`}
       >
         <div className="text-center">
-          <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="mb-6"
-          >
             {renderSpinner()}
-          </motion.div>
-          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="space-y-4"
-          >
             <h2 className={`${textSizeClasses[size]} font-semibold text-white`}>
               {message}{variant === 'dots' ? dots : ''}
             </h2>
@@ -161,7 +120,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.5 }}
                   />
-                </div>
               </div>
             )}
             <motion.div
@@ -172,7 +130,6 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             >
               <p>Please wait while we prepare everything for you...</p>
             </motion.div>
-          </motion.div>
         </div>
       </motion.div>
     </AnimatePresence>

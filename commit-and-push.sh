@@ -1,13 +1,14 @@
 #!/bin/bash
 
-echo "Committing and pushing Netlify build fixes..."
+echo "🚀 Starting commit and push process..."
 
 # Add all changes
 git add .
 
 # Commit with descriptive message
-git commit -m "Fix Netlify build issues
+git commit -m "Resolve merge conflicts and fix Netlify build issues
 
+- Resolved merge conflicts in App.tsx and other files
 - Added missing vite-plugin-compression dependency
 - Simplified Vite configuration for better Netlify compatibility
 - Disabled compression and visualizer plugins that may cause build issues
@@ -19,8 +20,4 @@ These changes should resolve the Netlify build timeout issues."
 # Push to main branch
 git push origin main
 
-<<<<<<< HEAD
-echo "Changes committed and pushed successfully!"
-=======
-echo "Changes committed and pushed successfully!"
->>>>>>> origin/backup-main-20250918-004015
+echo "✅ Changes committed and pushed successfully!"

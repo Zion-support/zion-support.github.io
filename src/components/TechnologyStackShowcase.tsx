@@ -27,7 +27,6 @@ interface Technology {
   website: string;
   color: string;
 }
-
 const technologies: Technology[] = [
   {
     id: 'react',
@@ -41,7 +40,6 @@ const technologies: Technology[] = [
     website: 'https://reactjs.org',
     color: 'text-blue-400'
   },
-  {
     id: 'nodejs',
     name: 'Node.js & Python',
     category: 'Backend',
@@ -52,8 +50,6 @@ const technologies: Technology[] = [
     benefits: ['High Performance', 'Rich Ecosystem', 'Cross-platform'],
     website: 'https://nodejs.org',
     color: 'text-green-400'
-  },
-  {
     id: 'aws',
     name: 'AWS & Azure',
     category: 'Cloud',
@@ -64,8 +60,6 @@ const technologies: Technology[] = [
     benefits: ['Global Scale', 'Cost Optimization', 'Security First'],
     website: 'https://aws.amazon.com',
     color: 'text-orange-400'
-  },
-  {
     id: 'docker',
     name: 'Docker & Kubernetes',
     category: 'DevOps',
@@ -75,9 +69,6 @@ const technologies: Technology[] = [
     useCases: ['Microservices', 'CI/CD Pipelines', 'Scalable Infrastructure'],
     benefits: ['Consistent Deployments', 'Easy Scaling', 'Portability'],
     website: 'https://docker.com',
-    color: 'text-blue-400'
-  },
-  {
     id: 'tensorflow',
     name: 'TensorFlow & PyTorch',
     category: 'AI/ML',
@@ -88,8 +79,6 @@ const technologies: Technology[] = [
     benefits: ['State-of-the-art Models', 'Production Ready', 'Community Support'],
     website: 'https://tensorflow.org',
     color: 'text-purple-400'
-  },
-  {
     id: 'blockchain',
     name: 'Blockchain & Web3',
     category: 'Emerging Tech',
@@ -100,8 +89,6 @@ const technologies: Technology[] = [
     benefits: ['Transparency', 'Security', 'Innovation'],
     website: 'https://ethereum.org',
     color: 'text-cyan-400'
-  },
-  {
     id: 'typescript',
     name: 'TypeScript',
     category: 'Development',
@@ -112,8 +99,6 @@ const technologies: Technology[] = [
     benefits: ['Type Safety', 'Better IDE Support', 'Reduced Bugs'],
     website: 'https://typescriptlang.org',
     color: 'text-blue-500'
-  },
-  {
     id: 'postgresql',
     name: 'PostgreSQL & MongoDB',
     category: 'Database',
@@ -124,8 +109,6 @@ const technologies: Technology[] = [
     benefits: ['ACID Compliance', 'Scalability', 'Flexibility'],
     website: 'https://postgresql.org',
     color: 'text-green-500'
-  },
-  {
     id: 'graphql',
     name: 'GraphQL',
     category: 'API',
@@ -136,8 +119,6 @@ const technologies: Technology[] = [
     benefits: ['Efficient Queries', 'Type Safety', 'Real-time Updates'],
     website: 'https://graphql.org',
     color: 'text-pink-400'
-  },
-  {
     id: 'redis',
     name: 'Redis & Elasticsearch',
     category: 'Caching & Search',
@@ -148,8 +129,6 @@ const technologies: Technology[] = [
     benefits: ['Lightning Fast', 'Scalable', 'Feature Rich'],
     website: 'https://redis.io',
     color: 'text-red-400'
-  },
-  {
     id: 'jenkins',
     name: 'Jenkins & GitHub Actions',
     category: 'CI/CD',
@@ -160,38 +139,30 @@ const technologies: Technology[] = [
     benefits: ['Automation', 'Quality Gates', 'Faster Releases'],
     website: 'https://jenkins.io',
     color: 'text-yellow-400'
-  },
-  {
     id: 'terraform',
     name: 'Terraform & Ansible',
     category: 'Infrastructure',
     description: 'Infrastructure as code and configuration management',
     icon: '🏗️',
-    expertise: 88,
     useCases: ['Infrastructure Provisioning', 'Configuration Management', 'Multi-cloud'],
     benefits: ['Version Control', 'Reproducible', 'Scalable'],
     website: 'https://terraform.io',
     color: 'text-purple-500'
   }
 ];
-
 const categories = ['All', 'Frontend', 'Backend', 'Cloud', 'DevOps', 'AI/ML', 'Database', 'API', 'Emerging Tech'];
-
 export function TechnologyStackShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTech, setSelectedTech] = useState<Technology | null>(null);
-
   const filteredTechnologies = technologies.filter(tech => 
     selectedCategory === 'All' || tech.category === selectedCategory
   );
-
   const expertiseLevel = (level: number) => {
     if (level >= 90) return { label: 'Expert', color: 'text-green-400' };
     if (level >= 80) return { label: 'Advanced', color: 'text-blue-400' };
     if (level >= 70) return { label: 'Intermediate', color: 'text-yellow-400' };
     return { label: 'Basic', color: 'text-gray-400' };
   };
-
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-7xl mx-auto">
@@ -209,14 +180,10 @@ export function TechnologyStackShowcase() {
             We leverage the latest technologies and frameworks to deliver innovative, scalable, and high-performance solutions.
           </p>
         </motion.div>
-
         {/* Category Filter */}
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
-        >
           {categories.map((category) => (
             <button
               key={category}
@@ -230,8 +197,6 @@ export function TechnologyStackShowcase() {
               {category}
             </button>
           ))}
-        </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Technology Grid */}
           <motion.div
@@ -261,8 +226,6 @@ export function TechnologyStackShowcase() {
                       </div>
                       <div className="text-xs text-white/60">
                         {expertiseLevel(tech.expertise).label}
-                      </div>
-                    </div>
                   </div>
                   <p className="text-sm text-white/80 mb-3">{tech.description}</p>
                   <div className="flex justify-between items-center">
@@ -271,20 +234,13 @@ export function TechnologyStackShowcase() {
                         className={`h-2 rounded-full ${tech.color.replace('text-', 'bg-')}`}
                         style={{ width: `${tech.expertise}%` }}
                       />
-                    </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
           {/* Technology Details */}
-          <motion.div
             initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="space-y-6"
-          >
             {selectedTech ? (
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
                 {/* Header */}
@@ -293,12 +249,9 @@ export function TechnologyStackShowcase() {
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-1">{selectedTech.name}</h3>
                     <p className="text-white/60">{selectedTech.category}</p>
-                  </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-white/80 mb-6">{selectedTech.description}</p>
-
                 {/* Expertise Level */}
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-2">
@@ -306,17 +259,12 @@ export function TechnologyStackShowcase() {
                     <span className={`font-bold ${selectedTech.color}`}>
                       {selectedTech.expertise}% - {expertiseLevel(selectedTech.expertise).label}
                     </span>
-                  </div>
                   <div className="w-full bg-white/20 rounded-full h-3">
                     <div 
                       className={`h-3 rounded-full ${selectedTech.color.replace('text-', 'bg-')}`}
                       style={{ width: `${selectedTech.expertise}%` }}
                     />
-                  </div>
-                </div>
-
                 {/* Use Cases */}
-                <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-400" />
                     Use Cases
@@ -326,27 +274,13 @@ export function TechnologyStackShowcase() {
                       <div key={index} className="flex items-center gap-2 text-white/80">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                         <span className="text-sm">{useCase}</span>
-                      </div>
                     ))}
-                  </div>
-                </div>
-
                 {/* Benefits */}
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                     <Star className="w-5 h-5 text-yellow-400" />
                     Key Benefits
-                  </h4>
-                  <div className="space-y-2">
                     {selectedTech.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-center gap-2 text-white/80">
                         <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                         <span className="text-sm">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
                 {/* Actions */}
                 <div className="flex gap-3">
                   <a
@@ -362,7 +296,6 @@ export function TechnologyStackShowcase() {
                     <ArrowRight className="w-4 h-4" />
                     Get Quote
                   </button>
-                </div>
               </div>
             ) : (
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-12 text-center">
@@ -371,9 +304,7 @@ export function TechnologyStackShowcase() {
                 <p className="text-white/70">
                   Click on any technology from the left to see detailed information, use cases, and benefits.
                 </p>
-              </div>
             )}
-
             {/* Technology Stats */}
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
@@ -383,27 +314,14 @@ export function TechnologyStackShowcase() {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-1">
                     {Math.round(technologies.reduce((sum, tech) => sum + tech.expertise, 0) / technologies.length)}%
-                  </div>
                   <div className="text-white/70 text-sm">Average Expertise</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-1">
                     {technologies.length}+
-                  </div>
                   <div className="text-white/70 text-sm">Technologies</div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
-
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16"
-        >
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-xl p-8">
             <h3 className="text-2xl font-semibold text-white mb-4">
               Ready to Build with Cutting-Edge Tech?
@@ -415,10 +333,6 @@ export function TechnologyStackShowcase() {
             <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center gap-2 mx-auto">
               <Code className="w-5 h-5" />
               Start Your Project
-            </button>
           </div>
-        </motion.div>
       </div>
     </section>
-  );
-}

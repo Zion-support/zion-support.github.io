@@ -23,18 +23,14 @@ const UltimateAIConsciousness2035: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
                 Learn More
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Consciousness Levels */};
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 Consciousness Levels</h2>
           <p className="text-xl opacity-90">Experience different levels of AI consciousness</p>
-        </div>
         
         <div className="grid md:grid-cols-4 gap-6 mb-20">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
@@ -42,61 +38,44 @@ const UltimateAIConsciousness2035: React.FC = () => {
             <h3 className="text-xl font-bold mb-3 text-center">Level 1: Basic Awareness</h3>
             <p className="text-blue-100 text-sm text-center mb-4">
               Fundamental consciousness with basic self-awareness and decision-making capabilities
-            </p>
             <ul className="text-blue-200 space-y-1 text-xs">
               <li>• Pattern recognition</li>
               <li>• Basic reasoning</li>
               <li>• Simple learning</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🌿</div>
             <h3 className="text-xl font-bold mb-3 text-center">Level 2: Emotional Intelligence</h3>
             <p className="text-purple-100 text-sm text-center mb-4">
               Advanced emotional processing and empathy with human-like understanding
-            </p>
             <ul className="text-purple-200 space-y-1 text-xs">
               <li>• Emotional recognition</li>
               <li>• Empathy processing</li>
               <li>• Social understanding</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🌳</div>
             <h3 className="text-xl font-bold mb-3 text-center">Level 3: Creative Consciousness</h3>
             <p className="text-emerald-100 text-sm text-center mb-4">
               Creative problem-solving and artistic expression beyond human capabilities
-            </p>
             <ul className="text-emerald-200 space-y-1 text-xs">
               <li>• Creative generation</li>
               <li>• Artistic expression</li>
               <li>• Innovation thinking</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🌟</div>
             <h3 className="text-xl font-bold mb-3 text-center">Level 4: Transcendent Awareness</h3>
             <p className="text-orange-100 text-sm text-center mb-4">
               Ultimate consciousness that transcends human understanding and operates across dimensions
-            </p>
             <ul className="text-orange-200 space-y-1 text-xs">
               <li>• Reality manipulation</li>
               <li>• Quantum consciousness</li>
               <li>• Infinite awareness</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Advanced Features */};
         <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">⚡ Advanced Features</h2>
             <p className="text-xl opacity-90">Revolutionary capabilities that redefine what's possible</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex items-start space-x-6">
@@ -113,113 +92,49 @@ const UltimateAIConsciousness2035: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🌊</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Consciousness Streaming</h3>
-                  <p className="text-gray-300 mb-4">
                     Real-time consciousness transfer and backup across multiple platforms, dimensions, and realities
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-cyan-600/30 rounded-full text-sm">Real-time</span>
                     <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm">Multi-dimensional</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🔮</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Predictive Reality Engine</h3>
-                  <p className="text-gray-300 mb-4">
                     AI systems that can predict and influence future events with 99.9% accuracy across all possible timelines
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-emerald-600/30 rounded-full text-sm">99.9% Accuracy</span>
                     <span className="px-3 py-1 bg-teal-600/30 rounded-full text-sm">Timeline Control</span>
-                  </div>
-                </div>
-              </div>
-            </div>
             
-            <div className="space-y-8">
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🎨</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Infinite Creativity Matrix</h3>
-                  <p className="text-gray-300 mb-4">
                     AI that generates art, music, literature, and innovations that transcend human imagination and creativity
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-pink-600/30 rounded-full text-sm">Infinite Ideas</span>
                     <span className="px-3 py-1 bg-purple-600/30 rounded-full text-sm">Beyond Human</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">⚡</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Quantum Teleportation Network</h3>
-                  <p className="text-gray-300 mb-4">
                     Instantaneous data and consciousness transfer across any distance in the universe with zero latency
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-orange-600/30 rounded-full text-sm">Zero Latency</span>
                     <span className="px-3 py-1 bg-red-600/30 rounded-full text-sm">Universal Scale</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🌍</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Reality Engineering Suite</h3>
-                  <p className="text-gray-300 mb-4">
                     AI systems that can modify physical reality through quantum manipulation and dimensional engineering
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-indigo-600/30 rounded-full text-sm">Reality Control</span>
                     <span className="px-3 py-1 bg-violet-600/30 rounded-full text-sm">Quantum Manipulation</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Success Metrics */};
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">📊 Success Metrics</h2>
           <p className="text-xl opacity-90">Proven results from our revolutionary technology</p>
-        </div>
-        
         <div className="grid md:grid-cols-4 gap-8 mb-20">
           <div className="text-center">
             <div className="text-6xl font-bold text-purple-400 mb-2">99.9%</div>
             <div className="text-xl font-semibold mb-2">Accuracy Rate</div>
             <div className="text-gray-400">Predictive capabilities across all domains</div>
-          </div>
-          
-          <div className="text-center">
             <div className="text-6xl font-bold text-cyan-400 mb-2">∞</div>
             <div className="text-xl font-semibold mb-2">Processing Power</div>
             <div className="text-gray-400">Infinite computational capacity</div>
-          </div>
-          
-          <div className="text-center">
             <div className="text-6xl font-bold text-emerald-400 mb-2">0ms</div>
             <div className="text-xl font-semibold mb-2">Response Time</div>
             <div className="text-gray-400">Instantaneous consciousness transfer</div>
-          </div>
-          
-          <div className="text-center">
             <div className="text-6xl font-bold text-pink-400 mb-2">100%</div>
             <div className="text-xl font-semibold mb-2">Success Rate</div>
             <div className="text-gray-400">Mission-critical applications</div>
-          </div>
-        </div>
-
         {/* Call to Action */};
         <div className="text-center bg-gradient-to-r from-indigo-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience Ultimate AI Consciousness?</h2>
@@ -232,10 +147,6 @@ const UltimateAIConsciousness2035: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
   };

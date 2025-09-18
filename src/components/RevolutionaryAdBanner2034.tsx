@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 const RevolutionaryAdBanner2034: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentAd, setCurrentAd] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -12,7 +11,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   const ads = [
     {
       id: 1,
@@ -23,7 +21,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       icon: "🧠"
     },
-    {
       id: 2,
       title: "🌌 CREATE YOUR OWN REALITY",
       subtitle: "Reality Synthesis Engine",
@@ -31,8 +28,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       cta: "Create Reality",
       color: "from-cyan-600 to-blue-600",
       icon: "🌌"
-    },
-    {
       id: 3,
       title: "⚛️ QUANTUM CONSCIOUSNESS MATRIX",
       subtitle: "Infinite Processing Power",
@@ -40,8 +35,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       cta: "Access Matrix",
       color: "from-emerald-600 to-teal-600",
       icon: "⚛️"
-    },
-    {
       id: 4,
       title: "🧬 NEURAL QUANTUM INTERFACE",
       subtitle: "Direct Brain-Computer Integration",
@@ -51,7 +44,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       icon: "🧬"
     }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -77,12 +69,10 @@ const RevolutionaryAdBanner2034: React.FC = () => {
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-              }}
             />
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Main Ad Display */}
         <div className="text-center mb-12">
@@ -107,12 +97,9 @@ const RevolutionaryAdBanner2034: React.FC = () => {
               {ads[currentAd].cta} →
             </button>
           </motion.div>
-        </div>
-
         {/* Ad Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {ads.map((ad, index) => (
-            <motion.div
               key={ad.id}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
@@ -128,11 +115,7 @@ const RevolutionaryAdBanner2034: React.FC = () => {
                 <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold text-white">
                   {ad.cta}
                 </span>
-              </div>
             </motion.div>
-          ))}
-        </div>
-
         {/* Call to Action Section */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Reality?</h3>
@@ -142,35 +125,21 @@ const RevolutionaryAdBanner2034: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-10 py-5 rounded-xl hover:shadow-lg transition-all duration-300 font-bold text-xl">
               Start Your Journey
-            </button>
             <button className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               Learn More
-            </button>
           </div>
-        </div>
-
         {/* Trust Indicators */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
           <div className="text-center">
             <div className="text-3xl font-bold text-white mb-2">50K+</div>
             <div className="text-white/80 text-sm">Consciousness Transfers</div>
-          </div>
-          <div className="text-center">
             <div className="text-3xl font-bold text-white mb-2">1M+</div>
             <div className="text-white/80 text-sm">Realities Created</div>
-          </div>
-          <div className="text-center">
             <div className="text-3xl font-bold text-white mb-2">99.9%</div>
             <div className="text-white/80 text-sm">Success Rate</div>
-          </div>
-          <div className="text-center">
             <div className="text-3xl font-bold text-white mb-2">∞</div>
             <div className="text-white/80 text-sm">Possibilities</div>
-          </div>
-        </div>
-      </div>
     </motion.div>
   );
 };
-
 export default RevolutionaryAdBanner2034;

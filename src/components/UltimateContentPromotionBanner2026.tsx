@@ -19,14 +19,11 @@ export default function UltimateContentPromotionBanner2026() {
     "Industry-Leading Solutions",
     "Proven Success Stories"
   ];
-
   const stats = [
     { icon: Users, value: "500+", label: "Happy Clients" },
     { icon: Award, value: "50+", label: "Industry Awards" },
     { icon: TrendingUp, value: "340%", label: "Average ROI" },
     { icon: Clock, value: "24/7", label: "Support" }
-  ];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
       {/* Background Effects */}
@@ -36,7 +33,6 @@ export default function UltimateContentPromotionBanner2026() {
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-500/10 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -52,12 +48,10 @@ export default function UltimateContentPromotionBanner2026() {
               <br />
               Content Collection
             </h2>
-            
             <p className="text-xl text-gray-300 leading-relaxed">
               Explore our comprehensive collection of cutting-edge AI content, featuring the latest trends, 
               revolutionary services, and industry insights that will transform your understanding of artificial intelligence.
             </p>
-
             {/* Features List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((feature, index) => (
@@ -66,8 +60,6 @@ export default function UltimateContentPromotionBanner2026() {
                   <span className="font-medium">{feature}</span>
                 </div>
               ))}
-            </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
@@ -76,12 +68,8 @@ export default function UltimateContentPromotionBanner2026() {
               </button>
               <button className="px-8 py-4 border-2 border-purple-400 text-purple-300 font-semibold rounded-full hover:bg-purple-500/20 transition-all duration-300">
                 Download Guide
-              </button>
-            </div>
           </div>
-
           {/* Right Content - Stats & Visual */}
-          <div className="space-y-8">
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
@@ -93,22 +81,15 @@ export default function UltimateContentPromotionBanner2026() {
                   </div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-
             {/* Featured Content Cards */}
             <div className="space-y-4">
               <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-6 border border-purple-500/30">
                 <div className="flex items-center mb-4">
                   <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-4">
                     <Brain className="w-6 h-6 text-white" />
-                  </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">AI Trends 2026</h3>
                     <p className="text-purple-300 text-sm">Latest breakthrough insights</p>
-                  </div>
-                </div>
                 <p className="text-gray-300 text-sm mb-4">
                   Discover the revolutionary AI trends that will reshape industries and transform our digital future.
                 </p>
@@ -117,47 +98,27 @@ export default function UltimateContentPromotionBanner2026() {
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </button>
               </div>
-
               <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl p-6 border border-blue-500/30">
-                <div className="flex items-center mb-4">
                   <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mr-4">
                     <Rocket className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
                     <h3 className="text-lg font-bold text-white">Ultimate Services</h3>
                     <p className="text-blue-300 text-sm">Comprehensive AI solutions</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">
                   Explore our full range of AI services designed to transform your business operations.
-                </p>
                 <button className="text-blue-400 hover:text-blue-300 font-medium text-sm flex items-center">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
-
         {/* Bottom Banner */}
         <div className="mt-12 bg-gradient-to-r from-slate-800/50 to-slate-900/50 rounded-2xl p-6 border border-slate-700/50">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center mb-4 md:mb-0">
               <div className="p-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg mr-4">
                 <Zap className="w-6 h-6 text-white" />
-              </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Limited Time Offer</h3>
                 <p className="text-gray-300 text-sm">Get exclusive access to premium AI content and services</p>
-              </div>
-            </div>
             <button className="px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-full hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
               Claim Offer Now
             </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

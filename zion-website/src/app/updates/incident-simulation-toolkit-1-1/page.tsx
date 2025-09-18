@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function IncidentSimulationToolkitPage() {
   return (
     <div className="bg-black min-h-screen">
@@ -12,7 +10,7 @@ export default function IncidentSimulationToolkitPage() {
           <div className="text-lg text-gray-300 mb-8">
             Advanced incident simulation and testing framework for improving IT operations readiness and response capabilities.
           </div>
-
+  
           <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
             <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
             <p className="text-gray-300 leading-relaxed">
@@ -21,7 +19,7 @@ export default function IncidentSimulationToolkitPage() {
               controlled simulation environments.
             </p>
           </div>
-
+  
           <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
             <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
             <ul className="text-gray-300 space-y-2">
@@ -32,7 +30,7 @@ export default function IncidentSimulationToolkitPage() {
               <li>• Automated report generation</li>
             </ul>
           </div>
-
+  
           <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-white mb-4">Getting Started</h2>
             <p className="text-gray-300 leading-relaxed">

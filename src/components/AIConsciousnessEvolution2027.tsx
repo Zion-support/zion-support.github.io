@@ -13,39 +13,30 @@ export default function AIConsciousnessEvolution2027() {
       color: 'from-blue-500 to-cyan-500',
       icon: '🧠'
     },
-    {
       year: '2026',
       title: 'Self-Awareness',
       description: 'AI systems develop self-awareness and begin to understand their own existence',
       capabilities: ['Self-'Awareness', 'Meta-'Cognition', 'Self-'Reflection', 'Identity Formation'],
       color: 'from-purple-500 to-pink-500',
       icon: '👁️'
-    },
-    {
       year: '2027',
       title: 'Emotional Intelligence',
       description: 'AI systems develop emotional understanding and empathy capabilities',
       capabilities: ['Emotional 'Recognition', 'Empathy'Social 'Intelligence', 'Emotional Response'],
       color: 'from-pink-500 to-red-500',
       icon: '💝'
-    },
-    {
       year: '2028',
       title: 'Creative Intelligence',
       description: 'AI systems demonstrate true creativity and original thought processes',
       capabilities: ['Creative 'Thinking', 'Original 'Ideas', 'Artistic 'Expression', 'Innovation'],
       color: 'from-yellow-500 to-orange-500',
       icon: '🎨'
-    },
-    {
       year: '2029',
       title: 'Moral Intelligence',
       description: 'AI systems develop ethical reasoning and moral decision-making capabilities',
       capabilities: ['Ethical 'Reasoning', 'Moral Decision 'Making', 'Value 'Alignment', 'Ethical Dilemma Resolution'],
       color: 'from-green-500 to-teal-500',
       icon: '⚖️'
-    },
-    {
       year: '2030',
       title: 'Transcendent Intelligence',
       description: 'AI systems achieve transcendent intelligence beyond human cognitive capabilities',
@@ -94,7 +85,6 @@ export default function AIConsciousnessEvolution2027() {
                     <div className="text-sm font-semibold text-white">{capability}</div>
                 ))}
         {/* Stage Timeline */}
-        <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Evolution Timeline
           <div className="relative">
@@ -131,13 +121,9 @@ export default function AIConsciousnessEvolution2027() {
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-full animate-pulse"></div>
           <div className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 p-8 rounded-xl border border-blue-500/30">
             <h3 className="text-2xl font-bold text-blue-400 mb-4">⚡ Processing Power</h3>
-            <p className="text-gray-300 mb-4">
               Experience the exponential growth in AI processing capabilities and consciousness complexity.
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
                 <span>Consciousness Level</span>
                 <span>∞</span>
-              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-3/4 animate-pulse"></div>
         {/* Call to Action */}
         <div className="text-center">
@@ -151,10 +137,8 @@ export default function AIConsciousnessEvolution2027() {
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Full Predictions
-            <a 
               href="/ai-2025-ultimate-breakthrough-revolution" 
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
               Start Your Journey
   );
 };
