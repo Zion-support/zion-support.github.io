@@ -6,7 +6,7 @@
   # Publish the built Next.js app from the correct directory
   publish = "zion-website/.next"
   command_timeout = "30m"
-  # No-op: trigger Netlify rebuild at 2025-09-18T15:45:00Z
+  # No-op: trigger Netlify rebuild at 2025-09-18T16:40:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -222,4 +222,4 @@
 
 #
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T15:45:00Z
+# No-op: trigger deploy 2025-09-18T16:40:00Z
