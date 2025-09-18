@@ -1,13 +1,12 @@
 [build]
-  base = "zion-website"
-  command = "npm ci --no-audit --no-fund && NEXT_TELEMETRY_DISABLED=1 npm run build"
-  publish = ".next"
+  command = "cd zion-website && npm ci --no-audit --no-fund && NEXT_TELEMETRY_DISABLED=1 npm run build"
+  publish = "zion-website/.next"
   command_timeout = "30m"
 
 # Trigger Netlify build: no-op change on 2025-09-18T14:20:00Z
 
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NEXT_TELEMETRY_DISABLED = "1"
   NETLIFY_USE_NPM = "true"
@@ -23,12 +22,10 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  # With base = "zion-website", paths are resolved relative to that base.
-  # Our functions live at repo-root "netlify/functions", so use a path that escapes the base.
-  directory = "../netlify/functions"
+  directory = "netlify/functions"
   node_bundler = "esbuild"
-  # Static assets for functions should reference the base directory's public folder directly
-  included_files = ["public/**/*"]
+  # Ensure static assets from the Next.js app are available to functions if referenced
+  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
