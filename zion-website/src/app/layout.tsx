@@ -15,9 +15,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-}
-=======
   title: {
     default: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
     template: '%s | Zion Tech Group'
@@ -89,16 +86,11 @@ export const metadata: Metadata = {
   },
   category: 'technology',
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
 
 export default function RootLayout({
   children,
 }: {
-<<<<<<< HEAD
-  children: React.ReactNode
-=======
   children: React.ReactNode;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
 }) {
   return (
     <html lang="en" className={inter.className}>
@@ -131,9 +123,5 @@ export default function RootLayout({
         </ErrorBoundary>
       </body>
     </html>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
 }
