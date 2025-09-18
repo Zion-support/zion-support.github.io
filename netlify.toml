@@ -25,8 +25,8 @@
 [build.processing]
   skip_processing = true
 
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/assets/*"
@@ -137,11 +137,7 @@
   to = "https://backend.example.com/:splat"
   status = 200
 
-# SPA fallback to index.html for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Note: Do not add a SPA fallback for Next.js. The Next.js plugin handles routing.
 
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
