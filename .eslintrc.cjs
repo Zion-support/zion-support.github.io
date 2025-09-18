@@ -1,40 +1,7 @@
 module.exports = {
-  extends: ['next/core-web-vitals'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn'
-  },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/',
-    'netlify/',
-    'apps/'
-  ]
-};
-module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
->>>>>>> origin/feat/news-updates-home-teaser
-=======
->>>>>>> origin/feat/research-article-promo
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -57,7 +24,55 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
-    'src/',
-    'apps/'
+    'apps/',
+    'zion-os/',
+    'zion-os.disabled/',
+    'zion-website/',
+    'zion.app/',
+    'zion_academy/',
+    'backups/',
+    'cache/',
+    'artifacts/',
+    'dao/',
+    'token/',
+    'server/',
+    'zion-ai-assistant/',
+    'src-clean/',
+    'broken_components/',
+    'broken_files_backup/',
+    'app-disabled/',
+    'api.disabled/',
+    'api.disabled.temp/',
+    'api-backup/',
+    'automation_backup/',
+    'automation-logs/',
+    'automation-reports/',
+    'ci-cd-reports/',
+    'ai-optimization-backups/',
+    'backup-merge-conflicts/',
+    'backup-problematic-files/',
+    'zion-website/',
+    'zion-os/',
+    'zion-os.disabled/',
+    'zion.app/',
+    'zion_academy/',
+    'dao/',
+    'token/',
+    'server/',
+    'zion-ai-assistant/',
+    'src-clean/',
+    'broken_components/',
+    'broken_files_backup/',
+    'app-disabled/',
+    'api.disabled/',
+    'api.disabled.temp/',
+    'api-backup/',
+    'automation_backup/',
+    'automation-logs/',
+    'automation-reports/',
+    'ci-cd-reports/',
+    'ai-optimization-backups/',
+    'backup-merge-conflicts/',
+    'backup-problematic-files/'
   ]
 };
