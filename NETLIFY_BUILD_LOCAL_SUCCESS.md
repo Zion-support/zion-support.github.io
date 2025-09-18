@@ -1,3 +1,10 @@
+Netlify local build verification
+
+- Verified on: 2025-09-18T23:59:59Z
+- Directory: `zion-website`
+- Command: `npm ci --no-audit --no-fund && npm run build`
+- Result: Success. Next.js build completed and static pages generated.
+
 # Netlify Build Local Verification
 
 - Date: 2025-09-17
