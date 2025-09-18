@@ -17,7 +17,7 @@ import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
 import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import LoadingSpinner from './src/components/LoadingSpinner';
-import PerformanceDashboard from './src/components/PerformanceDashboard';
+import { PerformanceDashboard } from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
