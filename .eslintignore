@@ -1,21 +1,36 @@
-# Ignore all build artifacts and disabled directories
-node_modules/
+# Build artifacts and generated files
+dist/
 .next/
 out/
 build/
-dist/
 coverage/
+node_modules/
+*.min.js
+*.bundle.js
+*.chunk.js
 
-# Disabled and backup directories
+# Generated artifacts
+*.log
+**/*.generated.*
+*.backup.*
+*.backup
+*_backup.*
+*_backup
+
+# Disabled/problematic directories
 zion-os/
 zion-os.disabled/
 zion-website/
 zion.app/
 zion_academy/
-zion_academy/
+automation/
+backup-merge-conflicts/
+recovered-branches/
+public/automation/
+temp-problematic-pages/
+temp_backup_*/
 backup*/
 backups/
-automation/
 netlify/
 apps/
 server/
@@ -25,17 +40,20 @@ app-disabled/
 broken_components/
 broken_files_backup/
 
-# Config files
-*.config.js
-*.config.ts
-*.config.cjs
-postcss.config.js
-tailwind.config.js
-next.config.js
-babel.config.js
-babel.config.cjs
+# All problematic directories and files
+**/zion-os/**
+**/zion-os.disabled/**
+**/zion-website/**
+**/zion.app/**
+**/zion_academy/**
+**/automation/**
+**/backup-merge-conflicts/**
+**/recovered-branches/**
+**/public/automation/**
+**/temp-problematic-pages/**
+**/temp_backup_*/**
 
-# Build artifacts and chunks
+# Static assets and generated files
 **/.next/**
 **/static/**
 **/chunks/**
@@ -50,6 +68,22 @@ babel.config.cjs
 **/analytics.js
 **/feedback.js
 **/integration.js
+sw.js
+service-worker.js
+
+# Config files that don't need linting
+*.config.js
+*.config.ts
+*.config.cjs
+postcss.config.js
+tailwind.config.js
+next.config.js
+babel.config.js
+babel.config.cjs
+
+# Static files
+public/
+static/
 
 # Legacy and backup files
 *.backup.*
@@ -71,6 +105,9 @@ automation/
 __tests__/
 __mocks__/
 
+# Test artifacts
+coverage/
+.nyc_output/
 # Generated files
 *.generated.*
 *.auto.*
@@ -82,8 +119,11 @@ __mocks__/
 *.json
 *.tsv
 *.report.*
+logs/
 
 # Temporary files
+tmp/
+temp/
 *.tmp
 *.temp
 *~
