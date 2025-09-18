@@ -1,7 +1,7 @@
 [build]
-  base = "."
-  command = "npm run build"
-  publish = "dist"
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
@@ -22,7 +22,7 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*", "dist/**/*"]
+  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
