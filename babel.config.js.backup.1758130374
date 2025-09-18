@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-module.exports = {
-  presets: ['next/babel'],
-  plugins: []
-=======
->>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
-};

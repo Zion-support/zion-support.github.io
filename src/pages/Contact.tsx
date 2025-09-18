@@ -1,3 +1,18 @@
+import React, { useState } from 'react';
+const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, ...props }) => (
+  <button {...props} className={`px-4 py-2 rounded bg-blue-600 text-white ${props.className || ''}`}>{children}</button>
+);
+const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = (props) => (
+  <input {...props} className={`border rounded px-3 py-2 w-full ${props.className || ''}`} />
+);
+const Textarea: React.FC<React.TextareaHTMLAttributes<HTMLTextAreaElement>> = (props) => (
+  <textarea {...props} className={`border rounded px-3 py-2 w-full ${props.className || ''}`} />
+);
+const Label: React.FC<React.LabelHTMLAttributes<HTMLLabelElement>> = ({ children, ...props }) => (
+  <label {...props}>{children}</label>
+);
+
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -87,13 +102,103 @@
   }
 
   const services = [
+    'AI Solutions',
+    'Quantum Computing',
+    'Cybersecurity',
+    'Cloud Services',
+    'Data Analytics'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get in touch with our team to discuss your project requirements and discover how we can help transform your business.
+          </p>
         </div>
 
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-8">Send us a message</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <Label htmlFor="name" className="block text-white mb-2">Name</Label>
+                <Input
+                  id="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="email" className="block text-white mb-2">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="subject" className="block text-white mb-2">Subject</Label>
+                <Input
+                  id="subject"
+                  type="text"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="message" className="block text-white mb-2">Message</Label>
+                <Textarea
+                  id="message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  required
+                />
+              </div>
+              <Button type="submit" className="w-full">
+                Send Message
+              </Button>
+            </form>
+          </div>
 
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-8">Get in touch</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">contact@ziontechgroup.com</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 (555) 123-4567</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">
+                  123 Tech Street<br />
+                  Innovation City, IC 12345
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">Services</h3>
+                <ul className="text-gray-300 space-y-1">
+                  {services.map((service, index) => (
+                    <li key={index}>• {service}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

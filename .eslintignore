@@ -55,6 +55,8 @@ static/
 public/automation/
 temp-problematic-pages/
 temp_backup_*/
+public/
+static/
 
 # Test artifacts
 coverage/
@@ -154,6 +156,8 @@ babel.config.cjs
 
 # Automation and scripts
 *.cjs
+*.js
+*.jsx
 scripts/
 automation/
 

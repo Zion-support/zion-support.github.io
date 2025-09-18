@@ -44,6 +44,9 @@ export function SEO({
     robots
   ].filter(Boolean).join(', ');
 
+  return (
+    <>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={robotsContent} />
@@ -77,3 +80,6 @@ export function SEO({
       
       {/* Viewport */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </>
+  );
+}

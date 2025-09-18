@@ -1,177 +1,139 @@
-// Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
+// Service Worker for Zion Tech Group PWA
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE_NAME = 'zion-static-v1';
+const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
 
-// Static assets to cache immediately
+// Assets to cache on install
 const STATIC_ASSETS = [
   '/',
   '/about',
-  '/blog',
-  '/contact',
   '/services',
   '/solutions',
+  '/contact',
+  '/blog',
   '/manifest.json',
   '/favicon.ico',
-  '/icon.svg',
-  '/apple-touch-icon.png'
-]
+  '/og-image.jpg'
+];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...')
+  console.log('Service Worker installing...');
   
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
-        console.log('Caching static assets')
-        return cache.addAll(STATIC_ASSETS)
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Static assets cached successfully')
-        return self.skipWaiting()
+        console.log('Static assets cached successfully');
+        return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Failed to cache static assets:', error)
+        console.error('Failed to cache static assets:', error);
       })
-  )
-})
+  );
+});
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...')
+  console.log('Service Worker activating...');
   
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames
-            .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE
-            })
-            .map((cacheName) => {
-              console.log('Deleting old cache:', cacheName)
-              return caches.delete(cacheName)
-            })
-        )
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE_NAME && cacheName !== DYNAMIC_CACHE_NAME) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
       })
       .then(() => {
-        console.log('Service Worker activated')
-        return self.clients.claim()
+        console.log('Service Worker activated');
+        return self.clients.claim();
       })
-  )
-})
+  );
+});
 
-// Fetch event - serve from cache or network
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
-  const { request } = event
-  const url = new URL(request.url)
-  
+  const { request } = event;
+  const url = new URL(request.url);
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return
+    return;
   }
-  
-  // Skip cross-origin requests
+
+  // Skip external requests
   if (url.origin !== location.origin) {
-    return
+    return;
   }
-  
-  // Handle different types of requests
-  if (request.destination === 'document') {
-    // HTML pages - cache first, then network
-    event.respondWith(
-      caches.match(request)
-        .then((cachedResponse) => {
-          if (cachedResponse) {
-            // Update cache in background
-            fetch(request)
-              .then((networkResponse) => {
-                if (networkResponse.status === 200) {
-                  const responseClone = networkResponse.clone()
-                  caches.open(DYNAMIC_CACHE)
-                    .then((cache) => cache.put(request, responseClone))
-                }
-              })
-              .catch(() => {
-                // Network failed, use cached version
-              })
+
+  // Skip API requests (let them go to network)
+  if (url.pathname.startsWith('/api/')) {
+    return;
+  }
+
+  event.respondWith(
+    caches.match(request)
+      .then((cachedResponse) => {
+        if (cachedResponse) {
+          console.log('Serving from cache:', request.url);
+          return cachedResponse;
+        }
+
+        console.log('Fetching from network:', request.url);
+        return fetch(request)
+          .then((response) => {
+            // Don't cache non-successful responses
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response for caching
+            const responseToCache = response.clone();
+
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE_NAME)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+
+            return response;
+          })
+          .catch((error) => {
+            console.error('Fetch failed:', error);
             
-            return cachedResponse
-          }
-          
-          // Not in cache, fetch from network
-          return fetch(request)
-            .then((networkResponse) => {
-              if (networkResponse.status === 200) {
-                const responseClone = networkResponse.clone()
-                caches.open(DYNAMIC_CACHE)
-                  .then((cache) => cache.put(request, responseClone))
-              }
-              return networkResponse
-            })
-            .catch(() => {
-              // Network failed, return offline page if available
-              return caches.match('/offline.html')
-            })
-        })
-    )
-  } else if (request.destination === 'image' || request.destination === 'style' || request.destination === 'script') {
-    // Static assets - cache first
-    event.respondWith(
-      caches.match(request)
-        .then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse
-          }
-          
-          return fetch(request)
-            .then((networkResponse) => {
-              if (networkResponse.status === 200) {
-                const responseClone = networkResponse.clone()
-                const cacheName = request.destination === 'image' ? STATIC_CACHE : DYNAMIC_CACHE
-                caches.open(cacheName)
-                  .then((cache) => cache.put(request, responseClone))
-              }
-              return networkResponse
-            })
-        })
-    )
-  } else if (url.pathname.startsWith('/api/')) {
-    // API requests - network first
-    event.respondWith(
-      fetch(request)
-        .then((networkResponse) => {
-          if (networkResponse.status === 200) {
-            const responseClone = networkResponse.clone()
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => cache.put(request, responseClone))
-          }
-          return networkResponse
-        })
-        .catch(() => {
-          // Network failed, try cache
-          return caches.match(request)
-        })
-    )
-  }
-})
+            // Return offline page for navigation requests
+            if (request.mode === 'navigate') {
+              return caches.match('/offline.html') || new Response(
+                '<html><body><h1>Offline</h1><p>Please check your internet connection.</p></body></html>',
+                { headers: { 'Content-Type': 'text/html' } }
+              );
+            }
+            
+            throw error;
+          });
+      })
+  );
+});
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
-  console.log('Background sync triggered:', event.tag)
-  
   if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Handle offline actions when connection is restored
-      handleBackgroundSync()
-    )
+    console.log('Background sync triggered');
+    event.waitUntil(doBackgroundSync());
   }
-})
+});
 
 // Push notification handling
 self.addEventListener('push', (event) => {
-  console.log('Push notification received:', event)
+  console.log('Push notification received');
   
   const options = {
     body: event.data ? event.data.text() : 'New update available',
@@ -194,75 +156,58 @@ self.addEventListener('push', (event) => {
         icon: '/icon-192x192.png'
       }
     ]
-  }
-  
+  };
+
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
-  )
-})
+  );
+});
 
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
-  console.log('Notification clicked:', event)
+  console.log('Notification clicked');
   
-  event.notification.close()
-  
+  event.notification.close();
+
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
-    )
+    );
+  } else if (event.action === 'close') {
+    // Just close the notification
+    return;
+  } else {
+    // Default action - open the app
+    event.waitUntil(
+      clients.matchAll().then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === '/' && 'focus' in client) {
+            return client.focus();
+          }
+        }
+        if (clients.openWindow) {
+          return clients.openWindow('/');
+        }
+      })
+    );
   }
-})
+});
 
-// Helper function for background sync
-async function handleBackgroundSync() {
+// Background sync function
+async function doBackgroundSync() {
   try {
-    // Handle any pending offline actions
-    console.log('Processing background sync...')
-    
-    // Example: sync form submissions, analytics data, etc.
-    const pendingActions = await getPendingActions()
-    
-    for (const action of pendingActions) {
-      try {
-        await processAction(action)
-        await removePendingAction(action.id)
-      } catch (error) {
-        console.error('Failed to process action:', error)
-      }
-    }
+    // Implement your background sync logic here
+    // For example, sync offline form submissions, analytics data, etc.
+    console.log('Performing background sync...');
   } catch (error) {
-    console.error('Background sync failed:', error)
+    console.error('Background sync failed:', error);
   }
 }
 
-// Helper functions (implement based on your needs)
-async function getPendingActions() {
-  // Return pending actions from IndexedDB or other storage
-  return []
-}
-
-async function processAction(action) {
-  // Process the action (e.g., send to server)
-  console.log('Processing action:', action)
-}
-
-async function removePendingAction(actionId) {
-  // Remove processed action from storage
-  console.log('Removing action:', actionId)
-}
-
-// Message handling from main thread
-self.addEventListener('message', (event) => {
-  console.log('Service Worker received message:', event.data)
-  
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting()
+// Periodic background sync (if supported)
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'content-sync') {
+    console.log('Periodic sync triggered');
+    event.waitUntil(doBackgroundSync());
   }
-  
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME })
-  }
-})
-
-console.log('Service Worker loaded successfully')
+});
