@@ -15,9 +15,7 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-# Use the Next.js Netlify plugin for proper routing/functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Vite SPA build; Next.js plugin not needed
 
 [functions]
   directory = "netlify/functions"
@@ -139,6 +137,12 @@
   to = "https://backend.example.com/:splat"
   status = 200
 
+# SPA fallback to index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -219,4 +223,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js routing is handled by @netlify/plugin-nextjs
+# Note: Client-side routing handled by SPA fallback above
