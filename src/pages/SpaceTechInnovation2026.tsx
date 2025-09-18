@@ -12,6 +12,8 @@ const SpaceTechInnovation2026: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Space Technology Innovation 2026
           </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Revolutionary space technology solutions that are transforming our understanding of the cosmos
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
