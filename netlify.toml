@@ -22,9 +22,12 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  directory = "netlify/functions"
+  # With base = "zion-website", paths are resolved relative to that base.
+  # Our functions live at repo-root "netlify/functions", so use a path that escapes the base.
+  directory = "../netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["zion-website/public/**/*"]
+  # Static assets for functions should reference the base directory's public folder directly
+  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
