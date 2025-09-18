@@ -1,13 +1,14 @@
 # Updated: Fixed for Vite React app deployment - 2025-01-20T00:00:00Z
 [build]
   base = "zion-website"
-  command = "npm install && npm run build"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
