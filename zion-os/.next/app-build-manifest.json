@@ -1,744 +1,400 @@
 {
   "pages": {
     "/_not-found/page": [
-<<<<<<< HEAD
       "static/chunks/webpack-7c41e62318265d5b.js",
-=======
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
       "static/chunks/app/_not-found/page-2fe1d193f36e4b26.js"
     ],
     "/layout": [
-<<<<<<< HEAD
       "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/layout-73510efd639d183e.js"
+      "static/chunks/app/layout-2e47acbc49c27567.js"
     ],
     "/about/page": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/about/page-ed4378049c182eeb.js"
+      "static/chunks/app/about/page-2ac3ca2397a611eb.js"
     ],
     "/accessibility/page": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/accessibility/page-23a12aba17017e57.js"
+      "static/chunks/app/accessibility/page-e4cad474af3503bf.js"
     ],
     "/ai-automation-services/page": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-automation-services/page-7add6e514c9a6fac.js"
-    ],
-    "/ai-autonomous-research-assistant/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-autonomous-research-assistant/page-31f77d56a26ee14c.js"
+      "static/chunks/app/ai-automation-services/page-24ad01bb604db483.js"
     ],
     "/ai-autonomous-business-manager/page": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-autonomous-business-manager/page-699ced0d87a29df4.js"
-    ],
-    "/ai-autonomous-systems/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-autonomous-systems/page-8290f516c6f777b6.js"
-    ],
-    "/ai-business-intelligence/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-business-intelligence/page-cad83b92db661209.js"
-    ],
-    "/ai-consciousness-evolution/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-consciousness-evolution/page-892243b7a69ec091.js"
-    ],
-    "/ai-solutions/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-solutions/page-09147613ce53327a.js"
-    ],
-    "/ai-services/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-services/page-198e3e1026b1f942.js"
-    ],
-    "/api/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/api/page-bb273f25bdae15d1.js"
-    ],
-    "/auth/signin/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/auth/signin/page-9ca4488154183730.js"
-    ],
-    "/auth/signup/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/auth/signup/page-04e632928057f5cd.js"
-    ],
-    "/careers/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/careers/page-84908c698c1cf414.js"
-    ],
-    "/case-studies/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/case-studies/page-495a9e1ed60a539b.js"
-    ],
-    "/community/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/community/page-f4bb8bdd22dac358.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/contact/page-8f5b69b8021d7914.js"
-    ],
-    "/cookies/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/cookies/page-7b6c2acefd1d4b31.js"
-    ],
-    "/cybersecurity/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/cybersecurity/page-3aba0872ce3c89e2.js"
-    ],
-    "/dashboard/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/dashboard/page-2afb482c4d21ddf0.js"
-    ],
-    "/docs/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/docs/page-74e7eee13aa9c3da.js"
-    ],
-    "/enterprise-it/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/enterprise-it/page-db0e12ccb231af82.js"
-    ],
-    "/events/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/events/page-f5298d239c3d0b31.js"
-    ],
-    "/pricing/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/pricing/page-99e0ad84e75fa149.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/page-2bcb89b0b60a5e4b.js"
-    ],
-    "/privacy/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/privacy/page-34dde41d2abd93f4.js"
-    ],
-    "/quantum-neural-network-platform/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/quantum-neural-network-platform/page-c4d7364528ff37d3.js"
-    ],
-    "/quantum-services/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/quantum-services/page-ed34b7c18b940992.js"
-    ],
-    "/research-development/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/research-development/page-04f5eccce0f6856d.js"
-    ],
-    "/research/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/research/page-e32eaab26c33093b.js"
-    ],
-    "/services/ai-automation/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/ai-automation/page-634cb141cf28ed57.js"
-    ],
-    "/services/ai-solutions/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/ai-solutions/page-92ae62d776b390e6.js"
-    ],
-    "/services/ai/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/ai/page-b20f91fd4faa8da3.js"
-    ],
-    "/services/blockchain-web3/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/blockchain-web3/page-cf351a9c3137dbf9.js"
-    ],
-    "/services/blockchain/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/blockchain/page-d501484bd4c3ec8b.js"
-    ],
-    "/services/it-solutions/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/it-solutions/page-f056aba97a2047a1.js"
-    ],
-    "/services/micro-saas/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/micro-saas/page-1428a4512c774233.js"
-    ],
-    "/services/it/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/it/page-4e9a37125d8d67fd.js"
-    ],
-    "/services/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/page-499d4f8130e21dda.js"
-    ],
-    "/services/saas/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/saas/page-ae83a1d31ec5a9aa.js"
-    ],
-    "/solutions/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/solutions/page-a5323311953dafb8.js"
-    ],
-    "/space-tech/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/space-tech/page-21fc17e5d1d46704.js"
-    ],
-    "/terms/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/terms/page-686d5b7fb6cba6da.js"
-    ],
-    "/blog/ai-2026-agent-risk-management-framework/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/ai-2026-agent-risk-management-framework/page-0968ae032ba93f5f.js"
-    ],
-    "/blog/ai-2026-operational-excellence-blueprint/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/ai-2026-operational-excellence-blueprint/page-cd74278ed35d77f1.js"
-    ],
-    "/blog/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/page-e11cd3bee3c125ae.js"
-    ],
-    "/news/acquisition-vectoredge/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/acquisition-vectoredge/page-7b8edf9c0653aa1f.js"
-    ],
-    "/news/hybrid-quantum-classical-pipeline/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/hybrid-quantum-classical-pipeline/page-d623ceeed766edae.js"
-    ],
-    "/news/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/page-4905e688b5c4cf71.js"
-    ],
-    "/blog/[id]/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/[id]/page-fc57710d711464bd.js"
-    ],
-    "/news/ziongpt-2-adaptive-reasoning/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/ziongpt-2-adaptive-reasoning/page-9c8ef12a1cb2ccd9.js"
-    ],
-    "/sitemap/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/sitemap/page-6413e1cc7ff9e7f8.js"
-    ],
-    "/zion-os/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/zion-os/page-70c4fc01b0f321b8.js"
-    ],
-    "/team/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/team/page-bb5b0663b87871e1.js"
-    ],
-    "/quantum-computing/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/quantum-computing/page-58da8ea83076a93d.js"
-    ],
-    "/resources/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/resources/page-f902f57d51d43940.js"
-    ],
-    "/admin/instances/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/admin/instances/page-f7599be9e8f25506.js"
-    ],
-    "/admin/layout": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/admin/layout-ec5377eec48dec25.js"
-    ],
-    "/admin/deployments/page": [
-      "static/chunks/webpack-7c41e62318265d5b.js",
-=======
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/css/96eb7304f10ab5f4.css",
-      "static/chunks/app/layout-89ada9b6f307729d.js"
-    ],
-    "/about/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/about/page-35d62b427132e8b5.js"
-    ],
-    "/accessibility/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/accessibility/page-4a5900b7624c69db.js"
-    ],
-    "/ai-automation-services/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-automation-services/page-ee79753872633a02.js"
-    ],
-    "/ai-autonomous-business-manager/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-autonomous-business-manager/page-1f39586bb97979f3.js"
+      "static/chunks/app/ai-autonomous-business-manager/page-4f10f98c80e85111.js"
     ],
     "/ai-autonomous-research-assistant/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-autonomous-research-assistant/page-30ece47f0b8d488f.js"
+      "static/chunks/app/ai-autonomous-research-assistant/page-b375bc188dd0c1a8.js"
     ],
     "/ai-autonomous-systems/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-autonomous-systems/page-6e0893166db6a6ea.js"
+      "static/chunks/app/ai-autonomous-systems/page-166d790fc4f15033.js"
     ],
     "/ai-business-intelligence/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-business-intelligence/page-f7d6bb24949f21bb.js"
+      "static/chunks/app/ai-business-intelligence/page-e992b22237295770.js"
     ],
     "/ai-consciousness-evolution/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-consciousness-evolution/page-db4b6b3e38180d35.js"
+      "static/chunks/app/ai-consciousness-evolution/page-09471260431cfcdd.js"
     ],
     "/ai-services/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-services/page-aaddbb1c2deaa2e5.js"
+      "static/chunks/app/ai-services/page-68daec64630541a7.js"
     ],
     "/ai-solutions/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/ai-solutions/page-3c26ed6b9b42487c.js"
+      "static/chunks/app/ai-solutions/page-a162dc2d249235bb.js"
     ],
     "/api/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/api/page-cf912d34f379238c.js"
+      "static/chunks/app/api/page-ca5656b9c849069f.js"
     ],
     "/auth/signin/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/auth/signin/page-3ed74142057a10b4.js"
+      "static/chunks/app/auth/signin/page-39dc969be44870dd.js"
     ],
     "/auth/signup/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/auth/signup/page-94120f8e88afb22a.js"
-    ],
-    "/careers/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/careers/page-c2e5cffed81c5979.js"
-    ],
-    "/case-studies/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/case-studies/page-17b4075d40a51364.js"
-    ],
-    "/community/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/community/page-e1a9528f686599b8.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/contact/page-c6127e96a615aebf.js"
-    ],
-    "/cookies/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/cookies/page-4be352e0647a9f2a.js"
-    ],
-    "/cybersecurity/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/cybersecurity/page-b8eb79b1f0033e87.js"
-    ],
-    "/dashboard/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/dashboard/page-c8d0946c095dd140.js"
-    ],
-    "/docs/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/docs/page-b5bb0ea663ee4ccb.js"
-    ],
-    "/enterprise-it/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/enterprise-it/page-e26792a40974fff6.js"
-    ],
-    "/events/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/events/page-a69a387abf10100d.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/page-0cc163cf5b5e75a4.js"
-    ],
-    "/pricing/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/pricing/page-ff3cb91d16556556.js"
-    ],
-    "/privacy/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/privacy/page-ec954fcd9baceb6d.js"
-    ],
-    "/quantum-neural-network-platform/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/quantum-neural-network-platform/page-b4e4bff35ceea15a.js"
-    ],
-    "/quantum-services/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/quantum-services/page-8372393d98ef3562.js"
-    ],
-    "/research-development/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/research-development/page-f5cc1f493f173d1e.js"
-    ],
-    "/research/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/research/page-a0b0b72152ea8db1.js"
-    ],
-    "/services/ai-automation/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/ai-automation/page-f158f4f00269f64c.js"
-    ],
-    "/services/ai-solutions/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/ai-solutions/page-478d23125ec756e9.js"
-    ],
-    "/services/ai/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/ai/page-45dfaad8a713fbdd.js"
-    ],
-    "/services/blockchain-web3/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/blockchain-web3/page-b95c97b7503bb70e.js"
-    ],
-    "/services/blockchain/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/blockchain/page-7e3418360e32c5d6.js"
-    ],
-    "/services/it-solutions/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/it-solutions/page-87e97f0ffd8f12fa.js"
-    ],
-    "/services/it/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/it/page-5eb3bbb4c05d09d6.js"
-    ],
-    "/services/micro-saas/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/micro-saas/page-da5411b28731ab92.js"
-    ],
-    "/services/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/page-52d1880613066fd4.js"
-    ],
-    "/services/saas/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/services/saas/page-384482116c15498b.js"
-    ],
-    "/solutions/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/solutions/page-ca75995bc4d88229.js"
-    ],
-    "/space-tech/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/space-tech/page-e6d1ee28cdad0af3.js"
-    ],
-    "/terms/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/terms/page-97398d64763d131f.js"
+      "static/chunks/app/auth/signup/page-54b11dd671b0ab79.js"
     ],
     "/blog/[id]/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/[id]/page-12bdf2da6756739c.js"
-    ],
-    "/blog/ai-2026-agent-risk-management-framework/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/ai-2026-agent-risk-management-framework/page-79c4fcbda60e4b4a.js"
-    ],
-    "/blog/ai-2026-operational-excellence-blueprint/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
-      "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/ai-2026-operational-excellence-blueprint/page-745137b7a6d3d05c.js"
+      "static/chunks/app/blog/[id]/page-54edeb6d27e5c551.js"
     ],
     "/blog/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/blog/page-bc1c02354d27df01.js"
+      "static/chunks/app/blog/page-3fe56a8d3ed60867.js"
     ],
-    "/news/acquisition-vectoredge/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+    "/careers/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/acquisition-vectoredge/page-17286ab6f30b5e62.js"
+      "static/chunks/app/careers/page-0524b2db4e22de6f.js"
     ],
-    "/news/hybrid-quantum-classical-pipeline/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+    "/case-studies/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/hybrid-quantum-classical-pipeline/page-815c458e7a5c7f0e.js"
+      "static/chunks/app/case-studies/page-cb878d26754f7907.js"
+    ],
+    "/community/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/community/page-bcd96cea66fac8f9.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/contact/page-aac0a55a89471338.js"
+    ],
+    "/cookies/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/cookies/page-2f6f8624bae96de1.js"
+    ],
+    "/cybersecurity/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/cybersecurity/page-80089fd7da70749c.js"
+    ],
+    "/dashboard/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/dashboard/page-28003d3654e4b3dd.js"
+    ],
+    "/docs/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/docs/page-ccf92c494097d3be.js"
+    ],
+    "/enterprise-it/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/enterprise-it/page-466abaf353d0f33d.js"
+    ],
+    "/events/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/events/page-e95f7293c94e8a8a.js"
     ],
     "/news/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/page-64b9abb3d1b5deae.js"
+      "static/chunks/app/news/page-eb6e84603aa6f97c.js"
     ],
-    "/news/ziongpt-2-adaptive-reasoning/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+    "/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/news/ziongpt-2-adaptive-reasoning/page-ebcdd0348236c8be.js"
+      "static/chunks/app/page-04a81c2bfc92cb19.js"
+    ],
+    "/pricing/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/pricing/page-f3ca62bf894abd80.js"
     ],
     "/quantum-computing/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/quantum-computing/page-6f287b62c55e4ac0.js"
+      "static/chunks/app/quantum-computing/page-adb2d35d048a27c5.js"
+    ],
+    "/privacy/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/privacy/page-c8bcb2d1a6ce88c2.js"
+    ],
+    "/quantum-neural-network-platform/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/quantum-neural-network-platform/page-b6d27827c270f079.js"
+    ],
+    "/quantum-services/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/quantum-services/page-42dad02f36d542b5.js"
+    ],
+    "/research-development/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/research-development/page-129ecac83dd6a9db.js"
+    ],
+    "/research/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/research/page-f239dcca2a4fadb1.js"
     ],
     "/resources/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/resources/page-c770e2b93d4c104f.js"
+      "static/chunks/app/resources/page-16a55270d1ddedc3.js"
+    ],
+    "/services/ai-automation/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/ai-automation/page-6e00c6841c70c07e.js"
+    ],
+    "/services/ai/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/ai/page-d83ca4a9e0741ff9.js"
+    ],
+    "/services/blockchain-web3/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/blockchain-web3/page-ba11c1e1ae057314.js"
+    ],
+    "/services/ai-solutions/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/ai-solutions/page-0a3fdfc2cf93a5d0.js"
+    ],
+    "/services/blockchain/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/blockchain/page-307f6df52ca337cd.js"
+    ],
+    "/services/it-solutions/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/it-solutions/page-4a0310826d91ef77.js"
+    ],
+    "/services/micro-saas/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/micro-saas/page-84cc1c99d388f5d1.js"
+    ],
+    "/services/saas/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/saas/page-ef53f25c64fe1b07.js"
+    ],
+    "/services/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/services/page-75b9a04a0810a785.js"
     ],
     "/sitemap/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/sitemap/page-122a0613c59617f2.js"
+      "static/chunks/app/sitemap/page-7ca0d08dd9331eea.js"
+    ],
+    "/solutions/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/solutions/page-8ab85b7ebdfc1867.js"
+    ],
+    "/space-tech/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/space-tech/page-152071feefa5b79d.js"
     ],
     "/team/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/team/page-9ba2be14d8bf2982.js"
+      "static/chunks/app/team/page-46083d7c1f1638f7.js"
+    ],
+    "/terms/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/terms/page-f0a2be5ba7a0e430.js"
     ],
     "/zion-os/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/zion-os/page-cb5ba48c7fc58e55.js"
+      "static/chunks/app/zion-os/page-f9a0c618c1f100d4.js"
     ],
-    "/admin/deployments/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+    "/services/it/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/admin/deployments/page-e6741c6feb82b590.js"
+      "static/chunks/app/services/it/page-7e2b7c110b19821d.js"
     ],
-<<<<<<< HEAD
+    "/blog/ai-2026-operational-excellence-blueprint/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/blog/ai-2026-operational-excellence-blueprint/page-fcd6fd1ee9445435.js"
+    ],
+    "/blog/edge-ai-marketplaces/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/blog/edge-ai-marketplaces/page-0e1fda87ca26b51e.js"
+    ],
+    "/blog/ai-2026-agent-risk-management-framework/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/blog/ai-2026-agent-risk-management-framework/page-04936a37f2101605.js"
+    ],
+    "/news/acquisition-vectoredge/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/news/acquisition-vectoredge/page-0a5c5db21d3f8bb9.js"
+    ],
+    "/news/quantum-error-correction-breakthrough/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/news/quantum-error-correction-breakthrough/page-9291888f159aa65c.js"
+    ],
+    "/news/ai-business-intelligence-platform-launch/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/news/ai-business-intelligence-platform-launch/page-f9be1241b7b9bc54.js"
+    ],
+    "/news/hybrid-quantum-classical-pipeline/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/news/hybrid-quantum-classical-pipeline/page-83654c90fc265efa.js"
+    ],
+    "/news/ziongpt-2-adaptive-reasoning/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/news/ziongpt-2-adaptive-reasoning/page-6866b6b125d1aca3.js"
+    ],
+    "/blog/ai-governance-blueprint-2025/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/blog/ai-governance-blueprint-2025/page-83989949fd15b87e.js"
+    ],
     "/admin/os-deploy/page": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-=======
-    "/admin/layout": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/admin/layout-9e7adbd453d038b9.js"
+      "static/chunks/app/admin/os-deploy/page-d98e8c7e5b06b4bd.js"
+    ],
+    "/admin/layout": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
+      "static/chunks/main-app-dff33cccac5ce0bc.js",
+      "static/chunks/app/admin/layout-469593464ce0ba60.js"
     ],
     "/admin/instances/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/admin/instances/page-21a952ab88f090ed.js"
+      "static/chunks/app/admin/instances/page-b857a1bf84d4ad77.js"
     ],
-    "/admin/os-deploy/page": [
-      "static/chunks/webpack-6d2e3900d11a7f8d.js",
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-      "static/chunks/vendors-5f75eaeeba9d8604.js",
+    "/admin/deployments/page": [
+      "static/chunks/webpack-7c41e62318265d5b.js",
+      "static/chunks/vendors-fd0ea8748140f0fb.js",
       "static/chunks/main-app-dff33cccac5ce0bc.js",
-      "static/chunks/app/admin/os-deploy/page-f857dea5cb716dff.js"
+      "static/chunks/app/admin/deployments/page-8211b9d85fc71490.js"
     ]
   }
 }
