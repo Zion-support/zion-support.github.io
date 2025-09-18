@@ -3,8 +3,9 @@
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
+  # No-op: touch to trigger Netlify rebuild at 2025-09-18T15:22:00Z
 
-# Trigger Netlify build: no-op change on 2025-09-18T13:25:00Z
+# Trigger Netlify build: no-op change on 2025-09-18T15:15:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -16,7 +17,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-  NEXT_TELEMETRY_DISABLED = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -222,5 +222,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+# Note: Next.js routing is handled by @netlify/plugin-nextjs
+ 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18 12:45 UTC
+# No-op: trigger deploy 2025-09-18 15:15 UTC

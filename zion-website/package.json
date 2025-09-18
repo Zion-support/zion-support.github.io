@@ -11,6 +11,9 @@
     "tech"
   ],
   "author": "Zion Tech Group",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
