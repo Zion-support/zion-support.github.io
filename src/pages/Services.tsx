@@ -152,8 +152,32 @@ export default function Services() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+              <h1 className="text-5xl font-bold text-white mb-6">
+                Our Services
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our comprehensive suite of AI-powered services and cutting-edge technology solutions.
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
-                    {/* Tags */}
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
                         <span
