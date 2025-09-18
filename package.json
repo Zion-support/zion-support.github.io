@@ -15,7 +15,11 @@
     "type-check": "npx tsc --noEmit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx",
+    "build:analyze": "vite build --mode production && npx vite-bundle-analyzer dist/assets/*.js",
+    "build:clean": "rm -rf dist && npm run build:netlify",
+    "build:optimize": "npm run build:clean && npm run build:analyze",
+    "preview:build": "npm run build:netlify && npm run preview"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
