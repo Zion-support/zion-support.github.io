@@ -1,0 +1,43 @@
+{
+  "name": "zion-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zion Tech Group - Leading AI and Technology Solutions",
+  "keywords": [
+    "AI",
+    "technology",
+    "innovation",
+    "zion",
+    "tech"
+  ],
+  "author": "Zion Tech Group",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:analyze": "ANALYZE=true next build",
+    "build:netlify": "npm ci --no-audit --no-fund && npm run build",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@headlessui/react": "^2.2.8",
+    "@heroicons/react": "^2.2.0",
+    "@netlify/plugin-nextjs": "^5.13.3",
+    "@types/node": "24.2.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "next": "^15.5.3",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.4.5"
+  }
+}

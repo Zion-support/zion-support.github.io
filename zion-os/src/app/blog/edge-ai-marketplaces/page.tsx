@@ -1,0 +1,41 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Edge AI Marketplaces',
+  description: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
+};
+
+export default function EdgeAIMarketplacesPage() {
+  return (
+    <article className="min-h-screen bg-white">
+      <header className="bg-gradient-to-br from-green-700 to-blue-800 text-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-green-100 mb-3">AI Solutions • 7 min read</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge</h1>
+          <p className="text-green-100 max-w-3xl">Architectures for edge-native agent marketplaces with local policy and cloud sync.</p>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-lg">
+        <p>
+          Edge-native marketplaces unlock low-latency decisioning and resilience. This article explores reference
+          architectures, synchronization models, and risk controls for safe edge autonomy.
+        </p>
+        <h2>Reference Architecture</h2>
+        <ul>
+          <li>Local policy engines with periodic cloud consensus.</li>
+          <li>Event-sourced state with conflict-free replicated data types (CRDTs).</li>
+          <li>Zero-trust identity, attestation, and encrypted transport.</li>
+        </ul>
+        <h2>Use Cases</h2>
+        <p>
+          Retail, logistics, and telecom benefit from on-premise inference and coordination among specialized agents.
+        </p>
+        <div className="mt-10">
+          <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-semibold">← Back to Blog</Link>
+        </div>
+      </main>
+    </article>
+  );
+}
+

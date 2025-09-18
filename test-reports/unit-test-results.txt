@@ -1,0 +1,4 @@
+
+> zion-tech-group@0.1.0 test
+> jest
+No unit tests found
