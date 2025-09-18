@@ -7,7 +7,7 @@ const QuantumComputingApplications2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -25,19 +25,21 @@ const QuantumComputingApplications2026: React.FC = () => {
               </button>
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold">
                 View Quantum Demo
-          </divdiv>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       {/* Quantum Advantage Section */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white mb-6">⚡ Quantum Advantage</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Quantum computers offer exponential speedup for specific problem classes that would take classical computers millennia to solve
           </p>
-        </divdiv>
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             <div className="text-6xl mb-6 text-center">🔬</div>
