@@ -1,0 +1,210 @@
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  ArrowRight
+  Star
+  Users
+  TrendingUp
+  Zap,
+  Cpu,
+  Target,
+  Globe,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Award,
+  X,
+  Sparkles,
+  Rocket,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search
+} from 'lucide-react';
+
+const AIInnovationHub2026PromotionBanner: React.FC = () => {
+  return (
+    <div>
+      <div
+        className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400/20 rounded-full blur-xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-pink-400/20 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-400/10 rounded-full blur-2xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div
+              className="text-white"
+            >
+              <div className="flex items-center mb-6">
+                <Brain className="h-8 w-8 text-yellow-400 mr-3" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-yellow-400">
+                  Revolutionary AI Innovations
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                AI Innovation Hub
+                <span className="block text-yellow-400">2026 Edition</span>
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+                Explore the most groundbreaking AI innovationsbreakthrough technologiesand revolutionary 
+                developments that are reshaping the future of artificial intelligence.
+              </p>
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {stats.map((statindex) => {
+                  const Icon = stat.icon;
+                  return (
+                    <div
+                      key={stat.label}
+                      className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
+                    >
+                      <div className="flex items-center mb-2">
+                        <Icon className="h-5 w-5 text-yellow-400 mr-2" />
+                        <span className="text-sm text-gray-300">{stat.label}</span>
+                      </div>
+                      <div className="text-2xl font-bold text-white">{stat.value}</div>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-yellow-300 transition-colors"
+                >
+                  Explore Innovations
+                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button
+                  className="bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center group hover:bg-white/30 transition-colors border border-white/30"
+                >
+                  <Play className="h-5 w-5 mr-2" />
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content - Interactive Innovation Showcase */}
+            <div
+              className="relative"
+            >
+              {/* Innovation Categories */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                  Innovation Categories
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {categories.map((categoryindex) => {
+                    const Icon = category.icon;
+                    return (
+                      <div
+                        key={category.name}
+                        className="bg-white/5 rounded-xl p-4 text-center hover:bg-white/10 transition-colors cursor-pointer group"
+                      >
+                        <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                        <div className="text-white font-semibold">{category.name}</div>
+                        <div className="text-gray-300 text-sm">{category.count} innovations</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* Rotating Innovation Highlight */}
+              <div className="relative h-40 bg-gradient-to-r from-yellow-400/20 to-pink-400/20 rounded-xl overflow-hidden">
+                  <div
+                    key={currentInnovation}
+                    className="absolute inset-0 flex items-center justify-center p-6"
+                  >
+                    <div className="text-center">
+                      <div className="flex items-center justify-center mb-2">
+                        {React.createElement(innovations[currentInnovation].icon{
+                          className: "h-6 w-6 text-yellow-400 mr-2"
+                        })}
+                        <span className="text-white font-bold text-lg">
+                          {innovations[currentInnovation].title}
+                        </span>
+                      </div>
+                      <p className="text-gray-200 text-sm mb-1">
+                        {innovations[currentInnovation].description}
+                      </p>
+                      <p className="text-yellow-400 font-semibold text-sm">
+                        Impact: {innovations[currentInnovation].impact}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Innovation Indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {innovations.map((_index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentInnovation(index)}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentInnovation ? 'bg-yellow-400' : 'bg-white/30'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+              {/* Floating Innovation Icons */}
+              <div
+                  y: [0-10],
+                  rotate: [050]
+                }}
+                className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
+              >
+                <Brain className="h-6 w-6" />
+              </div>
+              
+              <div
+                  y: [010],
+                  rotate: [0-50]
+                }}
+                className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
+              >
+                <Atom className="h-6 w-6" />
+              </div>
+
+              <div
+                  y: [0-150],
+                  x: [050]
+                }}
+                className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
+              >
+                <Network className="h-5 w-5" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
+        >
+          <X className="h-5 w-5" />
+        </button>
+        {/* Bottom Gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
+      </div>
+    </div>
+  );
+
+
+
+export default AIInnovationHub2026PromotionBanner;

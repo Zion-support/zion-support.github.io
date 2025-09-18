@@ -1,0 +1,19 @@
+import type { NextPage } from 'next';
+
+const [id]: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>[id] - Zion Tech Solutions</title>
+        <meta name="description" content="[id] blog post" />
+      </Head>
+      
+      <main>
+        <h1>[id]</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+

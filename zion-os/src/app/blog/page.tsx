@@ -1,0 +1,41 @@
+import Link from 'next/link'
+import React from 'react'
+import { getRecentPosts } from '../../data/blog'
+
+}
+
+export default function BlogIndexPage() {
+  const posts = getRecentPosts()
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <h1 className="text-4xl md:text-5xl font-bold mb-8">Blog</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {posts.map((post) => (
+          <Link
+            key={post.id}
+            href={`/blog/${post.id}`}
+            className="block w-full bg-white rounded-xl border border-gray-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label={`Read: ${post.title}`}
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                {post.title.split(' ').slice(0, 2).map((w) => w[0]).join('')}
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">{post.category}</span>
+                  <span className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</span>
+                  <span className="text-xs text-gray-500">• {post.readTime}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">{post.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">{post.excerpt}</p>
+              </div>
+              <div className="text-blue-600 font-medium whitespace-nowrap">Read →</div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}
