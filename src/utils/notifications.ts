@@ -1,14 +1,11 @@
-/**
- * Notification utility for handling browser notifications
- * with fallbacks and error handling
- */
-export interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
-  data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -21,47 +18,50 @@ interface NotificationAction {
   icon?: string;
 }
 
-export const notifications = {
-  /**
-   * Check if notifications are supported
-   */
-  isSupported: (): boolean => {
-    return typeof window !== 'undefined' && 'Notification' in window;
-  },
+class NotificationManager {
+  private permission: NotificationPermission = 'default';
 
-  /**
-   * Check if notifications are permitted
-   */
-  getPermission: (): NotificationPermission => {
-    if (!notifications.isSupported()) return 'denied';
-    return Notification.permission;
-  },
+  constructor() {
+    this.checkPermission();
+  }
 
-  /**
-   * Request notification permission
-   */
-  requestPermission: async (): Promise<NotificationPermission> => {
-    if (!notifications.isSupported()) return 'denied';
-    try {
-      const permission = await Notification.requestPermission();
-      return permission;
-    } catch (error) {
-      console.warn('Failed to request notification permission:', error);
-      return 'denied';
+  private async checkPermission(): Promise<void> {
+    if ('Notification' in window) {
+      this.permission = Notification.permission;
     }
-  },
+  }
 
-  /**
-   * Show a notification
-   */
-  show: (options: NotificationOptions): Notification | null => {
-    if (!notifications.isSupported()) {
-      console.warn('Notifications not supported');
+  async requestPermission(): Promise<boolean> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
+      return false;
+    }
+
+    if (this.permission === 'granted') {
+      return true;
+    }
+
+    if (this.permission === 'denied') {
+      console.warn('Notification permission denied');
+      return false;
+    }
+
+    const permission = await Notification.requestPermission();
+    this.permission = permission;
+    return permission === 'granted';
+  }
+
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
       return null;
     }
-    if (Notification.permission !== 'granted') {
-      console.warn('Notification permission not granted');
-      return null;
+
+    if (this.permission !== 'granted') {
+      const granted = await this.requestPermission();
+      if (!granted) {
+        return null;
+      }
     }
 
     try {
@@ -70,11 +70,10 @@ export const notifications = {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
-        data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
-        actions: options.actions || []
+        actions: options.actions
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -89,56 +88,55 @@ export const notifications = {
       console.error('Error showing notification:', error);
       return null;
     }
-  },
-
-  /**
-   * Show a success notification
-   */
-  success: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/success.png',
-      tag: 'success'
-    });
-  },
-
-  /**
-   * Show an error notification
-   */
-  error: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/error.png',
-      tag: 'error',
-      requireInteraction: true
-    });
-  },
-
-  /**
-   * Show an info notification
-   */
-  info: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/info.png',
-      tag: 'info'
-    });
-  },
-
-  /**
-   * Show a warning notification
-   */
-  warning: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/warning.png',
-      tag: 'warning'
-    });
   }
-};
 
-export default notifications;
+  showToast(message: string, type: 'success' | 'error' | 'info' | 'warning' = 'info'): void {
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = `fixed top-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg transition-all duration-300 transform translate-x-full`;
+    
+    // Set colors based on type
+    const colors = {
+      success: 'bg-green-500 text-white',
+      error: 'bg-red-500 text-white',
+      info: 'bg-blue-500 text-white',
+      warning: 'bg-yellow-500 text-black'
+    };
+    
+    toast.className += ` ${colors[type]}`;
+    toast.textContent = message;
+    
+    // Add to DOM
+    document.body.appendChild(toast);
+    
+    // Animate in
+    setTimeout(() => {
+      toast.classList.remove('translate-x-full');
+    }, 100);
+    
+    // Auto-remove after 3 seconds
+    setTimeout(() => {
+      toast.classList.add('translate-x-full');
+      setTimeout(() => {
+        if (toast.parentNode) {
+          toast.parentNode.removeChild(toast);
+        }
+      }, 300);
+    }, 3000);
+  }
+}
+
+// Export singleton instance
+export const notificationManager = new NotificationManager();
+
+// Export convenience functions
+export const showNotification = (options: NotificationOptions) => 
+  notificationManager.showNotification(options);
+
+export const showToast = (message: string, type?: 'success' | 'error' | 'info' | 'warning') => 
+  notificationManager.showToast(message, type);
+
+export const requestNotificationPermission = () => 
+  notificationManager.requestPermission();
+
+export default notificationManager;
