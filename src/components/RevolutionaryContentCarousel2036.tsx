@@ -43,13 +43,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       image: "🌐",
       gradient: "from-indigo-600 to-blue-600",
       link: "/pages/UniversalConsciousnessNetwork2040"
-<<<<<<< HEAD
-    }
-  ];
-
-=======
-    };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -122,11 +115,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Navigation Dots */}
-=======
-          {/* Navigation Dots */};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
               <button
@@ -136,20 +124,10 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                   index === currentSlide 
                     ? 'bg-purple-500 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
-<<<<<<< HEAD
-                }`}
-=======
-                }`};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
               />
             ))};
           </div>
 
-<<<<<<< HEAD
-          {/* Navigation Arrows */}
-=======
-          {/* Navigation Arrows */};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"

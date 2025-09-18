@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowRight, Star, Zap, Shield, Users, Globe } from 'lucide-react';
-import AnimatedBackground from '../ui/AnimatedBackground';
-import { Button } from '../ui/Button';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const FuturisticHero: React.FC = () => {
   return (

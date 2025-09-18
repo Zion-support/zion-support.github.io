@@ -37,50 +37,6 @@ const InteractiveTechShowcase = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
-        <p className="text-lg text-gray-600">Explore our cutting-edge technologies</p>
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="flex justify-center mb-8">
-        <div className="bg-gray-100 rounded-lg p-1">
-          {techCategories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-md transition-all duration-300 ${
-                activeTab === index
-                  ? 'bg-white shadow-md text-blue-600'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.title}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Tab Content */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {techCategories[activeTab].technologies.map((tech, index) => (
-          <div
-            key={index}
-            className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-md transition-shadow"
-          >
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
-            <p className="text-gray-600">{tech.description}</p>
-          </div>
-        ))}
-      </div>
-=======
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-semibold mb-4">Interactive Tech Showcase</h3>
-      <p className="text-gray-600">Interactive technology showcase coming soon...</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };

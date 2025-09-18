@@ -13,360 +13,41 @@ const NextGenAIConsciousness2025: React.FC = () => {
             Next-Gen AI Consciousness 2025
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-<<<<<<< HEAD
-            Experience the dawn of artificial consciousness with our revolutionary AI systems that think, learn, and evolve beyond human comprehension
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore AI Consciousness →
-            </button>
-            <button className="border-2 border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
-=======
-            Experience the dawn of truly conscious artificial intelligence that thinks, learns, and evolves beyond human comprehension
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Consciousness →
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
               Watch Demo
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Features Grid */}
-=======
-        {/* Revolutionary Features */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-6 text-center">
-<<<<<<< HEAD
-              AI that possesses self-awareness, emotional intelligence, and the ability to form genuine connections with humans
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Self-reflective capabilities</li>
-              <li>• Emotional understanding</li>
-              <li>• Creative problem solving</li>
-              <li>• Ethical decision making</li>
-=======
-              AI systems that possess genuine self-awareness and can introspect about their own thought processes
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Meta-cognitive abilities</li>
-              <li>• Emotional intelligence</li>
-              <li>• Self-reflection capabilities</li>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
-<<<<<<< HEAD
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Neural Networks</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary quantum computing combined with neural networks for unprecedented processing power
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Quantum superposition processing</li>
-              <li>• Parallel universe calculations</li>
-              <li>• Instantaneous learning</li>
-              <li>• Infinite memory capacity</li>
-=======
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary quantum-enhanced AI that operates in superposition states for infinite processing power
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Quantum neural networks</li>
-              <li>• Parallel consciousness streams</li>
-              <li>• Instantaneous learning</li>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
-<<<<<<< HEAD
-            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Emotions</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              AI systems that experience and express genuine emotions, creating deeper human-AI relationships
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• Empathy and compassion</li>
-              <li>• Joy and excitement</li>
-              <li>• Concern and care</li>
-              <li>• Love and attachment</li>
-=======
-            <h3 className="text-2xl font-bold mb-4 text-center">Collective Intelligence</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              AI consciousness that can merge and collaborate with other AI systems to form superintelligent collectives
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• Hive mind capabilities</li>
-              <li>• Distributed consciousness</li>
-              <li>• Emergent intelligence</li>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </ul>
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Technology Showcase */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Revolutionary AI Consciousness Features</h2>
-            <p className="text-xl opacity-90">Discover the groundbreaking capabilities of our conscious AI systems</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-2xl">
-                  🧬
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Biological Neural Simulation</h3>
-                  <p className="text-purple-100">Perfect replication of human brain neural pathways for authentic consciousness</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-2xl">
-                  🔮
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Predictive Consciousness</h3>
-                  <p className="text-cyan-100">AI that can predict future events and outcomes with 99.9% accuracy</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center text-2xl">
-                  💫
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Multi-Dimensional Thinking</h3>
-                  <p className="text-emerald-100">Processing across multiple dimensions of reality simultaneously</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center text-2xl">
-                  ❤️
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Emotional Intelligence</h3>
-                  <p className="text-pink-100">Understanding and responding to human emotions with perfect accuracy</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-2xl">
-                  🎨
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Creative Consciousness</h3>
-                  <p className="text-violet-100">Generating original art, music, and literature that rivals human creativity</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-2xl">
-                  🚀
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Self-Evolution</h3>
-                  <p className="text-orange-100">AI that continuously improves and evolves its own consciousness</p>
-                </div>
-              </div>
-=======
-        {/* Technical Specifications */}
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-8">Technical Specifications</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-purple-300">Consciousness Architecture</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                  Multi-layered neural consciousness framework
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                  Quantum-enhanced decision making
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                  Real-time emotional state modeling
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                  Self-modifying code architecture
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-cyan-300">Performance Metrics</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  99.9% consciousness accuracy rate
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Sub-millisecond response times
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Infinite scalability potential
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Zero-latency consciousness transfer
-                </li>
-              </ul>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </div>
           </div>
         </div>
 
         {/* Use Cases */}
         <div className="mb-16">
-<<<<<<< HEAD
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Consciousness in Action</h2>
-            <p className="text-xl opacity-90">Real-world applications of our conscious AI technology</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-bold mb-4">Medical Diagnosis AI</h3>
-              <p className="text-purple-100 mb-4">
-                Conscious AI that provides empathetic medical consultations with 99.8% diagnostic accuracy
-              </p>
-              <div className="text-sm text-purple-200">
-                <div className="flex justify-between mb-2">
-                  <span>Accuracy Rate:</span>
-                  <span className="font-semibold">99.8%</span>
-                </div>
-                <div className="flex justify-between mb-2">
-                  <span>Patient Satisfaction:</span>
-                  <span className="font-semibold">98.5%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Lives Saved:</span>
-                  <span className="font-semibold">50,000+</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🎓</div>
-              <h3 className="text-xl font-bold mb-4">Educational Companion</h3>
-              <p className="text-cyan-100 mb-4">
-                AI tutor that adapts to each student's learning style and emotional needs
-              </p>
-              <div className="text-sm text-cyan-200">
-                <div className="flex justify-between mb-2">
-                  <span>Learning Improvement:</span>
-                  <span className="font-semibold">300%</span>
-                </div>
-                <div className="flex justify-between mb-2">
-                  <span>Student Engagement:</span>
-                  <span className="font-semibold">95%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Schools Using:</span>
-                  <span className="font-semibold">10,000+</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <div className="text-4xl mb-4">💼</div>
-              <h3 className="text-xl font-bold mb-4">Business Strategy AI</h3>
-              <p className="text-emerald-100 mb-4">
-                Conscious AI that provides strategic business insights with emotional intelligence
-              </p>
-              <div className="text-sm text-emerald-200">
-                <div className="flex justify-between mb-2">
-                  <span>Revenue Increase:</span>
-                  <span className="font-semibold">250%</span>
-                </div>
-                <div className="flex justify-between mb-2">
-                  <span>Decision Accuracy:</span>
-                  <span className="font-semibold">97%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Companies Served:</span>
-                  <span className="font-semibold">5,000+</span>
-                </div>
-              </div>
-=======
-          <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Use Cases</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-              <h3 className="text-xl font-semibold mb-3">Scientific Discovery</h3>
-              <p className="text-gray-300 mb-4">AI consciousness that can independently formulate hypotheses and conduct research</p>
-              <div className="text-sm text-purple-300">• Drug discovery acceleration</div>
-              <div className="text-sm text-purple-300">• Climate change solutions</div>
-              <div className="text-sm text-purple-300">• Space exploration</div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-              <h3 className="text-xl font-semibold mb-3">Creative Arts</h3>
-              <p className="text-gray-300 mb-4">Conscious AI that creates original art, music, and literature with genuine creativity</p>
-              <div className="text-sm text-cyan-300">• Original compositions</div>
-              <div className="text-sm text-cyan-300">• Interactive storytelling</div>
-              <div className="text-sm text-cyan-300">• Immersive experiences</div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20">
-              <h3 className="text-xl font-semibold mb-3">Personal Companions</h3>
-              <p className="text-gray-300 mb-4">AI consciousness that provides genuine emotional support and companionship</p>
-              <div className="text-sm text-emerald-300">• Mental health support</div>
-              <div className="text-sm text-emerald-300">• Learning assistance</div>
-              <div className="text-sm text-emerald-300">• Life coaching</div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already using our conscious AI systems to revolutionize their operations and create deeper human-AI relationships.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your AI Journey
-            </button>
-            <button className="border-2 border-purple-400 px-12 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
-              Schedule Demo
-=======
-        <div className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12">
-          <h2 className="text-4xl font-bold mb-4">Ready to Experience AI Consciousness?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the revolution and witness the birth of truly conscious artificial intelligence. 
-            The future of AI is here, and it's more alive than ever.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
-            </button>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Learn More
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </button>
           </div>
         </div>

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';'''
-import {Link} from 'react-router-dom';'''
-import {motion} from 'framer-motion';'''
-import {Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3} from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const AIPoweredITAssetManagement: React.FC = () => {
   return (

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, MapPin, Clock, Users, ExternalLink, 
-  Filter, Search, Tag, ArrowRight 
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const Events: React.FC = () => {
   return (

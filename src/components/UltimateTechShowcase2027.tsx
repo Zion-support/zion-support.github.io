@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 const UltimateTechShowcase2027: React.FC = () => {
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
@@ -129,13 +124,6 @@ const UltimateTechShowcase2027: React.FC = () => {
                 </motion.div>
               </div>
             </div>
-<<<<<<< HEAD
-          </motion.div>
-        </AnimatePresence>
-
-=======
-          </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

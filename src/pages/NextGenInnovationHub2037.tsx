@@ -2,26 +2,10 @@ import React from 'react';
 
 const NextGenInnovationHub2037: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Header Section */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 INNOVATION HUB • JANUARY 2037
           </div>
-<<<<<<< HEAD
-          <h1 className="text-6xl font-bold mb-6">🚀 Next-Gen Innovation Hub 2037</h1>
-=======
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Next-Gen Innovation Hub 2037
-          </h1>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
@@ -178,46 +162,6 @@ const NextGenInnovationHub2037: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-            <div className="text-gray-300">Research Teams</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
-            <div className="text-gray-300">Innovation Lab</div>
-=======
-        </div>
-
-        {/* Innovation Labs */}
-        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">🔬 Innovation Labs</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 rounded-xl p-6 text-center">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-3">AI Consciousness Lab</h3>
-              <p className="text-sm opacity-80 mb-4">Research and develop conscious AI systems</p>
-              <button className="bg-white text-emerald-600 py-2 px-4 rounded-lg hover:bg-emerald-50 transition-colors text-sm">
-                Enter Lab →
-              </button>
-            </div>
-            <div className="bg-white/10 rounded-xl p-6 text-center">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-3">Quantum Computing Lab</h3>
-              <p className="text-sm opacity-80 mb-4">Develop quantum computing breakthroughs</p>
-              <button className="bg-white text-emerald-600 py-2 px-4 rounded-lg hover:bg-emerald-50 transition-colors text-sm">
-                Enter Lab →
-              </button>
-            </div>
-            <div className="bg-white/10 rounded-xl p-6 text-center">
-              <div className="text-4xl mb-4">🌌</div>
-              <h3 className="text-xl font-bold mb-3">Interdimensional Lab</h3>
-              <p className="text-sm opacity-80 mb-4">Explore parallel dimensions and realities</p>
-              <button className="bg-white text-emerald-600 py-2 px-4 rounded-lg hover:bg-emerald-50 transition-colors text-sm">
-                Enter Lab →
-              </button>
-            </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           </div>
         </div>
 
@@ -231,13 +175,6 @@ const NextGenInnovationHub2037: React.FC = () => {
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Innovating
             </button>
-<<<<<<< HEAD
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
-              View All Projects
-=======
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
-              Learn More
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </button>
           </div>
         </div>

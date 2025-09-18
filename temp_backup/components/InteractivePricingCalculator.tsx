@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Calculator, Check, X, Info, TrendingUp, Zap, Shield, Brain } from 'lucide-react';
-
-interface PricingTier {
-  id: string;
-  name: string;
-  basePrice: number;
-  description: string;
-  features: string[];
-  icon: React.ReactNode;
-  color: string;
-  popular?: boolean;
-}
-
-interface PricingOptions {
-  users: number;
-  storage: number;
-  support: 'basic' | 'priority' | 'enterprise';
-  customization: boolean;
-  integration: boolean;
-  training: boolean;
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const InteractivePricingCalculator: React.FC = () => {
   return (

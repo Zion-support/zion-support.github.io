@@ -36,15 +36,6 @@ export default function TranslationManager({ }: TranslationManagerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/backup-main-20250918-004015
 
 
 }

@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Shield, 
-  AlertTriangle, 
-  CheckCircle, 
-  X
-} from 'lucide-react';
-
-interface SecurityStatus {
-  csp: boolean;
-  hsts: boolean;
-  xss: boolean;
-  frameOptions: boolean;
-  contentType: boolean;
-  referrerPolicy: boolean;
-}
-
-interface SecurityThreat {
-  type: 'high' | 'medium' | 'low';
-  description: string;
-  recommendation: string;
-  timestamp: Date;
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const SecurityEnhancer: React.FC = () => {
   return (

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, Rocket, Shield, Atom, Cpu, Cloud, Target,
-  ArrowRight, Play, Star, Zap, Users, Award, Globe,
-  ChevronDown, Sparkles, Eye, Lock, Clock, CheckCircle,
-  Phone, Mail, X
-} from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltraAdvancedFuturisticHero2025: React.FC = () => {
   return (

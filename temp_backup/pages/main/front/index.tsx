@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
-import { motion, useScroll, useSpring } from 'framer-motion';
-import { useEffect, useState } from 'react';
-
-export default function MainFrontIndex() {
-  const { scrollYProgress } = useScroll();
-  const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 });
-  const [showToTop, setShowToTop] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setShowToTop(window.scrollY > 400);
-    window.addEventListener('scroll', onScroll, { passive: true } as any);
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const index: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

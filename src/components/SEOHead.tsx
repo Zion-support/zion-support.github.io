@@ -16,54 +16,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   ogImage = "/og-image.jpg"
 }) => {
-<<<<<<< HEAD
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of revolutionary technology solutions including quantum consciousness, interdimensional technology, and advanced AI systems.",
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-ZION-TECH",
-      "contactType": "customer service",
-      "availableLanguage": "English"
-    },
-    "offers": {
-      "@type": "Offer",
-      "description": "Revolutionary technology solutions and consulting services",
-      "category": "Technology Services"
-    }
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-=======
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ]
-  };
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -90,27 +42,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-<<<<<<< HEAD
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional Structured Data for Technology Services */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
-          ]
-        })}
-=======
-        {JSON.stringify(structuredData)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       </script>
     </Helmet>
   );

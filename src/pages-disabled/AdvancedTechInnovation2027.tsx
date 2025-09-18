@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:src/pages/AdvancedTechInnovation2027.tsx
-import { Helmet } from 'react-helmet-async';
-=======
-import { Helmet }  from 'react-helmet-async';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:src/pages-disabled/AdvancedTechInnovation2027.tsx
 
 const AdvancedTechInnovation2027: React.FC = () => {
   return (

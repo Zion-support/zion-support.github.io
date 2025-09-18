@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Zap, Brain, Rocket, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
-import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard';
-import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const RevolutionaryServices: React.FC = () => {
   return (

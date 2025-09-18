@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
-import { Link }  from 'react-router-dom';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltimateContentBanner2032: React.FC = () => {
   return (

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
-  ChevronUp, ExternalLink, Download, Calendar, Users, Award
-} from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltraFuturisticFooter2044: React.FC = () => {
   return (

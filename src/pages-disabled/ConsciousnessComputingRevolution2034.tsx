@@ -359,13 +359,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD:src/pages/ConsciousnessComputingRevolution2034.tsx
-            </div>
-          </div>
-        </div>
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:src/pages-disabled/ConsciousnessComputingRevolution2034.tsx
         {/* Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -437,11 +430,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Multidimensional existence</li>
                 <li>• Universal creation abilities</li>
               </ul>
-<<<<<<< HEAD:src/pages/ConsciousnessComputingRevolution2034.tsx
-=======
-            </motion.div>
-            </motion.div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:src/pages-disabled/ConsciousnessComputingRevolution2034.tsx
             </motion.div>
           </div>
         </div>

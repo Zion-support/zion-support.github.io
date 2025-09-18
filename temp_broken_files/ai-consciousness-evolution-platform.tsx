@@ -1,9 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD:temp_conflicts/pages/ai-consciousness-evolution-platform.tsx
-import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_broken_files/ai-consciousness-evolution-platform.tsx
 import { 
   Brain, 
   Sparkles, 
@@ -356,12 +352,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 export default AIConsciousnessEvolutionPlatform;
 import Head from 'next/head';
-<<<<<<< HEAD:temp_conflicts/pages/ai-consciousness-evolution-platform.tsx
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-=======
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_broken_files/ai-consciousness-evolution-platform.tsx
 import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,

@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-ArrowRightPlayStarUsersAwardZap
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const HeroSection: React.FC = () => {
   return (

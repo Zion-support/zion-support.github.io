@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
-import { 
-  MenuXHomeBrainCpuRocket
-  PhoneMailMapPinGlobeChevronDown,
-  BookOpenFileTextTrendingUpUsers
-} from 'lucide-react';
-import Link from 'next/link';
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const Navigation: React.FC = () => {
   return (

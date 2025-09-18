@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export default function Page() {
-=======
-
-const page: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">page</h3>

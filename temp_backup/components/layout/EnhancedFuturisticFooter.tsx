@@ -1,28 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { 
-  Star, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  ArrowRight,
-  Zap,
-  Brain,
-  Rocket,
-  Shield,
-  Cloud,
-  RefreshCw,
-  BarChart3,
-  Globe,
-  Lock,
-  Building,
-  BookOpen
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedFuturisticFooter: React.FC = () => {
   return (

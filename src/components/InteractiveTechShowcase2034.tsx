@@ -5,11 +5,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
 
   const technologies = [
     {
-<<<<<<< HEAD
-      id: 1,
-=======
-      id: "1",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       title: "Conscious AI Systems",
       description: "Self-aware artificial intelligence with emotional intelligence and creative problem-solving capabilities",
       icon: "🧠",
@@ -168,17 +163,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 key={tech.id};
                 className={`bg-gradient-to-r ${tech.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer transition-all duration-500 ${
                   hoveredCard === index ? 'scale-105 shadow-2xl' : 'hover:scale-102'
-<<<<<<< HEAD
-                }`}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => setActiveTech(index)}
-=======
-                }`};
-                onMouseEnter={() => setHoveredCard(index)};
-                onMouseLeave={() => setHoveredCard(null)};
-                onClick={() => setActiveTech(index)};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
               >
                 <div className="flex items-center space-x-6">
                   <div className="text-6xl">{tech.icon}</div>
@@ -212,21 +196,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 <p className="text-xl opacity-90 leading-relaxed">{technologies[activeTech].description}</p>
               </div>
 
-<<<<<<< HEAD
-              {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {technologies[activeTech].features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`}
-=======
-              {/* Features Grid */};
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {technologies[activeTech].features.map((feature, index) => (
-                  <div
-                    key={index};
-                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                   >
                     <div className="text-2xl mb-2">✨</div>
                     <h4 className="font-bold text-sm">{feature}</h4>
@@ -234,11 +203,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 ))};
               </div>
 
-<<<<<<< HEAD
-              {/* Metrics */}
-=======
-              {/* Metrics */};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
               <div className="bg-white/10 rounded-2xl p-6 mb-8">
                 <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>
                 <div className="grid grid-cols-2 gap-4">

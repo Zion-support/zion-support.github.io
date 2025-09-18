@@ -1,23 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const NextGenInnovationHub2042: React.FC = () => {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Innovations', icon: '🌟' },
-    { id: 'ai', name: 'AI & Consciousness', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', name: 'Neural Interfaces', icon: '🧬' },
-    { id: 'space', name: 'Space Technology', icon: '🚀' },
-    { id: 'bio', name: 'Biotechnology', icon: '🌱' },
-    { id: 'energy', name: 'Energy Systems', icon: '⚡' },
-    { id: 'matter', name: 'Matter Manipulation', icon: '🔬' }
-  ];
-=======
-  const [activeInnovation, setActiveInnovation] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
   const innovations = [
     {

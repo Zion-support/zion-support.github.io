@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react';
-import { cuttingEdgeInnovationServices } from '../../data/2026-cutting-edge-innovations';
-import { enterpriseSolutions2026 } from '../../data/2026-enterprise-solutions';
-import { specializedSolutions2026 } from '../../data/2026-specialized-solutions';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedHero2026: React.FC = () => {
   return (

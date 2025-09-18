@@ -27,8 +27,3 @@ export default function ContactPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

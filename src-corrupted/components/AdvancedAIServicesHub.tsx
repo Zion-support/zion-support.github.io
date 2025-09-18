@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-    ArrowRight,
-    Brain,
-    CheckCircle,
-    Cpu,
-    Database,
-    Globe,
-    Rocket,
-    Shield,
-    TrendingUp,
-    Users
-} from 'lucide-react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-interface AIService {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  features: string[];
-  pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-  };
-  icon: React.ComponentType<any>;
-  route: string;
-  status: 'active' | 'beta' | 'coming-soon';
-}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const AdvancedAIServicesHub: React.FC = () => {
   return (

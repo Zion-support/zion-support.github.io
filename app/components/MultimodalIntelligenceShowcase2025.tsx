@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Eye, 
-  Headphones, 
-  Camera, 
-  FileText, 
-  Activity, 
-  Zap, 
-  TrendingUp, 
-  Target,
-  ChevronRight,
-  Star,
-  Award,
-  Users,
-  Clock
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const MultimodalIntelligenceShowcase2025: React.FC = () => {
   return (

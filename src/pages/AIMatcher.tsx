@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-=======
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 export default function AIMatcher() {
   return (

@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  Mail, Phone, MapPin, 
-  Linkedin, Twitter, Github, 
-  Youtube, Facebook, Instagram,
-  ArrowUpRight
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const Footer: React.FC = () => {
   return (

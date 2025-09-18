@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Layout from './layout/Layout';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
-  Users, Building, Rocket, CheckCircle, Phone, Mail
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const Homepage2026: React.FC = () => {
   return (

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import Layout from '../components/Layout';
-import ContentShowcaseBanner2026 from '../src/components/ContentShowcaseBanner2026';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Layout from './components/Layout';
@@ -123,12 +115,4 @@ const Home = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Home;
-=======
-<<<<<<< HEAD
-export default Home;
-=======
-export default Home;
->>>>>>> origin/backup-main-20250918-004015
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

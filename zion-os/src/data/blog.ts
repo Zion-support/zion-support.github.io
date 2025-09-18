@@ -94,45 +94,6 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     content: 'This guide covers audits across data, models, policies, and operations...'
   }
-<<<<<<< HEAD
-=======
-  ,
-  {
-    id: 'agentic-supply-chains-2025',
-    title: 'Agentic Supply Chains 2025: Self‑Orchestrating Logistics with SLAs',
-    excerpt: 'Design patterns for autonomous procurement, routing, and fulfillment with measurable reliability and cost.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-16',
-    readTime: '7 min read',
-    image: '/blog/agentic-supply-chains.jpg',
-    featured: true,
-    content: 'Agentic supply chains coordinate demand sensing, procurement, and last‑mile orchestration through policy‑as‑code and eval gates to hit on‑time SLAs while lowering cost.'
-  },
-  {
-    id: 'agent-safety-red-teaming-2025',
-    title: 'Agent Safety Red Teaming 2025: Scenarios, Signals, and Remediations',
-    excerpt: 'A practical playbook for probing agentic systems, collecting failure signals, and hardening with automated guardrails.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-16',
-    readTime: '10 min read',
-    image: '/blog/agent-safety-red-teaming.jpg',
-    featured: true,
-    content: 'Red teaming exercises surface unsafe tool use, looping, and data exfiltration risks. We provide scenarios, evaluation rubrics, and remediation workflows integrated into CI/CD.'
-  },
-  {
-    id: 'edge-ai-compliance-2025',
-    title: 'Edge AI Compliance 2025: Local Policy, Global Audit',
-    excerpt: 'Blueprint for compliant edge inference with local policy checks, signed telemetry, and centralized audit trails.',
-    category: 'Cybersecurity',
-    author: 'Sarah Chen',
-    date: '2025-09-16',
-    readTime: '8 min read',
-    image: '/blog/edge-ai-compliance.jpg',
-    content: 'Enterprises can enforce policy at the edge with signed adapters and privacy preserving telemetry, while preserving centralized oversight for audit and incident response.'
-  }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 ];
 
 export function getFeaturedPosts(): BlogPost[] {

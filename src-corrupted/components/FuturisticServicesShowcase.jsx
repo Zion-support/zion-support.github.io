@@ -1,22 +1,2 @@
-<<<<<<< HEAD
-import React, {useState, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
-const ServiceCard = (props: any) => {
-    const [isHovered, setIsHovered] = useState(false);
-    return (<motion.div initial = {
-  { opacity: 0, y: 50,
-  scale: 0.9 
-=======
-
-const FuturisticServicesShowcase: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">FuturisticServicesShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 export default FuturisticServicesShowcase;

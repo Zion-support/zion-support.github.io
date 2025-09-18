@@ -331,16 +331,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                     <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse delay-1000"></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white/40 rounded-full animate-pulse delay-500"></div>
-<<<<<<< HEAD
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -479,18 +469,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
             >
               <div className="relative">
                 {/* Main Icon */}
-<<<<<<< HEAD
-                <motion.div
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}
-                >
-                  <currentContent.icon className="w-16 h-16 text-white" />
-                </motion.div>
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 {/* Floating Elements */}
                 <div className="absolute inset-0">
                   {stats.map((stat, index) => (
@@ -637,12 +615,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
             </div>
           </div>
-<<<<<<< HEAD
-        </motion.div>
-      </AnimatePresence>
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
@@ -686,85 +658,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
-<<<<<<< HEAD
-=======
-            className={`p-4 rounded-xl text-left transition-all duration-300 ${
-              index === currentSlide
-                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
-                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
-            }`}
-          >
-            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
-              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
-            }`}>
-              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
-            </div>
-            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
-            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
-        ))}
-      </div>
-      {/* Dots Navigation */}
-      <div className="flex justify-center space-x-3 mt-8">
-        {revolutionaryContent.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-      {/* Content Preview Grid */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {revolutionaryContent.map((content, index) => (
-          <motion.button
-            key={content.id}
-            onClick={() => goToSlide(index)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`p-4 rounded-xl text-left transition-all duration-300 ${
-              index === currentSlide
-                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
-                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
-            }`}
-          >
-            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
-              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
-            }`}>
-              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
-            </div>
-            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
-            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
-        ))}
-      </div>
-            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
-            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </divbutton>
-        ))}
-      </div>
-      {/* Dots Navigation */}
-      <div className="flex justify-center space-x-3 mt-8">
-        {revolutionaryContent.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-      {/* Content Preview Grid */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {revolutionaryContent.map((content, index) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <motion.button
             key={content.id}
             onClick={() => goToSlide(index)}

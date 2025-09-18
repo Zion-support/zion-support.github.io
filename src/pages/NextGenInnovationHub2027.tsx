@@ -224,11 +224,6 @@ const NextGenInnovationHub2027: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Success Metrics */}
-=======
-        {/* Success Metrics */};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Innovation Hub Success Metrics</h2>

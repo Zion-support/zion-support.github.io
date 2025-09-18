@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion';
-import { 
-  Smartphone, Tablet, Monitor, Wifi, Battery,
-  Hand, Settings
-} from 'lucide-react';
-
-
-
-interface DeviceInfo {
-  type: 'mobile' | 'tablet' | 'desktop';
-  orientation: 'portrait' | 'landscape';
-  screenSize: { width: number; height: number };
-  touchSupport: boolean;
-  batteryLevel?: number;
-  connectionType?: string;
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedMobileExperience: React.FC = () => {
   return (

@@ -7,10 +7,3 @@ const NewContent2025UltimateBanner: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default NewContent2025UltimateBanner;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltraFuturisticBackground2029: React.FC = () => {
   return (

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Handshake, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Globe,
-  Shield
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const Partners: React.FC = () => {
   return (

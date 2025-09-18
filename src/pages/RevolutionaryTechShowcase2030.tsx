@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-=======
-import React, { useState, useEffect }  from 'react';
-import { motion }  from 'framer-motion';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const RevolutionaryTechShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -228,11 +221,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Testimonials */}
-=======
-      {/* Testimonials */};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">What Experts Say</h2>

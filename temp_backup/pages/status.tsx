@@ -1,33 +1,3 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  CheckCircle, AlertCircle, XCircle, Clock, 
-  Activity, Server, Database, Globe, Zap,
-  ArrowRight, RefreshCw, TrendingUp, TrendingDown,
-  Wifi, Shield, Cpu, HardDrive, Network, Monitor,
-  Brain, Rocket, Building
-} from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-
-const status: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>status | Zion Tech Group</title>
-        <meta name="description" content="status - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">status</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 export default status;

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, Zap, Brain, Eye, Mic, Video, TrendingUp, CheckCircle } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const MultimodalAI2025RevolutionBanner: React.FC = () => {
   return (

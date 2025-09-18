@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-
-interface Particle {
-  id: number;
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  color: string;
-  opacity: number;
-  life: number;
-}
-
-interface QuantumField {
-  id: number;
-  x: number;
-  y: number;
-  radius: number;
-  intensity: number;
-  color: string;
-  phase: number;
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltraAdvancedFuturisticBackground2045: React.FC = () => {
   return (

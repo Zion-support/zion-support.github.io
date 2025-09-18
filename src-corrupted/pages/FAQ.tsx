@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import { Helmet } from 'react-helmet-async';
 
 const FAQ: React.FC = () => {

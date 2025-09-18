@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Zap,
-  Brain,
-  Rocket,
-  Shield,
-  Cloud,
-  Bot,
-  RefreshCw,
-  BarChart3
-} from 'lucide-react';
-import Link from 'next/link';
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedFuturisticNavigation: React.FC = () => {
   return (

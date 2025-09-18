@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-export default function Page() {
-=======
-import React from 'react';
-
-export default function IncidentSimulationToolkitPage() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-4xl px-6 pt-24">

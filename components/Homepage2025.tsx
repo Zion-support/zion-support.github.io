@@ -17,13 +17,6 @@ import {
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
-<<<<<<< HEAD
-import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
-import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
-import InteractiveFeatures from './InteractiveFeatures';
-import ContentShowcase from './ContentShowcase';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -53,69 +46,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
-<<<<<<< HEAD
-    // Featured content (Sept 18, 2025)
-    {
-      title: 'AI-Powered Business Transformation Guide',
-      href: '/blog/ai-powered-business-transformation-2025',
-      tag: 'Featured',
-      gradient: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Quantum Computing Enterprise Applications',
-      href: '/blog/quantum-computing-enterprise-applications-2025',
-      tag: 'Quantum',
-      gradient: 'from-indigo-500 to-cyan-500'
-    },
-    {
-      title: 'AI Ops 2025: Autonomous Platforms',
-      href: '/blog/ai-ops-autonomous-platforms-2025',
-      tag: 'AI Ops',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    // Latest content (Sept 18, 2025)
-    {
-      title: 'Governed Real‑Time Observability (2026)',
-      href: '/blog/ai-2026-governed-real-time-observability',
-      tag: 'New',
-      gradient: 'from-teal-500 to-emerald-600'
-    },
-    {
-      title: 'Agent Release Scorecards — Evidence‑First (2026)',
-      href: '/blog/ai-2026-agent-release-scorecards',
-      tag: 'New',
-      gradient: 'from-amber-500 to-orange-600'
-    },
-    {
-      title: 'Production Agent Postmortems — Playbook (2026)',
-      href: '/blog/ai-2026-production-agent-postmortems-playbook',
-      tag: 'New',
-      gradient: 'from-fuchsia-500 to-pink-600'
-    },
-    {
-      title: 'Safe Tooling Permissions — Playbook (2026)',
-      href: '/blog/ai-2026-safe-tooling-permissions-playbook',
-      tag: 'New',
-      gradient: 'from-fuchsia-500 to-pink-600'
-    },
-    {
-      title: 'Reliable Real‑Time Agents (2026)',
-      href: '/blog/ai-2026-reliable-real-time-agents',
-      tag: 'New',
-      gradient: 'from-cyan-500 to-blue-600'
-    },
-    {
-      title: 'Zero‑Trust Agents (2026)',
-      href: '/blog/ai-2026-zero-trust-agents',
-      tag: 'New',
-      gradient: 'from-violet-500 to-indigo-500'
-    },
-    {
-      title: 'AI Ops 2025: Autonomous Platforms',
-      href: '/blog/ai-ops-autonomous-platforms-2025',
-      tag: 'AI Ops',
-      gradient: 'from-emerald-500 to-cyan-500'
->>>>>>> 06262d699328 (feat: add new content, interactive features, and homepage improvements)
     },
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

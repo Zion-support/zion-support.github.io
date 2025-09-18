@@ -53,7 +53,3 @@ const DynamicContentCarousel: React.FC = () => {
 };
 
 export default DynamicContentCarousel;
-<<<<<<< HEAD
-export default DynamicContentCarousel;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

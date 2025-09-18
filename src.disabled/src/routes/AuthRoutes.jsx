@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-
-const AuthRoutes: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AuthRoutes</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default AuthRoutes;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import _React from "react"; ); export default function Authroutes() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Authroutes></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for authroutes.; ></div> ></div> );}
 import React from \"react\"; ); export default function Authroutes() {; return (; <div className=\"min-h-screen bg-white\"> <div className=\"max-w-4xl mx-auto px-6 py-16\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-8\">Authroutes></div> <p className=\"text-lg text-gray-600 mb-8\"> This is a placeholder component for authroutes.; ></div> ></div> );}
 const React from "react"; ); export default function Authroutes() {; return (; <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Authroutes></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for authroutes.; ></div> ></div> );}""

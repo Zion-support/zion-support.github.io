@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Brain, Shield, Rocket, Star } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const StatisticsSection: React.FC = () => {
   return (

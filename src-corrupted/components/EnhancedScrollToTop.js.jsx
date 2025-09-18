@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React, {useState, useEffect} from 'react';'''
-import {motion, AnimatePresence} from 'framer-motion';'''
-import {ChevronUpIcon} from '@heroicons/react/24/outline';
-const EnhancedScrollToTop = (props: any) => {
-    const [isVisible, setIsVisible] = useState(false);    useEffect(() => {
-        const toggleVisibility = (props: any) => {
-            if (window.pageYOffset > 300) {
-                setIsVisible(true)}
-else {setIsVisible(false)}
-        };
-        window.addEventListener('scroll', toggleVisibility);
-        return () => window.removeEventListener('scroll', toggleVisibility)}, []);
-    const scrollToTop = (props: any) => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })};
-    return (<AnimatePresence>
-      {isVisible && (<motion.button initial = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedScrollToTop.js: React.FC = () => {
   return (

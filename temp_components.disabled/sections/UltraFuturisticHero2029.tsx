@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Star, Phone, Mail, MapPin } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltraFuturisticHero2029: React.FC = () => {
   return (

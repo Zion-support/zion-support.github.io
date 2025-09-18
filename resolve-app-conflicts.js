@@ -17,15 +17,6 @@ let i = 0;
 while (i < lines.length) {
   const line = lines[i];
   
-  if (line.startsWith('<<<<<<< HEAD')) {
-    // Start of conflict - skip until we find the separator
-    i++;
-    while (i < lines.length && !lines[i].startsWith('=======')) {
-      i++;
-    }
-    i++; // Skip the ======= line
-    
-    // Collect all lines until >>>>>>> 
     const incomingLines = [];
     while (i < lines.length && !lines[i].startsWith('>>>>>>> ')) {
       incomingLines.push(lines[i]);

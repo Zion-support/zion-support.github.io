@@ -1,23 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
-import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
-
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
-import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
-import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026',
-
-export default function QuantumCybersecurityServices() {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

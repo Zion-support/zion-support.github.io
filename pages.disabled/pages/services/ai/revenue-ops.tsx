@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-export default function Revenueops() {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

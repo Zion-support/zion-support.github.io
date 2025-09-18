@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-15T20:02:03.708Z",
-=======
-  "timestamp": "2025-09-17T10:18:03.936Z",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   "features": [
     {
       "title": "Intelligent Orchestrator System",

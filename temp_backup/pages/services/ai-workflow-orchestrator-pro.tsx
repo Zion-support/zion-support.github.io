@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Check, Star, Users, Zap, Shield, TrendingUp,
-  ArrowRight, Play, Clock, Award, Globe, Cpu, Brain
-} from 'lucide-react';
-
-export default function AIWorkflowOrchestratorPro() {
-=======
-import { Helmet } from 'react-helmet-async';
-
-const ai-workflow-orchestrator-pro: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

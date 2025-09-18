@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 interface SEOProps {
   title?: string;
@@ -49,24 +44,6 @@ export function SEO({
     robots
   ].filter(Boolean).join(', ');
 
-<<<<<<< HEAD
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
-  image = '/og-image.jpg',
-  url = 'https://zion.app',
-  type = 'website'
-}) => {
-  return (
-    <Head>
-      <title>{title}</title>
-=======
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={robotsContent} />
@@ -100,20 +77,3 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Viewport */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-<<<<<<< HEAD
-    </Head>
-  );
-};
-
-export default SEO;
-
-=======
-      
-      {/* Manifest */}
-      <link rel="manifest" href="/site.webmanifest" />
-    </Helmet>
-  );
-}
-
-export default SEO;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

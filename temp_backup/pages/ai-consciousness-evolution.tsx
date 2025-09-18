@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Star, Users, Target } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-export default function AIConsciousnessEvolution() {
-=======
-import { Helmet } from 'react-helmet-async';
-
-const ai-consciousness-evolution: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

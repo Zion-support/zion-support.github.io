@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, ArrowRight, Globe, Brain, Shield, Rocket, Atom } from 'lucide-react';
-import Link from 'next/link';
-import AccessibilityEnhancer from './AccessibilityEnhancer';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  type: 'service' | 'solution' | 'page' | 'resource';
-  url: string;
-  category: string;
-  tags: string[];
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const SearchComponent: React.FC = () => {
   return (

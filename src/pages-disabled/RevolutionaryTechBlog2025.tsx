@@ -166,11 +166,6 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD:src/pages/RevolutionaryTechBlog2025.tsx
-        {/* Newsletter Signup */}
-=======
-        {/* Newsletter Signup */};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:src/pages-disabled/RevolutionaryTechBlog2025.tsx
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Latest Tech Insights</h2>
@@ -196,11 +191,6 @@ const RevolutionaryTechBlog2025: React.FC = () => {
               <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover:bg-white/20 transition-all duration-300 cursor-pointer">
                 #{tag};
               </span>
-<<<<<<< HEAD:src/pages/RevolutionaryTechBlog2025.tsx
-            ))}
-=======
-            ))};
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:src/pages-disabled/RevolutionaryTechBlog2025.tsx
           </div>
         </div>
 

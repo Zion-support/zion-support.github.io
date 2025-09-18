@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, TrendingUp, TrendingDown, Clock, 
-  Zap, AlertTriangle, CheckCircle, Info
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  timestamp: number;
-}
-
-interface PerformanceScore {
-  score: number;
-  grade: 'A' | 'B' | 'C' | 'D' | 'F';
-  color: string;
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const PerformanceMonitor: React.FC = () => {
   return (

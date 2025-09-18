@@ -1,66 +1,6 @@
 import React from 'react';
 const UltimateContentBanner2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2026
-          </div>
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Ultimate Tech Breakthrough 2026
-          </h2>
-          <p className="text-xl opacity-90 mb-6 max-w-4xl mx-auto">
-            The most revolutionary technological advances that will reshape our world in 2026. 
-            From conscious AI systems to quantum reality engines, experience the impossible.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/pages/UltimateTechBreakthrough2026" 
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
-            >
-              🌟 Explore Ultimate →
-            </a>
-            <a 
-              href="/pages/RevolutionaryTechShowcase2026" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              ⚡ View Showcase →
-            </a>
-            <a 
-              href="/pages/NextGenInnovationHub2026" 
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              🧠 Innovation Hub →
-            </a>
-=======
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 BREAKTHROUGH CONTENT • JANUARY 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Ultimate Technology Showcase 2026
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most revolutionary technology content featuring AI Innovation, Quantum Computing, and Neural Interfaces
-          </p>
-<<<<<<< HEAD:src/components/UltimateContentBanner2026.tsx
-=======
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="flex items-center justify-center space-x-3 mb-4">
-          <span className="text-4xl animate-pulse">🚀</span>
-          <h3 className="text-3xl font-bold">🚀 ULTIMATE CONTENT 2026 🚀</h3>
-          <span className="text-4xl animate-pulse">🚀</span>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_conflicted_files/UltimateContentBanner2026.tsx
         </div>
 
         {/* Featured Content Grid */}
@@ -172,18 +112,8 @@ const UltimateContentBanner2026: React.FC = () => {
             </button>
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </div>
-<<<<<<< HEAD:src/components/UltimateContentBanner2026.tsx
-=======
-        <div className="mt-6 text-lg opacity-90">
-          🚀 50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities 🚀
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_conflicted_files/UltimateContentBanner2026.tsx
         </div>
       </div>
     </div>
   );
 };
-<<<<<<< HEAD:src/components/UltimateContentBanner2026.tsx
-
-export default UltimateContentBanner2026;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_conflicted_files/UltimateContentBanner2026.tsx

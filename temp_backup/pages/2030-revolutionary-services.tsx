@@ -1,23 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
-
-export default function Revolutionary2030ServicesPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const 2030-revolutionary-services: React.FC = () => {
   return (

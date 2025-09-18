@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Filter, Search, Grid, List, Star, TrendingUp, Zap } from 'lucide-react';
-import UltraAdvancedServiceCard from '../ui/UltraAdvancedServiceCard';
-import { innovativeMicroSaasServices } from '../../data/innovative-micro-saas-services';
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const InnovativeServicesShowcase: React.FC = () => {
   return (

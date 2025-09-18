@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, Send, Bot, User, Loader, 
-  X, Minimize2, Maximize2, HelpCircle,
-  Lightbulb, Zap, BookOpen, TrendingUp
-} from 'lucide-react';
-
-interface Message {
-  id: string;
-  type: 'user' | 'assistant';
-  content: string;
-  timestamp: Date;
-  suggestions?: string[];
-}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const InteractiveAIAssistant: React.FC = () => {
   return (

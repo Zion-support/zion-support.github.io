@@ -34,17 +34,8 @@
     </div>
   );
 };
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentBanner2033.tsx
-
-export default RevolutionaryContentBanner2033;
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentBanner2033.tsx
 export default RevolutionaryContentBanner2033;
               The fusion of quantum mechanics and human consciousness
             <a href="/pages/QuantumConsciousnessRevolution2033" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Experience Quantum Consciousness →
 export default RevolutionaryContentBanner2033;
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentBanner2033.tsx
-=======
-export default RevolutionaryContentBanner2033;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryContentBanner2033.tsx

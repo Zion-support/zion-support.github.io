@@ -77,11 +77,6 @@ const EnhancedContentAdvertising: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-<<<<<<< HEAD:src/components/EnhancedContentAdvertising.tsx
-        <divdiv
-=======
-        <div
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_broken_files/EnhancedContentAdvertising.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -155,11 +150,6 @@ const EnhancedContentAdvertising: React.FC = () => {
         </div>
         {/* Testimonials Section */}
         <div className="mb-20">
-<<<<<<< HEAD:src/components/EnhancedContentAdvertising.tsx
-          <divdiv
-=======
-          <div
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_broken_files/EnhancedContentAdvertising.tsx
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
@@ -189,11 +179,6 @@ const EnhancedContentAdvertising: React.FC = () => {
           </div>
         </div>
         {/* Call to Action */}
-<<<<<<< HEAD:src/components/EnhancedContentAdvertising.tsx
-        <divdiv
-=======
-        <div
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee:temp_broken_files/EnhancedContentAdvertising.tsx
           whileInView={{ opacity: 1, y: 0 }}
           className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30"
         >

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, Sparkles, Brain, Atom, Shield, Target, Cpu, Globe } from 'lucide-react';
-import { useRouter } from 'next/router';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  type: string;
-  slug: string;
-  relevance: number;
-}
-
-interface SearchFilters {
-  category: string;
-  type: string;
-  priceRange: string;
-}
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedSearch: React.FC = () => {
   return (

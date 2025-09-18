@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Cpu, Brain, Rocket, Zap, Shield, Target, ArrowRight, Play, Star, Cog, Wrench, Globe } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-export default function AutonomousSystems() {
-=======
-import { Helmet } from 'react-helmet-async';
-
-const autonomous-systems: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

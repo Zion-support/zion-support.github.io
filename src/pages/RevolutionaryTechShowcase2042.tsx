@@ -73,15 +73,6 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-<<<<<<< HEAD
-                  activeDemo === index
-                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
-                    : 'bg-white/10 text-cyan-200 hover:bg-white/20'
-=======
-                  activeTab === key
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 }`}
               >
                 {tech.icon} {tech.title}

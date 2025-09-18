@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Zap, Brain, Atom, Rocket, Shield, Target, 
-  Phone, Mail, MapPin, Globe, ExternalLink,
-  Twitter, Linkedin, Github, Facebook, Instagram,
-  ArrowRight, Star, TrendingUp, Users, Award
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const EnhancedFooter: React.FC = () => {
   return (

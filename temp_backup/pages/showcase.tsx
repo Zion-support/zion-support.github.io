@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Star, Rocket, Sparkles, Brain, Atom, Cpu, Building, Calculator, DollarSign, Grid, ArrowRight, Play, Target, Zap } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-export default function Showcase() {
-=======
-import { Helmet } from 'react-helmet-async';
-
-const showcase: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

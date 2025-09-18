@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO   } from '../../components/SEO';
-import { motion   } from 'framer-motion';
-
-const AIIoTEdgeComputingPlatform: Reac t.FC = (): JSX.Element => {
-=======
-
-const ai-iot-edge-computing-platform: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

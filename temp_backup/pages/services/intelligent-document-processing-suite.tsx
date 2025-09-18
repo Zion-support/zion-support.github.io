@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Check, Star, FileText, Zap, Shield, TrendingUp,
-  ArrowRight, Play, Clock, Award, Globe, Cpu, Eye, Users
-} from 'lucide-react';
-
-export default function IntelligentDocumentProcessingSuite() {
-=======
-import { Helmet } from 'react-helmet-async';
-
-const intelligent-document-processing-suite: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

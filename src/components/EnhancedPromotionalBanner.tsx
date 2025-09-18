@@ -10,11 +10,3 @@ const EnhancedPromotionalBanner: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default EnhancedPromotionalBanner;
-=======
-  };
-export default EnhancedPromotionalBanner;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

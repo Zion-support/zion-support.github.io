@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React, { useState }  from 'react';
-import { motion, AnimatePresence }  from 'framer-motion';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltimateInteractiveShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('revolution');
