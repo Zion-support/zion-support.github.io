@@ -215,5 +215,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js handles routing. Do not add a SPA catch-all redirect that sends
-# all routes to /index.html, as it will break SSR/ISR routing handled by the plugin.
+# Note: Next.js routing is handled by @netlify/plugin-nextjs
