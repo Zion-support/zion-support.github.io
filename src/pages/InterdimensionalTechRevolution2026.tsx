@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -104,25 +101,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-<<<<<<< HEAD
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Interdimensional Technology
-=======
           <div className="text-center">
             <h1 className="text-6xl font-bold text-white mb-6">
               Interdimensional Tech Revolution 2026
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Step into the future where technology transcends dimensions and reality itself
               becomes programmable. Experience the next evolution of human innovation.
             </p>
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-8">Ready to Transcend Dimensions?</h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 to="/contact" 
