@@ -1,6 +1,4 @@
 import React from 'react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const UltimateTechRevolution2042: React.FC = () => {
   return (
