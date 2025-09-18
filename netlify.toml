@@ -1,6 +1,6 @@
 # Updated: Fixed for Vite React app deployment
 [build]
-  command = "npm install --include=optional && npm run build"
+  command = "npm install --include=optional && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
 
