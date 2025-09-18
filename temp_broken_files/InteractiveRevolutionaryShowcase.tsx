@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const InteractiveRevolutionaryShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -15,6 +16,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
             Explore the most advanced technologies of 2026 with interactive demonstrations and real-time experiences
           </p>
         </div>
+
         {/* Tab Navigation */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,6 +39,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Content Area */}
         <div className="relative">
             <div
@@ -50,16 +53,19 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                 >
                   {technologies[activeTab as keyof typeof technologies].icon}
                 </div>
+                
                 <divh3
                   className="text-4xl font-bold mb-4"
                 >
                   {technologies[activeTab as keyof typeof technologies].title}
                 </divh3>
+                
                 <divp
                   className="text-xl opacity-80 mb-8"
                 >
                   {technologies[activeTab as keyof typeof technologies].description}
                 </divp>
+
                 <divul
                   className="space-y-3 mb-8"
                 >
@@ -73,19 +79,20 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                     </divli>
                   ))}
                 </divul>
+
                 <div
                   className="flex space-x-4"
                 >
-                  <divbutton
+                  <button
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300`}
                   >
                     Experience Demo →
-                  </divbutton>
-                  <divbutton
+                  </button>
+                  <button
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                   >
                     Learn More
-                  </divbutton>
+                  </button>
                 </div>
               </div>
               {/* Right Side - Interactive Demo */}
@@ -107,11 +114,12 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                       Interactive demonstration will load here
                     </div>
                   </div>
-                  <divbutton
+
+                  <button
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Launch Interactive Demo
-                  </divbutton>
+                  </button>
                 </div>
               </div>
             </div>
@@ -126,15 +134,17 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
             Join the revolutionary technology movement and be part of the most significant breakthrough in human history
           </p>
-          <divbutton
+          <button
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
           >
             Start Your Journey →
-          </divbutton>
+          </button>
         </div>
       </div>
     </div>
   );
 };
+
+
 export default InteractiveRevolutionaryShowcase;
 </div></div></div></div></div></div></div>

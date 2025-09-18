@@ -1,4 +1,10 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+ArrowRightZapBrainTrendingUpUsersAwardClock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
   return (
     <div
@@ -25,6 +31,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 Experience the future of artificial intelligence today.
               </p>
             </div>
+
             {/* Features List */}
             <div
               className="grid grid-cols-2 gap-2 mb-6"
@@ -36,6 +43,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -72,6 +80,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
               </div>
+
               {/* Static Stats */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-sm">
@@ -101,4 +110,6 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default AI2025UltimateInnovationPromotionBanner;

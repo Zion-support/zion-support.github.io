@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
+
 const QuantumSupremacy2026: React.FC = () => {
   const [quantumStatus, setQuantumStatus] = useState('idle');
   const startQuantumDemo = () => {
@@ -372,4 +373,6 @@ const QuantumSupremacy2026: React.FC = () => {
     </div>
   );
 };
+
+
 export default QuantumSupremacy2026;

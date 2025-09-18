@@ -1,4 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+
+interface CalculatorInputs {
+  currentRevenue: number;
+  currentCosts: number;
+  aiInvestment: number;
+  expectedEfficiency: number;
+  timeframe: number;
+}
+
+interface CalculationResult {
+  currentROI: number;
+  projectedROI: number;
+  roiImprovement: number;
+  monthlySavings: number;
+  annualSavings: number;
+  paybackPeriod: number;
+  netBenefit: number;
+}
+
 const InteractiveAICalculator: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
@@ -152,4 +171,6 @@ const InteractiveAICalculator: React.FC = () => {
     </div>
   );
 };
+
+
 export default InteractiveAICalculator;

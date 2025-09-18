@@ -1,4 +1,10 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+BellZapTrendingUpUsersAwardGlobeArrowRightClock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const RevolutionaryTechAnnouncementBanner: React.FC = () => {
   return (
     <div
@@ -25,6 +31,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Be among the first to experience the transformation.
               </p>
             </div>
+
             {/* Animated Announcement */}
             <div
               key={currentAnnouncement}
@@ -47,6 +54,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -101,4 +109,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryTechAnnouncementBanner;

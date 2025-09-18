@@ -1,31 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function RuntimeEvidenceBundles2026() {
+const Ai2026RuntimeEvidenceBundles: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Runtime Evidence Bundles (2026) | Zion Tech Group</title>
-        <meta name="description" content="Bundle evals, traces, policy events, and incidents per release." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-runtime-evidence-bundles" />
+        <title>Ai2026RuntimeEvidenceBundles - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026RuntimeEvidenceBundles blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Runtime Evidence Bundles (2026)</h1>
-        <p>
-          Capture release‑scoped evidence packages that unify eval results, traces, policy outcomes, and incidents. These
-          bundles power audits, postmortems, and leadership scorecards.
-        </p>
-
-        <h2>Why It Matters</h2>
-        <ul>
-          <li>Speed up audits with curated, immutable evidence</li>
-          <li>Enable quick rollbacks with context and impact analysis</li>
-          <li>Improve trust with objective signals tied to SLOs</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026RuntimeEvidenceBundles</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026RuntimeEvidenceBundles;
+=======
+export default Ai2026RuntimeEvidenceBundles;
+>>>>>>> origin/backup-main-20250918-004015

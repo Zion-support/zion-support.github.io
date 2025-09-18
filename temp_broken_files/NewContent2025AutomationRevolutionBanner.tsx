@@ -1,4 +1,6 @@
 import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
     <divsection
@@ -15,11 +17,13 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
           >
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
           </div>
+          
           <divh2
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
             AI 2025 Automation Revolution
           </divh2>
+          
           <divp
             className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
@@ -58,6 +62,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               <span className="ml-2">→</span>
             </a>
           </div>
+
           {/* Case Study Card */}
           <div
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
@@ -115,6 +120,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
             <div className="text-gray-300 text-sm">Success Rate</div>
           </div>
         </div>
+
         {/* Call to Action */}
         <div
           className="text-center"
@@ -138,5 +144,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
     </divsection>
   );
 };
+
+
 export default NewContent2025AutomationRevolutionBanner;
 </div></div></div>

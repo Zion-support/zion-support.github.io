@@ -1,64 +1,115 @@
 #!/bin/bash
 
-#!/bin/bash
+# Merge all open PRs into main
+set -e
 
-set -euo pipefail
+echo "🚀 Starting merge of open PRs into main..."
+echo "⏰ Started at: $(date)"
 
-echo "Starting systematic PR merge process..."
-
-# Ensure on main and up to date
+# Ensure we're on main and up to date
+echo "🔄 Switching to main and pulling latest..."
 git checkout main
-git pull --rebase
+git pull origin main
 
-echo "Fetching open PRs from GitHub..."
-PR_LIST=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+# Create backup branch
+BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
+git checkout main
 
-if [ -z "$PR_LIST" ]; then
-  echo "No open PRs found. Exiting."
-  exit 0
-fi
+# Fetch all branches
+echo "📋 Fetching all branches..."
+git fetch --all
 
-echo "Found PRs: $PR_LIST"
+# Get cursor branches
+echo "📊 Getting cursor branches..."
+git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/remotes/origin/cursor/ | sed 's/origin\///' > /tmp/cursor_branches.txt
 
-for pr_number in $PR_LIST; do
-  echo "---"
-  echo "Processing PR #$pr_number"
-  pr_json=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
-  branch_name=$(echo "$pr_json" | grep -o '"head":{[^}]*"ref":"[^"]*"' | grep -o '"ref":"[^"]*"' | cut -d '"' -f4)
-  if [ -z "$branch_name" ]; then
-    echo "Could not determine branch for PR #$pr_number, skipping."
-    continue
-  fi
-  echo "Branch: $branch_name"
+TOTAL_BRANCHES=$(wc -l < /tmp/cursor_branches.txt)
+echo "📊 Total cursor branches found: $TOTAL_BRANCHES"
 
-  git fetch origin "$branch_name" || true
+SUCCESSFUL_MERGES=0
+FAILED_MERGES=0
 
-  # Attempt a merge
-  if git merge --no-ff --no-edit "origin/$branch_name"; then
-    echo "Merged PR #$pr_number from $branch_name"
-    git push origin main || { echo "Push failed"; exit 1; }
-    continue
-  fi
+# Process each branch
+while IFS= read -r branch; do
+    echo "🔄 Processing branch: $branch"
+    
+    # Check if branch exists and not already merged
+    if git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        if ! git branch --merged main | grep -q "$branch"; then
+            echo "✅ Attempting to merge $branch..."
+            
+            # Try to merge
+            if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+                echo "✅ Successfully merged $branch"
+                git commit -m "Merge $branch into main - $(date)"
+                SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+            else
+                echo "⚠️  Merge conflicts in $branch, resolving..."
+                
+                # Get conflicted files
+                CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+                
+                if [ -n "$CONFLICTED_FILES" ]; then
+                    echo "📋 Conflicted files: $CONFLICTED_FILES"
+                    
+                    # Resolve conflicts by keeping main version for critical files
+                    for file in $CONFLICTED_FILES; do
+                        if [ -f "$file" ]; then
+                            echo "🔧 Resolving conflicts in $file..."
+                            
+                            # For critical files, keep main version
+                            if [[ "$file" == "package.json" || "$file" == "package-lock.json" || "$file" == "netlify.toml" ]]; then
+                                echo "📦 Critical file, keeping main version..."
+                                git checkout --ours "$file"
+                            else
+                                echo "📝 Regular file, keeping both versions..."
+                                # Remove conflict markers
+<<<<<<< HEAD
+                                sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+                                sed -i '/>>>>>>> /d' "$file"
+                            fi
+                        fi
+                    done
+                    
+                    # Add resolved files
+                    git add .
+                    
+                    # Commit the merge
+                    git commit -m "Resolve merge conflicts for $branch - $(date)"
+                    
+                    echo "✅ Successfully resolved conflicts and merged $branch"
+                    SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+                else
+                    echo "❌ No conflicted files found, aborting merge..."
+                    git merge --abort
+                    FAILED_MERGES=$((FAILED_MERGES + 1))
+                fi
+            fi
+        else
+            echo "⏭️  Branch $branch already merged, skipping..."
+        fi
+    else
+        echo "❌ Branch $branch doesn't exist, skipping..."
+    fi
+    
+    echo "---"
+done < /tmp/cursor_branches.txt
 
-  echo "Conflicts detected for PR #$pr_number. Attempting automatic resolution (prefer incoming changes)."
-  # Resolve by taking theirs for all conflicted files
-  conflicted_files=$(git diff --name-only --diff-filter=U || true)
-  if [ -z "$conflicted_files" ]; then
-    echo "No conflicted files found after merge failure. Aborting merge."
-    git merge --abort || true
-    continue
-  fi
-  for file in $conflicted_files; do
-    git checkout --theirs -- "$file" || true
-    git add -- "$file"
-  done
-  if git commit -m "chore: auto-resolve conflicts by preferring PR changes for #$pr_number ($branch_name)"; then
-    git push origin main || { echo "Push failed"; exit 1; }
-    echo "Auto-resolved and merged PR #$pr_number"
-  else
-    echo "Auto-resolution failed. Aborting merge for PR #$pr_number"
-    git merge --abort || true
-  fi
-done
+# Push changes
+echo "💾 Pushing changes to remote..."
+git push origin main
 
-echo "All PRs processed."
+# Cleanup
+rm -f /tmp/cursor_branches.txt
+
+echo "🎉 Merge completed!"
+echo "📊 Final Summary:"
+echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
+echo "   ❌ Failed merges: $FAILED_MERGES"
+echo "   🔒 Backup branch: $BACKUP_BRANCH"
+echo "⏰ Completed at: $(date)"
+=======
+>>>>>>> origin/backup-main-20250918-004015

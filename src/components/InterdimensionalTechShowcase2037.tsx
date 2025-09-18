@@ -6,7 +6,5 @@ const InterdimensionalTechShowcase2037: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-
-};
-
+  };
 export default InterdimensionalTechShowcase2037;

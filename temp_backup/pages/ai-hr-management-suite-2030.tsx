@@ -19,4 +19,5 @@ const ai-hr-management-suite-2030: React.FC = () => {
   );
 };
 
-export default ai-hr-management-suite-2030;
+
+export default UltimateContentShowcase2032;

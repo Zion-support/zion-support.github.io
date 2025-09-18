@@ -1,4 +1,8 @@
-import React from 'react';
+"use client";
+import React{ useState } from 'react';
+AtomZapCpuShieldTargetTrendingUpArrowRightPlayPause
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const QuantumComputingShowcase2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -17,6 +21,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
             Experience the future of computing with our revolutionary quantum solutions that transcend classical limitations and unlock infinite possibilities.
           </p>
         </div>
+
         {/* Interactive Tabs */}
         <div className="mb-16">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -76,12 +81,12 @@ const QuantumComputingShowcase2025: React.FC = () => {
                     ))}
                   </div>
                   <a href="/contact">
-                    <divbutton
+                    <button
                       className={`bg-gradient-to-r ${quantumSolutions[activeTab].gradient} hover:opacity-90 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center gap-2`}
                     >
                       Get Started
                       <ArrowRight className="w-5 h-5" />
-                    </divbutton>
+                    </button>
                   </a>
                 </div>
                 {/* Visual */}
@@ -112,6 +117,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                       ))}
                     </div>
                   </div>
+                  
                   {/* Floating Particles */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {[...Array(15)].map((_i) => (
@@ -158,6 +164,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-lg rounded-3xl p-16 border border-white/10"
@@ -170,19 +177,19 @@ const QuantumComputingShowcase2025: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a href="/contact">
-              <divbutton
+              <button
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center gap-2"
               >
                 Schedule Quantum Consultation
                 <ArrowRight className="w-6 h-6" />
-              </divbutton>
+              </button>
             </a>
             <a href="/quantum-computing-2025">
-              <divbutton
+              <button
                 className="border border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-lg"
               >
                 Learn More About Quantum
-              </divbutton>
+              </button>
             </a>
           </div>
         </div>
@@ -190,5 +197,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default QuantumComputingShowcase2025;
 </div></div></div></div>

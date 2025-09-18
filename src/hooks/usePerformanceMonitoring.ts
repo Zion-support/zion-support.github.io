@@ -1,74 +1,71 @@
-import { useEffect } from 'react';
+import { useEffect, useState }  from 'react';
+
 export const usePerformanceMonitoring = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: "0",
+    renderTime: "0",
+    memoryUsage: "0"});
+
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            event_category: 'Performance',
-            event_label: 'LCP',
-            value: Math.round(lastEntry.startTime),
-          });
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              event_category: 'Performance',
-              event_label: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-            });
-          }
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        if (window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            event_category: 'Performance',
-            event_label: 'CLS',
-            value: Math.round(clsValue * 1000),
-          });
-        }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      // Cleanup observers
-      return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+    // Measure page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
+
+    // Measure render time
+    const renderStart = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    });
+
+    // Monitor memory usage (if available)
+    if ('memory' in performance) {
+      const memoryUsage = performance.memory.usedJSHeapSize / 1024 / 1024; // MB
+      setMetrics(prev => ({ ...prev, memoryUsage }));
     }
+    // Cleanup
+    return () => {
+      // Cleanup logic if needed
+  };
   }, []);
-  // Monitor page load time
+
+  return metrics;
+  };
+export const useLazyLoading = (importFunction, deps = []) => {
+  const [Component, setComponent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('load', () => {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        if (window.gtag) {
-          window.gtag('event', 'page_load_time', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: loadTime,
-          });
+    let isMounted = true;
+
+    const loadComponent = async () => {
+      try {
+        setLoading(true);
+        const module = await importFunction();
+        
+        if (isMounted) {
+          setComponent(() => module.default);
+          setError(null);
         }
-      });
-    }
-  }, []);
-export default usePerformanceMonitoring;
+      } catch (err) {
+        if (isMounted) {
+          setError(err);
+          console.error('Failed to load component:', err);
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+  };
+    loadComponent();
+
+    return () => {
+      isMounted = false;
+  };
+  }, deps);
+
+  return { Component, loading, error
+  };
+  };

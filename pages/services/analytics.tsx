@@ -1,22 +1,31 @@
-import React from 'react';
+import type { NextPage } from 'next';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-const analytics: React.FC = () => {
+const Analytics: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>analytics | Zion Tech Group</title>
-        <meta name="description" content="analytics - Revolutionary technology solutions" />
-      </Helmet>
+    <div>
+      <Head>
+        <title>Analytics - Zion Tech Solutions</title>
+        <meta name="description" content="Analytics service" />
+      </Head>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">analytics</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
+      <main>
+        <h1>Analytics</h1>
+        <p>Service details coming soon...</p>
+        <Link href="/services">Back to Services</Link>
+      </main>
     </div>
   );
 };
 
-export default analytics;
+<<<<<<< HEAD
+export default Analytics;
+=======
+export default Analytics;
+>>>>>>> origin/backup-main-20250918-004015

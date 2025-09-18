@@ -12,8 +12,8 @@ export default function RevolutionarySuccessStoryBanner() {
       
       {/* Floating Success Icons */}
       <div
-
-
+          y: [0-10],
+          rotate: [050]
         }}
           duration: 3,
           repeat: Infinity,
@@ -25,8 +25,8 @@ export default function RevolutionarySuccessStoryBanner() {
       </div>
       
       <div
-
-
+          y: [010],
+          rotate: [0-50]
         }}
           duration: 4,
           repeat: Infinity,
@@ -119,7 +119,17 @@ export default function RevolutionarySuccessStoryBanner() {
           <p className="text-emerald-100 text-sm">
             <span className="font-semibold">Success Metrics:</span> 65% cost reduction • 300% efficiency gain • 95% quality improvement • $100M ROI
           </p>
+const function RevolutionarySuccessStoryBanner() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function RevolutionarySuccessStoryBanner() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
+};
+
+export default function RevolutionarySuccessStoryBanner() {;

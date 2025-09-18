@@ -1,4 +1,5 @@
 import React from 'react';
+
 const UltimateBreakthroughShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
@@ -26,6 +27,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
             Experience the most revolutionary technological breakthroughs that are reshaping reality itself
           </p>
         </div>
+
         {/* Breakthrough Technologies Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Consciousness Transfer */}
@@ -55,6 +57,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
               </a>
             </div>
           </div>
+
           {/* Quantum Teleportation */}
           <div
             whileInView={{ opacity: 1, x: 0 }}
@@ -99,6 +102,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
               Enter Holographic World →
             </a>
           </div>
+
           {/* Anti-Gravity Systems */}
           <div
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,6 +117,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
               Experience Anti-Gravity →
             </a>
           </div>
+
           {/* Mind-Machine Fusion */}
           <div
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,18 +146,18 @@ const UltimateBreakthroughShowcase: React.FC = () => {
             Be part of the future today.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <diva
+            <a
               href="/pages/RevolutionaryTech2026"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
             >
               🌟 Explore Revolutionary Tech →
-            </diva>
-            <diva
+            </a>
+            <a
               href="/pages/UltimateInnovation2026"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               🚀 Ultimate Innovation →
-            </diva>
+            </a>
           </div>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
             <div className="text-center">
@@ -177,5 +182,7 @@ const UltimateBreakthroughShowcase: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateBreakthroughShowcase;
 </div></div>

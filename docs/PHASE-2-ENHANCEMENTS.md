@@ -150,7 +150,11 @@ npm run build:master
 
 ```
 📊 REAL-TIME BUILD MONITORING DASHBOARD
-================================================================================
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+===
 ⏰ Time: 2:30:45 PM
 🔄 Status: MONITORING
 📋 Current Stage: build:compilation
@@ -170,7 +174,11 @@ npm run build:master
   ℹ️  Compiling pages...
   ⚠️  Large bundle detected
   ℹ️  Optimizing images...
-================================================================================
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+===
 ```
 
 ### **Performance Metrics**

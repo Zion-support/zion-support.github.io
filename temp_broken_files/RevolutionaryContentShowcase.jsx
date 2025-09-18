@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const RevolutionaryContentShowcase = () => {
   const [activeContent, setActiveContent] = useState(0);
 
@@ -46,7 +45,6 @@ const RevolutionaryContentShowcase = () => {
             that are reshaping the future of human-machine interaction.
           </p>
         </div>
-
         {/* Content Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
@@ -66,13 +64,9 @@ const RevolutionaryContentShowcase = () => {
             ))}
           </div>
         </div>
-
         {/* Active Content Display */}
         <div
           key={activeContent}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -80,7 +74,6 @@ const RevolutionaryContentShowcase = () => {
               <div className="text-8xl mb-6">{contentItems[activeContent].icon}</div>
               <h3 className="text-4xl font-bold mb-6">{contentItems[activeContent].title}</h3>
               <p className="text-xl opacity-90 mb-8">{contentItems[activeContent].description}</p>
-              
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {contentItems[activeContent].features.map((feature, index) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
@@ -88,7 +81,6 @@ const RevolutionaryContentShowcase = () => {
                   </div>
                 ))}
               </div>
-              
               <a
                 href={contentItems[activeContent].link}
                 className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
@@ -96,7 +88,6 @@ const RevolutionaryContentShowcase = () => {
                 Explore {contentItems[activeContent].title} →
               </a>
             </div>
-            
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                 <h4 className="text-2xl font-bold mb-4">Key Highlights</h4>
@@ -125,6 +116,8 @@ const RevolutionaryContentShowcase = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default RevolutionaryContentShowcase;

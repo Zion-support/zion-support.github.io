@@ -9,4 +9,5 @@ const EnhancedAnalyticsTracker: React.FC = () => {
   );
 };
 
-export default EnhancedAnalyticsTracker;
+
+export default InteractiveTechShowcase2032;

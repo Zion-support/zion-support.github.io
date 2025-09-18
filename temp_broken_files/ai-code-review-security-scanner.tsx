@@ -1,5 +1,12 @@
 import React from 'react';
-const ai-code-review-security-scanner: React.FC = () => {
+import SEO from '../components/SEO';
+import { 
+  Brain, Shield, Code, CheckCircle, Zap, 
+  ArrowRight, Star, TrendingUp, Users, 
+  Lock, Eye, BarChart3, Globe, Award
+} from 'lucide-react';
+
+const AICodeReviewSecurityScanner = () => {
   return (
     <>
       <SEO 
@@ -30,17 +37,18 @@ const ai-code-review-security-scanner: React.FC = () => {
                 suggests improvements, and ensures code quality across multiple programming languages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <divbutton
+                <button
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </divbutton>
-                <divbutton
+                </button>
+                
+                <button
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
-                </divbutton>
+                </button>
               </div>
               <div className="flex flex-wrap justify-center gap-8 text-gray-400">
                 <div className="flex items-center">
@@ -74,6 +82,7 @@ const ai-code-review-security-scanner: React.FC = () => {
                 to protect your applications and improve development efficiency.
               </p>
             </div>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -137,6 +146,7 @@ const ai-code-review-security-scanner: React.FC = () => {
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </div>
+            
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -222,7 +232,8 @@ const ai-code-review-security-scanner: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <divbutton
+                  
+                  <button
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
@@ -230,7 +241,7 @@ const ai-code-review-security-scanner: React.FC = () => {
                     }`}
                   >
                     Get Started
-                  </divbutton>
+                  </button>
                 </div>
               ))}
             </div>
@@ -251,6 +262,7 @@ const ai-code-review-security-scanner: React.FC = () => {
                 development efficiency, and code quality while reducing costs and risks.
               </p>
             </div>
+            
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
@@ -336,6 +348,7 @@ const ai-code-review-security-scanner: React.FC = () => {
                 to protect their applications and improve code quality.
               </p>
             </div>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams",
@@ -375,17 +388,18 @@ const ai-code-review-security-scanner: React.FC = () => {
                 and improve code quality. Start your free trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <divbutton
+                <button
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </divbutton>
-                <divbutton
+                </button>
+                
+                <button
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Contact Sales
-                </divbutton>
+                </button>
               </div>
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
@@ -432,5 +446,7 @@ const ai-code-review-security-scanner: React.FC = () => {
     </>
   );
 };
+
+
 export default AICodeReviewSecurityScanner;
 </div></div></div></div></div></div>

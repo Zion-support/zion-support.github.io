@@ -1,5 +1,62 @@
-import React from 'react';
-const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Calendar
+  TrendingUp
+  ArrowRight
+  Play
+  Sparkles,
+  Brain,
+  Award,
+  ChevronRight,
+  Zap,
+  Globe,
+  Rocket,
+  Star,
+  Target
+} from 'lucide-react';
+
+const FuturePredictionsShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentPredictionsetCurrentPrediction] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Rotate through predictions every 4 seconds
+    const interval = setInterval(() => {
+      setCurrentPrediction(prev => (prev + 1) % 3);
+    }4000);
+    
+    return () => clearInterval(interval);
+  }[]);
+
+  const predictions = [
+    { 
+      icon: Brain
+      title: 'Neural Interface Breakthrough'
+      year: '2025',
+      color: 'from-purple-500 to-blue-500',
+      description: 'First commercial neural interface devices'
+    },
+    { 
+      icon: Rocket
+      title: 'Universal Automation'
+      year: '2026',
+      color: 'from-green-500 to-emerald-500',
+      description: '90% of business processes automated'
+    },
+    { 
+      icon: Globe
+      title: 'Global AI Network'
+      year: '2030',
+      color: 'from-orange-500 to-red-500',
+      description: 'Worldwide interconnected AI consciousness'
+    }
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 md:p-12 my-8"
@@ -21,6 +78,7 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
               FUTURE PREDICTIONS
               <Sparkles className="w-4 h-4" />
             </div>
+
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -30,6 +88,7 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                 Showcase 2025-2030
               </span>
             </divh2>
+
             {/* Description */}
             <divp
               className="text-xl text-gray-300 mb-8 max-w-2xl"
@@ -37,6 +96,7 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
               Explore our expert predictions for the future of AItechnologyand human civilization 
               from 2025 to 2030 and beyond.
             </divp>
+
             {/* Features */}
             <div
               className="flex flex-wrap gap-4 mb-8"
@@ -52,6 +112,7 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -126,6 +187,8 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default FuturePredictionsShowcase2025PromotionBanner;
 </div></div>
 </p></p>

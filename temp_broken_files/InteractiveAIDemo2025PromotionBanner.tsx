@@ -1,5 +1,74 @@
-import React from 'react';
-const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Bot
+  MessageCircle
+  Send
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star,
+  Play,
+  X,
+  ChevronRight,
+  Clock,
+  Users,
+  TrendingUp
+} from 'lucide-react';
+
+const InteractiveAIDemo2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentDemosetCurrentDemo] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)2000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDemo((prev) => (prev + 1) % demos.length);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const demos = [
+    {
+      icon: Brain,
+      title: 'Neural Interface Demo',
+      description: 'Experience 500% efficiency boost',
+      color: 'from-purple-500 to-pink-500',
+      users: '2.5K+ active'
+    },
+    {
+      icon: Zap,
+      title: 'Quantum AI Demo',
+      description: 'See 1000x faster processing',
+      color: 'from-blue-500 to-cyan-500',
+      users: '1.8K+ active'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Business Automation',
+      description: 'Witness 90% cost reduction',
+      color: 'from-green-500 to-emerald-500',
+      users: '3.2K+ active'
+    },
+    {
+      icon: Star,
+      title: 'Future Predictions',
+      description: 'Explore 95% accuracy rate',
+      color: 'from-orange-500 to-red-500',
+      users: '4.1K+ active'
+    }
+  ];
+
+  if (isDismissed || !isVisible) return null;
+
   return (
     <div>
       <div
@@ -34,6 +103,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
+
               {/* Rotating Demo Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-blue-500/30"></div>
@@ -77,25 +147,27 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
               </div>
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
-                <divbutton
+                <button
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-all duration-300"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span className="text-sm font-medium">Chat Now</span>
-                </divbutton>
-                <divbutton
+                </button>
+
+                <button
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-blue-500/25"
                 >
                   <Play className="w-4 h-4" />
                   <span>Try Demo</span>
                   <ChevronRight className="w-4 h-4" />
-                </divbutton>
-                <divbutton
+                </button>
+
+                <button
                   onClick={() => setIsDismissed(true)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
                 >
                   <X className="w-5 h-5 text-gray-400 hover:text-white" />
-                </divbutton>
+                </button>
               </div>
             </div>
           </div>
@@ -131,4 +203,6 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default InteractiveAIDemo2025PromotionBanner;

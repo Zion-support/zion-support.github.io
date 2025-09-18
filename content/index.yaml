@@ -489,51 +489,6 @@ content_index:
         breaches: "reduced"
         audit_ready: true
 
-    - id: "ai-2026-cost-aware-model-routing"
-      type: "blog"
-      title: "AI 2026: Cost‑Aware Model Routing — Blueprint"
-      file_path: "/content/blog/ai-2026-cost-aware-model-routing-blueprint.md"
-      url: "/blog/ai-2026-cost-aware-model-routing-blueprint"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Routing", "Cost Optimization", "Evaluations", "SLOs", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        cost_reduction: "35%"
-        latency: "< 600ms"
-        quality: "> 95% target"
-
-    - id: "ai-2026-secure-prompt-engineering"
-      type: "resource"
-      title: "AI 2026: Secure Prompt Engineering — Enterprise Guide"
-      file_path: "/content/resources/ai-2026-secure-prompt-engineering.md"
-      url: "/resources/ai-2026-secure-prompt-engineering"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Security", "Prompt Engineering", "Governance", "Policy‑as‑Code", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        incident_reduction: "40%"
-        review_time: "-50%"
-        coverage: "100% gated"
-
-    - id: "ai-2026-agent-evidence-hub-starter"
-      type: "resource"
-      title: "AI 2026: Agent Evidence Hub — Starter Kit"
-      file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
-      url: "/resources/ai-2026-agent-evidence-hub-starter"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        audit_ready: true
-        integration_time: "< 1 day"
-        data_sources: "Evals, Incidents, Approvals"
-
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
@@ -678,46 +633,29 @@ content_index:
         downtime_reduction: "85%"
         cost_savings: "60%"
         prediction_accuracy: "95%"
-<<<<<<< HEAD
       reading_time: "18 min read"
 =======
+<<<<<<< HEAD
       reading_time: "18 min read"
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
-<<<<<<< HEAD
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> cursor/create-and-deploy-new-content-e453
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
-<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-7720
 =======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015

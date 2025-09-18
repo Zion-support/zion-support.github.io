@@ -1,22 +1,16 @@
+<<<<<<< HEAD
 =======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+=======
+>>>>>>> origin/backup-main-20250918-004015
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Badge = _React.forwardRef((_a,ref) => {} '; ''; '''; var { className,variant = 'default' } = _a,'''; props = __rest(_a,['className',variant']);'''; return _jsx(''''; 'div',; Object.assign() {} "ref": 'ref','; "className": cn(''; 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2,; {} '; ''; '''; 'border-transparent bg-primary text-primary-foreground "hover": bg-primary/80':''''; variant === 'default',border-transparent bg-secondary text-secondary-foreground "hover": bg-secondary/80':''''; variant === 'secondary',border-transparent bg-destructive text-destructive-foreground "hover": bg-destructive/80':''''; variant === 'destructive',text-foreground': variant === 'outline'},; className; )},; props; ); );});'; Badge.displayName = 'Badge'; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Badge = React.forwardRef((_a,ref) => {} \'; \''; \''\'; var { className,variant = \'default\' } = _a,\''\'; props = __rest(_a,[\'className\',variant\']);\''\'; return _jsx(\''\''; \'div\',; Object.assign() {} \"ref\": \'ref\',\'; \"className\": cn(\''; \'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\',; {} \'; \''; \''\'; \'border-transparent bg-primary text-primary-foreground \"hover\": bg-primary/80\':\''\''; variant === \'default\',border-transparent bg-secondary text-secondary-foreground \"hover\": bg-secondary/80\':\''\''; variant === \'secondary\',border-transparent bg-destructive text-destructive-foreground \"hover\": bg-destructive/80\':\''\''; variant === \'destructive\',text-foreground\': variant === \'outline\'},; className; )},; props; ); );});\'; Badge.displayName = \'Badge\'; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 var __rest =; (this && this.__rest) |; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Badge = React.forwardRef((_a,ref) => {} "; ""; """; var { className,variant = "default" } = _a,"""; props = __rest(_a,["className",variant"]);"""; return _jsx(""""; "div",; Object.assign() { return; } ref: "ref","; className: cn(""; "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",; {} "; ""; """; "border-transparent bg-primary text-primary-foreground hover: bg-primary/80":""""; variant === "default",border-transparent bg-secondary text-secondary-foreground hover: bg-secondary/80":""""; variant === "secondary",border-transparent bg-destructive text-destructive-foreground hover: bg-destructive/80":""""; variant === "destructive",text-foreground": variant === "outline"},; className; )},; props; ); );});"; Badge.displayName = "Badge"; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'"'"
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Badge = _React.forwardRef((_a,ref) => {} '; ''; '''; var { className,variant = 'default' } = _a,'''; props = __rest(_a,['className',variant']);'''; return _jsx(''''; 'div',; Object.assign() {} "ref": 'ref','; "className": cn(''; 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2,; {} '; ''; '''; 'border-transparent bg-primary text-primary-foreground "hover": bg-primary/80':''''; variant === 'default',border-transparent bg-secondary text-secondary-foreground "hover": bg-secondary/80':''''; variant === 'secondary',border-transparent bg-destructive text-destructive-foreground "hover": bg-destructive/80':''''; variant === 'destructive',text-foreground': variant === 'outline'},; className; )},; props; ); );});'; Badge.displayName = 'Badge'; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
 =======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+=======
+>>>>>>> origin/backup-main-20250918-004015

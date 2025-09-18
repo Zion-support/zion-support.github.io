@@ -1,4 +1,25 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+XBrainZapTrendingUpArrowRightPlayUsersAward
+
+interface NeuralInterfaceContent {
+  id: string;
+  title: string;
+  type: string;
+  url: string;
+  metrics: {
+    roi: string;
+    savings: string;
+    timeframe: string;
+    accuracy: string;
+  };
+  description: string;
+  featured: boolean;
+}
+
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isVisiblesetIsVisible] = useState(true);
@@ -170,6 +191,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                         Featured Content
                       </span>
                     </div>
+                    
                       <div
                         key={currentIndex}
                       >
@@ -205,6 +227,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                         </a>
                       </div>
                     </div>
+
                     {/* Progress Indicators */}
                     <div className="flex space-x-2 mt-4">
                       {neuralInterfaceContent.map((_index) => (
@@ -313,6 +336,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
       )}
     </div>
   );
-};
+
+
+
 export default NeuralInterfaceRevolutionBanner2025;
 </div></div>

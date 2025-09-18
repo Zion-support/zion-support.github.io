@@ -19,4 +19,5 @@ const ai-consciousness-evolution: React.FC = () => {
   );
 };
 
-export default ai-consciousness-evolution;
+
+export default UltimateTechRevolution2035;

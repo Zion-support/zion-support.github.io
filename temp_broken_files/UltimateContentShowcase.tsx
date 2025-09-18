@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
+
 const UltimateContentShowcase: React.FC = () => {
   const contentItems = [
     {
@@ -206,4 +207,6 @@ const UltimateContentShowcase: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateContentShowcase;

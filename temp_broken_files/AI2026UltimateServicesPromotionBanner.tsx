@@ -1,5 +1,32 @@
-import React from 'react';
-const AI2026UltimateServicesPromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  ArrowRight
+  Star
+  Sparkles,
+  TrendingUp,
+  Users,
+  CheckCircle
+} from 'lucide-react';
+
+const AI2026UltimateServicesPromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const features = [
+    "Neural Interface Revolution",
+    "Quantum AI Fusion",
+    "Autonomous Operations",
+    "Advanced Security AI"
+  ];
+
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4"
@@ -47,17 +74,17 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <divbutton
+              <button
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-3 group"
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-              </divbutton>
-              <divbutton
+              </button>
+              <button
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 Watch Demo
-              </divbutton>
+              </button>
             </div>
             <div className="flex items-center gap-8 text-gray-300">
               <div className="flex items-center gap-2">
@@ -70,6 +97,7 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
+
           {/* Right Content - Visual Elements */}
           <div
             className="relative"
@@ -86,6 +114,7 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
                   <h3 className="text-white font-semibold mb-2">Neural Interface</h3>
                   <p className="text-gray-300 text-sm">Direct brain-computer communication</p>
                 </div>
+
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
@@ -95,6 +124,7 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
                   <h3 className="text-white font-semibold mb-2">Quantum AI</h3>
                   <p className="text-gray-300 text-sm">10,000x processing speed</p>
                 </div>
+
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
@@ -104,6 +134,7 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
                   <h3 className="text-white font-semibold mb-2">Autonomous Ops</h3>
                   <p className="text-gray-300 text-sm">95% efficiency gain</p>
                 </div>
+
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
@@ -143,5 +174,7 @@ const AI2026UltimateServicesPromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default AI2026UltimateServicesPromotionBanner;
 </div></div></div></div></div></div></div></div>

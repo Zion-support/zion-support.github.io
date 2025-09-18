@@ -1,5 +1,104 @@
-import React from 'react';
-const NextGenAIInnovationShowcase2025: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  Cpu
+  Network
+  Shield
+  Target
+  TrendingUp
+  Users,
+  ArrowRight,
+  Play,
+  Star,
+  CheckCircle,
+  Lightbulb,
+  Rocket,
+  Globe,
+  Lock
+} from 'lucide-react';
+
+const NextGenAIInnovationShowcase2025 = () => {
+  const [activeFeaturesetActiveFeature] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(false);
+
+  const innovations = [
+    {
+      id: 'quantum-ai',
+      title: 'Quantum-AI Fusion Technology',
+      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power',
+      icon: Brain,
+      features: ['1000x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'],
+      impact: 'Transform entire industries',
+      color: 'from-purple-600 to-blue-600'
+    },
+    {
+      id: 'neural-interfaces',
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',
+      icon: Network,
+      features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'],
+      impact: 'Redefine human potential',
+      color: 'from-blue-600 to-cyan-600'
+    },
+    {
+      id: 'autonomous-systems',
+      title: 'Autonomous Business Systems',
+      description: 'Self-managing AI systems that operate independently while maintaining peak performance',
+      icon: Cpu,
+      features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'],
+      impact: 'Revolutionize business operations',
+      color: 'from-green-600 to-emerald-600'
+    },
+    {
+      id: 'consciousness-ai',
+      title: 'Conscious AI Framework',
+      description: 'Advanced AI systems with genuine understanding and emotional intelligence',
+      icon: Lightbulb,
+      features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'],
+      impact: 'Create truly intelligent systems',
+      color: 'from-orange-600 to-red-600'
+    }
+  ];
+
+  const stats = [
+    { number: '500%'label: 'Performance 'Increase', 'icon: TrendingUp },
+    { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target },
+    { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket },
+    { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'CTOTechCorp',
+      quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.',
+      rating: 5
+    },
+    {
+      name: 'Marcus Rodriguez',
+      role: 'CEOInnovateLabs',
+      quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.',
+      rating: 5
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'AI Research Director',
+      quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.',
+      rating: 5
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev + 1) % innovations.length);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -25,19 +124,20 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
               enhance human capabilitiesand unlock unlimited potential for the next decade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <divbutton
+              <button
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Play className="w-5 h-5" />
                 {isPlaying ? 'Pause Demo' : 'Watch Demo'}
-              </divbutton>
-              <divbutton
+              </button>
+              
+              <button
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 Explore Innovations
                 <ArrowRight className="w-5 h-5" />
-              </divbutton>
+              </button>
             </div>
           </div>
         </div>
@@ -76,6 +176,7 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
           </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Innovation Cards */}
             <div className="space-y-6">
@@ -158,6 +259,7 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
             <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
               <div
@@ -194,18 +296,19 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
               Join thousands of forward-thinking organizations already leveraging next-generation AI technologies
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <divbutton
+              <button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Rocket className="w-5 h-5" />
                 Start Your Transformation
-              </divbutton>
-              <divbutton
+              </button>
+              
+              <button
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <Users className="w-5 h-5" />
                 Schedule Consultation
-              </divbutton>
+              </button>
             </div>
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
@@ -227,5 +330,7 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default NextGenAIInnovationShowcase2025;
 </div></div></div>

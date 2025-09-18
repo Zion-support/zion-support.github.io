@@ -1,5 +1,59 @@
-import React from 'react';
-const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  ArrowRight
+  Star
+  Zap
+  TrendingUp,
+  Users,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  BarChart3,
+  Eye,
+  MousePointer,
+  Settings,
+  Code,
+  Database,
+  Cpu,
+  Network
+} from 'lucide-react';
+
+const InteractiveTechShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const features = [
+    { icon: Braintext: 'AI 'Automation', 'color: 'from-blue-500 to-purple-500' },
+    { icon: Shieldtext: ''Cybersecurity', 'color: 'from-red-500 to-orange-500' },
+    { icon: Cloudtext: 'Cloud 'Solutions', 'color: 'from-green-500 to-teal-500' },
+    { icon: BarChart3text: 'Data 'Analytics', 'color: 'from-purple-500 to-pink-500' }
+  ];
+
+  const stats = [
+    { value: '10'x', 'label: 'Performance Gain' },
+    { value: '99.7%'label: 'Accuracy Rate' },
+    { value: '<2's', 'label: 'Response Time' },
+    { value: '500+'label: 'Live Demos' }
+  ];
+
+  const demoSteps = [
+    'Real-time Process Analysis',
+    'AI-Powered Optimization',
+    'Live Performance Metrics',
+    'Instant Results Display'
+  ];
+
+  if (!isVisible) return null;
+
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16 overflow-hidden">
       {/* Animated Background */}
@@ -15,6 +69,7 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
             <Play className="w-4 h-4" />
             🎮 NEW: Interactive Technology Demo 2025
           </div>
+
           <divh2
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -23,12 +78,14 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
               Work in Real-Time
             </span>
           </divh2>
+
           <divp
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             Experience our revolutionary AI systems live in action. See how our technology 
             processes dataoptimizes processesand delivers results in real-time.
           </divp>
+
           {/* Interactive Demo Preview */}
           <div
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
@@ -89,6 +146,7 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
+
           {/* Feature Icons */}
           <div
             className="flex flex-wrap justify-center gap-8 mb-12"
@@ -108,6 +166,7 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
               );
             })}
           </div>
+
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -131,6 +190,8 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default InteractiveTechShowcase2025PromotionBanner;
 </div></div>

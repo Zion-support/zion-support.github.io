@@ -1,5 +1,39 @@
-import React from 'react';
-const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  Sparkles
+  ArrowRight
+  Brain
+  Zap
+  TrendingUp
+  X,
+  Star,
+  Rocket,
+  Target
+} from 'lucide-react';
+
+const AIInnovationShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai-innovation-banner-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+    }
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('ai-innovation-banner-'dismissed', 'true');
+  };
+
+  if (isDismissed || !isVisible) return null;
+
   return (
     <div>
       <div
@@ -103,5 +137,7 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default AIInnovationShowcase2025PromotionBanner;
 </div></div>

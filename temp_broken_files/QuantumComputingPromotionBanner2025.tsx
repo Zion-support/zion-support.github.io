@@ -1,4 +1,8 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
+AtomZapCpuArrowRightXStar
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const QuantumComputingPromotionBanner2025: React.FC = () => {
   return (
     <div>
@@ -15,6 +19,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
               >
                 QUANTUM REVOLUTION
               </div>
+              
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentFeature}`}
@@ -40,13 +45,13 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/quantum-computing-showcase-2025">
-                <divbutton
+                <button
                   className={`bg-gradient-to-r ${features[currentFeature].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
                 >
                   <Star className="w-4 h-4" />
                   Explore Quantum
                   <ArrowRight className="w-4 h-4" />
-                </divbutton>
+                </button>
               </a>
               <button
                 onClick={() => setIsVisible(false)}
@@ -84,5 +89,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default QuantumComputingPromotionBanner2025;
 </div></div>

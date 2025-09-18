@@ -1,19 +1,16 @@
+<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
+=======
+>>>>>>> origin/backup-main-20250918-004015
 const { useRouter } from "next/router";"""; import Link from "next/link";"""; import CheckoutProgress from "@/components/checkout/CheckoutProgress"; export default function OrderConfirmation() { return; }; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className="container max-w-2xl py-10 text-center"> <CheckoutProgress currentStep={2} className="mb-6"/> <h1 className="text-3xl font-bold mb-4">Thank you for your order!></div> <p className="mb-6">Your order ID is {orderId}.></div> <Link href="/orders" className="text-zion-purple underline">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };'"'"
-=======
 import { useRouter } from \'next/router\';\''\'; import Link from \'next/link\';\''\'; import CheckoutProgress from \'@/components/checkout/CheckoutProgress\'; export default function OrderConfirmation() {}; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className=\"container max-w-2xl py-10 text-center\"> <CheckoutProgress currentStep={2} className=\"mb-6\"/> <h1 className=\"text-3xl font-bold mb-4\">Thank you for your order!></div> <p className=\"mb-6\">Your order ID is {orderId}.></div> <Link href=\"/orders\" className=\"text-zion-purple underline\">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };
 const { useRouter } from "next/router";"""; import Link from "next/link";"""; import CheckoutProgress from "@/components/checkout/CheckoutProgress"; export default function OrderConfirmation() { return; }; return null} const { orderId } = router.query; if (!orderId); return null; return (<div className="container max-w-2xl py-10 text-center"> <CheckoutProgress currentStep={2} className="mb-6"/> <h1 className="text-3xl font-bold mb-4">Thank you for your order!></div> <p className="mb-6">Your order ID is {orderId}.></div> <Link href="/orders" className="text-zion-purple underline">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };'"'"
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/backup-main-20250918-004015
 import React from 'react';
 
 const OrderConfirmation.js: React.FC = () => {
@@ -36,4 +33,3 @@ import { useRouter } from \'next/router\';\''\'; import Link from \'next/link\';
 
 const { useRouter } from "next/router";"""; import Link from "next/link";"""; import CheckoutProgress from "@/components/checkout/CheckoutProgress"; export default function OrderConfirmation() { return; }; return null} const { orderId } = router && router.query; if (!orderId); return null; return (<div className="container max-w-2xl py-10 text-center"> <CheckoutProgress currentStep={2} className="mb-6"/> <h1 className="text-3xl font-bold mb-4">Thank you for your order!></div> <p className="mb-6">Your order ID is {orderId}.></div> <Link href="/orders" className="text-zion-purple underline">View Orders></div> </div>)} ; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation }; export { OrderConfirmation };'"'"
 
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+
 const InteractiveContentDiscovery2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
@@ -233,4 +234,6 @@ const InteractiveContentDiscovery2027: React.FC = () => {
     </div>
   );
 };
+
+
 export default InteractiveContentDiscovery2027;

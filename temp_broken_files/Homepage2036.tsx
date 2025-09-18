@@ -1,11 +1,20 @@
-import React from 'react';
-const Homepage2036: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Homepage2036</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+import React, { useState } from 'react';
+import UltraFuturisticServiceCard2036 from './ui/UltraFuturisticServiceCard2036';
+import { 
+  Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
+  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
+  Star, TrendingUp, Users, Building, Lightbulb,
+  ArrowRight, ChevronRight, Phone, Mail, MapPin,
+  Play, CheckCircle, Sparkles
+} from 'lucide-react';
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
@@ -24,7 +33,9 @@ const categories = [
   { name: 'IT Infrastructure', icon: <Cpu className="w-6 h-6" />, count: 120, color: 'from-orange-500 to-red-600' },
   { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, count: 90, color: 'from-blue-500 to-indigo-600' },
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6" />, count: 70, color: 'from-yellow-500 to-orange-600' }
-];
+
+
+
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
   const containerVariants = {
@@ -79,15 +90,22 @@ export default function Homepage2036() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-sm text-cyan-400 mb-6">
                 <Sparkles className="w-4 h-4" />
                 Pioneering the Future of Technology
+              </div>
+            </div>
+
             <divh1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               Zion Tech Group
+            </divh1>
+            
             <divp 
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Experience the future of technology with our cutting-edge micro SAAS services, 
               AI platforms, and quantum solutions. Transform your business with next-generation innovation.
+            </divp>
+            
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
@@ -103,6 +121,9 @@ export default function Homepage2036() {
               >
                 Get Started
                 <ChevronRight className="w-5 h-5" />
+              </a>
+            </div>
+
             {/* Stats */}
             <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -114,6 +135,10 @@ export default function Homepage2036() {
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
               ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Information */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-6xl mx-auto">
@@ -140,6 +165,11 @@ export default function Homepage2036() {
                 <h3 className="text-xl font-semibold mb-2 text-white">Address</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{contactInfo.address}</p>
                 <p className="text-gray-500 text-sm mt-2">Global operations</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Categories Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -153,6 +183,9 @@ export default function Homepage2036() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive range of cutting-edge technology solutions 
                 across multiple domains and industries.
+              </p>
+            </div>
+
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -173,7 +206,14 @@ export default function Homepage2036() {
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Explore</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
+                  </div>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
+
         {/* Featured Services */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto">
@@ -187,6 +227,9 @@ export default function Homepage2036() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most innovative and cutting-edge services that are 
                 transforming industries and driving the future of technology.
+              </p>
+            </div>
+
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -222,7 +265,10 @@ export default function Homepage2036() {
                       'default'
                     }
                   />
+                </div>
               ))}
+            </div>
+
             <div 
               className="text-center mt-12"
               whileInView={{ opacity: 1 }}
@@ -234,6 +280,11 @@ export default function Homepage2036() {
               >
                 View All Services
                 <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -247,6 +298,9 @@ export default function Homepage2036() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We combine cutting-edge technology with proven expertise to deliver 
                 solutions that drive real business transformation.
+              </p>
+            </div>
+
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -298,7 +352,12 @@ export default function Homepage2036() {
                     {feature.icon}
                   <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-4xl mx-auto text-center">
@@ -324,5 +383,28 @@ export default function Homepage2036() {
                 >
                   <Phone className="w-5 h-5" />
                   Call Us Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
   );
 }
+import React from "react";
+
+const function Homepage2036() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function Homepage2036() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function Homepage2036() {;

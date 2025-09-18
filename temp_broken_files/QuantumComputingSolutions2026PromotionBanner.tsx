@@ -1,5 +1,42 @@
-import React from 'react';
-const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Atom
+  Zap
+  Shield
+  Lock,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Target,
+  Brain,
+  X
+} from 'lucide-react';
+
+const QuantumComputingSolutions2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)3000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
+  const solutions = [
+    { icon: Targetlabel: ''Optimization', 'color: 'text-purple-400' },
+    { icon: Locklabel: ''Encryption', 'color: 'text-green-400' },
+    { icon: Atomlabel: ''Simulation', 'color: 'text-cyan-400' },
+    { icon: Brainlabel: 'AI/'ML', 'color: 'text-red-400' }
+  ];
+
   return (
     <div>
       {isVisible && (
@@ -47,16 +84,19 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
                     ))}
                   </div>
                 </div>
+
                 <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   ⚛️ Quantum Computing Solutions 2026
                 </divh2>
+
                 <divp
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Harness quantum power: OptimizationEncryptionSimulationand AI/ML solutions
                 </divp>
+
                 {/* Solution Icons */}
                 <div
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
@@ -83,13 +123,14 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
+
               {/* Dismiss Button */}
-              <divbutton
+              <button
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
-              </divbutton>
+              </button>
             </div>
           </div>
           {/* Progress Bar */}
@@ -102,5 +143,7 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default QuantumComputingSolutions2026PromotionBanner;
 </div></div></div></div></div></div>

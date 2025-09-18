@@ -1,5 +1,44 @@
-import React from 'react';
-const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  TrendingUp
+  Brain
+  Zap
+  ArrowRight
+  Star,
+  Sparkles,
+  Target,
+  Clock
+} from 'lucide-react';
+
+const AI2025TrendsInnovationPromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }2000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const stats = [
+    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" },
+    { icon: Brainvalue: "85%"label: "Efficiency Boost" },
+    { icon: Zapvalue: "60%"label: "Faster Processing" },
+    { icon: Targetvalue: "95%"label: "Success Rate" }
+  ];
+
+  const features = [
+    "Generative AI Revolution",
+    "Edge AI Computing"
+    "Quantum AI Integration",
+    "Predictive Analytics"
+  ];
+
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -46,20 +85,22 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <divbutton
+              <button
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 Explore AI Trends
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </divbutton>
-              <divbutton
+              </button>
+              
+              <button
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Clock className="w-5 h-5 mr-2" />
                 Limited Time
-              </divbutton>
+              </button>
             </div>
           </div>
+
           {/* Right Content - Stats Display */}
           <div
             className="relative"
@@ -105,6 +146,7 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
             >
               <Star className="w-8 h-8 text-white" />
             </div>
+
             <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
@@ -132,5 +174,7 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
     </section>
   );
 };
+
+
 export default AI2025TrendsInnovationPromotionBanner;
 </div></div></div>

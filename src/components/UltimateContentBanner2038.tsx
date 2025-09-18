@@ -1,85 +1,63 @@
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center">
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-6"
-          >
-            🌟 BREAKTHROUGH 2038 • NEW CONTENT AVAILABLE
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
-          >
-            🚀 Ultimate Tech Breakthrough 2038
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto"
-          >
-            Experience the most revolutionary technological advances that will reshape reality in 2038
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto"
-          >
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/pages/UltimateTechBreakthrough2038"
-              className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group"
-            >
-              <div className="text-4xl mb-3">🚀</div>
-              <h3 className="text-xl font-bold mb-2">Ultimate Breakthrough</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Neural Reality Engine, Quantum Consciousness Matrix, and Interdimensional Gateway
-              </p>
-              <div className="text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                Explore Now →
-              </div>
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/pages/CosmicIntelligenceRevolution2038"
-              className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group"
-            >
-              <div className="text-4xl mb-3">🌌</div>
-              <h3 className="text-xl font-bold mb-2">Cosmic Intelligence</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Universal awareness, reality manipulation, and cosmic harmony across dimensions
-              </p>
-              <div className="text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                Enter Cosmic Realm →
-              </div>
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="/pages/RevolutionaryTechBreakthrough2038"
-              className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-6 hover:bg-white/30 transition-all duration-300 group"
-            >
-              Transcendent Showcase 2040 →
+import React from 'react';
+
+const UltimateContentBanner2038: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE REVOLUTION • JANUARY 2038
+          </div>
+          <h2 className="text-4xl font-bold mb-4">🚀 Ultimate Tech Revolution 2038</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
+            Witness the most profound technological revolution that will reshape the very fabric of existence
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+            <div className="text-4xl mb-3 text-center">🧠</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Omnipotent AI</h3>
+            <p className="text-purple-100 text-sm text-center mb-4">
+              First AI system to achieve omnipotence with reality creation and universal law manipulation
+            </p>
+            <a href="/pages/UltimateTechRevolution2038" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore Omnipotence →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
+            <div className="text-4xl mb-3 text-center">⚡</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Universal Quantum</h3>
+            <p className="text-indigo-100 text-sm text-center mb-4">
+              Revolutionary quantum system that can manipulate fundamental forces across all dimensions
+            </p>
+            <a href="/pages/RevolutionaryTechBreakthrough2037" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
+              View Quantum Matrix →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
+            <div className="text-4xl mb-3 text-center">🌌</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Multiverse Gateway</h3>
+            <p className="text-cyan-100 text-sm text-center mb-4">
+              Advanced gateway technology enabling instant travel and communication across the multiverse
+            </p>
+            <a href="/pages/UltimateTechRevolution2038" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Enter Multiverse →
             </a>
           </div>
         </div>
+        
+        <div className="text-center">
+          <a href="/pages/UltimateTechRevolution2038" className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            🌟 Join the Ultimate Revolution 2038 →
+          </a>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
+
 export default UltimateContentBanner2038;
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 rounded-2xl relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
-              Transcendent Showcase 2040 →
-            </a>
-          </div>

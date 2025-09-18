@@ -1,5 +1,70 @@
-import React from 'react';
-const UltimateContentPromotionBanner2025_2026: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  Star
+  Zap
+  TrendingUp
+  ArrowRight
+  Play
+  CheckCircle,
+  Sparkles,
+  Rocket,
+  Brain,
+  Cpu,
+  Globe,
+  Shield
+} from 'lucide-react';
+
+const UltimateContentPromotionBanner2025_2026 = () => {
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }5000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const slides = [
+    {
+      id: 'ai-2025-breakthrough',
+      title: 'AI 2025 Revolutionary Breakthroughs',
+      subtitle: 'Experience the Future of Artificial Intelligence',
+      description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.',
+      features: ['Neural Consciousness 'AI', 'Quantum-Neural 'Fusion', 'Autonomous Data Intelligence'],
+      cta: 'Explore AI 2025',
+      gradient: 'from-blue-600 via-purple-600 to-pink-600',
+      icon: Brain
+    },
+    {
+      id: 'ai-2026-vision',
+      title: 'AI 2026 Future Vision',
+      subtitle: 'Prepare for the Next Decade of Innovation',
+      description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.',
+      features: ['Global AI 'Ecosystem', 'Space-Age 'Computing', 'Conscious AI Beings'],
+      cta: 'Discover AI 2026',
+      gradient: 'from-emerald-600 via-cyan-600 to-blue-600',
+      icon: Globe
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution',
+      subtitle: 'Unlock Infinite Computational Power',
+      description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.',
+      features: ['Quantum 'Supremacy', 'Exponential 'Speed', 'Unlimited Scalability'],
+      cta: 'Learn More',
+      gradient: 'from-purple-600 via-pink-600 to-red-600',
+      icon: Cpu
+    }
+  ];
+
+  const currentSlideData = slides[currentSlide];
+
   return (
     <div className="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -43,6 +108,7 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-semibold">New Content Available</span>
                   </div>
+
                   {/* Title */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
                     <span className={`bg-gradient-to-r ${currentSlideData.gradient} bg-clip-text text-transparent`}>
@@ -71,23 +137,25 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                   </div>
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <divbutton
+                    <button
                       className={`bg-gradient-to-r ${currentSlideData.gradient} text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300`}
                     >
                       <Rocket className="w-5 h-5" />
                       {currentSlideData.cta}
                       <ArrowRight className="w-5 h-5" />
-                    </divbutton>
-                    <divbutton
+                    </button>
+                    
+                    <button
                       className="border-2 border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:bg-white/10 transition-all duration-300"
                     >
                       <Play className="w-5 h-5" />
                       Watch Demo
-                    </divbutton>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
+
             {/* Visual */}
             <div
               className="relative"
@@ -112,6 +180,7 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                     </p>
                   </div>
                 </div>
+
                 {/* Floating Elements */}
                 {[...Array(6)].map((_i) => (
                   <div
@@ -158,5 +227,7 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateContentPromotionBanner2025_2026;
 </div></div></div></div></div>

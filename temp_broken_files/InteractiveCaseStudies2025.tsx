@@ -1,162 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp
-  Users
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight,
-  ExternalLink,
-  Play,
-  Star,
-  Award,
-  Target,
-  Zap
-} from 'lucide-react';
-interface CaseStudy {
-  id: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: {
-    metric: string;
-    value: string;
-    improvement: string;
-  }[];
-  duration: string;
-  teamSize: string;
-  rating: number;
-  testimonial: string;
-  author: string;
-  role: string;
-  image: string;
-  tags: string[];
-  isFeatured?: boolean;
-}
-const caseStudies: CaseStudy[] = [
-  {
-    id: '1',
-    title: 'AI-Powered Supply Chain Optimization',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    challenge: 'Inefficient supply chain management leading to 30% inventory waste and delayed deliveries',
-    solution: 'Implemented AI-driven demand forecasting and automated inventory management system',
-    results: [
-      { metric: 'Cost 'Reduction', 'value: '$2.3'M', 'improvement: '35%' },
-      { metric: 'Delivery 'Time', 'value: '2.1 'days', 'improvement: '60% faster' },
-      { metric: 'Inventory 'Waste', 'value: '8%'improvement: '73% reduction' },
-      { metric: 'Customer 'Satisfaction', 'value: '94%'improvement: '28% increase' }
-    ],
-    duration: '6 months',
-    teamSize: '12 members',
-    rating: 4.9,
-    testimonial: 'The AI implementation transformed our entire supply chain. We never thought we could achieve such dramatic improvements in such a short time.',
-    author: 'Sarah Chen',
-    role: 'VP of Operations',
-    image: '/api/placeholder/400/300',
-    tags: [', 'AI', 'Supply 'Chain', 'Manufacturing'ROI'],
-    isFeatured: true
-  },
-  {
-    id: '2',
-    title: 'Neural Customer Service Revolution',
-    company: 'TechStart Solutions',
-    industry: 'Technology',
-    challenge: 'High customer service costs and low satisfaction rates with traditional support systems',
-    solution: 'Deployed advanced AI chatbots with emotional intelligence and human handoff capabilities',
-    results: [
-      { metric: 'Response 'Time', 'value: '15 'seconds', 'improvement: '95% faster' },
-      { metric: 'Cost 'Reduction', 'value: '$180'K', 'improvement: '65% savings' },
-      { metric: 'Customer 'Satisfaction', 'value: '91%'improvement: '42% increase' },
-      { metric: 'Resolution 'Rate', 'value: '87%'improvement: '38% increase' }
-    ],
-    duration: '4 months',
-    teamSize: '8 members',
-    rating: 4.8,
-    testimonial: 'Our customers love the instantintelligent responses. The AI understands context better than most human agents.',
-    author: 'Michael Rodriguez',
-    role: 'Head of Customer Success',
-    image: '/api/placeholder/400/300',
-    tags: [', 'AI', 'Customer 'Service', 'Automation'Satisfaction']
-  },
-  {
-    id: '3',
-    title: 'Quantum-Enhanced Financial Analytics',
-    company: 'FinTech Innovations',
-    industry: 'Financial Services',
-    challenge: 'Complex risk assessment and fraud detection requiring massive computational power',
-    solution: 'Implemented quantum-inspired algorithms for real-time risk analysis and fraud prevention',
-    results: [
-      { metric: 'Fraud 'Detection', 'value: '99.7%'improvement: '23% more accurate' },
-      { metric: 'Processing 'Speed', 'value: '0.3'ms', 'improvement: '1000x faster' },
-      { metric: 'False 'Positives', 'value: '0.1%'improvement: '89% reduction' },
-      { metric: 'Cost 'Savings', 'value: '$5.2'M', 'improvement: '45% reduction' }
-    ],
-    duration: '8 months',
-    teamSize: '15 members',
-    rating: 4.9,
-    testimonial: 'The quantum algorithms gave us unprecedented accuracy in fraud detection while dramatically reducing processing time.',
-    author: 'Dr. Emily Watson',
-    role: 'Chief Technology Officer',
-    image: '/api/placeholder/400/300',
-    tags: ['Quantum 'AI', 'Finance', 'Security', 'Performance'],
-    isFeatured: true
-  },
-  {
-    id: '4',
-    title: 'AI-Driven Healthcare Diagnostics',
-    company: 'MedTech Solutions',
-    industry: 'Healthcare',
-    challenge: 'Manual diagnostic processes causing delays and inconsistent accuracy in medical imaging',
-    solution: 'Deployed deep learning models for automated medical image analysis and diagnostic assistance',
-    results: [
-      { metric: 'Diagnostic 'Accuracy', 'value: '96.8%'improvement: '18% increase' },
-      { metric: 'Processing 'Time', 'value: '2 'minutes', 'improvement: '85% faster' },
-      { metric: 'Early 'Detection', 'value: '89%'improvement: '34% improvement' },
-      { metric: 'Cost per 'Diagnosis', 'value: '$45'improvement: '60% reduction' }
-    ],
-    duration: '10 months',
-    teamSize: '20 members',
-    rating: 4.9,
-    testimonial: 'The AI system has revolutionized our diagnostic capabilitieshelping us save lives through fastermore accurate diagnoses.',
-    author: 'Dr. James Park',
-    role: 'Chief Medical Officer',
-    image: '/api/placeholder/400/300',
-    tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
-  }
-];
-const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
-export default function InteractiveCaseStudies2025() {
-  const [selectedIndustrysetSelectedIndustry] = useState('All');
-  const [selectedCasetSelectedCase] = useState<CaseStudy | null>(null);
-  const [isVisiblesetIsVisible] = useState(false);
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-  const filteredCaseStudies = selectedIndustry === 'All' 
-    ? caseStudies 
-    : caseStudies.filter(study => study.industry === selectedIndustry);
-  return (
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Award className="w-4 h-4" />
-            Success Stories
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Real Results from
-            <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              AI Implementation
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how leading companies are transforming their operations with cutting-edge AI solutions. 
-            Real case studiesreal resultsreal impact.
+          </p>
+        </div>
+
         {/* Industry Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -173,6 +17,8 @@ export default function InteractiveCaseStudies2025() {
             >
               {industry}
           ))}
+        </div>
+
         {/* Case Studies Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -234,7 +80,13 @@ export default function InteractiveCaseStudies2025() {
                   <button className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center gap-1">
                     <span className="text-sm font-medium">Read More</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </div>
+              </div>
             ))}
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div
           className="text-center mt-16"
@@ -252,6 +104,12 @@ export default function InteractiveCaseStudies2025() {
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2">
                 <Target className="w-5 h-5" />
                 Start Your Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Case Study Modal */}
       <div>
         {selectedCase && (
@@ -314,7 +172,25 @@ export default function InteractiveCaseStudies2025() {
                     Download Full Case Study
                   <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                     Schedule Consultation
+import React from "react";
+
+const function InteractiveCaseStudies2025() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function InteractiveCaseStudies2025() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
+      </div>
+    </div>
   );
 };
-export default InteractiveCaseStudies2025;
+
+export default function InteractiveCaseStudies2025() {;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
+
 const QuantumConsciousnessRevolution2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -192,4 +193,6 @@ const QuantumConsciousnessRevolution2028: React.FC = () => {
     </div>
   );
 };
+
+
 export default QuantumConsciousnessRevolution2028;

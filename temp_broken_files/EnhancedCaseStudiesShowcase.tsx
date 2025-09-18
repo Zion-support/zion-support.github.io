@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 const EnhancedCaseStudiesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -27,6 +29,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
+
         <div
           whileInView="visible"
           viewport={{ once: true }}
@@ -93,6 +96,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
+
         <div
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -112,4 +116,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
     </section>
   );
 };
+
+
 export default EnhancedCaseStudiesShowcase;

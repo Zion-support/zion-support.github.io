@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const NewContentPromotionalBanner: React.FC = () => {
   return (
     <div>
@@ -44,6 +47,7 @@ const NewContentPromotionalBanner: React.FC = () => {
                   </Link>
                 </div>
               </div>
+
               {/* Navigation Arrow */}
               <button
                 onClick={handleNext}
@@ -121,4 +125,7 @@ const NewContentPromotionalBanner: React.FC = () => {
   );
 };
 export { NewContentPromotionalBanner };
+
+
+
 export default NewContentPromotionalBanner;

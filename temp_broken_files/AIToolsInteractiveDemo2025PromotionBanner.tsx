@@ -1,4 +1,25 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  Sparkles
+  ArrowRight
+  Star
+  Users
+  Zap,
+  Brain,
+  Code,
+  BarChart3,
+  MessageSquare,
+  Image,
+  Video,
+  CheckCircle,
+  TrendingUp,
+  Shield
+} from 'lucide-react';
+
 const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -27,6 +48,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 See how AI can transform your workflow in real-time.
               </p>
             </div>
+
             {/* Features List */}
             <div
               className="space-y-4"
@@ -43,6 +65,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -56,6 +79,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 View All Tools
               </button>
             </div>
+
             {/* Stats */}
             <div
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
@@ -149,6 +173,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-8 h-8 text-white" />
             </div>
+
             <div
                 y: [010],
                 rotate: [0-50]
@@ -170,4 +195,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default AIToolsInteractiveDemo2025PromotionBanner;

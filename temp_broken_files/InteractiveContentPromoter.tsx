@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 const InteractiveContentPromoter: React.FC = () => {
   return (
     <div>
@@ -64,4 +65,6 @@ const InteractiveContentPromoter: React.FC = () => {
     </div>
   );
 };
+
+
 export default InteractiveContentPromoter;

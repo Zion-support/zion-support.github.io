@@ -1,13 +1,9 @@
-import React from 'react';
-const Logo = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Logo</h1>
-          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
-        </div>
+export function Logo({ className = '' }) {
+      <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">
+        Z
       </div>
-    </div>
-  );
-export default Logo;
+      <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Zion Tech Group
+      </span>
+    </div>);
+}

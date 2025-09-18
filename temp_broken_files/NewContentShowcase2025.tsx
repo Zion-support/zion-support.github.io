@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 const NewContentShowcase2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
@@ -18,6 +19,7 @@ const NewContentShowcase2025: React.FC = () => {
             innovation hubs, and breakthrough demonstrations
           </p>
         </div>
+
         {/* Interactive Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
@@ -132,6 +134,7 @@ const NewContentShowcase2025: React.FC = () => {
               Explore all our revolutionary new content
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {newContent.map((content, index) => (
               <div
@@ -170,5 +173,7 @@ const NewContentShowcase2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default NewContentShowcase2025;
 </p></p>

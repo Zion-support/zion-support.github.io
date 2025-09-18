@@ -23,6 +23,10 @@ import {
   Activity
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
+};
+
+
+
 export default function AIFinancialTrading() {
   const features = [
     {
@@ -159,6 +163,12 @@ export default function AIFinancialTrading() {
                 className="inline-flex items-center px-8 py-4 border-2 border-yellow-500 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500 hover:text-white transition-all duration-300"
               >
                 Watch Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Benefits */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -176,6 +186,7 @@ export default function AIFinancialTrading() {
               >
                 <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
                 <p className="text-white text-lg font-medium">{benefit}</p>
+              </div>
             ))}
       {/* Features */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -196,6 +207,7 @@ export default function AIFinancialTrading() {
                   {feature.icon}
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+              </div>
             ))}
       {/* Trading Strategies */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -217,6 +229,8 @@ export default function AIFinancialTrading() {
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 text-yellow-400 mr-2" />
                   <span className="text-yellow-400 font-semibold">{strategy.performance}</span>
+                </div>
+              </div>
             ))}
       {/* Pricing */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -262,6 +276,8 @@ export default function AIFinancialTrading() {
                   }`}
                 >
                   Get Started
+                </a>
+              </div>
             ))}
       {/* Market Information */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -293,6 +309,11 @@ export default function AIFinancialTrading() {
                   <div>
                     <p className="text-white font-semibold">Target Market</p>
                     <p className="text-gray-300">Individual traders, hedge funds, investment firms</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
@@ -311,6 +332,13 @@ export default function AIFinancialTrading() {
                 <div className="flex items-center justify-between">
                   <span className="text-gray-300">Automation Level</span>
                   <span className="text-green-400 font-semibold">80%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -335,6 +363,12 @@ export default function AIFinancialTrading() {
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
@@ -364,5 +398,22 @@ export default function AIFinancialTrading() {
               Visit our website
               <ExternalLink className="ml-2 w-4 h-4" />
   );
-};
+
+
+
 export default ai-financial-trading;
+
+const function AIFinancialTrading() {: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIFinancialTrading() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function AIFinancialTrading() {;

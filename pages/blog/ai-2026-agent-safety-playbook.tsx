@@ -1,57 +1,31 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function AI2026AgentSafetyPlaybook() {
+const Ai2026AgentSafetyPlaybook: NextPage = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-rose-50 to-indigo-100">
+    <div>
       <Head>
-        <title>AI 2026: Agent Safety Playbook | Zion Tech Group</title>
-        <meta name="description" content="Actionable patterns to ship safe, governed, and trustworthy agentic systems in production." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agent-safety-playbook" />
+        <title>Ai2026AgentSafetyPlaybook - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AgentSafetyPlaybook blog post" />
       </Head>
+      
+      <main>
+        <h1>Ai2026AgentSafetyPlaybook</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
 
-      <article className="mx-auto max-w-3xl px-6 py-16">
-        <header className="mb-10">
-          <p className="text-sm text-gray-600">Safety • September 2025 • 9 min read</p>
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">AI 2026: Agent Safety Playbook</h1>
-          <p className="mt-3 text-gray-700">A practical playbook to design, ship, and operate safe agentic systems with runtime guardrails, policy-as-code, and evidence-driven governance.</p>
-        </header>
-
-        <section className="prose prose-slate max-w-none">
-          <h2>Core Safety Anchors</h2>
-          <ul>
-            <li>Risk-tiered tool adapters with explicit permissions and budgets</li>
-            <li>Policy-as-code with approvals, overrides, and incident links</li>
-            <li>Eval gates for pre-deploy and runtime canarying</li>
-            <li>Observability for traces, decisions, costs, and violations</li>
-          </ul>
-
-          <h2>Operational Controls</h2>
-          <ul>
-            <li>SLIs/SLOs for safety, quality, reliability, and efficiency</li>
-            <li>Rollbacks tied to violation thresholds and override rates</li>
-            <li>Incident workflows with remediation playbooks</li>
-          </ul>
-
-          <h2>Design Patterns</h2>
-          <ul>
-            <li>Guarded tool envelopes with least-privilege execution</li>
-            <li>Deterministic checkpoints for critical actions</li>
-            <li>Shadow routing and red-team scenario suites</li>
-          </ul>
-
-          <h2>Read Next</h2>
-          <ul>
-            <li><Link href="/blog/ai-2026-runtime-guardrails-blueprint">Runtime Guardrails Blueprint</Link></li>
-            <li><Link href="/blog/ai-2026-production-evidence-hub-blueprint">Production Evidence Hub Blueprint</Link></li>
-          </ul>
-        </section>
-
-        <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-600">
-          <a href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</a>
-        </footer>
-      </article>
-    </main>
-  )
-}
-
+<<<<<<< HEAD
+export default Ai2026AgentSafetyPlaybook;
+=======
+export default Ai2026AgentSafetyPlaybook;
+>>>>>>> origin/backup-main-20250918-004015

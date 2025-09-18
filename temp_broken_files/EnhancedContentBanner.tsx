@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 const EnhancedContentBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
@@ -49,6 +50,7 @@ const EnhancedContentBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Navigation Controls */}
             <button
               onClick={prevSlide}
@@ -80,7 +82,7 @@ const EnhancedContentBanner: React.FC = () => {
       {/* Quick Access Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         {featuredContent.map((content, index) => (
-          <diva
+          <a
             key={content.id}
             href={content.link}
             className={`bg-gradient-to-r ${content.gradient} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center relative overflow-hidden group`}
@@ -94,7 +96,7 @@ const EnhancedContentBanner: React.FC = () => {
                 {content.badge}
               </span>
             </div>
-          </diva>
+          </a>
         ))}
       </div>
       {/* Interactive Stats */}
@@ -141,4 +143,6 @@ const EnhancedContentBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default EnhancedContentBanner;

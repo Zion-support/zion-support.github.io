@@ -1,5 +1,87 @@
-import React from 'react';
-const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Award
+  ArrowRight
+  Star
+  TrendingUp,
+  X,
+  CheckCircle,
+  DollarSign,
+  Users,
+  Clock,
+  Target,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe
+} from 'lucide-react';
+
+const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStat(prev => (prev + 1) % 4);
+    }2500);
+    return () => clearInterval(interval);
+  }[]);
+
+  const caseStudies = [
+    { 
+      title: 'FinTech Revolution'
+      roi: '500%'
+      icon: DollarSign
+      color: 'text-green-400',
+      company: 'PayFlow Solutions'
+    },
+    { 
+      title: 'Healthcare AI'
+      roi: '400%'
+      icon: Shield
+      color: 'text-blue-400',
+      company: 'MediTech Innovations'
+    },
+    { 
+      title: 'E-commerce Automation'
+      roi: '600%'
+      icon: Globe
+      color: 'text-purple-400',
+      company: 'ShopGlobal'
+    },
+    { 
+      title: 'Smart Manufacturing'
+      roi: '350%'
+      icon: Zap
+      color: 'text-orange-400',
+      company: 'AutoParts Pro'
+    }
+  ];
+
+  const features = [
+    'Real Success Stories',
+    'Proven ROI Results',
+    'Industry Expertise',
+    'Client Testimonials'
+  ];
+
+  const stats = [
+    { label: '200+'value: 'Projects' },
+    { label: '450%'value: 'Avg ROI' },
+    { label: '96%'value: 'Satisfaction' }
+  ];
+
+  if (!isVisible || isDismissed) return null;
+
   return (
     <div>
       <div
@@ -43,17 +125,20 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   SUCCESS STORIES
                 </span>
               </div>
+
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🏆 Revolutionary Case Studies 2026
               </divh2>
+
               <divp
                 className="text-lg text-purple-200 mb-6 max-w-2xl"
               >
                 Real success stories from companies that achieved incredible results with our AI and automation solutions. 
                 See how they transformed their operations and achieved massive ROI.
               </divp>
+
               {/* Rotating Case Study Display */}
               <div
                 key={currentStat}
@@ -68,6 +153,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   <div className="text-2xl font-bold text-yellow-300">{caseStudies[currentStat].roi} ROI</div>
                 </div>
               </div>
+
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
@@ -79,6 +165,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Stats */}
               <div
                 className="flex space-x-6 mb-6"
@@ -90,6 +177,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -142,5 +230,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryCaseStudiesShowcase2026PromotionBanner;
 </div></div></div></div>

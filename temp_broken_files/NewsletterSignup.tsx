@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -90,5 +91,7 @@ const NewsletterSignup: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default NewsletterSignup;

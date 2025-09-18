@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { 
   BookOpen, 
   FileText, 
@@ -145,7 +145,7 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.map((post, index) => (
-              <divarticle
+              <article
                 key={post.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
@@ -218,15 +218,16 @@ const ContentShowcase: React.FC = () => {
                         <p className="text-xs text-gray-500">{post.authorRole}</p>
                       </div>
                     </div>
-                    <divbutton
+                    
+                    <button
                       className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
                     >
                       <span>Read More</span>
                       <ArrowRight className="w-4 h-4" />
-                    </divbutton>
+                    </button>
                   </div>
                 </div>
-              </divarticle>
+              </article>
             ))}
           </div>
         );
@@ -283,12 +284,13 @@ const ContentShowcase: React.FC = () => {
                       <p className="font-semibold text-green-600">{study.savings}</p>
                     </div>
                   </div>
-                  <divbutton
+                  
+                  <button
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
                   >
                     <span>View Full Study</span>
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
               </div>
             ))}
@@ -338,12 +340,13 @@ const ContentShowcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  <divbutton
+                  
+                  <button
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Register Now</span>
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
               </div>
             ))}
@@ -390,12 +393,13 @@ const ContentShowcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  <divbutton
+                  
+                  <button
                     className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Download PDF</span>
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
               </div>
             ))}
@@ -426,6 +430,7 @@ const ContentShowcase: React.FC = () => {
             Discover how cutting-edge technology is transforming businesses worldwide.
           </p>
         </div>
+
         {/* Tab Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -434,7 +439,7 @@ const ContentShowcase: React.FC = () => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
             return (
-              <divbutton
+              <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
@@ -447,10 +452,11 @@ const ContentShowcase: React.FC = () => {
               >
                 <Icon className="w-5 h-5" />
                 <span>{tab.name}</span>
-              </divbutton>
+              </button>
             );
           })}
         </div>
+
         {/* Content */}
           <div
             key={activeTab}
@@ -458,6 +464,7 @@ const ContentShowcase: React.FC = () => {
             {renderContent()}
           </div>
         </div>
+
         {/* Newsletter Signup */}
         <div
           className="mt-20"
@@ -475,11 +482,11 @@ const ContentShowcase: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <divbutton
+              <button
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Subscribe
-              </divbutton>
+              </button>
             </div>
           </div>
         </div>
@@ -488,4 +495,7 @@ const ContentShowcase: React.FC = () => {
   );
 };
 export { ContentShowcase };
+
+
+
 export default ContentShowcase;

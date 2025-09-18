@@ -25,7 +25,10 @@ const interests = [
 ];
 const timeSlots = [
   '9:00 AM'10:00 AM'11:00 AM'1:00 PM'2:00 PM'3:00 PM'4:00 PM'
-];
+};
+
+
+
 export default function InteractiveDemoRequest() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
@@ -69,12 +72,14 @@ export default function InteractiveDemoRequest() {
   return (
     <>
       {/* Floating Demo Button */}
-      <divbutton
+      <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center z-50"
       >
         <Calendar className="w-5 h-5 mr-2" />
         Request Demo
+      </button>
+
       {/* Modal */}
       <div>
         {isOpen && (
@@ -128,6 +133,8 @@ export default function InteractiveDemoRequest() {
                       className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                     >
                       Close
+                    </button>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit}>
                       {/* Step 1: Personal Information */}
@@ -178,6 +185,9 @@ export default function InteractiveDemoRequest() {
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 placeholder="CTOCEOetc."
                               />
+                            </div>
+                          </div>
+                        </div>
                       )}
                       {/* Step 2: Business Details */}
                       {currentStep === 2 && (
@@ -237,6 +247,9 @@ export default function InteractiveDemoRequest() {
                                 >
                                   {interest}
                               ))}
+                            </div>
+                          </div>
+                        </div>
                       )}
                       {/* Step 3: Schedule */}
                       {currentStep === 3 && (
@@ -277,7 +290,11 @@ export default function InteractiveDemoRequest() {
                               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               placeholder="Tell us about your specific needs or questions..."
                             />
+                          </div>
+                        </div>
                       )}
+                    </div>
+                  </form>
                 )}
               {/* Footer */}
               {!isSubmitted && (
@@ -306,8 +323,13 @@ export default function InteractiveDemoRequest() {
                       Schedule Demo
                   )}
               )}
+            </div>
+          </div>
         )}
+      </div>
     </>
   );
-};
+
+
+
 export default InteractiveDemoRequest;

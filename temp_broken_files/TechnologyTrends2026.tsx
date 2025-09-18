@@ -1,4 +1,62 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  TrendingUp
+  Brain
+  Zap
+  Rocket
+  Target
+  Globe,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink,
+  Sparkles,
+  Cpu,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search,
+  Calendar,
+  Users,
+  BarChart3,
+  PieChart,
+  LineChart
+} from 'lucide-react';
+
+interface TrendItem {
+  id: string;
+  title: string;
+  description: string;
+  category: 'ai' | 'quantum' | 'automation' | 'biotech' | 'robotics' | 'sustainability';
+  impact: 'low' | 'medium' | 'high' | 'transformative';
+  timeline: string;
+  adoption: number; // percentage
+  marketSize: string;
+  growth: number; // percentage
+  tags: string[];
+  image: string;
+  url: string;
+  featured: boolean;
+  predictions: {
+    shortTerm: string;
+    mediumTerm: string;
+    longTerm: string;
+  };
+  keyPlayers: string[];
+  challenges: string[];
+}
+
 const TechnologyTrends2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
@@ -130,6 +188,7 @@ const TechnologyTrends2026: React.FC = () => {
             })}
           </div>
         </div>
+
         {/* Category Filter */}
         <div
           className="mb-12"
@@ -158,6 +217,7 @@ const TechnologyTrends2026: React.FC = () => {
             })}
           </div>
         </div>
+
         {/* Trends Grid */}
         <div
         >
@@ -360,5 +420,7 @@ const TechnologyTrends2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default TechnologyTrends2026;

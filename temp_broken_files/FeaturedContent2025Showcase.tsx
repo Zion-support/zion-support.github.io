@@ -1,4 +1,6 @@
 import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const FeaturedContent2025Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-white">
@@ -17,6 +19,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
             Expert guidance to accelerate your AI transformation journey.
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
             <div
@@ -103,6 +106,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Newsletter Signup */}
         <div
           className="mt-12 text-center"
@@ -133,4 +137,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
     </section>
   );
 };
+
+
 export default FeaturedContent2025Showcase;

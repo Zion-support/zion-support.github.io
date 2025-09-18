@@ -1,31 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function GovernedToolApprovals2026() {
+const Ai2026GovernedToolApprovals: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Governed Tool Approvals (2026) | Zion Tech Group</title>
-        <meta name="description" content="Risk‑tiered adapters, budgets, and just‑in‑time approvals for safe actions." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-governed-tool-approvals" />
+        <title>Ai2026GovernedToolApprovals - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026GovernedToolApprovals blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Governed Tool Approvals (2026)</h1>
-        <p>
-          Production agents must request permissions commensurate with risk. Implement risk tiers, budgets, and
-          approvals to keep actions safe, auditable, and reversible.
-        </p>
-
-        <h2>Design Principles</h2>
-        <ul>
-          <li>Low‑risk tools: pre‑approved with budgets and rate limits</li>
-          <li>Medium risk: human‑in‑the‑loop or policy‑based approvals</li>
-          <li>High risk: break‑glass with explicit scope and time bounds</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026GovernedToolApprovals</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026GovernedToolApprovals;
+=======
+export default Ai2026GovernedToolApprovals;
+>>>>>>> origin/backup-main-20250918-004015

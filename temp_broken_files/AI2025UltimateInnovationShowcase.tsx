@@ -1,4 +1,10 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const AI2025UltimateInnovationShowcase: React.FC = () => {
   return (
     <div
@@ -22,6 +28,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
         </div>
+
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
@@ -61,6 +68,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Call to Action */}
         <div
           className="text-center"
@@ -88,4 +96,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
     </div>
   );
 };
+
+
 export default AI2025UltimateInnovationShowcase;

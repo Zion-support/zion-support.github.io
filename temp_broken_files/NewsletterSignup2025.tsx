@@ -1,4 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { 
+  Mail, 
+  Send, 
+  CheckCircle, 
+  Star,
+  Sparkles,
+  ArrowRight,
+  Bell,
+  Zap
+} from 'lucide-react';
+
 const NewsletterSignup2025: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -90,6 +101,7 @@ const NewsletterSignup2025: React.FC = () => {
             and quantum computing.
           </p>
         </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
           <div
@@ -112,6 +124,7 @@ const NewsletterSignup2025: React.FC = () => {
               ))}
             </div>
           </div>
+
           {/* Signup Form */}
           <div
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
@@ -162,6 +175,7 @@ const NewsletterSignup2025: React.FC = () => {
             </p>
           </div>
         </div>
+
         <div
           className="text-center mt-12"
         >
@@ -186,5 +200,7 @@ const NewsletterSignup2025: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default NewsletterSignup2025;

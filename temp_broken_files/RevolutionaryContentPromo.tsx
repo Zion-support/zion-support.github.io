@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const RevolutionaryContentPromo: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -18,6 +19,7 @@ const RevolutionaryContentPromo: React.FC = () => {
             Neural Interfaces, and Next-Generation Technologies that will transform our world
           </p>
         </div>
+
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
@@ -88,6 +90,7 @@ const RevolutionaryContentPromo: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Call to Action */}
         <div
           className="text-center"
@@ -110,4 +113,6 @@ const RevolutionaryContentPromo: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryContentPromo;

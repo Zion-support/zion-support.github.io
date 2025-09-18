@@ -1,4 +1,6 @@
 import React from 'react';
+import { Star, Quote } from 'lucide-react';
+
 const TestimonialSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
@@ -17,6 +19,7 @@ const TestimonialSection: React.FC = () => {
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
@@ -94,4 +97,6 @@ const TestimonialSection: React.FC = () => {
     </section>
   );
 };
+
+
 export default TestimonialSection;

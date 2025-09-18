@@ -1,69 +1,31 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import React from 'react'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function AgenticCRM2025() {
+const AgenticCrmAutonomousRevenueWorkflows2025: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>Agentic CRM: Autonomous Revenue Workflows (2025) | Zion Tech Group</title>
-        <meta name='description' content='Design patterns to automate pipeline hygiene, outreach, and renewals with agentic CRM workflows that remain safe, controllable, and measurable.' />
-        <meta property='og:title' content='Agentic CRM: Autonomous Revenue Workflows' />
-        <meta property='og:description' content='Blueprints for trustworthy autonomous revenue operations.' />
-        <meta name='twitter:card' content='summary_large_image' />
+        <title>AgenticCrmAutonomousRevenueWorkflows2025 - Zion Tech Solutions</title>
+        <meta name="description" content="AgenticCrmAutonomousRevenueWorkflows2025 blog post" />
       </Head>
+      
+      <main>
+        <h1>AgenticCrmAutonomousRevenueWorkflows2025</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
 
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <div className='max-w-4xl mx-auto'>
-            <nav className='mb-8'>
-              <Link href='/blog' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
-                ← Back to Blog
-              </Link>
-            </nav>
-
-            <article className='prose prose-invert prose-lg max-w-none'>
-              <header className='mb-12 text-center'>
-                <div className='flex items-center gap-3 justify-center mb-4'>
-                  <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30'>
-                    RevOps
-                  </span>
-                  <span className='text-white/60 text-sm'>September 16, 2025</span>
-                  <span className='text-white/60 text-sm'>•</span>
-                  <span className='text-white/60 text-sm'>7 min read</span>
-                </div>
-                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-fuchsia-400 to-indigo-400 bg-clip-text text-transparent'>
-                  Agentic CRM: Autonomous Revenue Workflows (2025)
-                </h1>
-                <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-                  Automate pipeline health, outbound personalization, and renewal risk mitigation—while preserving human oversight and brand safety.
-                </p>
-              </header>
-
-              <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
-                  High-Leverage Autonomy
-                </h2>
-                <ul className='space-y-2 text-white/80 mb-6'>
-                  <li>• Inbox triage and enrichment with human-in-the-loop approvals</li>
-                  <li>• Deal desk assistants for policy-compliant quotes</li>
-                  <li>• Renewal watchlists with proactive mitigation playbooks</li>
-                </ul>
-              </section>
-
-              <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-indigo-400'>
-                  Controls and Metrics
-                </h2>
-                <p className='text-white/90 mb-4'>
-                  Define guardrails, experiment with small blast radiuses, and track lift with clear north-star metrics for pipeline quality and win rate.
-                </p>
-              </section>
-            </article>
-          </div>
-        </main>
-      </div>
-    </>
-  )
-}
-
+<<<<<<< HEAD
+export default AgenticCrmAutonomousRevenueWorkflows2025;
+=======
+export default AgenticCrmAutonomousRevenueWorkflows2025;
+>>>>>>> origin/backup-main-20250918-004015

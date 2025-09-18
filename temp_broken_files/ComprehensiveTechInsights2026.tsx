@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const ComprehensiveTechInsights2026: React.FC = () => {
+
+const QuantumComputingRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <section className="py-32 px-4">
@@ -16,4 +15,6 @@ const ComprehensiveTechInsights2026: React.FC = () => {
     </div>
   );
 };
+
+
 export default ComprehensiveTechInsights2026;

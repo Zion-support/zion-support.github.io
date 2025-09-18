@@ -1,5 +1,36 @@
-import React from 'react';
-const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  ArrowRight
+  X,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
+  Award
+} from 'lucide-react';
+
+const UltimateContentRevolution2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -17,6 +48,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                 </div>
+                
                 <div className="hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-xs font-bold">
@@ -64,27 +96,28 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                 </div>
                 {/* CTA Buttons */}
                 <div className="flex items-center gap-2">
-                  <divbutton
+                  <button
                     className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
                   >
                     <Play className="w-4 h-4" />
                     <span className="hidden sm:inline">Explore Now</span>
                     <span className="sm:hidden">Explore</span>
-                  </divbutton>
-                  <divbutton
+                  </button>
+                  
+                  <button
                     className="flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/20 transition-all duration-300"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
                 {/* Dismiss Button */}
-                <divbutton
+                <button
                   onClick={handleDismiss}
                   className="text-gray-400 hover:text-white transition-colors duration-300 p-1"
                 >
                   <X className="w-5 h-5" />
-                </divbutton>
+                </button>
               </div>
             </div>
             {/* Mobile Stats */}
@@ -145,5 +178,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateContentRevolution2026PromotionBanner;
 </div></div></div></div></div></div>

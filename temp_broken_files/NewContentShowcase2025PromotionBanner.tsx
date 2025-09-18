@@ -1,5 +1,70 @@
-import React from 'react';
-const NewContentShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  Sparkles,
+  Rocket
+} from 'lucide-react';
+
+const NewContentShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Rotate features every 3 seconds
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 3);
+    }3000);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Solutions',
+      description: 'Revolutionary AI technology',
+      color: 'from-purple-500 to-blue-500'
+    },
+    {
+      icon: Zap,
+      title: 'Automation',
+      description: 'Intelligent workflow automation',
+      color: 'from-green-500 to-teal-500'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Advanced cybersecurity protection',
+      color: 'from-red-500 to-orange-500'
+    }
+  ];
+
+  const stats = [
+    { label: 'New 'Features', 'value: '50+'icon: Sparkles },
+    { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
+    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star },
+    { label: 'ROI 'Increase', 'value: '300%'icon: TrendingUp }
+  ];
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -21,6 +86,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
               <Sparkles className="w-4 h-4 mr-2" />
               NEW CONTENT AVAILABLE
             </div>
+
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-5xl font-bold mb-6"
@@ -30,6 +96,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 Innovations
               </span>
             </divh2>
+
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8"
@@ -37,6 +104,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
               Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
               designed to revolutionize your business operations and drive unprecedented growth.
             </divp>
+
             {/* Rotating Feature */}
             <div
               key={currentFeature}
@@ -56,6 +124,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
@@ -67,6 +136,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -88,6 +158,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
               </a>
             </div>
           </div>
+
           {/* Right Content - Visual */}
           <div
             className="relative"
@@ -163,5 +234,7 @@ const NewContentShowcase2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default NewContentShowcase2025PromotionBanner;
 </div></div></div></div></div></div>

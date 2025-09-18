@@ -1,5 +1,35 @@
 import React from 'react';
-const comprehensive-2025-innovative-services-showcase: React.FC = () => {
+import SEO from '../components/SEO';
+import { 
+  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
+  Rocket, Lock, Palette, Factory, Database, Cloud, 
+  Cpu, Eye, Target, Users, BarChart3
+} from 'lucide-react';
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+
+const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
+  const categories = [
+    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' },
+    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
+    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
+    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
+    { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
+  ];
+
+  const getCategoryIcon = (category: string) => {
+    const cat = categories.find(c => c.name === category);
+    return cat ? cat.icon : Star;
+  };
+
+  const getCategoryColor = (category: string) => {
+    const cat = categories.find(c => c.name === category);
+    return cat ? cat.color : 'from-gray-500 to-gray-600';
+  };
+
   return (
     <Layout>
       <SEO 
@@ -35,6 +65,7 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               <Star className="w-5 h-5" />
               <span>Innovation Leader 2025</span>
             </div>
+            
             <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               2025 Innovative Services
             </h1>
@@ -81,6 +112,7 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               Explore our comprehensive range of innovative services across cutting-edge technology domains
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
               const IconComponent = category.icon;
@@ -123,6 +155,7 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               Our most popular and innovative services that are transforming industries
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
@@ -190,6 +223,7 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
               Explore our entire collection of innovative services designed for the future
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
@@ -261,5 +295,7 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
       </section>
     </Layout>
   );
-};
+
+
+
 export default Comprehensive2025InnovativeServicesShowcase;

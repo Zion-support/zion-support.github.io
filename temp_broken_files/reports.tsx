@@ -1,5 +1,113 @@
 import React from 'react';
-const reports: React.FC = () => {
+import Head from 'next/head';
+import { 
+  FileText, 
+  Download, 
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight, 
+  TrendingUp,
+  BarChart3,
+  Brain,
+  Atom,
+  Globe,
+  Shield,
+  Zap,
+  Eye,
+  Clock,
+  Award
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
+const ReportsPage: React.FC = () => {
+  const reports = [
+    {
+      title: 'The Future of Quantum Computing in Enterprise: 2024-2030',
+      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.',
+      date: '2024-01-15',
+      author: 'Dr. Sarah Chen & Quantum Research Team',
+      category: 'Technology Trends',
+      tags: ['Quantum Computing', 'Enterprise', 'Market Analysis', 'Future Tech'],
+      pages: 45,
+      downloads: 1247,
+      views: 5678,
+      featured: true,
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',
+      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.',
+      date: '2024-01-10',
+      author: 'AI Research Division',
+      category: 'Business Intelligence',
+      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'],
+      pages: 38,
+      downloads: 892,
+      views: 3456,
+      featured: false,
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',
+      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.',
+      date: '2024-01-08',
+      author: 'Cybersecurity Research Team',
+      category: 'Security',
+      tags: ['Cybersecurity', 'AI Threats', 'Threat Landscape', 'Defense'],
+      pages: 52,
+      downloads: 1567,
+      views: 6789,
+      featured: false,
+      icon: <Shield className="w-8 h-8" />,
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',
+      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.',
+      date: '2024-01-05',
+      author: 'Market Research Team',
+      category: 'Market Analysis',
+      tags: ['Venture Capital', 'Investment', 'Innovation', 'Global Markets'],
+      pages: 41,
+      downloads: 734,
+      views: 2890,
+      featured: false,
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Edge Computing & IoT: Transforming Industries in Real-Time',
+      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.',
+      date: '2024-01-03',
+      author: 'IoT Research Division',
+      category: 'Emerging Tech',
+      tags: ['Edge Computing', 'IoT', 'Industry 4.0', 'Real-time'],
+      pages: 36,
+      downloads: 623,
+      views: 2345,
+      featured: false,
+      icon: <Zap className="w-8 h-8" />,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      title: 'Sustainable Technology: Green Computing & Environmental Impact',
+      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.',
+      date: '2024-01-01',
+      author: 'Sustainability Research Team',
+      category: 'Sustainability',
+      tags: ['Green Computing', 'Sustainability', 'Environmental Impact', 'Clean Tech'],
+      pages: 43,
+      downloads: 445,
+      views: 1789,
+      featured: false,
+      icon: <Globe className="w-8 h-8" />,
+      color: 'from-teal-500 to-green-500'
+    }
+  ];
+
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -22,6 +130,7 @@ const reports: React.FC = () => {
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </divp>
+            
             <div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
             >
@@ -52,6 +161,7 @@ const reports: React.FC = () => {
                 Featured Report
               </h2>
             </div>
+
             {reports.filter(report => report.featured).map((report, index) => (
               <div
                 key={index}
@@ -131,6 +241,7 @@ const reports: React.FC = () => {
                 Explore our comprehensive research across different technology domains
               </p>
             </div>
+
             {/* Category Pills */}
             <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -150,10 +261,11 @@ const reports: React.FC = () => {
                 </button>
               ))}
             </div>
+
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
-                <divarticle
+                <article
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +305,7 @@ const reports: React.FC = () => {
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
-                </divarticle>
+                </article>
               ))}
             </div>
           </div>
@@ -234,5 +346,7 @@ const reports: React.FC = () => {
     </UltraAdvancedFuturisticBackground>
   );
 };
+
+
 export default ReportsPage;
 </div></div>

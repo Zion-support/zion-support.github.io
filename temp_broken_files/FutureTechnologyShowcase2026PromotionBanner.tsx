@@ -1,5 +1,54 @@
-import React from 'react';
-const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Rocket
+  ArrowRight
+  Star
+  Brain
+  Zap
+  Globe,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Lightbulb,
+  Target,
+  Shield,
+  Cpu,
+  Sparkles
+} from 'lucide-react';
+
+const FutureTechnologyShowcase2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const technologies = [
+    { icon: Rocketitle: 'Quantum 'Computing', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Braintitle: 'Neural 'Interfaces', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: Globetitle: 'Space 'Technology', 'color: 'from-green-500 to-emerald-500' },
+    { icon: Zaptitle: 'Biotech 'AI', 'color: 'from-orange-500 to-red-500' }
+  ];
+
+  const benefits = [
+    { icon: TrendingUptext: '1000x Performance' },
+    { icon: Userstext: 'Global Impact' },
+    { icon: Awardtext: '200+ Patents' },
+    { icon: Lightbulbtext: '50+ Technologies' }
+  ];
+
+  const stats = [
+    { value: '50+'label: 'Technologies' },
+    { value: '200+'label: 'Patents' },
+    { value: '500+'label: 'Research Papers' },
+    { value: '1M+'label: 'Global Impact' }
+  ];
+
   return (
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -21,6 +70,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
                 <Sparkles className="w-4 h-4" />
                 NEW: FUTURE TECHNOLOGY SHOWCASE 2026
               </div>
+
               {/* Main Heading */}
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
@@ -32,6 +82,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
                 <br />
                 Shaping Tomorrow
               </divh2>
+
               {/* Description */}
               <divp
                 className="text-xl text-gray-300 leading-relaxed"
@@ -39,6 +90,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
                 Explore cutting-edge technologies that will define the future of humanity
                 from quantum computing to neural interfaces and space technology.
               </divp>
+
               {/* Technologies Grid */}
               <div
                 className="grid grid-cols-2 gap-4"
@@ -52,6 +104,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Benefits */}
               <div
                 className="space-y-3"
@@ -63,6 +116,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -79,6 +133,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
                 </button>
               </div>
             </div>
+
             {/* Right Content - Stats & Visual */}
             <div
               className="space-y-8"
@@ -135,5 +190,7 @@ const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default FutureTechnologyShowcase2026PromotionBanner;
 </div></div>

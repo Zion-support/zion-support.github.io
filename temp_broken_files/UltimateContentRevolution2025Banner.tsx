@@ -1,5 +1,42 @@
-import React from 'react';
-const UltimateContentRevolution2025Banner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  Sparkles
+  ArrowRight
+  Star
+  Zap
+  Brain
+  Rocket,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  X
+} from 'lucide-react';
+
+const UltimateContentRevolution2025Banner = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
+
+  const features = [
+    { icon: Braintext: "Revolutionary AI Breakthroughs"color: "text-purple-400" },
+    { icon: Zaptext: "2,500% Average ROI"color: "text-blue-400" },
+    { icon: Rocketext: "Future Technology Predictions"color: "text-green-400" },
+    { icon: Userstext: "500+ Enterprise Clients"color: "text-yellow-400" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }3000);
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
   return (
     <div>
       <div
@@ -113,5 +150,7 @@ const UltimateContentRevolution2025Banner: React.FC = () => {
   );
 
 };
+
+
 export default UltimateContentRevolution2025Banner;
 </div></div></div></div></div></div></div>

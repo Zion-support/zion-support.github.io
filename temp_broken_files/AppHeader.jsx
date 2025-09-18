@@ -73,7 +73,9 @@ const AppHeader= () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <div className="relative">
+              <div 
+                className="relative"
+              >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
@@ -194,40 +196,94 @@ const AppHeader= () => {
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle mobile menu"
               >
-                {mobileMenuOpen ? (
-                  <div key="close">
-                    <X className="w-6 h-6" />
-                  </div>
-                ) : (
-                  <div key="menu">
-                    <Menu className="w-6 h-6" />
-                  </div>
-                )}
+                  {mobileMenuOpen ? (
+                    <div
+                      key="close"
+                    >
+                      <X className="w-6 h-6" />
+                    </div>
+                  ) : (
+                    <div
+                      key="menu"
+                    >
+                      <Menu className="w-6 h-6" />
+                    </div>
+                  )}
+                </div>
               </button>
             </div>
           </div>
           {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-white/10">
-              <nav className="py-4 space-y-2" role="navigation" aria-label="Mobile menu">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                      item.current
-                        ? 'bg-zion-cyan/20 text-zion-cyan'
-                        : 'text-white hover:bg-white/10'
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span>{item.name}</span>
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          )}
+          <div>
+            {mobileMenuOpen && (
+              <div 
+                className="lg:hidden"
+              >
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md ${
+                        item.current
+                          ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
+                          : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  
+                  {/* Mobile Services Dropdown */}
+                  <div className="px-3 py-2">
+                    <div className="text-sm font-medium text-zion-cyan mb-2">Services</div>
+                    {servicesDropdown.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  {/* Mobile Search */}
+                  <form onSubmit={handleSearch} className="px-3 py-2">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      aria-label="Search"
+                    />
+                  </form>
+                  
+                  {/* Mobile Actions */}
+                  <div className="px-3 py-2 space-y-2">
+                    <Link
+                      to="/login"
+                      className="block w-full text-center px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="block w-full text-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </header>
       {/* Spacer to prevent content from hiding behind fixed header */}

@@ -1,57 +1,31 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function EvidenceDrivenGovernance2025() {
+const Genai2025EvidenceDrivenAiGovernance: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>GenAI 2025: Evidence‑Driven AI Governance | Zion Tech Group</title>
-        <meta name="description" content="Practical framework for evidence‑driven AI governance: policies, evals, approvals, and audits that scale." />
-        <meta property="og:title" content="GenAI 2025: Evidence‑Driven AI Governance" />
-        <meta property="og:description" content="Policies, evals, approvals, and audits that scale across teams." />
+        <title>Genai2025EvidenceDrivenAiGovernance - Zion Tech Solutions</title>
+        <meta name="description" content="Genai2025EvidenceDrivenAiGovernance blog post" />
       </Head>
+      
+      <main>
+        <h1>Genai2025EvidenceDrivenAiGovernance</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
 
-      <div className='min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <div className='max-w-4xl mx-auto'>
-            <nav className='mb-8'>
-              <Link href='/blog' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
-                ← Back to Blog
-              </Link>
-            </nav>
-
-            <article className='prose prose-invert prose-lg max-w-none'>
-              <header className='mb-12 text-center'>
-                <div className='flex items-center gap-3 justify-center mb-4'>
-                  <span className='px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full border border-blue-300/30'>
-                    Governance
-                  </span>
-                  <span className='text-white/60 text-sm'>February 2025</span>
-                  <span className='text-white/60 text-sm'>•</span>
-                  <span className='text-white/60 text-sm'>7 min read</span>
-                </div>
-                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-                  Evidence‑Driven AI Governance (2025)
-                </h1>
-                <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-                  Establish policy‑as‑code, measurable approvals, and audit‑ready evidence across the AI lifecycle—from prompt changes to tool permissions.
-                </p>
-              </header>
-
-              <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>Policy‑as‑code</h2>
-                <p className='text-white/90 mb-4'>Express rules for data use, actions, and safety as versioned code reviewed with CI checks and test scenarios.</p>
-              </section>
-
-              <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>Evidence pipelines</h2>
-                <p className='text-white/90 mb-4'>Capture eval results, traces, and approvals in a central evidence hub tied to releases and incidents.</p>
-              </section>
-            </article>
-          </div>
-        </main>
-      </div>
-    </>
-  )
-}
-
+<<<<<<< HEAD
+export default Genai2025EvidenceDrivenAiGovernance;
+=======
+export default Genai2025EvidenceDrivenAiGovernance;
+>>>>>>> origin/backup-main-20250918-004015

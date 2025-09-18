@@ -1,5 +1,47 @@
-import React from 'react';
-const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  ArrowRight
+  Star
+  Sparkles,
+  TrendingUp,
+  Award,
+  Rocket
+} from 'lucide-react';
+
+const RevolutionaryTechShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Rotate features every 3 seconds
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }3000);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  const features = [
+    'AI Revolution 2025',
+    'Quantum Computing',
+    'Blockchain Innovation',
+    'IoT & Edge Computing'
+  ];
+
+  const stats = [
+    { label: ''Technologies', 'value: '50+' },
+    { label: 'Success 'Rate', 'value: '99%' },
+    { label: 'Client 'Satisfaction', 'value: '5.0' },
+    { label: 'ROI 'Improvement', 'value: '300%' }
+  ];
+
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 overflow-hidden">
       {/* Background Effects */}
@@ -21,6 +63,7 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Revolutionary Technology 2025</span>
             </div>
+
             {/* Main Heading */}
             <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -30,12 +73,14 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
                 Future of Technology
               </span>
             </divh1>
+
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Discover cutting-edge AIquantum computingblockchainand IoT solutions that are transforming industries and creating unprecedented opportunities for growth.
             </divp>
+
             {/* Rotating Features */}
             <div
               className="mb-8"
@@ -51,6 +96,7 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -65,6 +111,7 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
+
           {/* Right Content - Stats & Visual */}
           <div
             className="relative"
@@ -129,5 +176,7 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryTechShowcase2025PromotionBanner;
 </div></div>

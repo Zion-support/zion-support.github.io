@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 const InteractiveFeaturesShowcase: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white py-20 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div 
@@ -16,16 +18,30 @@ const InteractiveFeaturesShowcase: React.FC = () => {
       </div>
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE FEATURES • 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Experience Technology Like Never Before
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Interact with cutting-edge technologies through immersive demos, real-time simulations, 
-            and hands-on experiences that bring the future to life.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
+          >
+            🚀 INTERACTIVE FEATURES SHOWCASE
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
+          >
+            Revolutionary Interactive Features
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl opacity-90 max-w-4xl mx-auto"
+          >
+            Experience the future of human-computer interaction with our cutting-edge interactive features
+          </motion.p>
         </div>
         {/* Main Feature Showcase */}
         <div className="relative max-w-7xl mx-auto mb-16">
@@ -64,16 +80,16 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                       ))}
                     </div>
                     <div className="flex gap-4">
-                      <divbutton
+                      <button
                         className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                       >
                         Try Interactive Demo →
-                      </divbutton>
-                      <divbutton
+                      </button>
+                      <button
                         className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
                       >
                         Learn More
-                      </divbutton>
+                      </button>
                     </div>
                   </div>
                   <div className="relative">
@@ -146,18 +162,28 @@ const InteractiveFeaturesShowcase: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              whileInView={{ opacity: 1, y: 0 }}
-              className={`bg-gradient-to-br ${feature.gradient} p-6 rounded-xl hover:shadow-2xl transition-all duration-300 cursor-pointer ${
-                activeFeature === index ? 'ring-4 ring-white/30' : ''
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer group ${
+                hoveredCard === feature.id ? 'shadow-2xl shadow-purple-500/20 border-purple-400/50' : ''
               }`}
+              onMouseEnter={() => setHoveredCard(feature.id)}
+              onMouseLeave={() => setHoveredCard(null)}
               onClick={() => setActiveFeature(index)}
             >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-3xl">{feature.icon}</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-xs font-semibold">{feature.demo.status}</span>
+              <div className="text-center mb-6">
+                <div className={`text-6xl mb-4 transition-transform duration-300 ${
+                  hoveredCard === feature.id ? 'scale-110 rotate-12' : ''
+                }`}>
+                  {feature.icon}
                 </div>
+                <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                  {feature.title}
+                </h3>
+                <p className="text-purple-100 mb-4 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
               <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
               <p className="text-sm opacity-90 mb-4">{feature.description}</p>
@@ -168,11 +194,12 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <divbutton
+              
+              <button
                 className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
               >
                 Try Demo
-              </divbutton>
+              </button>
             </div>
           ))}
         </div>
@@ -192,6 +219,8 @@ const InteractiveFeaturesShowcase: React.FC = () => {
     </div>
   );
 };
+
+
 export default InteractiveFeaturesShowcase;
 </div></div></div></div></div></div></div>
 </p></p>

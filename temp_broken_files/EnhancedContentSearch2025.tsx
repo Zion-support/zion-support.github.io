@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
+
 const EnhancedContentSearch2025: React.FC = () => {
   return (
     <div className="w-full max-w-4xl mx-auto">
@@ -49,6 +50,7 @@ const EnhancedContentSearch2025: React.FC = () => {
           </div>
         </div>
       </divform>
+
       {/* Search Results */}
       <div>
         {showResults && (
@@ -117,6 +119,7 @@ const EnhancedContentSearch2025: React.FC = () => {
           </div>
         )}
       </div>
+
       {/* Quick Access */}
       <div
         className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6"
@@ -145,4 +148,6 @@ const EnhancedContentSearch2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default EnhancedContentSearch2025;

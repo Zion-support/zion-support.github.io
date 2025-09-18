@@ -1,4 +1,5 @@
 import React from 'react';
+
 const RevolutionaryTechAdvertisingBanner: React.FC = () => {
   return (
     <div
@@ -57,4 +58,6 @@ const RevolutionaryTechAdvertisingBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryTechAdvertisingBanner;

@@ -1,4 +1,7 @@
 import React from 'react';
+import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
     <divsection
@@ -31,19 +34,20 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/UltimateTechRevolution2032">
-                <divbutton
+                <button
                   className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
                 >
                   Explore Revolution <ArrowRight className="w-5 h-5" />
-                </divbutton>
+                </button>
               </Link>
-              <divbutton
+              <button
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Learn More
-              </divbutton>
+              </button>
             </div>
           </div>
+
           {/* Right Content - Feature Grid */}
           <div
             whileInView={{ opacity: 1, x: 0 }}
@@ -97,5 +101,7 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
     </divsection>
   );
 };
+
+
 export default UltimateTechRevolution2032Banner;
 </div></div></div>

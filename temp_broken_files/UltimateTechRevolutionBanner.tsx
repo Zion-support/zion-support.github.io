@@ -1,4 +1,5 @@
 import React from 'react';
+
 const UltimateTechRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white">
@@ -33,6 +34,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <h3 className="font-bold text-lg mb-2">Quantum Consciousness</h3>
               <p className="text-sm opacity-90">Revolutionary quantum processors with consciousness integration</p>
             </div>
+
             <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
@@ -40,6 +42,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <h3 className="font-bold text-lg mb-2">Interdimensional AI</h3>
               <p className="text-sm opacity-90">AI systems operating across multiple dimensions</p>
             </div>
+
             <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
@@ -50,18 +53,19 @@ const UltimateTechRevolutionBanner: React.FC = () => {
           </div>
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <diva
+            <a
               href="/pages/AdvancedTechShowcase2027"
               className="inline-block bg-white text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-all duration-300 font-bold text-lg shadow-lg"
             >
               🌟 Explore Advanced Tech Showcase →
-            </diva>
-            <diva
+            </a>
+            
+            <a
               href="/pages/ComprehensiveServices2027"
               className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-bold text-lg border border-white/30"
             >
               🚀 View All Services →
-            </diva>
+            </a>
           </div>
           {/* Stats */}
           <div
@@ -89,5 +93,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateTechRevolutionBanner;
 </div></div>

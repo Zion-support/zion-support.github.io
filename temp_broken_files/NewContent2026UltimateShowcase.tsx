@@ -1,4 +1,6 @@
 import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 const NewContent2026UltimateShowcase: React.FC = () => {
   return (
     <divsection
@@ -12,6 +14,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           >
             <span className="text-sm font-bold tracking-wide uppercase">🌟 New Content 2026</span>
           </div>
+
           <divh2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
@@ -20,6 +23,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
               Showcase 2026
             </span>
           </divh2>
+
           <divp
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
@@ -96,6 +100,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
             </a>
           </div>
         </div>
+
         {/* Trust Indicators */}
         <div
           className="mt-16 pt-8 border-t border-gray-200"
@@ -116,5 +121,7 @@ const NewContent2026UltimateShowcase: React.FC = () => {
     </divsection>
   );
 };
+
+
 export default NewContent2026UltimateShowcase;
 </div></div></div>

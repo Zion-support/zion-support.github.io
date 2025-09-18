@@ -1,5 +1,39 @@
-import React from 'react';
-const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Award
+  TrendingUp
+  DollarSign
+  Users
+  ArrowRight,
+  X,
+  CheckCircle,
+  Star,
+  BarChart3
+} from 'lucide-react';
+
+const SuccessStoriesShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  const stats = [
+    { value: "500+"label: "Companies Transformed"icon: Users },
+    { value: "$50M+"label: "Total Savings"icon: DollarSign },
+    { value: "95%"label: "Efficiency Gain"icon: TrendingUp },
+    { value: "99%"label: "Satisfaction Rate"icon: Star }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }2500);
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
   return (
     <div
       className="relative bg-gradient-to-r from-green-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
@@ -80,27 +114,28 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
             </div>
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <divbutton
+              <button
                 className="flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
               >
                 <BarChart3 className="w-4 h-4" />
                 View Stories
                 <ArrowRight className="w-4 h-4" />
-              </divbutton>
-              <divbutton
+              </button>
+              
+              <button
                 className="flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
               >
                 <Award className="w-4 h-4" />
                 Join Success
-              </divbutton>
+              </button>
             </div>
             {/* Close Button */}
-            <divbutton
+            <button
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
             >
               <X className="w-5 h-5" />
-            </divbutton>
+            </button>
           </div>
         </div>
         {/* Progress Bar */}
@@ -112,6 +147,8 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default SuccessStoriesShowcase2025PromotionBanner;
 </div></div></div></div></div></div></div></div></div>

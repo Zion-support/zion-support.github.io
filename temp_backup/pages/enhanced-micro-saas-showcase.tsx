@@ -19,4 +19,5 @@ const enhanced-micro-saas-showcase: React.FC = () => {
   );
 };
 
-export default enhanced-micro-saas-showcase;
+
+export default RevolutionaryCaseStudies2025;

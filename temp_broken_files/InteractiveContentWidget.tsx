@@ -1,5 +1,54 @@
-import React from 'react';
-const InteractiveContentWidget: React.FC = () => {
+"use client";
+import React{ useState } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+const InteractiveContentWidget = () => {
+  const [selectedCategorysetSelectedCategory] = useState('ai');
+  const [hoveredItemsetHoveredItem] = useState(null);
+
+  const contentCategories = {
+    ai: {
+      title: 'AI & Machine Learning',
+      icon: '🤖',
+      items: [
+        { title: 'Advanced AI Services 2025'description: 'Revolutionary automation 'solutions', 'link: '/ai-services-2025'featured: true },
+        { title: 'Neural Network 'Architectures', 'description: 'Next-gen AI brain 'designs', 'link: '/neural-architectures' },
+        { title: 'Machine Learning 'Mastery', 'description: 'Complete ML implementation 'guide', 'link: '/ml-mastery' },
+        { title: 'AI Ethics & 'Governance', 'description: 'Responsible AI 'development', 'link: '/ai-ethics' }
+      ]
+    },
+    quantum: {
+      title: 'Quantum Computing',
+      icon: '⚛️',
+      items: [
+        { title: 'Quantum Supremacy 2025'description: 'Error-corrected quantum 'computers', 'link: '/quantum-'supremacy', 'featured: true },
+        { title: 'Quantum 'Algorithms', 'description: 'Revolutionary problem-solving 'methods', 'link: '/quantum-algorithms' },
+        { title: 'Quantum Machine 'Learning', 'description: 'AI meets quantum 'computing', 'link: '/quantum-ml' },
+        { title: 'Quantum 'Cryptography', 'description: 'Unbreakable security 'systems', 'link: '/quantum-crypto' }
+      ]
+    },
+    automation: {
+      title: 'Business Automation',
+      icon: '🔄',
+      items: [
+        { title: 'Autonomous 'Operations', 'description: 'Self-managing business 'systems', 'link: '/autonomous-'ops', 'featured: true },
+        { title: 'Process 'Optimization', 'description: 'Streamline your 'workflows', 'link: '/process-optimization' },
+        { title: 'Intelligent 'Automation', 'description: 'Smart business process 'automation', 'link: '/intelligent-automation' },
+        { title: 'ROI 'Optimization', 'description: 'Maximize your 'returns', 'link: '/roi-optimization' }
+      ]
+    },
+    future: {
+      title: 'Future Technologies',
+      icon: '🔮',
+      items: [
+        { title: '2030 Technology 'Predictions', 'description: 'What the future 'holds', 'link: '/2030-'predictions', 'featured: true },
+        { title: 'Neural Interface 'Revolution', 'description: 'Brain-computer 'integration', 'link: '/neural-interfaces' },
+        { title: 'Transcendent 'AI', 'description: 'Beyond human 'intelligence', 'link: '/transcendent-ai' },
+        { title: 'Omniversal 'Computing', 'description: 'Computing beyond 'reality', 'link: '/omniversal-computing' }
+      ]
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
@@ -13,6 +62,7 @@ const InteractiveContentWidget: React.FC = () => {
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
         </div>
+
         {/* Category Selector */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -32,6 +82,7 @@ const InteractiveContentWidget: React.FC = () => {
             </button>
           ))}
         </div>
+
         {/* Content Grid */}
           <div
             key={selectedCategory}
@@ -80,6 +131,7 @@ const InteractiveContentWidget: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -95,4 +147,6 @@ const InteractiveContentWidget: React.FC = () => {
     </section>
   );
 };
+
+
 export default InteractiveContentWidget;

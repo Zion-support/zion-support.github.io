@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const UltimateContentShowcase2034: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -19,6 +20,7 @@ const UltimateContentShowcase2034: React.FC = () => {
             Experience the most revolutionary technology content ever created - featuring technologies that transcend reality itself
           </p>
         </div>
+
         {/* Tab Navigation */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,6 +42,7 @@ const UltimateContentShowcase2034: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Content Display */}
         <div
           key={activeTab}
@@ -120,6 +123,7 @@ const UltimateContentShowcase2034: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Bottom CTA */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -146,4 +150,6 @@ const UltimateContentShowcase2034: React.FC = () => {
     </div>
   );
 };
+
+
 export default UltimateContentShowcase2034;

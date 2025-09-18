@@ -19,4 +19,5 @@ const 2030-revolutionary-services: React.FC = () => {
   );
 };
 
-export default 2030-revolutionary-services;
+
+export default UltimateAIConsciousness2025;

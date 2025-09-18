@@ -1,4 +1,5 @@
 import React from 'react';
+
 const RevolutionaryServicesBanner: React.FC = () => {
   const services = [
     {
@@ -66,6 +67,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
             From AI and quantum computing to space technology and neural interfaces.
           </p>
         </div>
+
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
@@ -112,4 +114,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default RevolutionaryServicesBanner;

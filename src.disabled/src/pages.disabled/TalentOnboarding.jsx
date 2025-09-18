@@ -1,22 +1,20 @@
+<<<<<<< HEAD
 =======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+=======
+>>>>>>> origin/backup-main-20250918-004015
 import _React from 'react';'''; import { TalentOnboardingForm } from '@/components/profile/TalentOnboardingForm';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate } from 'react-router-dom'; export {}; return null} const { user,isLoading } = useAuth(); if (!isLoading && !user) {} return <Navigate to="/login" replace />;} return()"; <> <div className="bg-zion-blue min-h-screen py-8 "md": py-12"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12"> <h1 className="text-3xl md:text-4xl font-bold text-white mb-4"> Join Our Talent Network"; </h1> <p className="text-zion-slate-light max-w-2xl mx-auto"> Showcase your skills to top clients and employers. Create a; professional profile to get discovered for AI and tech projects on; the Zion Marketplace.; ></div> ></div> <TalentOnboardingForm /> ></div> ></div> </>)} ; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding };
 import React from \'react\';\''\'; import { TalentOnboardingForm } from \'@/components/profile/TalentOnboardingForm\';\''\'; import { useAuth } from \'@/hooks/useAuth\';\''\'; import { Navigate } from \'react-router-dom\'; export {}; return null} const { user,isLoading } = useAuth(); if (!isLoading && !user) {} return <Navigate to=\"/login\" replace />;} return()\"; <> <div className=\"bg-zion-blue min-h-screen py-8 \"md\": py-12\"> <div className=\"container mx-auto px-4\"> <div className=\"max-w-4xl mx-auto text-center mb-8 md:mb-12\"> <h1 className=\"text-3xl md:text-4xl font-bold text-white mb-4\"> Join Our Talent Network\"; </h1> <p className=\"text-zion-slate-light max-w-2xl mx-auto\"> Showcase your skills to top clients and employers. Create a; professional profile to get discovered for AI and tech projects on; the Zion Marketplace.; ></div> ></div> <TalentOnboardingForm /> ></div> ></div> </>)} ; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding };
 const React from "react";"""; import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm";"""; import { useAuth } from "@/hooks/useAuth";"""; import { Navigate } from "react-router-dom"; export {}; return null} const { user,isLoading } = useAuth(); if (!isLoading && !user) {} return <Navigate to="/login" replace />;} return()"; <> <div className="bg-zion-blue min-h-screen py-8 md: py-12"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12"> <h1 className="text-3xl md:text-4xl font-bold text-white mb-4"> Join Our Talent Network"; </h1> <p className="text-zion-slate-light max-w-2xl mx-auto"> Showcase your skills to top clients and employers. Create a; professional profile to get discovered for AI and tech projects on; the Zion Marketplace.; ></div> ></div> <TalentOnboardingForm /> ></div> ></div> </>)} ; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding };"""
 import _React from 'react';'''; import { TalentOnboardingForm } from '@/components/profile/TalentOnboardingForm';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate } from 'react-router-dom'; export {}; return null} const { user,isLoading } = useAuth(); if (!isLoading && !user) {} return <Navigate to="/login" replace />;} return()"; <> <div className="bg-zion-blue min-h-screen py-8 "md": py-12"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12"> <h1 className="text-3xl md:text-4xl font-bold text-white mb-4"> Join Our Talent Network"; </h1> <p className="text-zion-slate-light max-w-2xl mx-auto"> Showcase your skills to top clients and employers. Create a; professional profile to get discovered for AI and tech projects on; the Zion Marketplace.; ></div> ></div> <TalentOnboardingForm /> ></div> ></div> </>)} ; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding };
+<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
 =======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+=======
+=======
+=======
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015

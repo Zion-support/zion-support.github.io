@@ -116,6 +116,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {
               ))}
             </div>
           </div>
+
           {/* Right Column - Signup Form */}
           <div
             className="bg-white rounded-2xl p-8 shadow-2xl"
@@ -175,5 +176,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
+
 export default NewsletterSignupPromotion2025;

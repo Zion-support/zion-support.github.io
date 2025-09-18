@@ -1,11 +1,20 @@
-import React from 'react';
-const revolutionary-2028-pricing: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">revolutionary-2028-pricing</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+import Head from 'next/head';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
+  Building, Factory, Camera, Video, Music, Gamepad2,
+  Crown, Award, Target, Users, Clock, Globe2
+} from 'lucide-react';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 const pricingTiers = [
   {
@@ -85,8 +94,10 @@ const servicePricing = [
   {
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
-  }
-];
+  };
+
+
+
 export default function Revolutionary2028Pricing() {
   return (
     <>
@@ -149,6 +160,12 @@ export default function Revolutionary2028Pricing() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">30-Day</div>
                 <div className="text-cyan-300">Free Trial</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Tiers */}
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,6 +211,10 @@ export default function Revolutionary2028Pricing() {
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                     >
                       {tier.cta}
+                    </a>
+                  </div>
+                </div>
+              </div>
             ))}
       {/* Service Pricing */}
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
@@ -240,6 +261,11 @@ export default function Revolutionary2028Pricing() {
                           <div className="text-right">
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 ))}
           ))}
       {/* Value Proposition */}
@@ -263,6 +289,8 @@ export default function Revolutionary2028Pricing() {
                 superior technology and features.
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
+            </div>
+
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -275,6 +303,8 @@ export default function Revolutionary2028Pricing() {
                 with clear value for every dollar.
               <div className="text-3xl font-bold text-blue-400">100%</div>
               <div className="text-blue-300">Transparent Pricing</div>
+            </div>
+
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -287,6 +317,11 @@ export default function Revolutionary2028Pricing() {
                 that justify every penny of investment.
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -323,7 +358,29 @@ export default function Revolutionary2028Pricing() {
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>Cancel Anytime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <UltraFuturisticFooter2028 />
     </>
   );
 }
+import React from "react";
+
+const function Revolutionary2028Pricing() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function Revolutionary2028Pricing() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function Revolutionary2028Pricing() {;

@@ -1,11 +1,18 @@
-import React from 'react';
-const cutting-edge-pricing-2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">cutting-edge-pricing-2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { 
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
+} from 'lucide-react';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 const pricingTiers = [
   {
@@ -107,7 +114,9 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-];
+
+
+
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
@@ -160,11 +169,16 @@ export default function CuttingEdgePricing2025() {
                 Cutting-Edge
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Pricing 2025
+                </span>
+              </divh1>
+              
               <divp 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
               >
                 Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
                 a competitive advantage while maintaining affordability and value.
+              </divp>
+
               {/* Hero Stats */}
               <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
@@ -177,6 +191,11 @@ export default function CuttingEdgePricing2025() {
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-sm text-white/70">{stat.label}</div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,6 +212,9 @@ export default function CuttingEdgePricing2025() {
               <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology 
                 and world-class support to ensure your success.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingTiers.map((tier, index) => (
                 <div
@@ -235,6 +257,9 @@ export default function CuttingEdgePricing2025() {
                     >
                       {tier.cta}
                       <ArrowRight className="ml-2 w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
               ))}
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
@@ -252,6 +277,9 @@ export default function CuttingEdgePricing2025() {
               <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Explore our comprehensive range of cutting-edge services across multiple technology domains. 
                 Each category offers specialized solutions for different business needs.
+              </p>
+            </div>
+
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
@@ -332,7 +360,12 @@ export default function CuttingEdgePricing2025() {
                         <ArrowRight className="ml-2 w-4 h-4" />
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -377,6 +410,28 @@ export default function CuttingEdgePricing2025() {
                     <MapPin className="w-6 h-6 text-cyan-400" />
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Layout>
     </>
   );
 }
+import React from "react";
+
+const function CuttingEdgePricing2025() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function CuttingEdgePricing2025() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function CuttingEdgePricing2025() {;

@@ -1,4 +1,43 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  Code
+  BarChart3
+  MessageSquare
+  Image
+  Video
+  FileText,
+  Sparkles,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Shield,
+  Clock,
+  Target
+} from 'lucide-react';
+
+interface AITool {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  icon: React.ReactNode;
+  features: string[];
+  demoUrl?: string;
+  pricing: string;
+  rating: number;
+  users: string;
+  isPopular?: boolean;
+  isNew?: boolean;
+}
+
 const AIToolsInteractiveDemo2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -31,6 +70,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -49,6 +89,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             </button>
           ))}
         </div>
+
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Tools Grid */}
           <div className="lg:col-span-2">
@@ -144,6 +185,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
+              
                 {selectedToolData ? (
                   <div
                     key={selectedToolData.id}
@@ -261,4 +303,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
     </div>
   );
 };
+
+
 export default AIToolsInteractiveDemo2025;

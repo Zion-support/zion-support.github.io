@@ -1,5 +1,24 @@
-import React from 'react';
-const ServiceCard: React.FC = () => {
+"use client";
+import React, { useState, useCallback } from 'react';
+import { ArrowRight, Brain } from 'lucide-react';
+
+interface ServiceCardProps {
+  service: {
+    id: string;
+    name: string;
+    description: string;
+    type: string;
+    pricing: {
+      starter: string;
+    };
+    slug: string;
+  };
+  index: number;
+  isCurrent: boolean;
+  onClick: (service: { slug: string }) => void;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {
   return (
     <div
       className={`relative group cursor-pointer ${
@@ -146,6 +165,7 @@ const ServiceCard: React.FC = () => {
               <span className="text-sm text-emerald-400 font-medium">Available Now</span>
             </div>
           )}
+          
           <div
             className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
           >
@@ -160,8 +180,19 @@ const ServiceCard: React.FC = () => {
       </div>
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+import React from "react";
+
+const ServiceCard = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">ServiceCard</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
 };
+
 export default ServiceCard;
-</div></div></div></div>

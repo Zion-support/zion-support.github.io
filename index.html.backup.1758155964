@@ -1,0 +1,175 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+=======
+<!doctype html>
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions</title>
+    <meta name="title" content="Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions" />
+    <meta name="description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations. Get started today!" />
+    <meta name="keywords" content="AI solutions, artificial intelligence, quantum computing, cybersecurity, cloud services, business automation, machine learning, enterprise AI, AI calculator, AI trends 2025" />
+    <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions" />
+    <meta property="og:description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations. Get started today!" />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions" />
+    <meta property="twitter:description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations. Get started today!" />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#8B5CF6" />
+    <meta name="msapplication-TileColor" content="#8B5CF6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "description": "Leading provider of AI, quantum computing, and cybersecurity solutions",
+      "foundingDate": "2020",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Zion Tech Group Team"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/ziontechgroup"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "AI Solutions Calculator",
+        "description": "Interactive AI solutions calculator",
+        "url": "https://ziontechgroup.com/pages/AISolutionsCalculator"
+=======
+    <meta name="description" content="Revolutionary AI solutions for enterprise transformation - Zion App" />
+    <meta name="keywords" content="AI, artificial intelligence, enterprise, transformation, technology" />
+    <meta name="author" content="Zion Holdings" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    
+    <!-- Critical CSS inline -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <!-- Performance monitoring -->
+    <script src="/performance-monitor.js" defer></script>
+    
+    <title>Zion App - Revolutionary AI Solutions</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading-screen">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw-optimized.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+      }
+    }
+    </script>
+<<<<<<< HEAD
+    
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+=======
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+  </body>
+</html>

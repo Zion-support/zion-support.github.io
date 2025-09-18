@@ -1,5 +1,33 @@
-import React from 'react';
-const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  TrendingUp
+  ArrowRight
+  X
+  Star,
+  Zap,
+  Users,
+  DollarSign,
+  Target
+} from 'lucide-react';
+
+const BusinessTransformationShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1500);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -23,6 +51,7 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
                   <TrendingUp className="w-5 h-5 text-white" />
                   <span className="text-white font-bold text-sm">TRANSFORM</span>
                 </div>
+                
                 <div className="hidden md:flex items-center gap-2 text-white">
                   <Users className="w-5 h-5 text-blue-300" />
                   <DollarSign className="w-5 h-5 text-green-300" />
@@ -56,19 +85,20 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
               </div>
               {/* Right Actions */}
               <div className="flex items-center gap-3">
-                <divbutton
+                <button
                   className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
                 >
                   <Star className="w-4 h-4" />
                   Transform Now
                   <ArrowRight className="w-4 h-4" />
-                </divbutton>
-                <divbutton
+                </button>
+                
+                <button
                   onClick={handleDismiss}
                   className="text-white/70 hover:text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
-                </divbutton>
+                </button>
               </div>
             </div>
             {/* Mobile Layout */}
@@ -126,5 +156,7 @@ const BusinessTransformationShowcase2025PromotionBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default BusinessTransformationShowcase2025PromotionBanner;
 </div></div></div></div></div></div>

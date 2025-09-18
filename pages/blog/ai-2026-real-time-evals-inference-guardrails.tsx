@@ -1,57 +1,31 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function RealTimeEvalsInferenceGuardrails2026() {
+const Ai2026RealTimeEvalsInferenceGuardrails: NextPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       <Head>
-        <title>AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group</title>
-        <meta name="description" content="Blueprint for live evaluations, runtime checks, and safe tool use at inference time." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-real-time-evals-inference-guardrails" />
+        <title>Ai2026RealTimeEvalsInferenceGuardrails - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026RealTimeEvalsInferenceGuardrails blog post" />
       </Head>
-
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold">AI 2026: Real-Time Evals & Inference Guardrails</h1>
-          <p className="mt-4 text-lg opacity-90">Blueprint for live evaluations, runtime checks, and safe tool use at inference time.</p>
-          <div className="mt-6">
-            <Link href="/resources/ai-2026-agent-risk-metrics-starter-kit" className="inline-block bg-white text-cyan-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">Get Risk Metrics Starter</Link>
-          </div>
-        </div>
-      </div>
-
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
-          <h2>Why Real-Time Evals</h2>
-          <p>
-            Pre‑deployment evaluations are not enough. Live evaluations validate agent and model behavior against
-            policies, risk tiers, and safety envelopes while serving user traffic. This unlocks faster releases with
-            measurable guardrails.
-          </p>
-          <h2>Core Guardrail Patterns</h2>
-          <ul>
-            <li>Runtime safety checks for tool parameters and destinations</li>
-            <li>Groundedness probes before committing irreversible actions</li>
-            <li>Policy‑as‑code with allow/deny and approval workflows</li>
-            <li>Adaptive routing based on cost, latency, and quality signals</li>
-          </ul>
-          <h2>Operationalizing It</h2>
-          <ol>
-            <li>Define risk‑tiered tool adapters with budgets and approvals</li>
-            <li>Instrument traces, policy events, and evidence capture</li>
-            <li>Set scorecard thresholds and SLO‑linked rollbacks</li>
-            <li>Continuously tune with incident reviews and counterfactual testing</li>
-          </ol>
-          <p>
-            Ready to go deeper? Start with standardized risk metrics and wire them into promotion gates and runtime
-            policies.
-          </p>
-          <p>
-            <Link href="/resources/ai-2026-agent-risk-metrics-starter-kit" className="text-cyan-700 font-semibold">Open the starter kit →</Link>
-          </p>
-        </div>
+      
+      <main>
+        <h1>Ai2026RealTimeEvalsInferenceGuardrails</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026RealTimeEvalsInferenceGuardrails;
+=======
+export default Ai2026RealTimeEvalsInferenceGuardrails;
+>>>>>>> origin/backup-main-20250918-004015

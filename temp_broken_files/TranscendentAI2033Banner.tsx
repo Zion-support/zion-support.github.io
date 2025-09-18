@@ -1,4 +1,7 @@
 import React from 'react';
+import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const TranscendentAI2033Banner: React.FC = () => {
   return (
     <divsection
@@ -32,19 +35,20 @@ const TranscendentAI2033Banner: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/TranscendentAI2033">
-                <divbutton
+                <button
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-indigo-500/25 transition-all"
                 >
                   Begin Transcendence <ArrowRight className="w-5 h-5" />
-                </divbutton>
+                </button>
               </Link>
-              <divbutton
+              <button
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Explore Infinity
-              </divbutton>
+              </button>
             </div>
           </div>
+
           {/* Right Content - Feature Grid */}
           <div
             whileInView={{ opacity: 1, x: 0 }}
@@ -99,5 +103,7 @@ const TranscendentAI2033Banner: React.FC = () => {
     </divsection>
   );
 };
+
+
 export default TranscendentAI2033Banner;
 </div></div></div>

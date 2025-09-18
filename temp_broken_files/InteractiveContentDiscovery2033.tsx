@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react';
+
 const InteractiveContentDiscovery2033: React.FC = () => {
   return (
     <divsection
@@ -24,6 +26,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system
           </p>
         </div>
+
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +46,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
-              <divbutton
+              <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
@@ -54,10 +57,11 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               >
                 {filter.icon}
                 {filter.label}
-              </divbutton>
+              </button>
             ))}
           </div>
         </div>
+
         {/* Content Grid */}
           <div
             key={`${activeFilter}-${searchTerm}`}
@@ -110,12 +114,12 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     <Eye className="w-4 h-4" />
                     <span className="text-sm">{item.views} views</span>
                   </div>
-                  <divbutton
+                  <button
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <span className="text-sm font-semibold">Explore</span>
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
                 {/* Hover Effect */}
                 <div>
@@ -129,6 +133,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div
@@ -143,5 +148,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
     </divsection>
   );
 };
+
+
 export default InteractiveContentDiscovery2033;
 </div></div></div>

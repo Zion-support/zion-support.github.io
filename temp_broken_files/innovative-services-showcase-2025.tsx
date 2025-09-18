@@ -1,11 +1,31 @@
-import React from 'react';
-const innovative-services-showcase-2025: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">innovative-services-showcase-2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { 
+  Search, Filter, Star, CheckCircle, ArrowRight, 
+  Brain, Atom, Shield, Rocket, Target, Microscope,
+  Phone, Mail, MapPin, TrendingUp, Users, Award,
+  Zap, Globe, Cpu, Database, Lock, Cloud,
+  Stethoscope, GraduationCap, Leaf, Truck
+} from 'lucide-react';
+
+// Import all the new 2025 innovative service data
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
+
+// Import existing services for comprehensive coverage
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 const serviceCategories = [
   {
@@ -97,8 +117,10 @@ const serviceCategories = [
     services: [...realMicroSaasServices2025],
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
-  }
-];
+  };
+
+
+
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -155,6 +177,9 @@ export default function InnovativeServicesShowcase2025() {
               <span className="text-white">Showcase</span>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
+            </p>
+          </div>
+
           {/* Stats */}
           <div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
@@ -175,6 +200,11 @@ export default function InnovativeServicesShowcase2025() {
               <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
                 99.9%
               <div className="text-gray-400">Uptime</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Search and Filter Section */}
       <section className="py-16 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,6 +299,9 @@ export default function InnovativeServicesShowcase2025() {
                     className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                   >
                     <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
             ))}
           {sortedServices.length === 0 && (
             <div
@@ -276,6 +309,7 @@ export default function InnovativeServicesShowcase2025() {
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>
+            </div>
           )}
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -289,6 +323,9 @@ export default function InnovativeServicesShowcase2025() {
               Ready to Transform Your Business?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -299,6 +336,8 @@ export default function InnovativeServicesShowcase2025() {
                 <Phone className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
+            </div>
+
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -308,6 +347,8 @@ export default function InnovativeServicesShowcase2025() {
                 <Mail className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
+            </div>
+
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -317,5 +358,26 @@ export default function InnovativeServicesShowcase2025() {
                 <MapPin className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 }
+import React from "react";
+
+const function InnovativeServicesShowcase2025() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function InnovativeServicesShowcase2025() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function InnovativeServicesShowcase2025() {;

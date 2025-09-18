@@ -1,5 +1,82 @@
-import React from 'react';
-const AI2025RevolutionaryContentBanner: React.FC = () => {
+"use client";
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  ArrowRight,
+  Star,
+  Zap,
+  Brain,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
+  ExternalLink,
+  Sparkles,
+  Cpu,
+  Database,
+  Cloud,
+  Rocket,
+  Heart,
+  Lightbulb
+} from 'lucide-react';
+
+const RevolutionaryContentBanner2028 = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Auto-advance features
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 4);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    {
+      title: "Ultimate Tech Revolution 2028",
+      description: "Experience the most advanced technologies ever created",
+      icon: Rocket,
+      color: "from-purple-600 to-pink-600",
+      stats: "Revolutionary Breakthrough",
+      link: "/pages/UltimateTechRevolution2028"
+    },
+    {
+      title: "Consciousness Computing",
+      description: "AI systems that achieve true self-awareness and emotional intelligence",
+      icon: Brain,
+      color: "from-blue-600 to-cyan-600",
+      stats: "95% Emotional Accuracy",
+      link: "/pages/ConsciousnessComputingRevolution2028"
+    },
+    {
+      title: "Quantum Neural Networks",
+      description: "Fusion of quantum computing with neural networks for unprecedented power",
+      icon: Cpu,
+      color: "from-green-600 to-emerald-600",
+      stats: "1000x Speed Improvement",
+      link: "/pages/UltimateTechRevolution2028"
+    },
+    {
+      title: "Holographic Reality",
+      description: "Full-sensory holographic environments indistinguishable from reality",
+      icon: Globe,
+      color: "from-orange-600 to-red-600",
+      stats: "100% Reality Simulation",
+      link: "/pages/UltimateTechRevolution2028"
+    }
+  ];
+
+  const currentFeatureData = features[currentFeature];
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -75,6 +152,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                       </span>
                     </div>
                   </div>
+
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a
@@ -101,9 +179,11 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
                   <div
                     className="absolute inset-0 rounded-full border-2 border-purple-500/30"
                   />
+                  
                   <div
                     className="absolute inset-8 rounded-full border-2 border-blue-500/30"
                   />
+                  
                   <div
                     className="absolute inset-16 rounded-full border-2 border-pink-500/30"
                   />
@@ -186,5 +266,7 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
     </div>
   );
 };
+
+
 export default AI2025RevolutionaryContentBanner;
 </div></div></div></div></div></div></div></div>
