@@ -1,6 +1,8 @@
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
+import Analytics from '@/components/Analytics'
+import { ThemeProvider } from '@/components/ThemeProvider'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -121,14 +123,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="color-scheme" content="dark" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <PerformanceMonitor />
-        <div className="relative flex min-h-screen flex-col">
-          <Navigation />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <PerformanceMonitor />
+          <Analytics />
+          <div className="relative flex min-h-screen flex-col">
+            <Navigation />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
