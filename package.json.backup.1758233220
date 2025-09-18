@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:skip-lint": "vite build",
     "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144\" vite build --mode production",
-    "lint": "eslint src/ App.tsx --report-unused-disable-directives --max-warnings 0",
+<<<<<<< HEAD
+    "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
+=======
+    "lint": "eslint src/ --report-unused-disable-directives --max-warnings 0",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-59b3
     "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",

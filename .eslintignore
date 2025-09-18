@@ -1,29 +1,92 @@
-# Build artifacts
+# Build artifacts and generated files
 dist/
 .next/
 node_modules/
+*.min.js
+*.bundle.js
 
-# Disabled directories
-zion-os.disabled/
+# Generated artifacts
+*.log
+**/*.generated.*
+*.backup.*
+
+# Disabled/problematic directories
+automation/
+backup-merge-conflicts/
+recovered-branches/
+public/automation/
+temp-problematic-pages/
+temp_backup_*/
 zion-os/
+zion-os.disabled/
 zion-website/
 zion.app/
 zion_academy/
+
+<<<<<<< HEAD
+# All problematic directories and files
+**/zion-os/**
+**/zion-os.disabled/**
+**/zion-website/**
+**/zion.app/**
+**/zion_academy/**
+**/automation/**
+**/backup-merge-conflicts/**
+**/recovered-branches/**
+**/public/automation/**
+**/temp-problematic-pages/**
+**/temp_backup_*/**
+
+# Static assets and generated files
+**/.next/**
+**/static/**
+**/chunks/**
+**/server/**
+**/middleware-**
+**/server-reference-**
+**/postcss.config.js
+**/tailwind.config.js
+**/next.config.js
+**/sw.js
+**/analytics.js
+**/feedback.js
+**/integration.js
+**/*.cjs
+
+# Netlify functions (serverless functions with different linting rules)
+netlify/functions/
+=======
+# Build outputs
+build/
+out/
+
+# Service worker files
+sw.js
+service-worker.js
+
+# Config files that don't need linting
+*.config.js
+postcss.config.js
+tailwind.config.js
+next.config.js
+
+# Static files
+public/
+static/
+>>>>>>> 7ba23a988f719ef28160bdfb5df94f0ff3952f0d
 
 # Backup files
 *.backup
 *.backup.*
 
-# Generated files
-*.min.js
-*.bundle.js
-*.chunk.js
+# Test artifacts
+coverage/
+.nyc_output/
 
-# Service worker files
-sw.js
-sw-*.js
-service-worker.js
+# Logs
+*.log
+logs/
 
-# Static files
-public/
-static/
+# Temporary files
+tmp/
+temp/

@@ -51,7 +51,11 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
+<<<<<<< HEAD
   // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
+=======
+  // const [sidebarOpen, setSidebarOpen] = useState(false); // TODO: Implement sidebar functionality
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cd10
   
   return (
               

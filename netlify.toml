@@ -1,6 +1,6 @@
 # Updated: Fixed for Vite React app deployment
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
+  command = "npm install --include=optional && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
 
@@ -207,7 +207,11 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: SPA routing fallback handled via public/_redirects
+# SPA routing fallback - all routes go to index.html for Vite React app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # No-op: trigger deploy 2025-09-19 00:15 (run-11)
 

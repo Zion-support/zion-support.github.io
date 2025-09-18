@@ -3,17 +3,8 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+
 const Home: React.FC = () => {
-  const { addNotification } = useNotifications();
-  useEffect(() => {
-    // Welcome notification
-    addNotification({
-      type: 'info',
-      title: 'Welcome to Zion Tech Group 2026!',
-      message: 'Explore our revolutionary AI, quantum computing, and cybersecurity solutions.',
-      duration: 5000
-    });
-  }, [addNotification]);
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="container mx-auto px-4 py-16">

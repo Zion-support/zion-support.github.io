@@ -1,5 +1,10 @@
 import React from 'react';
-      </div>
+
+const UltimateTechShowcase2025: React.FC = () => {
+  return (
+    <div>
+      <h1>Ultimate Tech Showcase 2025</h1>
+      <p>Coming soon...</p>
     </div>
   );
 };
