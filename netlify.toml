@@ -1,7 +1,7 @@
 [build]
-  base = "zion-website"
+  base = "."
   command = "npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
@@ -15,16 +15,20 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
+# Use the Next.js Netlify plugin for proper routing/functions
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*", "zion-website/public/**/*"]
+  included_files = ["public/**/*", "dist/**/*"]
 
 [build.processing]
   skip_processing = true
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/assets/*"
@@ -215,5 +219,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js handles routing. Do not add a SPA catch-all redirect that sends
-# all routes to /index.html, as it will break SSR/ISR routing handled by the plugin.
+# Note: Next.js routing is handled by @netlify/plugin-nextjs
