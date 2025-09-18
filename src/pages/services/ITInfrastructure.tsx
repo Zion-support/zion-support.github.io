@@ -41,17 +41,20 @@ const ITInfrastructure = () => {
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
       icon: "🌐"
     },
-    {title}: "Server Management",
+    {
+      title: "Server Management",
       description: "Comprehensive server infrastructure and management services",
       features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
       icon: "🖥️"
     },
-    {title}: "Storage Solutions",
+    {
+      title: "Storage Solutions",
       description: "Scalable storage infrastructure for growing businesses",
       features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
       icon: "💾"
     },
-    {title}: "Security Infrastructure",
+    {
+      title: "Security Infrastructure",
       description: "Multi-layered security infrastructure protection",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
       icon: "🔒"

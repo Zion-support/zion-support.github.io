@@ -7,7 +7,6 @@
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🚀 ULTIMATE BREAKTHROUGH • JANUARY 2026
             </div>
-            </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                 Explore Revolution →

@@ -1,30 +1,31 @@
-import { useFavorites } from '@/hooks/useFavorites';
+import React, { useEffect } from 'react';
+import { useFavorites } from '../hooks/useFavorites';
 import { MARKETPLACE_LISTINGS } from '../data/marketplaceData';
 import { TALENT_PROFILES } from '../data/talentData';
 import { ProductListingCard } from '../components/ProductListingCard';
 import { TalentCard } from '../components/talent/TalentCard';
-
 import { Button } from '../components/ui/button';
-import { useCart } from '@/context/CartContext';
-import { useAuth } from '@/hooks/useAuth';
-import { getCartKey } from '@/utils/cartUtils';
-
+import { useCart } from '../context/CartContext';
+import { useAuth } from '../hooks/useAuth';
+import { getCartKey } from '../utils/cartUtils';
 import { useNavigate } from 'react-router-dom';
+import { safeStorage } from '../utils/safeStorage';
 export default function WishlistPage() {
     const { favorites, loading } = useFavorites();
-    const { user } = useAuth();
-    const { dispatch } = useCart();
+    const { user, isAuthLoading } = useAuth();
+    const { items, dispatch } = useCart();
     const navigate = useNavigate();
+    
     useEffect(() => {
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
-            router.push('/login');
+            navigate('/login');
         }
-    }, [user, isAuthLoading, router]);
+    }, [user, isAuthLoading, navigate]);
+    
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
         return null; // Or a loading spinner
     }
-    const { items, dispatch } = useCart();
     const addToCart = (item) => {
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) : [];
