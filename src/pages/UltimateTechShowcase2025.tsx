@@ -257,11 +257,6 @@ export default UltimateTechShowcase2025;
               </button>
               <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                 📊 View Analytics
-=======
-
-const UltimateTechShowcase2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -420,7 +415,6 @@ const UltimateTechShowcase2025: React.FC = () => {
               </div>
               <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Observe Quantum
->>>>>>> da6eea862eb0 (Add revolutionary new content and advertising components)
               </button>
             </div>
           </motion.div>

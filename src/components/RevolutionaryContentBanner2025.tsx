@@ -197,7 +197,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> da6eea862eb0 (Add revolutionary new content and advertising components)
     </div>
   );
 };
