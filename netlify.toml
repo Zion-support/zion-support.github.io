@@ -1,9 +1,7 @@
 [build]
-  # Build from zion-website subdirectory
-  base = "zion-website"
-  # Install dependencies and build the Next.js app
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = "zion-website/.next"
+  # Build Vite app from repo root
+  command = "npm ci --no-audit --no-fund && npm run build:netlify"
+  publish = "dist"
   command_timeout = "30m"
   # No-op: trigger Netlify rebuild at 2025-09-18T16:45:00Z
 
@@ -17,12 +15,11 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+## No Next.js plugin needed for Vite static build
 
 # Functions configuration (lives at repo root `netlify/functions`)
 [functions]
-  directory = "../netlify/functions"
+  directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
