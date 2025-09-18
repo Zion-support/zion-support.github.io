@@ -1,8 +1,14 @@
 # Updated: Fixed for Vite React app deployment - 2025-01-20T00:00:00Z
 [build]
+<<<<<<< HEAD
+  base = "zion-website"
+  command = "cd zion-website && npm ci --no-audit --no-fund && npm run build"
+  publish = "zion-website/.next"
+=======
   base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-15a0
   command_timeout = "30m"
 
 [build.environment]
