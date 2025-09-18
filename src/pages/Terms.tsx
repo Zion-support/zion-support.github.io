@@ -8,30 +8,27 @@ export default function Terms() {
       <SEO 
         title="Terms of Service - Zion Tech Group" 
         description="Read Zion Tech Group's terms of service and user agreement for our AI and tech marketplace platform." 
-        url="https://ziontechgroup.com/terms"
+        url="https: //ziontechgroup.com/terms",
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8"></div>,
+          <div className="text-center mb-16"></div>
             <GradientHeading>Terms of Service</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Please read these terms carefully before using our platform
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">Please read these terms carefully before using our platform</p>
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8">
+          <div className="max-w-4xl mx-auto space-y-8"></div>
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8"></div>
               <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
-              <p className="text-zion-slate-light mb-4">
-                By accessing and using Zion Tech Group's platform, you accept and agree to be bound by the terms and provision of this agreement.
+              <p className="text-zion-slate-light mb-4">By accessing and using Zion Tech Group's platform, you accept and agree to be bound by the terms and provision of this agreement.</p>
               </p>
-              <p className="text-zion-slate-light">
-                If you do not agree to abide by the above, please do not use this service.
+              <p className="text-zion-slate-light">If you do not agree to abide by the above, please do not use this service.</p>
             </div>
               <h2 className="text-2xl font-bold text-white mb-4">2. Use License</h2>
                 Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only.
-              <p className="text-zion-slate-light mb-4">This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-              <ul className="text-zion-slate-light list-disc list-inside space-y-2 ml-4">
+              <p className="text-zion-slate-light mb-4">This is the grant of a license, not a transfer of title, and under this license you may not: </p>,
+              <ul className="text-zion-slate-light list-disc list-inside space-y-2 ml-4"></ul>
                 <li>Modify or copy the materials</li>
                 <li>Use the materials for any commercial purpose or for any public display</li>
                 <li>Attempt to reverse engineer any software contained on Zion Tech Group's website</li>
@@ -45,10 +42,9 @@ export default function Terms() {
               <h2 className="text-2xl font-bold text-white mb-4">5. Privacy Policy</h2>
                 Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.
               <h2 className="text-2xl font-bold text-white mb-4">6. Contact Information</h2>
-                If you have any questions about these Terms of Service, please contact us at:
-              <div className="text-zion-slate-light space-y-2">
-                <p>Email: legal@ziontechgroup.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                If you have any questions about these Terms of Service, please contact us at: <div className="text-zion-slate-light space-y-2"></div>,
+                <p>Email: legal@ziontechgroup.com</p>,
+                <p>Phone: +1 (555) 123-4567</p>,
                 <p>Address: 123 Tech Street, Innovation City, IC 12345</p>
               </div>
         </div>

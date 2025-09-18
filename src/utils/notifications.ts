@@ -4,7 +4,7 @@
  */
 
 interface NotificationOptions {
-  title: string;
+  title: string;,
   body?: string;
   icon?: string;
   badge?: string;
@@ -18,14 +18,13 @@ interface NotificationOptions {
 }
 
 interface NotificationAction {
-  action: string;
-  title: string;
+  action: string;,
+  title: string;,
   icon?: string;
 }
 
 class NotificationManager {
-  private permission: NotificationPermission = 'default';
-
+  private permission: NotificationPermission = 'default';,
   async requestPermission(): Promise<NotificationPermission> {
     if ('Notification' in window) {
       this.permission = await Notification.requestPermission();
@@ -33,7 +32,7 @@ class NotificationManager {
     return this.permission;
   }
 
-  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {,
     if (!('Notification' in window)) {
       console.warn('This browser does not support notifications');
       return null;
@@ -58,7 +57,7 @@ class NotificationManager {
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
-        vibrate: options.vibrate
+        vibrate: options.vibrate,
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -117,14 +116,14 @@ export const notifications = {
   /**
    * Check if notifications are supported
    */
-  isSupported: (): boolean => {
+  isSupported: (): boolean => {,
     return typeof window !== 'undefined' && 'Notification' in window;
   },
 
   /**
    * Check if notifications are permitted
    */
-  getPermission: (): NotificationPermission => {
+  getPermission: (): NotificationPermission => {,
     if (!notifications.isSupported()) return 'denied';
     return Notification.permission;
   },
@@ -132,7 +131,7 @@ export const notifications = {
   /**
    * Request notification permission
    */
-  requestPermission: async (): Promise<NotificationPermission> => {
+  requestPermission: async (): Promise<NotificationPermission> => {,
     if (!notifications.isSupported()) return 'denied';
     
     try {
@@ -147,7 +146,7 @@ export const notifications = {
   /**
    * Show a notification
    */
-  show: (options: NotificationOptions): Notification | null => {
+  show: (options: NotificationOptions): Notification | null => {,
     if (!notifications.isSupported()) {
       console.warn('Notifications not supported');
       return null;
@@ -169,7 +168,7 @@ export const notifications = {
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
-        vibrate: options.vibrate
+        vibrate: options.vibrate,
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -194,7 +193,7 @@ export const notifications = {
       title,
       body,
       icon: '/icons/success.png',
-      tag: 'success'
+      tag: 'success',
     });
   },
 
@@ -219,7 +218,7 @@ export const notifications = {
       title,
       body,
       icon: '/icons/info.png',
-      tag: 'info'
+      tag: 'info',
     });
   },
 
@@ -231,7 +230,7 @@ export const notifications = {
       title,
       body,
       icon: '/icons/warning.png',
-      tag: 'warning'
+      tag: 'warning',
     });
   }
 };

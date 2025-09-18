@@ -3,15 +3,14 @@ export type SecurityConfig = {
   sanitizeDOM?: boolean;
 };
 
-export const defaultSecurityConfig: SecurityConfig = {
+export const defaultSecurityConfig: SecurityConfig = {,
   enableCSP: false,
-  sanitizeDOM: true
+  sanitizeDOM: true,
 };
 
 export class SecurityManager {
-  private config: SecurityConfig;
-
-  constructor(config: SecurityConfig = defaultSecurityConfig) {
+  private config: SecurityConfig;,
+  constructor(config: SecurityConfig = defaultSecurityConfig) {,
     this.config = config;
   };
   initialize(): void {

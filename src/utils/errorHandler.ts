@@ -6,25 +6,25 @@ interface ErrorContext {
   sessionId?: string;
   route?: string;
   component?: string;
-  timestamp: string;
+  timestamp: string;,
   userAgent?: string;
   url?: string;
 }
 
 interface ErrorReport {
-  id: string;
-  type: string;
-  message: string;
+  id: string;,
+  type: string;,
+  message: string;,
   stack?: string;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  resolved: boolean;
-  createdAt: string;
+  context: ErrorContext;,
+  severity: 'low' | 'medium' | 'high' | 'critical';,
+  resolved: boolean;,
+  createdAt: string;,
   resolvedAt?: string;
 }
 
 class ErrorHandler {
-  private errorReports: ErrorReport[] = [];
+  private errorReports: ErrorReport[] = [];,
   private maxReports = 1000;
   private isOnline = navigator.onLine;
 
@@ -42,7 +42,7 @@ class ErrorHandler {
         type: 'UnhandledPromiseRejection',
         message: event.reason?.message || 'Unhandled promise rejection',
         stack: event.reason?.stack,
-        severity: 'high'
+        severity: 'high',
       });
     });
 
@@ -52,7 +52,7 @@ class ErrorHandler {
         type: 'JavaScriptError',
         message: event.message,
         stack: event.error?.stack,
-        severity: 'high'
+        severity: 'high',
       });
     });
 
@@ -62,7 +62,7 @@ class ErrorHandler {
         this.handleError({
           type: 'ResourceError',
           message: `Failed to load resource: ${(event.target as any)?.src || 'unknown'}`,
-          severity: 'medium'
+          severity: 'medium',
         });
       }
     }, true);
@@ -75,7 +75,7 @@ class ErrorHandler {
       this.handleError({
         type: 'NetworkStatus',
         message: 'Network connection restored',
-        severity: 'low'
+        severity: 'low',
       });
     });
 
@@ -84,7 +84,7 @@ class ErrorHandler {
       this.handleError({
         type: 'NetworkStatus',
         message: 'Network connection lost',
-        severity: 'high'
+        severity: 'high',
       });
     });
   }
@@ -101,7 +101,7 @@ class ErrorHandler {
           this.handleError({
             type: 'PerformanceIssue',
             message: `LCP exceeded threshold: ${lastEntry.startTime}ms`,
-            severity: 'medium'
+            severity: 'medium',
           });
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] });
@@ -109,12 +109,12 @@ class ErrorHandler {
       // First Input Delay
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: any) => {,
           if (entry.processingStart - entry.startTime > 100) {
             this.handleError({
               type: 'PerformanceIssue',
               message: `FID exceeded threshold: ${entry.processingStart - entry.startTime}ms`,
-              severity: 'medium'
+              severity: 'medium',
             });
           }
         });
@@ -123,12 +123,12 @@ class ErrorHandler {
       // Cumulative Layout Shift
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: any) => {,
           if (entry.value > 0.1) {
             this.handleError({
               type: 'PerformanceIssue',
               message: `CLS exceeded threshold: ${entry.value}`,
-              severity: 'medium'
+              severity: 'medium',
             });
           }
         });
@@ -137,19 +137,19 @@ class ErrorHandler {
   }
 
   // Main error handling method
-  public handleError(errorData: {
-    type: string;
-    message: string;
+  public handleError(errorData: {,
+    type: string;,
+    message: string;,
     stack?: string;
     severity?: 'low' | 'medium' | 'high' | 'critical';
     context?: Partial<ErrorContext>;
   }): void {
-    const errorReport: ErrorReport = {
+    const errorReport: ErrorReport = {,
       id: this.generateErrorId(),
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,
-      context: {
+      context: {,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -158,7 +158,7 @@ class ErrorHandler {
       },
       severity: errorData.severity || 'medium',
       resolved: false,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
 
     // Add to local storage
@@ -182,7 +182,7 @@ class ErrorHandler {
   }
 
   // Add error report to local storage
-  private addErrorReport(report: ErrorReport): void {
+  private addErrorReport(report: ErrorReport): void {,
     this.errorReports.unshift(report);
     
     // Maintain max reports limit
@@ -199,7 +199,7 @@ class ErrorHandler {
   }
 
   // Send to monitoring service
-  private async sendToMonitoringService(report: ErrorReport): Promise<void> {
+  private async sendToMonitoringService(report: ErrorReport): Promise<void> {,
     if (!this.isOnline) {
       // Queue for later when online
       this.queueForLater(report);
@@ -209,10 +209,10 @@ class ErrorHandler {
     try {
       await fetch('/api/errors', {
         method: 'POST',
-        headers: {
+        headers: {,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(report)
+        body: JSON.stringify(report),
       });
     } catch (error) {
       console.warn('Failed to send error report to monitoring service:', error);
@@ -221,7 +221,7 @@ class ErrorHandler {
   }
 
   // Queue errors for later transmission
-  private queueForLater(report: ErrorReport): void {
+  private queueForLater(report: ErrorReport): void {,
     try {
       const queued = JSON.parse(localStorage.getItem('queuedErrors') || '[]');
       queued.push(report);
@@ -232,12 +232,12 @@ class ErrorHandler {
   }
 
   // Show user notification
-  private showUserNotification(report: ErrorReport): void {
+  private showUserNotification(report: ErrorReport): void {,
     // Create notification element
     const notification = document.createElement('div');
     notification.className = 'error-notification';
     notification.innerHTML = `
-      <div class="error-notification-content">
+      <div class="error-notification-content"></div>
         <h3>⚠️ System Error</h3>
         <p>We've encountered a critical error. Our team has been notified.</p>
         <button onclick="this.parentElement.parentElement.remove()">Dismiss</button>
@@ -247,16 +247,16 @@ class ErrorHandler {
 
     // Add styles
     notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #ff4444;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
+      position: fixed;,
+      top: 20px;,
+      right: 20px;,
+      background: #ff4444;,
+      color: white;,
+      padding: 20px;,
+      border-radius: 8px;,
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 10000;
-      max-width: 300px;
+      z-index: 10000;,
+      max-width: 300px;,
     `;
 
     document.body.appendChild(notification);
@@ -270,7 +270,7 @@ class ErrorHandler {
   }
 
   // Attempt recovery
-  private attemptRecovery(report: ErrorReport): void {
+  private attemptRecovery(report: ErrorReport): void {,
     switch (report.type) {
       case 'ResourceError':
         // Try to reload the failed resource
@@ -290,7 +290,7 @@ class ErrorHandler {
   }
 
   // Reload failed resource
-  private reloadFailedResource(report: ErrorReport): void {
+  private reloadFailedResource(report: ErrorReport): void {,
     // Implementation for reloading failed resources
     console.log('Attempting to reload failed resource:', report.message);
   }
@@ -325,10 +325,10 @@ class ErrorHandler {
 
   // Get error statistics
   public getErrorStatistics(): {
-    total: number;
+    total: number;,
     bySeverity: Record<string, number>;
     byType: Record<string, number>;
-    recent: number;
+    recent: number;,
   } {
     const bySeverity = this.errorReports.reduce((acc, report) => {
       acc[report.severity] = (acc[report.severity] || 0) + 1;
@@ -388,23 +388,23 @@ export class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> },
   { hasError: boolean; error?: Error }
 > {
-  constructor(props: any) {
+  constructor(props: any) {,
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError(error: Error) {,
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     errorHandler.handleError({
       type: 'ReactErrorBoundary',
       message: error.message,
       stack: error.stack,
       severity: 'high',
-      context: {
-        component: errorInfo.componentStack
+      context: {,
+        component: errorInfo.componentStack,
       }
     });
   }
@@ -422,19 +422,18 @@ export class ErrorBoundary extends React.Component<
 // Default error fallback component
 function DefaultErrorFallback({ error }: { error: Error }) {
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
+    <div style={{ padding: '20px', textAlign: 'center' }}></div>
       <h2>Something went wrong</h2>
       <p>We're sorry, but something unexpected happened.</p>
       {process.env.NODE_ENV === 'development' && (
         <details style={{ marginTop: '20px' }}>
           <summary>Error details</summary>
-          <pre style={{ textAlign: 'left', marginTop: '10px' }}>
-            {error.message}
+          <pre style={{ textAlign: 'left', marginTop: '10px' }}>{error.message}</p>
             {error.stack}
           </pre>
         </details>
       )}
-      <button onClick={() => window.location.reload()}>
+      <button onClick={() =>window.location.reload()}></button>
         Reload Page
       </button>
     </div>
