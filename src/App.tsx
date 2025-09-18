@@ -51,7 +51,7 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const [sidebarOpen, setSidebarOpen] = useState(false);
   
   return (
               
