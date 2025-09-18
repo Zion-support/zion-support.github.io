@@ -1,0 +1,53 @@
+Your branch is behind 'origin/main' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Updating 4842ba5c5e9f..7b6c40a8476a
+Fast-forward
+ netlify.toml                                       |   6 +-
+ zion-os/.next/app-build-manifest.json              | 694 ++++------------
+ zion-os/.next/build-manifest.json                  |  26 +-
+ zion-os/.next/routes-manifest.json                 |   1 +
+ zion-os/.next/server/app-paths-manifest.json       |  66 ++
+ .../_not-found/page_client-reference-manifest.js   |   6 +-
+ zion-os/.next/server/app/about/page.js             |   1 +
+ .../app/about/page_client-reference-manifest.js    |   6 +-
+ zion-os/.next/server/app/accessibility/page.js     |   1 +
+ .../page_client-reference-manifest.js              |   6 +-
+ zion-os/.next/server/app/admin/instances/page.js   |   1 +
+ .../server/app/admin/instances/page.js.nft.json    |   1 +
+ .../instances/page_client-reference-manifest.js    |   6 +-
+ zion-os/.next/server/app/admin/os-deploy/page.js   |   1 +
+ .../os-deploy/page_client-reference-manifest.js    |   6 +-
+ .../page_client-reference-manifest.js              |   6 +-
+ .../page_client-reference-manifest.js              |   6 +-
+ .../case-studies/page_client-reference-manifest.js |   6 +-
+ .../app/contact/page_client-reference-manifest.js  |   6 +-
+ .../app/cookies/page_client-reference-manifest.js  |   6 +-
+ .../app/docs/page_client-reference-manifest.js     |   6 +-
+ zion-os/.next/server/app/page.js                   |   1 +
+ .../server/app/page_client-reference-manifest.js   |   6 +-
+ .../app/pricing/page_client-reference-manifest.js  |   6 +-
+ .../app/privacy/page_client-reference-manifest.js  |   6 +-
+ .../app/research/page_client-reference-manifest.js |   6 +-
+ .../app/services/page_client-reference-manifest.js |   6 +-
+ .../solutions/page_client-reference-manifest.js    |   6 +-
+ .../app/terms/page_client-reference-manifest.js    |   6 +-
+ zion-os/.next/server/middleware-build-manifest.js  |   6 +-
+ zion-os/.next/server/server-reference-manifest.js  |   1 +
+ .../.next/server/server-reference-manifest.json    |   1 +
+ zion-os/src/app/admin/deployments/page.tsx         |   8 +
+ zion-os/src/app/admin/instances/page.tsx           |   8 +
+ zion-os/src/app/admin/layout.tsx                   |   9 +
+ zion-os/src/app/blog/[id]/page.tsx                 | 439 +---------
+ zion-os/src/app/blog/page.tsx                      | 128 ++-
+ zion-os/src/app/page.tsx                           | 925 ++-------------------
+ zion-os/tsconfig.json                              |  25 +-
+ 39 files changed, 427 insertions(+), 2030 deletions(-)
+Auto-merging netlify.toml
+Merge made by the 'ort' strategy.
+ netlify.toml | 21 +++++++++------------
+ 1 file changed, 9 insertions(+), 12 deletions(-)
+Your branch is up to date with 'origin/main'.
+Already up to date.
+Auto-merging netlify.toml
+CONFLICT (content): Merge conflict in netlify.toml
+Automatic merge failed; fix conflicts and then commit the result.
