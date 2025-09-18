@@ -28,8 +28,7 @@
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+## (single declaration above is sufficient)
 
 [build.processing]
   skip_processing = true
@@ -222,12 +221,6 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/chore/netlify-nextjs-plugin
-=======
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-18T00:00:00Z (refresh 2025-09-18T00:00:00Z-5)
-# trigger: 2025-09-18T00:00:00Z (refresh) re-run-11
->>>>>>> ee0cd2b02fcefc0003e3a2a5cf6ba752fe252239
+# trigger: 2025-09-18T00:00:00Z (refresh) re-run-12
