@@ -8,14 +8,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 
-=======
-import ConnectWalletButton from '../components/ConnectWalletButton';
-import { useWallet } from '@/context/WalletContext';
-import { Button } from '../components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Input } from '../components/ui/input';
-
 const CHAINS = [
     { id: 'ethereum', name: 'Ethereum', logo: '/logos/ethereum-logo.svg' },
     { id: 'polygon', name: 'Polygon', logo: '/logos/polygon-logo.svg' },
