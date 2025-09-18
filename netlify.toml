@@ -3,6 +3,7 @@
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
+  # No-op: touch to trigger Netlify rebuild at 2025-09-18T15:22:00Z
 
 # Trigger Netlify build: no-op change on 2025-09-18T15:15:00Z
 
