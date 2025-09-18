@@ -19,4 +19,5 @@ const ai-business-intelligence-suite-pro: React.FC = () => {
   );
 };
 
-export default ai-business-intelligence-suite-pro;
+
+export default InterdimensionalTechRevolution2030;

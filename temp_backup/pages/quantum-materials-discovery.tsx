@@ -19,4 +19,5 @@ const quantum-materials-discovery: React.FC = () => {
   );
 };
 
-export default quantum-materials-discovery;
+
+export default UltimateTechRevolution2042;

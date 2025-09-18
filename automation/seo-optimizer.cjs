@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-
 
 /**
  * SEO Optimizer
@@ -9,13 +6,9 @@
  */
 
 const { execSync } = require('child_process');
->>>>>>> origin/merge-pr-12271
-
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class SEOOptimizer {
   constructor() {
     this.seoData = new Map();

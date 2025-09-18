@@ -1,10 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Header from '../Header';
+import Footer from '../Footer';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       <Header />
       
@@ -172,11 +174,8 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       
       <Footer />
 =======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
+import { motion } from 'framer-motion';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
@@ -185,7 +184,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -206,74 +208,41 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
       {/* Quantum Features Grid */}
->>>>>>> cursor/create-and-deploy-new-content-79ca
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Advanced Quantum Computing2026
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Revolutionary technology solutions and insights for the future
-          </p>
+          <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Quantum Capabilities</h2>
+          <p className="text-xl opacity-90">Unlock unprecedented computational power with our advanced quantum systems</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
-            <p className="text-gray-300 mb-4">
-              Cutting-edge solutions that push the boundaries of what's possible
-=======
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Achieve computational tasks impossible for classical computers with our 1000+ qubit quantum processors
->>>>>>> cursor/create-and-deploy-new-content-79ca
             </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• AI-powered automation</li>
-              <li>• Quantum computing breakthroughs</li>
-              <li>• Neural interface technology</li>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• 1000+ logical qubits</li>
+              <li>• 99.9% quantum fidelity</li>
+              <li>• Sub-millisecond gate operations</li>
+              <li>• Error correction algorithms</li>
             </ul>
-<<<<<<< HEAD
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
-            <p className="text-gray-300 mb-4">
-              Discover the latest developments in technology and innovation
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research and development</li>
-              <li>• Industry partnerships</li>
-              <li>• Future technology trends</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
-            </ul>
-=======
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🧬</div>
@@ -287,10 +256,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Climate modeling precision</li>
               <li>• Protein folding analysis</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🔐</div>
@@ -304,10 +275,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Secure communication networks</li>
               <li>• Quantum random number generation</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🤖</div>
@@ -321,10 +294,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Quantum machine learning</li>
               <li>• Pattern recognition enhancement</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-violet-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🌐</div>
@@ -338,10 +313,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Distributed quantum computing</li>
               <li>• Quantum communication protocols</li>
             </ul>
-          </divdiv>
+          </motion.div>
 
-          <divdiv
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🔬</div>
@@ -355,7 +332,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Materials discovery</li>
               <li>• Fundamental research tools</li>
             </ul>
-          </divdiv>
+          </motion.div>
         </div>
       </div>
 
@@ -368,8 +345,10 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Financial Services</h3>
@@ -391,10 +370,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                   <span className="text-sm">Advanced fraud detection</span>
                 </div>
               </div>
-            </divdiv>
+            </motion.div>
 
-            <divdiv
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Healthcare & Life Sciences</h3>
@@ -416,11 +397,33 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                   <span className="text-sm">Personalized treatment optimization</span>
                 </div>
               </div>
-            </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
+            </motion.div>
           </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience Quantum Computing?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the quantum revolution and unlock unprecedented computational power for your organization. 
+            Our advanced quantum computing solutions are ready to transform your business.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Quantum Journey
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Contact Quantum Experts
+            </button>
+          </div>
+        </div>
+      </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+>>>>>>> cursor/create-and-deploy-new-content-634d
     </div>
   );
 };

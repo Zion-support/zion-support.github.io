@@ -19,4 +19,5 @@ const ai-marketing-automation-suite: React.FC = () => {
   );
 };
 
-export default ai-marketing-automation-suite;
+
+export default QuantumComputingSolutions2026;

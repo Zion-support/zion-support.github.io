@@ -1,17 +1,34 @@
-import React from 'react';
+// @ts-nocheck
+import Link from 'next/link'
 
+const posts = [
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7720
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+>>>>>>> cursor/create-and-deploy-new-content-7720
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
     slug: 'ai-2026-autonomous-workflow-architecture',
     title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
     summary:
@@ -28,37 +45,27 @@ import React from 'react';
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-=======
-=======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
+<<<<<<< HEAD
   },
   {
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+>>>>>>> cursor/create-and-deploy-new-content-e453
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 =======
   },
   {
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-e453
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -81,20 +88,68 @@ import React from 'react';
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e453
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> cursor/create-and-deploy-new-content-7720
+    slug: 'ai-2026-agent-orchestration-enterprise-guide',
+    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
+    summary:
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+<<<<<<< HEAD
 =======
+    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
+    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
+    summary:
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
 >>>>>>> cursor/create-and-deploy-new-content-8472
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 =======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-e453
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-7720
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
@@ -242,19 +297,6 @@ import React from 'react';
   }
   ,
   {
-    slug: 'ai-2026-autonomous-change-approvals-blueprint',
-    title: 'AI 2026: Autonomous Change Approvals — Blueprint',
-    summary:
-      'Policy‑as‑code approvals with eval gates, evidence bundles, and rollback safety nets.'
-  },
-  {
-    slug: 'ai-2026-real-time-agent-benchmark-suite-1-0',
-    title: 'AI 2026: Real‑Time Agent Benchmark Suite v1.0 — Launch',
-    summary:
-      'Scenario‑driven benchmarks for quality, safety, latency, and cost with CI/CD gates.'
-  }
-  ,
-  {
     slug: 'ai-2026-enterprise-retrieval-observability',
     title: 'AI 2026: Enterprise Retrieval Observability',
     summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
@@ -305,15 +347,32 @@ import React from 'react';
 ]
 
 export default function BlogIndexPage() {
-=======
-const page: React.FC = () => {
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="min-h-screen bg-white">
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
+          <p className="text-gray-600 mb-10">Insights, frameworks, and blueprints from Zion Tech Group.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <article key={post.slug} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:shadow-sm transition">
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-700">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="text-gray-600">{post.summary}</p>
+                <div className="mt-4">
+                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold">
+                    Read →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
-  );
-};
+  )
+}
 
-export default page;

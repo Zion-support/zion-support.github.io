@@ -1,0 +1,28 @@
+import React from 'react';
+
+export function MobileEmailCapture() {
+  return (
+    <div className="py-20 bg-blue-900 text-white">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          Get Early Access
+        </h2>
+        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Be the first to experience our revolutionary mobile app
+        </p>
+        <div className="max-w-md mx-auto">
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 p-3 rounded-l-lg text-gray-900"
+            />
+            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg font-semibold">
+              Notify Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

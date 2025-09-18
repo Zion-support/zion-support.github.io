@@ -19,4 +19,5 @@ const 2029-comprehensive-pricing: React.FC = () => {
   );
 };
 
-export default 2029-comprehensive-pricing;
+
+export default RevolutionaryAIContent2025;

@@ -9,4 +9,5 @@ const EnhancedServiceShowcase: React.FC = () => {
   );
 };
 
-export default EnhancedServiceShowcase;
+
+export default EnhancedContentShowcase;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState }  from 'react'
 export function useRouterReady() {
   const [ready, setReady] = useState(false)
   useEffect(() => {
@@ -15,13 +15,13 @@ export function useRouteChange() {
       window.next.router.events.on('routeChangeStart', handleStart)
       window.next.router.events.on('routeChangeComplete', handleComplete)
       window.next.router.events.on('routeChangeError', handleComplete)
-    }
-    return () => {
+    };
+return () => {
       if (typeof window !== 'undefined' && window.next) {
         window.next.router.events.off('routeChangeStart', handleStart)
         window.next.router.events.off('routeChangeComplete', handleComplete)
         window.next.router.events.off('routeChangeError', handleComplete)
-      }
-    }
+      };
+    };
   }, [])
   return isChanging
