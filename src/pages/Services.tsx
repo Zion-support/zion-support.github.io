@@ -205,10 +205,8 @@ export default function Services() {
                         <div className="text-xs text-gray-400">Setup Time</div>
                       </div>
                     </div>
-
           </div>
         </motion.div>
-        </div>
       </div>
     </section>
 </>

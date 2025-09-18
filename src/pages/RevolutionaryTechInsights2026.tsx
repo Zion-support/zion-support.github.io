@@ -245,11 +245,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
+                animate={{
                   y: [0, -400, 0],
                   opacity: [0.2, 1, 0.2],
                   scale: [1, 4, 1],
                   rotate: [0, 720, 0],
                 }}
+                transition={{
                   duration: 6 + Math.random() * 4,
                   repeat: Infinity,
                   delay: Math.random() * 5,
