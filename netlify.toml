@@ -1,14 +1,15 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T00:00:00Z (refresh 2025-09-18T00:00:00Z-5)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:00Z
 [build]
-  # Build Vite app at repository root and publish the dist folder
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
+  # Build the Vite React site from the repository root
+  base = "."
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
-# No-op: trigger Netlify rebuild at 2025-09-18T00:00:00Z-5
+  # No-op: trigger Netlify rebuild at 2025-09-18T19:25:00Z
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
@@ -16,8 +17,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-
-## No Next.js plugin needed for Vite SPA
 
 [functions]
   # Functions live at the repository root
@@ -125,10 +124,11 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-DNS-Prefetch-Control = "on"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' https: *.googleapis.com; img-src 'self' data: https:; font-src 'self' https: *.gstatic.com *.googleapis.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+# Optional CSP for JS if needed
+# [[headers]]
+#   for = "*.js"
+#   [headers.values]
+#     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
 # Redirects for legacy URLs
 [[redirects]]
@@ -216,8 +216,12 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## Note: Do not add SPA fallback for Next.js; plugin handles routing.
+# SPA fallback for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T00:00:00Z (refresh 2025-09-18T00:00:00Z-5)
-# trigger: 2025-09-18T00:00:00Z (refresh) re-run-11
+# No-op: trigger deploy 2025-09-18T23:59:59Z (refresh 2025-09-18T23:59:59Z)
+# trigger: 2025-09-18T23:59:59Z (refresh) re-run-3
