@@ -1,12 +1,7 @@
-<<<<<<< HEAD
+# Netlify build configuration for Vite app
 # This is a VITE project, NOT a Next.js project
 # The build process uses Vite to create a static site in the 'dist' folder
 # No Next.js plugins or configurations are needed
-
-=======
-# Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 18:02 UTC)
->>>>>>> origin/backup-main-20250918-004015
 [build]
   # Build the root Vite app and publish static assets
   command = "npm run build:netlify"
@@ -191,13 +186,9 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-<<<<<<< HEAD
-# Handle client-side routing for SPA (this is also in _redirects file)
-=======
 # Note: Next.js plugin removed; this is a Vite static site build
-
+# Handle client-side routing for SPA (this is also in _redirects file)
 # Use SPA catch-all routing for Vite (must be last)
->>>>>>> origin/backup-main-20250918-004015
 [[redirects]]
   from = "/*"
   to = "/index.html"
