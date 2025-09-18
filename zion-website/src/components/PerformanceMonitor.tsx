@@ -1,109 +1,150 @@
-'use client'
+'use client';
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number
-  domContentLoaded: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  firstInputDelay: number
-  cumulativeLayoutShift: number
-  timeToInteractive: number
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  fmp: number | null;
 }
 
 export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null
+  });
+
   useEffect(() => {
-    // Only run in production and when performance API is available
-    if (process.env.NODE_ENV !== 'production' || typeof window === 'undefined' || !('performance' in window)) {
-      return
-    }
+    // Only run in browser
+    if (typeof window === 'undefined') return;
 
-    const collectMetrics = () => {
-      const metrics: PerformanceMetrics = {
-        loadTime: 0,
-        domContentLoaded: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
-        timeToInteractive: 0
-      }
-
-      // Basic timing metrics
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {
-        metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart
-        metrics.domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart
-      }
-
-      // Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
+    // Performance Observer for Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const metric = entry as PerformanceEntry & { value?: number };
+        
+        switch (entry.entryType) {
+          case 'paint':
             if (entry.name === 'first-contentful-paint') {
-              metrics.firstContentfulPaint = entry.startTime
+              setMetrics(prev => ({ ...prev, fcp: metric.value || entry.startTime }));
             }
-          }
-          
-          if (entry.entryType === 'largest-contentful-paint') {
-            metrics.largestContentfulPaint = entry.startTime
-          }
-          
-          if (entry.entryType === 'first-input') {
-            metrics.firstInputDelay = (entry as any).processingStart - entry.startTime
-          }
-          
-          if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-            metrics.cumulativeLayoutShift += (entry as any).value
-          }
-        }
-      })
-
-      // Observe different types of performance entries
-      try {
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
-      } catch (error) {
-        console.warn('Performance Observer not fully supported:', error)
-      }
-
-      // Send metrics to analytics endpoint
-      const sendMetrics = () => {
-        if (metrics.loadTime > 0 || metrics.firstContentfulPaint > 0) {
-          fetch('/api/analytics/performance', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              ...metrics,
-              url: window.location.href,
-              timestamp: new Date().toISOString(),
-              userAgent: navigator.userAgent,
-              connection: (navigator as any).connection?.effectiveType || 'unknown'
-            }),
-          }).catch(err => console.error('Failed to send performance metrics:', err))
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: metric.value || entry.startTime }));
+            break;
+          case 'first-input':
+            setMetrics(prev => ({ ...prev, fid: metric.value || entry.processingStart - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ 
+                ...prev, 
+                cls: (prev.cls || 0) + ((entry as any).value || 0) 
+              }));
+            }
+            break;
         }
       }
+    });
 
-      // Send metrics after page load
-      if (document.readyState === 'complete') {
-        setTimeout(sendMetrics, 1000)
-      } else {
-        window.addEventListener('load', () => {
-          setTimeout(sendMetrics, 1000)
-        })
-      }
-
-      // Cleanup observer after 10 seconds
-      setTimeout(() => {
-        observer.disconnect()
-      }, 10000)
+    // Observe different entry types
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported:', e);
     }
 
-    // Start collecting metrics
-    collectMetrics()
-  }, [])
+    // TTFB measurement
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ 
+        ...prev, 
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+      }));
+    }
 
-  return null // This component doesn't render anything
+    // Send metrics to analytics
+    const sendMetrics = () => {
+      const validMetrics = Object.entries(metrics).filter(([_, value]) => value !== null);
+      if (validMetrics.length > 0) {
+        // Send to your analytics service
+        fetch('/api/analytics/performance', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            metrics: Object.fromEntries(validMetrics),
+            url: window.location.href,
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent
+          })
+        }).catch(console.error);
+      }
+    };
+
+    // Send metrics after a delay to ensure all metrics are collected
+    const timeoutId = setTimeout(sendMetrics, 5000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutId);
+    };
+  }, [metrics]);
+
+  // Development mode: show metrics in console
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  return null; // This component doesn't render anything
 }
+
+// Performance optimization utilities
+export const performanceUtils = {
+  // Lazy load images
+  lazyLoadImage: (img: HTMLImageElement, src: string) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          img.src = src;
+          observer.unobserve(img);
+        }
+      });
+    });
+    observer.observe(img);
+  },
+
+  // Preload critical resources
+  preloadResource: (href: string, as: string) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = href;
+    link.as = as;
+    document.head.appendChild(link);
+  },
+
+  // Defer non-critical JavaScript
+  deferScript: (src: string) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.defer = true;
+    document.head.appendChild(script);
+  },
+
+  // Optimize images
+  optimizeImage: (src: string, width?: number, quality: number = 80) => {
+    if (src.startsWith('http') && width) {
+      // Use Next.js Image Optimization if available
+      return `/api/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
+    }
+    return src;
+  }
+};
