@@ -1,6 +1,7 @@
-# Updated: Fixed for Vite React app deployment
+# Updated: Fixed for Vite React app deployment - 2025-01-20T00:00:00Z
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -19,21 +20,35 @@
   skip_processing = true
 
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
   for = "/js/*"
   [headers.values]
-    Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Content-Type = "text/css"
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store, max-age=0"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "*.js"
@@ -121,7 +136,7 @@
 #   [headers.values]
 #     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
-# Redirects for legacy URLs (timestamp refresh 2025-09-19T00:15:00Z)
+# Redirects for legacy URLs (timestamp refresh 2025-09-19T01:05:00Z)
 [[redirects]]
   from = "/api/*"
   to = "https://backend.example.com/:splat"
@@ -207,10 +222,14 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: SPA routing fallback handled via public/_redirects
+# SPA routing fallback - redirect all routes to index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-# No-op: trigger deploy 2025-09-19 00:15 (run-11)
+# No-op: trigger deploy 2025-09-19 01:05 (run-12)
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-19T00:15:00Z (refresh 2025-09-19T00:15:00Z)
-# trigger: 2025-09-19T00:15:00Z (refresh) re-run-11
+# No-op: trigger deploy 2025-09-19T01:05:00Z (refresh 2025-09-19T01:05:00Z)
+# trigger: 2025-09-19T01:05:00Z (refresh) re-run-12
