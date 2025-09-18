@@ -1,29 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text = 'Loading Zion Tech Group...' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-24 h-24'
-  };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
-  };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const LoadingSpinner: React.FC = () => {
   return (

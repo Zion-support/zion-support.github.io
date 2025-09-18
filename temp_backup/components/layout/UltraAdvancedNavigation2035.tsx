@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-import { 
-  Menu, X, ChevronDown, Search, 
-  Brain, Cpu, Rocket, Shield, 
-  Zap, Globe, Star, Users,
-  Target, Microscope, Atom, Database,
-  Lock, Cloud, BarChart3, Settings,
-  Eye, Code, Palette, Layers,
-  Network, Server, ShieldCheck,
-  GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
-  CheckCircleIcon, ArrowRightIcon, CpuIcon,
-  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna,
-  Sparkles, Target as TargetIcon, Shield as ShieldIcon, BookOpen,
-  Sparkles as SparklesIcon, Zap as ZapIcon, Brain as BrainIcon, Play,
-  Heart, BookOpen as BookOpenIcon, Microscope as MicroscopeIcon,
-  Rocket as RocketIcon, Atom as AtomIcon, Shield as ShieldIcon2
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedNavigation2035: React.FC = () => {
   return (

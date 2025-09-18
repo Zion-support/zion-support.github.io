@@ -1,25 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Link from 'next/link';
-
-import { 
-  BarChart3, 
-  Shield, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Building,
-  Heart,
-  GraduationCap,
-  ShoppingCart,
-  Landmark,
-  Factory,
-  Globe
-} from 'lucide-react';
-import Layout from '../../components/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const industry: React.FC = () => {
   return (

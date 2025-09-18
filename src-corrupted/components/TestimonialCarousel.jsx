@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, {useState, useEffect} from 'react';
-
-export default function Page(props: any) {
-,
-    {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const TestimonialCarousel: React.FC = () => {
   return (

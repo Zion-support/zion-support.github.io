@@ -1,47 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import ModernLayout from '../components/layout/ModernLayout';
-import { ArrowRight, Zap, Brain, Cloud, Shield } from "lucide-react";
-
-
-export default function Home() {
-  const features = [
-    {
-      icon: Zap,
-      title: 'Micro SaaS Solutions',
-      description: 'Ready-to-deploy SaaS platforms for common business needs',
-      href: '/services#micro-saas'
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Custom AI solutions to automate and optimize your operations',
-      href: '/services#ai-solutions'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Scalable cloud solutions and migration strategies',
-      href: '/services#cloud-solutions'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Zero Trust implementation and security hardening',
-      href: '/services#cybersecurity'
-    }
-  ];
-
-  const stats = [
-    { number: '50+', label: 'Projects Delivered' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '99.9%', label: 'Uptime SLA' },
-    { number: '48hrs', label: 'Response Time' }
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const index.route: React.FC = () => {
   return (

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { Link } from 'react-router-dom';
-import { 
-  Handshake, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Globe,
-  Shield
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Partners: React.FC = () => {
   return (

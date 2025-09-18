@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIContentGenerator: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
@@ -11,14 +10,12 @@ const AIContentGenerator: React.FC = () => {
           Generate high-quality content using advanced AI technology
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Content Type Selection */}
         <div className="lg:col-span-1">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Choose Content Type
           </h3>
-          
           <div className="space-y-3 mb-6">
             {contentTypes.map((type) => (
               <div
@@ -54,7 +51,6 @@ const AIContentGenerator: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Prompt Input */}
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -68,7 +64,6 @@ const AIContentGenerator: React.FC = () => {
               rows={4}
             />
           </div>
-
           {/* Generate Button */}
           <button
             onClick={generateContent}
@@ -77,7 +72,6 @@ const AIContentGenerator: React.FC = () => {
           >
             {isGenerating ? 'Generating...' : 'Generate Content'}
           </button>
-
           {/* Generation Progress */}
           {isGenerating && (
             <div className="mt-4">
@@ -93,7 +87,6 @@ const AIContentGenerator: React.FC = () => {
             </div>
           )}
         </div>
-
         {/* Generated Content Display */}
         <div className="lg:col-span-2">
           <div className="flex justify-between items-center mb-4">
@@ -104,7 +97,6 @@ const AIContentGenerator: React.FC = () => {
               {generatedContent.length} items generated
             </div>
           </div>
-
           {generatedContent.length === 0 ? (
             <div className="text-center py-12 text-gray-500 dark:text-gray-400">
               <div className="text-4xl mb-4">🤖</div>
@@ -131,7 +123,6 @@ const AIContentGenerator: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    
                     <div className="flex flex-wrap gap-1 mb-3">
                       {content.tags.map((tag) => (
                         <span
@@ -142,7 +133,6 @@ const AIContentGenerator: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     <div className="flex space-x-2">
                       <button
                         onClick={() => setSelectedContent(content)}
@@ -164,7 +154,6 @@ const AIContentGenerator: React.FC = () => {
                       </button>
                     </div>
                   </div>
-
                   {selectedContent?.id === content.id && (
                     <div className="p-4 border-t border-gray-200 dark:border-gray-600">
                       <div className="prose dark:prose-invert max-w-none">
@@ -183,5 +172,4 @@ const AIContentGenerator: React.FC = () => {
     </div>
   );
 };
-
 export default AIContentGenerator;

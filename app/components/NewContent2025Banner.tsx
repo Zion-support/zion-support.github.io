@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-import { 
-  ArrowRight, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  CheckCircle,
-  Star,
-  BookOpen,
-  FileText,
-  Lightbulb,
-  Target,
-  Zap,
-  X
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const NewContent2025Banner: React.FC = () => {
   return (

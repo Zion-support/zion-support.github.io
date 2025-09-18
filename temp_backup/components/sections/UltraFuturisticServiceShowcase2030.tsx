@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { 
-  Brain, Atom, Rocket, Target, Microscope, Cpu, 
-  Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle,
-  Phone, Mail, MapPin, Globe, TrendingUp, DollarSign
-} from 'lucide-react';
-import Link from 'next/link';
-import { cuttingEdgeInnovations2029 } from '../../data/2029-cutting-edge-innovations';
-import { innovativeMicroSaas2029 } from '../../data/2029-innovative-micro-saas';
-import { enterpriseITServices2029 } from '../../data/2029-enterprise-it-services';
-import { emergingTechServices2029 } from '../../data/2029-emerging-tech-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticServiceShowcase2030: React.FC = () => {
   return (

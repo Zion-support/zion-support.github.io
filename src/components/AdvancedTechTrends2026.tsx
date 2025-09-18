@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedTechTrends2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -19,7 +18,6 @@ const AdvancedTechTrends2026: React.FC = () => {
             and give you a competitive edge in the next decade.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trendindex) => (
             <div
@@ -31,15 +29,12 @@ const AdvancedTechTrends2026: React.FC = () => {
                 <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${trend.color} mb-6`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {trend.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {trend.description}
                 </p>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full">
                     {trend.impact}
@@ -50,7 +45,6 @@ const AdvancedTechTrends2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
@@ -76,5 +70,4 @@ const AdvancedTechTrends2026: React.FC = () => {
     </section>
   );
 };
-
 export default AdvancedTechTrends2026;

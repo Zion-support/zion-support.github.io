@@ -1,18 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-
-import { 
-  Search, Filter, Star, CheckCircle, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Phone, Mail, MapPin, TrendingUp, Users, Award,
-  ExternalLink, Zap, Globe, Cpu, Database, Cloud,
-  Lock, BarChart3, Settings, Code, Palette, MessageSquare
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const innovative-services-showcase-2034: React.FC = () => {
   return (

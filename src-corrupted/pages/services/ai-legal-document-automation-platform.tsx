@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" Generate, analyze, and manage legal documents with unprecedented speed and accuracy. </p>" <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <a" href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-legal-document-automation-platform: React.FC = () => {
   return (

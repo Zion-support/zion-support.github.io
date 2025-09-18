@@ -1,25 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Link from 'next/link';
-
-import { 
-  Settings, 
-  Code, 
-  Wrench, 
-  CheckCircle,
-  ArrowRight,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Zap,
-  Target,
-  Rocket
-} from 'lucide-react';
-import Layout from '../../components/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const custom: React.FC = () => {
   return (

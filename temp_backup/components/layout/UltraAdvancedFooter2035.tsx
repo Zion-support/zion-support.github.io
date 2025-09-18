@@ -1,21 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  Zap, Mail, Phone, MapPin, Globe, 
-  Twitter, Linkedin, Facebook, Instagram, 
-  Youtube, Github, ArrowRight, Star,
-  Shield, Rocket, Brain, Atom, DollarSign,
-  Users, FileText, HelpCircle, Settings,
-  TrendingUp, Award, CheckCircle, Clock,
-  Globe as GlobeIcon, Cpu, Database, Lock,
-  Target, BookOpen, Heart, Lightbulb,
-  Sparkles, ArrowUpRight, ChevronRight,
-  ArrowUp, ExternalLink
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedFooter2035: React.FC = () => {
   return (
@@ -26,4 +9,5 @@ const UltraAdvancedFooter2035: React.FC = () => {
   );
 };
 
-export default UltraAdvancedFooter2035;
+
+export default InteractiveTechDemo2035;

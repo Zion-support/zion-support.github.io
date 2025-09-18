@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
-import Link from 'next/link';
-
-import { 
-} from 'lucide-react';
-
-// Import new services
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
-import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Homepage2038: React.FC = () => {
   return (

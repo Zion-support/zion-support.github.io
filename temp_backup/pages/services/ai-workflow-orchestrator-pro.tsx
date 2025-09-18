@@ -1,14 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import SEO from '../../components/SEO';
-
-import { 
-  Check, Star, Users, Zap, Shield, TrendingUp,
-  ArrowRight, Play, Clock, Award, Globe, Cpu, Brain
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-workflow-orchestrator-pro: React.FC = () => {
   return (

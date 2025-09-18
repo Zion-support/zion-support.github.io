@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Zap,
-  Brain,
-  Rocket,
-  Shield,
-  Cloud,
-  Bot,
-  RefreshCw,
-  BarChart3
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedFuturisticNavigation: React.FC = () => {
   return (

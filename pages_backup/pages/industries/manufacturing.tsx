@@ -1,36 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import {
-  Settings,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  BarChart3,
-  Clock,
-  Award,
-  Brain,
-  Shield,
-  Target,
-  TrendingUp,
-  Globe,
-  Building,
-  Rocket,
-  Lock,
-  Activity,
-  Factory,
-  FileText,
-  Database,
-  Cpu,
-  DollarSign
-} from 'lucide-react';
-import Layout from '../../components/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const manufacturing: React.FC = () => {
   return (

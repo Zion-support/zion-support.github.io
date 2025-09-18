@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { Brain, Cpu, Zap, Target, Users, Globe, ArrowRight, Activity } from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const brain-computer-interface: React.FC = () => {
   return (
@@ -25,4 +19,5 @@ const brain-computer-interface: React.FC = () => {
   );
 };
 
-export default brain-computer-interface;
+
+export default QuantumRealityEngine2025;

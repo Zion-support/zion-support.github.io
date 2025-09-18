@@ -1,17 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
-  CheckCircle, ArrowRight, Star, Clock, Target,
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const cybersecurity-services: React.FC = () => {
   return (

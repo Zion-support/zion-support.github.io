@@ -1,16 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+interface SidebarProps {
+  className?: string;
+}
+
+export function Sidebar({ className }: SidebarProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Sidebar</h1>
-          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
+    <aside className={`w-64 bg-gray-800 p-6 ${className}`}>
+      <nav className="space-y-4">
+        <Link to="/" className="block text-white hover:text-cyan-400">Home</Link>
+        <Link to="/services" className="block text-white hover:text-cyan-400">Services</Link>
+        <Link to="/about" className="block text-white hover:text-cyan-400">About</Link>
+        <Link to="/contact" className="block text-white hover:text-cyan-400">Contact</Link>
+        <Link to="/faq" className="block text-white hover:text-cyan-400">FAQ</Link>
+        <Link to="/help" className="block text-white hover:text-cyan-400">Help</Link>
+      </nav>
+    </aside>
   );
-};
-
-export default Sidebar;
+}

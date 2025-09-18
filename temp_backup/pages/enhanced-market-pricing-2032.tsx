@@ -1,20 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
-  Sparkles, Atom, Dna, Cpu, Target, Microscope,
-  Users, Briefcase, BookOpen, MessageCircle, Globe,
-  ExternalLink, Award, TrendingDown, Eye, Lock
-} from 'lucide-react';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const enhanced-market-pricing-2032: React.FC = () => {
   return (
@@ -34,4 +19,5 @@ const enhanced-market-pricing-2032: React.FC = () => {
   );
 };
 
-export default enhanced-market-pricing-2032;
+
+export default AdvancedAITransformation2026;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedAnalyticsDashboard2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
@@ -14,7 +13,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
             <p className="text-gray-400">Comprehensive business intelligence and insights</p>
           </div>
         </div>
-        
         <div className="flex items-center gap-2">
           {timeframes.map((timeframe) => (
             <button
@@ -31,7 +29,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Analytics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div>
@@ -51,7 +48,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
               <div className="mb-2">
                 <div className="text-2xl font-bold text-white mb-1">
                   {item.value}
@@ -60,7 +56,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
                   {item.title}
                 </div>
               </div>
-              
               <div className="text-xs text-gray-500">
                 {item.description}
               </div>
@@ -68,7 +63,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Performance Insights */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -100,7 +94,6 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
           <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
             <Rocket className="w-5 h-5 text-orange-400" />
@@ -140,5 +133,4 @@ const AdvancedAnalyticsDashboard2026: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedAnalyticsDashboard2026;

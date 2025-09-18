@@ -1,19 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  Atom, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
-  Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock, 
-  Users, Briefcase, BookOpen, MessageCircle, TrendingUp,
-  Target, Layers, Globe, Brain, Rocket, Building, Network
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const quantum-internet-protocol-2029: React.FC = () => {
   return (

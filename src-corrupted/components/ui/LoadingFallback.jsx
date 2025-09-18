@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-
-import { Loader2 export function LoadingFallback(props: any) {
-    const sizeClasses = {
-  sm: "w-6 h-6",
-        md: "w-8 h-8",
-  lg: "w-12 h-12"
-    
-
-
-
-
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const LoadingFallback: React.FC = () => {
   return (

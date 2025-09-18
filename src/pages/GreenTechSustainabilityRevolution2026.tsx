@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const GreenTechSustainabilityRevolution2026: React.FC = () => {
   return (
@@ -270,8 +269,33 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">GreenTechSustainabilityRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+            Join the Green Revolution
+          </h2>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Together, we can reverse climate change and create a sustainable future for all life on Earth. 
+            The time to act is now.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <button className="bg-gradient-to-r from-green-600 to-teal-600 px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Start Your Impact
+            </button>
+            <button className="border-2 border-green-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-green-400/20 transition-all duration-300">
+              View Impact Report
+            </button>
+            <button className="border-2 border-teal-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-teal-400/20 transition-all duration-300">
+              Download Action Plan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="bg-black/50 backdrop-blur-sm py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-400">
+            © 2026 Zion Tech Group. Saving our planet, one innovation at a time.
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const FutureTechVision2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
@@ -35,7 +34,6 @@ const FutureTechVision2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Vision Timeline */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -57,7 +55,6 @@ const FutureTechVision2026: React.FC = () => {
             Envisioning the future of technology and its transformative impact on humanity
           </p>
         </motion.div>
-
         <div className="space-y-12">
           {visionSections.map((section, index) => (
             <motion.div
@@ -118,7 +115,6 @@ const FutureTechVision2026: React.FC = () => {
           ))}
         </div>
       </div>
-
         {/* Vision Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -134,7 +130,6 @@ const FutureTechVision2026: React.FC = () => {
               <li>• Renewable energy revolution</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Human Enhancement</h3>
@@ -148,7 +143,6 @@ const FutureTechVision2026: React.FC = () => {
               <li>• Longevity treatments</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Colonization</h3>
@@ -163,7 +157,6 @@ const FutureTechVision2026: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Future Scenarios */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🔮 Future Scenarios 2026-2030</h2>
@@ -189,7 +182,6 @@ const FutureTechVision2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🤖 AI-Human Symbiosis</h3>
                 <p className="text-lg opacity-90 mb-4">
@@ -211,7 +203,6 @@ const FutureTechVision2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🌌 Interdimensional Access</h3>
@@ -233,7 +224,6 @@ const FutureTechVision2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🧬 Biological Revolution</h3>
                 <p className="text-lg opacity-90 mb-4">
@@ -257,7 +247,6 @@ const FutureTechVision2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Roadmap */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🗺️ Technology Roadmap 2026-2030</h2>
@@ -321,7 +310,6 @@ const FutureTechVision2026: React.FC = () => {
               Our technologies are predicted to have transformative effects across all industries and aspects of human life.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -367,7 +355,6 @@ const FutureTechVision2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -381,7 +368,6 @@ const FutureTechVision2026: React.FC = () => {
             Discover how our revolutionary technologies will transform every aspect of human life.
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -463,7 +449,6 @@ const FutureTechVision2026: React.FC = () => {
             </div>
           </div>
         </div>
-
           <h2 className="text-4xl font-bold mb-6">Be Part of the Future</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in shaping the future of technology and humanity
@@ -484,5 +469,4 @@ const FutureTechVision2026: React.FC = () => {
     </div>
   );
 };
-
 export default FutureTechVision2026;

@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  Brain
-  Cloud
-  RefreshCw
-  Wifi
-  Shield
-  BarChart3,
-  ArrowRight,
-  Zap
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ServicesSection: React.FC = () => {
   return (

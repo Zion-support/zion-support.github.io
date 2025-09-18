@@ -1,29 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Star, ArrowRight } from 'lucide-react';
-
-export type ServiceItem = {
-  id?: string;
-  slug?: string;
-  title: string;
-  description: string;
-  provider: string;
-  priceFromUSD?: number;
-  priceRangeUSD?: [number, number];
-  categories: string[];
-  rating?: number; // 0-5
-};
-
-type Props = {
-  service: ServiceItem;
-  onRequestQuote: (service: ServiceItem) => void;
-};
-
-export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Props) {
-  const minPrice = service.priceFromUSD ?? (service.priceRangeUSD ? service.priceRangeUSD[0] : undefined);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedMarketplaceCard: React.FC = () => {
   return (

@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Shield, Target, Globe, TrendingUp } from 'lucide-react';
-
 const RevolutionaryTechShowcase2027: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 mb-6">
             <Star className="w-5 h-5 mr-2 text-purple-400" />
             <span className="text-sm font-medium">REVOLUTIONARY TECH 2027</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
             The Future is Here
           </h2>
@@ -24,7 +21,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             transforming human capabilities, and creating unprecedented opportunities.
           </p>
         </div>
-
         {/* Technology Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* AI & Machine Learning */}
@@ -64,7 +60,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
-
           {/* Quantum Computing */}
           <div className="group bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105">
             <div className="flex items-center mb-6">
@@ -102,7 +97,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
-
           {/* Advanced Technology */}
           <div className="group bg-gradient-to-br from-green-900/30 to-blue-900/30 rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
             <div className="flex items-center mb-6">
@@ -141,11 +135,9 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Key Features */}
         <div className="bg-gradient-to-r from-gray-900/50 to-purple-900/50 rounded-2xl p-8 border border-gray-700/50 mb-16">
           <h3 className="text-3xl font-bold text-center mb-12 text-purple-300">Revolutionary Capabilities</h3>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -154,7 +146,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <h4 className="text-xl font-bold mb-2 text-blue-300">Conscious AI</h4>
               <p className="text-gray-400 text-sm">Self-aware AI systems with emotional intelligence</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Atom className="w-8 h-8 text-white" />
@@ -162,7 +153,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <h4 className="text-xl font-bold mb-2 text-purple-300">Quantum Speed</h4>
               <p className="text-gray-400 text-sm">1000x faster processing than classical computers</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
@@ -170,7 +160,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <h4 className="text-xl font-bold mb-2 text-green-300">Ultra Security</h4>
               <p className="text-gray-400 text-sm">Quantum-resistant encryption and zero-trust architecture</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-white" />
@@ -180,7 +169,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Impact Statistics */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -204,14 +192,12 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             <div className="text-sm text-gray-400">By advanced technology</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full border border-purple-500/30 mb-6">
             <Zap className="w-5 h-5 mr-2 text-purple-400" />
             <span className="text-sm font-medium">Join the Revolution</span>
           </div>
-          
           <h3 className="text-3xl font-bold mb-4 text-white">
             Ready to Transform Your Future?
           </h3>
@@ -219,7 +205,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             Don't get left behind in the technological revolution. Explore these 
             cutting-edge technologies and discover how they can benefit your organization.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/ai-innovation-hub-2026" 
@@ -240,5 +225,4 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2027;

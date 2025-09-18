@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">About</h3>

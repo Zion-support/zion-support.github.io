@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedContentCarousel2032: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,6 +7,4 @@ const EnhancedContentCarousel2032: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedContentCarousel2032;
-</p></p>

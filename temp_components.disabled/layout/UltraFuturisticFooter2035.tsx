@@ -1,16 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  Star, Brain, Atom, Shield, Rocket, Target,
-  Users, Globe, Zap, TrendingUp, Award,
-  Mail, Phone, MapPin, ArrowRight, ExternalLink,
-  Github, Twitter, Linkedin, Facebook, Instagram,
-  Youtube
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticFooter2035: React.FC = () => {
   return (
@@ -21,4 +9,5 @@ const UltraFuturisticFooter2035: React.FC = () => {
   );
 };
 
-export default UltraFuturisticFooter2035;
+
+export default UltimateContentBanner2035;

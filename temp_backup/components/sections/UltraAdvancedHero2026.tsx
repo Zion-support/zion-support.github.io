@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useRef } from 'react';
-
-import Link from 'next/link';
-import { 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket,
-  CheckCircle,
-  Play,
-  Users,
-  TrendingUp,
-  Award,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedHero2026: React.FC = () => {
   return (

@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { Shield, Lock, Globe, Zap, Target, Users, ArrowRight, Atom } from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const quantum-internet-security: React.FC = () => {
   return (

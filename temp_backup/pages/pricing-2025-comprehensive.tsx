@@ -1,17 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-
-import { 
-  Check, Star, ArrowRight, Phone, Mail, MapPin,
-  Brain, Atom, Rocket, Target, Server, Building,
-  Shield, Globe, Zap, TrendingUp, Users, Award,
-  DollarSign, Clock, Users as UsersIcon, Shield as ShieldIcon
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const pricing-2025-comprehensive: React.FC = () => {
   return (

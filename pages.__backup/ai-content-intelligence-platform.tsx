@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircleArrowRightStarTrendingUpPhoneMailMapPin
-  BrainBarChart3TargetZapShieldGlobeUsersAward,
-  ClockDollarSignCheckArrowUpRightPlayBookOpenCode,
-  ShoppingCart
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-content-intelligence-platform: React.FC = () => {
   return (

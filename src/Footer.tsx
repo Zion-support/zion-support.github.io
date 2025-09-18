@@ -2,12 +2,15 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Footer</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <p className="text-gray-400">
+            © 2026 Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
   );
-};
-
+  };
 export default Footer;
-</p></p></p>

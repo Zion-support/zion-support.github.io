@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket } from 'lucide-react';
-import Link from 'next/link';
-import { innovativeMicroSaas2029V3 } from '../../data/2029-innovative-micro-saas-v3';
-import { innovativeITServices2029V3 } from '../../data/2029-innovative-it-services-v3';
-import { innovativeAIServices2029V3 } from '../../data/2029-innovative-ai-services-v3';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Enhanced2029ServicesShowcase: React.FC = () => {
   return (

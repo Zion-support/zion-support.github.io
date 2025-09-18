@@ -1,37 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
-
-interface NeonEffectProps {
-  children: React.ReactNode;
-  variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch';
-  intensity?: 'low' | 'medium' | 'high';
-  interactive?: boolean;
-  className?: string;
-}
-
-interface NeonGlowProps {
-  children: React.ReactNode;
-  color: string;
-  intensity: number;
-  spread?: number;
-  className?: string;
-}
-
-// Neon Glow Component
-const NeonGlow: React.FC<NeonGlowProps> = ({ 
-  children, 
-  color, 
-  intensity, 
-  spread = 20, 
-  className = '' 
-}) => {
-  const baseColor = color;
-  const glowColor = color + '80';
-  const shadowColor = color + '40';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedNeonEffects: React.FC = () => {
   return (

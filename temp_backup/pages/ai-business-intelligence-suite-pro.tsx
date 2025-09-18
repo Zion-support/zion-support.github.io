@@ -1,18 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, Users, TrendingUp, 
-  Brain, BarChart3, Database, Zap, Shield,
-  Phone, Mail, MapPin, Globe, Cpu, Lock,
-  Eye, Settings, Target, Microscope, Award, Clock
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-business-intelligence-suite-pro: React.FC = () => {
   return (
@@ -32,4 +19,5 @@ const ai-business-intelligence-suite-pro: React.FC = () => {
   );
 };
 
-export default ai-business-intelligence-suite-pro;
+
+export default InterdimensionalTechRevolution2030;

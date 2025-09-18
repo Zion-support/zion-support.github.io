@@ -1,18 +1,20 @@
 import React from 'react';
-import SEO from '@/components/SEO';
 
 const AIMatcher: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>AIMatcher | Zion Tech Group</title>
-        <meta name="description" content="AIMatcher - Revolutionary technology solutions" />
-      </Helmet>
-      
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">AIMatcher</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+          <h1 className="text-5xl font-bold mb-8">AI Matcher</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Find the perfect AI solution for your business needs.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
+            <p className="text-lg">
+              Our AI Matcher tool helps you discover the ideal artificial intelligence solutions 
+              tailored to your specific business requirements and industry challenges.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,16 @@
-import React from 'react';
-
-const LanguageContext= () => {
+// Language context
+import React, { createContext, useContext } from 'react';
+const LanguageContext = createContext();
+export const LanguageProvider = ({ children, authState }) => {
+  const value = {
+    language: 'en',
+    setLanguage: () => {},
+    authState: authState || { isAuthenticated: false, user: null }
+  };
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LanguageContext</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
   );
 };
-
-export default LanguageContext;
+export const useLanguage = () => useContext(LanguageContext);

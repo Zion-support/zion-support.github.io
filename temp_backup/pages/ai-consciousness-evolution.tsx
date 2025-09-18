@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-
-import { Brain, Zap, Star, Users, Target } from 'lucide-react';
-
-import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-consciousness-evolution: React.FC = () => {
   return (
@@ -29,4 +19,5 @@ const ai-consciousness-evolution: React.FC = () => {
   );
 };
 
-export default ai-consciousness-evolution;
+
+export default UltimateTechRevolution2035;

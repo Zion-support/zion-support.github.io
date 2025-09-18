@@ -1,14 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-
-import { Target, TrendingUp, Users, Mail, BarChart3, Zap, Shield, Globe, Phone, Mail as MailIcon, MapPin } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-marketing-automation-2030: React.FC = () => {
   return (
@@ -28,4 +19,5 @@ const ai-marketing-automation-2030: React.FC = () => {
   );
 };
 
-export default ai-marketing-automation-2030;
+
+export default AISolutionsComprehensive2025;

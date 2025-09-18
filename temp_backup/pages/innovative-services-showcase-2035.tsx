@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import SEO from '../components/SEO';
-
-import { 
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Star, TrendingUp, Users,
-  Zap, Globe, Lock, Database, Cloud
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const innovative-services-showcase-2035: React.FC = () => {
   return (

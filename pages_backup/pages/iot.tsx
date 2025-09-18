@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  Wifi, 
-  Cpu, 
-  Database, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
-  Award, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Zap,
-  Globe,
-  Lock
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const iot: React.FC = () => {
   return (

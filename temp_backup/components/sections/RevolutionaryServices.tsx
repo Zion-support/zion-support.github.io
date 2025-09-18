@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Zap, Brain, Rocket, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
-import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard';
-import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const RevolutionaryServices: React.FC = () => {
   return (

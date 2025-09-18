@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" <div className="text-center">" <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">" <Globe className="w-6 h-6 text-purple-400"  /> </div>" <h4 className="font-semibold text-white mb-2">Visit Our Site</h4>" <a href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Home2026: React.FC = () => {
   return (

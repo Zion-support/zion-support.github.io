@@ -1,113 +1,14 @@
 import React from 'react';
-
 const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
   return (
-    <div>
-      <div
-        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-400/30"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-4">
-            {/* Left Content */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
-                  <Sparkles className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white">
-                    🚀 New AI Innovation Showcase 2025
-                  </h3>
-                  <p className="text-sm text-blue-200">
-                    Discover revolutionary AI breakthroughs and technologies
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Center Features */}
-            <div className="hidden md:flex items-center gap-6">
-              <div className="flex items-center gap-2 text-white/80">
-                <Brain className="w-4 h-4" />
-                <span className="text-sm">Quantum-Neural Fusion</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <Zap className="w-4 h-4" />
-                <span className="text-sm">10,000x Faster</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <Target className="w-4 h-4" />
-                <span className="text-sm">99.9% Accuracy</span>
-              </div>
-            </div>
-
-            {/* Right Actions */}
-            <div className="flex items-center gap-3">
-              <a
-                href="/ai-innovation-showcase-2025"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm"
-              >
-                <Rocket className="w-4 h-4" />
-                Explore Now
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <button
-                onClick={handleDismiss}
-                className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
-                aria-label="Dismiss banner"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Features */}
-          <div className="md:hidden pb-4">
-            <div className="flex items-center justify-center gap-4 text-white/80">
-              <div className="flex items-center gap-1">
-                <Brain className="w-3 h-3" />
-                <span className="text-xs">Quantum AI</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <TrendingUp className="w-3 h-3" />
-                <span className="text-xs">2,500% ROI</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Star className="w-3 h-3" />
-                <span className="text-xs">Revolutionary</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-              x: [0100],
-              opacity: [0.30.60.3],
-            }}
-              duration: 4,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
-          />
-          <div
-              x: [0-100],
-              opacity: [0.20.50.2],
-            }}
-              duration: 6,
-              repeat: Infinity,
-              ease: "linear",
-              delay: 2
-            }}
-            className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
-          />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AIInnovationShowcase2025PromotionBanner</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default AIInnovationShowcase2025PromotionBanner;
-</div></div>

@@ -32,7 +32,7 @@ declare module "react" {
 
   // Default export so `import React from 'react'` keeps working even without
   // the real react package being installed.
-  const React: {
+  const React: {;
     useMemo: typeof useMemo;
   } & Record<string, unknown>;
 
@@ -44,6 +44,8 @@ declare namespace React {
   // errors when `@types/react` is not present.
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   export interface IntrinsicElements {
-    [elemName: string]: any;
+    [
+  {
+    elemName: string]: any;
   }
 }

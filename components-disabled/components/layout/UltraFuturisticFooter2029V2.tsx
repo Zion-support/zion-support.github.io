@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticFooter2029V2: React.FC = () => {
   return (
@@ -16,4 +9,5 @@ const UltraFuturisticFooter2029V2: React.FC = () => {
   );
 };
 
-export default UltraFuturisticFooter2029V2;
+
+export default InteractiveContentShowcase2025;

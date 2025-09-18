@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useRef, useState } from 'react';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticBackground2047: React.FC = () => {
   return (

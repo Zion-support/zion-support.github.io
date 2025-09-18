@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react';'''
-import {Link} from 'react-router-dom';'''
-'''
-import {Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3} from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AIPoweredITAssetManagement: React.FC = () => {
   return (

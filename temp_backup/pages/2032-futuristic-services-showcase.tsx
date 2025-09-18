@@ -1,22 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
-  Sparkles, Atom, Dna, Cpu, Target, Microscope,
-  Users, Briefcase, BookOpen, MessageCircle, Globe
-} from 'lucide-react';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032';
-import { futuristicInnovations2031 } from '../data/2031-futuristic-innovations';
-import { enterpriseITSolutions2031 } from '../data/2031-enterprise-it-solutions';
-import { innovativeMicroSaas2031 } from '../data/2031-innovative-micro-saas';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const 2032-futuristic-services-showcase: React.FC = () => {
   return (

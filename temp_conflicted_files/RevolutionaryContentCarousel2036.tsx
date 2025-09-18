@@ -1,61 +1,4 @@
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const slides = [
-    {
-      id: 1,
-      title: "Next-Gen Tech Revolution 2036",
-      description: "Experience the most advanced technological revolution featuring Conscious AI, Quantum Consciousness, and Interdimensional Computing",
-      image: "🧠",
-      gradient: "from-purple-600/30 to-pink-600/30",
-      border: "border-purple-400/30",
-      textColor: "text-purple-100",
-      link: "/pages/NextGenTechRevolution2036"
-    },
-    {
-      id: 2,
-      title: "Ultimate Tech Breakthrough 2036",
-      description: "Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality",
-      image: "⚡",
-      gradient: "from-cyan-600/30 to-blue-600/30",
-      border: "border-cyan-400/30",
-      textColor: "text-cyan-100",
-      link: "/pages/UltimateTechBreakthrough2036"
-    },
-    {
-      id: 3,
-      title: "Revolutionary Tech Showcase 2036",
-      description: "Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing",
-      image: "🌌",
-      gradient: "from-emerald-600/30 to-teal-600/30",
-      border: "border-emerald-400/30",
-      textColor: "text-emerald-100",
-      link: "/pages/RevolutionaryTechShowcase2036"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  return (
-    <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY SHOWCASE • JANUARY 2036
-          </div>
-          <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Carousel 2036</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-6">
-            Discover the most advanced technologies that will reshape humanity's future
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY TECHNOLOGY • 2036-2040
-          </div>
-=======
   const slides = [
     {
       id: 1,
@@ -161,3 +104,15 @@
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+import React from 'react';
+
+const RevolutionaryContentCarousel2036: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RevolutionaryContentCarousel2036</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default RevolutionaryContentCarousel2036;

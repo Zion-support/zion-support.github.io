@@ -1,20 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,
-  Globe, BarChart3, Cpu, Database, Network, Lock, Sparkles
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const services-overview-2025: React.FC = () => {
   return (

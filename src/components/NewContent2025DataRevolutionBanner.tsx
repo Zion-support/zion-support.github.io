@@ -1,143 +1,14 @@
 import React from 'react';
-
 const NewContent2025DataRevolutionBanner: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      </div>
-
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center justify-between">
-            {/* Content */}
-            <div className="flex-1 pr-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="flex items-center bg-white/20 rounded-full px-3 py-1">
-                  <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
-                </div>
-                <div className="flex items-center bg-green-500/20 rounded-full px-3 py-1">
-                  <span className="text-sm font-medium">500% ROI GUARANTEED</span>
-                </div>
-              </div>
-
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                AI 2025: The Enterprise Data Revolution
-              </h2>
-
-              <p className="text-lg opacity-90 mb-6 max-w-2xl">
-                Discover how Fortune 500 companies are achieving 500% ROI with AI-powered data transformation. 
-                Complete implementation guide with real-world case studies and proven methodologies.
-              </p>
-
-              {/* Metrics Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-2xl font-bold text-green-300">500%</div>
-                  <div className="text-sm opacity-80">Average ROI</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-2xl font-bold text-blue-300">$2.8B</div>
-                  <div className="text-sm opacity-80">Annual Savings</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-2xl font-bold text-purple-300">99.7%</div>
-                  <div className="text-sm opacity-80">Data Accuracy</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-2xl font-bold text-yellow-300">1,200%</div>
-                  <div className="text-sm opacity-80">Speed Increase</div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-                >
-                  Read Complete Guide
-                </a>
-                <a
-                  href="/case-studies/fortune-500-data-transformation-500-roi-success"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-                >
-                  View Success Stories
-                </a>
-                <a
-                  href="/resources/ai-data-transformation-implementation-guide-2025"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-                >
-                  Download Implementation Guide
-                </a>
-              </div>
-            </div>
-
-            {/* Content Preview Cards */}
-            <div className="hidden lg:block w-80">
-              <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h3 className="text-lg font-semibold mb-4">Featured Content</h3>
-                
-                <div className="space-y-4">
-                  {contentItems.map((itemindex) => (
-                    <div
-                      key={item.id}
-                      className={`p-4 rounded-lg transition-all duration-300 cursor-pointer ${
-                        index === currentSlide
-                          ? 'bg-white/20 border-2 border-white/30'
-                          : 'bg-white/5 hover:bg-white/10'
-                      }`}
-                      onClick={() => setCurrentSlide(index)}
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-blue-200">{item.type}</span>
-                        <span className="text-xs opacity-70">{item.readingTime}</span>
-                      </div>
-                      <h4 className="font-semibold text-sm mb-2 line-clamp-2">{item.title}</h4>
-                      <p className="text-xs opacity-80 line-clamp-2">{item.description}</p>
-                      <div className="flex items-center space-x-2 mt-2">
-                        <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">
-                          {item.metrics.roi} ROI
-                        </span>
-                        <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">
-                          {item.metrics.savings}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Progress Indicators */}
-                <div className="flex justify-center space-x-2 mt-4">
-                  {contentItems.map((_index) => (
-                    <button
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentSlide ? 'bg-white' : 'bg-white/30'
-                      }`}
-                      onClick={() => setCurrentSlide(index)}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">NewContent2025DataRevolutionBanner</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
-
-        {/* Dismiss Button */}
-        <button
-          onClick={handleDismiss}
-          className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
-          aria-label="Dismiss banner"
-        >
-          <svg className="w-6 h-6" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
       </div>
     </div>
   );
-};
-
+  };
 export default NewContent2025DataRevolutionBanner;

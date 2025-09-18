@@ -1,73 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
-  Sparkles, Atom, Target, Microscope, Search, Filter,
-  ExternalLink, Users, Clock, BarChart3, Award
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
-import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-import { realMicroSaasServices2025, microSaasCategories } from '../data/2025-real-micro-saas-expansion';
-
-export default function EnhancedMicroSaasShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const filteredServices = realMicroSaasServices2025
-    .filter(service => 
-      (selectedCategory === 'all' || service.category === selectedCategory) &&
-      (searchQuery === '' || 
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchQuery.toLowerCase()))
-    )
-    .sort((a, b) => {
-      if (sortBy === 'price') {
-        return a.pricing.starter.price - b.pricing.starter.price;
-      } else if (sortBy === 'category') {
-        return a.category.localeCompare(b.category);
-      }
-      return a.name.localeCompare(b.name);
-    });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const enhanced-micro-saas-showcase: React.FC = () => {
   return (
@@ -87,4 +19,5 @@ const enhanced-micro-saas-showcase: React.FC = () => {
   );
 };
 
-export default enhanced-micro-saas-showcase;
+
+export default RevolutionaryCaseStudies2025;

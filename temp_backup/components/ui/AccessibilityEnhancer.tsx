@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-
-import { 
-  Eye, EyeOff, Volume2, VolumeX, MousePointer, 
-  Keyboard, Monitor, Smartphone, Sun, Moon, 
-  Accessibility, SkipForward, SkipBack
-} from 'lucide-react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AccessibilityEnhancer: React.FC = () => {
   return (
@@ -29,4 +9,5 @@ const AccessibilityEnhancer: React.FC = () => {
   );
 };
 
-export default AccessibilityEnhancer;
+
+export default RevolutionaryAdBanner;

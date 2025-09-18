@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { Atom, Beaker, Zap, Target, Users, Globe, ArrowRight, Search } from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const quantum-materials-discovery: React.FC = () => {
   return (
@@ -25,4 +19,5 @@ const quantum-materials-discovery: React.FC = () => {
   );
 };
 
-export default quantum-materials-discovery;
+
+export default UltimateTechRevolution2042;

@@ -1,113 +1,14 @@
 import React from 'react';
-
 const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
   return (
-    <div
-      className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
-    >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <div
-              className="mb-4"
-            >
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                <Zap className="w-4 h-4" />
-                Limited Time Offer
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent mb-4">
-                AI 2025 Ultimate Innovation Showcase
-              </h2>
-              <p className="text-xl text-gray-300 mb-6 max-w-2xl">
-                Discover revolutionary AI breakthroughs that are transforming industries worldwide. 
-                Experience the future of artificial intelligence today.
-              </p>
-            </div>
-
-            {/* Features List */}
-            <div
-              className="grid grid-cols-2 gap-2 mb-6"
-            >
-              {features.map((featureindex) => (
-                <div key={index} className="flex items-center gap-2 text-gray-300">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
-                  <span className="text-sm">{feature}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <a
-                href="/ai-2025-ultimate-breakthrough"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Now
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 border-2 border-gray-400 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-300 hover:bg-gray-800/50 transition-all duration-300"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-
-          {/* Right Stats */}
-          <div
-            className="flex-shrink-0"
-          >
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
-              <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
-              
-              {/* Animated Stat */}
-              <div
-                key={currentStat}
-                className="text-center mb-6"
-              >
-                <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${stats[currentStat].color} mb-4`}>
-                  <stats[currentStat].icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
-                <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
-              </div>
-
-              {/* Static Stats */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400">Implementation Time</span>
-                  <span className="text-white font-semibold">24-48 Hours</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400">Success Rate</span>
-                  <span className="text-green-400 font-semibold">99.9%</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-400">Global Reach</span>
-                  <span className="text-white font-semibold">150+ Countries</span>
-                </div>
-              </div>
-
-              {/* Urgency Indicator */}
-              <div
-                className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
-              >
-                <Clock className="w-4 h-4" />
-                <span>Limited time offer - Act now!</span>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AI2025UltimateInnovationPromotionBanner</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default AI2025UltimateInnovationPromotionBanner;

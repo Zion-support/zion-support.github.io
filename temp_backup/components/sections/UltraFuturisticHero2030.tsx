@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { ArrowRight, Sparkles, Rocket, Brain, Atom, Zap, Star } from 'lucide-react';
-import Button from '../ui/Button';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticHero2030: React.FC = () => {
   return (

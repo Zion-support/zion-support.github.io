@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useRef } from 'react';
-
-import { Search, X, ArrowRight, Globe, Brain, Shield, Cpu, Cloud, BarChart3, Lock } from 'lucide-react';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  url: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const SearchComponent: React.FC = () => {
   return (

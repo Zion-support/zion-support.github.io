@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
-import Link from 'next/link';
-import { 
-  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
-  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
-  Globe, Database, Cloud, Lock, Palette, Target,
-  Layers, Sparkles, Atom, Microscope, Satellite
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedNavigation: React.FC = () => {
   return (

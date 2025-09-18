@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import { 
-  AlertTriangle, RefreshCw, Bug, 
-  Home, ArrowLeft, Info,
-  FileText, Terminal, Shield
-} from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ErrorBoundary: React.FC = () => {
   return (

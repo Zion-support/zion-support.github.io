@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const 2034-innovations: React.FC = () => {
   return (

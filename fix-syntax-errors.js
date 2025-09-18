@@ -1,92 +1,121 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Function to fix common syntax errors
-function fixSyntaxErrors(content, filePath) {
+function fixSyntaxErrors(content) {
   let fixed = content;
   
-  // Fix import statements without quotes
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
+  // Fix missing closing brackets for arrays
+  fixed = fixed.replace(/(\s+};\s*)$/gm, '\n  }\n];');
   
-  // Fix export statements
-  fixed = fixed.replace(/export\s*;/g, );
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)/g, export default function $1');
+  // Fix missing closing brackets for objects
+  fixed = fixed.replace(/(\s+};\s*)$/gm, '\n  }\n};');
   
-  // Fix React imports specifically
-  fixed = fixed.replace(/import\s+React\s+from\s+react;/g, "import React from react';");
+  // Fix malformed object properties
+  fixed = fixed.replace(/(\w+):\s*(\w+)\s*,/g, '$1: "$2",');
   
-  // Fix any remaining unquoted imports
-  fixed = fixed.replace(/from\s+([a-zA-Z][a-zA-Z0-9]*);/g, "from $1';");
+  // Fix missing commas in arrays
+  fixed = fixed.replace(/(\s+}\s*)(\s*{)/g, '$1,$2');
   
-  // Remove any trailing semicolons after export
-  fixed = fixed.replace(/export\s*;\s*\n/g, \n');
+  // Fix missing commas in objects
+  fixed = fixed.replace(/(\s+}\s*)(\s*[a-zA-Z])/g, '$1,$2');
   
   return fixed;
 }
 
-// Function to process a file
-function processFile(filePath) {
+// Function to fix specific file patterns
+function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content, filePath);
+    let fixed = content;
     
-    if (content !== fixed) {
+    // Fix specific patterns for different file types
+    if (filePath.includes('data/')) {
+      // Fix array syntax issues
+      if (fixed.includes('export const') && fixed.includes('[] = [')) {
+        // Ensure proper array closing
+        const lines = fixed.split('\n');
+        let inArray = false;
+        let braceCount = 0;
+        let fixedLines = [];
+        
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          
+          if (line.includes('[] = [')) {
+            inArray = true;
+            braceCount = 0;
+          }
+          
+          if (inArray) {
+            // Count braces
+            braceCount += (line.match(/{/g) || []).length;
+            braceCount -= (line.match(/}/g) || []).length;
+            
+            // If we're at the end of the file and still in array, add closing bracket
+            if (i === lines.length - 1 && inArray && braceCount === 0) {
+              fixedLines.push(line);
+              fixedLines.push('];');
+            } else {
+              fixedLines.push(line);
+            }
+          } else {
+            fixedLines.push(line);
+          }
+        }
+        
+        fixed = fixedLines.join('\n');
+      }
+    }
+    
+    // Apply general fixes
+    fixed = fixSyntaxErrors(fixed);
+    
+    if (fixed !== content) {
       fs.writeFileSync(filePath, fixed);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find and process all JS/TS/TSX files
-function processDirectory(dir) {
-  const extensions = ['.js', .ts', .tsx', .jsx'];
-  let fixedCount = 0;
+// Get all TypeScript files
+function getAllTsFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  function walkDir(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other build directories
-        if (!['node_modules', .next', dist', build', coverage'].includes(item)) {
-          walkDir(fullPath);
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
+    if (stat.isDirectory() && !item.includes('node_modules')) {
+      files.push(...getAllTsFiles(fullPath));
+    } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+      files.push(fullPath);
     }
   }
   
-  walkDir(dir);
-  return fixedCount;
+  return files;
 }
 
-// Main execution
-console.log('🔧 Starting syntax error fixes...');
+// Fix all files
+const srcDir = path.join(__dirname, 'src');
+const tsFiles = getAllTsFiles(srcDir);
 
-const startTime = Date.now();
-const fixedCount = processDirectory('.');
+let fixedCount = 0;
+for (const file of tsFiles) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+}
 
-console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`);
-
-// Run ESLint to check if issues are resolved
-console.log('🔍 Running ESLint to verify fixes...');
-try {
-  execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 100', { stdio: 'inherit' });
-  console.log('✅ ESLint passed!');
-} catch (error) {
-  console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.');
-} 
+console.log(`Fixed ${fixedCount} files`);

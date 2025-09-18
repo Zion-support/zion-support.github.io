@@ -40,8 +40,6 @@ function resolveConflictMarkers() {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Remove common conflict markers
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g, '$1');
-        content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g, '$1');
         
         fs.writeFileSync(filePath, content);
         console.log(`✅ Resolved conflicts in ${file}`);

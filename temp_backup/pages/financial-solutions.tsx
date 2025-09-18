@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { DollarSign, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, TrendingUp, Lock, BarChart3 } from 'lucide-react';
-import SEO from '../components/SEO';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const financial-solutions: React.FC = () => {
   return (
@@ -25,4 +19,5 @@ const financial-solutions: React.FC = () => {
   );
 };
 
-export default financial-solutions;
+
+export default NeuralInterface2026;

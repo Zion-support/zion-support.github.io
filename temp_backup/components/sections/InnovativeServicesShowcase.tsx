@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { Filter, Search, Grid, List, Star, TrendingUp, Zap } from 'lucide-react';
-import UltraAdvancedServiceCard from '../ui/UltraAdvancedServiceCard';
-import { innovativeMicroSaasServices } from '../../data/innovative-micro-saas-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InnovativeServicesShowcase: React.FC = () => {
   return (

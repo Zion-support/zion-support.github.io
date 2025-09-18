@@ -1,5 +1,4 @@
 import React from 'react';
-
 const index-enhanced = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -11,6 +10,7 @@ const index-enhanced = () => {
       </div>
     </div>
   );
+
 };
 
 export default index-enhanced;

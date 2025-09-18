@@ -1,51 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { Rocket, Zap, Brain, Target, Users, Globe, Shield, TrendingUp } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-export default function StartupSolutions() {
-  const solutions = [
-    {
-      icon: <Rocket className="w-12 h-12 text-cyan-400" />,
-      title: "Micro-SaaS Platform",
-      description: "Rapid development and deployment of micro-SaaS applications",
-      href: "/micro-saas"
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-blue-400" />,
-      title: "AI-Powered MVP",
-      description: "Fast-track your MVP with AI and automation solutions",
-      href: "/ai-powered-decision-engine"
-    },
-    {
-      icon: <Brain className="w-12 h-12 text-purple-400" />,
-      title: "MLOps Starter",
-      description: "Production-ready machine learning infrastructure for startups",
-      href: "/mlops-starter"
-    },
-    {
-      icon: <Target className="w-12 h-12 text-green-400" />,
-      title: "Growth Automation",
-      description: "Automate customer acquisition and growth processes",
-      href: "/ai-autonomous-business-operations"
-    },
-    {
-      icon: <Users className="w-12 h-12 text-yellow-400" />,
-      title: "Customer Analytics",
-      description: "Understand your users with advanced analytics and insights",
-      href: "/intelligent-hr-analytics-platform"
-    },
-    {
-      icon: <Globe className="w-12 h-12 text-pink-400" />,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud infrastructure that grows with your startup",
-      href: "/multi-cloud-disaster-recovery"
-    }
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const startup-solutions: React.FC = () => {
   return (

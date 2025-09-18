@@ -1,32 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function AutonomousChangeManagementBlueprint2026() {
+const Ai2026AutonomousChangeManagementBlueprint: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Autonomous Change Management — Blueprint (2026) | Zion Tech Group</title>
-        <meta name="description" content="Design safe, auditable, and low‑risk change pipelines for agentic systems." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-autonomous-change-management-blueprint" />
+        <title>Ai2026AutonomousChangeManagementBlueprint - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AutonomousChangeManagementBlueprint blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Autonomous Change Management — Blueprint (2026)</h1>
-        <p>
-          Ship changes with confidence using policy‑as‑code, evaluation gates, progressive delivery, and
-          audit‑ready evidence. This blueprint outlines the controls and telemetry needed to keep
-          autonomous systems safe while moving fast.
-        </p>
-
-        <h2>Key Capabilities</h2>
-        <ul>
-          <li>Policy‑driven approvals and risk‑tiered rollouts</li>
-          <li>Scenario evals and guardrails at each stage</li>
-          <li>Traceability across commits, incidents, and releases</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026AutonomousChangeManagementBlueprint</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026AutonomousChangeManagementBlueprint;
+=======
+export default Ai2026AutonomousChangeManagementBlueprint;
+>>>>>>> origin/backup-main-20250918-004015

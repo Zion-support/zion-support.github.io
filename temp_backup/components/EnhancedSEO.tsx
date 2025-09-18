@@ -1,42 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-import Head from 'next/head';
-
-import { 
-  Search, TrendingUp, BarChart3, Target, Eye, 
-  Globe, Smartphone, Monitor, Zap, CheckCircle,
-  AlertTriangle, Info, ExternalLink
-} from 'lucide-react';
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  ogImage: string;
-  canonical: string;
-  structuredData: any;
-}
-
-interface SEOMetrics {
-  titleLength: number;
-  descriptionLength: number;
-  keywordDensity: number;
-  imageOptimization: number;
-  mobileOptimization: number;
-  overallScore: number;
-}
-
-interface SEOIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  impact: 'high' | 'medium' | 'low';
-  fix: string;
-  category: 'meta' | 'content' | 'technical' | 'performance';
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedSEO: React.FC = () => {
   return (

@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-
-interface ContentOptimizationMetric {
-  metric: string;
-  current: number;
-  target: number;
-  improvement: string;
-  impact: 'high' | 'medium' | 'low';
-}
-
-interface OptimizationResult {
-  category: string;
-  metrics: ContentOptimizationMetric[];
-  totalImprovement: number;
-  roi: number;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedContentOptimization2026: React.FC = () => {
   return (

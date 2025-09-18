@@ -1,14 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-
-import { Users, Brain, Target, BarChart3, Zap, Shield, Globe, Phone, Mail, MapPin, TrendingUp, Clock } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-hr-management-suite-2030: React.FC = () => {
   return (
@@ -28,4 +19,5 @@ const ai-hr-management-suite-2030: React.FC = () => {
   );
 };
 
-export default ai-hr-management-suite-2030;
+
+export default UltimateContentShowcase2032;

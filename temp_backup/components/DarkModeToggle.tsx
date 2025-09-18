@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
-import { Sun, Moon, Monitor } from 'lucide-react';
-
-type Theme = 'light' | 'dark' | 'system';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const DarkModeToggle: React.FC = () => {
   return (

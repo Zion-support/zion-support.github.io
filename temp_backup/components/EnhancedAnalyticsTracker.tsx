@@ -1,37 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-
-import { 
-  BarChart3, 
-  Users, 
-  Clock, 
-  TrendingUp, 
-  Eye,
-  Activity,
-  X,
-  Play,
-  Pause,
-  Download
-} from 'lucide-react';
-
-interface UserBehavior {
-  pageViews: number;
-  uniqueVisitors: number;
-  averageSessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userJourney: Array<{ page: string; timestamp: Date; action: string }>;
-}
-
-interface AnalyticsEvent {
-  type: 'pageview' | 'click' | 'scroll' | 'form_submit' | 'download' | 'share';
-  timestamp: Date;
-  data: Record<string, unknown>;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedAnalyticsTracker: React.FC = () => {
   return (
@@ -42,4 +9,5 @@ const EnhancedAnalyticsTracker: React.FC = () => {
   );
 };
 
-export default EnhancedAnalyticsTracker;
+
+export default InteractiveTechShowcase2032;

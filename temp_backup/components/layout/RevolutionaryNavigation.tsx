@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Menu, X, ChevronDown, Search, User, 
-  Brain, Zap, Shield, Rocket, Globe,
-  Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const RevolutionaryNavigation: React.FC = () => {
   return (

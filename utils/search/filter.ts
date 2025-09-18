@@ -1,15 +1,9 @@
       return {
         type: 'talent',
-        id: p.slug,
-        slug: p.slug,
-        title: p.name,
-        subtitle: p.title,
-        location: p.location,
-        tags: p.skills,
+        id: p.slugslug: p.slugtitle: p.namesubtitle: p.titlelocation: p.locationtags: p.skills,
         hourlyRateUsd: p.hourlyRateUsd,
         availability: p.availability,
-        verified: true,
-        visibility: 'public',
+        verified: truevisibility: 'public',
         description: p.bio,
 }
 

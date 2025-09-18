@@ -1,23 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const data_path = path.join (process.cwd (), 'datalearncourses.json')
-export default /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const raw = fs.readFileSync (data_path, 'utf - 8')
-    const courses = JSON.parse (raw)
-    const { id } = req.query
-    const course = courses.find ((c: any) => c.id === id)
-    if (return res.status (404).json ({ error: 'Course not found' }), ) {
-  $2
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+<<<<<<< HEAD
 }
-
-    res.status (200).json ({ course });
-
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
-  }
-};
+=======
+}
+>>>>>>> origin/backup-main-20250918-004015

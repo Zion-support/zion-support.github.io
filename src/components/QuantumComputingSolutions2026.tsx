@@ -1,11 +1,10 @@
 import React from 'react';
-
 const QuantumComputingSolutions2026: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20" />
+        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-cyan-900/40" />
         <div className="absolute inset-0">
           {[...Array(40)].map((_i) => (
@@ -28,7 +27,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -40,20 +38,17 @@ const QuantumComputingSolutions2026: React.FC = () => {
             <Atom className="w-4 h-4 mr-2" />
             Quantum Computing Solutions 2026
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Quantum
             <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               {' '}Revolution
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Harness the power of quantum computing to solve the 'world', 's most complex problems. 
             From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
         </div>
-
         {/* Benefits Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -70,7 +65,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Solutions Grid */}
         <div
           className="mb-16"
@@ -78,7 +72,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Quantum Solutions
           </h2>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {solutions.map((solutionindex) => (
               <div
@@ -97,11 +90,9 @@ const QuantumComputingSolutions2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-lg font-bold text-white">{solution.performance.speed}</div>
@@ -112,7 +103,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
                     <div className="text-gray-400 text-sm">Accuracy</div>
                   </div>
                 </div>
-                
                 <div className="space-y-2">
                   {solution.features.slice(03).map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300 text-sm">
@@ -125,7 +115,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Detailed Solution View */}
           <div
             key={activeSolution}
@@ -142,11 +131,9 @@ const QuantumComputingSolutions2026: React.FC = () => {
                     <p className="text-cyan-400 text-lg">{solutions[activeSolution].subtitle}</p>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {solutions[activeSolution].description}
                 </p>
-                
                 <div className="space-y-3 mb-6">
                   {solutions[activeSolution].features.map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300">
@@ -155,7 +142,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-white/5 rounded-lg">
                     <div className="text-2xl font-bold text-white">{solutions[activeSolution].performance.speed}</div>
@@ -167,7 +153,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="relative">
                 <div className={`w-full h-80 bg-gradient-to-br ${solutions[activeSolution].color} rounded-2xl flex items-center justify-center`}>
                   <solutions[activeSolution].icon className="w-32 h-32 text-white opacity-80" />
@@ -179,7 +164,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div
           className="mb-16"
@@ -187,7 +171,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Industry Applications
           </h2>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industryindex) => (
               <div
@@ -208,7 +191,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -236,6 +218,5 @@ const QuantumComputingSolutions2026: React.FC = () => {
     </div>
   );
 };
-
 export default QuantumComputingSolutions2026;
 </div></div>

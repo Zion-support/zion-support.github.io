@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-export default function Page(props: any) {
-, [location.pathname]) ;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedFuturisticNavigation: React.FC = () => {
   return (

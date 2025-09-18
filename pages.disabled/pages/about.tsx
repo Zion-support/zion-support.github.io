@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const about: React.FC = () => {
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function About() {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

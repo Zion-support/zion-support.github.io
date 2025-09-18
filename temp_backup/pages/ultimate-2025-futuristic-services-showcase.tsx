@@ -1,23 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  Search, Filter, Star, Users, TrendingUp, Zap, Shield, 
-  Brain, Rocket, Atom, Cloud, Lock, Globe, Target,
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Award,
-  Clock, Heart, Lightbulb, Sparkles, Cpu, Eye, BarChart3,
-  Settings, Database, Network, Server, Monitor, Smartphone
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { ultimateFuturisticMicroSaasServices2025 } from '../data/2025-ultimate-futuristic-micro-saas';
-import { ultimateFuturisticITServices2025 } from '../data/2025-ultimate-futuristic-it-services';
-import { ultimateFuturisticAIServices2025 } from '../data/2025-ultimate-futuristic-ai-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ultimate-2025-futuristic-services-showcase: React.FC = () => {
   return (

@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-
-import { 
-  Eye, EyeOff, Keyboard, MousePointer, 
-  Contrast, Type, ZoomIn, ZoomOut, RotateCcw
-} from 'lucide-react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  zoomLevel: number;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedAccessibility: React.FC = () => {
   return (

@@ -1,16 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  ArrowRight, Star, TrendingUp, Award, Crown, 
-  Brain, Atom, Cpu, Rocket, Zap, Sparkles,
-  CheckCircle, Users, Globe, Shield, Infinity, Phone, Mail, MapPin
-} from 'lucide-react';
-import { cuttingEdgeInnovations2034 } from '../../data/2034-cutting-edge-innovations';
-import { enterpriseInnovations2034 } from '../../data/2034-enterprise-innovations';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticHero2034: React.FC = () => {
   return (
