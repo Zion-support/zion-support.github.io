@@ -12,6 +12,7 @@ import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryCont
 import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
+import AdvancedAITechnologyShowcase2026 from './src/components/AdvancedAITechnologyShowcase2026';
 import './src/index.css';
 
 function App() {
@@ -68,6 +69,11 @@ function App() {
                 {/* Revolutionary Content Showcase 2026 */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2026 />
+                </div>
+
+                {/* Advanced AI Technology Showcase 2026 */}
+                <div className="mb-12">
+                  <AdvancedAITechnologyShowcase2026 />
                 </div>
               </div>
             } />
