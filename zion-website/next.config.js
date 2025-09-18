@@ -20,8 +20,8 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: true,
   
-  // Server external packages (migrated from experimental.serverComponentsExternalPackages)
-  serverExternalPackages: [],
+  // Server external packages
+  serverExternalPackages: ['sharp'],
   
   // Enhanced security headers
   async headers() {
@@ -122,6 +122,7 @@ const nextConfig = {
     optimizePackageImports: ['@headlessui/react', '@heroicons/react'],
     optimizeCss: true,
     scrollRestoration: true,
+    serverMinification: true,
   },
   
   // Webpack optimizations
@@ -135,9 +136,30 @@ const nextConfig = {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
+            priority: 10,
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 5,
+            reuseExistingChunk: true,
           },
         },
       }
+      
+      // Enable tree shaking
+      config.optimization.usedExports = true
+      config.optimization.sideEffects = false
+    }
+    
+    // Add compression plugin for production
+    if (!dev && !isServer) {
+      config.plugins.push(
+        new webpack.optimize.LimitChunkCountPlugin({
+          maxChunks: 5,
+        })
+      )
     }
     
     return config
