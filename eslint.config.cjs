@@ -1,0 +1,111 @@
+const js = require('@eslint/js');
+const tseslint = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
+const react = require('eslint-plugin-react');
+const reactHooks = require('eslint-plugin-react-hooks');
+
+module.exports = [
+  js.configs.recommended,
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      'zion-website/**',
+      'zion-os/**',
+      'zion-os.disabled/**',
+      'zion.app/**',
+      'zion_academy/**',
+      'automation/**',
+      'backup*/**',
+      'temp*/**',
+      '*.backup.*',
+      '*.disabled.*',
+      '*.old.*',
+      '*.broken.*',
+      '*.corrupted.*',
+      '*.temp.*',
+      'recovered-branches/**',
+      'deployments/**',
+      'deployment/**',
+      'api-backup/**',
+      'api.disabled/**',
+      'api.disabled.temp/**',
+      'src-clean/**',
+      'src_backup*/**',
+      'pages_backup*/**',
+      'pages.disabled*/**',
+      'pages-*/**',
+      'pages_*/**',
+      'pages.*/**',
+      'components.disabled/**',
+      'utils.disabled/**',
+      'tests.disabled/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'build/**',
+      '.next/**',
+      'out/**',
+      'public/**',
+      'static-reports/**',
+      'reports/**',
+      'reports.backup/**',
+      'automation-reports/**',
+      'error-prevention-reports/**',
+      'performance-reports/**',
+      'link-reports/**',
+      'monitoring/**',
+      'pm2-automation/**',
+      'ai-optimization-backups/**',
+      'ai-analysis-reports/**',
+      'optimization-reports/**',
+      'log-analysis-reports*/**',
+      'performance-*.json',
+      'performance-*.js',
+      'performance-*.cjs',
+      'performance-*.sh',
+      'performance-*.html',
+      'performance-*.md',
+      'performance-*.txt'
+    ]
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        browser: true,
+        es2021: true,
+        node: true,
+      },
+      parser: tsparser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react': react,
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/no-unescaped-entities': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+];

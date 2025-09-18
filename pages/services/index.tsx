@@ -1,6 +1,11 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
 import Head from 'next/head';
 import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
 const Index: NextPage = () => {
   return (
@@ -19,4 +24,8 @@ const Index: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Index;
+=======
+export default Index;
+>>>>>>> origin/backup-main-20250918-004015
