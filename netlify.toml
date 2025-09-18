@@ -1,3 +1,16 @@
+[build]
+  command = "yarn build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 # Netlify build configuration for Vite app
 # This is a VITE project, NOT a Next.js project
 # The build process uses Vite to create a static site in the 'dist' folder
