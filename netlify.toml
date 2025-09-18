@@ -2,7 +2,7 @@
 [build]
   base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
 
