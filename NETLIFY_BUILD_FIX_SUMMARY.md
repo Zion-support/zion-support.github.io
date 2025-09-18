@@ -57,32 +57,9 @@
 +   command = "npm ci && npm run build"
 ```
 
-## Manual Steps Required
+## Deployment Trigger
 
-Since terminal commands are timing out, please run the following commands manually:
-
-```bash
-# Navigate to the workspace directory
-cd /workspace
-
-# Check current branch
-git branch --show-current
-
-# Add all changes
-git add .
-
-# Commit the changes
-git commit -m "Fix Netlify build configuration
-
-- Remove vite-plugin-compression dependency from vite.config.ts
-- Update Netlify build command to use standard npm run build
-- Fix path resolution issues in Vite configuration
-
-This should resolve Netlify build failures."
-
-# Push to main branch
-git push origin main
-```
+Committing this update triggers a Netlify build to validate the configuration in CI.
 
 ## Expected Results
 
