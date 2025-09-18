@@ -2,184 +2,211 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-
-console.log('🔧 Starting syntax error fixes...');
+import pkg from 'glob';
+const { glob } = pkg;
 
 // Common syntax fixes
 const fixes = [
-  // Fix unclosed JSX tags
+  // Fix unclosed button tags
   {
-    pattern: /<button([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<button$1>$2</button>',
-    description: 'Fix unclosed button tags'
+    pattern: /<button([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</button>')) {
+        return `<button${attrs}>${content}</button>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed div tags
   {
-    pattern: /<div([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<div$1>$2</div>',
-    description: 'Fix unclosed div tags'
+    pattern: /<div([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</div>')) {
+        return `<div${attrs}>${content}</div>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed span tags
   {
-    pattern: /<span([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<span$1>$2</span>',
-    description: 'Fix unclosed span tags'
+    pattern: /<span([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</span>')) {
+        return `<span${attrs}>${content}</span>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed p tags
   {
-    pattern: /<a([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<a$1>$2</a>',
-    description: 'Fix unclosed anchor tags'
+    pattern: /<p([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</p>')) {
+        return `<p${attrs}>${content}</p>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed a tags
   {
-    pattern: /<p([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<p$1>$2</p>',
-    description: 'Fix unclosed paragraph tags'
+    pattern: /<a([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</a>')) {
+        return `<a${attrs}>${content}</a>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed label tags
   {
-    pattern: /<ul([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<ul$1>$2</ul>',
-    description: 'Fix unclosed ul tags'
+    pattern: /<label([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</label>')) {
+        return `<label${attrs}>${content}</label>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed Link tags
   {
-    pattern: /<Link([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<Link$1>$2</Link>',
-    description: 'Fix unclosed Link tags'
+    pattern: /<Link([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</Link>')) {
+        return `<Link${attrs}>${content}</Link>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed ul tags
   {
-    pattern: /<Select([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<Select$1>$2</Select>',
-    description: 'Fix unclosed Select tags'
+    pattern: /<ul([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</ul>')) {
+        return `<ul${attrs}>${content}</ul>`;
+      }
+      return match;
+    }
   },
+  // Fix unclosed motion.div tags
   {
-    pattern: /<Button([^>]*)>\s*([^<]*?)\s*$/gm,
-    replacement: '<Button$1>$2</Button>',
-    description: 'Fix unclosed Button tags'
+    pattern: /<motion\.div([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</motion.div>')) {
+        return `<motion.div${attrs}>${content}</motion.div>`;
+      }
+      return match;
+    }
   },
-  // Fix missing commas in object literals
+  // Fix unclosed Select tags
   {
-    pattern: /(\w+):\s*([^,\n}]+)\s*$/gm,
-    replacement: '$1: $2,',
-    description: 'Fix missing commas in object properties'
+    pattern: /<Select([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</Select>')) {
+        return `<Select${attrs}>${content}</Select>`;
+      }
+      return match;
+    }
   },
-  // Fix React import issues
+  // Fix unclosed Button tags
   {
-    pattern: /^import React from 'react';$/gm,
-    replacement: "import React from 'react';",
-    description: 'Fix React imports'
-  },
-  // Fix semicolon issues
-  {
-    pattern: /;;+/g,
-    replacement: ';',
-    description: 'Fix multiple semicolons'
+    pattern: /<Button([^>]*)>([^<]*?)(?=\s*$|\s*<[^/])/gm,
+    replacement: (match, attrs, content) => {
+      if (!match.includes('</Button>')) {
+        return `<Button${attrs}>${content}</Button>`;
+      }
+      return match;
+    }
   }
+];
+
+// Fix incomplete files
+const incompleteFiles = [
+  'src/pages/QuantumNeuralInterface2026.tsx',
+  'src/pages/RevolutionaryServicesShowcase2026.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2033.tsx',
+  'src/pages/RevolutionaryTechBlog2026.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2038.tsx',
+  'src/pages/RevolutionaryTechShowcase2026.tsx',
+  'src/pages/RevolutionaryTechShowcase2032.tsx',
+  'src/pages/RevolutionaryTechShowcase2042.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2034.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2030.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2032.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2036.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2037.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2039.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2043.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2035.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2031.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2038.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2042.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2044.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2045.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2046.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2047.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2048.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2049.tsx',
+  'src/pages/RevolutionaryTechBreakthrough2050.tsx'
 ];
 
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
-    fixes.forEach(fix => {
-      const originalContent = content;
-      content = content.replace(fix.pattern, fix.replacement);
-      if (content !== originalContent) {
+
+    // Apply fixes
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
         modified = true;
-        console.log(`  ✓ ${fix.description} in ${path.basename(filePath)}`);
       }
-    });
-    
+    }
+
+    // Fix specific incomplete files
+    if (incompleteFiles.some(f => filePath.includes(f))) {
+      if (content.trim().length < 100) {
+        content = `import React from 'react';
+
+const ${path.basename(filePath, '.tsx')}: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-6">${path.basename(filePath, '.tsx')}</h1>
+        <p className="text-xl opacity-90">Coming soon...</p>
+      </div>
+    </div>
+  );
+};
+
+export default ${path.basename(filePath, '.tsx')};`;
+        modified = true;
+      }
+    }
+
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
     }
-    return false;
   } catch (error) {
-    console.error(`  ✗ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        files.push(fullPath);
-      }
-    }
+// Main execution
+async function main() {
+  // Get all TypeScript/TSX files
+  const files = await glob('src/**/*.{ts,tsx}');
+
+  console.log(`Found ${files.length} files to check...`);
+
+  let fixedCount = 0;
+  for (const file of files) {
+    fixFile(file);
+    fixedCount++;
   }
-  
-  traverse(dir);
-  return files;
+
+  console.log(`Processed ${fixedCount} files`);
 }
 
-// Get list of problematic files from the lint output
-const problematicFiles = [
-  'src/pages/QuantumNeuralFusion2035.tsx',
-  'src/pages/QuantumNeuralInterface2026.tsx',
-  'src/pages/QuantumNeuralNetworkPlatform.tsx',
-  'src/pages/QuantumReality2026.tsx',
-  'src/pages/RequestQuote.tsx',
-  'src/pages/Resources.tsx',
-  'src/pages/Services.tsx',
-  'src/pages/Settings.tsx',
-  'src/pages/Solutions.tsx',
-  'src/pages/Talent.tsx',
-  'src/pages/Terms.tsx',
-  'src/pages/Training.tsx',
-  'src/pages/Unauthorized.tsx',
-  'src/pages/Wishlist.tsx',
-  'src/utils/errorHandler.ts',
-  'src/utils/notifications.ts',
-  'src/utils/security.ts',
-  'src/setupTests.ts'
-];
-
-let fixedCount = 0;
-const totalFiles = problematicFiles.length;
-
-console.log(`📁 Processing ${totalFiles} problematic files...`);
-
-problematicFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
-    console.log(`\n🔍 Fixing ${filePath}...`);
-    if (fixFile(fullPath)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
-  }
-});
-
-console.log(`\n✅ Fixed ${fixedCount} out of ${totalFiles} files`);
-
-// Try to run a quick lint check on a few key files
-console.log('\n🧪 Testing fixes...');
-const testFiles = [
-  'src/pages/RequestQuote.tsx',
-  'src/pages/Services.tsx',
-  'src/pages/Settings.tsx'
-];
-
-testFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
-    try {
-      execSync(`npx eslint ${fullPath} --no-eslintrc --config .eslintrc.json`, { stdio: 'pipe' });
-      console.log(`  ✓ ${filePath} - No syntax errors`);
-    } catch (error) {
-      console.log(`  ⚠️  ${filePath} - Still has issues`);
-    }
-  }
-});
-
-console.log('\n🎉 Syntax error fixing completed!');
+main().catch(console.error);

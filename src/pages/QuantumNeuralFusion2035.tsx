@@ -17,8 +17,10 @@ const QuantumNeuralFusion2035: React.FC = () => {,
             <div className="flex justify-center space-x-4"></div>
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">Explore Fusion →</button>,
               </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors font-semibold text-lg">Watch Demo</button>,
-          </div>
+              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+                Watch Demo
+              </button>
+            </div>
         </div>
       </div>
       {/* Fusion Technology */}

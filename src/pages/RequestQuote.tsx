@@ -52,34 +52,36 @@ export default function RequestQuote() {
                     />
                   </div>
                 </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-zion-slate-light mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
-                    placeholder="Enter your email address"
-                  />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block text-zion-slate-light mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-zion-slate-light mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
                 </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-zion-slate-light mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block text-zion-slate-light mb-2">
                     Company Name
@@ -92,7 +94,7 @@ export default function RequestQuote() {
                     placeholder="Enter your company name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="projectType" className="block text-zion-slate-light mb-2">
                     Project Type *
@@ -115,7 +117,7 @@ export default function RequestQuote() {
                     <option value="other">Other</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label htmlFor="projectDescription" className="block text-zion-slate-light mb-2">
                     Project Description *
@@ -123,13 +125,13 @@ export default function RequestQuote() {
                   <textarea
                     id="projectDescription"
                     name="projectDescription"
-                    rows={6}
                     required
-                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg resize-none"
-                    placeholder="Describe your project requirements, goals, and any specific features you need..."
+                    rows={6}
+                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
+                    placeholder="Describe your project requirements, timeline, and any specific needs..."
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="budget" className="block text-zion-slate-light mb-2">
                     Budget Range
@@ -141,13 +143,13 @@ export default function RequestQuote() {
                   >
                     <option value="">Select budget range</option>
                     <option value="under-10k">Under $10,000</option>
-                    <option value="10k-50k">$10,000 - $50,000</option>
+                    <option value="10k-25k">$10,000 - $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
                     <option value="50k-100k">$50,000 - $100,000</option>
-                    <option value="100k-500k">$100,000 - $500,000</option>
-                    <option value="over-500k">Over $500,000</option>
+                    <option value="over-100k">Over $100,000</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label htmlFor="timeline" className="block text-zion-slate-light mb-2">
                     Project Timeline
@@ -165,23 +167,23 @@ export default function RequestQuote() {
                     <option value="flexible">Flexible</option>
                   </select>
                 </div>
-                
+
                 <div className="flex items-center">
                   <input
                     id="newsletter"
                     name="newsletter"
                     type="checkbox"
-                    className="h-4 w-4 text-zion-blue-light border-zion-blue-light rounded focus:ring-zion-blue-light"
+                    className="h-4 w-4 text-cyan-600 focus:ring-cyan-500 border-zion-blue-light rounded"
                   />
-                  <label htmlFor="newsletter" className="ml-2 text-zion-slate-light">
+                  <label htmlFor="newsletter" className="ml-2 block text-zion-slate-light">
                     Subscribe to our newsletter for tech updates and insights
                   </label>
                 </div>
-                
+
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-zion-blue-light to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-purple hover:to-zion-blue-light transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
                   >
                     Request Quote
                   </button>
