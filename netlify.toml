@@ -1,4 +1,4 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T19:20:00Z
+# Updated: bump timestamp to trigger Netlify deploy at 
 [build]
   # Build Vite app from repo root
   # No-op change to trigger Netlify deploy at 2025-09-18T19:20:00Z
