@@ -4,7 +4,7 @@
   publish = ".next"
   command_timeout = "30m"
 
-# Trigger Netlify build: no-op change on 2025-09-18T11:30:00Z
+# Trigger Netlify build: no-op change on 2025-09-18T12:45:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -16,20 +16,23 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  directory = "netlify/functions"
+  # With base = "zion-website", paths are resolved relative to that base.
+  # Our functions live at repo-root "netlify/functions", so use a path that escapes the base.
+  directory = "../netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["zion-website/public/**/*"]
+  # Static assets for functions should reference the base directory's public folder directly
+  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
 
-## Next.js routing is handled by @netlify/plugin-nextjs
-
+# Next.js handles routing; no SPA fallback redirect
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -220,4 +223,4 @@
   status = 301
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18 11:30 UTC
+# No-op: trigger deploy 2025-09-18 12:45 UTC
