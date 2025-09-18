@@ -3,8 +3,8 @@
   base = "zion-website"
   # Install dependencies and build the Next.js app
   command = "npm ci --no-audit --no-fund && npm run build"
-  # Publish the built Next.js app from the correct directory
-  publish = "zion-website/.next"
+  # With base set, publish is relative to base; use .next for Netlify Next.js plugin
+  publish = ".next"
   command_timeout = "30m"
   # No-op: trigger Netlify rebuild at 2025-09-18T15:45:00Z
 
