@@ -1,14 +1,19 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T16:00:00Z (refresh 2025-09-18T16:00:00Z-5)
+<<<<<<< HEAD
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:00Z
+=======
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T15:45:00Z (refresh 2025-09-18T15:45:00Z-5)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1b24
 [build]
-  # Build the Next.js site located in the monorepo subdirectory from the repo root
-  base = "zion-website"
+  # Build the Vite React site from the repository root
+  base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
+  # No-op: trigger Netlify rebuild at 2025-09-18T19:25:00Z
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
@@ -16,10 +21,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-
-## Use the official Next.js plugin for routing, SSR/ISR, and functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [functions]
   # Functions live at the repository root
@@ -123,14 +124,15 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation()"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-DNS-Prefetch-Control = "on"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' https: *.googleapis.com; img-src 'self' data: https:; font-src 'self' https: *.gstatic.com *.googleapis.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+# Optional CSP for JS if needed
+# [[headers]]
+#   for = "*.js"
+#   [headers.values]
+#     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
 # Redirects for legacy URLs
 [[redirects]]
@@ -218,8 +220,17 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## Note: Do not add SPA fallback for Next.js; plugin handles routing.
+# SPA fallback for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T16:00:00Z (refresh 2025-09-18T16:00:00Z-5)
-# trigger: 2025-09-18T16:00:00Z (refresh) re-run-15
+<<<<<<< HEAD
+# No-op: trigger deploy 2025-09-18T23:59:59Z (refresh 2025-09-18T23:59:59Z)
+# trigger: 2025-09-18T23:59:59Z (refresh) re-run-3
+=======
+# No-op: trigger deploy 2025-09-18T15:45:00Z (refresh 2025-09-18T15:45:00Z-5)
+# trigger: 2025-09-18T15:45:00Z (refresh) re-run-12
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1b24
