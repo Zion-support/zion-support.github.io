@@ -4,7 +4,7 @@
   publish = ".next"
   command_timeout = "30m"
 
-# Trigger Netlify build: no-op change on 2025-09-18T00:00:00Z
+# Trigger Netlify build: no-op change on 2025-09-18T12:00:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -220,4 +220,4 @@
   status = 301
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18
+# No-op: trigger deploy 2025-09-18 12:00 UTC
