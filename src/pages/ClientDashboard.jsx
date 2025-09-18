@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { JobsList } from "@/components/jobs/JobsList";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { JobsList } from "../components/jobs/JobsList";
+import { Button } from "../components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEO";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import { SuggestedTalents } from "../components/jobs/SuggestedTalents";
 import { useJobs } from "@/hooks/useJobs";
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+import { ClientOnboardingSteps } from "../components/onboarding/ClientOnboardingSteps";
+import { ActiveProjectsCard } from "../components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard } from "../components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
     const [activeTab, setActiveTab] = useState("all");

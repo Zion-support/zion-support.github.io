@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Skeleton from '@/components/ui/skeleton';
+import Skeleton from '../components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
 export default function CartPage() {
     const navigate = useNavigate();

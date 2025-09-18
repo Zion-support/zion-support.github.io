@@ -1,6 +1,6 @@
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import PostForm from "@/components/community/PostForm";
+import { SEO } from "../components/SEO";
+import PostForm from "../components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 export default function CreatePostPage() {
     const navigate = useNavigate();

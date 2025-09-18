@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { NEW_PRODUCTS } from '@/data/newProductsData';
+import { Button } from '../components/ui/button';
+import { NEW_PRODUCTS } from '../data/newProductsData';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 export default function ProductPage() {

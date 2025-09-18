@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { InterviewCard } from "@/components/interviews/InterviewCard";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
+import { SEO } from "../components/SEO";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import { InterviewCard } from "../components/interviews/InterviewCard";
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
-import { servicesCatalog } from '@/data/servicesCatalog';
+import { servicesCatalog } from '../data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 export default function Services() {
     const contact = {
