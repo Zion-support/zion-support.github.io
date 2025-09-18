@@ -1,7 +1,7 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z (run-7)
 [build]
   base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "corepack enable && corepack prepare yarn@4.9.4 --activate && yarn install --immutable && yarn build"
   publish = ".next"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-18T23:59:59Z (run-7)
@@ -9,7 +9,7 @@
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_USE_NPM = "true"
+  NETLIFY_USE_YARN = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
