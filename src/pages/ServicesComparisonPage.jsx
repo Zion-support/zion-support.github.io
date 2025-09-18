@@ -5,7 +5,7 @@ import { Badge } from '../components/ui/badge';
 <<<<<<< HEAD
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { PRICING_TIERS } from '../data/advancedServices';
 =======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';

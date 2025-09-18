@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 import { useAuth } from '../hooks/useAuth';
 import useJobDetails from '../hooks/useJobDetails';
 import { ApplyToJobModal } from '../components/messaging/job-application';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { useWhitelabel } from '../context/WhitelabelContext';
 =======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';

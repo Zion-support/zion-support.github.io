@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
 <<<<<<< HEAD
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 =======
 import { SEO } from '../components/SEO.jsx';
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65

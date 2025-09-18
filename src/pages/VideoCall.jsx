@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 <<<<<<< HEAD
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { VideoCallRoom } from '../components/video/VideoCallRoom';
 =======
 import { SEO } from '../components/SEO.jsx';

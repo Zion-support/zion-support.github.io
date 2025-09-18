@@ -6,7 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
 <<<<<<< HEAD
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 =======
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { SEO } from '../components/SEO.jsx';

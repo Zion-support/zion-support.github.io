@@ -1,6 +1,6 @@
 import { useState } from 'react';
 <<<<<<< HEAD
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { ResumeWizard } from '../components/resume-builder/ResumeWizard';

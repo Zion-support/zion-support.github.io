@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 =======
 import { SEO } from '../components/SEO.jsx';
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65

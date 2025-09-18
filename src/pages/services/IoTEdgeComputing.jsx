@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from "../../components/SEO";
+import { SEO } from "../../components/SEO";
 import { Link } from 'react-router-dom';
 import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
 export default function IoTEdgeComputingServices() {
