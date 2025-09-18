@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
-import { NextSeo } from '@/components/NextSeo';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { NextSeo } from "../components/NextSeo';
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
+import { AspectRatio } from "../components/ui/aspect-ratio";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
-import { useCart } from '@/context/CartContext';
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
-import { equipmentListings } from '@/data/listings';
-import { ProductListing } from '@/types/listings';
+import { toast } from "../hooks/use-toast";
+import { useAuth } from "../hooks/useAuth";
+import { getStripe } from "../utils/getStripe";
+import { useCart } from "../context/CartContext';
+import { ImageWithRetry } from "../components/ui/ImageWithRetry';
+import { equipmentListings } from "../data/listings';
+import { ProductListing } from "../types/listings';
 import { motion } from 'framer-motion';
-import { useCurrency } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useCurrency } from "../hooks/useCurrency';
+import {logErrorToProduction} from "../utils/productionLogger';
 
 
 interface EquipmentSpecification {

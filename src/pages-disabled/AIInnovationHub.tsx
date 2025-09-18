@@ -1,5 +1,9 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+=======
+import { SEO } from '../components/SEO.jsx';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { 
   ArrowRight, 
   Brain, 
