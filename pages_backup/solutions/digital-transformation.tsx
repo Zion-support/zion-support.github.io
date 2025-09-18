@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from "../../components/Layout";";
-
+import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 export default function DigitalTransformationPage() {
   const transformationServices = [;

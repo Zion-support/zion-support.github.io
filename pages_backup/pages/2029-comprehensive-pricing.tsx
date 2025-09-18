@@ -5,7 +5,7 @@
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion } from 'framer-motion',;
 import { 
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
   Atom, Rocket, Target, Microscope, DollarSign, Phone, 
@@ -67,7 +67,7 @@ const contactInfo = {
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 import {
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, CheckCircle, Users, Globe, Shield } from 'lucide-react';
 import Link from 'next/link';
 import { innovative2026AIServicesV2 } from '../../data/innovative-2026-ai-services-v2';

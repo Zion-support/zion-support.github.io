@@ -1,4 +1,4 @@
-
+import {motion} from "framer-motion";
 import { Loader2 export function LoadingFallback(props: any) {
     const sizeClasses = {
   sm: "w-6 h-6",

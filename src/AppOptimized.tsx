@@ -18,7 +18,6 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
-const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
@@ -54,7 +53,6 @@ const AppOptimized: React.FC = () => {
                           <Route path="/services" element={<Services />} />
                           <Route path="/contact" element={<Contact />} />
                           <Route path="/blog" element={<Blog />} />
-                          <Route path="/blog/:slug" element={<BlogPost />} />
                         </Routes>
                       </Suspense>
                     </div>

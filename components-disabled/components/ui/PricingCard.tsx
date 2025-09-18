@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Check, Star, Zap, ArrowRight } from 'lucide-react';
 import Button from './Button';
 

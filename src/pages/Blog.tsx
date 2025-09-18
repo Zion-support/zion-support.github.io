@@ -1,5 +1,4 @@
-import LatestContentPromotion from '@/components/LatestContentPromotion';
-import LatestContentPromotion2029 from '@/components/LatestContentPromotion2029';
+import React from 'react';
 
 const Blog: React.FC = () => {
   return (
@@ -12,13 +11,6 @@ const Blog: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Revolutionary technology solutions and insights for the future
           </p>
-        </div>
-        {/* Promote freshest content */}
-        <div className="mb-12">
-          <LatestContentPromotion />
-        </div>
-        <div className="mb-12">
-          <LatestContentPromotion2029 />
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

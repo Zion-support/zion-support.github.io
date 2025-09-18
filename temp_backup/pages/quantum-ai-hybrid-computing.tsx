@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, Star, Atom, Zap, Shield, Users, TrendingUp, Ph
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-
+import { motion } from 'framer-motion';
 
 export default function QuantumAIHybridComputing() {
   const contactInfo = {

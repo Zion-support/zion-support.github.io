@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Gamepad2, Eye, Globe, Users, Target, ArrowRight, 
   CheckCircle, Building, Rocket, Shield, Zap, Star,

@@ -4,7 +4,7 @@ import Link from 'next/link',;';';
     ';';';';
 import { useRouter } from 'next/router',;',';';
     ';';';';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
   X,

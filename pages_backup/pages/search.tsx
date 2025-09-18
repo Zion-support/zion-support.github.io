@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
 
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 
 import {
@@ -144,7 +144,7 @@ const filters = [
 export default function SearchPage() {
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search,
   Filter,
@@ -213,7 +213,7 @@ export default function SearchPage() {;
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Search, Filter, Grid, List, ArrowRight, ExternalLink,;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;

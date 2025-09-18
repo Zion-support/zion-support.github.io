@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import { motion, useInView } from 'framer-motion';
 
 // Extend global types for browser APIs
 declare global {

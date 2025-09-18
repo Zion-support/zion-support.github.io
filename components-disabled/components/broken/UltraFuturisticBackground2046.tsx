@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2046: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);

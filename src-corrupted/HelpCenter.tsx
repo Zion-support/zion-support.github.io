@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
 import React from 'react';
@@ -34,7 +34,7 @@ import {
   ChevronRight,
   ExternalLink,
 import { Helmet } from 'react-helmet-async';
-
+import { motion } from 'framer-motion';
 import { 
   Search, 
   HelpCircle, 
@@ -136,14 +136,14 @@ import { Search, Phone, Mail, ArrowRight } from 'lucide-react';
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
-
-
+import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
 
 const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Search, Book, MessageCircle, Phone, Mail, FileText, Video, Download, ChevronDown, ChevronRight, Star, Clock, Users, HelpCircle, Zap, Shield, Settings, Globe } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -585,7 +585,7 @@ const HelpCenter = () => {
         { title: "Refund Policy", path: "/help/refund-policy" }
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
+import { motion } from 'framer-motion';
 import { 
   QuestionMarkCircleIcon, 
   BookOpenIcon, 
@@ -652,7 +652,7 @@ const HelpCenter: React.FC = () => {
           answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our payment systems."
         }
       ]
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
   MessageCircle, 

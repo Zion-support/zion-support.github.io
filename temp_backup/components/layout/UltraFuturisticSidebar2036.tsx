@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, Home, Globe, Rocket, Brain, Atom, Shield, Target, 
   Sparkles, DollarSign, BookOpen, Building, Users, 

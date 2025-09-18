@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import React, { useState, useEffect, useRef } from 'react';
 import { 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Accessibility, 

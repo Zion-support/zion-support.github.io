@@ -140,7 +140,7 @@ import { Brain, Search, Zap, Target, ArrowRight, BookOpen, Globe, TrendingUp } f
   Target,
   Shield
 } from 'lucide-react';
-
+import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
 
 const AIAutonomousResearchAssistant = () => {
@@ -191,7 +191,7 @@ const AIAutonomousResearchAssistant = () => {
     {
       icon: Zap,
       title: "Real-time Analysis",
-
+import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
 
 const AIAutonomousResearchAssistant: React.FC = () => {

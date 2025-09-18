@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import Footer from '../Footer';
+import EnhancedFooter from '../components/EnhancedFooter';
 
 const NeuralInterfaceEvolution2026: React.FC = () => {
   return (
@@ -216,7 +216,7 @@ const NeuralInterfaceEvolution2026: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      <EnhancedFooter />
     </div>
   );
 };

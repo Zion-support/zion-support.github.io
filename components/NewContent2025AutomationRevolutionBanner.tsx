@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (

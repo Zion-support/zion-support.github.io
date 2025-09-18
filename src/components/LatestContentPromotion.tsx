@@ -1,3 +1,4 @@
+import React from 'react';
 
 const LatestContentPromotion: React.FC = () => {
   return (
@@ -6,9 +7,9 @@ const LatestContentPromotion: React.FC = () => {
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            🚀 NEW CONTENT RELEASE • SEPTEMBER 2025
+            🚀 NEW CONTENT RELEASE • JANUARY 2026
           </div>
-          <h2 className="text-4xl font-bold mb-4">🌟 New: Exec Guide, FinServ Case, Scorecards Kit</h2>
+          <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary AI 2026 Content Now Available</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Discover breakthrough insights, implementation guides, and success stories that will transform your organization
           </p>
@@ -16,67 +17,67 @@ const LatestContentPromotion: React.FC = () => {
         
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🧪</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Exec Guide: Evals + Guardrails</h3>
+            <div className="text-4xl mb-3 text-center">📚</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Ultimate AI 2026 Guide</h3>
             <p className="text-purple-100 mb-4 text-center text-sm">
-              What leaders need to ship safe, high‑quality AI with provable controls
+              Comprehensive guide covering synthetic intelligence, quantum computing, and consciousness AI
             </p>
             <ul className="text-purple-200 space-y-1 mb-4 text-xs">
-              <li>• Policy gates with pass/fail criteria</li>
-              <li>• Journey KPIs and thresholds</li>
-              <li>• Shadow tests and traffic slices</li>
-              <li>• Rollbacks and kill‑switches</li>
+              <li>• Revolutionary breakthrough technologies</li>
+              <li>• Business transformation opportunities</li>
+              <li>• Implementation framework</li>
+              <li>• ROI optimization strategies</li>
             </ul>
-            <a href="/blog/exec-guide-eval-gates-ship-tomorrow" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
-              Read Exec Guide →
+            <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Read Full Guide →
             </a>
           </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">💰</div>
-            <h3 className="text-xl font-bold mb-3 text-center">FinServ Cost Controls</h3>
+            <div className="text-4xl mb-3 text-center">🏆</div>
+            <h3 className="text-xl font-bold mb-3 text-center">800% ROI Success Story</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
-              35–40% savings with routing bands, budgets, and eval‑guarded releases
+              Fortune 500 company achieves unprecedented transformation with AI 2026 technologies
             </p>
             <ul className="text-cyan-200 space-y-1 mb-4 text-xs">
-              <li>• $350M annualized savings</li>
-              <li>• Quality preserved via evals</li>
-              <li>• Journey‑level KPIs</li>
-              <li>• Anomaly alerts</li>
+              <li>• 800% return on investment</li>
+              <li>• 300% efficiency improvements</li>
+              <li>• 400% faster innovation</li>
+              <li>• Industry leadership achieved</li>
             </ul>
-            <a href="/blog/finserv-case-study-policy-routing-35-savings" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
-              Read Case Study →
+            <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              View Case Study →
             </a>
           </div>
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🛠️</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Journey Scorecards Kit</h3>
+            <h3 className="text-xl font-bold mb-3 text-center">Implementation Guide</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
-              Deploy journey‑level KPIs and thresholds for quality, cost, latency, safety
+              Step-by-step framework for implementing AI 2026 technologies in your organization
             </p>
             <ul className="text-emerald-200 space-y-1 mb-4 text-xs">
-              <li>• JSON KPI schemas</li>
-              <li>• Policy‑as‑code examples</li>
-              <li>• CI gate wiring</li>
-              <li>• Reference dashboards</li>
+              <li>• Strategic foundation setup</li>
+              <li>• Technology assessment</li>
+              <li>• Change management</li>
+              <li>• ROI optimization</li>
             </ul>
-            <a href="/blog/journey-scorecards-starter-kpis" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
-              Get Starter Kit →
+            <a href="/content/resources/ai-2026-implementation-guide" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Download Guide →
             </a>
           </div>
         </div>
         
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
-            <a href="/blog/exec-guide-eval-gates-ship-tomorrow" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              📚 Read Exec Guide
+            <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              📚 Read Ultimate Guide
             </a>
-            <a href="/blog/finserv-case-study-policy-routing-35-savings" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              🏆 View Cost Controls Case Study
+            <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              🏆 View Success Story
             </a>
-            <a href="/blog/journey-scorecards-starter-kpis" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              🛠️ Get Scorecards Starter Kit
+            <a href="/content/resources/ai-2026-implementation-guide" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              🛠️ Get Implementation Guide
             </a>
           </div>
         </div>

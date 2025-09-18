@@ -1,47 +1,30 @@
 import React from 'react'
-import Link from 'next/link'
 
-export const metadata = {
-  title: 'AI 2026: Grounded Generation — Blueprint',
-  description:
-    'Ensure factual, traceable outputs with retrieval, constraints, and evaluation gates for production AI systems.',
-}
-
-export default function Page() {
+export default function GroundedGenerationBlueprintPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-white">AI 2026: Grounded Generation — Blueprint</h1>
-      <p className="text-gray-300 mt-3">
-        Techniques to ensure factual, traceable outputs using retrieval augmentation, structured constraints, and
-        evaluation gates. Reduce hallucinations and improve trust in production.
-      </p>
-
-      <div className="prose prose-invert mt-8">
-        <h2>Core techniques</h2>
-        <ul>
-          <li>Retrieval with provenance and snippet attributions</li>
-          <li>Schema constraints with JSON Schema and tool envelopes</li>
-          <li>Guardrail policies with automated policy-as-code checks</li>
-          <li>Offline and runtime evaluations with rollback gates</li>
-        </ul>
-        <h3>Rollout path</h3>
-        <ol>
-          <li>Instrument retrieval with citations and source scoring</li>
-          <li>Add JSON schema validation and fail-safe fallbacks</li>
-          <li>Introduce runtime checks; block unsafe actions</li>
-          <li>Track groundedness SLIs and violations</li>
-        </ol>
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
+        <p className="text-sm text-gray-300">Blueprint • 2025-09-15 • 8 min read</p>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          Grounded Generation Blueprint
+        </h1>
+        <div className="prose prose-invert prose-lg mt-8 max-w-none">
+          <p>
+            Reduce hallucinations by constraining models to cited evidence, robust retrieval, and eval gates with
+            objective rubrics.
+          </p>
+          <h2>Core components</h2>
+          <ul>
+            <li>Retrieval with freshness and domain constraints</li>
+            <li>Answer planning with tool-typed steps and checks</li>
+            <li>Attribution and citation verification</li>
+            <li>Pre-deploy and live canary evals</li>
+          </ul>
+          <h2>Operational metrics</h2>
+          <p>Groundedness, citation accuracy, override rate, drift, and incident MTTR.</p>
+        </div>
       </div>
-
-      <div className="mt-10 flex gap-3">
-        <Link href="/blog/ai-2026-operational-evals-blueprint" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">
-          Operational Evals
-        </Link>
-        <Link href="/blog/ai-2026-enterprise-retrieval-observability" className="inline-block border border-blue-600 text-blue-300 px-5 py-3 rounded-lg font-semibold hover:bg-blue-50/10">
-          Retrieval Observability
-        </Link>
-      </div>
-    </main>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
-
+import { motion } from 'framer-motion';
 import { Code, Zap, Server, Database, Shield, BarChart3, Users, Building2, Rocket, Factory, Brain, Cloud, Network, Settings, ArrowRight, CheckCircle, Star, TrendingUp, Award, Clock, Globe, Lock, Cpu, Workflow, MessageCircle, ArrowUp, Sparkles, Home, Truck, BookOpen, Leaf, Satellite, HelpCircle, Menu, X, Building, DollarSign, ShoppingCart, Heart, Eye, FileText, AlertCircle, Scale, Phone, Mail, MapPin, Instagram, Linkedin, Twitter, Facebook, ExternalLink, Calendar, User, Download, Play, Tag, Smartphone, Target } from 'lucide-react';
 
 const services = [

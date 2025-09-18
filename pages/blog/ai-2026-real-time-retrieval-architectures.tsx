@@ -1,6 +1,7 @@
+import React from 'react';
 import Link from 'next/link';
 
-export default function RealTimeRetrievalArchitectures2026() {
+export default function AI2026RealTimeRetrievalArchitectures() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
@@ -38,3 +39,4 @@ export default function RealTimeRetrievalArchitectures2026() {
     </main>
   );
 }
+

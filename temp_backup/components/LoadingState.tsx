@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Atom, Shield, Rocket, Zap, Sparkles } from 'lucide-react';
 
 const LoadingState: React.FC = () => {

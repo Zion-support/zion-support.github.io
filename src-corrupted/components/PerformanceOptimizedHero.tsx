@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom';
 export default function Page(props: any) {
 </motion.div>}
-
+import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
 , { icon: Za p, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };

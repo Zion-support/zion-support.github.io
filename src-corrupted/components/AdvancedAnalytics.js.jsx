@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import {motion} from 'framer-motion';
 
 export function AdvancedAnalytics(props: any) {
     const [analyticsData, setAnalyticsData] = useState({

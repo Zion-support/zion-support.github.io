@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Crown, Building, Rocket, Star, Zap, Shield } from 'lucide-react';
 import Link from 'next/link';
 

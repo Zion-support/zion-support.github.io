@@ -354,10 +354,10 @@ export default function Cookies() {
             </div>
           </div>
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Cookie, Shield, Settings, Eye, Database, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
 
 export default function Cookies() {

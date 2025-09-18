@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react.ts';
 
 export default function AIBusinessIntelligence(...args: any[]): any {

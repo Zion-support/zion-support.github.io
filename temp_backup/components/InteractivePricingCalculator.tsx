@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, Check, X, Info, TrendingUp, Zap, Shield, Brain } from 'lucide-react';
 
 interface PricingTier {

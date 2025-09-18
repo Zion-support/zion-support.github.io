@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Users, Award, Star, Globe, CheckCircle, ArrowRight, Linkedin, Github, Mail, Shield, Zap, Brain, Cloud, Database } from 'lucide-react';
 const teamMembers = [
     {

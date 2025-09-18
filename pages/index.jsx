@@ -1,11 +1,9 @@
-import fs from 'fs';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import path from 'path';
 import Layout from './components/Layout';
 const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
 
-const Home = ({ featuredItems = [] }) => {
+const Home = () => {
   return (
     <Layout 
       title="Zion Tech Group - Leading Technology Solutions Provider"
@@ -64,13 +62,26 @@ const Home = ({ featuredItems = [] }) => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {featuredItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                    <div className="text-sm text-blue-200 mb-2">Latest • 5-8 min read</div>
-                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-white/80">{item.desc}</p>
-                  </Link>
-                ))}
+                <Link href="/blog/ai-2026-agent-observability-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Observability • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Agent Observability Scorecards</h3>
+                  <p className="text-white/80">Turn traces, evals, and policy events into trust signals leaders can act on.</p>
+                </Link>
+                <Link href="/blog/ai-2026-governed-tooling-approvals-in-practice" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Governed Tooling in Practice</h3>
+                  <p className="text-white/80">Implement approvals, scoped permissions, and runtime checks for safe agents.</p>
+                </Link>
+                <Link href="/blog/ai-2026-production-eval-gates-live-ops" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Evaluations • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Production Eval Gates</h3>
+                  <p className="text-white/80">Enforce gates pre‑merge, pre‑deploy, and continuously to ship without regret.</p>
+                </Link>
+                <Link href="/blog/ai-2026-autonomous-evidence-led-ops" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Autonomous, Evidence‑Led Ops</h3>
+                  <p className="text-white/80">Run agents with auditable traces, eval gates, and runtime guardrails.</p>
+                </Link>
               </div>
               <div className="mt-6">
                 <Link href="/blog" className="text-blue-200 hover:text-white font-semibold">View all articles →</Link>
@@ -104,20 +115,3 @@ const Home = ({ featuredItems = [] }) => {
 };
 
 export default Home;
-
-export async function getStaticProps() {
-  try {
-    const registryPath = path.join(process.cwd(), 'public', 'automation', 'new-content-registry.json');
-    const raw = fs.readFileSync(registryPath, 'utf-8');
-    const data = JSON.parse(raw);
-    const items = Array.isArray(data.items) ? data.items : [];
-    const featuredItems = items
-      .filter((i) => typeof i.title === 'string' && typeof i.href === 'string')
-      .sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0))
-      .slice(0, 12);
-
-    return { props: { featuredItems }, revalidate: 3600 };
-  } catch (e) {
-    return { props: { featuredItems: [] }, revalidate: 3600 };
-  }
-}

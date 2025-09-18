@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface Service {
   id: string;

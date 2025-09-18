@@ -1,18 +1,6 @@
 import React from 'react';
 
 const Home: React.FC = () => {
-  const { addNotification } = useNotifications();
-
-  useEffect(() => {
-    // Welcome notification
-    addNotification({
-      type: 'info',
-      title: 'Welcome to Zion Tech Group 2026!',
-      message: 'Explore our revolutionary AI, quantum computing, and cybersecurity solutions.',
-      duration: 5000
-    });
-  }, [addNotification]);
-
   return (
     <>
       <Helmet>
@@ -57,14 +45,39 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Featured Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-2xl font-semibold text-white mb-4">AI Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced artificial intelligence solutions for modern businesses. 
-              From machine learning to autonomous systems.
+        {/* NEW: Ultimate Tech Showcase Banner */}
+        <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
+          <div className="relative z-10">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <span className="text-3xl animate-pulse">🚀</span>
+              <h3 className="text-3xl font-bold">ULTIMATE TECH SHOWCASE 2026</h3>
+              <span className="text-3xl animate-pulse">🚀</span>
+            </div>
+            <p className="text-xl opacity-95 mb-6 max-w-5xl mx-auto">
+              Discover the most comprehensive collection of cutting-edge technologies including
+              Biotech AI, Space Technology, and Advanced Quantum Systems
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+              <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                🌟 Ultimate Tech Showcase →
+              </a>
+              <a href="/pages/AdvancedBiotechAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                🧬 Advanced Biotech AI →
+              </a>
+              <a href="/pages/NextGenSpaceTech2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                🛸 Next-Gen Space Tech →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Solutions</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Explore our comprehensive range of cutting-edge technologies and services
             </p>
           </div>
 
@@ -165,65 +178,40 @@ const Home: React.FC = () => {
               </div>
             </divdiv>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl mb-4">🔒</div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive cybersecurity solutions to protect your business 
-              from evolving threats in the digital landscape.
-            </p>
+        </div>
+
+        {/* Content Showcases */}
+        <div className="container mx-auto px-4 py-20">
+          <EnhancedContentShowcase />
+        </div>
+
+        <div className="container mx-auto px-4 py-20">
+          <RevolutionaryContentShowcase />
+        </div>
+
+        {/* Enhanced Content Advertising */}
+        <EnhancedContentAdvertising />
+
+        {/* Call to Action */}
+        <div className="container mx-auto px-4 py-20">
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Revolutionary Technology Showcase 2026
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of technology with our comprehensive collection of 
-              cutting-edge innovations, AI breakthroughs, and quantum computing advancements.
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join the revolution and discover how our cutting-edge technologies can transform your business and unlock unprecedented possibilities.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">AI Innovation Hub</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Discover the latest AI technologies and their real-world applications.
-                </p>
-                <Link 
-                  to="/pages/AIInnovationHub2026" 
-                  className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  Explore Hub
-                </Link>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Tech Trends 2026</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Stay ahead with the most important technology trends of 2026.
-                </p>
-                <Link 
-                  to="/pages/TechTrends2026" 
-                  className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  View Trends
-                </Link>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Tech Insights</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Deep dive into comprehensive technology insights and analysis.
-                </p>
-                <Link 
-                  to="/pages/ComprehensiveTechInsights2026" 
-                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  Get Insights
-                </Link>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Start Your Journey →
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                Schedule Consultation
+              </button>
             </div>
           </div>
-        </div>
       </div>
-    </div>
+    </>
   );
 };
+
 
 export default Home;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import AppOptimized from './AppOptimized.tsx';
+import App from './App.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -38,7 +38,7 @@ function renderApp() {
             <HelmetProvider>
                 <QueryClientProvider client={queryClient}>
                     <Router>
-                        <AppOptimized />
+                        <App />
                     </Router>
                 </QueryClientProvider>
             </HelmetProvider>

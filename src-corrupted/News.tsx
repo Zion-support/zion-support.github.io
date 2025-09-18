@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 
 const News: React.FC = () => {
@@ -233,7 +233,7 @@ export default function News() {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-
+import { motion } from 'framer-motion';
 import { 
   Search, 
   Calendar, 

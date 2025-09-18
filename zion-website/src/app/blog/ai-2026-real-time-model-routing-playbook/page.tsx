@@ -1,48 +1,35 @@
-import React from 'react'
-import Link from 'next/link'
 
-export const metadata = {
-  title: 'AI 2026: Real-Time Model Routing — Playbook',
-  description:
-    'Latency- and cost-aware routing strategies with safety envelopes, backoffs, and graceful degradation policies.',
-}
-
-export default function Page() {
+export default function BlogPostPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-white">AI 2026: Real-Time Model Routing — Playbook</h1>
-      <p className="text-gray-300 mt-3">
-        Strategies to meet strict SLOs: hedged requests, adaptive timeouts, multi-model routing, and cost-aware
-        budgets with guardrails.
-      </p>
-
-      <div className="prose prose-invert mt-8">
-        <h2>Key patterns</h2>
-        <ul>
-          <li>Hedged requests and speculative execution with cancellation</li>
-          <li>Policy-driven routing: risk tiers, cost ceilings, and latency budgets</li>
-          <li>Degradation playbooks: compression, truncation, and cached fallbacks</li>
-          <li>Continuous evaluation of SLI compliance with auto rollback</li>
-        </ul>
-
-        <h3>Implementation checklist</h3>
-        <ol>
-          <li>Define latency and cost SLOs; instrument end-to-end timing</li>
-          <li>Implement router with circuit breakers and budget accounting</li>
-          <li>Test under load with chaos and tail-latency profiles</li>
-          <li>Automate incident policies and rollback criteria</li>
-        </ol>
-      </div>
-
-      <div className="mt-10 flex gap-3">
-        <Link href="/blog/ai-2026-production-rag-latency-budgets" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">
-          RAG Latency Budgets
-        </Link>
-        <Link href="/blog/ai-2026-agent-finops-blueprint" className="inline-block border border-purple-600 text-purple-300 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50/10">
-          Agent FinOps
-        </Link>
-      </div>
-    </main>
+    <div className="min-h-screen bg-white">
+      <article className="max-w-3xl mx-auto px-6 py-24">
+        <header>
+          <h1 className="text-4xl font-bold text-gray-900">AI 2026: Real-Time Model Routing — Playbook</h1>
+          <p className="mt-2 text-gray-500">Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.</p>
+        </header>
+        <section className="prose prose-lg mt-8">
+          <p>
+            Real‑time routing balances quality, latency, and cost by selecting models and tools based on
+            task class, budgets, and live evaluation signals. This playbook details policies, telemetry,
+            and rollback mechanics to ship safely.
+          </p>
+          <h2>Core components</h2>
+          <ul>
+            <li>Policy‑as‑code routing rules with risk tiers and budgets</li>
+            <li>Live eval signals and SLOs feeding decision points</li>
+            <li>Shadow tests and abort switches with auto‑rollback</li>
+            <li>Signed evidence bundles for audits</li>
+          </ul>
+          <h2>Implementation checklist</h2>
+          <ol>
+            <li>Define task taxonomy and routing candidates</li>
+            <li>Instrument tracing and eval metrics per route</li>
+            <li>Configure budgets and exception workflows</li>
+            <li>Automate canary rollout with rollback policies</li>
+          </ol>
+        </section>
+      </article>
+    </div>
   )
 }
 

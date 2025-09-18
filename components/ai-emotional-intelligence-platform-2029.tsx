@@ -436,7 +436,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Brain, Heart, Eye, MessageCircle, Users, Shield, 
   Zap, TrendingUp, CheckCircle, ArrowRight, Star,

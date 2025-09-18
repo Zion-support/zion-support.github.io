@@ -249,7 +249,7 @@ export default AdvancedRobotics2026;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -272,10 +272,10 @@ export default AdvancedRobotics2026;
               Get Started
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Revolutionary Robotics Banner */}
-        <div
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -309,7 +309,7 @@ export default AdvancedRobotics2026;
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Solutions Grid */}
         <motion.section
@@ -582,9 +582,9 @@ export default AdvancedRobotics2026;
             </a>
           </div>
         </motion.section>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -601,9 +601,9 @@ export default AdvancedRobotics2026;
               <li>• Diagnostic procedures</li>
               <li>• Patient care</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -620,7 +620,7 @@ export default AdvancedRobotics2026;
               <li>• Security patrol</li>
               <li>• Delivery services</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
 

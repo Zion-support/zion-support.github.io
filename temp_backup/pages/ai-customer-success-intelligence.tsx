@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Brain, Users, TrendingUp, Shield, Zap, 
   BarChart3, Target, CheckCircle, Star, 

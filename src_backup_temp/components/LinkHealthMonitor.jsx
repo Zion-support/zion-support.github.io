@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';'''
-
+import {motion} from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = ("props": "any) => {"}
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);'
@@ -111,7 +111,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
         const healthyLinks = links.filter(l => l.status === 'healthy').length;'';';
         const brokenLinks = links.filter(l => l.status === 'broken').length;'';';
 import React, {useState, useEffect} from 'react';
-
+import {motion} from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = (props: any) => {}
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);';

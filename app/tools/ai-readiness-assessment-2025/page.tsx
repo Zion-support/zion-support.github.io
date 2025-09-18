@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, BarChart3, Users, Shield, Zap } from 'lucide-react';
 
 interface AssessmentQuestion {

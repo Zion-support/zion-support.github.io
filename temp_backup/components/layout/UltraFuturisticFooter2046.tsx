@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Brain, Rocket, Shield,
   Cloud, Users, Target, Lightbulb, Code, Server, Network,

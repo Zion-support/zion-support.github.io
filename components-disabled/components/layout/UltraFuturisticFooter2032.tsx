@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 ];

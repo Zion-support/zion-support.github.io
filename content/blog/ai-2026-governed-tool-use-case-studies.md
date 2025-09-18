@@ -1,33 +1,4 @@
 ---
-title: AI 2026: Governed Tool Use — Real-World Case Studies
-date: 2025-09-16
-tags:
-  - Safety
-  - Tool Use
-  - Governance
-  - Policy-as-Code
-summary: Case studies showing how risk tiers, isolation sandboxes, and runtime checks prevent incidents and ensure audit-ready operations.
-reading_time: 12 min read
-status: published
----
-
-# Governed Tool Use — Case Studies
-
-This collection highlights production patterns that reduced incidents by 40% while preserving velocity:
-
-- Risk-tiered permissions and approvals
-- Isolation domains and sandboxed execution
-- Runtime guardrails with evaluation hooks
-
-Outcomes:
-
-- Incident reduction: 40%
-- Approval speed: 2x
-- Audit readiness: 100%
-
-...
-
----
 title: "AI 2026: Governed Tool Use — Real-World Case Studies"
 date: 2025-09-15
 author: "Zion Research"

@@ -47,7 +47,7 @@ export default function Training() {
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
   GraduationCap, Users, Clock, Award, BookOpen, Video, 
   Headphones, Code, Brain, Atom, Rocket, Shield, Zap;

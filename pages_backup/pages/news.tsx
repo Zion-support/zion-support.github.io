@@ -78,7 +78,7 @@ const NewsPage: React.FC = () => {
 
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import {;
   Newspaper,;
   Calendar,;
@@ -791,14 +791,14 @@ function NewsPage() {
 import React, { useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import {
   Newspaper, Globe, Award, Users, Rocket, Brain
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
 import React, { useState } from 'react',;
 import React from 'react',;
 import Head from 'next/head',;
-
+import { motion } from 'framer-motion',;
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
@@ -1246,7 +1246,7 @@ export default function NewsPage(req, res) {
 import React, { useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import {;
   Newspaper, Globe, Award, Users, Rocket, Brain,;
   ArrowRight, ExternalLink, Calendar, Tag, Star;

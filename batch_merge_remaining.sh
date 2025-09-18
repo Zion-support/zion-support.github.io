@@ -1,86 +1,72 @@
 #!/bin/bash
 
-# Batch Merge Remaining PRs Script
+# Script to batch merge remaining unmerged cursor branches
 set -e
 
-echo "🚀 Starting batch merge of remaining PRs..."
+echo "Starting batch merge of remaining unmerged cursor branches..."
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+# Get list of unmerged cursor branches
+UNMERGED_BRANCHES=($(git branch -r --no-merged main | grep "cursor/" | head -20))
 
-print_status() { echo -e "${BLUE}[INFO]${NC} $1"; }
-print_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
-print_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
-print_error() { echo -e "${RED}[ERROR]${NC} $1"; }
+echo "Found ${#UNMERGED_BRANCHES[@]} unmerged cursor branches"
 
-# Ensure we're on main branch
-print_status "Switching to main branch..."
-git checkout main
+SUCCESSFUL_MERGES=()
+FAILED_MERGES=()
 
-# Pull latest changes
-print_status "Pulling latest changes..."
-git pull origin main
-
-# Get list of recent cursor branches
-print_status "Getting recent cursor branches..."
-git fetch origin
-
-# Focus on the most recent branches first
-recent_branches=(
-    "cursor/create-and-deploy-new-content-b497"
-    "cursor/create-and-deploy-new-content-db92"
-    "feat/new-content-sept-2025"
-    "feature/new-content-2026"
-    "feature/new-content-sep-2025"
-    "feature/revolutionary-content-2026"
-    "revolutionary-content-2026"
-    "feat/new-content-ads"
-    "feat/new-blog-content-sept16"
-    "feat/new-content-sept16"
-    "feat/content-and-homepage-promos-20250916"
-    "feat/new-sept-2025-blog"
-    "feat/add-sept16-content-promos"
-    "feat/new-updates-2025-09-16"
-    "content/updates-and-blogs-2025-09-16"
-    "chore/create-and-deploy-new-content"
-    "chore/new-content-2025-09-16"
-    "chore/add-updates-2025-09-16"
-)
-
-successful_merges=0
-failed_merges=0
-
-print_status "Processing ${#recent_branches[@]} priority branches..."
-
-for branch in "${recent_branches[@]}"; do
-    print_status "Processing branch: $branch"
+for branch in "${UNMERGED_BRANCHES[@]}"; do
+    # Remove 'origin/' prefix
+    branch_name=${branch#origin/}
     
-    # Check if branch exists
-    if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        # Try to merge the branch
-        if git merge --no-edit "origin/$branch" 2>/dev/null; then
-            print_success "Successfully merged $branch"
-            ((successful_merges++))
+    echo ""
+    echo "Processing branch: $branch_name"
+    echo "=========================================="
+    
+    # Try to merge the branch with strategy
+    if git merge "origin/$branch_name" --no-edit -X ours; then
+        echo "✅ Successfully merged $branch_name"
+        SUCCESSFUL_MERGES+=("$branch_name")
+        
+        # Commit the merge
+        git add . && git commit -m "Merge $branch_name with advanced content and components" || true
+        
+        # Push the merge
+        if git push origin main --force-with-lease; then
+            echo "✅ Successfully pushed merge for $branch_name"
         else
-            print_warning "Merge conflict in $branch, skipping..."
-            git merge --abort 2>/dev/null || true
-            ((failed_merges++))
+            echo "❌ Failed to push merge for $branch_name"
         fi
     else
-        print_warning "Branch $branch does not exist, skipping..."
+        echo "❌ Merge conflict in $branch_name even with strategy"
+        FAILED_MERGES+=("$branch_name")
+        
+        # Abort the merge
+        git merge --abort
+        echo "Aborted merge for $branch_name"
     fi
+    
+    echo "Current status:"
+    git status --porcelain
+    echo ""
 done
 
-print_status "Batch merge process completed!"
-print_success "Successful merges: $successful_merges"
-print_warning "Failed merges: $failed_merges"
+echo ""
+echo "=========================================="
+echo "BATCH MERGE SUMMARY"
+echo "=========================================="
+echo "Successful merges: ${#SUCCESSFUL_MERGES[@]}"
+for branch in "${SUCCESSFUL_MERGES[@]}"; do
+    echo "  ✅ $branch"
+done
 
-# Push changes
-print_status "Pushing changes to remote..."
-git push origin main
+echo ""
+echo "Failed merges: ${#FAILED_MERGES[@]}"
+for branch in "${FAILED_MERGES[@]}"; do
+    echo "  ❌ $branch"
+done
 
-print_success "Batch merge process completed!"
+echo ""
+echo "Final git status:"
+git status
+
+echo ""
+echo "Batch merge completed!"

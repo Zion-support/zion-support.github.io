@@ -202,37 +202,15 @@ import UltimateRevolutionBanner2026 from './src/components/UltimateRevolutionBan
 import TranscendentTechRevolution2027 from './src/pages/TranscendentTechRevolution2027';
 import TranscendentRevolutionBanner2027 from './src/components/TranscendentRevolutionBanner2027';
 
-export default function App(): JSX.Element {
+// Import only existing components
+import Home from './src/pages/Home';
+import About from './About';
+import Blog from './src/pages/Blog';
+
+function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-white">
-        <ScrollToTop />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer />
-        <SEOOptimizer />
-        <MobileOptimizer />
-        <ModernSEOOptimizer />
-        <ModernMobileOptimizer />
-        <EnhancedAccessibilityPanel />
-        <ModernPerformanceMonitor />
-        <PerformanceDashboard />
-        <PerformanceEnhancer />
-        <AnalyticsDashboard />
-        <NotificationSystem />
-        <ContentManagementSystem />
-        <SEOAnalyzer />
-        <ErrorMonitoringSystem />
-        <NewContentBanner2026 />
-        <NewContentPromotionBanner2026 />
-        <AdvancedPerformanceOptimizer2025 />
-        <AdvancedSEOOptimizer2025 />
-        <AdvancedAnalyticsTracker2025 />
-        <EnhancedAccessibility2025 />
-        <MobileOptimizer2025 />
-        <Header />
-        <UltimatePromotionalBanner2026 />
-        
+    <Router>
+      <div className="App">
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -1430,10 +1408,9 @@ export default function App(): JSX.Element {
             </main>
           } />
         </Routes>
-        
-        <Footer />
       </div>
     </Router>
-    </ErrorBoundary>
   );
 }
+
+export default App;

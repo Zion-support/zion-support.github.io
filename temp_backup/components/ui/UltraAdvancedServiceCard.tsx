@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Star, TrendingUp, Users, Clock, 
   ArrowRight, ExternalLink, Check, 

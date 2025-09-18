@@ -1,24 +1,6 @@
 import React from 'react';
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const RevolutionaryCaseStudies2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Industries', icon: '🌟' },
-    { id: 'ai', name: 'AI Solutions', icon: '🤖' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', name: 'Neural Interfaces', icon: '🧠' },
-    { id: 'blockchain', name: 'Blockchain', icon: '🔗' },
-    { id: 'cloud', name: 'Cloud Services', icon: '☁️' }
-  ];
-
-import React from 'react';
-
-const RevolutionaryCaseStudies2025: React.FC = () => {
   const caseStudies = [
     {
       id: 1,
@@ -150,44 +132,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Case Studies Grid */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {caseStudies.map((study) => (
-            <div key={study.id} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-              {/* Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-4">
-                  <div className="text-6xl">{study.image}</div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
-                    <div className="flex items-center space-x-2 text-sm opacity-80">
-                      <span>{study.company}</span>
-                      <span>•</span>
-                      <span>{study.industry}</span>
-                    </div>
-                  </div>
-                </div>
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -233,9 +177,17 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   <div className="text-2xl font-bold text-green-400">{study.results.efficiency}</div>
                   <div className="text-xs opacity-80">Efficiency Gain</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">$12M</div>
-                  <div className="text-sm opacity-75">Annual Savings</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-blue-400">{study.results.costSavings}</div>
+                  <div className="text-xs opacity-80">Cost Savings</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-purple-400">{study.results.accuracy}</div>
+                  <div className="text-xs opacity-80">Accuracy Rate</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-orange-400">{study.results.timeReduction}</div>
+                  <div className="text-xs opacity-80">Time Reduction</div>
                 </div>
               </div>
 
@@ -259,10 +211,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           ))}
         </div>
 
-      {/* Statistics Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Impact in Numbers</h2>
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -284,9 +232,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               <div className="text-lg opacity-80">Average Accuracy</div>
             </div>
             <div className="text-center">
-            <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-lg opacity-90">Industries Served</div>
               <div className="text-5xl font-bold text-orange-400 mb-2">500+</div>
               <div className="text-lg opacity-80">Companies Transformed</div>
             </div>
@@ -304,11 +249,6 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               Start Your Transformation
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
-              Schedule Consultation
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-              View All Case Studies
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-              View All Case Studies
               Schedule Consultation
             </button>
           </div>

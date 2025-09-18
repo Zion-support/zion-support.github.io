@@ -1,6 +1,6 @@
 import React{ useState } from 'react';
 import Head from 'next/head';
-
+import { motionAnimatePresence } from 'framer-motion';
 import { 
   SearchStarUsersTrendingUp
   DollarSignClockCheckCircleArrowRight,

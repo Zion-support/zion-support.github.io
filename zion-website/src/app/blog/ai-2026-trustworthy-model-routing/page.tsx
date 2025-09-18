@@ -1,72 +1,59 @@
-// @ts-nocheck
-import Link from 'next/link'
-
 export default function TrustworthyModelRoutingPage() {
   return (
-    <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
-        <Link href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</Link>
-        <header className="mt-6 mb-10">
-          <div className="flex items-center gap-3 text-sm text-gray-300 mb-4">
-            <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-medium">Field Guide</span>
-            <time className="text-gray-400">2025-09-16</time>
-            <span className="text-gray-400">8 min read</span>
-          </div>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Trustworthy Model Routing (2026): Evidence‑Backed Decisions Under Budgets
+    <div className="min-h-screen bg-white">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <header className="mb-8">
+          <p className="text-sm text-gray-500">Blueprint • 2025-09-15</p>
+          <h1 className="mt-2 text-4xl font-bold text-gray-900">
+            AI 2026: Trustworthy Model Routing
           </h1>
-          <p className="mt-4 text-gray-300 max-w-3xl">
-            A practical field guide to build objective, auditable routing that balances quality, latency, and cost using eval gates, risk tiers, and policy‑as‑code.
+          <p className="mt-3 text-gray-600">
+            A practical blueprint for policy‑aware, evaluation‑driven routing that balances quality, latency,
+            and cost while producing audit‑ready evidence for every generation.
           </p>
         </header>
 
-        <article className="prose prose-invert prose-lg max-w-none">
-          <h2>Core Principles</h2>
-          <ul>
-            <li>Measure before you route: define SLIs and target SLOs.</li>
-            <li>Ground routing decisions in evals and risk signals.</li>
-            <li>Make budgets explicit: latency, cost, carbon, and risk.</li>
-            <li>Capture evidence: inputs, decisions, outcomes, and rollbacks.</li>
-          </ul>
-
-          <h2>Reference Architecture</h2>
+        <section className="prose prose-gray max-w-none">
+          <h2>Why model routing?</h2>
           <p>
-            Implement a routing controller that fetches model candidates, retrieves live signals
-            (quality, latency, cost), applies policy‑as‑code, and emits an auditable decision record.
+            No single model dominates across all tasks. Trustworthy routing selects the right model per
+            request using signals about task type, sensitivity, latency budgets, and historical evals.
           </p>
 
-          <pre><code>{`// pseudo
-const decision = route({
-  task, candidates, budgets: { p95LatencyMs: 800, maxCents: 12 },
-  signals: { groundedness, faithfulness, overrideRate },
-  policies: [guardrails.minQuality, guardrails.maxLatency, guardrails.riskTier]
-})
-if (!decision.ok) rollback()
-logEvidence(decision)
-`}</code></pre>
+          <h3>Core design principles</h3>
+          <ul>
+            <li>Policy‑as‑code defines risk tiers, prohibited behaviors, and approval thresholds.</li>
+            <li>Live evals and guardrail events provide objective signals for routing and rollback.</li>
+            <li>Budgets enforce latency and cost SLOs per route with automatic canaries.</li>
+            <li>Evidence bundles capture inputs, decisions, and outcomes for audits.</li>
+          </ul>
 
-          <h2>Operational Controls</h2>
+          <h3>Reference architecture</h3>
           <ol>
-            <li>Pre‑deployment eval suites with golden tasks.</li>
-            <li>Runtime canaries with automatic rollbacks.</li>
-            <li>Budget enforcement and anomaly alerts.</li>
-            <li>Weekly scorecards and incident‑ready postmortems.</li>
+            <li>Classifier identifies task and sensitivity, attaches policy context.</li>
+            <li>Router consults eval registry and budgets to choose candidate models.</li>
+            <li>Guardrails validate prompts, tools, and outputs with inline policies.</li>
+            <li>Traces, metrics, and evals stream to telemetry for continuous improvement.</li>
           </ol>
 
-          <h2>Rollout Checklist</h2>
+          <h3>Rollout playbook</h3>
           <ul>
-            <li>Define SLIs for quality, latency, cost, and safety.</li>
-            <li>Codify risk tiers and permissions for tool use.</li>
-            <li>Wire policy checks into CI/CD and runtime.</li>
-            <li>Publish evidence to your governance hub.</li>
+            <li>Start with offline benchmarks; promote to shadow tests; enable canaries.</li>
+            <li>Gate releases with eval thresholds and automatic abort switches.</li>
+            <li>Export signed evidence for compliance and post‑release reviews.</li>
           </ul>
 
-          <p className="mt-10">
-            Continue with our deep dives on <Link href="/updates/real-time-rag-benchmark-suite-1-0" className="text-blue-400">RAG benchmarking</Link> and
-            {' '}<Link href="/blog/ai-2026-enterprise-agent-observability-deep-dive" className="text-blue-400">agent observability</Link>.
+          <p className="mt-8">
+            See also the{' '}
+            <a href="/updates/trustworthy-model-routing-2026" className="text-blue-700 font-semibold">
+              Trustworthy Model Routing (2026 Preview)
+            </a>{' '}report and our{' '}
+            <a href="/updates/cost-aware-routing-live-evals" className="text-blue-700 font-semibold">
+              Cost‑Aware Routing blueprint
+            </a>.
           </p>
-        </article>
-      </div>
+        </section>
+      </article>
     </div>
   )
 }

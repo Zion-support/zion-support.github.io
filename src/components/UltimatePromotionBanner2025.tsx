@@ -1,143 +1,152 @@
-import React, { useState, useEffect } from 'react';
+'use client';
 
-const UltimatePromotionBanner2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentPromo, setCurrentPromo] = useState(0);
+import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+ArrowRightStarZapTargetUsersTrendingUpAward
 
-  const promotions = [
-    {
-      id: 1,
-      title: "🚀 ULTIMATE TECH REVOLUTION 2025",
-      subtitle: "Limited Time: 50% Off All Revolutionary Technologies",
-      description: "Experience the most advanced AI, quantum computing, and neural interface technologies at unprecedented prices.",
-      cta: "Get 50% Off Now",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900 via-indigo-900 to-blue-900",
-      icon: "🌟",
-      discount: "50%",
-      urgency: "Limited Time"
-    },
-    {
-      id: 2,
-      title: "⚛️ QUANTUM REALITY ENGINE",
-      subtitle: "Exclusive: Free Quantum Computing Trial",
-      description: "Be among the first to experience reality manipulation and parallel universe communication technology.",
-      cta: "Start Free Trial",
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-900 via-blue-900 to-indigo-900",
-      icon: "⚡",
-      discount: "FREE",
-      urgency: "Exclusive"
-    },
-    {
-      id: 3,
-      title: "🧠 NEURAL INTERFACE REVOLUTION",
-      subtitle: "Early Access: Mind Control Technology",
-      description: "Control devices with your mind and enhance your cognitive abilities with our revolutionary neural interfaces.",
-      cta: "Join Early Access",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900 via-teal-900 to-cyan-900",
-      icon: "🧬",
-      discount: "Early Access",
-      urgency: "Exclusive"
-    }
+const UltimatePromotionBanner2025 = () => {
+  const stats = [
+    { number: "15,000+"label: "Businesses Transformed"icon: Users },
+    { number: "95%"label: "Efficiency Increase"icon: TrendingUp },
+    { number: "500%"label: "Average ROI"icon: Target },
+    { number: "24/7"label: "AI Support"icon: Zap }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPromo((prev) => (prev + 1) % promotions.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, [promotions.length]);
-
-  const currentPromoData = promotions[currentPromo];
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
   return (
-    <div className={`bg-gradient-to-r ${currentPromoData.bgColor} text-white py-6 mb-8 relative overflow-hidden transition-all duration-500`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+    <div className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
       
-      {/* Close Button */}
-      <button
-        onClick={handleClose}
-        className="absolute top-3 right-3 text-white/70 hover:text-white transition-colors z-10"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-white/10 rounded-full animate-pulse delay-500"></div>
+      </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4 flex-1">
-            <div className="text-3xl animate-pulse">{currentPromoData.icon}</div>
-            <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-2">
-                <h2 className="text-2xl font-bold">{currentPromoData.title}</h2>
-                <span className={`px-3 py-1 bg-gradient-to-r ${currentPromoData.color} text-white text-sm font-bold rounded-full animate-pulse`}>
-                  {currentPromoData.discount}
-                </span>
-                <span className="px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">
-                  {currentPromoData.urgency}
-                </span>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
+            <Award className="w-5 h-5 mr-2" />
+            ULTIMATE BREAKTHROUGH 2025
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            The Future of
+            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              AI Technology
+            </span>
+            is Here
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Experience revolutionary AI solutions that transform businessesenhance productivity
+            and unlock unprecedented growth opportunities in 2025 and beyond.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a
+              href="#"
+              className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold text-lg rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            >
+              Start Your Transformation
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-200"
+            >
+              Watch Demo
+            </a>
+          </div>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((statindex) => {
+            const IconComponent = stat.icon;
+            return (
+              <div key={index} className="text-center group">
+                <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
+                  <IconComponent className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white/80 font-medium">
+                  {stat.label}
+                </div>
               </div>
-              <p className="text-lg opacity-90 mb-2">{currentPromoData.subtitle}</p>
-              <p className="text-sm opacity-80">{currentPromoData.description}</p>
+            );
+          })}
+        </div>
+
+        {/* Feature Highlights */}
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center group">
+            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
+              <Star className="w-8 h-8 text-yellow-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              Award-Winning Technology
+            </h3>
+            <p className="text-white/80">
+              Recognized by leading industry experts and tech publications worldwide
+            </p>
+          </div>
+
+          <div className="text-center group">
+            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
+              <Zap className="w-8 h-8 text-yellow-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              Lightning Fast Implementation
+            </h3>
+            <p className="text-white/80">
+              Get up and running in minutes with our streamlined setup process
+            </p>
+          </div>
+
+          <div className="text-center group">
+            <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
+              <Target className="w-8 h-8 text-yellow-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              Proven Results
+            </h3>
+            <p className="text-white/80">
+              Join thousands of successful businesses already using our solutions
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Limited Time: Get 50% Off Your First Year
+            </h3>
+            <p className="text-white/90 mb-6">
+              'Don', 't miss this exclusive opportunity to transform your business with cutting-edge AI technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-indigo-900 font-bold text-lg rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-200 transform hover:scale-105"
+              >
+                Claim Your Discount
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-200"
+              >
+                Learn More
+              </a>
             </div>
           </div>
-
-          <div className="flex items-center space-x-4">
-            <button className={`bg-gradient-to-r ${currentPromoData.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-              {currentPromoData.cta} →
-            </button>
-            <button className="text-white/80 hover:text-white transition-colors font-semibold text-sm">
-              Learn More
-            </button>
-          </div>
         </div>
-
-        {/* Progress Bar */}
-        <div className="mt-4">
-          <div className="w-full bg-white/20 rounded-full h-1">
-            <div 
-              className={`bg-gradient-to-r ${currentPromoData.color} h-1 rounded-full transition-all duration-1000`}
-              style={{ width: `${((currentPromo + 1) / promotions.length) * 100}%` }}
-            ></div>
-          </div>
-        </div>
-
-        {/* Promo Navigation */}
-        <div className="flex justify-center space-x-2 mt-4">
-          {promotions.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPromo(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                currentPromo === index
-                  ? 'bg-white scale-125'
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-4 left-4 text-xl opacity-20 animate-bounce">
-        🚀
-      </div>
-      <div className="absolute top-4 right-16 text-xl opacity-20 animate-bounce delay-1000">
-        ⚛️
-      </div>
-      <div className="absolute bottom-4 left-16 text-xl opacity-20 animate-bounce delay-2000">
-        🧠
       </div>
     </div>
   );

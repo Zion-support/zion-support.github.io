@@ -4,7 +4,7 @@
 
 import React from 'react',;
 import Head from 'next/head',;
-
+import { motion } from 'framer-motion',;
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react',;
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031',;
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031',;
@@ -34,7 +34,7 @@ export default function FuturisticServices2030Page() {
 
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';

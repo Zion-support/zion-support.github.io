@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   innovativeRealMicroSaasServices2025 
 } from '../data/2025-innovative-real-micro-saas-services';

@@ -47,10 +47,10 @@ function Header() {
 
 	const quickActions = [
 		{
-			name: 'New: Edge Agents Guide',
-			href: '/blog/ai-2026-edge-agents-production-guide',
+			name: 'Latest Insights',
+			href: '/blog/latest',
 			icon: Sparkles,
-			description: 'Fresh: production blueprint',
+			description: 'Read our newest research',
 			featured: true,
 			color: 'from-amber-500 to-orange-600'
 		},

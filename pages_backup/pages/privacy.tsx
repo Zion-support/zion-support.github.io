@@ -1,7 +1,7 @@
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 import React from 'react';

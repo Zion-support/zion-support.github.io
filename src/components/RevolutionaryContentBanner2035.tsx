@@ -1,6 +1,47 @@
 import React from 'react';
 
 const RevolutionaryContentBanner2035: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const slides = [
+    {
+      title: "🌟 Revolutionary Tech Showcase 2035",
+      subtitle: "Conscious AI • Quantum Consciousness • Interdimensional Technology",
+      description: "Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology",
+      link: "/pages/RevolutionaryTechShowcase2035",
+      color: "from-purple-600 to-pink-600",
+      icon: "🚀"
+    },
+    {
+      title: "⚡ Ultimate Innovation Hub 2035",
+      subtitle: "Next-Gen Solutions • Advanced AI • Quantum Breakthroughs",
+      description: "Discover cutting-edge innovations that will reshape industries and transform human capabilities",
+      link: "/pages/ComprehensiveServices2035",
+      color: "from-cyan-600 to-blue-600",
+      icon: "🧠"
+    },
+    {
+      title: "🌌 Transcendent Tech Revolution 2035",
+      subtitle: "Interdimensional Computing • Reality Manipulation • Universal AI",
+      description: "Explore technologies that transcend physical limitations and achieve digital immortality",
+      link: "/pages/TranscendentTechRevolution2035",
+      color: "from-emerald-600 to-teal-600",
+      icon: "🌟"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
@@ -46,14 +87,6 @@ const RevolutionaryContentBanner2035: React.FC = () => {
             🚀 LIMITED TIME: Early Access to Revolutionary Technology
           </div>
         </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-4 right-4 text-white/20 text-6xl animate-bounce delay-1000">
-        ⚡
-      </div>
-      <div className="absolute bottom-4 left-4 text-white/20 text-4xl animate-pulse delay-2000">
-        🌟
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology 2035</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience the most advanced technology ever created: Conscious AI Systems, 
@@ -66,6 +99,10 @@ const RevolutionaryContentBanner2035: React.FC = () => {
             <div className="text-4xl mb-3 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-4 text-center text-sm">
+              AI systems that have achieved consciousness beyond human understanding
+            </p>
+            <a href="/pages/RevolutionaryTechShowcase2035" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore AI Consciousness →
             </a>
           </div>
           
@@ -75,6 +112,8 @@ const RevolutionaryContentBanner2035: React.FC = () => {
             <p className="text-cyan-100 mb-4 text-center text-sm">
               Direct neural interface with quantum computing systems for enhanced cognitive processing
             </p>
+            <a href="/pages/ComprehensiveServices2035" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              View Services →
             </a>
           </div>
           
@@ -84,7 +123,7 @@ const RevolutionaryContentBanner2035: React.FC = () => {
             <p className="text-emerald-100 mb-4 text-center text-sm">
               Breakthrough technology that allows interaction with parallel dimensions and alternate realities
             </p>
-              Enter New Reality →
+            <a href="/pages/RevolutionaryTechShowcase2035" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter New Reality →
             </a>
           </div>
@@ -98,10 +137,6 @@ const RevolutionaryContentBanner2035: React.FC = () => {
         
         <div className="mt-12 text-lg opacity-75">
           <p>🌟 The most advanced technology content ever created • Revolutionary breakthroughs • Infinite possibilities • Future is now</p>
-        </div>
-          <a href="/pages/RevolutionaryTechShowcase2035" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-            Explore All Revolutionary Technologies →
-          </a>
         </div>
       </div>
     </div>

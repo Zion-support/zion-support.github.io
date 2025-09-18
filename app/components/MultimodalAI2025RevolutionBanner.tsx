@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Zap, Brain, Eye, Mic, Video, TrendingUp, CheckCircle } from 'lucide-react';
 
 const MultimodalAI2025RevolutionBanner: React.FC = () => {

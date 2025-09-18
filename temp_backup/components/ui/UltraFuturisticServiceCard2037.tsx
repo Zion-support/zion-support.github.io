@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ArrowRight, Zap, Clock } from 'lucide-react';
 
 interface Service {

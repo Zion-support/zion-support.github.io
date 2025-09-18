@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   ArrowRight, Star, Zap, Brain, Rocket, Shield, 
   Atom, Cpu, Cloud, Target, Users, Award,

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Brain, Zap, TrendingUp, Award } from 'lucide-react';
 
 const AdvancedNeuralNetworks2025Banner = () => {

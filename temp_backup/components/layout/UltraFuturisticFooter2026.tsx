@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Star, Mail, Phone, MapPin, 
   Linkedin, Github, Twitter, Facebook, Instagram, Youtube,

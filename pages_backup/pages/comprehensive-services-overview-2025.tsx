@@ -14,7 +14,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
 import React, { useState } from 'react',;
 import Head from 'next/head',;
-
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,
@@ -89,7 +89,7 @@ export default function ComprehensiveServicesOverviewPage() {
 
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,;
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,;

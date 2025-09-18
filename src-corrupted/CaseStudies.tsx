@@ -908,7 +908,7 @@ export default function CaseStudies() {
     "AI Research & Development"
   ];
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
 
 const CaseStudies = () => {
@@ -1007,7 +1007,7 @@ const CaseStudies = () => {
         timeframe: "36 months",
         teamSize: "25 network engineers"
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { CheckCircle, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
 
 export default function CaseStudies() {
@@ -1990,7 +1990,7 @@ const CaseStudies = () => {
   ];
 
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Building, 
   Users, 

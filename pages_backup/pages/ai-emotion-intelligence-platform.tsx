@@ -5,7 +5,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
   Zap, DollarSign, Shield, Mail, MapPin, Brain,
@@ -57,7 +57,7 @@ const features = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone

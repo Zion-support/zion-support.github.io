@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-
+import { motion } from 'framer-motion';
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
 import { useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
 import { useAnalytics } from '../hooks/useAnalytics';

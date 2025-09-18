@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Zap, Shield, Globe, Cpu, Database, Network, Cloud, Lock, Eye, Target, BarChart3, Lightbulb, Code, TestTube, Leaf, Car, Bot, Microscope, BrainCircuit, Phone, Mail, MapPin } from 'lucide-react';
 import { revolutionary2026MicroSaasV2 } from '../data/revolutionary-2026-micro-saas-v2';
 import { ultimate2026AIServicesV2 } from '../data/ultimate-2026-ai-services-v2';

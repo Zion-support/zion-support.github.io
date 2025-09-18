@@ -247,3 +247,4 @@ export default function FuturisticServicesShowcase2041() {
 }
 
 // Import motion from framer-motion
+import { motion } from 'framer-motion';

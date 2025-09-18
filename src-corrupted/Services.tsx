@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useState, useMemo } from 'react';
 import { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices';
 import React, { useState, useEffect } from 'react';
 import { SEO } from "@/components/SEO";
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { 
@@ -277,7 +277,7 @@ export default function Services() {
           </p>
 import React from 'react';
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 

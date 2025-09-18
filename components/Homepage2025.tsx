@@ -22,6 +22,7 @@ import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
 import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
+import InteractiveFeatures from './InteractiveFeatures';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -51,23 +52,31 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    // Featured content (Sept 18, 2025)
     {
-      title: 'Agent Rollback Patterns — Safe Recovery (2026)',
-      href: '/blog/ai-2026-agent-rollback-patterns',
-      tag: 'New',
-      gradient: 'from-amber-500 to-rose-600'
+      title: 'AI-Powered Business Transformation Guide',
+      href: '/blog/ai-powered-business-transformation-2025',
+      tag: 'Featured',
+      gradient: 'from-purple-500 to-pink-500'
     },
+    {
+      title: 'Quantum Computing Enterprise Applications',
+      href: '/blog/quantum-computing-enterprise-applications-2025',
+      tag: 'Quantum',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
+      title: 'AI Ops 2025: Autonomous Platforms',
+      href: '/blog/ai-ops-autonomous-platforms-2025',
+      tag: 'AI Ops',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    // Latest content (Sept 18, 2025)
     {
       title: 'Governed Real‑Time Observability (2026)',
       href: '/blog/ai-2026-governed-real-time-observability',
       tag: 'New',
       gradient: 'from-teal-500 to-emerald-600'
-    },
-    {
-      title: 'Governed Real‑Time Observability (2026)',
-      href: '/blog/ai-2026-governed-real-time-observability',
-      tag: 'New',
-      gradient: 'from-emerald-500 to-teal-600'
     },
     {
       title: 'Agent Release Scorecards — Evidence‑First (2026)',
@@ -98,6 +107,13 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-zero-trust-agents',
       tag: 'New',
       gradient: 'from-violet-500 to-indigo-500'
+    },
+    {
+      title: 'AI Ops 2025: Autonomous Platforms',
+      href: '/blog/ai-ops-autonomous-platforms-2025',
+      tag: 'AI Ops',
+      gradient: 'from-emerald-500 to-cyan-500'
+>>>>>>> 06262d699328 (feat: add new content, interactive features, and homepage improvements)
     },
     // Newly added content (Sept 16, 2025)
     {
@@ -613,13 +629,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Rollback patterns, real-time evals, and trustworthy routing now live.</p>
+                <p className="opacity-90">Real-time evals, edge agents, and trustworthy routing now live.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
-                <a href="/blog/ai-2026-agent-rollback-patterns" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
-                  <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Rollback Patterns — Safe Recovery (2026)</div>
-                  <div className="text-xs opacity-90">6 min • Reliability</div>
-                </a>
                 <a href="/blog/ai-2026-production-agent-postmortems-playbook" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Production Agent Postmortems — Playbook (2026)</div>
                   <div className="text-xs opacity-90">6 min • Reliability</div>
@@ -817,6 +829,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
       {/* Advanced Automation Banner 2026 */}
       <AdvancedAutomationBanner2026 />
+
+      {/* Interactive Features Section */}
+      <InteractiveFeatures />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">

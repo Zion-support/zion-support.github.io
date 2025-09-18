@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { Brain, Zap, Star, Users, Target } from 'lucide-react';
-
+import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 

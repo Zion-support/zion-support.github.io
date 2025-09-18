@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, RotateCcw, ChevronRight, ChevronLeft, Zap, Brain, Shield, Rocket, Cpu, Database, Atom } from 'lucide-react';
 
 interface DemoStep {

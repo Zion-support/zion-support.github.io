@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, X, Filter, TrendingUp, Clock, 
   Star, Zap, Brain, Shield, Rocket, 

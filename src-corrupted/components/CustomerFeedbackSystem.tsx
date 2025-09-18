@@ -1,4 +1,4 @@
-
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
 > {

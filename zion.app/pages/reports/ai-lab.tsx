@@ -11,9 +11,6 @@ interface ArticleEntry {
 export default function AILabPage() {
   const [items, setItems] = useState<ArticleEntry[]>([]);
   const [loading, setLoading] = useState(true);
-  const featured = items
-    .slice()
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0];
 
   useEffect(() => {
     async function load() {
@@ -35,13 +32,6 @@ export default function AILabPage() {
     <main className="max-w-5xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-4">AI Lab: Fresh Insights</h1>
       <p className="text-gray-600 mb-8">Continuously generated articles derived from public AI/IT research and news.</p>
-      {featured && (
-        <a href={featured.url} className="block mb-8 rounded-lg border p-5 bg-gradient-to-r from-indigo-50 to-purple-50 hover:from-indigo-100 hover:to-purple-100 transition">
-          <div className="text-xs uppercase tracking-wide text-indigo-700 font-semibold mb-1">Featured</div>
-          <div className="text-xl font-semibold text-indigo-900">{featured.title}</div>
-          <div className="text-sm text-indigo-700 mt-1">{new Date(featured.createdAt).toLocaleString()} • {featured.tags?.slice(0,3).join(', ')}</div>
-        </a>
-      )}
       {loading && <p>Loading…</p>}
       {!loading && items.length === 0 && <p>No content yet. Check back soon.</p>}
       <ul className="space-y-4">

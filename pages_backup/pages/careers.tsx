@@ -1,14 +1,14 @@
 
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
-
+import { motion } from "framer-motion";
 import React from 'react';
 ursor/integrate-build-improve-and-re-verify-8f7d
 import MainLayout from '../src/components/layout/MainLayout';
-
+import { motion } from 'framer-motion';
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
-
+import { motion } from "framer-motion";
 origin/main
 origin/automation-improvements-final
 import {
@@ -212,7 +212,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
-
+import { motion } from "framer-motion";
 import {;
   Users,;
   MapPin,;
@@ -361,7 +361,7 @@ origin/automation-improvements-final
 
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
-
+import { motion  } from './framer-motion';
 import {
   Users,
   MapPin,

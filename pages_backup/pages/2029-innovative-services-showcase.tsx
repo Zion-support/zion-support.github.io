@@ -5,7 +5,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion } from 'framer-motion',;
 import { 
   Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
   Phone, Mail, MapPin
@@ -32,7 +32,7 @@ export default function InnovativeServicesShowcase2029() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 import {
   Brain, Atom, Target, ArrowRight, CheckCircle, Star

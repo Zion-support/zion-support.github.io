@@ -33,30 +33,6 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <div className="relative group">
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
-              Revolutionary 2030+
-              <span className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                FUTURE
-              </span>
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="py-2">
-                <Link href="/ai-2030-future-innovation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
-                  🚀 AI 2030: Future Innovation Breakthrough (REVOLUTIONARY)
-                </Link>
-                <Link href="/quantum-consciousness-2036" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  🌟 Quantum Consciousness 2036 (TRANSCENDENT)
-                </Link>
-                <Link href="/interdimensional-tech-2037" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
-                  🌌 Interdimensional Technology 2037 (ULTIMATE)
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="relative group">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
               AI 2025
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
                 BREAKTHROUGH
@@ -90,19 +66,6 @@ function Header() {
                 </Link>
                 <Link href="/blog/ai-2025-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2025 Revolutionary Trends & Predictions (NEW)
-                </Link>
-                <div className="border-t border-gray-200 my-2"></div>
-                <Link href="/ai-2026-ultimate-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500">
-                  🚀 AI 2026: Ultimate Breakthrough (NEW)
-                </Link>
-                <Link href="/ai-2026-quantum-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
-                  ⚛️ AI 2026: Quantum Revolution (NEW)
-                </Link>
-                <Link href="/ai-2026-neural-interfaces" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500">
-                  🧠 AI 2026: Neural Interfaces (NEW)
-                </Link>
-                <Link href="/blog/ai-2026-ultimate-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  📖 AI 2026 Breakthrough Blog (NEW)
                 </Link>
                 <Link href="/ai-2025-comprehensive-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-violet-50 border-l-4 border-indigo-500">
                   🚀 AI 2025 Comprehensive Solutions (NEW)
@@ -1113,15 +1076,6 @@ function Header() {
             </span>
           </Link>
           <Link 
-            href="/tools" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
-          >
-            Tools
-            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-              NEW
-            </span>
-          </Link>
-          <Link 
             href="/resources" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
           >
@@ -1285,12 +1239,6 @@ function Footer() {
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
                 Case Studies
-              </Link>
-              <Link 
-                href="/tools" 
-                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
-              >
-                Tools
               </Link>
             </div>
           </div>

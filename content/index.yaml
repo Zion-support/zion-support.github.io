@@ -1,6 +1,6 @@
 content_index:
-  last_updated: "2025-09-16"
-  total_content_pieces: 50
+  last_updated: "2025-09-15"
+  total_content_pieces: 39
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -99,6 +99,7 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
+<<<<<<< HEAD
     - id: "data-governance-trust-security-2025"
       type: "blog"
       title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide"
@@ -114,6 +115,9 @@ content_index:
         approval_speed: "2x"
         audit_coverage: "100%"
         incidents_reduction: "40%"
+
+=======
+>>>>>>> origin/feat/new-content-2026-evals
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -197,7 +201,10 @@ content_index:
         projects: "500+"
         timeline: "6-8 months"
       reading_time: "28 min read"
+<<<<<<< HEAD
+=======
       
+>>>>>>> origin/feat/new-content-2026-evals
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
@@ -274,6 +281,8 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
+<<<<<<< HEAD
+=======
     - id: "ai-enterprise-automation-revolution"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution - 500% ROI"
@@ -289,7 +298,7 @@ content_index:
         savings: "$200M"
         satisfaction: "99.8%"
         time: "12 months"
- 
+
   new_case_studies:
     - id: "global-manufacturing-ai-transformation"
       type: "case-study"
@@ -315,6 +324,7 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
+>>>>>>> origin/feat/new-content-2026-evals
       featured: true
       is_new: true
       metrics:
@@ -438,137 +448,12 @@ content_index:
         timeframe: "6 months"
         phases: "3 phases"
         payback: "3.8 months"
+<<<<<<< HEAD
+
   newly_added_september_2025:
-    - id: "ai-2026-real-world-eval-gates-case-studies"
-      type: "blog"
-      title: "AI 2026: Real-World Eval Gates — Case Studies from Production"
-      file_path: "/content/blog/ai-2026-real-world-eval-gates-case-studies.md"
-      url: "/blog/ai-2026-real-world-eval-gates-case-studies"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "CI/CD", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      reading_time: "13 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-    - id: "ai-2026-agentic-sandbox-patterns"
-      type: "blog"
-      title: "AI 2026: Agentic Sandbox Patterns"
-      file_path: "/content/blog/ai-2026-agentic-sandbox-patterns.md"
-      url: "/blog/ai-2026-agentic-sandbox-patterns"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Agents", "Security", "Sandboxing", "Policy-as-Code", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        reliability: "99.9%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "ai-2026-agent-safety-observability-blueprint"
-      type: "blog"
-      title: "AI 2026: Agent Safety & Observability Blueprint"
-      file_path: "/content/blog/ai-2026-agent-safety-observability-blueprint.md"
-      url: "/blog/ai-2026-agent-safety-observability-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Agents", "Observability", "Evals", "Safety", "Governance"]
-      featured: true
-      is_new: true
-      reading_time: "14 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "ai-2026-live-evals-in-production-practical-guide"
-      type: "blog"
-      title: "AI 2026: Live Evals in Production — Practical Guide"
-      file_path: "/content/blog/ai-2026-live-evals-in-production-practical-guide.md"
-      url: "/blog/ai-2026-live-evals-in-production-practical-guide"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Reliability", "Governance", "Observability", "2026"]
-      featured: true
-      is_new: true
-      reading_time: "14 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "agent-observability-starter-kit-2026"
-      type: "resource"
-      title: "Agent Observability Starter Kit 2026"
-      file_path: "/content/resources/agent-observability-starter-kit-2026.md"
-      url: "/resources/agent-observability-starter-kit-2026"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Observability", "Evals", "Policy-as-Code", "Reliability"]
-      featured: true
-      is_new: true
-      reading_time: "10 min read"
-      metrics:
-        gate_pass_rate: "> 95%"
-        incident_mttr: "< 10 min"
-        approval_speed: "2x"
-    - id: "ai-2026-production-safety-checklist"
-      type: "blog"
-      title: "AI 2026: Production Safety Checklist"
-      file_path: "/content/blog/ai-2026-production-safety-checklist.md"
-      url: "/blog/ai-2026-production-safety-checklist"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Safety", "Change Management", "Reliability", "Evals", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        rollback_time: "< 5 min"
-        reliability: "99.9%"
-        audit_ready: true
-    - id: "ai-2026-evaluation-cookbook"
-      type: "blog"
-      title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
-      file_path: "/content/blog/ai-2026-evaluation-cookbook.md"
-      url: "/blog/ai-2026-evaluation-cookbook"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Reliability", "Policy-as-Code", "Observability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        coverage: "> 70% initial"
-        gate_pass_rate: "> 95%"
-        audit_ready: true
-    - id: "ai-2026-eval-gated-ci-cd-blueprint"
-      type: "blog"
-      title: "AI 2026: Eval‑Gated CI/CD Blueprint — Shipping Fast Without Breaking Things"
-      file_path: "/content/blog/ai-2026-eval-gated-ci-cd-blueprint.md"
-      url: "/blog/ai-2026-eval-gated-ci-cd-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-    - id: "ai-2026-agentic-observability-deep-dive"
-      type: "blog"
-      title: "AI 2026: Agentic Observability Deep Dive — Traces, Evals, and Safety Telemetry"
-      file_path: "/content/blog/ai-2026-agentic-observability-deep-dive.md"
-      url: "/blog/ai-2026-agentic-observability-deep-dive"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Observability", "Agents", "Evals", "Safety", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        latency_p95: "< 600ms"
-        citation_density: "> 0.9"
-        audit_ready: true
+<<<<<<< HEAD
+    - id: "ai-2026-evidence-driven-release-checklists"
+=======
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"
       title: "AI 2026: Sovereign AI Commerce — Autonomous Marketplaces"
@@ -612,84 +497,28 @@ content_index:
         citation_density: "> 0.9"
         audit_ready: true
     - id: "ai-2026-eval-driven-release-engineering"
+>>>>>>> origin/feat/new-content-promos
       type: "blog"
       title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
       file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
       url: "/blog/ai-2026-evidence-driven-release-checklists"
+=======
   new_resources:
     - id: "ai-transformation-checklist-2025"
       type: "resource"
       title: "AI Transformation Checklist 2025 - Complete Implementation Guide"
       file_path: "/content/resources/ai-transformation-checklist-2025.md"
       url: "/resources/ai-transformation-checklist-2025"
+>>>>>>> origin/feat/new-content-2026-evals
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Reliability", "Governance", "Progressive Delivery", "2026"]
       featured: true
       is_new: true
       metrics:
+<<<<<<< HEAD
         reliability: "99.9%"
         rollback_time: "< 5 min"
-        audit_ready: true
-
-    - id: "ai-2026-safe-rollouts-in-production"
-      type: "blog"
-      title: "AI 2026: Safe Rollouts in Production — Eval‑Gated Releases and Automated Rollback"
-      file_path: "/content/blog/ai-2026-safe-rollouts-in-production.md"
-      url: "/blog/ai-2026-safe-rollouts-in-production"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Progressive Delivery", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-
-    - id: "ai-2026-agentic-billing-controls"
-      type: "blog"
-      title: "AI 2026: Agentic Billing Controls — Budgets, Approvals, and Guardrails"
-      file_path: "/content/blog/ai-2026-agentic-billing-controls.md"
-      url: "/blog/ai-2026-agentic-billing-controls"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["AI", "Cost", "Governance", "Budgets", "Approvals", "Observability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        budget_breaches: "-60%"
-        approval_lead_time: "-50%"
-        cost_slo_coverage: "100% gated"
-
-    - id: "ai-2026-reliable-autonomy-operations"
-      type: "blog"
-      title: "AI 2026: Reliable Autonomy Operations — Gates, SLOs, and Runbooks"
-      file_path: "/content/blog/ai-2026-reliable-autonomy-operations.md"
-      url: "/blog/ai-2026-reliable-autonomy-operations"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Reliability", "Operations", "Evaluations", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        gate_pass_rate: "> 95%"
-        rollback_time: "< 5 min"
-        change_failure_rate: "< 3%"
-
-    - id: "ai-2026-autonomous-evidence-led-operations"
-      type: "blog"
-      title: "AI 2026: Autonomous Evidence‑Led Operations — Centralizing Evals, Incidents, and KPIs"
-      file_path: "/content/blog/ai-2026-autonomous-evidence-led-operations.md"
-      url: "/blog/ai-2026-autonomous-evidence-led-operations"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Operations", "Evaluations", "SLOs", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        approval_speed: "2x"
-        incident_reduction: "40%"
         audit_ready: true
 
     - id: "ai-2026-agent-platform-health-dashboard-starter"
@@ -706,21 +535,6 @@ content_index:
         availability: "99.9%"
         eval_pass_rate: "> 95%"
         cost_per_task: "tracked"
-
-    - id: "ai-2026-evidence-hub-architecture"
-      type: "blog"
-      title: "AI 2026: Evidence Hub Architecture — Unifying Evals, Incidents, and Approvals"
-      file_path: "/content/blog/ai-2026-evidence-hub-architecture.md"
-      url: "/blog/ai-2026-evidence-hub-architecture"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Governance", "Observability", "Reliability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        approval_speed: "2x"
-        incident_reduction: "40%"
-        audit_ready: true
     
     - id: "ai-2026-zero-trust-agent-architecture"
       type: "blog"
@@ -812,21 +626,13 @@ content_index:
         review_time: "-50%"
         coverage: "100% gated"
 
+<<<<<<< HEAD
     - id: "ai-2026-agent-evidence-hub-starter"
       type: "resource"
       title: "AI 2026: Agent Evidence Hub — Starter Kit"
       file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
       url: "/resources/ai-2026-agent-evidence-hub-starter"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evidence", "Operations", "Governance", "Audit", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        integration_time: "< 1 day"
-        audit_ready: true
-        coverage: "Incidents, Evals, Approvals"
-
+=======
     - id: "ai-2026-generative-ai-risk-register"
       type: "blog"
       title: "AI 2026: Generative AI Risk Register — Templates, Controls, and Evidence"
@@ -862,6 +668,7 @@ content_index:
       title: "AI 2026: Secure Agent Routing Strategies"
       file_path: "/content/blog/ai-2026-secure-agent-routing-strategies.md"
       url: "/blog/ai-2026-secure-agent-routing-strategies"
+>>>>>>> origin/feat/new-content-2025-09-15-b
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]
@@ -871,78 +678,11 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
-
-    - id: "ai-2026-secure-agent-operations-blueprint"
-      type: "blog"
-      title: "AI 2026: Secure Agent Operations — Blueprint"
-      file_path: "/content/blog/ai-2026-secure-agent-operations-blueprint.md"
-      url: "/blog/ai-2026-secure-agent-operations-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Operations", "Security", "Policy-as-Code", "Evals", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        incident_reduction: "40%"
-        rollback_time: "< 5 min"
-        audit_ready: true
-
-    - id: "ai-2026-agent-operations-checklist"
-      type: "resource"
-      title: "AI 2026: Agent Operations Checklist"
-      file_path: "/content/resources/ai-2026-agent-operations-checklist.md"
-      url: "/resources/ai-2026-agent-operations-checklist"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Operations", "Checklist", "Governance", "Reliability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        coverage: "Top 10 journeys"
-        adoption_time: "< 1 day"
-        audit_ready: true
-    - id: "ai-2026-foundational-model-routing-patterns"
-      type: "blog"
-      title: "AI 2026: Foundational Model Routing Patterns — Cost, Quality, and Latency"
-      file_path: "/content/blog/ai-2026-foundational-model-routing-patterns.md"
-      url: "/blog/ai-2026-foundational-model-routing-patterns"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Model Routing", "Cost Optimization", "Reliability", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        cost_reduction: "30-60%"
-        latency_p95: "stable"
-        quality: ">= target"
-    - id: "ai-2026-causal-evaluation-blueprint"
-      type: "blog"
-      title: "AI 2026: Causal Evaluation Blueprint — Measure Cause‑Effect Correctness"
-      file_path: "/content/blog/ai-2026-causal-evaluation-blueprint.md"
-      url: "/blog/ai-2026-causal-evaluation-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Causality", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        uplift_detection: ">= 5pp"
-        rollback_time: "< 5 min"
-        audit_ready: true
-    - id: "ai-2026-agent-postmortems-lessons-learned"
-      type: "blog"
-      title: "AI 2026: Agent Postmortems — Lessons Learned from Real Incidents"
-      file_path: "/content/blog/ai-2026-agent-postmortems-lessons-learned.md"
-      url: "/blog/ai-2026-agent-postmortems-lessons-learned"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Incidents", "Postmortems", "Reliability", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        repeat_incidents: "-40%"
-        remediation_lead_time: "-50%"
-        verification_evals: "wired"
+=======
+        downloads: "1000+"
+        success_rate: "95%"
+        implementation_time: "6-12 months"
+        roi: "300-500%"
   latest_2026_content:
     - id: "ai-2026-autonomous-evals-blueprint"
       type: "blog"
@@ -973,36 +713,7 @@ content_index:
         suites: "30+ scenario suites"
         gates: "Policy gates in CI/CD"
         reporting: "Automated regression reports"
-
-    - id: "ai-2026-safe-change-management-blueprint"
-      type: "blog"
-      title: "AI 2026: Safe Change Management — Eval‑Gated Releases, Rollbacks, and Approvals"
-      file_path: "/content/blog/ai-2026-safe-change-management-blueprint.md"
-      url: "/blog/ai-2026-safe-change-management-blueprint"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Change Management", "Evaluations", "Progressive Delivery", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        rollback_time: "< 5 min"
-        gate_pass_rate: "> 95%"
-        change_failure_rate: "< 3%"
-
-    - id: "ai-2026-evaluation-cookbook"
-      type: "blog"
-      title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
-      file_path: "/content/blog/ai-2026-evaluation-cookbook.md"
-      url: "/blog/ai-2026-evaluation-cookbook"
-      status: "published"
-      created: "2025-09-16"
-      tags: ["Evaluations", "Reliability", "Observability", "Policy-as-Code", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        coverage: "> 70% initial"
-        reliability: "> 95% gate pass"
-        audit_ready: true
+>>>>>>> origin/feat/new-content-2026-evals
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
@@ -1200,5 +911,17 @@ content_index:
         downtime_reduction: "85%"
         cost_savings: "60%"
         prediction_accuracy: "95%"
+<<<<<<< HEAD
       reading_time: "18 min read"
- 
+=======
+      reading_time: "18 min read"
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175

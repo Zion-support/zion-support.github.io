@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Zap, Brain, Atom, Shield, Rocket, 
   Globe, Mail, Phone, MapPin, ArrowRight,

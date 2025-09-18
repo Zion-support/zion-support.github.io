@@ -22,14 +22,14 @@ import React from 'react';
   ];
 
   const prohibitedActivities = [
-
+import { motion } from 'framer-motion';
 import { 
   FileText, Shield, CheckCircle, AlertTriangle, 
   Globe, Calendar, Scale, Users, ArrowRight,
   BookOpen, Lock, Zap, Building, Brain, Rocket
 } from 'lucide-react';
 
-
+import { motion } from 'framer-motion';
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -91,7 +91,7 @@ const Terms: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-
+import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';

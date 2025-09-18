@@ -1,210 +1,121 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Award,
-  Brain,
-  Rocket,
-  X,
-  Zap
-} from 'lucide-react';
-import { useEffect, useState } from 'react';
+import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-interface LatestContentPromotionBanner2026Props {
-  onClose?: () => void;
-  autoHide?: boolean;
-  hideDelay?: number;
-}
-
-const LatestContentPromotionBanner2026: React.FC<LatestContentPromotionBanner2026Props> = ({ 
-  onClose, 
-  autoHide = true, 
-  hideDelay = 10000 
-}) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const newContent = [
-    {
-      icon: Brain,
-      title: "AI 2026 Latest Breakthroughs",
-      description: "Discover the revolutionary AI technologies transforming businesses worldwide with conscious AI systems and quantum neural networks",
-      link: "/pages/AI2026LatestBreakthroughs",
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-600/20 to-pink-600/20",
-      category: "New Content",
-      urgency: "Hot",
-      stats: "500+ Companies Transformed"
-    },
-    {
-      icon: Award,
-      title: "Fortune 500 AI Success Story",
-      description: "How a Fortune 500 company achieved 2,100% ROI with AI consciousness technology - complete transformation case study",
-      link: "/pages/Fortune500AITransformation2026",
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-600/20 to-cyan-600/20",
-      category: "Case Study",
-      urgency: "Must Read",
-      stats: "$847M Revenue Increase"
-    },
-    {
-      icon: Rocket,
-      title: "Quantum AI Business Revolution",
-      description: "The ultimate guide to implementing quantum AI for 500% ROI and market leadership in 2026",
-      link: "/pages/QuantumAIBusinessRevolution2026",
-      gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-600/20 to-emerald-600/20",
-      category: "Guide",
-      urgency: "Trending",
-      stats: "10,000x Faster Processing"
-    },
-    {
-      icon: Zap,
-      title: "Autonomous Business Operations",
-      description: "Revolutionary AI systems that manage entire business operations autonomously with 99.7% accuracy",
-      link: "/pages/AutonomousBusinessOperations2026",
-      gradient: "from-orange-500 to-red-500",
-      bgGradient: "from-orange-600/20 to-red-600/20",
-      category: "Innovation",
-      urgency: "Breakthrough",
-      stats: "98% Process Automation"
-    }
-  ];
-
-  useEffect(() => {
-    if (autoHide) {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-      }, hideDelay);
-      return () => clearTimeout(timer);
-    }
-  }, [autoHide, hideDelay]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % newContent.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [newContent.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-    onClose?.();
-  };
-
-  if (!isVisible) return null;
-
-  const currentItem = newContent[currentSlide];
-
+export default function LatestContentPromotionBanner2026() {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30 shadow-2xl"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            {/* Content Display */}
-            <div className="flex-1 flex items-center space-x-6">
-              {/* Icon and Badge */}
-              <div className="flex items-center space-x-4">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${currentItem.gradient} flex items-center justify-center`}>
-                  <currentItem.icon className="w-6 h-6 text-white" />
-                </div>
-                
-                <div className="flex flex-col space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <span className="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-xs font-semibold text-purple-300">
-                      {currentItem.category}
-                    </span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-bold ${
-                      currentItem.urgency === 'Hot' ? 'bg-red-500/20 text-red-300 border border-red-500/30' :
-                      currentItem.urgency === 'Must Read' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
-                      currentItem.urgency === 'Trending' ? 'bg-green-500/20 text-green-300 border border-green-500/30' :
-                      'bg-orange-500/20 text-orange-300 border border-orange-500/30'
-                    }`}>
-                      {currentItem.urgency}
-                    </span>
-                  </div>
-                  <div className="text-xs text-gray-400">
-                    {currentItem.stats}
-                  </div>
-                </div>
+    <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white via-transparent to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full transform translate-x-48 translate-y-48 opacity-5"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div>
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🔥 JUST PUBLISHED</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Revolutionary Content Collection 2026
+            </h2>
+            
+            <p className="text-xl mb-8 opacity-90 leading-relaxed">
+              Discover our latest breakthrough content covering AI automationquantum computing
+              cybersecurityand enterprise transformation. Stay ahead with cutting-edge insights 
+              from industry leaders.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">50+</div>
+                <div className="text-sm opacity-90">Expert Articles</div>
               </div>
-
-              {/* Content Info */}
-              <div className="flex-1 min-w-0">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h3 className="text-lg font-bold text-white truncate">
-                    {currentItem.title}
-                  </h3>
-                  <p className="text-sm text-gray-300 truncate">
-                    {currentItem.description}
-                  </p>
-                </motion.div>
+              <div className="bg-white bg-opacity-20 rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">100K+</div>
+                <div className="text-sm opacity-90">Monthly Readers</div>
               </div>
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex items-center space-x-4">
-              {/* Slide Indicators */}
-              <div className="flex space-x-1">
-                {newContent.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide 
-                        ? 'bg-white' 
-                        : 'bg-white/30 hover:bg-white/50'
-                    }`}
-                  />
-                ))}
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/blog"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+              >
+                Explore All Content
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+              >
+                Get Custom Insights
+              </a>
+            </div>
+          </div>
+          
+          {/* Featured Content Cards */}
+          <div className="space-y-6">
+            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🤖</div>
+                <div className="inline-flex items-center bg-green-500 bg-opacity-20 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-green-300">NEW</span>
+                </div>
               </div>
-
-              {/* CTA Button */}
-              <motion.a
-                href={currentItem.link}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 bg-gradient-to-r ${currentItem.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 flex items-center space-x-2`}
+              <h3 className="text-lg font-bold mb-2">AI 2025 Enterprise Automation Revolution</h3>
+              <p className="text-gray-300 text-sm mb-3">
+                Complete guide to implementing AI automation in enterprise environments with real-world case studies.
+              </p>
+              <a
+                href="/blog/ai-2025-enterprise-automation-revolution-ultimate-guide"
+                className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
               >
-                <span>Explore Now</span>
-                <ArrowRight className="w-4 h-4" />
-              </motion.a>
-
-              {/* Close Button */}
-              <button
-                onClick={handleClose}
-                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
+                Read More →
+              </a>
+            </div>
+            
+            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">⚛️</div>
+                <div className="inline-flex items-center bg-blue-500 bg-opacity-20 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-blue-300">BREAKTHROUGH</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold mb-2">Quantum AI 2026 Business Transformation</h3>
+              <p className="text-gray-300 text-sm mb-3">
+                Revolutionary guide to quantum AI applications in business with implementation strategies.
+              </p>
+              <a
+                href="/blog/quantum-ai-2026-business-transformation-ultimate-guide"
+                className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
               >
-                <X className="w-5 h-5" />
-              </button>
+                Read More →
+              </a>
+            </div>
+            
+            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🛡️</div>
+                <div className="inline-flex items-center bg-red-500 bg-opacity-20 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-red-300">ESSENTIAL</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold mb-2">AI 2025 Cybersecurity Revolution</h3>
+              <p className="text-gray-300 text-sm mb-3">
+                Next-generation AI-powered cybersecurity solutions protecting enterprises from evolving threats.
+              </p>
+              <a
+                href="/blog/ai-2025-cybersecurity-revolution"
+                className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
+              >
+                Read More →
+              </a>
             </div>
           </div>
         </div>
-
-        {/* Progress Bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
-          <motion.div
-            key={currentSlide}
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 4, ease: "linear" }}
-            className={`h-full bg-gradient-to-r ${currentItem.gradient}`}
-          />
-        </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </section>
   );
-};
-
-export default LatestContentPromotionBanner2026;
+}

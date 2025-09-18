@@ -21,7 +21,7 @@ import { Card, CardContent, CardHeader  } from '@/components/ui/card';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
 import { NextSeo } from '@/components/NextSeo';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
@@ -181,7 +181,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 import { use_router } from 'next / router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { use_translation } from 'react - i18next';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
 import { NextSeo } from '@/components / NextSeo';
 import { useInfiniteScrollPagination } from '@/hooks / useInfiniteScroll';

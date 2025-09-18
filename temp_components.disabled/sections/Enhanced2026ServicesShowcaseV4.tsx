@@ -1,5 +1,5 @@
 import React{ useState } from 'react';
-
+import { motionAnimatePresence } from 'framer-motion';
 StarTrendingUpUsersZapArrowRightCheckCircleClockDollarSign
 import Link from 'next/link';
 

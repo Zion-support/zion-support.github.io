@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, Star,
   Brain, Atom, Shield, Zap

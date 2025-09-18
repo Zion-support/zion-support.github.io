@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion  } from 'framer-motion';
 export default function Page(props: any) {
 ,"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"

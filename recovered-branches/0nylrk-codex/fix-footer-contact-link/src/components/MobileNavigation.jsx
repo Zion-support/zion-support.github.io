@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, Search, User, Bell } from 'lucide-react';
 const MobileNavigation = ({ isOpen, onToggle }) => {
     const [activeDropdown, setActiveDropdown] = useState(null);

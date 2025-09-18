@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Phone, Mail } from 'lucide-react';
 
 export default function FuturisticNav() {

@@ -9,7 +9,7 @@ const FutureTechTrends2025 = () => {
             Future Tech Trends 2025
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Revolutionary technology solutions and insights for the future
+            Discover the revolutionary technology trends that will shape the future
           </p>
         </div>
         
@@ -17,44 +17,41 @@ const FutureTechTrends2025 = () => {
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Revolution</h3>
             <p className="text-gray-300 mb-4">
-              Artificial intelligence transforming every industry
+              Artificial intelligence is transforming every industry with unprecedented capabilities
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Machine learning advances</li>
-              <li>• Natural language processing</li>
-              <li>• Computer vision breakthroughs</li>
+              <li>• Generative AI</li>
+              <li>• Autonomous Systems</li>
+              <li>• AI-Powered Automation</li>
+              <li>• Conversational AI</li>
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Quantum Computing</h3>
             <p className="text-gray-300 mb-4">
-              Next-generation computing power and capabilities
+              Quantum computing is solving problems that were previously impossible
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Quantum algorithms</li>
-              <li>• Quantum simulation</li>
-              <li>• Quantum optimization</li>
+              <li>• Quantum Supremacy</li>
+              <li>• Quantum Algorithms</li>
+              <li>• Quantum Cryptography</li>
+              <li>• Quantum Machine Learning</li>
             </ul>
           </div>
           
-          <div className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 rounded-xl p-6 backdrop-blur-sm border border-pink-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-pink-300">Neural Interfaces</h3>
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Neural Interfaces</h3>
             <p className="text-gray-300 mb-4">
-              Direct brain-computer interfaces and communication
+              Direct brain-computer interfaces are becoming a reality
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Brain-computer interfaces</li>
-              <li>• Neural signal processing</li>
-              <li>• Thought-controlled systems</li>
+              <li>• Brain-Computer Interfaces</li>
+              <li>• Neural Prosthetics</li>
+              <li>• Thought-Controlled Devices</li>
+              <li>• Memory Enhancement</li>
             </ul>
           </div>
-        </div>
-        
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-            Explore Trends
-          </button>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 const FeaturedContentShowcase2026 = () => {
@@ -11,16 +12,6 @@ const FeaturedContentShowcase2026 = () => {
       href: "/blog/ai-2026-enterprise-transformation-ultimate-guide",
       featured: true,
       tags: ["Enterprise AI", "Transformation", "2026", "Implementation"]
-    },
-    {
-      title: "Governed Agent Tool‑Use Patterns",
-      description: "Risk‑tiered autonomy, eval‑gated tools, and policy‑as‑code patterns for safe tool‑use.",
-      category: "Governance",
-      readTime: "10 min read",
-      image: "/images/agent-tool-use-governance.jpg",
-      href: "/blog/ai-2026-governed-agent-tool-use-patterns",
-      featured: true,
-      tags: ["Agents", "Tool‑Use", "Policy‑as‑Code", "Evals"]
     },
     {
       title: "Quantum AI 2026 Business Revolution",

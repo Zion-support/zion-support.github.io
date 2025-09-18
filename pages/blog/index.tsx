@@ -1,8 +1,14 @@
+import type { NextPage } from 'next';
 import Head from 'next/head'
 import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  // Featured content (Sept 18, 2025)
+  { slug: 'ai-powered-business-transformation-2025', title: 'AI-Powered Business Transformation Guide', excerpt: 'Discover how AI is revolutionizing business operations, from autonomous workflows to intelligent decision-making systems.' },
+  { slug: 'quantum-computing-enterprise-applications-2025', title: 'Quantum Computing Enterprise Applications', excerpt: 'Explore how quantum computing is solving complex business problems and creating new opportunities for enterprise innovation.' },
+  { slug: 'ai-ops-autonomous-platforms-2025', title: 'AI Ops 2025: Autonomous Platforms in Production', excerpt: 'Design, ship, and run AI-driven autonomous platforms safely in 2025.' },
+  // Latest content
   { slug: 'ai-2026-autonomous-incident-response-blueprint', title: 'Autonomous Incident Response Blueprint (2026)', excerpt: 'Close the loop from detection to remediation with safe, auditable autonomy.' },
   { slug: 'ai-2026-reliable-autonomy-operations', title: 'Reliable Autonomy Operations (2026)', excerpt: 'Operate agents safely with SLOs, eval gates, incidents, and governed tools.' },
   { slug: 'ai-2026-agent-slo-scorecards', title: 'Agent SLO Scorecards (2026)', excerpt: 'Objective gates for safe autonomy rollouts.' },
@@ -11,9 +17,7 @@ const posts = [
   { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
   { slug: 'ai-2026-agentic-observability-deep-dive', title: 'Agentic Observability — Deep Dive (2026)', excerpt: 'Traces, policy events, and evidence that keep agents reliable.' },
   { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
-  { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
-  { slug: 'ai-2026-agent-observability-blueprint', title: 'Agent Observability Blueprint (2026)', excerpt: 'Traces, evals, guardrails, incidents, and SLOs for production AI agents.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },

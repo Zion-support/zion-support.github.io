@@ -291,7 +291,7 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
               </div>;
             </Link>;
 import React, { useState } from 'react';
-
+import { motion  } from 'framer-motion';
 
 export default function Page() {;";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";

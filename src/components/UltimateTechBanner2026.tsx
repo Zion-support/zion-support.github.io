@@ -1,98 +1,102 @@
 import React, { useState, useEffect } from 'react';
 
 const UltimateTechBanner2026: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
+  const [currentMessage, setCurrentMessage] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-  const banners = [
+  const messages = [
     {
-      title: "🧬 Advanced Biotech AI 2026",
-      subtitle: "Revolutionary healthcare technology powered by AI",
-      link: "/pages/AdvancedBiotechAI2026",
-      gradient: "from-green-500 to-blue-500",
-      bgGradient: "from-green-600/20 to-blue-600/20"
+      text: "🌟 NEW: Ultimate Tech Revolution 2026 - Experience the convergence of all revolutionary technologies",
+      action: "Explore Now",
+      link: "/pages/UltimateTechRevolution2026",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "🚀 Advanced Space Tech 2026",
-      subtitle: "Next-generation space exploration and satellite technology",
-      link: "/pages/AdvancedSpaceTech2026",
-      gradient: "from-indigo-500 to-purple-500",
-      bgGradient: "from-indigo-600/20 to-purple-600/20"
+      text: "🧠 BREAKTHROUGH: Transcendent AI - Witness AI evolution beyond human comprehension",
+      action: "Discover",
+      link: "/pages/TranscendentAI2026",
+      color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "🌈 Holographic Reality 2026",
-      subtitle: "Immersive holographic experiences and mixed reality",
-      link: "/pages/AdvancedHolographicReality2026",
-      gradient: "from-cyan-500 to-purple-500",
-      bgGradient: "from-cyan-600/20 to-purple-600/20"
+      text: "📚 FEATURED: Revolutionary Tech Blog - Dive deep into groundbreaking innovations",
+      action: "Read More",
+      link: "/pages/RevolutionaryTechBlog2026",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      text: "⚛️ QUANTUM: Neural-Quantum Fusion - Infinite processing power beyond classical physics",
+      action: "Learn More",
+      link: "/pages/QuantumNeuralFusion2026",
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentMessage((prev) => (prev + 1) % messages.length);
+        setIsVisible(true);
+      }, 300);
     }, 4000);
-    return () => clearInterval(timer);
-  }, [banners.length]);
+
+    return () => clearInterval(interval);
+  }, [messages.length]);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    setTimeout(() => {
+      // Banner stays hidden for 30 seconds
+      setTimeout(() => setIsVisible(true), 30000);
+    }, 300);
+  };
+
+  if (!isVisible) return null;
 
   return (
-    <div className="relative overflow-hidden rounded-2xl mb-12">
-      <div 
-        className={`bg-gradient-to-r ${banners[currentBanner].bgGradient} backdrop-blur-sm transition-all duration-1000 ease-in-out`}
-      >
-        <div className="relative z-10 p-8 md:p-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold mb-4 animate-pulse">
-                  🌟 BREAKTHROUGH TECHNOLOGY • 2026
-                </div>
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                  {banners[currentBanner].title}
-                </h2>
-                <p className="text-xl text-white/90 mb-6">
-                  {banners[currentBanner].subtitle}
+    <div className="relative overflow-hidden">
+      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4 flex-1">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold">LIVE</span>
+              </div>
+              <div className={`transition-all duration-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
+                <p className="text-lg font-medium">
+                  {messages[currentMessage].text}
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <a 
-                    href={banners[currentBanner].link}
-                    className={`bg-gradient-to-r ${banners[currentBanner].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
-                  >
-                    Explore Now →
-                  </a>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-                    Learn More
-                  </button>
-                </div>
               </div>
-              <div className="text-center">
-                <div className={`w-48 h-48 mx-auto bg-gradient-to-br ${banners[currentBanner].gradient} rounded-2xl flex items-center justify-center text-6xl opacity-80 animate-pulse`}>
-                  {banners[currentBanner].title.split(' ')[0]}
-                </div>
-              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <a
+                href={messages[currentMessage].link}
+                className={`bg-gradient-to-r ${messages[currentMessage].color} text-white px-6 py-2 rounded-full text-sm font-bold hover:shadow-lg transition-all duration-300 hover:scale-105`}
+              >
+                {messages[currentMessage].action} →
+              </a>
+              <button
+                onClick={handleDismiss}
+                className="text-gray-400 hover:text-white transition-colors p-1"
+                title="Dismiss for 30 seconds"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute top-20 right-20 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-32 right-1/3 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-3000"></div>
-        </div>
       </div>
-
-      {/* Navigation Dots */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentBanner ? 'bg-white' : 'bg-white/30'
-            }`}
-          />
-        ))}
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+        <div className="absolute top-2 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-2 right-8 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
+        <div className="absolute bottom-2 left-12 w-1.5 h-1.5 bg-pink-400 rounded-full animate-pulse"></div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Rocket, Shield, Atom, Globe, BookOpen, Building, ChevronDown, Menu, X, Star } from 'lucide-react';
 
 interface NavigationItem {

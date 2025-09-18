@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   FileText, Calendar, Download, Mail, Phone, 
   Globe, Users, TrendingUp, Award, Star, 

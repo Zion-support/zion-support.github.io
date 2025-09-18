@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
 import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
@@ -686,7 +686,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
                 </a>
 import React, {useState, useMemo, useCallback, useEffect} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 import {Search,
             Filter,
             Star,

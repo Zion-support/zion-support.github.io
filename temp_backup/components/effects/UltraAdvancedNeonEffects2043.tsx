@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface NeonEffectProps {
   children: React.ReactNode;

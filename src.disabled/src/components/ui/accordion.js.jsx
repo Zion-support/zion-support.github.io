@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
 'use client';'''; import * as _React from 'react';'''; import * as AccordionPrimitive from '@radix-ui/react-accordion';'''; import { ChevronDown } from 'lucide-react';'''; import { cn } from '@/lib/utils'; const AccordionItem = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> />''; ));'''; AccordionItem.displayName = 'AccordionItem'; const AccordionTrigger = _React.forwardRef(); ({ className,children,...props },ref) => (; <AccordionPrimitive.Header className="flex"> <div>Broken JSX</div> 'flex flex-1 items-center justify-between py-4 font-medium transition-all "hover": underline [&[data-state=open]>svg]:rotate-180',; className; )} {...props} >"; {children} <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" /> ></div> ></div> ); ); AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName; const AccordionContent = _React.forwardRef(); ({ className,children,...props },ref) => (; <div>Broken JSX</div> >'; <div className={cn('pb-4 pt-0',className)}>{children}></div> ></div> ); ); AccordionContent.displayName = AccordionPrimitive.Content.displayName; export { Accordion,AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent };
 'use client\';\''\'; import * as React from \'react\';\''\'; import * as AccordionPrimitive from \'@radix-ui/react-accordion\';\''\'; import { ChevronDown } from \'lucide-react\';\''\'; import { cn } from \'@/lib/utils\'; const AccordionItem = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> />\''; ));\''\'; AccordionItem.displayName = \'AccordionItem\'; const AccordionTrigger = React.forwardRef(); ({ className,children,...props },ref) => (; <AccordionPrimitive.Header className=\"flex\"> <div>Broken JSX</div> \'flex flex-1 items-center justify-between py-4 font-medium transition-all \"hover\": underline [&[data-state=open]>svg]:rotate-180\',; className; )} {...props} >\"; {children} <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" /> ></div> ></div> ); ); AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName; const AccordionContent = React.forwardRef(); ({ className,children,...props },ref) => (; <div>Broken JSX</div> >\'; <div className={cn(\'pb-4 pt-0\',className)}>{children}></div> ></div> ); ); AccordionContent.displayName = AccordionPrimitive.Content.displayName; export { Accordion,AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent };
 "use client";"""; import * as React from "react";"""; import * as AccordionPrimitive from "@radix-ui/react-accordion";"""; import { ChevronDown } from "lucide-react";"""; import { cn } from "@/lib/utils"; const AccordionItem = React.forwardRef(({ className,.props },ref) => (; <div>Broken JSX</div> />""; ));"""; AccordionItem.displayName = "AccordionItem"; const AccordionTrigger = React.forwardRef(); ({ className,children,.props },ref) => (; <AccordionPrimitive.Header className="flex"> <div>Broken JSX</div> "flex flex-1 items-center justify-between py-4 font-medium transition-all hover: underline [&[data-state=open]>svg]:rotate-180",; className; )} {.props} >"; {children} <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" /> ></div> ></div> ); ); AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName; const AccordionContent = React.forwardRef(); ({ className,children,.props },ref) => (; <div>Broken JSX</div> >"; <div className={cn("pb-4 pt-0",className)}>{children}></div> ></div> ); ); AccordionContent.displayName = AccordionPrimitive.Content.displayName; export { Accordion,AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent };'"'"
 'use client';'''; import * as _React from 'react';'''; import * as AccordionPrimitive from '@radix-ui/react-accordion';'''; import { ChevronDown } from 'lucide-react';'''; import { cn } from '@/lib/utils'; const AccordionItem = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> />''; ));'''; AccordionItem.displayName = 'AccordionItem'; const AccordionTrigger = _React.forwardRef(); ({ className,children,...props },ref) => (; <AccordionPrimitive.Header className="flex"> <div>Broken JSX</div> 'flex flex-1 items-center justify-between py-4 font-medium transition-all "hover": underline [&[data-state=open]>svg]:rotate-180',; className; )} {...props} >"; {children} <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" /> ></div> ></div> ); ); AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName; const AccordionContent = _React.forwardRef(); ({ className,children,...props },ref) => (; <div>Broken JSX</div> >'; <div className={cn('pb-4 pt-0',className)}>{children}></div> ></div> ); ); AccordionContent.displayName = AccordionPrimitive.Content.displayName; export { Accordion,AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent }; export { AccordionItem,AccordionTrigger,AccordionContent };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs

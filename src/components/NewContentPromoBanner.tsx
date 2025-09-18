@@ -1,31 +1,47 @@
-import { getRecentBlogPosts } from '../data/blog-posts';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewContentPromoBanner: React.FC = () => {
-	const recent = getRecentBlogPosts(3);
-
-	return (
-		<div className="px-4 md:px-8 lg:px-12 py-8 bg-gradient-to-r from-indigo-900 via-purple-900 to-fuchsia-900 rounded-xl border border-purple-500/30">
-			<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Latest from the blog</h2>
-			<p className="text-purple-200/90 mb-6">Fresh insights on reliable autonomy, trusted RAG, and cost-aware routing.</p>
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-				{recent.map(post => (
-					<a key={post.slug} href={`/blog/${post.slug}`} className="group block rounded-lg bg-black/20 hover:bg-black/30 transition-colors border border-white/10 overflow-hidden">
-						{post.imageUrl ? (
-							<div className="h-40 w-full overflow-hidden">
-								<img src={post.imageUrl} alt={post.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-							</div>
-						) : null}
-						<div className="p-4">
-							<div className="text-xs text-purple-300/80 mb-1">{post.category} • {post.readTime}</div>
-							<h3 className="text-white font-medium leading-snug line-clamp-2">{post.title}</h3>
-							<p className="mt-2 text-purple-200/80 text-sm line-clamp-2">{post.excerpt}</p>
-							<div className="mt-3 text-fuchsia-300 group-hover:text-fuchsia-200 text-sm">Read more →</div>
-						</div>
-					</a>
-				))}
-			</div>
-		</div>
-	);
+  return (
+    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-3xl animate-bounce">🚀</span>
+          <h3 className="text-2xl font-bold">NEW BREAKTHROUGH CONTENT - JANUARY 2025</h3>
+          <span className="text-3xl animate-bounce">🚀</span>
+        </div>
+        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto text-center">
+          Discover our latest insights on AI automation revolution, quantum computing breakthroughs, and enterprise transformation success stories
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <Link 
+            to="/blog/ai-2025-next-generation-business-automation-revolution" 
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
+          >
+            🤖 AI Automation Revolution →
+          </Link>
+          <Link 
+            to="/blog/quantum-computing-2025-business-breakthrough-guide" 
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
+          >
+            ⚡ Quantum Computing Guide →
+          </Link>
+          <Link 
+            to="/case-studies/ai-automation-enterprise-transformation-success" 
+            className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center"
+          >
+            📈 Success Story →
+          </Link>
+        </div>
+        <div className="text-center mt-6">
+          <p className="text-sm opacity-80">
+            🎯 Featured: Enterprise case study with $15M annual savings and 300% productivity gains
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default NewContentPromoBanner;

@@ -1,8 +1,3 @@
-export const metadata = {
-  title: 'Incident Simulation Toolkit v1.1 — Guide',
-  description: 'Run realistic failure drills with eval gates, evidence capture, and rollback practice.',
-}
-
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">

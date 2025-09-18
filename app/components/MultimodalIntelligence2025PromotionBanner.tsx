@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
 
 const MultimodalIntelligence2025PromotionBanner: React.FC = () => {

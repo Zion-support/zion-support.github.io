@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, Star, Brain, Zap, Shield, Users, TrendingUp, P
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-
+import { motion } from 'framer-motion';
 
 export default function AIConsciousnessSimulatorPro() {
   const contactInfo = {

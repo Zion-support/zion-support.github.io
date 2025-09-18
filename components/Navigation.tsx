@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -16,11 +16,11 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 import React, { useState } from './react';
 import Link from './next / link';
-
+import { motion, AnimatePresence  } from './framer-motion';
 
 import {
   Menu,
@@ -65,7 +65,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 import React, { useState } from "react";
 import Link from "next/link";
-
+import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
 

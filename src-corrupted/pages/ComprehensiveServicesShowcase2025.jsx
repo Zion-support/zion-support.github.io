@@ -1,5 +1,5 @@
 import React, {useState} from 'react';'''
-
+import {motion} from 'framer-motion';
 import {Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search} from 'lucide-react';
 import {CUTTING_EDGE_SERVICES_2025} from "../data/enhanced-2025-cutting-edge-services.jsx";
 import {SPECIALIZED_INDUSTRY_SOLUTIONS_2025} from "../data/specialized-industry-solutions-2025.jsx";

@@ -35,7 +35,7 @@ const QuantumAIRevolution2026 = () => {
                 Get Quantum Access
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

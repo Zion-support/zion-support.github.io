@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Linkedin, Twitter, Globe, Mail, Phone, MapPin, 
   Award, Users, Rocket, Brain, Shield, Cloud, Code,

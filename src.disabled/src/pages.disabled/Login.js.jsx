@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
 import _React,{ useState } from 'react';'''; import { SEO } from '@/components/SEO';'''; import { GradientHeading } from '@/components/GradientHeading';'''; import { Button } from '@/components/ui/button'; export {}; return null} const { isAuthenticated,user,isLoading } = useAuth(); const navigate = useNavigate(); const location = useLocation(); const { dispatch } = useCart(); const reduxDispatch = useDispatch(); useEffect(() => {} const params = new URLSearchParams(location.search);'; const token = params.get('token'); if (token) {} '; ''; '''; safeStorage.setItem('zion_token',token); router(location.pathname,{ "replace": 'true' });} },[location.search,location.pathname,navigate]); useEffect ( () => {} if (!isLoading && isAuthenticated) {} reduxDispatch(setLoggedIn(true));'; const next =''; new URLSearchParams(location.search).get('next') || '/dashboard'; router(next,{ "replace": 'true' });} },[isAuthenticated,isLoading,navigate,reduxDispatch,location.search]); if (!isAuthenticated && !isLoading) {} return(); <ErrorBoundary FallbackComponent={LoginErrorFallback}> <LoginContent /> ></div> );} ; if (isLoading) {} return <div className="p-4 text-center text-foreground">Loading...</div>} ; return null} ; export { Login }; export { Login }; export { Login }; export { Login }; export { Login };
 import React,{ useState } from \'react\';\''\'; import { SEO } from \'@/components/SEO\';\''\'; import { GradientHeading } from \'@/components/GradientHeading\';\''\'; import { Button } from \'@/components/ui/button\'; export {}; return null} const { isAuthenticated,user,isLoading } = useAuth(); const navigate = useNavigate(); const location = useLocation(); const { dispatch } = useCart(); const reduxDispatch = useDispatch(); useEffect(() => {} const params = new URLSearchParams(location.search);\'; const token = params.get(\'token\'); if (token) {} \'; \''; \''\'; safeStorage.setItem(\'zion_token\',token); router(location.pathname,{ \"replace\": \'true\' });} },[location.search,location.pathname,navigate]); useEffect ( () => {} if (!isLoading && isAuthenticated) {} reduxDispatch(setLoggedIn(true));\'; const next =\''; new URLSearchParams(location.search).get(\'next\') || \'/dashboard\'; router(next,{ \"replace\": \'true\' });} },[isAuthenticated,isLoading,navigate,reduxDispatch,location.search]); if (!isAuthenticated && !isLoading) {} return(); <ErrorBoundary FallbackComponent={LoginErrorFallback}> <LoginContent /> ></div> );} ; if (isLoading) {} return <div className=\"p-4 text-center text-foreground\">Loading...</div>} ; return null} ; export { Login }; export { Login }; export { Login }; export { Login }; export { Login };
 const React,{ useState } from "react";"""; import { SEO } from "@/components/SEO";"""; import { GradientHeading } from "@/components/GradientHeading";"""; import { Button } from "@/components/ui/button"; export {}; return null} const { isAuthenticated,user,isLoading } = useAuth(); const navigate = useNavigate(); const location = useLocation(); const { dispatch } = useCart(); const reduxDispatch = useDispatch(); useEffect(() => {} const params = new URLSearchParams(location.search);"; const token = params.get("token"); if (token) {} "; ""; """; safeStorage.setItem("zion_token",token); router(location.pathname,{ replace: "true" });} },[location.search,location.pathname,navigate]); useEffect ( () => {} if (!isLoading && isAuthenticated) {} reduxDispatch(setLoggedIn(true));"; const next =""; new URLSearchParams(location.search).get("next") | "/dashboard"; router(next,{ replace: "true" });} },[isAuthenticated,isLoading,navigate,reduxDispatch,location.search]); if (!isAuthenticated && !isLoading) {} return(); <ErrorBoundary FallbackComponent={LoginErrorFallback}> <LoginContent /> ></div> );} ; if (isLoading) {} return <div className="p-4 text-center text-foreground">Loading.</div>} ; return null} ; export { Login }; export { Login }; export { Login }; export { Login }; export { Login };"""
 import _React,{ useState } from 'react';'''; import { SEO } from '@/components/SEO';'''; import { GradientHeading } from '@/components/GradientHeading';'''; import { Button } from '@/components/ui/button'; export {}; return null} const { isAuthenticated,user,isLoading } = useAuth(); const navigate = useNavigate(); const location = useLocation(); const { dispatch } = useCart(); const reduxDispatch = useDispatch(); useEffect(() => {} const params = new URLSearchParams(location.search);'; const token = params.get('token'); if (token) {} '; ''; '''; safeStorage.setItem('zion_token',token); router(location.pathname,{ "replace": 'true' });} },[location.search,location.pathname,navigate]); useEffect ( () => {} if (!isLoading && isAuthenticated) {} reduxDispatch(setLoggedIn(true));'; const next =''; new URLSearchParams(location.search).get('next') || '/dashboard'; router(next,{ "replace": 'true' });} },[isAuthenticated,isLoading,navigate,reduxDispatch,location.search]); if (!isAuthenticated && !isLoading) {} return(); <ErrorBoundary FallbackComponent={LoginErrorFallback}> <LoginContent /> ></div> );} ; if (isLoading) {} return <div className="p-4 text-center text-foreground">Loading...</div>} ; return null} ; export { Login }; export { Login }; export { Login }; export { Login }; export { Login };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs

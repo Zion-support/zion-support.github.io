@@ -1,24 +1,32 @@
-export default function Page() {
+
+export default function MultimodalRagBenchmarkingPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <section className="px-6 py-16 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-sm text-blue-300">Guide • 2026 Preview</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Benchmarking Multimodal RAG</h1>
-          <p className="mt-4 text-lg text-gray-300">Evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.</p>
-          <hr className="my-8 border-white/10" />
-          <div className="prose prose-invert max-w-none">
-            <p>Multimodal RAG introduces cross-signal synchronization challenges. This brief outlines:</p>
-            <ul>
-              <li>Dataset construction and relevance metrics</li>
-              <li>Latency budgeting and pipeline instrumentation</li>
-              <li>Grounding quality and hallucination checks</li>
-              <li>Reproducible benchmarking methodology</li>
-            </ul>
-            <p>Adopt these practices to compare architectures and drive measurable improvements.</p>
-          </div>
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24">
+        <div className="mb-6 flex items-center gap-3 text-xs text-gray-400">
+          <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Guide</span>
+          <time dateTime="2025-09-15">September 15, 2025</time>
         </div>
-      </section>
+        <h1 className="text-4xl font-bold tracking-tight text-white">Benchmarking Multimodal RAG (2026 Preview)</h1>
+        <p className="mt-4 text-lg leading-8 text-gray-300">
+          Evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines powering agents and copilots.
+        </p>
+        <div className="mt-10 space-y-6 text-gray-300">
+          <h2 className="text-2xl font-semibold text-white">What youll learn</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>SLIs and SLAs for multimodal retrieval and fusion</li>
+            <li>Golden sets and annotation strategies across modalities</li>
+            <li>Streaming vs batched tradeoffs and tail-latency mitigation</li>
+            <li>Cost-aware routing for hybrid encoders and retrievers</li>
+          </ul>
+          <p>Includes example notebooks and a reference dataset with licenses.</p>
+        </div>
+        <div className="mt-10">
+          <a href="/contact" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+            Get the full guide E
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Shield, Cloud, Database, Code, 
   BarChart3, Star, Zap, Sparkles, ArrowRight, CheckCircle,

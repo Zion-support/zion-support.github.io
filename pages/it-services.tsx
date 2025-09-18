@@ -1,22 +1,7 @@
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { 
-  Cloud,
-  Shield,
-  Database,
-  Smartphone,
-  Globe,
-  Code,
-  Server,
-  BarChart3,
-  Link as LinkIcon,
-  Cpu,
-  TestTube,
-  BookOpen,
-  Wrench,
-  Brain
-} from 'lucide-react';
+import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench, Brain } from 'lucide-react';
 
 export default function ITServices() {
   const contact = {

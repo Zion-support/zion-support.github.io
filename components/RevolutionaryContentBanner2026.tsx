@@ -1,174 +1,193 @@
-"use client";
+'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Cpu, Globe, Lock, Sparkles, Star, Zap } from 'lucide-react';
-import Link from 'next/link';
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Star
+  Zap
+  TrendingUp
+  Users
+  Award,
+  ArrowRight,
+  CheckCircle,
+  Sparkles
+} from 'lucide-react';
 
-const RevolutionaryContentBanner2026: React.FC = () => {
-  const revolutionaryFeatures = [
-    {
-      title: "AI Consciousness Evolution 2026",
-      description: "Breakthrough in artificial consciousness with quantum neural networks",
-      icon: Brain,
-      href: "/ai-consciousness-evolution-2026",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Quantum Internet Revolution",
-      description: "Next-generation quantum communication networks",
-      icon: Globe,
-      href: "/quantum-internet-revolution-2026",
-      gradient: "from-cyan-500 to-blue-500"
-    },
-    {
-      title: "Synthetic Intelligence Platform",
-      description: "Advanced synthetic intelligence beyond traditional AI",
-      icon: Cpu,
-      href: "/synthetic-intelligence-platform-2026",
-      gradient: "from-emerald-500 to-teal-500"
-    },
-    {
-      title: "Post-Quantum Cryptography",
-      description: "Quantum-resistant security for the future",
-      icon: Lock,
-      href: "/post-quantum-cryptography-2026",
-      gradient: "from-amber-500 to-orange-500"
-    }
+const RevolutionaryContentBanner2026 = () => {
+  const features = [
+    "300% ROI Guaranteed",
+    "Zero Implementation Risk",
+    "24/7 Expert Support",
+    "Future-Proof Technology"
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+  const stats = [
+    { number: "500+"label: "Companies Transformed" },
+    { number: "99.9%"label: "Uptime Guarantee" },
+    { number: "24/7"label: "Expert Support" },
+    { number: "300%"label: "Average ROI" }
+  ];
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto">
+    <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">Revolutionary Technology 2026</span>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.6delay: 0.2 }}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-6 py-3 rounded-full font-bold text-lg mb-8"
+          >
+            <Sparkles className="w-5 h-5" />
+            <span>Revolutionary 2026 Technology</span>
           </motion.div>
 
-          <motion.h2 
-            variants={itemVariants}
-            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent"
-          >
-            The Future is Here
-          </motion.h2>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Transform Your Business with
+            <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              Revolutionary AI
+            </span>
+          </h1>
+          
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Experience the future of business automation with our cutting-edge AI solutions. 
+            Join 500+ companies already achieving unprecedented growth and efficiency.
+          </p>
 
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-          >
-            Experience breakthrough technologies that will reshape the digital landscape. 
-            From AI consciousness to quantum internet, discover what's possible in 2026.
-          </motion.p>
-
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/revolutionary-tech-showcase-2026"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              Explore 2026 Innovations
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              href="/future-tech-roadmap"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-semibold rounded-full transition-all duration-300 hover:bg-purple-500/10"
-            >
-              View Roadmap
-              <Star className="w-5 h-5" />
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {revolutionaryFeatures.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
-                variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.05 }}
-                className="group"
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
+                className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full border border-white/20"
               >
-                <Link href={feature.href} className="block">
-                  <div className="relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 h-full">
-                    <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.gradient} mb-4`}>
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
-                      {feature.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </Link>
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-white font-medium">{feature}</span>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </motion.div>
 
+        {/* Stats Grid */}
         <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          <div className="inline-flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-full">
-            <Zap className="w-5 h-5 text-yellow-400" />
-            <span className="text-white font-medium">Limited Early Access Available</span>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          {stats.map((statindex) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0scale: 0.8 }}
+              whileInView={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
+              <div className="text-gray-300 text-lg">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 max-w-4xl mx-auto">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Lead the Revolution?
+            </h3>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join the elite group of forward-thinking companies transforming their operations 
+              with our revolutionary AI technology. Limited spots available for 2026.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-yellow-300 hover:to-orange-300 transition-all duration-300 shadow-2xl"
+              >
+                <span className="flex items-center space-x-3">
+                  <span>Get Started Now</span>
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                <span className="flex items-center space-x-3">
+                  <span>Watch Demo</span>
+                  <Zap className="w-6 h-6 group-hover:animate-pulse" />
+                </span>
+              </motion.button>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center space-x-6 text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Award className="w-5 h-5" />
+                <span>Trusted by Fortune 500</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="w-5 h-5" />
+                <span>500+ Happy Clients</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <TrendingUp className="w-5 h-5" />
+                <span>300% Average ROI</span>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
+
+      {/* Floating Elements */}
+      <motion.div
+        animate={{ 
+          y: [0-20],
+          rotate: [050]
+        }}
+        transition={{ 
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-20 blur-xl"
+      />
+      
+      <motion.div
+        animate={{ 
+          y: [020],
+          rotate: [0-50]
+        }}
+        transition={{ 
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-xl"
+      />
     </section>
   );
-};
-
-export default RevolutionaryContentBanner2026;
+}

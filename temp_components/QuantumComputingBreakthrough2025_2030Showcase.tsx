@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 export default function QuantumComputingBreakthrough2025_2030Showcase() {
   const quantumBreakthroughs = [

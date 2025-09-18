@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ContentType {
   id: string;

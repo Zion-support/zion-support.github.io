@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useCallback } from 'react';
-
+import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2036: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);

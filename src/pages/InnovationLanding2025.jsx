@@ -29,32 +29,26 @@ const InnovationLanding2025 = () => {
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
             <p className="text-gray-300 mb-4">
-              A central platform for discovering and implementing breakthrough technologies
+              Discover the latest developments in technology and innovation
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research & development</li>
-              <li>• Technology partnerships</li>
-              <li>• Innovation consulting</li>
+              <li>• Research and development</li>
+              <li>• Industry partnerships</li>
+              <li>• Future technology trends</li>
             </ul>
           </div>
           
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Future Solutions</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
             <p className="text-gray-300 mb-4">
-              Preparing for tomorrow's challenges with today's innovations
+              Comprehensive technology solutions for modern challenges
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Sustainable technology</li>
-              <li>• Smart infrastructure</li>
-              <li>• Digital transformation</li>
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
             </ul>
           </div>
-        </div>
-        
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-            Explore Innovation
-          </button>
         </div>
       </div>
     </div>

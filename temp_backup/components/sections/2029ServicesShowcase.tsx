@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Dna, Globe2, CheckCircle, TrendingUp } from 'lucide-react';
 import { futuristicAIServices2029 } from '../../data/2029-futuristic-ai-services';

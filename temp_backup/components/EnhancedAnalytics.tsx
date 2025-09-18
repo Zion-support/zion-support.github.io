@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart3, TrendingUp, TrendingDown, Users, Eye, MousePointer, 
   Clock, Target, Zap, Settings, X, Maximize2, Minimize2, 

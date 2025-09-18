@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const LoadingSkeleton: React.FC = () => {
   const shimmer = "animate-pulse bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-[length:200%_100%]";

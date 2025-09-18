@@ -94,7 +94,7 @@ import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/equipmentData';
 import { ProductListing } from '@/types/listings';
-
+import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {;
@@ -286,7 +286,7 @@ import { useCart } from '@/context/CartContext',;
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
 import { equipmentListings } from '@/data/equipmentData',;
 import { ProductListing } from '@/types/listings',;
-
+import { motion } from 'framer-motion',;
 import { useCurrency } from '@/hooks/useCurrency',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface EquipmentSpecification {;

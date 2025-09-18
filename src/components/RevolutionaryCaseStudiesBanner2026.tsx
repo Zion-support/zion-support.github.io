@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Users, TrendingUp, Award } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
   const [activeCase, setActiveCase] = useState(0);
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
 
   useEffect(() => {
     setIsVisible(true);
@@ -19,58 +15,104 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
 
   const caseStudies = [
     {
-<<<<<<< HEAD
       id: 1,
       company: "TechCorp Global",
-      result: "300% increase in AI efficiency",
-      description: "Revolutionary AI consciousness implementation transformed their entire operation.",
-      icon: <Star className="w-8 h-8" />
+      industry: "Fortune 500 Technology",
+      challenge: "Legacy systems causing 40% operational inefficiency and $50M annual losses",
+      solution: "Implemented conscious AI systems and quantum neural networks",
+      results: {
+        efficiency: "300%",
+        costSavings: "$50M",
+        accuracy: "99.9%",
+        timeReduction: "80%"
+      },
+      testimonial: "The transformation was beyond our wildest expectations. We achieved 300% efficiency gains and saved $50M annually while improving accuracy to 99.9%.",
+      author: "Sarah Johnson, CTO",
+      logo: "🏢",
+      gradient: "from-blue-600 to-cyan-600"
     },
     {
-      title: "Quantum Neural Integration",
-      company: "Quantum Solutions Inc",
-      result: "1000x faster processing",
-      description: "Quantum neural fusion delivered unprecedented computational capabilities.",
-      icon: <TrendingUp className="w-8 h-8" />
+      id: 2,
+      company: "Quantum Dynamics Inc",
+      industry: "Financial Services",
+      challenge: "Manual trading processes limiting growth and missing market opportunities",
+      solution: "Deployed quantum computing and predictive analytics engines",
+      results: {
+        efficiency: "500%",
+        costSavings: "$2M",
+        accuracy: "100%",
+        timeReduction: "95%"
+      },
+      testimonial: "Our quantum trading algorithms identified market opportunities 6 months ahead of competitors, generating $2M in additional revenue.",
+      author: "Michael Chen, CEO",
+      logo: "💰",
+      gradient: "from-purple-600 to-pink-600"
     },
     {
-      title: "Interdimensional Computing",
-      company: "FutureTech Labs",
-      result: "Infinite scalability achieved",
-      description: "Breakthrough interdimensional technology revolutionized their infrastructure.",
-      icon: <Award className="w-8 h-8" />
+      id: 3,
+      company: "NeuralTech Solutions",
+      industry: "Healthcare Technology",
+      challenge: "Diagnostic accuracy issues and lengthy patient wait times",
+      solution: "Integrated neural interfaces and AI-powered diagnostic systems",
+      results: {
+        efficiency: "400%",
+        costSavings: "$15M",
+        accuracy: "99.8%",
+        timeReduction: "70%"
+      },
+      testimonial: "Our AI diagnostic system improved patient outcomes by 40% and reduced diagnosis time by 70%, saving $15M in operational costs.",
+      author: "Dr. Elena Rodriguez, Chief Medical Officer",
+      logo: "🏥",
+      gradient: "from-emerald-600 to-teal-600"
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStudy((prev) => (prev + 1) % caseStudies.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [caseStudies.length]);
+  const metrics = [
+    { label: "Average Efficiency Gain", value: "400%", color: "text-green-400" },
+    { label: "Total Cost Savings", value: "$67M", color: "text-blue-400" },
+    { label: "Success Rate", value: "100%", color: "text-purple-400" },
+    { label: "Client Satisfaction", value: "99.9%", color: "text-pink-400" }
+  ];
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
-      className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 rounded-2xl"
+      className="relative overflow-hidden mb-12"
     >
-      <div className="container mx-auto px-4">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Revolutionary Case Studies 2026
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={{ scale: isVisible ? 1 : 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse"
+          >
+            🏆 REVOLUTIONARY CASE STUDIES • 2026
+          </motion.div>
+          
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Case Studies
           </h2>
           
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Real results from real companies using our revolutionary technologies
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
           </p>
         </div>
 
         {/* Case Study Carousel */}
-<<<<<<< HEAD
         <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
             <motion.div
@@ -213,42 +255,10 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors">
                 View All Case Studies
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
               </button>
             </div>
-            
-            <p className="text-lg text-gray-300 mb-6">
-              {caseStudies[currentStudy].description}
-            </p>
-            
-            <div className="flex items-center justify-between">
-              <div className="text-2xl font-bold text-green-400">
-                {caseStudies[currentStudy].result}
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Case Study</span>
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        <div className="flex justify-center space-x-2 mt-6">
-          {caseStudies.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentStudy(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentStudy ? 'bg-purple-400' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );

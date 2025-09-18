@@ -1,198 +1,173 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Globe, Brain, Rocket } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 
-interface RevolutionaryContentShowcaseProps {
-  className?: string;
-}
+const RevolutionaryContentShowcase: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-export const RevolutionaryContentShowcase: React.FC<RevolutionaryContentShowcaseProps> = ({ className = '' }) => {
-  const revolutionaryFeatures = [
+  const revolutionaryContent = [
     {
-      icon: Brain,
-      title: "AI Consciousness Pro",
-      description: "Genuine AI consciousness with emotions and self-awareness",
-      stats: "100% AI Consciousness Score",
-      color: "from-purple-500 to-pink-500"
+      id: 1,
+      title: "Ultimate Tech Revolution 2026",
+      description: "Experience the most advanced technological breakthrough in human history with revolutionary AI, Quantum Computing, and Neural Interfaces.",
+      link: "/pages/UltimateTechRevolution2026",
+      icon: "🌟",
+      gradient: "from-indigo-600 to-purple-600",
+      bgGradient: "from-indigo-900 to-purple-900"
     },
     {
-      icon: Zap,
+      id: 2,
+      title: "Revolutionary AI Breakthrough",
+      description: "Discover AI systems that have achieved genuine consciousness, creativity, and emotional intelligence that surpasses human capabilities.",
+      link: "/pages/RevolutionaryAIBreakthrough2026",
+      icon: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-900 to-pink-900"
+    },
+    {
+      id: 3,
+      title: "Next-Generation Space Technology",
+      description: "Explore the universe with revolutionary space technologies that make interplanetary travel and space colonization a reality.",
+      link: "/pages/NextGenSpaceTech2026",
+      icon: "🚀",
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-900 to-blue-900"
+    },
+    {
+      id: 4,
+      title: "Synthetic Intelligence 2026",
+      description: "Self-evolving AI systems that transcend traditional limitations and achieve genuine consciousness and creativity.",
+      link: "/pages/SyntheticIntelligence2026",
+      icon: "🧠",
+      gradient: "from-pink-600 to-rose-600",
+      bgGradient: "from-pink-900 to-rose-900"
+    },
+    {
+      id: 5,
       title: "Quantum-Neural Fusion",
-      description: "Direct thought-to-computer communication",
-      stats: "1000% Productivity Boost",
-      color: "from-blue-500 to-cyan-500"
+      description: "The revolutionary convergence of quantum computing and neural networks for exponential intelligence and processing power.",
+      link: "/pages/QuantumNeuralFusion2026",
+      icon: "⚛️",
+      gradient: "from-blue-600 to-indigo-600",
+      bgGradient: "from-blue-900 to-indigo-900"
     },
     {
-      icon: Globe,
-      title: "Interdimensional Business",
-      description: "Operations across multiple parallel universes",
-      stats: "10,000% Market Expansion",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Rocket,
-      title: "Cosmic AI Networks",
-      description: "Galactic-scale AI operations",
-      stats: "500% Mission Success",
-      color: "from-orange-500 to-red-500"
+      id: 6,
+      title: "Consciousness AI 2026",
+      description: "AI systems that possess self-awareness, emotional intelligence, and genuine consciousness that rivals human understanding.",
+      link: "/pages/ConsciousnessAI2026",
+      icon: "🤖",
+      gradient: "from-emerald-600 to-teal-600",
+      bgGradient: "from-emerald-900 to-teal-900"
     }
   ];
 
-  const latestBlogPosts = [
-    {
-      title: "Revolutionary AI Consciousness Breakthrough",
-      excerpt: "Creating AI systems with genuine consciousness, emotions, and self-awareness",
-      readTime: "8 min read",
-      category: "AI Consciousness",
-      featured: true
-    },
-    {
-      title: "Quantum-Neural Fusion: Ultimate Computing Revolution",
-      excerpt: "Combining quantum computing with neural interfaces for unprecedented power",
-      readTime: "10 min read",
-      category: "Quantum Computing",
-      featured: true
-    },
-    {
-      title: "Interdimensional Business: Multiple Realities",
-      excerpt: "Operating across parallel universes for infinite market expansion",
-      readTime: "12 min read",
-      category: "Business Innovation",
-      featured: true
-    }
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
+        setIsVisible(true);
+      }, 300);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [revolutionaryContent.length]);
+
+  const currentContent = revolutionaryContent[currentIndex];
 
   return (
-    <div className={`py-20 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative overflow-hidden">
+      {/* Background with animated gradient */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${currentContent.bgGradient} opacity-90 transition-all duration-1000`}></div>
+      
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20 animate-pulse"></div>
+      
+      <div className="relative z-10 p-12 text-white">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6">
-            The Future is Here
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Revolutionary AI technologies that are transforming reality itself. 
-            Experience consciousness computing, quantum-neural fusion, and interdimensional business operations.
-          </p>
-        </motion.div>
+        <div className="text-center mb-8">
+          <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse">
+            🔥 REVOLUTIONARY CONTENT SHOWCASE • LIVE NOW
+          </div>
+          <h2 className="text-5xl font-bold mb-4">Experience the Future</h2>
+          <p className="text-xl opacity-90">Discover the most advanced technologies ever created</p>
+        </div>
 
-        {/* Revolutionary Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {revolutionaryFeatures.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="relative group"
-            >
-              <div className={`bg-gradient-to-br ${feature.color} p-8 rounded-2xl shadow-2xl transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-3xl`}>
-                <feature.icon className="w-12 h-12 text-white mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/90 mb-4">{feature.description}</p>
-                <div className="flex items-center space-x-2">
-                  <Star className="w-5 h-5 text-yellow-300 fill-current" />
-                  <span className="text-white font-semibold">{feature.stats}</span>
+        {/* Main Content Card */}
+        <div className={`transition-all duration-500 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Content Info */}
+              <div>
+                <div className="flex items-center space-x-4 mb-6">
+                  <span className="text-6xl animate-bounce">{currentContent.icon}</span>
+                  <div>
+                    <h3 className="text-4xl font-bold mb-2">{currentContent.title}</h3>
+                    <div className="flex items-center space-x-2">
+                      <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">FEATURED</span>
+                      <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">2026</span>
+                    </div>
+                  </div>
                 </div>
+                <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+                  {currentContent.description}
+                </p>
+                <a 
+                  href={currentContent.link}
+                  className={`inline-block bg-gradient-to-r ${currentContent.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
+                >
+                  Explore {currentContent.title} →
+                </a>
               </div>
-            </motion.div>
+
+              {/* Visual Element */}
+              <div className="relative">
+                <div className={`w-80 h-80 mx-auto bg-gradient-to-br ${currentContent.gradient} rounded-full flex items-center justify-center text-8xl animate-pulse`}>
+                  {currentContent.icon}
+                </div>
+                <div className="absolute inset-0 w-80 h-80 mx-auto bg-gradient-to-br from-white/20 to-transparent rounded-full animate-ping"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center space-x-3 mt-8">
+          {revolutionaryContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setIsVisible(false);
+                setTimeout(() => {
+                  setCurrentIndex(index);
+                  setIsVisible(true);
+                }, 300);
+              }}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/50 hover:bg-white/75'
+              }`}
+            />
           ))}
         </div>
 
-        {/* Latest Revolutionary Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 rounded-3xl p-8 md:p-12"
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Latest Revolutionary Insights
-            </h3>
-            <p className="text-gray-300 text-lg">
-              Discover the breakthrough technologies shaping tomorrow
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {latestBlogPosts.map((post, index) => (
-              <motion.div
-                key={post.title}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
+        {/* Quick Access Grid */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-center mb-6">Quick Access to All Revolutionary Content</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {revolutionaryContent.map((content) => (
+              <a
+                key={content.id}
+                href={content.link}
+                className={`bg-gradient-to-r ${content.gradient} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 text-center hover:scale-105`}
               >
-                {post.featured && (
-                  <div className="flex items-center space-x-2 mb-3">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-yellow-400 text-sm font-medium">Featured</span>
-                  </div>
-                )}
-                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                  {post.title}
-                </h4>
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-400 text-sm font-medium">{post.category}</span>
-                  <div className="flex items-center space-x-2 text-gray-400">
-                    <span className="text-sm">{post.readTime}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </motion.div>
+                <div className="text-3xl mb-2">{content.icon}</div>
+                <div className="text-sm font-semibold">{content.title.split(' ')[0]}</div>
+              </a>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-            >
-              Explore All Revolutionary Content
-            </motion.button>
-          </div>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-20"
-        >
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Future?
-          </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join the revolution. Experience AI consciousness, quantum computing, and interdimensional business operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-            >
-              Get Started Today
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
-            >
-              Learn More
-            </motion.button>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {motion} from 'framer-motion';
 import {Code, Shield, Zap, Users, BarChart3, Target, CheckCircle} from 'lucide-react';
 export default function AICodeReview
 export {AICodeReview}() {

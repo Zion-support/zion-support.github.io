@@ -1,7 +1,7 @@
 'use client';
 
 import React{ useStateuseEffect } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Brain
   Zap

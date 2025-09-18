@@ -1,11 +1,30 @@
 export default function SolutionsPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Solutions</h1>
-        <p className="mt-4 text-lg text-gray-300">AI solutions for research, operations, and governance.</p>
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Our Solutions</h1>
+          <p className="mt-4 text-lg text-gray-300">
+            Cutting-edge AI and technology solutions that drive innovation and growth.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:mt-20 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            <div className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm">
+              <h3 className="text-lg font-semibold text-white">AI Platform</h3>
+              <p className="mt-2 text-sm text-gray-300">
+                Comprehensive AI platform with machine learning, natural language processing, and computer vision capabilities.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm">
+              <h3 className="text-lg font-semibold text-white">Quantum Computing</h3>
+              <p className="mt-2 text-sm text-gray-300">
+                Next-generation quantum computing solutions for complex optimization and simulation problems.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
-

@@ -1,6 +1,6 @@
 import React, {useState, useMemo} from 'react';'''';';
 import React, {useState, useMemo} from 'react';'''
-
+import {motion} from 'framer-motion';
 import {}
   BarChart3,
   PieChart,
@@ -135,7 +135,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}';';
       complexity: 'Enterprise','';';
       marketDemand: 'Exploding','';';
 import React, {useState, useMemo} from 'react';
-
+import {motion} from 'framer-motion';
 import {}
   BarChart3,;
   PieChart,;

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Star, ArrowRight, Check, Zap, Brain, Atom, Rocket, 
   Shield, Cpu, Globe, Eye, Building, Lightbulb, Target,

@@ -1,4 +1,4 @@
-
+import {motion} from 'framer-motion';
 import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog export default function ManufacturingSolutions
 export { ManufacturingSolutions }() {
     const features = [

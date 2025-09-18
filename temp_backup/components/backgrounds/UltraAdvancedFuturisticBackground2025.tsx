@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useCallback, useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackground2025Props {
   intensity?: 'low' | 'medium' | 'high';

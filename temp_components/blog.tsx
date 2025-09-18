@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle,

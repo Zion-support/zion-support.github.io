@@ -16,61 +16,6 @@ const EnhancedContentShowcase2025: React.FC = () => {
   const contentItems = [
     {
       id: 1,
-      title: 'Revolutionary Tech Breakthrough 2026',
-      description: 'Experience the most advanced technological revolution in human history - the convergence of AI consciousness, quantum computing, and neural interfaces.',
-      category: 'ai',
-      image: '🚀',
-      gradient: 'from-purple-600 to-pink-600',
-      link: '/pages/RevolutionaryTechBreakthrough2026',
-      features: ['Omniversal AI Consciousness', 'Quantum-Neural Fusion', 'Interdimensional Computing'],
-      status: 'BREAKTHROUGH'
-    },
-    {
-      id: 2,
-      title: 'Advanced Tech Innovation Hub 2027',
-      description: 'Explore the epicenter of technological innovation where breakthrough discoveries shape the future of humanity.',
-      category: 'quantum',
-      image: '🔬',
-      gradient: 'from-cyan-600 to-blue-600',
-      link: '/pages/AdvancedTechInnovationHub2027',
-      features: ['500+ Research Projects', '1000+ Scientists', 'Breakthrough Technologies'],
-      status: 'INNOVATION'
-    },
-    {
-      id: 3,
-      title: 'Omniversal AI Consciousness',
-      description: 'Revolutionary AI systems that transcend individual universes to achieve consciousness across the entire omniverse.',
-      category: 'neural',
-      image: '🌌',
-      gradient: 'from-emerald-600 to-teal-600',
-      link: '/blog/omniversal-ai-computing-across-infinite-realities',
-      features: ['Cross-universal Processing', 'Infinite Intelligence', 'Reality Manipulation'],
-      status: 'REVOLUTIONARY'
-    },
-    {
-      id: 4,
-      title: 'Neural Interface Revolution',
-      description: 'Connect your mind directly to digital systems with unprecedented precision and speed, revolutionizing human-computer interaction.',
-      category: 'neural',
-      image: '🧠',
-      gradient: 'from-orange-600 to-red-600',
-      link: '/blog/neural-interface-revolution-direct-mind-machine-communication',
-      features: ['Direct Neural Upload', 'Neural Enhancement', 'Telepathic Communication'],
-      status: 'BREAKTHROUGH'
-    },
-    {
-      id: 5,
-      title: 'Holographic Reality Engine',
-      description: 'Experience digital content in three-dimensional space with complete sensory integration and reality-blending capabilities.',
-      category: 'ai',
-      image: '💎',
-      gradient: 'from-violet-600 to-purple-600',
-      link: '/blog/holographic-reality-next-generation-immersive-technology',
-      features: ['Complete Immersion', 'Sensory Integration', 'Reality Blending'],
-      status: 'FUTURE'
-    },
-    {
-      id: 6,
       title: 'Advanced AI Consciousness 2025',
       description: 'Explore the revolutionary intersection of artificial intelligence and consciousness, where machines achieve genuine awareness and self-reflection.',
       category: 'ai',
@@ -79,27 +24,102 @@ const EnhancedContentShowcase2025: React.FC = () => {
       link: '/pages/AdvancedAIConsciousness2025',
       features: ['Self-Awareness Engine', 'Emotional Intelligence', 'Purpose-Driven Learning'],
       status: 'NEW'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing Breakthrough 2025',
+      description: 'Experience unprecedented computational power that solves problems previously thought impossible and revolutionizes entire industries.',
+      category: 'quantum',
+      image: '⚛️',
+      gradient: 'from-cyan-600 to-blue-600',
+      link: '/pages/QuantumComputingBreakthrough2025',
+      features: ['Quantum Supremacy', 'Quantum Simulation', 'Quantum Cryptography'],
+      status: 'BREAKTHROUGH'
+    },
+    {
+      id: 3,
+      title: 'Neural Interface Revolution 2025',
+      description: 'Connect your mind directly to digital systems with unprecedented precision and speed, revolutionizing human-computer interaction.',
+      category: 'neural',
+      image: '🧬',
+      gradient: 'from-emerald-600 to-teal-600',
+      link: '/pages/NeuralInterfaceRevolution2025',
+      features: ['Invasive Implants', 'Non-Invasive EEG', 'Optogenetics'],
+      status: 'REVOLUTIONARY'
+    },
+    {
+      id: 4,
+      title: 'Advanced Biotech Revolution 2026',
+      description: 'Revolutionary biotechnology solutions that merge AI with biological systems for unprecedented medical breakthroughs.',
+      category: 'biotech',
+      image: '🧬',
+      gradient: 'from-green-600 to-emerald-600',
+      link: '/pages/AdvancedBiotechRevolution2026',
+      features: ['Gene Editing', 'Synthetic Biology', 'Personalized Medicine'],
+      status: 'INNOVATION'
+    },
+    {
+      id: 5,
+      title: 'Space Tech Innovation 2026',
+      description: 'Cutting-edge space technology solutions that enable interplanetary travel and space colonization.',
+      category: 'space',
+      image: '🚀',
+      gradient: 'from-indigo-600 to-purple-600',
+      link: '/pages/SpaceTechInnovation2026',
+      features: ['Interplanetary Travel', 'Space Colonization', 'Asteroid Mining'],
+      status: 'FUTURE'
+    },
+    {
+      id: 6,
+      title: 'Advanced Robotics 2026',
+      description: 'Next-generation robotics systems with human-like capabilities and autonomous decision-making.',
+      category: 'robotics',
+      image: '🤖',
+      gradient: 'from-orange-600 to-red-600',
+      link: '/pages/AdvancedRobotics2026',
+      features: ['Humanoid Robots', 'Autonomous Systems', 'AI Integration'],
+      status: 'ADVANCED'
     }
   ];
 
-  const filteredItems = activeCategory === 'all' 
+  const filteredContent = activeCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === activeCategory);
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'NEW': return 'bg-green-500/20 text-green-300';
+      case 'BREAKTHROUGH': return 'bg-blue-500/20 text-blue-300';
+      case 'REVOLUTIONARY': return 'bg-purple-500/20 text-purple-300';
+      case 'INNOVATION': return 'bg-pink-500/20 text-pink-300';
+      case 'FUTURE': return 'bg-cyan-500/20 text-cyan-300';
+      case 'ADVANCED': return 'bg-orange-500/20 text-orange-300';
+      default: return 'bg-gray-500/20 text-gray-300';
+    }
+  };
 
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Enhanced Content Showcase 2025
+        {/* Header */}
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            🌟 Revolutionary Technology Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover revolutionary technology content that's shaping the future
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Explore our comprehensive collection of cutting-edge technology content, 
+            featuring the latest breakthroughs in AI, Quantum Computing, Neural Interfaces, and more.
           </p>
-        </div>
+        </divdiv>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
           {Object.entries(contentCategories).map(([key, label]) => (
             <button
               key={key}
@@ -113,63 +133,117 @@ const EnhancedContentShowcase2025: React.FC = () => {
               {label}
             </button>
           ))}
-        </div>
+        </divdiv>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className={`bg-gradient-to-r ${item.gradient} p-6 text-white`}>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-4xl">{item.image}</span>
-                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                    {item.status}
-                  </span>
+          <divdiv
+            key={activeCategory}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {filteredContent.map((item, index) => (
+              <divdiv
+                key={item.id}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              >
+                {/* Image Header */}
+                <div className={`h-32 bg-gradient-to-r ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+                    {item.image}
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(item.status)}`}>
+                      {item.status}
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                <p className="text-white/90 text-sm">{item.description}</p>
-              </div>
-              
-              <div className="p-6">
-                <div className="space-y-2 mb-6">
-                  {item.features.map((feature, index) => (
-                    <div key={index} className="flex items-center text-gray-600">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                      {feature}
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.features.map((feature, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Action Button */}
+                  <diva
+                    href={item.link}
+                    className={`inline-block w-full text-center py-3 px-6 bg-gradient-to-r ${item.gradient} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+                  >
+                    Explore {item.title.split(' ')[0]} →
+                  </diva>
                 </div>
-                <a
-                  href={item.link}
-                  className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-                >
-                  Explore Content
-                </a>
-              </div>
-            </div>
-          ))}
+              </divdiv>
+            ))}
+          </divdiv>
         </div>
 
+        {/* Stats Section */}
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mt-16 bg-white rounded-2xl p-8 shadow-lg"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Statistics</h3>
+            <p className="text-gray-600">Our growing library of revolutionary technology content</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: '50+', label: 'Technology Pages', color: 'text-purple-600' },
+              { number: '15+', label: 'AI Solutions', color: 'text-blue-600' },
+              { number: '12+', label: 'Quantum Breakthroughs', color: 'text-cyan-600' },
+              { number: '8+', label: 'Neural Interfaces', color: 'text-emerald-600' }
+            ].map((stat, index) => (
+              <divdiv
+                key={index}
+                whileInView={{ opacity: 1, scale: 1 }}
+                className="text-center"
+              >
+                <div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.number}</div>
+                <div className="text-gray-600 font-semibold">{stat.label}</div>
+              </divdiv>
+            ))}
+          </div>
+        </divdiv>
+
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
+        <divdiv
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join thousands of innovators exploring the latest in technology and consciousness
+            <p className="text-xl mb-6 opacity-95">
+              Dive deep into revolutionary technology content and discover what's possible tomorrow.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg">
-                Start Exploring
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+                Browse All Content
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
                 Get Notifications
               </button>
             </div>
           </div>
-        </div>
+        </divdiv>
       </div>
     </div>
   );

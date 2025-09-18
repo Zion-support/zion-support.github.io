@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from "../../components/Layout";";
-
+import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
 export default function CybersecurityPage() {
@@ -129,7 +129,7 @@ const features = [
   },
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const securityServices = [

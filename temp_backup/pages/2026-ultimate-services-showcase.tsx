@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Star, ArrowRight, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, 
   Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, ArrowRight, CheckCircle, Users, DollarSign, Clock } from 'lucide-react';
 import { revolutionary2026MicroSaasServices } from '../../data/revolutionary-2026-micro-saas-services';
 import { revolutionary2026ITServices } from '../../data/revolutionary-2026-it-services';

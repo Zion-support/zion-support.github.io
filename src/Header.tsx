@@ -1,6 +1,5 @@
 import React from 'react';
 import NotificationSystem from './components/NotificationSystem';
-import NewContentNavigation2026 from './components/NewContentNavigation2026';
 
 const Header: React.FC = () => {
   return (
@@ -31,24 +30,12 @@ const Header: React.FC = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex space-x-8">
             <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
             </a>
-            <a href="/pages/NextGenInnovationHub2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Innovation Hub
-            </a>
-            <a href="/pages/AITrends2026Insights" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
-              AI Trends 2026
-            </a>
-            <a href="/pages/RevolutionaryCaseStudies2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-              Case Studies
-            </a>
-            <a href="/revolutionary-content-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
-              Revolutionary 2026
-            </a>
-            <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-              Content Showcase
+            <a href="/pages/InnovationLanding2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Innovation
             </a>
             <a href="/blog/ai-2026-neural-consensus-revolution" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg">
               Neural Consensus
@@ -56,11 +43,12 @@ const Header: React.FC = () => {
             <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Services
             </a>
+            <a href="/pages/RevolutionaryTechBlog2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Blog
+            </a>
             <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Contact
             </a>
-            {/* New Content Navigation */}
-            <NewContentNavigation2026 />
           </nav>
 
           {/* Right side actions */}

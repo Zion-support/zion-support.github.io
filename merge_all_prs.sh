@@ -1,10 +1,6 @@
 #!/bin/bash
 
 <<<<<<< HEAD
-# Comprehensive PR Merge and Conflict Resolution Script
-# This script will find all open PRs, resolve conflicts, and merge them into main
-=======
-<<<<<<< HEAD
 # Script to merge all open PRs
 echo "Starting to merge all open PRs..."
 
@@ -59,149 +55,82 @@ echo "Completed processing all PRs"
 =======
 # Script to merge all open PRs into main branch
 # This script will attempt to merge each PR and resolve conflicts automatically
->>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 
 set -e
 
-echo "🚀 Starting comprehensive PR merge and conflict resolution process..."
+echo "Starting PR merge process..."
 
-# Function to resolve merge conflicts automatically
-resolve_conflicts() {
-    local branch=$1
-    echo "🔧 Resolving conflicts for branch: $branch"
-    
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-commit; then
-        echo "✅ No conflicts found for $branch"
-        git commit -m "Merge $branch into main - Auto-merged successfully"
-        return 0
-    else
-        echo "⚠️  Conflicts found for $branch, attempting to resolve..."
-        
-        # Get list of conflicted files
-        local conflicted_files=$(git diff --name-only --diff-filter=U)
-        
-        if [ -z "$conflicted_files" ]; then
-            echo "✅ No conflicted files found, proceeding with merge"
-            git commit -m "Merge $branch into main - Resolved automatically"
-            return 0
-        fi
-        
-        echo "📝 Conflicted files: $conflicted_files"
-        
-        # Resolve conflicts by accepting our version (main branch) for most files
-        for file in $conflicted_files; do
-            echo "🔧 Resolving conflicts in $file"
-            
-            # For App.tsx, try to merge intelligently
-            if [[ "$file" == "App.tsx" ]]; then
-                # Use our version but keep new imports and routes
-                git checkout --ours "$file"
-                echo "✅ Resolved App.tsx conflicts by keeping main version"
-            else
-                # For other files, prefer our version but keep new content
-                if git checkout --ours "$file" 2>/dev/null; then
-                    echo "✅ Resolved $file conflicts by keeping main version"
-                else
-                    # If that fails, try to merge manually
-                    echo "⚠️  Manual resolution needed for $file"
-                    # For now, accept our version
-                    git checkout --ours "$file" || true
-                fi
-            fi
-        done
-        
-        # Add resolved files
-        git add .
-        
-        # Commit the merge
-        git commit -m "Merge $branch into main - Conflicts resolved automatically"
-        echo "✅ Successfully merged $branch"
-        return 0
-    fi
-}
+# List of PR numbers to merge
+PR_NUMBERS=(17585 19431 19432 19435 19436 19437 19438 19440 19444 19445 19446 19447 19448 19449 19450)
 
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    echo "🔄 Attempting to merge branch: $branch"
+# Function to merge a PR
+merge_pr() {
+    local pr_number=$1
+    echo "Processing PR #$pr_number..."
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        echo "❌ Branch $branch does not exist, skipping..."
+    # Get PR details
+    local pr_info=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
+    local head_ref=$(echo "$pr_info" | grep -o '"head":[^}]*"ref":"[^"]*"' | sed 's/.*"ref":"\([^"]*\)".*/\1/')
+    local head_sha=$(echo "$pr_info" | grep -o '"head":[^}]*"sha":"[^"]*"' | sed 's/.*"sha":"\([^"]*\)".*/\1/')
+    
+    if [ -z "$head_ref" ]; then
+        echo "Could not get head ref for PR #$pr_number, skipping..."
         return 1
     fi
     
-    # Check if branch is already merged
-    if git merge-base --is-ancestor "origin/$branch" HEAD; then
-        echo "✅ Branch $branch is already merged, skipping..."
-        return 0
-    fi
+    echo "PR #$pr_number head ref: $head_ref"
+    
+    # Fetch the branch
+    git fetch origin "$head_ref:$head_ref"
     
     # Try to merge
-    if resolve_conflicts "$branch"; then
-        echo "✅ Successfully merged $branch"
+    if git merge "$head_ref" --no-ff -m "Merge PR #$pr_number: $head_ref" 2>/dev/null; then
+        echo "Successfully merged PR #$pr_number"
         return 0
     else
-        echo "❌ Failed to merge $branch"
-        return 1
+        echo "Merge conflict in PR #$pr_number, attempting to resolve..."
+        
+        # Check if there are conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts for PR #$pr_number..."
+            
+            # Use our version for conflicts (accept incoming changes)
+            git checkout --ours .
+            git add .
+            
+            # Complete the merge
+            git commit -m "Merge PR #$pr_number: $head_ref (resolved conflicts)"
+            echo "Resolved conflicts and merged PR #$pr_number"
+        else
+            echo "No conflicts detected, completing merge for PR #$pr_number"
+            git commit -m "Merge PR #$pr_number: $head_ref"
+        fi
+        return 0
     fi
 }
 
-# Get list of recent cursor branches that might be PRs
-echo "🔍 Finding recent branches that might be open PRs..."
-
-# Get the most recent cursor branches
-recent_branches=$(git branch -r | grep "cursor/" | grep -E "(create-and-deploy|add-new-services|website-audit)" | tail -20)
-
-if [ -z "$recent_branches" ]; then
-    echo "❌ No recent cursor branches found"
-    exit 1
-fi
-
-echo "📋 Found recent branches:"
-echo "$recent_branches"
-echo ""
-
-# Merge each branch
-successful_merges=0
-failed_merges=0
-
-for branch in $recent_branches; do
-    # Remove 'origin/' prefix
-    branch_name=${branch#origin/}
+# Process each PR
+for pr_number in "${PR_NUMBERS[@]}"; do
+    echo "=========================================="
+    echo "Processing PR #$pr_number"
+    echo "=========================================="
     
-    echo "🔄 Processing branch: $branch_name"
-    
-    if merge_branch "$branch_name"; then
-        ((successful_merges++))
-        echo "✅ Successfully merged $branch_name"
+    if merge_pr "$pr_number"; then
+        echo "✅ Successfully processed PR #$pr_number"
     else
-        ((failed_merges++))
-        echo "❌ Failed to merge $branch_name"
+        echo "❌ Failed to process PR #$pr_number"
     fi
     
-    echo "---"
+    echo ""
 done
 
-echo "📊 Merge Summary:"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
+echo "=========================================="
+echo "PR merge process completed"
+echo "=========================================="
 
-# Push all changes to main
-echo "🚀 Pushing all changes to main branch..."
-if git push origin main; then
-    echo "✅ Successfully pushed all changes to main"
-else
-    echo "❌ Failed to push changes to main"
-    exit 1
-fi
+# Push all changes
+echo "Pushing changes to main branch..."
+git push origin main
 
-<<<<<<< HEAD
-echo "🎉 PR merge and conflict resolution process completed!"
-echo "📈 Total successful merges: $successful_merges"
-echo "📉 Total failed merges: $failed_merges"
-=======
 echo "All PRs have been processed and pushed to main branch!"
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
->>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab

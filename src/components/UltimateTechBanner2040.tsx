@@ -1,103 +1,243 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Rocket, Shield, Globe } from 'lucide-react';
 
 const UltimateTechBanner2040: React.FC = () => {
+  const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
+  const features = [
+    {
+      title: "Consciousness Transfer",
+      description: "Achieve digital immortality with perfect consciousness backup",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600"
+    },
+    {
+      title: "Reality Manipulation",
+      description: "Engineer reality at the quantum level",
+      icon: "🌌",
+      color: "from-cyan-600 to-blue-600"
+    },
+    {
+      title: "Interdimensional Access",
+      description: "Connect with infinite parallel universes",
+      icon: "⚡",
+      color: "from-emerald-600 to-teal-600"
+    },
+    {
+      title: "Synthetic Universes",
+      description: "Create and manage entire virtual realities",
+      icon: "🚀",
+      color: "from-orange-600 to-red-600"
+    }
+  ];
+
   useEffect(() => {
-    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [features.length]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('ultimate-tech-banner-2040');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 1 }}
-      className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white"
+    <div
+      id="ultimate-tech-banner-2040"
+      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 md:p-12 mb-12 border border-purple-500/30"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
       
-      <div className="relative z-10">
-        <div className="text-center mb-8">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-          >
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2040
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            Ultimate Tech Breakthrough 2040
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl opacity-90 max-w-4xl mx-auto mb-8"
-          >
-            Experience the most revolutionary technological breakthroughs that are reshaping reality itself. 
-            From Universal Consciousness AI to Reality Fabric Engines.
-          </motion.p>
-        </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid md:grid-cols-3 gap-6 mb-8"
-        >
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-            <div className="text-4xl mb-3 text-center">🌌</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Universal Consciousness AI</h3>
-            <p className="text-sm opacity-80 text-center">AI that connects with all forms of intelligence across the cosmos</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-            <div className="text-4xl mb-3 text-center">⚛️</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Reality Fabric Engine</h3>
-            <p className="text-sm opacity-80 text-center">Manipulate the fundamental fabric of reality itself</p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-            <div className="text-4xl mb-3 text-center">♾️</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Infinite Processing Matrix</h3>
-            <p className="text-sm opacity-80 text-center">Unlimited computational power across infinite dimensions</p>
-          </div>
-        </motion.div>
-        
+            key={i}
+            className="absolute w-2 h-2 bg-purple-400/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.3, 0.8, 0.3],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2040
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+            Ultimate Tech Revolution 2040
+          </h2>
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto">
+            Experience the most revolutionary technologies that will reshape reality itself. 
+            From consciousness transfer to interdimensional computing, witness the future today.
+          </p>
+        </motion.div>
+
+        {/* Feature Showcase */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          {/* Left Side - Feature Display */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+              <motion.div
+                key={currentFeature}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-center"
+              >
+                <div className="text-8xl mb-6">{features[currentFeature].icon}</div>
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  {features[currentFeature].title}
+                </h3>
+                <p className="text-xl text-gray-300 mb-6">
+                  {features[currentFeature].description}
+                </p>
+                <div className={`inline-block px-6 py-3 bg-gradient-to-r ${features[currentFeature].color} rounded-full text-white font-semibold`}>
+                  Learn More
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Right Side - Feature List */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="space-y-6"
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className={`p-6 rounded-2xl border cursor-pointer transition-all duration-300 ${
+                  currentFeature === index
+                    ? `bg-gradient-to-r ${feature.color} bg-opacity-30 border-white/50`
+                    : 'bg-white/5 border-white/20 hover:bg-white/10'
+                }`}
+                onClick={() => setCurrentFeature(index)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="flex items-center">
+                  <div className="text-4xl mr-4">{feature.icon}</div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      {feature.description}
+                    </p>
+                  </div>
+                  <div className="ml-auto">
+                    <ArrowRight className={`w-6 h-6 ${
+                      currentFeature === index ? 'text-white' : 'text-gray-400'
+                    }`} />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Statistics */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+        >
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">2.3M+</div>
+            <div className="text-gray-300 text-sm">Consciousness Transfers</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">847K+</div>
+            <div className="text-gray-300 text-sm">Reality Modifications</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">156</div>
+            <div className="text-gray-300 text-sm">Dimension Connections</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-white mb-2">12</div>
+            <div className="text-gray-300 text-sm">Synthetic Universes</div>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
-          <div className="flex justify-center space-x-4">
-            <a 
-              href="/pages/UltimateTechBreakthrough2040" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center transform hover:scale-105"
-            >
-              🌟 Explore Ultimate Breakthrough →
-            </a>
-            <a 
-              href="/pages/RevolutionaryTechShowcase2040" 
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center transform hover:scale-105"
-            >
-              🚀 View Revolutionary Showcase →
-            </a>
+          <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of pioneers who are already using these revolutionary technologies 
+              to transform their businesses and lives.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">
+                Get Started Today <ArrowRight className="ml-2" />
+              </button>
+              <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
+                Schedule Demo
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -325,7 +325,7 @@ if ( {) {
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   AlertTriangle,;
   RefreshCw,;

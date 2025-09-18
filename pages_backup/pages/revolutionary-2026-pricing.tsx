@@ -5,7 +5,7 @@
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
@@ -30,7 +30,7 @@ export default function Revolutionary2026Pricing() {
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 import {
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users

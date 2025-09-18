@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 
 import {
   HelpCircle, MessageCircle, Phone, Mail, Clock
@@ -18,7 +18,7 @@ export default function Support() {
       icon: <Brain className="w-8 h-8 text-cyan-400" />
       description: 'Support for AI consciousness and autonomous systems'
 import React, { useState } from 'react',;
-
+import { motion } from 'framer-motion',;
 import { 
   HelpCircle, MessageCircle, Phone, Mail, Clock, 
 

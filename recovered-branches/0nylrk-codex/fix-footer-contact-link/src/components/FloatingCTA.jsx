@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) {

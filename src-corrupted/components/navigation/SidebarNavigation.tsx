@@ -1,6 +1,6 @@
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { Link, useLocation  } from 'react-router-dom'; import { motion, AnimatePresence  } from 'framer-motion',;',';';
     ';';';';
 import { Brain,; Cloud,; Shield,; Cpu,; Zap,; Leaf,; Star,; ChevronRight,; ChevronDown,; Home,; Users,; Settings,; FileText,; HelpCircle,; Phone,; Mail,; MapPin,; Globe,; Rocket,; Sparkles,; Target,; Lightbulb,; Code,; Database,; Network,; Lock,; Heart,; Activity,; Building,; Briefcase,; GraduationCap,; Factory,; ShoppingCart,; Truck,; Zap as ZapIcon,; Sun,; TreePine} from 'lucide-react',';';
     ';';';';
@@ -18,7 +18,7 @@ return (',';';
     ';';';
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { Link, useLocation    } from 'react-router-dom'; import { motion, AnimatePresence    } from 'framer-motion',;',';';
     ';';';';
 import { Brain,; Cloud,; Shield,; Cpu,; Zap,; Leaf,; Star,; ChevronRight,; ChevronDown,; Home,; Users,; Settings,; FileText,; HelpCircle,; Phone,; Mail,; MapPin,; Globe,; Rocket,; Sparkles,; Target,; Lightbulb,; Code,; Database,; Network,; Lock,; Heart,; Activity,; Building,; Briefcase,; GraduationCap,; Factory,; ShoppingCart,; Truck,; Zap as ZapIcon,; Sun,; TreePine} from 'lucide-react',';';
     ';';';';
@@ -36,7 +36,7 @@ return (',';';
     ';';';
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { Link, useLocation } from 'react-router-dom'; import { motion, AnimatePresence } from 'framer-motion',;',';';
     ';';';';
 import { Brain,; Cloud,; Shield,; Cpu,; Zap,; Leaf,; Star,; ChevronRight,; ChevronDown,; Home,; Users,; Settings,; FileText,; HelpCircle,; Phone,; Mail,; MapPin,; Globe,; Rocket,; Sparkles,; Target,; Lightbulb,; Code,; Database,; Network,; Lock,; Heart,; Activity,; Building,; Briefcase,; GraduationCap,; Factory,; ShoppingCart,; Truck,; Zap as ZapIcon,; Sun,; TreePine} from 'lucide-react',';';
     ';';';';
@@ -55,7 +55,7 @@ return (',';';
     ';';';
 import React { useState } from 'react',;',';';
     ';';';';
-
+import { Link, useLocation    } from 'react-router-dom'; import { motion, AnimatePresence    } from 'framer-motion',;',';';
     ';';';';
 import { Brain,; Cloud,; Shield,; Cpu,; Zap,; Leaf,; Star,; ChevronRight,; ChevronDown,; Home,; Users,; Settings,; FileText,; HelpCircle,; Phone,; Mail,; MapPin,; Globe,; Rocket,; Sparkles,; Target,; Lightbulb,; Code,; Database,; Network,; Lock,; Heart,; Activity,; Building,; Briefcase,; GraduationCap,; Factory,; ShoppingCart,; Truck,; Zap as ZapIcon,; Sun,; TreePine} from 'lucide-react',';';
     ';';';';
@@ -71,7 +71,7 @@ return (',';';
     ';';';
      <AnimatePresence> {isOpen && (; <> {};" <motion.div;";" initial={{ opacity: 0  }};";" animate={{ opacity: 1  }} exit={{ opacity: 0  }}" className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"; onClick={onClose}; /> {}; <motion.div;" initial={{ x: '-100%'  }};";" animate={{ x: 0  }};";" exit={{ x: '-100%'  }} transition={{ type 'spring', damping: 2 5, stiffness: 20 0 }}" className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-cyan/20 z-50 overflow-y-auto";";" > {}" <div className="p-6 border-b border-zion-cyan/20">" <div className="flex items-center justify-between">" <Link to="/" className="flex items-center space-x-3 group" onClick={onClose}>" <div className="relative">" <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">" <span className="text-xl font-bold text-white">Z</span>;";" </div>;";" </div> <div>" <div className="text-white font-bold text-lg">Zion Tech Group</div>" <div className="text-zion-slate-light text-sm">Innovation Hub</div>; </div>;" </Link>;";" </div>;";" </div> {}" <nav className={`p-4 space-y-2`> {navigationItems.map((item) => (; <div key={item.name}> {item.children ? (; <div>; <button; onClick={() => toggleExpanded(item.name)}; className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${ isActive(item.href);" ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30';";" : 'text-zion-slate-light hover: b g-zion-slate/50 hover: tex t-white';";" }`};``};" >" <div className="flex items-center space-x-3"> {item.icon}" <span className="font-medium">{item.name}</span>;";" </div> {isExpanded(item.name) ? (" <ChevronDown className="w-4 h-4"  /> ) : (" <ChevronRight className="w-4 h-4"  />; )}; </button>; <AnimatePresence> {isExpanded(item.name) && (; <motion.div;" initial={{ height: 0, opacity: 0 }};";" animate={{ height: 'auto', opacity: 1 }};";" exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2  }}" className={`ml-8 mt-2 space-y-1 overflow-hidden`; > {item.children.map((child) => (; <Link; key={child.name}; to={child.href}; onClick={onClose}; className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${ isActive(child.href); ? 'bg-zion-cyan/10 text-zion-cyan';" : 'text-zion-slate-light hover: b g-zion-slate/30 hover: tex t-white';";" }`};`;`} > {child.icon}" <span className="text-sm">{child.name}</span> {child.featured && (" <span className={`ml-auto px-2 py-1 bg-zion-cyan text-white text-xs rounded-full`> {child.badge || 'Featured'}; </span>; )}; </Link>; ))}; </motion.div>; )}; </AnimatePresence>; </div>; ) : (; <Link; to={item.href}; onClick={onClose}; className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${ isActive(item.href); ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30';" : 'text-zion-slate-light hover: b g-zion-slate/50 hover: tex t-white';";" }`};`;`} > {item.icon}" <span className="font-medium">{item.name}</span>; </Link>; )};" </div>;";" ))};";" </nav> {}" <div className="p-4 border-t border-zion-cyan/20 mt-auto">" <div className="space-y-3 text-sm">" <div className="flex items-center space-x-3 text-zion-slate-light">" <Phone className="w-4 h-4"  />;";" <span>+1 302 464 0950</span> </div>" <div className="flex items-center space-x-3 text-zion-slate-light">" <Mail className="w-4 h-4"  />;";" <span>kleber@ziontechgroup.com</span> </div>" <div className="flex items-center space-x-3 text-zion-slate-light">" <MapPin className="w-4 h-4"  />; <span>364 E Main St STE 1008<br  />Middletown DE 19709</span>; </div>; </div>; </div>; </motion.div>; </>; )}; </AnimatePresence>;" );";" };";"  export default SidebarNavigation;";,"});,"})',';';
     ';';';
-
+import React { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from 'lucide-react'  interface NavigationItem {',;',';';
     ';
    name: string,
    href: string,
@@ -149,19 +149,19 @@ return (',';';
     ' {}''' <div: classNam e="p-4 border-t border-zion-cyan/20 mt-auto">''' <div className="space-y-3 text-sm">''' <div className="flex items-center space-x-3 text-zion-slate-light">''' <Phone className="w-4 h-4"  />' <span>+1 302 464 0950</span>'' </div>''' <div className="flex items-center space-x-3 text-zion-slate-light">''' <Mail className="w-4 h-4"  />' <span>kleber@ziontechgroup.com</span>'' </div>''' <div className="flex items-center space-x-3 text-zion-slate-light">''' <MapPin className="w-4 h-4"  /> <span>364 E Main St STE 1008<br /    />Middletown DE 19709</span> </div> </div> </div> </motion.div> </> )} </AnimatePresence>' )'}',',';';
     ';' export: default SidebarNavigation';'',',';';
     '```;";`;';';';';
-
+import React { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from 'lucide-react'  interface NavigationItem { name: string',;';';
     ';';';
-
+import React { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from 'lucide-react'  interface NavigationItem {',;';';
     ';';';
 import React {useState } from 'react'',;';';
     ';';';
-
+import {Link, useLocation } from 'react-router-dom' import {motion, AnimatePresence } from 'framer-motion' import {Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from 'lucide-react'  interface NavigationItem {;';';';
 import React { useState } from &apos;',';';
     ';';';
-
+import { motion } from &apos;framer-motion',';';';
     ',';';
     ';';';
-  interface NavigationItem {
+import Link from &apos;next/link';react&apos; import { Link, useLocation } from &apos;react-router-dom&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos; import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from &apos;lucide-react&apos;  interface NavigationItem {
 "";
 }';
    name: string;';';
@@ -359,7 +359,7 @@ import React { useState } from &apos;',';';
     ' {}''' <div className="p-4 border-t border-zion-cyan/20 mt-auto">''' <div className="space-y-3 text-sm">''' <div className="flex items-center space-x-3 text-zion-slate-light">''' <Phone className="w-4 h-4"  />' <span>+1 302 464 0950</span>'' </div>''' <div className="flex items-center space-x-3 text-zion-slate-light">''' <Mail className="w-4 h-4"  />' <span>kleber@ziontechgroup.com</span>'' </div>''' <div className="flex items-center space-x-3 text-zion-slate-light">''' <MapPin className="w-4 h-4"  /> <span>364 E Main St STE 1008<br /    />Middletown DE 19709</span> </div> </div> </div> </motion.div> </> )} </AnimatePresence>' )'}',',';';
     ';' export default SidebarNavigation';'',',';';
     '``';';';';
-
+import React { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine }  from 'lucide-react';interface NavigationItem {';';
 "';';';
 "';';';';
 </motion>
