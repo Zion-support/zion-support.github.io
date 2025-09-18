@@ -10,12 +10,6 @@ import { Label } from '@/components/ui/label';
 
 // Card components are usually exported from 'card.tsx' like this:
 // import { Card, CardHeader, CardTitle, CardContent } from "../../components/ui/card';
-=======
-import { NextSeo } from '@/components/NextSeo';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-// import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 // However, the provided JSX doesn't use Card, CardHeader, etc. explicitly as wrappers,
 // but implies their styling might be used. The current JSX structure is fine as is
 // and will rely on Tailwind classes primarily. If Card components were needed for structure,
