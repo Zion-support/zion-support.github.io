@@ -132,8 +132,6 @@ const SpaceTechInnovation2026: React.FC = () => {
           </div>
         </div>
 
-        </div>
-
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">

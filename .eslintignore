@@ -1,116 +1,47 @@
-# Build outputs
+# Build artifacts and generated files
 dist/
-build/
 .next/
-out/
 node_modules/
+*.min.js
+*.bundle.js
 
-# Disabled/backup directories
+# Disabled directories
 zion-os.disabled/
 zion-os/
 zion-website/
 zion.app/
 zion_academy/
-zion-ai-assistant/
-token/
-dao/
-server/
-netlify/
-src-clean/
-apps/
-apps.backup/
-automation/
-backup/
-backups/
-backup-merge-conflicts/
-broken_components/
-broken_files_backup/
-app-disabled/
-app-minimal/
-api-backup/
-api.disabled/
-api.disabled.temp/
-recovered-branches/
 
-# Generated files
-**/*.backup.*
-**/*.old.*
-**/*.disabled.*
-**/*.broken.*
-**/*.corrupted.*
-**/*.temp.*
-**/*.test.*
-**/*.spec.*
-**/*.config.*
-**/*.log
-**/*.lock
+# Build outputs
+build/
+out/
 
-# Public assets
+# Service worker files
+sw.js
+service-worker.js
+
+# Config files that don't need linting
+*.config.js
+postcss.config.js
+tailwind.config.js
+next.config.js
+
+# Static files
 public/
+static/
 
-# Reports and logs
-**/*-report*
-**/*-summary*
-**/*-logs*
-**/automation-reports/
-**/performance-reports/
-**/link-reports/
-**/monitoring/
+# Backup files
+*.backup
+*.backup.*
 
-# Scripts and automation
-**/*.sh
-**/*.py
-**/*.cjs
-**/*.mjs
-**/scripts/
-**/automation/
-**/pm2-*
-**/fix-*
-**/clean-*
-**/batch-*
-**/merge-*
-**/resolve-*
-**/systematic-*
-**/ultimate-*
-**/structural-*
-**/quick-*
-**/comprehensive-*
-**/enhanced-*
-**/complete-*
-**/app-optimizer.*
-**/improve-*
-**/find-*
-**/git-ops.*
-**/pr-manager.*
-**/merge-strategy.*
-**/resolve-and-merge-*
-**/merge-all-*
-**/merge-prs.*
-**/pr-*
-**/batch_*
-**/check_*
-**/commit-*
-**/complete_*
-**/deploy-*
-**/fix_*
-**/git_*
-**/health-*
-**/quick-*
-**/run-*
-**/start-*
-**/test-*
-**/ultimate-*
+# Test artifacts
+coverage/
+.nyc_output/
 
-# Specific file patterns
-**/Dockerfile*
-**/docker-compose*
-**/ecosystem.config.*
-**/bundle-analyzer.config.*
-**/csp-config.*
-**/vite.config.*
-**/postcss.config.*
-**/playwright.config.*
-**/cypress.config.*
-**/jest.config.*
-**/jest.setup.*
-**/test-utils.*
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
