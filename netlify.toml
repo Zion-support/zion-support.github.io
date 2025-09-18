@@ -3,7 +3,7 @@
   command = "npm ci --no-audit --no-fund && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
-  # No-op: trigger Netlify rebuild at 2025-09-18T16:45:00Z
+  # No-op: trigger Netlify rebuild at 2025-09-18T17:30:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -219,4 +219,4 @@
 
 ## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T16:50:00Z
+# No-op: trigger deploy 2025-09-18T17:30:00Z
