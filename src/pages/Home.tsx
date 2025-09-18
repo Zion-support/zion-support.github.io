@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 
@@ -21,7 +22,7 @@ const Home: React.FC = () => {
             <Link to="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">⚛️ Quantum Computing Revolution</Link>
             <Link to="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🛡️ Cybersecurity Solutions</Link>
           </div>
-        </motion.div>
+        </div>
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🤖</div>
@@ -73,6 +74,7 @@ const Home: React.FC = () => {
             <Link to="/blog/ai-2026-agent-rollback-patterns" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
           </div>
         </div>
+        </div>
           <motion.div 
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -89,6 +91,12 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-semibold text-white mb-4">AI Services</h3>
+              <p className="text-gray-300 mb-4">
+                Advanced AI solutions for modern businesses.
+              </p>
+            </motion.div>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
