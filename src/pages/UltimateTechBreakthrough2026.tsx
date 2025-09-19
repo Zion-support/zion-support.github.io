@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
@@ -31,7 +30,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/30 hover:scale-105 transition-all duration-500">
               <div className="text-8xl mb-6 text-center">⚛️</div>
               <h2 className="text-3xl font-bold mb-6 text-center">Quantum Consciousness</h2>
@@ -55,7 +53,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-10 border border-emerald-400/30 hover:scale-105 transition-all duration-500">
               <div className="text-8xl mb-6 text-center">🌌</div>
               <h2 className="text-3xl font-bold mb-6 text-center">Interdimensional Computing</h2>
@@ -80,7 +77,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           {/* Revolutionary Applications */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-20">
             <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -109,7 +105,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           {/* Technology Timeline */}
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-20">
             <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -138,7 +133,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           {/* Call to Action */}
           <div className="text-center">
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">

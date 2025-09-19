@@ -30,7 +30,6 @@ export const PerformanceOptimizer = () => {,
           setTimeout(() => {,
             const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             if (perfData) {,
-              console.log('Performance Metrics:', {,
                 loadTime: perfData.loadEventEnd - perfData.loadEventStart;
                 domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
                 firstPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-paint')?.startTime;

@@ -36,7 +36,6 @@ export class PerformanceOptimizer {,
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as any;
         this.metrics.set('LCP', lastEntry.startTime);
-        console.log('LCP:', lastEntry.startTime);
       });
       this.observer.observe({ entryTypes: ['largest-contentful-paint'] ,});
       // First Input Delay,
@@ -44,7 +43,6 @@ export class PerformanceOptimizer {,
         const entries = list.getEntries();
         entries.forEach((entry: any) => {,
           this.metrics.set('FID', entry.processingStart - entry.startTime);
-          console.log('FID:', entry.processingStart - entry.startTime);
         });
       });
       this.observer.observe({ entryTypes: ['first-input'] ,});
@@ -57,7 +55,6 @@ export class PerformanceOptimizer {,
             clsValue += entry.value,}
         });
         this.metrics.set('CLS', clsValue);
-        console.log('CLS:', clsValue);
       });
       this.observer.observe({ entryTypes: ['layout-shift'] ,});
     } catch (error) {,
@@ -75,7 +72,6 @@ export class PerformanceOptimizer {,
         entries.forEach((entry: any) => {,
           if (entry.initiatorType === 'script' || entry.initiatorType === 'link') {,
             const loadTime = entry.responseEnd - entry.startTime;
-            console.log(`${entry.name}: ${loadTime}ms`);
           }
         });
       });
@@ -112,7 +108,6 @@ export class PerformanceOptimizer {,
    */,
   reportMetrics(): void {,
     const metrics = this.getMetrics();
-    console.log('Performance Metrics:', Object.fromEntries(metrics));
     // Send to analytics service if available,
     if (typeof window !== 'undefined' && (window as any).gtag) {,
       metrics.forEach((value, key) => {,
@@ -240,13 +235,9 @@ export function analyzeBundleSize(): void {,
   if (typeof window === 'undefined') return;
   const scripts = Array.from(document.scripts);
   const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
-  console.log('Bundle Analysis: ');
-  console.log('Scripts:', scripts.length);
-  console.log('Stylesheets:', stylesheets.length);
   // Analyze script sizes,
   scripts.forEach((script, index) => {,
     if (script.src) {,
-      console.log(`Script ${index + 1}: ${script.src}`);
     }
   });
 }

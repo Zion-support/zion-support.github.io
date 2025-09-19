@@ -1,0 +1,82 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Bot, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
+const AutonomousBusinessOperationsPlatform = () => {,
+  const cards = [,
+    { icon: Bot, title: 'Autonomous Operations', desc: 'AI runs routine workflows 24/7.' ,};
+    { icon: Shield, title: 'Enterprise Security', desc: 'Built-in protections and compliance.' ,};
+    { icon: TrendingUp, title: 'Performance Insights', desc: 'Optimize processes with analytics.' ,};
+    { icon: Users, title: 'Team Orchestration', desc: 'Coordinate work across teams.' ,}
+  ];
+<<<<<<< HEAD
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">,
+      <Helmet>,
+        <title>Autonomous Business Operations Platform - Zion Tech Group</title>,
+        <meta name="description" content="AI-powered platform that automates, monitors, and optimizes business operations." />,
+        <link rel="canonical" href="https: //ziontechgroup.com/autonomous-business-operations-platform" />,
+      </Helmet>,
+      <section className="pt-24 pb-12 px-4">,
+        <div className="max-w-5xl mx-auto text-center">,
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Autonomous Business Operations Platform</h1>,
+          <p className="text-lg md:text-xl text-gray-300 mb-8">Automate and optimize core processes with production‑grade AI.</p>,
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">,
+            <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-semibold">,
+              Get Started <ArrowRight className="w-5 h-5 ml-2" />,
+            </Link>,
+            <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg font-semibold">,
+              View Services,
+          </div>,
+        </div>,
+      </section>,
+      <section className="pb-20 px-4">,
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">,
+          {cards.map((c, i) => {,
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <Helmet>
+        <title>Autonomous Business Operations Platform - Zion Tech Group</title>
+        <meta name="description" content="AI-powered platform that automates, monitors, and optimizes business operations." />
+        <link rel="canonical" href="https://ziontechgroup.com/autonomous-business-operations-platform" />
+      </Helmet>
+      <section className="pt-24 pb-12 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Autonomous Business Operations Platform</h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8">Automate and optimize core processes with production‑grade AI.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-semibold">
+              Get Started <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg font-semibold">
+              View Services
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="pb-20 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((c, i) => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-6d83
+            const Icon = c.icon;
+            return (,
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-600 flex items-center justify-center mb-4">,
+                  <Icon className="w-6 h-6" />,
+                </div>,
+                <h3 className="text-xl font-semibold mb-2">{c.title}</h3>,
+                <p className="text-gray-300 text-sm">{c.desc}</p>,
+              </div>,
+            );
+          })}
+<<<<<<< HEAD
+    </div>,
+=======
+        </div>
+      </section>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-6d83
+  );
+};
+export default AutonomousBusinessOperationsPlatform;

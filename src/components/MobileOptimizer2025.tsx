@@ -82,10 +82,8 @@ const MobileOptimizer2025: React.FC = () => {,
     const handleVisibilityChange = () => {,
       if (document.hidden) {,
         // Pause non-essential operations when page is hidden,
-        console.log('Page hidden - optimizing for battery life');
       } else {,
         // Resume operations when page is visible,
-        console.log('Page visible - resuming normal operations');
     document.addEventListener('visibilitychange', handleVisibilityChange);
     // Add touch event optimizations,
     const addTouchOptimizations = () => {,

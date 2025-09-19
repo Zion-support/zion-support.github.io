@@ -1,36 +1,33 @@
 #!/bin/bash
 
-# Script to fix all merge conflicts by accepting remote version
-set -e
+echo "Starting comprehensive merge conflict resolution..."
 
-echo "Fixing all merge conflicts by accepting remote version..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
-
-if [ -z "$files_with_conflicts" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
-
-echo "Found merge conflicts in the following files:"
-echo "$files_with_conflicts"
-
-# For each file with conflicts, accept the remote version
-for file in $files_with_conflicts; do
-    echo "Fixing conflicts in $file..."
-    
-    # Accept remote version (theirs)
-    git checkout --theirs "$file" 2>/dev/null || {
-        echo "Could not checkout theirs for $file, trying manual resolution..."
+# Find and fix all merge conflicts in src directory
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Fixing conflicts in: $file"
         
-        # If checkout fails, manually resolve by removing conflict markers and keeping remote content
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-    }
-    
-    # Add the resolved file
-    git add "$file"
+        # Create backup
+        cp "$file" "$file.backup.$(date +%s)"
+        
+        # Remove merge conflict markers and keep HEAD version
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> cursor\/fix-netlify-build-and-merge-to-main-ca65/d' "$file"
+        
+        # Fix import paths
+        sed -i 's|@/data/|../data/|g' "$file"
+        sed -i 's|@/components/|../components/|g' "$file"
+        sed -i 's|@/hooks/|../hooks/|g' "$file"
+        sed -i 's|@/utils/|../utils/|g' "$file"
+        sed -i 's|@/context/|../context/|g' "$file"
+        
+        # Fix SEO imports
+        sed -i 's|from '\''../components/SEO\.jsx'\''|from '\''../components/SEO'\''|g' "$file"
+        sed -i 's|from '\''../components/SEO\.tsx'\''|from '\''../components/SEO'\''|g' "$file"
+        
+        echo "Fixed: $file"
+    fi
 done
 
-echo "All merge conflicts resolved!"
+echo "Merge conflict resolution completed!"
+echo "Files processed: $(find src -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | wc -l)"

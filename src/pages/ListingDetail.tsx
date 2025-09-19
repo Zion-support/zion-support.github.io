@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "../components/ChatWidget";
-import { useRouter } from "next/router";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
@@ -16,8 +16,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../components/
 export default function ListingDetail() {,
     // useParams may be untyped in this environment, so avoid passing a,
     // type argument and cast the result instead to prevent TS2347 errors.,
-    const router = useRouter();
-    const id = router.query.id;
+    const { id } = useParams();
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);

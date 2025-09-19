@@ -7,7 +7,7 @@ interface AccessibilitySettings {,
   screenReader: boolean;
   zoomLevel: number;
   colorBlindMode: boolean,}
-export default function AccessibilityEnhancer() {,
+export default React.memo(function AccessibilityEnhancer() {,
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({,
     highContrast: false;
