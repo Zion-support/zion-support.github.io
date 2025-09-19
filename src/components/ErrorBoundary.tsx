@@ -10,6 +10,14 @@ interface State {
   error?: Error;
 }
 
+// Extend Window interface to include gtag
+declare global {
+  interface Window {
+    // eslint-disable-next-line no-unused-vars
+    gtag?: (command: string, action: string, parameters?: Record<string, unknown>) => void;
+  }
+}
+
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false

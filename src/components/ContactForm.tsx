@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useToast } from '../hooks/useToast';
 
 interface FormData {
@@ -18,7 +18,30 @@ const ContactForm: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formErrors, setFormErrors] = useState<Partial<FormData>>({});
   const { showSuccess, showError } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const validateForm = (): boolean => {
+    const errors: Partial<FormData> = {};
+    
+    if (!formData.name.trim()) {
+      errors.name = 'Name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required';
+    }
+    
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -26,10 +49,24 @@ const ContactForm: React.FC = () => {
       ...prev,
       [name]: value
     }));
+    
+    // Clear error for this field when user starts typing
+    if (formErrors[name as keyof FormData]) {
+      setFormErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      showError('Please fix the errors in the form');
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -44,6 +81,7 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
+      setFormErrors({});
       
       showSuccess('Thank you for your message! We\'ll get back to you soon.');
     } catch {
@@ -60,7 +98,7 @@ const ContactForm: React.FC = () => {
       <h2>Get In Touch</h2>
       <p>Ready to transform your business with our technology solutions?</p>
       
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="name">Full Name *</label>
@@ -72,8 +110,14 @@ const ContactForm: React.FC = () => {
               onChange={handleInputChange}
               required
               placeholder="Enter your full name"
-              aria-describedby="name-error"
+              aria-describedby={formErrors.name ? "name-error" : undefined}
+              aria-invalid={!!formErrors.name}
             />
+            {formErrors.name && (
+              <span id="name-error" className="error-message" role="alert">
+                {formErrors.name}
+              </span>
+            )}
           </div>
           
           <div className="form-group">
@@ -86,8 +130,14 @@ const ContactForm: React.FC = () => {
               onChange={handleInputChange}
               required
               placeholder="Enter your email"
-              aria-describedby="email-error"
+              aria-describedby={formErrors.email ? "email-error" : undefined}
+              aria-invalid={!!formErrors.email}
             />
+            {formErrors.email && (
+              <span id="email-error" className="error-message" role="alert">
+                {formErrors.email}
+              </span>
+            )}
           </div>
         </div>
 
@@ -132,8 +182,14 @@ const ContactForm: React.FC = () => {
             required
             rows={5}
             placeholder="Tell us about your project requirements..."
-            aria-describedby="message-error"
+            aria-describedby={formErrors.message ? "message-error" : undefined}
+            aria-invalid={!!formErrors.message}
           />
+          {formErrors.message && (
+            <span id="message-error" className="error-message" role="alert">
+              {formErrors.message}
+            </span>
+          )}
         </div>
 
         <button

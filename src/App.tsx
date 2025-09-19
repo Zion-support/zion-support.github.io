@@ -122,6 +122,14 @@ function App() {
             event.preventDefault();
             window.location.reload();
             break;
+          case 'h':
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            break;
+          case 'l':
+            event.preventDefault();
+            document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            break;
         }
       }
     };
@@ -130,13 +138,21 @@ function App() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [toggleDarkMode]);
 
-  // Handle scroll to top button
+  // Handle scroll to top button with throttling for performance
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setShowScrollToTop(window.scrollY > 300);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setShowScrollToTop(window.scrollY > 300);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -202,6 +218,31 @@ function App() {
       pricing: "$15,000/month"
     }
   ], []);
+
+  // Enhanced accessibility: Focus management
+  useEffect(() => {
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement?.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement?.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   if (error) {
     return (
@@ -326,7 +367,7 @@ function App() {
       </header>
       
       <main className="main-content">
-        <section className="contact-section">
+        <section className="contact-section" id="contact-form">
           <ContactForm />
         </section>
       </main>
