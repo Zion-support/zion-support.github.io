@@ -60,8 +60,12 @@
     "dao",
     "netlify/functions",
     "recovered-branches",
-    "components",
     "token",
-    "zion.app"
+    "zion.app",
+    "src/pages-disabled",
+    "src/utils-disabled",
+    "src.disabled",
+    "src/backup",
+    "src/components-disabled"
   ]
 }

@@ -48,7 +48,6 @@ export default [
       'src/pages/services/**',
       'src/pages/solutions/**',
       'src/pages/talent/**',
-      'src/components/**',
       'src/context/**',
       'src/data/**',
       'src/hooks/**',

@@ -25,6 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
     
@@ -45,7 +46,7 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="error-boundary" role="alert">
           <h2>Something went wrong</h2>
-          <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+          <p>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
 
           <button 
             onClick={() => window.location.reload()}
