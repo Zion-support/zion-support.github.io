@@ -4,6 +4,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import LazyImage from './components/LazyImage';
 import VirtualList from './components/VirtualList';
 import MemoizedComponent from './components/MemoizedComponent';
+import ErrorBoundary from './components/ErrorBoundary';
 import { useTheme } from './context/ThemeContext';
 
 // Service data with more details
@@ -101,7 +102,9 @@ function App() {
     // Add performance monitoring
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        console.log('Performance entry:', entry);
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance entry:', entry);
+        }
       });
     });
     observer.observe({ entryTypes: ['measure', 'navigation'] });
@@ -122,7 +125,9 @@ function App() {
   // Contact form handlers
   const handleContactSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact form submitted:', contactData);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Contact form submitted:', contactData);
+    }
     // In a real app, you would send this to your backend
     alert('Thank you for your message! We will get back to you soon.');
     setContactData({ name: '', email: '', company: '', message: '' });
@@ -190,8 +195,9 @@ function App() {
   );
 
   return (
-    <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
-      <PerformanceMonitor />
+    <ErrorBoundary>
+      <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+        <PerformanceMonitor />
       
       <header className="App-header">
         <div className="header-controls">
@@ -432,7 +438,8 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 }
 
