@@ -18,7 +18,13 @@
     "type-check:watch": "tsc --noEmit --watch",
     "test": "echo \"No tests specified\" && exit 0",
     "clean": "rm -rf dist node_modules/.vite",
-    "prebuild": "echo 'Skipping lint for build fix'"
+    "prebuild": "echo 'Skipping lint for build fix'",
+    "validate": "npm run type-check && npm run lint && npm run build",
+    "validate:fix": "npm run lint:fix && npm run type-check && npm run build",
+    "dev:clean": "npm run clean && npm run dev",
+    "build:production": "npm run clean && npm run build",
+    "check:all": "npm run type-check && npm run lint && npm audit && npm outdated",
+    "serve": "npm run build && npm run preview"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",

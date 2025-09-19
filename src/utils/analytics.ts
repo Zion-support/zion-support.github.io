@@ -26,6 +26,27 @@ export const trackButtonClick = (buttonName: string, context?: string) => {
   trackEvent('button_click', { button: buttonName, context });
 };
 
-export const trackFeatureInteraction = (featureName: string, action: string) => {
-  trackEvent('feature_interaction', { feature: featureName, action });
+export const trackFeatureInteraction = (featureName: string, action: string | Record<string, unknown>) => {
+  const properties = typeof action === 'string' 
+    ? { feature: featureName, action } 
+    : { feature: featureName, ...action };
+  trackEvent('feature_interaction', properties);
+};
+
+export const trackError = (error: Error, context?: string) => {
+  trackEvent('error_occurred', {
+    error_message: error.message,
+    error_stack: error.stack,
+    context,
+    timestamp: new Date().toISOString()
+  });
+};
+
+export const trackPerformance = (metricName: string, value: number, unit: string = 'ms') => {
+  trackEvent('performance_metric', {
+    metric: metricName,
+    value,
+    unit,
+    timestamp: new Date().toISOString()
+  });
 };
