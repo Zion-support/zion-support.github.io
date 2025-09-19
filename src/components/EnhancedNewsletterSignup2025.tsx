@@ -23,11 +23,11 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
         <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
         <p className="text-xl opacity-90 mb-6">
-          You're now part of our revolutionary technology community. 
+          You&apos;re now part of our revolutionary technology community. 
           Get ready for exclusive access to breakthrough innovations.
         </p>
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-          <h4 className="text-xl font-semibold mb-4">What you'll receive:</h4>
+          <h4 className="text-xl font-semibold mb-4">What you&apos;ll receive:</h4>
           <ul className="text-left space-y-2">
             <li>• Exclusive access to new technology releases</li>
             <li>• Early previews of revolutionary breakthroughs</li>
@@ -74,12 +74,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               {isLoading ? 'Joining...' : 'Join Revolution'}
             </button>
           </form>
-        ) : (
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Welcome to the Future!</h3>
-            <p className="text-gray-300">You're now part of the revolution.</p>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );

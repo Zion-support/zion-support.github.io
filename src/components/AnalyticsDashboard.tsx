@@ -60,9 +60,8 @@ const AnalyticsDashboard: React.FC = () => {
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300"
         title="Toggle Analytics Dashboard"
       >
-        📊
+        📊</button>
       </button>
-
       {/* Analytics Dashboard */}
       {isVisible && (
         <div className="fixed bottom-20 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-xl z-50 min-w-64 border border-gray-700">
@@ -72,32 +71,21 @@ const AnalyticsDashboard: React.FC = () => {
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-white text-xl"
             >
-              ×
+              ×</button>
             </button>
-          </div>
-          
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-300">Session Duration:</span>
               <span className="text-green-400 font-mono">{formatDuration(analyticsData.sessionDuration)}</span>
-            </div>
-            
             <div className="flex justify-between">
               <span className="text-gray-300">Page Views:</span>
               <span className="text-blue-400 font-mono">{analyticsData.pageViewCount}</span>
-            </div>
-            
             <div className="flex justify-between">
               <span className="text-gray-300">Events:</span>
               <span className="text-purple-400 font-mono">{analyticsData.eventCount}</span>
-            </div>
-            
             <div className="flex justify-between">
               <span className="text-gray-300">Last Activity:</span>
               <span className="text-yellow-400 font-mono">{analyticsData.lastActivity}</span>
-            </div>
-          </div>
-          
           <div className="mt-3 pt-3 border-t border-gray-700">
             <button
               onClick={() => {
@@ -109,10 +97,8 @@ const AnalyticsDashboard: React.FC = () => {
               }}
               className="w-full bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded text-xs transition-colors duration-200"
             >
-              Export Session Data
+              Export Session Data</button>
             </button>
-          </div>
-        </div>
       )}
     </>
   );

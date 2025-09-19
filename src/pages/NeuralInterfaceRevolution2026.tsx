@@ -31,8 +31,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 flex items-center justify-center">
-        <div className="text-white text-2xl font-bold animate-pulse">Initializing Neural Interface...</div>
-      </div>
+        <div className="text-white text-2xl font-bold animate-pulse">Initializing Neural Interface...
     );
   }
 
@@ -134,51 +133,39 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm">
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🧬 NEURAL INTERFACE REVOLUTION 2026 • MIND-MACHINE FUSION
-            </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Neural Interface Revolution 2026
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
               Bridge the gap between mind and machine with revolutionary neural interface technology. 
-              Experience direct brain-computer communication and unlock new possibilities for human potential.
+              Experience direct brain-computer communication and unlock new possibilities for human potential.</p>
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Technology
+                Explore Technology</button>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
-                Schedule Demo
+                Schedule Demo</button>
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Live Neural Data */}
       <div className="container mx-auto px-4 py-8">
         <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 mb-12">
           <h2 className="text-3xl font-bold text-center mb-8">Live Neural Interface Status</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">{neuralData.signalStrength}%</div>
-              <div className="text-lg opacity-80">Signal Strength</div>
-            </div>
+              <div className="text-4xl font-bold text-emerald-400 mb-2">{neuralData.signalStrength}%
+              <div className="text-lg opacity-80">Signal Strength
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">{neuralData.accuracy}%</div>
-              <div className="text-lg opacity-80">Recognition Accuracy</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">{neuralData.accuracy}%
+              <div className="text-lg opacity-80">Recognition Accuracy
             <div className="text-center">
-              <div className="text-4xl font-bold text-teal-400 mb-2">{neuralData.latency}ms</div>
-              <div className="text-lg opacity-80">Response Latency</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-4xl font-bold text-teal-400 mb-2">{neuralData.latency}ms
+              <div className="text-lg opacity-80">Response Latency
         {/* Navigation */}
         <div className="flex flex-wrap justify-center space-x-2 mb-8">
           {['overview', 'technologies', 'applications', 'case-studies', 'contact'].map((tab) => (
@@ -191,11 +178,9 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                   : 'bg-white/10 text-white hover:bg-white/20'
               }`}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1).replace('-', ' ')}
+              {tab.charAt(0).toUpperCase() + tab.slice(1).replace('-', ' ')}</button>
             </button>
           ))}
-        </div>
-
         {/* Overview Tab */}
         {activeTab === 'overview' && (
           <div className="space-y-12">
@@ -204,33 +189,25 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               <p className="text-xl opacity-90 max-w-4xl mx-auto">
                 Neural interfaces represent the next frontier in human-computer interaction, enabling direct 
                 communication between the brain and digital systems. Our revolutionary technology opens up 
-                unprecedented possibilities for human enhancement and medical treatment.
+                unprecedented possibilities for human enhancement and medical treatment.</p>
               </p>
-            </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
-                <div className="text-5xl mb-4">🧠</div>
+                <div className="text-5xl mb-4">🧠
                 <h3 className="text-xl font-bold mb-2">Direct Brain Control</h3>
                 <p className="text-emerald-100 text-sm">Control devices with your thoughts</p>
-              </div>
               <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-teal-400/30 text-center">
-                <div className="text-5xl mb-4">⚡</div>
+                <div className="text-5xl mb-4">⚡
                 <h3 className="text-xl font-bold mb-2">Real-time Processing</h3>
                 <p className="text-teal-100 text-sm">Instantaneous neural signal processing</p>
-              </div>
               <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
-                <div className="text-5xl mb-4">🔬</div>
+                <div className="text-5xl mb-4">🔬
                 <h3 className="text-xl font-bold mb-2">Medical Applications</h3>
                 <p className="text-cyan-100 text-sm">Revolutionary medical treatments</p>
-              </div>
               <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 text-center">
-                <div className="text-5xl mb-4">🚀</div>
+                <div className="text-5xl mb-4">🚀
                 <h3 className="text-xl font-bold mb-2">Human Enhancement</h3>
                 <p className="text-blue-100 text-sm">Augment human capabilities</p>
-              </div>
-            </div>
-          </div>
         )}
 
         {/* Technologies Tab */}
@@ -240,10 +217,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               <h2 className="text-4xl font-bold mb-6">Neural Interface Technologies</h2>
               <p className="text-xl opacity-90 max-w-4xl mx-auto">
                 Our comprehensive suite of neural interface technologies covers the full spectrum from 
-                non-invasive to invasive solutions
+                non-invasive to invasive solutions</p>
               </p>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {neuralTechnologies.map((tech) => (
                 <div key={tech.id} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
@@ -261,8 +236,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                       <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold">
                         {tech.accuracy} Accuracy
                       </span>
-                    </div>
-                  </div>
                   <p className="text-white/80 mb-6">{tech.description}</p>
                   <div className="space-y-4">
                     <div>
@@ -275,7 +248,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
                     <div>
                       <h4 className="font-semibold text-lg mb-2">Applications:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -284,16 +256,10 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                             {app}
                           </span>
                         ))}
-                      </div>
-                    </div>
                     <button className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Learn More
+                      Learn More</button>
                     </button>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
         )}
 
         {/* Applications Tab */}
@@ -302,10 +268,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold mb-6">Real-World Applications</h2>
               <p className="text-xl opacity-90 max-w-4xl mx-auto">
-                Discover how neural interface technology is transforming industries and improving lives
+                Discover how neural interface technology is transforming industries and improving lives</p>
               </p>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {applications.map((app, index) => (
                 <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
@@ -314,7 +278,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                     <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold">
                       {app.category}
                     </span>
-                  </div>
                   <p className="text-white/80 mb-6">{app.description}</p>
                   <div className="space-y-4">
                     <div>
@@ -327,18 +290,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-white/60">Status: {app.status}</span>
                       <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                        Explore
+                        Explore</button>
                       </button>
-                    </div>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
         )}
 
         {/* Case Studies Tab */}
@@ -347,10 +304,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold mb-6">Success Stories</h2>
               <p className="text-xl opacity-90 max-w-4xl mx-auto">
-                Real patient outcomes demonstrating the transformative power of neural interface technology
+                Real patient outcomes demonstrating the transformative power of neural interface technology</p>
               </p>
-            </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
@@ -367,17 +322,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
                   <div className="mt-6 flex justify-between items-center">
                     <span className="text-sm text-white/60">Timeline: {study.timeline}</span>
                     <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Full Story
+                      Full Story</button>
                     </button>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
         )}
 
         {/* Contact Tab */}
@@ -387,10 +337,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               <h2 className="text-4xl font-bold mb-6">Begin Your Neural Journey</h2>
               <p className="text-xl opacity-90 max-w-4xl mx-auto">
                 Ready to explore the possibilities of neural interface technology? 
-                Let's discuss how it can transform your life or business.
+                Let's discuss how it can transform your life or business.</p>
               </p>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -398,18 +346,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">📧</span>
                     <span>neural@ziontechgroup.com</span>
-                  </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">📞</span>
                     <span>+1 (555) 123-4567</span>
-                  </div>
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">🌐</span>
                     <span>www.ziontechgroup.com/neural</span>
-                  </div>
-                </div>
-              </div>
-
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">Request Consultation</h3>
                 <form className="space-y-4">
@@ -434,22 +376,17 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                     type="submit"
                     className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   >
-                    Request Consultation
+                    Request Consultation</button>
                   </button>
                 </form>
-              </div>
-            </div>
-          </div>
         )}
-      </div>
-
       {/* Footer CTA */}
       <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm border-t border-white/20">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Connect Mind and Machine?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Join the neural interface revolution and unlock the full potential of human-computer interaction
+              Join the neural interface revolution and unlock the full potential of human-computer interaction</p>
             </p>
             <div className="flex justify-center space-x-4">
               <Link
@@ -464,11 +401,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               >
                 Contact Us
               </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

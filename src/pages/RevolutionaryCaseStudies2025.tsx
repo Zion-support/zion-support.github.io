@@ -134,22 +134,17 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm">
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🏆 REVOLUTIONARY CASE STUDIES • 2025
-            </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Revolutionary Case Studies
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover how our cutting-edge AI solutions are transforming industries and delivering unprecedented results for businesses worldwide.
+              Discover how our cutting-edge AI solutions are transforming industries and delivering unprecedented results for businesses worldwide.</p>
             </p>
-          </div>
-        </div>
-      </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -162,14 +157,11 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
               }`}
-            >
+            ></button>
               <span className="mr-2">{category.icon}</span>
               {category.name}
             </button>
           ))}
-        </div>
-      </div>
-
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -178,16 +170,13 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               {/* Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="text-6xl">{study.image}</div>
+                  <div className="text-6xl">{study.image}
                   <div>
                     <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
                     <div className="flex items-center space-x-2 text-sm opacity-80">
                       <span>{study.company}</span>
                       <span>•</span>
                       <span>{study.industry}</span>
-                    </div>
-                  </div>
-                </div>
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -196,49 +185,34 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               {/* Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="text-6xl">{study.image}</div>
+                  <div className="text-6xl">{study.image}
                   <div>
                     <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
                     <div className="flex items-center space-x-2 text-sm opacity-80">
                       <span>{study.company}</span>
                       <span>•</span>
                       <span>{study.industry}</span>
-                    </div>
-                  </div>
-                </div>
                 <div className={`px-3 py-1 bg-gradient-to-r ${study.color} text-white text-xs font-semibold rounded-full`}>
                   SUCCESS
-                </div>
-              </div>
-
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold mb-2 text-red-400">Challenge:</h4>
                   <p className="text-gray-300 text-sm">{study.challenge}</p>
-                </div>
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold mb-2 text-green-400">Solution:</h4>
                   <p className="text-gray-300 text-sm">{study.solution}</p>
-                </div>
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold mb-2 text-blue-400">Description:</h4>
                   <p className="text-gray-300 text-sm">{study.description}</p>
-                </div>
-              </div>
-
               {/* Results */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                  <div className="text-2xl font-bold text-green-400">{study.results.efficiency}</div>
-                  <div className="text-xs opacity-80">Efficiency Gain</div>
-                </div>
+                  <div className="text-2xl font-bold text-green-400">{study.results.efficiency}
+                  <div className="text-xs opacity-80">Efficiency Gain
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">$12M</div>
-                  <div className="text-sm opacity-75">Annual Savings</div>
-                </div>
-              </div>
-
+                  <div className="text-4xl font-bold text-purple-400 mb-2">$12M
+                  <div className="text-sm opacity-75">Annual Savings
               {/* Technologies Used */}
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">Technologies Used:</h4>
@@ -248,17 +222,11 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
-              </div>
-
               {/* CTA */}
               <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                View Detailed Case Study →
+                View Detailed Case Study →</button>
               </button>
-            </div>
           ))}
-        </div>
-
       {/* Statistics Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
@@ -268,53 +236,40 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Overall Success Metrics</h2>
             <p className="text-xl opacity-90">Combined results across all our revolutionary AI implementations</p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-green-400 mb-2">+400%</div>
-              <div className="text-lg opacity-80">Average Efficiency Gain</div>
-            </div>
+              <div className="text-5xl font-bold text-green-400 mb-2">+400%
+              <div className="text-lg opacity-80">Average Efficiency Gain
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-400 mb-2">$98M</div>
-              <div className="text-lg opacity-80">Total Cost Savings</div>
-            </div>
+              <div className="text-5xl font-bold text-blue-400 mb-2">$98M
+              <div className="text-lg opacity-80">Total Cost Savings
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.8%</div>
-              <div className="text-lg opacity-80">Average Accuracy</div>
-            </div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">99.8%
+              <div className="text-lg opacity-80">Average Accuracy
             <div className="text-center">
             <div>
-              <div className="text-5xl font-bold mb-2">50+</div>
-              <div className="text-lg opacity-90">Industries Served</div>
-              <div className="text-5xl font-bold text-orange-400 mb-2">500+</div>
-              <div className="text-lg opacity-80">Companies Transformed</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-5xl font-bold mb-2">50+
+              <div className="text-lg opacity-90">Industries Served
+              <div className="text-5xl font-bold text-orange-400 mb-2">500+
+              <div className="text-lg opacity-80">Companies Transformed
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join hundreds of companies that have already revolutionized their operations with our cutting-edge AI solutions. Start your transformation journey today.
+            Join hundreds of companies that have already revolutionized their operations with our cutting-edge AI solutions. Start your transformation journey today.</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Transformation
+              Start Your Transformation</button>
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
-              Schedule Consultation
+              Schedule Consultation</button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+              View All Case Studies</button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               View All Case Studies
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-              View All Case Studies
-              Schedule Consultation
+              Schedule Consultation</button>
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

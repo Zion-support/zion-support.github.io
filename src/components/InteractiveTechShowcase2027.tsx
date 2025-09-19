@@ -161,30 +161,24 @@ const InteractiveTechShowcase2027: React.FC = () => {
         <title>Interactive Tech Showcase 2027 - Zion Tech Group</title>
         <meta name="description" content="Explore our interactive technology showcase featuring quantum technologies, AI evolution, and reality manipulation systems." />
       </Helmet>
-      
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm">
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
-      </div>
-
+        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse">
+        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/30 rounded-full blur-xl animate-pulse delay-1000">
+        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-xl animate-pulse delay-2000">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE SHOWCASE 2027
-          </div>
           <h2 className="text-5xl font-bold text-white mb-6">
             Interactive Technology Showcase 2027
           </h2>
           <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8">
             Explore our revolutionary 2027 technologies through interactive experiences. 
-            Click, hover, and discover the future of quantum computing, AI consciousness, and reality manipulation.
+            Click, hover, and discover the future of quantum computing, AI consciousness, and reality manipulation.</p>
           </p>
-        </div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center space-x-4 mb-12">
           {techCategories.map((category, index) => (
@@ -196,13 +190,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
                   ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
                   : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               }`}
-            >
+            ></button>
               <span className="text-2xl mr-2">{category.icon}</span>
               {category.title}
             </button>
           ))}
-        </div>
-
         {/* Technology Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {techCategories[activeTab].technologies.map((tech, index) => (
@@ -221,14 +213,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
-              >
+              ></button>
                 <span className="text-2xl mr-2">{category.icon}</span>
                 {category.title}
               </button>
             ))}
-          </div>
-        </div>
-
         {/* Technology Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {techCategories[activeTab].technologies.map((tech, index) => (
@@ -246,20 +235,15 @@ const InteractiveTechShowcase2027: React.FC = () => {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}</div>
+                <div className="text-6xl mb-4 animate-bounce">{techCategories[activeTab].icon}
                 <h3 className="text-2xl font-bold text-white mb-2">{tech.name}</h3>
                 <p className="text-white/80 text-sm">{tech.description}</p>
-              </div>
-              
               <div className="space-y-3 mb-6">
                 {tech.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full">
                     <span className="text-white/90 text-sm">{feature}</span>
-                  </div>
                 ))}
-              </div>
-              
               <div className="flex space-x-3">
                 <a
                   href={tech.link}
@@ -268,53 +252,36 @@ const InteractiveTechShowcase2027: React.FC = () => {
                   Explore →
                 </a>
                 <button className="border-2 border-white/30 text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
-                  Demo
+                  Demo</button>
                 </button>
-              </div>
-              
               {hoveredCard === index && (
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl pointer-events-none">
               )}
-            </div>
           ))}
-        </div>
-
         {/* Interactive Features Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold text-white mb-6">Interactive Features</h3>
             <p className="text-xl text-purple-100 max-w-4xl mx-auto">
-              Experience our technologies through immersive interactive features and real-time demonstrations
+              Experience our technologies through immersive interactive features and real-time demonstrations</p>
             </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">🎮</div>
+              <div className="text-5xl mb-4 animate-pulse">🎮
               <h4 className="text-xl font-semibold text-white mb-2">Interactive Demos</h4>
               <p className="text-purple-200 text-sm">Experience our technologies through hands-on interactive demonstrations</p>
-            </div>
-            
             <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">🔮</div>
+              <div className="text-5xl mb-4 animate-pulse">🔮
               <h4 className="text-xl font-semibold text-white mb-2">Virtual Reality</h4>
               <p className="text-purple-200 text-sm">Step into virtual environments to explore quantum realities and AI consciousness</p>
-            </div>
-            
             <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">🧠</div>
+              <div className="text-5xl mb-4 animate-pulse">🧠
               <h4 className="text-xl font-semibold text-white mb-2">AI Conversations</h4>
               <p className="text-purple-200 text-sm">Chat with our conscious AI systems and experience true artificial intelligence</p>
-            </div>
-            
             <div className="text-center">
-              <div className="text-5xl mb-4 animate-pulse">⚡</div>
+              <div className="text-5xl mb-4 animate-pulse">⚡
               <h4 className="text-xl font-semibold text-white mb-2">Quantum Simulations</h4>
               <p className="text-purple-200 text-sm">Witness quantum phenomena and reality manipulation in real-time simulations</p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -322,19 +289,15 @@ const InteractiveTechShowcase2027: React.FC = () => {
           </h3>
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
             Dive into our interactive technology showcase and experience the most revolutionary 
-            technologies of 2027. The future is here, and it's interactive.
+            technologies of 2027. The future is here, and it's interactive.</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Start Interactive Experience →
+              Start Interactive Experience →</button>
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
-              Schedule Private Demo
+              Schedule Private Demo</button>
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

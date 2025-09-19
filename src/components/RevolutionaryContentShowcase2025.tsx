@@ -80,44 +80,38 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY CONTENT SHOWCASE 2025
-          </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Experience the Future Today
           </h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Discover groundbreaking technologies that are reshaping our world and defining the next decade
+            Discover groundbreaking technologies that are reshaping our world and defining the next decade</p>
           </p>
-        </div>
-
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
+          ></button>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></p>
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
+          ></button>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></p>
             </svg>
           </button>
-
           {/* Auto-play Toggle */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             className="absolute top-4 right-4 z-10 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 text-sm"
           >
-            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
+            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}</button>
           </button>
-
           {/* Content Slides */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -130,10 +124,9 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center w-full">
                       {/* Content */}
                       <div className="space-y-6">
-                        <div className="text-8xl mb-6">{content.image}</div>
+                        <div className="text-8xl mb-6">{content.image}
                         <h3 className="text-4xl font-bold text-white mb-4">{content.title}</h3>
                         <p className="text-xl text-white/90 mb-6">{content.description}</p>
-                        
                         {/* Features */}
                         <div className="flex flex-wrap gap-2 mb-8">
                           {content.features.map((feature, featureIndex) => (
@@ -144,30 +137,18 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                               {feature}
                             </span>
                           ))}
-                        </div>
-                        
                         <a
                           href={content.link}
                           className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
                         >
                           Explore {content.title} →
                         </a>
-                      </div>
-                      
                       {/* Visual Element */}
                       <div className="relative">
                         <div className="w-full h-96 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                          <div className="text-9xl opacity-50">{content.image}</div>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                          <div className="text-9xl opacity-50">{content.image}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl">
               ))}
-            </div>
-          </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (
@@ -180,10 +161,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
-            ))}
-          </div>
-        </div>
-
+            ))}</button>
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Revolutionary Content</h3>
@@ -196,16 +174,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               >
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {content.image}
-                </div>
                 <h4 className="text-xl font-bold text-white mb-2">{content.title}</h4>
                 <p className="text-white/80 text-sm">{content.description}</p>
-                <div className="mt-4 text-white/60 text-sm">Explore →</div>
+                <div className="mt-4 text-white/60 text-sm">Explore →
               </a>
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

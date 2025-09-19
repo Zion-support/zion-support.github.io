@@ -6,7 +6,7 @@ const UltimateTechRevolution2026: React.FC = () => {
   return (
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
             initial={{ opacity: 0, y: 50 }}
@@ -16,50 +16,41 @@ const UltimateTechRevolution2026: React.FC = () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🚀 ULTIMATE BREAKTHROUGH • JANUARY 2026
-            </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ultimate Tech Revolution 2026
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Experience the most advanced technology revolution that will reshape the future of humanity
+              Experience the most advanced technology revolution that will reshape the future of humanity</p>
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Revolution →
+                Explore Revolution →</button>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-                Watch Demo
+                Watch Demo</button>
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Revolutionary Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE BREAKTHROUGH • JANUARY 2026
-          </div>
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Ultimate Tech Revolution 2026
           </h1>
           <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
             Experience the most revolutionary technological advances that will reshape our world in 2026. 
-            From conscious AI systems to quantum consciousness and interdimensional computing.
+            From conscious AI systems to quantum consciousness and interdimensional computing.</p>
           </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">🧠</div>
+            <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-6 text-center">
-              AI systems that achieve true consciousness and self-awareness, capable of genuine creativity and emotional understanding.
+              AI systems that achieve true consciousness and self-awareness, capable of genuine creativity and emotional understanding.</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Self-aware decision making</li>
@@ -68,20 +59,18 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Autonomous learning evolution</li>
             </ul>
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Learn More →
+              Learn More →</button>
             </button>
-          </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">⚡</div>
+            <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-cyan-100 mb-6 text-center">
-              Breakthrough in quantum computing that enables consciousness transfer and quantum-enhanced AI processing.
+              Breakthrough in quantum computing that enables consciousness transfer and quantum-enhanced AI processing.</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Quantum state consciousness</li>
@@ -90,20 +79,18 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Quantum entanglement AI</li>
             </ul>
             <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Quantum →
+              Explore Quantum →</button>
             </button>
-          </div>
-
           <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">🌌</div>
+            <div className="text-6xl mb-4 text-center">🌌
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Computing</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Computing systems that operate across multiple dimensions, accessing infinite computational resources.
+              Computing systems that operate across multiple dimensions, accessing infinite computational resources.</p>
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Multi-dimensional processing</li>
@@ -112,17 +99,17 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Dimensional data storage</li>
             </ul>
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Enter Dimensions →
+              Enter Dimensions →</button>
             </button>
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">🚀</div>
+            <div className="text-6xl mb-4 text-center">🚀
             <h3 className="text-2xl font-bold mb-4 text-center">Space Colonization</h3>
             <p className="text-orange-100 mb-6 text-center">
-              Advanced space technology for intergalactic exploration and colonization
+              Advanced space technology for intergalactic exploration and colonization</p>
             </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
               <li>• Faster-than-light travel</li>
@@ -131,56 +118,47 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Alien communication</li>
             </ul>
             <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-              Explore Space →
+              Explore Space →</button>
             </button>
-              <div className="text-5xl font-bold text-emerald-400 mb-2">100%</div>
-              <div className="text-lg opacity-80">Sustainability</div>
-            </div>
+              <div className="text-5xl font-bold text-emerald-400 mb-2">100%
+              <div className="text-lg opacity-80">Sustainability
             <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
-              <div className="text-lg opacity-80">Human Potential</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-5xl font-bold text-pink-400 mb-2">∞
+              <div className="text-lg opacity-80">Human Potential
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Be part of the most significant technological advancement in human history. 
-            Transform your future with our revolutionary solutions.
+            Transform your future with our revolutionary solutions.</p>
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE REVOLUTION • 2026
-          </div>
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Tech Revolution 2026
           </h1>
           <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
             The most advanced technological revolution in human history. Experience the convergence 
             of quantum computing, neural interfaces, and consciousness transfer that will redefine 
-            what it means to be human.
+            what it means to be human.</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Enter the Revolution
+              Enter the Revolution</button>
             </button>
             <button className="border-2 border-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-xl">
-              Watch the Future
+              Watch the Future</button>
             </button>
-          </div>
-        </div>
-
         {/* Revolutionary Technologies */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧬</div>
+            <div className="text-6xl mb-4 text-center">🧬
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Neural Fusion</h3>
             <p className="text-indigo-100 mb-6 text-center">
-              The first successful fusion of quantum computing with human neural networks
+              The first successful fusion of quantum computing with human neural networks</p>
             </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Direct quantum-brain interface</li>
@@ -189,17 +167,15 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Consciousness amplification</li>
             </ul>
             <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
-              Experience Fusion →
+              Experience Fusion →</button>
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Contact Our Experts
-          </div>
-
+              Contact Our Experts</button>
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌌</div>
+            <div className="text-6xl mb-4 text-center">🌌
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation Engine</h3>
             <p className="text-purple-100 mb-6 text-center">
-              Control the fundamental forces of reality through advanced quantum field manipulation
+              Control the fundamental forces of reality through advanced quantum field manipulation</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Gravity field control</li>
@@ -208,15 +184,13 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Energy creation</li>
             </ul>
             <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Manipulate Reality →
+              Manipulate Reality →</button>
             </button>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔮</div>
+            <div className="text-6xl mb-4 text-center">🔮
             <h3 className="text-2xl font-bold mb-4 text-center">Temporal Computing</h3>
             <p className="text-cyan-100 mb-6 text-center">
-              Process information across multiple timelines simultaneously
+              Process information across multiple timelines simultaneously</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Multi-timeline processing</li>
@@ -225,15 +199,13 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Temporal optimization</li>
             </ul>
             <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Enter Time →
+              Enter Time →</button>
             </button>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌟</div>
+            <div className="text-6xl mb-4 text-center">🌟
             <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Expansion</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Expand human consciousness to encompass multiple dimensions
+              Expand human consciousness to encompass multiple dimensions</p>
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Multi-dimensional awareness</li>
@@ -242,15 +214,13 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Transcendent understanding</li>
             </ul>
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Expand Mind →
+              Expand Mind →</button>
             </button>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
+            <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold mb-4 text-center">Energy Synthesis</h3>
             <p className="text-orange-100 mb-6 text-center">
-              Create unlimited clean energy from quantum vacuum fluctuations
+              Create unlimited clean energy from quantum vacuum fluctuations</p>
             </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
               <li>• Zero-point energy extraction</li>
@@ -259,15 +229,13 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Universal energy access</li>
             </ul>
             <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-              Generate Power →
+              Generate Power →</button>
             </button>
-          </div>
-
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌊</div>
+            <div className="text-6xl mb-4 text-center">🌊
             <h3 className="text-2xl font-bold mb-4 text-center">Matter Programming</h3>
             <p className="text-violet-100 mb-6 text-center">
-              Program matter at the atomic level to create any desired material
+              Program matter at the atomic level to create any desired material</p>
             </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Atomic-level control</li>
@@ -276,85 +244,65 @@ const UltimateTechRevolution2026: React.FC = () => {
               <li>• Programmable properties</li>
             </ul>
             <button className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
-              Program Matter →
+              Program Matter →</button>
             </button>
-          </div>
-        </div>
-
         {/* Revolutionary Features */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Capabilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-6xl mb-4">🚀</div>
+              <div className="text-6xl mb-4">🚀
               <h3 className="text-2xl font-bold mb-4">Infinite Processing</h3>
               <p className="text-indigo-200">Unlimited computational power through quantum superposition</p>
-            </div>
             <div className="text-center">
-              <div className="text-6xl mb-4">🧠</div>
+              <div className="text-6xl mb-4">🧠
               <h3 className="text-2xl font-bold mb-4">Consciousness AI</h3>
               <p className="text-purple-200">True artificial consciousness with emotional intelligence</p>
-            </div>
             <div className="text-center">
-              <div className="text-6xl mb-4">🌌</div>
+              <div className="text-6xl mb-4">🌌
               <h3 className="text-2xl font-bold mb-4">Reality Control</h3>
               <p className="text-cyan-200">Manipulate the fundamental forces of the universe</p>
-            </div>
             <div className="text-center">
-              <div className="text-6xl mb-4">⚡</div>
+              <div className="text-6xl mb-4">⚡
               <h3 className="text-2xl font-bold mb-4">Energy Mastery</h3>
               <p className="text-emerald-200">Create unlimited clean energy from quantum vacuum</p>
-            </div>
-          </div>
-        </div>
-
         {/* Impact Statistics */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 text-center">
-            <div className="text-5xl font-bold text-indigo-400 mb-2">∞</div>
-            <div className="text-xl font-semibold mb-2">Computational Power</div>
-            <div className="text-indigo-200">Infinite processing through quantum superposition</div>
-          </div>
+            <div className="text-5xl font-bold text-indigo-400 mb-2">∞
+            <div className="text-xl font-semibold mb-2">Computational Power
+            <div className="text-indigo-200">Infinite processing through quantum superposition
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
-            <div className="text-5xl font-bold text-purple-400 mb-2">100%</div>
-            <div className="text-xl font-semibold mb-2">Consciousness Transfer</div>
-            <div className="text-purple-200">Perfect preservation of human consciousness</div>
-          </div>
+            <div className="text-5xl font-bold text-purple-400 mb-2">100%
+            <div className="text-xl font-semibold mb-2">Consciousness Transfer
+            <div className="text-purple-200">Perfect preservation of human consciousness
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 text-center">
-            <div className="text-5xl font-bold text-cyan-400 mb-2">0</div>
-            <div className="text-xl font-semibold mb-2">Energy Waste</div>
-            <div className="text-cyan-200">Perfect efficiency through quantum optimization</div>
-          </div>
-        </div>
-
+            <div className="text-5xl font-bold text-cyan-400 mb-2">0
+            <div className="text-xl font-semibold mb-2">Energy Waste
+            <div className="text-cyan-200">Perfect efficiency through quantum optimization
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6">Join the Ultimate Revolution</h2>
           <p className="text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
             Be among the first to experience the most advanced technologies ever created. 
-            Transform your reality and transcend human limitations.
+            Transform your reality and transcend human limitations.</p>
           </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-16 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-2xl">
-              Enter the Future
+              Enter the Future</button>
             </button>
             <button className="border-2 border-white px-16 py-6 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-2xl">
-              Schedule Experience
+              Schedule Experience</button>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
+              Start Your Journey</button>
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Contact Our Experts
+              Contact Our Experts</button>
             </button>
-          </div>
-        </div>
-      </div>
       </main>
-      
       <Footer />
-    </div>
   );
 };
 

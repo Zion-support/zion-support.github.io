@@ -89,23 +89,18 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2042
-          </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2042
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience the most advanced technologies through interactive demonstrations and real-time simulations
+            Experience the most advanced technologies through interactive demonstrations and real-time simulations</p>
           </p>
-        </div>
-
         {/* Interactive Demo Selector */}
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {demos.map((demo, index) => (
             Interactive showcase of cutting-edge technologies that will define the future of humanity
           </p>
-        </div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 flex space-x-2">
@@ -122,20 +117,15 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                     : 'text-gray-300 hover:text-white hover:bg-white/20'
                 }`}
               >
-                {tech.icon} {tech.title}
+                {tech.icon} {tech.title}</button>
               </button>
             ))}
-          </div>
-        </div>
-
           {/* Active Demo Display */}
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
             <div className="text-center mb-8">
-              <div className="text-8xl mb-4">{demos[activeDemo].icon}</div>
+              <div className="text-8xl mb-4">{demos[activeDemo].icon}
               <h2 className="text-4xl font-bold mb-4">{demos[activeDemo].title}</h2>
               <p className="text-xl opacity-90">{demos[activeDemo].description}</p>
-            </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-2xl font-bold mb-6">Key Features</h3>
@@ -147,79 +137,62 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-              
               <div className="bg-black/20 rounded-xl p-6">
                 <h3 className="text-2xl font-bold mb-4">Live Demo</h3>
                 <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg p-6 text-center">
-                  <div className="text-4xl mb-4">🎮</div>
+                  <div className="text-4xl mb-4">🎮
                   <p className="text-lg mb-4">Interactive demonstration ready</p>
                   <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    Launch Demo
+                    Launch Demo</button>
                   </button>
-                </div>
-              </div>
         {/* Active Technology Display */}
         <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-8xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}</div>
+              <div className="text-8xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}
               <h2 className="text-4xl font-bold mb-6">
                 {technologies[activeTab as keyof typeof technologies].title}
               </h2>
               <p className="text-xl opacity-90 mb-8">
-                {technologies[activeTab as keyof typeof technologies].description}
+                {technologies[activeTab as keyof typeof technologies].description}</p>
               </p>
               <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
-                Experience Technology →
+                Experience Technology →</button>
               </button>
-            </div>
-            
             <div className="space-y-4">
               <h3 className="text-2xl font-bold mb-6">Key Features</h3>
               {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full">
                   <span className="text-lg">{feature}</span>
-                </div>
               ))}
-            </div>
-          </div>
-        </div>
-
         {/* Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔮</div>
+            <div className="text-6xl mb-4 text-center">🔮
             <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics</h3>
             <p className="text-purple-100 mb-6 text-center">
-              AI that can predict future events with 99.9% accuracy
+              AI that can predict future events with 99.9% accuracy</p>
             </p>
             <div className="text-center">
               <span className="px-3 py-1 bg-purple-500/50 rounded-full text-xs font-semibold">
                 Live Now
               </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌱</div>
+            <div className="text-6xl mb-4 text-center">🌱
             <h3 className="text-2xl font-bold mb-4 text-center">Eco-Tech Solutions</h3>
             <p className="text-emerald-100 mb-6 text-center">
-              Technology that actively heals and improves the environment
+              Technology that actively heals and improves the environment</p>
             </p>
             <div className="text-center">
               <span className="px-3 py-1 bg-emerald-500/50 rounded-full text-xs font-semibold">
                 Deployed
               </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🚀</div>
+            <div className="text-6xl mb-4 text-center">🚀
             <h3 className="text-2xl font-bold mb-4 text-center">Space Colonization</h3>
             <p className="text-orange-100 mb-6 text-center">
-              Automated systems for establishing human colonies across the galaxy
+              Automated systems for establishing human colonies across the galaxy</p>
             </p>
             <div className="text-center">
               <span className="px-3 py-1 bg-orange-500/50 rounded-full text-xs font-semibold">
@@ -230,134 +203,102 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🎮 Interactive Technology Demo</h2>
             <p className="text-xl opacity-90">Experience our revolutionary technologies in real-time</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4">🧠</div>
+              <div className="text-6xl mb-4">🧠
               <h3 className="text-2xl font-bold mb-4">AI Consciousness Test</h3>
               <p className="text-gray-200 mb-6">Test the consciousness level of our AI systems</p>
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start Test
+                Start Test</button>
               </button>
-            </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4">⚛️</div>
+              <div className="text-6xl mb-4">⚛️
               <h3 className="text-2xl font-bold mb-4">Quantum Simulation</h3>
               <p className="text-gray-200 mb-6">Experience quantum computing in action</p>
               <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Launch Simulation
+                Launch Simulation</button>
               </button>
-            </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4">🌌</div>
+              <div className="text-6xl mb-4">🌌
               <h3 className="text-2xl font-bold mb-4">Dimension Explorer</h3>
               <p className="text-gray-200 mb-6">Explore alternate dimensions and realities</p>
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Enter Dimensions
+                Enter Dimensions</button>
               </button>
-            </div>
-          </div>
-        </div>
-
         {/* Performance Metrics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Performance Metrics</h2>
             <p className="text-xl opacity-90">
-              Our technologies have achieved unprecedented performance levels
+              Our technologies have achieved unprecedented performance levels</p>
             </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
-              <div className="text-lg font-semibold mb-1">Processing Speed</div>
-              <div className="text-sm opacity-80">Infinite computational power</div>
-            </div>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞
+              <div className="text-lg font-semibold mb-1">Processing Speed
+              <div className="text-sm opacity-80">Infinite computational power
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-400 mb-2">0</div>
-              <div className="text-lg font-semibold mb-1">Error Rate</div>
-              <div className="text-sm opacity-80">Perfect accuracy achieved</div>
-            </div>
+              <div className="text-5xl font-bold text-blue-400 mb-2">0
+              <div className="text-lg font-semibold mb-1">Error Rate
+              <div className="text-sm opacity-80">Perfect accuracy achieved
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">100%</div>
-              <div className="text-lg font-semibold mb-1">Efficiency</div>
-              <div className="text-sm opacity-80">Maximum resource utilization</div>
-            </div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">100%
+              <div className="text-lg font-semibold mb-1">Efficiency
+              <div className="text-sm opacity-80">Maximum resource utilization
             <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
-              <div className="text-lg font-semibold mb-1">Scalability</div>
-              <div className="text-sm opacity-80">Unlimited expansion capacity</div>
+              <div className="text-5xl font-bold text-pink-400 mb-2">∞
+              <div className="text-lg font-semibold mb-1">Scalability
+              <div className="text-sm opacity-80">Unlimited expansion capacity
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
             <p className="text-xl opacity-90">See how our revolutionary technologies are transforming the world</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-green-500 text-white text-xs rounded-full">+500%</span>
                 <span className="text-sm text-gray-300">Efficiency Gain</span>
-              </div>
               <h3 className="text-xl font-bold mb-2">Global AI Transformation</h3>
               <p className="text-gray-200 mb-4">Implemented conscious AI systems that increased productivity by 500% across 50+ countries</p>
-              <div className="text-sm text-gray-400">Fortune 500 Companies</div>
-            </div>
-            
+              <div className="text-sm text-gray-400">Fortune 500 Companies
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-blue-500 text-white text-xs rounded-full">$10B</span>
                 <span className="text-sm text-gray-300">Cost Savings</span>
-              </div>
               <h3 className="text-xl font-bold mb-2">Quantum Computing Revolution</h3>
               <p className="text-gray-200 mb-4">Deployed quantum consciousness systems that solved previously impossible problems</p>
-              <div className="text-sm text-gray-400">Research Institutions</div>
-            </div>
-            
+              <div className="text-sm text-gray-400">Research Institutions
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-purple-500 text-white text-xs rounded-full">∞</span>
                 <span className="text-sm text-gray-300">Possibilities</span>
-              </div>
               <h3 className="text-xl font-bold mb-2">Interdimensional Breakthrough</h3>
               <p className="text-gray-200 mb-4">Opened access to infinite parallel realities for unlimited computing power</p>
-              <div className="text-sm text-gray-400">Space Agencies</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-sm text-gray-400">Space Agencies
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Don't just read about the future - experience it firsthand through our interactive demonstrations
+            Don't just read about the future - experience it firsthand through our interactive demonstrations</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Interactive Demo
+              Start Interactive Demo</button>
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
-              Schedule Private Demo
+              Schedule Private Demo</button>
           <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the technological revolution and be part of the most advanced civilization in history
+            Join the technological revolution and be part of the most advanced civilization in history</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Start Your Journey
+              Start Your Journey</button>
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
-              Schedule Demo
+              Schedule Demo</button>
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

@@ -57,12 +57,9 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Revolutionary Case Studies 2026
           </h2>
-          
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Real results from real companies using our revolutionary technologies
+            Real results from real companies using our revolutionary technologies</p>
           </p>
-        </div>
-
         {/* Case Study Carousel */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
@@ -75,52 +72,35 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
             >
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="text-6xl mr-4">{caseStudies[activeCase].logo}</div>
+                  <div className="text-6xl mr-4">{caseStudies[activeCase].logo}
                   <div>
                     <h3 className="text-3xl font-bold">{caseStudies[activeCase].company}</h3>
                     <p className="text-indigo-300">{caseStudies[activeCase].industry}</p>
-                  </div>
-                </div>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-red-300">Challenge:</h4>
                   <p className="text-gray-300">{caseStudies[activeCase].challenge}</p>
-                </div>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-blue-300">Solution:</h4>
                   <p className="text-gray-300">{caseStudies[activeCase].solution}</p>
-                </div>
-                
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <p className="text-gray-300 italic mb-4">"{caseStudies[activeCase].testimonial}"</p>
                   <p className="text-indigo-300 font-semibold">- {caseStudies[activeCase].author}</p>
-                </div>
-              </div>
-              
               <div>
                 <h4 className="text-2xl font-bold mb-6 text-center">Results Achieved</h4>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">{caseStudies[activeCase].results.efficiency}</div>
-                    <div className="text-white/80 text-sm">Efficiency Gain</div>
-                  </div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">{caseStudies[activeCase].results.efficiency}
+                    <div className="text-white/80 text-sm">Efficiency Gain
                   <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">{caseStudies[activeCase].results.costSavings}</div>
-                    <div className="text-white/80 text-sm">Cost Savings</div>
-                  </div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">{caseStudies[activeCase].results.costSavings}
+                    <div className="text-white/80 text-sm">Cost Savings
                   <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">{caseStudies[activeCase].results.accuracy}</div>
-                    <div className="text-white/80 text-sm">Accuracy Rate</div>
-                  </div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">{caseStudies[activeCase].results.accuracy}
+                    <div className="text-white/80 text-sm">Accuracy Rate
                   <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
-                    <div className="text-3xl font-bold text-orange-400 mb-2">{caseStudies[activeCase].results.timeReduction}</div>
-                    <div className="text-white/80 text-sm">Time Reduction</div>
-                  </div>
-                </div>
-              </div>
+                    <div className="text-3xl font-bold text-orange-400 mb-2">{caseStudies[activeCase].results.timeReduction}
+                    <div className="text-white/80 text-sm">Time Reduction
             </motion.div>
-            
             {/* Carousel Controls */}
             <div className="flex justify-center mt-8 space-x-2">
               {caseStudies.map((_, index) => (
@@ -131,11 +111,7 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                     activeCase === index ? 'bg-indigo-400' : 'bg-gray-500'
                   }`}
                 />
-              ))}
-            </div>
-          </div>
-        </div>
-
+              ))}</button>
         {/* Metrics Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -151,12 +127,11 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
               className="text-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
             >
-              <div className={`text-4xl font-bold mb-2 ${metric.color}`}>{metric.value}</div>
-              <div className="text-white/80">{metric.label}</div>
+              <div className={`text-4xl font-bold mb-2 ${metric.color}`}>{metric.value}
+              <div className="text-white/80">{metric.label}
             </motion.div>
           ))}
         </motion.div>
-
         {/* Industry Success Stories */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -167,8 +142,6 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">🌟 Industry Success Stories</h3>
             <p className="text-xl opacity-90">Transforming businesses across all sectors</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -178,16 +151,14 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
                 className={`bg-gradient-to-br ${study.gradient} p-8 rounded-xl text-white hover:scale-105 transition-all duration-300`}
               >
-                <div className="text-4xl mb-4">{study.logo}</div>
+                <div className="text-4xl mb-4">{study.logo}
                 <h4 className="text-xl font-bold mb-2">{study.company}</h4>
                 <p className="text-sm opacity-90 mb-4">{study.industry}</p>
-                <div className="text-2xl font-bold mb-2">{study.results.efficiency} Efficiency</div>
-                <div className="text-lg font-semibold">{study.results.costSavings} Saved</div>
+                <div className="text-2xl font-bold mb-2">{study.results.efficiency} Efficiency
+                <div className="text-lg font-semibold">{study.results.costSavings} Saved
               </motion.div>
             ))}
-          </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -198,25 +169,21 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
             <h3 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
             <p className="text-xl opacity-90 mb-8">
-              Join the companies that have transformed their operations with our revolutionary technologies
+              Join the companies that have transformed their operations with our revolutionary technologies</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
-                Start Your Transformation →
+                Start Your Transformation →</button>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors">
-                View All Case Studies
+                View All Case Studies</button>
               </button>
-            </div>
-            
             <p className="text-lg text-gray-300 mb-6">
-              {caseStudies[currentStudy].description}
+              {caseStudies[currentStudy].description}</p>
             </p>
-            
             <div className="flex items-center justify-between">
               <div className="text-2xl font-bold text-green-400">
                 {caseStudies[currentStudy].result}
-              </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -225,10 +192,8 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                 <span>View Case Study</span>
                 <ArrowRight className="w-4 h-4" />
               </motion.button>
-            </div>
           </motion.div>
         </AnimatePresence>
-
         <div className="flex justify-center space-x-2 mt-6">
           {caseStudies.map((_, index) => (
             <button
@@ -238,9 +203,7 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                 index === currentStudy ? 'bg-purple-400' : 'bg-white/30'
               }`}
             />
-          ))}
-        </div>
-      </div>
+          ))}</button>
     </motion.div>
   );
 };

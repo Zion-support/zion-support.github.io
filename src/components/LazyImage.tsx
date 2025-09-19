@@ -78,11 +78,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
           {hasError && (
             <div className="lazy-image-error">
               <span>Failed to load image</span>
-            </div>
           )}
         </>
       )}
-    </div>
   );
 };
 

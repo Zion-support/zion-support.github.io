@@ -97,7 +97,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20" />
-        
         {/* Animated background elements */}
         <div className="absolute inset-0">
           {[...Array(30)].map((_, i) => (
@@ -119,8 +118,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               }}
             />
           ))}
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.div
@@ -131,7 +128,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               <Star className="w-5 h-5 mr-2" />
               REVOLUTIONARY CONTENT COLLECTION 2026
             </motion.div>
-            
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -143,7 +139,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 AI Content
               </span>
             </motion.h1>
-            
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -152,7 +147,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             >
               Explore groundbreaking insights, revolutionary technologies, and cutting-edge AI solutions that are shaping the future of humanity
             </motion.p>
-
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -161,29 +155,21 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stats.totalArticles}+</div>
-                <div className="text-gray-300">Articles</div>
-              </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stats.totalArticles}+
+                <div className="text-gray-300">Articles
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{Math.round(stats.totalWords / 1000)}K+</div>
-                <div className="text-gray-300">Words</div>
-              </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{Math.round(stats.totalWords / 1000)}K+
+                <div className="text-gray-300">Words
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stats.totalCategories}+</div>
-                <div className="text-gray-300">Categories</div>
-              </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stats.totalCategories}+
+                <div className="text-gray-300">Categories
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stats.totalAuthors}+</div>
-                <div className="text-gray-300">Experts</div>
-              </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stats.totalAuthors}+
+                <div className="text-gray-300">Experts
             </motion.div>
-          </div>
-        </div>
       </section>
-
       {/* New Content Banner */}
       <NewContentAdvertisingBanner2026 />
-
       {/* Content Categories */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,8 +189,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             >
               Dive deep into specialized areas of AI and technology innovation
             </motion.p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contentCategories.map((category, index) => (
               <motion.div
@@ -216,30 +200,20 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {category.icon}
-                </div>
-                
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {category.name}
                 </h3>
-                
                 <p className="text-gray-600 mb-4">
-                  {category.description}
+                  {category.description}</p>
                 </p>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-3xl font-bold text-gray-900">{category.count}</span>
                   <span className="text-sm text-gray-500">Articles</span>
-                </div>
-                
                 <div className="absolute top-4 right-4">
                   <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.color}`} />
-                </div>
               </motion.div>
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Enhanced Content Showcase */}
       <section className="py-20 bg-gray-50">
         <EnhancedContentShowcase2026 
@@ -249,7 +223,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           autoRotate={true}
         />
       </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -260,7 +233,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           >
             Ready to Explore the Future?
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -269,25 +241,22 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           >
             Join thousands of innovators, researchers, and technology leaders who are already exploring our revolutionary content
           </motion.p>
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group">
+            <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group"></button>
               <BookOpen className="w-5 h-5 mr-2" />
               Start Reading Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300">
-              Subscribe to Updates
+              Subscribe to Updates</button>
             </button>
           </motion.div>
-        </div>
       </section>
-    </div>
   );
 };
 

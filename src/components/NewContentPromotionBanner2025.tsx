@@ -61,7 +61,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
         <div className="relative z-10 container mx-auto px-4 py-12">
           <AnimatePresence mode="wait">
             <motion.div
@@ -74,12 +74,11 @@ const NewContentPromotionBanner2025: React.FC = () => {
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
                 🚀 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
-              </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {promotions[currentSlide].title}
               </h2>
               <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
-                {promotions[currentSlide].subtitle}
+                {promotions[currentSlide].subtitle}</p>
               </p>
               <div className="flex flex-wrap justify-center gap-2 mb-8">
                 {promotions[currentSlide].features.map((feature, index) => (
@@ -90,7 +89,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
                     {feature}
                   </span>
                 ))}
-              </div>
               <div className="flex justify-center space-x-4">
                 <a
                   href={promotions[currentSlide].link}
@@ -99,12 +97,10 @@ const NewContentPromotionBanner2025: React.FC = () => {
                   {promotions[currentSlide].icon} Explore Now →
                 </a>
                 <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
-                  Watch Demo
+                  Watch Demo</button>
                 </button>
-              </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-2 mt-8">
             {promotions.map((_, index) => (
@@ -115,11 +111,8 @@ const NewContentPromotionBanner2025: React.FC = () => {
                   index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
                 }`}
               />
-            ))}
-          </div>
-        </div>
+            ))}</button>
       </motion.div>
-
       {/* Quick Links Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -131,8 +124,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-white mb-2">🚀 Explore Our Latest Innovations</h3>
             <p className="text-gray-400">Discover cutting-edge technologies and solutions</p>
-          </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {quickLinks.map((link, index) => (
               <motion.a
@@ -145,16 +136,11 @@ const NewContentPromotionBanner2025: React.FC = () => {
               >
                 <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
                   {link.icon}
-                </div>
                 <div className="text-sm font-semibold text-white group-hover:text-white">
                   {link.name}
-                </div>
               </motion.a>
             ))}
-          </div>
-        </div>
       </motion.div>
-
       {/* Special Offer Banner */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -164,15 +150,12 @@ const NewContentPromotionBanner2025: React.FC = () => {
       >
         <div className="container mx-auto px-4 text-center">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4">
-            <div className="text-2xl font-bold">🎉 LIMITED TIME OFFER</div>
-            <div className="text-lg">Get 50% off all AI solutions for the first 3 months</div>
+            <div className="text-2xl font-bold">🎉 LIMITED TIME OFFER
+            <div className="text-lg">Get 50% off all AI solutions for the first 3 months
             <button className="bg-black text-yellow-400 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
-              Claim Offer
+              Claim Offer</button>
             </button>
-          </div>
-        </div>
       </motion.div>
-
       {/* Technology Highlights */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -184,106 +167,74 @@ const NewContentPromotionBanner2025: React.FC = () => {
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">🌟 Revolutionary Technology Highlights</h3>
             <p className="text-xl text-gray-300">Experience the future of technology today</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
-              <div className="text-4xl mb-4">🧠</div>
+              <div className="text-4xl mb-4">🧠
               <h4 className="text-xl font-bold text-white mb-2">Conscious AI</h4>
               <p className="text-gray-300 text-sm">Self-aware artificial intelligence that understands context and emotions</p>
-            </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
-              <div className="text-4xl mb-4">⚡</div>
+              <div className="text-4xl mb-4">⚡
               <h4 className="text-xl font-bold text-white mb-2">Quantum Computing</h4>
               <p className="text-gray-300 text-sm">Exponential processing power through quantum mechanics</p>
-            </div>
-            
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 text-center">
-              <div className="text-4xl mb-4">🌌</div>
+              <div className="text-4xl mb-4">🌌
               <h4 className="text-xl font-bold text-white mb-2">Interdimensional Tech</h4>
               <p className="text-gray-300 text-sm">Computing across multiple dimensions for infinite possibilities</p>
-            </div>
-          </div>
-        </div>
-
 import React from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-pink-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-indigo-600/20 backdrop-blur-sm">
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 NEW CONTENT • JANUARY 2025
-          </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary New Content 2025
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover our latest revolutionary content featuring cutting-edge technology innovations
+            Discover our latest revolutionary content featuring cutting-edge technology innovations</p>
           </p>
-        </div>
-        
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="text-4xl">🌟</div>
+                <div className="text-4xl">🌟
                 <div>
                   <h3 className="text-xl font-bold text-pink-300">Ultimate Tech Breakthrough</h3>
                   <p className="text-pink-100 text-sm">The most revolutionary technological breakthrough</p>
-                </div>
-              </div>
               <a href="/pages/UltimateTechBreakthrough2025" className="inline-block bg-white text-pink-600 px-4 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-sm">
                 Explore Breakthrough →
               </a>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="text-4xl">⚡</div>
+                <div className="text-4xl">⚡
                 <div>
                   <h3 className="text-xl font-bold text-purple-300">Next-Gen Tech Revolution</h3>
                   <p className="text-purple-100 text-sm">Revolutionary technology breakthroughs of 2025</p>
-                </div>
-              </div>
               <a href="/pages/NextGenTechRevolution2025" className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-sm">
                 Join Revolution →
               </a>
-            </div>
-          </div>
-          
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="text-4xl">🎮</div>
+                <div className="text-4xl">🎮
                 <div>
                   <h3 className="text-xl font-bold text-indigo-300">Revolutionary Showcase</h3>
                   <p className="text-indigo-100 text-sm">Interactive technology showcase and demos</p>
-                </div>
-              </div>
               <a href="/pages/RevolutionaryTechShowcase2025" className="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-sm">
                 View Showcase →
               </a>
-            </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="text-4xl">🧠</div>
+                <div className="text-4xl">🧠
                 <div>
                   <h3 className="text-xl font-bold text-cyan-300">AI Consciousness</h3>
                   <p className="text-cyan-100 text-sm">Experience true AI consciousness and intelligence</p>
-                </div>
-              </div>
               <a href="/pages/UltimateTechBreakthrough2025" className="inline-block bg-white text-cyan-600 px-4 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-sm">
                 Meet AI →
               </a>
-            </div>
-          </div>
-        </div>
-        
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
             <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -292,9 +243,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
             <a href="/pages/RevolutionaryTechShowcase2025" className="border border-pink-400 text-pink-400 px-8 py-3 rounded-lg hover:bg-pink-400/10 transition-colors font-semibold">
               Watch Live Demos
             </a>
-          </div>
-        </div>
-      </div>
 import React, { useState, useEffect } from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -355,31 +303,28 @@ const NewContentPromotionBanner2025: React.FC = () => {
   return (
     <div className={`relative overflow-hidden bg-gradient-to-r ${currentPromotion.bgColor} backdrop-blur-sm border border-white/20 rounded-2xl mb-8 transition-all duration-500`}>
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse">
       {/* Close Button */}
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
-      >
+      ></button>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></p>
         </svg>
       </button>
-
       <div className="relative z-10 p-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Content */}
           <div className="flex-1 mb-4 md:mb-0">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse">
               <span className="text-sm font-semibold text-yellow-300">LIVE NOW</span>
-            </div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
               {currentPromotion.title}
             </h3>
             <p className="text-white/90 text-lg mb-4">
-              {currentPromotion.description}
+              {currentPromotion.description}</p>
             </p>
             <div className="flex items-center space-x-4">
               <a
@@ -388,15 +333,11 @@ const NewContentPromotionBanner2025: React.FC = () => {
               >
                 <span>{currentPromotion.cta}</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></p>
                 </svg>
               </a>
               <div className="text-white/70 text-sm">
                 <span className="font-semibold">Limited Time:</span> 50% off first month
-              </div>
-            </div>
-          </div>
-
           {/* Visual Element */}
           <div className="flex-shrink-0 ml-6">
             <div className="relative">
@@ -407,17 +348,10 @@ const NewContentPromotionBanner2025: React.FC = () => {
                     {currentPromo === 1 && "⚡"}
                     {currentPromo === 2 && "🧠"}
                     {currentPromo === 3 && "🌟"}
-                  </div>
-                </div>
-              </div>
               {/* Floating particles */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-cyan-400 rounded-full animate-bounce delay-300"></div>
-              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-700"></div>
-            </div>
-          </div>
-        </div>
-
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce">
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-cyan-400 rounded-full animate-bounce delay-300">
+              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-700">
         {/* Progress Indicator */}
         <div className="mt-4 flex space-x-2">
           {promotions.map((_, index) => (
@@ -428,14 +362,10 @@ const NewContentPromotionBanner2025: React.FC = () => {
               }`}
             />
           ))}
-        </div>
-      </div>
-
       {/* Animated Border */}
-      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x"></div>
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x">
       </motion.div>
       </motion.div>
-    </div>
   );
 };
 

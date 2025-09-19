@@ -10,11 +10,10 @@ const RevolutionaryAdBanner2035: React.FC = () => {
       className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-20 mb-12 relative overflow-hidden"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30">
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           <motion.div
@@ -25,7 +24,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
           >
             🌟 REVOLUTIONARY ADVERTISEMENT • JANUARY 2035
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,7 +32,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
           >
             🚀 REVOLUTIONARY TECHNOLOGY 2035
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +42,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             Interdimensional computing, consciousness transfer, and reality manipulation technologies 
             that will reshape reality itself. Don't miss out on the future!
           </motion.p>
-          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,8 +67,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
               🚀 BREAKTHROUGHS →
             </a>
           </motion.div>
-        </div>
-        
         {/* Feature Highlights Grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -117,7 +111,7 @@ const RevolutionaryAdBanner2035: React.FC = () => {
               transition={{ duration: 0.6, delay: 1.2 + index * 0.2 }}
               className={`bg-gradient-to-br ${feature.gradient} bg-opacity-20 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:scale-105 transition-all duration-300`}
             >
-              <div className="text-5xl mb-4">{feature.icon}</div>
+              <div className="text-5xl mb-4">{feature.icon}
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
               <p className="text-white/80 text-sm mb-4">{feature.description}</p>
               <a
@@ -129,7 +123,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -140,7 +133,7 @@ const RevolutionaryAdBanner2035: React.FC = () => {
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <h3 className="text-3xl font-bold mb-4">🌟 Don't Miss the Future!</h3>
             <p className="text-xl opacity-90 mb-6">
-              Join millions of users experiencing the most revolutionary technologies in human history
+              Join millions of users experiencing the most revolutionary technologies in human history</p>
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a
@@ -155,10 +148,7 @@ const RevolutionaryAdBanner2035: React.FC = () => {
               >
                 ⚡ Watch Demo
               </a>
-            </div>
-          </div>
         </motion.div>
-      </div>
     </motion.div>
   );
 };

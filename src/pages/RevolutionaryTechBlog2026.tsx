@@ -92,52 +92,43 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <meta name="description" content="Latest insights on revolutionary technology trends including AI consciousness, quantum computing, neural interfaces, and biotech breakthroughs." />
         <meta name="keywords" content="tech blog, AI consciousness, quantum computing, neural interfaces, biotechnology, space technology, 2026 trends" />
       </Helmet>
-
     <>
       <Helmet>
         <title>Revolutionary Tech Blog 2026 - Zion Tech Group</title>
         <meta name="description" content="Latest insights on revolutionary technology trends including AI consciousness, quantum computing, neural interfaces, and biotech breakthroughs." />
         <meta name="keywords" content="tech blog, AI consciousness, quantum computing, neural interfaces, biotechnology, space technology, 2026 trends" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm">
           <div className="relative z-10 container mx-auto px-4 py-20">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            <divdiv
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
                 📚 REVOLUTIONARY TECH INSIGHTS • 2026
-              </div>
               <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Tech Blog 2026
               </h1>
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-                Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.
+                Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.</p>
               </p>
-            </divdiv>
             </motion.div>
-          </div>
-        </div>
-
         {/* Featured Posts Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Featured Articles</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Deep dives into the most revolutionary technological breakthroughs of 2026
+              Deep dives into the most revolutionary technological breakthroughs of 2026</p>
             </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.filter(post => post.featured).map((post) => (
-              <divdiv
+              <div
               <motion.div
                 key={post.id}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -148,22 +139,17 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     {post.category}
                   </span>
                   <span className="text-sm text-gray-400">{post.readTime}</span>
-              </divdiv>
               </motion.div>
             ))}
-          </div>
-
           {/* All Posts Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">All Articles</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Complete archive of our revolutionary technology insights
+              Complete archive of our revolutionary technology insights</p>
             </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <divdiv
+              <div
               <motion.div
                 key={post.id}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -174,41 +160,34 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     {post.category}
                   </span>
                   <span className="text-sm text-gray-400">{post.readTime}</span>
-                </div>
                 <h3 className="text-xl font-bold mb-4 text-white hover:text-gray-300 transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  {post.excerpt}
+                  {post.excerpt}</p>
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-gray-400">By {post.author}</span>
                   <span className="text-sm text-gray-400">{post.date}</span>
-                </div>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag, index) => (
                     <span key={index} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">
                       {tag}
                     </span>
                   ))}
-                </div>
-              </divdiv>
               </motion.div>
             ))}
-          </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div className="container mx-auto px-4 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Get the latest revolutionary technology insights delivered directly to your inbox
+              Get the latest revolutionary technology insights delivered directly to your inbox</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
@@ -217,10 +196,8 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Subscribe
+                Subscribe</button>
               </button>
-            </div>
-
 const RevolutionaryTechBlog2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -229,15 +206,13 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🔬 Technology Insights</h2>
           <p className="text-xl opacity-90">Deep dive into the science behind our revolutionary technologies</p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <div className="text-4xl mb-4">⚡</div>
+            <div className="text-4xl mb-4">⚡
             <h3 className="text-2xl font-bold mb-4">Quantum Computing Explained</h3>
             <p className="text-cyan-100 mb-6">
               Learn how quantum computing works and why it represents the future of computational power. 
-              Our quantum processors can solve problems that would take classical computers millennia to complete.
+              Our quantum processors can solve problems that would take classical computers millennia to complete.</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Quantum superposition principles</li>
@@ -246,16 +221,14 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <li>• Real-world quantum algorithms</li>
             </ul>
             <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              Read Quantum Guide →
+              Read Quantum Guide →</button>
             </button>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4">🧠</div>
+            <div className="text-4xl mb-4">🧠
             <h3 className="text-2xl font-bold mb-4">AI Consciousness Research</h3>
             <p className="text-purple-100 mb-6">
               Explore the cutting-edge research into artificial consciousness and how we're creating 
-              AI systems that truly understand, learn, and evolve beyond their initial programming.
+              AI systems that truly understand, learn, and evolve beyond their initial programming.</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Neural network consciousness</li>
@@ -264,30 +237,22 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <li>• Ethical AI development</li>
             </ul>
             <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Explore AI Research →
+              Explore AI Research →</button>
             </button>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join our community of innovators, researchers, and technology enthusiasts who are shaping the future
+            Join our community of innovators, researchers, and technology enthusiasts who are shaping the future</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join Our Community
+              Join Our Community</button>
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Contact Our Team
+              Contact Our Team</button>
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
     </>
   );
 };

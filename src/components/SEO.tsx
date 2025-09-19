@@ -51,7 +51,6 @@ export function SEO({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={robotsContent} />
       <meta name="author" content={author} />
-
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
 
@@ -62,14 +61,12 @@ export function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
-
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-
       {/* Additional Meta Tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
