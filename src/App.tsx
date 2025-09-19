@@ -79,7 +79,8 @@ function App() {
     // Use requestIdleCallback for better performance
     const scheduleAnimation = () => {
       if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
+        // eslint-disable-next-line no-unused-vars
+        (window as Window & { requestIdleCallback: (callback: () => void) => void }).requestIdleCallback(() => {
           try {
             setIsLoading(false);
             animateCount('projects', 150);
@@ -187,7 +188,8 @@ function App() {
       };
 
       if ('requestIdleCallback' in window) {
-        requestIdleCallback(registerSW);
+        // eslint-disable-next-line no-unused-vars
+        (window as Window & { requestIdleCallback: (callback: () => void) => void }).requestIdleCallback(registerSW);
       } else {
         setTimeout(registerSW, 2000);
       }
