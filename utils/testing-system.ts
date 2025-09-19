@@ -1,8 +1,8 @@
-import React from 'react.ts';
 export class TestingSystem {
-  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
+  static async testUserInteraction(
+    element: HTMLElementaction: 'click' | 'type' | 'hover'
+  ): Promise<void> {
     switch (action) {
-
       case 'click':
         element.click();
         break;

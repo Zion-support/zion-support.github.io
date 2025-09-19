@@ -1,0 +1,17 @@
+{
+<<<<<<< HEAD
+  "totalEntries": 1,
+=======
+  "generatedAt": "2025-08-09T00:39:09.660Z",
+  "totalEntries": 6,
+>>>>>>> origin/sync-automerge
+  "categories": {
+    "system": 1
+  },
+  "confidenceDistribution": {
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "lastUpdated": "2025-08-08T17:08:25.433Z"
+}
