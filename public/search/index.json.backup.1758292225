@@ -2175,6 +2175,8 @@
     "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-agent-observability-blueprint",
     "title": "AI 2026: Agent Observability Blueprint | Zion Tech Group",
     "h1": "Agent Observability Blueprint (2026)"
@@ -2185,11 +2187,14 @@
     "h1": "Agent Observability Scorecards (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-agent-platform-slos-best-practices",
     "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-agent-safety-playbook",
     "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
     "h1": "AI 2026: Agent Safety Playbook"
@@ -2200,16 +2205,20 @@
     "h1": "Agent Platform SLO Blueprint (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
     "title": "",
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-cost-aware-routing-in-practice",
     "title": "Cost-Aware Routing in Practice (2026) | Zion Tech Group",
     "h1": "Cost-Aware Routing in Practice (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-cost-optimization-blueprint",
     "title": "",
     "h1": "AI 2026: Cost Optimization Blueprint"
@@ -2221,6 +2230,12 @@
   },
   {
     "route": "/blog/ai-2026-evaluation-cookbook",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "AI 2026: Evaluation Cookbook"
+  },
+  {
+=======
     "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
     "h1": "AI 2026: Evaluation Cookbook"
   },
@@ -2230,16 +2245,20 @@
     "h1": "Evidence‑Led Operations Blueprint (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-foundation-model-quality-engineering",
     "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
     "h1": "Foundation Model Quality Engineering (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-governed-tool-use-case-studies",
     "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
     "h1": "Governed Tool Use — Case Studies (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
@@ -2255,6 +2274,8 @@
     "h1": "Operationalizing Agentic Workflows in 2026"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-production-evidence-hub-blueprint",
     "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
     "h1": "AI 2026: Production Evidence Hub Blueprint"
@@ -2265,13 +2286,18 @@
     "h1": "AI 2026: Real-Time Evals & Inference Guardrails"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
     "title": "",
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
+<<<<<<< HEAD
+    "title": "",
+=======
     "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "h1": "AI 2026: Runtime Guardrails Blueprint"
   },
   {
@@ -2280,16 +2306,21 @@
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
     "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
     "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
     "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
@@ -2300,16 +2331,20 @@
     "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-roadmap-2026",
     "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
     "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/autonomous-evaluation-playbooks-2025",
     "title": "Autonomous Evaluation Playbooks (2025) | Zion Tech Group",
     "h1": "Autonomous Evaluation Playbooks (2025)"
@@ -2330,11 +2365,14 @@
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/genai-2025-evidence-driven-ai-governance",
     "title": "GenAI 2025: Evidence‑Driven AI Governance | Zion Tech Group",
     "h1": "Evidence‑Driven AI Governance (2025)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-083622
     "route": "/blog/genai-2025-practical-compliance-patterns",
     "title": "GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group",
     "h1": "GenAI for Regulated Industries (2025): Practical Compliance Patterns"
