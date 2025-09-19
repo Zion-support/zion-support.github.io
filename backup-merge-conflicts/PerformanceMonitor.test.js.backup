@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceMonitor.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceMonitor from "./components/PerformanceMonitor" describe("PerformanceMonitor",() => {" test("renders without crashing",() => {" render(<PerformanceMonitor / />) expect(screen.getByTestId("performancemonitor")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PerformanceMonitor / />) }) test("handles user interactions",() => {" render(<PerformanceMonitor / />) }) test("applies correct styling",() => {" render(<PerformanceMonitor / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceMonitor from '../components/PerformanceMonitor" describe('PerformanceMonitor',() => {' test('renders without crashing',() => {' render(<PerformanceMonitor / />) expect(screen.getByTestId("performancemonitor")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceMonitor / />) }) test('handles user interactions',() => {' render(<PerformanceMonitor / />) }) test('applies correct styling',() => {' render(<PerformanceMonitor / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceMonitor from '../components/PerformanceMonitor" describe('PerformanceMonitor',() => {' test('renders without crashing',() => {' render(<PerformanceMonitor / />) expect(screen.getByTestId("performancemonitor")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceMonitor / />) }) test('handles user interactions',() => {' render(<PerformanceMonitor / />) }) test('applies correct styling',() => {' render(<PerformanceMonitor / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/PerformanceMonitor.test.js

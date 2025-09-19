@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/ModernLayout.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ModernLayout from "./components/ModernLayout" describe("ModernLayout",() => {" test("renders without crashing",() => {" render(<ModernLayout / / />) expect(screen.getByTestId("modernlayout")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ModernLayout / / />) }) test("handles user interactions",() => {" render(<ModernLayout / / />) }) test("applies correct styling",() => {" render(<ModernLayout / / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ModernLayout from '../components/ModernLayout" describe('ModernLayout',() => {' test('renders without crashing',() => {' render(<ModernLayout / / />) expect(screen.getByTestId("modernlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernLayout / / />) }) test('handles user interactions',() => {' render(<ModernLayout / / />) }) test('applies correct styling',() => {' render(<ModernLayout / / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ModernLayout from '../components/ModernLayout" describe('ModernLayout',() => {' test('renders without crashing',() => {' render(<ModernLayout / / />) expect(screen.getByTestId("modernlayout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernLayout / / />) }) test('handles user interactions',() => {' render(<ModernLayout / / />) }) test('applies correct styling',() => {' render(<ModernLayout / / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/ModernLayout.test.js
