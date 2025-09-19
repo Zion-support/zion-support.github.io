@@ -13,7 +13,8 @@ interface State {
 // Extend Window interface to include gtag
 declare global {
   interface Window {
-    gtag?: (command: string, action: string, parameters?: Record<string, any>) => void;
+    // eslint-disable-next-line no-unused-vars
+    gtag?: (command: string, action: string, parameters?: Record<string, unknown>) => void;
   }
 }
 
