@@ -7,15 +7,36 @@ import reactHooks from 'eslint-plugin-react-hooks';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
+    files: ['src/App.tsx', 'src/main.tsx', 'src/Footer.tsx', 'src/Header.tsx', 'src/ScrollToTop.tsx', 'App.tsx', 'main.tsx', 'index.tsx'],
+    ignores: [
+      'src/pages-disabled/**',
+      'src/utils-disabled/**',
+      'src/components-disabled/**',
+      'src/store/**/*.js',
+      'src/routes.js',
+      'src/setupTests.ts',
+      'src/types/listings.ts',
+      'src/utils/errorHandler.ts',
+      'src/utils/notifications.ts',
+      'src/utils/safeStorage.ts',
+      'src/utils/security.ts',
+      'node_modules/**',
+=======
     files: ['src/**/*.{js,jsx,ts,tsx}', 'App.tsx', 'main.tsx', 'index.tsx'],
     ignores: [
       // Build outputs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       'dist/**',
       'build/**',
       '.next/**',
       'out/**',
+<<<<<<< HEAD
+      'public/**',
+=======
       'node_modules/**',
       // Disabled/backup directories
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       'zion-os.disabled/**',
       'zion-os/**',
       'zion-website/**',
@@ -27,6 +48,11 @@ export default [
       'server/**',
       'netlify/**',
       'src-clean/**',
+<<<<<<< HEAD
+      'src/pages-disabled/**',
+      'src/components/**',
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       'apps/**',
       'apps.backup/**',
       'automation/**',
@@ -41,7 +67,11 @@ export default [
       'api.disabled/**',
       'api.disabled.temp/**',
       'recovered-branches/**',
+<<<<<<< HEAD
+      'temp_*/**',
+=======
       // Generated files
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       '**/*.backup.*',
       '**/*.old.*',
       '**/*.disabled.*',
@@ -53,9 +83,12 @@ export default [
       '**/*.config.*',
       '**/*.log',
       '**/*.lock',
+<<<<<<< HEAD
+=======
       // Public assets
       'public/**',
       // Reports and logs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       '**/*-report*',
       '**/*-summary*',
       '**/*-logs*',
@@ -63,7 +96,10 @@ export default [
       '**/performance-reports/**',
       '**/link-reports/**',
       '**/monitoring/**',
+<<<<<<< HEAD
+=======
       // Scripts and automation
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       '**/*.sh',
       '**/*.py',
       '**/*.cjs',
@@ -104,7 +140,10 @@ export default [
       '**/run-*',
       '**/start-*',
       '**/test-*',
+<<<<<<< HEAD
+=======
       // Specific file patterns
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       '**/Dockerfile*',
       '**/docker-compose*',
       '**/ecosystem.config.*',
@@ -117,6 +156,22 @@ export default [
       '**/jest.config.*',
       '**/jest.setup.*',
       '**/test-utils.*',
+<<<<<<< HEAD
+      '**/webpack.config.*',
+      '**/tailwind.config.*',
+      '**/next.config.*',
+      '**/static/**',
+      '**/chunks/**',
+      '**/webpack-*.js',
+      '**/polyfills-*.js',
+      '**/main-*.js',
+      '**/pages/**',
+      '**/server/**',
+      '**/middleware-*.js',
+      '**/server-reference-*.js',
+      '**/_buildManifest.js',
+      '**/_ssgManifest.js',
+=======
       // Additional patterns to ignore build artifacts
       '**/static/**',
       '**/chunks/**',
@@ -132,6 +187,7 @@ export default [
       '**/_ssgManifest.js',
       '**/middleware-build-manifest.js',
       '**/server-reference-manifest.js'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -139,8 +195,13 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
+<<<<<<< HEAD
+          jsx: true,
+        },
+=======
           jsx: true
         }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
       },
       globals: {
         window: 'readonly',
@@ -189,13 +250,22 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
+<<<<<<< HEAD
+        jest: 'readonly',
+      },
+=======
         jest: 'readonly'
       }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
+<<<<<<< HEAD
+      'react-hooks': reactHooks,
+=======
       'react-hooks': reactHooks
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -208,6 +278,15 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
+<<<<<<< HEAD
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+=======
       '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
@@ -215,6 +294,7 @@ export default [
         version: 'detect'
       }
     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
   },
   {
     files: ['**/*.cjs'],
@@ -236,9 +316,15 @@ export default [
         setInterval: 'readonly',
         clearInterval: 'readonly',
         setImmediate: 'readonly',
+<<<<<<< HEAD
+        clearImmediate: 'readonly',
+      },
+    },
+=======
         clearImmediate: 'readonly'
       }
     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
   },
   {
     ignores: [
@@ -252,7 +338,13 @@ export default [
       'public/**',
       // Root-level noisy files
       '*.log',
+<<<<<<< HEAD
+      '*.lock',
+    ],
+  },
+=======
       '*.lock'
     ]
   }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1724
 ];
