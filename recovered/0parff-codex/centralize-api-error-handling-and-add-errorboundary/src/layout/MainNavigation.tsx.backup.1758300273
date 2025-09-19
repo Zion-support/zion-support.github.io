@@ -27,6 +27,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'marketplace',
       href: '/marketplace',
       matches: (path: string) => path.startsWith('/marketplace')
+<<<<<<< HEAD:recovered/0parff-codex/centralize-api-error-handling-and-add-errorboundary/src/layout/MainNavigation.tsx
+=======
     },
     {
       key: 'services',
@@ -37,6 +39,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'micro-saas',
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738:src/layout/MainNavigation.tsx
     },
     {
       key: 'categories',

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+=======
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
@@ -44,28 +48,11 @@ const TalentProfilePage: React.FC = () => {
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738
   return (
-    <main className="min-h-screen bg-zion-blue py-8 text-white">
-      <div className="container mx-auto px-4 space-y-4">
-        <h1 className="text-3xl font-bold" data-testid="profile-name">
-          {profile.full_name}
-        </h1>
-        {profile.skills && profile.skills.length > 0 && (
-          <div>
-            <h2 className="font-semibold">Skills</h2>
-            <ul className="list-disc ml-5">
-              {profile.skills.map(skill => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {profile.availability_type && (
-          <p>Availability: {profile.availability_type}</p>
-        )}
-      </div>
-    </main>
+    <>
+      <Head><title>talent/[id] - Zion App</title><meta name="description" content="talent/[id] page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">talent/[id]</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
+            ← Back to Home</a></div></div></>;
   );
-};
 
-export default TalentProfilePage;
+export default Id;

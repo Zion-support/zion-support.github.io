@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
@@ -124,3 +126,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>
   );
 }
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738

@@ -2,6 +2,38 @@ export interface MicroSaasService {
   id: string;
   title: string;
   description: string;
+<<<<<<< HEAD
+  category: 'AI & ML' | 'Development' | 'Business Tools' | 'Security' | 'Analytics' | 'Communication' | 'Productivity' | 'Marketing' | 'Finance' | 'Healthcare' | 'Education' | 'E-commerce';
+  pricing: {
+    starter: number;
+    professional: number;
+    enterprise: number;
+    currency: string;
+    billing: 'monthly' | 'yearly' | 'one-time';
+  };
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  integration: string[];
+  support: string[];
+  deployment: string[];
+  compliance: string[];
+  rating: number;
+  reviewCount: number;
+  featured: boolean;
+  launchDate: string;
+  website: string;
+  demo: string;
+  documentation: string;
+  tags: string[];
+  image: string;
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+  };
+=======
   category: 'AI Services' | 'IT Services' | 'Business Solutions' | 'Development Tools' | 'Analytics' | 'Security' | 'Automation';
   price: number;
   currency: string;
@@ -25,11 +57,26 @@ export interface MicroSaasService {
   integrations: string[];
   compliance: string[];
   aiScore: number;
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738
 }
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  // AI Services
   {
+<<<<<<< HEAD
+    id: "ai-content-optimizer",
+    title: "AI Content Optimizer Pro",
+    description: "Advanced AI-powered content optimization tool that analyzes, improves, and optimizes your content for SEO, readability, and engagement. Features real-time suggestions, competitor analysis, and performance tracking.",
+    category: "AI & ML",
+    pricing: { starter: 29, professional: 79, enterprise: 199, currency: "$", billing: "monthly" },
+    features: ["AI-powered content analysis", "SEO optimization suggestions", "Readability scoring", "Competitor content analysis", "Performance tracking", "Multi-language support", "API access", "Custom templates"],
+    benefits: ["Improve SEO rankings by 40%", "Increase content engagement by 60%", "Save 5+ hours per content piece", "Reduce bounce rate by 25%", "Optimize for multiple platforms"],
+    useCases: ["Blog content optimization", "Marketing copy improvement", "Product description enhancement", "Social media content", "Email marketing optimization"],
+    targetAudience: ["Content creators", "Marketing teams", "SEO specialists", "Small businesses", "Agencies"],
+    integration: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Zapier", "REST API"],
+    support: ["24/7 chat support", "Email support", "Video tutorials", "Live webinars", "Dedicated account manager"],
+    deployment: ["Cloud-based", "SaaS", "Mobile responsive", "Progressive Web App"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+=======
     id: "ai-chatbot-builder",
     title: "AI Chatbot Builder Pro",
     description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integration capabilities.",
@@ -61,16 +108,24 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     tags: ["AI Chatbot", "NLP", "Customer Service", "Automation"],
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738
     rating: 4.8,
-    reviewCount: 156,
-    availability: "Immediate",
-    implementationTime: "2-3 days",
-    supportLevel: "premium",
-    integrations: ["Slack", "Discord", "WhatsApp", "Website", "Mobile Apps"],
-    compliance: ["GDPR", "CCPA", "HIPAA"],
-    aiScore: 94
+    reviewCount: 1247,
+    featured: true,
+    launchDate: "2024-01-15",
+    website: "https://ziontechgroup.com/ai-content-optimizer",
+    demo: "https://ziontechgroup.com/demo/ai-content-optimizer",
+    documentation: "https://ziontechgroup.com/docs/ai-content-optimizer",
+    tags: ["AI", "Content Optimization", "SEO", "Marketing", "Analytics"],
+    image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500",
+    author: { name: "Zion AI Labs", id: "zion-ai-labs", avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100" }
   },
   {
+<<<<<<< HEAD
+    id: "cyber-threat-monitor",
+    title: "Cyber Threat Monitor",
+    description: "Real-time cybersecurity threat detection and monitoring system with AI-powered analysis and automated response capabilities. Provides comprehensive security insights and threat intelligence.",
+=======
     id: "ai-content-generator",
     title: "AI Content Generator Suite",
     description: "Advanced AI-powered content creation tool for blogs, social media, marketing copy, and technical documentation.",
@@ -199,35 +254,29 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     id: "cybersecurity-monitoring",
     title: "24/7 Cybersecurity Monitoring",
     description: "Advanced threat detection and response service with AI-powered security monitoring and incident response.",
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738
     category: "Security",
-    price: 799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time Threat Detection",
-      "AI-powered Analysis",
-      "Incident Response",
-      "Vulnerability Assessment",
-      "Compliance Reporting",
-      "Security Training",
-      "Penetration Testing"
-    ],
-    benefits: [
-      "Detect threats 10x faster than traditional methods",
-      "Reduce security incidents by 80%",
-      "Meet compliance requirements automatically",
-      "Protect against zero-day attacks"
-    ],
-    targetAudience: ["Financial Services", "Healthcare", "E-commerce", "Enterprise"],
-    marketPrice: "$799-1,999/month",
-    website: "https://ziontechgroup.com/cybersecurity",
-    contactInfo: {
-      email: "kleber@ziontechgroup.com",
-      phone: "+1 302 464 0950",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    tags: ["Cybersecurity", "Threat Detection", "Incident Response", "Compliance"],
+    pricing: { starter: 99, professional: 299, enterprise: 799, currency: "$", billing: "monthly" },
+    features: ["Real-time threat detection", "AI-powered analysis", "Automated response", "Threat intelligence", "Vulnerability scanning", "Compliance reporting", "24/7 monitoring", "Custom alerts"],
+    benefits: ["Detect threats 3x faster", "Reduce false positives by 70%", "Automated incident response", "Compliance automation", "Cost-effective security"],
+    useCases: ["Enterprise security", "SMB cybersecurity", "Compliance monitoring", "Incident response", "Security operations"],
+    targetAudience: ["Security teams", "IT administrators", "Compliance officers", "Small businesses", "Enterprises"],
+    integration: ["SIEM systems", "Firewalls", "IDS/IPS", "Cloud platforms", "API integration"],
+    support: ["24/7 security support", "Dedicated security engineer", "Emergency response", "Training programs"],
+    deployment: ["Cloud-native", "On-premise", "Hybrid", "Multi-cloud"],
+    compliance: ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "GDPR"],
     rating: 4.9,
+<<<<<<< HEAD
+    reviewCount: 892,
+    featured: true,
+    launchDate: "2024-02-01",
+    website: "https://ziontechgroup.com/cyber-threat-monitor",
+    demo: "https://ziontechgroup.com/demo/cyber-threat-monitor",
+    documentation: "https://ziontechgroup.com/docs/cyber-threat-monitor",
+    tags: ["Cybersecurity", "Threat Detection", "AI", "Compliance", "Monitoring"],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500",
+    author: { name: "Zion Security", id: "zion-security", avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100" }
+=======
     reviewCount: 134,
     availability: "1-2 weeks",
     implementationTime: "2-3 weeks",
@@ -444,17 +493,30 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     integrations: ["GitHub", "GitLab", "Bitbucket", "Jenkins", "CircleCI"],
     compliance: ["SOC 2", "ISO 27001"],
     aiScore: 89
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738
   }
 ];
 
-export const getServiceByCategory = (category: string) => {
+export const getMicroSaasServicesByCategory = (category: string) => {
+  if (category === 'all') return MICRO_SAAS_SERVICES;
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 
+<<<<<<< HEAD
+export const getFeaturedMicroSaasServices = () => {
+  return MICRO_SAAS_SERVICES.filter(service => service.featured);
+};
+
+export const getMicroSaasServicesByPriceRange = (min: number, max: number) => {
+  return MICRO_SAAS_SERVICES.filter(service => 
+    service.pricing.starter >= min && service.pricing.starter <= max
+  );
+=======
 export const getServiceById = (id: string) => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 
 export const getServicesByPriceRange = (min: number, max: number) => {
   return MICRO_SAAS_SERVICES.filter(service => service.price >= min && service.price <= max);
+>>>>>>> origin/resolved-conflicts-summary-20250825-234738
 };
