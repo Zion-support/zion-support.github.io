@@ -1,7 +1,7 @@
 # Updated: Fixed for Vite React SPA deployment at 2025-01-19T12:00:00Z
 [build]
   base = "."
-  command = "npm install --include=optional && npm run build:netlify"
+  command = "npm ci --include=optional && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T01:45:00Z (run-13)
