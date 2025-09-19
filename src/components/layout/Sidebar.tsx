@@ -84,7 +84,7 @@ const contactInfo = {,
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008, Middletown DE 19709',
 };
-export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProps) {,
+export default React.memo(function Sidebar({ isOpen, onClose, className = '' }: SidebarProps) {,
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const toggleSection = (sectionId: string) => {,
     setExpandedSections(prev =>,

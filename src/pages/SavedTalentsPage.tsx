@@ -60,7 +60,6 @@ export default function SavedTalentsPage() {,
         navigate(`/talent/${talentId}`);
     };
     const handleRequestHire = (talent) => {,
-        console.log("Request to hire:", talent);
         toast({,
             title: "Hire Request Sent";
             description: `A hire request has been sent to ${talent.full_name,}.`,

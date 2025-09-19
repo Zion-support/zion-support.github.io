@@ -60,7 +60,6 @@ export const useAnalytics = () => {,
     sendAnalyticsEvent(event);
     // Log in development,
     if (process.env.NODE_ENV === 'development') {,
-      console.log('Analytics Page View:', event);
     }
   }, []);
   // Track custom events,
@@ -80,7 +79,6 @@ export const useAnalytics = () => {,
     sendAnalyticsEvent(analyticsEvent);
     // Log in development,
     if (process.env.NODE_ENV === 'development') {,
-      console.log('Analytics Event:', analyticsEvent);
     }
   }, []);
   // Track user interactions,

@@ -103,7 +103,6 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {,
     fn();
     const end = performance.now();
     if (process.env.NODE_ENV === 'development') {,
-      console.log(`${name} took ${end - start} milliseconds`);
     }
     return end - start;
   }, []);
