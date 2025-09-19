@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
       });
       
       showSuccess('Thank you for your message! We\'ll get back to you soon.');
-    } catch (error) {
+    } catch {
       showError('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
