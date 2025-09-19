@@ -1,27 +1,14 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 import Toast from './components/Toast';
-import ScrollToTop from './components/ScrollToTop';
-import BackToTop from './components/BackToTop';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Pricing from './pages/Pricing';
 import LoadingSpinner from './components/LoadingSpinner';
 import ThemeToggle from './components/ThemeToggle';
 import PerformanceMetrics from './components/PerformanceMetrics';
 
 // Custom hooks
-const useLocalStorage = (key: string, initialValue: any) => {
-  const [storedValue, setStoredValue] = useState(() => {
+const useLocalStorage = <T,>(key: string, initialValue: T): [T, (value: T) => void] => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
@@ -30,11 +17,12 @@ const useLocalStorage = (key: string, initialValue: any) => {
     }
   });
 
-  const setValue = (value: any) => {
+  const setValue = (value: T) => {
     try {
       setStoredValue(value);
       window.localStorage.setItem(key, JSON.stringify(value));
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Error saving to localStorage:', error);
     }
   };
@@ -42,8 +30,14 @@ const useLocalStorage = (key: string, initialValue: any) => {
   return [storedValue, setValue];
 };
 
+interface ToastItem {
+  id: number;
+  type: 'success' | 'error' | 'info';
+  message: string;
+}
+
 const useToast = () => {
-  const [toasts, setToasts] = useState<any[]>([]);
+  const [toasts, setToasts] = useState<ToastItem[]>([]);
 
   const showSuccess = (message: string) => {
     setToasts(prev => [...prev, { id: Date.now(), type: 'success', message }]);
@@ -62,14 +56,17 @@ const useToast = () => {
 
 // Analytics functions
 const trackButtonClick = (buttonName: string) => {
+  // eslint-disable-next-line no-console
   console.log('Button clicked:', buttonName);
 };
 
 const trackPageView = (pageName: string) => {
+  // eslint-disable-next-line no-console
   console.log('Page viewed:', pageName);
 };
 
 const trackFeatureInteraction = (featureName: string) => {
+  // eslint-disable-next-line no-console
   console.log('Feature interaction:', featureName);
 };
 
@@ -86,7 +83,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const { toasts, showSuccess, showInfo, showWarning } = useToast();
 
   // Update time every second
@@ -244,10 +240,6 @@ function App() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   const services = useMemo(() => [
     {
