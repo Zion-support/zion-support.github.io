@@ -34,7 +34,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <div className="testimonial-content">
         <div className="testimonial-text">
           <blockquote>
-            "{content}"
+            &ldquo;{content}&rdquo;
           </blockquote>
         </div>
         <div className="testimonial-rating">

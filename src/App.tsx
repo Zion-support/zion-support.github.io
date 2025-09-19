@@ -116,7 +116,7 @@ function App() {
         switch (event.key) {
           case 'k':
             event.preventDefault();
-            toggleTheme();
+            toggleDarkMode();
             break;
           case 'r':
             event.preventDefault();
@@ -128,7 +128,7 @@ function App() {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [toggleDarkMode]);
 
   // Handle scroll to top button
   useEffect(() => {
