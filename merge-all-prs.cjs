@@ -5,8 +5,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const REPO_OWNER = 'ziontechgroup'; // Update this with the actual repo owner
-const REPO_NAME = 'ziontechgroup'; // Update this with the actual repo name
+const REPO_OWNER = 'Zion-Holdings'; // Update this with the actual repo owner
+const REPO_NAME = 'zion.app'; // Update this with the actual repo name
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 
 if (!GITHUB_TOKEN) {
