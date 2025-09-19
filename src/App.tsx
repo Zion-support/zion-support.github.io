@@ -1,5 +1,11 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import React, { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react'
 import './App.css'
+
+// Lazy load components for better performance
+const ContactForm = lazy(() => import('./components/ContactForm'))
+const Testimonials = lazy(() => import('./components/Testimonials'))
+const Footer = lazy(() => import('./components/Footer'))
+const SEO = lazy(() => import('./components/SEO'))
 
 function App() {
   const [currentTime, setCurrentTime] = useState(new Date())
@@ -64,25 +70,43 @@ function App() {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
       icon: "🤖",
-      color: "#6366f1"
+      color: "#6366f1",
+      link: "/services/ai"
     },
     {
       title: "Blockchain Technology",
       description: "Secure and decentralized solutions for modern businesses with smart contracts and DeFi platforms.",
       icon: "⛓️",
-      color: "#10b981"
+      color: "#10b981",
+      link: "/services/blockchain"
     },
     {
       title: "IT Services",
       description: "Comprehensive IT infrastructure management, cloud solutions, and digital transformation services.",
       icon: "💻",
-      color: "#f59e0b"
+      color: "#f59e0b",
+      link: "/services/it"
     },
     {
       title: "Quantum Computing",
       description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
       icon: "⚛️",
-      color: "#8b5cf6"
+      color: "#8b5cf6",
+      link: "/services/quantum"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Enterprise-grade security solutions to protect your digital assets and infrastructure.",
+      icon: "🛡️",
+      color: "#ef4444",
+      link: "/services/cybersecurity"
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services for modern businesses.",
+      icon: "☁️",
+      color: "#06b6d4",
+      link: "/services/cloud"
     }
   ], [])
 
@@ -99,6 +123,9 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+      <Suspense fallback={null}>
+        <SEO />
+      </Suspense>
       <header className="App-header">
         <div className="header-controls">
           <button 
@@ -144,20 +171,50 @@ function App() {
               <div className="feature-icon">{feature.icon}</div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
-              <button className="learn-more-btn">Learn More</button>
+              <button 
+                className="learn-more-btn"
+                onClick={() => window.location.href = feature.link}
+                aria-label={`Learn more about ${feature.title}`}
+              >
+                Learn More
+              </button>
             </div>
           ))}
         </div>
+
+        <Suspense fallback={<div className="loading-placeholder">Loading testimonials...</div>}>
+          <Testimonials />
+        </Suspense>
+
+        <Suspense fallback={<div className="loading-placeholder">Loading contact form...</div>}>
+          <ContactForm />
+        </Suspense>
 
         <div className="cta-section">
           <h2>Ready to Transform Your Business?</h2>
           <p>Get started with our cutting-edge technology solutions today.</p>
           <div className="cta-buttons">
-            <button className="btn-primary">Get Started</button>
-            <button className="btn-secondary">Contact Us</button>
+            <button 
+              className="btn-primary"
+              onClick={() => window.location.href = '/contact'}
+              aria-label="Get started with our services"
+            >
+              Get Started
+            </button>
+            <button 
+              className="btn-secondary"
+              onClick={() => window.location.href = '/contact'}
+              aria-label="Contact us for more information"
+            >
+              Contact Us
+            </button>
           </div>
         </div>
       </header>
+
+      <Suspense fallback={<div className="loading-placeholder">Loading footer...</div>}>
+        <Footer />
+      </Suspense>
     </div>
   )
 }
