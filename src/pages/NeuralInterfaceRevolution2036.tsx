@@ -6,8 +6,6 @@ const NeuralInterfaceRevolution2036: React.FC = () => {
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-8">Neural Interface Revolution 2036</h1>
         <p className="text-lg">This page is under construction.</p>
-      </div>
-    </div>
   );
 };
 

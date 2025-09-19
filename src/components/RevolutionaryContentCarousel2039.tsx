@@ -48,19 +48,15 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
 
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm">
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT CAROUSEL • JANUARY 2039-2040
-          </div>
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Carousel</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Explore our latest revolutionary technology content featuring the most advanced breakthroughs in AI, quantum computing, and reality manipulation
+            Explore our latest revolutionary technology content featuring the most advanced breakthroughs in AI, quantum computing, and reality manipulation</p>
           </p>
-        </div>
-
         <div className="relative">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -71,16 +67,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
                       >
                         Explore {slide.title} →
                       </a>
-                    </div>
-                    </div>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
-
-      </div>
-    </div>
   );
 };
 

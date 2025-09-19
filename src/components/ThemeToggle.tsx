@@ -27,7 +27,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ darkMode, onToggle, className
           {darkMode ? 'Dark mode enabled' : 'Light mode enabled'}
         </span>
       </span>
-      
       {/* Icons */}
       <span className="absolute left-1 text-xs">
         {darkMode ? '🌙' : '☀️'}

@@ -139,13 +139,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
-                <divdiv
+                <div
                   className="flex items-center space-x-2"
                 >
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg">
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
-                </divdiv>
-                
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
@@ -157,15 +155,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                           ? 'text-cyan-400 border-b-2 border-cyan-400'
                           : 'text-gray-300 hover:text-cyan-400'
                       }`}
-                    >
+                    ></button>
                       <span>{section.icon}</span>
                       <span>{section.label}</span>
                     </button>
                   ))}
-                </div>
-
                 {/* Contact Info */}
-                <divdiv
+                <div
                   className="hidden md:flex items-center space-x-4"
                 >
                   <a
@@ -180,23 +176,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   >
                     Contact Us
                   </a>
-                </divdiv>
-
                 {/* Mobile Menu Button */}
                 <button
                   className="lg:hidden text-white p-2"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
+                ></button>
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></p>
                   </svg>
                 </button>
-              </div>
-
               {/* Mobile Navigation Menu */}
               <div>
                 {isMobileMenuOpen && (
-                  <divdiv
+                  <div
                     className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
@@ -209,7 +201,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'
                           }`}
-                        >
+                        ></button>
                           <span>{section.icon}</span>
                           <span>{section.label}</span>
                         </button>
@@ -229,12 +221,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                           <span>✉️</span>
                           <span>kleber@ziontechgroup.com</span>
                         </a>
-                      </div>
-                    </div>
-                  </divdiv>
                 )}
-              </div>
-            </div>
           </nav>
         </>
       )}
@@ -242,32 +229,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="text-center max-w-6xl mx-auto relative z-10"
           >
-            <divdiv
+            <div
               className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
             >
-              <divdiv
+              <div
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
               >
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
-              </divdiv>
-              
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Pioneering the future of technology with innovative solutions that drive business transformation
+                Pioneering the future of technology with innovative solutions that drive business transformation</p>
               </p>
-              
               {/* Enhanced CTA Section */}
-              <divdiv 
+              <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
               >
                 <a href="/comprehensive-services-showcase-2026">
-                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"></button>
                     <span className="flex items-center gap-2">
                       Explore 2026 Services
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -276,42 +260,32 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </a>
                 <a href="/comprehensive-services-showcase-2025">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    2025 Services Showcase
+                    2025 Services Showcase</button>
                   </button>
                 </a>
                 <a href="/get-started">
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Get Started
+                    Get Started</button>
                   </button>
                 </a>
-              </divdiv>
-              
               {/* Trust Indicators */}
-              <divdiv
+              <div
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-green-400" />
                   <span>Enterprise Security</span>
-                </div>
                 <div className="flex items-center space-x-2">
                   <Globe className="w-4 h-4 text-blue-400" />
                   <span>Global Reach</span>
-                </div>
                 <div className="flex items-center space-x-2">
                   <TrendingUp className="w-4 h-4 text-purple-400" />
                   <span>Proven Results</span>
-                </div>
-              </divdiv>
-            </divdiv>
-          </divdiv>
-        </div>
       </section>
-
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="flex items-end justify-between mb-8"
@@ -319,10 +293,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Latest Insights</h2>
               <p className="text-gray-300 mt-2">New guides and blueprints from our experts</p>
-            </div>
             <a href="/blog" className="text-cyan-400 hover:text-cyan-300">View all</a>
-          </divdiv>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {latestInsights.map((post, index) => (
               <diva
@@ -335,7 +306,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-cyan-300">
                   <span className="px-2 py-1 rounded-md bg-white/10 border border-white/10">{post.tag}</span>
-                </div>
                 <h3 className="mt-4 text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
                   {post.title}
                 </h3>
@@ -345,14 +315,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </span>
               </diva>
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-20"
@@ -361,13 +328,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Comprehensive Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
+              From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.</p>
             </p>
-          </divdiv>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
                 whileInView={{ opacity: 1, y: 0 }}
@@ -377,20 +342,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <div className="relative">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-3 mb-6">
                     <feature.icon className="w-full h-full text-white" />
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </div>
-              </divdiv>
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -399,10 +358,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Our Revolutionary 2026 Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
+              From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today</p>
             </p>
-          </divdiv>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },
@@ -412,7 +369,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
                 whileInView={{ opacity: 1, y: 0 }}
@@ -422,20 +379,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <div className="relative p-6">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}>
                     <service.icon className="w-full h-full text-white" />
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
                   <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Explore Service</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
-                </div>
-              </divdiv>
             ))}
-          </div>
-
           {/* Call to Action for Services Showcase */}
-          <divdiv
+          <div
             className="text-center mt-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -448,14 +400,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               View All 2026 Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-          </divdiv>
-        </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <divdiv
+          <div
             className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -464,35 +413,25 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Get in touch with our team to discuss how our innovative services can help you achieve your goals.
+              Get in touch with our team to discuss how our innovative services can help you achieve your goals.</p>
             </p>
-          </divdiv>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-cyan-400" />
-              </div>
               <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
               <p className="text-gray-300 text-sm">Dedicated professionals ready to help</p>
-            </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-blue-400" />
-              </div>
               <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
               <p className="text-gray-300 text-sm">Quick setup and deployment</p>
-            </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-purple-400" />
-              </div>
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
-            </div>
-          </div>
-
-          <divdiv
+          <div
             className="text-center"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -510,11 +449,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               >
                 Call Us
               </a>
-            </div>
-          </divdiv>
-        </div>
       </section>
-
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
@@ -523,9 +458,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <p className="mt-2">
               Address: 364 E Main St STE 1008 Middletown DE 19709 | 
               Phone: +1 302 464 0950 | 
-              Email: kleber@ziontechgroup.com
+              Email: kleber@ziontechgroup.com</p>
             </p>
-          </div>
           <div className="flex justify-center space-x-6">
             <a href="/comprehensive-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               2026 Services
@@ -536,8 +470,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Website
             </a>
-          </div>
-        </div>
       </footer>
     </UltraFuturisticBackground2026>
   );

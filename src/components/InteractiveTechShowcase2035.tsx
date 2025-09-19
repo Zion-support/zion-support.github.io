@@ -50,18 +50,14 @@ const InteractiveTechShowcase2035: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • 2035
-          </div>
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • 2035
-          </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Interactive Technology Showcase 2035
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Explore our revolutionary technologies through interactive demonstrations and immersive experiences
+            Explore our revolutionary technologies through interactive demonstrations and immersive experiences</p>
           </p>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Selector */}
           <div className="space-y-4">
@@ -69,21 +65,13 @@ const InteractiveTechShowcase2035: React.FC = () => {
             {technologies.map((tech, index) => (
               <button
                 key={tech.id}
-            {demos.map((demo, index) => (
+            {demos.map((demo, index) => (</button>
               <button
                 key={demo.id}
-                onClick={() => setActiveDemo(index)}
-                  </div>
-                </div>
+                onClick={() => setActiveDemo(index)}</button>
               </button>
             ))}
-          </div>
-
               </button>
-            </div>
-          </div>
-        </div>
-
                   activeTech === index
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                     : 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white'
@@ -93,47 +81,29 @@ const InteractiveTechShowcase2035: React.FC = () => {
                   <span className="text-3xl">{tech.icon}</span>
                   <div>
                     <h4 className="text-lg font-semibold">{tech.name}</h4>
-                  </div>
-                </div>
               </button>
             ))}
-          </div>
-
-                  </div>
-                </div>
               </button>
             ))}
-          </div>
-
               </button>
-            </div>
-          </div>
-        </div>
-
         {/* Performance Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30">
-            <div className="text-4xl font-bold text-purple-300 mb-2">∞</div>
-            <div className="text-sm text-purple-200">Computational Power</div>
-          </div>
+            <div className="text-4xl font-bold text-purple-300 mb-2">∞
+            <div className="text-sm text-purple-200">Computational Power
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-cyan-400/30">
-            <div className="text-4xl font-bold text-cyan-300 mb-2">0ms</div>
-            <div className="text-sm text-cyan-200">Response Time</div>
-          </div>
+            <div className="text-4xl font-bold text-cyan-300 mb-2">0ms
+            <div className="text-sm text-cyan-200">Response Time
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-emerald-400/30">
-            <div className="text-4xl font-bold text-emerald-300 mb-2">100%</div>
-            <div className="text-sm text-emerald-200">Accuracy</div>
-          </div>
+            <div className="text-4xl font-bold text-emerald-300 mb-2">100%
+            <div className="text-sm text-emerald-200">Accuracy
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-orange-400/30">
-            <div className="text-4xl font-bold text-orange-300 mb-2">∞</div>
-            <div className="text-sm text-orange-200">Possibilities</div>
-          </div>
-        </div>
-
+            <div className="text-4xl font-bold text-orange-300 mb-2">∞
+            <div className="text-sm text-orange-200">Possibilities
         {/* Call to Action */}
             </button>
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
-              📚 Learn More
+              📚 Learn More</button>
             </button>
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -151,10 +121,6 @@ const InteractiveTechShowcase2035: React.FC = () => {
             >
               View Revolutionary Showcase →
             </a>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

@@ -211,29 +211,23 @@ const NextGenInnovationHub2042: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2042
-          </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2042
-          </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2042
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover and explore the most revolutionary technologies shaping humanity's future
+            Discover and explore the most revolutionary technologies shaping humanity's future</p>
           </p>
-        </div>
-
         {/* Innovation Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredInnovations.map((innovation) => (
             <div key={innovation.id} className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-center mb-6">
-                <div className="text-6xl mb-4">{innovation.icon}</div>
+                <div className="text-6xl mb-4">{innovation.icon}
                 <h3 className="text-2xl font-bold mb-2">{innovation.title}</h3>
                 <p className="text-emerald-100 mb-4">{innovation.description}</p>
-              </div>
-
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-sm opacity-80">Status:</span>
@@ -246,7 +240,6 @@ const NextGenInnovationHub2042: React.FC = () => {
                   }`}>
                     {innovation.status}
                   </span>
-                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm opacity-80">Impact:</span>
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -256,9 +249,6 @@ const NextGenInnovationHub2042: React.FC = () => {
                   }`}>
                     {innovation.impact}
                   </span>
-                </div>
-              </div>
-
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-1">
@@ -269,11 +259,9 @@ const NextGenInnovationHub2042: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-
               <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Innovation
-          {innovations.map((innovation, index) => (
+          {innovations.map((innovation, index) => (</button>
             <div
               key={innovation.id}
               className={`bg-gradient-to-br ${innovation.color}/20 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
@@ -282,179 +270,130 @@ const NextGenInnovationHub2042: React.FC = () => {
               onClick={() => setSelectedInnovation(index)}
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="text-4xl">{innovation.icon}</div>
+                <div className="text-4xl">{innovation.icon}
                 <div className="flex items-center space-x-2">
                   <span className={`px-2 py-1 ${getStatusColor(innovation.status)} text-white text-xs rounded-full`}>
                     {innovation.status}
                   </span>
-                </div>
-              </div>
-              
               <h3 className="text-2xl font-bold mb-3">{innovation.title}</h3>
               <p className="text-gray-200 mb-4 text-sm">{innovation.description}</p>
-              
               <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                 <span>{innovation.category}</span>
                 <span>{innovation.users} users</span>
-              </div>
-              
               <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                Explore Innovation →
+                Explore Innovation →</button>
               </button>
-            </div>
           ))}
-        </div>
-
         {/* Statistics Section */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Innovation Hub Statistics</h2>
             <p className="text-xl opacity-90">
-              Our hub has become the epicenter of technological advancement
+              Our hub has become the epicenter of technological advancement</p>
             </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">500+</div>
-              <div className="text-lg font-semibold mb-1">Active Innovations</div>
-              <div className="text-sm opacity-80">Currently in development</div>
-            </div>
+              <div className="text-5xl font-bold text-emerald-400 mb-2">500+
+              <div className="text-lg font-semibold mb-1">Active Innovations
+              <div className="text-sm opacity-80">Currently in development
             <div className="text-center">
-              <div className="text-5xl font-bold text-teal-400 mb-2">99.9%</div>
-              <div className="text-lg font-semibold mb-1">Success Rate</div>
-              <div className="text-sm opacity-80">Innovation deployment</div>
-            </div>
+              <div className="text-5xl font-bold text-teal-400 mb-2">99.9%
+              <div className="text-lg font-semibold mb-1">Success Rate
+              <div className="text-sm opacity-80">Innovation deployment
             <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
-              <div className="text-lg font-semibold mb-1">Possibilities</div>
-              <div className="text-sm opacity-80">Future innovations</div>
-            </div>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞
+              <div className="text-lg font-semibold mb-1">Possibilities
+              <div className="text-sm opacity-80">Future innovations
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
-              <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
-              <div className="text-sm opacity-80">Continuous development</div>
+              <div className="text-5xl font-bold text-blue-400 mb-2">24/7
+              <div className="text-lg font-semibold mb-1">Innovation Cycle
+              <div className="text-sm opacity-80">Continuous development
         {/* Selected Innovation Details */}
         <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-8xl mb-6">{innovations[selectedInnovation].icon}</div>
+              <div className="text-8xl mb-6">{innovations[selectedInnovation].icon}
               <h2 className="text-4xl font-bold mb-6">{innovations[selectedInnovation].title}</h2>
               <p className="text-xl opacity-90 mb-8">{innovations[selectedInnovation].description}</p>
-              
               <div className="flex items-center space-x-4 mb-8">
                 <div className="flex items-center space-x-2">
                   <span className={`px-3 py-1 ${getStatusColor(innovations[selectedInnovation].status)} text-white text-sm rounded-full`}>
                     {innovations[selectedInnovation].status}
                   </span>
                   <span className="text-sm text-gray-300">{innovations[selectedInnovation].users} users</span>
-                </div>
-              </div>
-              
               <button className={`bg-gradient-to-r ${innovations[selectedInnovation].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
-                Get Started →
+                Get Started →</button>
               </button>
-            </div>
-            
             <div>
               <h3 className="text-2xl font-bold mb-6">Key Features</h3>
               <div className="space-y-4">
                 {innovations[selectedInnovation].features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full">
                     <span className="text-lg">{feature}</span>
-                  </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">📊 Innovation Statistics</h2>
             <p className="text-xl opacity-90">Our impact on the future of technology</p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2 text-cyan-400">50+</div>
-              <div className="text-lg text-gray-300">Active Innovations</div>
-            </div>
+              <div className="text-5xl font-bold mb-2 text-cyan-400">50+
+              <div className="text-lg text-gray-300">Active Innovations
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2 text-blue-400">1M+</div>
-              <div className="text-lg text-gray-300">Global Users</div>
-            </div>
+              <div className="text-5xl font-bold mb-2 text-blue-400">1M+
+              <div className="text-lg text-gray-300">Global Users
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2 text-purple-400">99.9%</div>
-              <div className="text-lg text-gray-300">Success Rate</div>
-            </div>
+              <div className="text-5xl font-bold mb-2 text-purple-400">99.9%
+              <div className="text-lg text-gray-300">Success Rate
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2 text-pink-400">∞</div>
-              <div className="text-lg text-gray-300">Possibilities</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-5xl font-bold mb-2 text-pink-400">∞
+              <div className="text-lg text-gray-300">Possibilities
         {/* Community Showcase */}
         <div className="bg-gradient-to-r from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🌟 Community Showcase</h2>
             <p className="text-xl opacity-90">See what our community is building with our revolutionary technologies</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-4">🧠</div>
+              <div className="text-4xl mb-4">🧠
               <h3 className="text-xl font-bold mb-2">Conscious AI Art Gallery</h3>
               <p className="text-gray-200 mb-4">AI-generated artwork that demonstrates true creativity and emotional expression</p>
-              <div className="text-sm text-gray-400">Created by: AI Artist Collective</div>
-            </div>
-            
+              <div className="text-sm text-gray-400">Created by: AI Artist Collective
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-4">⚛️</div>
+              <div className="text-4xl mb-4">⚛️
               <h3 className="text-xl font-bold mb-2">Quantum Reality Simulator</h3>
               <p className="text-gray-200 mb-4">Interactive simulation of quantum realities and parallel universes</p>
-              <div className="text-sm text-gray-400">Created by: Quantum Research Lab</div>
-            </div>
-            
+              <div className="text-sm text-gray-400">Created by: Quantum Research Lab
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-4">🌌</div>
+              <div className="text-4xl mb-4">🌌
               <h3 className="text-xl font-bold mb-2">Dimension Explorer App</h3>
               <p className="text-gray-200 mb-4">Mobile app for exploring and communicating across dimensions</p>
-              <div className="text-sm text-gray-400">Created by: Interdimensional Dev Team</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-sm text-gray-400">Created by: Interdimensional Dev Team
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most advanced innovation ecosystem in human history. Contribute to technologies that will shape the future of civilization.
+            Be part of the most advanced innovation ecosystem in human history. Contribute to technologies that will shape the future of civilization.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join Innovation Hub
+              Join Innovation Hub</button>
             </button>
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
-              Submit Innovation
+              Submit Innovation</button>
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join our community of innovators and be part of the most advanced technological revolution in history
+            Join our community of innovators and be part of the most advanced technological revolution in history</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Join Innovation Hub
+              Join Innovation Hub</button>
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
-              View All Innovations
+              View All Innovations</button>
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

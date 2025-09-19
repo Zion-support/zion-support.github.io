@@ -154,15 +154,13 @@ const InteractiveTechShowcase2025: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE TECH SHOWCASE • 2025
-          </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the future of technology with our interactive demonstrations of cutting-edge AI and quantum computing solutions.
+            Experience the future of technology with our interactive demonstrations of cutting-edge AI and quantum computing solutions.</p>
           </p>
         </motion.div>
-
         {/* Interactive Tech Display */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Tech Selection */}
@@ -183,73 +181,53 @@ const InteractiveTechShowcase2025: React.FC = () => {
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                     : 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white'
                 }`}
-              >
+              ></button>
                 <div className="flex items-center space-x-4">
                   <span className="text-3xl">{tech.icon}</span>
                   <div className="text-left">
                     <h4 className="font-semibold">{tech.name}</h4>
                     <p className="text-sm opacity-80">{tech.description}</p>
-                  </div>
-                </div>
               </button>
             ))}
-          </div>
-
           {/* Active Tech Display */}
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
             <div className="text-center">
-              <div className="text-8xl mb-6 animate-bounce">{currentTech.icon}</div>
+              <div className="text-8xl mb-6 animate-bounce">{currentTech.icon}
               <h3 className="text-3xl font-bold mb-4">{currentTech.name}</h3>
               <p className="text-lg opacity-90 mb-8">{currentTech.description}</p>
-              
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {currentTech.features.map((feature, index) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                     <span className="text-sm font-semibold">{feature}</span>
-                  </div>
                 ))}
-              </div>
-
               <div className="space-y-4">
                 <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Try Interactive Demo
+                  Try Interactive Demo</button>
                 </button>
                 <button className="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors">
-                  Learn More
+                  Learn More</button>
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Live Stats */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center mb-8">Live Technology Metrics</h3>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-sm opacity-80">AI Accuracy Rate</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%
+              <div className="text-sm opacity-80">AI Accuracy Rate
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">1000x</div>
-              <div className="text-sm opacity-80">Processing Speed</div>
-            </div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">1000x
+              <div className="text-sm opacity-80">Processing Speed
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
-              <div className="text-sm opacity-80">Autonomous Operation</div>
-            </div>
+              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7
+              <div className="text-sm opacity-80">Autonomous Operation
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">50+</div>
-              <div className="text-sm opacity-80">Active Technologies</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-4xl font-bold text-orange-400 mb-2">50+
+              <div className="text-sm opacity-80">Active Technologies
         {/* Technology Timeline */}
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold mb-8">Technology Evolution Timeline</h3>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-cyan-500"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-cyan-500">
             <div className="space-y-8">
               {[
                 { year: "2025", tech: "Quantum AI Integration", status: "Current" },
@@ -258,94 +236,64 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 { year: "2028", tech: "Conscious AI Systems", status: "Research" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center justify-center">
-                  <div className={`w-4 h-4 rounded-full ${item.status === 'Current' ? 'bg-purple-500' : 'bg-gray-500'} z-10`}></div>
+                  <div className={`w-4 h-4 rounded-full ${item.status === 'Current' ? 'bg-purple-500' : 'bg-gray-500'} z-10`}>
                   <div className="ml-6 text-left">
-                    <div className="text-2xl font-bold">{item.year}</div>
-                    <div className="text-lg opacity-80">{item.tech}</div>
-                    <div className="text-sm text-purple-400">{item.status}</div>
-                  </div>
-                </div>
+                    <div className="text-2xl font-bold">{item.year}
+                    <div className="text-lg opacity-80">{item.tech}
+                    <div className="text-sm text-purple-400">{item.status}
               ))}
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the cutting-edge technologies that are reshaping our world. Start your journey into the future today.
+            Join us in exploring the cutting-edge technologies that are reshaping our world. Start your journey into the future today.</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Interactive Demo
+              Start Interactive Demo</button>
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
-              Schedule Consultation
-            </button>
-          </div>
-        </div>
-                  </div>
-                </div>
-              </button>
+              Schedule Consultation</button>
             ))}
-          </div>
-
           {/* Active Tech Display */}
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
             <div className="text-center">
-              <div className="text-8xl mb-6 animate-bounce">{currentTech.icon}</div>
+              <div className="text-8xl mb-6 animate-bounce">{currentTech.icon}
               <h3 className="text-3xl font-bold mb-4">{currentTech.name}</h3>
               <p className="text-lg opacity-90 mb-8">{currentTech.description}</p>
-              
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {currentTech.features.map((feature, index) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                     <span className="text-sm font-semibold">{feature}</span>
-                  </div>
                 ))}
-              </div>
-
               <div className="space-y-4">
                 <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Try Interactive Demo
+                  Try Interactive Demo</button>
                 </button>
                 <button className="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors">
-                  Learn More
+                  Learn More</button>
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Live Stats */}
         <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center mb-8">Live Technology Metrics</h3>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-sm opacity-80">AI Accuracy Rate</div>
-            </div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%
+              <div className="text-sm opacity-80">AI Accuracy Rate
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">1000x</div>
-              <div className="text-sm opacity-80">Processing Speed</div>
-            </div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">1000x
+              <div className="text-sm opacity-80">Processing Speed
             <div className="text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
-              <div className="text-sm opacity-80">Autonomous Operation</div>
-            </div>
+              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7
+              <div className="text-sm opacity-80">Autonomous Operation
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">50+</div>
-              <div className="text-sm opacity-80">Active Technologies</div>
-            </div>
-          </div>
-        </div>
-
+              <div className="text-4xl font-bold text-orange-400 mb-2">50+
+              <div className="text-sm opacity-80">Active Technologies
         {/* Technology Timeline */}
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold mb-8">Technology Evolution Timeline</h3>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-cyan-500"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-cyan-500">
             <div className="space-y-8">
               {[
                 { year: "2025", tech: "Quantum AI Integration", status: "Current" },
@@ -354,35 +302,25 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 { year: "2028", tech: "Conscious AI Systems", status: "Research" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center justify-center">
-                  <div className={`w-4 h-4 rounded-full ${item.status === 'Current' ? 'bg-purple-500' : 'bg-gray-500'} z-10`}></div>
+                  <div className={`w-4 h-4 rounded-full ${item.status === 'Current' ? 'bg-purple-500' : 'bg-gray-500'} z-10`}>
                   <div className="ml-6 text-left">
-                    <div className="text-2xl font-bold">{item.year}</div>
-                    <div className="text-lg opacity-80">{item.tech}</div>
-                    <div className="text-sm text-purple-400">{item.status}</div>
-                  </div>
-                </div>
+                    <div className="text-2xl font-bold">{item.year}
+                    <div className="text-lg opacity-80">{item.tech}
+                    <div className="text-sm text-purple-400">{item.status}
               ))}
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the cutting-edge technologies that are reshaping our world. Start your journey into the future today.
+            Join us in exploring the cutting-edge technologies that are reshaping our world. Start your journey into the future today.</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Interactive Demo
+              Start Interactive Demo</button>
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
-              Schedule Consultation
+              Schedule Consultation</button>
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

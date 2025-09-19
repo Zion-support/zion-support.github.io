@@ -197,7 +197,7 @@ const RevolutionaryServicesShowcase2026 = () => {
     { label: "Client Satisfaction", value: "4.9/5", icon: Star }
   ];
 
-  return (
+  return (</p>
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -205,19 +205,14 @@ const RevolutionaryServicesShowcase2026 = () => {
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200 mb-6">
             <Star className="w-5 h-5 text-blue-600 mr-2" />
             <span className="text-sm font-medium text-blue-800">REVOLUTIONARY SERVICES 2026</span>
-          </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Transform Your Business with
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Next-Gen AI</span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our cutting-edge AI services are designed to revolutionize how you do business, 
-            providing unprecedented efficiency, intelligence, and competitive advantage.
+            providing unprecedented efficiency, intelligence, and competitive advantage.</p>
           </p>
-        </div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -226,23 +221,18 @@ const RevolutionaryServicesShowcase2026 = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stats.totalServices}</div>
-            <div className="text-gray-300">Revolutionary Services</div>
-          </div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stats.totalServices}
+            <div className="text-gray-300">Revolutionary Services
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{formatPrice(stats.totalRevenue)}</div>
-            <div className="text-gray-300">Total Value Created</div>
-          </div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{formatPrice(stats.totalRevenue)}
+            <div className="text-gray-300">Total Value Created
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stats.happyClients}</div>
-            <div className="text-gray-300">Happy Clients</div>
-          </div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stats.happyClients}
+            <div className="text-gray-300">Happy Clients
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stats.successRate}%</div>
-            <div className="text-gray-300">Success Rate</div>
-          </div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stats.successRate}%
+            <div className="text-gray-300">Success Rate
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -261,11 +251,10 @@ const RevolutionaryServicesShowcase2026 = () => {
               }`}
             >
               {category.icon}
-              {category.name}
+              {category.name}</button>
             </button>
           ))}
         </motion.div>
-
         {/* Featured Services */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -292,44 +281,30 @@ const RevolutionaryServicesShowcase2026 = () => {
                     <div className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white text-sm font-semibold">
                       <Award className="w-4 h-4" />
                       {service.aiScore}
-                    </div>
-                  </div>
-
                   {/* Category Icon */}
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {getCategoryIcon(service.category)}
-                  </div>
-
                   {/* Content */}
                   <h4 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                     {service.title}
                   </h4>
-                  
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                    {service.description}
+                    {service.description}</p>
                   </p>
-
                   {/* Price */}
                   <div className="text-2xl font-bold text-white mb-4">
                     {formatPrice(service.price)}
-                  </div>
-
                   {/* Key Benefits */}
                   <div className="space-y-2 mb-6">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </div>
                     ))}
-                  </div>
-
                   {/* Delivery Time */}
                   <div className="flex items-center text-sm text-gray-400 mb-4">
                     <Clock className="w-4 h-4 mr-2" />
                     Delivery: {service.deliveryTime}
-                  </div>
-
                   {/* Action Button */}
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -339,8 +314,6 @@ const RevolutionaryServicesShowcase2026 = () => {
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </motion.button>
-                </div>
-
                 {/* Hover Overlay */}
                 <AnimatePresence>
                   {hoveredService === service.id && (
@@ -354,9 +327,7 @@ const RevolutionaryServicesShowcase2026 = () => {
                 </AnimatePresence>
               </motion.div>
             ))}
-          </div>
         </motion.div>
-
         {/* All Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -366,7 +337,6 @@ const RevolutionaryServicesShowcase2026 = () => {
           <h3 className="text-2xl font-bold text-white mb-8 text-center">
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${selectedCategory} Services`}
           </h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -379,26 +349,19 @@ const RevolutionaryServicesShowcase2026 = () => {
                 <div className="flex items-start justify-between mb-3">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center text-white`}>
                     {getCategoryIcon(service.category)}
-                  </div>
                   <div className="text-right">
-                    <div className="text-lg font-bold text-white">{formatPrice(service.price)}</div>
-                    <div className="text-xs text-gray-400">AI Score: {service.aiScore}</div>
-                  </div>
-                </div>
-
+                    <div className="text-lg font-bold text-white">{formatPrice(service.price)}
+                    <div className="text-xs text-gray-400">AI Score: {service.aiScore}
                 <h4 className="text-lg font-semibold text-white mb-2 line-clamp-2">
                   {service.title}
                 </h4>
-                
                 <p className="text-gray-300 text-sm mb-3 line-clamp-2">
-                  {service.description}
+                  {service.description}</p>
                 </p>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-400">
                     <Clock className="w-4 h-4 mr-1" />
                     {service.deliveryTime}
-                  </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -406,12 +369,9 @@ const RevolutionaryServicesShowcase2026 = () => {
                   >
                     View Details
                   </motion.button>
-                </div>
               </motion.div>
             ))}
-          </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -424,9 +384,8 @@ const RevolutionaryServicesShowcase2026 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the revolution and be among the first to experience technologies that will reshape the future.
+              Join the revolution and be among the first to experience technologies that will reshape the future.</p>
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -435,7 +394,6 @@ const RevolutionaryServicesShowcase2026 = () => {
               >
                 Start Your Transformation
               </motion.button>
-              
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -443,9 +401,6 @@ const RevolutionaryServicesShowcase2026 = () => {
               >
                 Schedule Demo
               </motion.button>
-            </div>
-          </div>
-        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
@@ -453,14 +408,10 @@ const RevolutionaryServicesShowcase2026 = () => {
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}
+                <div className="text-sm text-gray-600">{stat.label}
             );
           })}
-        </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service) => {
@@ -477,30 +428,21 @@ const RevolutionaryServicesShowcase2026 = () => {
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
                       FEATURED
-                    </div>
-                  </div>
                 )}
                 
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  
                   <div className="flex items-center space-x-2 mb-2">
                     <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                       {service.category}
                     </span>
-                  </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    {service.description}
+                    {service.description}</p>
                   </p>
-                </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -511,13 +453,9 @@ const RevolutionaryServicesShowcase2026 = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-                
                 <div className="mb-6">
-                  <div className="text-2xl font-bold text-gray-900 mb-2">{service.price}</div>
-                  <div className="text-sm text-gray-500">Flexible payment options available</div>
-                </div>
-                
+                  <div className="text-2xl font-bold text-gray-900 mb-2">{service.price}
+                  <div className="text-sm text-gray-500">Flexible payment options available
                 <Link
                   to="/contact"
                   className="group/btn inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105"
@@ -525,11 +463,8 @@ const RevolutionaryServicesShowcase2026 = () => {
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </div>
             );
           })}
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
@@ -537,9 +472,8 @@ const RevolutionaryServicesShowcase2026 = () => {
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of forward-thinking companies already using our revolutionary AI services 
-            to gain competitive advantage and drive unprecedented growth.
+            to gain competitive advantage and drive unprecedented growth.</p>
           </p>
-          
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link
               to="/contact"
@@ -548,7 +482,6 @@ const RevolutionaryServicesShowcase2026 = () => {
               <span>Schedule Consultation</span>
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            
             <Link
               to="/services"
               className="group inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl border border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105"
@@ -556,10 +489,6 @@ const RevolutionaryServicesShowcase2026 = () => {
               <span>View All Services</span>
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

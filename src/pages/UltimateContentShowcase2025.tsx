@@ -161,10 +161,8 @@ const UltimateContentShowcase2025: React.FC = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4">
           <p className="text-white text-xl">Loading Ultimate Content Showcase...</p>
-        </div>
-      </div>
     );
   }
 
@@ -180,23 +178,20 @@ const UltimateContentShowcase2025: React.FC = () => {
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE CONTENT SHOWCASE • JANUARY 2025
-          </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Content Showcase 2025
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover the most comprehensive collection of cutting-edge technology content, research, and insights
+            Discover the most comprehensive collection of cutting-edge technology content, research, and insights</p>
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Explore All Content
+              Explore All Content</button>
             </button>
             <button className="border border-white/30 px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold">
-              Subscribe for Updates
+              Subscribe for Updates</button>
             </button>
-          </div>
         </motion.div>
-
         {/* Featured Content Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -219,32 +214,26 @@ const UltimateContentShowcase2025: React.FC = () => {
                     {item.type}
                   </span>
                   <span className="text-yellow-400">⭐ {item.rating}</span>
-                </div>
                 <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                 <p className="text-blue-100 mb-6">{item.description}</p>
                 <div className="flex items-center justify-between text-sm text-blue-200 mb-4">
                   <span>👤 {item.author}</span>
                   <span>👁️ {item.views} views</span>
-                </div>
                 <div className="flex items-center justify-between text-sm text-blue-200 mb-6">
                   <span>⏱️ {item.readTime}</span>
                   <span>📅 {item.published}</span>
-                </div>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 3).map((tag, idx) => (
                     <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs">
                       {tag}
                     </span>
                   ))}
-                </div>
                 <button className={`w-full bg-gradient-to-r ${item.color} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Read More
+                  Read More</button>
                 </button>
               </motion.div>
             ))}
-          </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -263,14 +252,12 @@ const UltimateContentShowcase2025: React.FC = () => {
                     ? 'bg-white text-blue-900'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}
-              >
+              ></button>
                 <span className="mr-2">{category.icon}</span>
                 {category.name}
               </button>
             ))}
-          </div>
         </motion.div>
-
         {/* Content Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -297,33 +284,27 @@ const UltimateContentShowcase2025: React.FC = () => {
                       {item.type}
                     </span>
                     <span className="text-yellow-400">⭐ {item.rating}</span>
-                  </div>
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-blue-100 mb-4 text-sm">{item.description}</p>
                   <div className="flex items-center justify-between text-xs text-blue-200 mb-4">
                     <span>👤 {item.author}</span>
                     <span>👁️ {item.views}</span>
-                  </div>
                   <div className="flex items-center justify-between text-xs text-blue-200 mb-4">
                     <span>⏱️ {item.readTime}</span>
                     <span>📅 {item.published}</span>
-                  </div>
                   <div className="flex flex-wrap gap-1 mb-4">
                     {item.tags.slice(0, 2).map((tag, idx) => (
                       <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs">
                         {tag}
                       </span>
                     ))}
-                  </div>
                   <button className={`w-full bg-gradient-to-r ${item.color} py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}>
-                    Read More
+                    Read More</button>
                   </button>
                 </motion.div>
               ))}
             </AnimatePresence>
-          </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -334,23 +315,19 @@ const UltimateContentShowcase2025: React.FC = () => {
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
             <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Get exclusive access to the latest technology insights, research papers, and breakthrough discoveries
+              Get exclusive access to the latest technology insights, research papers, and breakthrough discoveries</p>
             </p>
             <div className="flex justify-center space-x-6">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Subscribe Now
+                Subscribe Now</button>
               </button>
               <button className="border border-white/30 px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                Download Resources
+                Download Resources</button>
               </button>
               <button className="bg-gradient-to-r from-green-500 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Join Community
+                Join Community</button>
               </button>
-            </div>
-          </div>
         </motion.div>
-      </div>
-    </div>
   );
 };
 

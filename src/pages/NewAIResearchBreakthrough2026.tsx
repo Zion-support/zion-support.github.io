@@ -6,8 +6,6 @@ const NewAIResearchBreakthrough2026: React.FC = () => {
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-8">New AI Research Breakthrough 2026</h1>
         <p className="text-lg">This page is under construction.</p>
-      </div>
-    </div>
   );
 };
 

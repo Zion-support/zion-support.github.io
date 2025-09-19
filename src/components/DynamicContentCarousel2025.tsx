@@ -97,10 +97,8 @@ const DynamicContentCarousel2025: React.FC = () => {
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our latest breakthroughs and cutting-edge solutions that are shaping the future of technology.
+            Explore our latest breakthroughs and cutting-edge solutions that are shaping the future of technology.</p>
           </p>
-        </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
@@ -119,24 +117,17 @@ const DynamicContentCarousel2025: React.FC = () => {
                     <div className="flex items-center gap-4 mb-6">
                       <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${currentItem.gradient} text-white text-sm font-semibold`}>
                         {currentItem.category}
-                      </div>
                       <div className="flex items-center gap-2 text-yellow-400">
                         <Star className="w-4 h-4 fill-current" />
                         <span className="text-white font-semibold">{currentItem.rating}</span>
-                      </div>
                       <div className="text-gray-400 text-sm">
                         {currentItem.views} views
-                      </div>
-                    </div>
-
                     <h3 className="text-4xl font-bold text-white mb-6">
                       {currentItem.title}
                     </h3>
-
                     <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                      {currentItem.description}
+                      {currentItem.description}</p>
                     </p>
-
                     <div className="flex flex-col sm:flex-row gap-4">
                       <motion.button
                         whileHover={{ scale: 1.05 }}
@@ -154,9 +145,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                         Learn More
                         <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </motion.button>
-                    </div>
-                  </div>
-
                   {/* Image */}
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl">
@@ -170,15 +158,8 @@ const DynamicContentCarousel2025: React.FC = () => {
                         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                           <h4 className="text-white font-semibold text-lg mb-2">{currentItem.title}</h4>
                           <p className="text-gray-300 text-sm line-clamp-2">{currentItem.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             </AnimatePresence>
-          </div>
-
           {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <div className="flex gap-3">
@@ -192,20 +173,18 @@ const DynamicContentCarousel2025: React.FC = () => {
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
                 />
-              ))}
-            </div>
-
+              ))}</button>
             <div className="flex gap-4">
               <button
                 onClick={prevSlide}
                 className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-              >
+              ></button>
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={nextSlide}
                 className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-              >
+              ></button>
                 <ChevronRight className="w-6 h-6" />
               </button>
               <button
@@ -215,13 +194,9 @@ const DynamicContentCarousel2025: React.FC = () => {
                     ? 'bg-green-500/20 border-green-500/50 text-green-400'
                     : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                 }`}
-              >
+              ></button>
                 <Play className={`w-6 h-6 ${isAutoPlaying ? 'fill-current' : ''}`} />
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

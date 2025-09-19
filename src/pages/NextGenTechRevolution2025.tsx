@@ -9,11 +9,9 @@ const NextGenTechRevolution2025: React.FC = () => {
             Next Gen Tech Revolution 2025
           </h1>
           <p className="text-2xl text-gray-300 mb-12">
-            Experience the most revolutionary technological advancement in human history.
+            Experience the most revolutionary technological advancement in human history.</p>
           </p>
-        </div>
       </section>
-    </div>
   );
 };
 

@@ -400,7 +400,6 @@ const RevolutionaryAIServices2026 = () => {
         <meta name="description" content="Discover our revolutionary AI services including conscious AI systems, quantum processing, neural interfaces, and interdimensional computing solutions." />
         <meta name="keywords" content="AI services, conscious AI, quantum computing, neural interfaces, cybersecurity, interdimensional computing" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div 
@@ -414,9 +413,8 @@ const RevolutionaryAIServices2026 = () => {
           </h1>
           <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our groundbreaking services that push the boundaries of what's possible. 
-            From conscious AI systems to interdimensional computing, we're redefining reality itself.
+            From conscious AI systems to interdimensional computing, we're redefining reality itself.</p>
           </p>
-          
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Link 
               to="/pages/ConsciousAIRevolution2026" 
@@ -436,9 +434,7 @@ const RevolutionaryAIServices2026 = () => {
             >
               Neural Interfaces
             </Link>
-          </div>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
@@ -452,14 +448,10 @@ const RevolutionaryAIServices2026 = () => {
               <div className="flex items-center mb-6">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-xl mr-4">
                   <service.icon className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-              </div>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
+                {service.description}</p>
               </p>
-              
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-300">
@@ -468,18 +460,13 @@ const RevolutionaryAIServices2026 = () => {
                   </li>
                 ))}
               </ul>
-              
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 p-4 rounded-lg mb-4">
                 <p className="text-cyan-400 font-bold text-lg">{service.price}</p>
-              </div>
-              
               <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Get Started</button>
               </button>
             </motion.div>
           ))}
-        </div>
-
         {/* Testimonials */}
         <motion.div 
           className="mb-20"
@@ -494,22 +481,16 @@ const RevolutionaryAIServices2026 = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <p className="text-gray-300 mb-6 italic text-lg leading-relaxed">
-                  "{testimonial.quote}"
+                  "{testimonial.quote}"</p>
                 </p>
                 <div className="flex items-center">
                   <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
                     <Users className="w-6 h-6 text-white" />
-                  </div>
                   <div>
                     <p className="text-white font-bold">{testimonial.name}</p>
                     <p className="text-cyan-400">{testimonial.company}</p>
-                  </div>
-                </div>
-              </div>
             ))}
-          </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div 
           className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30"
@@ -521,18 +502,16 @@ const RevolutionaryAIServices2026 = () => {
             Ready to Transform Your Reality?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the revolution and experience the future of AI technology. Our revolutionary services are changing the world, one consciousness at a time.
+            Join the revolution and experience the future of AI technology. Our revolutionary services are changing the world, one consciousness at a time.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Schedule Consultation
+              Schedule Consultation</button>
             </button>
             <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Download Brochure
+              Download Brochure</button>
             </button>
-          </div>
         </motion.div>
-      </div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -548,7 +527,7 @@ const RevolutionaryAIServices2026 = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of artificial intelligence with our cutting-edge services that are reshaping reality and creating possibilities beyond imagination.
+              Experience the future of artificial intelligence with our cutting-edge services that are reshaping reality and creating possibilities beyond imagination.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -566,13 +545,11 @@ const RevolutionaryAIServices2026 = () => {
               >
                 Schedule Consultation
               </motion.button>
-            </div>
             className="mb-8"
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
               Revolutionary AI Services 2026
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               The Future of
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -581,10 +558,9 @@ const RevolutionaryAIServices2026 = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Experience revolutionary AI services that transcend traditional limitations. 
-              From synthetic intelligence to space technology, we're building the future today.
+              From synthetic intelligence to space technology, we're building the future today.</p>
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -592,16 +568,14 @@ const RevolutionaryAIServices2026 = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2">
-              Explore Services
+              Explore Services</button>
               <ArrowRight className="w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
-              Watch Demo
+              Watch Demo</button>
             </button>
           </motion.div>
-        </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -616,15 +590,11 @@ const RevolutionaryAIServices2026 = () => {
               >
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}
+                <div className="text-gray-300">{stat.label}
               </motion.div>
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -639,7 +609,7 @@ const RevolutionaryAIServices2026 = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our comprehensive suite of AI services that are transforming industries and creating the future.
-      {/* Services Grid */}
+      {/* Services Grid */}</p>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -652,10 +622,9 @@ const RevolutionaryAIServices2026 = () => {
               Revolutionary AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technologies that are reshaping industries and creating new possibilities for human advancement.
+              Cutting-edge AI technologies that are reshaping industries and creating new possibilities for human advancement.</p>
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -668,15 +637,10 @@ const RevolutionaryAIServices2026 = () => {
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-3 mr-4">
                     <service.icon className="w-6 h-6 text-white" />
-                  </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
                     <span className="text-sm text-blue-400">{service.category}</span>
-                  </div>
-                </div>
-                
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
                     <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
@@ -685,13 +649,11 @@ const RevolutionaryAIServices2026 = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2">
                         {feature}
                       </li>
                     ))}
                   </ul>
-                </div>
-
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
                     <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
@@ -700,15 +662,13 @@ const RevolutionaryAIServices2026 = () => {
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2">
                         {benefit}
                       </li>
                     ))}
                   </ul>
-                </div>
-
                 <div className="border-t border-white/20 pt-4">
-                  <div className="text-lg font-bold text-white mb-2">{service.pricing}</div>
+                  <div className="text-lg font-bold text-white mb-2">{service.pricing}
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -724,17 +684,12 @@ const RevolutionaryAIServices2026 = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg">
                     <service.icon className="w-8 h-8 text-white" />
-                  </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
                     <span className="text-purple-400 text-sm font-medium">{service.category}</span>
-                  </div>
-                </div>
-
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
+                  {service.description}</p>
                 </p>
-
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
@@ -743,19 +698,14 @@ const RevolutionaryAIServices2026 = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
                   <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105">
-                    Learn More
+                    Learn More</button>
                   </button>
-                </div>
               </motion.div>
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -770,7 +720,7 @@ const RevolutionaryAIServices2026 = () => {
             </h2>
             <p className="text-xl text-gray-300">
               Hear from industry leaders who are transforming their businesses with our AI solutions.
-      {/* Testimonials */}
+      {/* Testimonials */}</p>
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -783,10 +733,9 @@ const RevolutionaryAIServices2026 = () => {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leading organizations trust our revolutionary AI services to transform their operations.
+              Leading organizations trust our revolutionary AI services to transform their operations.</p>
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -805,24 +754,19 @@ const RevolutionaryAIServices2026 = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-blue-400">{testimonial.role}</div>
+                  <div className="font-semibold text-white">{testimonial.name}
+                  <div className="text-sm text-blue-400">{testimonial.role}
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  "{testimonial.content}"
+                  "{testimonial.content}"</p>
                 </p>
                 <div>
                   <h4 className="text-white font-semibold">{testimonial.name}</h4>
                   <p className="text-purple-400 text-sm">{testimonial.role}</p>
-                </div>
               </motion.div>
             ))}
-          </div>
-        </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -835,7 +779,7 @@ const RevolutionaryAIServices2026 = () => {
               Ready to Transform Your Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the AI revolution and discover how our cutting-edge services can transform your business and unlock unlimited potential.
+              Join the AI revolution and discover how our cutting-edge services can transform your business and unlock unlimited potential.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -866,21 +810,18 @@ const RevolutionaryAIServices2026 = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join the revolution and experience the power of next-generation AI services. 
-              Let's build the future together.
+              Let's build the future together.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2">
-                Get Started Today
+                Get Started Today</button>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation</button>
               </button>
-            </div>
           </motion.div>
-        </div>
       </section>
-    </div>
   );
 };
 

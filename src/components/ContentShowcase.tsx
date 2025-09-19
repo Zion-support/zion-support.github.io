@@ -162,20 +162,16 @@ const ContentShowcase: React.FC = () => {
                       <Star className="w-3 h-3 mr-1" />
                       Featured
                     </span>
-                  </div>
                 )}
                 {post.new && (
                   <div className="absolute top-4 right-4 z-10">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       New
                     </span>
-                  </div>
                 )}
                 
                 <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-blue-500" />
-                </div>
-                
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${
@@ -186,14 +182,10 @@ const ContentShowcase: React.FC = () => {
                     }`}>
                       {post.category}
                     </span>
-                  </div>
-                  
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tag, idx) => (
                       <span key={idx} className="flex items-center text-xs text-gray-500">
@@ -201,8 +193,6 @@ const ContentShowcase: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                  </div>
-                  
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-4">
                       <span className="flex items-center">
@@ -217,40 +207,30 @@ const ContentShowcase: React.FC = () => {
                         <Clock className="w-4 h-4 mr-1" />
                         {post.readTime}
                       </span>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                         <span className="text-white text-xs font-semibold">
                           {post.author.split(' ').map(n => n[0]).join('')}
                         </span>
-                      </div>
                       <div>
                         <p className="font-semibold text-gray-900 text-sm">{post.author}</p>
                         <p className="text-xs text-gray-500">{post.authorRole}</p>
-                      </div>
-                    </div>
-                    
                     <divbutton
                       className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
                     >
                       <span>Read More</span>
                       <ArrowRight className="w-4 h-4" />
                     </divbutton>
-                  </div>
-                </div>
               </divarticle>
             ))}
-          </div>
         );
       
       case 'case-studies':
         return (
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
-              <divdiv
+              <div
                 key={study.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
               >
@@ -258,11 +238,9 @@ const ContentShowcase: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <Award className="w-5 h-5 text-yellow-500 mr-2" />
                     <span className="text-sm font-semibold text-yellow-600">Featured Case Study</span>
-                  </div>
                 )}
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h3>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Client: {study.client}</h4>
@@ -270,15 +248,10 @@ const ContentShowcase: React.FC = () => {
                     <div className="bg-red-50 p-4 rounded-lg">
                       <h5 className="font-semibold text-red-800 mb-2">Challenge:</h5>
                       <p className="text-red-700">{study.challenge}</p>
-                    </div>
-                  </div>
-                  
                   <div>
                     <div className="bg-blue-50 p-4 rounded-lg mb-4">
                       <h5 className="font-semibold text-blue-800 mb-2">Solution:</h5>
                       <p className="text-blue-700">{study.solution}</p>
-                    </div>
-                    
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold text-green-800 mb-2">Results:</h5>
                       <ul className="space-y-1">
@@ -289,32 +262,21 @@ const ContentShowcase: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
-                  </div>
-                </div>
-                
                 <div className="flex items-center justify-between pt-4 border-t">
                   <div className="flex items-center space-x-6">
                     <div>
                       <span className="text-sm text-gray-500">Duration:</span>
                       <p className="font-semibold">{study.duration}</p>
-                    </div>
                     <div>
                       <span className="text-sm text-gray-500">Annual Savings:</span>
                       <p className="font-semibold text-green-600">{study.savings}</p>
-                    </div>
-                  </div>
-                  
                   <button
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
-                  >
+                  ></button>
                     <span>View Full Study</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </div>
-              </div>
             ))}
-          </div>
         );
       
       case 'webinars':
@@ -330,31 +292,22 @@ const ContentShowcase: React.FC = () => {
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
-                  </div>
                 )}
                 
                 <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                   <Play className="w-12 h-12 text-blue-500" />
-                </div>
-                
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{webinar.title}</h3>
-                  
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="w-4 h-4 mr-2" />
                       {webinar.date} at {webinar.time}
-                    </div>
                     <div className="flex items-center text-gray-600">
                       <Clock className="w-4 h-4 mr-2" />
                       {webinar.duration}
-                    </div>
                     <div className="flex items-center text-gray-600">
                       <Users className="w-4 h-4 mr-2" />
                       {webinar.attendees}
-                    </div>
-                  </div>
-                  
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Topics:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -363,26 +316,20 @@ const ContentShowcase: React.FC = () => {
                           {topic}
                         </span>
                       ))}
-                    </div>
-                  </div>
-                  
                   <divbutton
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Register Now</span>
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
-                </div>
-              </div>
             ))}
-          </div>
         );
       
       case 'whitepapers':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
-              <divdiv
+              <div
                 key={paper.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
@@ -391,28 +338,20 @@ const ContentShowcase: React.FC = () => {
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
-                  </div>
                 )}
                 
                 <div className="h-32 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
                   <FileText className="w-12 h-12 text-indigo-500" />
-                </div>
-                
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{paper.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
-                  
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex items-center justify-between text-gray-600">
                       <span>Pages:</span>
                       <span className="font-semibold">{paper.pages}</span>
-                    </div>
                     <div className="flex items-center justify-between text-gray-600">
                       <span>Downloads:</span>
                       <span className="font-semibold">{paper.downloads}</span>
-                    </div>
-                  </div>
-                  
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Topics:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -421,19 +360,13 @@ const ContentShowcase: React.FC = () => {
                           {topic}
                         </span>
                       ))}
-                    </div>
-                  </div>
-                  
                   <divbutton
                     className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Download PDF</span>
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
-                </div>
-              </div>
             ))}
-          </div>
         );
       
       default:
@@ -445,26 +378,22 @@ const ContentShowcase: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
             <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full">
               <Lightbulb className="w-5 h-5" />
               <span className="font-semibold">Expert Insights & Resources</span>
-            </div>
-          </div>
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Knowledge Hub
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Stay ahead with our latest insights, case studies, and expert resources. 
-            Discover how cutting-edge technology is transforming businesses worldwide.
+            Discover how cutting-edge technology is transforming businesses worldwide.</p>
           </p>
-        </div>
-
         {/* Tab Navigation */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {tabs.map((tab) => {
@@ -488,16 +417,11 @@ const ContentShowcase: React.FC = () => {
               </divbutton>
             );
           })}
-        </div>
-
         {/* Content */}
           <div
             key={activeTab}
           >
             {renderContent()}
-          </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div
           className="mt-20"
@@ -507,7 +431,7 @@ const ContentShowcase: React.FC = () => {
               Stay Updated with Our Latest Insights
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Get exclusive access to our latest research, case studies, and technology insights delivered directly to your inbox.
+              Get exclusive access to our latest research, case studies, and technology insights delivered directly to your inbox.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
@@ -518,13 +442,8 @@ const ContentShowcase: React.FC = () => {
               <button
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
-                Subscribe
+                Subscribe</button>
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
