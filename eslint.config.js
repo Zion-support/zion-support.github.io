@@ -37,6 +37,8 @@ export default [
       'server/**',
       'netlify/**',
       'src-clean/**',
+      'src/pages-disabled/**',
+      'src/components/**',
       'apps/**',
       'apps.backup/**',
       'automation/**',

@@ -34,7 +34,7 @@ export default function App(): React.JSX.Element {
                       </h1>
                       <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
                         Your trusted partner in AI and technology solutions.
-                        We're revolutionizing the future with cutting-edge innovations that drive business transformation.
+                        We&apos;re revolutionizing the future with cutting-edge innovations that drive business transformation.
                       </p>
                       <div className="grid md:grid-cols-2 gap-6 mb-8">
                         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg">
@@ -163,7 +163,7 @@ export default function App(): React.JSX.Element {
                       <div className="text-8xl font-bold text-gray-200 mb-4">404</div>
                       <h1 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found</h1>
                       <p className="text-lg text-gray-600 mb-8">
-                        The page you're looking for doesn't exist or has been moved.
+                        The page you&apos;re looking for doesn&apos;t exist or has been moved.
                       </p>
                       <Link
                         className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 inline-block"
