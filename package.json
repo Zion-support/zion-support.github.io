@@ -10,9 +10,13 @@
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
     "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production",
+    "build:analyze": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview",
     "lint": "eslint src/App.tsx --report-unused-disable-directives --max-warnings 0",
-    "type-check": "tsc --noEmit"
+    "lint:fix": "eslint src/App.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules/.vite",
+    "prebuild": "npm run clean"
   },
   "dependencies": {
     "react": "^18.3.1",
