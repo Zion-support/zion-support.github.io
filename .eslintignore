@@ -31,6 +31,7 @@ api-backup/
 api.disabled/
 api.disabled.temp/
 recovered-branches/
+temp_*/
 
 # Generated files
 **/*.backup.*
@@ -58,10 +59,11 @@ public/
 **/monitoring/
 
 # Scripts and automation
-**/*.sh
-**/*.py
+scripts/
 **/*.cjs
 **/*.mjs
+**/*.sh
+**/*.py
 **/scripts/
 **/automation/
 **/pm2-*
@@ -112,6 +114,9 @@ public/
 **/jest.config.*
 **/jest.setup.*
 **/test-utils.*
+**/webpack.config.*
+**/tailwind.config.*
+**/next.config.*
 
 # Disabled components
 **/components-disabled/**

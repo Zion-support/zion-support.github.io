@@ -20,7 +20,7 @@
     "start:backend": "cd server && npm start",
     "start:hybrid": "cd server && npm start",
     "postbuild": "echo 'Build completed successfully'",
-    "lint": "eslint . --ignore-pattern \"**/components-disabled/**\" --ignore-pattern \"**/utils-disabled/**\"",
+    "lint": "eslint src/ --ignore-pattern \"**/components-disabled/**\" --ignore-pattern \"**/utils-disabled/**\"",
     "lint:backend": "cd server && npm run lint",
     "lint:all": "npm run lint && npm run lint:backend",
     "type-check": "tsc --noEmit",

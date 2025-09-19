@@ -9,13 +9,12 @@ export default [
   {
     files: ['src/**/*.{js,jsx,ts,tsx}', 'App.tsx', 'main.tsx', 'index.tsx'],
     ignores: [
-      // Build outputs
+      'node_modules/**',
       'dist/**',
       'build/**',
       '.next/**',
       'out/**',
-      'node_modules/**',
-      // Disabled/backup directories
+      'public/**',
       'zion-os.disabled/**',
       'zion-os/**',
       'zion-website/**',
@@ -41,7 +40,7 @@ export default [
       'api.disabled/**',
       'api.disabled.temp/**',
       'recovered-branches/**',
-      // Generated files
+      'temp_*/**',
       '**/*.backup.*',
       '**/*.old.*',
       '**/*.disabled.*',
@@ -53,9 +52,6 @@ export default [
       '**/*.config.*',
       '**/*.log',
       '**/*.lock',
-      // Public assets
-      'public/**',
-      // Reports and logs
       '**/*-report*',
       '**/*-summary*',
       '**/*-logs*',
@@ -63,7 +59,6 @@ export default [
       '**/performance-reports/**',
       '**/link-reports/**',
       '**/monitoring/**',
-      // Scripts and automation
       '**/*.sh',
       '**/*.py',
       '**/*.cjs',
@@ -104,7 +99,6 @@ export default [
       '**/run-*',
       '**/start-*',
       '**/test-*',
-      // Specific file patterns
       '**/Dockerfile*',
       '**/docker-compose*',
       '**/ecosystem.config.*',
@@ -117,7 +111,11 @@ export default [
       '**/jest.config.*',
       '**/jest.setup.*',
       '**/test-utils.*',
-      // Additional patterns to ignore
+      '**/webpack.config.*',
+      '**/tailwind.config.*',
+      '**/next.config.*',
+      '**/components-disabled/**',
+      '**/utils-disabled/**',
       '**/static/**',
       '**/chunks/**',
       '**/webpack-*.js',
