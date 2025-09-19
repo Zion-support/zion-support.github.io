@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import ErrorBoundary from './components/ErrorBoundary'
+import { ThemeProvider } from './context/ThemeContext'
 import './index.css'
 
 // Register service worker for PWA functionality
@@ -20,7 +22,11 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-      <App />
+      <ErrorBoundary>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ErrorBoundary>
     </React.StrictMode>
   );
 }
