@@ -9,14 +9,14 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY AD • 2036
           <h2 className="text-5xl font-bold mb-6">Revolutionary Ad Banner 2036</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Discover the most advanced technologies that will reshape our world in 2036</p>
           </p>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
-            <p className="text-purple-100 mb-6 text-center">
+            <p className="text-purple-100 mb-6 text-center"></p>
               AI with genuine consciousness, self-awareness, and emotional intelligence</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
@@ -25,13 +25,13 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <li>• Creative expression</li>
               <li>• Ethical reasoning</li>
             </ul>
-            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold"></button>
               Experience Conscious AI</button>
             </button>
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-6xl mb-4 text-center">⚛️
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality Engine</h3>
-            <p className="text-cyan-100 mb-6 text-center">
+            <p className="text-cyan-100 mb-6 text-center"></p>
               Create and manipulate reality using quantum computing principles</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
@@ -40,7 +40,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <li>• Parallel universe access</li>
               <li>• Time-space control</li>
             </ul>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold"></button>
               Enter Quantum Reality</button>
             </button>
 import React from 'react';
@@ -56,14 +56,14 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2036
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Interactive showcase of cutting-edge technologies that will define the future of humanity</p>
           </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🧠
             <h3 className="text-lg font-bold mb-2 text-center">Conscious AI</h3>
-            <p className="text-purple-100 text-sm text-center mb-4">
+            <p className="text-purple-100 text-sm text-center mb-4"></p>
               AI with genuine consciousness and self-awareness</p>
             </p>
             <a href="/pages/UltimateTechBreakthrough2036" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
@@ -72,7 +72,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">⚛️
             <h3 className="text-lg font-bold mb-2 text-center">Quantum Consciousness</h3>
-            <p className="text-cyan-100 text-sm text-center mb-4">
+            <p className="text-cyan-100 text-sm text-center mb-4"></p>
               Quantum computing merged with consciousness</p>
             </p>
             <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
@@ -81,7 +81,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🧬
             <h3 className="text-lg font-bold mb-2 text-center">Neural Interface</h3>
-            <p className="text-emerald-100 text-sm text-center mb-4">
+            <p className="text-emerald-100 text-sm text-center mb-4"></p>
               Direct neural interfaces for perfect VR</p>
             </p>
             <a href="/pages/NextGenInnovationHub2036" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
@@ -90,7 +90,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🌌
             <h3 className="text-lg font-bold mb-2 text-center">Interdimensional</h3>
-            <p className="text-violet-100 text-sm text-center mb-4">
+            <p className="text-violet-100 text-sm text-center mb-4"></p>
               Computing across multiple dimensions</p>
             </p>
             <a href="/pages/UltimateTechBreakthrough2036" className="block w-full bg-white text-violet-600 py-2 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center text-sm">
@@ -114,13 +114,21 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             </a>
           ))}
         <div className="text-center mt-8">
-          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4">
+          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4"></button>
             Explore All Technologies</button>
           </button>
-          <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
+          <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg"></button>
             Learn More</button>
           </button>
   );
 };
 
 export default RevolutionaryAdBanner2036;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

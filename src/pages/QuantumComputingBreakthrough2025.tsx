@@ -13,7 +13,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
             <div className="text-4xl mb-4 text-center">🔐
             <h4 className="text-xl font-bold mb-3 text-center">Quantum Cryptography</h4>
-            <p className="text-indigo-100 text-center text-sm mb-4">
+            <p className="text-indigo-100 text-center text-sm mb-4"></p>
               Unbreakable encryption using quantum principles for ultimate data security.</p>
             </p>
             <ul className="text-indigo-200 text-xs space-y-1">
@@ -24,7 +24,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
             <div className="text-4xl mb-4 text-center">🎯
             <h4 className="text-xl font-bold mb-3 text-center">Optimization Problems</h4>
-            <p className="text-purple-100 text-center text-sm mb-4">
+            <p className="text-purple-100 text-center text-sm mb-4"></p>
               Solving complex optimization challenges in logistics, finance, and resource allocation.</p>
             </p>
             <ul className="text-purple-200 text-xs space-y-1">
@@ -35,7 +35,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
             <div className="text-4xl mb-4 text-center">🧬
             <h4 className="text-xl font-bold mb-3 text-center">Drug Discovery</h4>
-            <p className="text-cyan-100 text-center text-sm mb-4">
+            <p className="text-cyan-100 text-center text-sm mb-4"></p>
               Accelerating pharmaceutical research through quantum molecular simulation.</p>
             </p>
             <ul className="text-cyan-200 text-xs space-y-1">
@@ -53,14 +53,14 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Quantum Computing Revolution
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
               Experience the most powerful quantum computing technology that's solving impossible problems in seconds</p>
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Explore Quantum Power →</button>
               </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg"></button>
                 Watch Demo</button>
               </button>
       {/* Quantum Features */}
@@ -81,7 +81,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             </ul>
             <div className="text-6xl mb-4 text-center">🎯
             <h3 className="text-2xl font-bold mb-4 text-center">Optimization Problems</h3>
-            <p className="text-emerald-100 mb-6 text-center">
+            <p className="text-emerald-100 mb-6 text-center"></p>
               Solve complex optimization problems in logistics, finance, and resource allocation</p>
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
@@ -125,7 +125,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">🏥
             <h3 className="text-2xl font-bold mb-4">Drug Discovery</h3>
-            <p className="text-cyan-100 mb-6">
+            <p className="text-cyan-100 mb-6"></p>
               Quantum computing accelerates drug discovery by simulating molecular interactions at unprecedented speed and accuracy.</p>
             </p>
             <div className="space-y-3">
@@ -141,7 +141,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">🌍
             <h3 className="text-2xl font-bold mb-4">Climate Modeling</h3>
-            <p className="text-purple-100 mb-6">
+            <p className="text-purple-100 mb-6"></p>
               Advanced climate models that predict weather patterns and climate change with unprecedented accuracy.</p>
             </p>
             <div className="space-y-3">
@@ -157,7 +157,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <div className="text-4xl mb-4">💰
             <h3 className="text-2xl font-bold mb-4">Financial Optimization</h3>
-            <p className="text-emerald-100 mb-6">
+            <p className="text-emerald-100 mb-6"></p>
               Quantum algorithms optimize complex financial portfolios and risk management strategies.</p>
             </p>
             <div className="space-y-3">
@@ -173,7 +173,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
             <div className="text-4xl mb-4">🔬
             <h3 className="text-2xl font-bold mb-4">Materials Science</h3>
-            <p className="text-orange-100 mb-6">
+            <p className="text-orange-100 mb-6"></p>
               Design new materials with specific properties for next-generation technologies.</p>
             </p>
             <div className="space-y-3">
@@ -223,7 +223,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
         <div className="text-center">
             </button>
           <h2 className="text-4xl font-bold mb-6">Unlock Quantum Computing Power</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join the quantum revolution and harness the power of quantum computing to solve your most complex challenges.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -243,3 +243,157 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
 };
 
 export default QuantumComputingBreakthrough2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

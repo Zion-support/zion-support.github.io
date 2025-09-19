@@ -157,7 +157,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
             Experience the future of technology with our interactive demonstrations of cutting-edge AI and quantum computing solutions.</p>
           </p>
         </motion.div>
@@ -179,8 +179,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 className={`w-full p-4 rounded-lg transition-all duration-300 ${
                   activeTech === index
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                    : 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white'
-                }`}
+                    : 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white'</button>
+                }`}</button>
               ></button>
                 <div className="flex items-center space-x-4">
                   <span className="text-3xl">{tech.icon}</span>
@@ -201,10 +201,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
                     <span className="text-sm font-semibold">{feature}</span>
                 ))}
               <div className="space-y-4">
-                <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                   Try Interactive Demo</button>
                 </button>
-                <button className="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors">
+                <button className="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors"></button>
                   Learn More</button>
                 </button>
         {/* Live Stats */}
@@ -245,14 +245,14 @@ const InteractiveTechShowcase2025: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join us in exploring the cutting-edge technologies that are reshaping our world. Start your journey into the future today.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Interactive Demo</button>
             </button>
-            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg"></button>
               Schedule Consultation</button>
             ))}
           {/* Active Tech Display */}
@@ -267,10 +267,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
                     <span className="text-sm font-semibold">{feature}</span>
                 ))}
               <div className="space-y-4">
-                <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                <button className={`w-full bg-gradient-to-r ${currentTech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                   Try Interactive Demo</button>
                 </button>
-                <button className="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors">
+                <button className="w-full border border-white/30 text-white py-3 rounded-lg hover:bg-white/10 transition-colors"></button>
                   Learn More</button>
                 </button>
         {/* Live Stats */}
@@ -311,17 +311,112 @@ const InteractiveTechShowcase2025: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join us in exploring the cutting-edge technologies that are reshaping our world. Start your journey into the future today.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Interactive Demo</button>
             </button>
-            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg"></button>
               Schedule Consultation</button>
             </button>
   );
 };
 
 export default InteractiveTechShowcase2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

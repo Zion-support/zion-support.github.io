@@ -52,8 +52,8 @@ const AISolutionsComprehensive2025: React.FC = () => {
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
+                  : 'bg-white/10 text-white hover:bg-white/20'</button>
+              }`}</button>
             ></button>
               <span className="text-xl">{category.icon}</span>
               <span>{category.name}</span>
@@ -108,7 +108,7 @@ const AISolutionsComprehensive2025: React.FC = () => {
                       <div className="text-xs opacity-80">Potential
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-white/90">{solution.pricing}
-                  <button className="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  <button className="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
                     Get Started →</button>
                   </button>
               </motion.div>
@@ -149,17 +149,88 @@ const AISolutionsComprehensive2025: React.FC = () => {
       >
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto"></p>
             Schedule a consultation with our AI experts and discover how our solutions can revolutionize your operations</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"></button>
               Schedule Consultation</button>
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
               View Case Studies</button>
             </button>
   );
 };
 
 export default AISolutionsComprehensive2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

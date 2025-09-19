@@ -46,8 +46,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <span className="font-semibold">Performance</span>
           <button
             onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white"
-          >
+            className="text-gray-400 hover:text-white"</button>
+          ></button>
             ×</button>
           </button>
         <div className="space-y-1">
@@ -60,3 +60,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default PerformanceMonitor;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

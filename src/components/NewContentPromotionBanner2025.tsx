@@ -77,7 +77,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {promotions[currentSlide].title}
               </h2>
-              <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
+              <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto"></p>
                 {promotions[currentSlide].subtitle}</p>
               </p>
               <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -96,7 +96,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
                 >
                   {promotions[currentSlide].icon} Explore Now →
                 </a>
-                <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
+                <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg"></button>
                   Watch Demo</button>
                 </button>
             </motion.div>
@@ -109,8 +109,8 @@ const NewContentPromotionBanner2025: React.FC = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
-                }`}
-              />
+                }`}</button>
+              /></button>
             ))}</button>
       </motion.div>
       {/* Quick Links Section */}
@@ -152,7 +152,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4">
             <div className="text-2xl font-bold">🎉 LIMITED TIME OFFER
             <div className="text-lg">Get 50% off all AI solutions for the first 3 months
-            <button className="bg-black text-yellow-400 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
+            <button className="bg-black text-yellow-400 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold"></button>
               Claim Offer</button>
             </button>
       </motion.div>
@@ -193,7 +193,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary New Content 2025
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Discover our latest revolutionary content featuring cutting-edge technology innovations</p>
           </p>
         <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -306,8 +306,8 @@ const NewContentPromotionBanner2025: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse">
       {/* Close Button */}
       <button
-        onClick={() => setIsVisible(false)}
-        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
+        onClick={() => setIsVisible(false)}</button>
+        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"</button>
       ></button>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></p>
@@ -323,7 +323,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
               {currentPromotion.title}
             </h3>
-            <p className="text-white/90 text-lg mb-4">
+            <p className="text-white/90 text-lg mb-4"></p>
               {currentPromotion.description}</p>
             </p>
             <div className="flex items-center space-x-4">
@@ -370,3 +370,109 @@ const NewContentPromotionBanner2025: React.FC = () => {
 };
 
 export default NewContentPromotionBanner2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

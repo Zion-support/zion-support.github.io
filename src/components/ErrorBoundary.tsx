@@ -30,7 +30,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         <div className="error-boundary">
           <div className="error-content">
             <h2>Oops! Something went wrong</h2>
-            <p>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
+            <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
             <button 
               onClick={() => window.location.reload()}
               className="retry-button"

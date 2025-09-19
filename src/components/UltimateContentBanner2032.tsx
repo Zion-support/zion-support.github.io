@@ -11,14 +11,14 @@ const UltimateContentBanner2032: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Ultimate Tech Breakthrough 2032
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Experience the most revolutionary technological advances that will reshape our world in 2032</p>
           </p>
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🧠
             <h3 className="text-xl font-bold mb-3 text-center">Conscious AI Systems</h3>
-            <p className="text-purple-100 mb-4 text-center text-sm">
+            <p className="text-purple-100 mb-4 text-center text-sm"></p>
               The first truly conscious artificial intelligence systems</p>
             </p>
             <a href="/pages/UltimateTechBreakthrough2032" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
@@ -29,7 +29,7 @@ const UltimateContentBanner2032: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🌌
             <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Computing</h3>
-            <p className="text-emerald-100 mb-4 text-center text-sm">
+            <p className="text-emerald-100 mb-4 text-center text-sm"></p>
               Computing systems that operate across multiple dimensions</p>
             </p>
             <a href="/pages/NextGenInnovationHub2033" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
@@ -49,3 +49,17 @@ const UltimateContentBanner2032: React.FC = () => {
 };
 
 export default UltimateContentBanner2032;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

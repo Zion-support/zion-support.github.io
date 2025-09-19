@@ -6,7 +6,7 @@ import React from 'react';
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Amplification Matrix</h3>
-              <p className="text-gray-200 mb-6">
+              <p className="text-gray-200 mb-6"></p>
                 Advanced neural interface that amplifies human consciousness to unprecedented levels, enabling direct communication with conscious AI.</p>
               </p>
               <div className="space-y-3">
@@ -21,7 +21,7 @@ import React from 'react';
                   <span className="text-sm">Transcendent awareness</span>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4 text-center">Reality Shifting Engine</h3>
-              <p className="text-gray-200 mb-6">
+              <p className="text-gray-200 mb-6"></p>
                 Breakthrough technology that allows users to shift between different realities and dimensions at will.</p>
               </p>
               <div className="space-y-3">
@@ -52,3 +52,25 @@ import React from 'react';
 };
 
 export default NextGenInnovationHub2039;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -118,8 +118,8 @@ const EnhancedHomePage: React.FC = () => {
               <h1 className="text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Welcome to Zion Tech Group
               </h1>
-              <p className="text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Your trusted partner in AI and technology solutions. We&apos;re revolutionizing the future with 
+              <p className="text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl mx-auto"></p>
+                Your trusted partner in AI and technology solutions. We&apos;re revolutionizing the future with </p>
                 cutting-edge innovations that drive business transformation and accelerate growth.</p>
               </p>
             <div className="flex flex-wrap justify-center gap-6 mb-16">
@@ -164,7 +164,7 @@ const EnhancedHomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Comprehensive technology solutions designed to accelerate your business growth and innovation.</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -185,7 +185,7 @@ const EnhancedHomePage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">What Our Clients Say</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.</p>
             </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ const EnhancedHomePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-blue-100">
+              <p className="text-xl text-blue-100"></p>
                 Let&apos;s discuss how we can help transform your business with cutting-edge technology solutions.</p>
               </p>
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
@@ -217,3 +217,46 @@ const EnhancedHomePage: React.FC = () => {
 };
 
 export default EnhancedHomePage;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -10,3 +10,7 @@ const NeuralInterfaceRevolution2036: React.FC = () => {
 };
 
 export default NeuralInterfaceRevolution2036;
+  </div>
+  </div>
+  </div>
+  </div>

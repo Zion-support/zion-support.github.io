@@ -480,8 +480,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Shield, Database, Network, TrendingUp, ArrowRight, Star, Rocket, Globe, Brain, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const AIPoweredITAssetManagement: React.FC = () => {
+</p>
+const AIPoweredITAssetManagement: React.FC = () => {</p>
   return (</p>
     <>
       <Helmet>
@@ -514,8 +514,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 Management
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your IT infrastructure management with intelligent asset tracking, 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+              Revolutionize your IT infrastructure management with intelligent asset tracking, </p>
               predictive maintenance, and automated optimization powered by artificial intelligence.</p>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -529,8 +529,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your IT asset management with AI-powered intelligence. Get complete visibility, 
-              predictive maintenance, and automated lifecycle management for all your technology assets 
+              Transform your IT asset management with AI-powered intelligence. Get complete visibility, </p>
+              predictive maintenance, and automated lifecycle management for all your technology assets </p>
               across the enterprise.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -543,20 +543,20 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
               AI-Powered IT Asset Management
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your IT infrastructure management with AI-powered asset monitoring, optimization, 
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
+              Transform your IT infrastructure management with AI-powered asset monitoring, optimization, </p>
               and security. Gain complete visibility and control over your technology investments.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"></button>
                 Start Free Trial</button>
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button>
                 Start Free Trial</button>
               </button>
-              <button className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold rounded-xl transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold rounded-xl transition-all duration-300"></button>
                 Schedule Demo</button>
               </button>
-              <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"></button>
                 Schedule Demo</button>
               </button>
                 to="/services/it-infrastructure"
@@ -611,15 +611,15 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent mb-6">
               AI-Powered IT Asset Management
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your IT asset management with intelligent automation, 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+              Revolutionize your IT asset management with intelligent automation, </p>
               predictive analytics, and comprehensive security monitoring.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"></button>
                 Start Free Trial</button>
               </button>
-              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 hover:bg-purple-500/20 rounded-lg font-semibold transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 hover:bg-purple-500/20 rounded-lg font-semibold transition-all duration-300"></button>
                 Schedule Demo</button>
               </button>
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -633,8 +633,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               AI-Powered IT Asset Management
             </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Revolutionize your IT asset management with AI-driven insights, automated discovery, 
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
+            Revolutionize your IT asset management with AI-driven insights, automated discovery, </p>
             and intelligent optimization for maximum efficiency and cost savings.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -664,8 +664,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your IT asset management with AI-powered intelligence. 
-              Discover, track, optimize, and secure all your technology assets 
+              Transform your IT asset management with AI-powered intelligence. </p>
+              Discover, track, optimize, and secure all your technology assets </p>
               with unprecedented accuracy and efficiency.</p>
             </p>
           {/* Key Features */}
@@ -685,7 +685,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Discover how AI-powered asset management transforms your IT operations.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -699,7 +699,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Business Impact</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto"></p>
               See measurable improvements in your IT asset management and security.</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
@@ -734,7 +734,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced AI Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Discover the powerful AI features that transform how you manage IT assets</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -786,7 +786,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}
                   <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Our platform manages all types of IT assets across your organization.</p>
             </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -801,8 +801,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered IT asset management platform delivers unprecedented capabilities 
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Our AI-powered IT asset management platform delivers unprecedented capabilities </p>
                 that redefine how organizations manage their technology infrastructure.</p>
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -825,8 +825,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Asset Coverage
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our platform manages every type of IT asset across your organization, 
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Our platform manages every type of IT asset across your organization, </p>
                 providing unified visibility and control.</p>
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -849,8 +849,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Advanced Capabilities
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our platform combines cutting-edge AI technology with comprehensive asset management 
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Our platform combines cutting-edge AI technology with comprehensive asset management </p>
                 to deliver unprecedented operational excellence.</p>
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -873,8 +873,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose AI-Powered Asset Management?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the competitive advantage that intelligent asset management provides 
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Experience the competitive advantage that intelligent asset management provides </p>
                 for your organization's efficiency and cost control.</p>
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -890,7 +890,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Asset Types Managed</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto"></p>
               Comprehensive coverage of all IT assets across your organization.</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
@@ -902,11 +902,11 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 <div className="text-center">
                   <Star className="w-16 h-16 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-4">Industry Leader</h3>
-                  <p className="text-gray-300 mb-6">
-                    Join forward-thinking organizations already leveraging AI-powered asset management 
+                  <p className="text-gray-300 mb-6"></p>
+                    Join forward-thinking organizations already leveraging AI-powered asset management </p>
                     for competitive advantage and operational excellence.</p>
                   </p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300">
+                  <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300"></button>
                     Learn More</button>
                   </button>
         </section>
@@ -955,14 +955,14 @@ const AIPoweredITAssetManagement: React.FC = () => {
                     <span className="text-2xl">📈</span>
                   <h3 className="text-lg font-semibold text-white mb-2">Analytics</h3>
                   <p className="text-gray-300 text-sm">AI-powered insights and reporting</p>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
               Revolutionize your IT infrastructure with intelligent asset management. Monitor, optimize, and secure every device with AI-driven insights.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"></button>
                 Start Managing</button>
               </button>
-              <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
+              <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300"></button>
                 View Demo</button>
               </button>
       </section>
@@ -979,8 +979,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Intelligent Asset Management Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive IT asset management capabilities 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              Our AI-powered platform provides comprehensive IT asset management capabilities </p>
               that adapt and learn from your infrastructure.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1027,8 +1027,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Asset Management
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From hardware to software, network to cloud, our platform manages every aspect 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              From hardware to software, network to cloud, our platform manages every aspect </p>
               of your IT infrastructure.</p>
             </p>
       {/* Capabilities Section */}
@@ -1058,8 +1058,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Comprehensive Asset Management
               </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Our AI platform provides end-to-end IT asset management capabilities, 
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
+                Our AI platform provides end-to-end IT asset management capabilities, </p>
                 from discovery and monitoring to optimization and retirement planning.</p>
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1095,7 +1095,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the transformative benefits of AI-powered IT asset management.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1109,7 +1109,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Intelligent Asset Management
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Leverage AI to gain complete visibility and control over your IT infrastructure</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1174,7 +1174,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Comprehensive Asset Coverage
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Manage all types of IT assets from a single, intelligent platform.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1196,7 +1196,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose AI-Powered Management?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Transform your IT operations with intelligent automation and insights</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1221,7 +1221,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Business Benefits
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto"></p>
               Transform your IT operations with intelligent asset management</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1309,8 +1309,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Manage All Types of IT Assets
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From hardware to cloud resources, our platform provides comprehensive 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              From hardware to cloud resources, our platform provides comprehensive </p>
               management for every type of IT asset in your organization.</p>
             </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -1327,8 +1327,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Optimize Your IT Asset Management?</h3>
-              <p className="text-gray-300 mb-6">
-                Experience the power of AI-driven asset management. Discover, track, 
+              <p className="text-gray-300 mb-6"></p>
+                Experience the power of AI-driven asset management. Discover, track, </p>
                 and optimize all your IT assets with unprecedented intelligence.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1347,41 +1347,41 @@ const AIPoweredITAssetManagement: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your IT Management?</h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-gray-400 mb-8"></p>
             Join the AI-powered IT asset management revolution and secure your infrastructure today.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"></button>
               Get Started Now</button>
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="px-8 py-4 border border-purple-500/30 text-purple-400 hover:bg-purple-500/20 rounded-lg font-semibold transition-all duration-300">
+            <button className="px-8 py-4 border border-purple-500/30 text-purple-400 hover:bg-purple-500/20 rounded-lg font-semibold transition-all duration-300"></button>
               Contact Sales</button>
             </button>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Optimize Your IT Assets?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Transform your IT infrastructure management with AI-powered intelligence and automation.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"></button>
                 Contact Sales</button>
               </button>
-              <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"></button>
                 Download Whitepaper</button>
               </button>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your IT Management?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Join leading organizations using AI to revolutionize their IT asset management</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"></button>
                 Start Free Trial</button>
               </button>
-              <button className="border-2 border-green-400 text-green-400 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+              <button className="border-2 border-green-400 text-green-400 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"></button>
                 Schedule Demo</button>
               </button>
       </section>
@@ -1406,16 +1406,16 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Asset Management?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Start your journey toward intelligent IT asset management today 
+              <p className="text-xl text-gray-300 mb-8"></p>
+                Start your journey toward intelligent IT asset management today </p>
                 and discover the unlimited potential of AI-powered infrastructure optimization.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button>
                   Get Started Now</button>
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
-                <button className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold rounded-xl transition-all duration-300">
+                <button className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold rounded-xl transition-all duration-300"></button>
                   Contact Sales</button>
                 </button>
         </section>
@@ -1498,7 +1498,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI-Powered IT Asset Management
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto"></p>
                 Transform your IT infrastructure management with AI-powered asset tracking, predictive maintenance, and intelligent optimization. Reduce costs and improve efficiency.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1533,7 +1533,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Revolutionary Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Our AI-powered platform combines cutting-edge technology with deep IT expertise to deliver unprecedented asset management capabilities.</p>
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1560,7 +1560,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Transformative Use Cases
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Discover how our AI-powered platform is revolutionizing IT asset management across industries.</p>
               </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1582,7 +1582,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Optimize Your IT Assets?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Join hundreds of enterprises that have transformed their IT asset management with our AI-powered platform.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1621,3 +1621,319 @@ const AIPoweredITAssetManagement: React.FC = () => {
 };
 
 export default AIPoweredITAssetManagement;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
