@@ -57,7 +57,6 @@ import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
-import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 // import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
