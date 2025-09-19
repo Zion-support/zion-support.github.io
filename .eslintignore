@@ -36,6 +36,18 @@ src-corrupted/
 src-clean/
 src_backup_temp/
 
+# Additional problematic source directories
+src/__mocks__/
+src/config/
+src/context/
+src/data/
+src/hooks/
+src/lib/
+src/store/
+src/i18n.js
+src/main.js
+src/routes.js
+
 # All nested disabled directories
 **/zion-os.disabled/**
 **/zion-os/**
