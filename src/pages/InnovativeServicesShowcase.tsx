@@ -9,7 +9,6 @@ import { ADVANCED_AI_SERVICES } from '@/data/advancedAIServices';
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '@/data/innovativeITInfrastructure';
 import { IOT_EDGE_COMPUTING_SERVICES } from '@/data/iotEdgeComputingServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
-=======,
 // Import all service data,
 const InnovativeServicesShowcase = () => {,
     const [searchTerm, setSearchTerm] = useState('');

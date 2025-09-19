@@ -6,7 +6,6 @@ import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
-=======,
 export default function OrderDetailPage() {,
     const { orderId } = useParams();
     const { user } = useAuth();
