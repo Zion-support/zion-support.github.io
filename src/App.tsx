@@ -59,7 +59,7 @@ function App() {
   }, []);
 
   const toggleDarkMode = useCallback(() => {
-    setDarkMode(prev => !prev);
+    setDarkMode((prev: boolean) => !prev);
   }, []);
 
   const features = useMemo(() => [
