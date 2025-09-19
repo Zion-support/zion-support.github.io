@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Comprehensive Merge All PRs Script
-# This script will resolve merge conflicts and merge all open PRs into main branch
+# Final Comprehensive Merge All PRs Script
+# This script will handle any remaining PRs and ensure all are merged into main
 
 set -e
 
-echo "🚀 Starting Comprehensive Merge All PRs Process..."
+echo "🚀 Starting Final Comprehensive Merge All PRs Process..."
 echo "⏰ Started at: $(date)"
 
 # Colors for output
@@ -39,7 +39,7 @@ if ! git rev-parse --git-dir > /dev/null 2>&1; then
 fi
 
 # Create backup branch
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+BACKUP_BRANCH="final-merge-backup-$(date +%Y%m%d-%H%M%S)"
 print_status "Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH" 2>/dev/null || true
 git push origin "$BACKUP_BRANCH" 2>/dev/null || true
@@ -66,6 +66,20 @@ ALL_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | s
 TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -l)
 
 print_status "Found $TOTAL_BRANCHES branches to process"
+
+if [ $TOTAL_BRANCHES -eq 0 ]; then
+    print_success "No remote branches found to merge. All PRs are already merged!"
+    exit 0
+fi
+
+# Show first 20 branches
+echo "$ALL_BRANCHES" | head -20 | while read branch; do
+    echo "   - $branch"
+done
+
+if [ $TOTAL_BRANCHES -gt 20 ]; then
+    print_status "... and $((TOTAL_BRANCHES - 20)) more branches"
+fi
 
 # Function to resolve conflicts intelligently
 resolve_conflicts() {
@@ -211,8 +225,9 @@ for branch in $ALL_BRANCHES; do
     fi
     
     # Progress update
-    print_status "Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
-    echo "---"
+    if [ $((CURRENT % 10)) -eq 0 ]; then
+        print_status "Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+    fi
     
     # Push changes periodically to avoid losing work
     if [ $((SUCCESSFUL_MERGES % 25)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
@@ -227,7 +242,7 @@ git push origin main 2>/dev/null || print_warning "Could not push main"
 
 # Summary
 echo ""
-print_success "Comprehensive merge process completed!"
+print_success "Final comprehensive merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"

@@ -1,22 +1,25 @@
 #!/bin/bash
 
-# Add all changes
+# Fix Netlify build issues and push to main branch
+echo "Adding all changes..."
 git add .
 
-# Commit changes
-git commit -m "Fix Netlify build configuration and dependencies
+echo "Committing changes..."
+git commit -m "Fix Netlify build issues: resolve syntax errors in React components
 
-- Updated package.json with proper build scripts
-- Fixed Vite configuration for production builds
-- Ensured all dependencies are properly installed
-- Build now passes successfully with no errors
-- Ready for Netlify deployment"
+- Fix JSX structure in SpaceTechInnovation2026.tsx
+- Fix JSX structure in UltimateTechShowcase2026.tsx  
+- Fix JSX structure in AdvancedAISystems2026.tsx
+- Remove extra closing div tags and fix component structure
+- Ensure proper JSX syntax for Netlify build"
 
-# Push to main branch
+echo "Switching to main branch..."
+git checkout main
+
+echo "Merging changes..."
+git merge cursor/fix-netlify-build-and-merge-to-main-692f
+
+echo "Pushing to main branch..."
 git push origin main
 
-<<<<<<< HEAD
-echo "Changes committed and pushed to main branch successfully!"
-=======
-echo "Changes committed and pushed to main branch successfully!"
->>>>>>> origin/backup-main-20250918-004015
+echo "Done! Netlify build should now work."

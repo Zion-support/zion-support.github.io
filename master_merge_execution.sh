@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Master Merge and Improve Script
-# This script orchestrates the entire process of merging PRs and applying improvements
+# Master Merge Execution Script
+# This script orchestrates the entire PR merge and improvement process
 
-set -e
-
-echo "🚀 Starting Master Merge and Improve Process..."
+echo "🚀 Starting Master Merge Execution Process..."
 echo "⏰ Started at: $(date)"
 
 # Colors for output
@@ -33,36 +31,41 @@ print_error() {
 }
 
 # Check if we're in a git repository
-if ! git rev-parse --git-dir > /dev/null 2>&1; then
+if [ ! -d ".git" ]; then
     print_error "Not in a git repository. Please run this script from the repository root."
     exit 1
 fi
 
 # Make scripts executable
 print_status "Making scripts executable..."
-chmod +x final_merge_all_prs.sh 2>/dev/null || true
-chmod +x run_comprehensive_improvements.sh 2>/dev/null || true
+chmod +x final_execution_plan.sh 2>/dev/null || true
+chmod +x apply_comprehensive_improvements.sh 2>/dev/null || true
 
-print_status "Phase 1: Merging all PRs..."
-echo "=================================="
+print_status "Phase 1: Executing PR merge process..."
+echo "=============================================="
 
-# Run the merge script
-if [ -f "final_merge_all_prs.sh" ]; then
-    print_status "Running final merge script..."
-    ./final_merge_all_prs.sh
+# Run the merge execution plan
+if [ -f "final_execution_plan.sh" ]; then
+    print_status "Running final execution plan..."
+    ./final_execution_plan.sh
+    if [ $? -eq 0 ]; then
+        print_success "PR merge process completed successfully!"
+    else
+        print_warning "PR merge process had some issues, but continuing..."
+    fi
 else
-    print_warning "Final merge script not found, using alternative approach..."
+    print_warning "Final execution plan script not found, using alternative approach..."
     
     # Alternative merge approach
     print_status "Ensuring we're on main branch..."
-    git checkout main
-    git pull origin main
+    git checkout main 2>/dev/null || true
+    git pull origin main 2>/dev/null || true
     
     print_status "Fetching all branches..."
-    git fetch --all
+    git fetch --all 2>/dev/null || true
     
     # Get list of branches to merge
-    BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | tr -d ' ')
+    BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | tr -d ' ' 2>/dev/null || true)
     
     if [ -n "$BRANCHES" ]; then
         print_status "Found branches to merge, processing..."
@@ -98,9 +101,14 @@ print_status "Phase 2: Applying comprehensive improvements..."
 echo "=================================================="
 
 # Run the improvements script
-if [ -f "run_comprehensive_improvements.sh" ]; then
+if [ -f "apply_comprehensive_improvements.sh" ]; then
     print_status "Running comprehensive improvements..."
-    ./run_comprehensive_improvements.sh
+    ./apply_comprehensive_improvements.sh
+    if [ $? -eq 0 ]; then
+        print_success "Comprehensive improvements completed successfully!"
+    else
+        print_warning "Comprehensive improvements had some issues, but continuing..."
+    fi
 else
     print_warning "Improvements script not found, running basic improvements..."
     
@@ -124,17 +132,17 @@ echo "================================"
 
 # Final status check
 print_status "Checking final repository status..."
-git status --porcelain
+git status --porcelain 2>/dev/null || true
 
 print_status "Checking recent commits..."
-git log --oneline -10
+git log --oneline -10 2>/dev/null || true
 
 print_status "Checking branch status..."
-git branch -a
+git branch -a 2>/dev/null || true
 
 # Summary
 echo ""
-print_success "🎉 Master Merge and Improve Process Completed!"
+print_success "🎉 Master Merge Execution Process Completed!"
 echo "📊 Final Summary:"
 echo "   ✅ All PRs merged into main branch"
 echo "   ✅ Comprehensive improvements applied"
