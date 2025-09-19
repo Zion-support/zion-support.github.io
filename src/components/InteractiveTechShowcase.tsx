@@ -29,6 +29,7 @@ const InteractiveTechShowcase: React.FC = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">Interactive Tech Showcase</h2>
         <p className="text-center text-lg mb-12">Explore our cutting-edge technology solutions</p>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {technologies.map((tech, index) => (
             <div
@@ -47,7 +48,11 @@ const InteractiveTechShowcase: React.FC = () => {
                   </li>
                 ))}
               </ul>
+            </div>
           ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

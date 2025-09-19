@@ -115,8 +115,10 @@ export function Footer() {
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple text-white relative overflow-hidden">
       {/* Futuristic Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+      </div>
+
       <div className="relative z-10 container mx-auto px-4 py-20">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
@@ -125,26 +127,36 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
                 <Rocket className="w-7 h-7 text-white" />
+              </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
                 <p className="text-zion-slate-light">Revolutionary Technology Solutions</p>
+              </div>
+            </div>
             <p className="text-zion-slate-light mb-6 leading-relaxed">
-              Leading provider of revolutionary micro SAAS services, AI solutions, cloud infrastructure and cutting-edge technology services. We transform businesses through innovative technology.</p>
+              Leading provider of revolutionary micro SAAS services, AI solutions, cloud infrastructure and cutting-edge technology services. We transform businesses through innovative technology.
             </p>
+
             {/* Contact Information */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <Phone className="w-5 h-5" />
                 <span>{contactInfo.phone}</span>
+              </div>
               <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <Mail className="w-5 h-5" />
                 <span>{contactInfo.email}</span>
+              </div>
               <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <MapPin className="w-5 h-5" />
                 <span>{contactInfo.address}</span>
+              </div>
               <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <Globe className="w-5 h-5" />
                 <span>{contactInfo.website}</span>
+              </div>
+            </div>
+
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
               {socialLinks.map((social) => (
@@ -158,13 +170,18 @@ export function Footer() {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
+            </div>
+          </div>
+
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                   <section.icon className="w-4 h-4 text-white" />
+                </div>
                 <h4 className="text-lg font-semibold text-white">{section.title}</h4>
+              </div>
               <p className="text-sm text-zion-slate-light mb-4">{section.description}</p>
               <ul className="space-y-2">
                 {section.links.map((link) => (
@@ -181,19 +198,28 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
+            </div>
           ))}
+        </div>
+
         {/* Trust Signals Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-8">
           <div className="text-center mb-6">
             <h3 className="text-xl font-semibold text-white mb-2">Trust & Security</h3>
             <p className="text-zion-slate-light">Your data and business are protected by industry-leading security standards</p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {trustSignals.map((signal, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <signal.icon className="w-6 h-6 text-white" />
+                </div>
                 <p className="text-sm text-zion-slate-light font-medium">{signal.label}</p>
+              </div>
             ))}
+          </div>
+        </div>
+
         {/* Newsletter Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-16">
           <div className="text-center max-w-2xl mx-auto">
@@ -201,7 +227,7 @@ export function Footer() {
               Stay Updated with Latest Tech Trends
             </h3>
             <p className="text-zion-slate-light mb-6">
-              Get insights on AI, emerging technologies, and industry innovations delivered to your inbox.</p>
+              Get insights on AI, emerging technologies, and industry innovations delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
@@ -210,13 +236,18 @@ export function Footer() {
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                Subscribe</button>
+                Subscribe
               </button>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Footer */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-zion-slate-light text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Privacy Policy
@@ -227,10 +258,15 @@ export function Footer() {
               <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Cookie Policy
               </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Floating Elements */}
-      <div className="absolute top-20 right-20 w-2 h-2 bg-zion-cyan rounded-full animate-ping opacity-60">
-      <div className="absolute bottom-32 left-32 w-3 h-3 bg-zion-purple rounded-full animate-pulse opacity-60">
-      <div className="absolute top-1/2 left-20 w-1 h-1 bg-zion-cyan rounded-full animate-bounce opacity-60">
+      <div className="absolute top-20 right-20 w-2 h-2 bg-zion-cyan rounded-full animate-ping opacity-60"></div>
+      <div className="absolute bottom-32 left-32 w-3 h-3 bg-zion-purple rounded-full animate-pulse opacity-60"></div>
+      <div className="absolute top-1/2 left-20 w-1 h-1 bg-zion-cyan rounded-full animate-bounce opacity-60"></div>
     </footer>
   );
 }

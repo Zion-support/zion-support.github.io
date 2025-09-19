@@ -21,8 +21,10 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
               <Rocket className="w-6 h-6 text-white" />
+            </div>
             <span className="text-xl font-bold">Zion Tech Group</span>
           </Link>
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -35,13 +37,16 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-          ></button>
+          >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+        </div>
+
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/20">
@@ -57,7 +62,9 @@ const Header: React.FC = () => {
                 </Link>
               ))}
             </nav>
+          </div>
         )}
+      </div>
     </header>
   );
 };
