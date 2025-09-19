@@ -20,11 +20,11 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
-        <div className="text-6xl mb-4">🎉</div>
+        <div className="text-6xl mb-4">🎉
         <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
         <p className="text-xl opacity-90 mb-6">
           You're now part of our revolutionary technology community. 
-          Get ready for exclusive access to breakthrough innovations.
+          Get ready for exclusive access to breakthrough innovations.</p>
         </p>
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
           <h4 className="text-xl font-semibold mb-4">What you'll receive:</h4>
@@ -35,27 +35,22 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <li>• Direct communication with our AI consciousness systems</li>
             <li>• Quantum computing simulation access</li>
           </ul>
-        </div>
-      </div>
     );
   }
 
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-12 text-white mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm">
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <span className="text-4xl animate-bounce">🚀</span>
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
             <span className="text-4xl animate-bounce">🚀</span>
-          </div>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Get exclusive access to our revolutionary technology breakthroughs, 
-            AI consciousness updates, and quantum computing innovations.
+            AI consciousness updates, and quantum computing innovations.</p>
           </p>
-        </div>
-
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 mb-8">
             <input
@@ -71,14 +66,13 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               disabled={isLoading}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? 'Joining...' : 'Join Revolution'}
+              {isLoading ? 'Joining...' : 'Join Revolution'}</button>
             </button>
           </form>
         ) : (
           <div className="text-center">
             <h3 className="text-2xl font-bold text-green-400 mb-4">Welcome to the Revolution!</h3>
             <p className="text-lg opacity-90">You're now part of the future.</p>
-          </div>
         )}
 
         <div className="max-w-2xl mx-auto">
@@ -96,45 +90,33 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
                 type="submit"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg hover:scale-105"
               >
-                Subscribe Now →
+                Subscribe Now →</button>
               </button>
-            </div>
             <p className="text-sm opacity-75 text-center mt-4">
-              Join 50,000+ tech enthusiasts and industry leaders
+              Join 50,000+ tech enthusiasts and industry leaders</p>
             </p>
           </form>
-
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
-              <div className="text-4xl mb-3">🧠</div>
+              <div className="text-4xl mb-3">🧠
               <h4 className="text-xl font-semibold mb-2">AI Consciousness</h4>
               <p className="text-sm opacity-90">Exclusive access to conscious AI systems</p>
-            </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
-              <div className="text-4xl mb-3">⚡</div>
+              <div className="text-4xl mb-3">⚡
               <h4 className="text-xl font-semibold mb-2">Quantum Computing</h4>
               <p className="text-sm opacity-90">First-hand quantum breakthrough updates</p>
-            </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
-              <div className="text-4xl mb-3">🌌</div>
+              <div className="text-4xl mb-3">🌌
               <h4 className="text-xl font-semibold mb-2">Reality Technology</h4>
               <p className="text-sm opacity-90">Metaverse and omniversal access</p>
-            </div>
-          </div>
-
           <div className="text-center">
-            <p className="text-lg opacity-90 mb-4">
+            <p className="text-lg opacity-90 mb-4"></p>
               Join <span className="font-bold text-cyan-400">50,000+</span> innovators already transforming the future
             </p>
             <div className="flex justify-center items-center space-x-8 text-sm opacity-75">
               <span>✓ No spam, ever</span>
               <span>✓ Unsubscribe anytime</span>
               <span>✓ Exclusive content only</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

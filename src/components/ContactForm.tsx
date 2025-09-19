@@ -97,7 +97,6 @@ const ContactForm: React.FC = () => {
     <div className="contact-form-container">
       <h2>Get In Touch</h2>
       <p>Ready to transform your business with our technology solutions?</p>
-      
       <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
         <div className="form-row">
           <div className="form-group">
@@ -118,8 +117,6 @@ const ContactForm: React.FC = () => {
                 {formErrors.name}
               </span>
             )}
-          </div>
-          
           <div className="form-group">
             <label htmlFor="email">Email Address *</label>
             <input
@@ -138,9 +135,6 @@ const ContactForm: React.FC = () => {
                 {formErrors.email}
               </span>
             )}
-          </div>
-        </div>
-
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="company">Company</label>
@@ -152,8 +146,6 @@ const ContactForm: React.FC = () => {
               onChange={handleInputChange}
               placeholder="Enter your company name"
             />
-          </div>
-          
           <div className="form-group">
             <label htmlFor="service">Service Interest</label>
             <select
@@ -169,9 +161,6 @@ const ContactForm: React.FC = () => {
               <option value="quantum-computing">Quantum Computing</option>
               <option value="consultation">Consultation</option>
             </select>
-          </div>
-        </div>
-
         <div className="form-group">
           <label htmlFor="message">Message *</label>
           <textarea
@@ -190,18 +179,15 @@ const ContactForm: React.FC = () => {
               {formErrors.message}
             </span>
           )}
-        </div>
-
         <button
           type="submit"
           className="submit-btn"
           disabled={!isFormValid || isSubmitting}
           aria-describedby="submit-status"
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting ? 'Sending...' : 'Send Message'}</button>
         </button>
       </form>
-    </div>
   );
 };
 

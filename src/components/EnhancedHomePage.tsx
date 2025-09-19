@@ -111,7 +111,7 @@ const EnhancedHomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="container mx-auto px-4 py-20 relative">
           <div className={`max-w-6xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-8">
@@ -120,10 +120,8 @@ const EnhancedHomePage: React.FC = () => {
               </h1>
               <p className="text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl mx-auto">
                 Your trusted partner in AI and technology solutions. We&apos;re revolutionizing the future with 
-                cutting-edge innovations that drive business transformation and accelerate growth.
+                cutting-edge innovations that drive business transformation and accelerate growth.</p>
               </p>
-            </div>
-            
             <div className="flex flex-wrap justify-center gap-6 mb-16">
               <Link
                 className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3"
@@ -139,11 +137,7 @@ const EnhancedHomePage: React.FC = () => {
                 Get in Touch
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </div>
-          </div>
-        </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -151,41 +145,28 @@ const EnhancedHomePage: React.FC = () => {
             <div className="group">
               <div className="text-5xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 {stats.projects}+
-              </div>
-              <div className="text-gray-600 text-lg font-medium">Projects Completed</div>
-            </div>
+              <div className="text-gray-600 text-lg font-medium">Projects Completed
             <div className="group">
               <div className="text-5xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 {stats.clients}+
-              </div>
-              <div className="text-gray-600 text-lg font-medium">Happy Clients</div>
-            </div>
+              <div className="text-gray-600 text-lg font-medium">Happy Clients
             <div className="group">
               <div className="text-5xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 {stats.years}+
-              </div>
-              <div className="text-gray-600 text-lg font-medium">Years Experience</div>
-            </div>
+              <div className="text-gray-600 text-lg font-medium">Years Experience
             <div className="group">
               <div className="text-5xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 {stats.satisfaction}%
-              </div>
-              <div className="text-gray-600 text-lg font-medium">Client Satisfaction</div>
-            </div>
-          </div>
-        </div>
+              <div className="text-gray-600 text-lg font-medium">Client Satisfaction
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and innovation.
+              Comprehensive technology solutions designed to accelerate your business growth and innovation.</p>
             </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <ServiceCard
@@ -198,20 +179,15 @@ const EnhancedHomePage: React.FC = () => {
                 gradient={service.gradient}
               />
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">What Our Clients Say</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.</p>
             </p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
@@ -224,10 +200,7 @@ const EnhancedHomePage: React.FC = () => {
                 company={testimonial.company}
               />
             ))}
-          </div>
-        </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4">
@@ -235,17 +208,11 @@ const EnhancedHomePage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
               <p className="text-xl text-blue-100">
-                Let&apos;s discuss how we can help transform your business with cutting-edge technology solutions.
+                Let&apos;s discuss how we can help transform your business with cutting-edge technology solutions.</p>
               </p>
-            </div>
-            
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
               <ContactForm />
-            </div>
-          </div>
-        </div>
       </section>
-    </div>
   );
 };
 

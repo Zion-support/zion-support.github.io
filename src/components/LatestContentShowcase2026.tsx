@@ -18,10 +18,8 @@ const LatestContentShowcase2026: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay ahead with our cutting-edge technology insights, revolutionary services, 
-            and industry-leading solutions that are shaping the future.
+            and industry-leading solutions that are shaping the future.</p>
           </p>
-        </div>
-
         {/* Latest Blog Posts */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
@@ -36,8 +34,6 @@ const LatestContentShowcase2026: React.FC = () => {
               View All Articles
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recentPosts.map((post) => (
               <article
@@ -46,34 +42,25 @@ const LatestContentShowcase2026: React.FC = () => {
               >
                 <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
                   <div className="text-white text-center">
-                    <div className="text-4xl font-bold mb-2">{post.id}</div>
-                    <div className="text-sm opacity-90">{post.category}</div>
-                  </div>
-                </div>
-                
+                    <div className="text-4xl font-bold mb-2">{post.id}
+                    <div className="text-sm opacity-90">{post.category}
                 <div className="p-6">
                   <div className="flex items-center text-sm text-gray-500 mb-2">
                     <Clock className="w-4 h-4 mr-1" />
                     {post.readTime}
                     <span className="mx-2">•</span>
                     <span>{new Date(post.publishDate).toLocaleDateString()}</span>
-                  </div>
-                  
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
                     {post.title}
                   </h4>
-                  
                   <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
+                    {post.excerpt}</p>
                   </p>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-sm text-gray-500">
                       <span className="font-medium">{post.author}</span>
                       <span className="mx-2">•</span>
                       <span>{post.authorRole}</span>
-                    </div>
-                    
                     <Link
                       to={`/blog/${post.slug}`}
                       className="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
@@ -81,8 +68,6 @@ const LatestContentShowcase2026: React.FC = () => {
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
-                  </div>
-                  
                   <div className="flex flex-wrap gap-2 mt-4">
                     {post.tags.slice(0, 3).map((tag) => (
                       <span
@@ -92,13 +77,8 @@ const LatestContentShowcase2026: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                  </div>
-                </div>
               </article>
             ))}
-          </div>
-        </div>
-
         {/* Featured Services */}
         <div>
           <div className="flex items-center justify-between mb-8">
@@ -113,8 +93,6 @@ const LatestContentShowcase2026: React.FC = () => {
               View All Services
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service) => (
               <div
@@ -123,11 +101,8 @@ const LatestContentShowcase2026: React.FC = () => {
               >
                 <div className="h-48 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center">
                   <div className="text-white text-center">
-                    <div className="text-4xl font-bold mb-2">{service.aiScore}%</div>
-                    <div className="text-sm opacity-90">AI Score</div>
-                  </div>
-                </div>
-                
+                    <div className="text-4xl font-bold mb-2">{service.aiScore}%
+                    <div className="text-sm opacity-90">AI Score
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
@@ -137,26 +112,17 @@ const LatestContentShowcase2026: React.FC = () => {
                       <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm font-medium">{service.reviews.rating}</span>
                       <span className="ml-1 text-sm text-gray-500">({service.reviews.count})</span>
-                    </div>
-                  </div>
-                  
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
                     {service.title}
                   </h4>
-                  
                   <p className="text-gray-600 mb-4 line-clamp-3">
-                    {service.description}
+                    {service.description}</p>
                   </p>
-                  
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-green-600">
                       {service.currency}{service.price.toLocaleString()}
-                    </div>
                     <div className="text-sm text-gray-500">
                       {service.deliveryTime}
-                    </div>
-                  </div>
-                  
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (
                       <span
@@ -166,8 +132,6 @@ const LatestContentShowcase2026: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                  </div>
-                  
                   <Link
                     to={`/services/${service.id}`}
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
@@ -175,12 +139,7 @@ const LatestContentShowcase2026: React.FC = () => {
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -189,7 +148,7 @@ const LatestContentShowcase2026: React.FC = () => {
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join thousands of companies already using our revolutionary AI solutions 
-              to drive innovation and achieve unprecedented results.
+              to drive innovation and achieve unprecedented results.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -204,11 +163,6 @@ const LatestContentShowcase2026: React.FC = () => {
               >
                 Schedule Demo
               </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

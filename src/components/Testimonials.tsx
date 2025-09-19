@@ -88,7 +88,6 @@ const Testimonials: React.FC = () => {
       <div className="testimonials-container">
         <h2>What Our Clients Say</h2>
         <p>Don&apos;t just take our word for it - hear from our satisfied clients</p>
-        
         <div 
           className="testimonials-carousel"
           onMouseEnter={() => setIsAutoPlaying(false)}
@@ -96,40 +95,31 @@ const Testimonials: React.FC = () => {
         >
           <div className="testimonial-card">
             <div className="testimonial-content">
-              <div className="quote-mark">&ldquo;</div>
+              <div className="quote-mark">&ldquo;
               <p>{testimonials[currentIndex].content}</p>
               <div className="rating">
                 {renderStars(testimonials[currentIndex].rating)}
-              </div>
-            </div>
-            
             <div className="testimonial-author">
-              <div className="avatar">{testimonials[currentIndex].avatar}</div>
+              <div className="avatar">{testimonials[currentIndex].avatar}
               <div className="author-info">
                 <h4>{testimonials[currentIndex].name}</h4>
                 <p className="role">{testimonials[currentIndex].role}</p>
                 <p className="company">{testimonials[currentIndex].company}</p>
-              </div>
-            </div>
-          </div>
-          
           <div className="carousel-controls">
             <button 
               className="carousel-btn prev"
               onClick={prevTestimonial}
               aria-label="Previous testimonial"
             >
-              ‹
+              ‹</button>
             </button>
             <button 
               className="carousel-btn next"
               onClick={nextTestimonial}
               aria-label="Next testimonial"
             >
-              ›
+              ›</button>
             </button>
-          </div>
-          
           <div className="carousel-indicators">
             {testimonials.map((_, index) => (
               <button
@@ -138,10 +128,7 @@ const Testimonials: React.FC = () => {
                 onClick={() => goToTestimonial(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
-            ))}
-          </div>
-        </div>
-      </div>
+            ))}</button>
     </section>
   )
 }

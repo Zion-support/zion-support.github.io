@@ -41,7 +41,7 @@ class ErrorBoundary extends Component<Props, State> {
               onClick={() => window.location.reload()}
               className="retry-button"
             >
-              Refresh Page
+              Refresh Page</button>
             </button>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="error-details">
@@ -49,8 +49,6 @@ class ErrorBoundary extends Component<Props, State> {
                 <pre>{this.state.error.stack}</pre>
               </details>
             )}
-          </div>
-        </div>
       );
     }
 

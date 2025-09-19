@@ -25,77 +25,55 @@ const Home: React.FC = () => {
         <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business." />
         <meta name="keywords" content="AI solutions, quantum computing, cybersecurity, technology innovation, Zion Tech Group" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
             Zion Tech Group 2026
           </h1>
           <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business and reshape reality itself.
+            Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business and reshape reality itself.</p>
           </p>
-
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🚀 Revolutionary AI Services</Link>
             <Link to="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">⚛️ Quantum Computing Revolution</Link>
             <Link to="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🛡️ Cybersecurity Solutions</Link>
-          </div>
         </motion.div>
-
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">🤖</div>
+            <div className="text-6xl mb-6 text-center">🤖
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Conscious AI Systems</h3>
             <p className="text-gray-300 mb-6 text-center">Revolutionary AI systems that exhibit true consciousness and self-awareness, capable of independent thought and creative problem-solving.</p>
             <div className="text-center">
               <Link to="/pages/RevolutionaryAIServices2026" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">Explore AI Services →</Link>
-            </div>
-          </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">⚛️</div>
+            <div className="text-6xl mb-6 text-center">⚛️
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Computing</h3>
             <p className="text-gray-300 mb-6 text-center">Ultra-fast quantum processing that transcends classical limitations, enabling computations across multiple dimensions and realities.</p>
             <div className="text-center">
               <Link to="/pages/QuantumComputingRevolution2026" className="text-purple-400 hover:text-purple-300 font-semibold text-lg">Discover Quantum Tech →</Link>
-            </div>
-          </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">🔒</div>
+            <div className="text-6xl mb-6 text-center">🔒
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">AI Cybersecurity</h3>
             <p className="text-gray-300 mb-6 text-center">Advanced AI-powered security systems that predict and prevent threats before they occur, protecting across all dimensions.</p>
             <div className="text-center">
               <Link to="/pages/CybersecurityFortress2025" className="text-green-400 hover:text-green-300 font-semibold text-lg">Secure Your Future →</Link>
-            </div>
-          </div>
         </motion.div>
-
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
-        </div>
-
         <div className="container mx-auto px-4 py-20">
           <RevolutionaryContentShowcase />
-        </div>
-
         <div className="container mx-auto px-4 py-16">
           <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">New: 2026 AI Executive Strategy</h3>
             <p className="text-gray-300 mb-6">A concise guide for leaders to adopt AI responsibly and effectively.</p>
             <Link to="/pages/AIExecutiveStrategy2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Read the Strategy →</Link>
-          </div>
-        </div>
-
         <motion.div className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30 mt-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Reality?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join the revolution and experience the future of technology. Our revolutionary solutions are changing the world, one breakthrough at a time.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Explore All Services</Link>
             <Link to="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get Started Today</Link>
-          </div>
         </motion.div>
-        
         {/* Latest Innovations Section */}
         <motion.div className="mt-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}>
           <div className="text-center mb-16">
@@ -103,49 +81,35 @@ const Home: React.FC = () => {
               Latest Innovations 2026
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our groundbreaking technologies that are reshaping the future of computing and artificial intelligence.
+              Discover our groundbreaking technologies that are reshaping the future of computing and artificial intelligence.</p>
             </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl mb-6 text-center">🧠</div>
+              <div className="text-5xl mb-6 text-center">🧠
               <h3 className="text-2xl font-semibold text-white mb-4 text-center">Neural Interface Revolution</h3>
               <p className="text-gray-300 mb-6 text-center">Direct brain-computer interfaces enabling seamless human-AI collaboration and enhanced cognitive capabilities.</p>
               <div className="text-center">
                 <Link to="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Explore Technology
                 </Link>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl mb-6 text-center">🌌</div>
+              <div className="text-5xl mb-6 text-center">🌌
               <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Consciousness</h3>
               <p className="text-gray-300 mb-6 text-center">Quantum computing systems with emergent consciousness properties, capable of quantum-enhanced decision making.</p>
               <div className="text-center">
                 <Link to="/pages/ConsciousnessComputingRevolution2026" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Discover More
                 </Link>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl mb-6 text-center">🚀</div>
+              <div className="text-5xl mb-6 text-center">🚀
               <h3 className="text-2xl font-semibold text-white mb-4 text-center">Space Tech Innovation</h3>
               <p className="text-gray-300 mb-6 text-center">Advanced space technologies including quantum communication networks and interplanetary AI systems.</p>
               <div className="text-center">
                 <Link to="/pages/SpaceTechInnovation2026" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Learn More
                 </Link>
-              </div>
-            </div>
-          </div>
         </motion.div>
-      </div>
-    </div>
   );
 };
 
 export default Home;
-

@@ -48,18 +48,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-white"
           >
-            ×
+            ×</button>
           </button>
-        </div>
         <div className="space-y-1">
-          <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-          <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+          <div>Load: {metrics.loadTime.toFixed(2)}ms
+          <div>Render: {metrics.renderTime.toFixed(2)}ms
           {metrics.memoryUsage && (
-            <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>
+            <div>Memory: {metrics.memoryUsage.toFixed(2)}MB
           )}
-        </div>
-      </div>
-    </div>
   );
 };
 

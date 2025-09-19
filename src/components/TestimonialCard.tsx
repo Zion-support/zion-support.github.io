@@ -36,11 +36,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           <blockquote>
             &ldquo;{content}&rdquo;
           </blockquote>
-        </div>
         <div className="testimonial-rating">
           {renderStars()}
-        </div>
-      </div>
       <div className="testimonial-author">
         <div className="author-avatar">
           {avatar ? (
@@ -48,16 +45,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           ) : (
             <div className="avatar-placeholder">
               {name.charAt(0).toUpperCase()}
-            </div>
           )}
-        </div>
         <div className="author-info">
-          <div className="author-name">{name}</div>
-          <div className="author-role">{role}</div>
-          <div className="author-company">{company}</div>
-        </div>
-      </div>
-    </div>
+          <div className="author-name">{name}
+          <div className="author-role">{role}
+          <div className="author-company">{company}
   );
 };
 

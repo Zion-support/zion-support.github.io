@@ -10,18 +10,12 @@ const DynamicContentCarousel: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
             <p className="text-gray-300">Revolutionary AI-powered solutions for modern businesses</p>
-          </div>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-4">Cloud Services</h3>
             <p className="text-gray-300">Scalable cloud infrastructure and deployment solutions</p>
-          </div>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-4">Data Analytics</h3>
             <p className="text-gray-300">Advanced analytics and insights for data-driven decisions</p>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
