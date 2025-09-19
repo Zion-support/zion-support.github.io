@@ -27,6 +27,8 @@ module.exports = {
     '*.disabled',
     '.next',
     'server',
+    '*.min.js',
+    '*.bundle.js',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],

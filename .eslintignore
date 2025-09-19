@@ -1,21 +1,41 @@
+# Build outputs
 dist/
 build/
 out/
+.next/
+*.min.js
+*.bundle.js
+*.chunk.js
+
+# Dependencies
 node_modules/
-public/
+
+# Disabled/legacy directories
 zion-os.disabled/
 zion-os/
 zion-website/
 zion.app/
 zion_academy/
+
+# Backup and cache directories
 backup/
 backups/
 cache/
 artifacts/
 *.backup.*
 *.disabled
-.next/
 server/
-*.min.js
-*.bundle.js
-*.chunk.js
+
+# Public assets
+public/
+
+# Generated files
+*.generated.js
+*.generated.ts
+
+# Test files (optional - uncomment if you want to exclude tests)
+# __tests__/
+# *.test.js
+# *.test.ts
+# *.spec.js
+# *.spec.ts
