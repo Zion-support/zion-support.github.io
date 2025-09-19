@@ -1,11 +1,19 @@
+<<<<<<< HEAD
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T00:00:00Z; refreshed at +00:00
+=======
 # Updated: bump timestamp to trigger Netlify deploy at 2025-01-19T15:45:00Z (refresh 2025-01-19T15:45:00Z-5)
+>>>>>>> origin/aggressive-merge-backup-20250918-213412
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
   base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  command = "npm run build"
   command_timeout = "30m"
+<<<<<<< HEAD
+
+# Trigger Netlify build: no-op change on 2025-09-18T00:00:00Z
+=======
 # No-op: trigger deploy 2025-09-18T15:26:33Z (refresh)
+>>>>>>> origin/aggressive-merge-backup-20250918-213412
 
 [build.environment]
   NODE_VERSION = "20"
@@ -17,7 +25,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-
 ## Use the official Next.js plugin for routing, SSR/ISR, and functions
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -27,6 +34,9 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.processing]
   skip_processing = true
@@ -128,10 +138,11 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-DNS-Prefetch-Control = "on"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' https: *.googleapis.com; img-src 'self' data: https:; font-src 'self' https: *.gstatic.com *.googleapis.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+# Optional CSP for JS if needed
+# [[headers]]
+#   for = "*.js"
+#   [headers.values]
+#     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
 # Redirects for legacy URLs
 [[redirects]]
@@ -219,8 +230,10 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 
+<<<<<<< HEAD
+=======
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-18T15:26:33Z (refresh)
 # trigger: 2025-09-18T15:26:33Z (refresh) re-run-1
+>>>>>>> origin/aggressive-merge-backup-20250918-213412
