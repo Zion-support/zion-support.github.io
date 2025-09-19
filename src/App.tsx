@@ -23,6 +23,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const { toasts, showSuccess, showInfo, showWarning } = useToast();
 
   // Update time every second
@@ -58,7 +59,7 @@ function App() {
     };
   }, [showSuccess, showWarning]);
 
-  // Animate counters on component mount
+  // Animate counters on component mount with intersection observer
   useEffect(() => {
     const animateCount = (key: keyof typeof animatedCounts, target: number) => {
       const duration = 2000;
@@ -75,19 +76,40 @@ function App() {
       }, duration / steps);
     };
 
-    // Simulate loading time for better UX
-    const loadingTimer = setTimeout(() => {
-      try {
-        setIsLoading(false);
-        animateCount('projects', 150);
-        animateCount('clients', 500);
-        animateCount('years', 10);
-      } catch (err) {
-        setError('Failed to load application data');
-        // eslint-disable-next-line no-console
-        console.error('Loading error:', err);
+    // Use requestIdleCallback for better performance
+    const scheduleAnimation = () => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          try {
+            setIsLoading(false);
+            animateCount('projects', 150);
+            animateCount('clients', 500);
+            animateCount('years', 10);
+          } catch (err) {
+            setError('Failed to load application data');
+            // eslint-disable-next-line no-console
+            console.error('Loading error:', err);
+          }
+        });
+      } else {
+        // Fallback for browsers without requestIdleCallback
+        setTimeout(() => {
+          try {
+            setIsLoading(false);
+            animateCount('projects', 150);
+            animateCount('clients', 500);
+            animateCount('years', 10);
+          } catch (err) {
+            setError('Failed to load application data');
+            // eslint-disable-next-line no-console
+            console.error('Loading error:', err);
+          }
+        }, 100);
       }
-    }, 1000);
+    };
+
+    // Simulate loading time for better UX
+    const loadingTimer = setTimeout(scheduleAnimation, 1000);
 
     return () => clearTimeout(loadingTimer);
   }, []);
@@ -151,15 +173,24 @@ function App() {
   // Register service worker for PWA capabilities
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in window.navigator) {
-      window.navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          // Service Worker registered successfully
-          trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
-        })
-        .catch((error) => {
-          // Service Worker registration failed
-          trackFeatureInteraction('service_worker_failed', { error: error.message });
-        });
+      // Use requestIdleCallback for non-critical service worker registration
+      const registerSW = () => {
+        window.navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            // Service Worker registered successfully
+            trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
+          })
+          .catch((error) => {
+            // Service Worker registration failed
+            trackFeatureInteraction('service_worker_failed', { error: error.message });
+          });
+      };
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(registerSW);
+      } else {
+        setTimeout(registerSW, 2000);
+      }
     }
   }, []);
 
@@ -185,30 +216,34 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const services = useMemo(() => [
+  const features = useMemo(() => [
     {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
       icon: "🤖",
-      color: "#6366f1"
+      color: "#6366f1",
+      features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"]
     },
     {
       title: "Blockchain Technology",
       description: "Secure and decentralized solutions for modern businesses with smart contracts and DeFi platforms.",
       icon: "⛓️",
-      color: "#10b981"
+      color: "#10b981",
+      features: ["Smart Contracts", "DeFi", "NFTs", "Cryptocurrency"]
     },
     {
       title: "IT Services",
       description: "Comprehensive IT infrastructure management, cloud solutions, and digital transformation services.",
       icon: "💻",
-      color: "#f59e0b"
+      color: "#f59e0b",
+      features: ["Cloud Migration", "DevOps", "Cybersecurity", "Infrastructure"]
     },
     {
       title: "Quantum Computing",
       description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
       icon: "⚛️",
-      color: "#8b5cf6"
+      color: "#8b5cf6",
+      features: ["Quantum Algorithms", "Optimization", "Simulation", "Cryptography"]
     }
   ], []);
 
@@ -310,6 +345,13 @@ function App() {
               </div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
+              <div className="feature-tags">
+                {feature.features.map((tag, index) => (
+                  <span key={index} className="feature-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <button 
                 className="learn-more-btn"
                 onClick={() => {
@@ -346,6 +388,33 @@ function App() {
       {toasts.map((toast) => (
         <Toast key={toast.id} {...toast} />
       ))}
+      
+      {/* Scroll to Top Button */}
+      {showScrollToTop && (
+        <button
+          className="scroll-to-top"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: 1000,
+            background: '#6366f1',
+            color: 'white',
+            border: 'none',
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            cursor: 'pointer',
+            fontSize: '20px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          ↑
+        </button>
+      )}
       
       {/* Performance Metrics (Development Only) */}
       <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />

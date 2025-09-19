@@ -1,10 +1,11 @@
-// Service Worker for Zion Tech Group
+// Service Worker for PWA capabilities
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/manifest.json',
-  '/favicon.ico'
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
 // Install event - cache resources
@@ -14,9 +15,6 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
-      })
-      .catch((error) => {
-        console.log('Cache installation failed:', error);
       })
   );
 });
@@ -28,13 +26,8 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      })
-      .catch(() => {
-        // If both cache and network fail, return offline page
-        if (event.request.destination === 'document') {
-          return caches.match('/index.html');
-        }
-      })
+      }
+    )
   );
 });
 

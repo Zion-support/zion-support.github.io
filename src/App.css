@@ -1736,6 +1736,55 @@ select:focus-visible {
   will-change: opacity;
 }
 
+/* Feature Tags */
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.feature-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--card-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: var(--transition);
+}
+
+.feature-tag:hover {
+  background: var(--card-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   *,
