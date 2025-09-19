@@ -1,9 +1,0 @@
-// Centralized component exports for better tree shaking,
-export { default as EnhancedHeroSection }  from './EnhancedHeroSection';
-export { default as FeaturedContentSection }  from './FeaturedContentSection';
-export { default as DynamicContentCarousel }  from './DynamicContentCarousel';
-export { default as InteractiveTechShowcase }  from './InteractiveTechShowcase';
-export { default as PerformanceOptimizer }  from './PerformanceOptimizer';
-export { default as RevolutionaryContentBanner2026 }  from './RevolutionaryContentBanner2026';
-export { default as RevolutionaryContentBanner2027 }  from './RevolutionaryContentBanner2027';
-export { default as UltimateContentShowcase2027 }  from './UltimateContentShowcase2027';

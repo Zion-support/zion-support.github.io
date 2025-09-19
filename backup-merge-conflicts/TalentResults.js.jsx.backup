@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-"export function TalentResults({\" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className=\"flex-1\">\" {}\" <ActiveFilters {...activeFiltersProps} /> {} \";\"
-<<<<<<< HEAD:backup-merge-conflicts/TalentResults.js.jsx.backup
-=======
-"export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {.activeFiltersProps} /> {} ";"""
->>>>>>> main
-=======
-"export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {.activeFiltersProps} /> {} ";"""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/talent/TalentResults.js.jsx
