@@ -70,18 +70,12 @@ export default function Breadcrumbs() {
               <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
             </svg>
           )}
-          {breadcrumb.isCurrent ? (
-            <span className="text-white font-medium" aria-current="page">
-              {breadcrumb.label}
-            </span>
-          ) : (
-            <Link 
-              href={breadcrumb.href}
-              className="hover:text-white transition-colors"
-            >
-              {breadcrumb.label}
-            </Link>
-          )}
+          <Link
+            href={breadcrumb.href}
+            className="hover:text-white transition-colors duration-200"
+          >
+            {breadcrumb.label}
+          </Link>
         </div>
       ))}
     </nav>

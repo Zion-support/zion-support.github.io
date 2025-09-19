@@ -23,7 +23,7 @@ const AnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const orbsRef = useRef<Orb[]>([]);
-  const animationRef = useRef<number | null>(null);
+  const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -94,9 +94,9 @@ const AnimatedBackground: React.FC = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
              // Update and draw orbs
-       orbsRef.current?.forEach((orb) => {
-        orb.pulse += 0.02;
-        const pulseOpacity = orb.opacity + Math.sin(orb.pulse) * 0.02;
+             orbsRef.current?.forEach((orb) => {
+               orb.pulse += 0.02;
+               const pulseOpacity = orb.opacity + Math.sin(orb.pulse) * 0.02;
         
         ctx.beginPath();
         ctx.arc(orb.x, orb.y, orb.size, 0, Math.PI * 2);

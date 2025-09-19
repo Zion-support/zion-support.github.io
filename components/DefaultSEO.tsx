@@ -11,13 +11,6 @@ interface DefaultSEOProps {
   type?: string;
 }
 
-const SITE_NAME = 'Zion Tech Group';
-const SITE_URL = 'https://ziontechgroup.com';
-const DEFAULT_TITLE = 'Zion Tech Group — Autonomous Cloud Automation';
-const DEFAULT_DESC = 'AI-driven, self-improving web platform with autonomous growth, marketing, and optimization.';
-
-
-
 const DefaultSEO: React.FC<DefaultSEOProps> = ({
   title = "Zion Tech Group - Revolutionary Technology Solutions for 2045 and Beyond",
   description = "Experience the future of technology with our cutting-edge AI consciousness, quantum computing, and autonomous systems. Transform your business with revolutionary micro SAAS solutions.",
