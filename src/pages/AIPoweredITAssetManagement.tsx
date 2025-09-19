@@ -27,6 +27,7 @@ const AIPoweredITAssetManagement = () => {
             </Link>
             <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg font-semibold">
               View Services
+            </Link>
           </div>
         </div>
       </section>
@@ -44,6 +45,8 @@ const AIPoweredITAssetManagement = () => {
               </div>
             );
           })}
+        </div>
+      </section>
     </div>
   );
 };
