@@ -305,12 +305,12 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <divbutton
+                  <button
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
                   >
                     <span>View Full Study</span>
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
               </div>
             ))}
