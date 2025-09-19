@@ -48,7 +48,7 @@ function App() {
     };
     const handleOffline = () => {
       setIsOnline(false);
-      showInfo('You are now offline. Some features may be limited.');
+      showWarning('You are now offline. Some features may be limited.');
     };
 
     window.addEventListener('online', handleOnline);
@@ -58,7 +58,7 @@ function App() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, [showSuccess, showInfo]);
+  }, [showSuccess, showWarning]);
 
   // Animate counters on component mount
   useEffect(() => {
