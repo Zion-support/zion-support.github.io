@@ -22,7 +22,17 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
-    'src/',
-    'apps/'
+    'zion-os/',
+    'zion-website/',
+    'zion.app/',
+    'zion_academy/',
+    'recovered/',
+    'pages*/',
+    'temp*/',
+    '*.backup.*',
+    '*.disabled/',
+    '*.broken/',
+    '*.corrupted/',
+    '*.disabled'
   ]
 };
