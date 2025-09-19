@@ -1,27 +1,14 @@
 #!/bin/bash
 
-# Script to merge current branch to main
-set -e
+# Script to merge current branch to main and push changes
 
 echo "Starting merge process..."
 
 # Check current branch
-echo "Current branch:"
-git branch --show-current
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "Current branch: $CURRENT_BRANCH"
 
-# Add and commit any changes
-echo "Adding all changes..."
-git add .
-
-echo "Committing changes..."
-git commit -m "Fix Netlify build: Install dependencies and ensure build compatibility
-
-- Installed npm dependencies to resolve 'vite: not found' error
-- Build now completes successfully with all assets generated
-- Linting passes with only TypeScript version warning (non-critical)
-- All build artifacts created in dist/ directory"
-
-# Switch to main
+# Switch to main branch
 echo "Switching to main branch..."
 git checkout main
 
@@ -30,11 +17,11 @@ echo "Pulling latest changes from origin..."
 git pull origin main
 
 # Merge the feature branch
-echo "Merging cursor/fix-netlify-build-and-merge-to-main-0ddb..."
-git merge cursor/fix-netlify-build-and-merge-to-main-0ddb --no-ff -m "Merge fix-netlify-build-and-merge-to-main-0ddb: Fix Netlify build issues"
+echo "Merging branch $CURRENT_BRANCH into main..."
+git merge $CURRENT_BRANCH
 
-# Push to origin main
-echo "Pushing to origin main..."
+# Push changes to main
+echo "Pushing changes to main..."
 git push origin main
 
 echo "Merge completed successfully!"
