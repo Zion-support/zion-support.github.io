@@ -23,7 +23,15 @@ module.exports = {
     'src/components-disabled/**/*',
     'src/utils-disabled/**/*',
     '**/components-disabled/**/*',
-    '**/utils-disabled/**/*'
+    '**/utils-disabled/**/*',
+    'zion-os.disabled/**/*',
+    'zion-os/**/*',
+    'zion-website/**/*',
+    'zion.app/**/*',
+    'zion_academy/**/*',
+    '**/.next/**/*',
+    '**/static/**/*',
+    '**/public/**/*'
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
