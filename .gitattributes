@@ -9,5 +9,5 @@ cache/** merge=ours
 *.db merge=ours
 zion_academy/instance/** merge=ours
 **/.DS_Store merge=ours
-mergetool.keepBackup = false
+# mergetool.keepBackup = false
 netlify.toml merge=ours
