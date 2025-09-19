@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './src/Footer';
 import Header from './src/Header';
