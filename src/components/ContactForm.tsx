@@ -184,8 +184,8 @@ const ContactForm: React.FC = () => {
           className="submit-btn"
           disabled={!isFormValid || isSubmitting}
           aria-describedby="submit-status"
-        ></button>
-          {isSubmitting ? 'Sending...' : 'Send Message'}</button>
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
   );

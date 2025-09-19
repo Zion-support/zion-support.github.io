@@ -50,15 +50,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="service-pricing">
           <span className="price">{pricing}</span>
           <span className="price-note">Starting from</span>
+        </div>
       )}
-      <button className="service-btn"></button>
-        Get Started</button>
+      <button className="service-btn">
+        Get Started
       </button>
+    </div>
   );
 };
 
 export default ServiceCard;
-  </div>
-  </div>
-  </div>
-  </div>

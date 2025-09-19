@@ -50,9 +50,9 @@ class ErrorBoundary extends Component<Props, State> {
           <button 
             onClick={() => window.location.reload()}
             className="btn-primary"
-            type="button"</button>
-          ></button>
-            Refresh Page</button>
+            type="button"
+          >
+            Refresh Page
           </button>
           {process.env.NODE_ENV === 'development' && this.state.error && (
             <details style={{ marginTop: '1rem' }}>
