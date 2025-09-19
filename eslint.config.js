@@ -7,7 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 export default [
   js.configs.recommended,
   {
-    files: ['src/App.tsx', 'src/main.tsx', 'src/Footer.tsx', 'src/Header.tsx', 'src/ScrollToTop.tsx', 'App.tsx', 'main.tsx', 'index.tsx'],
+    files: ['src/**/*.{ts,tsx,js,jsx}', '*.{ts,tsx,js,jsx}'],
     ignores: [
       'src/pages-disabled/**',
       'src/utils-disabled/**',
@@ -144,6 +144,7 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        project: './tsconfig.json',
         ecmaFeatures: {
           jsx: true,
         },
