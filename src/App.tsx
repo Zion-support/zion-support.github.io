@@ -7,14 +7,17 @@ import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
+import AnalyticsDashboard from './components/AnalyticsDashboard';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { trackPageView, trackButtonClick } from './utils/analytics';
+import { trackPageView as trackEnhancedPageView, trackButtonClick as trackEnhancedButtonClick } from './utils/enhancedAnalytics';
 import './index.css';
 
 const App: React.FC = () => {
   // Track page view and performance on mount
   useEffect(() => {
     trackPageView('home');
+    trackEnhancedPageView('home');
     
     // Initialize performance monitoring
     const handlePerformanceTracking = () => {
@@ -235,9 +238,12 @@ const App: React.FC = () => {
         
         <Footer />
         
+        {/* Analytics Dashboard (Development Only) */}
+        <AnalyticsDashboard />
+        
         {/* Performance Monitor (Development Only) */}
         {process.env.NODE_ENV === 'development' && (
-          <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-3 rounded-lg text-xs font-mono max-w-xs">
+          <div className="fixed bottom-4 left-4 bg-black bg-opacity-75 text-white p-3 rounded-lg text-xs font-mono max-w-xs">
             <div className="font-bold mb-2">Performance Metrics</div>
             <div id="performance-metrics" className="space-y-1">
               <div>Loading...</div>
