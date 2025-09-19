@@ -51,7 +51,6 @@ const specialServices = [{
 =======
 
 ;
->>>>>>> main
 
 interface CategoriesSectionProps
   extends React.HTMLAttributes<HTMLElement> {
@@ -74,7 +73,6 @@ export function CategoriesSection({
         {showTitle && (
           <motion.div"
             className="text-center mb-16"
->>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -87,12 +85,6 @@ export function CategoriesSection({
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
           </motion.div>;) }
-<<<<<<< HEAD
-
-        <motion.div
-          className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6"
-          variants={containerVariants}
-=======
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category) => (
@@ -110,15 +102,9 @@ export function CategoriesSection({
               </Link>
             </motion.div>) ) }
         </motion.div>
-<<<<<<< HEAD
-
-        <motion.div
-          className="mt-12"
-=======
         
         <motion.div "
           className="mt-12"
->>>>>>> main
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-
-export default function Page() {
-,;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
-];
-
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
   '
@@ -47,15 +31,9 @@ export default function Page() {
       // Here you would typically send the data to your newsletter service'
       // // // // // // // // console.log('Newsletter subscription:', formData);
 
-<<<<<<< HEAD
-      console.log('Newsletter subscription: ', formData) ;
-
-      setStatus('success') ;
-=======
       // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
->>>>>>> main
 
       // Reset form after successful submission
       setTimeout(() => {
@@ -67,16 +45,9 @@ export default function Page() {
           frequency: 'monthly'
         });
       // // // // // // // // console.error('Newsletter subscription error:', error);
-<<<<<<< HEAD
-    }
-        setStatus('idle')}, 3000)} catch(error) {
-
-      setStatus('error');
-=======
     }'        setStatus('idle')}, 3000)} catch(error) {
 '
       setStatus('error');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Newsletter subscription error:', error)}
   };
 
@@ -89,14 +60,8 @@ export default function Page() {
     if(errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
-<<<<<<< HEAD
-    }
-  };
-
-=======
     }  };
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if(status = == 'success') {
 
     return ()

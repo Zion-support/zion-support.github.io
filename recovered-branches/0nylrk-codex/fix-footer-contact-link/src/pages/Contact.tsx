@@ -166,25 +166,12 @@ export default function Contact() {
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-<<<<<<< HEAD
-        method: "POST"
-        headers: {
-
-
-=======
         method: "method",
     headers: {
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
-<<<<<<< HEAD
-      
-
-
-=======
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -736,11 +723,6 @@ export default function Contact() {;
                   disabled={isSubmitting}
                 >;
                   {isSubmitting ? "Sending..." : "Send Message"}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
                 </Button>;
               </form>;
             </div>;
@@ -957,16 +939,9 @@ export default function Contact() {;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-
-          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
-            <h2 className="text - 3xl font - bold text - white mb - 6">Need immediate assistance?</h2>;
-            <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx - auto">;
-=======
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text-center">;
             <h2 className="text - 3xl font - bold text - white mb-6">Need immediate assistance?</h2>;
             <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx-auto">;
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
               Our customer support team is available 24 / 7 to help you with any questions.;
             </p>;
             <div className="flex flex - col sm:flex - row justify - center gap - 4">;

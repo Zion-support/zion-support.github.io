@@ -23,7 +23,6 @@ export interface Listing {
   location: string;
 =======
     reviews: number};  location: string;
->>>>>>> main
   createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
@@ -41,14 +40,8 @@ export interface Listing {
     cost: number;
     method: string;
     estimatedDays: number}}
-<<<<<<< HEAD
-;
-export interface ServiceListing extends Listing {
-
-=======
 ;export interface ServiceListing extends Listing {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];

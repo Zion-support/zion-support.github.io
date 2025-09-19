@@ -44,8 +44,4 @@ EOF
     fi
 done
 
-<<<<<<< HEAD
-echo "Import fixing completed!"
-=======
 echo "Missing imports fixed!"
->>>>>>> origin/backup-main-20250918-004015

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-=======
-echo "Resolving all merge conflicts by accepting our version..."
-=======
 # Comprehensive conflict resolution script
 echo "🚀 Starting comprehensive conflict resolution..."
 
@@ -42,46 +39,54 @@ else
     echo "✅ No existing conflicts found"
 fi
 
-# Step 5: Get open PRs
-echo "📋 Fetching open PRs..."
-PR_DATA=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open 2>/dev/null || echo "[]")
-
-if [ "$PR_DATA" = "[]" ]; then
-    echo "❌ No open PRs found or API request failed"
-    exit 1
+# Step 5: Find and resolve all files with merge conflict markers
+echo "🔍 Searching for files with merge conflict markers..."
+        
+        git add "$file" 2>/dev/null || true
+    done
+    
+    git commit -m "Resolve merge conflict markers - $(date)" 2>/dev/null || true
+    echo "✅ Resolved conflict markers"
+else
+    echo "✅ No files with conflict markers found"
 fi
 
-# Extract PR information
-PR_NUMBERS=$(echo "$PR_DATA" | grep -o '"number":[0-9]*' | grep -o '[0-9]*' | head -10)
-PR_BRANCHES=$(echo "$PR_DATA" | grep -o '"ref":"[^"]*"' | cut -d'"' -f4 | head -10)
+# Step 6: Get list of branches to merge (excluding main and backup branches)
+echo "📋 Getting list of branches to merge..."
+BRANCHES_TO_MERGE=$(git branch -r | grep -v "origin/main" | grep -v "backup" | grep -v "HEAD" | head -20)
 
-echo "📋 Found PRs: $PR_NUMBERS"
-echo "📋 Found branches: $PR_BRANCHES"
+if [ -z "$BRANCHES_TO_MERGE" ]; then
+    echo "❌ No branches found to merge"
+    exit 0
+fi
 
-# Step 6: Process each PR
+echo "📋 Found branches to merge: $BRANCHES_TO_MERGE"
+
+# Step 7: Process each branch
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 
-for branch in $PR_BRANCHES; do
+for branch in $BRANCHES_TO_MERGE; do
+    branch_name=$(echo "$branch" | sed 's/origin\///')
     echo "---"
-    echo "🔄 Processing branch: $branch"
+    echo "🔄 Processing branch: $branch_name"
     
     # Fetch the branch
-    echo "📥 Fetching $branch..."
-    if ! git fetch origin "$branch" 2>/dev/null; then
-        echo "❌ Failed to fetch $branch"
+    echo "📥 Fetching $branch_name..."
+    if ! git fetch origin "$branch_name" 2>/dev/null; then
+        echo "❌ Failed to fetch $branch_name"
         FAILED_MERGES=$((FAILED_MERGES + 1))
         continue
     fi
     
     # Try to merge
-    echo "🔄 Attempting to merge $branch..."
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch - $(date)" 2>/dev/null || true
+    echo "🔄 Attempting to merge $branch_name..."
+    if git merge --no-commit --no-ff "origin/$branch_name" 2>/dev/null; then
+        echo "✅ Successfully merged $branch_name"
+        git commit -m "Merge $branch_name - $(date)" 2>/dev/null || true
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
     else
-        echo "⚠️  Merge conflicts detected for $branch, resolving..."
+        echo "⚠️  Merge conflicts detected for $branch_name, resolving..."
         
         # Get conflicted files
         CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
@@ -97,8 +102,8 @@ for branch in $PR_BRANCHES; do
             done
             
             # Commit the merge
-            git commit -m "Resolve merge conflicts for $branch - $(date)" 2>/dev/null || true
-            echo "✅ Successfully resolved conflicts and merged $branch"
+            git commit -m "Resolve merge conflicts for $branch_name - $(date)" 2>/dev/null || true
+            echo "✅ Successfully resolved conflicts and merged $branch_name"
             SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
         else
             echo "❌ No conflicted files found, but merge failed"
@@ -108,11 +113,7 @@ for branch in $PR_BRANCHES; do
     fi
 done
 
-=======
-echo "Resolving all merge conflicts by using main branch version..."
-
-# Find all files with merge conflicts
-# Step 7: Push changes
+# Step 8: Push changes
 echo "---"
 echo "🚀 Pushing changes to main..."
 if git push origin main; then
@@ -121,7 +122,7 @@ else
     echo "⚠️  Failed to push changes"
 fi
 
-# Step 8: Test build
+# Step 9: Test build
 echo "---"
 echo "🧪 Testing build..."
 if npm run build:netlify; then
@@ -130,22 +131,6 @@ else
     echo "❌ Build failed"
 fi
 
-# Step 9: Run health checks
-echo "---"
-echo "🏥 Running health checks..."
-if npm run health-check; then
-    echo "✅ Health checks passed"
-else
-    echo "❌ Health checks failed"
-fi
-
-echo "All merge conflicts resolved!"
-=======
-echo "All merge conflicts resolved!"
-=======
-echo "Conflict resolution complete!"
-echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
-=======
 # Summary
 echo "---"
 echo "📊 Final Summary:"

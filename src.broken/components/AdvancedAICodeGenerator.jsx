@@ -57,16 +57,6 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         description: 'Custom Tailwind utilities for advanced animations and transitions',
         language: 'css',`
         code: `@layer utilities {
-<<<<<<< HEAD
-  .animate - float {
-    animation: float 3s ease - in - out infinite}
-
-  .animate - glow {
-    animation: glow 2s ease - in - out infinite alternate}
-
-  .animate - shimmer {
-    background: linear - gradient(90deg,
-=======
 
   .animate-float {
 
@@ -80,7 +70,6 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
     background: linear-gradient()
       90deg,
->>>>>>> main
       transparent,
       rgba(255, 255, 255, 0.4) ,
       transparent) ;

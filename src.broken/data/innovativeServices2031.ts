@@ -93,13 +93,7 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
-};
-
-// Innovative Micro SAAS Services 2031
-=======
 // Innovative Micro SAAS Services 2031;
->>>>>>> main
 export const innovativeMicroSaasServices2031: MicroSaasService[] = [{
 
     id: 1,"
@@ -807,13 +801,5 @@ export const allInnovativeServices2031 = {
   ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ai: innovativeAIServices2031;
-;
-
-};
-=======
   ai: innovativeAIServices2031};
 "
->>>>>>> main

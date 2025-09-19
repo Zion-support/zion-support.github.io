@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-import { Smartphone, Tablet, Monitor, >>>>>>> main Smartphone, Tablet, Monitor, Touch, Gesture, Swipe, Pinch, Rotate, X, CheckCircle, AlertTriangle, Info, Settings, ArrowUp, ArrowDown, ArrowLeft, ArrowRight'  } from 'lucide-react';
 
 export default function Page() {
  | null>(null);
@@ -28,14 +25,8 @@ export default function Page() {
 
           setDeviceOrientation('landscape')}
       }, 100) };
-<<<<<<< HEAD
-
-    checkDevice();
-    window.addEventListener('resize', handleResize);
-=======
     checkDevice();'
     window.addEventListener('resize', handleResize);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     window.addEventListener('orientationchange', handleOrientationChange);
 
     return () => {
@@ -81,12 +72,7 @@ export default function Page() {
             if(window.history.length > 1) {
 
               window.history.forward();
-<<<<<<< HEAD
-            }
-          } else if(gesture.direction === 'right') {
-=======
             }'          } else if(gesture.direction === 'right') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
             // Swipe right - go back
             if(window.history.length > 1) {
@@ -132,12 +118,7 @@ export default function Page() {
         if(searchInput) {
 
           searchInput.focus()}
-<<<<<<< HEAD
-        break;
-      case 'menu':
-=======
         break;'      case 'menu':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         setShowMobileMenu(!showMobileMenu);
         break;
       case 'back':
@@ -162,28 +143,6 @@ export default function Page() {
     
     if(viewport) {
 
-<<<<<<< HEAD
-    // Add touch-action CSS for better touch handling
-    const style = document.createElement('style') ;
-    style.textContent = `
-      .mobile - device * {
-        touch-action: manipulation;
-        -webkit - tap - highlight - color: transparent;
-      }
-
-      .mobile - device button,
-      .mobile - device [] {
-        min - height: 44px;
-        min - width: 44px;
-      }
-
-      .mobile - device input,
-      .mobile - device select,
-      .mobile - device textarea {
-        font - size: 16px;
-      }
-    `;
-=======
       viewport.setAttribute('content',width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
 
     // Add touch-action CSS for better touch handling'
@@ -204,7 +163,6 @@ export default function Page() {
       .mobile-device textarea {
 
         font-size: 16px}`    `;
->>>>>>> main
     document.head.appendChild(style) ;
 
     return () => {
@@ -398,12 +356,7 @@ export default function Page() {
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
           <div className="flex items-center space-x-2">"
-<<<<<<< HEAD
-            {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}
-            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
-=======
             {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}'            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>

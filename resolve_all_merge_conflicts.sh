@@ -37,34 +37,3 @@ if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
         if [[ "$file" == *".sh"* ]]; then
             echo "Resolving script conflict in: $file"
             # Remove conflict markers and keep the better version
-            sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file" 2>/dev/null || true
-        fi
-        
-        # For other files, use git's merge resolution
-        git add "$file" 2>/dev/null || true
-    done
-fi
-
-# Add all resolved files
-git add .
-
-# Commit the merge
-echo "Committing merge resolution..."
-git commit -m "Resolve all merge conflicts and prepare for main branch integration
-
-- Resolved merge conflicts in all files
-- Removed build artifacts to prevent conflicts
-- Updated configuration files
-- Prepared codebase for deployment
-
-This commit resolves all outstanding merge conflicts and integrates all changes into main branch."
-
-# Check if we're ahead of origin
-if git status | grep -q "ahead of"; then
-    echo "Pushing changes to origin..."
-    git push origin main
-fi
-
-echo "=== Merge conflict resolution completed ==="
-echo "Current status:"
-git status --short

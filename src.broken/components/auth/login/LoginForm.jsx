@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
->>>>>>> main
 import { useState } from 'react';
 export default function Page() {
 );

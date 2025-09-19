@@ -353,14 +353,9 @@ export default function Page() {
 }} exit = {
 
   { opacity: 0, scale: 0.8,
-<<<<<<< HEAD
-  y: 20
-
-=======
   y: 20 
 
 "
->>>>>>> main
 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"

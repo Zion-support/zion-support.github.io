@@ -44,12 +44,8 @@ export default function Page() {
 
                 duration: 0.5
 
-<<<<<<< HEAD
-    };
-=======
 
     };"
->>>>>>> main
     return (<section className="py-20 bg-zion-slate-dark relative overflow-hidden">;
       {/* Background Elements */}"
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark opacity-50"></div>;"
@@ -66,16 +62,10 @@ export default function Page() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
-  y: 0
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Core Services
           </h2>"
@@ -128,16 +118,10 @@ export default function Page() {
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
-  delay: 0.5
-
-}} className="text-center mt-16">
-=======
   delay: 0.5 
 
 "
 }} className="text-center mt-16">"
->>>>>>> main
           <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30">
             View All Services"
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">"

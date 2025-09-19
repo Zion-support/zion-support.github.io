@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
-
- params - Function parameters
- * @returns {*} Function return value
- */
-function CaseStudiesSection () {
-=======
->>>>>>> main
 
   TrendingUp,
   Users,
@@ -21,12 +12,6 @@ function CaseStudiesSection () {
   ];
 const caseStudies = [{
 
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
-=======
     id: 1,
     title: "AI-Powered Supply Chain Optimization","
     company: "Global Manufacturing Corp","
@@ -74,7 +59,6 @@ const caseStudies = [{
     color: "from-green-500 to-emerald-500"};
 ];
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function CaseStudiesSection() {
   return ("
@@ -82,7 +66,6 @@ export function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -171,13 +154,8 @@ export function CaseStudiesSection() {
             </motion.div>) ) }
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="mt-16 text-center"
-=======
         <motion.div "
           className="mt-16 text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,

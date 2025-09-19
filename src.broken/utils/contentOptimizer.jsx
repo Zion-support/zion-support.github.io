@@ -1,9 +1,4 @@
 export class ContentOptimizer {
-<<<<<<< HEAD
-export default ContentOptimizer;
-
-=======
->>>>>>> main
   static MIN_WORD_COUNT = 300;
   static MIN_HEADING_COUNT = 2;
   static MIN_IMAGE_COUNT = 1;
@@ -123,13 +118,8 @@ export default ContentOptimizer;
     const imagesWithAlt = images.filter(img => img.includes('alt='));
     if(images.length > 0 && imagesWithAlt.length === 0) score -= 10;
 
-<<<<<<< HEAD
-    // Check for internal links
-    const internalLinks = content.match(/href="/[^"]*"/g) || [];
-=======
     // Check for internal links"
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
->>>>>>> main
     if(internalLinks.length < 2) score -= 10;
 
     return Math.max(0, score);

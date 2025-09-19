@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean}
-
-export function LoadingSpinner({
-
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false}: LoadingSpinnerProps) {
-
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -202,14 +183,9 @@ export function PageLoader(...args[]):  {
               className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
               transition = {
-<<<<<<< HEAD
-  { duration: 1, repeat: Infinity,
-  ease: "linear"
-=======
 
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
->>>>>>> main
 
 }}
             />"
@@ -262,14 +238,9 @@ export function PageLoader(...args[]):  {
                 initial={{ width: 0 }}"
                 animate={{ width: "100%" }}
                 transition = {
-<<<<<<< HEAD
-  { duration: 3,
-  ease: "easeInOut"
-=======
 
   { duration: 3,"
   ease: "easeInOut" 
->>>>>>> main
 
 }}
               />

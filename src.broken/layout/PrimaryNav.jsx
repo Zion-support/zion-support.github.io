@@ -49,12 +49,8 @@ export default function Page() {
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
 
   { width: 'clamp(12rem, 20vw,
-<<<<<<< HEAD
-  16rem)'
-=======
   16rem)
 
->>>>>>> main
 
 }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
@@ -69,11 +65,8 @@ export default function Page() {
                 // Product listings with IDs go to product detail page`
                 router(`/marketplace/listing/${sugg.id
 
-<<<<<<< HEAD
-=======
 
 `
->>>>>>> main
 }`);
             }
             else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
@@ -113,14 +106,9 @@ export default function Page() {
 
   t('nav.cart',Cart')
 
-<<<<<<< HEAD
-}>
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
-=======
 
 }>"
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>"
->>>>>>> main
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>)}
@@ -150,15 +138,9 @@ export default function Page() {
                 </>)}
               {isLoggedIn && <UserMenu />}
             </div>
-<<<<<<< HEAD
-
-          {/* Mobile menu button */}
-          <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
-=======
           
           {/* Mobile menu button */}'"
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>"
->>>>>>> main
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>
         </div>

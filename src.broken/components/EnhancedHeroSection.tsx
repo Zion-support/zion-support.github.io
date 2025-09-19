@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom';
-
-export default function Page() {
-=======
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
   badge?: string}
->>>>>>> main
 
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 

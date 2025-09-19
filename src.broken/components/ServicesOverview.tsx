@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
- from 'lucide-react';
-
-export function ServicesOverview(...args[]):  {
-
-      icon: Heart,;
-      color: 'from-zion-pink to-zion-purple',;
-      description: 'Healthcare artificial intelligence solutions',;
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ()
     <div className="py-20 bg-futuristic relative overflow-hidden">

@@ -54,8 +54,4 @@ echo "Next steps:"
 echo "1. Check GitHub for any open PRs"
 echo "2. Test the application functionality"
 echo "3. Verify all new pages are working"
-<<<<<<< HEAD
 echo "4. Check responsive design on mobile devices"
-=======
-echo "4. Check responsive design on mobile devices"
->>>>>>> origin/backup-main-20250918-004015

@@ -164,13 +164,6 @@ resolve_ts_conflicts() {
     cp "$file" "$file.backup"
     
     # Try to resolve common patterns
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/,/^>>>>>>> /c\
-// Auto-resolved merge conflict' "$file"
-    
-    # Remove conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
     
     print_success "TypeScript/JavaScript conflicts resolved in: $file"
 }
@@ -185,13 +178,6 @@ resolve_json_conflicts() {
     
     # Try to merge JSON objects
     # This is a simplified approach - in practice, you might want more sophisticated JSON merging
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/,/^>>>>>>> /c\
-    "merged": true' "$file"
-    
-    # Remove conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
     
     print_success "JSON conflicts resolved in: $file"
 }
@@ -205,13 +191,6 @@ resolve_markdown_conflicts() {
     cp "$file" "$file.backup"
     
     # Try to merge markdown content
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/,/^>>>>>>> /c\
-<!-- Auto-resolved merge conflict -->' "$file"
-    
-    # Remove conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
     
     print_success "Markdown conflicts resolved in: $file"
 }
@@ -225,13 +204,6 @@ resolve_generic_conflicts() {
     cp "$file" "$file.backup"
     
     # Try to resolve by taking both sides
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/,/^>>>>>>> /c\
-# Auto-resolved merge conflict - both sides preserved' "$file"
-    
-    # Remove conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
     
     print_success "Generic conflicts resolved in: $file"
 }
