@@ -34,7 +34,6 @@
     "types": ["vite/client", "node"]
   },
   "include": [
-<<<<<<< HEAD
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/types/offline-shims.d.ts",
@@ -43,25 +42,18 @@
     "vite.config.js",
     "tailwind.config.js",
     "postcss.config.js",
-    ".eslintrc.js"
-=======
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
+    ".eslintrc.js",
     "components/**/*.ts",
     "components/**/*.tsx",
     "lib/**/*.ts",
     "lib/**/*.tsx",
     "pages/**/*.ts",
     "pages/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
     "types/**/*.ts"
->>>>>>> origin/temp-merge-11532
   ],
   "exclude": [
     "node_modules",
     "dist",
-<<<<<<< HEAD
     "build",
     "coverage",
     "**/*.test.ts",
@@ -83,12 +75,10 @@
     "src/utils-disabled",
     "src.disabled",
     "src/backup",
-    "src/components-disabled"
-=======
+    "src/components-disabled",
     "data_backup/**",
     "src.corrupted/**",
     "src/data/**",
-    "src/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
     "api-backup",
@@ -96,7 +86,6 @@
     "backup-pages",
     "automation/**",
     "scripts/**",
-    "src.corrupted/**",
     "deployments/**",
     "deployment/**",
     "backup/**",
@@ -112,8 +101,6 @@
     "temp_backup",
     "temp_backup/**",
     "temp_broken_components",
-    "temp_broken_components/**",
-    "src.corrupted/**"
->>>>>>> origin/temp-merge-11532
+    "temp_broken_components/**"
   ]
 }
