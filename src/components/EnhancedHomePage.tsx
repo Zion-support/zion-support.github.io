@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Star, Users, Award, Zap } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import ServiceCard from './ServiceCard';
 import TestimonialCard from './TestimonialCard';
 import ContactForm from './ContactForm';
@@ -119,7 +119,7 @@ const EnhancedHomePage: React.FC = () => {
                 Welcome to Zion Tech Group
               </h1>
               <p className="text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Your trusted partner in AI and technology solutions. We're revolutionizing the future with 
+                Your trusted partner in AI and technology solutions. We&apos;re revolutionizing the future with 
                 cutting-edge innovations that drive business transformation and accelerate growth.
               </p>
             </div>
@@ -208,7 +208,7 @@ const EnhancedHomePage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">What Our Clients Say</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about working with us.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
             </p>
           </div>
           
@@ -235,7 +235,7 @@ const EnhancedHomePage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
               <p className="text-xl text-blue-100">
-                Let's discuss how we can help transform your business with cutting-edge technology solutions.
+                Let&apos;s discuss how we can help transform your business with cutting-edge technology solutions.
               </p>
             </div>
             

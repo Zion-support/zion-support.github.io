@@ -1,40 +1,20 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-01-19T15:45:00Z (refresh 2025-01-19T15:45:00Z-5)
 [build]
-  # Build the Next.js site located in the monorepo subdirectory from the repo root
-  base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
-  command_timeout = "30m"
-# No-op: trigger deploy 2025-09-18T15:26:33Z (refresh)
+  # Netlify installs dependencies automatically; run only the build step
+  command = "npm run build:netlify"
+  publish = "dist"
+  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
+  base = "."
+ # ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:00:01Z
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
+  NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-  GIT_SUBMODULE_STRATEGY = "none"
-  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-  NPM_CONFIG_STRICT_SSL = "false"
-  NPM_CONFIG_BUILD_FROM_SOURCE = "false"
-  NPM_CONFIG_PREFER_OFFLINE = "true"
 
-## Use the official Next.js plugin for routing, SSR/ISR, and functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[functions]
-  # Functions live at the repository root
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-  included_files = ["public/**/*"]
-
-[build.processing]
-  skip_processing = true
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
+# Fix MIME type issues
 [[headers]]
   for = "/js/*"
   [headers.values]
@@ -112,33 +92,9 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+# Removed Next.js plugin since this is a Vite project
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    X-DNS-Prefetch-Control = "on"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' https: *.googleapis.com; img-src 'self' data: https:; font-src 'self' https: *.gstatic.com *.googleapis.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
-
-# Redirects for legacy URLs
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
-
+# Redirects for SEO/legacy URLs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -219,8 +175,10 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## Note: Do not add SPA fallback for Next.js; plugin handles routing.
+# Handle client-side routing for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T15:26:33Z (refresh)
-# trigger: 2025-09-18T15:26:33Z (refresh) re-run-1
+ # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2)

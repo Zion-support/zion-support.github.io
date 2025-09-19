@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+=======
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+    tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
+    price: '$25,999',
+    period: '/month',
+    description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
+    features: [
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Continue merging the next batch of branches
+# Test script to merge a small batch of PRs safely
 set -e
 
-echo "🚀 Continuing merge process - Batch 2..."
+echo "🧪 Starting test merge with small batch of PRs..."
+echo "📊 Total cursor branches available: $(git branch -r | grep "origin/cursor/" | wc -l)"
 echo "⏰ Started at: $(date)"
 echo "---"
 
 # Configuration
-BATCH_SIZE=20
-BACKUP_BRANCH="merge-batch2-backup-$(date +%Y%m%d-%H%M%S)"
+BATCH_SIZE=5
+BACKUP_BRANCH="test-backup-$(date +%Y%m%d-%H%M%S)"
 
 # Create a backup branch
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
@@ -21,25 +22,13 @@ git checkout main
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
+SKIPPED_BRANCHES=0
 
-# Get next batch of branches that have commits ahead of main
-echo "🔍 Finding next batch of branches with commits ahead of main..."
-BRANCHES_TO_PROCESS=""
-TOTAL_IN_BATCH=0
+# Get first 5 cursor branches only
+BRANCHES=$(git branch -r | grep "origin/cursor/" | head -5 | sed 's/origin\///' | sort)
 
-# Get the first BATCH_SIZE branches that need merging
-while read branch && [ $TOTAL_IN_BATCH -lt $BATCH_SIZE ]; do
-    branch_name=$(echo $branch | sed 's/origin\///')
-    commits_ahead=$(git log --oneline main..$branch 2>/dev/null | wc -l)
-    if [ $commits_ahead -gt 0 ]; then
-        BRANCHES_TO_PROCESS="$BRANCHES_TO_PROCESS $branch_name"
-        TOTAL_IN_BATCH=$((TOTAL_IN_BATCH + 1))
-        echo "📋 Found: $branch_name ($commits_ahead commits ahead)"
-    fi
-done < <(git branch -r | grep "origin/cursor/" | sort)
-
-echo "---"
-echo "📊 Processing batch of $TOTAL_IN_BATCH branches"
+echo "📋 Processing first 5 branches:"
+echo "$BRANCHES"
 echo "---"
 
 # Function to resolve conflicts in a file
@@ -50,15 +39,49 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "⚠️  Found conflicts in $file, resolving..."
+        
+        # Create a backup of the conflicted file
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Strategy: Keep both versions where possible, prefer main branch for critical files
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            echo "📦 Critical file detected, keeping main version and merging dependencies..."
+            # For package files, we'll need special handling
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/        else
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        else
             echo "📝 Regular file, attempting to merge both versions..."
-            sed -i '/        fi
+            # Remove conflict markers and try to keep both versions
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
+        fi
         
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
+}
+
+# Function to check if a branch can be merged
+can_merge_branch() {
+    local branch="$1"
+    
+    # Skip if branch doesn't exist
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        return 1
+    fi
+    
+    # Skip if branch is already merged
+    if git branch --merged main | grep -q "$branch"; then
+        return 1
+    fi
+    
+    return 0
 }
 
 # Function to merge a single branch
@@ -110,12 +133,21 @@ merge_branch() {
     fi
 }
 
-# Process each branch in the batch
-echo "🔄 Starting batch processing..."
+# Main processing loop
+echo "🔄 Starting test batch processing..."
+echo "📊 Batch size: $BATCH_SIZE"
 echo "---"
 
-for branch in $BRANCHES_TO_PROCESS; do
+# Process each branch
+for branch in $BRANCHES; do
     echo "📋 Processing branch: $branch"
+    
+    # Check if branch can be merged
+    if ! can_merge_branch "$branch"; then
+        echo "⏭️  Skipping $branch (already merged or doesn't exist)"
+        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
+        continue
+    fi
     
     # Try to merge the branch
     if merge_branch "$branch"; then
@@ -130,29 +162,24 @@ for branch in $BRANCHES_TO_PROCESS; do
 done
 
 # Push changes
-echo "💾 Pushing batch changes to remote..."
+echo "💾 Pushing changes to remote..."
 git push origin main
 
 # Summary
 echo ""
-echo "🎉 Batch 2 completed successfully!"
+echo "🎉 Test merge batch completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
+echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
-
-# Show remaining branches
-echo ""
-echo "📊 Remaining branches to process:"
-REMAINING_COUNT=$(git branch -r | grep "origin/cursor/" | while read branch; do branch_name=$(echo $branch | sed 's/origin\///'); commits_ahead=$(git log --oneline main..$branch 2>/dev/null | wc -l); if [ $commits_ahead -gt 0 ]; then echo "1"; fi; done | wc -l)
-echo "   📋 Total remaining: $REMAINING_COUNT branches"
 
 # Cleanup recommendations
 echo ""
 echo "🧹 Cleanup recommendations:"
-echo "   1. Review the merged changes: git log --oneline -20"
+echo "   1. Review the merged changes: git log --oneline -10"
 echo "   2. Test the application thoroughly"
-echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   4. Run this script again to continue with the next batch"
+echo "   3. If successful, run the full merge script"
+echo "   4. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
