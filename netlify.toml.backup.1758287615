@@ -1,15 +1,28 @@
+<<<<<<< HEAD
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T00:00:00Z
+[build]
+  # Build the Vite React site from the repository root
+  base = "."
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = "dist"
+=======
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T00:00:00Z; refreshed at +00:00
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
   base = "zion-website"
   command = "npm run build"
+>>>>>>> origin/aggressive-merge-backup-20250918-154441
   command_timeout = "30m"
+# No-op: trigger Netlify rebuild at 2025-09-18T00:00:00Z
 
+<<<<<<< HEAD
+=======
 # Trigger Netlify build: no-op change on 2025-09-18T00:00:00Z
 
+>>>>>>> origin/aggressive-merge-backup-20250918-154441
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
@@ -17,18 +30,12 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-## Use the official Next.js plugin for routing, SSR/ISR, and functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [functions]
   # Functions live at the repository root
   directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [build.processing]
   skip_processing = true
@@ -222,4 +229,17 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+<<<<<<< HEAD
+# SPA fallback for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
+## End of Netlify configuration
+# No-op: trigger deploy 2025-09-18T00:00:00Z
+# trigger: 2025-09-18T00:00:00Z re-run-1
+# trigger: 2025-09-18T15:15:23Z re-run-2
+=======
+
+>>>>>>> origin/aggressive-merge-backup-20250918-154441
