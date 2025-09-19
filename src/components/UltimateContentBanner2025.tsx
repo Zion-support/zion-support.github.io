@@ -3,7 +3,7 @@ import React from 'react';
 const UltimateContentBanner2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm">
       <div className="relative z-10">
         <div className="text-center mb-8">
 import { motion } from 'framer-motion';
@@ -88,9 +88,8 @@ const UltimateContentBanner2025: React.FC = () => {
       className="relative overflow-hidden rounded-2xl mb-12"
     >
       {/* Background with animated gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -112,8 +111,6 @@ const UltimateContentBanner2025: React.FC = () => {
             }}
           />
         ))}
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
@@ -122,41 +119,34 @@ const UltimateContentBanner2025: React.FC = () => {
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 NEW: ULTIMATE CONTENT 2025
-          </div>
           <h2 className="text-4xl font-bold mb-4">🚀 Ultimate Tech Revolution 2025</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
-            Experience the most revolutionary technological breakthroughs that will reshape our world in 2025
+            Experience the most revolutionary technological breakthroughs that will reshape our world in 2025</p>
           </p>
-        </div>
-        
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🧠</div>
+            <div className="text-4xl mb-4 text-center">🧠
             <h3 className="text-xl font-bold mb-3 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-4 text-center text-sm">
-              The first truly conscious artificial intelligence that can think, feel, and create independently
+              The first truly conscious artificial intelligence that can think, feel, and create independently</p>
             </p>
             <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Explore AI Revolution →
             </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">⚡</div>
+            <div className="text-4xl mb-4 text-center">⚡
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Breakthrough</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
-              Revolutionary quantum computing that processes consciousness itself
+              Revolutionary quantum computing that processes consciousness itself</p>
             </p>
             <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               Discover Breakthrough →
             </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🧠</div>
+            <div className="text-4xl mb-4 text-center">🧠
             <h3 className="text-xl font-bold mb-3 text-center">Innovation Hub</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
-              Discover and explore the most revolutionary technologies shaping humanity's future
+              Discover and explore the most revolutionary technologies shaping humanity's future</p>
             </p>
             <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Innovation Hub →
@@ -165,10 +155,9 @@ const UltimateContentBanner2025: React.FC = () => {
             Revolutionary Technology Content
           </h2>
           <p className="text-2xl text-purple-200 max-w-4xl mx-auto">
-            Discover our latest groundbreaking content featuring the most advanced technologies of 2025
+            Discover our latest groundbreaking content featuring the most advanced technologies of 2025</p>
           </p>
         </motion.div>
-
         {/* Carousel */}
         <motion.div
           className="relative"
@@ -196,16 +185,10 @@ const UltimateContentBanner2025: React.FC = () => {
                           Explore Now →
                         </a>
                         <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
-                          Learn More
+                          Learn More</button>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               ))}
             </motion.div>
-          </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -216,10 +199,8 @@ const UltimateContentBanner2025: React.FC = () => {
                   index === currentSlide ? 'bg-white' : 'bg-white/50'
                 }`}
               />
-            ))}
-          </div>
+            ))}</button>
         </motion.div>
-
         {/* Quick Access Grid */}
         <motion.div
           className="mt-12 grid md:grid-cols-3 gap-6"
@@ -237,11 +218,9 @@ const UltimateContentBanner2025: React.FC = () => {
               <p className="text-purple-100 mb-4">{slide.description}</p>
               <div className="flex items-center text-sm font-semibold">
                 <span>Explore →</span>
-              </div>
             </motion.a>
           ))}
         </motion.div>
-
         {/* Additional Promotional Content */}
         <motion.div
           className="mt-12 text-center"
@@ -252,20 +231,16 @@ const UltimateContentBanner2025: React.FC = () => {
               🚀 Don't Miss Out on the Future
             </h3>
             <p className="text-xl text-purple-100 mb-6">
-              Join thousands of innovators already exploring these revolutionary technologies
+              Join thousands of innovators already exploring these revolutionary technologies</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
-                Get Early Access
+                Get Early Access</button>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
-                Subscribe to Updates
+                Subscribe to Updates</button>
               </button>
-            </div>
-          </div>
         </motion.div>
-      </div>
-    </div>
     <motion.div
       variants={containerVariants}
       initial="hidden"
@@ -273,9 +248,8 @@ const UltimateContentBanner2025: React.FC = () => {
       className="relative overflow-hidden rounded-2xl mb-12"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm">
       {/* Content */}
       <div className="relative z-10 p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
@@ -286,15 +260,13 @@ const UltimateContentBanner2025: React.FC = () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 ULTIMATE CONTENT • JANUARY 2025
-            </div>
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               Ultimate Content Banner 2025
             </h2>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-              Discover our most revolutionary content featuring breakthrough technologies that are reshaping the future
+              Discover our most revolutionary content featuring breakthrough technologies that are reshaping the future</p>
             </p>
           </motion.div>
-
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
@@ -310,24 +282,20 @@ const UltimateContentBanner2025: React.FC = () => {
                   <div className="text-center">
                     <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
-                    </div>
                     <h3 className="text-xl font-bold mb-3 text-white">
                       {feature.title}
                     </h3>
                     <p className="text-sm opacity-90 mb-4 text-white">
-                      {feature.description}
+                      {feature.description}</p>
                     </p>
                     <div className="text-lg font-bold mb-4 text-white/90">
                       {feature.stats}
-                    </div>
                     <a
                       href={feature.link}
                       className="inline-block w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                     >
                       Explore →
                     </a>
-                  </div>
-                  
                   {/* Hover Effect */}
                   <AnimatePresence>
                     {hoveredCard === feature.id && (
@@ -339,11 +307,8 @@ const UltimateContentBanner2025: React.FC = () => {
                       />
                     )}
                   </AnimatePresence>
-                </div>
               </motion.div>
             ))}
-          </div>
-
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
@@ -354,20 +319,16 @@ const UltimateContentBanner2025: React.FC = () => {
                 Ready to Experience the Future?
               </h3>
               <p className="text-xl opacity-90 mb-6 text-white">
-                Join thousands of forward-thinking organizations already using our revolutionary technologies
+                Join thousands of forward-thinking organizations already using our revolutionary technologies</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                  Start Your Journey
+                  Start Your Journey</button>
                 </button>
                 <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                  View All Content
+                  View All Content</button>
                 </button>
-              </div>
-            </div>
           </motion.div>
-        </div>
-      </div>
     </motion.div>
   );
 };

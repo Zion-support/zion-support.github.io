@@ -46,7 +46,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-50">
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center text-white">
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -54,7 +54,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
               Discover the cutting-edge technologies and innovations that are reshaping our world in 2026. 
-              From quantum computing breakthroughs to AI consciousness evolution, explore the future today.
+              From quantum computing breakthroughs to AI consciousness evolution, explore the future today.</p>
             </p>
             <div className="flex justify-center space-x-4">
               <Link 
@@ -69,29 +69,20 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               >
                 Quantum Revolution
               </Link>
-            </div>
-          </div>
-        </div>
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
-            </div>
-            
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Tech Insights 2026
             </h1>
-            
             <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
               Discover the revolutionary technology insights that are reshaping our understanding 
-              of consciousness, reality, and intelligence in ways never before imagined.
+              of consciousness, reality, and intelligence in ways never before imagined.</p>
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
               >
                 <Play className="w-5 h-5" />
                 <span>Explore Insights</span>
-            </div>
-
             {/* Breakthrough Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
               {breakthroughStats.map((stat, index) => (
@@ -99,10 +90,9 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/20"
                 >
                   <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
-                  <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-300">{stat.label}</div>
+                  <div className="text-3xl font-bold text-white mb-1">{stat.number}
+                  <div className="text-sm text-gray-300">{stat.label}
         </section>
-
         {/* Insights Section */}
         <section id="insights" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
@@ -115,7 +105,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Revolutionary Tech Insights 2026 represents the convergence of consciousness, quantum computing, and reality engineering 
-                to create systems that transcend human limitations and open infinite possibilities
+                to create systems that transcend human limitations and open infinite possibilities</p>
               </p>
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +115,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-16 h-16 bg-gradient-to-r ${insight.color} rounded-xl flex items-center justify-center`}>
                       <insight.icon className="w-8 h-8 text-white" />
-                    </div>
                     <div className="flex flex-col items-end space-y-1">
                       <span className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-xs font-semibold">
                         {insight.status}
@@ -133,8 +122,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full text-xs font-semibold">
                         {insight.impact}
                       </span>
-                    </div>
-                  </div>
                   <h3 className="text-xl font-bold mb-2">{insight.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{insight.description}</p>
                   <ul className="space-y-1">
@@ -146,10 +133,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     ))}
                   </ul>
               ))}
-            </div>
-          </div>
         </section>
-
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
@@ -162,7 +146,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 Transcendent <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Applications</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
+                Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility</p>
               </p>
                   key={index}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -175,7 +159,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       <span className="inline-block px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-xs font-semibold mt-2">
                         {application.category}
                       </span>
-                    </div>
                     <div className="flex flex-col items-end space-y-1">
                       <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-xs font-semibold">
                         {application.status}
@@ -183,8 +166,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-xs font-semibold">
                         {application.impact}
                       </span>
-                    </div>
-                  </div>
                   <p className="text-gray-300 mb-6">{application.description}</p>
                   <ul className="space-y-2 mb-6">
                     {application.capabilities.map((capability, capabilityIndex) => (
@@ -194,23 +175,17 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="flex items-center space-x-2 text-indigo-400 hover:text-indigo-300 font-semibold">
+                  <button className="flex items-center space-x-2 text-indigo-400 hover:text-indigo-300 font-semibold"></button>
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
               ))}
-            </div>
-          </div>
         </section>
-
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
               ))}
-            </div>
-          </div>
         </section>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -222,10 +197,9 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 Visionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Testimonials</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand
+                Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand</p>
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -240,26 +214,19 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                  </div>
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </span>
-                    </div>
                     <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}</div>
-                      <div className="text-xs text-indigo-400">{testimonial.company}</div>
-                    </div>
-                  </div>
+                      <div className="font-semibold text-white">{testimonial.name}
+                      <div className="text-sm text-gray-400">{testimonial.role}
+                      <div className="text-xs text-indigo-400">{testimonial.company}
                 </motion.div>
               ))}
-            </div>
-          </div>
         </section>
-
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
@@ -271,12 +238,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
                 Discover the revolutionary technology insights that are reshaping our understanding 
-                of consciousness, reality, and intelligence in ways never before imagined
+                of consciousness, reality, and intelligence in ways never before imagined</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          </div>
         </section>
-
         {/* Footer */}
         <footer className="relative z-10 border-t border-white/20 py-12">
           <div className="container mx-auto px-4">
@@ -284,36 +249,26 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <div className="flex items-center space-x-3 mb-6 md:mb-0">
                 <div className="w-10 h-10 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-lg flex items-center justify-center">
                   <Rocket className="w-6 h-6 text-white" />
-                </div>
                 <div>
                   <h3 className="text-xl font-bold">Zion Tech Group</h3>
                   <p className="text-sm text-gray-400">Revolutionary Tech Insights 2026</p>
-                </div>
-              </div>
               <div className="text-center md:text-right">
                 <p className="text-gray-400 mb-2">© 2026 Zion Tech Group. All rights reserved.</p>
                 <p className="text-sm text-gray-500">Transcending reality through revolutionary technology insights.</p>
-              </div>
-            </div>
-          </div>
         </footer>
-      </div>
-
       {/* Featured Insights */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Featured Tech Insights</h2>
           <p className="text-xl text-gray-300">The most groundbreaking discoveries and innovations of 2026</p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Insight 1 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-cyan-400 text-4xl mb-4">🧠</div>
+            <div className="text-cyan-400 text-4xl mb-4">🧠
             <h3 className="text-2xl font-bold text-white mb-3">Neural Interface Breakthrough</h3>
             <p className="text-gray-300 mb-4">
               Revolutionary brain-computer interfaces that enable direct neural communication with AI systems, 
-              opening new possibilities for human-AI collaboration.
+              opening new possibilities for human-AI collaboration.</p>
             </p>
             <Link 
               to="/pages/NeuralInterfaceRevolution2026" 
@@ -321,15 +276,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               Learn More →
             </Link>
-          </div>
-
           {/* Insight 2 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-purple-400 text-4xl mb-4">⚛️</div>
+            <div className="text-purple-400 text-4xl mb-4">⚛️
             <h3 className="text-2xl font-bold text-white mb-3">Quantum Consciousness</h3>
             <p className="text-gray-300 mb-4">
               The intersection of quantum computing and artificial consciousness, creating AI systems 
-              that exhibit quantum-level awareness and decision-making capabilities.
+              that exhibit quantum-level awareness and decision-making capabilities.</p>
             </p>
             <Link 
               to="/pages/QuantumConsciousness2026" 
@@ -337,15 +290,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               Explore Quantum AI →
             </Link>
-          </div>
-
           {/* Insight 3 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-green-400 text-4xl mb-4">🌐</div>
+            <div className="text-green-400 text-4xl mb-4">🌐
             <h3 className="text-2xl font-bold text-white mb-3">Metaverse Integration</h3>
             <p className="text-gray-300 mb-4">
               Seamless integration between physical and digital realities, creating immersive 
-              experiences that blur the boundaries between real and virtual worlds.
+              experiences that blur the boundaries between real and virtual worlds.</p>
             </p>
             <Link 
               to="/pages/MetaverseRevolution2026" 
@@ -353,15 +304,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               Enter the Metaverse →
             </Link>
-          </div>
-
           {/* Insight 4 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-yellow-400 text-4xl mb-4">🔬</div>
+            <div className="text-yellow-400 text-4xl mb-4">🔬
             <h3 className="text-2xl font-bold text-white mb-3">Biotech Revolution</h3>
             <p className="text-gray-300 mb-4">
               Advanced biotechnology solutions that combine AI with genetic engineering, 
-              creating personalized medical treatments and enhanced human capabilities.
+              creating personalized medical treatments and enhanced human capabilities.</p>
             </p>
             <Link 
               to="/pages/BiotechRevolution2026" 
@@ -369,15 +318,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               Discover Biotech →
             </Link>
-          </div>
-
           {/* Insight 5 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-red-400 text-4xl mb-4">🛡️</div>
+            <div className="text-red-400 text-4xl mb-4">🛡️
             <h3 className="text-2xl font-bold text-white mb-3">Cybersecurity Evolution</h3>
             <p className="text-gray-300 mb-4">
               Next-generation cybersecurity solutions powered by AI and quantum encryption, 
-              providing unprecedented protection against emerging threats.
+              providing unprecedented protection against emerging threats.</p>
             </p>
             <Link 
               to="/pages/CybersecurityFortress2026" 
@@ -385,15 +332,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               Secure Your Future →
             </Link>
-          </div>
-
           {/* Insight 6 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-pink-400 text-4xl mb-4">🚀</div>
+            <div className="text-pink-400 text-4xl mb-4">🚀
             <h3 className="text-2xl font-bold text-white mb-3">Space Technology</h3>
             <p className="text-gray-300 mb-4">
               Revolutionary space technologies enabling interplanetary communication, 
-              asteroid mining, and the establishment of sustainable space colonies.
+              asteroid mining, and the establishment of sustainable space colonies.</p>
             </p>
             <Link 
               to="/pages/SpaceTechRevolution2026" 
@@ -401,10 +346,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               Reach for the Stars →
             </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl p-12 text-center">
@@ -413,7 +354,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             Join thousands of forward-thinking organizations already leveraging these revolutionary technologies 
-            to gain competitive advantages and drive unprecedented growth.
+            to gain competitive advantages and drive unprecedented growth.</p>
           </p>
           <div className="flex justify-center space-x-4">
             <Link 
@@ -428,10 +369,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             >
               View Our Services
             </Link>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

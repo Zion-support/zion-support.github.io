@@ -27,7 +27,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Content Showcase 2026</h2>
         <p className="text-center text-lg mb-12">Discover our latest innovations and breakthrough technologies</p>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {contentItems.map((item, index) => (
             <div
@@ -38,22 +37,14 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold">{item.category.charAt(0)}</span>
-                  </div>
                   <h3 className="text-lg font-semibold">{item.category}</h3>
-                </div>
-              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="text-gray-300 mb-4">{item.description}</p>
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300">
-                  Learn More
+                  Learn More</button>
                 </button>
-              </div>
-            </div>
           ))}
-        </div>
-      </div>
-    </div>
   );
 };
 

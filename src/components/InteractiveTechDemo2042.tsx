@@ -100,16 +100,13 @@ const InteractiveTechDemo2042: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-sm">
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🎮 INTERACTIVE TECH DEMO • JANUARY 2042
-          </div>
           <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Demonstrations</h2>
           <p className="text-xl opacity-90">Experience our revolutionary technologies through immersive interactive demonstrations</p>
-        </div>
-
         {/* Demo Selector */}
         <div className="flex justify-center mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
@@ -123,33 +120,24 @@ const InteractiveTechDemo2042: React.FC = () => {
                     : 'text-white hover:bg-white/20'
                 }`}
               >
-                {demo.icon} {demo.title.split(' ')[0]}
+                {demo.icon} {demo.title.split(' ')[0]}</button>
               </button>
             ))}
-          </div>
-        </div>
-
         {/* Active Demo Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center mb-6">
-                <div className="text-6xl mr-4">{demos[activeDemo].icon}</div>
+                <div className="text-6xl mr-4">{demos[activeDemo].icon}
                 <div>
                   <h3 className="text-2xl font-bold mb-2">{demos[activeDemo].title}</h3>
                   <p className="text-gray-300">{demos[activeDemo].description}</p>
-                </div>
-              </div>
-              
               <div className="space-y-3 mb-6">
                 {demos[activeDemo].features.map((feature, index) => (
                   <div key={index} className="flex items-center text-sm">
                     <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                     {feature}
-                  </div>
                 ))}
-              </div>
-
               <div className="flex space-x-4">
                 <button
                   onClick={startDemo}
@@ -160,7 +148,7 @@ const InteractiveTechDemo2042: React.FC = () => {
                       : `bg-gradient-to-r ${demos[activeDemo].color} hover:shadow-lg`
                   }`}
                 >
-                  {isRunning ? 'Running...' : '▶️ Start Demo'}
+                  {isRunning ? 'Running...' : '▶️ Start Demo'}</button>
                 </button>
                 <button
                   onClick={stopDemo}
@@ -171,60 +159,45 @@ const InteractiveTechDemo2042: React.FC = () => {
                       : 'bg-red-600 hover:bg-red-700'
                   }`}
                 >
-                  ⏹️ Stop Demo
+                  ⏹️ Stop Demo</button>
                 </button>
-              </div>
-            </div>
-
             <div className="flex flex-col justify-center">
               <div className="bg-black/30 rounded-lg p-6 mb-6">
                 <h4 className="text-lg font-bold mb-4">Demo Console</h4>
                 <div className="space-y-2 text-sm">
-                  <div className="text-green-400">System: Demo environment initialized</div>
-                  <div className="text-blue-400">AI: Ready to demonstrate capabilities</div>
-                  <div className="text-yellow-400">Quantum: Field manipulation active</div>
-                  <div className="text-purple-400">Dimensions: 12 parallel universes detected</div>
-                </div>
-              </div>
-
+                  <div className="text-green-400">System: Demo environment initialized
+                  <div className="text-blue-400">AI: Ready to demonstrate capabilities
+                  <div className="text-yellow-400">Quantum: Field manipulation active
+                  <div className="text-purple-400">Dimensions: 12 parallel universes detected
               {isRunning && (
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm font-semibold">Demo Progress</span>
                     <span className="text-sm">{progress}%</span>
-                  </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div
                       className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color} transition-all duration-300`}
                       style={{ width: `${progress}%` }}
-                    ></div>
-                  </div>
-                </div>
+                    >
               )}
-            </div>
-          </div>
-        </div>
-
         {/* Navigation Controls */}
         <div className="flex justify-center space-x-4">
           <button
             onClick={prevDemo}
             className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-          >
+          ></button>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></p>
             </svg>
           </button>
           <button
             onClick={nextDemo}
             className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-          >
+          ></button>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></p>
             </svg>
           </button>
-        </div>
-
         {/* Quick Access Links */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           {demos.map((demo) => (
@@ -235,12 +208,9 @@ const InteractiveTechDemo2042: React.FC = () => {
                 activeDemo === demo.id - 1 ? 'ring-2 ring-white' : ''
               }`}
             >
-              {demo.icon} {demo.title.split(' ')[0]}
+              {demo.icon} {demo.title.split(' ')[0]}</button>
             </button>
           ))}
-        </div>
-      </div>
-    </div>
   );
 };
 

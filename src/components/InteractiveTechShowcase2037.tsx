@@ -91,19 +91,16 @@ const InteractiveTechShowcase2037: React.FC = () => {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Showcase 2037</h2>
         <p className="text-xl opacity-90 max-w-4xl mx-auto">
-          Explore the most advanced technologies of 2037 with interactive demonstrations and real-time data
+          Explore the most advanced technologies of 2037 with interactive demonstrations and real-time data</p>
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           🚀 INTERACTIVE DEMO • 2037 TECHNOLOGY
-        </div>
         <h2 className="text-4xl font-bold mb-4">Interactive Technology Showcase 2037</h2>
         <p className="text-xl opacity-90 max-w-3xl mx-auto">
           Experience the future of technology through our interactive demonstrations. 
-          Select a technology below to explore its capabilities and potential applications.
+          Select a technology below to explore its capabilities and potential applications.</p>
         </p>
-      </div>
-
       {/* Technology Selector */}
       <div className="flex justify-center mb-12">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
@@ -120,40 +117,28 @@ const InteractiveTechShowcase2037: React.FC = () => {
               className={`bg-gradient-to-br ${demo.color} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 text-center ${
                 activeDemo === index ? 'ring-2 ring-white ring-opacity-50' : ''
               }`}
-            >
-              <div className="text-4xl mb-3">{demo.title.split(' ')[0]}</div>
+            ></button>
+              <div className="text-4xl mb-3">{demo.title.split(' ')[0]}
               <h3 className="text-lg font-bold mb-2">{demo.title}</h3>
               <p className="text-sm opacity-90 mb-4">{demo.description}</p>
               <div className="text-white text-sm font-semibold">
                 {activeDemo === index ? 'Active Demo' : 'Click to Activate'}
-              </div>
             </button>
           ))}
-        </div>
-          </div>
-        </div>
-      </div>
-
-          </div>
           <div className="bg-white/10 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-4xl mb-4">🌌</div>
+            <div className="text-4xl mb-4">🌌
             <h4 className="font-bold mb-2">Dimension Explorer</h4>
             <p className="text-sm opacity-90 mb-4">Explore parallel universes</p>
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">
-              Explore →
+              Explore →</button>
             </button>
-          </div>
           <div className="bg-white/10 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="text-4xl mb-4">⚡</div>
+            <div className="text-4xl mb-4">⚡
             <h4 className="font-bold mb-2">Reality Simulator</h4>
             <p className="text-sm opacity-90 mb-4">Manipulate reality parameters</p>
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2 rounded-lg text-sm font-semibold">
-              Simulate →
+              Simulate →</button>
             </button>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="text-center mt-12">
         <h3 className="text-2xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -167,15 +152,12 @@ const InteractiveTechShowcase2037: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2037
-          </div>
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Experience our revolutionary technologies through interactive demonstrations
+            Experience our revolutionary technologies through interactive demonstrations</p>
           </p>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Technology Selector */}
           <div className="space-y-4">
@@ -191,7 +173,7 @@ const InteractiveTechShowcase2037: React.FC = () => {
                 onClick={() => setActiveTech(index)}
               >
                 <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{tech.icon}</div>
+                  <div className="text-4xl">{tech.icon}
                   <div className="flex-1">
                     <h4 className="text-xl font-bold mb-2">{tech.name}</h4>
                     <p className="text-sm opacity-80 mb-3">{tech.description}</p>
@@ -202,27 +184,18 @@ const InteractiveTechShowcase2037: React.FC = () => {
                       <span className="text-sm opacity-60">
                         {index + 1} of {technologies.length}
                       </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             ))}
-          </div>
-
           {/* Technology Display */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className={`transition-all duration-500 ${isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
               <div className="text-center mb-6">
-                <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
+                <div className="text-8xl mb-4">{technologies[activeTech].icon}
                 <h3 className="text-3xl font-bold mb-4">{technologies[activeTech].name}</h3>
                 <p className="text-lg opacity-90 mb-6">{technologies[activeTech].description}</p>
                 <div className="flex justify-center mb-6">
                   <span className={`px-4 py-2 ${getStatusColor(technologies[activeTech].status)} text-white rounded-full text-sm font-semibold`}>
                     {technologies[activeTech].status}
                   </span>
-                </div>
-              </div>
-
               <div className="mb-8">
                 <h4 className="text-xl font-bold mb-4">Key Features</h4>
                 <div className="grid grid-cols-2 gap-3">
@@ -230,59 +203,40 @@ const InteractiveTechShowcase2037: React.FC = () => {
                     <div key={index} className="flex items-center space-x-2">
                       <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                       <span className="text-sm opacity-90">{feature}</span>
-                    </div>
                   ))}
-                </div>
-              </div>
-
               {/* Interactive Demo Area */}
               <div className={`bg-gradient-to-br ${getColorClasses(technologies[activeTech].color)} rounded-lg p-8 mb-6 min-h-[200px] flex items-center justify-center`}>
                 <div className="text-center">
-                  <div className="text-6xl mb-4 animate-pulse">{technologies[activeTech].icon}</div>
+                  <div className="text-6xl mb-4 animate-pulse">{technologies[activeTech].icon}
                   <h4 className="text-xl font-bold mb-2">Interactive Demo</h4>
                   <p className="text-sm opacity-80 mb-4">
-                    Experience {technologies[activeTech].name} in action
+                    Experience {technologies[activeTech].name} in action</p>
                   </p>
                   <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                    Start Demo
+                    Start Demo</button>
                   </button>
-                </div>
-              </div>
-
               {/* Action Buttons */}
               <div className="flex space-x-4">
                 <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Try Now
+                  Try Now</button>
                 </button>
                 <button className="flex-1 border border-white text-white py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold">
-                  Learn More
+                  Learn More</button>
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Stats */}
         <div className="mt-16 grid md:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-            <div className="text-white/80">Accuracy Rate</div>
-          </div>
+            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%
+            <div className="text-white/80">Accuracy Rate
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
-            <div className="text-white/80">Efficiency Gain</div>
-          </div>
+            <div className="text-4xl font-bold text-cyan-400 mb-2">300%
+            <div className="text-white/80">Efficiency Gain
           <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">5</div>
-            <div className="text-white/80">Dimensions Accessed</div>
-          </div>
+            <div className="text-4xl font-bold text-emerald-400 mb-2">5
+            <div className="text-white/80">Dimensions Accessed
           <div className="text-center">
-            <div className="text-4xl font-bold text-pink-400 mb-2">1000+</div>
-            <div className="text-white/80">Active Users</div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div className="text-4xl font-bold text-pink-400 mb-2">1000+
+            <div className="text-white/80">Active Users
   );
 };
 

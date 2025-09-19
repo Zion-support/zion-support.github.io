@@ -79,31 +79,23 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
             className="text-gray-400 hover:text-white transition-colors"
             aria-label="Close performance metrics"
           >
-            ×
+            ×</button>
           </button>
-        </div>
         <div className="space-y-1 text-xs">
           <div className="flex justify-between">
             <span>Load Time:</span>
             <span className="text-blue-400">{metrics.loadTime.toFixed(2)}ms</span>
-          </div>
           <div className="flex justify-between">
             <span>Render Time:</span>
             <span className="text-yellow-400">{metrics.renderTime.toFixed(2)}ms</span>
-          </div>
           {metrics.memoryUsage > 0 && (
             <div className="flex justify-between">
               <span>Memory:</span>
               <span className="text-red-400">{metrics.memoryUsage.toFixed(2)}MB</span>
-            </div>
           )}
           <div className="flex justify-between">
             <span>Connection:</span>
             <span className="text-green-400">{metrics.connectionType}</span>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

@@ -67,10 +67,8 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
           Interactive Technology Showcase 2034-2036
         </h2>
         <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-          Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself
+          Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself</p>
         </p>
-      </div>
-
       {/* Tab Navigation */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         {contentItems.map((item, index) => (
@@ -84,13 +82,11 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
+          ></button>
             <span className="mr-2">{item.icon}</span>
             {item.title.split(' ')[0]} {item.title.split(' ')[1]}
           </button>
         ))}
-      </div>
-
       {/* Content Display */}
       <div className="relative min-h-[500px]">
         <AnimatePresence mode="wait">
@@ -107,19 +103,14 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className={`text-6xl bg-gradient-to-r ${contentItems[activeTab].color} bg-clip-text text-transparent`}>
                   {contentItems[activeTab].icon}
-                </div>
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-2">
                     {contentItems[activeTab].title}
                   </h3>
-                  <div className={`w-16 h-1 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>
-                </div>
-              </div>
-              
+                  <div className={`w-16 h-1 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}>
               <p className="text-lg text-gray-300 mb-8">
-                {contentItems[activeTab].description}
+                {contentItems[activeTab].description}</p>
               </p>
-
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {contentItems[activeTab].features.map((feature, idx) => (
                   <div
@@ -129,12 +120,9 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="flex items-center space-x-2 text-sm text-gray-300"
                   >
-                    <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>
+                    <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}>
                     <span>{feature}</span>
-                  </div>
                 ))}
-              </div>
-
               <motion.a
                 href={contentItems[activeTab].link}
                 className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
@@ -143,54 +131,32 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
               >
                 Explore {contentItems[activeTab].title.split(' ')[0]} Technology →
               </motion.a>
-            </div>
-
             {/* Interactive Visualization */}
             <div className="relative">
               <div className={`bg-gradient-to-br ${contentItems[activeTab].color}/20 backdrop-blur-sm rounded-3xl p-8 border border-white/20`}>
                 <div className="text-center">
                   <div className="text-8xl mb-6 animate-pulse">
                     {contentItems[activeTab].icon}
-                  </div>
-                  
                   <div className="space-y-4">
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-300">Technology Level</span>
                         <span className="text-lg font-bold text-white">2034-2036</span>
-                      </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '95%' }}></div>
-                      </div>
-                    </div>
-
+                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '95%' }}>
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-300">Revolutionary Impact</span>
                         <span className="text-lg font-bold text-white">∞</span>
-                      </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}></div>
-                      </div>
-                    </div>
-
+                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}>
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-300">Consciousness Integration</span>
                         <span className="text-lg font-bold text-white">Perfect</span>
-                      </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}>
         </AnimatePresence>
-      </div>
-
       {/* Additional Features */}
       <div
         initial={{ opacity: 0, y: 20 }}
@@ -199,22 +165,17 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
         className="mt-12 grid md:grid-cols-3 gap-6"
       >
         <div className="text-center">
-          <div className="text-4xl mb-4">🚀</div>
+          <div className="text-4xl mb-4">🚀
           <h4 className="text-xl font-bold text-white mb-2">Revolutionary Technology</h4>
           <p className="text-gray-300 text-sm">Cutting-edge innovations that transcend current limitations</p>
-        </div>
         <div className="text-center">
-          <div className="text-4xl mb-4">🧠</div>
+          <div className="text-4xl mb-4">🧠
           <h4 className="text-xl font-bold text-white mb-2">Consciousness Evolution</h4>
           <p className="text-gray-300 text-sm">Advanced consciousness expansion and awareness technologies</p>
-        </div>
         <div className="text-center">
-          <div className="text-4xl mb-4">⚛️</div>
+          <div className="text-4xl mb-4">⚛️
           <h4 className="text-xl font-bold text-white mb-2">Reality Manipulation</h4>
           <p className="text-gray-300 text-sm">Direct control over the fundamental forces of reality</p>
-        </div>
-      </div>
-    </div>
   );
 };
 

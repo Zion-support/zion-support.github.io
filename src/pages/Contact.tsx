@@ -76,7 +76,6 @@ const Contact: React.FC = () => {
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI-powered technology solutions, consulting, and innovative business services."
       />
-      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           className="max-w-4xl mx-auto text-center"
@@ -86,23 +85,20 @@ const Contact: React.FC = () => {
           </h1>
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
             Ready to transform your business with revolutionary technology? 
-            Get in touch with our experts and discover what's possible.
+            Get in touch with our experts and discover what's possible.</p>
           </p>
       </section>
-
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
                 key={index}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className="text-cyan-400 mb-4">{method.icon}</div>
+                <div className="text-cyan-400 mb-4">{method.icon}
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-lg text-cyan-400 font-medium mb-2">{method.details}</p>
                 <p className="text-gray-400 text-sm">{method.description}</p>
-        </div>
       </section>
-
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -111,10 +107,8 @@ const Contact: React.FC = () => {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
               <p className="text-gray-300">
-                Tell us about your project and we'll get back to you within 24 hours
+                Tell us about your project and we'll get back to you within 24 hours</p>
               </p>
-            </div>
-
             {isSubmitted ? (
                 className="text-center py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -124,7 +118,7 @@ const Contact: React.FC = () => {
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-gray-300">
-                  Thank you for reaching out. We'll get back to you soon.
+                  Thank you for reaching out. We'll get back to you soon.</p>
                 </p>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -140,7 +134,6 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
                       placeholder="Your full name"
                     />
-                  </div>
                   <div>
                     <label className="block text-white font-semibold mb-2">Email *</label>
                     <input
@@ -152,9 +145,6 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
                       placeholder="your.email@company.com"
                     />
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white font-semibold mb-2">Company</label>
@@ -166,7 +156,6 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
                       placeholder="Your company name"
                     />
-                  </div>
                   <div>
                     <label className="block text-white font-semibold mb-2">Phone</label>
                     <input
@@ -177,9 +166,6 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
                       placeholder="+1 (555) 123-4567"
                     />
-                  </div>
-                </div>
-
                 <div>
                   <label className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
@@ -195,8 +181,6 @@ const Contact: React.FC = () => {
                       </option>
                     ))}
                   </select>
-                </div>
-
                 <div>
                   <label className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
@@ -208,16 +192,14 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300 resize-none"
                     placeholder="Tell us about your project and how we can help..."
                   />
-                </div>
-
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
                 >
-                  {isSubmitting ? (
+                  {isSubmitting ? (</button>
                     <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white">
                       <span>Sending...</span>
                     </>
                   ) : (
@@ -229,9 +211,7 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             )}
-        </div>
       </section>
-
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -239,15 +219,11 @@ const Contact: React.FC = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
             <p className="text-gray-300 mb-6">
-              Need immediate assistance? Our 24/7 emergency support team is here to help.
+              Need immediate assistance? Our 24/7 emergency support team is here to help.</p>
             </p>
-        </div>
       </section>
-
           </motion.div>
-        </div>
       </section>
-
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -255,17 +231,15 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-          <divdiv
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We combine cutting-edge technology with proven business strategies to deliver 
-              exceptional results for our clients.
+              exceptional results for our clients.</p>
             </p>
-          </divdiv>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -287,15 +261,9 @@ const Contact: React.FC = () => {
                 <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-white" />
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

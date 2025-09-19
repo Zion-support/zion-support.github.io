@@ -66,29 +66,20 @@ const UltimatePromotionalBanner: React.FC = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className={`absolute inset-0 bg-gradient-to-r ${currentContent.gradient} opacity-90`}></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      </div>
-
+        <div className={`absolute inset-0 bg-gradient-to-r ${currentContent.gradient} opacity-90`}>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30">
             >
-            </div>
-          </div>
-              <div className="text-sm text-blue-100 mb-2">Offer Expires In:</div>
+              <div className="text-sm text-blue-100 mb-2">Offer Expires In:
               <div className="flex justify-center space-x-4 text-2xl font-bold">
                 <div className="bg-white/20 rounded-lg px-3 py-2">
-                  <div className="text-yellow-300">07</div>
-                  <div className="text-xs text-blue-100">Days</div>
-                </div>
+                  <div className="text-yellow-300">07
+                  <div className="text-xs text-blue-100">Days
                 <div className="bg-white/20 rounded-lg px-3 py-2">
-                  <div className="text-yellow-300">23</div>
-                  <div className="text-xs text-blue-100">Hours</div>
-                </div>
+                  <div className="text-yellow-300">23
+                  <div className="text-xs text-blue-100">Hours
                 <div className="bg-white/20 rounded-lg px-3 py-2">
-                  <div className="text-yellow-300">45</div>
-                  <div className="text-xs text-blue-100">Minutes</div>
-                </div>
-              </div>
-            </div>
+                  <div className="text-yellow-300">45
+                  <div className="text-xs text-blue-100">Minutes
               <div className="flex items-center space-x-4">
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -102,12 +93,9 @@ const UltimatePromotionalBanner: React.FC = () => {
                     {currentContent.title}
                   </h3>
                   <p className={`text-lg ${currentContent.textColor} opacity-90`}>
-                    {currentContent.subtitle}
+                    {currentContent.subtitle}</p>
                   </p>
-                </div>
-              </div>
             </motion.div>
-
             {/* Description */}
             <motion.div
               key={`desc-${currentSlide}`}
@@ -117,10 +105,9 @@ const UltimatePromotionalBanner: React.FC = () => {
               className="hidden md:block flex-1 text-center"
             >
               <p className={`text-lg ${currentContent.textColor} opacity-90`}>
-                {currentContent.description}
+                {currentContent.description}</p>
               </p>
             </motion.div>
-
             {/* Actions */}
             <motion.div
               key={`actions-${currentSlide}`}
@@ -144,18 +131,15 @@ const UltimatePromotionalBanner: React.FC = () => {
               >
                 Explore Now →
               </motion.a>
-              
               <button
                 onClick={() => setIsVisible(false)}
                 className={`${currentContent.textColor} opacity-70 hover:opacity-100 transition-opacity`}
-              >
+              ></button>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></p>
                 </svg>
               </button>
             </motion.div>
-          </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-2 mt-4">
             {promotionalContent.map((_, index) => (
@@ -168,11 +152,7 @@ const UltimatePromotionalBanner: React.FC = () => {
                     : 'bg-white/50 hover:bg-white/75'
                 }`}
               />
-            ))}
-          </div>
-        </div>
-      </div>
-
+            ))}</button>
       {/* Animated Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <motion.div
@@ -190,7 +170,6 @@ const UltimatePromotionalBanner: React.FC = () => {
         >
           ⚡
         </motion.div>
-        
         <motion.div
           animate={{ 
             x: [0, -100, 0],
@@ -206,11 +185,7 @@ const UltimatePromotionalBanner: React.FC = () => {
         >
           🚀
         </motion.div>
-      </div>
     </motion.div>
-          </divdiv>
-        </div>
-      </div>
     </divsection>
   );
 }

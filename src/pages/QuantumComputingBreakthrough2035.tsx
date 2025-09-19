@@ -6,8 +6,6 @@ const QuantumComputingBreakthrough2035: React.FC = () => {
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-8">Quantum Computing Breakthrough 2035</h1>
         <p className="text-lg">This page is under construction.</p>
-      </div>
-    </div>
   );
 };
 

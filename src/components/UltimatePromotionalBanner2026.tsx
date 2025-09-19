@@ -114,10 +114,8 @@ const UltimatePromotionalBanner2026: React.FC = () => {
     <div className="relative w-full overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl shadow-2xl border border-white/10 mb-8">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 via-blue-600/30 to-indigo-600/30 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
-      </div>
-
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 via-blue-600/30 to-indigo-600/30 animate-pulse">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse">
       {/* Content */}
       <div className="relative z-10 p-6">
         {/* Header */}
@@ -125,21 +123,15 @@ const UltimatePromotionalBanner2026: React.FC = () => {
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
               <Sparkles className="w-5 h-5 text-white" />
-            </div>
             <div>
               <h2 className="text-lg font-bold text-white">Latest Breakthroughs 2026</h2>
               <p className="text-white/80 text-sm">Revolutionary AI innovations now available</p>
-            </div>
-          </div>
-          
           <button
             onClick={() => setIsVisible(false)}
             className="text-white/60 hover:text-white transition-colors"
-          >
+          ></button>
             <X className="w-5 h-5" />
           </button>
-        </div>
-
         {/* Main Promotional Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -162,27 +154,18 @@ const UltimatePromotionalBanner2026: React.FC = () => {
                   }`}>
                     {current.badge}
                   </span>
-                </div>
-                
                 <p className="text-white/90 text-sm mb-2">{current.description}</p>
-                
                 {/* Stats */}
                 <div className="flex items-center space-x-4 text-sm">
                   <div className="flex items-center space-x-1 text-white/80">
                     <Users className="w-4 h-4" />
                     <span>{current.stats.participants}</span>
-                  </div>
                   <div className="flex items-center space-x-1 text-green-400">
                     <TrendingUp className="w-4 h-4" />
                     <span>{current.stats.success} success</span>
-                  </div>
                   <div className="flex items-center space-x-1 text-yellow-400">
                     <Gift className="w-4 h-4" />
                     <span>Save {current.stats.savings}</span>
-                  </div>
-                </div>
-              </div>
-              
               <div className="ml-4">
                 <Link
                   to={current.link}
@@ -191,22 +174,15 @@ const UltimatePromotionalBanner2026: React.FC = () => {
                   <span>{current.cta}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
-            </div>
-
             {/* Time Left */}
             <div className="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-lg p-3">
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4 text-red-400" />
                 <span className="text-white text-sm">{current.urgency}</span>
-              </div>
               <div className="text-red-400 font-bold text-sm">
                 {formatTime(timeLeft)}
-              </div>
-            </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-2 mt-4">
           {promotions.map((_, index) => (
@@ -219,17 +195,12 @@ const UltimatePromotionalBanner2026: React.FC = () => {
                   : 'bg-white/30 hover:bg-white/50'
               }`}
             />
-          ))}
-        </div>
-      </div>
-
+          ))}</button>
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute top-3/4 left-3/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-40"></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
-      </div>
-    </div>
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-ping opacity-60">
+        <div className="absolute top-3/4 left-3/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-40">
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-bounce opacity-50">
   );
 };
 
