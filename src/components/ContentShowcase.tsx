@@ -321,7 +321,7 @@ const ContentShowcase: React.FC = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webinars.map((webinar, index) => (
-              <divdiv
+              <div
                 key={webinar.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
