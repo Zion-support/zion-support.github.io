@@ -15,8 +15,4 @@ git commit -m "Fix Netlify build configuration and dependencies
 # Push to main branch
 git push origin main
 
-<<<<<<< HEAD
 echo "Changes committed and pushed to main branch successfully!"
-=======
-echo "Changes committed and pushed to main branch successfully!"
->>>>>>> origin/backup-main-20250918-004015
