@@ -1214,7 +1214,7 @@
   resolved "https://registry.yarnpkg.com/@esbuild/linux-x64/-/linux-x64-0.25.9.tgz#831fe0b0e1a80a8b8391224ea2377d5520e1527f"
   integrity sha512-iSwByxzRe48YVkmpbgoxVzn76BXjlYFXC7NvLYq+b+kDjyyk30J0JY47DIn8z1MO3K0oSl9fZoRmZPQI4Hklzg==
 
-"@esbuild/linux-x64@^0.25.10":
+"@esbuild/linux-x64@^0.25.9":
   version "0.25.10"
   resolved "https://registry.yarnpkg.com/@esbuild/linux-x64/-/linux-x64-0.25.10.tgz#9d9b09c0033d17529570ced6d813f98315dfe4e9"
   integrity sha512-QSX81KhFoZGwenVyPoberggdW1nrQZSvfVDAIUXr3WqLRZGZqWk/P4T8p2SP+de2Sr5HPcvjhcJzEiulKgnxtA==
