@@ -1,61 +1,85 @@
 module.exports = {
   apps: [
     {
-      name: "zion-app",
-      script: "npm",
-      args: "start",
-      interpreter: "none",
-      cwd: __dirname,
-      watch: false,
+      name: 'error-monitor',
+      script: 'automation/error-monitor.js',
+      instances: 1,
       autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
+      watch: false,
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: "production",
-        PORT: process.env.PORT || 3000
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/zion-app-error.log",
-      out_file: "automation/logs/zion-app-out.log",
+      error_file: 'automation/logs/error-monitor-error.log',
+      out_file: 'automation/logs/error-monitor-out.log',
+      log_file: 'automation/logs/error-monitor-combined.log',
       time: true
     },
     {
-      name: "zion-auto-sync",
-      script: "automation/pm2-auto-sync.js",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
+      name: 'lint-automation',
+      script: 'automation/lint-automation.js',
+      instances: 1,
       autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
+      watch: false,
+      max_memory_restart: '512M',
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
-        NODE_ENV: "production",
-        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
-        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
-        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
-        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
-        AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/zion-auto-sync-error.log",
-      out_file: "automation/logs/zion-auto-sync-out.log",
+      error_file: 'automation/logs/lint-automation-error.log',
+      out_file: 'automation/logs/lint-automation-out.log',
+      log_file: 'automation/logs/lint-automation-combined.log',
       time: true
     },
     {
-      name: "zion-build-monitor",
-      script: "automation/continuous-build-monitor.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
+      name: 'build-monitor',
+      script: 'automation/build-monitor.cjs',
+      instances: 1,
       autorestart: true,
-      max_restarts: 5,
+      watch: false,
+      max_memory_restart: '1G',
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
       env: {
-        NODE_ENV: "production"
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/build-monitor-error.log",
-      out_file: "automation/logs/build-monitor-out.log",
-      time: true
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log'
+    },
+    {
+      name: 'automation-ci-cd',
+      script: 'node',
+      args: 'automation/ci-cd-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/ci-cd.log',
+      out_file: './logs/ci-cd-out.log',
+      error_file: './logs/ci-cd-error.log'
+    },
+    {
+      name: 'automation-continuous-improvement',
+      script: 'node',
+      args: 'automation/continuous-improvement.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/continuous-improvement.log',
+      out_file: './logs/continuous-improvement-out.log',
+      error_file: './logs/continuous-improvement-error.log'
     }
   ]
 };

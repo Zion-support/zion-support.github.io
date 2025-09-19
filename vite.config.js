@@ -61,8 +61,15 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+<<<<<<< HEAD
   preview: {
     port: 4173,
     open: true,
   }
+=======
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+  },
+>>>>>>> origin/temp-merge-11532
 });
