@@ -107,6 +107,19 @@ function App() {
   // Track page view on mount
   useEffect(() => {
     trackPageView('home');
+    
+    // Track performance metrics
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const perfData = {
+        loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,
+        domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
+        firstPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+      };
+      
+      console.log('Performance Metrics:', perfData);
+      trackFeatureInteraction('performance_metrics', perfData);
+    }
   }, []);
 
   // Add keyboard shortcuts
@@ -137,6 +150,21 @@ function App() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [toggleDarkMode]);
+
+  // Register service worker for PWA capabilities
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration);
+          trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+          trackFeatureInteraction('service_worker_failed', { error: error.message });
+        });
+    }
+  }, []);
 
   // Handle scroll to top button with throttling for performance
   useEffect(() => {

@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { trackError } from '../utils/analytics';
 
 interface Props {
   children: ReactNode;
@@ -33,11 +34,16 @@ class ErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+    
     // Track error for analytics
+    trackError(error, 'ErrorBoundary');
+    
+    // Also track with gtag if available
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.toString(),
-        fatal: false
+        fatal: false,
+        error_info: errorInfo.componentStack
       });
     }
   }
