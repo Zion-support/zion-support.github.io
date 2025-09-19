@@ -1,25 +1,26 @@
 # Deployment Guide
 
-## Production Build
+## Production Build (Vite + React)
 
-1. Build the Next.js website (monorepo subdirectory `zion-website`):
+1. Build the Vite React site from the repository root:
 
 ```bash
-cd zion-website && npm ci --no-audit --no-fund && npm run build
+npm ci --no-audit --no-fund && npm run build
 ```
 
-2. The Netlify Next.js plugin will deploy from the `.next` output automatically.
+2. The build output will be written to the `dist/` directory.
 
 ## Deployment Options
 
 ### Netlify (Recommended)
 
 1. Connect your repository to Netlify
-2. Ensure the site Base directory is `zion-website` (configured in `netlify.toml`)
-3. Build command: `npm ci --no-audit --no-fund && npm run build` (from `zion-website`)
-4. Publish directory: `.next` (handled by `@netlify/plugin-nextjs`)
+2. Base directory: repository root (configured in `netlify.toml`)
+3. Build command: `npm ci --include=optional && npm run build`
+4. Publish directory: `dist`
 5. Environment: Node `20.x` and `NETLIFY_USE_NPM=true` (see `netlify.toml`)
-6. Deploys will trigger automatically on push to `main`
+6. Ensure no Next.js plugin is enabled for this site
+7. Deploys will trigger automatically on push to `main`
 
 ### Vercel
 
