@@ -6,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText } from 'lucide-react';
 import Target from 'lucide-react/dist/esm/icons/target';
 import { Link } from 'react-router-dom';
-=======,
 const microSAASServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'Micro SAAS');
 export default function MicroSAASShowcase() {,
     return (<div className="min-h-screen bg-background">,

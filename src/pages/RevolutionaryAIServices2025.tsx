@@ -76,7 +76,6 @@ const RevolutionaryAIServices2025: React.FC = () => {,
               <li>• Facial recognition</li>,
         {/* Success Stories Section */,}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-20">,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
           <div className="text-center mb-12">,
             <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>,
             <p className="text-xl opacity-90">See how our AI services are transforming businesses worldwide</p>,

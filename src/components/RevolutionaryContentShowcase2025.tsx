@@ -2,7 +2,6 @@
     {,
       id: 1;
       title: "AI Consciousness Revolution 2025";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.";
       image: "🧠";
       gradient: "from-purple-600 to-pink-600";
