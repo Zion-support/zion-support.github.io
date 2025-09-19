@@ -80,10 +80,7 @@
     "src/components-disabled",
     "data_backup/**",
     "src.corrupted/**",
-<<<<<<< HEAD
-=======
     "src/data/**",
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-07aa
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
     "api-backup",
