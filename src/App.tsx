@@ -13,7 +13,7 @@ const performanceObserver = typeof window !== 'undefined' && 'PerformanceObserve
   ? new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.entryType === 'measure') {
-          console.log(`${entry.name}: ${entry.duration}ms`)
+          // Performance measurement logged
         }
       })
     })
@@ -34,7 +34,7 @@ function App() {
   const [animatedCounts, setAnimatedCounts] = useState({ projects: 0, clients: 0, years: 0 })
   const [isLoading, setIsLoading] = useState(true)
   const [isVisible, setIsVisible] = useState(false)
-  const [scrollY, setScrollY] = useState(0)
+  const [, setScrollY] = useState(0)
   const appRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
 
@@ -99,11 +99,11 @@ function App() {
         setAnimatedCounts(prev => ({ ...prev, [key]: current }))
         
         if (progress < 1) {
-          requestAnimationFrame(animate)
+          window.requestAnimationFrame(animate)
         }
       }
       
-      requestAnimationFrame(animate)
+      window.requestAnimationFrame(animate)
     }
 
     // Simulate loading time for better UX
@@ -139,7 +139,7 @@ function App() {
     }
     
     // Analytics tracking (placeholder for real analytics)
-    console.log(`Feature clicked: ${feature.title}`)
+    // Feature click tracked: ${feature.title}
     
     // Navigate to feature page
     window.location.href = feature.link
