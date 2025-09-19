@@ -1,4 +1,23 @@
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram, 
+  Youtube, 
+  ArrowRight, 
+  Star, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Rocket 
+} from 'lucide-react';
+=======
 import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight, Star, Shield, Zap, Brain, Rocket, LucideIcon } from 'lucide-react';
 
 interface FooterLink {
@@ -13,6 +32,7 @@ interface FooterSection {
   description?: string;
   links: FooterLink[];
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-296d
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -37,6 +57,16 @@ export function Footer() {
       icon: Rocket,
       description: "Industry-specific solutions for modern businesses",
       links: [
+<<<<<<< HEAD
+        { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+        { name: "Healthcare Technology", href: "/solutions/healthcare" },
+        { name: "Financial Services", href: "/solutions/financial" },
+        { name: "Manufacturing Intelligence", href: "/solutions/manufacturing" },
+        { name: "Retail Technology", href: "/solutions/retail" },
+        { name: "Government Solutions", href: "/solutions/government" },
+        { name: "Education Technology", href: "/solutions/education" },
+        { name: "Energy Management", href: "/solutions/energy" }
+=======
         { name: "Enterprise Solutions", href: "/solutions/enterprise", description: "Large-scale transformation" },
         { name: "Healthcare Technology", href: "/solutions/healthcare", description: "Medical innovation" },
         { name: "Financial Services", href: "/solutions/financial", description: "Fintech solutions" },
@@ -45,6 +75,7 @@ export function Footer() {
         { name: "Government Solutions", href: "/solutions/government", description: "Public sector innovation" },
         { name: "Education Technology", href: "/solutions/education", description: "Learning innovation" },
         { name: "Energy Management", href: "/solutions/energy", description: "Sustainable energy solutions" }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-296d
       ]
     },
     {
@@ -52,6 +83,16 @@ export function Footer() {
       icon: Zap,
       description: "Cutting-edge technologies for tomorrow's challenges",
       links: [
+<<<<<<< HEAD
+        { name: "Quantum Computing", href: "/emerging-tech" },
+        { name: "Blockchain & DeFi", href: "/emerging-tech" },
+        { name: "IoT & Edge Computing", href: "/emerging-tech" },
+        { name: "Extended Reality (XR)", href: "/emerging-tech" },
+        { name: "5G & Networks", href: "/emerging-tech" },
+        { name: "Green Technology", href: "/emerging-tech" },
+        { name: "Digital Twins", href: "/emerging-tech" },
+        { name: "Neuromorphic Computing", href: "/emerging-tech" }
+=======
         { name: "Quantum Computing", href: "/emerging-tech", description: "Next-generation computing" },
         { name: "Blockchain & DeFi", href: "/emerging-tech", description: "Decentralized finance" },
         { name: "IoT & Edge Computing", href: "/emerging-tech", description: "Connected device management" },
@@ -60,6 +101,7 @@ export function Footer() {
         { name: "Green Technology", href: "/emerging-tech", description: "Sustainable solutions" },
         { name: "Digital Twins", href: "/emerging-tech", description: "Virtual asset replicas" },
         { name: "Neuromorphic Computing", href: "/emerging-tech", description: "Brain-inspired AI" }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-296d
       ]
     },
     {
@@ -178,7 +220,7 @@ export function Footer() {
             <div key={section.title}>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                  <section.icon className="w-4 h-4 text-white" />
+                  {section.icon && <section.icon className="w-4 h-4 text-white" />}
                 </div>
                 <h4 className="text-lg font-semibold text-white">{section.title}</h4>
               </div>
@@ -223,9 +265,7 @@ export function Footer() {
         {/* Newsletter Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-16">
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Tech Trends
-            </h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Stay Updated with Latest Tech Trends</h3>
             <p className="text-zion-slate-light mb-6">
               Get insights on AI, emerging technologies, and industry innovations delivered to your inbox.
             </p>
