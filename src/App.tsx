@@ -91,10 +91,15 @@ const App: React.FC = () => {
           <Route path="/" element={
             <div className="space-y-0">
               {/* Hero Section */}
-              <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-                <div className="container mx-auto px-4 text-center">
-                  <h1 className="text-5xl font-bold mb-6">Revolutionary AI Solutions</h1>
-                  <p className="text-xl mb-8">Transform your business with cutting-edge technology</p>
+              <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+                <div className="absolute inset-0 bg-black opacity-20"></div>
+                <div className="container mx-auto px-4 text-center relative z-10">
+                  <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Revolutionary AI Solutions
+                  </h1>
+                  <p className="text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                    Transform your business with cutting-edge AI, blockchain, and quantum technologies that drive innovation and growth
+                  </p>
                   <button 
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2"
                     onClick={() => {
@@ -107,6 +112,43 @@ const App: React.FC = () => {
                   </button>
                 </div>
               </div>
+
+              {/* Features Section */}
+              <section className="py-16 bg-white dark:bg-gray-900">
+                <div className="container mx-auto px-4">
+                  <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                      Why Choose Zion Tech Group?
+                    </h2>
+                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                      We deliver cutting-edge solutions that transform businesses and drive innovation
+                    </p>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900 dark:to-indigo-900">
+                      <div className="text-4xl mb-4">🤖</div>
+                      <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">AI-Powered Solutions</h3>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        Advanced artificial intelligence that automates processes and enhances decision-making
+                      </p>
+                    </div>
+                    <div className="text-center p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900 dark:to-pink-900">
+                      <div className="text-4xl mb-4">⚡</div>
+                      <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Lightning Fast</h3>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        Optimized performance and real-time processing for maximum efficiency
+                      </p>
+                    </div>
+                    <div className="text-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-teal-100 dark:from-green-900 dark:to-teal-900">
+                      <div className="text-4xl mb-4">🔒</div>
+                      <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Enterprise Security</h3>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        Bank-level security and compliance for your most sensitive data
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
               {/* Revolutionary Content Banner 2026 */}
               <div className="mb-12">
