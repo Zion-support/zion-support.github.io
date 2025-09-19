@@ -144,7 +144,7 @@ function App() {
     
     const handleScroll = () => {
       if (!ticking) {
-        requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
           setShowScrollToTop(window.scrollY > 300);
           ticking = false;
         });
