@@ -11,7 +11,6 @@ function toast(options: ToastOptions) {,
   const variant = options.variant || 'default';
   // For now, just log to console to avoid build errors,
   // In production, this could be replaced with a proper toast library,
-  console.log(`[${variant.toUpperCase()}] ${message}`);
   // You can implement a proper toast UI here later,
   // For example, using a simple div that appears and disappears,
 }

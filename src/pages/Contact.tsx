@@ -13,7 +13,6 @@ const ContactPage: React.FC = () => {,
   };
   const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault();
-    console.log('Form submitted:', formData);
     // Handle form submission here,
   return (,
     <div className="min-h-screen bg-gray-50 py-12">,

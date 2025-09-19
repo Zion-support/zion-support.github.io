@@ -9,7 +9,7 @@ interface AnalyticsData {,
   trafficSources: Array<{ source: string, percentage: number ,}>;
   deviceTypes: Array<{ device: string, percentage: number ,}>;
   realTimeUsers: number,}
-export default function AnalyticsDashboard() {,
+export default React.memo(function AnalyticsDashboard() {,
   const [analytics, setAnalytics] = useState<AnalyticsData>({,
     pageViews: 0;
     uniqueVisitors: 0;

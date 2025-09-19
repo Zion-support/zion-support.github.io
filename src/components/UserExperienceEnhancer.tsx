@@ -13,7 +13,7 @@ interface UserExperienceMetrics {,
   bounceRate: number;
   conversionRate: number;
   userSatisfaction: number;
-export default function UserExperienceEnhancer() {,
+export default React.memo(function UserExperienceEnhancer() {,
   const [feedback, setFeedback] = useState<UserFeedback>({,
     likes: 0;
     rating: 0;

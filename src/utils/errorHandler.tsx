@@ -269,13 +269,11 @@ class ErrorHandler {,
   // Reload failed resource,
   private reloadFailedResource(report: ErrorReport): void {;
     // Implementation for reloading failed resources,
-    console.log('Attempting to reload failed resource:', report.message);
   }
 ,
   // Retry failed requests,
   private retryFailedRequests(): void {,
     // Implementation for retrying failed network requests,
-    console.log('Retrying failed network requests');
   }
 ,
   // Clear cache and reload,
@@ -343,7 +341,6 @@ class ErrorHandler {,
       }
 ,
       localStorage.removeItem('queuedErrors');
-      console.log(`Sent ${queued.length} queued error reports`);
     } catch (error) {,
       console.warn('Failed to send queued errors:', error);
     }

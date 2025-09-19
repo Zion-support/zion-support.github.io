@@ -3,11 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zion Tech Group</title>
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="description" content="Zion Tech Group - Advanced technology solutions including AI, blockchain, and cloud services" />
+    <meta name="keywords" content="technology, AI, blockchain, cloud, cybersecurity, quantum computing" />
+    <meta name="author" content="Zion Tech Group" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="og:description" content="Advanced technology solutions including AI, blockchain, and cloud services" />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="twitter:description" content="Advanced technology solutions including AI, blockchain, and cloud services" />
+    <meta property="twitter:image" content="/og-image.jpg" />
+    
+    <title>Zion Tech Group - Technology Solutions</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

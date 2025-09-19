@@ -35,7 +35,6 @@ export default function AccountSettings() {,
         setTimeout(() => {,
             try {,
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully');
             catch (e) {,
                 console.error('Failed to save settings', e);

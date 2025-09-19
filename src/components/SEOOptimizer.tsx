@@ -10,7 +10,7 @@ interface SEOProps {,
   twitterCard?: string;
   structuredData?: object;
 }
-export default function SEOOptimizer({,
+export default React.memo(function SEOOptimizer({,
   title = "Zion Tech Group - Revolutionary AI & Technology Solutions";
   description = "Leading provider of AI-powered solutions, cloud infrastructure, cybersecurity, and digital transformation services. 200+ Micro SaaS services with 99.99% uptime guarantee.";
   keywords = "AI solutions, cloud infrastructure, cybersecurity, digital transformation, micro saas, technology consulting, artificial intelligence, machine learning";

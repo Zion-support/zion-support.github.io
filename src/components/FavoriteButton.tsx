@@ -5,7 +5,6 @@ export function FavoriteButton({ itemId, itemType }) {,
   const toggleFavorite = () => {,
     setIsFavorited(!isFavorited);
     // Here you would typically make an API call to save/remove the favorite,
-    console.log(`${isFavorited ? 'Removed from' : 'Added to'} favorites:`, { itemId, itemType });
   };
   return (,
     <button,

@@ -46,6 +46,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="error-boundary" role="alert">
           <h2>Something went wrong</h2>
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+
           <button 
             onClick={() => window.location.reload()}
             className="btn-primary"

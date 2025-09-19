@@ -6,7 +6,6 @@ export const initGA = () => {,
   };
   const doNotTrack = navigator.doNotTrack;
   if (doNotTrack === "1" || doNotTrack === "yes") {,
-    console.log("Do Not Track is enabled. GA4 initialization skipped.");
     return;
   };
   // Initialize GA4,
