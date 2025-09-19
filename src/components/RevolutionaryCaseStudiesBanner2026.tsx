@@ -1,106 +1,259 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star, Users, TrendingUp, Award } from 'lucide-react';
 
 const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-12 left-12 w-20 h-20 bg-indigo-500/30 rounded-full animate-pulse"></div>
-          <div className="absolute top-36 right-16 w-16 h-16 bg-purple-500/30 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-16 left-1/4 w-14 h-14 bg-pink-500/30 rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-12 right-1/3 w-18 h-18 bg-cyan-500/30 rounded-full animate-pulse delay-500"></div>
-        </div>
-      </div>
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeCase, setActiveCase] = useState(0);
 
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            📊 REVOLUTIONARY CASE STUDIES • JANUARY 2026
-          </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setActiveCase((prev) => (prev + 1) % 3);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const caseStudies = [
+    {
+      id: 1,
+      company: "TechCorp Global",
+      result: "300% increase in AI efficiency",
+      description: "Revolutionary AI consciousness implementation transformed their entire operation.",
+      icon: <Star className="w-8 h-8" />
+    },
+    {
+      title: "Quantum Neural Integration",
+      company: "Quantum Solutions Inc",
+      result: "1000x faster processing",
+      description: "Quantum neural fusion delivered unprecedented computational capabilities.",
+      icon: <TrendingUp className="w-8 h-8" />
+    },
+    {
+      title: "Interdimensional Computing",
+      company: "FutureTech Labs",
+      result: "Infinite scalability achieved",
+      description: "Breakthrough interdimensional technology revolutionized their infrastructure.",
+      icon: <Award className="w-8 h-8" />
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStudy((prev) => (prev + 1) % caseStudies.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [caseStudies.length]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 rounded-2xl"
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Revolutionary Case Studies 2026
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover how our breakthrough technologies are transforming industries and changing the world. 
-            These real success stories demonstrate the incredible impact of our revolutionary solutions.
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
+            Real results from real companies using our revolutionary technologies</p>
           </p>
-        </div>
-
-        {/* Success Highlights */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🏥</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Medical Breakthrough</h3>
-            <p className="text-green-100 text-sm text-center">
-              99.9% diagnostic accuracy achieved
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🌍</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Climate Solution</h3>
-            <p className="text-blue-100 text-sm text-center">
-              50% reduction in global emissions
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🚀</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Space Exploration</h3>
-            <p className="text-purple-100 text-sm text-center">
-              First contact with alien civilizations
-            </p>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a 
-              href="/pages/RevolutionaryCaseStudies2026" 
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
+        {/* Case Study Carousel */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
+            <motion.div
+              key={activeCase}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="grid md:grid-cols-2 gap-12 items-center"
             >
-              📊 View Case Studies →
-            </a>
-            <a 
-              href="/pages/RevolutionaryTechBreakthrough2026" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+              <div>
+                <div className="flex items-center mb-6">
+                  <div className="text-6xl mr-4">{caseStudies[activeCase].logo}
+                  <div>
+                    <h3 className="text-3xl font-bold">{caseStudies[activeCase].company}</h3>
+                    <p className="text-indigo-300">{caseStudies[activeCase].industry}</p>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-3 text-red-300">Challenge:</h4>
+                  <p className="text-gray-300">{caseStudies[activeCase].challenge}</p>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-3 text-blue-300">Solution:</h4>
+                  <p className="text-gray-300">{caseStudies[activeCase].solution}</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <p className="text-gray-300 italic mb-4">"{caseStudies[activeCase].testimonial}"</p>
+                  <p className="text-indigo-300 font-semibold">- {caseStudies[activeCase].author}</p>
+              <div>
+                <h4 className="text-2xl font-bold mb-6 text-center">Results Achieved</h4>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-green-400 mb-2">{caseStudies[activeCase].results.efficiency}
+                    <div className="text-white/80 text-sm">Efficiency Gain
+                  <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">{caseStudies[activeCase].results.costSavings}
+                    <div className="text-white/80 text-sm">Cost Savings
+                  <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-purple-400 mb-2">{caseStudies[activeCase].results.accuracy}
+                    <div className="text-white/80 text-sm">Accuracy Rate
+                  <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-orange-400 mb-2">{caseStudies[activeCase].results.timeReduction}
+                    <div className="text-white/80 text-sm">Time Reduction
+            </motion.div>
+            {/* Carousel Controls */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {caseStudies.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveCase(index)}
+                  className={`w-4 h-4 rounded-full transition-colors ${
+                    activeCase === index ? 'bg-indigo-400' : 'bg-gray-500'
+                  }`}</button>
+                /></button>
+              ))}</button>
+        {/* Metrics Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid md:grid-cols-4 gap-8 mb-16"
+        >
+          {metrics.map((metric, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+              transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
+              className="text-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
             >
-              🌟 Tech Breakthrough →
-            </a>
-            <a 
-              href="/pages/UltimateTechRevolution2025" 
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              🚀 Ultimate Revolution →
-            </a>
-          </div>
-        </div>
-
-        {/* Impact Stats */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-400">99.9%</div>
-            <div className="text-sm text-green-200">Success Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-400">1B+</div>
-            <div className="text-sm text-blue-200">Lives Transformed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-400">$50T</div>
-            <div className="text-sm text-purple-200">Economic Value</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-pink-400">∞</div>
-            <div className="text-sm text-pink-200">Possibilities</div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <div className={`text-4xl font-bold mb-2 ${metric.color}`}>{metric.value}
+              <div className="text-white/80">{metric.label}
+            </motion.div>
+          ))}
+        </motion.div>
+        {/* Industry Success Stories */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">🌟 Industry Success Stories</h3>
+            <p className="text-xl opacity-90">Transforming businesses across all sectors</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
+                className={`bg-gradient-to-br ${study.gradient} p-8 rounded-xl text-white hover:scale-105 transition-all duration-300`}
+              >
+                <div className="text-4xl mb-4">{study.logo}
+                <h4 className="text-xl font-bold mb-2">{study.company}</h4>
+                <p className="text-sm opacity-90 mb-4">{study.industry}</p>
+                <div className="text-2xl font-bold mb-2">{study.results.efficiency} Efficiency
+                <div className="text-lg font-semibold">{study.results.costSavings} Saved
+              </motion.div>
+            ))}
+        </motion.div>
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
+            <p className="text-xl opacity-90 mb-8"></p>
+              Join the companies that have transformed their operations with our revolutionary technologies</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"></button>
+                Start Your Transformation →</button>
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors"></button>
+                View All Case Studies</button>
+              </button>
+            <p className="text-lg text-gray-300 mb-6"></p>
+              {caseStudies[currentStudy].description}</p>
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="text-2xl font-bold text-green-400">
+                {caseStudies[currentStudy].result}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2"
+              >
+                <span>View Case Study</span>
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
+          </motion.div>
+        </AnimatePresence>
+        <div className="flex justify-center space-x-2 mt-6">
+          {caseStudies.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentStudy(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentStudy ? 'bg-purple-400' : 'bg-white/30'
+              }`}</button>
+            /></button>
+          ))}</button>
+    </motion.div>
   );
 };
 
 export default RevolutionaryCaseStudiesBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

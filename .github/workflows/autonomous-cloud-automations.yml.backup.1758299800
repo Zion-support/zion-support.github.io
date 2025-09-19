@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+name: Autonomous Cloud Automations
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+=======
+name: autonomous-cloud-automations
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */2 * * *
+permissions:
+  contents: write
+  actions: read
+>>>>>>> origin/pm2-automation-fixes
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+<<<<<<< HEAD
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+=======
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
+
+  run-automations:
+      - name: Checkout
+        uses: actions/checkout@v4
+          persist-credentials: true
+      - name: Setup Node
+>>>>>>> origin/pm2-automation-fixes
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+<<<<<<< HEAD
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+=======
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      
+      - name: Clean git state
+        run: |
+          echo "Workflow completed successfully"
+          
+>>>>>>> origin/pm2-automation-fixes

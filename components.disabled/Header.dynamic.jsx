@@ -1,5 +1,5 @@
-const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,'
-</p>'
-</p>'
-</p>'
-</p>'
+const Header = dynamic(() => import("./Header"),{', "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,',
+</p>',
+</p>',
+</p>',
+</p>',

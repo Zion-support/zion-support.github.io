@@ -1,78 +1,72 @@
 import Link from 'next/link';
-
-export const metadata = {
-  title: 'AI 2026: Agent Platform Readiness Checklist',
+export const metadata = {,
+  title: 'AI 2026: Agent Platform Readiness Checklist';
   description: 'A pragmatic, eval-first checklist to prepare your agent platform for safe, reliable, cost-aware operations in production.',
 };
-
-export default function AgentPlatformReadinessChecklist() {
-  return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-50 to-cyan-50 border-b border-emerald-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <p className="text-sm font-semibold text-emerald-700">Guide • 2026</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Agent Platform Readiness Checklist</h1>
-          <p className="text-gray-700 mt-3 max-w-2xl">Ship safer autonomy with evaluation gates, policy‑as‑code, and a tight SLO set across safety, quality, reliability, and cost.</p>
-          <div className="mt-5 flex gap-3">
-            <Link href="/blog/ai-2026-agent-platform-readiness-checklist" className="inline-block bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-emerald-700">Read Announcement</Link>
-            <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-emerald-50">Related: Agent SLOs</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">What this checklist covers</h2>
-          <ul className="list-disc ml-6 text-gray-700 space-y-2">
-            <li>Evaluation harnesses wired into CI/CD with offline and live gates</li>
-            <li>Risk‑tiered tool use with policy‑as‑code and isolation domains</li>
-            <li>Observability: request/trace logs, eval IDs, and redaction policy</li>
-            <li>SLOs: safety, quality, latency/reliability, cost and capacity</li>
-            <li>Change management: approvals, rollouts, incident and post‑incident SOP</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Quick readiness checklist</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="font-semibold text-gray-900 mb-2">Evaluation‑first delivery</h3>
-              <ul className="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Scenario suites cover critical user journeys</li>
-                <li>Guardrail tests block regressions</li>
-                <li>Live eval canary on real traffic</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="font-semibold text-gray-900 mb-2">Policy‑as‑code</h3>
-              <ul className="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Executable policies gate high‑risk operations</li>
-                <li>Versioned, auditable control changes</li>
-                <li>Least‑privilege tooling permissions</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="font-semibold text-gray-900 mb-2">Observability</h3>
-              <ul className="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Traceable runs with eval IDs</li>
-                <li>Prompt/version provenance and diffs</li>
-                <li>Redaction/retention policy enforced</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-              <h3 className="font-semibold text-gray-900 mb-2">SLOs and costs</h3>
-              <ul className="list-disc ml-6 text-gray-700 space-y-1">
-                <li>Clear SLOs with dashboards and alerts</li>
-                <li>Cost per task and budget guardrails</li>
-                <li>Capacity plans for peak demand</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-10">
-            <Link href="/content/ai-2026-agent-platform-operations" className="text-purple-700 font-semibold hover:text-purple-900">Next: Agent Platform Operations →</Link>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-
+export default function AgentPlatformReadinessChecklist() {,
+  return (,
+    <main className="min-h-screen bg-white">,
+      <section className="bg-gradient-to-r from-emerald-50 to-cyan-50 border-b border-emerald-100">,
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-10">,
+          <p className="text-sm font-semibold text-emerald-700">Guide • 2026</p>,
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Agent Platform Readiness Checklist</h1>,
+          <p className="text-gray-700 mt-3 max-w-2xl">Ship safer autonomy with evaluation gates, policy‑as‑code, and a tight SLO set across safety, quality, reliability, and cost.</p>,
+          <div className="mt-5 flex gap-3">,
+            <Link href="/blog/ai-2026-agent-platform-readiness-checklist" className="inline-block bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-semibold hover: bg-emerald-700">Read Announcement</Link>,
+            <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-emerald-50">Related: Agent SLOs</Link>,
+          </div>,
+        </div>,
+      </section>,
+      <section className="py-12">,
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">,
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">What this checklist covers</h2>,
+          <ul className="list-disc ml-6 text-gray-700 space-y-2">,
+            <li>Evaluation harnesses wired into CI/CD with offline and live gates</li>,
+            <li>Risk‑tiered tool use with policy‑as‑code and isolation domains</li>,
+            <li>Observability: request/trace logs, eval IDs, and redaction policy</li>,
+            <li>SLOs: safety, quality, latency/reliability, cost and capacity</li>,
+            <li>Change management: approvals, rollouts, incident and post‑incident SOP</li>,
+          </ul>,
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Quick readiness checklist</h2>,
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">,
+              <h3 className="font-semibold text-gray-900 mb-2">Evaluation‑first delivery</h3>,
+              <ul className="list-disc ml-6 text-gray-700 space-y-1">,
+                <li>Scenario suites cover critical user journeys</li>,
+                <li>Guardrail tests block regressions</li>,
+                <li>Live eval canary on real traffic</li>,
+              </ul>,
+            </div>,
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">,
+              <h3 className="font-semibold text-gray-900 mb-2">Policy‑as‑code</h3>,
+              <ul className="list-disc ml-6 text-gray-700 space-y-1">,
+                <li>Executable policies gate high‑risk operations</li>,
+                <li>Versioned, auditable control changes</li>,
+                <li>Least‑privilege tooling permissions</li>,
+              </ul>,
+            </div>,
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">,
+              <h3 className="font-semibold text-gray-900 mb-2">Observability</h3>,
+              <ul className="list-disc ml-6 text-gray-700 space-y-1">,
+                <li>Traceable runs with eval IDs</li>,
+                <li>Prompt/version provenance and diffs</li>,
+                <li>Redaction/retention policy enforced</li>,
+              </ul>,
+            </div>,
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">,
+              <h3 className="font-semibold text-gray-900 mb-2">SLOs and costs</h3>,
+              <ul className="list-disc ml-6 text-gray-700 space-y-1">,
+                <li>Clear SLOs with dashboards and alerts</li>,
+                <li>Cost per task and budget guardrails</li>,
+                <li>Capacity plans for peak demand</li>,
+              </ul>,
+            </div>,
+          </div>,
+          <div className="mt-10">,
+            <Link href="/content/ai-2026-agent-platform-operations" className="text-purple-700 font-semibold hover: text-purple-900">Next: Agent Platform Operations →</Link>,
+          </div>,
+        </div>,
+      </section>,
+    </main>,
+  ),}
+,

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
+import { useState, useEffect, useCallback } from 'react', // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {};
   return null}
@@ -6,20 +6,18 @@ export default function Page() {};
       // Consider if a case where userType is none of these should fetch all or none;
       const { data, "error": fetchError } = await query;
       if(fetchError) throw fetchError;
-
-      const transformedData = data && data.map(("project": unknown) => ({}} : undefined,
-
+      const transformedData = data && data.map(("project": unknown) => ({}} : undefined;
         // client_profile is already in the correct shape from select}));
       setProjects(transformedData as Project[]);
       setError(null)} catch("err": unknown) {}} finally {}}
-  }, [user]); // user is a dependency of fetchProjects;
+  }, [user]), // user is a dependency of fetchProjects;
   const getProjectById = async("projectId": string): Promise<Project | null> => {};
       const { data, error } = await supabase;
         .from("projects");
         .select(";
-          *,
-          "job": jobs(title, description),
-          "talent_profile": profiles!talent_id(display_name:display_name, "professional_title": bio, "profile_picture_url": avatar_url),
+          *;
+          "job": jobs(title, description);
+          "talent_profile": profiles!talent_id(display_name:display_name, "professional_title": bio, "profile_picture_url": avatar_url);
           "client_profile": profiles!client_id(display_name, avatar_url);
         ");
         .eq("id", projectId);
@@ -36,18 +34,12 @@ export default function Page() {};
         .eq("id", projectId);
       if(error) throw error;
       setProjects(prev => ;
-
         prev && prev.map(project => project && project.id === projectId ? { ...project, status } : project);
       );
       toast && toast.success(`Project status updated to ${status}`);
-
       return true} catch("err": unknown) {}}
   };
   useEffect(() => {;
   // "TODO": Add dependencies if needed}, []);
     if(user) {}} else {}}
-  }, [user, fetchProjects]); // Added fetchProjects;
-
-
-
-
+  }, [user, fetchProjects]), // Added fetchProjects;

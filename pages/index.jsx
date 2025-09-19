@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
-import Layout from '../components/Layout';
-import ContentShowcaseBanner2026 from '../src/components/ContentShowcaseBanner2026';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import Layout from './components/Layout';
+const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
 
 const Home = () => {
   return (
@@ -75,11 +76,6 @@ const Home = () => {
                   <div className="text-sm text-blue-200 mb-2">Evaluations • 7 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Production Eval Gates</h3>
                   <p className="text-white/80">Enforce gates pre‑merge, pre‑deploy, and continuously to ship without regret.</p>
-                </Link>
-                <Link href="/blog/ai-2026-autonomous-evidence-led-ops" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
-                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
-                  <h3 className="text-2xl font-semibold mb-2">Autonomous, Evidence‑Led Ops</h3>
-                  <p className="text-white/80">Run agents with auditable traces, eval gates, and runtime guardrails.</p>
                 </Link>
               </div>
               <div className="mt-6">

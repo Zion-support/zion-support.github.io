@@ -1,83 +1,68 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node,
 const fs = require('fs');
 const path = require('path');
-
-// List of specific pages that were identified as corrupted
-const corruptedPages = [
-  'pages/403.tsx',
-  'pages/ProductsList.tsx',
-  'pages/faq.tsx',
-  'pages/order-success.tsx',
-  'pages/thank-you.tsx',
-  'pages/gpt-library.tsx',
-  'pages/order-confirmation/[orderId].tsx',
-  'pages/governance/zgp-library.tsx',
-  'pages/governance/create.tsx',
-  'pages/governance/my-votes.tsx',
-  'pages/governance/[proposalId].tsx'
+// List of specific pages that were identified as corrupted,
+const corruptedPages = [,
+  'pages/403.tsxpages/ProductsList.tsx';
+  'pages/faq.tsxpages/order-success.tsx';
+  'pages/thank-you.tsxpages/gpt-library.tsx';
+  'pages/order-confirmation/[orderId].tsxpages/governance/zgp-library.tsx';
+  'pages/governance/create.tsxpages/governance/my-votes.tsx';
+  'pages/governance/[proposalId].tsx',
 ];
-
-// Function to find the best backup file for a given page
-function findBestBackup(pagePath) {
+// Function to find the best backup file for a given page,
+function findBestBackup(pagePath) {,
   const dir = path.dirname(pagePath);
   const baseName = path.basename(pagePath, path.extname(pagePath));
   const ext = path.extname(pagePath);
-  
-  // Look for backup files
+  // Look for backup files,
   const backupPattern = new RegExp(`^${baseName}\\.tsx\\.backup\\.\\d+$`);
   const files = fs.readdirSync(dir).filter(file => backupPattern.test(file));
-  
   if (files.length === 0) return null;
-  
-  // Sort by timestamp (newest first) and find the first valid one
-  files.sort((a, b) => {
+  // Sort by timestamp (newest first) and find the first valid one,
+  files.sort((a, b) => {,
     const timestampA = parseInt(a.match(/\.backup\.(\d+)$/)[1]);
     const timestampB = parseInt(b.match(/\.backup\.(\d+)$/)[1]);
     return timestampB - timestampA;
   });
-  
-  for (const backupFile of files) {
+  for (const backupFile of files) {,
     const backupPath = path.join(dir, backupFile);
-    try {
+    try {,
       const content = fs.readFileSync(backupPath, 'utf8');
-      
-      // Check if this backup has proper content
-      if (content.includes('export default') && 
-          (content.includes('function') || content.includes('const') || content.includes('class')) &&
-          content.includes('return') &&
-          content.length > 100) {
+      // Check if this backup has proper content,
+      if (content.includes('export default') &&,
+          (content.includes('function') || content.includes('const') || content.includes('class')) &&,
+          content.includes('return') &&,
+          content.length > 100) {,
         return backupPath;
       }
-    } catch (error) {
+    } catch (error) {,
       console.log(`Error reading backup ${backupPath}:`, error.message);
     }
   }
-  
+,
   return null;
 }
-
-// Function to restore a corrupted page
-function restorePage(pagePath) {
-  try {
+,
+// Function to restore a corrupted page,
+function restorePage(pagePath) {,
+  try {,
     const currentContent = fs.readFileSync(pagePath, 'utf8');
-    
-    // Check if the page is corrupted
-    const isCorrupted = !currentContent.includes('export default') || 
-                        currentContent.length < 100 ||
+    // Check if the page is corrupted,
+    const isCorrupted = !currentContent.includes('export default') ||,
+                        currentContent.length < 100 ||,
                         !currentContent.includes('return');
-    
-    if (!isCorrupted) {
-      return { restored: false, reason: 'Page is not corrupted' };
+    if (!isCorrupted) {,
+      return { restored: false, reason: 'Page is not corrupted' ,};
     }
-    
-    // Find backup
+,
+    // Find backup,
     const backupPath = findBestBackup(pagePath);
-    if (!backupPath) {
-      return { restored: false, reason: 'No valid backup found' };
+    if (!backupPath) {,
+      return { restored: false, reason: 'No valid backup found' ,};
     }
-    
-    // Read backup content
+,
+    // Read backup content,
     let backupContent = fs.readFileSync(backupPath, 'utf8');
-    
-    // Handle merge conflicts by taking the content after the conflict markers
+    // Handle merge conflicts by taking the content after the conflict markers,
+}}

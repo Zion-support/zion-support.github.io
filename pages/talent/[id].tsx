@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
-=======
-import { useParams, useNavigate } from 'react-router-dom';
->>>>>>> f3114b5ec6e0762a89ac302f1e1c77234f5ec6df
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -13,12 +9,7 @@ interface TalentProfileWithSocial extends TalentProfileType {
 }
 
 const TalentProfilePage: React.FC = () => {
-<<<<<<< HEAD
-  const { id } = useParams() as { id?: string };
-=======
   const { id } = useParams();
-  const navigate = useNavigate();
->>>>>>> f3114b5ec6e0762a89ac302f1e1c77234f5ec6df
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +42,7 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ProfileErrorState error={error} />;
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

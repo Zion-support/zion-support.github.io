@@ -1,33 +1,24 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node,
 import fs from 'fs';
-
-// Read the App.tsx file
+// Read the App.tsx file,
 const appPath = './src/App.tsx';
 let content = fs.readFileSync(appPath, 'utf8');
-
-// List of problematic components to comment out
-const problematicComponents = [
-  'InterdimensionalTechShowcase2027',
-  'OmniversalTechShowcase2029',
-  'AbsoluteTechShowcase2031',
-  'NewContentShowcase2026',
-  'UltimateContentShowcase2026',
-  'TranscendentTechnologyShowcase2028'
+// List of problematic components to comment out,
+const problematicComponents = [,
+  'InterdimensionalTechShowcase2027OmniversalTechShowcase2029';
+  'AbsoluteTechShowcase2031NewContentShowcase2026';
+  'UltimateContentShowcase2026TranscendentTechnologyShowcase2028',
 ];
-
-// Comment out imports
-problematicComponents.forEach(component => {
-  const importRegex = new RegExp(`import ${component} from '[^']+';`, 'g');
-  content = content.replace(importRegex, `// import ${component} from './components/${component}';`);
+// Comment out imports,
+problematicComponents.forEach(component => {,
+  const importRegex = new RegExp(`import ${component} from '[^']+',`, 'g');
+  content = content.replace(importRegex, `// import ${component} from './components/${component}',`);
 });
-
-// Comment out component usage
-problematicComponents.forEach(component => {
+// Comment out component usage,
+problematicComponents.forEach(component => {,
   const usageRegex = new RegExp(`<${component}[^>]*\\s*/>`, 'g');
   content = content.replace(usageRegex, `{/* <${component} /> */}`);
 });
-
-// Write the modified content back
+// Write the modified content back,
 fs.writeFileSync(appPath, content);
 console.log('Commented out problematic components');

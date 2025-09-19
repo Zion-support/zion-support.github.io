@@ -1,5 +1,4 @@
-    </div>
+    </div>,
   );
 };
-
 export default Services;

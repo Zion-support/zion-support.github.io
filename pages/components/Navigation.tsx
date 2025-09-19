@@ -1,15 +1,6 @@
-import React from 'react';
+import React from 'react',
 
-interface NavigationProps {
-  children?: React.ReactNode;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ children }) => {
-  return (
-    <div>
-      {children}
-    </div>
-  );
+const Navigation: React.FC<NavigationProps> = ({ children ,}) => {,
+  return ();
 };
-
 export default Navigation;

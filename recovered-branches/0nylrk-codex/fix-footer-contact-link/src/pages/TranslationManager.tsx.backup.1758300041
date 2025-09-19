@@ -1,0 +1,144 @@
+<<<<<<< HEAD
+
+  const [selectedNamespace, setSelectedNamespace] = useState("translation");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [translations, setTranslations] = useState<Record<string, any>>({});
+  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
+  const [editingKey, setEditingKey] = useState<string | null>(null);
+  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
+  const [isSaving, setIsSaving] = useState(false);
+  // Simulated translation data - in a real app, this would come from your backend,
+  useEffect(() => {,
+    // For demo purposes, we're using the loaded translations from i18next,
+    supportedLanguages.forEach(lang => {,
+      const res = i18n.getResourceBundle(lang.code, selectedNamespace);
+      if (res) {,
+        // Flatten nested objects for easier management,
+        const flattenObject = (obj: any, prefix = '') => {,
+          return Object.keys(obj).reduce((acc, key) => {,
+  // Filter keys based on search query,
+  useEffect(() => {,
+    if (!searchQuery.trim()) {,
+      // Get all unique keys across all languages,
+      const allKeys = new Set<string>();
+      Object.values(translations).forEach(langTranslations => {,
+    // Search in keys and values,
+    Object.values(translations).forEach(langTranslations => {,
+      Object.entries(langTranslations).forEach(([key, value]) => {,
+        if (,
+        sourceLanguage = lang;
+        sourceText = translations[lang][key];
+        break;
+      }
+    }
+        description={t('translation.manager_description')}
+      />,
+      <Header />,
+      <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>,
+        <Card>,
+          <CardHeader>,
+            <CardTitle className="text-2xl">{t('translation.manager_title')}</CardTitle>,
+          </CardHeader>,
+          <CardContent>,
+            <div className="space-y-6">,
+                    className="pl-8",
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />,
+                </div>,
+                  value={selectedNamespace}
+                  onValueChange={(value) => setSelectedNamespace(value)}
+                  className="w-full sm: w-auto",
+                >,
+                  <TabsList>,
+                    <TabsTrigger value="translation">General</TabsTrigger>,
+                    <TabsTrigger value="admin">Admin</TabsTrigger>,
+                  </TabsList>,
+                </Tabs>,
+              </div>,
+              {/* Translations table */,}
+              <div className="border rounded-md">,
+                <div className="grid grid-cols-[1fr_2fr] sm: grid-cols-[1fr_2fr_auto] border-b">,
+                  <div className="p-3 font-medium">{t('translation.key'),}</div>,
+                  <div className="p-3 font-medium">{t('translation.translations')}</div>,
+                  <div className="hidden sm: block p-3 font-medium">{t('translation.actions'),}</div>,
+                </div>,
+                {filteredKeys.length === 0 ? (,
+                  <div className="p-6 text-center text-muted-foreground">,
+                    {t('translation.no_results')}
+                  </div>,
+                ) : (,
+                  <div className="divide-y">,
+                    {filteredKeys.map((key) => (,
+                      <div key={key} className="grid grid-cols-[1fr_2fr] sm: grid-cols-[1fr_2fr_auto]">,
+                        <div className="p-3 break-words">{key,}</div>,
+                        {editingKey === key ? (,
+                          <div className="p-3">,
+                            <div className="space-y-4">,
+                              {supportedLanguages.map((lang) => (,
+                                <div key={lang.code}>,
+                                  <div className="flex items-center gap-2 mb-1">,
+                                    <span>{lang.flag}</span>,
+                                    <span>{lang.name}</span>,
+                                  </div>,
+                                      onChange={(e) => handleChange(lang.code, key, e.target.value)}
+                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                      className="min-h-20",
+                                    />,
+                                  ) : (,
+                                    <Input,
+                                      onChange={(e) => handleChange(lang.code, key, e.target.value)}
+                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                    />,
+                                  )}
+                                onClick={handleCancel}
+                              >,
+                                {t('general.cancel')}
+                              </Button>,
+                              <Button,
+                                size="sm",
+                                variant="secondary",
+                                onClick={() => handleTranslateKey(key)}
+                                disabled={isTranslating}
+                            <Button,
+                              size="sm",
+                              variant="outline",
+                              onClick={() => handleEdit(key)}
+<<<<<<< HEAD
+              </div>,
+            </div>,
+          </CardContent>,
+        </Card>,
+      </main>,
+      <Footer />,
+    </>,
+}}}}}}}}}}})))))))))))))
+=======
+                            >
+                              {t('translation.edit')}
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </main>
+      <Footer />
+    </>
+=======
+import React from 'react';
+export function TranslationManager() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+  );
+}
+>>>>>>> origin/pm2-automation-fixes

@@ -9,12 +9,12 @@ import { apiClient } from './apiClient';
 export function formatDate(date: Date | string | undefined): string {
   if (!date) return '-';
   try {
-    const d = typeof date === 'string' ? new Date(date) : date;
-    return new Intl.DateTimeFormat('en-US', {
-      month: 'short',
-      day: 'numeric',
+    if (typeof date === 'string') {
+      return format(new Date(date), 'MMM d, yyyy');
+    }
+    return format(date, 'MMM d, yyyy');
   } catch (e) {
-    logErrorToProduction('Error formatting date:', { data:  e });
+    console.error('Error formatting date:', e);
     return '-';
   }
 }
@@ -29,14 +29,14 @@ export function checkUrlForReferralCode(): string | null {
   const refCode = url.searchParams.get('ref');
   
   if (refCode) {
-    safeStorage.setItem('referral_code', refCode);
+    localStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
     url.searchParams.delete('ref');
     window.history.replaceState({}, document.title, url.toString());
     return refCode;
   }
   
-  return safeStorage.getItem('referral_code');
+  return localStorage.getItem('referral_code');
 }
 
 /**
@@ -46,26 +46,28 @@ import api from '@/lib/api';
 
 export async function trackReferral(userId: string, email: string) {
   try {
-    const refCode = safeStorage.getItem('referral_code');
-    if (!refCode) return false;
+    const refCode = localStorage.getItem('referral_code');
+    if (!refCode) return;
     
     // Call API to record the referral
     const response = await apiClient('/api/track-referral', {
       method: 'POST',
       headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         refCode,
         userId,
         email,
         ipAddress: '', // This will be captured by the server
+      }),
+    });
 
     if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code
-      safeStorage.removeItem('referral_code');
-      return true;
+      localStorage.removeItem('referral_code');
     }
   } catch (error) {
-    logErrorToProduction('Error tracking referral:', { data: error });
+    console.error('Error tracking referral:', error);
   }
-  return false;
 }

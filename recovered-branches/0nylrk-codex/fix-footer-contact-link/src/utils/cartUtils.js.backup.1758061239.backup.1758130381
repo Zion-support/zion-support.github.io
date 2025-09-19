@@ -1,8 +1,0 @@
-export const cartUtils = {
-  // Add item to cart
-  addItem: (cart, item) => {
-    const existingItem = cart.find(cartItem => cartItem.id === item.id);
-    
-  // Get total items count
-export default cartUtils;
->>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526

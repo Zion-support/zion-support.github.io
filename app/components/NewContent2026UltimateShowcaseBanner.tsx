@@ -1,6 +1,4 @@
 import React from 'react';
-
-export default function NewContent2026UltimateShowcaseBanner() {
-  return (
-  );
-}
+const NewContent2026UltimateShowcaseBanner: React.FC = () => {,
+  return (,
+})

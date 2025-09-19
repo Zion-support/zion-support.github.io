@@ -1,54 +1,52 @@
-// Performance monitoring utilities
-export const measurePerformance = (name: string, fn: () => void) => {
+import React from 'react',
+// Performance monitoring utilities,
+export const measurePerformance = (name: string, fn: () => void) => {,
   const start = performance.now();
   fn();
   const end = performance.now()};
-export const reportWebVitals = (metric: an y) => {
-  // Send to analytics service
-  // Example: Send to Google Analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {';';
-    (window as any).gtag('event', metric.name, {';';
+export const reportWebVitals = (metric: an y) => {,
+  // Send to analytics service,
+  // Example: Send to Google Analytics,
+  if (typeof window !== 'undefined' && (window as any).gtag) {;
+    (window as any).gtag('event', metric.name, {;
       event_category: 'Web Vitals',';
-      event_label: metri c.id,';';
-      value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: tru e,
-    })}
+      event_label: metri c.id,;
+      value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
+      non_interaction: tru e,})}
 };
-export const lazyLoadImage = (img: HTMLImageElemen t) => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+export const lazyLoadImage = (img: HTMLImageElemen t) => {,
+  const observer = new IntersectionObserver((entries) => {,
+    entries.forEach((entry) => {,
+      if (entry.isIntersecting) {,
         const image = entry.target as HTMLImageElement;
         if (image.dataset.src) {';
-          image.src = image.dataset.src;';';
+          image.src = image.dataset.src,;
           image.classList.remove('lazy');
           observer.unobserve(image)}
       }
     })});
   ';
-  observer.observe(img)};';';
-// Performance monitoring and optimization utilities
-interface PerformanceMetrics {
+  observer.observe(img)},;
+// Performance monitoring and optimization utilities,
+interface PerformanceMetrics {,
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
-  cacheHitRate: number;
-}
-interface PerformanceConfig {
+  cacheHitRate: number,}
+interface PerformanceConfig {,
   enableMonitoring: boolean;
   enablePreloading: boolean;
   enableCaching: boolean;
   enableCompression: boolean;
-  maxCacheSize: number;
-}
-class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0,
-    cacheHitRate: 0,
+  maxCacheSize: number,}
+class PerformanceMonitor {,
+  private metrics: PerformanceMetrics = {,
+    loadTime: 0;
+    renderTime: 0;
+    memoryUsage: 0;
+    bundleSize: 0;
+    cacheHitRate: 0;
 // Performance monitoring and optimization utilities;
 interface PerformanceMetrics {;
   "loadTime": "number;
@@ -68,18 +66,18 @@ interface PerformanceConfig {;
 ;
 class PerformanceMonitor {;
   private "metrics": "PerformanceMetrics = {;
-    "loadTime": 0",;
-    "renderTime": "0",;
-    "memoryUsage": "0",;
-    "bundleSize": "0",;
-    "cacheHitRate": "0",;
+    "loadTime": 0";
+    "renderTime": "0";
+    "memoryUsage": "0";
+    "bundleSize": "0";
+    "cacheHitRate": "0";
   };
 ;
   private "config": "PerformanceConfig = {;
-    "enableMonitoring": true",;
-    "enablePreloading": "true",;
-    "enableCaching": "true",;
-    "enableCompression": "true",;
+    "enableMonitoring": true";
+    "enablePreloading": "true";
+    "enableCaching": "true";
+    "enableCompression": "true";
     "maxCacheSize": "50 * 1024 * 1024", // 50MB;
   };
 ;
@@ -148,9 +146,9 @@ class PerformanceMonitor {;
     if (!this.config.enableCaching) return;
 ;
     const item = {;
-      value",;
-      "timestamp": "Date.now()",;
-      ttl,;
+      value";
+      "timestamp": "Date.now()";
+      ttl;
     };
 ;
     this.cache.set(key, item);
@@ -182,8 +180,8 @@ class PerformanceMonitor {;
 ;
   // Lazy loading with intersection observer;
   createLazyLoader(;
-    "element": "HTMLElement",;
-    "callback": "() => void",;
+    "element": "HTMLElement";
+    "callback": "() => void";
     "options": "IntersectionObserverInit = { "threshold": 0.1 "}
   ): "IntersectionObserver {;
     const observer = new IntersectionObserver((entries) => {;
@@ -207,7 +205,7 @@ class PerformanceMonitor {;
     if (width) params.set('w'", width.toString());
     if (height) params.set('h', height.toString());
     params.set('q', quality.toString());
-    params.set('f', 'auto');
+    params.set('fauto');
 ;
     return `${src}?${params.toString()}`;
   }
@@ -223,7 +221,7 @@ class PerformanceMonitor {;
       const src = (script as HTMLScriptElement).src;
       if (src) {;
         // This is a simplified calculation - in production", you'd want to fetch actual sizes;
-        totalSize += src.length * 2; // Rough estimate;
+        totalSize += src.length * 2, // Rough estimate;
       }
     });
 ;
@@ -235,20 +233,20 @@ class PerformanceMonitor {;
     if (!this.config.enableMonitoring) return;
 ;
     console.log('Performance "Metrics":'", {;
-      "loadTime": "`${this.metrics.loadTime.toFixed(2)"}ms`,;
-      "renderTime": "`${this.metrics.renderTime.toFixed(2)"}ms`,;
-      "memoryUsage": "`${(this.metrics.memoryUsage / 1024 / 1024).toFixed(2)"}MB`,;
-      "bundleSize": "`${(this.metrics.bundleSize / 1024).toFixed(2)"}KB`,;
-      "cacheSize": "this.cache.size",;
+      "loadTime": "`${this.metrics.loadTime.toFixed(2)"}ms`;
+      "renderTime": "`${this.metrics.renderTime.toFixed(2)"}ms`;
+      "memoryUsage": "`${(this.metrics.memoryUsage / 1024 / 1024).toFixed(2)"}MB`;
+      "bundleSize": "`${(this.metrics.bundleSize / 1024).toFixed(2)"}KB`;
+      "cacheSize": "this.cache.size";
     });
 ;
     // Send to analytics if available;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
-      (window as any).gtag('event', 'performance_metrics', {;
-        "load_time": "this.metrics.loadTime",;
-        "render_time": "this.metrics.renderTime",;
-        "memory_usage": "this.metrics.memoryUsage",;
-        "bundle_size": "this.metrics.bundleSize",;
+      (window as any).gtag('eventperformance_metrics', {;
+        "load_time": "this.metrics.loadTime";
+        "render_time": "this.metrics.renderTime";
+        "memory_usage": "this.metrics.memoryUsage";
+        "bundle_size": "this.metrics.bundleSize";
       });
     }
   }
@@ -275,9 +273,8 @@ export const performanceMonitor = new PerformanceMonitor();
 // Utility functions;
 export const preloadCriticalResources = (): "void => {;
   const criticalResources = [;
-    '/fonts/inter.woff2'",;
-    '/images/hero-bg.webp',;
-    '/js/critical.js',;
+    '/fonts/inter.woff2'";
+    '/images/hero-bg.webp/js/critical.js';
   ];
 ;
   criticalResources.forEach((resource) => {;
@@ -292,8 +289,8 @@ export const optimizeImages = ("images": "NodeListOf<HTMLImageElement>): void =>
     if (img.dataset.optimized) return;
 ;
     const optimizedSrc = performanceMonitor.optimizeImage(;
-      img.src",;
-      img.width || undefined,;
+      img.src";
+      img.width || undefined;
       img.height || undefined;
     );
 ;
@@ -333,36 +330,35 @@ export const usePerformanceMonitor = () => {;
 };
 ;
 export default PerformanceMonitor;
-export const measurePerformance = (name: string,fn: () => void) => { const start = performance.now(); fn(); const end = performance.now()};; export const reportWebVitals = (metric: an y) => { if (typeof window !== &apos;undefined&apos; && (window as any).gtag) { (window as any).gtag(&apos;event&apos;,metric.name,{ event_category: &apos;Web Vitals&apos;,event_label: metri c.id,value: Mat h.round(metric.name === &apos;CLS&apos; ? metric.value * 1000 : metric.value),non_interaction: tru e,})} };; export const lazyLoadImage = (img: HTMLImageElemen t) => { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { const image = entry.target as HTMLImageElement; if (image.dataset.src) { image.src = image.dataset.src;&apos;;&apos;; image.classList.remove(&apos;lazy&apos;); observer.unobserve(image)} } })}); &apos;; observer.observe(img)};&apos;;&apos;;
-// Performance monitoring utilities
-export const measurePerformance = ("name": string, "fn": () => void) => {
+export const measurePerformance = (name: string,fn: () => void) => { const start = performance.now(), fn(), const end = performance.now()}, export const reportWebVitals = (metric: an y) => { if (typeof window !== &apos,undefined&apos, && (window as any).gtag) { (window as any).gtag(&apos,event&apos,metric.name,{ event_category: &apos,Web Vitals&apos,event_label: metri c.id,value: Mat h.round(metric.name === &apos,CLS&apos, ? metric.value * 1000 : metric.value),non_interaction: tru e,})} }, export const lazyLoadImage = (img: HTMLImageElemen t) => { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { const image = entry.target as HTMLImageElement, if (image.dataset.src) { image.src = image.dataset.src,&apos,&apos, image.classList.remove(&apos,lazy&apos,), observer.unobserve(image)} } })}), &apos, observer.observe(img)},&apos,&apos;
+// Performance monitoring utilities,
+export const measurePerformance = ("name": string, "fn": () => void) => {,
   const start = performance.now();
   fn();
   const end = performance.now()};
-export const reportWebVitals = ("metric": an y) => {
-  // Send to analytics service
-  // Example: Send to Google Analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metri c.id,
-      value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: tru e,
-    }
+export const reportWebVitals = ("metric": an y) => {,
+  // Send to analytics service,
+  // Example: Send to Google Analytics,
+  if (typeof window !== 'undefined' && (window as any).gtag) {,
+    (window as any).gtag('event', metric.name, {,
+      event_category: 'Web Vitals';
+      event_label: metri c.id;
+      value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
+      non_interaction: tru e,}
     );
   }
-      "event_category": 'Web Vitals',
-      "event_label": metri c.id,
-      "value": Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      "event_category": 'Web Vitals';
+      "event_label": metri c.id;
+      "value": Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value);
       "non_interaction": tru e})}
 };
-export const lazyLoadImage = ("img": HTMLImageElemen t) => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+export const lazyLoadImage = ("img": HTMLImageElemen t) => {,
+  const observer = new IntersectionObserver((entries) => {,
+    entries.forEach((entry) => {,
+      if (entry.isIntersecting) {,
         const image = entry.target as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;';';
+        if (image.dataset.src) {,
+          image.src = image.dataset.src,;
           image.classList.remove('lazy');
           observer.unobserve(image)}
       }
@@ -374,5 +370,5 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {
 };
     })});
   ';
-  observer.observe(img)};';';
-export const measurePerformance = (name: string,fn: () => void) => { const start = performance.now(); fn(); const end = performance.now()};; export const reportWebVitals = (metric: an y) => { if (typeof window !== 'undefined' && (window as any).gtag) { (window as any).gtag('event',metric.name,{ event_category: 'Web Vitals',event_label: metri c.id,value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),non_interaction: tru e,})} };; export const lazyLoadImage = (img: HTMLImageElemen t) => { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { const image = entry.target as HTMLImageElement; if (image.dataset.src) { image.src = image.dataset.src;';'; image.classList.remove('lazy'); observer.unobserve(image)} } })}); '; observer.observe(img)};';';
+  observer.observe(img)},;
+export const measurePerformance = (name: string,fn: () => void) => { const start = performance.now(), fn(), const end = performance.now()}, export const reportWebVitals = (metric: an y) => { if (typeof window !== 'undefined' && (window as any).gtag) { (window as any).gtag('event',metric.name,{ event_category: 'Web Vitals',event_label: metri c.id,value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),non_interaction: tru e,})} }, export const lazyLoadImage = (img: HTMLImageElemen t) => { const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { const image = entry.target as HTMLImageElement, if (image.dataset.src) { image.src = image.dataset.src, image.classList.remove('lazy'), observer.unobserve(image)} } })}), ', observer.observe(img)},',';

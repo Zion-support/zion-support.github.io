@@ -1,139 +1,181 @@
-import React, { useState, useEffect }  from 'react';
-import { Link }  from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
-    "🧠 Conscious AI Systems",
-    "⚡ Quantum Consciousness", 
-    "🌌 Interdimensional Computing",
-    "🧬 Neural Interface Revolution",
-    "⚗️ Molecular Manufacturing",
-    "🌟 Holographic Reality"
-
-  const bannerContent = [
-    {
-      title: "Revolutionary Content Banner 2027",
-      subtitle: "Experience the Future of Technology",
-      description: "Discover groundbreaking innovations that will reshape humanity's future",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      link: "/pages/RevolutionaryContent2027"
-    },
-    {
-      title: "Next-Gen Innovation Hub 2027",
-      subtitle: "Where the Future is Created",
-      description: "Explore the most advanced technology solutions and innovations",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      link: "/pages/InnovationHub2027"
-    },
-    {
-      title: "Ultimate Tech Breakthrough 2027",
-      subtitle: "The Most Revolutionary Technology",
-      description: "Witness the most significant technological advancement in human history",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      link: "/pages/TechBreakthrough2027"
-    };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [features.length]);
-
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
-      {/* Animated Background */};
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-30"></div>
-      
-      <div className="relative z-10 p-8 md:p-12">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT 2027 • JANUARY
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Content Banner 2027
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the most revolutionary content and innovations that will reshape the future
-          </p>
-        </div>
-
-        {/* Main Banner Carousel */};
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
-          {bannerContent.map((banner, index) => (
-            <div
-              key={index};
-              className={`absolute inset-0 bg-gradient-to-br ${banner.gradient} flex items-center justify-center transition-opacity duration-1000 ${
-                index === currentFeature ? 'opacity-100' : 'opacity-0'
-              }`};
-            >
-              <div className="text-center text-white p-8">
-                <h3 className="text-3xl font-bold mb-4">{banner.title}</h3>
-                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{banner.description}</p>
-                <Link 
-                  to={banner.link};
-                  className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-                >
-                  Explore Now →
-                </Link>
-              </div>
-            </div>
-          ))};
-        </div>
-
-        {/* Features Showcase */};
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {bannerContent.map((content, index) => (
-            <div
-              key={index};
-              className={`bg-gradient-to-br ${content.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20`};
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-4xl">{features[index % features.length]}</span>
-                <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-bold">
-                  {index === 0 ? 'NEW' : index === 1 ? 'HOT' : 'TRENDING'};
-                </span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">{content.title}</h3>
-              <p className="text-sm opacity-90 mb-4">{content.description}</p>
-              <Link 
-                to={content.link};
-                className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-sm"
-              >
-                Learn More →
-              </Link>
-            </div>
-          ))};
-        </div>
-
-        {/* Features Animation */};
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse">
+          <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-1000">
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-2000">
+          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-purple-500/20 rounded-full animate-pulse delay-3000">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-2xl p-12 mb-12 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-indigo-600/50 backdrop-blur-sm">
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-4 mb-6">
+          <span className="text-4xl animate-bounce">🚀</span>
+          <h3 className="text-3xl font-bold">REVOLUTIONARY BREAKTHROUGH 2027</h3>
+          <span className="text-4xl animate-bounce">🚀</span>
+        <p className="text-2xl opacity-95 mb-8 max-w-5xl mx-auto"></p>
+          Experience the most advanced technological convergence in human history with our revolutionary 2027 content </p>
+          featuring Ultimate Innovation Hub, Advanced AI Systems, and Interdimensional Technology</p>
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-8xl mx-auto">
+          <a href="/pages/RevolutionaryTechBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+            🚀 Revolutionary Tech Breakthrough 2026 →
+          </a>
+          <a href="/pages/UltimateInnovationHub2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+            🌟 Ultimate Innovation Hub 2027 →
+          </a>
+          <a href="/pages/InterdimensionalTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+            🌌 Interdimensional Tech Revolution →
+          </a>
+        <div className="mt-8">
+          <a href="/pages/RevolutionaryTechBreakthrough2026" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl border-2 border-white/30">
+            🌟 NEW: Revolutionary Tech Breakthrough →
+          </a>
+          <a href="/pages/UltimateInnovationHub2027" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl border-2 border-white/30 ml-6">
+            🚀 NEW: Ultimate Innovation Hub →
+          </a>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
-            <span className="text-sm font-semibold">Featured:</span>
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl animate-bounce">{features[currentFeature]}</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Navigation Dots */};
-        <div className="flex justify-center mt-8 space-x-2">
-          {bannerContent.map((_, index) => (
-            <button
-              key={index};
-              onClick={() => setCurrentFeature(index)};
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentFeature ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-              }`};
-            />
-          ))};
-        </div>
-      </div>
-    </div>
+          {/* New Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30 mb-6 animate-bounce">
+            <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
+            NEW REVOLUTIONARY CONTENT 2027
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            The Future is Here
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
+            Discover groundbreaking content covering <span className="text-purple-300 font-semibold">Synthetic Intelligence</span>, 
+            <span className="text-blue-300 font-semibold"> Quantum Neural Fusion</span>, 
+            <span className="text-indigo-300 font-semibold"> Holographic Reality</span>, and 
+            <span className="text-pink-300 font-semibold"> Consciousness Transfer</span> technology.
+          </p>
+          {/* Feature highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300">
+              <div className="text-3xl mb-3">🧠
+              <h3 className="text-lg font-semibold text-purple-300 mb-2">Synthetic Intelligence</h3>
+              <p className="text-sm text-gray-300">AI that surpasses human cognitive abilities</p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300">
+              <div className="text-3xl mb-3">⚡
+              <h3 className="text-lg font-semibold text-blue-300 mb-2">Quantum Neural Fusion</h3>
+              <p className="text-sm text-gray-300">Revolutionary quantum-enhanced AI</p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300">
+              <div className="text-3xl mb-3">🌐
+              <h3 className="text-lg font-semibold text-indigo-300 mb-2">Holographic Reality</h3>
+              <p className="text-sm text-gray-300">Immersive 3D computing environments</p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-pink-500/50 transition-all duration-300">
+              <div className="text-3xl mb-3">🔮
+              <h3 className="text-lg font-semibold text-pink-300 mb-2">Consciousness Transfer</h3>
+              <p className="text-sm text-gray-300">Digital immortality technology</p>
+          {/* Action buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/revolutionary-content-2027"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+            >
+              Explore 2027 Content
+            </Link>
+            <Link
+              to="/blog"
+              className="px-8 py-4 border-2 border-white/30 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+            >
+              Read Latest Posts
+            </Link>
+          {/* Stats */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-300 mb-2">25K+
+              <div className="text-gray-400">Monthly Readers
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-300 mb-2">50+
+              <div className="text-gray-400">Revolutionary Articles
+            <div className="text-center">
+              <div className="text-3xl font-bold text-indigo-300 mb-2">100+
+              <div className="text-gray-400">Case Studies
+      {/* Floating elements */}
+      <div className="absolute top-1/4 left-10 w-2 h-2 bg-purple-400 rounded-full animate-ping">
+      <div className="absolute top-1/3 right-16 w-1 h-1 bg-blue-400 rounded-full animate-ping delay-1000">
+      <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-indigo-400 rounded-full animate-ping delay-2000">
   );
-  };
+};
+
 export default RevolutionaryContentBanner2027;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

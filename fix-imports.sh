@@ -1,31 +1,26 @@
 #!/bin/bash
 
-# Fix import paths in all TypeScript files
-echo "Fixing import paths..."
+# Fix @/components imports to relative imports
+echo "Fixing @/components imports..."
 
-# Find all .tsx and .ts files in the app directory and fix import paths
-find app -name "*.tsx" -o -name "*.ts" | while read file; do
-    # Fix SEO import paths
-    sed -i "s|from '../../../components/SEO'|from '../../components/SEO'|g" "$file"
-    sed -i "s|from '../../../components/ErrorBoundary'|from '../../components/ErrorBoundary'|g" "$file"
-    sed -i "s|from '../../../components/LoadingSpinner'|from '../../components/LoadingSpinner'|g" "$file"
+# Find all files with @/components imports and fix them
+find /workspace/src -name "*.jsx" -o -name "*.tsx" | while read file; do
+    # Get the directory depth to determine the relative path
+    dir=$(dirname "$file")
+    depth=$(echo "$dir" | grep -o "/" | wc -l)
     
-    # Fix other component import paths
-    sed -i "s|from '../../../components/|from '../../components/|g" "$file"
-    sed -i "s|from '../../../|from '../../|g" "$file"
+    # Calculate the relative path back to src
+    relative_path=""
+    for ((i=3; i<=depth; i++)); do
+        relative_path="../$relative_path"
+    done
     
-    echo "Fixed imports in: $file"
+    # Replace @/components with the relative path
+    if grep -q 'from "@/components' "$file"; then
+        echo "Fixing imports in: $file"
+        sed -i "s|from \"@/components|from \"${relative_path}components|g" "$file"
+        sed -i "s|from '@/components|from \"${relative_path}components|g" "$file"
+    fi
 done
 
-# Remove merge conflict markers
-echo "Removing merge conflict markers..."
-find app -name "*.tsx" -o -name "*.ts" | while read file; do
-    # Remove merge conflict markers
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    echo "Cleaned merge conflicts in: $file"
-done
-
-echo "Import path fixes completed!"
+echo "Import fixes completed!"

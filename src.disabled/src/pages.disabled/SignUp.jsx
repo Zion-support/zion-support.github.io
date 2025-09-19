@@ -1,50 +1,45 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {,
+  constructor(props) {,
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ,};
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
+,
+  static getDerivedStateFromError(error) {,
+    return { hasError: true ,};
   }
-  
-  componentDidCatch(error, errorInfo) {
+,
+  componentDidCatch(error, errorInfo) {,
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
-  render() {
-    if (this.state.hasError) {
+,
+  render() {,
+    if (this.state.hasError) {,
       return <div>Something went wrong.</div>;
     }
-    
+,
     return this.props.children;
   }
 }
 import React from 'react';
-interface SignUpProps {
-  // Add props here as needed
-
+interface SignUpProps {,
+  // Add props here as needed,
 }
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-export default function SignUp({ }: SignUpProps) {
-  return (
-    <div>
-      <h1>SignUp</h1>
-      <p>This component is currently under development.</p>
-    </div>
+,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5,
+export default function SignUp({ }: SignUpProps) {,
+  return (,
+    <div>,
+      <h1>SignUp</h1>,
+      <p>This component is currently under development.</p>,
+    </div>,
   );
-=======
-
-
 }
-:src.disabled/src/pages.disabled/SignUp.jsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
+:src.disabled/src/pages.disabled/SignUp.jsx,
 }
 }
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 }
-:temp_exclude/src.disabled/src/pages.disabled/SignUp.jsx
-
+:temp_exclude/src.disabled/src/pages.disabled/SignUp.jsx,

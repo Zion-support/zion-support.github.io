@@ -1,78 +1,64 @@
 const fs = require('fs');
 const path = require('path');
-
-function fixTsTestFile(filePath) {
-  try {
+function fixTsTestFile(filePath) {,
+  try {,
     const fileName = path.basename(filePath, '.test.tsx').replace('.test', '');
     const componentName = fileName.replace('.dynamic', '');
-    
     const content = `import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
-
-describe('${componentName}', () => {
-  test('renders without crashing', () => {
+describe('${componentName}', () => {,
+  test('renders without crashing', () => {,
     render(<${componentName} />);
     expect(screen.getByTestId('${componentName.toLowerCase()}')).toBeInTheDocument();
   });
-  
-  test('displays correct content', () => {
+  test('displays correct content', () => {,
     render(<${componentName} />);
   });
-  
-  test('handles user interactions', () => {
+  test('handles user interactions', () => {,
     render(<${componentName} />);
   });
-  
-  test('applies correct styling', () => {
+  test('applies correct styling', () => {,
     render(<${componentName} />);
   });
 });
 `;
-    
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
+    console.log(`Fixed: ${filePath,}`);
+  } catch (error) {,
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
-// Get all TypeScript test files
+,
+// Get all TypeScript test files,
 const testDir = path.join(__dirname, '__tests__');
 const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.ts') || file.endsWith('.test.tsx'));
-
 console.log(`Found ${files.length} TypeScript test files to fix`);
-
-files.forEach(file => {
+files.forEach(file => {,
   const filePath = path.join(testDir, file);
   fixTsTestFile(filePath);
 });
-
-// Fix App.test.ts
+// Fix App.test.ts,
 const appTestPath = path.join(__dirname, 'App.test.ts');
-if (fs.existsSync(appTestPath)) {
+if (fs.existsSync(appTestPath)) {,
   const appContent = `import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
-
-describe('App', () => {
-  it('renders without crashing', () => {
+describe('App', () => {,
+  it('renders without crashing', () => {,
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-  
-  it('displays correct content', () => {
+  it('displays correct content', () => {,
     render(<App />);
   });
-  
-  it('handles user interactions', () => {
+  it('handles user interactions', () => {,
     render(<App />);
   });
 });
 `;
   fs.writeFileSync(appTestPath, appContent);
-  console.log('Fixed: App.test.ts');
-}
-
+  console.log('Fixed: App.test.ts'),}
+,
 console.log('TypeScript test file fixing completed!');

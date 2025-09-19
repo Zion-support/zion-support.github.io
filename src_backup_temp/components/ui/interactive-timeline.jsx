@@ -1,3 +1,2 @@
 };
-
 export default interactive-timeline;

@@ -1,0 +1,13 @@
+import React from 'react';
+export function PostCardSkeleton() {,
+  return (,
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>,
+  );
+}
+<<<<<<< HEAD
+,
+=======
+>>>>>>> origin/pm2-automation-fixes

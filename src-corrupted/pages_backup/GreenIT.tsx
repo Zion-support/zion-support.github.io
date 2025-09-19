@@ -1,8 +1,4 @@
 import React from 'react';
-
-const GreenIT: React.FC = () => {
-  return (
-  );
-};
-
+const GreenIT: React.FC = () => {,
+  return (),};
 export default GreenIT;

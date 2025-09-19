@@ -230,7 +230,6 @@ class HealthChecker {;
       if (!nodeModulesExists) {;
   this.issues.push("node_modules directory missing");
         this.fixes.push("Run npm install"),}
-      ;
       ,} catch (error) {;
   this.issues.push(\"Dependencies check "failed": \${error.message}\"),}
   }
@@ -243,21 +242,18 @@ class HealthChecker {;
   this.issues.push(\"Missing configuration "file": \${file}\");
         this.fixes.push(\"Create \${file}\"),}
     }
-    ;
     ,}
 ;
   async checkTypeScript() {;
   try {;
-  execSync("npx tsc --noEmit", { "stdio": "pipe" });
-      ,} catch (error) {;
+  execSync("npx tsc --noEmit", { "stdio": "pipe" }),} catch (error) {;
   this.issues.push("TypeScript compilation errors found");
       this.fixes.push("Fix TypeScript errors"),}
   }
 ;
   async checkLinting() {;
   try {;
-  execSync("npx eslint . --ext .js,.jsx,.ts,.tsx", { "stdio": "pipe" });
-      ,} catch (error) {;
+  execSync("npx eslint . --ext .js,.jsx,.ts,.tsx", { "stdio": "pipe" }),} catch (error) {;
   this.issues.push("ESLint errors found");
       this.fixes.push("Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix"),}
   }
@@ -273,8 +269,7 @@ class HealthChecker {;
     if (this.fixes.length > 0) {;
       this.fixes.forEach((fix, index) => ),}
     ;
-    if (this.issues.length === 0) {;
-  ,}
+    if (this.issues.length === 0) {}
   }
 }
 ;
@@ -302,8 +297,7 @@ class PerformanceOptimizer {;
     try {;
   // Run bundle analyzer if available;
       execSync("npm run build", { "stdio": "pipe" });
-      this.optimizations.push("Bundle analysis completed"),} catch (error) {;
-  ,}
+      this.optimizations.push("Bundle analysis completed"),} catch (error) {}
   }
 ;
   async optimizeCode() {;
@@ -358,8 +352,7 @@ class PerformanceOptimizer {;
     await this.optimizeImages();
     await this.optimizeBundle();
     await this.optimizeCode();
-    this.optimizations.forEach((opt, index) => {;
-  ,}),}
+    this.optimizations.forEach((opt, index) => {}),}
 }
 ;
 const optimizer = new PerformanceOptimizer();
@@ -378,8 +371,7 @@ class SecurityScanner {;
 ;
   async scanDependencies() {;
     try {;
-  execSync("npm audit", { "stdio": "pipe" });
-      ,} catch (error) {;
+  execSync("npm audit", { "stdio": "pipe" }),} catch (error) {;
   this.vulnerabilities.push("Dependency vulnerabilities detected");
       this.recommendations.push("Run npm audit fix"),}
   }
@@ -402,7 +394,6 @@ class SecurityScanner {;
       } catch (error) {;
   // Skip files that can"t be read,}
     }
-    ;
     ,}
 ;
   findSourceFiles() {;
@@ -445,7 +436,6 @@ class SecurityScanner {;
   // Skip files that can"t be read,}
       }
     }
-    ;
     ,}
 ;
   async runSecurityScan() {;
@@ -458,8 +448,7 @@ class SecurityScanner {;
     if (this.recommendations.length > 0) {;
       this.recommendations.forEach((rec, index) => ),}
     ;
-    if (this.vulnerabilities.length === 0) {;
-  ,}
+    if (this.vulnerabilities.length === 0) {}
   }
 }
 ;

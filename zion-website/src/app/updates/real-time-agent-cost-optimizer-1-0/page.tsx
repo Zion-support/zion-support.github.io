@@ -36,5 +36,5 @@ export default function Page() {
   )
 }
 
-// Removed duplicate default component to fix build error. The page component above is the intended default export.
+// Additional details are included in the Page component above.
 

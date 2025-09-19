@@ -4,7 +4,8 @@
 
 // Simplified logger functions - using proper structured logging
 function logInfo(message, ...args) {
-  // console.log(`[INFO] ${message}`, ...args);
+  // eslint-disable-next-line no-console
+  console.log(`[INFO] ${message}`, ...args);
 }
 
 function logWarn(message, ...args) {
@@ -191,7 +192,7 @@ try {
     // Assuming default to dev if not set
     // logInfo('✅ Environment configuration looks good.'); // This might be redundant
   }
-} catch (_err) {
+} catch (err) {
   // This catch is if validateProductionEnvironment itself throws an unhandled error,
   // not for the configuration errors it's designed to report.
   // The original `scripts/check-env.ts` has a top-level catch.

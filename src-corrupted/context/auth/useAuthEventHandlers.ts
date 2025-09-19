@@ -1,7 +1,5 @@
 import { useCallback  } from 'react.ts';
-
-interface User {
-
+interface User {,
   id: string;
   email: string;
   displayName?: string;
@@ -9,26 +7,23 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string;
-
+  updatedAt?: string,
 }
-
-export const useAuthEventHandlers = (
-  setUser: any(user: User | null)  => void,
-  setOnboardingStep: any(step: number)  => void
-) => {
-  const handleSignedIn = useCallback((user: anyUser)  => {
+,
+export const useAuthEventHandlers = (,
+  setUser: any(user: User | null)  => void;
+  setOnboardingStep: any(step: number)  => void,
+) => {,
+  const handleSignedIn = useCallback((user: anyUser)  => {,
     setUser(user);
-    setOnboardingStep(1); // Start onboarding process
+    setOnboardingStep(1), // Start onboarding process,
   }, [setUser, setOnboardingStep]);
-
-  const handleSignedOut = useCallback(() => {
+  const handleSignedOut = useCallback(() => {,
     setUser(null);
-    setOnboardingStep(0); // Reset onboarding
+    setOnboardingStep(0), // Reset onboarding,
   }, [setUser, setOnboardingStep]);
-
-  return {
-    handleSignedIn,
-    handleSignedOut
+  return {,
+    handleSignedIn;
+    handleSignedOut,
   };
 };

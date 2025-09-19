@@ -1,40 +1,10 @@
-import React from 'react';
-import Link from '../lib/CompatLink';
-import { ArrowRight, Play, Star, Users, Award, Globe } from 'lucide-react';
 
-const HeroSection: React.FC = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Revolutionary AI Solutions
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
-          Transform your business with cutting-edge artificial intelligence and automation technologies
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to="/services"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
-          >
-            Explore Services
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-colors"
-          >
-            <Play className="mr-2 w-5 h-5" />
-            Get Started
-          </Link>
-        </div>
-      </div>
+import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Globe, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Globe } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -75,128 +45,133 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
-      {/* Enhanced background gradient effect */}
+      {/* Enhanced background with multiple gradient layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-zion-slate-dark via-transparent to-transparent opacity-60"></div>
       
-      {/* Animated mesh gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-transparent to-zion-purple/20 animate-pulse"></div>
-      
-      {/* Enhanced floating particles with better positioning */}
-      <div className="absolute inset-0">
-        <motion.div 
-          variants={floatingVariants}
-          animate="float"
-          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
-        />
-        <motion.div 
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "1s" }}
-          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-40"
-        />
-        <motion.div 
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "2s" }}
-          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-50"
-        />
-        <motion.div 
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "0.5s" }}
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
-        />
-        <motion.div 
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "1.5s" }}
-          className="absolute top-3/4 left-1/3 w-2 h-2 rounded-full bg-zion-purple-light opacity-40"
-        />
-      </div>
-      
-      {/* Decorative geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 rotate-45 opacity-30"></div>
-        <div className="absolute top-1/2 left-10 w-16 h-16 border border-zion-cyan/20 rotate-12 opacity-20"></div>
-      </div>
-      
+      {/* Animated floating particles with better positioning */}
       <motion.div 
-        className="container relative z-10 px-4 mx-auto text-center"
+        className="absolute inset-0"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Enhanced title with better typography */}
-        <motion.div variants={itemVariants} className="mb-6">
-          <GradientHeading className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            {t('home.hero_title') || "The Future of Tech is Here"}
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
+          variants={floatingVariants}
+          animate="float"
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50"
+          variants={floatingVariants}
+          animate="float"
+          style={{ animationDelay: "1s" }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-70"
+          variants={floatingVariants}
+          animate="float"
+          style={{ animationDelay: "2s" }}
+        />
+        <motion.div 
+          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
+          variants={floatingVariants}
+          animate="float"
+          style={{ animationDelay: "0.5s" }}
+        />
+        <motion.div 
+          className="absolute top-3/4 left-1/3 w-2 h-2 rounded-full bg-zion-purple-light opacity-40"
+          variants={floatingVariants}
+          animate="float"
+          style={{ animationDelay: "1.5s" }}
+        />
+      </motion.div>
+
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 opacity-20">
+        <Sparkles className="w-8 h-8 text-zion-cyan" />
+      </div>
+      <div className="absolute top-32 right-20 opacity-20">
+        <Zap className="w-6 h-6 text-zion-purple" />
+      </div>
+      <div className="absolute bottom-32 left-20 opacity-20">
+        <Globe className="w-7 h-7 text-zion-cyan-light" />
+      </div>
+      
+      <div className="container relative z-10 px-4 mx-auto text-center max-w-6xl">
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <GradientHeading className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            {t('home.hero_title')}
           </GradientHeading>
         </motion.div>
 
-        {/* Enhanced subtitle with better spacing */}
-        <motion.div variants={itemVariants} className="mb-10">
-          <p className="text-lg sm:text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            {t('home.hero_subtitle') || "Discover top AI and tech talent, services, and equipment in one place. Powered by cutting-edge AI matching technology."}
-          </p>
-        </motion.div>
-
-        {/* Enhanced CTA buttons with better mobile layout */}
-        <motion.div 
+        <motion.p 
+          className="text-lg sm:text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed"
           variants={itemVariants}
-          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 max-w-md sm:max-w-none mx-auto"
+          initial="hidden"
+          animate="visible"
+        >
+          {t('home.hero_subtitle')}
+        </motion.p>
+
+        <motion.div 
+          className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
         >
           <Button
-            className="group bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             size="lg"
-
+            asChild
           >
             <Link
               to="/signup"
               role="button"
-              aria-label={t('auth.signup') || "Get Started"}
+              aria-label={t('auth.signup')}
               tabIndex={0}
               data-testid="hero-signup-btn"
               className="flex items-center gap-2"
             >
-              <Sparkles className="w-5 h-5" />
-              {t('auth.signup') || "Get Started"}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              {t('auth.signup')}
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
-          
           <Link
             id="browse-marketplace"
             to="/marketplace"
-            className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 transform hover:scale-105"
+            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 transform hover:scale-105"
           >
-            <Globe className="w-5 h-5" />
-            {t('home.browse_marketplace') || "Browse Marketplace"}
-            <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" />
+            {t('home.browse_marketplace')}
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>
 
-        {/* Enhanced trust indicators */}
+        {/* Trust indicators */}
         <motion.div 
+          className="flex flex-wrap justify-center items-center gap-6 text-sm text-zion-slate-light opacity-80"
           variants={itemVariants}
-          className="mt-12 flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm"
+          initial="hidden"
+          animate="visible"
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-            <span>AI-Powered Matching</span>
+            <span>24/7 Support</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
             <span>Global Network</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-            <span>24/7 Support</span>
+            <div className="w-2 h-2 bg-zion-cyan-light rounded-full"></div>
+            <span>AI-Powered</span>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

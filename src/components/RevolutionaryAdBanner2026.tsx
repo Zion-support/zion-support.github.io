@@ -1,133 +1,141 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8 }}
-      className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-          >
-            ⚡ REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            🚀 Revolutionary Tech Breakthrough 2026
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl opacity-90 max-w-4xl mx-auto mb-8"
-          >
-            Witness the most groundbreaking technological breakthrough in human history. 
-            Experience the future of AI, quantum computing, and neural interfaces like never before.
-          </motion.p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🤖</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Synthetic Intelligence</h3>
-            <p className="text-indigo-100 mb-4 text-sm text-center">
-              AI that surpasses human intelligence in every measurable way
-            </p>
-            <div className="text-xs text-indigo-300 space-y-1">
-              <div>• 1000x faster processing</div>
-              <div>• Perfect memory retention</div>
-              <div>• Instant learning</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Neural Quantum Fusion</h3>
-            <p className="text-purple-100 mb-4 text-sm text-center">
-              The perfect fusion of quantum computing and neural networks
-            </p>
-            <div className="text-xs text-purple-300 space-y-1">
-              <div>• Quantum neural processing</div>
-              <div>• Infinite parallel paths</div>
-              <div>• Consciousness simulation</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🌐</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Reality Engine</h3>
-            <p className="text-cyan-100 mb-4 text-sm text-center">
-              Create and manipulate reality itself through advanced computing
-            </p>
-            <div className="text-xs text-cyan-300 space-y-1">
-              <div>• Reality simulation</div>
-              <div>• Matter manipulation</div>
-              <div>• Dimension creation</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🔮</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Time Computing</h3>
-            <p className="text-emerald-100 mb-4 text-sm text-center">
-              Process information across multiple timelines simultaneously
-            </p>
-            <div className="text-xs text-emerald-300 space-y-1">
-              <div>• Temporal processing</div>
-              <div>• Future prediction</div>
-              <div>• Past analysis</div>
-            </div>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center mt-8"
-        >
-          <div className="inline-flex items-center space-x-4">
-            <span className="text-lg font-semibold">Ready for the breakthrough?</span>
-            <a href="/pages/RevolutionaryTechBreakthrough2026" className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Experience Now →
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    </motion.div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center text-white">
+          <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-black px-4 py-2 rounded-full text-sm font-bold mb-4">
+            🚀 NEW IN 2026
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Tech Insights & Case Studies
+          </h2>
+          <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-300"></p>
+            Discover the latest breakthroughs in AI consciousness, quantum computing, neural interfaces, </p>
+            and more. See how leading organizations are transforming their industries with our cutting-edge solutions.</p>
+          </p>
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-3">🧠
+              <h3 className="text-xl font-bold text-white mb-2">AI Consciousness</h3>
+              <p className="text-gray-300 text-sm mb-4">Explore the evolution of artificial consciousness and its implications</p>
+              <Link 
+                to="/pages/RevolutionaryTechInsights2026" 
+                className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
+              >
+                Learn More →
+              </Link>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-3">⚛️
+              <h3 className="text-xl font-bold text-white mb-2">Quantum Revolution</h3>
+              <p className="text-gray-300 text-sm mb-4">Discover quantum computing breakthroughs and real-world applications</p>
+              <Link 
+                to="/pages/NextGenInnovationHub2026" 
+                className="text-purple-400 hover:text-purple-300 font-semibold text-sm"
+              >
+                Explore →
+              </Link>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-3">📊
+              <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
+              <p className="text-gray-300 text-sm mb-4">See how companies achieved 300%+ improvements with our solutions</p>
+              <Link 
+                to="/pages/RevolutionaryCaseStudies2026" 
+                className="text-green-400 hover:text-green-300 font-semibold text-sm"
+              >
+                View Cases →
+              </Link>
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <Link 
+              to="/pages/RevolutionaryTechInsights2026" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
+            >
+              Explore Tech Insights
+            </Link>
+            <Link 
+              to="/pages/RevolutionaryCaseStudies2026" 
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
+            >
+              View Case Studies
+            </Link>
+            <Link 
+              to="/contact" 
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
+            >
+              Get Started
+            </Link>
+          {/* Stats */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-1">500+
+              <div className="text-gray-300 text-sm">Projects Delivered
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-1">$2B+
+              <div className="text-gray-300 text-sm">Value Created
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-1">99%
+              <div className="text-gray-300 text-sm">Success Rate
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">24/7
+              <div className="text-gray-300 text-sm">Support
   );
 };
+
 export default RevolutionaryAdBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

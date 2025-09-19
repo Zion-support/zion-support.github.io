@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+      'AI-powered data analysis and insights',
+      'Predictive analytics and forecasting',
+      'Automated report generation',
+      'Real-time business monitoring',
+      'Custom dashboard creation',
+      'Data visualization and exploration',
+      'Business performance optimization',
+      'Integration with business systems',
+      'Advanced analytics and reporting',
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'AI Business Intelligence',
+    realService: true,
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

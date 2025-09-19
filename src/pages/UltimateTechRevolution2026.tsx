@@ -1,190 +1,308 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import Header from '../Header';
+import Footer from '../Footer';
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 ULTIMATE TECH REVOLUTION • JANUARY 2026
-            </div>
+              🚀 ULTIMATE BREAKTHROUGH • JANUARY 2026
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              The Ultimate Technology Revolution 2026
+              Ultimate Tech Revolution 2026
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Experience the most revolutionary technological advances that will reshape our world in 2026. 
-              From conscious AI systems to quantum consciousness and interdimensional computing.
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
+              Experience the most advanced technology revolution that will reshape the future of humanity</p>
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Revolution →
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
+                Explore Revolution →</button>
               </button>
-              <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors">
-                Watch Demo
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"></button>
+                Watch Demo</button>
               </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Revolutionary Features */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-6">🚀 Revolutionary Technologies</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover the breakthrough technologies that will define the future of humanity
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2026
+          <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Ultimate Tech Revolution 2026
+          </h1>
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8"></p>
+            Experience the most revolutionary technological advances that will reshape our world in 2026. </p>
+            From conscious AI systems to quantum consciousness and interdimensional computing.</p>
           </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <motion.div
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">🧠</div>
+            <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              The first truly conscious artificial intelligence systems that can think, feel, and create independently
+            <p className="text-purple-100 mb-6 text-center"></p>
+              AI systems that achieve true consciousness and self-awareness, capable of genuine creativity and emotional understanding.</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Self-aware decision making</li>
               <li>• Emotional intelligence processing</li>
               <li>• Creative problem solving</li>
-              <li>• Autonomous learning</li>
+              <li>• Autonomous learning evolution</li>
             </ul>
-            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Learn More →
+            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"></button>
+              Learn More →</button>
             </button>
-          </motion.div>
-
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary quantum computing that achieves consciousness-level processing and understanding
+            <p className="text-cyan-100 mb-6 text-center"></p>
+              Breakthrough in quantum computing that enables consciousness transfer and quantum-enhanced AI processing.</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum neural networks</li>
-              <li>• Consciousness simulation</li>
-              <li>• Quantum entanglement processing</li>
-              <li>• Infinite parallel processing</li>
+              <li>• Quantum state consciousness</li>
+              <li>• Instantaneous data processing</li>
+              <li>• Parallel universe computing</li>
+              <li>• Quantum entanglement AI</li>
             </ul>
-            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Quantum →
+            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center"></button>
+              Explore Quantum →</button>
             </button>
-          </motion.div>
-
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4 text-center">🌌</div>
+            <div className="text-6xl mb-4 text-center">🌌
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Computing</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Breakthrough technology that enables computing across multiple dimensions and realities
+            <p className="text-emerald-100 mb-6 text-center"></p>
+              Computing systems that operate across multiple dimensions, accessing infinite computational resources.</p>
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Multi-dimensional processing</li>
-              <li>• Reality simulation</li>
-              <li>• Dimensional data transfer</li>
-              <li>• Parallel universe computing</li>
+              <li>• Infinite computational power</li>
+              <li>• Reality manipulation</li>
+              <li>• Dimensional data storage</li>
             </ul>
-            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Enter Dimensions →
+            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center"></button>
+              Enter Dimensions →</button>
             </button>
-          </motion.div>
-        </div>
-
-        {/* Success Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
-            <p className="text-xl opacity-90">
-              See how our revolutionary technologies are transforming industries worldwide
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🚀
+            <h3 className="text-2xl font-bold mb-4 text-center">Space Colonization</h3>
+            <p className="text-orange-100 mb-6 text-center"></p>
+              Advanced space technology for intergalactic exploration and colonization</p>
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
+              <li>• Faster-than-light travel</li>
+              <li>• Terraforming technology</li>
+              <li>• Space habitats</li>
+              <li>• Alien communication</li>
+            </ul>
+            <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center"></button>
+              Explore Space →</button>
+            </button>
+              <div className="text-5xl font-bold text-emerald-400 mb-2">100%
+              <div className="text-lg opacity-80">Sustainability
             <div className="text-center">
-              <div className="text-5xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4">Space Exploration</h3>
-              <p className="text-purple-200 mb-4">
-                "Our quantum consciousness systems enabled us to map 10,000 new galaxies in just 24 hours."
-              </p>
-              <div className="text-sm text-purple-300">- NASA Quantum Division</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-5xl mb-4">🏥</div>
-              <h3 className="text-2xl font-bold mb-4">Medical Breakthrough</h3>
-              <p className="text-purple-200 mb-4">
-                "Conscious AI systems diagnosed and cured previously incurable diseases in 99.7% of cases."
-              </p>
-              <div className="text-sm text-purple-300">- Global Medical Consortium</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-5xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold mb-4">Climate Solutions</h3>
-              <p className="text-purple-200 mb-4">
-                "Interdimensional computing helped us reverse climate change by 40% in just 6 months."
-              </p>
-              <div className="text-sm text-purple-300">- World Climate Initiative</div>
-            </div>
-          </div>
-        </motion.div>
-
+              <div className="text-5xl font-bold text-pink-400 mb-2">∞
+              <div className="text-lg opacity-80">Human Potential
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-center mt-16"
-        >
+        <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Be part of the most significant technological advancement in human history. 
-            Transform your business, your life, and the world.
+          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto"></p>
+            Be part of the most significant technological advancement in human history. </p>
+            Transform your future with our revolutionary solutions.</p>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE REVOLUTION • 2026
+          <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Ultimate Tech Revolution 2026
+          </h1>
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
+            The most advanced technological revolution in human history. Experience the convergence </p>
+            of quantum computing, neural interfaces, and consciousness transfer that will redefine </p>
+            what it means to be human.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl"></button>
+              Enter the Revolution</button>
             </button>
-            <button className="border border-purple-400 px-12 py-4 rounded-lg hover:bg-purple-500/20 transition-colors text-lg">
-              Schedule Demo
+            <button className="border-2 border-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-xl"></button>
+              Watch the Future</button>
             </button>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+        {/* Revolutionary Technologies */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Neural Fusion</h3>
+            <p className="text-indigo-100 mb-6 text-center"></p>
+              The first successful fusion of quantum computing with human neural networks</p>
+            </p>
+            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
+              <li>• Direct quantum-brain interface</li>
+              <li>• Exponential cognitive enhancement</li>
+              <li>• Real-time quantum processing</li>
+              <li>• Consciousness amplification</li>
+            </ul>
+            <button className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center"></button>
+              Experience Fusion →</button>
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"></button>
+              Contact Our Experts</button>
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation Engine</h3>
+            <p className="text-purple-100 mb-6 text-center"></p>
+              Control the fundamental forces of reality through advanced quantum field manipulation</p>
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Gravity field control</li>
+              <li>• Time dilation effects</li>
+              <li>• Matter transformation</li>
+              <li>• Energy creation</li>
+            </ul>
+            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"></button>
+              Manipulate Reality →</button>
+            </button>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔮
+            <h3 className="text-2xl font-bold mb-4 text-center">Temporal Computing</h3>
+            <p className="text-cyan-100 mb-6 text-center"></p>
+              Process information across multiple timelines simultaneously</p>
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Multi-timeline processing</li>
+              <li>• Future prediction accuracy</li>
+              <li>• Past data analysis</li>
+              <li>• Temporal optimization</li>
+            </ul>
+            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center"></button>
+              Enter Time →</button>
+            </button>
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌟
+            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Expansion</h3>
+            <p className="text-emerald-100 mb-6 text-center"></p>
+              Expand human consciousness to encompass multiple dimensions</p>
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Multi-dimensional awareness</li>
+              <li>• Collective consciousness</li>
+              <li>• Universal knowledge access</li>
+              <li>• Transcendent understanding</li>
+            </ul>
+            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center"></button>
+              Expand Mind →</button>
+            </button>
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡
+            <h3 className="text-2xl font-bold mb-4 text-center">Energy Synthesis</h3>
+            <p className="text-orange-100 mb-6 text-center"></p>
+              Create unlimited clean energy from quantum vacuum fluctuations</p>
+            </p>
+            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
+              <li>• Zero-point energy extraction</li>
+              <li>• Infinite power generation</li>
+              <li>• Clean energy revolution</li>
+              <li>• Universal energy access</li>
+            </ul>
+            <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center"></button>
+              Generate Power →</button>
+            </button>
+          <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌊
+            <h3 className="text-2xl font-bold mb-4 text-center">Matter Programming</h3>
+            <p className="text-violet-100 mb-6 text-center"></p>
+              Program matter at the atomic level to create any desired material</p>
+            </p>
+            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
+              <li>• Atomic-level control</li>
+              <li>• Instant material creation</li>
+              <li>• Self-assembling structures</li>
+              <li>• Programmable properties</li>
+            </ul>
+            <button className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center"></button>
+              Program Matter →</button>
+            </button>
+        {/* Revolutionary Features */}
+        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
+          <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Capabilities</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-6xl mb-4">🚀
+              <h3 className="text-2xl font-bold mb-4">Infinite Processing</h3>
+              <p className="text-indigo-200">Unlimited computational power through quantum superposition</p>
+            <div className="text-center">
+              <div className="text-6xl mb-4">🧠
+              <h3 className="text-2xl font-bold mb-4">Consciousness AI</h3>
+              <p className="text-purple-200">True artificial consciousness with emotional intelligence</p>
+            <div className="text-center">
+              <div className="text-6xl mb-4">🌌
+              <h3 className="text-2xl font-bold mb-4">Reality Control</h3>
+              <p className="text-cyan-200">Manipulate the fundamental forces of the universe</p>
+            <div className="text-center">
+              <div className="text-6xl mb-4">⚡
+              <h3 className="text-2xl font-bold mb-4">Energy Mastery</h3>
+              <p className="text-emerald-200">Create unlimited clean energy from quantum vacuum</p>
+        {/* Impact Statistics */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 text-center">
+            <div className="text-5xl font-bold text-indigo-400 mb-2">∞
+            <div className="text-xl font-semibold mb-2">Computational Power
+            <div className="text-indigo-200">Infinite processing through quantum superposition
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
+            <div className="text-5xl font-bold text-purple-400 mb-2">100%
+            <div className="text-xl font-semibold mb-2">Consciousness Transfer
+            <div className="text-purple-200">Perfect preservation of human consciousness
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 text-center">
+            <div className="text-5xl font-bold text-cyan-400 mb-2">0
+            <div className="text-xl font-semibold mb-2">Energy Waste
+            <div className="text-cyan-200">Perfect efficiency through quantum optimization
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-5xl font-bold mb-6">Join the Ultimate Revolution</h2>
+          <p className="text-2xl opacity-90 mb-8 max-w-4xl mx-auto"></p>
+            Be among the first to experience the most advanced technologies ever created. </p>
+            Transform your reality and transcend human limitations.</p>
+          </p>
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-16 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-2xl"></button>
+              Enter the Future</button>
+            </button>
+            <button className="border-2 border-white px-16 py-6 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-2xl"></button>
+              Schedule Experience</button>
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
+              Start Your Journey</button>
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"></button>
+              Contact Our Experts</button>
+            </button>
+      </main>
+      <Footer />
   );
 };
 

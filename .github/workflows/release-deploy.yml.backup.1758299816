@@ -1,0 +1,166 @@
+<<<<<<< HEAD
+---
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        type: string
+
+=======
+name: Release
+'on':
+  push:
+    tags:
+      - v*
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version (e.g., v1.0.0)
+        required: true
+        type: string
+>>>>>>> origin/pm2-automation-fixes
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+<<<<<<< HEAD
+  issues: write
+
+concurrency:
+  group: "release"
+  cancel-in-progress: false
+
+=======
+concurrency:
+  group: release
+  cancel-in-progress: false
+>>>>>>> origin/pm2-automation-fixes
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/pm2-automation-fixes
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+<<<<<<< HEAD
+          cache: 'npm'
+=======
+          cache: npm
+>>>>>>> origin/pm2-automation-fixes
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Get version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+      - name: Build application
+        run: npm run build
+        env:
+<<<<<<< HEAD
+          NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
+      - name: Export static files
+        run: npm run export
+      - name: Package build artifacts
+        id: package
+        run: |
+          ZIP="zion-app-${{ steps.version.outputs.version }}.zip"
+          (cd out && zip -r "../$ZIP" .)
+          echo "zip_path=$ZIP" >> "$GITHUB_OUTPUT"
+      - name: Create GitHub release and upload artifact
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.version }}
+          files: ${{ steps.package.outputs.zip_path }}
+          draft: false
+          prerelease: false
+=======
+          NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      - name: Export static files
+        run: npm run export
+      - name: Archive build
+        run: |
+          cd out
+          zip -r ../zion-app-${{ steps.version.outputs.version }}.zip .
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.version }}
+          draft: false
+          prerelease: false
+          files: |
+            zion-app-${{ steps.version.outputs.version }}.zip
+>>>>>>> origin/pm2-automation-fixes
+      - name: Update package.json version
+        run: |
+          npm version ${{ steps.version.outputs.version }} --no-git-tag-version
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+<<<<<<< HEAD
+          git commit -m "chore: bump version to ${{ steps.version.outputs.version }}" || echo "No version changes to commit"
+=======
+          git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
+>>>>>>> origin/pm2-automation-fixes
+          git push
+      - name: Deploy to production
+        run: |
+          echo "Deploying version ${{ steps.version.outputs.version }} to production"
+          # Add your deployment logic here
+          # Example: netlify deploy --dir=out --prod=true
+      - name: Notify release
+        uses: actions/github-script@v7
+        with:
+<<<<<<< HEAD
+          script: |
+            const version = '${{ steps.version.outputs.version }}';
+            const message = `🚀 **Release ${version} Deployed**\n\nVersion ${version} has been successfully released and deployed to production.`;
+
+            // Create a release summary issue
+=======
+          script: >
+            const version = '${{ steps.version.outputs.version }}';
+
+            const message = `🚀 **Release ${version} Deployed**\n\nVersion ${version} has been successfully released and
+            deployed to production.`;
+
+
+            // Create a release summary issue
+
+>>>>>>> origin/pm2-automation-fixes
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Release ${version} Summary`,
+              body: message,
+              labels: ['release', 'deployment']
+            });
+<<<<<<< HEAD
+=======
+    runs_on: ubuntu-latest
+>>>>>>> origin/pm2-automation-fixes

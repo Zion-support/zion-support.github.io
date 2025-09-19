@@ -1,4 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
+
 export interface FuturisticAIService2030 {
   id: string;
   name: string;
@@ -39,6 +40,7 @@ export interface FuturisticAIService2030 {
   rating: number;
   reviews: number;
 }
+
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {
@@ -300,3 +302,4 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5.0,
     reviews: 4
   }
+];

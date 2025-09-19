@@ -48,13 +48,13 @@ class MergeConflictResolver {
       ",
       ",
       ",
-      "      "      ""],,
+      "      "      ""],
 }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),,
+    console.log(`[${new Date().toISOString()}] ${message}`),
 }
   hasConflictMarkers(content) {
-    return this.conflictMarkers.some(marker => content.includes(marker)),,
+    return this.conflictMarkers.some(marker => content.includes(marker)),
 }
   resolveConflict(content) {
     // Remove all conflict markers and keep the HEAD version (first part)
@@ -69,7 +69,7 @@ class MergeConflictResolver {
     resolved = resolved.replace(/,\s*}/g, "}")
     resolved = resolved.replace(/,\s*]/g, "]")
     resolved = resolved.replace(/,\s*\)/g, ")")
-    return resolved,,
+    return resolved,
 }
   fixFile(filePath) {
     try {
@@ -81,14 +81,14 @@ class MergeConflictResolver {
           fs.writeFileSync(filePath, content, "utf8")
           this.fixedFiles.push(filePath)
           this.log(`✅ Resolved merge conflicts in ${filePath}`)
-          return true,,
+          return true,
 }
       }
-      return false,,
+      return false,
 } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error fixing ${filePath}: ${error.message}`)
-      return false,,
+      return false,
 }
   }
   findFilesWithConflicts() {
@@ -99,15 +99,15 @@ class MergeConflictResolver {
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          searchInDirectory(fullPath),,
+          searchInDirectory(fullPath),
 } else if (stat.isFile() && (item.endsWith(".js") || item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".cjs") || item.endsWith(".mjs"))) {
           try {
             const content = fs.readFileSync(fullPath, "utf8")
             if (this.hasConflictMarkers(content)) {
-              filesWithConflicts.push(fullPath),,
+              filesWithConflicts.push(fullPath),
 }
           } catch (error) {
-            // Skip files that can"t be read,,
+            // Skip files that can"t be read,
 }
 
 // Function to find all files with merge conflicts

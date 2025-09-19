@@ -1,0 +1,102 @@
+{
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T17:32:53.642Z",
+  "checks": {
+    "Node.js Version": {
+      "status": "passed",
+      "message": "Node.js v22.16.0"
+    },
+    "Package.json": {
+      "status": "passed",
+      "message": "package.json exists"
+    },
+    "Dependencies": {
+      "status": "passed",
+      "message": "Dependencies installed"
+    },
+    "Disk Space": {
+      "status": "passed",
+      "message": "Disk usage: 12%"
+    },
+    "Memory Usage": {
+      "status": "passed",
+      "message": "Memory usage: 9%"
+    },
+    "Build Test": {
+      "status": "passed",
+      "message": "Build successful"
+    },
+    "Linting": {
+      "status": "warning",
+      "warning": true,
+      "message": "Linting errors found"
+    }
+  },
+  "summary": {
+    "total": 7,
+    "passed": 6,
+    "failed": 0,
+    "warnings": 1
+=======
+  "timestamp": "2025-09-03T21:30:05.200Z",
+  "status": "completed",
+  "checks": [
+    {
+      "name": "Package.json Validation",
+      "status": "passed",
+      "result": {
+        "name": "ziontechgroup.com",
+        "version": "0.1.0"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
+    },
+    {
+      "name": "Dependencies Check",
+      "status": "passed",
+      "result": {
+        "status": "dependencies_installed"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
+    },
+    {
+      "name": "Build Directory Check",
+      "status": "passed",
+      "result": {
+        "status": "build_directory_exists"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
+    },
+    {
+      "name": "PM2 Process Check",
+      "status": "failed",
+      "error": "PM2 not available or no processes running",
+      "timestamp": "2025-09-03T21:30:05.476Z"
+    },
+    {
+      "name": "Disk Space Check",
+      "status": "passed",
+      "result": {
+        "available": "105G",
+        "used": "15G",
+        "total": "126G"
+      },
+      "timestamp": "2025-09-03T21:30:05.484Z"
+    },
+    {
+      "name": "Memory Check",
+      "status": "passed",
+      "result": {
+        "total": "16017MB",
+        "used": "2433MB",
+        "available": "13584MB"
+      },
+      "timestamp": "2025-09-03T21:30:05.512Z"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 5,
+    "failed": 1
+>>>>>>> origin/temp-merge-11532
+  }
+}

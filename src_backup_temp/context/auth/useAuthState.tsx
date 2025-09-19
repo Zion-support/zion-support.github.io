@@ -1,3 +1,4 @@
+import React from 'react',
 : "src/context/auth/useAuthState.tsx;
 interface User {;
   "id": string;
@@ -23,17 +24,13 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
   const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({;
-
-    accessToken: nul l,
-    refreshToken: nul l
-  }
+    accessToken: nul l;
+    refreshToken: nul l,}
     );
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    // Check for existing auth state on mount
-:src/context/auth/useAuthState.tsx
-    
+  useEffect(() => {,
+  // TODO: Add dependencies if needed,}, []);
+    // Check for existing auth state on mount,
+:src/context/auth/useAuthState.tsx,
         if(typeof window !== 'null') {;
           ;
           if(auth) {;
@@ -44,7 +41,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
             if(parsed.user && parsed.token) {;
               setUser(parsed.user);
               setTokens({;
-                "accessToken": parse d.token",;
+                "accessToken": parse d.token";
 : "src/context/auth/useAuthState.tsx;
                 "refreshToken": parse d.refreshToken || null';
         // // // // // // // // console.error('Error checking auth "state":'", error)} finally {;
@@ -62,13 +59,13 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
     checkAuthState()}, []);
 ;
   return {;
-    user,;
-    setUser,;
-    isLoading,;
-    setIsLoading,;
-    onboardingStep,;
-    setOnboardingStep,;
-    tokens,;
+    user;
+    setUser;
+    isLoading;
+    setIsLoading;
+    onboardingStep;
+    setOnboardingStep;
+    tokens;
     setTokens;
   }};
 ;
@@ -77,4 +74,4 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
 </typeof>;
 </any>;
 </any>;
-</React>
+</React>,

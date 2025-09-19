@@ -22,50 +22,6 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-16",
   },
   {
-    id: "enterprise-ai-readiness-checklist-2026",
-    title: "AI 2026: Enterprise AI Readiness Checklist",
-    description:
-      "A practical, audit‑ready readiness framework for safe and reliable AI at scale.",
-    ctaLabel: "Read Checklist",
-    href: "/blog/ai-2026-enterprise-ai-readiness-checklist",
-    emoji: "✅",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "operational-reliability-blueprint-2026",
-    title: "Operational Reliability Blueprint (2026)",
-    description:
-      "Eval‑gated releases, rollback contracts, error budgets, and observability for dependable agents.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-operational-reliability-blueprint",
-    emoji: "🛠️",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "executive-ai-security-playbook-2026",
-    title: "Executive AI Security Playbook",
-    description:
-      "Board‑ready controls: policy‑as‑code, eval gates, and audit evidence to ship safely.",
-    ctaLabel: "Read Playbook",
-    href: "/blog/ai-2026-executive-ai-security-playbook",
-    emoji: "🛡️",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "evidence-hub-architecture-2026",
-    title: "Evidence Hub Architecture",
-    description:
-      "Unify traces, evals, incidents, and KPIs to power scorecards and release gates.",
-    ctaLabel: "View Architecture",
-    href: "/blog/ai-2026-evidence-hub-architecture",
-    emoji: "🗃️",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
     id: "realtime-agent-routing-2026",
     title: "AI 2026: Real‑Time Agent Routing — Best Practices",
     description:

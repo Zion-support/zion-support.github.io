@@ -1,11 +1,8 @@
 import React from 'react';
-
-interface PerformanceMonitorProps {
+interface PerformanceMonitorProps {,
   showDetails?: boolean;
 }
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
-  return null;
-};
-
+,
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {,
+  return null,};
 export default PerformanceMonitor;

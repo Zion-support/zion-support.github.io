@@ -1,1 +1,1 @@
-import {AnimatePresence, motion} from 'framer - motionimport {CheckCircle, Clock, ExternalLink, Mail, MapPin, Phone, Search, Shield, TrendingUp} from lucide - reactimport {useState} from react;';
+import {AnimatePresence, motion} from 'framer - motionimport {CheckCircle, Clock, ExternalLink, Mail, MapPin, Phone, Search, Shield, TrendingUp} from lucide - reactimport {useState} from react,';

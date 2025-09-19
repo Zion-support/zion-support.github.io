@@ -1,143 +1,111 @@
 #!/bin/bash
 
-# Priority Merge Script - Focus on important branches first
+# Priority merge script for most recent branches
 set -e
 
-echo "🚀 Starting priority merge of important branches..."
+echo "🚀 Starting priority merge for recent branches..."
 echo "⏰ Started at: $(date)"
 
-# Ensure we're on main and up to date
-echo "🔄 Ensuring main branch is up to date..."
+# Create backup
+BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
 git checkout main
+
+# Update main
+echo "🔄 Updating main branch..."
 git pull origin main
 
 # Initialize counters
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
-SKIPPED_BRANCHES=0
+CONFLICT_RESOLUTIONS=0
 
-# Function to resolve conflicts quickly
-resolve_conflicts_fast() {
-    local file="$1"
-    
-    if [ ! -f "$file" ]; then
-        return 0
-    fi
-    
-    # Quick conflict resolution - prefer incoming changes for most files
-    case "$file" in
-        "package.json"|"package-lock.json"|"yarn.lock")
-            git checkout --ours "$file" 2>/dev/null || true
-            ;;
-        "app/layout.tsx"|"app/page.tsx"|"src/App.tsx")
-            git checkout --ours "$file" 2>/dev/null || true
-            ;;
-        *)
-            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-            ;;
-    esac
-}
+# Get most recent cursor branches (last 100)
+echo "📊 Getting most recent cursor branches..."
+BRANCHES=$(git branch -r | grep "origin/cursor/" | tail -100 | sed 's/origin\///')
+TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
 
-# Function to merge a single branch
-merge_branch() {
+echo "📋 Processing $TOTAL_BRANCHES recent branches..."
+
+# Function to resolve conflicts
+resolve_conflicts() {
     local branch="$1"
     
-    echo "🔄 Processing: $branch"
+    # Keep main version for critical config files
+    git checkout --ours package.json package-lock.json next.config.js tsconfig.json tailwind.config.js netlify.toml vite.config.js 2>/dev/null || true
     
-    # Skip if branch doesn't exist or is already merged
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        echo "  ⏭️  Branch doesn't exist, skipping..."
-        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-        return 1
-    fi
+    # For other files, prefer incoming changes
+    git add . 2>/dev/null || true
     
-    if git branch --merged main | grep -q "$branch"; then
-        echo "  ⏭️  Already merged, skipping..."
-        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-        return 1
+    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
+    echo "✅ Conflicts resolved for $branch"
+}
+
+# Process each branch
+CURRENT=0
+for branch in $BRANCHES; do
+    CURRENT=$((CURRENT + 1))
+    echo ""
+    echo "📋 [$CURRENT/$TOTAL_BRANCHES] Processing: $branch"
+    
+    # Fetch the branch
+    if ! git fetch origin "$branch" 2>/dev/null; then
+        echo "❌ Failed to fetch $branch"
+        FAILED_MERGES=$((FAILED_MERGES + 1))
+        continue
     fi
     
     # Try to merge
     if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "  ✅ Merged successfully"
-        git commit -m "Merge $branch into main - $(date)" 2>/dev/null || true
+        echo "✅ Successfully merged $branch"
+        git commit -m "Merge $branch into main - $(date)"
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        return 0
     else
-        echo "  ⚠️  Conflicts detected, resolving..."
+        echo "⚠️  Merge conflicts detected in $branch"
+        resolve_conflicts "$branch"
         
-        # Quick conflict resolution
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-        if [ -n "$CONFLICTED_FILES" ]; then
-            for file in $CONFLICTED_FILES; do
-                resolve_conflicts_fast "$file"
-            done
-            
-            git add . 2>/dev/null || true
-            if git commit -m "Resolve conflicts for $branch - $(date)" 2>/dev/null; then
-                echo "  ✅ Conflicts resolved and merged"
-                SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-                return 0
-            else
-                echo "  ❌ Failed to resolve conflicts"
-                git merge --abort 2>/dev/null || true
-                FAILED_MERGES=$((FAILED_MERGES + 1))
-                return 1
-            fi
+        if git commit -m "Resolve merge conflicts for $branch - $(date)" 2>/dev/null; then
+            echo "✅ Successfully resolved conflicts and merged $branch"
+            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
         else
-            echo "  ❌ Merge failed, aborting..."
+            echo "❌ Failed to commit resolved conflicts for $branch"
             git merge --abort 2>/dev/null || true
             FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
         fi
     fi
-}
-
-# Get priority branches (recent, non-backup, important features)
-echo "📊 Getting priority branches..."
-
-# Priority 1: Recent feature branches (last 30 days)
-PRIORITY_BRANCHES=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep -E "(cursor|pr)" | grep -v "backup\|merge" | head -50)
-
-echo "📊 Found $(echo "$PRIORITY_BRANCHES" | wc -l) priority branches to process"
-
-# Process priority branches
-echo "🔄 Processing priority branches..."
-echo "---"
-
-CURRENT=0
-for branch in $PRIORITY_BRANCHES; do
-    CURRENT=$((CURRENT + 1))
-    echo "📋 [$CURRENT] Processing: $branch"
     
-    if merge_branch "$branch"; then
-        echo "✅ Successfully processed $branch"
-    else
-        echo "❌ Failed to process $branch"
-    fi
+    # Progress update
+    echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
     
-    # Push every 10 branches
-    if [ $((CURRENT % 10)) -eq 0 ]; then
+    # Push every 10 merges
+    if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         echo "💾 Pushing progress..."
-        git push origin main 2>/dev/null || true
-        echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $SKIPPED_BRANCHES skipped"
-        echo "---"
+        git push origin main
     fi
 done
 
 # Final push
-echo "💾 Final push to remote..."
+echo ""
+echo "💾 Pushing final changes..."
 git push origin main
 
 # Summary
 echo ""
-echo "🎉 Priority merge process completed!"
-echo "📊 Final Summary:"
+echo "🎉 Priority merge completed!"
+echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
-echo "   📈 Total processed: $((SUCCESSFUL_MERGES + FAILED_MERGES + SKIPPED_BRANCHES))"
+echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
+echo "   📈 Total processed: $CURRENT"
+echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 
+# Show recent commits
 echo ""
-echo "🎯 Priority branches have been processed!"
+echo "📝 Recent commits:"
+git log --oneline -10
+
+echo ""
+echo "🎯 Priority merge process completed successfully!"

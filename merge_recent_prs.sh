@@ -1,121 +1,212 @@
 #!/bin/bash
 
-# Merge Recent PRs Script
-# This script processes the most recent 100 branches
-
+# Smart PR Merge Script - Focus on recent branches first
 set -e
 
-echo "🚀 Starting Recent PRs Merge Process"
-echo "===================================="
+echo "🚀 Starting smart PR merge process..."
+echo "📊 Total cursor branches: $(git branch -r | grep "origin/cursor/" | wc -l)"
+echo "⏰ Started at: $(date)"
+echo "---"
 
-# Get the most recent 100 branches
-RECENT_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -100 | sed 's/origin\///' | sort)
+# Create backup branch
+BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH" || true
+git checkout main
 
-echo "📋 Processing 100 most recent branches"
+# Initialize counters
+SUCCESSFUL_MERGES=0
+FAILED_MERGES=0
+CONFLICT_RESOLUTIONS=0
+SKIPPED_BRANCHES=0
+TOTAL_PROCESSED=0
 
-# Counter for tracking
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-TOTAL_COUNT=$(echo "$RECENT_BRANCHES" | wc -l)
-
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    local branch_num=$2
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    local branch="$2"
     
-    echo ""
-    echo "🔄 [$branch_num/$TOTAL_COUNT] Processing: $branch"
-    echo "----------------------------------------"
+    echo "🔧 Resolving conflicts in $file for branch $branch..."
     
-    # Try to merge directly
-    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-        return 0
-    else
-        echo "❌ Merge conflict for $branch, attempting resolution..."
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "⚠️  Found conflicts in $file, resolving..."
         
-        # Try to resolve conflicts automatically
-        if resolve_conflicts_quick; then
-            echo "✅ Conflicts resolved for $branch"
-            git add .
-            git commit -m "Resolve merge conflicts for $branch"
-            SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-            return 0
+        # Create backup
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Strategy based on file type
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            echo "📦 Package file - keeping main version and merging dependencies..."
+            # Keep main version for package files
+            git checkout --ours "$file"
+        elif [[ "$file" == "*.config.js" || "$file" == "*.config.ts" || "$file" == "tsconfig.json" ]]; then
+            echo "⚙️  Config file - keeping main version..."
+            git checkout --ours "$file"
+        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
+            echo "📚 Documentation - keeping both versions..."
+            # Remove conflict markers but keep content
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         else
-            echo "❌ Could not resolve conflicts for $branch"
-            git merge --abort 2>/dev/null || true
-            FAILED_COUNT=$((FAILED_COUNT + 1))
-            return 1
+            echo "📝 Regular file - attempting smart merge..."
+            # Try to keep both versions where possible
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         fi
+        
+        echo "✅ Resolved conflicts in $file"
+        CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
 }
 
-# Function to resolve conflicts quickly
-resolve_conflicts_quick() {
-    local resolved=false
+# Function to check if branch can be merged
+can_merge_branch() {
+    local branch="$1"
     
-    # Resolve common conflicts by taking the newer version
-    if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-        # For all conflicted files, take the newer version (theirs)
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-        
-        # Also resolve any remaining conflicts
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --ours "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
+    # Skip if branch doesn't exist
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        return 1
+    fi
+    
+    # Skip if branch is already merged
+    if git branch --merged main | grep -q "$branch"; then
+        return 1
+    fi
+    
+    # Skip if branch is the same as main
+    if git merge-base --is-ancestor "origin/$branch" main; then
+        return 1
     fi
     
     return 0
 }
 
-# Process each branch
-branch_num=1
-for branch in $RECENT_BRANCHES; do
-    merge_branch "$branch" "$branch_num"
-    branch_num=$((branch_num + 1))
+# Function to merge a single branch
+merge_branch() {
+    local branch="$1"
     
-    # Push every 10 branches
-    if [ $((branch_num % 10)) -eq 0 ]; then
-        echo ""
-        echo "🚀 Pushing changes after $branch_num branches..."
-        if git push origin main; then
-            echo "✅ Changes pushed successfully"
+    echo "🔄 Attempting to merge $branch..."
+    
+    # Fetch the latest version
+    git fetch origin "$branch" || {
+        echo "❌ Failed to fetch $branch"
+        return 1
+    }
+    
+    # Try to merge
+    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        git commit -m "Merge $branch into main - $(date)" || true
+        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+        return 0
+    else
+        echo "⚠️  Merge conflicts detected in $branch, resolving..."
+        
+        # Get conflicted files
+        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+        
+        if [ -n "$CONFLICTED_FILES" ]; then
+            echo "📋 Conflicted files: $CONFLICTED_FILES"
+            
+            # Resolve conflicts in each file
+            for file in $CONFLICTED_FILES; do
+                if [ -f "$file" ]; then
+                    resolve_conflicts "$file" "$branch"
+                fi
+            done
+            
+            # Add resolved files
+            git add . || true
+            
+            # Commit the merge
+            git commit -m "Resolve merge conflicts for $branch - $(date)" || {
+                echo "❌ Failed to commit merge for $branch"
+                git merge --abort
+                return 1
+            }
+            
+            echo "✅ Successfully resolved conflicts and merged $branch"
+            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+            return 0
         else
-            echo "⚠️  Failed to push changes, will retry later"
+            echo "❌ No conflicted files found, but merge failed. Aborting..."
+            git merge --abort
+            FAILED_MERGES=$((FAILED_MERGES + 1))
+            return 1
+        fi
+    fi
+}
+
+# Get recent branches (last 100 by commit date)
+echo "📋 Getting recent branches to process..."
+RECENT_BRANCHES=$(git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/remotes/origin/cursor/ | head -100)
+
+echo "🔄 Processing recent branches..."
+echo "---"
+
+for branch in $RECENT_BRANCHES; do
+    # Remove origin/ prefix
+    branch_name=${branch#origin/}
+    
+    echo "📋 Processing branch: $branch_name"
+    TOTAL_PROCESSED=$((TOTAL_PROCESSED + 1))
+    
+    # Check if branch can be merged
+    if ! can_merge_branch "$branch_name"; then
+        echo "⏭️  Skipping $branch_name (already merged or doesn't exist)"
+        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
+        continue
+    fi
+    
+    # Try to merge the branch
+    if merge_branch "$branch_name"; then
+        echo "✅ Branch $branch_name processed successfully"
+    else
+        echo "❌ Failed to process branch $branch_name"
+    fi
+    
+    # Progress update every 10 branches
+    if [ $((TOTAL_PROCESSED % 10)) -eq 0 ]; then
+        echo "📊 Progress: $TOTAL_PROCESSED processed, $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+        echo "---"
+        
+        # Push changes periodically
+        if [ $SUCCESSFUL_MERGES -gt 0 ] && [ $((SUCCESSFUL_MERGES % 20)) -eq 0 ]; then
+            echo "💾 Pushing progress to remote..."
+            git push origin main || true
         fi
     fi
     
-    # Small delay
-    sleep 0.5
+    # Safety limit - don't process more than 50 branches in one run
+    if [ $TOTAL_PROCESSED -ge 50 ]; then
+        echo "⚠️  Reached safety limit of 50 branches. Stopping here."
+        break
+    fi
 done
 
 # Final push
-echo ""
-echo "🚀 Final push..."
-if git push origin main; then
-    echo "✅ Final changes pushed successfully"
-else
-    echo "⚠️  Failed to push final changes"
-fi
+echo "💾 Pushing final changes to remote..."
+git push origin main || true
 
-# Final summary
+# Summary
 echo ""
-echo "🎉 Recent PRs Merge Process Complete!"
-echo "====================================="
-echo "✅ Successfully merged: $SUCCESS_COUNT branches"
-echo "❌ Failed to merge: $FAILED_COUNT branches"
-echo "📊 Total processed: $TOTAL_COUNT branches"
+echo "🎉 Smart PR merge process completed!"
+echo "📊 Summary:"
+echo "   📋 Total processed: $TOTAL_PROCESSED"
+echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
+echo "   ❌ Failed merges: $FAILED_MERGES"
+echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
+echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
+echo "   🔒 Backup branch: $BACKUP_BRANCH"
+echo "⏰ Completed at: $(date)"
 
+# Cleanup recommendations
 echo ""
-echo "🏁 Recent PRs processing complete!"
+echo "🧹 Next steps:"
+echo "   1. Review merged changes: git log --oneline -20"
+echo "   2. Test the application: npm run build"
+echo "   3. Run additional batches if needed"
+echo "   4. Delete backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
+
+echo "✅ Script completed successfully!"

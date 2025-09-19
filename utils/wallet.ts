@@ -1,17 +1,12 @@
 
-
-
-
-
-
+,
   }
 }
 export type WalletProvider = any;
-
-export function getEthereumProvider(): WalletProvider | null {
+export function getEthereumProvider(): WalletProvider | null {,
   if (typeof window === 'undefined') return null;
-  // @ts-ignore
+  // @ts-ignore,
   const { ethereum } = window;
   return ethereum ?? null;
 }
-
+,

@@ -1,5 +1,4 @@
-// comment
+// comment,
 export const serviceWorker = {}
-
-
-export default serviceWorker
+,
+export default serviceWorker,

@@ -67,6 +67,7 @@ while IFS= read -r branch; do
                             else
                                 echo "📝 Regular file, keeping both versions..."
                                 # Remove conflict markers
+<<<<<<< HEAD
                                 sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
                                 sed -i '/>>>>>>> /d' "$file"
                             fi
@@ -110,3 +111,5 @@ echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
+=======
+>>>>>>> origin/backup-main-20250918-004015

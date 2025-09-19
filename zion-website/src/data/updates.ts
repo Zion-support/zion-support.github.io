@@ -11,18 +11,18 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
-        title: 'Launch: AI Security Evidence Vault v1.1',
-        summary: 'Signed lineage, immutable bundles, and policy hooks for faster audits.',
-        href: '/updates/agent-evidence-vault-1-1',
+        title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
+        summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
+        href: '/updates/real-time-agent-finops-dashboard-1-0',
         date: '2025-09-16',
         tag: 'Launch',
     },
     {
-        title: 'Launch: Agent Risk Dashboard v1.1',
-        summary: 'Improved override tracking, policy diffs, and risk trend analytics.',
-        href: '/updates/agent-risk-dashboard-1-1',
+        title: 'Blog: Continuous Agent Evidence Bundles',
+        summary: 'Designing continuous evidence capture for autonomous agents with policy gates and provenance.',
+        href: '/blog/ai-2026-continuous-agent-evidence-bundles',
         date: '2025-09-16',
-        tag: 'Launch',
+        tag: 'Announcement',
     },
     {
         title: 'Launch: Autonomous Experimentation Toolkit v1.0',

@@ -1,43 +1,86 @@
 #!/bin/bash
+set -e
 
-# Script to automatically resolve merge conflicts
-# Takes the version from the incoming branch (origin/revolutionary-content-merge-1758084568) for most files
+<<<<<<< HEAD
+# Script to resolve merge conflicts by choosing HEAD version
+<<<<<<< HEAD
+# This will remove all merge conflict markers and keep only the HEAD version
 
-echo "Resolving merge conflicts automatically..."
+echo "Resolving merge conflicts..."
 
-# List of files with conflicts
-conflict_files=(
-    "src/Footer.tsx"
-    "src/components/InteractiveTechShowcase.tsx"
-    "src/components/InteractiveTechShowcase2026.tsx"
-    "src/components/NewContentShowcase.tsx"
-    "src/components/RevolutionaryContentShowcase2026.tsx"
-    "src/components/UltimateContentShowcase2026.tsx"
-    "src/hooks/useWebhooks.ts"
-    "src/pages/AIInnovationHub2026.tsx"
-    "src/pages/FutureTechTrends2026.tsx"
-    "src/pages/QuantumAIRevolution2026.tsx"
-    "src/pages/QuantumNeuralFusion2026.tsx"
-    "src/pages/UltimateTechShowcase2026.tsx"
-    "src/utils/notifications.ts"
-    "src/utils/safeStorage.ts"
-)
-
-# For each conflicted file, take the version from the incoming branch
-for file in "${conflict_files[@]}"; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file..."
-        # Use git checkout to take the version from the incoming branch
-        git checkout --theirs "$file"
-        git add "$file"
+# Find all files with merge conflicts (excluding node_modules)
+find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | \
+grep -v node_modules | \
+while read file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Resolving conflicts in: $file"
+        
+        # Create a temporary file
+        temp_file=$(mktemp)
+        
+        # Process the file to resolve conflicts
+        awk '
+        /^<<<<<<< HEAD/ { in_head = 1; next }
+        /^=======/ { in_head = 0; in_other = 1; next }
+        /^>>>>>>>/ { in_other = 0; next }
+        in_head { print; next }
+        !in_other { print }
+        ' "$file" > "$temp_file"
+        
+        # Replace the original file
+        mv "$temp_file" "$file"
     fi
 done
 
-# Handle backup files and dist files by removing them (they're not needed)
-echo "Removing unnecessary backup and dist files..."
-rm -f "dist/sw.js"
-rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/fetchWithRetry.ts.backup.1758109657.backup.1758130384"
-rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/productionLogger.ts"
-rm -f "src/pages/FutureTechInnovationHub2026.tsx.backup"
+echo "Merge conflicts resolved!"
+=======
+echo "Resolving merge conflicts..."
+=======
+echo "Resolving merge conflicts automatically..."
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
 
-echo "All conflicts resolved!"
+# Function to resolve conflicts by choosing HEAD version
+resolve_conflicts() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        echo "Resolving conflicts in $file"
+        # Use git checkout to choose HEAD version for conflicted files
+        git checkout --ours "$file" 2>/dev/null || true
+        git add "$file" 2>/dev/null || true
+    fi
+}
+
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+
+if [ -n "$conflicted_files" ]; then
+    echo "Found conflicted files:"
+    echo "$conflicted_files"
+    
+    # Resolve each conflicted file
+    while IFS= read -r file; do
+        if [ -n "$file" ]; then
+            resolve_conflicts "$file"
+        fi
+    done <<< "$conflicted_files"
+    
+<<<<<<< HEAD
+    # Use sed to resolve conflicts by choosing HEAD version
+    # Remove conflict markers and keep only HEAD content
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
+    sed -i '/^=======/,/^>>>>>>>/d' "$file"
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+    
+    echo "Resolved: $file"
+done
+
+echo "All merge conflicts resolved!"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+=======
+    echo "All conflicts resolved automatically"
+else
+    echo "No conflicts found"
+fi
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955

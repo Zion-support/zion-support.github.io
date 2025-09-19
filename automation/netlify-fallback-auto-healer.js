@@ -11,3 +11,21 @@ exports.handler = async (_event, _context) => {
         const result = {
             statusCode: 200,
             body: JSON.stringify({
+                message: 'auto-healer executed locally as fallback',
+                timestamp: new Date().toISOString(),
+                fallback: true
+            })
+        };
+        
+        return result;
+    } catch (error) {
+        console.error('Fallback execution error:', error);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({
+                error: 'Fallback execution failed',
+                message: error.message
+            })
+        };
+    }
+};

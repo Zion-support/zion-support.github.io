@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceEnhancer.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceEnhancer from "./components/PerformanceEnhancer" describe("PerformanceEnhancer",() => {" test("renders without crashing",() => {" render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PerformanceEnhancer / />) }) test("handles user interactions",() => {" render(<PerformanceEnhancer / />) }) test("applies correct styling",() => {" render(<PerformanceEnhancer / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/PerformanceEnhancer.test.js

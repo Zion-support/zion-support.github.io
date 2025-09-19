@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
+@import './styles/navbar.css';
+@import './styles/responsive.css';
+
+/* CSS Custom Properties for Theming */
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 3.9%);
+  --border: hsl(0 0% 89.8%);
+  --input: hsl(0 0% 89.8%);
+  --ring: hsl(240 5.9% 10%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(0 0% 98%);
+}
+
+[data-theme='dark'] {
+  --background: hsl(222, 47%, 8%);
+  --foreground: hsl(0, 0%, 88%);
+  --primary: hsl(188, 85%, 53%);
+  --primary-foreground: hsl(222, 47%, 8%);
+  --secondary: hsl(271, 76%, 53%);
+  --secondary-foreground: hsl(0, 0%, 88%);
+  --card: hsl(220, 30%, 11%);
+  --card-foreground: hsl(0, 0%, 88%);
+  --border: hsl(222, 39%, 17%);
+  --input: hsl(222, 39%, 17%);
+  --ring: hsl(188, 85%, 53%);
+  --accent: hsl(288, 85%, 60%);
+  --accent-foreground: hsl(0, 0%, 88%);
+}
+
+/*Scoped Theme Variables for Mobile App */
+.mobile-app {
+  min-height: 100vh; /* Ensure it takes full height */
+}
+
+.mobile-app[data-theme='light'] {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 3.9%);
+  --border: hsl(0 0% 89.8%);
+  --input: hsl(0 0% 89.8%);
+  --ring: hsl(240 5.9% 10%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(0 0% 98%);
+
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.mobile-app[data-theme='dark'] {
+  --background: hsl(222, 47%, 8%);
+  --foreground: hsl(0, 0%, 88%);
+  --primary: hsl(188, 85%, 53%);
+  --primary-foreground: hsl(222, 47%, 8%);
+  --secondary: hsl(271, 76%, 53%);
+  --secondary-foreground: hsl(0, 0%, 88%);
+  --card: hsl(220, 30%, 11%);
+  --card-foreground: hsl(0, 0%, 88%);
+  --border: hsl(222, 39%, 17%);
+  --input: hsl(222, 39%, 17%);
+  --ring: hsl(188, 85%, 53%);
+  --accent: hsl(288, 85%, 60%);
+  --accent-foreground: hsl(0, 0%, 88%);
+
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Global layout fixes */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@layer base {
+  :root {
+<<<<<<< HEAD
+    --font-sans: 'Orbitron', system-ui, sans-serif;
+
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 228 12% 92%;
+
+    --sidebar-foreground: 0 0% 7%;
+
+    --sidebar-primary: 216 84% 53%;
+
+    --sidebar-primary-foreground: 142 71% 45%;
+
+    --sidebar-accent: 0 0% 68%;
+
+    --sidebar-accent-foreground: 0 0% 7%;
+
+    --sidebar-border: 0 0% 68%;
+
+    --sidebar-ring: 216 84% 53%;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 40% 96%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 262 83% 58%;
+=======
+    --font-sans: 'Orbitron', system-ui, sans-serif; /* Keep existing font */
+
+    /* Dark Theme Base (zion-slate) */
+    --background: 260 70% 10%; /* zion-slate */
+    --foreground: 0 0% 85%;    /* Light Gray Text */
+
+    --card: 260 70% 12%;       /* Slightly lighter zion-slate */
+    --card-foreground: 0 0% 85%; /* Light Gray Text */
+
+    --popover: 260 70% 12%;    /* Slightly lighter zion-slate */
+    --popover-foreground: 0 0% 85%; /* Light Gray Text */
+
+    --primary: 217 82% 55%;    /* zion-blue */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 273 82% 50%;  /* zion-purple */
+    --secondary-foreground: 0 0% 100%; /* white */
+
+    --muted: 260 70% 20%;      /* Darker muted zion-slate */
+    --muted-foreground: 0 0% 60%; /* Muted gray text */
+
+    --accent: 177 70% 50%;     /* zion-cyan */
+    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+
+    --destructive: 0 70% 55%;   /* Adjusted Red for dark theme */
+    --destructive-foreground: 0 0% 100%; /* white */
+
+    --border: 260 70% 20%;     /* Muted zion-slate for borders */
+    --input: 260 70% 15%;      /* Slightly different from border for input bg */
+    --ring: 217 82% 55%;       /* zion-blue for focus rings */
+
+    --radius: 0.5rem; /* Keep existing radius */
+
+    /* Dark Theme Sidebar */
+    --sidebar-background: 260 70% 8%;  /* Even darker zion-slate */
+    --sidebar-foreground: 0 0% 85%;    /* Light Gray Text */
+    --sidebar-primary: 217 82% 55%;    /* zion-blue */
+    --sidebar-primary-foreground: 0 0% 100%; /* white */
+    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
+    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
+    --sidebar-border: 260 70% 15%;     /* Muted zion-slate for sidebar borders */
+    --sidebar-ring: 217 82% 55%;       /* zion-blue */
+  }
+
+  .dark { /* Ensure .dark mirrors :root for dark theme consistency */
+    --background: 260 70% 10%; /* zion-slate */
+    --foreground: 0 0% 85%;    /* Light Gray Text */
+
+    --card: 260 70% 12%;       /* Slightly lighter zion-slate */
+    --card-foreground: 0 0% 85%; /* Light Gray Text */
+
+    --popover: 260 70% 12%;    /* Slightly lighter zion-slate */
+    --popover-foreground: 0 0% 85%; /* Light Gray Text */
+
+    --primary: 217 82% 55%;    /* zion-blue */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 273 82% 50%;  /* zion-purple */
+    --secondary-foreground: 0 0% 100%; /* white */
+
+    --muted: 260 70% 20%;      /* Darker muted zion-slate */
+    --muted-foreground: 0 0% 60%; /* Muted gray text */
+
+    --accent: 177 70% 50%;     /* zion-cyan */
+    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+
+    --destructive: 0 70% 55%;   /* Adjusted Red for dark theme */
+    --destructive-foreground: 0 0% 100%; /* white */
+
+    --border: 260 70% 20%;     /* Muted zion-slate for borders */
+    --input: 260 70% 15%;      /* Slightly different from border for input bg */
+    --ring: 217 82% 55%;       /* zion-blue for focus rings */
+
+    /* Dark Theme Sidebar */
+    --sidebar-background: 260 70% 8%;  /* Even darker zion-slate */
+    --sidebar-foreground: 0 0% 85%;    /* Light Gray Text */
+    --sidebar-primary: 217 82% 55%;    /* zion-blue */
+    --sidebar-primary-foreground: 0 0% 100%; /* white */
+    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
+    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
+    --sidebar-border: 260 70% 15%;     /* Muted zion-slate for sidebar borders */
+    --sidebar-ring: 217 82% 55%;       /* zion-blue */
+  }
+
+  .light {
+    /* Light Theme Base */
+    --background: 0 0% 100%;    /* white */
+    --foreground: 260 70% 15%;  /* Dark Gray Text (derived from zion-slate) */
+
+    --card: 0 0% 98%;         /* Very light gray for cards */
+    --card-foreground: 260 70% 15%; /* Dark Gray Text */
+
+    --popover: 0 0% 98%;      /* Very light gray for popovers */
+    --popover-foreground: 260 70% 15%; /* Dark Gray Text */
+
+    --primary: 217 82% 55%;    /* zion-blue */
+    --primary-foreground: 0 0% 100%; /* white */
+
+    --secondary: 273 82% 50%;  /* zion-purple */
+    --secondary-foreground: 0 0% 100%; /* white */
+
+    --muted: 0 0% 90%;         /* Light muted gray */
+    --muted-foreground: 0 0% 40%; /* Darker muted gray text */
+
+    --accent: 177 70% 50%;     /* zion-cyan */
+    --accent-foreground: 260 70% 10%; /* zion-slate (for contrast on cyan) */
+
+    --destructive: 0 70% 50%;   /* Adjusted Red for light theme */
+    --destructive-foreground: 0 0% 100%; /* white */
+
+    --border: 0 0% 85%;       /* Light gray border */
+    --input: 0 0% 90%;        /* Slightly different from border for input bg */
+    --ring: 217 82% 55%;       /* zion-blue for focus rings */
+
+    --radius: 0.5rem; /* Keep existing radius */
+
+    /* Light Theme Sidebar */
+    --sidebar-background: 0 0% 96%;  /* Light gray for sidebar */
+    --sidebar-foreground: 260 70% 15%;  /* Dark Gray Text */
+    --sidebar-primary: 217 82% 55%;    /* zion-blue */
+    --sidebar-primary-foreground: 0 0% 100%; /* white */
+    --sidebar-accent: 177 70% 50%;     /* zion-cyan */
+    --sidebar-accent-foreground: 260 70% 10%; /* zion-slate */
+    --sidebar-border: 0 0% 80%;       /* Slightly darker gray for sidebar borders */
+    --sidebar-ring: 217 82% 55%;       /* zion-blue */
+>>>>>>> origin/pm2-automation-fixes
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--zion-cyan-600);
+  border-radius: 4px;
+}
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+<<<<<<< HEAD
+=======
+  a {
+    @apply text-primary hover:text-accent focus-visible:outline-accent transition-colors duration-150;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground font-semibold;
+  }
+
+  p {
+    @apply text-foreground/90; /* Using 90% opacity for foreground */
+  }
+
+>>>>>>> origin/pm2-automation-fixes
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+<<<<<<< HEAD
+  .pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 10px;
+=======
+::-moz-selection {
+  background-color: var(--zion-cyan);
+  color: white;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgb(var(--zion-cyan));
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Main content area */
+.main-content {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+>>>>>>> origin/pm2-automation-fixes
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors["zion-blue"].DEFAULT');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors["zion-purple"].dark');
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors["zion-purple"].DEFAULT');
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* LiveKit UI overrides */
+  [data-lk-theme='default'] {
+    --lk-color-accent: #06B6D4;
+    --lk-button-background: #06B6D4;
+    --lk-button-background-hover: #0891B2;
+    --lk-bg1: #0B1120;
+    --lk-bg2: #0F172A;
+  }
+
+  /* Skip link styles */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ffffff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Improved placeholder contrast */
+  input::placeholder,
+  textarea::placeholder {
+    color: #b3b3b3;
+    opacity: 1;
+  }
+}
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }

@@ -1,95 +1,190 @@
 # Logging Guidelines
 
-This project uses a centralized, structured logger defined in `src/utils/productionLogger.ts`. Avoid using `console.log` directly. Instead, import the specific logging functions (e.g., `logInfo`, `logError`) and use the appropriate log level.
+This project utilizes a structured logging approach. Developers should prefer using specific logging functions from `src/utils/productionLogger.ts` or the dedicated error reporting function `logError` from `src/utils/logError.ts`.
 
-```typescript
-import { logDebug, logInfo, logWarn, logError, timeStart, timeEnd } from '@/utils/productionLogger';
+The old logger in `src/utils/logger.ts` is **deprecated** and should be avoided in new code. It has been refactored to use the new system internally for backward compatibility.
 
-logDebug('This is a debug message with context', { data: 'someValue' });
-logInfo('This is an info message.');
-logWarn('This is a warning message.', { userId: 'user123' });
+## Recommended Logging Practices
+
+**For general informational logs, warnings, and development-specific debug logs:**
+
+```ts
+import { logInfo, logWarn, logDev, logDebug, timeStart, timeEnd } from '@/utils/productionLogger';
+
+logInfo('This is an informational message.', { additionalContext: 'data' });
+logWarn('This is a warning message.', { userAction: 'attempt_delete' });
+
+// For logs that should only appear in development or when DEBUG=true
+logDev('This is a development-specific debug message.', { component: 'MyComponent' });
+
+// For performance timing (primarily in development)
+timeStart('dataProcessing');
+// ... some operation ...
+const duration = timeEnd('dataProcessing');
+if (duration) {
+  logInfo('Data processing completed.', { durationMs: duration });
+}
+```
+
+**For error reporting:**
+
+It's highly recommended to use the `logError` function from `src/utils/logError.ts` for detailed error reporting, as it integrates with multiple monitoring services (Sentry, Datadog, LogRocket) and provides more context.
+
+```ts
+import { logError } from '@/utils/logError'; // Preferred for detailed error reporting
+// OR, for simpler error logging that still goes to Sentry via productionLogger:
+// import { logError as plLogError } from '@/utils/productionLogger';
 
 try {
-  // ... some operation that might fail
-  throw new Error("Something went wrong!");
-} catch (e) {
-  // logError handles the error object, an optional message, and additional context
-  logError('Operation failed', e as Error, { component: 'MyComponent' });
-}
-
-// For performance timing
-const timerLabel = 'MyOperation';
-timeStart(timerLabel);
-// ... some operation
-const duration = timeEnd(timerLabel); // duration is also automatically logged
-if (duration !== undefined) {
-  logInfo(\`Operation ${timerLabel} took ${duration.toFixed(2)}ms\`);
+  // ... some operation that might fail ...
+} catch (error) {
+  const traceId = logError(error, {
+    componentStack: 'MyComponent',
+    operation: 'user_update'
+  });
+  console.error(`Operation failed. Trace ID: ${traceId}`);
+  // plLogError('Operation failed', error, { component: 'MyComponent' });
 }
 ```
 
-## Key Features of `productionLogger`
+## Log Levels & Behavior
 
-- **Structured Logging**: Logs can include additional context objects.
-- **Log Levels**: Supports `debug`, `info`, `warn`, `error`.
-- **Error Reporting**: `logError` automatically reports errors to configured services (Sentry, Datadog, LogRocket, and a custom webhook via `src/utils/logError.ts`).
-- **Performance Timing**: `timeStart` and `timeEnd` for measuring code execution duration.
-- **Client-Side Buffering**: Logs are buffered on the client and sent to a backend endpoint (`/api/logs`) periodically, which can then persist them and/or forward them.
-- **Console Output**: Logs are also output to the browser console during development (and errors/warnings typically in production too).
+-   **`logInfo`**: For general operational information. Visible in development; visible in production if `productionLogger` is configured to send them to a remote service (currently sends to `/api/logs` which then can forward).
+-   **`logWarn`**: For potential issues or unexpected situations that don't necessarily break functionality. Visible in development and production (sent to Sentry and `/api/logs`).
+-   **`logError` (from `productionLogger`)**: For application errors. Visible in development and production (sent to Sentry and `/api/logs`).
+-   **`logError` (from `src/utils/logError.ts`)**: Specialized function for frontend errors. Reports to Sentry, Datadog (if configured), LogRocket (if configured), and `/api/logs`. Includes a trace ID.
+-   **`logDev` / `logDebug` (from `productionLogger`)**: For detailed debugging information. By default, these are only output to the console during development (`NODE_ENV=development`) or if `DEBUG=true` is set in your environment variables (e.g., `.env.local`). They are not sent to remote services by default to avoid excessive noise.
 
-## Log Levels and Output
+## Enabling Debug Logs
 
-- **`logDebug`**: Only outputs to console in development mode (or if `DEBUG=true` in `.env.local`). Buffered and sent to `/api/logs`.
-- **`logInfo`**: Outputs to console in development. Buffered and sent to `/api/logs`.
-- **`logWarn`**: Outputs to console. Buffered and sent to `/api/logs`. Warnings sent to `/api/logs` may also be forwarded to Sentry as messages.
-- **`logError`**: Outputs to console. Directly reported to Sentry, Datadog, LogRocket, and the custom webhook. **Not** sent via the `/api/logs` buffering system to avoid duplication.
+-   **`logDev` / `logDebug`** messages from `productionLogger` are shown automatically in development (`NODE_ENV=development`).
+-   You can force more verbose debug output (including `productionLogger.debug` if used) by setting `DEBUG=true` in your `.env.local` file.
 
-## Enabling Debug Logs in Console
+## Error Monitoring
 
-Debug logs (`logDebug`) are shown in the browser console automatically in development environments. You can also force more verbose debug output from various parts of the system by setting `DEBUG=true` in your `.env.local` file.
+Errors logged with `logError` (from `productionLogger` or `src/utils/logError.ts`) are typically forwarded to monitoring services like Sentry to provide better visibility in production environments. The `logError` function from `src/utils/logError.ts` offers the most comprehensive reporting.
 
-## Server-Side Logging
+## Correlation IDs
 
-- Next.js API routes and server-side components primarily use Sentry for error capture, initialized via `instrumentation.ts`.
-- The `/api/logs` endpoint handles logs sent from the client-side `productionLogger`. It can write these to local files (e.g., `logs/client-YYYY-MM-DD.log`) if the filesystem is writable and forward them to Sentry or other webhooks.
+To facilitate tracing requests across different parts of the system (frontend, backend APIs), a **Correlation ID** is used.
+-   The Django backend generates a correlation ID for each incoming request and includes it in the `X-Correlation-ID` response header.
+-   The frontend captures this ID from API responses and includes it in subsequent logs made by `productionLogger` and `logError`.
+-   Django backend logs also include this correlation ID.
+This allows for easier debugging of distributed operations. Ensure your log queries can filter or group by `correlationId`.
 
-## Specialized Log Files
+## User Identification in Logs
 
-The system may also generate specialized log files, typically through scheduled scripts or background processes:
+-   **Frontend:** When a user is authenticated, their User ID is automatically included in logs generated by `productionLogger` and `logError`.
+-   **Backend (Django):** Authenticated User IDs are included in Django logs that pass through the `RequestIdFilter`.
 
-- `logs/self-heal.log`: Log file for the `scripts/watchdog.js` monitoring script.
-- `logs/perf/hourly.log`: Contains performance metrics from backend endpoint checks. Generated by `scripts/perf/monitor.js` (requires setup with a process manager like PM2).
-- `logs/security/hourly-fix.log`: Logs results from the hourly NPM audit script. Generated by `scripts/hourly_audit.sh` (requires cron job setup).
-  These directories are also scanned by `npm run logs:collect:enhanced` to include performance and security logs in consolidated reports.
+This contextual information is vital for understanding user-specific issues.
 
-Refer to `docs/hourly_audit_setup.md` and `docs/performance_monitoring_setup.md` (once created) for details on setting up these scripts.
+## Backend (Django) Logging
 
-## Collecting Logs for Troubleshooting
+The Django backend (`backend/`) is configured for comprehensive logging.
 
-To gather various log files for troubleshooting or to share with support, run:
+### Configuration
+-   Logging is set up in `backend/django_backend/settings.py` within the `LOGGING` dictionary.
+-   It uses Python's standard `logging` module.
+-   **Formatters**:
+    -   `simple`: For readable console output during development (`DEBUG=True`).
+    -   `json`: For structured JSON output, used by default in production for both console and file logs. This format includes fields like `levelname`, `asctime`, `correlation_id`, `user_id`, `module`, `funcName`, `lineno`, and `message`.
+-   **Handlers**:
+    -   `console`: Outputs to `stderr`. Uses `simple` format in debug, `json` in production.
+    -   `logfile_json`: A `logging.handlers.RotatingFileHandler` that writes JSON logs to `backend/logs/django_json.log`. This file rotates when it reaches 5MB, keeping 5 backup files.
+-   **Middleware (`CorrelationIDMiddleware`)**:
+    -   Located in `backend/middleware/request_logging.py`.
+    -   Generates/retrieves a correlation ID for each request.
+    -   Logs incoming request details and outgoing response details.
+    -   Makes the correlation ID and authenticated user ID available to the logging system via a `RequestIdFilter`.
+-   **Loggers**: Configured for `django`, `django.request`, `django.db.backends`, custom middleware, and general application logs (e.g., under the `zion_backend` logger).
 
-```bash
-npm run logs:collect
+### Sentry Integration
+-   The Django backend integrates with Sentry for error reporting if the `SENTRY_DSN_DJANGO` environment variable is set.
+-   Uses `sentry-sdk[django]`.
+-   Sentry is initialized in `settings.py`, capturing errors and logging INFO-level messages and above as breadcrumbs.
+
+### Best Practices
+-   Use Python's standard `logging` module in your Django apps:
+    ```python
+    import logging
+    logger = logging.getLogger(__name__) # Or a more specific logger name like 'zion_backend.views'
+
+    def my_view(request):
+        logger.info(f"Processing request for user {request.user.id if request.user.is_authenticated else 'anonymous'}")
+        try:
+            # ... your logic ...
+            logger.debug("Some detailed step completed.")
+        except Exception as e:
+            logger.error("An error occurred in my_view", exc_info=True, extra={'custom_data': 'value'})
+        # ...
+    ```
+-   Leverage the `extra` argument in logging calls to add custom contextual data. The `correlation_id` and `user_id` will be added automatically by the filter where applicable.
+
+## Supabase Function Logging
+
+Supabase Edge Functions (typically written in Deno/TypeScript) also require robust logging.
+
+### Recommended Approach
+1.  **Shared Utility**: A shared utility (e.g., `supabase/functions/_shared/sentry.ts`) is provided to:
+    *   Initialize Sentry for Deno (`npm:@sentry/deno`).
+    *   Provide a `captureSupabaseError` function to send errors to Sentry.
+    *   Provide a `logStructured` helper for writing JSON-formatted logs to `console.log`/`console.error`.
+2.  **In each function**:
+    *   Call `initSentry()` at the beginning of the function invocation.
+    *   Use `logStructured("INFO", "message", {data}, "function-name")` for operational logs.
+    *   Wrap critical logic in try/catch blocks. In the catch block, use `logStructured("ERROR", ...)` and `captureSupabaseError(error, {context})`.
+
+### Example (Conceptual)
+```typescript
+// In supabase/functions/my-function/index.ts
+import { initSentry, captureSupabaseError, logStructured } from "../_shared/sentry.ts";
+
+const FUNCTION_NAME = "my-function";
+
+serve(async (req) => {
+  initSentry();
+  logStructured("INFO", "Function received request", {method: req.method}, FUNCTION_NAME);
+  try {
+    // ... function logic ...
+    if (somethingUnexpected) {
+      logStructured("WARN", "An unexpected condition occurred", {detail: "blah"}, FUNCTION_NAME);
+    }
+    // ...
+    return new Response("Success");
+  } catch (error) {
+    logStructured("ERROR", "Function execution failed", {errorMessage: error.message}, FUNCTION_NAME);
+    captureSupabaseError(error, {request_url: req.url});
+    return new Response(JSON.stringify({error: error.message}), { status: 500 });
+  }
+});
 ```
 
-This command creates a timestamped archive under `logs/archive/` and includes:
+### Sentry Integration
+-   Supabase functions can report errors to Sentry if the `SENTRY_DSN_SUPABASE` environment variable is configured in the Supabase project settings for Edge Functions.
 
-- General logs from the `logs/` directory (including any `client-*.log` files, `self-heal.log`, `perf/hourly.log`, `security/hourly-fix.log` if present).
-- Server logs from `server/logs/` (if applicable).
-- Test run outputs from `playwright-logs/` and `cypress/results/`.
-- Any `.log` files in the project root.
-- Test results from `test-results/` and `test_results.json` if present.
+### Log Forwarding
+-   Supabase automatically captures `console.log` and `console.error` outputs from functions, visible in the Supabase Dashboard.
+-   For centralized aggregation of these logs (especially the structured JSON logs), Supabase offers **Log Drains** that can forward platform logs to third-party services. This is a platform-level configuration.
 
-Always check the `AGENTS.md` file for any project-specific conventions or automated checks related to logging.
+## Key Environment Variables for Logging
 
-## Analyzing Logs for Errors
+The following environment variables control various aspects of logging and error reporting across the platform. Refer to `.env.example` for placeholders.
 
-After collecting logs, you can quickly scan them for common issues using the built-in analyzer:
+-   `DEBUG` (General): Set to `true` to enable debug-level logging in frontend (`productionLogger`) and more verbose output in Django (e.g., simple console format, potentially more detailed SQL logs).
+-   `CLIENT_DEBUG_LOGGING` (Frontend -> API): Set to `true` to make the `/api/logs` endpoint process and log `debug` level messages received from the client's `productionLogger`. Default is `false`.
 
-```bash
-npm run logs:summary
-```
+**Sentry:**
+-   `NEXT_PUBLIC_SENTRY_DSN` (Frontend): DSN for client-side Sentry.
+-   `SENTRY_DSN_DJANGO` (Backend): DSN for Django backend Sentry.
+-   `SENTRY_DSN_SUPABASE` (Supabase): DSN for Supabase Edge Function Sentry (set in Supabase project env vars).
+-   `SENTRY_RELEASE` (All): A version string for your application release (e.g., `myapp@1.2.3`). Helps track errors by release.
+-   `SENTRY_ENVIRONMENT` (All): The environment name (e.g., `development`, `staging`, `production`).
 
-This command searches all log files for error patterns and now also extracts any **missing translation keys** it finds. A summary report along with a `missing-keys-<timestamp>.log` file will be generated under `logs/summary/`.
+**Datadog (Frontend):**
+-   `NEXT_PUBLIC_DATADOG_CLIENT_TOKEN`: Client token for Datadog Browser Logs.
+-   `NEXT_PUBLIC_DATADOG_SITE`: Datadog site (e.g., `datadoghq.com`, `datadoghq.eu`). Defaults to `datadoghq.com`.
+-   `NEXT_PUBLIC_DATADOG_SERVICE_NAME`: Service name for frontend logs in Datadog. Defaults to `zion-frontend`.
 
 ## One-Stop Log Collection
 
@@ -119,29 +214,12 @@ Python utilities are available for manual log inspection. After running `main_ap
 python bug_log_summary.py
 ```
 
-To simply print all recorded entries in the log file, use the `--list` option provided by `bug_logger.py`:
-
-```bash
-python bug_logger.py --list
-```
-
 This script reads `logs/bug/bug_log.json` (or the path set in `BUG_LOG_FILE`) and prints the number of entries per severity along with the most frequent error messages.
-You can filter by severity using the optional `--severity` flag, e.g.:
+
+Alternatively, use the provided npm scripts:
 
 ```bash
-python bug_log_summary.py --severity High
+npm run bug:demo      # generate example bug entries
+npm run bug:summary   # print the summary report
 ```
 
-Additional filtering options allow you to only include log entries within a date range:
-
-```bash
-python bug_log_summary.py --since "2025-07-01T00:00:00Z" --until "2025-07-05T23:59:59Z"
-```
-
-Timestamps should be in ISO format. The `--since` and `--until` flags can be combined with `--severity` and `--output` as needed.
-
-To export a CSV summary of counts per severity, use the `--csv` option:
-
-```bash
-python bug_log_summary.py --csv bug_summary.csv
-```
