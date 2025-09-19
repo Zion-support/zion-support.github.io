@@ -63,9 +63,9 @@ class ErrorBoundary extends Component<Props, State> {
                 borderRadius: '4px',
                 overflow: 'auto',
                 fontSize: '12px'
-              }}></p>
-                {this.state.error.toString()}</p>
-                {this.state.errorInfo?.componentStack}</p>
+              }}>
+                {this.state.error.toString()}
+                {this.state.errorInfo?.componentStack}
               </pre>
             </details>
           )}
