@@ -71,7 +71,6 @@ const trackFeatureInteraction = (featureName: string) => {
 };
 
 function App() {
-<<<<<<< HEAD
   const [currentTime, setCurrentTime] = useState(new Date());
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', 
     typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false
