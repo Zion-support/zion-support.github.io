@@ -1,32 +1,14 @@
-[build]
-  command = "npm run build:netlify"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NPM_FLAGS = "--no-fund --no-audit"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[dev]
-  command = "npm run dev"
-  port = 8888
-  publish = "dist"
-
 # Updated: Fixed for Vite React SPA deployment at 2025-01-19T12:00:00Z
 [build]
   base = "."
   command = "npm ci --include=optional && npm run build"
   publish = "dist"
   command_timeout = "30m"
+
+[dev]
+  command = "npm run dev"
+  port = 8888
+  publish = "dist"
 # No-op: trigger Netlify rebuild at 2025-09-19T01:45:00Z (run-13)
 
 # Vite React SPA - no Next.js plugin needed
