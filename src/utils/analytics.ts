@@ -50,7 +50,3 @@ export const trackPerformance = (metricName: string, value: number, unit: string
     timestamp: new Date().toISOString()
   });
 };
-  </div>
-  </div>
-  </div>
-  </div>

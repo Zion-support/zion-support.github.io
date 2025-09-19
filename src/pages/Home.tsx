@@ -1,163 +1,160 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useNotifications } from '../context/notifications/NotificationContext';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import { ArrowRight, Zap, Shield, Brain, Rocket, Star } from 'lucide-react';
 
-const Home: React.FC = () => {
-  const { addNotification } = useNotifications();
+interface HomeProps {
+  onButtonClick: (action: string, location: string) => void;
+}
 
-  useEffect(() => {
-    addNotification({
-      type: 'info',
-      title: 'Welcome to Zion Tech Group 2026!',
-      message: 'Explore our revolutionary AI, quantum computing, and cybersecurity solutions.',
-      duration: 5000,
-    });
-  }, [addNotification]);
+const Home: React.FC<HomeProps> = ({ onButtonClick }) => {
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: 'AI Solutions',
+      description: 'Revolutionary artificial intelligence that transforms your business operations.',
+      link: '/services/ai'
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum computing solutions for complex problem solving.',
+      link: '/services/quantum'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets.',
+      link: '/services/cybersecurity'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Expert Engineers' }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <Helmet>
-        <title>Zion Tech Group 2026 - Revolutionary AI, Quantum Computing & Cybersecurity Solutions</title>
-        <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business." />
-        <meta name="keywords" content="AI solutions, quantum computing, cybersecurity, technology innovation, Zion Tech Group" />
+        <title>Zion Tech Group - Revolutionary Technology Solutions</title>
+        <meta name="description" content="Leading provider of AI, quantum computing, and cybersecurity solutions. Transform your business with cutting-edge technology." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
-            Zion Tech Group 2026
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm" />
+        <div className="relative container mx-auto px-4 py-20 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            The Future of Technology
           </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed"></p>
-            Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business and reshape reality itself.</p>
+          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. 
+            Discover the next generation of technology that will transform your business.
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-16">
-            <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🚀 Revolutionary AI Services</Link>
-            <Link to="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">⚛️ Quantum Computing Revolution</Link>
-            <Link to="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🛡️ Cybersecurity Solutions</Link>
-        </motion.div>
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">🤖
-            <h3 className="text-2xl font-semibold text-white mb-4 text-center">Conscious AI Systems</h3>
-            <p className="text-gray-300 mb-6 text-center">Revolutionary AI systems that exhibit true consciousness and self-awareness, capable of independent thought and creative problem-solving.</p>
-            <div className="text-center">
-              <Link to="/pages/RevolutionaryAIServices2026" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">Explore AI Services →</Link>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">⚛️
-            <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Computing</h3>
-            <p className="text-gray-300 mb-6 text-center">Ultra-fast quantum processing that transcends classical limitations, enabling computations across multiple dimensions and realities.</p>
-            <div className="text-center">
-              <Link to="/pages/QuantumComputingRevolution2026" className="text-purple-400 hover:text-purple-300 font-semibold text-lg">Discover Quantum Tech →</Link>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">🔒
-            <h3 className="text-2xl font-semibold text-white mb-4 text-center">AI Cybersecurity</h3>
-            <p className="text-gray-300 mb-6 text-center">Advanced AI-powered security systems that predict and prevent threats before they occur, protecting across all dimensions.</p>
-            <div className="text-center">
-              <Link to="/pages/CybersecurityFortress2025" className="text-green-400 hover:text-green-300 font-semibold text-lg">Secure Your Future →</Link>
-        </motion.div>
-        <div className="container mx-auto px-4 py-20">
-          <EnhancedContentShowcase />
-        <div className="container mx-auto px-4 py-20">
-          <RevolutionaryContentShowcase />
-        <div className="container mx-auto px-4 py-16">
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">New: 2026 AI Executive Strategy</h3>
-            <p className="text-gray-300 mb-6">A concise guide for leaders to adopt AI responsibly and effectively.</p>
-            <Link to="/pages/AIExecutiveStrategy2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Read the Strategy →</Link>
-        <motion.div className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30 mt-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Reality?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join the revolution and experience the future of technology. Our revolutionary solutions are changing the world, one breakthrough at a time.</p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Explore All Services</Link>
-            <Link to="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get Started Today</Link>
-        </motion.div>
-        {/* Latest Innovations Section */}
-        <motion.div className="mt-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }}>
+            <Link 
+              to="/services" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              onClick={() => onButtonClick('explore_services', 'hero_section')}
+            >
+              Explore Services
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </Link>
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              onClick={() => onButtonClick('contact_us', 'hero_section')}
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-white/5 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-              Latest Innovations 2026
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Our Core Technologies
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Discover our groundbreaking technologies that are reshaping the future of computing and artificial intelligence.</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our groundbreaking technologies that are reshaping the future of computing and artificial intelligence.
             </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl mb-6 text-center">🧠
-              <h3 className="text-2xl font-semibold text-white mb-4 text-center">Neural Interface Revolution</h3>
-              <p className="text-gray-300 mb-6 text-center">Direct brain-computer interfaces enabling seamless human-AI collaboration and enhanced cognitive capabilities.</p>
-              <div className="text-center">
-                <Link to="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Explore Technology
-                </Link>
-            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl mb-6 text-center">🌌
-              <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Consciousness</h3>
-              <p className="text-gray-300 mb-6 text-center">Quantum computing systems with emergent consciousness properties, capable of quantum-enhanced decision making.</p>
-              <div className="text-center">
-                <Link to="/pages/ConsciousnessComputingRevolution2026" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Discover More
-                </Link>
-            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl mb-6 text-center">🚀
-              <h3 className="text-2xl font-semibold text-white mb-4 text-center">Space Tech Innovation</h3>
-              <p className="text-gray-300 mb-6 text-center">Advanced space technologies including quantum communication networks and interplanetary AI systems.</p>
-              <div className="text-center">
-                <Link to="/pages/SpaceTechInnovation2026" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-cyan-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <Link 
+                  to={feature.link}
+                  className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center"
+                  onClick={() => onButtonClick(`learn_more_${feature.title.toLowerCase().replace(' ', '_')}`, 'features_section')}
+                >
                   Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-        </motion.div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of companies already using our revolutionary technology solutions to stay ahead of the competition.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              onClick={() => onButtonClick('get_started_cta', 'cta_section')}
+            >
+              Get Started Today
+            </Link>
+            <Link 
+              to="/blog" 
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              onClick={() => onButtonClick('read_blog', 'cta_section')}
+            >
+              Read Our Blog
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
 export default Home;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>

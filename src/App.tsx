@@ -1,53 +1,65 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { trackPageView, trackButtonClick, trackFeatureInteraction } from './utils/analytics';
-import LoadingSpinner from './components/LoadingSpinner';
-import ThemeToggle from './components/ThemeToggle';
-import Toast from './components/Toast';
-import PerformanceMetrics from './components/PerformanceMetrics';
-import ErrorBoundary from './components/ErrorBoundary';
-import { useToast } from './hooks/useToast';
-import useLocalStorage from './hooks/useLocalStorage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+// Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMetrics from './components/PerformanceMetrics';
+import Toast from './components/Toast';
+
+// Pages
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+
+// Hooks
+import { useToast } from './hooks/useToast';
+
+// Analytics
+import { trackPageView, trackButtonClick } from './utils/analytics';
+
 function App() {
-  const [currentTime, setCurrentTime] = useState(new Date());
-  const [darkMode, setDarkMode] = useLocalStorage('darkMode', 
-    typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false
-  );
-  const [animatedCounts, setAnimatedCounts] = useState({
-    projects: 0,
-    clients: 0,
-    years: 0
-  });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
-  const { toasts, showSuccess, showInfo, showWarning } = useToast();
+  const [darkMode, setDarkMode] = useState(false);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const { toasts, addToast, removeToast } = useToast();
 
-  // Update time every second
+  // Initialize app
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-    return () => clearInterval(timer);
+    const initializeApp = async () => {
+      try {
+        // Load saved theme preference
+        const savedTheme = localStorage.getItem('darkMode');
+        if (savedTheme !== null) {
+          setDarkMode(JSON.parse(savedTheme));
+        }
+
+        // Simulate loading time
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        setIsLoading(false);
+        
+        // Track initial page view
+        trackPageView(window.location.pathname);
+      } catch (err) {
+        console.error('App initialization error:', err);
+        setError('Failed to initialize application');
+        setIsLoading(false);
+      }
+    };
+
+    initializeApp();
   }, []);
-
-  // Apply dark mode to document
-  useEffect(() => {
-    document.body.classList.toggle('dark-mode', darkMode);
-  }, [darkMode]);
 
   // Handle online/offline status
   useEffect(() => {
-    const handleOnline = () => {
-      setIsOnline(true);
-      showSuccess('Connection restored!');
-    };
-    const handleOffline = () => {
-      setIsOnline(false);
-      showWarning('You are now offline. Some features may be limited.');
-    };
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -56,162 +68,23 @@ function App() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, [showSuccess, showWarning]);
-
-  // Animate counters on component mount
-  useEffect(() => {
-    const animateCount = (key: keyof typeof animatedCounts, target: number) => {
-      const duration = 2000;
-      const steps = 60;
-      const increment = target / steps;
-      let current = 0;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        setAnimatedCounts(prev => ({ ...prev, [key]: Math.floor(current) }));
-      }, duration / steps);
-    };
-
-    // Simulate loading time for better UX
-    const loadingTimer = setTimeout(() => {
-      try {
-        setIsLoading(false);
-        animateCount('projects', 150);
-        animateCount('clients', 500);
-        animateCount('years', 10);
-      } catch (err) {
-        setError('Failed to load application data');
-        // eslint-disable-next-line no-console
-        console.error('Loading error:', err);
-      }
-    }, 1000);
-
-    return () => clearTimeout(loadingTimer);
   }, []);
 
+  // Handle theme toggle
   const toggleDarkMode = useCallback(() => {
-    setDarkMode((prev: boolean) => {
+    setDarkMode(prev => {
       const newMode = !prev;
-      trackButtonClick('theme_toggle', newMode ? 'dark' : 'light');
-      showInfo(`Switched to ${newMode ? 'dark' : 'light'} mode`);
+      localStorage.setItem('darkMode', JSON.stringify(newMode));
       return newMode;
     });
-  }, [showInfo, setDarkMode]);
-
-  // Track page view on mount
-  useEffect(() => {
-    trackPageView('home');
-    
-    // Track performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = {
-        loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,
-        domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
-        firstPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-      };
-      
-      // Performance metrics collected
-      trackFeatureInteraction('performance_metrics', perfData);
-    }
   }, []);
 
-  // Add keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey || event.metaKey) {
-        switch (event.key) {
-          case 'k':
-            event.preventDefault();
-            toggleDarkMode();
-            break;
-          case 'r':
-            event.preventDefault();
-            window.location.reload();
-            break;
-          case 'h':
-            event.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            break;
-          case 'l':
-            event.preventDefault();
-            document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
-            break;
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [toggleDarkMode]);
-
-  // Register service worker for PWA capabilities
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in window.navigator) {
-      window.navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          // Service Worker registered successfully
-          trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
-        })
-        .catch((error) => {
-          // Service Worker registration failed
-          trackFeatureInteraction('service_worker_failed', { error: error.message });
-        });
-    }
+  // Handle button clicks
+  const handleButtonClick = useCallback((action: string, location: string) => {
+    trackButtonClick(action, location);
   }, []);
 
-  // Handle scroll to top button with throttling for performance
-  useEffect(() => {
-    let ticking = false;
-    
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setShowScrollToTop(window.scrollY > 300);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const services = useMemo(() => [
-    {
-      title: "AI Solutions",
-      description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
-      icon: "🤖",
-      color: "#6366f1"
-    },
-    {
-      title: "Blockchain Technology",
-      description: "Secure and decentralized solutions for modern businesses with smart contracts and DeFi platforms.",
-      icon: "⛓️",
-      color: "#10b981"
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive IT infrastructure management, cloud solutions, and digital transformation services.",
-      icon: "💻",
-      color: "#f59e0b"
-    },
-    {
-      title: "Quantum Computing",
-      description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
-      icon: "⚛️",
-      color: "#8b5cf6"
-    }
-  ], []);
-
+  // Error boundary fallback
   if (error) {
     return (
       <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
@@ -228,13 +101,14 @@ function App() {
             onClick={() => window.location.reload()}
             aria-label="Reload page"
           >
-            Try Again</button>
+            Try Again
           </button>
         </div>
       </div>
     );
   }
 
+  // Loading screen
   if (isLoading) {
     return (
       <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
@@ -244,6 +118,8 @@ function App() {
         </Helmet>
         <div className="loading-screen">
           <LoadingSpinner size="large" text="Loading Zion Tech Group..." />
+        </div>
+      </div>
     );
   }
 
@@ -251,130 +127,46 @@ function App() {
     <ErrorBoundary>
       <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
         <Helmet>
-          <title>Zion Tech Group - Innovative Technology Solutions</title>
-          <meta name="description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions. Transform your business with cutting-edge technology." />
-          <meta name="keywords" content="AI solutions, blockchain technology, IT services, quantum computing, digital transformation" />
-        <meta property="og:title" content="Zion Tech Group - Innovative Technology Solutions" />
-        <meta property="og:description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Innovative Technology Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Helmet>
-      {!isOnline && (
-        <div className="offline-banner" role="alert" aria-live="polite">
-          <span>⚠️ You&apos;re currently offline. Some features may be limited.</span>
-      )}
-      <header className="App-header">
-        <div className="header-controls">
-          <ThemeToggle 
+          <title>Zion Tech Group - Revolutionary Technology Solutions</title>
+          <meta name="description" content="Leading provider of AI, quantum computing, and next-generation technology solutions" />
+          <meta name="keywords" content="AI, quantum computing, technology, innovation, software development" />
+        </Helmet>
+
+        {/* Offline Banner */}
+        {!isOnline && (
+          <div className="offline-banner" role="alert" aria-live="polite">
+            <span>⚠️ You're currently offline. Some features may be limited.</span>
+          </div>
+        )}
+
+        <Router>
+          <Header 
             darkMode={darkMode} 
-            onToggle={toggleDarkMode}
-            className="mr-4"
+            onToggleDarkMode={toggleDarkMode}
+            onButtonClick={handleButtonClick}
           />
-          <div className="current-time" role="timer" aria-live="polite">
-            {currentTime.toLocaleTimeString()}
-        <h1 className="main-title">
-          <span className="title-highlight">Zion Tech Group</span>
-        </h1>
-        <p className="subtitle">Welcome to our innovative technology solutions</p>
-        <div className="stats-container">
-          <div className="stat-card">
-            <div className="stat-number">{animatedCounts.projects}+
-            <div className="stat-label">Projects Completed
-          <div className="stat-card">
-            <div className="stat-number">{animatedCounts.clients}+
-            <div className="stat-label">Happy Clients
-          <div className="stat-card">
-            <div className="stat-number">{animatedCounts.years}+
-            <div className="stat-label">Years Experience
-        <div className="features">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="feature-card"
-              style={{ '--card-color': feature.color } as React.CSSProperties}
-            >
-              <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
-                {feature.icon}
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-              <button 
-                className="learn-more-btn"
-                onClick={() => {
-                  trackFeatureInteraction(feature.title, 'learn_more_clicked');
-                }}
-                aria-label={`Learn more about ${feature.title}`}
-              ></button>
-                Learn More</button>
-              </button>
-          ))}
-        <div className="cta-section">
-          <h2>Ready to Transform Your Business?</h2>
-          <p>Get started with our cutting-edge technology solutions today.</p>
-          <div className="cta-buttons">
-            <button 
-              className="btn-primary"
-              onClick={() => trackButtonClick('get_started', 'cta_section')}
-            ></button>
-              Get Started</button>
-            </button>
-            <button 
-              className="btn-secondary"
-              onClick={() => trackButtonClick('contact_us', 'cta_section')}
-            ></button>
-              Contact Us</button>
-            </button>
-      </header>
-      {/* Toast Notifications */}
-      {toasts.map((toast) => (
-        <Toast key={toast.id} {...toast} />
-      ))}
-      
-      {/* Performance Metrics (Development Only) */}
-      <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
+          
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home onButtonClick={handleButtonClick} />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact onButtonClick={handleButtonClick} />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </Router>
+
+        {/* Toast Notifications */}
+        {toasts.map((toast) => (
+          <Toast key={toast.id} {...toast} onClose={() => removeToast(toast.id)} />
+        ))}
+
+        {/* Performance Metrics (Development Only) */}
+        <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
+      </div>
     </ErrorBoundary>
   );
 }
 
 export default App;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>

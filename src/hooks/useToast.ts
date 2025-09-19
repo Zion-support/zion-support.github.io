@@ -55,7 +55,3 @@ export const useToast = () => {
     showInfo
   };
 };
-  </div>
-  </div>
-  </div>
-  </div>
