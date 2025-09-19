@@ -1,0 +1,32 @@
+name: app-monitoring
+'on':
+  schedule:
+    - cron: 0 2 * * *
+  workflow_dispatch: null
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: app-monitoring-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  monitor-performance:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+      - name: Run app monitoring
+        run: 
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+          name: performance-report
+          path: lighthouse-report.json
+          retention-days: 7
+    runs_on: ubuntu-latest

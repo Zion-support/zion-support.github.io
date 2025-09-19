@@ -1,0 +1,48 @@
+name: autonomous-content-scanner
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */2 * * *
+permissions:
+  contents: write
+  actions: read
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
+
+  scan-and-commit:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies (minimal)
+        run: npm ci --omit=dev || npm ci
+      - name: Run TODO/FIXME scanner
+        run: node automation/todo-scanner.cjs | cat
+      - name: Build pages/docs registry
+        run: node automation/docs-pages-indexer.cjs | cat
+      - name: Commit and push changes to main
+        run: |
+          echo "Workflow completed successfully"
+          

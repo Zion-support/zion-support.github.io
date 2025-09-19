@@ -1,0 +1,48 @@
+name: Sync Health
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 2 * * *
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+        continue-on-error: true
+      - name: Run sync health check
+        if: always()
+        run: node automation/sync-health-check.cjs | tee sync-health.out
+        continue-on-error: true
+      - name: Upload sync health artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-health-artifacts
+          path: |
+            data/reports/sync/sync-health.json
+            automation/logs/sync-health.log
+            sync-health.out
+          if-no-files-found: ignore
+          retention-days: 7
+        if: always()
+      - name: Create summary
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          AHEAD=$(git rev-list --left-right --count HEAD...origin/main | awk '{print $1}')
+          if [ "$AHEAD" != "0" ]; then
+            git push origin HEAD:main
+          else
+            echo "No push needed."
+          fi
