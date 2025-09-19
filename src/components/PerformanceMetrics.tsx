@@ -1,12 +1,15 @@
 import React from 'react';
 
 interface PerformanceMetricsProps {
+  show?: boolean;
   className?: string;
 }
 
 const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ 
+  show = false,
   className = '' 
 }) => {
+  if (!show) return null;
   const [metrics, setMetrics] = React.useState({
     loadTime: 0,
     domContentLoaded: 0,

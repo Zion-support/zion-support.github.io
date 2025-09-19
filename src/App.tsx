@@ -156,7 +156,7 @@ function App() {
   const toggleDarkMode = useCallback(() => {
     setDarkMode((prev: boolean) => {
       const newMode = !prev;
-      trackButtonClick('theme_toggle', newMode ? 'dark' : 'light');
+      trackButtonClick('theme_toggle');
       showInfo(`Switched to ${newMode ? 'dark' : 'light'} mode`);
       return newMode;
     });
@@ -176,7 +176,7 @@ function App() {
       };
       
       // Performance metrics collected
-      trackFeatureInteraction('performance_metrics', perfData);
+      trackFeatureInteraction('performance_metrics');
     }
   }, []);
 
@@ -215,11 +215,11 @@ function App() {
       window.navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           // Service Worker registered successfully
-          trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
+          trackFeatureInteraction('service_worker_registered');
         })
         .catch((error) => {
           // Service Worker registration failed
-          trackFeatureInteraction('service_worker_failed', { error: error.message });
+          trackFeatureInteraction('service_worker_failed');
         });
     }
   }, []);
@@ -270,9 +270,9 @@ function App() {
   // ], []);
 
   const features = [
-    { name: 'Fast Performance', description: 'Optimized for speed' },
-    { name: 'Secure', description: 'Enterprise-grade security' },
-    { name: 'Scalable', description: 'Grows with your business' }
+    { name: 'Fast Performance', description: 'Optimized for speed', icon: '⚡', color: '#10b981' },
+    { name: 'Secure', description: 'Enterprise-grade security', icon: '🔒', color: '#ef4444' },
+    { name: 'Scalable', description: 'Grows with your business', icon: '📈', color: '#3b82f6' }
   ];
 
   if (error) {
@@ -366,21 +366,21 @@ function App() {
       <div className="features">
         {features.map((feature) => (
           <div
-            key={feature.title}
+            key={feature.name}
             className="feature-card"
             style={{ '--card-color': feature.color } as React.CSSProperties}
           >
-            <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
+            <div className="feature-icon" role="img" aria-label={`${feature.name} icon`}>
               {feature.icon}
             </div>
-            <h3>{feature.title}</h3>
+            <h3>{feature.name}</h3>
             <p>{feature.description}</p>
             <button 
               className="learn-more-btn"
               onClick={() => {
-                trackFeatureInteraction(feature.title, 'learn_more_clicked');
+                trackFeatureInteraction(feature.name);
               }}
-              aria-label={`Learn more about ${feature.title}`}
+              aria-label={`Learn more about ${feature.name}`}
             >
               Learn More
             </button>
@@ -394,13 +394,13 @@ function App() {
         <div className="cta-buttons">
           <button 
             className="btn-primary"
-            onClick={() => trackButtonClick('get_started', 'cta_section')}
+            onClick={() => trackButtonClick('get_started')}
           >
             Get Started
           </button>
           <button 
             className="btn-secondary"
-            onClick={() => trackButtonClick('contact_us', 'cta_section')}
+            onClick={() => trackButtonClick('contact_us')}
           >
             Contact Us
           </button>
