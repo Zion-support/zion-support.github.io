@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-}
-
-export default function Layout({ children, title, description }: LayoutProps) {
-  return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
-=======
-<<<<<<< HEAD
-
-;
-import React from 'react';
-import Head from 'next/head';
-interface LayoutProps  {children: React.ReactNode;
-  title?: string;
-  description?: string;
-}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-}
-
-export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
-
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,22 +15,6 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-<<<<<<< HEAD
-}import Header from './Header';
-import Footer from './Footer';
-interface LayoutProps  {children: React.ReactNode;
-interface LayoutProps  {children: React && React.ReactNode;
-=======
-}
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-interface LayoutProps {
-  children: React.ReactNode;
-interface LayoutProps {;
-  children: React && React.ReactNode;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   title?: string;
   description?: string;
   keywords?: string;
@@ -116,22 +64,6 @@ const Layout: React.FC < LayoutProps> = ({children,title = "Zion Tech Group - AI
       <main>{children}</main>;
       <Footer />;
     </div>;
-<<<<<<< HEAD
-  )}interface LayoutProps  {children: ReactNode;
-=======
-  )
-};
-interface LayoutProps {
-  children: ReactNode,
-}
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
-import React, { ReactNode } from "react";
-interface LayoutProps {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   children: ReactNode;
   children: ReactNode;
 }
@@ -190,29 +122,6 @@ export default Layout;
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Home,Users,Briefcase,Phone,Mail,MapPin,Menu,X,ChevronDown,Star,CheckCircle;
- } from 'lucide-react';
-interface LayoutProps  {title?: string;
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  ChevronDown,
-  Star,
-  CheckCircle
-} from 'lucide-react';
-interface LayoutProps {
-  title?: string;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -284,9 +193,6 @@ export default function Layout({
     <>
       <Head>
         <title>{title}</title>
-<<<<<<< HEAD
-        <meta name="description" content={description} />
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -295,11 +201,4 @@ export default function Layout({
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-}
-=======
-        <meta name="description" content={description} />
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 >>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923

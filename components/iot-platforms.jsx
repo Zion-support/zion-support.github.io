@@ -17,8 +17,4 @@ const IotPlatforms = () => {
   );
 };
 
-<<<<<<< HEAD
 export default IotPlatforms;
-=======
-export default IotPlatforms;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
