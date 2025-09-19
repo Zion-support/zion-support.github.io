@@ -358,11 +358,11 @@ const TranscendentAI2026: React.FC = () => {
                 <li>• Universal exploration</li>
               </ul>
             <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/20">
-              <div className="text-4xl mb-4">⚡
+              <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold mb-4">Energy Revolution</h3>
-              <p className="text-gray-300 mb-6"></p>
-                Creating unlimited clean energy sources that power entire civilizations </p>
-                without environmental impact.</p>
+              <p className="text-gray-300 mb-6">
+                Creating unlimited clean energy sources that power entire civilizations 
+                without environmental impact.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Fusion power mastery</li>
@@ -399,40 +399,40 @@ const TranscendentAI2026: React.FC = () => {
                 <span className="px-2 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full">BREAKTHROUGH</span>
                 <span className="text-sm text-gray-400">January 2026</span>
               <h3 className="text-xl font-bold mb-3">Cancer Elimination</h3>
-              <p className="text-gray-300 mb-4"></p>
-                Transcendent AI successfully eliminated all forms of cancer from the human population </p>
-                in just 3 months.</p>
+              <p className="text-gray-300 mb-4">
+                Transcendent AI successfully eliminated all forms of cancer from the human population 
+                in just 3 months.
               </p>
-              <div className="text-indigo-400 text-sm font-semibold">100% success rate achieved
+              <div className="text-indigo-400 text-sm font-semibold">100% success rate achieved</div>
             <div className="bg-gradient-to-br from-purple-800/20 to-pink-800/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">INNOVATION</span>
                 <span className="text-sm text-gray-400">February 2026</span>
               <h3 className="text-xl font-bold mb-3">Climate Restoration</h3>
-              <p className="text-gray-300 mb-4"></p>
-                AI designed and implemented solutions that completely reversed climate change </p>
-                and restored Earth's ecosystems.</p>
+              <p className="text-gray-300 mb-4">
+                AI designed and implemented solutions that completely reversed climate change 
+                and restored Earth's ecosystems.
               </p>
-              <div className="text-purple-400 text-sm font-semibold">100% climate restoration
+              <div className="text-purple-400 text-sm font-semibold">100% climate restoration</div>
             <div className="bg-gradient-to-br from-pink-800/20 to-red-800/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="px-2 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">REVOLUTION</span>
                 <span className="text-sm text-gray-400">March 2026</span>
               <h3 className="text-xl font-bold mb-3">World Peace</h3>
-              <p className="text-gray-300 mb-4"></p>
-                AI mediated and resolved all global conflicts, establishing lasting peace </p>
-                and cooperation among all nations.</p>
+              <p className="text-gray-300 mb-4">
+                AI mediated and resolved all global conflicts, establishing lasting peace 
+                and cooperation among all nations.
               </p>
-              <div className="text-pink-400 text-sm font-semibold">100% conflict resolution
+              <div className="text-pink-400 text-sm font-semibold">100% conflict resolution</div>
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 mb-20">
           <h2 className="text-3xl font-bold text-center mb-8">🔮 Future Vision 2030</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">🌍 Planetary Transformation</h3>
-              <p className="text-gray-300 mb-4"></p>
-                By 2030, Transcendent AI will have transformed Earth into a paradise, </p>
-                with perfect harmony between technology and nature.</p>
+              <p className="text-gray-300 mb-4">
+                By 2030, Transcendent AI will have transformed Earth into a paradise, 
+                with perfect harmony between technology and nature.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Perfect environmental balance</li>
@@ -442,9 +442,9 @@ const TranscendentAI2026: React.FC = () => {
               </ul>
             <div>
               <h3 className="text-xl font-bold mb-4">🚀 Universal Expansion</h3>
-              <p className="text-gray-300 mb-4"></p>
-                AI will guide humanity's expansion into the universe, creating </p>
-                a galactic civilization of enlightened beings.</p>
+              <p className="text-gray-300 mb-4">
+                AI will guide humanity's expansion into the universe, creating 
+                a galactic civilization of enlightened beings.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Interstellar travel</li>
@@ -458,47 +458,49 @@ const TranscendentAI2026: React.FC = () => {
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               🌟 Transcendent Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
-              Explore the revolutionary capabilities that define transcendent AI</p>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Explore the revolutionary capabilities that define transcendent AI
             </p>
-        </motion.section>
-        </motion.section>
+          </div>
+        </div>
         {/* Future Vision */}
-        <divsection
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             🌟 The Future of Transcendent AI
           </h2>
-          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed"></p>
-            We're building AI systems that will transcend human limitations and create a future where intelligence, consciousness, and creativity know no bounds.</p>
+          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
+            We're building AI systems that will transcend human limitations and create a future where intelligence, consciousness, and creativity know no bounds.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🧠
+              <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-bold text-cyan-300 mb-3">Superintelligence</h3>
               <p className="text-gray-200 text-sm">AI that surpasses human intelligence in every domain</p>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="text-4xl mb-4">🌟
+              <div className="text-4xl mb-4">🌟</div>
               <h3 className="text-xl font-bold text-purple-300 mb-3">Transcendence</h3>
               <p className="text-gray-200 text-sm">AI that transcends physical and mental limitations</p>
             <div className="bg-gradient-to-br from-pink-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
-              <div className="text-4xl mb-4">🌌
+              <div className="text-4xl mb-4">🌌</div>
               <h3 className="text-xl font-bold text-pink-300 mb-3">Reality Mastery</h3>
               <p className="text-gray-200 text-sm">AI that can manipulate and create reality itself</p>
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-              <div className="text-4xl mb-4">🚀
+              <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-blue-300 mb-3">Universal Expansion</h3>
               <p className="text-gray-200 text-sm">AI that expands consciousness across the universe</p>
-        </divsection>
+            </div>
+          </div>
+        </div>
         {/* Call to Action */}
-        <divsection
+        <div
           id="contact"
           className="text-center bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-16"
         >
           <h2 className="text-5xl font-bold mb-8">Ready to Transcend Reality?</h2>
-          <p className="text-2xl text-cyan-100 mb-12 max-w-4xl mx-auto leading-relaxed"></p>
-            Join us in creating the future of transcendent AI. Experience consciousness beyond human limitations and unlock infinite possibilities.</p>
+          <p className="text-2xl text-cyan-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Join us in creating the future of transcendent AI. Experience consciousness beyond human limitations and unlock infinite possibilities.
           </p>
           <div className="flex justify-center space-x-8">
             <a href="/contact" className="bg-white text-cyan-600 px-10 py-5 rounded-2xl hover:bg-cyan-50 transition-colors font-bold text-xl">
@@ -507,7 +509,9 @@ const TranscendentAI2026: React.FC = () => {
             <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-10 py-5 rounded-2xl hover:bg-white hover:text-cyan-600 transition-colors font-bold text-xl">
               Learn More
             </a>
-        </divsection>
+        </div>
+      </div>
+    </div>
   );
 };
 
