@@ -43,6 +43,7 @@ import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevoluti
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027';
+import FuturisticTechShowcase2028 from './src/components/FuturisticTechShowcase2028';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import FutureTechRevolution2026 from './src/pages/FutureTechRevolution2026';
@@ -51,6 +52,8 @@ import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
 import AdvancedAISystems2027 from './src/pages/AdvancedAISystems2027';
 import QuantumComputingRevolution2027 from './src/pages/QuantumComputingRevolution2027';
+import AdvancedAITransformation2028 from './src/pages/AdvancedAITransformation2028';
+import QuantumNeuralFusion2028 from './src/pages/QuantumNeuralFusion2028';
 import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
 import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
 import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
@@ -254,6 +257,11 @@ export default function App(): JSX.Element {
                 {/* Ultimate Tech Showcase 2027 */}
                 <div className="mb-12">
                   <UltimateTechShowcase2027 />
+                </div>
+
+                {/* Futuristic Tech Showcase 2028 */}
+                <div className="mb-12">
+                  <FuturisticTechShowcase2028 />
                 </div>
 
                 {/* Innovation Showcase 2026 */}
@@ -568,6 +576,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/AdvancedAISystems2027" element={<AdvancedAISystems2027 />} />
           <Route path="/pages/QuantumComputingRevolution2027" element={<QuantumComputingRevolution2027 />} />
+          <Route path="/pages/AdvancedAITransformation2028" element={<AdvancedAITransformation2028 />} />
+          <Route path="/pages/QuantumNeuralFusion2028" element={<QuantumNeuralFusion2028 />} />
           <Route path="/pages/SpaceTechAI2025" element={<SpaceTechAI2025 />} />
           <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
