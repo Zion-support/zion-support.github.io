@@ -74,12 +74,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               {isLoading ? 'Joining...' : 'Join Revolution'}
             </button>
           </form>
-        ) : (
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Welcome to the Future!</h3>
-            <p className="text-gray-300">You're now part of the revolution.</p>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
