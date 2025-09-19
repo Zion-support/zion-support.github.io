@@ -3,14 +3,26 @@ dist/
 build/
 out/
 .next/
-*.min.js
-*.bundle.js
-*.chunk.js
+**/.next/
+**/static/
+**/chunks/
+**/server/
+**/polyfills-*.js
+**/webpack-*.js
+**/main-*.js
+**/pages/
+**/app/
+**/middleware-*.js
+**/server-reference-*.js
+**/_buildManifest.js
+**/_ssgManifest.js
 
 # Dependencies
 node_modules/
 
 # Disabled/legacy directories
+*.disabled/
+*.disabled/**
 zion-os.disabled/
 zion-os/
 zion-website/
@@ -30,6 +42,25 @@ public/
 # Generated files
 *.generated.js
 *.generated.ts
+*.min.js
+*.bundle.js
+*.chunk.js
+
+# Config files
+postcss.config.js
+next.config.js
+sw.js
+performance-check.js
+tailwind.config.js
+
+# Automation files
+**/evaluate.cjs
+**/evolve.cjs
+**/ai-it-content-factory.cjs
+**/ai-it-researcher.cjs
+**/analytics.js
+**/feedback.js
+**/integration.js
 
 # Test files (optional - uncomment if you want to exclude tests)
 # __tests__/
