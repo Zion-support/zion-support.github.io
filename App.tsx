@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
@@ -6,57 +6,67 @@ import Footer from './src/Footer';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
-import InnovationLanding2025 from './src/pages/InnovationLanding2025';
-import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
-import BlogPost2025 from './src/pages/BlogPost2025';
-import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
-import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
-import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
-import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
-import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
-import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
-import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
-import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
-import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
-import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
-import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
-import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
-import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
-import AIRevolution2025 from './src/pages/AIRevolution2025';
-import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
-import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
-import DynamicContentCarousel from './src/components/DynamicContentCarousel';
-import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
-import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
-import NewShowcase2025 from './src/pages/NewShowcase2025';
-import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
-import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
-import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
-import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
-import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
-import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
-import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
-import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
-import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
-import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
-import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
-import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
-import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
-import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027';
-import FuturisticTechShowcase2028 from './src/components/FuturisticTechShowcase2028';
-import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
-import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
-import FutureTechRevolution2026 from './src/pages/FutureTechRevolution2026';
-import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
-import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
-import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
-import AdvancedAISystems2027 from './src/pages/AdvancedAISystems2027';
-import QuantumComputingRevolution2027 from './src/pages/QuantumComputingRevolution2027';
-import AdvancedAITransformation2028 from './src/pages/AdvancedAITransformation2028';
-import QuantumNeuralFusion2028 from './src/pages/QuantumNeuralFusion2028';
-import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
-import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
-import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
+
+// Lazy load components for better performance
+const InnovationLanding2025 = lazy(() => import('./src/pages/InnovationLanding2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./src/pages/InnovativeServicesShowcase2025'));
+const BlogPost2025 = lazy(() => import('./src/pages/BlogPost2025'));
+const AdvancedTechSolutions2025 = lazy(() => import('./src/pages/AdvancedTechSolutions2025'));
+const NewAIUseCases2025 = lazy(() => import('./src/pages/NewAIUseCases2025'));
+const EdgeAIandIoT2025 = lazy(() => import('./src/pages/EdgeAIandIoT2025'));
+const FutureTechTrends2025 = lazy(() => import('./src/pages/FutureTechTrends2025'));
+const ComprehensiveServices2025 = lazy(() => import('./src/pages/ComprehensiveServices2025'));
+const AIInnovationPlaybook2025 = lazy(() => import('./src/pages/AIInnovationPlaybook2025'));
+const TechnologyInsights2025 = lazy(() => import('./src/pages/TechnologyInsights2025'));
+const AITransformationGuide2025 = lazy(() => import('./src/pages/AITransformationGuide2025'));
+const QuantumComputingSolutions2025 = lazy(() => import('./src/pages/QuantumComputingSolutions2025'));
+const AIInnovationHub2025 = lazy(() => import('./src/pages/AIInnovationHub2025'));
+const DigitalTransformation2025 = lazy(() => import('./src/pages/DigitalTransformation2025'));
+const AdvancedAnalytics2025 = lazy(() => import('./src/pages/AdvancedAnalytics2025'));
+const CybersecurityFortress2025 = lazy(() => import('./src/pages/CybersecurityFortress2025'));
+const AIRevolution2025 = lazy(() => import('./src/pages/AIRevolution2025'));
+const QuantumComputingBreakthrough = lazy(() => import('./src/pages/QuantumComputingBreakthrough'));
+const NeuralInterfaceFuture = lazy(() => import('./src/pages/NeuralInterfaceFuture'));
+const DynamicContentCarousel = lazy(() => import('./src/components/DynamicContentCarousel'));
+const InteractiveTechShowcase = lazy(() => import('./src/components/InteractiveTechShowcase'));
+const AIEnterpriseCopilot2025 = lazy(() => import('./src/pages/AIEnterpriseCopilot2025'));
+const NewShowcase2025 = lazy(() => import('./src/pages/NewShowcase2025'));
+const AdvancedAITransformation2025 = lazy(() => import('./src/pages/AdvancedAITransformation2025'));
+const QuantumComputingRevolution2025 = lazy(() => import('./src/pages/QuantumComputingRevolution2025'));
+const NeuralInterfaceRevolution2025 = lazy(() => import('./src/pages/NeuralInterfaceRevolution2025'));
+const NextGenTechShowcase2025 = lazy(() => import('./src/pages/NextGenTechShowcase2025'));
+const SyntheticIntelligence2026 = lazy(() => import('./src/pages/SyntheticIntelligence2026'));
+const QuantumNeuralFusion2026 = lazy(() => import('./src/pages/QuantumNeuralFusion2026'));
+const AdvancedQuantumComputing2026 = lazy(() => import('./src/pages/AdvancedQuantumComputing2026'));
+const NeuralInterfaceRevolution2026 = lazy(() => import('./src/pages/NeuralInterfaceRevolution2026'));
+const EnhancedContentShowcase = lazy(() => import('./src/components/EnhancedContentShowcase'));
+const NextGenAIRevolution2026 = lazy(() => import('./src/pages/NextGenAIRevolution2026'));
+const QuantumComputingRevolution2026 = lazy(() => import('./src/pages/QuantumComputingRevolution2026'));
+const RevolutionaryTechBlog2026 = lazy(() => import('./src/pages/RevolutionaryTechBlog2026'));
+const RevolutionaryContentShowcase = lazy(() => import('./src/components/RevolutionaryContentShowcase'));
+const UltimateTechShowcase2027 = lazy(() => import('./src/components/UltimateTechShowcase2027'));
+const FuturisticTechShowcase2028 = lazy(() => import('./src/components/FuturisticTechShowcase2028'));
+const ComprehensiveTechInsights2026 = lazy(() => import('./src/pages/ComprehensiveTechInsights2026'));
+const UltimateTechShowcase2026 = lazy(() => import('./src/pages/UltimateTechShowcase2026'));
+const FutureTechRevolution2026 = lazy(() => import('./src/pages/FutureTechRevolution2026'));
+const AdvancedAITransformation2026 = lazy(() => import('./src/pages/AdvancedAITransformation2026'));
+const NextGenTechShowcase2026 = lazy(() => import('./src/pages/NextGenTechShowcase2026'));
+const AdvancedAISystems2026 = lazy(() => import('./src/pages/AdvancedAISystems2026'));
+const AdvancedAISystems2027 = lazy(() => import('./src/pages/AdvancedAISystems2027'));
+const QuantumComputingRevolution2027 = lazy(() => import('./src/pages/QuantumComputingRevolution2027'));
+const AdvancedAITransformation2028 = lazy(() => import('./src/pages/AdvancedAITransformation2028'));
+const QuantumNeuralFusion2028 = lazy(() => import('./src/pages/QuantumNeuralFusion2028'));
+const SpaceTechAI2025 = lazy(() => import('./src/pages/SpaceTechAI2025'));
+const BiotechAIRevolution2025 = lazy(() => import('./src/pages/BiotechAIRevolution2025'));
+const InnovationShowcase2026 = lazy(() => import('./src/components/InnovationShowcase2026'));
+
+// Loading component for lazy loading
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
+
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -66,7 +76,8 @@ export default function App(): JSX.Element {
         <ScrollToTop />
         <Header />
         
-        <Routes>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
@@ -603,7 +614,8 @@ export default function App(): JSX.Element {
               <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
             </main>
           } />
-        </Routes>
+          </Routes>
+        </Suspense>
         
         <Footer />
       </div>

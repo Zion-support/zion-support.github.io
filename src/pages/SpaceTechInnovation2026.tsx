@@ -7,13 +7,10 @@ const SpaceTechInnovation2026: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">SpaceTechInnovation2026</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default SpaceTechInnovation2026;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
