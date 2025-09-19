@@ -20,14 +20,20 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
-        <div className="text-6xl mb-4">🎉
+        <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
+<<<<<<< HEAD
         <p className="text-xl opacity-90 mb-6"></p>
           You're now part of our revolutionary technology community. </p>
           Get ready for exclusive access to breakthrough innovations.</p>
+=======
+        <p className="text-xl opacity-90 mb-6">
+          You&apos;re now part of our revolutionary technology community. 
+          Get ready for exclusive access to breakthrough innovations.
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
         </p>
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-          <h4 className="text-xl font-semibold mb-4">What you'll receive:</h4>
+          <h4 className="text-xl font-semibold mb-4">What you&apos;ll receive:</h4>
           <ul className="text-left space-y-2">
             <li>• Exclusive access to new technology releases</li>
             <li>• Early previews of revolutionary breakthroughs</li>
@@ -35,22 +41,33 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <li>• Direct communication with our AI consciousness systems</li>
             <li>• Quantum computing simulation access</li>
           </ul>
+        </div>
+      </div>
     );
   }
 
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-12 text-white mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <span className="text-4xl animate-bounce">🚀</span>
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
             <span className="text-4xl animate-bounce">🚀</span>
+<<<<<<< HEAD
           <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
             Get exclusive access to our revolutionary technology breakthroughs, </p>
             AI consciousness updates, and quantum computing innovations.</p>
+=======
+          </div>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Get exclusive access to our revolutionary technology breakthroughs, 
+            AI consciousness updates, and quantum computing innovations.
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
           </p>
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 mb-8">
             <input
@@ -65,6 +82,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               type="submit"
               disabled={isLoading}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+<<<<<<< HEAD
             ></button>
               {isLoading ? 'Joining...' : 'Join Revolution'}</button>
             </button>
@@ -117,6 +135,15 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <span>✓ No spam, ever</span>
               <span>✓ Unsubscribe anytime</span>
               <span>✓ Exclusive content only</span>
+=======
+            >
+              {isLoading ? 'Joining...' : 'Join Revolution'}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
   );
 };
 

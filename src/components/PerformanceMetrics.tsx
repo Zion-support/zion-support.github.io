@@ -61,9 +61,21 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ show }) => {
             <span className="text-blue-400">{metrics.loadTime.toFixed(2)}ms</span>
           </div>
           <div className="flex justify-between">
+<<<<<<< HEAD
             <span>Memory:</span>
             <span className="text-red-400">{metrics.memoryUsage.toFixed(2)}MB</span>
           </div>
+=======
+            <span>Render Time:</span>
+            <span className="text-yellow-400">{metrics.renderTime.toFixed(2)}ms</span>
+          </div>
+          {metrics.memoryUsage > 0 && (
+            <div className="flex justify-between">
+              <span>Memory:</span>
+              <span className="text-red-400">{metrics.memoryUsage.toFixed(2)}MB</span>
+            </div>
+          )}
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
           <div className="flex justify-between">
             <span>Connection:</span>
             <span className="text-green-400">{metrics.connectionType}</span>

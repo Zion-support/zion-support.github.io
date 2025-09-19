@@ -1,7 +1,26 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+=======
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import Toast from './components/Toast';
+import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
 
 // Components
 import Header from './components/Header';
@@ -127,6 +146,7 @@ function App() {
     <ErrorBoundary>
       <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
         <Helmet>
+<<<<<<< HEAD
           <title>Zion Tech Group - Revolutionary Technology Solutions</title>
           <meta name="description" content="Leading provider of AI, quantum computing, and next-generation technology solutions" />
           <meta name="keywords" content="AI, quantum computing, technology, innovation, software development" />
@@ -141,10 +161,32 @@ function App() {
 
         <Router>
           <Header 
+=======
+          <title>Zion Tech Group - Innovative Technology Solutions</title>
+          <meta name="description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions. Transform your business with cutting-edge technology." />
+          <meta name="keywords" content="AI solutions, blockchain technology, IT services, quantum computing, digital transformation" />
+        <meta property="og:title" content="Zion Tech Group - Innovative Technology Solutions" />
+        <meta property="og:description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Innovative Technology Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions." />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      </Helmet>
+      {!isOnline && (
+        <div className="offline-banner" role="alert" aria-live="polite">
+          <span>⚠️ You&apos;re currently offline. Some features may be limited.</span>
+        </div>
+      )}
+      <header className="App-header">
+        <div className="header-controls">
+          <ThemeToggle 
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
             darkMode={darkMode} 
             onToggleDarkMode={toggleDarkMode}
             onButtonClick={handleButtonClick}
           />
+<<<<<<< HEAD
           
           <main className="main-content">
             <Routes>
@@ -164,6 +206,82 @@ function App() {
 
         {/* Performance Metrics (Development Only) */}
         <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
+=======
+          <div className="current-time" role="timer" aria-live="polite">
+            {currentTime.toLocaleTimeString()}
+          </div>
+        </div>
+        <h1 className="main-title">
+          <span className="title-highlight">Zion Tech Group</span>
+        </h1>
+        <p className="subtitle">Welcome to our innovative technology solutions</p>
+        <div className="stats-container">
+          <div className="stat-card">
+            <div className="stat-number">{animatedCounts.projects}+</div>
+            <div className="stat-label">Projects Completed</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">{animatedCounts.clients}+</div>
+            <div className="stat-label">Happy Clients</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">{animatedCounts.years}+</div>
+            <div className="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </header>
+      
+      <div className="features">
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            className="feature-card"
+            style={{ '--card-color': feature.color } as React.CSSProperties}
+          >
+            <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
+              {feature.icon}
+            </div>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+            <button 
+              className="learn-more-btn"
+              onClick={() => {
+                trackFeatureInteraction(feature.title, 'learn_more_clicked');
+              }}
+              aria-label={`Learn more about ${feature.title}`}
+            >
+              Learn More
+            </button>
+          </div>
+        ))}
+      </div>
+      
+      <div className="cta-section">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Get started with our cutting-edge technology solutions today.</p>
+        <div className="cta-buttons">
+          <button 
+            className="btn-primary"
+            onClick={() => trackButtonClick('get_started', 'cta_section')}
+          >
+            Get Started
+          </button>
+          <button 
+            className="btn-secondary"
+            onClick={() => trackButtonClick('contact_us', 'cta_section')}
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+      {/* Toast Notifications */}
+      {toasts.map((toast) => (
+        <Toast key={toast.id} {...toast} />
+      ))}
+      
+      {/* Performance Metrics (Development Only) */}
+      <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
       </div>
     </ErrorBoundary>
   );

@@ -1,0 +1,31 @@
+# Build artifacts and generated files
+dist/
+.next/
+node_modules/
+*.min.js
+*.bundle.js
+
+# Disabled directories
+zion-os.disabled/
+zion-os/
+zion-website/
+zion_academy/
+zion.app/
+recovered-branches/
+automation/
+
+# Backup files
+*.backup.*
+*backup*/
+
+# Large generated files
+*.log
+*.txt
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

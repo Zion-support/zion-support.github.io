@@ -49,6 +49,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode, onButtonCli
             ))}
           </nav>
 
+<<<<<<< HEAD
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
             <button
@@ -67,6 +68,15 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode, onButtonCli
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+=======
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
         </div>
 
         {/* Mobile Navigation */}
@@ -83,8 +93,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode, onButtonCli
                   {item.name}
                 </Link>
               ))}
+<<<<<<< HEAD
             </div>
           </nav>
+=======
+            </nav>
+          </div>
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
         )}
       </div>
     </header>
