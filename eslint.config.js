@@ -50,7 +50,6 @@ export default [
       'src/pages/talent/**',
       'src/context/**',
       'src/data/**',
-      'src/hooks/**',
       'src/integrations/**',
       'src/layout/**',
       'src/lib/**',

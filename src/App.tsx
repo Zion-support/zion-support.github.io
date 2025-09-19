@@ -24,7 +24,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
-  const { toasts, showSuccess, showError, showInfo } = useToast();
+  const { toasts, showSuccess, showInfo, showWarning } = useToast();
 
   // Update time every second
   useEffect(() => {
