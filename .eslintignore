@@ -1,8 +1,8 @@
 # Build outputs
 dist/
 build/
-out/
 .next/
+out/
 node_modules/
 
 # Disabled/backup directories
@@ -15,6 +15,7 @@ zion-ai-assistant/
 token/
 dao/
 server/
+netlify/
 src-clean/
 apps/
 apps.backup/
@@ -40,6 +41,7 @@ recovered-branches/
 **/*.temp.*
 **/*.test.*
 **/*.spec.*
+**/*.config.*
 **/*.log
 **/*.lock
 
@@ -61,6 +63,7 @@ public/
 **/*.cjs
 **/*.mjs
 **/scripts/
+**/automation/
 **/pm2-*
 **/fix-*
 **/clean-*
@@ -113,3 +116,16 @@ public/
 # Disabled components
 **/components-disabled/**
 **/utils-disabled/**
+
+# Additional patterns to ignore
+**/static/
+**/chunks/
+**/webpack-*.js
+**/polyfills-*.js
+**/main-*.js
+**/pages/
+**/server/
+**/middleware-*.js
+**/server-reference-*.js
+**/_buildManifest.js
+**/_ssgManifest.js
