@@ -1,4 +1,4 @@
-export interface NextGenerationAIService {
+export interface NextGenerationAIService {,
   id: string;
   name: string;
   tagline: string;
@@ -25,27 +25,23 @@ export interface NextGenerationAIService {
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {
+  contactInfo: {,
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string,};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    customers: 150,
-    rating: 4.9,
-    reviews: 89
-  },
+  reviews: number,}
+    contactInfo: {,
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com',};
+    realImplementation: true;
+    customers: 150;
+    rating: 4.9;
+    reviews: 89,};

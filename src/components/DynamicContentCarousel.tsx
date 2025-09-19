@@ -1,7 +1,6 @@
 import React from 'react';
-
-const DynamicContentCarousel = () => {
-    </div>
+const DynamicContentCarousel = () => {,
+    </div>,
   );
 };
 export default DynamicContentCarousel;

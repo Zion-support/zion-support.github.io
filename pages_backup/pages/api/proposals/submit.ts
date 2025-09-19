@@ -1,288 +1,188 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
-import {
-
-
-
-
-  getProposal,
-  updateProposalMeta,
-  updateArtifacts,;
-
-
-
-
-
-
-} from "../../../utils/data/proposals";
-async function submitByEmail(
-  to: string
-  subject: string
-  text: string
-  attachments: any[] = []
-) {
-
-
-
-
-
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-
+import {,
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
-
+import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals',
+  getProposal;
+  updateProposalMeta;
+  updateArtifacts;
+} from "../../../utils/data/proposals";
+async function submitByEmail(,
+  to: string,
+  subject: string,
+  text: string,
+  attachments: any[] = [],
+) {,
+export default function handler(req: NextApiRequest, res: NextApiResponse) {,
+  res.status(200).json({ message: 'API endpoint' ,});
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
-
-
-
-
-
-
-
-
-
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
-
-
-
-
-
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
-
-
-
-
-  const transporter = nodemailer.createTransport({
-    host
-    port
-    secure: port === 465
+  const transporter = nodemailer.createTransport({,
+    host,
+    port,
+    secure: port === 465,
     auth: { user, pass }
   });
-
-
-
-
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
-
-
+,
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
-
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-export default async function handler(
+,
+export default async function handler(,
   req: NextApiRequest,
   res: NextApiResponse,
-) {;
-
+) {} catch (error) {,
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" ,});
+  }
+}
+,
+export default async function handler(req: NextApiRequest;
+  res: NextApiResponse) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
-  try {
+  try {,
     const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
     if (!id) return res.status($1).json({ $2 });
     const meta = getProposal(id);
     if (!meta) return res.status($1).json({ $2 });
-    // Email submission
-    if (channels.includes("email")) {
+    // Email submission,
+    if (channels.includes("email")) {,
       const to = emailTo |process.env.UN_GATEWAY_EMAIL |"example@un.org";
       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote |"N/A"}`;
+      const text = `Please find the proposal attached.\n\nTitle: ${meta.title,}\nTarget: ${meta.targetInstitution,}\nType: ${meta.type,}\nRegion: ${meta.regionalScope,}\nBudget/Resolution: ${meta.budgetOrResolution,}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote |"N/A",}`;
       await submitByEmail(to, subject, text);
     }
-    // ENS record hash (default: compute and store hash only)
+    // ENS record hash (default: compute and store hash only),
     let ensRecordHash: string | undefined;
-    try {
-      const hash = crypto
-        .createHash("sha256")
-        .update(JSON.stringify(meta))
+    try {,
+      const hash = crypto,
+        .createHash("sha256"),
+        .update(JSON.stringify(meta)),
         .digest("hex");
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {}
-    const updated = updateProposalMeta(id, (m) => ({
-      ...m
-      status: "Submitted"
-    }));
-    return res.status(200).json({ meta: updated });
-
-  } catch (error: any) {
-    return res
-      .status(500)
-
-
-
-
-
-      .json({ error: error?.message |"Submission failed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-import crypto from 'crypto';
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-
-
+    const updated = updateProposalMeta(id, (m) => ({,
+      ...m,
+      status: "Submitted",}));
+    return res.status(200).json({ meta: updated ,});
+  } catch (error: any) {,
+    return res,
+      .status(500),
+      .json({ error: error?.message |"Submission failed" ,});
+async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {,
   const host = process.env.EMAIL_HOST;
   const port = Number (process.env.EMAIL_PORT || 587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
   const from = process.env.EMAIL_FROM || user;
-  if (throw new Error ("Email not configured")) {
-  $2
+  if (throw new Error ("Email not configured")) {,
+  $2,
 }
-  const transporter = nodemailer.create_transport ({
-
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
+  const transporter = nodemailer.create_transport ({,
+    host;
+    port;
+    secure: port === 465;
+    auth: { user, pass }
   });
-
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
-
-
-
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
-      .json({ error: error?.message || "Submission failed" });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+  if (req.method !== 'POST') return res.status($1).json({$2,});
+      .json({ error: error?.message || "Submission failed" ,});
 ;
-export default async function handler(req, res) {
-
-  try {
+export default async function handler(req, res) {,
+  try {,
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-    if (!id) return res.status(400).json({ error: 'id is required' });
+    if (!id) return res.status(400).json({ error: 'id is required' ,});
     const meta = getProposal(id);
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' });
-
-    // Email submission
-
-    if (channels.includes('email')) {
+    if (!meta) return res.status(404).json({ error: 'Proposal not found' ,});
+    // Email submission,
+    if (channels.includes('email')) {,
       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
-      await submitByEmail(to, subject, text)
-
+      const text = `Please find the proposal attached.\n\nTitle: ${meta.title,}\nTarget: ${meta.targetInstitution,}\nType: ${meta.type,}\nRegion: ${meta.regionalScope,}\nBudget/Resolution: ${meta.budgetOrResolution,}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A',}`;
+      await submitByEmail(to, subject, text),
     }
-    // ENS record hash (default: compute and store hash only)
+    // ENS record hash (default: compute and store hash only),
     let ensRecordHash: string | undefined;
-    try {
-
-
+    try {,
       ensRecordHash = `0x${hash}`;
       update_artifacts (id, { ensRecordHash });
     } catch {}
-
-    return res && res.status(200).json({ meta: updated });
-
-  } catch (error: any) {
-    return res
-      .status(500)
-
-      .json({ error: error?.message |"Submission failed" });
-
+,
+    return res && res.status(200).json({ meta: updated ,});
+  } catch (error: any) {,
+    return res,
+      .status(500),
+      .json({ error: error?.message |"Submission failed" ,});
   }
 }
-
+,
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
-      updateArtifacts(id, { ensRecordHash })
+      updateArtifacts(id, { ensRecordHash }),
     } catch {}
-
-
-    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Submission failed' })
-
+,
+    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' ,}));
+    return res.status(200).json({ meta: updated ,}),
+  } catch (error: any) {,
+    return res.status(500).json({ error: error?.message || 'Submission failed' ,}),
   }
-
-
+,
 }
-    const updated = updateProposalMeta (id, (m) => ({
-      ...m,
-      status: "Submitted",
-    }));
-    return res.status (200).json ({ meta: updated });
-  } catch (error: any) {
+    const updated = updateProposalMeta (id, (m) => ({,
+      ...m;
+      status: "Submitted",}));
+    return res.status (200).json ({ meta: updated ,});
+  } catch (error: any) {,
     return res;
       .status (500);
-      .json ({ error: error?.message || "Submission failed" });
-
-
+      .json ({ error: error?.message || "Submission failed" ,});
   }
-
+,
 }
-  } catch (error) {
+  } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal server error" ,});
   }
 }
-
-
+,
   }
 }
-
+,
 }
-
-
+,
 }
-  } catch (error) {
+  } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal server error" ,});
   }
 }
-  } catch (error) {
+  } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
+    return res.status(500).json({ error: "Internal server error" ,});
+    } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal server error" ,});
   }
 }
-  } catch (error) {
+  } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal server error" ,});
   }
 }
-
-
-
-
-
-
-
+,

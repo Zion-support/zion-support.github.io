@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface NextGenAIService2026 {
+export interface NextGenAIService2026 {,
   id: string;
   name: string;
   tagline: string;
@@ -26,17 +26,16 @@ export interface NextGenAIService2026 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: {,
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string,};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number,}
   }
+,

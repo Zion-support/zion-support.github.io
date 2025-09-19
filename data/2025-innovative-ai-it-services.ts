@@ -1,163 +1,100 @@
-    category: 'DevOps & Infrastructure',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      currency: 'USD',
-      'Continuous deployment automation',
-      'Infrastructure as code management',
-      'Application performance optimization',
-      'Security compliance automation',
-      'Cost optimization',
-    category: 'Cybersecurity',
-    price: {
-      monthly: 1299,
-      yearly: 12990,
-      currency: 'USD',
-      'Behavioral analysis',
-      'Automated incident response',
-      'Threat intelligence sharing',
-      'Compliance automation',
-      'Security orchestration',
-      'Vulnerability management',
-      'Reduce security incidents by 95%',
-      'Automate 90% of security responses',
-      'Improve threat detection accuracy by 99%',
-      'Reduce compliance costs by 60%',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Tech companies',
-      'Endpoint security',
-      'Network security',
-      'Cloud security',
-      'Identity and access management',
-      'Compliance automation',
-    category: 'Space Technology',
-    price: {
-      monthly: 4999,
-      yearly: 49990,
-      currency: 'USD',
-      'Autonomous mining fleet management',
-      'Space logistics optimization',
-      'Resource value assessment',
-      'Mining operation planning',
-      'Risk assessment and mitigation',
-      'Regulatory compliance tools',
-      'Market analysis platform',
-      'Supply chain optimization',
-      'Optimize mining operations by 500%',
-      'Reduce operational risks by 80%',
-      'Increase resource discovery by 300%',
-      'Enable profitable space mining',
-      'Space mining companies',
-      'Aerospace corporations',
-      'Government space agencies',
-      'Private space companies',
-      'Investment firms',
-      'Asteroid mining',
-      'Lunar resource extraction',
-      'Space station resource management',
-      'Satellite resource optimization',
-      'Space logistics planning',
-    category: 'Emerging Technology',
-    price: {
-      monthly: 3999,
-      yearly: 39990,
-      currency: 'USD',
-      'DNA computing engine',
-      'Biological problem solver',
-      'Drug discovery platform',
-      'Genetic algorithm optimization',
-      'Bioinformatics tools',
-      'Molecular simulation',
-      'Protein folding prediction',
-      'Disease modeling',
-      'Drug interaction analysis',
-      'Solve biological problems 1000x faster',
-      'Accelerate drug discovery by 500%',
-      'Enable new research possibilities',
-      'Reduce computational costs by 90%',
-      'Pharmaceutical companies',
-      'Biotechnology firms',
-      'Research institutions',
-      'Healthcare organizations',
-      'Government labs',
-      'Drug discovery',
-      'Protein structure prediction',
-      'Disease modeling',
-      'Genetic research',
-      'Molecular simulation',
-    category: 'Metaverse & Virtual Reality',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      currency: 'USD',
-      'Virtual asset marketplace',
-      'User management system',
-      'Monetization tools',
-      'Analytics dashboard',
-      'Create metaverse experiences in days',
-      'Generate content 10x faster with AI',
-      'Monetize virtual experiences',
-      'Reach global audiences',
-      'Brands and businesses',
-      'Content creators',
-      'Educational institutions',
-      'Event organizers',
-      'Real estate companies',
-      'Virtual events and conferences',
-      'Brand experiences',
-      'Educational virtual worlds',
-      'Virtual real estate',
-      'Gaming and entertainment',
-    category: 'Logistics & Supply Chain',
-    price: {
-      monthly: 899,
-      yearly: 8990,
-      currency: 'USD',
-      'Reduce logistics costs by 40%',
-      'Improve delivery times by 60%',
-      'Optimize inventory by 50%',
-      'Reduce carbon footprint by 30%',
-      'Retail chains',
-      'Manufacturing companies',
-      'Logistics providers',
-      'Food delivery services',
-      'Supply chain optimization',
-      'Route optimization',
-      'Inventory management',
-      'Warehouse automation',
-    category: 'Financial Technology',
-    price: {
-      monthly: 2499,
-      yearly: 24990,
-      currency: 'USD',
-      'Portfolio optimization engine',
-      'Financial modeling tools',
-      'Market prediction algorithms',
-      'Fraud detection system',
-      'Compliance automation',
-      'Performance analytics',
-      'API access',
-      'Investment banks',
-      'Hedge funds',
-      'Asset management firms',
-      'Trading companies',
-      'Financial institutions',
-      'Algorithmic trading',
-      'Portfolio optimization',
-      'Risk management',
-      'Financial modeling',
-      'Market analysis',
-
-
-
-];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
-
-      'Improve diagnostic accuracy by 99 && 99.9%',
-    id: 'ai - healthcare - diagnostic',
-    name: 'AI Healthcare Diagnostic Platform',
+    category: 'DevOps & Infrastructure';
+    price: {,
+      monthly: 799;
+      yearly: 7990;
+      currency: 'USDContinuous deployment automation';
+      'Infrastructure as code managementApplication performance optimization';
+      'Security compliance automationCost optimization';
+    category: 'Cybersecurity';
+    price: {,
+      monthly: 1299;
+      yearly: 12990;
+      currency: 'USDBehavioral analysis';
+      'Automated incident responseThreat intelligence sharing';
+      'Compliance automationSecurity orchestration';
+      'Vulnerability managementReduce security incidents by 95%';
+      'Automate 90% of security responsesImprove threat detection accuracy by 99%';
+      'Reduce compliance costs by 60%Financial institutions';
+      'Healthcare organizationsGovernment agencies';
+      'Tech companiesEndpoint security';
+      'Network securityCloud security';
+      'Identity and access managementCompliance automation';
+    category: 'Space Technology';
+    price: {,
+      monthly: 4999;
+      yearly: 49990;
+      currency: 'USDAutonomous mining fleet management';
+      'Space logistics optimizationResource value assessment';
+      'Mining operation planningRisk assessment and mitigation';
+      'Regulatory compliance toolsMarket analysis platform';
+      'Supply chain optimizationOptimize mining operations by 500%';
+      'Reduce operational risks by 80%Increase resource discovery by 300%';
+      'Enable profitable space miningSpace mining companies';
+      'Aerospace corporationsGovernment space agencies';
+      'Private space companiesInvestment firms';
+      'Asteroid miningLunar resource extraction';
+      'Space station resource managementSatellite resource optimization';
+      'Space logistics planning';
+    category: 'Emerging Technology';
+    price: {,
+      monthly: 3999;
+      yearly: 39990;
+      currency: 'USDDNA computing engine';
+      'Biological problem solverDrug discovery platform';
+      'Genetic algorithm optimizationBioinformatics tools';
+      'Molecular simulationProtein folding prediction';
+      'Disease modelingDrug interaction analysis';
+      'Solve biological problems 1000x fasterAccelerate drug discovery by 500%';
+      'Enable new research possibilitiesReduce computational costs by 90%';
+      'Pharmaceutical companiesBiotechnology firms';
+      'Research institutionsHealthcare organizations';
+      'Government labsDrug discovery';
+      'Protein structure predictionDisease modeling';
+      'Genetic researchMolecular simulation';
+    category: 'Metaverse & Virtual Reality';
+    price: {,
+      monthly: 599;
+      yearly: 5990;
+      currency: 'USDVirtual asset marketplace';
+      'User management systemMonetization tools';
+      'Analytics dashboardCreate metaverse experiences in days';
+      'Generate content 10x faster with AIMonetize virtual experiences';
+      'Reach global audiencesBrands and businesses';
+      'Content creatorsEducational institutions';
+      'Event organizersReal estate companies';
+      'Virtual events and conferencesBrand experiences';
+      'Educational virtual worldsVirtual real estate';
+      'Gaming and entertainment';
+    category: 'Logistics & Supply Chain';
+    price: {,
+      monthly: 899;
+      yearly: 8990;
+      currency: 'USDReduce logistics costs by 40%';
+      'Improve delivery times by 60%Optimize inventory by 50%';
+      'Reduce carbon footprint by 30%Retail chains';
+      'Manufacturing companiesLogistics providers';
+      'Food delivery servicesSupply chain optimization';
+      'Route optimizationInventory management';
+      'Warehouse automation';
+    category: 'Financial Technology';
+    price: {,
+      monthly: 2499;
+      yearly: 24990;
+      currency: 'USDPortfolio optimization engine';
+      'Financial modeling toolsMarket prediction algorithms';
+      'Fraud detection systemCompliance automation';
+      'Performance analyticsAPI access';
+      'Investment banksHedge funds';
+      'Asset management firmsTrading companies';
+      'Financial institutionsAlgorithmic trading';
+      'Portfolio optimizationRisk management';
+      'Financial modelingMarket analysis',
+],      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research',
+      'Improve diagnostic accuracy by 99 && 99.9%';
+    id: 'ai - healthcare - diagnostic';
+    name: 'AI Healthcare Diagnostic Platform';
     tagline:;
-      'AI - powered medical diagnostics with 99.9% accuracy for early disease detection',
+      'AI - powered medical diagnostics with 99.9% accuracy for early disease detection';
     description:;
-      'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
+      'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.';
+}}}}}}}

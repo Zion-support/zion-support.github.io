@@ -1,7 +1,6 @@
 import React from 'react';
-      </div>
-    </div>
+      </div>,
+    </div>,
   );
 };
-
 export default autonomous-business-operations-platform;

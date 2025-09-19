@@ -85,7 +85,7 @@ class ErrorPreventionMonitor {
       });
     } catch (error) {
       // Directory access error
-    }      return false;,
+    }      return false,
 }
   }
 ;
@@ -93,7 +93,7 @@ class ErrorPreventionMonitor {
   let fixedLine = line;
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");,
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)"),
 }
 ;
     // Replace innerHTML with textContent where possible;
@@ -103,17 +103,17 @@ class ErrorPreventionMonitor {
 
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");,
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)"),
 }
 ;
     // Replace innerHTML with textContent where possible;
     if (line.includes(".innerHTML =")) {
   fixedLine = line.replace(;
         /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";
-      );,
+      ),
 }
 ;
-    return fixedLine;,
+    return fixedLine,
 }
 ;
   async fixMemoryLeak(line) {
@@ -122,10 +122,10 @@ class ErrorPreventionMonitor {
     if (line.includes("addEventListener")) {
   fixedLine = line.replace(;
         /addEventListener\s*\((["^", ""]+),\s*(["^", ""]+),\s*false\)/g,addEventListener($1, $2, { once: true })";
-      );,
+      ),
 }
 ;
-    return fixedLine;,
+    return fixedLine,
 }
 ;
   async fixAsyncError(line) {
@@ -134,7 +134,7 @@ class ErrorPreventionMonitor {
     if (line.includes(".then(") && !line.includes(".catch(")) {
   fixedLine = line + "\n  .catch(error => console.error("Error: ", error))"}
 ;
-    return fixedLine;,
+    return fixedLine,
 }
 ;
   async fixTypeIssue(line) {
@@ -145,29 +145,29 @@ class ErrorPreventionMonitor {
 
     // Replace any with more specific types;
     if (line.includes(": any")) {
-  fixedLine = line.replace(/: "any/g", ": unknown");,
+  fixedLine = line.replace(/: "any/g", ": unknown"),
 }
 ;
     if (line.includes("as any")) {
-  fixedLine = line.replace(/as "any/g", "as unknown");,
+  fixedLine = line.replace(/as "any/g", "as unknown"),
 }
 ;
-    return fixedLine;,
+    return fixedLine,
 }
 ;
   async generateReport(fixResults) {
   this.log("📊 Generating error prevention monitoring report...");
     const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString();
       summary: {
-  totalIssues: fixResults.totalIssues,;
-        fixedIssues: fixResults.fixedCount,;
+  totalIssues: fixResults.totalIssues;
+        fixedIssues: fixResults.fixedCount;
         preventionRate: fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
                 2;
               );
-            : 100},;
-      fixResults: fixResults.results,;
+            : 100};
+      fixResults: fixResults.results;
       recommendations: ["Review applied fixes to ensure they meet your requirements"", "Consider adding more specific type annotations", "Implement proper error handling for async operations"", "Regularly review code for potential security issues`, ``]}
     const reportFile = path.join(;
       this.reportsPath,error-prevention-monitor-report.json`;
@@ -175,7 +175,7 @@ class ErrorPreventionMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report generated: ${reportFile}`);
-    return report;,
+    return report,
 }
 ;
   async run() {
@@ -194,10 +194,10 @@ class ErrorPreventionMonitor {
       const report = await this.generateReport(fixResults);
       this.log(`🎉 Error Prevention Monitor completed!`);this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
       return {
-  success: fixResults.fixedCount > 0,;
-        issues: potentialErrors,;
-        fixed: fixResults.fixedCount,;
-        report,;
+  success: fixResults.fixedCount > 0;
+        issues: potentialErrors;
+        fixed: fixResults.fixedCount;
+        report;
 
   async run() {
   this.log("🚀 Starting Error Prevention Monitor...");
@@ -220,13 +220,13 @@ class ErrorPreventionMonitor {
       this.log("🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
 
       return {
-  success: fixResults.fixedCount > 0,;
-        issues: potentialErrors,;
-        fixed: fixResults.fixedCount,;
-        report,;,
+  success: fixResults.fixedCount > 0;
+        issues: potentialErrors;
+        fixed: fixResults.fixedCount;
+        report,
 }
     } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error,
 }
   }
 

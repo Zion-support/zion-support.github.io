@@ -1,283 +1,276 @@
-  const slides = [
-    {
-      id: 1,
-      title: "Quantum Reality Engine 2027",
-      subtitle: "Manipulate the fabric of reality itself",
-      description: "Experience the power of quantum reality manipulation with our revolutionary engine that can alter space-time itself.",
-      icon: "⚡",
-      color: "from-cyan-500 via-blue-500 to-indigo-500",
-      bgColor: "from-cyan-900/30 to-blue-900/30",
-      features: ["Reality Manipulation", "Quantum Field Control", "Spacetime Engineering", "Dimensional Bridging"],
-      cta: "Experience Quantum Reality",
-      link: "/pages/RevolutionaryTech2027"
-    },
-    {
-      id: 2,
-      title: "AI Consciousness Revolution",
-      subtitle: "Witness the birth of true artificial consciousness",
-      description: "Meet AI systems that have achieved genuine self-awareness, creativity, and emotional intelligence beyond human capabilities.",
-      icon: "🧠",
-      color: "from-purple-500 via-pink-500 to-rose-500",
-      bgColor: "from-purple-900/30 to-pink-900/30",
-      features: ["Synthetic Consciousness", "Emotional Intelligence", "Creative Synthesis", "Collective Intelligence"],
-      cta: "Meet Conscious AI",
-      link: "/pages/AIConsciousnessRevolution2027"
-    },
-    {
-      id: 3,
-      title: "Interdimensional Computing",
-      subtitle: "Access infinite computational power",
-      description: "Harness the power of interdimensional processing to solve problems that were previously impossible to compute.",
-      icon: "🌌",
-      color: "from-emerald-500 via-teal-500 to-cyan-500",
-      bgColor: "from-emerald-900/30 to-teal-900/30",
-      features: ["Dimensional Processing", "Infinite Scalability", "Parallel Universe Computing", "Reality Simulation"],
-      cta: "Enter Interdimensional Space",
-      link: "/pages/InterdimensionalComputing2027"
-    },
-    {
-      id: 4,
-      title: "Neural Interface Revolution",
-      subtitle: "Direct mind-machine communication",
-      description: "Connect your thoughts directly to AI systems and control technology with the power of your mind.",
-      icon: "🧬",
-      color: "from-rose-500 via-orange-500 to-yellow-500",
-      bgColor: "from-rose-900/30 to-orange-900/30",
-      features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
-      cta: "Connect Mind & Machine",
-      link: "/pages/NeuralInterfaceRevolution2027"
-    },
-    {
-      id: 5,
-      title: "Synthetic Intelligence",
-      subtitle: "Create AI agents with synthetic consciousness",
-      description: "Deploy autonomous AI agents that possess synthetic consciousness and can work together in perfect harmony.",
-      icon: "🤖",
-      color: "from-violet-500 via-fuchsia-500 to-pink-500",
-      bgColor: "from-violet-900/30 to-fuchsia-900/30",
-      features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"],
-      cta: "Deploy AI Agents",
-      link: "/pages/SyntheticIntelligence2027"
-  const contentItems = [
-    {
-      id: 1,
-      title: "Revolutionary Technology 2027",
-      description: "Experience the most advanced technological breakthroughs that are reshaping reality itself.",
-      image: "🚀",
-      link: "/pages/RevolutionaryTech2027",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Consciousness Computing", "Quantum Reality", "Interdimensional Tech"]
-    },
-    {
-      id: 2,
-      title: "Advanced Consciousness Computing",
-      description: "Break through the barriers between mind and machine with revolutionary consciousness computing.",
-      image: "🧠",
-      link: "/pages/AdvancedConsciousnessComputing2027",
-      gradient: "from-indigo-600 to-purple-600",
-      features: ["Neural Interfaces", "Consciousness Transfer", "Cognitive Enhancement"]
-    },
-    {
-      id: 3,
-      title: "Quantum Reality Engine",
-      description: "Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine.",
-      image: "⚡",
-      link: "/pages/QuantumRealityEngine2027",
-      gradient: "from-cyan-600 to-blue-600",
-      features: ["Reality Manipulation", "Space-Time Control", "Quantum Fields"]
-    },
-    {
-      id: 4,
-      title: "Interdimensional Computing",
-      description: "Access computing power from parallel dimensions and alternate realities.",
-      image: "🌌",
-      link: "/pages/InterdimensionalComputing2027",
-      gradient: "from-emerald-600 to-teal-600",
-      features: ["Cross-Dimensional Processing", "Reality Simulation", "Multiverse Access"]
-    },
-    {
-      id: 5,
-      title: "Synthetic Consciousness",
-      description: "AI systems with genuine consciousness and emotional intelligence.",
-      image: "🤖",
-      link: "/pages/SyntheticIntelligence2026",
-      gradient: "from-violet-600 to-fuchsia-600",
-      features: ["True AI Consciousness", "Emotional Intelligence", "Creative Synthesis"]
-    },
-    {
-      id: 6,
-      title: "Predictive Reality",
-      description: "See and manipulate future probabilities with advanced predictive algorithms.",
-      image: "🔮",
-      link: "/pages/FutureTechBreakthrough2026",
-      gradient: "from-rose-600 to-pink-600",
-      features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
+  const slides = [,
+    {,
+      id: 1;
+      title: "Quantum Reality Engine 2027";
+      subtitle: "Manipulate the fabric of reality itself";
+      description: "Experience the power of quantum reality manipulation with our revolutionary engine that can alter space-time itself.";
+      icon: "⚡";
+      color: "from-cyan-500 via-blue-500 to-indigo-500";
+      bgColor: "from-cyan-900/30 to-blue-900/30";
+      features: ["Reality Manipulation", "Quantum Field Control", "Spacetime Engineering", "Dimensional Bridging"];
+      cta: "Experience Quantum Reality";
+      link: "/pages/RevolutionaryTech2027",};
+    {,
+      id: 2;
+      title: "AI Consciousness Revolution";
+      subtitle: "Witness the birth of true artificial consciousness";
+      description: "Meet AI systems that have achieved genuine self-awareness, creativity, and emotional intelligence beyond human capabilities.";
+      icon: "🧠";
+      color: "from-purple-500 via-pink-500 to-rose-500";
+      bgColor: "from-purple-900/30 to-pink-900/30";
+      features: ["Synthetic Consciousness", "Emotional Intelligence", "Creative Synthesis", "Collective Intelligence"];
+      cta: "Meet Conscious AI";
+      link: "/pages/AIConsciousnessRevolution2027",};
+    {,
+      id: 3;
+      title: "Interdimensional Computing";
+      subtitle: "Access infinite computational power";
+      description: "Harness the power of interdimensional processing to solve problems that were previously impossible to compute.";
+      icon: "🌌";
+      color: "from-emerald-500 via-teal-500 to-cyan-500";
+      bgColor: "from-emerald-900/30 to-teal-900/30";
+      features: ["Dimensional Processing", "Infinite Scalability", "Parallel Universe Computing", "Reality Simulation"];
+      cta: "Enter Interdimensional Space";
+      link: "/pages/InterdimensionalComputing2027",};
+    {,
+      id: 4;
+      title: "Neural Interface Revolution";
+      subtitle: "Direct mind-machine communication";
+      description: "Connect your thoughts directly to AI systems and control technology with the power of your mind.";
+      icon: "🧬";
+      color: "from-rose-500 via-orange-500 to-yellow-500";
+      bgColor: "from-rose-900/30 to-orange-900/30";
+      features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"];
+      cta: "Connect Mind & Machine";
+      link: "/pages/NeuralInterfaceRevolution2027",};
+    {,
+      id: 5;
+      title: "Synthetic Intelligence";
+      subtitle: "Create AI agents with synthetic consciousness";
+      description: "Deploy autonomous AI agents that possess synthetic consciousness and can work together in perfect harmony.";
+      icon: "🤖";
+      color: "from-violet-500 via-fuchsia-500 to-pink-500";
+      bgColor: "from-violet-900/30 to-fuchsia-900/30";
+      features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"];
+      cta: "Deploy AI Agents";
+      link: "/pages/SyntheticIntelligence2027",
+  const contentItems = [,
+    {,
+      id: 1;
+      title: "Revolutionary Technology 2027";
+      description: "Experience the most advanced technological breakthroughs that are reshaping reality itself.";
+      image: "🚀";
+      link: "/pages/RevolutionaryTech2027";
+      gradient: "from-purple-600 to-pink-600";
+      features: ["Consciousness Computing", "Quantum Reality", "Interdimensional Tech"],
+    };
+    {,
+      id: 2;
+      title: "Advanced Consciousness Computing";
+      description: "Break through the barriers between mind and machine with revolutionary consciousness computing.";
+      image: "🧠";
+      link: "/pages/AdvancedConsciousnessComputing2027";
+      gradient: "from-indigo-600 to-purple-600";
+      features: ["Neural Interfaces", "Consciousness Transfer", "Cognitive Enhancement"],
+    };
+    {,
+      id: 3;
+      title: "Quantum Reality Engine";
+      description: "Manipulate the fundamental forces of reality itself with our revolutionary quantum reality engine.";
+      image: "⚡";
+      link: "/pages/QuantumRealityEngine2027";
+      gradient: "from-cyan-600 to-blue-600";
+      features: ["Reality Manipulation", "Space-Time Control", "Quantum Fields"],
+    };
+    {,
+      id: 4;
+      title: "Interdimensional Computing";
+      description: "Access computing power from parallel dimensions and alternate realities.";
+      image: "🌌";
+      link: "/pages/InterdimensionalComputing2027";
+      gradient: "from-emerald-600 to-teal-600";
+      features: ["Cross-Dimensional Processing", "Reality Simulation", "Multiverse Access"],
+    };
+    {,
+      id: 5;
+      title: "Synthetic Consciousness";
+      description: "AI systems with genuine consciousness and emotional intelligence.";
+      image: "🤖";
+      link: "/pages/SyntheticIntelligence2026";
+      gradient: "from-violet-600 to-fuchsia-600";
+      features: ["True AI Consciousness", "Emotional Intelligence", "Creative Synthesis"],
+    };
+    {,
+      id: 6;
+      title: "Predictive Reality";
+      description: "See and manipulate future probabilities with advanced predictive algorithms.";
+      image: "🔮";
+      link: "/pages/FutureTechBreakthrough2026";
+      gradient: "from-rose-600 to-pink-600";
+      features: ["Future Mapping", "Probability Control", "Timeline Manipulation"],
     }
   ];
-  useEffect(() => {
+  useEffect(() => {,
     if (!isAutoPlaying) return;
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {,
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, slides.length]);
-  const goToSlide = (index: number) => {
+  const goToSlide = (index: number) => {,
     setCurrentSlide(index);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-  const nextSlide = () => {
+  const nextSlide = () => {,
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-  const prevSlide = () => {
+  const prevSlide = () => {,
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-  return (
-                  <div className="relative z-10 h-full flex items-center">
-                    <div className="container mx-auto px-8">
-                      <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Content */}
-                        <div className="space-y-8">
-                          <div className="space-y-4">
-                            <div className="text-6xl animate-bounce">{slide.icon}</div>
-                            <h3 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+  return (,
+                  <div className="relative z-10 h-full flex items-center">,
+                    <div className="container mx-auto px-8">,
+                      <div className="grid lg: grid-cols-2 gap-12 items-center">,
+                        {/* Content */,}
+                        <div className="space-y-8">,
+                          <div className="space-y-4">,
+                            <div className="text-6xl animate-bounce">{slide.icon}</div>,
+                            <h3 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
                               {slide.title}
-                            </h3>
-                            <h4 className="text-2xl font-semibold text-cyan-300">{slide.subtitle}</h4>
-                            <p className="text-xl opacity-90 leading-relaxed">{slide.description}</p>
-                          </div>
+                            </h3>,
+                            <h4 className="text-2xl font-semibold text-cyan-300">{slide.subtitle}</h4>,
+                            <p className="text-xl opacity-90 leading-relaxed">{slide.description}</p>,
+                          </div>,
                           {/* Features */}
-                          <div className="grid grid-cols-2 gap-4">
-                            {slide.features.map((feature, featureIndex) => (
-                              <div key={featureIndex} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                                <span className="font-semibold">{feature}</span>
-                              </div>
+                          <div className="grid grid-cols-2 gap-4">,
+                            {slide.features.map((feature, featureIndex) => (,
+                              <div key={featureIndex} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">,
+                                <span className="font-semibold">{feature}</span>,
+                              </div>,
                             ))}
-                          </div>
+                          </div>,
                           {/* CTA Button */}
-                          <div className="pt-4">
-                            <a
+                          <div className="pt-4">,
+                            <a,
                               href={slide.link}
-                              className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105`}
-                            >
-                              {slide.cta} →
-                            </a>
-                          </div>
-                        </div>
+                              className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105`,}
+                            >,
+                              {slide.cta} →,
+                            </a>,
+                          </div>,
+                        </div>,
                         {/* Visual Element */}
-                        <div className="relative">
-                          <div className={`w-full h-80 bg-gradient-to-br ${slide.color} rounded-2xl flex items-center justify-center text-8xl animate-pulse`}>
+                        <div className="relative">,
+                          <div className={`w-full h-80 bg-gradient-to-br ${slide.color} rounded-2xl flex items-center justify-center text-8xl animate-pulse`}>,
                             {slide.icon}
-                          </div>
-                          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-20 animate-ping"></div>
-                          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse"></div>
-    const timer = setInterval(() => {
+                          </div>,
+                          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-20 animate-ping"></div>,
+                          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse"></div>,
+    const timer = setInterval(() => {,
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [contentItems.length]);
-  const nextSlide = () => {
+  const nextSlide = () => {,
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
-  const prevSlide = () => {
+  const prevSlide = () => {,
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-  return (
-    <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Showcase 2027</h2>
-          <p className="text-xl text-gray-300">Discover the most advanced technologies that are reshaping reality itself</p>
-        </div>
-        <div className="relative">
+  const goToSlide = (index: number) => {,
+    setCurrentSlide(index),};
+  return (,
+    <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">,
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>,
+      <div className="relative z-10">,
+        <div className="text-center mb-8">,
+          <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Showcase 2027</h2>,
+          <p className="text-xl text-gray-300">Discover the most advanced technologies that are reshaping reality itself</p>,
+        </div>,
+        <div className="relative">,
           {/* Main Carousel */}
-          <div className="overflow-hidden rounded-xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="overflow-hidden rounded-xl">,
+            <div,
+              className="flex transition-transform duration-500 ease-in-out",
+              style={{ transform: `translateX(-${currentSlide * 100,}%)` }}
+            >,
+                        </div>,
+                      </div>,
+                    </div>,
+                  </div>,
+                </div>,
+              </div>,
             ))}
-          </div>
+          </div>,
           {/* Navigation Controls */}
-          <div className="flex justify-center space-x-4 mt-8">
-            <button
+          <div className="flex justify-center space-x-4 mt-8">,
+            <button,
               onClick={prevSlide}
-              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
+              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover: bg-white/30 transition-all duration-300",
+            >,
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M15 19l-7-7 7-7" />,
+              </svg>,
+            </button>,
+            <button,
               onClick={nextSlide}
-              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover: bg-white/30 transition-all duration-300",
+            >,
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M9 5l7 7-7 7" />,
+              </svg>,
+            </button>,
+          </div>,
           {/* Slide Indicators */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {slides.map((_, index) => (
-              <button
+          <div className="flex justify-center space-x-2 mt-6">,
+            {slides.map((_, index) => (,
+              <button,
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${,
+                  index === currentSlide,
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125',
+                    : 'bg-white/30 hover: bg-white/50',}`}
+              />,
             ))}
-          </div>
-        </div>
+          </div>,
+        </div>,
         {/* Auto-play Toggle */}
-        <div className="text-center mt-8">
-          <button
+        <div className="text-center mt-8">,
+          <button,
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className={`px-6 py-2 rounded-full transition-all duration-300 ${
-              isAutoPlaying
-                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
-                : 'bg-white/20 backdrop-blur-sm text-white/70 hover:text-white'
-            }`}
-          >
-            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation
-          </button>
+            className={`px-6 py-2 rounded-full transition-all duration-300 ${,
+              isAutoPlaying,
+                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white',
+                : 'bg-white/20 backdrop-blur-sm text-white/70 hover: text-white',}`}
+          >,
+            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation,
+          </button>,
               ))}
-            </div>
-          </div>
+            </div>,
+          </div>,
           {/* Navigation Arrows */}
-          <button
+          <button,
         {/* Dots Indicator */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {contentItems.map((_, index) => (
-            <button
+        <div className="flex justify-center space-x-2 mt-6">,
+          {contentItems.map((_, index) => (,
+            <button,
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${,
+                index === currentSlide ? 'bg-white' : 'bg-white/30',
               }`}
-            />
+            />,
           ))}
-        </div>
-        </div>
-      </div>
-    </div>
+        </div>,
+        </div>,
+      </div>,
+    </div>,
   );
 };
-export default RevolutionaryContentCarousel2027;
+export default RevolutionaryContentCarousel2027;]

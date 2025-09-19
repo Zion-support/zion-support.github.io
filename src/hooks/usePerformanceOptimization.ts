@@ -1,38 +1,32 @@
 import { useEffect, useCallback, useRef } from 'react';
-
-interface PerformanceConfig {
+interface PerformanceConfig {,
   enableLazyLoading?: boolean;
   enableImageOptimization?: boolean;
   enableCodeSplitting?: boolean;
   enablePrefetching?: boolean;
   enableCaching?: boolean;
 }
-export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
-  const {
-    enableLazyLoading = true,
-    enableImageOptimization = true,
-    enableCodeSplitting = true,
-    enablePrefetching = true,
-    enableCaching = true
+export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {,
+  const {,
+    enableLazyLoading = true;
+    enableImageOptimization = true;
+    enableCodeSplitting = true;
+    enablePrefetching = true;
+    enableCaching = true,
   } = config;
-
   const observerRef = useRef<IntersectionObserver | null>(null);
-
-  // Lazy loading for images
-  useEffect(() => {
+  // Lazy loading for images,
+  useEffect(() => {,
     if (!enableLazyLoading) return;
-
     const images = document.querySelectorAll('img[data-src]');
-    
     if (images.length === 0) return;
-
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+    observerRef.current = new IntersectionObserver(,
+      (entries) => {,
+        entries.forEach((entry) => {,
+          if (entry.isIntersecting) {,
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
-            if (src) {
+            if (src) {,
               img.src = src;
               img.removeAttribute('data-src');
               img.classList.add('loaded');
@@ -40,133 +34,111 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
             observerRef.current?.unobserve(img);
           }
         });
-      },
-        { rootMargin: '50px' }
+      };
+        { rootMargin: '50px' ,}
     );
-
     images.forEach((img) => observerRef.current?.observe(img));
-
-    return () => {
+    return () => {,
       observerRef.current?.disconnect();
     };
   }, [enableLazyLoading]);
-
-  // Prefetch critical resources
-  const prefetchResource = useCallback((url: string, type: 'script' | 'style' | 'image' = 'script') => {
+  // Prefetch critical resources,
+  const prefetchResource = useCallback((url: string, type: 'script' | 'style' | 'image' = 'script') => {,
     if (!enablePrefetching) return;
-
     const link = document.createElement('link');
     link.rel = 'prefetch';
     link.href = url;
     link.as = type;
-    document.head.appendChild(link);
+    document.head.appendChild(link),
   }, [enablePrefetching]);
-
-  // Optimize images
-  const optimizeImage = useCallback((src: string, options: {
+  // Optimize images,
+  const optimizeImage = useCallback((src: string, options: {,
     width?: number;
     height?: number;
     quality?: number;
-    format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  } = {}) => {
+    format?: 'webp' | 'avif' | 'jpeg' | 'png',
+  } = {}) => {,
     if (!enableImageOptimization) return src;
-
     const { width, height, quality = 80, format = 'webp' } = options;
     const params = new URLSearchParams();
-    
     if (width) params.set('w', width.toString());
     if (height) params.set('h', height.toString());
     params.set('q', quality.toString());
     params.set('f', format);
-
     return `${src}?${params.toString()}`;
   }, [enableImageOptimization]);
-
-  // Cache management
-  const cacheResource = useCallback((key: string, data: any, ttl: number = 300000) => {
+  // Cache management,
+  const cacheResource = useCallback((key: string, data: any, ttl: number = 300000) => {,
     if (!enableCaching) return;
-
-    const cacheData = {
-      data,
-      timestamp: Date.now(),
-      ttl
+    const cacheData = {,
+      data;
+      timestamp: Date.now();
+      ttl,
     };
-
-    try {
+    try {,
       localStorage.setItem(`cache_${key}`, JSON.stringify(cacheData));
-    } catch (error) {
+    } catch (error) {,
       console.warn('Failed to cache resource:', error);
     }
   }, [enableCaching]);
-
-  const getCachedResource = useCallback((key: string) => {
+  const getCachedResource = useCallback((key: string) => {,
     if (!enableCaching) return null;
-
-    try {
+    try {,
       const cached = localStorage.getItem(`cache_${key}`);
       if (!cached) return null;
-
       const { data, timestamp, ttl } = JSON.parse(cached);
-      
-      if (Date.now() - timestamp > ttl) {
+      if (Date.now() - timestamp > ttl) {,
         localStorage.removeItem(`cache_${key}`);
         return null;
       }
       return data;
-    } catch (error) {
+    } catch (error) {,
       console.warn('Failed to retrieve cached resource:', error);
       return null;
     }
   }, [enableCaching]);
-
-  // Performance monitoring
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
+  // Performance monitoring,
+  const measurePerformance = useCallback((name: string, fn: () => void) => {,
     const start = performance.now();
     fn();
     const end = performance.now();
-    
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {,
       console.log(`${name} took ${end - start} milliseconds`);
     }
     return end - start;
   }, []);
-
-  // Debounce function for performance
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): ((...args: Parameters<T>) => void) => {
+  // Debounce function for performance,
+  const debounce = useCallback(<T extends (...args: any[]) => any>(,
+    func: T;
+    wait: number,
+  ): ((...args: Parameters<T>) => void) => {,
     let timeout: NodeJS.Timeout;
-    
-    return (...args: Parameters<T>) => {
+    return (...args: Parameters<T>) => {,
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
     };
   }, []);
-
-  // Throttle function for performance
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): ((...args: Parameters<T>) => void) => {
+  // Throttle function for performance,
+  const throttle = useCallback(<T extends (...args: any[]) => any>(,
+    func: T;
+    limit: number,
+  ): ((...args: Parameters<T>) => void) => {,
     let inThrottle: boolean;
-    
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
+    return (...args: Parameters<T>) => {,
+      if (!inThrottle) {,
         func(...args);
         inThrottle = true;
         setTimeout(() => inThrottle = false, limit);
       }
     };
   }, []);
-
-  return {
-    prefetchResource,
-    optimizeImage,
-    cacheResource,
-    getCachedResource,
-    measurePerformance,
-    debounce,
-    throttle
+  return {,
+    prefetchResource;
+    optimizeImage;
+    cacheResource;
+    getCachedResource;
+    measurePerformance;
+    debounce;
+    throttle,
   };
 };

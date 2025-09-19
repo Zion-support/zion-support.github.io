@@ -1,27 +1,26 @@
 import { supabase } from '@/integrations/supabase/client';
 import type { OrderStatus } from '@/lib/orderStatusMachine';
-
-export async function holdInEscrow(params: {
+export async function holdInEscrow(params: {,
   amount: number;
   currency?: string;
   providerAccountId: string;
-  orderId: string;
-}) {
-  const { data, error } = await supabase.functions.invoke('escrow-service', {
+  orderId: string,}) {,
+  const { data, error } = await supabase.functions.invoke('escrow-service', {,
   if (error) throw error;
-  return data as { paymentIntentId: string };
+  return data as { paymentIntentId: string ,};
 }
-
-export async function releaseEscrow(paymentIntentId: string) {
-  const { data, error } = await supabase.functions.invoke('escrow-service', {
+,
+export async function releaseEscrow(paymentIntentId: string) {,
+  const { data, error } = await supabase.functions.invoke('escrow-service', {,
   if (error) throw error;
-  return data as { message: string };
+  return data as { message: string ,};
 }
-
-export async function disputeOrder(orderId: string) {
-  const { data, error } = await supabase.functions.invoke('escrow-service', {
+,
+export async function disputeOrder(orderId: string) {,
+  const { data, error } = await supabase.functions.invoke('escrow-service', {,
   if (error) throw error;
-  return data as { message: string };
+  return data as { message: string ,};
 }
-
+,
 export type EscrowStatus = OrderStatus;
+}}})))

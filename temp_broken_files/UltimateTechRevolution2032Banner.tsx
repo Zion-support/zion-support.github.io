@@ -1,107 +1,99 @@
 import React from 'react';
 import { ArrowRight, Zap, Brain, Globe, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const UltimateTechRevolution2032Banner: React.FC = () => {
-  return (
-    <divsection
-      whileInView={{ opacity: 1, y: 0 }}
-      className="relative py-16 px-4 overflow-hidden"
-    >
+const UltimateTechRevolution2032Banner: React.FC = () => {,
+  return (,
+    <divsection,
+      whileInView={{ opacity: 1, y: 0 ,}}
+      className="relative py-16 px-4 overflow-hidden",
+    >,
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-blue-900/50 to-indigo-900/50"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-      </div>
-      <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div
-            whileInView={{ opacity: 1, x: 0 }}
-            className="text-center lg:text-left"
-          >
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
-              <Zap className="w-5 h-5 text-purple-400" />
-              <span className="text-purple-300 font-semibold">Revolutionary 2032</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Ultimate Tech Revolution
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Experience the convergence of consciousness, quantum computing, and interdimensional technology. 
-              The future beyond imagination awaits.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Link to="/pages/UltimateTechRevolution2032">
-                <button
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
-                >
-                  Explore Revolution <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <button
-                className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-
-          {/* Right Content - Feature Grid */}
-          <div
-            whileInView={{ opacity: 1, x: 0 }}
-            className="grid grid-cols-2 gap-6"
-          >
-            {[
-              {
-                icon: <Brain className="w-8 h-8" />,
-                title: "Neural Reality",
-                description: "Consciousness transfer technology"
-              },
-              {
-                icon: <Globe className="w-8 h-8" />,
-                title: "Omniversal AI",
-                description: "Multi-dimensional intelligence"
-              },
-              {
-                icon: <Rocket className="w-8 h-8" />,
-                title: "Interstellar Commerce",
-                description: "Quantum trade networks"
-              },
-              {
-                icon: <Zap className="w-8 h-8" />,
-                title: "Reality Firewall",
-                description: "Dimensional protection systems"
-              }
-            ].map((feature, index) => (
-              <div
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-blue-900/50 to-indigo-900/50"></div>,
+      <div className="absolute inset-0">,
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>,
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>,
+      </div>,
+      <div className="relative max-w-7xl mx-auto">,
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
+          {/* Left Content */,}
+          <div,
+            whileInView={{ opacity: 1, x: 0 ,}}
+            className="text-center lg: text-left",
+          >,
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">,
+              <Zap className="w-5 h-5 text-purple-400" />,
+              <span className="text-purple-300 font-semibold">Revolutionary 2032</span>,
+            </div>,
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">,
+              Ultimate Tech Revolution,
+            </h2>,
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">,
+              Experience the convergence of consciousness, quantum computing, and interdimensional technology.,
+              The future beyond imagination awaits.,
+            </p>,
+            <div className="flex flex-wrap gap-4 justify-center lg: justify-start">,
+              <Link to="/pages/UltimateTechRevolution2032">,
+                <button,
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all",
+                >,
+                  Explore Revolution <ArrowRight className="w-5 h-5" />,
+                </button>,
+              </Link>,
+              <button,
+                className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all",
+              >,
+                Learn More,
+              </button>,
+            </div>,
+          </div>,
+          {/* Right Content - Feature Grid */,}
+          <div,
+            whileInView={{ opacity: 1, x: 0 ,}}
+            className="grid grid-cols-2 gap-6",
+          >,
+            {[,
+              {,
+                icon: <Brain className="w-8 h-8" />;
+                title: "Neural Reality";
+                description: "Consciousness transfer technology",};
+              {,
+                icon: <Globe className="w-8 h-8" />;
+                title: "Omniversal AI";
+                description: "Multi-dimensional intelligence",};
+              {,
+                icon: <Rocket className="w-8 h-8" />;
+                title: "Interstellar Commerce";
+                description: "Quantum trade networks",};
+              {,
+                icon: <Zap className="w-8 h-8" />;
+                title: "Reality Firewall";
+                description: "Dimensional protection systems",}
+            ].map((feature, index) => (,
+              <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-400/40 transition-all group"
-              >
-                <div className="text-purple-400 mb-4 group-hover:text-purple-300 transition-colors flex justify-center">
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-white group-hover:text-purple-300 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                  {feature.description}
-                </p>
-              </div>
+                whileInView={{ opacity: 1, y: 0 ,}}
+                className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover: border-purple-400/40 transition-all group",
+              >,
+                <div className="text-purple-400 mb-4 group-hover:text-purple-300 transition-colors flex justify-center">,
+                  {feature.icon,}
+                </div>,
+                <h3 className="text-lg font-bold mb-2 text-white group-hover: text-purple-300 transition-colors">,
+                  {feature.title,}
+                </h3>,
+                <p className="text-sm text-gray-400 group-hover: text-gray-300 transition-colors">,
+                  {feature.description,}
+                </p>,
+              </div>,
             ))}
-          </div>
-        </div>
-      </div>
+          </div>,
+        </div>,
+      </div>,
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-8 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
-      <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
-    </divsection>
+      <div className="absolute top-1/4 left-8 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>,
+      <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>,
+      <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>,
+    </divsection>,
   );
 };
-
-
 export default UltimateTechRevolution2032Banner;
-</div></div></div>
+</div></div></div>,

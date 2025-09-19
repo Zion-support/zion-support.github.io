@@ -1,1 +1,1 @@
-// Global fetch interceptor for handling API requests
+// Global fetch interceptor for handling API requests,

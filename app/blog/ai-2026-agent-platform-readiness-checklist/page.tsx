@@ -1,45 +1,39 @@
 import Link from 'next/link';
-
-export const metadata = {
-  title: 'Announcing: Agent Platform Readiness Checklist (2026)',
+export const metadata = {,
+  title: 'Announcing: Agent Platform Readiness Checklist (2026)';
   description: 'A practical checklist to ensure your agent platform is safe, reliable, observable, and cost-aware before scaling autonomy.',
 };
-
-export default function Announcement() {
-  return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <p className="text-sm font-semibold text-purple-700">Blog • Announcement</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Announcing the Agent Platform Readiness Checklist</h1>
-          <p className="text-gray-700 mt-3">Use this checklist to validate evaluation gates, policy‑as‑code, observability, and SLOs before scaling autonomous agents into production.</p>
-          <div className="mt-5 flex gap-3">
-            <Link href="/content/ai-2026-agent-platform-readiness-checklist" className="inline-block bg-purple-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-700">Read the Guide</Link>
-            <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-purple-600 text-purple-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50">Related: Agent SLOs</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Why it matters</h2>
-          <p className="text-gray-700 mb-6">Enterprises are moving from proof‑of‑concept agents to production systems. The fastest path to safe scale is an evaluation‑first operating model with clear SLOs and executable controls. This checklist gives your teams a pragmatic, auditable starting point.</p>
-
-          <h2 className="text-xl font-bold text-gray-900 mb-3">What you get</h2>
-          <ul className="list-disc ml-6 text-gray-700 space-y-2">
-            <li>CI/CD and live eval gates to prevent regressions</li>
-            <li>Risk‑tiered tool permissions with policy‑as‑code</li>
-            <li>Traceability: eval IDs, prompts, versions, and diffs</li>
-            <li>SLOs that balance safety, quality, reliability, and cost</li>
-            <li>Change management with approvals, rollouts, and incident SOP</li>
-          </ul>
-
-          <div className="mt-10">
-            <Link href="/content/ai-2026-agent-platform-readiness-checklist" className="text-purple-700 font-semibold hover:text-purple-900">Open the checklist →</Link>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-
+export default function Announcement() {,
+  return (,
+    <main className="min-h-screen bg-white">,
+      <section className="bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-100">,
+        <div className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-10">,
+          <p className="text-sm font-semibold text-purple-700">Blog • Announcement</p>,
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Announcing the Agent Platform Readiness Checklist</h1>,
+          <p className="text-gray-700 mt-3">Use this checklist to validate evaluation gates, policy‑as‑code, observability, and SLOs before scaling autonomous agents into production.</p>,
+          <div className="mt-5 flex gap-3">,
+            <Link href="/content/ai-2026-agent-platform-readiness-checklist" className="inline-block bg-purple-600 text-white px-5 py-2.5 rounded-lg font-semibold hover: bg-purple-700">Read the Guide</Link>,
+            <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-purple-600 text-purple-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50">Related: Agent SLOs</Link>,
+          </div>,
+        </div>,
+      </section>,
+      <section className="py-10">,
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">,
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Why it matters</h2>,
+          <p className="text-gray-700 mb-6">Enterprises are moving from proof‑of‑concept agents to production systems. The fastest path to safe scale is an evaluation‑first operating model with clear SLOs and executable controls. This checklist gives your teams a pragmatic, auditable starting point.</p>,
+          <h2 className="text-xl font-bold text-gray-900 mb-3">What you get</h2>,
+          <ul className="list-disc ml-6 text-gray-700 space-y-2">,
+            <li>CI/CD and live eval gates to prevent regressions</li>,
+            <li>Risk‑tiered tool permissions with policy‑as‑code</li>,
+            <li>Traceability: eval IDs, prompts, versions, and diffs</li>,
+            <li>SLOs that balance safety, quality, reliability, and cost</li>,
+            <li>Change management with approvals, rollouts, and incident SOP</li>,
+          </ul>,
+          <div className="mt-10">,
+            <Link href="/content/ai-2026-agent-platform-readiness-checklist" className="text-purple-700 font-semibold hover: text-purple-900">Open the checklist →</Link>,
+          </div>,
+        </div>,
+      </section>,
+    </main>,
+  ),}
+,

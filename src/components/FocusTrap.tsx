@@ -1,36 +1,35 @@
 import React, { useEffect, useRef }  from 'react';
-
-interface FocusTrapProps {
+interface FocusTrapProps {,
   children: React.ReactNode;
-  active?: boolean;
+  active?: boolean,
 }
-export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true }) => {
+export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true }) => {,
   const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  useEffect(() => {,
     if (!active || !containerRef.current) return;
     const container = containerRef.current;
-    const focusableElements = container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    const focusableElements = container.querySelectorAll(,
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     );
-    
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEvent) => {,
       if (e.key !== 'Tab') return;
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
+      if (e.shiftKey) {,
+        if (document.activeElement === firstElement) {,
           lastElement?.focus();
-          e.preventDefault();
+          e.preventDefault(),
         }
-      } else {
-        if (document.activeElement === lastElement) {
+      } else {,
+        if (document.activeElement === lastElement) {,
           firstElement?.focus();
       }
   };
     document.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
-    return () => {
+    return () => {,
       document.removeEventListener('keydown', handleTabKey);
   }, [active]);
   return <div ref={containerRef}>{children}</div>;
 export default FocusTrap;
+}}}

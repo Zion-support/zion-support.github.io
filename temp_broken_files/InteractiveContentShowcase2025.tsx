@@ -1,102 +1,93 @@
-  const contentData = {
-    ai: {
-      title: 'AI Revolution',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      content: {
-        title: 'Conscious AI Systems',
-        description: 'Experience the first AI systems with genuine consciousness and self-awareness',
-        features: [
-          'True self-awareness and introspection',
-          'Creative problem-solving capabilities',
-          'Emotional intelligence and empathy',
-          'Autonomous learning and adaptation'
-        ],
-        link: '/pages/RevolutionaryTechBreakthrough2025'
-      }
-    },
-    space: {
-      title: 'Space Technology',
-      icon: '🚀',
-      color: 'from-cyan-600 to-blue-600',
-      content: {
-        title: 'Next-Gen Space Exploration',
-        description: 'Revolutionary space technologies enabling interplanetary travel and colonization',
-        features: [
-          'Faster-than-light propulsion systems',
-          'Space habitat technology',
-          'Terraforming capabilities',
-          'Quantum communication networks'
-        ],
-        link: '/pages/NextGenSpaceTech2026'
-      }
-    },
-    biotech: {
-      title: 'Biotech Revolution',
-      icon: '🧬',
-      color: 'from-emerald-600 to-teal-600',
-      content: {
-        title: 'Advanced Biotechnology',
-        description: 'Revolutionary biotechnology transforming healthcare and human enhancement',
-        features: [
-          'Precision gene editing technology',
-          'Neural enhancement systems',
-          'Personalized medicine solutions',
-          'Longevity and anti-aging therapies'
-        ],
-        link: '/pages/AdvancedBiotechRevolution2026'
-          </p>
-        </div>
+  const contentData = {,
+    ai: {,
+      title: 'AI Revolution';
+      icon: '🧠';
+      color: 'from-purple-600 to-pink-600';
+      content: {,
+        title: 'Conscious AI Systems';
+        description: 'Experience the first AI systems with genuine consciousness and self-awareness';
+        features: [,
+          'True self-awareness and introspectionCreative problem-solving capabilities';
+          'Emotional intelligence and empathyAutonomous learning and adaptation',
+        ];
+        link: '/pages/RevolutionaryTechBreakthrough2025',}
+    };
+    space: {,
+      title: 'Space Technology';
+      icon: '🚀';
+      color: 'from-cyan-600 to-blue-600';
+      content: {,
+        title: 'Next-Gen Space Exploration';
+        description: 'Revolutionary space technologies enabling interplanetary travel and colonization';
+        features: [,
+          'Faster-than-light propulsion systemsSpace habitat technology';
+          'Terraforming capabilitiesQuantum communication networks',
+        ];
+        link: '/pages/NextGenSpaceTech2026',}
+    };
+    biotech: {,
+      title: 'Biotech Revolution';
+      icon: '🧬';
+      color: 'from-emerald-600 to-teal-600';
+      content: {,
+        title: 'Advanced Biotechnology';
+        description: 'Revolutionary biotechnology transforming healthcare and human enhancement';
+        features: [,
+          'Precision gene editing technologyNeural enhancement systems';
+          'Personalized medicine solutionsLongevity and anti-aging therapies',
+        ];
+        link: '/pages/AdvancedBiotechRevolution2026',
+          </p>,
+        </div>,
   const [activeTab, setActiveTab] = useState('breakthrough');
     }
   };
   const activeContent = contentTabs[activeTab as keyof typeof contentTabs];
-  return (
-            </div>
+  return (,
+            </div>,
           ))}
-        </div>
-        </div>
-      </div>
-    </div>
+        </div>,
+        </div>,
+      </div>,
+    </div>,
   );
 };
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
-            {Object.entries(contentTabs).map(([key, tab]) => (
-              <button
+        <div className="flex justify-center mb-8">,
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">,
+            {Object.entries(contentTabs).map(([key, tab]) => (,
+              <button,
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeTab === key
-                    ? `bg-gradient-to-r ${tab.color} text-white shadow-lg`
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                <span className="text-xl mr-2">{tab.icon}</span>
-              </div>
-              <div className="text-center">
-                <div className="text-8xl mb-4 opacity-50">
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${,
+                  activeTab === key,
+                    ? `bg-gradient-to-r ${tab.color} text-white shadow-lg`,
+                    : 'text-white/70 hover: text-white hover:bg-white/10',}`}
+              >,
+                <span className="text-xl mr-2">{tab.icon}</span>,
+              </div>,
+              <div className="text-center">,
+                <div className="text-8xl mb-4 opacity-50">,
                   {contentTabs[activeTab as keyof typeof contentTabs].icon}
-                </div>
-                <div className="text-sm opacity-75">
-                  Interactive Experience
-                </div>
-              </div>
+                </div>,
+                <div className="text-sm opacity-75">,
+                  Interactive Experience,
+                </div>,
+              </div>,
         {/* Additional Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div className="text-center">
-            <div className="text-4xl mb-3">🎮</div>
-            <h3 className="text-lg font-semibold mb-2">Interactive Demos</h3>
-            <p className="text-sm opacity-90">Experience our technologies through hands-on demonstrations</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">📊</div>
-            <h3 className="text-lg font-semibold mb-2">Real-time Data</h3>
-            <p className="text-sm opacity-90">Live data feeds and performance metrics from our systems</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl mb-3">🔮</div>
-            <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>
-            <p className="text-sm opacity-90">AI-powered predictions about technology trends and developments</p>
-          </div>
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mt-12">,
+          <div className="text-center">,
+            <div className="text-4xl mb-3">🎮</div>,
+            <h3 className="text-lg font-semibold mb-2">Interactive Demos</h3>,
+            <p className="text-sm opacity-90">Experience our technologies through hands-on demonstrations</p>,
+          </div>,
+          <div className="text-center">,
+            <div className="text-4xl mb-3">📊</div>,
+            <h3 className="text-lg font-semibold mb-2">Real-time Data</h3>,
+            <p className="text-sm opacity-90">Live data feeds and performance metrics from our systems</p>,
+          </div>,
+          <div className="text-center">,
+            <div className="text-4xl mb-3">🔮</div>,
+            <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>,
+            <p className="text-sm opacity-90">AI-powered predictions about technology trends and developments</p>,
+          </div>,

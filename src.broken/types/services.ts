@@ -1,12 +1,11 @@
-export interface ServiceCategory {
+export interface ServiceCategory {,
   id: string;
   name: string;
   description: string;
   icon: string;
-  color: string;
-}
-
-export interface ServiceProvider {
+  color: string,}
+,
+export interface ServiceProvider {,
   id: string;
   name: string;
   logo: string;
@@ -14,34 +13,33 @@ export interface ServiceProvider {
   reviewCount: number;
   location: string;
   verified: boolean;
-  specialties: string[];
+  specialties: string[],}
+,
+export interface ServicePricing {,
+  basic: {,
+    price: number;
+    currency: string;
+    period: string;
+    features: string[];
+    popular?: boolean,
+  };
+  professional: {,
+    price: number;
+    currency: string;
+    period: string;
+    features: string[];
+    popular?: boolean,
+  };
+  enterprise: {,
+    price: number;
+    currency: string;
+    period: string;
+    features: string[];
+    popular?: boolean,
+  };
 }
-
-export interface ServicePricing {
-  basic: {
-    price: number;
-    currency: string;
-    period: string;
-    features: string[];
-    popular?: boolean;
-  };
-  professional: {
-    price: number;
-    currency: string;
-    period: string;
-    features: string[];
-    popular?: boolean;
-  };
-  enterprise: {
-    price: number;
-    currency: string;
-    period: string;
-    features: string[];
-    popular?: boolean;
-  };
-}
-
-export interface ServiceSolution {
+,
+export interface ServiceSolution {,
   id: string;
   title: string;
   description: string;
@@ -65,31 +63,27 @@ export interface ServiceSolution {
   tags: string[];
   aiScore?: number;
   marketTrend: 'rising' | 'stable' | 'declining';
-  industryFocus: string[];
-}
-
-export interface ITService extends ServiceSolution {
+  industryFocus: string[],}
+,
+export interface ITService extends ServiceSolution {,
   serviceType: 'onsite' | 'remote' | 'hybrid';
   responseTime: string;
   coverage: string[];
   emergencySupport: boolean;
-  sla: string;
-}
-
-export interface AIService extends ServiceSolution {
+  sla: string,}
+,
+export interface AIService extends ServiceSolution {,
   aiModel: string;
   accuracy: number;
   trainingData: string;
   customization: boolean;
   apiAccess: boolean;
-  realTimeProcessing: boolean;
-}
-
-export interface MicroSAAS extends ServiceSolution {
+  realTimeProcessing: boolean,}
+,
+export interface MicroSAAS extends ServiceSolution {,
   userLimit: number;
   whiteLabel: boolean;
   apiRateLimit: string;
   dataRetention: string;
   backupFrequency: string;
-  uptime: number;
-}
+  uptime: number,}

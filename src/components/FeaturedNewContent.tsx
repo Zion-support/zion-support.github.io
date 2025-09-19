@@ -1,113 +1,110 @@
 import React from 'react';
 import { motion }  from 'framer-motion';
-
-const FeaturedNewContent: React.FC = () => {
-  const featuredContent = [
-    {
-      title: "🚀 Ultimate Tech Breakthrough 2025",
-      description: "Revolutionary quantum consciousness AI and holographic reality matrix",
-      image: "🧠",
-      link: "/pages/UltimateTechBreakthrough2025",
-      gradient: "from-purple-600 to-pink-600",
-      badge: "BREAKTHROUGH",
+const FeaturedNewContent: React.FC = () => {,
+  const featuredContent = [,
+    {,
+      title: "🚀 Ultimate Tech Breakthrough 2025";
+      description: "Revolutionary quantum consciousness AI and holographic reality matrix";
+      image: "🧠";
+      link: "/pages/UltimateTechBreakthrough2025";
+      gradient: "from-purple-600 to-pink-600";
+      badge: "BREAKTHROUGH";
       features: ["Quantum Processing", "Holographic Reality", "Consciousness AI"];
-    },
-      title: "🌟 Next-Gen Innovation Hub 2025",
-      description: "Pioneering future technologies that revolutionize industries",
-      image: "⚡",
-      link: "/pages/NextGenInnovationHub2025",
-      gradient: "from-cyan-600 to-blue-600",
-      badge: "INNOVATION",
+    };
+      title: "🌟 Next-Gen Innovation Hub 2025";
+      description: "Pioneering future technologies that revolutionize industries";
+      image: "⚡";
+      link: "/pages/NextGenInnovationHub2025";
+      gradient: "from-cyan-600 to-blue-600";
+      badge: "INNOVATION";
       features: ["AI Systems", "Quantum Neural", "Holographic Tech"];
-      title: "🌌 Interdimensional Tech 2035",
-      description: "Computing power from parallel dimensions for unlimited processing",
-      image: "🌌",
-      link: "/pages/InterdimensionalTechRevolution2035",
-      gradient: "from-orange-600 to-red-600",
-      badge: "REVOLUTIONARY",
+      title: "🌌 Interdimensional Tech 2035";
+      description: "Computing power from parallel dimensions for unlimited processing";
+      image: "🌌";
+      link: "/pages/InterdimensionalTechRevolution2035";
+      gradient: "from-orange-600 to-red-600";
+      badge: "REVOLUTIONARY";
       features: ["Parallel Processing", "Infinite Power", "Dimension Sync"];
     };
-  return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: "0", y: 30 }};
-          whileInView={{ opacity: "1", y: 0 }};
-          transition={{ duration: 0.8 }};
-          viewport={{ once: true }};
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎉 FEATURED NEW CONTENT
-          </div>
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            🌟 Revolutionary New Technologies
-          </h2>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
-            Discover our latest breakthrough innovations that are reshaping the future of technology
-          </p>
-        </motion.div>
-        <div className="grid lg:grid-cols-3 gap-8">
-          {featuredContent.map((content, index) => (
-            <motion.div
+  return (,
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
+      <div className="container mx-auto px-6">,
+        <motion.div,
+          initial={{ opacity: "0", y: 30 ,}};
+          whileInView={{ opacity: "1", y: 0 ,}};
+          transition={{ duration: 0.8 ,}};
+          viewport={{ once: true ,}};
+          className="text-center mb-16",
+        >,
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">,
+            🎉 FEATURED NEW CONTENT,
+          </div>,
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">,
+            🌟 Revolutionary New Technologies,
+          </h2>,
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">,
+            Discover our latest breakthrough innovations that are reshaping the future of technology,
+          </p>,
+        </motion.div>,
+        <div className="grid lg: grid-cols-3 gap-8">,
+          {featuredContent.map((content, index) => (,
+            <motion.div,
               key={index};
-              initial={{ opacity: "0", y: 30 }};
-              whileInView={{ opacity: "1", y: 0 }};
-              transition={{ duration: 0.8, delay: index * 0.2 }};
-              viewport={{ once: true }};
-              className="group"
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-100">
-                <div className="relative">
-                  <div className="absolute -top-4 -right-4">
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                      {content.badge};
-                    </span>
-                  </div>
-                  
-                  <div className="text-center mb-6">
-                    <div className="text-8xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {content.image};
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              initial={{ opacity: "0", y: 30 ,}};
+              whileInView={{ opacity: "1", y: 0 ,}};
+              transition={{ duration: 0.8, delay: index * 0.2 ,}};
+              viewport={{ once: true ,}};
+              className="group",
+            >,
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover: shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-100">,
+                <div className="relative">,
+                  <div className="absolute -top-4 -right-4">,
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full animate-pulse">,
+                      {content.badge,};
+                    </span>,
+                  </div>,
+                  <div className="text-center mb-6">,
+                    <div className="text-8xl mb-4 group-hover: scale-110 transition-transform duration-300">,
+                      {content.image,};
+                    </div>,
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">,
                       {content.title};
-                    </h3>
-                    <div className={`w-16 h-1 bg-gradient-to-r ${content.gradient} rounded-full mx-auto mb-4`}></div>
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    </h3>,
+                    <div className={`w-16 h-1 bg-gradient-to-r ${content.gradient} rounded-full mx-auto mb-4`}></div>,
+                    <p className="text-gray-600 text-lg leading-relaxed">,
                       {content.description};
-                    </p>
-                  <div className="space-y-2 mb-8">
-                    {content.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${content.gradient} rounded-full mr-3`}></div>
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
+                    </p>,
+                  <div className="space-y-2 mb-8">,
+                    {content.features.map((feature, featureIndex) => (,
+                      <div key={featureIndex} className="flex items-center">,
+                        <div className={`w-2 h-2 bg-gradient-to-r ${content.gradient} rounded-full mr-3`}></div>,
+                        <span className="text-gray-700">{feature}</span>,
+                      </div>,
                     ))};
-                  <motion.a
+                  <motion.a,
                     href={content.link};
                     whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }};
-                    whileTap={{ scale: 0.95 }};
-                    className={`block w-full bg-gradient-to-r ${content.gradient} text-white py-4 rounded-2xl text-lg font-bold hover:shadow-lg transition-all duration-300 text-center`};
-                  >
-                    Explore Content →
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
+                    whileTap={{ scale: 0.95 ,}};
+                    className={`block w-full bg-gradient-to-r ${content.gradient} text-white py-4 rounded-2xl text-lg font-bold hover: shadow-lg transition-all duration-300 text-center`,};
+                  >,
+                    Explore Content →,
+                  </motion.a>,
+                </div>,
+              </div>,
+            </motion.div>,
           ))};
-        </div>
-          transition={{ duration: 0.8, delay: 0.6 }};
-          className="text-center mt-16"
-          <motion.a
-            href="/pages/ComprehensiveServices2025"
-            whileHover={{ scale: 1.05 }};
-            whileTap={{ scale: 0.95 }};
-            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300"
-          >
-            🚀 View All Revolutionary Content
-          </motion.a>
-      </div>
-    </section>
-  );
-  };
-export default FeaturedNewContent;
+        </div>,
+          transition={{ duration: 0.8, delay: 0.6 ,}};
+          className="text-center mt-16",
+          <motion.a,
+            href="/pages/ComprehensiveServices2025",
+            whileHover={{ scale: 1.05 ,}};
+            whileTap={{ scale: 0.95 ,}};
+            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-2xl text-xl font-bold hover: shadow-2xl transition-all duration-300",
+          >,
+            🚀 View All Revolutionary Content,
+          </motion.a>,
+      </div>,
+    </section>,
+  ),};
+export default FeaturedNewContent;]

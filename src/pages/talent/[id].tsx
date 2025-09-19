@@ -4,56 +4,57 @@ import { SEO } from '@/components/SEO';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import SEO from '@/components/SEO.jsx';
-export default function TalentProfilePage() {
+export default function TalentProfilePage() {,
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    useEffect(() => {
-        const fetchProfile = async () => {
-            if (!id) {
+    useEffect(() => {,
+        const fetchProfile = async () => {,
+            if (!id) {,
                 setError('Profile not found');
                 setLoading(false);
                 return;
             }
-            try {
+            try {,
                 const res = await fetch(`/api/talent/${id}`);
-                if (!res.ok)
+                if (!res.ok),
                     throw new Error('Failed to load profile');
                 const data = await res.json();
                 setProfile(data.profile);
-            catch (err) {
-            finally {
-        };
+            catch (err) {,
+            finally {};
         fetchProfile();
     }, [id]);
-    if (loading)
+    if (loading),
         return <ProfileLoadingState />;
-    if (error || !profile)
+    if (error || !profile),
         return <ProfileErrorState error={error || 'Profile not found'}/>;
-    return (<>
-      <SEO title={profile.full_name} description={profile.bio || ''}/>
-      <main className="min-h-screen bg-zion-blue py-8 text-white">
-        <div className="container mx-auto px-4 space-y-4">
-          <h1 className="text-3xl font-bold" data-testid="profile-name">
+    return (<>,
+      <SEO title={profile.full_name} description={profile.bio || ''}/>,
+      <main className="min-h-screen bg-zion-blue py-8 text-white">,
+        <div className="container mx-auto px-4 space-y-4">,
+          <h1 className="text-3xl font-bold" data-testid="profile-name">,
             {profile.full_name}
-          </h1>
+          </h1>,
           {profile.bio && <p>{profile.bio}</p>}
-          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
-          {profile.skills && (<div>
-              <h2 className="font-semibold">Skills</h2>
-              <ul className="list-disc ml-5">
+          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate,}/hr</p>}
+          {profile.skills && (<div>,
+              <h2 className="font-semibold">Skills</h2>,
+              <ul className="list-disc ml-5">,
                 {profile.skills.map(skill => (<li key={skill}>{skill}</li>))}
-              </ul>
+              </ul>,
             </div>)}
-          {profile.social && (<div>
-              <h2 className="font-semibold">Social Links</h2>
-                {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>
-                    <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
+          {profile.social && (<div>,
+              <h2 className="font-semibold">Social Links</h2>,
+                {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>,
+                    <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">,
                       {platform}
-                    </a>
+                    </a>,
                   </li>))}
-        </div>
-      </main>
+        </div>,
+      </main>,
     </>);
 }
+,
+}}}})

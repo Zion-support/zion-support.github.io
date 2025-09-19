@@ -1,4 +1,4 @@
 import React from 'react';
-
-const contact: React.FC = () => {
-  return (
+const contact: React.FC = () => {,
+  return (,
+})

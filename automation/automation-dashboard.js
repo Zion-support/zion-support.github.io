@@ -1,130 +1,122 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const http = require('http');
 const url = require('url');
-class AutomationDashboard {
-  constructor() {
+class AutomationDashboard {,
+  constructor() {,
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
-    this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
+    this.logFile = path.join(__dirname, 'logsautomation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection();
   }
-  ensureLogDirectory() {
+  ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+    if (!fs.existsSync(logDir)) {,
+      fs.mkdirSync(logDir, { recursive: true ,});
     }
   }
-  log(message) {
+  log(message) {,
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-  loadAutomationSystems() {
-    const systems = [
-      { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-fixer', path: 'lint-error-fixer.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-manager', path: 'lint-automation-manager.js', category: 'code-quality', status: 'available' },
-      { name: 'code-quality', path: 'code-quality-monitor.js', category: 'analysis', status: 'available' },
-      { name: 'performance', path: 'performance-optimizer.js', category: 'optimization', status: 'available' },
-      { name: 'content-generator', path: 'content-generator.js', category: 'generation', status: 'available' },
-      { name: 'seo-optimizer', path: 'seo-optimizer.js', category: 'seo', status: 'available' },
-      { name: 'security-scanner', path: 'security-scanner.js', category: 'security', status: 'available' },
-      { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' },
-      { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
-      { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
+  loadAutomationSystems() {,
+    const systems = [,
+      { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' ,};
+      { name: 'lint-fixer', path: 'lint-error-fixer.js', category: 'code-quality', status: 'available' ,};
+      { name: 'lint-manager', path: 'lint-automation-manager.js', category: 'code-quality', status: 'available' ,};
+      { name: 'code-quality', path: 'code-quality-monitor.js', category: 'analysis', status: 'available' ,};
+      { name: 'performance', path: 'performance-optimizer.js', category: 'optimization', status: 'available' ,};
+      { name: 'content-generator', path: 'content-generator.js', category: 'generation', status: 'available' ,};
+      { name: 'seo-optimizer', path: 'seo-optimizer.js', category: 'seo', status: 'available' ,};
+      { name: 'security-scanner', path: 'security-scanner.js', category: 'security', status: 'available' ,};
+      { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' ,};
+      { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' ,};
+      { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' ,}
     ];
-    for (const system of systems) {
+    for (const system of systems) {,
       const systemPath = path.join(__dirname, system.path);
-      if (fs.existsSync(systemPath)) {
-        this.automationSystems.set(system.name, {
-          ...system,
-          path: systemPath,
-          lastRun: null,
-          successCount: 0,
-          failureCount: 0,
-          totalExecutionTime: 0,
-          averageExecutionTime: 0,
-          uptime: 0,
-          isRunning: false
-        });
+      if (fs.existsSync(systemPath)) {,
+        this.automationSystems.set(system.name, {,
+          ...system;
+          path: systemPath;
+          lastRun: null;
+          successCount: 0;
+          failureCount: 0;
+          totalExecutionTime: 0;
+          averageExecutionTime: 0;
+          uptime: 0;
+          isRunning: false,});
       }
     }
   }
-  startMetricsCollection() {
-    // Collect metrics every 30 seconds
-    setInterval(() => {
+  startMetricsCollection() {,
+    // Collect metrics every 30 seconds,
+    setInterval(() => {,
       this.collectMetrics();
     }, 30000);
-    // Generate alerts every minute
-    setInterval(() => {
+    // Generate alerts every minute,
+    setInterval(() => {,
       this.generateAlerts();
     }, 60000);
   }
-  collectMetrics() {
-    for (const [name, system] of this.automationSystems) {
-      const metrics = {
-        timestamp: new Date().toISOString(),
-        isRunning: system.isRunning,
-        lastRun: system.lastRun,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
-        averageExecutionTime: system.averageExecutionTime,
-        uptime: system.uptime
-      };
+  collectMetrics() {,
+    for (const [name, system] of this.automationSystems) {,
+      const metrics = {,
+        timestamp: new Date().toISOString();
+        isRunning: system.isRunning;
+        lastRun: system.lastRun;
+        successRate: system.successCount / (system.successCount + system.failureCount) || 0;
+        averageExecutionTime: system.averageExecutionTime;
+        uptime: system.uptime,};
       this.metrics.set(name, metrics);
     }
   }
-  generateAlerts() {
+  generateAlerts() {,
     this.alerts = [];
-    for (const [name, system] of this.automationSystems) {
+    for (const [name, system] of this.automationSystems) {,
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      
-      if (successRate < 0.8) {
-        this.alerts.push({
-          type: 'warning',
-          system: name,
-          message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
-          timestamp: new Date().toISOString()
-        });
+      if (successRate < 0.8) {,
+        this.alerts.push({,
+          type: 'warning';
+          system: name;
+          message: `Low success rate: ${(successRate * 100).toFixed(1),}%`;
+          timestamp: new Date().toISOString(),});
       }
-      if (system.averageExecutionTime > 30000) {
-        this.alerts.push({
-          type: 'warning',
-          system: name,
-          message: `Slow execution time: ${system.averageExecutionTime}ms`,
-          timestamp: new Date().toISOString()
-        });
+      if (system.averageExecutionTime > 30000) {,
+        this.alerts.push({,
+          type: 'warning';
+          system: name;
+          message: `Slow execution time: ${system.averageExecutionTime,}ms`;
+          timestamp: new Date().toISOString(),});
       }
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
-        this.alerts.push({
-          type: 'error',
-          system: name,
-          message: 'System not running recently',
-          timestamp: new Date().toISOString()
-        });
+      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {,
+        this.alerts.push({,
+          type: 'error';
+          system: name;
+          message: 'System not running recently';
+          timestamp: new Date().toISOString(),});
       }
     }
   }
-  async runSystem(systemName) {
+  async runSystem(systemName) {,
     const system = this.automationSystems.get(systemName);
-    if (!system) {
-      this.log(`❌ System not found: ${systemName}`);
+    if (!system) {,
+      this.log(`❌ System not found: ${systemName,}`);
       return false;
     }
     const startTime = Date.now();
     system.isRunning = true;
-    try {
-      this.log(`🚀 Running system: ${systemName}`);
-      
-      const result = execSync(`node "${system.path}"`, { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
+    try {,
+      this.log(`🚀 Running system: ${systemName,}`);
+      const result = execSync(`node "${system.path}"`, {,
+        encoding: 'utf8';
+        stdio: 'pipe',});
       const executionTime = Date.now() - startTime;
+}}}

@@ -1,4 +1,4 @@
-// Centralized page exports for better tree shaking
+// Centralized page exports for better tree shaking,
 export { default as NewShowcase2025 }  from './NewShowcase2025';
 export { default as AIEnterpriseCopilot2025 }  from './AIEnterpriseCopilot2025';
 export { default as NeuralInterfaceFuture }  from './NeuralInterfaceFuture';

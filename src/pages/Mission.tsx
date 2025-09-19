@@ -1,14 +1,12 @@
-'Countries Reached',
+'Countries Reached';
     description;
 'Global presence and impact across diverse markets';
-{
-    '95%',
+{,
+    '95%';
         label;
-    'Client Satisfaction',
+    'Client Satisfaction';
         description;
     'Consistently exceeding client expectations and needs';
 }
-    '100%',
-    'Carbon Neutral',
+    '100%Carbon Neutral';
     'Committed to sustainable technology development';
-export {};

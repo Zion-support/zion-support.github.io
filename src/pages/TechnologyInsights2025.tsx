@@ -1,11 +1,10 @@
 import React from 'react';
-
-const TechnologyInsights2025 = () => {
-  return (
-    <div>
-      <h1>Technology Insights 2025</h1>
-      <p>Coming soon...</p>
-    </div>
+const TechnologyInsights2025 = () => {,
+  return (,
+    <div>,
+      <h1>Technology Insights 2025</h1>,
+      <p>Coming soon...</p>,
+    </div>,
   );
 };
 export default TechnologyInsights2025;

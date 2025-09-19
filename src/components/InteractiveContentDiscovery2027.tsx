@@ -1,4 +1,4 @@
-    </div>
+    </div>,
   );
   };
 export default InteractiveContentDiscovery2027;

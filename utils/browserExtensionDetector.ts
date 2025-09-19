@@ -1,1 +1,1 @@
-export const detectBrowserExtension = () => {
+export const detectBrowserExtension = () => {}

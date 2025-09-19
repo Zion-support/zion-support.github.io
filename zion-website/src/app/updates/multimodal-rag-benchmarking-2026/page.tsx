@@ -1,7 +1,7 @@
-export default function MultimodalRAGBenchmarkingPage() {
-  return (
-    <div className="bg-black min-h-screen">
-      <h1>Multimodal RAG Benchmarking 2026</h1>
-    </div>
+export default function MultimodalRAGBenchmarkingPage() {,
+  return (,
+    <div className="bg-black min-h-screen">,
+      <h1>Multimodal RAG Benchmarking 2026</h1>,
+    </div>,
   );
 }

@@ -1,164 +1,161 @@
 import React from 'react';
-
-const AutonomousSystems2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full text-sm font-bold mb-6">
-            🤖 REVOLUTIONARY: Autonomous Systems 2025
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Autonomous AI Systems 2025
-          </h1>
-          <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            Deploy self-managing AI systems that operate independently, learn continuously, and deliver unprecedented results without human intervention
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Deploy Autonomous AI
-            </button>
-            <button className="border border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition-colors font-semibold text-lg">
-              View Case Studies
-        </div>
-        {/* Core Capabilities */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-5xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Self-Learning Intelligence</h3>
-            <p className="text-gray-600 mb-6">
-              AI systems that continuously learn from their environment, adapt to new situations, and improve their performance autonomously.
-            </p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Continuous learning algorithms</li>
-              <li>• Adaptive behavior patterns</li>
-              <li>• Self-optimization mechanisms</li>
-              <li>• Knowledge accumulation</li>
-            </ul>
-            <div className="text-5xl mb-4 text-center">⚙️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Decision Making</h3>
-              Systems that make complex decisions independently, weighing multiple factors and choosing optimal actions in real-time.
-              <li>• Multi-objective optimization</li>
-              <li>• Risk assessment algorithms</li>
-              <li>• Strategic planning capabilities</li>
-              <li>• Ethical decision frameworks</li>
-            <div className="text-5xl mb-4 text-center">🔧</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Self-Healing Architecture</h3>
-              Robust systems that detect, diagnose, and repair issues automatically, ensuring continuous operation and reliability.
-              <li>• Fault detection systems</li>
-              <li>• Automated recovery protocols</li>
-              <li>• Performance monitoring</li>
-              <li>• Predictive maintenance</li>
+const AutonomousSystems2025: React.FC = () => {,
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">,
+      <div className="container mx-auto px-4 py-16">,
+        {/* Hero Section */,}
+        <div className="text-center mb-16">,
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full text-sm font-bold mb-6">,
+            🤖 REVOLUTIONARY: Autonomous Systems 2025,
+          </div>,
+          <h1 className="text-6xl font-bold text-gray-900 mb-6">,
+            Autonomous AI Systems 2025,
+          </h1>,
+          <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">,
+            Deploy self-managing AI systems that operate independently, learn continuously, and deliver unprecedented results without human intervention,
+          </p>,
+          <div className="flex justify-center space-x-4">,
+            <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">,
+              Deploy Autonomous AI,
+            </button>,
+            <button className="border border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition-colors font-semibold text-lg">,
+              View Case Studies,
+        </div>,
+        {/* Core Capabilities */,}
+        <div className="grid md: grid-cols-3 gap-8 mb-16">,
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">,
+            <div className="text-5xl mb-4 text-center">🧠</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center">Self-Learning Intelligence</h3>,
+            <p className="text-gray-600 mb-6">,
+              AI systems that continuously learn from their environment, adapt to new situations, and improve their performance autonomously.,
+            </p>,
+            <ul className="text-gray-600 space-y-2">,
+              <li>• Continuous learning algorithms</li>,
+              <li>• Adaptive behavior patterns</li>,
+              <li>• Self-optimization mechanisms</li>,
+              <li>• Knowledge accumulation</li>,
+            </ul>,
+            <div className="text-5xl mb-4 text-center">⚙️</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Decision Making</h3>,
+              Systems that make complex decisions independently, weighing multiple factors and choosing optimal actions in real-time.,
+              <li>• Multi-objective optimization</li>,
+              <li>• Risk assessment algorithms</li>,
+              <li>• Strategic planning capabilities</li>,
+              <li>• Ethical decision frameworks</li>,
+            <div className="text-5xl mb-4 text-center">🔧</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center">Self-Healing Architecture</h3>,
+              Robust systems that detect, diagnose, and repair issues automatically, ensuring continuous operation and reliability.,
+              <li>• Fault detection systems</li>,
+              <li>• Automated recovery protocols</li>,
+              <li>• Performance monitoring</li>,
+              <li>• Predictive maintenance</li>,
         {/* System Types */}
-        <div className="bg-gradient-to-r from-green-900 to-blue-900 rounded-2xl p-12 text-white mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Autonomous System Types</h2>
-            <p className="text-xl opacity-90">Comprehensive solutions for every industry need</p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-green-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
-              <div className="text-5xl mb-4 text-center">🏭</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Industrial Automation</h3>
-              <p className="text-green-100 mb-6 text-center">
-                Fully autonomous manufacturing systems that optimize production, predict maintenance, and adapt to changing demands
-              </p>
-              <ul className="text-green-200 space-y-2 text-sm">
-                <li>• Smart manufacturing lines</li>
-                <li>• Predictive maintenance</li>
-                <li>• Quality control automation</li>
-                <li>• Supply chain optimization</li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-cyan-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <div className="text-5xl mb-4 text-center">🚗</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Vehicles</h3>
-              <p className="text-cyan-100 mb-6 text-center">
-                Self-driving systems with advanced perception, decision-making, and navigation capabilities for various vehicle types
-              <ul className="text-cyan-200 space-y-2 text-sm">
-                <li>• Advanced driver assistance</li>
-                <li>• Fleet management systems</li>
-                <li>• Route optimization</li>
-                <li>• Safety monitoring</li>
-            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
-              <div className="text-5xl mb-4 text-center">🏥</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Healthcare Automation</h3>
-              <p className="text-orange-100 mb-6 text-center">
-                Medical systems that provide autonomous diagnosis, treatment recommendations, and patient monitoring
-              <ul className="text-orange-200 space-y-2 text-sm">
-                <li>• Diagnostic assistance</li>
-                <li>• Treatment optimization</li>
-                <li>• Patient monitoring</li>
-                <li>• Drug discovery</li>
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="text-5xl mb-4 text-center">🏦</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Financial Systems</h3>
-              <p className="text-purple-100 mb-6 text-center">
-                Autonomous trading systems, fraud detection, and risk management that operate 24/7 without human oversight
-              <ul className="text-purple-200 space-y-2 text-sm">
-                <li>• Algorithmic trading</li>
-                <li>• Fraud detection</li>
-                <li>• Risk assessment</li>
-                <li>• Compliance monitoring</li>
+        <div className="bg-gradient-to-r from-green-900 to-blue-900 rounded-2xl p-12 text-white mb-16">,
+          <div className="text-center mb-12">,
+            <h2 className="text-4xl font-bold mb-4">Autonomous System Types</h2>,
+            <p className="text-xl opacity-90">Comprehensive solutions for every industry need</p>,
+          <div className="grid md: grid-cols-2 gap-8">,
+            <div className="bg-gradient-to-br from-green-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">,
+              <div className="text-5xl mb-4 text-center">🏭</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center">Industrial Automation</h3>,
+              <p className="text-green-100 mb-6 text-center">,
+                Fully autonomous manufacturing systems that optimize production, predict maintenance, and adapt to changing demands,
+              </p>,
+              <ul className="text-green-200 space-y-2 text-sm">,
+                <li>• Smart manufacturing lines</li>,
+                <li>• Predictive maintenance</li>,
+                <li>• Quality control automation</li>,
+                <li>• Supply chain optimization</li>,
+              </ul>,
+            </div>,
+            <div className="bg-gradient-to-br from-cyan-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">,
+              <div className="text-5xl mb-4 text-center">🚗</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Vehicles</h3>,
+              <p className="text-cyan-100 mb-6 text-center">,
+                Self-driving systems with advanced perception, decision-making, and navigation capabilities for various vehicle types,
+              <ul className="text-cyan-200 space-y-2 text-sm">,
+                <li>• Advanced driver assistance</li>,
+                <li>• Fleet management systems</li>,
+                <li>• Route optimization</li>,
+                <li>• Safety monitoring</li>,
+            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">,
+              <div className="text-5xl mb-4 text-center">🏥</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center">Healthcare Automation</h3>,
+              <p className="text-orange-100 mb-6 text-center">,
+                Medical systems that provide autonomous diagnosis, treatment recommendations, and patient monitoring,
+              <ul className="text-orange-200 space-y-2 text-sm">,
+                <li>• Diagnostic assistance</li>,
+                <li>• Treatment optimization</li>,
+                <li>• Patient monitoring</li>,
+                <li>• Drug discovery</li>,
+            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">,
+              <div className="text-5xl mb-4 text-center">🏦</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center">Financial Systems</h3>,
+              <p className="text-purple-100 mb-6 text-center">,
+                Autonomous trading systems, fraud detection, and risk management that operate 24/7 without human oversight,
+              <ul className="text-purple-200 space-y-2 text-sm">,
+                <li>• Algorithmic trading</li>,
+                <li>• Fraud detection</li>,
+                <li>• Risk assessment</li>,
+                <li>• Compliance monitoring</li>,
         {/* Technology Architecture */}
-        <div className="mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Autonomous Architecture</h2>
-            <p className="text-xl text-gray-600">Robust framework for self-managing systems</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <div className="text-4xl mb-4">👁️</div>
-              <h3 className="text-xl font-bold mb-3">Perception Layer</h3>
-              <p className="text-gray-600 text-sm">
-                Multi-modal sensors and data fusion for comprehensive environmental awareness
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-3">Cognition Layer</h3>
-                Advanced AI models for reasoning, planning, and decision-making processes
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-3">Action Layer</h3>
-                Autonomous execution of decisions through various actuators and interfaces
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-bold mb-3">Learning Layer</h3>
-                Continuous improvement through experience and feedback integration
+        <div className="mb-16">,
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Autonomous Architecture</h2>,
+            <p className="text-xl text-gray-600">Robust framework for self-managing systems</p>,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">,
+              <div className="text-4xl mb-4">👁️</div>,
+              <h3 className="text-xl font-bold mb-3">Perception Layer</h3>,
+              <p className="text-gray-600 text-sm">,
+                Multi-modal sensors and data fusion for comprehensive environmental awareness,
+              <div className="text-4xl mb-4">🧠</div>,
+              <h3 className="text-xl font-bold mb-3">Cognition Layer</h3>,
+                Advanced AI models for reasoning, planning, and decision-making processes,
+              <div className="text-4xl mb-4">⚡</div>,
+              <h3 className="text-xl font-bold mb-3">Action Layer</h3>,
+                Autonomous execution of decisions through various actuators and interfaces,
+              <div className="text-4xl mb-4">🔄</div>,
+              <h3 className="text-xl font-bold mb-3">Learning Layer</h3>,
+                Continuous improvement through experience and feedback integration,
         {/* Success Metrics */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 text-white mb-16">
-            <h2 className="text-4xl font-bold mb-4">Proven Results</h2>
-            <p className="text-xl opacity-90">Measurable impact across industries</p>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-green-400 mb-2">95%</div>
-              <h3 className="text-xl font-bold mb-2">Uptime</h3>
-              <p className="text-gray-300">Average system availability with autonomous monitoring</p>
-              <div className="text-5xl font-bold text-blue-400 mb-2">60%</div>
-              <h3 className="text-xl font-bold mb-2">Cost Reduction</h3>
-              <p className="text-gray-300">Operational cost savings through automation</p>
-              <div className="text-5xl font-bold text-purple-400 mb-2">300%</div>
-              <h3 className="text-xl font-bold mb-2">Efficiency Gain</h3>
-              <p className="text-gray-300">Performance improvement with autonomous optimization</p>
-              <div className="text-5xl font-bold text-orange-400 mb-2">99.9%</div>
-              <h3 className="text-xl font-bold mb-2">Accuracy</h3>
-              <p className="text-gray-300">Decision accuracy in autonomous operations</p>
-        {/* Implementation Roadmap */}
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white text-center">
-          <h2 className="text-4xl font-bold mb-6">Autonomous Future Starts Today</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Transform your operations with self-managing AI systems that work around the clock
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-2xl font-bold mb-4">Phase 1</div>
-              <h3 className="text-xl font-bold mb-2">Assessment & Planning</h3>
-              <p className="text-sm opacity-90">Evaluate current systems and design autonomous architecture</p>
-              <div className="text-2xl font-bold mb-4">Phase 2</div>
-              <h3 className="text-xl font-bold mb-2">Pilot Deployment</h3>
-              <p className="text-sm opacity-90">Deploy autonomous systems in controlled environments</p>
-              <div className="text-2xl font-bold mb-4">Phase 3</div>
-              <h3 className="text-xl font-bold mb-2">Full Automation</h3>
-              <p className="text-sm opacity-90">Scale autonomous systems across entire operations</p>
-            <button className="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-              Start Your Journey
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold text-lg">
-              Schedule Consultation
-      </div>
-    </div>
-  );
-};
+        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-12 text-white mb-16">,
+            <h2 className="text-4xl font-bold mb-4">Proven Results</h2>,
+            <p className="text-xl opacity-90">Measurable impact across industries</p>,
+          <div className="grid md: grid-cols-4 gap-8">,
+            <div className="text-center">,
+              <div className="text-5xl font-bold text-green-400 mb-2">95%</div>,
+              <h3 className="text-xl font-bold mb-2">Uptime</h3>,
+              <p className="text-gray-300">Average system availability with autonomous monitoring</p>,
+              <div className="text-5xl font-bold text-blue-400 mb-2">60%</div>,
+              <h3 className="text-xl font-bold mb-2">Cost Reduction</h3>,
+              <p className="text-gray-300">Operational cost savings through automation</p>,
+              <div className="text-5xl font-bold text-purple-400 mb-2">300%</div>,
+              <h3 className="text-xl font-bold mb-2">Efficiency Gain</h3>,
+              <p className="text-gray-300">Performance improvement with autonomous optimization</p>,
+              <div className="text-5xl font-bold text-orange-400 mb-2">99.9%</div>,
+              <h3 className="text-xl font-bold mb-2">Accuracy</h3>,
+              <p className="text-gray-300">Decision accuracy in autonomous operations</p>,
+        {/* Implementation Roadmap */,}
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white text-center">,
+          <h2 className="text-4xl font-bold mb-6">Autonomous Future Starts Today</h2>,
+          <p className="text-xl mb-8 opacity-90">,
+            Transform your operations with self-managing AI systems that work around the clock,
+          <div className="grid md: grid-cols-3 gap-8 mb-8">,
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">,
+              <div className="text-2xl font-bold mb-4">Phase 1</div>,
+              <h3 className="text-xl font-bold mb-2">Assessment & Planning</h3>,
+              <p className="text-sm opacity-90">Evaluate current systems and design autonomous architecture</p>,
+              <div className="text-2xl font-bold mb-4">Phase 2</div>,
+              <h3 className="text-xl font-bold mb-2">Pilot Deployment</h3>,
+              <p className="text-sm opacity-90">Deploy autonomous systems in controlled environments</p>,
+              <div className="text-2xl font-bold mb-4">Phase 3</div>,
+              <h3 className="text-xl font-bold mb-2">Full Automation</h3>,
+              <p className="text-sm opacity-90">Scale autonomous systems across entire operations</p>,
+            <button className="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">,
+              Start Your Journey,
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold text-lg">,
+              Schedule Consultation,
+      </div>,
+    </div>,
+  ),};
 export default AutonomousSystems2025;

@@ -1,25 +1,24 @@
-title: "Technology Assessment",
+title: "Technology Assessment";
     description;
-"Comprehensive evaluation of your current technology landscape and capabilities",
+"Comprehensive evaluation of your current technology landscape and capabilities";
     features;
-["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
+["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"];
     icon;
 "🔍";
-{
-    title: "Strategic Planning",
+{,
+    title: "Strategic Planning";
         description;
-    "Develop long-term technology strategy aligned with business objectives",
+    "Develop long-term technology strategy aligned with business objectives";
         features;
-    ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
+    ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"];
         icon;
     "📋";
 }
-    title: "Vendor Selection",
-    "Expert guidance in selecting the right technology partners and solutions",
-    ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
+    title: "Vendor Selection";
+    "Expert guidance in selecting the right technology partners and solutions";
+    ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"];
     "🤝";
-    icon: Target,
+    icon: Target;
         title;
-    "Project Management",
+    "Project Management";
     ;
-export {};

@@ -1,167 +1,164 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const FutureTechInnovations2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🚀 FUTURE TECH INNOVATIONS • 2026
-            </div>
-            <h1 className="text-6xl font-bold text-white mb-6">
-              The Future is Here: <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Revolutionary Technologies</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Explore the cutting-edge technologies that are reshaping our world and creating unprecedented opportunities for innovation and growth.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-      {/* Revolutionary Technologies Grid */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
-          {/* AI-Powered Autonomous Systems */}
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">AI-Powered Autonomous Systems</h3>
-            <p className="text-gray-300 mb-6 text-center">
-              Self-managing systems that adapt, learn, and optimize without human intervention, revolutionizing how we approach complex problems.
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Self-healing infrastructure</li>
-              <li>• Autonomous decision-making</li>
-              <li>• Predictive maintenance</li>
-              <li>• Dynamic resource allocation</li>
-            </ul>
-            <div className="text-center">
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-semibold">
-                Available Now
-              </span>
-          </div>
+const FutureTechInnovations2026: React.FC = () => {,
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+      {/* Header */,}
+      <div className="relative overflow-hidden">,
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
+        <div className="relative z-10 container mx-auto px-4 py-16">,
+          <motion.div,
+            initial={{ opacity: 0, y: 20 ,}}
+            animate={{ opacity: 1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
+            className="text-center",
+          >,
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">,
+              🚀 FUTURE TECH INNOVATIONS • 2026,
+            </div>,
+            <h1 className="text-6xl font-bold text-white mb-6">,
+              The Future is Here: <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Revolutionary Technologies</span>,
+            </h1>,
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">,
+              Explore the cutting-edge technologies that are reshaping our world and creating unprecedented opportunities for innovation and growth.,
+            </p>,
+          </motion.div>,
+        </div>,
+      </div>,
+      {/* Revolutionary Technologies Grid */,}
+      <div className="container mx-auto px-4 py-16">,
+        <motion.div,
+          initial={{ opacity: 0, y: 20 ,}}
+          animate={{ opacity: 1, y: 0 ,}}
+          transition={{ duration: 0.8, delay: 0.2 ,}}
+          className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16",
+        >,
+          {/* AI-Powered Autonomous Systems */,}
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover: scale-105 transition-all duration-300">,
+            <div className="text-6xl mb-6 text-center">🤖</div>,
+            <h3 className="text-2xl font-bold mb-4 text-white text-center">AI-Powered Autonomous Systems</h3>,
+            <p className="text-gray-300 mb-6 text-center">,
+              Self-managing systems that adapt, learn, and optimize without human intervention, revolutionizing how we approach complex problems.,
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">,
+              <li>• Self-healing infrastructure</li>,
+              <li>• Autonomous decision-making</li>,
+              <li>• Predictive maintenance</li>,
+              <li>• Dynamic resource allocation</li>,
+            </ul>,
+            <div className="text-center">,
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-semibold">,
+                Available Now,
+              </span>,
+          </div>,
           {/* Quantum-Neural Hybrid Computing */}
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">Quantum-Neural Hybrid Computing</h3>
-              Revolutionary computing architecture combining quantum processing with neural networks for unprecedented computational power.
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum neural networks</li>
-              <li>• Hybrid optimization algorithms</li>
-              <li>• Exponential speed improvements</li>
-              <li>• Complex pattern recognition</li>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg text-sm font-semibold">
-                Coming 2026
-          {/* Synthetic Intelligence Networks */}
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">Synthetic Intelligence Networks</h3>
-              Next-generation AI systems that mimic biological intelligence with synthetic neural architectures and consciousness-like behaviors.
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Synthetic consciousness</li>
-              <li>• Biological-AI fusion</li>
-              <li>• Emotional intelligence</li>
-              <li>• Creative problem solving</li>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg text-sm font-semibold">
-                In Development
-          {/* Neural Interface Technology */}
-          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">Neural Interface Technology</h3>
-              Direct brain-computer interfaces enabling seamless communication between human minds and digital systems.
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• Thought-controlled devices</li>
-              <li>• Memory augmentation</li>
-              <li>• Cognitive enhancement</li>
-              <li>• Telepathic communication</li>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg text-sm font-semibold">
-                Beta Testing
-          {/* Advanced Robotics */}
-          <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🦾</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">Advanced Robotics</h3>
-              Humanoid robots with advanced AI, capable of complex interactions and autonomous operations in various environments.
-            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
-              <li>• Human-like mobility</li>
-              <li>• Emotional recognition</li>
-              <li>• Collaborative intelligence</li>
-              <li>• Adaptive learning</li>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg text-sm font-semibold">
-                Production Ready
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover: scale-105 transition-all duration-300">,
+            <div className="text-6xl mb-6 text-center">⚛️</div>,
+            <h3 className="text-2xl font-bold mb-4 text-white text-center">Quantum-Neural Hybrid Computing</h3>,
+              Revolutionary computing architecture combining quantum processing with neural networks for unprecedented computational power.,
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">,
+              <li>• Quantum neural networks</li>,
+              <li>• Hybrid optimization algorithms</li>,
+              <li>• Exponential speed improvements</li>,
+              <li>• Complex pattern recognition</li>,
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg text-sm font-semibold">,
+                Coming 2026,
+          {/* Synthetic Intelligence Networks */,}
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover: scale-105 transition-all duration-300">,
+            <div className="text-6xl mb-6 text-center">🧬</div>,
+            <h3 className="text-2xl font-bold mb-4 text-white text-center">Synthetic Intelligence Networks</h3>,
+              Next-generation AI systems that mimic biological intelligence with synthetic neural architectures and consciousness-like behaviors.,
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">,
+              <li>• Synthetic consciousness</li>,
+              <li>• Biological-AI fusion</li>,
+              <li>• Emotional intelligence</li>,
+              <li>• Creative problem solving</li>,
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg text-sm font-semibold">,
+                In Development,
+          {/* Neural Interface Technology */,}
+          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover: scale-105 transition-all duration-300">,
+            <div className="text-6xl mb-6 text-center">🧠</div>,
+            <h3 className="text-2xl font-bold mb-4 text-white text-center">Neural Interface Technology</h3>,
+              Direct brain-computer interfaces enabling seamless communication between human minds and digital systems.,
+            <ul className="text-orange-200 space-y-2 mb-6 text-sm">,
+              <li>• Thought-controlled devices</li>,
+              <li>• Memory augmentation</li>,
+              <li>• Cognitive enhancement</li>,
+              <li>• Telepathic communication</li>,
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg text-sm font-semibold">,
+                Beta Testing,
+          {/* Advanced Robotics */,}
+          <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover: scale-105 transition-all duration-300">,
+            <div className="text-6xl mb-6 text-center">🦾</div>,
+            <h3 className="text-2xl font-bold mb-4 text-white text-center">Advanced Robotics</h3>,
+              Humanoid robots with advanced AI, capable of complex interactions and autonomous operations in various environments.,
+            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">,
+              <li>• Human-like mobility</li>,
+              <li>• Emotional recognition</li>,
+              <li>• Collaborative intelligence</li>,
+              <li>• Adaptive learning</li>,
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg text-sm font-semibold">,
+                Production Ready,
           {/* Digital Twin Ecosystems */}
-          <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🌐</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">Digital Twin Ecosystems</h3>
-              Complete digital replicas of physical systems, enabling real-time monitoring, simulation, and optimization.
-            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
-              <li>• Real-time synchronization</li>
-              <li>• Predictive modeling</li>
-              <li>• Virtual testing</li>
-              <li>• Performance optimization</li>
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-lg text-sm font-semibold">
-                Widely Deployed
-        </motion.div>
+          <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover: scale-105 transition-all duration-300">,
+            <div className="text-6xl mb-6 text-center">🌐</div>,
+            <h3 className="text-2xl font-bold mb-4 text-white text-center">Digital Twin Ecosystems</h3>,
+              Complete digital replicas of physical systems, enabling real-time monitoring, simulation, and optimization.,
+            <ul className="text-pink-200 space-y-2 mb-6 text-sm">,
+              <li>• Real-time synchronization</li>,
+              <li>• Predictive modeling</li>,
+              <li>• Virtual testing</li>,
+              <li>• Performance optimization</li>,
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-lg text-sm font-semibold">,
+                Widely Deployed,
+        </motion.div>,
         {/* Innovation Impact Section */}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">🚀 Innovation Impact</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              These revolutionary technologies are transforming industries and creating new possibilities for human advancement.
-          
-          <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-4xl font-bold text-purple-400 mb-2">500%</div>
-              <div className="text-gray-300">Efficiency Increase</div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">90%</div>
-              <div className="text-gray-300">Cost Reduction</div>
-              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
-              <div className="text-gray-300">Autonomous Operation</div>
-              <div className="text-4xl font-bold text-orange-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
-        {/* Future Applications */}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
-          <h2 className="text-4xl font-bold text-white mb-8">🌟 Future Applications</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold text-white mb-3">Healthcare Revolution</h3>
-              <p className="text-gray-300 text-sm">AI-powered diagnostics, robotic surgery, and personalized medicine</p>
-              <h3 className="text-xl font-bold text-white mb-3">Smart Cities</h3>
-              <p className="text-gray-300 text-sm">Autonomous transportation, intelligent infrastructure, and sustainable living</p>
-              <h3 className="text-xl font-bold text-white mb-3">Space Exploration</h3>
-              <p className="text-gray-300 text-sm">Autonomous spacecraft, AI astronauts, and interplanetary colonization</p>
-              <h3 className="text-xl font-bold text-white mb-3">Climate Solutions</h3>
-              <p className="text-gray-300 text-sm">AI climate modeling, carbon capture, and renewable energy optimization</p>
-              <h3 className="text-xl font-bold text-white mb-3">Education Transformation</h3>
-              <p className="text-gray-300 text-sm">Personalized learning, virtual reality classrooms, and AI tutors</p>
-              <h3 className="text-xl font-bold text-white mb-3">Financial Innovation</h3>
-              <p className="text-gray-300 text-sm">Quantum cryptography, AI trading, and decentralized finance</p>
+          transition={{ duration: 0.8, delay: 0.4 ,}}
+          className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30",
+          <div className="text-center mb-12">,
+            <h2 className="text-4xl font-bold text-white mb-6">🚀 Innovation Impact</h2>,
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">,
+              These revolutionary technologies are transforming industries and creating new possibilities for human advancement.,
+          <div className="grid md: grid-cols-4 gap-8">,
+              <div className="text-4xl font-bold text-purple-400 mb-2">500%</div>,
+              <div className="text-gray-300">Efficiency Increase</div>,
+              <div className="text-4xl font-bold text-cyan-400 mb-2">90%</div>,
+              <div className="text-gray-300">Cost Reduction</div>,
+              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>,
+              <div className="text-gray-300">Autonomous Operation</div>,
+              <div className="text-4xl font-bold text-orange-400 mb-2">99.9%</div>,
+              <div className="text-gray-300">Accuracy Rate</div>,
+        {/* Future Applications */,}
+          transition={{ duration: 0.8, delay: 0.6 ,}}
+          className="text-center",
+          <h2 className="text-4xl font-bold text-white mb-8">🌟 Future Applications</h2>,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+              <h3 className="text-xl font-bold text-white mb-3">Healthcare Revolution</h3>,
+              <p className="text-gray-300 text-sm">AI-powered diagnostics, robotic surgery, and personalized medicine</p>,
+              <h3 className="text-xl font-bold text-white mb-3">Smart Cities</h3>,
+              <p className="text-gray-300 text-sm">Autonomous transportation, intelligent infrastructure, and sustainable living</p>,
+              <h3 className="text-xl font-bold text-white mb-3">Space Exploration</h3>,
+              <p className="text-gray-300 text-sm">Autonomous spacecraft, AI astronauts, and interplanetary colonization</p>,
+              <h3 className="text-xl font-bold text-white mb-3">Climate Solutions</h3>,
+              <p className="text-gray-300 text-sm">AI climate modeling, carbon capture, and renewable energy optimization</p>,
+              <h3 className="text-xl font-bold text-white mb-3">Education Transformation</h3>,
+              <p className="text-gray-300 text-sm">Personalized learning, virtual reality classrooms, and AI tutors</p>,
+              <h3 className="text-xl font-bold text-white mb-3">Financial Innovation</h3>,
+              <p className="text-gray-300 text-sm">Quantum cryptography, AI trading, and decentralized finance</p>,
         {/* Call to Action */}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Embrace the Future?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join us in shaping tomorrow's world with these revolutionary technologies. 
-            Let's build the future together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Start Your Innovation Journey
-            </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold">
-              Explore Our Solutions
-    </div>
-  );
-};
+          transition={{ duration: 0.8, delay: 0.8 ,}}
+          className="text-center mt-16",
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Embrace the Future?</h2>,
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+            Join us in shaping tomorrow's world with these revolutionary technologies.,
+            Let's build the future together.,
+          </p>,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">,
+              Start Your Innovation Journey,
+            </button>,
+            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold">,
+              Explore Our Solutions,
+    </div>,
+  ),};
 export default FutureTechInnovations2026;

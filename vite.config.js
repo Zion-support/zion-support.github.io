@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -20,7 +19,7 @@ export default defineConfig({
       '@services': path.resolve(__dirname, './src/services'),
       '@context': path.resolve(__dirname, './src/context'),
       '@constants': path.resolve(__dirname, './src/constants'),
-    },
+    }
   },
   build: {
     target: 'es2015',
@@ -29,7 +28,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-      },
+      }
     },
     rollupOptions: {
       output: {
@@ -52,8 +51,8 @@ export default defineConfig({
             }
             return 'vendor';
           }
-        },
-      },
+        }
+      }
     },
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
@@ -65,5 +64,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     open: true,
-  },
+  }
 });

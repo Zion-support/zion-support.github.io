@@ -1,4 +1,3 @@
 // Type definitions for quotes;
 interface quotes {;
-  // TODO: Add proper type definitions;
-};
+  // TODO: Add proper type definitions,};

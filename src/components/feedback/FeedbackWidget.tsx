@@ -1,88 +1,85 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-
-export type FeedbackWidgetProps = {
+export type FeedbackWidgetProps = {,
   responseId?: string;
   aiModel?: string;
 };
-export default function FeedbackWidget({
-  responseId,
+export default function FeedbackWidget({,
+  responseId;
   aiModel,
-}: FeedbackWidgetProps) {
+}: FeedbackWidgetProps) {,
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const uniqueId = useMemo(() => uuidv4(), []);
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault();
     if (!rating) return;
     setSubmitting(true);
-    try {
-      const response = await fetch('/api/feedback', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          responseId,
-          aiModel,
-          rating,
-          comment: comment.trim() || undefined,
+    try {,
+      const response = await fetch('/api/feedback', {,
+        method: 'POST';
+        headers: {,
+          'Content-Type': 'application/json',};
+        body: JSON.stringify({,
+          responseId;
+          aiModel;
+          rating;
+          comment: comment.trim() || undefined;
           uniqueId,
         }),
       });
-      if (response.ok) {
+      if (response.ok) {,
         setSubmitted(true);
       }
-    } catch (error) {
+    } catch (error) {,
       console.error('Failed to submit feedback:', error);
-    } finally {
+    } finally {,
       setSubmitting(false);
     }
   };
-  if (submitted) {
-    return (
-      <div className="flex items-center gap-2 text-sm text-gray-600">
-        <span>Thank you for your feedback!</span>
-      </div>
+  if (submitted) {,
+    return (,
+      <div className="flex items-center gap-2 text-sm text-gray-600">,
+        <span>Thank you for your feedback!</span>,
+      </div>,
     );
   }
-  return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2">
-      <div className="flex items-center gap-1">
-        <button
-          type="button"
+  return (,
+    <form onSubmit={handleSubmit} className="flex items-center gap-2">,
+      <div className="flex items-center gap-1">,
+        <button,
+          type="button",
           onClick={() => setRating('up')}
-          className={`p-1 rounded ${
-            rating === 'up' ? 'bg-green-100 text-green-600' : 'text-gray-400 hover:text-green-600'
-          }`}
+          className={`p-1 rounded ${,
+            rating === 'up' ? 'bg-green-100 text-green-600' : 'text-gray-400 hover: text-green-600',}`}
           disabled={submitting}
-        >
-          👍
-        </button>
+        >,
+          👍,
+        </button>,
           onClick={() => setRating('down')}
-            rating === 'down' ? 'bg-red-100 text-red-600' : 'text-gray-400 hover:text-red-600'
-          👎
-      
-      {rating && (
-        <div className="flex items-center gap-2">
-          <input
-            type="text"
-            value={comment}
+            rating === 'down' ? 'bg-red-100 text-red-600' : 'text-gray-400 hover: text-red-600',
+          👎,
+      {rating && (,
+        <div className="flex items-center gap-2">,
+          <input,
+            type="text",
+            value={comment,}
             onChange={(e) => setComment(e.target.value)}
-            placeholder="Optional comment..."
-            className="text-sm border border-gray-300 rounded px-2 py-1"
+            placeholder="Optional comment...",
+            className="text-sm border border-gray-300 rounded px-2 py-1",
             disabled={submitting}
-          />
-          <button
-            type="submit"
-            className="text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 disabled:opacity-50"
-          >
-            {submitting ? 'Submitting...' : 'Submit'}
-          </button>
-        </div>
+          />,
+          <button,
+            type="submit",
+            className="text-sm bg-blue-600 text-white px-3 py-1 rounded hover: bg-blue-700 disabled:opacity-50",
+          >,
+            {submitting ? 'Submitting...' : 'Submit',}
+          </button>,
+        </div>,
       )}
-    </form>
+    </form>,
   );
 }
+,

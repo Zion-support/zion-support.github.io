@@ -1,18 +1,17 @@
+import React from 'react',
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
-
-import { badgeVariants } from "@/components/ui/badge-variants"
-
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?:
-    | "default"
-    | "secondary"
-    | "destructive"
-    | "outline"
-    | "success"
-    | "warning"
-    | "info"
+import * as React from "react",
+import { cn } from "@/lib/utils",
+import { badgeVariants } from "@/components/ui/badge-variants",
+export interface BadgeProps,
+  extends React.HTMLAttributes<HTMLSpanElement> {,
+  variant?:,
+    | "default",
+    | "secondary",
+    | "destructive",
+    | "outline",
+    | "success",
+    | "warning",
+    | "info",
 }
-
+,

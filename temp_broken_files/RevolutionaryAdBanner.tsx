@@ -1,4 +1,4 @@
-    </div>
+    </div>,
   );
 };
 export default RevolutionaryAdBanner;

@@ -1,7 +1,6 @@
 "use client";
 'use client';
-
-    </div>
+    </div>,
   );
 };
 export default AdvancedAnalytics;

@@ -2,34 +2,33 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-
-      <Button
-        variant="ghost"
-        size="icon"
-        title="View Details"
+      <Button,
+        variant="ghost",
+        size="icon",
+        title="View Details",
         onClick={() => alert("View details (would open a detailed view)")}
-      <Button
-        variant="ghost"
-        size="icon"
-        title="Send Warning"
-      <Button
-        variant="ghost"
-        size="icon"
-        title="Suspend User"
-      <Button
-        variant="ghost"
-        size="icon"
-        title="Ban User"
-      >
-        <Ban className="h-4 w-4" />
-      </Button>
-      {status === 'pending' && (
-        <Button
-          variant="ghost"
-          size="sm"
-        >
-          Ignore
-        </Button>
+      <Button,
+        variant="ghost",
+        size="icon",
+        title="Send Warning",
+      <Button,
+        variant="ghost",
+        size="icon",
+        title="Suspend User",
+      <Button,
+        variant="ghost",
+        size="icon",
+        title="Ban User",
+      >,
+        <Ban className="h-4 w-4" />,
+      </Button>,
+      {status === 'pending' && (,
+        <Button,
+          variant="ghost",
+          size="sm",
+        >,
+          Ignore,
+        </Button>,
       )}
-    </div>
+    </div>,
   );

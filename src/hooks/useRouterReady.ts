@@ -1,27 +1,28 @@
-import { useEffect, useState }  from 'react'
-export function useRouterReady() {
-  const [ready, setReady] = useState(false)
-  useEffect(() => {
-    setReady(true)
-  }, [])
-  return ready
-export function useRouteChange() {
-  const [isChanging, setIsChanging] = useState(false)
-  useEffect(() => {
-    const handleStart = () => setIsChanging(true)
-    const handleComplete = () => setIsChanging(false)
-    // For Next.js router events
-    if (typeof window !== 'undefined' && window.next) {
-      window.next.router.events.on('routeChangeStart', handleStart)
-      window.next.router.events.on('routeChangeComplete', handleComplete)
-      window.next.router.events.on('routeChangeError', handleComplete)
+import { useEffect, useState }  from 'react',
+export function useRouterReady() {,
+  const [ready, setReady] = useState(false),
+  useEffect(() => {,
+    setReady(true),
+  }, []),
+  return ready,
+export function useRouteChange() {,
+  const [isChanging, setIsChanging] = useState(false),
+  useEffect(() => {,
+    const handleStart = () => setIsChanging(true),
+    const handleComplete = () => setIsChanging(false),
+    // For Next.js router events,
+    if (typeof window !== 'undefined' && window.next) {,
+      window.next.router.events.on('routeChangeStart', handleStart),
+      window.next.router.events.on('routeChangeComplete', handleComplete),
+      window.next.router.events.on('routeChangeError', handleComplete),
     };
-return () => {
-      if (typeof window !== 'undefined' && window.next) {
-        window.next.router.events.off('routeChangeStart', handleStart)
-        window.next.router.events.off('routeChangeComplete', handleComplete)
-        window.next.router.events.off('routeChangeError', handleComplete)
+return () => {,
+      if (typeof window !== 'undefined' && window.next) {,
+        window.next.router.events.off('routeChangeStart', handleStart),
+        window.next.router.events.off('routeChangeComplete', handleComplete),
+        window.next.router.events.off('routeChangeError', handleComplete),
       };
     };
-  }, [])
-  return isChanging
+  }, []),
+  return isChanging,
+}}

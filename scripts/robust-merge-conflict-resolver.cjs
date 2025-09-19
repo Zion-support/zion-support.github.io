@@ -24,7 +24,7 @@ const colors = {
   yellow: "\x1b[33m",
   blue: "\x1b[34m",
   magenta: "\x1b[35m",
-  cyan: "\x1b[36m",,
+  cyan: "\x1b[36m",
 }
 
 function log(message, color = "reset") {
@@ -143,7 +143,7 @@ function resolveMergeConflict(filePath) {
     // Strategy 1": Remove all variations of merge conflict markers
     // Handle corrupted markers like     if (content.includes("      content.includes("") ||";      content.includes(">>>>>>>")") {";      // Remove everything between 
       // Remove everything between  and       content = content.replace(/[\s\S]*?);      // Remove any remaining       content = content.replace(/);      // Remove any remaining  sections
-      content = content.replace(/[\s\S]*/g, "");"";      // Remove any remaining       content = content.replace(/);      fixed = true,,
+      content = content.replace(/[\s\S]*/g, "");"";      // Remove any remaining       content = content.replace(/);      fixed = true,
 }
 
     // Strategy 2: Clean up malformed imports and exports;";    // Remove broken import statements

@@ -1,205 +1,201 @@
 import React from 'react';
-
-const BusinessAutomationGuide2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 text-white">
-            📋 BUSINESS AUTOMATION GUIDE • 2025
-          </div>
-          <h1 className="text-6xl font-bold mb-6 text-gray-900">
-            Business Automation Guide 2025
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
-            Complete 90-day roadmap to automate 80% of your business operations and achieve unprecedented efficiency
-          </p>
-        </div>
+const BusinessAutomationGuide2025: React.FC = () => {,
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">,
+      <div className="container mx-auto px-4 py-16">,
+        {/* Header */,}
+        <div className="text-center mb-16">,
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 text-white">,
+            📋 BUSINESS AUTOMATION GUIDE • 2025,
+          </div>,
+          <h1 className="text-6xl font-bold mb-6 text-gray-900">,
+            Business Automation Guide 2025,
+          </h1>,
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto">,
+            Complete 90-day roadmap to automate 80% of your business operations and achieve unprecedented efficiency,
+          </p>,
+        </div>,
         {/* Key Benefits */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-5xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">80% Automation</h3>
-            <p className="text-gray-600 text-center mb-6">
-              Automate the majority of your business processes within 90 days
-            </p>
-            <div className="bg-green-100 border border-green-300 rounded-lg p-4 text-center">
-              <span className="text-green-700 font-bold text-lg">+300% Productivity</span>
-            </div>
-          
-            <div className="text-5xl mb-4 text-center">💰</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Cost Reduction</h3>
-              Reduce operational costs by 40-60% through intelligent automation
-            <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 text-center">
-              <span className="text-blue-700 font-bold text-lg">-50% Costs</span>
-            <div className="text-5xl mb-4 text-center">🎯</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">ROI in 30 Days</h3>
-              See measurable returns on investment within the first month
-            <div className="bg-purple-100 border border-purple-300 rounded-lg p-4 text-center">
-              <span className="text-purple-700 font-bold text-lg">500% ROI</span>
-        {/* 90-Day Roadmap */}
-        <div className="bg-white rounded-2xl p-12 shadow-lg mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6 text-gray-900">🗓️ 90-Day Automation Roadmap</h2>
-            <p className="text-xl text-gray-600">
-              Step-by-step implementation plan for maximum business transformation
-          <div className="space-y-8">
+        <div className="grid md: grid-cols-3 gap-8 mb-16">,
+          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">,
+            <div className="text-5xl mb-4 text-center">⚡</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">80% Automation</h3>,
+            <p className="text-gray-600 text-center mb-6">,
+              Automate the majority of your business processes within 90 days,
+            </p>,
+            <div className="bg-green-100 border border-green-300 rounded-lg p-4 text-center">,
+              <span className="text-green-700 font-bold text-lg">+300% Productivity</span>,
+            </div>,
+            <div className="text-5xl mb-4 text-center">💰</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Cost Reduction</h3>,
+              Reduce operational costs by 40-60% through intelligent automation,
+            <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 text-center">,
+              <span className="text-blue-700 font-bold text-lg">-50% Costs</span>,
+            <div className="text-5xl mb-4 text-center">🎯</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">ROI in 30 Days</h3>,
+              See measurable returns on investment within the first month,
+            <div className="bg-purple-100 border border-purple-300 rounded-lg p-4 text-center">,
+              <span className="text-purple-700 font-bold text-lg">500% ROI</span>,
+        {/* 90-Day Roadmap */,}
+        <div className="bg-white rounded-2xl p-12 shadow-lg mb-16">,
+          <div className="text-center mb-12">,
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">🗓️ 90-Day Automation Roadmap</h2>,
+            <p className="text-xl text-gray-600">,
+              Step-by-step implementation plan for maximum business transformation,
+          <div className="space-y-8">,
             {/* Month 1 */}
-            <div className="border-l-4 border-blue-500 pl-8 pb-8">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="bg-blue-500 text-white px-4 py-2 rounded-lg font-bold">Month 1</div>
-                <h3 className="text-2xl font-bold text-gray-900">Foundation & Quick Wins</h3>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 1-2: Assessment</h4>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Business process audit</li>
-                    <li>• Automation opportunity identification</li>
-                    <li>• Technology stack evaluation</li>
-                    <li>• Team training preparation</li>
-                  </ul>
-                </div>
-                <div className="bg-green-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 3-4: Quick Wins</h4>
-                    <li>• Email automation setup</li>
-                    <li>• Document workflow automation</li>
-                    <li>• Basic data entry automation</li>
-                    <li>• Customer onboarding automation</li>
-            {/* Month 2 */}
-            <div className="border-l-4 border-green-500 pl-8 pb-8">
-                <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold">Month 2</div>
-                <h3 className="text-2xl font-bold text-gray-900">Core Process Automation</h3>
-                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 5-6: Sales & Marketing</h4>
-                    <li>• Lead generation automation</li>
-                    <li>• CRM integration and workflows</li>
-                    <li>• Social media automation</li>
-                    <li>• Email marketing campaigns</li>
-                <div className="bg-purple-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 7-8: Operations</h4>
-                    <li>• Inventory management automation</li>
-                    <li>• Order processing workflows</li>
-                    <li>• Customer service automation</li>
-                    <li>• Financial reporting automation</li>
-            {/* Month 3 */}
-            <div className="border-l-4 border-purple-500 pl-8">
-                <div className="bg-purple-500 text-white px-4 py-2 rounded-lg font-bold">Month 3</div>
-                <h3 className="text-2xl font-bold text-gray-900">Advanced Integration & AI</h3>
-                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 9-10: AI Integration</h4>
-                    <li>• AI-powered decision making</li>
-                    <li>• Predictive analytics implementation</li>
-                    <li>• Intelligent document processing</li>
-                    <li>• Chatbot and virtual assistant</li>
-                <div className="bg-orange-50 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 11-12: Optimization</h4>
-                    <li>• Performance monitoring and tuning</li>
-                    <li>• Advanced workflow optimization</li>
-                    <li>• Cross-department integration</li>
-                    <li>• Continuous improvement setup</li>
-        {/* Automation Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="text-5xl mb-4 text-center">📧</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Communication</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Email automation</li>
-              <li>• SMS campaigns</li>
-              <li>• Social media posting</li>
-              <li>• Customer notifications</li>
-            </ul>
-            <div className="text-5xl mb-4 text-center">📊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Data Management</h3>
-              <li>• Data entry automation</li>
-              <li>• Report generation</li>
-              <li>• Database synchronization</li>
-              <li>• Backup automation</li>
-            <div className="text-5xl mb-4 text-center">🛒</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Sales & Marketing</h3>
-              <li>• Lead scoring</li>
-              <li>• Follow-up sequences</li>
-              <li>• Campaign management</li>
-              <li>• Customer segmentation</li>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Finance</h3>
-              <li>• Invoice generation</li>
-              <li>• Payment processing</li>
-              <li>• Expense tracking</li>
-              <li>• Financial reporting</li>
-            <div className="text-5xl mb-4 text-center">👥</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">HR & Operations</h3>
-              <li>• Employee onboarding</li>
-              <li>• Timesheet management</li>
-              <li>• Performance reviews</li>
-              <li>• Leave management</li>
-            <div className="text-5xl mb-4 text-center">🔧</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">IT & Support</h3>
-              <li>• Ticket routing</li>
-              <li>• System monitoring</li>
-              <li>• Software updates</li>
-              <li>• Security scans</li>
-        {/* Success Metrics */}
-        <div className="bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl p-12 mb-16 text-white">
-            <h2 className="text-4xl font-bold mb-6">📈 Expected Results</h2>
-            <p className="text-xl opacity-90">
-              Measurable outcomes from implementing our automation guide
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold mb-4">Productivity</h3>
-              <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4">
-                <div className="text-3xl font-bold text-green-400 mb-2">+300%</div>
-                <p className="text-green-300 text-sm">Overall Productivity Increase</p>
-            
-              <div className="text-5xl mb-4">💰</div>
-              <h3 className="text-2xl font-bold mb-4">Cost Savings</h3>
-              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4">
-                <div className="text-3xl font-bold text-blue-400 mb-2">-50%</div>
-                <p className="text-blue-300 text-sm">Operational Cost Reduction</p>
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold mb-4">Accuracy</h3>
-              <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-4">
-                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-                <p className="text-purple-300 text-sm">Process Accuracy Rate</p>
-              <div className="text-5xl mb-4">⏱️</div>
-              <h3 className="text-2xl font-bold mb-4">Time Savings</h3>
-              <div className="bg-orange-500/20 border border-orange-500/30 rounded-lg p-4">
-                <div className="text-3xl font-bold text-orange-400 mb-2">40hrs</div>
-                <p className="text-orange-300 text-sm">Weekly Time Saved</p>
-        {/* Implementation Tools */}
-            <h2 className="text-4xl font-bold mb-6 text-gray-900">🛠️ Recommended Tools & Technologies</h2>
-              Proven automation platforms and technologies for maximum success
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">Workflow Automation</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Zapier</li>
-                <li>• Microsoft Power Automate</li>
-                <li>• UiPath</li>
-                <li>• Automation Anywhere</li>
-              </ul>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">CRM & Sales</h3>
-                <li>• Salesforce</li>
-                <li>• HubSpot</li>
-                <li>• Pipedrive</li>
-                <li>• Monday.com</li>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">AI & Analytics</h3>
-                <li>• OpenAI API</li>
-                <li>• Google Analytics</li>
-                <li>• Tableau</li>
-                <li>• Power BI</li>
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6 text-gray-900">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Start your automation journey today and achieve 80% business process automation in just 90 days. 
-            Our comprehensive guide provides everything you need for success.
-          <div className="flex justify-center space-x-6">
-            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Get Implementation Support
-            </a>
-            <a href="/pages/AdvancedTechSolutions2025" className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors text-lg">
-              Explore AI Solutions
-      </div>
-    </div>
-  );
-};
+            <div className="border-l-4 border-blue-500 pl-8 pb-8">,
+              <div className="flex items-center space-x-4 mb-4">,
+                <div className="bg-blue-500 text-white px-4 py-2 rounded-lg font-bold">Month 1</div>,
+                <h3 className="text-2xl font-bold text-gray-900">Foundation & Quick Wins</h3>,
+              </div>,
+              <div className="grid md: grid-cols-2 gap-6">,
+                <div className="bg-blue-50 rounded-lg p-6">,
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 1-2: Assessment</h4>,
+                  <ul className="space-y-2 text-gray-600">,
+                    <li>• Business process audit</li>,
+                    <li>• Automation opportunity identification</li>,
+                    <li>• Technology stack evaluation</li>,
+                    <li>• Team training preparation</li>,
+                  </ul>,
+                </div>,
+                <div className="bg-green-50 rounded-lg p-6">,
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 3-4: Quick Wins</h4>,
+                    <li>• Email automation setup</li>,
+                    <li>• Document workflow automation</li>,
+                    <li>• Basic data entry automation</li>,
+                    <li>• Customer onboarding automation</li>,
+            {/* Month 2 */,}
+            <div className="border-l-4 border-green-500 pl-8 pb-8">,
+                <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold">Month 2</div>,
+                <h3 className="text-2xl font-bold text-gray-900">Core Process Automation</h3>,
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 5-6: Sales & Marketing</h4>,
+                    <li>• Lead generation automation</li>,
+                    <li>• CRM integration and workflows</li>,
+                    <li>• Social media automation</li>,
+                    <li>• Email marketing campaigns</li>,
+                <div className="bg-purple-50 rounded-lg p-6">,
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 7-8: Operations</h4>,
+                    <li>• Inventory management automation</li>,
+                    <li>• Order processing workflows</li>,
+                    <li>• Customer service automation</li>,
+                    <li>• Financial reporting automation</li>,
+            {/* Month 3 */,}
+            <div className="border-l-4 border-purple-500 pl-8">,
+                <div className="bg-purple-500 text-white px-4 py-2 rounded-lg font-bold">Month 3</div>,
+                <h3 className="text-2xl font-bold text-gray-900">Advanced Integration & AI</h3>,
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 9-10: AI Integration</h4>,
+                    <li>• AI-powered decision making</li>,
+                    <li>• Predictive analytics implementation</li>,
+                    <li>• Intelligent document processing</li>,
+                    <li>• Chatbot and virtual assistant</li>,
+                <div className="bg-orange-50 rounded-lg p-6">,
+                  <h4 className="text-lg font-semibold mb-3 text-gray-900">Week 11-12: Optimization</h4>,
+                    <li>• Performance monitoring and tuning</li>,
+                    <li>• Advanced workflow optimization</li>,
+                    <li>• Cross-department integration</li>,
+                    <li>• Continuous improvement setup</li>,
+        {/* Automation Categories */,}
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
+            <div className="text-5xl mb-4 text-center">📧</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Communication</h3>,
+            <ul className="space-y-2 text-gray-600">,
+              <li>• Email automation</li>,
+              <li>• SMS campaigns</li>,
+              <li>• Social media posting</li>,
+              <li>• Customer notifications</li>,
+            </ul>,
+            <div className="text-5xl mb-4 text-center">📊</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Data Management</h3>,
+              <li>• Data entry automation</li>,
+              <li>• Report generation</li>,
+              <li>• Database synchronization</li>,
+              <li>• Backup automation</li>,
+            <div className="text-5xl mb-4 text-center">🛒</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Sales & Marketing</h3>,
+              <li>• Lead scoring</li>,
+              <li>• Follow-up sequences</li>,
+              <li>• Campaign management</li>,
+              <li>• Customer segmentation</li>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Finance</h3>,
+              <li>• Invoice generation</li>,
+              <li>• Payment processing</li>,
+              <li>• Expense tracking</li>,
+              <li>• Financial reporting</li>,
+            <div className="text-5xl mb-4 text-center">👥</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">HR & Operations</h3>,
+              <li>• Employee onboarding</li>,
+              <li>• Timesheet management</li>,
+              <li>• Performance reviews</li>,
+              <li>• Leave management</li>,
+            <div className="text-5xl mb-4 text-center">🔧</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">IT & Support</h3>,
+              <li>• Ticket routing</li>,
+              <li>• System monitoring</li>,
+              <li>• Software updates</li>,
+              <li>• Security scans</li>,
+        {/* Success Metrics */,}
+        <div className="bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl p-12 mb-16 text-white">,
+            <h2 className="text-4xl font-bold mb-6">📈 Expected Results</h2>,
+            <p className="text-xl opacity-90">,
+              Measurable outcomes from implementing our automation guide,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="text-center">,
+              <div className="text-5xl mb-4">⚡</div>,
+              <h3 className="text-2xl font-bold mb-4">Productivity</h3>,
+              <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4">,
+                <div className="text-3xl font-bold text-green-400 mb-2">+300%</div>,
+                <p className="text-green-300 text-sm">Overall Productivity Increase</p>,
+              <div className="text-5xl mb-4">💰</div>,
+              <h3 className="text-2xl font-bold mb-4">Cost Savings</h3>,
+              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4">,
+                <div className="text-3xl font-bold text-blue-400 mb-2">-50%</div>,
+                <p className="text-blue-300 text-sm">Operational Cost Reduction</p>,
+              <div className="text-5xl mb-4">🎯</div>,
+              <h3 className="text-2xl font-bold mb-4">Accuracy</h3>,
+              <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-4">,
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>,
+                <p className="text-purple-300 text-sm">Process Accuracy Rate</p>,
+              <div className="text-5xl mb-4">⏱️</div>,
+              <h3 className="text-2xl font-bold mb-4">Time Savings</h3>,
+              <div className="bg-orange-500/20 border border-orange-500/30 rounded-lg p-4">,
+                <div className="text-3xl font-bold text-orange-400 mb-2">40hrs</div>,
+                <p className="text-orange-300 text-sm">Weekly Time Saved</p>,
+        {/* Implementation Tools */,}
+            <h2 className="text-4xl font-bold mb-6 text-gray-900">🛠️ Recommended Tools & Technologies</h2>,
+              Proven automation platforms and technologies for maximum success,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
+            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">,
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">Workflow Automation</h3>,
+              <ul className="space-y-2 text-gray-600">,
+                <li>• Zapier</li>,
+                <li>• Microsoft Power Automate</li>,
+                <li>• UiPath</li>,
+                <li>• Automation Anywhere</li>,
+              </ul>,
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">CRM & Sales</h3>,
+                <li>• Salesforce</li>,
+                <li>• HubSpot</li>,
+                <li>• Pipedrive</li>,
+                <li>• Monday.com</li>,
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">AI & Analytics</h3>,
+                <li>• OpenAI API</li>,
+                <li>• Google Analytics</li>,
+                <li>• Tableau</li>,
+                <li>• Power BI</li>,
+        {/* Call to Action */,}
+        <div className="text-center">,
+          <h2 className="text-4xl font-bold mb-6 text-gray-900">Ready to Transform Your Business?</h2>,
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">,
+            Start your automation journey today and achieve 80% business process automation in just 90 days.,
+            Our comprehensive guide provides everything you need for success.,
+          <div className="flex justify-center space-x-6">,
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">,
+              Get Implementation Support,
+            </a>,
+            <a href="/pages/AdvancedTechSolutions2025" className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors text-lg">,
+              Explore AI Solutions,
+      </div>,
+    </div>,
+  ),};
 export default BusinessAutomationGuide2025;

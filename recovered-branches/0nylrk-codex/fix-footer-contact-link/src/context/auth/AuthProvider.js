@@ -1,18 +1,17 @@
-// Auth provider
+// Auth provider,
 import React, { createContext, useContext } from 'react';
 const AuthContext = createContext();
-export const AuthProvider = ({ children }) => {
-  const value = {
-    isAuthenticated: false,
-    user: null,
-    login: () => {},
+export const AuthProvider = ({ children }) => {,
+  const value = {,
+    isAuthenticated: false;
+    user: null;
+    login: () => {};
     logout: () => {}
   };
-  return (
-    <AuthContext.Provider value={value}>
+  return (,
+    <AuthContext.Provider value={value}>,
       {children}
-    </AuthContext.Provider>
+    </AuthContext.Provider>,
   );
 };
-
 export const useAuth = () => useContext(AuthContext);

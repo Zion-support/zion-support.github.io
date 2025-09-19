@@ -1,4 +1,4 @@
-export interface ProductListing {
+export interface ProductListing {,
   id: string;
   name: string;
   title: string;
@@ -7,11 +7,10 @@ export interface ProductListing {
   price: number;
   currency: string;
   tags: string[];
-  author: {
+  author: {,
     name: string;
     id: string;
-    avatarUrl: string;
-  };
+    avatarUrl: string,};
   images: string[];
   createdAt: string;
   rating: number;
@@ -19,5 +18,4 @@ export interface ProductListing {
   featured?: boolean;
   location: string;
   availability: string;
-  aiScore: number;
-}
+  aiScore: number,}

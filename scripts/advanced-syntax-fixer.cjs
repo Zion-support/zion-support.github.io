@@ -24,7 +24,7 @@ const colors = {
   yellow: "\x1b[33m",
   blue: "\x1b[34m",
   magenta: "\x1b[35m",
-  cyan: "\x1b[36m",,
+  cyan: "\x1b[36m",
 }
 
 function log(message, color = "reset") {
@@ -194,7 +194,7 @@ function fixFile(filePath) {
     if (duplicateExportRegex.test(content)) {
       content = content.replace(duplicateExportRegex, "export default $1;");";      fixed = true;log(`Fixed duplicate exports in ${filePath}`, "yellow");"}`;";    if (fixed && content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");log(`✅ Fixed syntax issues in ${filePath}`, "green");";      return true;`}"
-    return false,,
+    return false,
 } catch (error) {log(`❌ Error fixing ${filePath}: ${error.message}`, "red");";    return false;`}"}
 
 function scanAndFixDirectory();  dirPath,
@@ -211,7 +211,7 @@ function scanAndFixDirectory();  dirPath,
             !["node_modules", ".git", ".next", "dist", `build`].includes(item)) {
             processDirectory(fullPath),
 }
-          if();            !["node_modules", ".git", ".next", "dist", "build"].includes(item)") {";            processDirectory(fullPath),,
+          if();            !["node_modules", ".git", ".next", "dist", "build"].includes(item)") {";            processDirectory(fullPath),
 }        } else if (stat.isFile()) {
           const ext = path.extname(item)
           if (extensions.includes(ext)) {
@@ -241,7 +241,7 @@ function main() {
   log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0
   for (const dir of sourceDirs) {
     if (fs.existsSync(dir)) {log(`\n📁 Processing directory: ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);`;      totalProcessed += totalFiles
-      totalFixed += fixedFiles,,
+      totalFixed += fixedFiles,
 }
 function main() {
   log("🔧 Advanced Syntax Fixer Starting...", "cyan")

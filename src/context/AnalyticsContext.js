@@ -1,16 +1,15 @@
-// Analytics context
+// Analytics context,
 import React, { createContext, useContext } from 'react';
 const AnalyticsContext = createContext();
-export const AnalyticsProvider = ({ children }) => {
-  const value = {
-    track: () => {},
+export const AnalyticsProvider = ({ children }) => {,
+  const value = {,
+    track: () => {};
     page: () => {}
   };
-  return (
-    <AnalyticsContext.Provider value={value}>
+  return (,
+    <AnalyticsContext.Provider value={value}>,
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>,
   );
 };
-
 export const useAnalytics = () => useContext(AnalyticsContext);

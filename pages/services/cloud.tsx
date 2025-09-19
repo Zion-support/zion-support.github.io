@@ -1,19 +1,15 @@
 import type { NextPage } from 'next';
-
-const Cloud: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Cloud - Zion Tech Solutions</title>
-        <meta name="description" content="Cloud service" />
-      </Head>
-      
-      <main>
-        <h1>Cloud</h1>
-        <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
-      </main>
-    </div>
-  );
-};
-
+const Cloud: NextPage = () => {,
+  return (,
+    <div>,
+      <Head>,
+        <title>Cloud - Zion Tech Solutions</title>,
+        <meta name="description" content="Cloud service" />,
+      </Head>,
+      <main>,
+        <h1>Cloud</h1>,
+        <p>Service details coming soon...</p>,
+        <Link href="/services">Back to Services</Link>,
+      </main>,
+    </div>,
+  ),};

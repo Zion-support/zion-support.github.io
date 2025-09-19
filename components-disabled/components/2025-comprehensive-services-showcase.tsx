@@ -1,7 +1,5 @@
 import React from 'react';
-
-    </div>
+    </div>,
   );
 };
-
 export default 2025-comprehensive-services-showcase;

@@ -1,6 +1,6 @@
+import React from 'react',
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-
   id: string;
   title: string;
   message: string;
@@ -13,23 +13,15 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   actions?: NotificationAction[];
   metadata?: Record < string, any>;
   expiresAt?: Date;
-
   label: string;
   action: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
-
-interface SmartNotificationSystemProps {
-
-  // Add your props here: any;
-
-};
-
-const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+,
+interface SmartNotificationSystemProps {,
+  // Add your props here: any,};
+const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enabled = true ,}) => {,
   if(!enabled) return null;
   return <div className="hidden" aria-hidden="true"  />};
-
-export default SmartNotificationSystem;
-;,"});,})";
-
-</SmartNotificationSystemProps>
+export default SmartNotificationSystem,"}),})";
+</SmartNotificationSystemProps>,

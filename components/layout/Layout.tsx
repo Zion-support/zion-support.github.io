@@ -7,52 +7,42 @@ import TopContactBar from './TopContactBar';
 import PerformanceMonitor from '../PerformanceMonitor';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
+interface LayoutProps {,
+  children: React.ReactNode,}
+,
+export default function Layout({ children }: LayoutProps) {,
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+  return (,
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">,
       {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
-      
+      <a href="#main" className="skip-link">Skip to main content</a>,
       {/* Futuristic Background */}
-      <UltraFuturisticBackground2036 />
-      
+      <UltraFuturisticBackground2036 />,
       {/* Layout Structure */}
-      <div className="relative z-10">
+      <div className="relative z-10">,
         {/* Top Contact Bar */}
-        <TopContactBar />
-        
+        <TopContactBar />,
         {/* Navigation */}
-        <UltraFuturisticNavigation2040 />
-        
+        <UltraFuturisticNavigation2040 />,
         {/* Sidebar and Main Content */}
-        <div className="flex">
-          <EnhancedSidebar2025 
-            isOpen={sidebarOpen} 
-            onClose={() => setSidebarOpen(false)} 
-          />
-          
-          <main id="main" role="main" className="flex-1 pt-24 lg:pt-28">
-            {children}
-          </main>
-        </div>
-        
+        <div className="flex">,
+          <EnhancedSidebar2025,
+            isOpen={sidebarOpen} ,
+            onClose={() => setSidebarOpen(false)} ,
+          />,
+          <main id="main" role="main" className="flex-1 pt-24 lg: pt-28">,
+            {children,}
+          </main>,
+        </div>,
         {/* Footer */}
-        <UltraFuturisticFooter2040 />
-      </div>
-
+        <UltraFuturisticFooter2040 />,
+      </div>,
       {/* Accessibility and Performance Tools */}
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
-      
+      <AccessibilityEnhancer />,
+      <PerformanceMonitor />,
       {/* Cookie Consent Banner */}
-      <CookieConsentBanner />
-    </div>
+      <CookieConsentBanner />,
+    </div>,
   );
 }
+,

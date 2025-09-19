@@ -1,4 +1,3 @@
 // Utility functions for error-monitor;
 export const error-monitor = {;
-  // TODO: Implement utility functions;
-};
+  // TODO: Implement utility functions,};

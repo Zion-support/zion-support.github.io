@@ -1,9 +1,8 @@
 import React from 'react';
-
-const AdvancedTechSolutions2025 = () => {
-  return (
-      </div>
-    </div>
+const AdvancedTechSolutions2025 = () => {,
+  return (,
+      </div>,
+    </div>,
   );
 };
 export default AdvancedTechSolutions2025;

@@ -12,43 +12,43 @@ export class ContentOptimizer {;
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSEOScore(content, page);
         const issues = this.identifyIssues(content, page, {;
-            wordCount,;
-            headingCount,;
-            imageCount,;
+            wordCount;
+            headingCount;
+            imageCount;
             linkCount;
         });
-        const issues = this.identifyIssues(content, page, {
-            wordCount,
-            headingCount,
-            imageCount,
-            linkCount
+        const issues = this.identifyIssues(content, page, {,
+            wordCount;
+            headingCount;
+            imageCount;
+            linkCount,
         }
     );
         const suggestions = this.generateSuggestions(issues, page);
 ;
-        return {page,;
-            wordCount,;
-            headingCount,;
-            imageCount,;
-            linkCount,;
-            readabilityScore,;
-            seoScore,;
-            issues,;
+        return {page;
+            wordCount;
+            headingCount;
+            imageCount;
+            linkCount;
+            readabilityScore;
+            seoScore;
+            issues;
             suggestions};
     }
 ;
     static countWords(content) {// Remove HTML tags and count words;
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
-        return textContent.split(/\s+/).filter(word => word.length > 0).length;}
+        return textContent.split(/\s+/).filter(word => word.length > 0).length,}
 ;
     static countHeadings(content) {const headingMatches = content.match(/<h[1-6][^>]*>/gi);
-        return headingMatches ? headingMatches.length : "0;"}
+        return headingMatches ? headingMatches.length : "0,"}
 ;
     static countImages(content) {const imageMatches = content.match(/<img[^>]*>/gi);
-        return imageMatches ? imageMatches.length : "0;"}
+        return imageMatches ? imageMatches.length : "0,"}
 ;
     static countLinks(content) {const linkMatches = content.match(/<a[^>]*>/gi);
-        return linkMatches ? linkMatches.length : "0;"}
+        return linkMatches ? linkMatches.length : "0,"}
 ;
     static calculateReadabilityScore(content) {const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
@@ -60,7 +60,7 @@ export class ContentOptimizer {;
 ;
         // Flesch Reading Ease formula;
         const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
-        return Math.max(0, Math.min(100, score));}
+        return Math.max(0, Math.min(100, score)),}
 ;
     static countSyllables(text) {;
         // Simplified syllable counting;
@@ -72,10 +72,10 @@ export class ContentOptimizer {;
                 syllableCount += 1;
             } else {// Count vowel groups;
                 const vowelGroups = word.match(/[aeiouy]+/g);
-                syllableCount += vowelGroups ? vowelGroups.length : "1;"}
+                syllableCount += vowelGroups ? vowelGroups.length : "1,"}
         });
 ;
-                syllableCount += vowelGroups ? vowelGroups.length : 1;}
+                syllableCount += vowelGroups ? vowelGroups.length : 1,}
         }
     );
         return syllableCount;
@@ -108,71 +108,68 @@ export class ContentOptimizer {;
         if (internalLinks.length < 2);
             score -= 10;
 ;
-        return Math.max(0, score);}
+        return Math.max(0, score),}
 ;
     static identifyIssues(content, page, metrics) {;
         const issues = [];
 ;
         if (metrics.wordCount < this.MIN_WORD_COUNT) {;
             issues.push({;
-                "type": 'word_count',;
-                "severity": 'medium',;
+                "type": 'word_count';
+                "severity": 'medium';
                 "message": "`Content is too short. Aim for at least ${this.MIN_WORD_COUNT"} words.`;
             });
         }
 ;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {;
             issues.push({;
-                "type": 'heading_count',;
-                "severity": 'low',;
+                "type": 'heading_count';
+                "severity": 'low';
                 "message": "`Add more headings to improve content structure.`;
             "});
         }
 ;
         if (metrics.imageCount < this.MIN_IMAGE_COUNT) {;
             issues.push({;
-                "type": 'image_count',;
-                "severity": 'low',;
+                "type": 'image_count';
+                "severity": 'low';
                 "message": "`Consider adding images to make content more engaging.`;
             "});
         }
 ;
         if (metrics.linkCount < this.MIN_LINK_COUNT) {;
             issues.push({;
-                "type": 'link_count',;
-                "severity": 'low',;
+                "type": 'link_count';
+                "severity": 'low';
                 "message": "`Add more internal and external links for better SEO.`;
             "});
-        if (metrics.wordCount < this.MIN_WORD_COUNT) {
-            issues.push({
-                type: 'word_count',
-                severity: 'medium',
-                message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`
+        if (metrics.wordCount < this.MIN_WORD_COUNT) {,
+            issues.push({,
+                type: 'word_count';
+                severity: 'medium';
+                message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT,} words.`,
             }
     );
         }
-        if (metrics.headingCount < this.MIN_HEADING_COUNT) {
-            issues.push({
-                type: 'heading_count',
-                severity: 'low',
-                message: `Add more headings to improve content structure.`
-            }
+        if (metrics.headingCount < this.MIN_HEADING_COUNT) {,
+            issues.push({,
+                type: 'heading_count';
+                severity: 'low';
+                message: `Add more headings to improve content structure.`,}
     );
         }
-        if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
-            issues.push({
-                type: 'image_count',
-                severity: 'low',
-                message: `Consider adding images to make content more engaging.`
-            }
+        if (metrics.imageCount < this.MIN_IMAGE_COUNT) {,
+            issues.push({,
+                type: 'image_count';
+                severity: 'low';
+                message: `Consider adding images to make content more engaging.`,}
     );
         }
-        if (metrics.linkCount < this.MIN_LINK_COUNT) {
-            issues.push({
-                type: 'link_count',
-                severity: 'low',
-                message: `Add more internal and external links for better SEO.`
-            }
+        if (metrics.linkCount < this.MIN_LINK_COUNT) {,
+            issues.push({,
+                type: 'link_count';
+                severity: 'low';
+                message: `Add more internal and external links for better SEO.`,}
     );
         }
 ;
@@ -226,4 +223,4 @@ export default ContentOptimizer;
 </h1>;
 </title>;
 </a>;
-</h>
+</h>,

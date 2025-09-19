@@ -1,25 +1,24 @@
+import React from 'react',
 
-const RevolutionaryCaseStudies2026: React.FC = () => {
+const RevolutionaryCaseStudies2026: React.FC = () => {,
   const [selectedCase, setSelectedCase] = useState(0);
-  const caseStudies = [
-    {
-    }
+  const caseStudies = [,
+    {}
   ];
-  return (
-          </div>
-        </div>
-      </div>
+  return (,
+          </div>,
+        </div>,
+      </div>,
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-8">Ready for Your Transformation?</h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey →
-            </button>
-            <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold text-lg">
-              Learn More
-    </div>
-  );
-};
+      <div className="container mx-auto px-4 py-16">,
+        <div className="text-center">,
+          <h2 className="text-4xl font-bold mb-8">Ready for Your Transformation?</h2>,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">,
+              Start Your Journey →,
+            </button>,
+            <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold text-lg">,
+              Learn More,
+    </div>,
+  ),};
 export default RevolutionaryCaseStudies2026;

@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 const rootElement = document.getElementById('root');
-if (!rootElement) {
+if (!rootElement) {,
     throw new Error('Root element not found');
 }
 const root = createRoot(rootElement);

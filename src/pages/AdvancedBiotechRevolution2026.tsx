@@ -1,142 +1,138 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const AdvancedBiotechRevolution2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧬 BIOTECH REVOLUTION • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Advanced Biotech Revolution 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Pioneering the future of biotechnology with revolutionary solutions that enhance human capabilities, cure diseases, and extend life expectancy.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Biotech Solutions
-              </button>
-              <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
-                Research Overview
-          </motion.div>
-        </div>
-      </div>
-      {/* Breakthrough Technologies */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Revolutionary Biotech Breakthroughs</h2>
-          <p className="text-xl opacity-80">Transforming medicine and human potential</p>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300"
-            <div className="text-6xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Gene Therapy 2.0</h3>
-            <p className="text-green-100 mb-6 text-center">
-              Advanced gene editing technologies that can cure genetic diseases and enhance human capabilities
-            <ul className="text-green-200 space-y-2 text-sm">
-              <li>• CRISPR-3.0 precision editing</li>
-              <li>• Real-time gene monitoring</li>
-              <li>• Personalized treatments</li>
-            </ul>
-          
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-            <div className="text-6xl mb-4 text-center">🦠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Biology</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Engineering biological systems to create new organisms and materials for medical applications
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Designer proteins</li>
-              <li>• Artificial organs</li>
-              <li>• Bio-manufacturing</li>
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Neural Enhancement</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Advanced neural interfaces and brain-computer integration for enhanced cognitive abilities
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Memory augmentation</li>
-              <li>• Cognitive enhancement</li>
-              <li>• Neural prosthetics</li>
-      {/* Medical Applications */}
-          <h2 className="text-4xl font-bold mb-4">Medical Applications</h2>
-          <p className="text-xl opacity-80">Revolutionizing healthcare with biotechnology</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-            <div className="text-4xl mb-4">💊</div>
-            <h3 className="text-xl font-semibold mb-2">Personalized Medicine</h3>
-            <p className="text-sm opacity-80">Custom treatments based on individual genetic profiles</p>
-          </div>
-            <div className="text-4xl mb-4">🫀</div>
-            <h3 className="text-xl font-semibold mb-2">Organ Regeneration</h3>
-            <p className="text-sm opacity-80">Growing replacement organs from patient's own cells</p>
-            <div className="text-4xl mb-4">🔬</div>
-            <h3 className="text-xl font-semibold mb-2">Cancer Treatment</h3>
-            <p className="text-sm opacity-80">Targeted therapies that eliminate cancer cells precisely</p>
-            <div className="text-4xl mb-4">⏰</div>
-            <h3 className="text-xl font-semibold mb-2">Longevity Research</h3>
-            <p className="text-sm opacity-80">Extending healthy human lifespan through biotechnology</p>
-      {/* Research Areas */}
-          <h2 className="text-4xl font-bold mb-4">Research Focus Areas</h2>
-          <p className="text-xl opacity-80">Leading the future of biotechnology research</p>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Regenerative Medicine</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Stem cell therapy for tissue regeneration
-              </li>
-                3D bioprinting of complex organs
-                Cellular reprogramming techniques
-                Biomaterial development for implants
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Synthetic Biology</h3>
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                Engineered biological circuits
-                Artificial life forms for medical use
-                Bio-manufacturing of pharmaceuticals
-                Environmental biotechnology solutions
-      {/* Impact Statistics */}
-        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-12">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Revolutionary Impact</h2>
-            <p className="text-xl opacity-80">Transforming healthcare and human potential</p>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
-              <p className="text-green-100">Success Rate in Gene Therapy</p>
-              <div className="text-4xl font-bold text-emerald-400 mb-2">50+</div>
-              <p className="text-emerald-100">Diseases Cured</p>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">30%</div>
-              <p className="text-cyan-100">Life Extension Achieved</p>
-              <div className="text-4xl font-bold text-blue-400 mb-2">1M+</div>
-              <p className="text-blue-100">Lives Improved</p>
-      {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Join the Biotech Revolution</h2>
-          <p className="text-xl opacity-80 mb-8">Be part of the future of medicine and human enhancement</p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Treatment
-            </button>
-            <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
-              Research Partnership
-    </div>
-  );
-};
+const AdvancedBiotechRevolution2026: React.FC = () => {,
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">,
+      {/* Hero Section */,}
+      <div className="relative overflow-hidden">,
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>,
+        <div className="relative z-10 container mx-auto px-4 py-20">,
+          <motion.div,
+            initial={{ opacity: 0, y: 50 ,}}
+            animate={{ opacity: 1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
+            className="text-center",
+          >,
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">,
+              🧬 BIOTECH REVOLUTION • JANUARY 2026,
+            </div>,
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">,
+              Advanced Biotech Revolution 2026,
+            </h1>,
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">,
+              Pioneering the future of biotechnology with revolutionary solutions that enhance human capabilities, cure diseases, and extend life expectancy.,
+            </p>,
+            <div className="flex justify-center space-x-4">,
+              <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">,
+                Explore Biotech Solutions,
+              </button>,
+              <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">,
+                Research Overview,
+          </motion.div>,
+        </div>,
+      </div>,
+      {/* Breakthrough Technologies */,}
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center mb-16">,
+          <h2 className="text-4xl font-bold mb-4">Revolutionary Biotech Breakthroughs</h2>,
+          <p className="text-xl opacity-80">Transforming medicine and human potential</p>,
+        <div className="grid md: grid-cols-3 gap-8">,
+            whileInView={{ opacity: 1, y: 0 ,}}
+            transition={{ duration: 0.6 ,}}
+            className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all duration-300",
+            <div className="text-6xl mb-4 text-center">🧬</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center">Gene Therapy 2.0</h3>,
+            <p className="text-green-100 mb-6 text-center">,
+              Advanced gene editing technologies that can cure genetic diseases and enhance human capabilities,
+            <ul className="text-green-200 space-y-2 text-sm">,
+              <li>• CRISPR-3.0 precision editing</li>,
+              <li>• Real-time gene monitoring</li>,
+              <li>• Personalized treatments</li>,
+            </ul>,
+            transition={{ duration: 0.6, delay: 0.2 ,}}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover: scale-105 transition-all duration-300",
+            <div className="text-6xl mb-4 text-center">🦠</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Biology</h3>,
+            <p className="text-cyan-100 mb-6 text-center">,
+              Engineering biological systems to create new organisms and materials for medical applications,
+            <ul className="text-cyan-200 space-y-2 text-sm">,
+              <li>• Designer proteins</li>,
+              <li>• Artificial organs</li>,
+              <li>• Bio-manufacturing</li>,
+            transition={{ duration: 0.6, delay: 0.4 ,}}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all duration-300",
+            <div className="text-6xl mb-4 text-center">🧠</div>,
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Enhancement</h3>,
+            <p className="text-purple-100 mb-6 text-center">,
+              Advanced neural interfaces and brain-computer integration for enhanced cognitive abilities,
+            <ul className="text-purple-200 space-y-2 text-sm">,
+              <li>• Memory augmentation</li>,
+              <li>• Cognitive enhancement</li>,
+              <li>• Neural prosthetics</li>,
+      {/* Medical Applications */,}
+          <h2 className="text-4xl font-bold mb-4">Medical Applications</h2>,
+          <p className="text-xl opacity-80">Revolutionizing healthcare with biotechnology</p>,
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">,
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">,
+            <div className="text-4xl mb-4">💊</div>,
+            <h3 className="text-xl font-semibold mb-2">Personalized Medicine</h3>,
+            <p className="text-sm opacity-80">Custom treatments based on individual genetic profiles</p>,
+          </div>,
+            <div className="text-4xl mb-4">🫀</div>,
+            <h3 className="text-xl font-semibold mb-2">Organ Regeneration</h3>,
+            <p className="text-sm opacity-80">Growing replacement organs from patient's own cells</p>,
+            <div className="text-4xl mb-4">🔬</div>,
+            <h3 className="text-xl font-semibold mb-2">Cancer Treatment</h3>,
+            <p className="text-sm opacity-80">Targeted therapies that eliminate cancer cells precisely</p>,
+            <div className="text-4xl mb-4">⏰</div>,
+            <h3 className="text-xl font-semibold mb-2">Longevity Research</h3>,
+            <p className="text-sm opacity-80">Extending healthy human lifespan through biotechnology</p>,
+      {/* Research Areas */,}
+          <h2 className="text-4xl font-bold mb-4">Research Focus Areas</h2>,
+          <p className="text-xl opacity-80">Leading the future of biotechnology research</p>,
+        <div className="grid md: grid-cols-2 gap-8">,
+          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8">,
+            <h3 className="text-2xl font-bold mb-4">Regenerative Medicine</h3>,
+            <ul className="space-y-3">,
+              <li className="flex items-center">,
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>,
+                Stem cell therapy for tissue regeneration,
+              </li>,
+                3D bioprinting of complex organs,
+                Cellular reprogramming techniques,
+                Biomaterial development for implants,
+          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8">,
+            <h3 className="text-2xl font-bold mb-4">Synthetic Biology</h3>,
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>,
+                Engineered biological circuits,
+                Artificial life forms for medical use,
+                Bio-manufacturing of pharmaceuticals,
+                Environmental biotechnology solutions,
+      {/* Impact Statistics */,}
+        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-12">,
+          <div className="text-center mb-12">,
+            <h2 className="text-4xl font-bold mb-4">Revolutionary Impact</h2>,
+            <p className="text-xl opacity-80">Transforming healthcare and human potential</p>,
+          <div className="grid md: grid-cols-4 gap-8">,
+            <div className="text-center">,
+              <div className="text-4xl font-bold text-green-400 mb-2">95%</div>,
+              <p className="text-green-100">Success Rate in Gene Therapy</p>,
+              <div className="text-4xl font-bold text-emerald-400 mb-2">50+</div>,
+              <p className="text-emerald-100">Diseases Cured</p>,
+              <div className="text-4xl font-bold text-cyan-400 mb-2">30%</div>,
+              <p className="text-cyan-100">Life Extension Achieved</p>,
+              <div className="text-4xl font-bold text-blue-400 mb-2">1M+</div>,
+              <p className="text-blue-100">Lives Improved</p>,
+      {/* CTA Section */,}
+        <div className="text-center">,
+          <h2 className="text-4xl font-bold mb-4">Join the Biotech Revolution</h2>,
+          <p className="text-xl opacity-80 mb-8">Be part of the future of medicine and human enhancement</p>,
+          <div className="flex justify-center space-x-4">,
+            <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">,
+              Start Treatment,
+            </button>,
+            <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">,
+              Research Partnership,
+    </div>,
+  ),};
 export default AdvancedBiotechRevolution2026;

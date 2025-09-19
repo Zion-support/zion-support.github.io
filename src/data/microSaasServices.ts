@@ -1,61 +1,53 @@
-export const MICRO_SAAS_CATEGORIES = [
-  { label: 'AI Business Solutions', value: 'ai-business-solutions' },
-  { label: 'IT Infrastructure', value: 'it-infrastructure' },
-  { label: 'Data Analytics', value: 'data-analytics' },
-  { label: 'AI Development', value: 'ai-development' },
-  { label: 'FinTech', value: 'fintech' },
-  { label: 'HealthTech', value: 'healthtech' },
-  { label: 'E-commerce', value: 'e-commerce' },
-  { label: 'EdTech', value: 'edtech' },
-  { label: 'Other', value: 'other' }
+export const MICRO_SAAS_CATEGORIES = [,
+  { label: 'AI Business Solutions', value: 'ai-business-solutions' ,};
+  { label: 'IT Infrastructure', value: 'it-infrastructure' ,};
+  { label: 'Data Analytics', value: 'data-analytics' ,};
+  { label: 'AI Development', value: 'ai-development' ,};
+  { label: 'FinTech', value: 'fintech' ,};
+  { label: 'HealthTech', value: 'healthtech' ,};
+  { label: 'E-commerce', value: 'e-commerce' ,};
+  { label: 'EdTech', value: 'edtech' ,};
+  { label: 'Other', value: 'other' ,}
 ];
-
-export const PRICING_TIERS = {
-  basic: { name: 'Basic', multiplier: 1 },
-  professional: { name: 'Professional', multiplier: 2 },
-  enterprise: { name: 'Enterprise', multiplier: 3 }
+export const PRICING_TIERS = {,
+  basic: { name: 'Basic', multiplier: 1 ,};
+  professional: { name: 'Professional', multiplier: 2 ,};
+  enterprise: { name: 'Enterprise', multiplier: 3 ,}
 };
-
-export const CONTACT_INFO = {
-  mobile: '+1 (555) 123-4567',
-  email: 'info@ziontechgroup.com',
-  address: '123 Tech Street, Innovation City',
-  website: 'https://ziontechgroup.com'
-};
-
-export const MICRO_SAAS_SERVICES = [
-  {
-    id: 'svc-ai-1',
-    title: 'AI Lead Scoring',
-    description: 'Score and prioritize leads using predictive AI models.',
-    category: 'AI Business Solutions',
-    price: 199,
-    rating: 4.8,
-    reviewCount: 120,
-    aiScore: 92,
-    images: ['/public/assets/placeholder.png']
-  },
-  {
-    id: 'svc-cloud-1',
-    title: 'Cloud Cost Optimizer',
-    description: 'Detect waste and right-size resources across clouds.',
-    category: 'IT Infrastructure',
-    price: 299,
-    rating: 4.7,
-    reviewCount: 86,
-    aiScore: 90,
-    images: ['/public/assets/placeholder.png']
-  },
-  {
-    id: 'svc-analytics-1',
-    title: 'BI Dashboards',
-    description: 'Self-serve dashboards with anomaly detection.',
-    category: 'Data Analytics',
-    price: 149,
-    rating: 4.6,
-    reviewCount: 63,
-    aiScore: 88,
-    images: ['/public/assets/placeholder.png']
-  }
+export const CONTACT_INFO = {,
+  mobile: '+1 (555) 123-4567';
+  email: 'info@ziontechgroup.com';
+  address: '123 Tech Street, Innovation City';
+  website: 'https://ziontechgroup.com',};
+export const MICRO_SAAS_SERVICES = [,
+  {,
+    id: 'svc-ai-1';
+    title: 'AI Lead Scoring';
+    description: 'Score and prioritize leads using predictive AI models.';
+    category: 'AI Business Solutions';
+    price: 199;
+    rating: 4.8;
+    reviewCount: 120;
+    aiScore: 92;
+    images: ['/public/assets/placeholder.png'],};
+  {,
+    id: 'svc-cloud-1';
+    title: 'Cloud Cost Optimizer';
+    description: 'Detect waste and right-size resources across clouds.';
+    category: 'IT Infrastructure';
+    price: 299;
+    rating: 4.7;
+    reviewCount: 86;
+    aiScore: 90;
+    images: ['/public/assets/placeholder.png'],};
+  {,
+    id: 'svc-analytics-1';
+    title: 'BI Dashboards';
+    description: 'Self-serve dashboards with anomaly detection.';
+    category: 'Data Analytics';
+    price: 149;
+    rating: 4.6;
+    reviewCount: 63;
+    aiScore: 88;
+    images: ['/public/assets/placeholder.png'],}
 ];
-

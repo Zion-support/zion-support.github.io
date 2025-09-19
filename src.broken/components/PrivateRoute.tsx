@@ -1,9 +1,10 @@
 import React from 'react';
-export function PrivateRoute() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
+export function PrivateRoute() {,
+  return (,
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>,
   );
 }
+,

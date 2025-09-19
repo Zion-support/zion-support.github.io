@@ -11,7 +11,7 @@ function main() {;
   log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;
   for (const dir of sourceDirs) {;
     if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);";      totalProcessed += totalFiles;
-      totalFixed += fixedFiles,,}
+      totalFixed += fixedFiles,}
 function main() {;
   log("🔧 Advanced Syntax Fixer Starting...", "cyan");
   const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
@@ -116,7 +116,7 @@ function log(message, color = "reset")
     // Fix "10"
       content = content.replace(duplicateExportRegex, "export default $1;");";      fixed = true;log(`Fixed duplicate exports in ${filePath}`, "yellow");"}";"
       fs.writeFileSync(filePath, content, "utf8");log(" Fixed syntax issues in ${filePath}", "green");";      return true;"}"
-    return false,,} catch (error) {log(` Error fixing ${filePath}: ${error.message}`, "red");";    return false;"}"
+    return false,} catch (error) {log(` Error fixing ${filePath}: ${error.message}`, "red");";    return false;"}"
   extensions = [".js", ".jsx", ".ts", ".tsx"]") {"}
             !["node_modules", ".git", ".next", "dist", "]
           if();            !["node_modules", ".git", ".next", "dist", "build"].includes(item)") {"}

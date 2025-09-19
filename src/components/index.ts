@@ -1,4 +1,4 @@
-// Centralized component exports for better tree shaking
+// Centralized component exports for better tree shaking,
 export { default as EnhancedHeroSection }  from './EnhancedHeroSection';
 export { default as FeaturedContentSection }  from './FeaturedContentSection';
 export { default as DynamicContentCarousel }  from './DynamicContentCarousel';

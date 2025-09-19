@@ -1,9 +1,8 @@
 import React from 'react';
-
-const NeuralInterfaceFuture = () => {
-  return (
-      </div>
-    </div>
+const NeuralInterfaceFuture = () => {,
+  return (,
+      </div>,
+    </div>,
   );
 };
 export default NeuralInterfaceFuture;

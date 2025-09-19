@@ -1,68 +1,67 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ;
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
-  DollarSign, Users, Clock, CheckCircle, ArrowRight,;
-  Phone, Mail, MapPin, ExternalLink, Search, Filter,;
-  Grid, List, ChevronDown, ChevronUp, Sparkles,;
+  DollarSign, Users, Clock, CheckCircle, ArrowRight;
+  Phone, Mail, MapPin, ExternalLink, Search, Filter;
+  Grid, List, ChevronDown, ChevronUp, Sparkles;
   Crown, Award, Target, Globe, Cpu, Database;
-} from 'lucide-react',;
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import { innovativeAIServices } from '../data/innovative-ai-services',;
-import { quantumSpaceServices } from '../data/quantum-space-services',;
-import { enterpriseITServices } from '../data/enterprise-it-services',;
-import { realMarketServices } from '../data/real-market-services',;
-import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025',;
+} from 'lucide-react';
+import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { realMarketServices } from '../data/real-market-services';
+import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
 ;
 export default function EnhancedServicesShowcase() {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [sortBy, setSortBy] = useState<string>('name'),;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<string>('name');
 ;
   const contactInfo = {;
-    mobile:'+1 302 464 0950',;
-    email:'kleber@ziontechgroup.com',;
-    address:'364 E Main St STE 1008 Middletown DE 19709',;
-    website:'https://ziontechgroup.com';
-  },;
+    mobile:'+1 302 464 0950';
+    email:'kleber@ziontechgroup.com';
+    address:'364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com',};
 ;
   // Combine all services for comprehensive showcase;
   const allServices = [;
-    ...nextGenerationAIServices,;
-    ...cuttingEdgeITServices,;
-    ...innovativeMicroSaasV2Services,;
-    ...enhancedRealMicroSaasServices,;
-    ...innovativeAIServices,;
-    ...quantumSpaceServices,;
-    ...enterpriseITServices,;
-    ...realMarketServices,;
+    ...nextGenerationAIServices;
+    ...cuttingEdgeITServices;
+    ...innovativeMicroSaasV2Services;
+    ...enhancedRealMicroSaasServices;
+    ...innovativeAIServices;
+    ...quantumSpaceServices;
+    ...enterpriseITServices;
+    ...realMarketServices;
     ...newVerifiedServicesQ22025;
-  ],;
+  ];
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'', count:allServices.length },;
-    { id:'next-gen-ai', name:'ArrowRight-Gen AI', icon:'', count:nextGenerationAIServices.length },;
-    { id:'cutting-edge-it', name:'Cutting-Edge IT', icon:'', count:cuttingEdgeITServices.length },;
-    { id:'innovative-saas', name:'Innovative SaaS', icon:'', count:innovativeMicroSaasV2Services.length },;
-    { id:'quantum-space', name:'Quantum & Space', icon:'', count:quantumSpaceServices.length },;
-    { id:'enterprise', name:'Enterprise IT', icon:'', count:enterpriseITServices.length }
-  ],;
+    { id:'all', name:'All Services', icon:'', count: allServices.length ,};
+    { id:'next-gen-ai', name:'ArrowRight-Gen AI', icon:'', count: nextGenerationAIServices.length ,};
+    { id:'cutting-edge-it', name:'Cutting-Edge IT', icon:'', count: cuttingEdgeITServices.length ,};
+    { id:'innovative-saas', name:'Innovative SaaS', icon:'', count: innovativeMicroSaasV2Services.length ,};
+    { id:'quantum-space', name:'Quantum & Space', icon:'', count: quantumSpaceServices.length ,};
+    { id:'enterprise', name:'Enterprise IT', icon:'', count: enterpriseITServices.length ,}
+  ];
 ;
   const sortOptions = [;
-    { id:'name', name:'Name A-Z' },;
-    { id:'price-low', name:'Price Low to High' },;
-    { id:'price-high', name:'Price High to Low' },;
-    { id:'rating', name:'Rating' },;
-    { id:'customers', name:'Customer Count' },;
-    { id:'popularity', name:'Popularity' }
-  ],;
+    { id:'name', name: 'Name A-Z' ,};
+    { id:'price-low', name: 'Price Low to High' ,};
+    { id:'price-high', name: 'Price High to Low' ,};
+    { id:'rating', name: 'Rating' ,};
+    { id:'customers', name: 'Customer Count' ,};
+    { id:'popularity', name: 'Popularity' ,}
+  ];
 ;
   // Filter and sort services;
   const filteredServices = React.useMemo(() => {;
@@ -72,94 +71,88 @@ export default function EnhancedServicesShowcase() {;
         (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||;
         (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||;
         (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||;
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service)),;
+        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
       ;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())),;
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
       ;
-      return matchesCategory && matchesSearch,;
-    }),;
+      return matchesCategory && matchesSearch;
+    });
 ;
     // Sort services;
     switch (sortBy) {;
       case 'name':;
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),;
-        break,;
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
       case 'price-low':;
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),;
-        break,;
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
+        break;
       case 'price-high':;
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),;
-        break,;
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
+        break;
       case 'rating':;
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),;
-        break,;
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
       case 'customers':;
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0)),;
-        break,;
+        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
+        break;
       case 'popularity':;
-        filtered.sort((a, b) => (b.popular ? 1 :0) - (a.popular ? 1 :0)),;
-        break,;
-      default:break;
-    }
+        filtered.sort((a, b) => (b.popular ? 1 :0) - (a.popular ? 1 :0));
+        break;
+      default: break,}
 ;
-    return filtered,;
-  }, [allServices, selectedCategory, searchTerm, sortBy]),;
+    return filtered;
+  }, [allServices, selectedCategory, searchTerm, sortBy]);
 ;
   const containerVariants = {;
-    hidden:{ opacity:0 },;
-    visible:{;
-      opacity:1,;
-      transition:{;
-        staggerChildren:0.1,;
-        delayChildren:0.2;
-      }
+    hidden: { opacity:0 ,};
+    visible: {;
+      opacity:1;
+      transition: {;
+        staggerChildren:0.1;
+        delayChildren: 0.2,}
     }
-  },;
+  };
 ;
   const itemVariants = {;
-    hidden:{ opacity:0, y:30 },;
-    visible:{;
-      opacity:1,;
-      y:0,;
-      transition:{;
-        duration:0.6,;
-        ease:"easeOut" as const;
-      }
+    hidden:{ opacity:0, y: 30 ,};
+    visible: {;
+      opacity:1;
+      y:0;
+      transition: {;
+        duration:0.6;
+        ease: "easeOut" as const,}
     }
-  },;
+  };
 ;
   const featuredServices = [;
     {;
-      title:' ArrowRight-Generation AI Services',;
-      description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
-      services:nextGenerationAIServices.slice(0, 3),;
-      color:'from-purple-500 to-pink-600';
-    },;
+      title:' ArrowRight-Generation AI Services';
+      description:'Revolutionary AI platforms that push the boundaries of what\'s possible';
+      services:nextGenerationAIServices.slice(0, 3);
+      color: 'from-purple-500 to-pink-600',};
     {;
-      title:' Cutting-Edge IT Infrastructure',;
-      description:'Advanced infrastructure solutions for the modern enterprise',;
-      services:cuttingEdgeITServices.slice(0, 3),;
-      color:'from-blue-500 to-cyan-600';
-    },;
+      title:' Cutting-Edge IT Infrastructure';
+      description:'Advanced infrastructure solutions for the modern enterprise';
+      services:cuttingEdgeITServices.slice(0, 3);
+      color: 'from-blue-500 to-cyan-600',};
     {;
-      title:' Innovative Micro SaaS Solutions',;
-      description:'Creative and practical SaaS tools for every business need',;
-      services:innovativeMicroSaasV2Services.slice(0, 3),;
-      color:'from-green-500 to-emerald-600';
-    }
-  ],;
+      title:' Innovative Micro SaaS Solutions';
+      description:'Creative and practical SaaS tools for every business need';
+      services:innovativeMicroSaasV2Services.slice(0, 3);
+      color: 'from-green-500 to-emerald-600',}
+  ];
 ;
   return (;
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">;
       <div className="min-h-screen">;
         <Head>;
           <title>Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions</title>;
-          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact:+1 302 464 0950" />;
+          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />;
           <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology" />;
-          <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group" />;
+          <meta property="og: title" content="Enhanced Services Showcase - Zion Tech Group" />;
           <meta property="og:description" content="600+ cutting-edge technology services showcase" />;
           <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase" />;
           <meta property="og:type" content="website" />;
@@ -167,24 +160,24 @@ export default function EnhancedServicesShowcase() {;
         </Head>;
 ;
         {/* Hero Section */}
-        <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">;
+        <section className="relative z-10 pt-20 pb-16 px-4 sm: px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
+              initial={{ opacity:0, y: 30 ,}}
+              animate={{ opacity:1, y: 0 ,}}
+              transition={{ duration: 0.8 ,}}
             >;
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;
+              <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;
                 Enhanced Services Showcase;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
                 600+ Revolutionary AI, Quantum Computing & IT Services;
               </p>;
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">;
+              <p className="text-lg md: text-xl text-gray-400 mb-12 max-w-3xl mx-auto">;
                 From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.;
               </p>;
               ;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center mb-16">;
                 <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30">;
                   <Users className="w-5 h-5 text-cyan-400" />;
                   <span className="text-cyan-300 font-semibold">600+ Services</span>;
@@ -203,16 +196,16 @@ export default function EnhancedServicesShowcase() {;
         </section>;
 ;
         {/* Featured Service Categories */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.6 }}
-              viewport={{ once:true }}
+              initial={{ opacity:0, y: 20 ,}}
+              whileInView={{ opacity:1, y: 0 ,}}
+              transition={{ duration: 0.6 ,}}
+              viewport={{ once: true ,}}
               className="text-center mb-16";
             >;
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">;
+              <h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">;
                 Featured Service Categories;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -224,10 +217,10 @@ export default function EnhancedServicesShowcase() {;
               {featuredServices.map((category, index) => (;
                 <motion.div;
                   key={index}
-                  initial={{ opacity:0, y:30 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.2 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity:0, y: 30 ,}}
+                  whileInView={{ opacity:1, y: 0 ,}}
+                  transition={{ duration:0.6, delay: index * 0.2 ,}}
+                  viewport={{ once: true ,}}
                   className="relative";
                 >;
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>;
@@ -265,7 +258,7 @@ export default function EnhancedServicesShowcase() {;
         </section>;
 ;
         {/* Filters and Search */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">;
+        <section className="py-8 px-4 sm: px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6">;
               <div className="flex flex-col lg:flex-row gap-6">;
@@ -278,7 +271,7 @@ export default function EnhancedServicesShowcase() {;
                       placeholder="Search services...";
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                      className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                     />;
                   </div>;
                 </div>;
@@ -288,7 +281,7 @@ export default function EnhancedServicesShowcase() {;
                   <select;
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                   >;
                     {categories.map((category) => (;
                       <option key={category.id} value={category.id}>;
@@ -303,7 +296,7 @@ export default function EnhancedServicesShowcase() {;
                   <select;
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                   >;
                     {sortOptions.map((option) => (;
                       <option key={option.id} value={option.id}>;
@@ -321,8 +314,7 @@ export default function EnhancedServicesShowcase() {;
                       className={`p-2 rounded-md transition-colors ${;
                         viewMode === 'grid' ;
                           ? 'bg-cyan-500 text-white' ;
-                          :'text-gray-400 hover:text-white';
-                      }`}
+                          :'text-gray-400 hover: text-white',}`}
                     >;
                       <Grid className="w-5 h-5" />;
                     </button>;
@@ -331,8 +323,7 @@ export default function EnhancedServicesShowcase() {;
                       className={`p-2 rounded-md transition-colors ${;
                         viewMode === 'list' ;
                           ? 'bg-cyan-500 text-white' ;
-                          :'text-gray-400 hover:text-white';
-                      }`}
+                          :'text-gray-400 hover: text-white',}`}
                     >;
                       <List className="w-5 h-5" />;
                     </button>;
@@ -344,15 +335,15 @@ export default function EnhancedServicesShowcase() {;
         </section>;
 ;
         {/* Services Grid/List */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
               variants={containerVariants}
               initial="hidden";
               animate="visible";
               className={viewMode === 'grid' ;
-                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
-                :'space-y-6';
+                ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8';
+                :'space-y-6',
               }
             >;
               {filteredServices.map((service, index) => (;
@@ -362,7 +353,7 @@ export default function EnhancedServicesShowcase() {;
                   className={viewMode === 'grid' ? '' :'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >;
                   {viewMode === 'grid' ? (;
-                    <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full">;
+                    <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover: border-cyan-500/40 transition-colors h-full">;
                       <div className="flex items-center justify-between mb-4">;
                         <div className="flex items-center space-x-2">;
                           <span className="text-2xl">{service.icon}</span>;
@@ -383,7 +374,7 @@ export default function EnhancedServicesShowcase() {;
 ;
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center justify-between text-sm">;
-                          <span className="text-gray-400">Rating:</span>;
+                          <span className="text-gray-400">Rating: </span>;
                           <div className="flex items-center space-x-1">;
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />;
                             <span className="text-white">{service.rating}</span>;
@@ -391,11 +382,11 @@ export default function EnhancedServicesShowcase() {;
                           </div>;
                         </div>;
                         <div className="flex items-center justify-between text-sm">;
-                          <span className="text-gray-400">Customers:</span>;
+                          <span className="text-gray-400">Customers: </span>;
                           <span className="text-white">{service.customers.toLocaleString()}</span>;
                         </div>;
                         <div className="flex items-center justify-between text-sm">;
-                          <span className="text-gray-400">Trial:</span>;
+                          <span className="text-gray-400">Trial: </span>;
                           <span className="text-white">{service.trialDays} days</span>;
                         </div>;
                       </div>;
@@ -439,24 +430,24 @@ export default function EnhancedServicesShowcase() {;
                           </div>;
                         </div>;
 ;
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm">;
+                        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-4 text-sm">;
                           <div>;
                             <span className="text-gray-400">Category:</span>;
                             <div className="text-white">{service.category}</div>;
                           </div>;
                           <div>;
-                            <span className="text-gray-400">Rating:</span>;
+                            <span className="text-gray-400">Rating: </span>;
                             <div className="flex items-center space-x-1">;
                               <Star className="w-4 h-4 text-yellow-400 fill-current" />;
                               <span className="text-white">{service.rating}</span>;
                             </div>;
                           </div>;
                           <div>;
-                            <span className="text-gray-400">Customers:</span>;
+                            <span className="text-gray-400">Customers: </span>;
                             <div className="text-white">{service.customers.toLocaleString()}</div>;
                           </div>;
                           <div>;
-                            <span className="text-gray-400">Setup:</span>;
+                            <span className="text-gray-400">Setup: </span>;
                             <div className="text-white">{service.setupTime}</div>;
                           </div>;
                         </div>;
@@ -493,8 +484,8 @@ export default function EnhancedServicesShowcase() {;
                 <Button ;
                   href="#";
                   onClick={() => {;
-                    setSearchTerm(''),;
-                    setSelectedCategory('all'),;
+                    setSearchTerm('');
+                    setSelectedCategory('all');
                   }}
                   variant="primary";
                 >;
@@ -506,15 +497,15 @@ export default function EnhancedServicesShowcase() {;
         </section>;
 ;
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity:0, y:30 }}
-              whileInView={{ opacity:1, y:0 }}
-              transition={{ duration:0.8 }}
-              viewport={{ once:true }}
+              initial={{ opacity:0, y: 30 ,}}
+              whileInView={{ opacity:1, y: 0 ,}}
+              transition={{ duration: 0.8 ,}}
+              viewport={{ once: true ,}}
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
                 Ready to Transform Your Business?;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
@@ -536,7 +527,7 @@ export default function EnhancedServicesShowcase() {;
                 </div>;
               </div>;
 ;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                 <Button ;
                   href="/contact";
                   variant="primary";
@@ -561,7 +552,7 @@ export default function EnhancedServicesShowcase() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticMatrixBackground>;
-  );
+  ),
 }
 ;
 // Button component (if not imported);
@@ -573,39 +564,36 @@ const Button = ({ ;
   children, ;
   onClick ;
 } {;
-  href?:string,;
-  variant?:'primary' | 'secondary',;
-  size?:'sm' | 'md' | 'lg',;
-  className?:string,;
-  children:React.ReactNode,;
+  href?:string;
+  variant?:'primary' | 'secondary';
+  size?:'sm' | 'md' | 'lg';
+  className?:string;
+  children:React.ReactNode;
   onClick?:() => void;
 }) => {;
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',;
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900';
   ;
   const variantClasses = {;
-    primary:'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',;
-    secondary:'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500';
-  },;
+    primary:'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500';
+    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500',};
   ;
   const sizeClasses = {;
-    sm:'px-4 py-2 text-sm',;
-    md:'px-6 py-3 text-base',;
-    lg:'px-8 py-4 text-lg';
-  },;
+    sm:'px-4 py-2 text-sm';
+    md:'px-6 py-3 text-base';
+    lg: 'px-8 py-4 text-lg',};
 ;
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,;
+  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
 ;
   if (href) {;
     return (;
       <a href={href} className={classes}>;
         {children}
       </a>;
-    ),;
+    );
   }
 ;
   return (;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
-
-
+}}}})]]]

@@ -1,71 +1,69 @@
 import Link from 'next/link';
-
-export default function RevolutionaryContentBanner2026() {
-  return (
-    <section className="py-12 bg-gradient-to-r from-indigo-50 to-purple-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
-                  🚀 NEW CONTENT
-                </span>
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                  AI 2026
-                </span>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Revolutionary AI Technologies for 2026
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 max-w-2xl">
-                Discover our comprehensive guides to the most advanced AI technologies that will 
-                transform your business operations and create unprecedented competitive advantages.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/blog/ai-2026-enterprise-autonomous-systems-complete-guide"
-                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
-                  Autonomous Systems Guide
-                </Link>
-                <Link
-                  href="/blog/ai-2026-quantum-ai-business-transformation"
-                  className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
-                >
-                  Quantum AI Guide
-                </Link>
-                <Link
-                  href="/blog/ai-2026-neural-interface-business-applications"
-                  className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                >
-                  Neural Interfaces Guide
-                </Link>
-              </div>
-            </div>
-            <div className="flex-shrink-0">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-purple-600 mb-1">1000x</div>
-                  <div className="text-xs text-purple-700">Faster Processing</div>
-                </div>
-                <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">99.9%</div>
-                  <div className="text-xs text-blue-700">Accuracy Rate</div>
-                </div>
-                <div className="bg-gradient-to-br from-green-100 to-green-200 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-1">300%</div>
-                  <div className="text-xs text-green-700">Productivity Gain</div>
-                </div>
-                <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-4 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-orange-600 mb-1">50%</div>
-                  <div className="text-xs text-orange-700">Cost Reduction</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+export default function RevolutionaryContentBanner2026() {,
+  return (,
+    <section className="py-12 bg-gradient-to-r from-indigo-50 to-purple-50">,
+      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
+        <div className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100">,
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">,
+            <div className="flex-1">,
+              <div className="flex items-center gap-2 mb-4">,
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">,
+                  🚀 NEW CONTENT,
+                </span>,
+                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">,
+                  AI 2026,
+                </span>,
+              </div>,
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">,
+                Revolutionary AI Technologies for 2026,
+              </h2>,
+              <p className="text-lg text-gray-600 mb-6 max-w-2xl">,
+                Discover our comprehensive guides to the most advanced AI technologies that will,
+                transform your business operations and create unprecedented competitive advantages.,
+              </p>,
+              <div className="flex flex-wrap gap-3">,
+                <Link,
+                  href="/blog/ai-2026-enterprise-autonomous-systems-complete-guide",
+                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors",
+                >,
+                  Autonomous Systems Guide,
+                </Link>,
+                <Link,
+                  href="/blog/ai-2026-quantum-ai-business-transformation",
+                  className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors",
+                >,
+                  Quantum AI Guide,
+                </Link>,
+                <Link,
+                  href="/blog/ai-2026-neural-interface-business-applications",
+                  className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors",
+                >,
+                  Neural Interfaces Guide,
+                </Link>,
+              </div>,
+            </div>,
+            <div className="flex-shrink-0">,
+              <div className="grid grid-cols-2 gap-4">,
+                <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-4 rounded-lg text-center">,
+                  <div className="text-2xl font-bold text-purple-600 mb-1">1000x</div>,
+                  <div className="text-xs text-purple-700">Faster Processing</div>,
+                </div>,
+                <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-4 rounded-lg text-center">,
+                  <div className="text-2xl font-bold text-blue-600 mb-1">99.9%</div>,
+                  <div className="text-xs text-blue-700">Accuracy Rate</div>,
+                </div>,
+                <div className="bg-gradient-to-br from-green-100 to-green-200 p-4 rounded-lg text-center">,
+                  <div className="text-2xl font-bold text-green-600 mb-1">300%</div>,
+                  <div className="text-xs text-green-700">Productivity Gain</div>,
+                </div>,
+                <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-4 rounded-lg text-center">,
+                  <div className="text-2xl font-bold text-orange-600 mb-1">50%</div>,
+                  <div className="text-xs text-orange-700">Cost Reduction</div>,
+                </div>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </section>,
+  ),}
