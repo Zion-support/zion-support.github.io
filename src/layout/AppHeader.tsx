@@ -55,7 +55,6 @@ export function AppHeader() {,
     e.preventDefault();
     if (searchQuery.trim()) {,
       // Implement search functionality,
-      console.log('Searching for:', searchQuery);
     }
     return location.pathname.startsWith(path);
   };

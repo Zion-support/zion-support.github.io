@@ -50,12 +50,6 @@ return metrics as PerformanceMetrics;
   }, []);
   const logPerformanceMetrics = useCallback((metrics: PerformanceMetrics) => {,
     console.group('🚀 Performance Metrics');
-    console.log('Load Time:', `${metrics.loadTime?.toFixed(2)}ms`);
-    console.log('First Contentful Paint:', `${metrics.firstContentfulPaint?.toFixed(2)}ms`);
-    console.log('Largest Contentful Paint:', `${metrics.largestContentfulPaint?.toFixed(2)}ms`);
-    console.log('First Input Delay:', `${metrics.firstInputDelay?.toFixed(2)}ms`);
-    console.log('Cumulative Layout Shift:', metrics.cumulativeLayoutShift?.toFixed(4));
-    console.log('Time to Interactive:', `${metrics.timeToInteractive?.toFixed(2)}ms`);
     console.groupEnd();
     // Send to analytics service in production,
     if (process.env.NODE_ENV === 'production') {,
