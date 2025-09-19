@@ -8,12 +8,20 @@
 - **High Vulnerabilities**: 0 🟠
 - **Outdated Packages**: 0
 - **Security Issues**: 4
+<<<<<<< HEAD
+- **Potential Secrets**: 4
+=======
 - **Potential Secrets**: 6
+>>>>>>> origin/temp-merge-branch
 
 ## Detailed Results
 
 ### 🔍 Security Audit
+<<<<<<< HEAD
+- **Status**: ❌ Failed
+=======
 - **Status**: ✅ Completed
+>>>>>>> origin/temp-merge-branch
 - **Vulnerabilities**: 0
 - **Breakdown**: Low: 0, Moderate: 0, High: 0, Critical: 0
 
@@ -29,11 +37,11 @@
 
 ### 🔐 Secret Scan
 - **Status**: ✅ Completed
-- **Potential Secrets**: 6
+- **Potential Secrets**: 4
 
 ### 📋 Compliance
 - **Status**: ✅ Completed
-- **Checks Performed**: 1
+- **Checks Performed**: 4
 
 ## 🚨 Immediate Actions Required
 
@@ -41,9 +49,8 @@
 
 2. ✅ No high-risk vulnerabilities found
 
-5. **SECRETS**: Remove or secure 6 hardcoded secrets
+5. **SECRETS**: Remove or secure 4 hardcoded secrets
 6. **SECRETS**: Use environment variables for sensitive data
-
 ## 📚 Recommendations
 
 1. **Regular Updates**: Update dependencies weekly
