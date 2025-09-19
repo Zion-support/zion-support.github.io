@@ -3,11 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Award } from 'lucide-react';
 
 const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
   const [activeCase, setActiveCase] = useState(0);
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
 
   useEffect(() => {
     setIsVisible(true);
@@ -19,7 +16,6 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
 
   const caseStudies = [
     {
-<<<<<<< HEAD
       id: 1,
       company: "TechCorp Global",
       result: "300% increase in AI efficiency",
@@ -64,13 +60,10 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
           
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Real results from real companies using our revolutionary technologies
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
           </p>
         </div>
 
         {/* Case Study Carousel */}
-<<<<<<< HEAD
         <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
             <motion.div
@@ -213,8 +206,6 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors">
                 View All Case Studies
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
               </button>
             </div>
             

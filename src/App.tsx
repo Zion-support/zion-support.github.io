@@ -8,7 +8,7 @@ import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
 import { performanceMonitor } from './utils/performanceMonitor';
-import { trackPageView } from './utils/analytics';
+import { trackPageView, trackButtonClick } from './utils/analytics';
 import './index.css';
 
 const App: React.FC = () => {
@@ -217,7 +217,7 @@ const App: React.FC = () => {
                               onClick={(e) => {
                                 e.preventDefault();
                                 trackButtonClick('contact_form_submit', 'contact_section');
-                                alert('Thank you for your message! We\'ll get back to you soon.');
+                                console.log('Thank you for your message! We\'ll get back to you soon.');
                               }}
                             >
                               Send Message
