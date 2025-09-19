@@ -115,7 +115,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Tech Blog 2026
               </h1>
-              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
                 Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.</p>
               </p>
             </motion.div>
@@ -123,7 +123,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Featured Articles</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               Deep dives into the most revolutionary technological breakthroughs of 2026</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -144,7 +144,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
           {/* All Posts Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">All Articles</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               Complete archive of our revolutionary technology insights</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,7 +163,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                 <h3 className="text-xl font-bold mb-4 text-white hover:text-gray-300 transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   {post.excerpt}</p>
                 </p>
                 <div className="flex items-center justify-between mb-4">
@@ -186,7 +186,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
             className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto"></p>
               Get the latest revolutionary technology insights delivered directly to your inbox</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -195,7 +195,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
                 Subscribe</button>
               </button>
 const RevolutionaryTechBlog2026: React.FC = () => {
@@ -210,8 +210,8 @@ const RevolutionaryTechBlog2026: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">⚡
             <h3 className="text-2xl font-bold mb-4">Quantum Computing Explained</h3>
-            <p className="text-cyan-100 mb-6">
-              Learn how quantum computing works and why it represents the future of computational power. 
+            <p className="text-cyan-100 mb-6"></p>
+              Learn how quantum computing works and why it represents the future of computational power. </p>
               Our quantum processors can solve problems that would take classical computers millennia to complete.</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
@@ -220,14 +220,14 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <li>• Quantum error correction</li>
               <li>• Real-world quantum algorithms</li>
             </ul>
-            <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+            <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold"></button>
               Read Quantum Guide →</button>
             </button>
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">🧠
             <h3 className="text-2xl font-bold mb-4">AI Consciousness Research</h3>
-            <p className="text-purple-100 mb-6">
-              Explore the cutting-edge research into artificial consciousness and how we're creating 
+            <p className="text-purple-100 mb-6"></p>
+              Explore the cutting-edge research into artificial consciousness and how we're creating </p>
               AI systems that truly understand, learn, and evolve beyond their initial programming.</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
@@ -236,21 +236,21 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <li>• Emotional intelligence in AI</li>
               <li>• Ethical AI development</li>
             </ul>
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold"></button>
               Explore AI Research →</button>
             </button>
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join our community of innovators, researchers, and technology enthusiasts who are shaping the future</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Join Our Community</button>
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"></button>
               Contact Our Team</button>
             </button>
     </>
@@ -258,3 +258,4 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 };
 
 export default RevolutionaryTechBlog2026;
+  </div>

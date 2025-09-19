@@ -19,14 +19,14 @@ const AdvancedSpaceTech2026: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Advanced Space Technology 2026
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
               Pioneering the next frontier with revolutionary space technologies that enable interplanetary travel, space colonization, and cosmic exploration.</p>
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Explore Space Solutions</button>
               </button>
-              <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/10 transition-colors font-semibold text-lg">
+              <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/10 transition-colors font-semibold text-lg"></button>
                 Mission Overview</button>
               </button>
           </motion.div>
@@ -41,13 +41,15 @@ const AdvancedSpaceTech2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Join the Space Revolution</h2>
           <p className="text-xl opacity-80 mb-8">Be part of humanity's greatest adventure</p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Apply for Mission</button>
             </button>
-            <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/10 transition-colors font-semibold text-lg">
+            <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400/10 transition-colors font-semibold text-lg"></button>
               Learn More</button>
             </button>
   );
 };
 
 export default AdvancedSpaceTech2026;
+  </div>
+  </div>

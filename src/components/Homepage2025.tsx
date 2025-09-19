@@ -153,8 +153,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       className={`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
                         activeSection === section.id
                           ? 'text-cyan-400 border-b-2 border-cyan-400'
-                          : 'text-gray-300 hover:text-cyan-400'
-                      }`}
+                          : 'text-gray-300 hover:text-cyan-400'</button>
+                      }`}</button>
                     ></button>
                       <span>{section.icon}</span>
                       <span>{section.label}</span>
@@ -179,7 +179,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 {/* Mobile Menu Button */}
                 <button
                   className="lg:hidden text-white p-2"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}</button>
                 ></button>
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></p>
@@ -199,8 +199,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                             activeSection === section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
-                              : 'text-gray-300 hover:bg-white/10'
-                          }`}
+                              : 'text-gray-300 hover:bg-white/10'</button>
+                          }`}</button>
                         ></button>
                           <span>{section.icon}</span>
                           <span>{section.label}</span>
@@ -243,7 +243,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
-              <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"></p>
                 Pioneering the future of technology with innovative solutions that drive business transformation</p>
               </p>
               {/* Enhanced CTA Section */}
@@ -259,12 +259,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </a>
                 <a href="/comprehensive-services-showcase-2025">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"></button>
                     2025 Services Showcase</button>
                   </button>
                 </a>
                 <a href="/get-started">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"></button>
                     Get Started</button>
                   </button>
                 </a>
@@ -327,7 +327,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Technology Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -357,7 +357,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Revolutionary 2026 Services
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto"></p>
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -412,7 +412,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto"></p>
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -456,8 +456,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <div className="text-gray-400 mb-4">
             <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
             <p className="mt-2">
-              Address: 364 E Main St STE 1008 Middletown DE 19709 | 
-              Phone: +1 302 464 0950 | 
+              Address: 364 E Main St STE 1008 Middletown DE 19709 | </p>
+              Phone: +1 302 464 0950 | </p>
               Email: kleber@ziontechgroup.com</p>
             </p>
           <div className="flex justify-center space-x-6">
@@ -476,3 +476,60 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 };
 
 export default Homepage2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

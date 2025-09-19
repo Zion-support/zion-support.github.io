@@ -57,3 +57,11 @@ const InteractiveTechShowcase: React.FC = () => {
 };
 
 export default InteractiveTechShowcase;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

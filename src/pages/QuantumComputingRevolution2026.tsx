@@ -92,8 +92,8 @@ const QuantumComputingRevolution2026: React.FC = () => {
           <h1 className="text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             Quantum Computing Revolution 2026
           </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Enter the quantum realm where the impossible becomes possible. Our revolutionary quantum computing solutions 
+          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed"></p>
+            Enter the quantum realm where the impossible becomes possible. Our revolutionary quantum computing solutions </p>
             harness the power of quantum mechanics to solve problems that transcend classical limitations.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-16">
@@ -153,7 +153,7 @@ const QuantumComputingRevolution2026: React.FC = () => {
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-xl mr-4">
                   <service.icon className="w-8 h-8 text-white" />
                 <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed"></p>
                 {service.description}</p>
               </p>
               <div className="mb-6">
@@ -178,7 +178,7 @@ const QuantumComputingRevolution2026: React.FC = () => {
                 </ul>
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 p-4 rounded-lg mb-4">
                 <p className="text-cyan-400 font-bold text-lg">{service.price}</p>
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Get Quantum Access</button>
               </button>
             </motion.div>
@@ -221,15 +221,15 @@ const QuantumComputingRevolution2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">
             Enter the Quantum Revolution
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and experience computing power that transcends the boundaries of classical physics. 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            Join the quantum revolution and experience computing power that transcends the boundaries of classical physics. </p>
             Our quantum solutions are reshaping reality itself.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"></button>
               Schedule Quantum Demo</button>
             </button>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"></button>
               Download Quantum Guide</button>
             </button>
         </motion.div>
@@ -249,3 +249,23 @@ const QuantumComputingRevolution2026: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

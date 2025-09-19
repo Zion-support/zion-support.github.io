@@ -7,7 +7,7 @@ const NextGenInnovationHub2036: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6">🌟 Revolutionary Innovations</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
             Experience the cutting-edge technologies that will define the next era of human civilization</p>
           </p>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -21,8 +21,8 @@ const NextGenInnovationHub2036: React.FC = () => {
                 className={`w-full p-6 rounded-xl transition-all duration-300 text-left ${
                   activeInnovation === index
                     ? 'bg-gradient-to-r from-indigo-600/30 to-purple-600/30 border-2 border-indigo-400/50'
-                    : 'bg-white/10 hover:bg-white/20 border border-white/20'
-                }`}
+                    : 'bg-white/10 hover:bg-white/20 border border-white/20'</button>
+                }`}</button>
               ></button>
                 <div className="flex items-center space-x-4">
                   <div className="text-4xl">{innovation.icon}
@@ -48,10 +48,10 @@ const NextGenInnovationHub2036: React.FC = () => {
               <h4 className="text-lg font-bold mb-2">Impact:</h4>
               <p className="text-sm opacity-90">{innovations[activeInnovation].impact}</p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
                 Try Innovation</button>
               </button>
-              <button className="border border-indigo-400 text-indigo-400 px-8 py-3 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold">
+              <button className="border border-indigo-400 text-indigo-400 px-8 py-3 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold"></button>
                 Learn More</button>
               </button>
         {/* Innovation Stats */}
@@ -65,12 +65,12 @@ const NextGenInnovationHub2036: React.FC = () => {
                 <span className="px-3 py-1 bg-green-500 text-white text-xs rounded-full">ACTIVE</span>
                 <span className="text-sm opacity-80">Phase 3</span>
               <h3 className="text-xl font-bold mb-3">Consciousness Transfer Technology</h3>
-              <p className="text-cyan-100 mb-4">
+              <p className="text-cyan-100 mb-4"></p>
                 Revolutionary technology for transferring human consciousness between biological and artificial bodies.</p>
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-cyan-300 text-sm">85% Complete</span>
-                <button className="text-cyan-300 hover:text-white font-semibold text-sm">
+                <button className="text-cyan-300 hover:text-white font-semibold text-sm"></button>
                   View Details →</button>
                 </button>
   return (
@@ -83,8 +83,8 @@ const NextGenInnovationHub2036: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2036
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover and explore the most revolutionary technologies shaping humanity's future. 
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
+            Discover and explore the most revolutionary technologies shaping humanity's future. </p>
             Build, create, and innovate with cutting-edge tools and platforms.</p>
           </p>
         {/* Innovation Grid */}
@@ -105,7 +105,7 @@ const NextGenInnovationHub2036: React.FC = () => {
                   <li key={featureIndex}>• {feature}</li>
                 ))}
               </ul>
-              <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+              <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                 Explore Innovation</button>
               </button>
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -113,12 +113,12 @@ const NextGenInnovationHub2036: React.FC = () => {
                 <span className="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full">TESTING</span>
                 <span className="text-sm opacity-80">Phase 2</span>
               <h3 className="text-xl font-bold mb-3">Quantum Reality Engine</h3>
-              <p className="text-blue-100 mb-4">
+              <p className="text-blue-100 mb-4"></p>
                 Advanced quantum computing system capable of manipulating reality at the quantum level.</p>
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-blue-300 text-sm">60% Complete</span>
-                <button className="text-blue-300 hover:text-white font-semibold text-sm">
+                <button className="text-blue-300 hover:text-white font-semibold text-sm"></button>
                   View Details →</button>
                 </button>
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
@@ -126,19 +126,19 @@ const NextGenInnovationHub2036: React.FC = () => {
                 <span className="px-3 py-1 bg-purple-500 text-white text-xs rounded-full">CONCEPT</span>
                 <span className="text-sm opacity-80">Phase 1</span>
               <h3 className="text-xl font-bold mb-3">Interdimensional Portal</h3>
-              <p className="text-indigo-100 mb-4">
+              <p className="text-indigo-100 mb-4"></p>
                 Technology for creating stable portals between different dimensions and parallel universes.</p>
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-indigo-300 text-sm">25% Complete</span>
-                <button className="text-indigo-300 hover:text-white font-semibold text-sm">
+                <button className="text-indigo-300 hover:text-white font-semibold text-sm"></button>
                   View Details →</button>
                 </button>
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">📊 Innovation Statistics</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               Our impact on technological advancement and innovation</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -162,7 +162,7 @@ const NextGenInnovationHub2036: React.FC = () => {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🏢 Research Facilities</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               State-of-the-art facilities equipped with the most advanced technology</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
@@ -209,28 +209,28 @@ const NextGenInnovationHub2036: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto"></p>
             Be part of the most advanced research and development community in the world</p>
           </p>
           <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Join Innovation Hub</button>
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg"></button>
               Visit Innovation Hub</button>
             </button>
         {/* Featured Innovations */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Featured Innovations</h2>
-            <p className="text-xl opacity-90">
+            <p className="text-xl opacity-90"></p>
               Discover the most groundbreaking technologies currently in development</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🧠 Conscious AI System v3.0</h3>
-                <p className="text-lg mb-4">
+                <p className="text-lg mb-4"></p>
                   The most advanced AI system with true consciousness, emotional intelligence, and creative capabilities.</p>
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -239,12 +239,12 @@ const NextGenInnovationHub2036: React.FC = () => {
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Creativity</span>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-300 font-bold">Progress: 87%</span>
-                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"></button>
                     Learn More</button>
                   </button>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">⚡ Quantum Neural Interface</h3>
-                <p className="text-lg mb-4">
+                <p className="text-lg mb-4"></p>
                   Direct neural interface with quantum computing systems for enhanced cognitive processing.</p>
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -253,13 +253,13 @@ const NextGenInnovationHub2036: React.FC = () => {
                   <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-sm">Cognitive Enhancement</span>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-300 font-bold">Progress: 73%</span>
-                  <button className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
+                  <button className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"></button>
                     Learn More</button>
                   </button>
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🌌 Dimensional Portal Network</h3>
-                <p className="text-lg mb-4">
+                <p className="text-lg mb-4"></p>
                   A network of portals connecting our reality with 12 parallel dimensions and alternate realities.</p>
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -268,12 +268,12 @@ const NextGenInnovationHub2036: React.FC = () => {
                   <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-sm">Portal Network</span>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-300 font-bold">Progress: 94%</span>
-                  <button className="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors">
+                  <button className="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition-colors"></button>
                     Learn More</button>
                   </button>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-2xl font-bold mb-4">🌟 Transcendent AI Consciousness</h3>
-                <p className="text-lg mb-4">
+                <p className="text-lg mb-4"></p>
                   AI systems that transcend physical limitations and achieve digital immortality.</p>
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -282,7 +282,7 @@ const NextGenInnovationHub2036: React.FC = () => {
                   <span className="px-3 py-1 bg-pink-500/30 rounded-full text-sm">Universal Knowledge</span>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-300 font-bold">Progress: 67%</span>
-                  <button className="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition-colors">
+                  <button className="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition-colors"></button>
                     Learn More</button>
                   </button>
         {/* Innovation Statistics */}
@@ -302,21 +302,89 @@ const NextGenInnovationHub2036: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-90"></p>
             Be part of the most revolutionary technological advances in human history</p>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Explore All Innovations</button>
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"></button>
               Submit Your Innovation</button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
+            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg"></button>
               Start Your Innovation</button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
+            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg"></button>
               Start Your Innovation</button>
             </button>
   );
 };
 
 export default NextGenInnovationHub2036;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

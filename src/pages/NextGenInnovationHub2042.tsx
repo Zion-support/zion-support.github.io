@@ -217,7 +217,7 @@ const NextGenInnovationHub2042: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2042
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
             Discover and explore the most revolutionary technologies shaping humanity's future</p>
           </p>
         {/* Innovation Grid */}
@@ -259,8 +259,8 @@ const NextGenInnovationHub2042: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Innovation
+              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
+                Explore Innovation</button>
           {innovations.map((innovation, index) => (</button>
             <div
               key={innovation.id}
@@ -280,7 +280,7 @@ const NextGenInnovationHub2042: React.FC = () => {
               <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                 <span>{innovation.category}</span>
                 <span>{innovation.users} users</span>
-              <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+              <button className={`w-full bg-gradient-to-r ${innovation.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                 Explore Innovation →</button>
               </button>
           ))}
@@ -288,7 +288,7 @@ const NextGenInnovationHub2042: React.FC = () => {
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Innovation Hub Statistics</h2>
-            <p className="text-xl opacity-90">
+            <p className="text-xl opacity-90"></p>
               Our hub has become the epicenter of technological advancement</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -321,7 +321,7 @@ const NextGenInnovationHub2042: React.FC = () => {
                     {innovations[selectedInnovation].status}
                   </span>
                   <span className="text-sm text-gray-300">{innovations[selectedInnovation].users} users</span>
-              <button className={`bg-gradient-to-r ${innovations[selectedInnovation].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
+              <button className={`bg-gradient-to-r ${innovations[selectedInnovation].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}></button>
                 Get Started →</button>
               </button>
             <div>
@@ -374,27 +374,142 @@ const NextGenInnovationHub2042: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Be part of the most advanced innovation ecosystem in human history. Contribute to technologies that will shape the future of civilization.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Join Innovation Hub</button>
             </button>
-            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
+            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg"></button>
               Submit Innovation</button>
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join our community of innovators and be part of the most advanced technological revolution in history</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl"></button>
               Join Innovation Hub</button>
             </button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl"></button>
               View All Innovations</button>
             </button>
   );
 };
 
 export default NextGenInnovationHub2042;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

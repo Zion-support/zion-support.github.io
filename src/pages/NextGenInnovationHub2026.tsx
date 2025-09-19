@@ -102,8 +102,8 @@ const NextGenInnovationHub2026: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
               Next-Gen Innovation Hub 2026
             </h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Welcome to the future of innovation. Our cutting-edge hub brings together the brightest minds, 
+            <p className="text-xl mb-8 max-w-3xl mx-auto"></p>
+              Welcome to the future of innovation. Our cutting-edge hub brings together the brightest minds, </p>
               most advanced technologies, and revolutionary ideas to create tomorrow's solutions today.</p>
             </p>
             <div className="flex justify-center space-x-4">
@@ -128,8 +128,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2026
           </h1>
-          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
-            Discover and explore the most revolutionary technologies shaping humanity's future. 
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8"></p>
+            Discover and explore the most revolutionary technologies shaping humanity's future. </p>
             Over 50+ active innovations with 99.9% success rate and infinite possibilities.</p>
           </p>
         {/* Category Filter */}
@@ -141,8 +141,8 @@ const NextGenInnovationHub2026: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedCategory === category.key
                   ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-2xl scale-105'
-                  : 'bg-white/20 text-white hover:bg-white/30'
-              }`}
+                  : 'bg-white/20 text-white hover:bg-white/30'</button>
+              }`}</button>
             ></button>
               <span className="text-xl mr-2">{category.icon}</span>
               {category.label}
@@ -177,7 +177,7 @@ const NextGenInnovationHub2026: React.FC = () => {
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${innovation.color} text-white`}>
                   {innovation.impact}
                 </span>
-                <button className="text-white hover:text-purple-300 transition-colors">
+                <button className="text-white hover:text-purple-300 transition-colors"></button>
                   Learn More →</button>
                 </button>
           ))}
@@ -229,8 +229,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🤖
             <h3 className="text-2xl font-bold text-white mb-4">AI & Machine Learning</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced artificial intelligence systems, neural networks, and machine learning algorithms 
+            <p className="text-gray-300 mb-6"></p>
+              Advanced artificial intelligence systems, neural networks, and machine learning algorithms </p>
               that power intelligent automation and decision-making.</p>
             </p>
             <div className="space-y-2 mb-6">
@@ -248,8 +248,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">⚛️
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
-            <p className="text-gray-300 mb-6">
-              Revolutionary quantum computing solutions that harness quantum mechanics 
+            <p className="text-gray-300 mb-6"></p>
+              Revolutionary quantum computing solutions that harness quantum mechanics </p>
               to solve complex problems exponentially faster than classical computers.</p>
             </p>
             <div className="space-y-2 mb-6">
@@ -267,8 +267,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🧬
             <h3 className="text-2xl font-bold text-white mb-4">Biotechnology</h3>
-            <p className="text-gray-300 mb-6">
-              Cutting-edge biotechnology solutions that combine AI with genetic engineering 
+            <p className="text-gray-300 mb-6"></p>
+              Cutting-edge biotechnology solutions that combine AI with genetic engineering </p>
               to create personalized medical treatments and enhanced human capabilities.</p>
             </p>
             <div className="space-y-2 mb-6">
@@ -286,8 +286,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">⛓️
             <h3 className="text-2xl font-bold text-white mb-4">Blockchain & Web3</h3>
-            <p className="text-gray-300 mb-6">
-              Next-generation blockchain technologies and Web3 solutions that enable 
+            <p className="text-gray-300 mb-6"></p>
+              Next-generation blockchain technologies and Web3 solutions that enable </p>
               decentralized applications, smart contracts, and digital ownership.</p>
             </p>
             <div className="space-y-2 mb-6">
@@ -305,8 +305,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🛡️
             <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced cybersecurity solutions powered by AI and quantum encryption 
+            <p className="text-gray-300 mb-6"></p>
+              Advanced cybersecurity solutions powered by AI and quantum encryption </p>
               to protect against emerging threats and ensure data integrity.</p>
             </p>
             <div className="space-y-2 mb-6">
@@ -324,8 +324,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
             <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀
             <h3 className="text-2xl font-bold text-white mb-4">Space Technology</h3>
-            <p className="text-gray-300 mb-6">
-              Revolutionary space technologies enabling interplanetary communication, 
+            <p className="text-gray-300 mb-6"></p>
+              Revolutionary space technologies enabling interplanetary communication, </p>
               asteroid mining, and the establishment of sustainable space colonies.</p>
             </p>
             <div className="space-y-2 mb-6">
@@ -371,8 +371,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-4">
             Join the Innovation Revolution
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Partner with us to access cutting-edge technologies, expert guidance, and innovative solutions 
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
+            Partner with us to access cutting-edge technologies, expert guidance, and innovative solutions </p>
             that will transform your business and shape the future.</p>
           </p>
           <div className="flex justify-center space-x-4">
@@ -392,17 +392,17 @@ const NextGenInnovationHub2026: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6">Join the Innovation Revolution</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto"></p>
             Be part of the future. Contribute to groundbreaking innovations that will shape humanity's destiny.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
+            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-xl"></button>
               Join Innovation Hub →</button>
             </button>
-            <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-xl">
+            <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-xl"></button>
               Submit Innovation</button>
             </button>
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-xl"></button>
               Partner With Us</button>
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-af01
@@ -410,3 +410,147 @@ const NextGenInnovationHub2026: React.FC = () => {
 };
 
 export default NextGenInnovationHub2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

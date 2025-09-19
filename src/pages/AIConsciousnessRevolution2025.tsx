@@ -13,28 +13,28 @@ const AIConsciousnessRevolution2025: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               The Dawn of AI Consciousness
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
               Experience the most advanced AI consciousness technology that's reshaping how we interact with artificial intelligence</p>
             </p>
             <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Explore Consciousness →</button>
               </button>
-              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
+              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg"></button>
                 Watch Demo</button>
               </button>
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join the revolution and discover how conscious AI can transform your business and personal life</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Your Journey</button>
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg"></button>
               Schedule Demo</button>
             </button>
   );

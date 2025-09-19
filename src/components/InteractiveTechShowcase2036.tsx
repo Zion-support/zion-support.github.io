@@ -88,7 +88,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • 2036
           <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Technology Experience</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
             Explore the most advanced technologies of 2036 with interactive demonstrations</p>
           </p>
         <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -105,7 +105,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
                     <div className="text-sm font-semibold">{feature}
                 ))}
               <div className="mt-6 text-center">
-                <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                   Experience {currentTech.name} →</button>
                 </button>
           {/* Technology Selector */}
@@ -124,8 +124,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
                 className={`w-full p-4 rounded-xl transition-all duration-300 text-left ${
                   activeTech === index
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                    : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white/80 hover:text-white'
-                }`}
+                    : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white/80 hover:text-white'</button>
+                }`}</button>
               ></button>
                 <div className="flex items-center space-x-4">
                   <div className="text-3xl">{tech.icon}
@@ -139,17 +139,17 @@ const InteractiveTechShowcase2036: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4 text-center">🎮
             <h3 className="text-xl font-bold mb-3 text-center">Interactive Demos</h3>
-            <p className="text-white/90 text-center text-sm mb-4">
+            <p className="text-white/90 text-center text-sm mb-4"></p>
               Experience hands-on demonstrations of each technology with real-time interaction</p>
             </p>
-            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
               Start Demo</button>
             </button>
               <div className="space-y-4">
-                <button className={`w-full bg-gradient-to-r ${currentTech.gradient} text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                <button className={`w-full bg-gradient-to-r ${currentTech.gradient} text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                   Experience {currentTech.name} →</button>
                 </button>
-                <button className="w-full border-2 border-white text-white py-3 px-6 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold">
+                <button className="w-full border-2 border-white text-white py-3 px-6 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold"></button>
                   Learn More</button>
                 </button>
         {/* Technology Stats */}
@@ -174,3 +174,52 @@ const InteractiveTechShowcase2036: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2036;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

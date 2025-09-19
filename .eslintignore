@@ -3,6 +3,19 @@ dist/
 build/
 out/
 .next/
+**/.next/
+**/static/
+**/chunks/
+**/server/
+**/polyfills-*.js
+**/webpack-*.js
+**/main-*.js
+**/pages/
+**/app/
+**/middleware-*.js
+**/server-reference-*.js
+**/_buildManifest.js
+**/_ssgManifest.js
 *.min.js
 *.bundle.js
 *.chunk.js
@@ -11,16 +24,17 @@ out/
 node_modules/
 
 # Disabled/legacy directories
+*.disabled/
+*.disabled/**
 zion-os.disabled/
 zion-os/
 zion-website/
+zion.app/
 zion_academy/
-zion.app/
-zion.app/
 recovered-branches/
 automation/
 
-# Backup files
+# Backup and cache directories
 backup/
 backups/
 cache/
@@ -33,11 +47,13 @@ server/
 # Public assets
 public/
 
+# Generated files
+*.generated.js
+*.generated.ts
+
 # Large generated files
 *.log
 *.txt
-*.generated.js
-*.generated.ts
 
 # IDE files
 .vscode/
@@ -46,6 +62,22 @@ public/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Config files
+postcss.config.js
+next.config.js
+sw.js
+performance-check.js
+tailwind.config.js
+
+# Automation files
+**/evaluate.cjs
+**/evolve.cjs
+**/ai-it-content-factory.cjs
+**/ai-it-researcher.cjs
+**/analytics.js
+**/feedback.js
+**/integration.js
 
 # Test files (optional - uncomment if you want to exclude tests)
 # __tests__/

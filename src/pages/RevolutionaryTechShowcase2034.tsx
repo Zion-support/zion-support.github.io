@@ -19,7 +19,7 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary Tech Showcase 2034
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
               Experience the most advanced technologies through interactive demonstrations and real-time simulations</p>
             </p>
           </motion.div>
@@ -32,8 +32,8 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   currentDemo === index
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg scale-105'
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}
+                    : 'bg-white/10 text-white hover:bg-white/20'</button>
+                }`}</button>
               ></button>
                 <span className="text-2xl mr-2">{demo.icon}</span>
                 {demo.title}
@@ -51,7 +51,7 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
               >
                 <div className="text-8xl mb-6 animate-bounce">{demos[currentDemo].icon}
                 <h2 className="text-4xl font-bold mb-4">{demos[currentDemo].title}</h2>
-                <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
                   {demos[currentDemo].description}</p>
                 </p>
                 {/* Interactive Demo Area */}
@@ -88,13 +88,13 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
                             <div className="bg-gradient-to-r from-pink-400 to-cyan-400 h-2 rounded-full w-full">
                 {/* Interactive Controls */}
                 <div className="flex flex-wrap justify-center gap-4">
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"></button>
                     🎮 Start Interactive Demo</button>
                   </button>
-                  <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-colors">
+                  <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-colors"></button>
                     📊 View Analytics</button>
                   </button>
-                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400/10 transition-colors">
+                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400/10 transition-colors"></button>
                     🔬 Technical Details</button>
                   </button>
               </motion.div>
@@ -126,8 +126,8 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6">
             🌟 Revolutionary Tech Showcase 2034
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology showcase featuring interactive demos, 
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
+            Experience the most advanced technology showcase featuring interactive demos, </p>
             real-time processing, and multi-dimensional technology demonstrations.</p>
           </p>
         {/* Interactive Technology Demos */}
@@ -135,7 +135,7 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎮
             <h3 className="text-2xl font-bold mb-4 text-center">Interactive Demos</h3>
-            <p className="text-pink-100 mb-6 text-center">
+            <p className="text-pink-100 mb-6 text-center"></p>
               Hands-on demonstrations of cutting-edge technologies with real-time interaction and feedback.</p>
             </p>
             <div className="space-y-3 mb-6">
@@ -148,13 +148,13 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
               <div className="bg-white/20 rounded-lg p-3 text-sm">
                 <span className="font-semibold">Neural Interface Demo</span>
                 <p className="text-xs opacity-80">Control devices with your mind</p>
-            <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold"></button>
               Try Interactive Demo →</button>
             </button>
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold mb-4 text-center">Real-time Processing</h3>
-            <p className="text-cyan-100 mb-6 text-center">
+            <p className="text-cyan-100 mb-6 text-center"></p>
               Experience lightning-fast processing with our advanced quantum and neural computing systems.</p>
             </p>
             <div className="space-y-3 mb-6">
@@ -167,13 +167,13 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
               <div className="bg-white/20 rounded-lg p-3 text-sm">
                 <span className="font-semibold">Consciousness AI</span>
                 <p className="text-xs opacity-80">Real-time decision making</p>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold"></button>
               View Processing Power →</button>
             </button>
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌
             <h3 className="text-2xl font-bold mb-4 text-center">Multi-dimensional Tech</h3>
-            <p className="text-emerald-100 mb-6 text-center">
+            <p className="text-emerald-100 mb-6 text-center"></p>
               Explore technology that operates across multiple dimensions and realities simultaneously.</p>
             </p>
             <div className="space-y-3 mb-6">
@@ -186,7 +186,7 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
               <div className="bg-white/20 rounded-lg p-3 text-sm">
                 <span className="font-semibold">Consciousness Transfer</span>
                 <p className="text-xs opacity-80">Move between dimensions</p>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold"></button>
               Explore Dimensions →</button>
             </button>
         {/* Technology Showcase Grid */}
@@ -260,17 +260,165 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join the technological revolution and be part of the most advanced showcase of human innovation.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Your Journey</button>
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"></button>
               Book Demo</button>
             </button>
   );
 };
 
 export default RevolutionaryTechShowcase2034;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

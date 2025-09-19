@@ -142,7 +142,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Revolutionary Case Studies
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
               Discover how our cutting-edge AI solutions are transforming industries and delivering unprecedented results for businesses worldwide.</p>
             </p>
       {/* Category Filter */}
@@ -155,8 +155,8 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
-              }`}
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'</button>
+              }`}</button>
             ></button>
               <span className="mr-2">{category.icon}</span>
               {category.name}
@@ -223,7 +223,7 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
                     </span>
                   ))}
               {/* CTA */}
-              <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+              <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                 View Detailed Case Study →</button>
               </button>
           ))}
@@ -255,22 +255,112 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join hundreds of companies that have already revolutionized their operations with our cutting-edge AI solutions. Start your transformation journey today.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Your Transformation</button>
             </button>
-            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg"></button>
               Schedule Consultation</button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"></button>
               View All Case Studies</button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-              View All Case Studies
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"></button>
+              View All Case Studies</button>
               Schedule Consultation</button>
             </button>
   );
 };
 
 export default RevolutionaryCaseStudies2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

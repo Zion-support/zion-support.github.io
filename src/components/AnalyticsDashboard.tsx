@@ -58,8 +58,8 @@ const AnalyticsDashboard: React.FC = () => {
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300"
-        title="Toggle Analytics Dashboard"
-      >
+        title="Toggle Analytics Dashboard"</button>
+      ></button>
         📊</button>
       </button>
       {/* Analytics Dashboard */}
@@ -69,8 +69,8 @@ const AnalyticsDashboard: React.FC = () => {
             <h3 className="text-lg font-semibold text-cyan-400">Analytics Dashboard</h3>
             <button
               onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-white text-xl"
-            >
+              className="text-gray-400 hover:text-white text-xl"</button>
+            ></button>
               ×</button>
             </button>
           <div className="space-y-2 text-sm">
@@ -95,8 +95,8 @@ const AnalyticsDashboard: React.FC = () => {
                   window.navigator.clipboard.writeText(sessionData);
                 }
               }}
-              className="w-full bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded text-xs transition-colors duration-200"
-            >
+              className="w-full bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded text-xs transition-colors duration-200"</button>
+            ></button>
               Export Session Data</button>
             </button>
       )}
@@ -105,3 +105,6 @@ const AnalyticsDashboard: React.FC = () => {
 };
 
 export default AnalyticsDashboard;
+  </div>
+  </div>
+  </div>

@@ -388,8 +388,8 @@ const ContentShowcase: React.FC = () => {
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
             Knowledge Hub
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Stay ahead with our latest insights, case studies, and expert resources. 
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"></p>
+            Stay ahead with our latest insights, case studies, and expert resources. </p>
             Discover how cutting-edge technology is transforming businesses worldwide.</p>
           </p>
         {/* Tab Navigation */}
@@ -430,7 +430,7 @@ const ContentShowcase: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stay Updated with Our Latest Insights
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"></p>
               Get exclusive access to our latest research, case studies, and technology insights delivered directly to your inbox.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -441,7 +441,7 @@ const ContentShowcase: React.FC = () => {
               />
               <button
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-              >
+              ></button>
                 Subscribe</button>
               </button>
   );
@@ -449,3 +449,102 @@ const ContentShowcase: React.FC = () => {
 
 export { ContentShowcase };
 export default ContentShowcase;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

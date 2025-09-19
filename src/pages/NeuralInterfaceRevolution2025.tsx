@@ -48,10 +48,10 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Explore Neural Interfaces</button>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg"></button>
                 Watch Demo</button>
               </button>
       <div className="container mx-auto px-4 py-16">
@@ -67,8 +67,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-white mb-6">
             Neural Interface Revolution 2025
           </h1>
-          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8">
-            Bridge the gap between mind and machine with revolutionary neural interface technology 
+          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8"></p>
+            Bridge the gap between mind and machine with revolutionary neural interface technology </p>
             that enables direct brain-computer communication and thought-controlled devices.</p>
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Non-Invasive BCI</h3>
-            <p className="text-emerald-200 mb-6 text-center">
+            <p className="text-emerald-200 mb-6 text-center"></p>
               Advanced EEG and fNIRS technology for safe, comfortable brain-computer interfaces</p>
             </p>
             <ul className="text-emerald-300 space-y-2 text-sm">
@@ -91,7 +91,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <li>• Machine learning integration</li>
               <li>• Portable and wireless</li>
             </ul>
-            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto"></p>
               Advanced technical capabilities and performance metrics of neural interface systems</p>
             </p>
           <div className="grid lg:grid-cols-2 gap-12">
@@ -198,8 +198,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-white mb-6">
             Neural Interface Revolution 2025
           </h1>
-          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8">
-            Bridge the gap between mind and machine with revolutionary neural interface technology 
+          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8"></p>
+            Bridge the gap between mind and machine with revolutionary neural interface technology </p>
             that enables direct brain-computer communication and thought-controlled devices.</p>
           </p>
         </motion.div>
@@ -213,7 +213,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Non-Invasive BCI</h3>
-            <p className="text-emerald-200 mb-6 text-center">
+            <p className="text-emerald-200 mb-6 text-center"></p>
               Advanced EEG and fNIRS technology for safe, comfortable brain-computer interfaces</p>
             </p>
             <ul className="text-emerald-300 space-y-2 text-sm">
@@ -225,7 +225,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Invasive Neural Implants</h3>
-            <p className="text-cyan-200 mb-6 text-center">
+            <p className="text-cyan-200 mb-6 text-center"></p>
               Precision neural implants for high-bandwidth, bidirectional brain-computer communication</p>
             </p>
             <ul className="text-cyan-300 space-y-2 text-sm">
@@ -237,7 +237,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Optical Neural Interfaces</h3>
-            <p className="text-purple-200 mb-6 text-center">
+            <p className="text-purple-200 mb-6 text-center"></p>
               Light-based neural stimulation and recording for precise, non-destructive brain control</p>
             </p>
             <ul className="text-purple-300 space-y-2 text-sm">
@@ -256,7 +256,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
-            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto"></p>
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation</p>
             </p>
       {/* Call to Action */}
@@ -268,8 +268,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           >
             <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-12 text-white">
               <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Experience the future of human-computer interaction with neural interfaces that 
+              <p className="text-xl mb-8 max-w-3xl mx-auto"></p>
+                Experience the future of human-computer interaction with neural interfaces that </p>
                 bridge the gap between mind and machine. The revolution starts with you.</p>
               </p>
         {/* Call to Action */}
@@ -281,14 +281,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
             <h2 className="text-4xl font-bold mb-6">Ready to Connect Mind and Machine?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto"></p>
               Experience the future of human-computer interaction with revolutionary neural interface technology.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition-colors">
+              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition-colors"></button>
                 Explore Neural Interfaces →</button>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-colors"></button>
                 Schedule Demo</button>
               </button>
         </motion.div>
@@ -303,19 +303,19 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Neural Interface Revolution 2025
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Bridge the gap between mind and machine with revolutionary neural interfaces that enable direct brain-computer communication</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Connect Your Mind →</button>
             </button>
-            <button className="border border-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-500/20 transition-colors font-semibold text-lg">
+            <button className="border border-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-500/20 transition-colors font-semibold text-lg"></button>
               Watch Demo</button>
             </button>
             <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Non-Invasive BCI</h3>
-            <p className="text-emerald-200 mb-6 text-center">
+            <p className="text-emerald-200 mb-6 text-center"></p>
               Advanced EEG and fNIRS systems for seamless brain-computer interaction without surgery.</p>
             </p>
             <ul className="text-emerald-200 space-y-2 text-sm">
@@ -326,7 +326,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Thought Control</h3>
-            <p className="text-cyan-200 mb-6 text-center">
+            <p className="text-cyan-200 mb-6 text-center"></p>
               Direct neural control of devices and applications through pure thought and intention.</p>
             </p>
             <ul className="text-cyan-200 space-y-2 text-sm">
@@ -337,7 +337,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔄
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Neural Feedback</h3>
-            <p className="text-purple-200 mb-6 text-center">
+            <p className="text-purple-200 mb-6 text-center"></p>
               Bidirectional interfaces that provide sensory feedback directly to the brain.</p>
             </p>
             <ul className="text-purple-300 space-y-2 text-sm">
@@ -356,14 +356,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
-            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto"></p>
       {/* Main Content */}</p>
       <div className="container mx-auto px-4 py-16">
         {/* Neural Interface Technologies */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Neural Technologies</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               Advanced technical capabilities and performance metrics of neural interface systems</p>
             </p>
           </motion.div>
@@ -377,7 +377,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             >
               <div className="text-4xl mb-4">🧠
               <h3 className="text-2xl font-bold mb-4">Non-Invasive BCI</h3>
-              <p className="text-emerald-100 mb-6">
+              <p className="text-emerald-100 mb-6"></p>
                 Advanced brain-computer interfaces that read neural signals without surgical implantation</p>
               </p>
               <ul className="text-emerald-200 space-y-2 mb-6">
@@ -447,7 +447,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">🎯
               <h3 className="text-xl font-bold mb-3">Precision Control</h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 text-sm mb-4"></p>
                 Control robotic systems with surgical precision using only your thoughts</p>
               </p>
               <div className="text-xs text-emerald-300">
@@ -455,7 +455,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="text-4xl mb-4">💬
               <h3 className="text-xl font-bold mb-3">Silent Communication</h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 text-sm mb-4"></p>
                 Communicate with others through direct thought transmission</p>
               </p>
               <div className="text-xs text-cyan-300">
@@ -463,7 +463,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-4xl mb-4">🎨
               <h3 className="text-xl font-bold mb-3">Creative Expression</h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 text-sm mb-4"></p>
                 Create art, music, and content directly from your imagination</p>
               </p>
               <div className="text-xs text-purple-300">
@@ -471,7 +471,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">🏥
               <h3 className="text-xl font-bold mb-3">Medical Rehabilitation</h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 text-sm mb-4"></p>
                 Restore lost functions through neural pathway retraining</p>
               </p>
               <div className="text-xs text-orange-300">
@@ -479,7 +479,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30">
               <div className="text-4xl mb-4">🧠
               <h3 className="text-xl font-bold mb-3">Memory Enhancement</h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 text-sm mb-4"></p>
                 Enhance memory storage and retrieval through neural stimulation</p>
               </p>
               <div className="text-xs text-violet-300">
@@ -487,7 +487,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
               <div className="text-4xl mb-4">🌐
               <h3 className="text-xl font-bold mb-3">Virtual Reality</h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 text-sm mb-4"></p>
                 Experience fully immersive VR through direct neural input</p>
               </p>
               <div className="text-xs text-pink-300">
@@ -501,7 +501,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 <span className="px-3 py-1 bg-green-500 text-white text-xs rounded-full">SUCCESS</span>
                 <span className="text-sm text-gray-400">January 2025</span>
               <h3 className="text-2xl font-bold mb-4">Paralyzed Patient Walks Again</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6"></p>
                 Using our neural interface technology, a patient paralyzed for 5 years regained the ability to walk by controlling robotic exoskeleton with their thoughts.</p>
               </p>
               <div className="text-sm text-emerald-300">
@@ -511,7 +511,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 <span className="px-3 py-1 bg-blue-500 text-white text-xs rounded-full">BREAKTHROUGH</span>
                 <span className="text-sm text-gray-400">January 2025</span>
               <h3 className="text-2xl font-bold mb-4">Thought-to-Text Revolution</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6"></p>
                 Developed a system that can translate thoughts directly into text with 99.5% accuracy, revolutionizing communication for people with speech disabilities.</p>
               </p>
               <div className="text-sm text-cyan-300">
@@ -529,8 +529,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-white mb-6">
             Neural Interface Revolution 2025
           </h1>
-          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8">
-            Bridge the gap between mind and machine with revolutionary neural interface technology 
+          <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8"></p>
+            Bridge the gap between mind and machine with revolutionary neural interface technology </p>
             that enables direct brain-computer communication and thought-controlled devices.</p>
           </p>
         </motion.div>
@@ -544,7 +544,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Non-Invasive BCI</h3>
-            <p className="text-emerald-200 mb-6 text-center">
+            <p className="text-emerald-200 mb-6 text-center"></p>
               Advanced EEG and fNIRS technology for safe, comfortable brain-computer interfaces</p>
             </p>
             <ul className="text-emerald-300 space-y-2 text-sm">
@@ -556,7 +556,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Invasive Neural Implants</h3>
-            <p className="text-cyan-200 mb-6 text-center">
+            <p className="text-cyan-200 mb-6 text-center"></p>
               Precision neural implants for high-bandwidth, bidirectional brain-computer communication</p>
             </p>
             <ul className="text-cyan-300 space-y-2 text-sm">
@@ -568,7 +568,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Optical Neural Interfaces</h3>
-            <p className="text-purple-200 mb-6 text-center">
+            <p className="text-purple-200 mb-6 text-center"></p>
               Light-based neural stimulation and recording for precise, non-destructive brain control</p>
             </p>
             <ul className="text-purple-300 space-y-2 text-sm">
@@ -587,7 +587,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
-            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto"></p>
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation</p>
             </p>
       {/* Call to Action */}
@@ -601,8 +601,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           >
             <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-12 text-white">
               <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Experience the future of human-computer interaction with neural interfaces that 
+              <p className="text-xl mb-8 max-w-3xl mx-auto"></p>
+                Experience the future of human-computer interaction with neural interfaces that </p>
                 bridge the gap between mind and machine. The revolution starts with you.</p>
               </p>
             <div className="text-center">
@@ -616,7 +616,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🏥 Medical Applications</h3>
-                <p className="text-emerald-200 mb-4">
+                <p className="text-emerald-200 mb-4"></p>
                   Restoring mobility and communication for patients with paralysis, stroke, or neurodegenerative diseases.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -625,7 +625,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">Prosthetic Control</span>
               <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">💬 Communication Enhancement</h3>
-                <p className="text-cyan-200 mb-4">
+                <p className="text-cyan-200 mb-4"></p>
                   Enabling direct thought-to-text communication and language translation through neural interfaces.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -635,7 +635,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl p-6 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🎮 Human-Computer Interaction</h3>
-                <p className="text-purple-200 mb-4">
+                <p className="text-purple-200 mb-4"></p>
                   Intuitive control of computers, VR/AR systems, and smart devices through thought commands.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -644,7 +644,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Gaming Interfaces</span>
               <div className="bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-xl p-6 border border-orange-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🚀 Human Augmentation</h3>
-                <p className="text-orange-200 mb-4">
+                <p className="text-orange-200 mb-4"></p>
                   Enhancing human capabilities through direct neural enhancement and cognitive augmentation.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -661,7 +661,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🔬 Neural Interface Specifications</h2>
-            <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
+            <p className="text-xl text-indigo-200 max-w-3xl mx-auto"></p>
               Advanced technical specifications and performance metrics for our neural interface systems</p>
             </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -705,14 +705,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🛡️ Safety & Ethical Framework</h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto"></p>
               Comprehensive safety protocols and ethical guidelines for responsible neural interface development</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🔒 Safety Protocols</h3>
-                <p className="text-emerald-200 mb-4">
+                <p className="text-emerald-200 mb-4"></p>
                   Rigorous safety testing and monitoring systems to ensure user protection.</p>
                 </p>
                 <ul className="text-emerald-300 space-y-2 text-sm">
@@ -723,7 +723,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 </ul>
               <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🧠 Neural Privacy</h3>
-                <p className="text-cyan-200 mb-4">
+                <p className="text-cyan-200 mb-4"></p>
                   Advanced encryption and privacy protection for neural data.</p>
                 </p>
                 <ul className="text-cyan-300 space-y-2 text-sm">
@@ -735,7 +735,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl p-6 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">⚖️ Ethical Guidelines</h3>
-                <p className="text-purple-200 mb-4">
+                <p className="text-purple-200 mb-4"></p>
                   Comprehensive ethical framework for responsible neural interface development.</p>
                 </p>
                 <ul className="text-purple-300 space-y-2 text-sm">
@@ -746,7 +746,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 </ul>
               <div className="bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-xl p-6 border border-orange-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🔬 Research Standards</h3>
-                <p className="text-orange-200 mb-4">
+                <p className="text-orange-200 mb-4"></p>
                   Rigorous research protocols and peer review processes.</p>
                 </p>
                 <ul className="text-orange-300 space-y-2 text-sm">
@@ -756,14 +756,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   <li>• Independent oversight</li>
                 </ul>
         </motion.div>
-            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto"></p>
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🏥 Medical Applications</h3>
-                <p className="text-emerald-200 mb-4">
+                <p className="text-emerald-200 mb-4"></p>
                   Restoring mobility and communication for patients with paralysis, stroke, or neurodegenerative diseases.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -772,7 +772,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">Prosthetic Control</span>
               <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">💬 Communication Enhancement</h3>
-                <p className="text-cyan-200 mb-4">
+                <p className="text-cyan-200 mb-4"></p>
                   Enabling direct thought-to-text communication and language translation through neural interfaces.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -782,7 +782,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl p-6 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🎮 Human-Computer Interaction</h3>
-                <p className="text-purple-200 mb-4">
+                <p className="text-purple-200 mb-4"></p>
                   Intuitive control of computers, VR/AR systems, and smart devices through thought commands.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -791,7 +791,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Gaming Interfaces</span>
               <div className="bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-xl p-6 border border-orange-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🚀 Human Augmentation</h3>
-                <p className="text-orange-200 mb-4">
+                <p className="text-orange-200 mb-4"></p>
                   Enhancing human capabilities through direct neural enhancement and cognitive augmentation.</p>
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -808,7 +808,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🔬 Neural Interface Specifications</h2>
-            <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
+            <p className="text-xl text-indigo-200 max-w-3xl mx-auto"></p>
               Advanced technical specifications and performance metrics for our neural interface systems</p>
             </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -852,14 +852,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🛡️ Safety & Ethical Framework</h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto"></p>
               Comprehensive safety protocols and ethical guidelines for responsible neural interface development</p>
             </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🔒 Safety Protocols</h3>
-                <p className="text-emerald-200 mb-4">
+                <p className="text-emerald-200 mb-4"></p>
                   Rigorous safety testing and monitoring systems to ensure user protection.</p>
                 </p>
                 <ul className="text-emerald-300 space-y-2 text-sm">
@@ -870,7 +870,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 </ul>
               <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">🧠 Neural Privacy</h3>
-                <p className="text-cyan-200 mb-4">
+                <p className="text-cyan-200 mb-4"></p>
                   Advanced encryption and privacy protection for neural data.</p>
                 </p>
                 <ul className="text-cyan-300 space-y-2 text-sm">
@@ -886,19 +886,19 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl mb-4">🔒
               <h3 className="text-xl font-bold mb-3">Privacy Protection</h3>
-              <p className="opacity-90">
+              <p className="opacity-90"></p>
                 Advanced encryption and privacy protocols ensure your neural data remains completely secure and private.</p>
               </p>
             <div className="text-center">
               <div className="text-5xl mb-4">⚖️
               <h3 className="text-xl font-bold mb-3">Ethical Guidelines</h3>
-              <p className="opacity-90">
+              <p className="opacity-90"></p>
                 Strict ethical frameworks govern the development and use of neural interface technology.</p>
               </p>
             <div className="text-center">
               <div className="text-5xl mb-4">🛡️
               <h3 className="text-xl font-bold mb-3">Safety Standards</h3>
-              <p className="opacity-90">
+              <p className="opacity-90"></p>
                 Comprehensive safety testing and monitoring ensure the technology is safe for long-term use.</p>
               </p>
         {/* Call to Action */}
@@ -908,7 +908,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200">
             <div className="text-6xl mb-6 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center text-emerald-800">Non-Invasive BCI</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Advanced brain-computer interfaces that read neural signals without surgery, enabling seamless mind-machine interaction.</p>
             </p>
             <ul className="text-emerald-700 space-y-2 text-sm">
@@ -920,7 +920,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-200">
             <div className="text-6xl mb-6 text-center">🎮
             <h3 className="text-2xl font-bold mb-4 text-center text-teal-800">Thought Control</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Control devices, applications, and systems using only your thoughts, opening new possibilities for accessibility and efficiency.</p>
             </p>
             <ul className="text-teal-700 space-y-2 text-sm">
@@ -932,7 +932,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200">
             <div className="text-6xl mb-6 text-center">🔄
             <h3 className="text-2xl font-bold mb-4 text-center text-cyan-800">Neural Feedback</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Receive direct feedback from digital systems to your brain, creating immersive experiences and enhanced learning capabilities.</p>
             </p>
             <ul className="text-cyan-700 space-y-2 text-sm">
@@ -951,14 +951,14 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
             <h2 className="text-4xl font-bold mb-6">Ready to Connect Mind and Machine?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto"></p>
               Experience the future of human-computer interaction with revolutionary neural interface technology.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition-colors">
+              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition-colors"></button>
                 Explore Neural Interfaces →</button>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-colors"></button>
                 Schedule Demo</button>
               </button>
         </motion.div>
@@ -973,7 +973,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Neural Interface Revolution 2025
           </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8"></p>
             Bridge the gap between mind and machine with our revolutionary neural interface technology that enables direct brain-computer communication.</p>
           </p>
         {/* Neural Interface Features */}
@@ -981,7 +981,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200">
             <div className="text-6xl mb-6 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center text-emerald-800">Non-Invasive BCI</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Advanced brain-computer interfaces that read neural signals without surgery, enabling seamless mind-machine interaction.</p>
             </p>
             <ul className="text-emerald-700 space-y-2 text-sm">
@@ -993,7 +993,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-200">
             <div className="text-6xl mb-6 text-center">🎮
             <h3 className="text-2xl font-bold mb-4 text-center text-teal-800">Thought Control</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Control devices, applications, and systems using only your thoughts, opening new possibilities for accessibility and efficiency.</p>
             </p>
             <ul className="text-teal-700 space-y-2 text-sm">
@@ -1005,7 +1005,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200">
             <div className="text-6xl mb-6 text-center">🔄
             <h3 className="text-2xl font-bold mb-4 text-center text-cyan-800">Neural Feedback</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Receive direct feedback from digital systems to your brain, creating immersive experiences and enhanced learning capabilities.</p>
             </p>
             <ul className="text-cyan-700 space-y-2 text-sm">
@@ -1104,25 +1104,25 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
-          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto"></p>
             Experience the next evolution of human-computer interaction with our revolutionary neural interface technology.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Neural Journey</button>
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg"></button>
               Learn More</button>
         <div className="text-center bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Experience the future of human-computer interaction. Connect your mind directly to the digital world.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Neural Connection</button>
             </button>
-            <button className="border border-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-500/20 transition-colors font-semibold text-lg">
+            <button className="border border-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-500/20 transition-colors font-semibold text-lg"></button>
               Schedule Demo</button>
             </button>
         </motion.div>
@@ -1137,7 +1137,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Neural Interface Revolution 2025
           </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8"></p>
             Bridge the gap between mind and machine with our revolutionary neural interface technology that enables direct brain-computer communication.</p>
           </p>
         {/* Neural Interface Features */}
@@ -1145,7 +1145,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200">
             <div className="text-6xl mb-6 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center text-emerald-800">Non-Invasive BCI</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Advanced brain-computer interfaces that read neural signals without surgery, enabling seamless mind-machine interaction.</p>
             </p>
             <ul className="text-emerald-700 space-y-2 text-sm">
@@ -1157,7 +1157,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-200">
             <div className="text-6xl mb-6 text-center">🎮
             <h3 className="text-2xl font-bold mb-4 text-center text-teal-800">Thought Control</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Control devices, applications, and systems using only your thoughts, opening new possibilities for accessibility and efficiency.</p>
             </p>
             <ul className="text-teal-700 space-y-2 text-sm">
@@ -1169,7 +1169,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-cyan-200">
             <div className="text-6xl mb-6 text-center">🔄
             <h3 className="text-2xl font-bold mb-4 text-center text-cyan-800">Neural Feedback</h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-gray-600 mb-6 text-center"></p>
               Receive direct feedback from digital systems to your brain, creating immersive experiences and enhanced learning capabilities.</p>
             </p>
             <ul className="text-cyan-700 space-y-2 text-sm">
@@ -1245,40 +1245,40 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="text-4xl mb-4 text-center">👨‍🦽
               <h3 className="text-xl font-bold mb-3 text-center">Mobility Restoration</h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center"></p>
                 "I can control my wheelchair and computer using only my thoughts. This technology has given me my independence back."</p>
               </p>
               <div className="text-sm text-teal-600 font-semibold text-center mt-4">- Sarah M., Patient
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="text-4xl mb-4 text-center">🎓
               <h3 className="text-xl font-bold mb-3 text-center">Enhanced Learning</h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center"></p>
                 "Students using neural interfaces learn 3x faster and retain information better. It's revolutionizing education."</p>
               </p>
               <div className="text-sm text-teal-600 font-semibold text-center mt-4">- Dr. Johnson, Educator
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="text-4xl mb-4 text-center">🏥
               <h3 className="text-xl font-bold mb-3 text-center">Medical Breakthrough</h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-600 text-center"></p>
                 "Neural interfaces are helping patients recover from strokes and brain injuries faster than ever before."</p>
               </p>
               <div className="text-sm text-teal-600 font-semibold text-center mt-4">- Dr. Chen, Neurologist
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
-          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto"></p>
             Experience the next evolution of human-computer interaction with our revolutionary neural interface technology.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Neural Journey</button>
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg"></button>
               Learn More</button>
             </button>
         <div className="text-center bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Connect Mind and Machine</h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-90"></p>
             Experience the future of human-computer interaction with our revolutionary neural interface technology.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1292,3 +1292,296 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
 };
 
 export default NeuralInterfaceRevolution2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

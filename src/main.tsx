@@ -8,10 +8,10 @@ import './utils/performanceMonitor'
 if (typeof window !== 'undefined' && 'serviceWorker' in (window as any).navigator) {
   window.addEventListener('load', () => {
     (window as any).navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
+      .then((_registration) => {
         // console.log('SW registered: ', registration)
       })
-      .catch((registrationError) => {
+      .catch((_registrationError) => {
         // console.log('SW registration failed: ', registrationError)
       })
   })

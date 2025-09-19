@@ -176,7 +176,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Technology Showcase
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
             Experience the future with our groundbreaking 2027 technology innovations</p>
           </p>
         {/* Main Carousel */}
@@ -296,8 +296,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                   index === currentSlide
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125'
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
+                }`}</button>
+              /></button>
             ))}</button>
         {/* Auto-play Toggle */}
         <div className="text-center mt-8">
@@ -307,8 +307,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               isAutoPlaying
                 ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
                 : 'bg-white/20 backdrop-blur-sm text-white/70 hover:text-white'
-            }`}
-          >
+            }`}</button>
+          ></button>
             {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation</button>
           </button>
               ))}
@@ -337,8 +337,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-            />
+              }`}</button>
+            /></button>
           ))}</button>
         {/* View All Button */}
         <div className="text-center mt-8">
@@ -355,3 +355,48 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2027;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

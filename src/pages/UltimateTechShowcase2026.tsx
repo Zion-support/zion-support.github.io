@@ -43,7 +43,7 @@ const UltimateTechShowcase2026: React.FC = () => {
               <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 Ultimate Tech Showcase
               </h1>
-              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
                 Experience the most comprehensive collection of revolutionary technologies that are reshaping our world and defining the future of human civilization.</p>
               </p>
             </motion.div>
@@ -67,7 +67,7 @@ const UltimateTechShowcase2026: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               Explore the cutting-edge technologies that are transforming industries and reshaping human potential</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -120,14 +120,14 @@ const UltimateTechShowcase2026: React.FC = () => {
             className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto"></p>
               Join us in exploring these revolutionary technologies and discover how they can transform your business and unlock unprecedented possibilities.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
                 Schedule Demo</button>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"></button>
                 Contact Our Experts</button>
               </button>
           </motion.div>
@@ -135,3 +135,53 @@ const UltimateTechShowcase2026: React.FC = () => {
 };
 
 export default UltimateTechShowcase2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
