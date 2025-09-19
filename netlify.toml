@@ -1,9 +1,8 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-01-19T15:45:00Z (refresh 2025-01-19T15:45:00Z-5)
 [build]
-  # Build the Next.js site located in the monorepo subdirectory from the repo root
-  base = "zion-website"
+  # Build the Vite + React site
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 # No-op: trigger deploy 2025-09-18T15:26:33Z (refresh)
 
@@ -18,15 +17,11 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-## Use the official Next.js plugin for routing, SSR/ISR, and functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[functions]
-  # Functions live at the repository root
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-  included_files = ["public/**/*"]
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [build.processing]
   skip_processing = true
