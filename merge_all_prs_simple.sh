@@ -1,11 +1,23 @@
 #!/bin/bash
 
-# Script to merge all remaining PRs into main
+# Simple and reliable script to merge all open PRs into main
 set -e
 
-echo "🚀 Starting merge process for remaining PRs..."
+echo "🚀 Starting merge process for all open PRs..."
 echo "⏰ Started at: $(date)"
 echo "---"
+
+# Create a backup branch
+BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
+git checkout main
+
+# Ensure we're on main and it's up to date
+echo "🔄 Ensuring main branch is up to date..."
+git checkout main
+git pull origin main
 
 # Initialize counters
 SUCCESSFUL_MERGES=0
@@ -14,15 +26,15 @@ CONFLICT_RESOLUTIONS=0
 SKIPPED_BRANCHES=0
 TOTAL_PROCESSED=0
 
-# Get all PR branches (excluding the first 20 we already processed)
-echo "📋 Fetching all remaining PR branches..."
+# Get all PR branches
+echo "📋 Fetching all PR branches..."
 git fetch --all
 
 # Get all branches that look like PRs
-PR_BRANCHES=$(git branch -r | grep -E "(origin/PR-|origin/pr-|origin/pull-)" | sed 's/origin\///' | tail -n +21)
+PR_BRANCHES=$(git branch -r | grep -E "(origin/PR-|origin/pr-|origin/pull-)" | sed 's/origin\///' | head -20)
 TOTAL_BRANCHES=$(echo "$PR_BRANCHES" | wc -l)
 
-echo "📊 Processing $TOTAL_BRANCHES remaining PR branches..."
+echo "📊 Processing $TOTAL_BRANCHES PR branches..."
 
 # Function to resolve conflicts in a file
 resolve_conflicts() {
@@ -166,8 +178,8 @@ for branch in $PR_BRANCHES; do
     echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved, $SKIPPED_BRANCHES skipped"
     echo "---"
     
-    # Push changes every 10 successful merges
-    if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+    # Push changes every 5 successful merges
+    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         echo "💾 Pushing progress to remote..."
         git push origin main 2>/dev/null || echo "⚠️  Could not push main"
     fi
@@ -179,13 +191,14 @@ git push origin main 2>/dev/null || echo "⚠️  Could not push main"
 
 # Summary
 echo ""
-echo "🎉 Remaining PRs merge process completed!"
+echo "🎉 Merge process completed!"
 echo "📊 Final Summary:"
 echo "   📋 Total branches processed: $TOTAL_PROCESSED"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
+echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 
 # Show recent commits
@@ -194,4 +207,4 @@ echo "📝 Recent commits:"
 git log --oneline -10 2>/dev/null || true
 
 echo ""
-echo "🎯 Remaining PRs merge process completed successfully!"
+echo "🎯 Merge process completed successfully!"
