@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+// import SEO from '@/components/SEO';
 import { 
   Rocket, 
   Users, 
@@ -83,11 +83,11 @@ export default function About() {
 
   return (
     <>
-      <SEO 
+      {/* <SEO 
         title="About Zion Tech Group - Leading AI & Technology Innovation Company"
         description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions. Discover our story, values, and commitment to innovation."
         keywords={['about Zion Tech Group', 'AI company', 'technology innovation', 'quantum computing', 'digital transformation']}
-      />
+      /> */}
       
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
