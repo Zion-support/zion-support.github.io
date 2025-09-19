@@ -318,7 +318,7 @@ function App() {
         <h1 className="main-title">
           <span className="title-highlight">Zion Tech Group</span>
         </h1>
-        <p className="subtitle">Welcome to our innovative technology solutions</p>
+        <p className="subtitle">Welcome to our innovative technology solutions - Empowering the future with cutting-edge AI, blockchain, and quantum technologies</p>
         <div className="stats-container">
           <div className="stat-card">
             <div className="stat-number">{animatedCounts.projects}+</div>
