@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-af01
+import { Link } from 'react-router-dom';
 
 const NextGenInnovationHub2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -92,7 +88,6 @@ const NextGenInnovationHub2026: React.FC = () => {
     : innovations.filter(innovation => innovation.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -257,7 +252,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           <p className="text-xl text-gray-300">Explore our comprehensive range of next-generation technologies</p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
@@ -478,7 +472,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-af01
     </div>
   );
 };
