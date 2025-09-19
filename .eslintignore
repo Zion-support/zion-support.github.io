@@ -5,6 +5,7 @@ out/
 .next/
 *.min.js
 *.bundle.js
+*.chunk.js
 
 # Dependencies
 node_modules/
@@ -15,6 +16,13 @@ zion-os/
 zion-website/
 zion.app/
 zion_academy/
+backup/
+backups/
+cache/
+artifacts/
+*.backup.*
+*.disabled
+server/
 
 # Public assets
 public/
