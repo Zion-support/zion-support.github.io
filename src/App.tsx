@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
@@ -14,6 +15,63 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
+import LoadingSpinner from './components/LoadingSpinner';
+import ThemeToggle from './components/ThemeToggle';
+import PerformanceMetrics from './components/PerformanceMetrics';
+
+// Custom hooks
+const useLocalStorage = (key: string, initialValue: any) => {
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      return initialValue;
+    }
+  });
+
+  const setValue = (value: any) => {
+    try {
+      setStoredValue(value);
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error('Error saving to localStorage:', error);
+    }
+  };
+
+  return [storedValue, setValue];
+};
+
+const useToast = () => {
+  const [toasts, setToasts] = useState<any[]>([]);
+
+  const showSuccess = (message: string) => {
+    setToasts(prev => [...prev, { id: Date.now(), type: 'success', message }]);
+  };
+
+  const showInfo = (message: string) => {
+    setToasts(prev => [...prev, { id: Date.now(), type: 'info', message }]);
+  };
+
+  const showWarning = (message: string) => {
+    setToasts(prev => [...prev, { id: Date.now(), type: 'warning', message }]);
+  };
+
+  return { toasts, showSuccess, showInfo, showWarning };
+};
+
+// Analytics functions
+const trackButtonClick = (buttonName: string) => {
+  console.log('Button clicked:', buttonName);
+};
+
+const trackPageView = (pageName: string) => {
+  console.log('Page viewed:', pageName);
+};
+
+const trackFeatureInteraction = (featureName: string) => {
+  console.log('Feature interaction:', featureName);
+};
 
 function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -28,6 +86,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const { toasts, showSuccess, showInfo, showWarning } = useToast();
 
   // Update time every second
@@ -216,6 +275,12 @@ function App() {
       color: "#8b5cf6"
     }
   ], []);
+
+  const features = [
+    { name: 'Fast Performance', description: 'Optimized for speed' },
+    { name: 'Secure', description: 'Enterprise-grade security' },
+    { name: 'Scalable', description: 'Grows with your business' }
+  ];
 
   if (error) {
     return (
