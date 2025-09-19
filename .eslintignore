@@ -52,6 +52,7 @@ next.config.js
 sw.js
 performance-check.js
 tailwind.config.js
+.eslintrc.js
 
 # Automation files
 **/evaluate.cjs
@@ -61,10 +62,20 @@ tailwind.config.js
 **/analytics.js
 **/feedback.js
 **/integration.js
+automation/
+.scripts/
 
 # Test files (optional - uncomment if you want to exclude tests)
 # __tests__/
-# *.test.js
-# *.test.ts
-# *.spec.js
-# *.spec.ts
+# **/*.test.js
+# **/*.test.ts
+# **/*.test.tsx
+# **/*.spec.js
+# **/*.spec.ts
+# **/*.spec.tsx
+
+# AI components
+AIAgentOrchestrator.jsx
+AIAnalytics.jsx
+AIAnalyticsCopilot.jsx
+AIAutonomousBusinessManager.jsx

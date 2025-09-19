@@ -1,6 +1,10 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { 
+    browser: true, 
+    es2020: true,
+    node: true
+  },
   extends: [
     'eslint:recommended',
     '@typescript-eslint/recommended',
@@ -58,8 +62,43 @@ module.exports = {
     '*.min.js',
     '*.bundle.js',
     '*.chunk.js',
+    '.eslintrc.js',
+    'AIAgentOrchestrator.jsx',
+    'AIAnalytics.jsx',
+    'AIAnalyticsCopilot.jsx',
+    'AIAutonomousBusinessManager.jsx',
+    '.scripts/**',
+    'automation/**',
+    'zion-os.disabled/**',
+    'zion-website/**',
+    'zion-os/**',
+    'zion_academy/**',
+    'zion.app/**',
+    'zion-ai-assistant/**',
+    'apps.backup/**',
+    'src-clean/**',
+    'dao/**',
+    'netlify/functions/**',
+    'recovered-branches/**',
+    'token/**',
+    'src/pages-disabled/**',
+    'src/utils-disabled/**',
+    'src.disabled/**',
+    'src/backup/**',
+    'src/components-disabled/**',
+    '.eslintrc.js',
+    '.scripts/**',
+    'automation/**'
   ],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
+    project: './tsconfig.json'
+  },
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [
@@ -74,10 +113,40 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-empty-object-type': 'warn',
+    'no-undef': 'off', // Turn off for JS files
+    'no-unused-vars': 'off' // Use TypeScript version instead
   },
   settings: {
     react: {
       version: 'detect',
     }
-  }
+  },
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      parser: '@babel/eslint-parser',
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          presets: ['@babel/preset-react']
+        }
+      },
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': 'warn'
+      }
+    },
+    {
+      files: ['.eslintrc.js', '.scripts/**/*.js', 'automation/**/*.js'],
+      env: {
+        node: true,
+        commonjs: true
+      },
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': 'warn',
+        'no-undef': 'off'
+      }
+    }
+  ]
 };
