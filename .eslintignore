@@ -3,14 +3,14 @@ dist/
 build/
 out/
 .next/
-node_modules/
-public/
-server/
 *.min.js
 *.bundle.js
 *.chunk.js
 
-# Disabled directories
+# Dependencies
+node_modules/
+
+# Disabled/legacy directories
 zion-os.disabled/
 zion-os/
 zion-website/
@@ -28,10 +28,16 @@ artifacts/
 *.backup.*
 *backup*/
 *.disabled
+server/
+
+# Public assets
+public/
 
 # Large generated files
 *.log
 *.txt
+*.generated.js
+*.generated.ts
 
 # IDE files
 .vscode/
@@ -40,3 +46,10 @@ artifacts/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Test files (optional - uncomment if you want to exclude tests)
+# __tests__/
+# *.test.js
+# *.test.ts
+# *.spec.js
+# *.spec.ts
