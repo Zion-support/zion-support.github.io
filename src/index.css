@@ -161,16 +161,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors["zion-blue"].DEFAULT');
+    background: theme('colors.slate.200');
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors["zion-purple"].dark');
+    background: theme('colors.slate.400');
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors["zion-purple"].DEFAULT');
+    background: theme('colors.slate.500');
   }
 
   /* Smooth scrolling */
