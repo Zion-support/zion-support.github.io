@@ -12,6 +12,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-purple-600 to-pink-600',
       link: '/pages/NextGenAIConsciousness2025',
       features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
+    }
+  ];
 
   const contentSlides = [
     {
