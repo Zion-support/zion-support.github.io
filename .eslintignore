@@ -1,200 +1,58 @@
-# Build artifacts
+# Build outputs
 dist/
 build/
-.next/
 out/
-
-# Dependencies
+.next/
 node_modules/
 
-# Disabled/backup directories
+# Disabled directories
 zion-os.disabled/
 zion-os/
 zion-website/
 zion.app/
 zion_academy/
-zion-ai-assistant/
-backup/
-backups/
-broken_components/
-broken_files_backup/
-app-disabled/
-api.disabled/
-api.disabled.temp/
-netlify/functions/
-automation/
-backup-merge-conflicts/
-recovered-branches/
-apps/
-server/
-api-disabled/
-
-# Generated files
-*.min.js
-*.bundle.js
-*.chunk.js
-*.generated.*
-*.auto.*
-*.backup.*
-*.backup
-*_backup.*
-*_backup
-*.log
-*.md
-*.txt
-*.json
-*.tsv
-*.report.*
-*.tmp
-*.temp
-*~
 
 # Static files
-public/sw.js
 static/
-public/automation/
-temp-problematic-pages/
-temp_backup_*/
 public/
-static/
+*.min.js
+*.bundle.js
 
-# Test artifacts
-coverage/
-.nyc_output/
-__tests__/
-__mocks__/
-
-# IDE files
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-logs/
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-public
-
-# Storybook build outputs
-.out
-.storybook-out
-
-# Temporary folders
-tmp/
-temp/
-
-# Service workers and static JS
-**/sw.js
-**/analytics.js
-**/feedback.js
-**/integration.js
-sw.js
-service-worker.js
-
-# Config files that don't need linting
+# Config files
 *.config.js
 *.config.ts
 *.config.cjs
-postcss.config.js
-tailwind.config.js
-next.config.js
-babel.config.js
-babel.config.cjs
 
-# Automation and scripts
-*.cjs
-*.js
-*.jsx
+# Scripts
 scripts/
+
+# Automation
 automation/
 
-# Test files (if not needed for linting)
-**/*.test.js
-**/*.test.ts
-**/*.test.tsx
+# Netlify
+netlify/
 
-# All problematic directories and files
-**/zion-os/**
-**/zion-os.disabled/**
-**/zion-website/**
-**/zion.app/**
-**/zion_academy/**
-**/automation/**
-**/backup-merge-conflicts/**
-**/recovered-branches/**
-**/public/automation/**
-**/temp-problematic-pages/**
-**/temp_backup_*/**
+# Apps
+apps/
 
-# Static assets and generated files
-**/.next/**
-**/static/**
+# Disabled components
+**/components-disabled/**
+**/utils-disabled/**
+src/components-disabled/**
+src/utils-disabled/**
+
+# Generated files
 **/chunks/**
+**/static/chunks/**
 **/server/**
-**/middleware-*
-**/server-reference-*
+**/middleware-**
+**/server-reference-**
 **/_buildManifest.js
 **/_ssgManifest.js
 
-# Specific problematic files
-zion-os.disabled/zion-os/.next/
-zion-os/.next/
-zion-website/next.config.js
-zion-website/tailwind.config.js
-zion-website/public/sw.js
-zion-os/postcss.config.js
+# Service workers
+**/sw.js
+**/service-worker.js
+
+# Academy static files
 zion_academy/static/js/
-zion.app/automation/
