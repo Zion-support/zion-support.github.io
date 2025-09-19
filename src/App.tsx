@@ -220,7 +220,7 @@ const App: React.FC = () => {
                               onClick={(e) => {
                                 e.preventDefault();
                                 trackButtonClick('contact_form_submit', 'contact_section');
-                                console.log('Thank you for your message! We\'ll get back to you soon.');
+                                // console.log('Thank you for your message! We\'ll get back to you soon.');
                               }}
                             >
                               Send Message
