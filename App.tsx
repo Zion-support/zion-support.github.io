@@ -10,6 +10,7 @@ import './src/index.css';
 
 // Lazy load the main page component for better performance
 const UltimateTechBreakthrough2026 = lazy(() => import('./src/pages/UltimateTechBreakthrough2026'));
+const EnhancedHomePage = lazy(() => import('./src/components/EnhancedHomePage'));
 
 export default function App(): React.JSX.Element {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,66 +42,7 @@ export default function App(): React.JSX.Element {
               </div>
             }>
               <Routes>
-                <Route path="/" element={
-                  <div className="container mx-auto px-4 py-8">
-                    <div className="max-w-4xl mx-auto text-center">
-                      <div className="animate-fade-in">
-                        <h1 className="text-6xl font-bold text-gray-900 mb-6 gradient-text">
-                          Welcome to Zion Tech Group
-                        </h1>
-                        <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-                          Your trusted partner in AI and technology solutions.
-                          We&apos;re revolutionizing the future with cutting-edge innovations that drive business transformation.
-                        </p>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6 mb-8">
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg hover-lift cursor-pointer transition-all duration-300">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Solutions</h3>
-                          <p className="text-gray-600">
-                            Advanced artificial intelligence systems that transform your business operations.
-                          </p>
-                        </div>
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg hover-lift cursor-pointer transition-all duration-300">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-3">Tech Innovation</h3>
-                          <p className="text-gray-600">
-                            Next-generation technology solutions for the modern enterprise.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap justify-center gap-4 mb-12">
-                        <Link
-                          className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                          to="/pages/UltimateTechBreakthrough2026"
-                        >
-                          Explore Our Technology
-                        </Link>
-                        <Link
-                          className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 border-2 border-gray-200 hover:border-gray-300 shadow-lg"
-                          to="/contact"
-                        >
-                          Get in Touch
-                        </Link>
-                      </div>
-                      {/* Stats Section */}
-                      <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white text-center">
-                        <div className="grid md:grid-cols-3 gap-8">
-                          <div>
-                            <div className="text-4xl font-bold mb-2">500+</div>
-                            <div className="text-gray-300">Projects Completed</div>
-                          </div>
-                          <div>
-                            <div className="text-4xl font-bold mb-2">99.9%</div>
-                            <div className="text-gray-300">Uptime Guarantee</div>
-                          </div>
-                          <div>
-                            <div className="text-4xl font-bold mb-2">24/7</div>
-                            <div className="text-gray-300">Support Available</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                } />
+                <Route path="/" element={<EnhancedHomePage />} />
                 <Route path="/services" element={<UltimateTechBreakthrough2026 />} />
                 <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
                 <Route path="/contact" element={
