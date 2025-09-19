@@ -95,7 +95,7 @@
 
 # Removed Next.js plugin since this is a Vite project
 
-# Redirects for SEO/legacy URLs
+# Redirects for SEO/legacy URLs and broken internal slugs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/services"
