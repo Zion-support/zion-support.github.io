@@ -10,6 +10,13 @@ interface State {
   error?: Error;
 }
 
+// Extend Window interface to include gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, parameters?: Record<string, any>) => void;
+  }
+}
+
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
