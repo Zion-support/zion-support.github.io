@@ -8,16 +8,12 @@
 
 [build.environment]
   NODE_VERSION = "20"
-<<<<<<< HEAD
-  NODE_OPTIONS = "--max-old-space-size=6144"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
   NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-=======
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NPM_FLAGS = "--prefer-offline"
->>>>>>> origin/website-audit-clean
 
 # Fix MIME type issues
 [[headers]]
@@ -26,7 +22,6 @@
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
 
-<<<<<<< HEAD
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -100,10 +95,7 @@
 
 # Removed Next.js plugin since this is a Vite project
 
-# Redirects for SEO/legacy URLs
-=======
-# Redirects to resolve broken internal slugs
->>>>>>> origin/website-audit-clean
+# Redirects for SEO/legacy URLs and broken internal slugs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/services"
