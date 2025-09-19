@@ -1,20 +1,48 @@
 [build]
+<<<<<<< HEAD
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
+  command_timeout = "30m"
+
+# Trigger Netlify build: no-op change on 2025-09-18T14:10:00Z
+=======
   # Netlify installs dependencies automatically; run only the build step
   command = "npm run build:netlify"
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
  # ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:00:01Z
+>>>>>>> origin/bulk-merge-backup-20250917-114724
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
+  GIT_SUBMODULE_STRATEGY = "none"
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_STRICT_SSL = "false"
+  NPM_CONFIG_BUILD_FROM_SOURCE = "false"
+  NPM_CONFIG_PREFER_OFFLINE = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
 
-# Fix MIME type issues
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  directory = "../netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["public/**/*"]
+
+[build.processing]
+  skip_processing = true
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/js/*"
   [headers.values]
@@ -92,9 +120,27 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Removed Next.js plugin since this is a Vite project
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
-# Redirects for SEO/legacy URLs
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Redirects for legacy URLs
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -175,6 +221,9 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+<<<<<<< HEAD
+## End of Netlify configuration
+=======
 # Handle client-side routing for SPA
 [[redirects]]
   from = "/*"
@@ -182,3 +231,4 @@
   status = 200
 
  # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2)
+>>>>>>> origin/bulk-merge-backup-20250917-114724

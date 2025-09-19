@@ -75,11 +75,6 @@
     "h1": "AI Services & Solutions"
   },
   {
-    "route": "/ITServices",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/MicroSAAS",
     "title": "",
     "h1": "Micro SaaS Solutions"
@@ -185,11 +180,6 @@
     "h1": ""
   },
   {
-    "route": "/ai-autonomous-marketing-platform",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/ai-autonomous-research-assistant",
     "title": "",
     "h1": ""
@@ -213,11 +203,6 @@
     "route": "/ai-consciousness-evolution-2025",
     "title": "AI Consciousness Evolution 2025 | Zion Tech Group",
     "h1": "AI Consciousness Evolution 2025"
-  },
-  {
-    "route": "/ai-consciousness-evolution-2026",
-    "title": "AI Consciousness Evolution 2026 | Zion Tech Group",
-    "h1": "AI Consciousness Evolution 2026"
   },
   {
     "route": "/ai-consciousness-evolution-2029",
@@ -433,11 +418,6 @@
     "route": "/api-performance-testing",
     "title": "",
     "h1": "API Performance Testing"
-  },
-  {
-    "route": "/api",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/automation",
@@ -740,11 +720,6 @@
     "h1": "Enterprise IT"
   },
   {
-    "route": "/enterprise",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/entertainment-media-solutions",
     "title": "Entertainment & Media Solutions | Zion Tech Group",
     "h1": "Entertainment & Media Solutions"
@@ -810,17 +785,7 @@
     "h1": "GitHub Compliance Bot"
   },
   {
-    "route": "/guides",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/healthcare-ai-solutions",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/help",
     "title": "",
     "h1": ""
   },
@@ -1010,11 +975,6 @@
     "h1": "Post a Job"
   },
   {
-    "route": "/post-quantum-cryptography-2026",
-    "title": "Post-Quantum Cryptography 2026 | Zion Tech Group",
-    "h1": "Post-Quantum Cryptography 2026"
-  },
-  {
     "route": "/press",
     "title": "",
     "h1": "Press"
@@ -1093,11 +1053,6 @@
     "route": "/quantum-financial-trading",
     "title": "{service.name} - Zion Tech Group",
     "h1": ""
-  },
-  {
-    "route": "/quantum-internet-revolution-2026",
-    "title": "Quantum Internet Revolution 2026 | Zion Tech Group",
-    "h1": "Quantum Internet Revolution 2026"
   },
   {
     "route": "/quantum-logistics",
@@ -1255,11 +1210,6 @@
     "h1": "Site Map"
   },
   {
-    "route": "/sitemap.xml",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/solutions.page",
     "title": "",
     "h1": "Innovative Solutions for Modern Businesses"
@@ -1308,11 +1258,6 @@
     "route": "/support",
     "title": "",
     "h1": "How Can We Help?"
-  },
-  {
-    "route": "/synthetic-intelligence-platform-2026",
-    "title": "Synthetic Intelligence Platform 2026 | Zion Tech Group",
-    "h1": "Synthetic Intelligence Platform 2026"
   },
   {
     "route": "/talent",
@@ -2230,6 +2175,8 @@
     "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-agent-observability-blueprint",
     "title": "AI 2026: Agent Observability Blueprint | Zion Tech Group",
     "h1": "Agent Observability Blueprint (2026)"
@@ -2240,11 +2187,14 @@
     "h1": "Agent Observability Scorecards (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-2026-agent-platform-slos-best-practices",
     "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-agent-safety-playbook",
     "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
     "h1": "AI 2026: Agent Safety Playbook"
@@ -2265,11 +2215,14 @@
     "h1": "AI 2026: Agentic Observability — Deep Dive"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
     "title": "",
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-autonomous-evidence-led-ops",
     "title": "Autonomous, Evidence‑Led Ops (2026) | Zion Tech Group",
     "h1": "Autonomous, Evidence‑Led Ops (2026)"
@@ -2285,6 +2238,7 @@
     "h1": "Cost-Aware Routing in Practice (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-2026-cost-optimization-blueprint",
     "title": "",
     "h1": "AI 2026: Cost Optimization Blueprint"
@@ -2295,18 +2249,11 @@
     "h1": "AI 2026: Edge Agents in Production"
   },
   {
-    "route": "/blog/ai-2026-enterprise-agent-risk-mitigation",
-    "title": "AI 2026: Enterprise Agent Risk Mitigation",
-    "h1": "AI 2026: Enterprise Agent Risk Mitigation"
-  },
-  {
     "route": "/blog/ai-2026-evaluation-cookbook",
-    "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
-    "h1": "AI 2026: Evaluation Cookbook"
-  },
-  {
-    "route": "/blog/ai-2026-evidence-hub-architecture",
     "title": "",
+<<<<<<< HEAD
+    "h1": "AI 2026: Evaluation Cookbook"
+=======
     "h1": "AI 2026: Evidence Hub Architecture"
   },
   {
@@ -2318,6 +2265,7 @@
     "route": "/blog/ai-2026-evidence-led-operations-blueprint",
     "title": "AI 2026: Evidence‑Led Operations Blueprint | Zion Tech Group",
     "h1": "Evidence‑Led Operations Blueprint (2026)"
+>>>>>>> origin/bulk-merge-backup-20250917-114724
   },
   {
     "route": "/blog/ai-2026-foundation-model-quality-engineering",
@@ -2325,6 +2273,8 @@
     "h1": "Foundation Model Quality Engineering (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-governed-tool-use-case-studies",
     "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
     "h1": "Governed Tool Use — Case Studies (2026)"
@@ -2335,6 +2285,7 @@
     "h1": "Governed Tooling in Practice (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
@@ -2348,6 +2299,8 @@
     "route": "/blog/ai-2026-operationalizing-agentic-workflows",
     "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
     "h1": "Operationalizing Agentic Workflows in 2026"
+<<<<<<< HEAD
+=======
   },
   {
     "route": "/blog/ai-2026-production-eval-gates-live-ops",
@@ -2363,6 +2316,7 @@
     "route": "/blog/ai-2026-real-time-evals-inference-guardrails",
     "title": "AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group",
     "h1": "AI 2026: Real-Time Evals & Inference Guardrails"
+>>>>>>> origin/bulk-merge-backup-20250917-114724
   },
   {
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
@@ -2370,6 +2324,8 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-reliable-autonomy-operations",
     "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
     "h1": "AI 2026: Reliable Autonomy Operations"
@@ -2380,24 +2336,23 @@
     "h1": "Reliable Real‑Time Agents (2026)"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
-    "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
+    "title": "",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-safe-autonomy-in-production",
     "title": "AI 2026: Safe Autonomy in Production | Zion Tech Group",
     "h1": "AI 2026: Safe Autonomy in Production"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-2026-safety-evals-operational-checklist",
     "title": "",
     "h1": "AI 2026: Safety Evals Operational Checklist"
-  },
-  {
-    "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
-    "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
-    "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
   },
   {
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
@@ -2405,6 +2360,8 @@
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
     "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
     "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
@@ -2415,14 +2372,30 @@
     "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250917-114724
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
   },
   {
-    "route": "/blog/ai-roadmap-2026",
-    "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
-    "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
+    "route": "/blog/autonomous-evaluation-playbooks-2025",
+    "title": "Autonomous Evaluation Playbooks (2025) | Zion Tech Group",
+    "h1": "Autonomous Evaluation Playbooks (2025)"
+  },
+  {
+    "route": "/blog/cloud-cost-optimization-2025",
+    "title": "Cloud Cost Optimization 2025: Modern FinOps Patterns | Zion Tech Group",
+    "h1": "Cloud Cost Optimization 2025: Modern FinOps Patterns"
+  },
+  {
+    "route": "/blog/cloud-native-automation",
+    "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
+    "h1": "Building Cloud-Native Automation Infrastructure"
+  },
+  {
+    "route": "/blog/cybersecurity-autonomous-systems",
+    "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
+    "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
     "route": "/blog/autonomous-evaluation-playbooks-2025",
@@ -2458,11 +2431,6 @@
     "route": "/blog",
     "title": "Blog | Zion Tech Group",
     "h1": "Insights & Guides"
-  },
-  {
-    "route": "/blog/quantum-security-2026",
-    "title": "Quantum Security 2026: Readiness Checklist | Zion Tech Group",
-    "h1": "Quantum Security 2026: Readiness Checklist"
   },
   {
     "route": "/automations",
