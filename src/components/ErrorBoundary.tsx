@@ -25,7 +25,6 @@ class ErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-    
     // Track error for analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
