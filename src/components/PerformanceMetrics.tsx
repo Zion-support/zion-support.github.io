@@ -36,11 +36,11 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
       
       // Memory usage (if available)
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
       
       // Connection type (if available)
-      const connection = (window.navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+      const connection = (window.navigator as { connection?: { effectiveType?: string } }).connection;
       const connectionType = connection ? connection.effectiveType || 'unknown' : 'unknown';
       
       setMetrics({
