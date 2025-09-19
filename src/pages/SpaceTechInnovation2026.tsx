@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 
 const SpaceTechInnovation2026: React.FC = () => {
   return (
