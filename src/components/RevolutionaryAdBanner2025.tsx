@@ -74,8 +74,8 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                 onClick={() => setCurrentOffer(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentOffer ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
+                }`}</button>
+              /></button>
             ))}</button>
           {/* Main Offer Content */}
           <div className="max-w-4xl mx-auto">
@@ -84,7 +84,7 @@ const RevolutionaryAdBanner2025: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
               {currentOfferData.title}
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
               {currentOfferData.description}</p>
             </p>
             {/* Price Display */}
@@ -98,10 +98,10 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                   {currentOfferData.discount}
             {/* Call to Action */}
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
-              <button className={`bg-gradient-to-r ${currentOfferData.accent} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105 animate-pulse`}>
+              <button className={`bg-gradient-to-r ${currentOfferData.accent} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105 animate-pulse`}></button>
                 {currentOfferData.cta} →</button>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"></button>
                 Learn More</button>
               </button>
             {/* Urgency Elements */}
@@ -151,3 +151,92 @@ const RevolutionaryAdBanner2025: React.FC = () => {
 };
 
 export default RevolutionaryAdBanner2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

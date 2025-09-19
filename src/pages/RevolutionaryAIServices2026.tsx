@@ -411,8 +411,8 @@ const RevolutionaryAIServices2026 = () => {
           <h1 className="text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Revolutionary AI Services 2026
           </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Experience the future of artificial intelligence with our groundbreaking services that push the boundaries of what's possible. 
+          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed"></p>
+            Experience the future of artificial intelligence with our groundbreaking services that push the boundaries of what's possible. </p>
             From conscious AI systems to interdimensional computing, we're redefining reality itself.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-16">
@@ -449,7 +449,7 @@ const RevolutionaryAIServices2026 = () => {
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-xl mr-4">
                   <service.icon className="w-8 h-8 text-white" />
                 <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed"></p>
                 {service.description}</p>
               </p>
               <ul className="space-y-2 mb-6">
@@ -462,7 +462,7 @@ const RevolutionaryAIServices2026 = () => {
               </ul>
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 p-4 rounded-lg mb-4">
                 <p className="text-cyan-400 font-bold text-lg">{service.price}</p>
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Get Started</button>
               </button>
             </motion.div>
@@ -480,7 +480,7 @@ const RevolutionaryAIServices2026 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <p className="text-gray-300 mb-6 italic text-lg leading-relaxed">
+                <p className="text-gray-300 mb-6 italic text-lg leading-relaxed"></p>
                   "{testimonial.quote}"</p>
                 </p>
                 <div className="flex items-center">
@@ -501,14 +501,14 @@ const RevolutionaryAIServices2026 = () => {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Reality?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Join the revolution and experience the future of AI technology. Our revolutionary services are changing the world, one consciousness at a time.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"></button>
               Schedule Consultation</button>
             </button>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"></button>
               Download Brochure</button>
             </button>
         </motion.div>
@@ -526,7 +526,7 @@ const RevolutionaryAIServices2026 = () => {
                 2026
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Experience the future of artificial intelligence with our cutting-edge services that are reshaping reality and creating possibilities beyond imagination.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -556,8 +556,8 @@ const RevolutionaryAIServices2026 = () => {
                 {" "}Artificial Intelligence
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Experience revolutionary AI services that transcend traditional limitations. 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"></p>
+              Experience revolutionary AI services that transcend traditional limitations. </p>
               From synthetic intelligence to space technology, we're building the future today.</p>
             </p>
           </motion.div>
@@ -567,11 +567,11 @@ const RevolutionaryAIServices2026 = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2"></button>
               Explore Services</button>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"></button>
               Watch Demo</button>
             </button>
           </motion.div>
@@ -607,8 +607,8 @@ const RevolutionaryAIServices2026 = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Revolutionary AI Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive suite of AI services that are transforming industries and creating the future.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              Discover our comprehensive suite of AI services that are transforming industries and creating the future.</p>
       {/* Services Grid */}</p>
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -621,7 +621,7 @@ const RevolutionaryAIServices2026 = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary AI Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Cutting-edge AI technologies that are reshaping industries and creating new possibilities for human advancement.</p>
             </p>
           </motion.div>
@@ -687,7 +687,7 @@ const RevolutionaryAIServices2026 = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
                     <span className="text-purple-400 text-sm font-medium">{service.category}</span>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {service.description}</p>
                 </p>
                 <ul className="space-y-2 mb-6">
@@ -700,7 +700,7 @@ const RevolutionaryAIServices2026 = () => {
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
-                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105">
+                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105"></button>
                     Learn More</button>
                   </button>
               </motion.div>
@@ -718,8 +718,8 @@ const RevolutionaryAIServices2026 = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300">
-              Hear from industry leaders who are transforming their businesses with our AI solutions.
+            <p className="text-xl text-gray-300"></p>
+              Hear from industry leaders who are transforming their businesses with our AI solutions.</p>
       {/* Testimonials */}</p>
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -732,7 +732,7 @@ const RevolutionaryAIServices2026 = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Leading organizations trust our revolutionary AI services to transform their operations.</p>
             </p>
           </motion.div>
@@ -758,7 +758,7 @@ const RevolutionaryAIServices2026 = () => {
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}
                   <div className="text-sm text-blue-400">{testimonial.role}
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   "{testimonial.content}"</p>
                 </p>
                 <div>
@@ -778,7 +778,7 @@ const RevolutionaryAIServices2026 = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Join the AI revolution and discover how our cutting-edge services can transform your business and unlock unlimited potential.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -808,16 +808,16 @@ const RevolutionaryAIServices2026 = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the revolution and experience the power of next-generation AI services. 
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+              Join the revolution and experience the power of next-generation AI services. </p>
               Let's build the future together.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2"></button>
                 Get Started Today</button>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"></button>
                 Schedule Consultation</button>
               </button>
           </motion.div>
@@ -826,3 +826,26 @@ const RevolutionaryAIServices2026 = () => {
 };
 
 export default RevolutionaryAIServices2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -196,7 +196,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Technology Showcase
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
             Discover the most advanced technologies that are reshaping our world and defining the future</p>
           </p>
         {/* Carousel Container */}
@@ -210,7 +210,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 <h3 className="text-4xl font-bold mb-4">
                   {contentItems[currentSlide].title}
                 </h3>
-                <p className="text-xl text-gray-300 mb-6">
+                <p className="text-xl text-gray-300 mb-6"></p>
                   {contentItems[currentSlide].description}</p>
                 </p>
                 {/* Features */}
@@ -243,7 +243,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           <div>
                             <h3 className="text-4xl font-bold mb-2">{slide.title}</h3>
                             <p className="text-xl text-purple-200">{slide.subtitle}</p>
-                        <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                        <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                           Start Interactive Demo →</button>
                         </button>
                       <span className="text-lg">{feature}</span>
@@ -256,7 +256,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   >
                     Explore Technology →
                   </a>
-                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
                     Learn More</button>
                   </button>
               {/* Visual Demo Area */}
@@ -265,7 +265,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   <div className="text-9xl mb-6 animate-pulse">
                     {contentItems[currentSlide].icon}
                       <span className="text-lg">{feature}</span>
-                        <p className="text-lg opacity-90 leading-relaxed">
+                        <p className="text-lg opacity-90 leading-relaxed"></p>
                           {slide.description}</p>
                         </p>
                         <div className="grid grid-cols-2 gap-4">
@@ -368,7 +368,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   >
                     Explore Technology →
                   </a>
-                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
                     Learn More</button>
                   </button>
               {/* Visual Demo Area */}
@@ -383,7 +383,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                       className={`h-4 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full animate-pulse`}
                       style={{width: '75%'}}
                     >
-                  <p className="text-gray-300">
+                  <p className="text-gray-300"></p>
                     Interactive demonstration of {contentItems[currentSlide].title.toLowerCase()}</p>
                   </p>
           {/* Navigation Controls */}
@@ -413,8 +413,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     index === currentSlide 
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
                       : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
-                />
+                  }`}</button>
+                /></button>
               ))}</button>
             <button 
               onClick={nextSlide}
@@ -432,8 +432,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 index === currentIndex 
                   ? 'bg-purple-400 scale-125' 
                   : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
+              }`}</button>
+            /></button>
           ))}</button>
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-16">
@@ -468,7 +468,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
           className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-white/20"
         >
           <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of forward-thinking companies already using our revolutionary technologies to transform their operations.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -491,3 +491,77 @@ const EnhancedContentCarousel2025: React.FC = () => {
 };
 
 export default EnhancedContentCarousel2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

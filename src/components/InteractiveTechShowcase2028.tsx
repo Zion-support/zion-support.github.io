@@ -98,7 +98,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
   const currentTech = technologies[activeTech];
 
   return (
-              <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+              <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                 Try Interactive Demo →</button>
               </button>
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-16">
@@ -110,8 +110,8 @@ const InteractiveTechShowcase2028: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Explore Revolutionary Technologies
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Click on any technology below to explore its capabilities and features. 
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
+            Click on any technology below to explore its capabilities and features. </p>
             Experience the future of technology through interactive demonstrations.</p>
           </p>
         {/* Technology Selector */}
@@ -123,8 +123,8 @@ const InteractiveTechShowcase2028: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTech === index
                   ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-              }`}
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'</button>
+              }`}</button>
             ></button>
               <span className="text-2xl mr-2">{tech.icon}</span>
               {tech.name}
@@ -149,7 +149,7 @@ const InteractiveTechShowcase2028: React.FC = () => {
                       <span className="px-3 py-1 bg-white/20 text-white text-sm rounded-full">
                         2028
                       </span>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
                   {currentTech.description}</p>
                 </p>
                 <div className="mb-8">
@@ -219,14 +219,14 @@ const InteractiveTechShowcase2028: React.FC = () => {
                 activeTech === index
                   ? 'bg-cyan-400 scale-125'
                   : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
+              }`}</button>
+            /></button>
           ))}</button>
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-4 text-white">Ready to Experience the Future?</h3>
-          <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            These revolutionary technologies are already transforming industries and reshaping our world. 
+          <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto"></p>
+            These revolutionary technologies are already transforming industries and reshaping our world. </p>
             Join us in the next evolution of human civilization.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -240,3 +240,51 @@ const InteractiveTechShowcase2028: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2028;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

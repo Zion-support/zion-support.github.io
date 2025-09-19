@@ -50,8 +50,8 @@ class ErrorBoundary extends Component<Props, State> {
           <button 
             onClick={() => window.location.reload()}
             className="btn-primary"
-            type="button"
-          >
+            type="button"</button>
+          ></button>
             Refresh Page</button>
           </button>
           {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -63,8 +63,8 @@ class ErrorBoundary extends Component<Props, State> {
                 borderRadius: '4px',
                 overflow: 'auto',
                 fontSize: '12px'
-              }}>
-                {this.state.error.toString()}
+              }}></p>
+                {this.state.error.toString()}</p>
                 {this.state.errorInfo?.componentStack}</p>
               </pre>
             </details>

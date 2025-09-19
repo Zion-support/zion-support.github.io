@@ -57,10 +57,10 @@ const UltimateContentBanner2037: React.FC = () => {
           <h2 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-violet-200 bg-clip-text text-transparent">
             {slides[currentSlide].title}
           </h2>
-          <p className="text-2xl md:text-3xl text-purple-200 mb-8 max-w-5xl mx-auto">
+          <p className="text-2xl md:text-3xl text-purple-200 mb-8 max-w-5xl mx-auto"></p>
             {slides[currentSlide].subtitle}</p>
           </p>
-          <p className="text-xl text-purple-300 mb-12 max-w-4xl mx-auto">
+          <p className="text-xl text-purple-300 mb-12 max-w-4xl mx-auto"></p>
             {slides[currentSlide].description}</p>
           </p>
           {/* Slide Indicators */}
@@ -73,8 +73,8 @@ const UltimateContentBanner2037: React.FC = () => {
                   index === currentSlide 
                     ? 'bg-white scale-125' 
                     : 'bg-white/50 hover:bg-white/75'
-                }`}
-              />
+                }`}</button>
+              /></button>
             ))}</button>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -122,3 +122,36 @@ const UltimateContentBanner2037: React.FC = () => {
 };
 
 export default UltimateContentBanner2037;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

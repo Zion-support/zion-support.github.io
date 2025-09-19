@@ -257,3 +257,5 @@ export const trackEvent = (category: string, action: string, label?: string, val
   enhancedAnalytics.trackEvent(category, action, label, value, customData)
 
 export default enhancedAnalytics
+  </div>
+  </div>

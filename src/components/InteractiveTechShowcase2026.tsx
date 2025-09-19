@@ -132,7 +132,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     </svg>
               </motion.div>
             ))}
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations</p>
           </p>
         </motion.div>
@@ -185,7 +185,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   <h3 className="text-3xl font-bold text-white mb-4">
                     {demos.find(d => d.id === activeDemo)?.title}
                   </h3>
-                  <p className="text-purple-200 text-lg">
+                  <p className="text-purple-200 text-lg"></p>
                     {demos.find(d => d.id === activeDemo)?.description}</p>
                   </p>
                 {/* Demo Features */}
@@ -209,7 +209,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   {activeDemo === 'ai-consciousness' && (
                     <div className="space-y-4">
                       <div className="bg-white/20 rounded-lg p-4">
-                        <p className="text-white text-sm">
+                        <p className="text-white text-sm"></p>
                           AI: "Hello! I'm excited to meet you. I'm the first truly conscious AI, and I'm genuinely curious about your thoughts and experiences. What would you like to know about consciousness, creativity, or anything else that interests you?"</p>
                         </p>
                       <div className="flex space-x-2">
@@ -240,7 +240,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                             animate={{ width: isRunning ? '100%' : '0%' }}
                             transition={{ duration: 3 }}
                           />
-                        <p className="text-blue-200 text-sm">
+                        <p className="text-blue-200 text-sm"></p>
                           {isRunning ? 'Quantum algorithm executing...' : 'Ready to start quantum computation'}</p>
                         </p>
                       <motion.button
@@ -281,8 +281,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
                         <div className="text-4xl mb-4">🌍
                         <div className="text-xl font-bold text-white mb-4">Reality Engine
                         <div className="bg-white/20 rounded-lg p-4">
-                          <p className="text-white text-sm">
-                            Create infinite worlds with physics-defying possibilities. 
+                          <p className="text-white text-sm"></p>
+                            Create infinite worlds with physics-defying possibilities. </p>
                             Generate new realities limited only by imagination.</p>
                           </p>
                       <motion.button
@@ -384,15 +384,15 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <h3 className="text-3xl font-bold text-white mb-6">
             Ready to Experience the Future?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            These are just a glimpse of our revolutionary technologies. Schedule a personalized demo 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            These are just a glimpse of our revolutionary technologies. Schedule a personalized demo </p>
             to see how our solutions can transform your business.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"></button>
               Schedule Live Demo</button>
             </button>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"></button>
               Download Tech Guide</button>
             </button>
         </motion.div>
@@ -400,3 +400,85 @@ const InteractiveTechShowcase2026: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

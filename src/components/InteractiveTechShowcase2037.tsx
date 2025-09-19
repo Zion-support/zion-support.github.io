@@ -90,15 +90,15 @@ const InteractiveTechShowcase2037: React.FC = () => {
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Showcase 2037</h2>
-        <p className="text-xl opacity-90 max-w-4xl mx-auto">
+        <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
           Explore the most advanced technologies of 2037 with interactive demonstrations and real-time data</p>
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           🚀 INTERACTIVE DEMO • 2037 TECHNOLOGY
         <h2 className="text-4xl font-bold mb-4">Interactive Technology Showcase 2037</h2>
-        <p className="text-xl opacity-90 max-w-3xl mx-auto">
-          Experience the future of technology through our interactive demonstrations. 
+        <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
+          Experience the future of technology through our interactive demonstrations. </p>
           Select a technology below to explore its capabilities and potential applications.</p>
         </p>
       {/* Technology Selector */}
@@ -115,8 +115,8 @@ const InteractiveTechShowcase2037: React.FC = () => {
                 }, 500);
               }}
               className={`bg-gradient-to-br ${demo.color} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 text-center ${
-                activeDemo === index ? 'ring-2 ring-white ring-opacity-50' : ''
-              }`}
+                activeDemo === index ? 'ring-2 ring-white ring-opacity-50' : ''</button>
+              }`}</button>
             ></button>
               <div className="text-4xl mb-3">{demo.title.split(' ')[0]}
               <h3 className="text-lg font-bold mb-2">{demo.title}</h3>
@@ -129,14 +129,14 @@ const InteractiveTechShowcase2037: React.FC = () => {
             <div className="text-4xl mb-4">🌌
             <h4 className="font-bold mb-2">Dimension Explorer</h4>
             <p className="text-sm opacity-90 mb-4">Explore parallel universes</p>
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 rounded-lg text-sm font-semibold"></button>
               Explore →</button>
             </button>
           <div className="bg-white/10 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-4xl mb-4">⚡
             <h4 className="font-bold mb-2">Reality Simulator</h4>
             <p className="text-sm opacity-90 mb-4">Manipulate reality parameters</p>
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2 rounded-lg text-sm font-semibold">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2 rounded-lg text-sm font-semibold"></button>
               Simulate →</button>
             </button>
       {/* Call to Action */}
@@ -155,7 +155,7 @@ const InteractiveTechShowcase2037: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
             Experience our revolutionary technologies through interactive demonstrations</p>
           </p>
         <div className="grid lg:grid-cols-2 gap-12">
@@ -209,18 +209,18 @@ const InteractiveTechShowcase2037: React.FC = () => {
                 <div className="text-center">
                   <div className="text-6xl mb-4 animate-pulse">{technologies[activeTech].icon}
                   <h4 className="text-xl font-bold mb-2">Interactive Demo</h4>
-                  <p className="text-sm opacity-80 mb-4">
+                  <p className="text-sm opacity-80 mb-4"></p>
                     Experience {technologies[activeTech].name} in action</p>
                   </p>
-                  <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                  <button className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors"></button>
                     Start Demo</button>
                   </button>
               {/* Action Buttons */}
               <div className="flex space-x-4">
-                <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
                   Try Now</button>
                 </button>
-                <button className="flex-1 border border-white text-white py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold">
+                <button className="flex-1 border border-white text-white py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold"></button>
                   Learn More</button>
                 </button>
         {/* Technology Stats */}
@@ -241,3 +241,61 @@ const InteractiveTechShowcase2037: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2037;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

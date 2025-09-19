@@ -36,19 +36,17 @@ export function MainNavigation({ className }: MainNavigationProps) {
       >
         Home
       </Link>
-      
       {/* Services Dropdown */}
       <div className="relative group">
         <button 
           onMouseEnter={() => setIsServicesOpen(true)} 
           onMouseLeave={() => setIsServicesOpen(false)} 
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"</button>
+        ></button>
           <Zap className="w-4 h-4"/>
           <span>Services</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        
         {isServicesOpen && (
           <div
             onMouseEnter={() => setIsServicesOpen(true)}
@@ -70,7 +68,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <li><Link href="/services/transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
                     <li><Link href="/services/consulting" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Consulting</Link></li>
                   </ul>
-                </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Shield className="w-4 h-4 mr-2" />
@@ -84,25 +81,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <li><Link href="/services/space" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Space Tech</Link></li>
                     <li><Link href="/services/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
                   </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         )}
-      </div>
-
       {/* Solutions Dropdown */}
       <div className="relative group">
         <button 
           onMouseEnter={() => setIsSolutionsOpen(true)} 
           onMouseLeave={() => setIsSolutionsOpen(false)} 
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"</button>
+        ></button>
           <Brain className="w-4 h-4"/>
           <span>Solutions</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        
         {isSolutionsOpen && (
           <div
             onMouseEnter={() => setIsSolutionsOpen(true)}
@@ -118,23 +108,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 <li><Link href="/solutions/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail & E-commerce</Link></li>
                 <li><Link href="/solutions/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
               </ul>
-            </div>
-          </div>
         )}
-      </div>
-
       {/* Company Dropdown */}
       <div className="relative group">
         <button 
           onMouseEnter={() => setIsCompanyOpen(true)} 
           onMouseLeave={() => setIsCompanyOpen(false)} 
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"</button>
+        ></button>
           <Building2 className="w-4 h-4"/>
           <span>Company</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        
         {isCompanyOpen && (
           <div
             onMouseEnter={() => setIsCompanyOpen(true)}
@@ -149,23 +134,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 <li><Link href="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
                 <li><Link href="/news" className="text-zion-slate-light hover:text-zion-cyan transition-colors">News</Link></li>
               </ul>
-            </div>
-          </div>
         )}
-      </div>
-
       {/* Resources Dropdown */}
       <div className="relative group">
         <button 
           onMouseEnter={() => setIsResourcesOpen(true)} 
           onMouseLeave={() => setIsResourcesOpen(false)} 
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"</button>
+        ></button>
           <FileText className="w-4 h-4"/>
           <span>Resources</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        
         {isResourcesOpen && (
           <div
             onMouseEnter={() => setIsResourcesOpen(true)}
@@ -181,18 +161,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 <li><Link href="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Webinars</Link></li>
                 <li><Link href="/help-center" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
               </ul>
-            </div>
-          </div>
         )}
-      </div>
-
       <Link
         href="/pricing"
         className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground hover:text-zion-cyan"
       >
         Pricing
       </Link>
-
       <Link
         href="/contact"
         className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground hover:text-zion-cyan"
@@ -202,3 +177,21 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   );
 }
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

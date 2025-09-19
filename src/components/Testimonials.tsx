@@ -110,14 +110,14 @@ const Testimonials: React.FC = () => {
               className="carousel-btn prev"
               onClick={prevTestimonial}
               aria-label="Previous testimonial"
-            >
+            ></button>
               ‹</button>
             </button>
             <button 
               className="carousel-btn next"
               onClick={nextTestimonial}
               aria-label="Next testimonial"
-            >
+            ></button>
               ›</button>
             </button>
           <div className="carousel-indicators">
@@ -126,11 +126,22 @@ const Testimonials: React.FC = () => {
                 key={index}
                 className={`indicator ${index === currentIndex ? 'active' : ''}`}
                 onClick={() => goToTestimonial(index)}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
+                aria-label={`Go to testimonial ${index + 1}`}</button>
+              /></button>
             ))}</button>
     </section>
   )
 }
 
 export default Testimonials
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
