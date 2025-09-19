@@ -16,6 +16,9 @@ out/
 **/server-reference-*.js
 **/_buildManifest.js
 **/_ssgManifest.js
+*.min.js
+*.bundle.js
+*.chunk.js
 
 # Dependencies
 node_modules/
@@ -28,6 +31,8 @@ zion-os/
 zion-website/
 zion.app/
 zion_academy/
+
+# Backup and cache directories
 backup/
 backups/
 cache/
@@ -42,9 +47,6 @@ public/
 # Generated files
 *.generated.js
 *.generated.ts
-*.min.js
-*.bundle.js
-*.chunk.js
 
 # Config files
 postcss.config.js
