@@ -1,2 +1,0 @@
-// constants.ts
-// Utility functions
