@@ -5,7 +5,7 @@ import {
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-  Building, Cpu, Database, Cloud, Lock, ShoppingCart, Lightbulb
+  Building, Cpu, Database, Cloud, Lock, Sparkles
 } from 'lucide-react';
 import { innovative2025MicroSaasExpansionV2 } from '../data/innovative-2025-micro-saas-expansion-v2';
 import { innovative2025ITServicesExpansionV2 } from '../data/innovative-2025-it-services-expansion-v2';
@@ -30,6 +30,12 @@ import { revolutionary20252026MicroSaasServices } from '../data/revolutionary-20
 import { revolutionary20252026AIServices } from '../data/revolutionary-2025-2026-ai-services';
 import { revolutionary20252026ITInfrastructureServices } from '../data/revolutionary-2025-2026-it-infrastructure-services';
 
+<<<<<<< HEAD
+// Import new expanded services
+import { innovativeMicroSaasServicesExpanded } from '../data/innovative-2025-micro-saas-expanded';
+import { innovativeITServicesExpanded } from '../data/innovative-2025-it-services-expanded';
+import { innovativeAIServicesExpanded } from '../data/innovative-2025-ai-services-expanded';
+=======
 // Import our new 2025 comprehensive services
 import { advancedEnterpriseSolutions2025 } from '../data/2025-advanced-enterprise-solutions';
 import { innovativeAIAutomationServices2025 } from '../data/2025-innovative-ai-automation-services';
@@ -39,23 +45,12 @@ import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
 import { emergingTech2025Innovations } from '../data/emerging-tech-2025-innovations';
+>>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e6ba
 
 // Import 2025 advanced services
 import { real2025AdvancedAIServices } from '../data/real-2025-advanced-ai-services';
 import { real2025ITInfrastructureServices } from '../data/real-2025-it-infrastructure-services';
 import { real2025InnovativeMicroSaas } from '../data/real-2025-innovative-micro-saas';
-
-// Import 2038 innovative services
-import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038IndustryServices } from '../data/innovative-2038-industry-services';
-import { innovative2038ConsultingServices } from '../data/innovative-2038-consulting-services';
-
-// Import new innovative 2037 services
-import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
-import { innovative2037ITServices } from '../data/innovative-2037-it-services';
-import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -79,10 +74,25 @@ const getServiceCategory = (service: any) => {
 
 // Helper function to get service pricing
 const getServicePricing = (service: any) => {
+<<<<<<< HEAD
+  // Handle pricing object structure
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  if (service.pricing && typeof service.pricing === 'object') {
+    // Handle complex pricing objects
+    if (service.pricing.starter) return service.pricing.starter;
+    if (service.pricing.monthly) return `$${service.pricing.monthly}/month`;
+    if (service.pricing.yearly) return `$${service.pricing.yearly}/year`;
+    // If it's a complex object, return a default message
+    return 'Contact for pricing';
+  }
+=======
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   if (service.price?.monthly) return `$${service.price.monthly}/month`;
   if (typeof service.price === 'string') return service.price;
+>>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e6ba
   return 'Contact for pricing';
 };
 
@@ -133,10 +143,10 @@ const allServices = [
   ...real2036ServiceExpansions,
   ...innovative2036MicroSaasServices,
   ...innovative2036ITServices,
-  // New innovative 2037 services
-  ...innovative2037MicroSaasServices,
-  ...innovative2037ITServices,
-  ...innovative2037AIServices
+  // 2025 Advanced Services
+  ...real2025AdvancedAIServices,
+  ...real2025ITInfrastructureServices,
+  ...real2025InnovativeMicroSaas
 ];
 
 const categories = [
@@ -211,25 +221,11 @@ const categories = [
     description: 'Learning and research platforms'
   },
   {
-    id: 'manufacturing-industry',
-    name: 'Manufacturing & Industry',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Industrial automation and smart manufacturing'
-  },
-  {
-    id: 'retail-ecommerce',
-    name: 'Retail & E-commerce',
-    icon: <ShoppingCart className="w-6 h-6" />,
-    color: 'from-pink-500 to-rose-500',
-    description: 'Retail technology and e-commerce solutions'
-  },
-  {
-    id: 'consulting-strategy',
-    name: 'Consulting & Strategy',
-    icon: <Lightbulb className="w-6 h-6" />,
-    color: 'from-indigo-500 to-purple-500',
-    description: 'Strategic consulting and advisory services'
+    id: 'revolutionary-2025-2026',
+    name: 'Revolutionary 2025-2026',
+    icon: <Sparkles className="w-6 h-6" />,
+    color: 'from-cyan-500 to-purple-500',
+    description: 'Cutting-edge services for the future'
   }
 ];
 
@@ -271,65 +267,11 @@ const ServicesPage: React.FC = () => {
     return sortOrder === 'asc' ? comparison : -comparison;
   });
 
-  // Pagination helpers
-  const totalPages = Math.max(1, Math.ceil(sortedServices.length / pageSize));
-  const currentPageClamped = Math.min(currentPage, totalPages);
-  const paginatedServices = sortedServices.slice(
-    (currentPageClamped - 1) * pageSize,
-    currentPageClamped * pageSize
-  );
-
-  // Reset to first page when filters/sort change
-  React.useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory, sortBy]);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'enterprise it':
-      case 'enterprise security':
-      case 'devops & automation':
-      case 'data & analytics':
-      case 'cloud services':
-      case 'cybersecurity':
-        return <Building className="w-6 h-6 text-blue-400" />;
-      case 'ai & consciousness':
-      case 'ai services':
-      case 'artificial intelligence':
-        return <Brain className="w-6 h-6 text-cyan-400" />;
-      case 'quantum':
-      case 'quantum & emerging tech':
-        return <Atom className="w-6 h-6 text-purple-400" />;
-      case 'space':
-      case 'space & metaverse':
-        return <Rocket className="w-6 h-6 text-pink-400" />;
-      case 'micro saas':
-      case 'micro saas solutions':
-        return <Target className="w-6 h-6 text-orange-400" />;
-      case 'creative':
-      case 'creative & media':
-        return <Palette className="w-6 h-6 text-indigo-400" />;
-      case 'healthcare':
-      case 'healthcare & biotech':
-        return <Heart className="w-6 h-6 text-red-400" />;
-      case 'transportation':
-      case 'transportation & logistics':
-        return <Truck className="w-6 h-6 text-blue-400" />;
-      case 'education':
-      case 'education & research':
-        return <GraduationCap className="w-6 h-6 text-yellow-400" />;
-      case 'manufacturing':
-      case 'manufacturing & industry':
-        return <Building className="w-6 h-6 text-gray-400" />;
-      case 'retail':
-      case 'retail & e-commerce':
-        return <ShoppingCart className="w-6 h-6 text-pink-400" />;
-      case 'consulting':
-      case 'consulting & strategy':
-        return <Lightbulb className="w-6 h-6 text-indigo-400" />;
-      default:
-        return <Shield className="w-6 h-6 text-gray-400" />;
-    }
+  const getCategoryIcon = (serviceName: string) => {
+    if (serviceName.toLowerCase().includes('ai')) return <Users className="w-6 h-6" />;
+    if (serviceName.toLowerCase().includes('quantum')) return <Filter className="w-6 h-6" />;
+    if (serviceName.toLowerCase().includes('infrastructure') || serviceName.toLowerCase().includes('devops') || serviceName.toLowerCase().includes('security')) return <ArrowRight className="w-6 h-6" />;
+    return <Award className="w-6 h-6" />;
   };
 
   const getCategoryColor = (serviceName: string) => {

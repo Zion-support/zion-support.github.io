@@ -11,9 +11,7 @@ import {
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
   Building, MessageCircle, Sparkles as SparklesIcon, Zap as ZapIcon,
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon,
-  Briefcase, Layers, ShieldCheck, Zap as ZapIcon2, Globe2, 
-  Cpu as CpuIcon, Database as DatabaseIcon, Network as NetworkIcon,
-  GraduationCap, Handshake
+  Sun, Moon
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -76,14 +74,6 @@ const navigationItems: NavigationItem[] = [
         featured: true
       },
       { 
-        name: 'Ultimate 2036 Showcase', 
-        href: '/ultimate-2036-futuristic-services-showcase', 
-        description: 'Latest futuristic services',
-        icon: <Sparkles className="w-4 h-4" />,
-        featured: true,
-        badge: 'NEW'
-      },
-      { 
         name: 'AI & Machine Learning', 
         href: '/ai-services', 
         description: 'Advanced AI solutions',
@@ -96,22 +86,10 @@ const navigationItems: NavigationItem[] = [
         icon: <Atom className="w-4 h-4" />
       },
       { 
-        name: 'Emerging Technology', 
-        href: '/emerging-technology', 
-        description: 'Cutting-edge innovations',
-        icon: <Sparkles className="w-4 h-4" />
-      },
-      { 
         name: 'Space Technology', 
         href: '/space-technology', 
         description: 'Space exploration solutions',
         icon: <Rocket className="w-4 h-4" />
-      },
-      { 
-        name: 'Cybersecurity', 
-        href: '/cybersecurity', 
-        description: 'Advanced security solutions',
-        icon: <Shield className="w-4 h-4" />
       },
       { 
         name: 'IT Solutions', 
@@ -150,73 +128,64 @@ const navigationItems: NavigationItem[] = [
         icon: <GraduationCap className="w-4 h-4" />
       },
       { 
-        name: 'Micro SAAS', 
-        href: '/micro-saas', 
-        description: 'Innovative micro SAAS solutions',
+        name: 'Specialized Solutions', 
+        href: '/solutions', 
+        description: 'Industry-specific solutions',
         icon: <Play className="w-4 h-4" />
       },
       { 
         name: 'Micro SAAS', 
         href: '/micro-saas', 
-        description: 'Specialized software solutions',
-        icon: <Code className="w-4 h-4" />
-      },
-      { 
-        name: 'Cybersecurity', 
-        href: '/cybersecurity', 
-        description: 'Security & compliance solutions',
-        icon: <Shield className="w-4 h-4" />
-      },
-      { 
-        name: 'Cloud Solutions', 
-        href: '/cloud-platform', 
-        description: 'Cloud infrastructure & services',
-        icon: <Cloud className="w-4 h-4" />
-      },
-      { 
-        name: 'Specialized Solutions', 
-        href: '/solutions', 
-        description: 'Industry-specific solutions',
-        icon: <TargetIcon className="w-4 h-4" />
-      },
-      {
-        name: 'Micro SAAS',
-        href: '/micro-saas',
-        description: 'Innovative micro SaaS solutions',
-        icon: <Layers className="w-4 h-4" />
-      },
-      {
-        name: 'Fintech Solutions',
-        href: '/fintech-solutions',
-        description: 'Financial technology innovations',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      {
-        name: 'Healthtech',
-        href: '/healthtech-solutions',
-        description: 'Healthcare technology solutions',
-        icon: <Heart className="w-4 h-4" />
+        description: 'Business automation solutions',
+        icon: <Play className="w-4 h-4" />
       }
     ]
   },
   {
     name: 'Showcase & Pricing',
-    href: '/2036-innovative-services-showcase',
+    href: '/pricing',
     icon: <Star className="w-5 h-5" />,
     description: 'Service showcases and pricing',
-    badge: 'Featured',
-    category: 'showcase',
+    badge: 'Showcase',
     children: [
       { 
-        name: '2036 Innovation Showcase', 
-        href: '/2036-innovative-services-showcase', 
-        description: 'Cutting-edge 2036 services',
-        icon: <Sparkles className="w-4 h-4" />,
-        featured: true
+<<<<<<< HEAD
+        name: 'Innovative 2027 Services', 
+        href: '/innovative-2027-services-showcase', 
+        description: 'Cutting-edge 2027 services showcase',
+        icon: <Star className="w-4 h-4" />,
+        featured: true,
+        badge: 'NEW'
       },
       { 
         name: 'Services Showcase', 
+=======
+        name: '2025 Services Showcase', 
+>>>>>>> 3b4576602ed4b9e300f7981902918f218ac3fb01
         href: '/comprehensive-services-showcase-2025', 
+<<<<<<< HEAD:components/layout/UltraFuturisticNavigation2036.tsx.backup.1755988436
+        description: 'Complete 2025 services overview',
+        icon: <Star className="w-4 h-4" />,
+        featured: true
+      },
+      { 
+        name: 'Revolutionary 2025 Pricing', 
+        href: '/revolutionary-2025-pricing', 
+        description: 'Innovative pricing models',
+        icon: <Calculator className="w-4 h-4" />
+      },
+      { 
+        name: '2040 Pricing', 
+        href: '/pricing-2040', 
+        description: 'Revolutionary 2040 technology pricing',
+        icon: <Star className="w-4 h-4" />,
+        badge: 'New'
+      },
+      { 
+        name: 'Pricing Plans', 
+        href: '/revolutionary-2025-pricing', 
+        description: 'Transparent pricing structure',
+=======
         description: 'Complete services overview',
         icon: <Grid className="w-4 h-4" />,
       },
@@ -231,127 +200,20 @@ const navigationItems: NavigationItem[] = [
         name: 'Pricing Plans', 
         href: '/pricing', 
         description: 'Service pricing information',
+>>>>>>> origin/merge-progress-backup-20250823-230432:components/layout/UltraFuturisticNavigation2036.tsx
         icon: <DollarSign className="w-4 h-4" />
       },
       { 
         name: 'Market Pricing', 
         href: '/market-pricing', 
         description: 'Market price references',
-        icon: <BarChart3 className="w-4 h-4" />
+        icon: <Play className="w-4 h-4" />
       },
       { 
-        name: 'Revolutionary Pricing 2025', 
-        href: '/revolutionary-2025-pricing', 
-        description: '2025 pricing innovations',
-        icon: <TrendingUp className="w-4 h-4" />
-      },
-      { 
-        name: 'Revolutionary Pricing 2026', 
-        href: '/revolutionary-2026-pricing', 
-        description: '2026 pricing innovations',
-        icon: <TrendingUp className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry-specific solutions',
-    category: 'solutions',
-    children: [
-      {
-        name: 'Enterprise Solutions',
-        href: '/enterprise-solutions',
-        description: 'Large-scale enterprise solutions',
-        icon: <Building className="w-4 h-4" />
-      },
-      {
-        name: 'Startup Solutions',
-        href: '/startup-solutions',
-        description: 'Solutions for growing businesses',
-        icon: <Rocket className="w-4 h-4" />
-      },
-      {
-        name: 'Government Solutions',
-        href: '/government-solutions',
-        description: 'Public sector technology',
-        icon: <ShieldCheck className="w-4 h-4" />
-      },
-      {
-        name: 'Healthcare Solutions',
-        href: '/healthcare-solutions',
-        description: 'Medical technology solutions',
-        icon: <Heart className="w-4 h-4" />
-      },
-      {
-        name: 'Financial Solutions',
-        href: '/financial-solutions',
-        description: 'Fintech and banking solutions',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
-        description: 'Join our team',
-        icon: <Users className="w-4 h-4" />
-      },
-      { 
-        name: 'Investors', 
-        href: '/investors', 
-        description: 'Investment information',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
-        description: 'Join our team',
-        icon: <User className="w-4 h-4" />
-      },
-      { 
-        name: 'News', 
-        href: '/news', 
-        description: 'Company updates',
-        icon: <FileText className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Knowledge and insights',
-    category: 'resources',
-    children: [
-      {
-        name: 'Blog & Insights',
-        href: '/blog',
-        description: 'Latest industry insights',
-        icon: <FileText className="w-4 h-4" />
-      },
-      {
-        name: 'White Papers',
-        href: '/white-papers',
-        description: 'In-depth research reports',
-        icon: <BookOpenCheck className="w-4 h-4" />
-      },
-      {
-        name: 'Webinars',
-        href: '/webinars',
-        description: 'Educational webinars',
-        icon: <Video className="w-4 h-4" />
-      },
-      {
-        name: 'Training',
-        href: '/training',
-        description: 'Professional development',
-        icon: <GraduationCap className="w-4 h-4" />
-      },
-      {
-        name: 'Documentation',
-        href: '/api-documentation',
-        description: 'Technical documentation',
-        icon: <Code className="w-4 h-4" />
+        name: 'Get Quote', 
+        href: '/quote', 
+        description: 'Request custom pricing',
+        icon: <Play className="w-4 h-4" />
       }
     ]
   },
@@ -362,35 +224,91 @@ const navigationItems: NavigationItem[] = [
     description: 'About Zion Tech Group',
     category: 'company',
     children: [
-      {
-        name: 'About Us',
-        href: '/about',
-        description: 'Our story and mission',
-        icon: <Users className="w-4 h-4" />
+      { 
+        name: 'About Us', 
+        href: '/about', 
+        description: 'Company information',
+        icon: <Play className="w-4 h-4" />
       },
-      {
-        name: 'Team',
-        href: '/team',
-        description: 'Meet our experts',
-        icon: <Users className="w-4 h-4" />
+      { 
+        name: 'Contact', 
+        href: '/contact', 
+        description: 'Get in touch',
+        icon: <MessageCircle className="w-4 h-4" />
       },
-      {
-        name: 'Careers',
-        href: '/careers',
+      { 
+        name: 'Partners', 
+        href: '/partners', 
+        description: 'Partnership opportunities',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Investors', 
+        href: '/investors', 
+        description: 'Investment information',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Careers', 
+        href: '/careers', 
         description: 'Join our team',
-        icon: <Briefcase className="w-4 h-4" />
+        icon: <Play className="w-4 h-4" />
       },
-      {
-        name: 'Partners',
-        href: '/partners',
-        description: 'Strategic partnerships',
-        icon: <Handshake className="w-4 h-4" />
+      { 
+        name: 'News & Events', 
+        href: '/news', 
+        description: 'Latest company updates',
+        icon: <Play className="w-4 h-4" />
+      }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: 'Knowledge & documentation',
+    children: [
+      { 
+        name: 'Documentation', 
+        href: '/docs', 
+        description: 'Technical documentation',
+        icon: <FileText className="w-4 h-4" />
       },
-      {
-        name: 'Investors',
-        href: '/investors',
-        description: 'Investment opportunities',
-        icon: <TrendingUp className="w-4 h-4" />
+      { 
+        name: 'White Papers', 
+        href: '/white-papers', 
+        description: 'Industry insights',
+        icon: <FileText className="w-4 h-4" />
+      },
+      { 
+        name: 'Case Studies', 
+        href: '/case-studies', 
+        description: 'Success stories',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Support', 
+        href: '/support', 
+        description: 'Technical support',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Training', 
+        href: '/training', 
+        description: 'Learning resources',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Webinars', 
+        href: '/webinars', 
+        description: 'Educational sessions',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'White Papers', 
+        href: '/white-papers', 
+        description: 'In-depth research',
+        icon: <Play className="w-4 h-4" />
       }
     ]
   },
@@ -398,77 +316,82 @@ const navigationItems: NavigationItem[] = [
     name: 'Support',
     href: '/support',
     icon: <HelpCircle className="w-5 h-5" />,
-    description: 'Help and support',
-    category: 'support',
-    children: [
-      {
-        name: 'Help Center',
-        href: '/support',
-        description: 'Comprehensive help resources',
-        icon: <HelpCircle className="w-4 h-4" />
-      },
-      { 
-        name: 'Training', 
-        href: '/training', 
-        description: 'Learning resources',
-        icon: <BookOpenCheck className="w-4 h-4" />
-      },
-      { 
-        name: 'Webinars', 
-        href: '/webinars', 
-        description: 'Educational sessions',
-        icon: <Video className="w-4 h-4" />
-      },
-      { 
-        name: 'White Papers', 
-        href: '/white-papers', 
-        description: 'In-depth research',
-        icon: <FileText className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry solutions',
-    category: 'solutions',
+    description: 'Help & assistance',
     children: [
       { 
-        name: 'Healthcare', 
-        href: '/healthcare-ai-solutions', 
-        description: 'Healthcare technology',
-        icon: <Heart className="w-4 h-4" />
+        name: 'Contact Us', 
+        href: '/contact', 
+        description: 'Get in touch',
+        icon: <MessageCircle className="w-4 h-4" />
       },
       { 
-        name: 'Financial Services', 
-        href: '/financial-solutions', 
-        description: 'Fintech solutions',
-        icon: <DollarSign className="w-4 h-4" />
+        name: 'Live Chat', 
+        href: '/chat', 
+        description: 'Instant support',
+        icon: <MessageCircle className="w-4 h-4" />
       },
       { 
         name: 'Manufacturing', 
         href: '/manufacturing-ai-solutions', 
-        description: 'Industrial automation',
-        icon: <Settings className="w-4 h-4" />
+        description: 'Manufacturing automation',
+        icon: <Play className="w-4 h-4" />
       },
       { 
         name: 'Retail', 
         href: '/retail-technology-solutions', 
-        description: 'Retail technology',
-        icon: <ShoppingCart className="w-4 h-4" />
+        description: 'Retail technology solutions',
+        icon: <Play className="w-4 h-4" />
       },
       { 
         name: 'Government', 
         href: '/government-technology-solutions', 
-        description: 'Public sector solutions',
-        icon: <Building className="w-4 h-4" />
+        description: 'Government technology solutions',
+        icon: <Play className="w-4 h-4" />
       },
       { 
         name: 'Education', 
         href: '/education-technology-solutions', 
-        description: 'EdTech solutions',
-        icon: <BookOpen className="w-4 h-4" />
+        description: 'Educational technology solutions',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Entertainment', 
+        href: '/entertainment-media-solutions', 
+        description: 'Media and entertainment solutions',
+        icon: <Play className="w-4 h-4" />
+      }
+    ]
+  },
+  {
+    name: 'Get Started',
+    href: '/get-started',
+    icon: <Play className="w-5 h-5" />,
+    description: 'Start your journey',
+    category: 'get-started',
+    children: [
+      { 
+        name: 'Get Started', 
+        href: '/get-started', 
+        description: 'Begin your transformation',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Request Demo', 
+        href: '/contact', 
+        description: 'See our solutions in action',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Get Quote', 
+        href: '/quote', 
+        description: 'Custom pricing for your needs',
+        icon: <Play className="w-4 h-4" />
+      },
+      { 
+        name: 'Live Chat', 
+        href: '/support', 
+        description: 'Get immediate assistance',
+        icon: <Play className="w-4 h-4" />
       }
     ]
   }
