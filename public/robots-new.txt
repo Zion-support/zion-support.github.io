@@ -1,0 +1,55 @@
+User-agent: *
+Allow: /
+<<<<<<< HEAD
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD:public/robots-new.txt
+
+=======
+Sitemap: https://ziontechgroup.com/sitemap
+# Allow all crawlers
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+>>>>>>> origin/feat/new-content-ads:dist/robots.txt
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+<<<<<<< HEAD:public/robots-new.txt
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /private/
+
+# Allow important pages
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Allow: /white-papers/
+Allow: /webinars/
+
+=======
+Disallow: /_next/
+Disallow: /static/
+# Allow important files
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /manifest.json
+>>>>>>> origin/feat/new-content-ads:dist/robots.txt
+# Crawl delay (optional)
+Crawl-delay: 1
+=======
+
+# Sitemaps
+Sitemap: https://zion.app/sitemap.xml
+Sitemap: https://zion.app/sitemap.txt
+
+# Crawl-delay
+Crawl-delay: 1
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,0 +1,15 @@
+import type { NextPage } from 'next';
+const AiMl: NextPage = () => {,
+  return (,
+    <div>,
+      <Head>,
+        <title>AiMl - Zion Tech Solutions</title>,
+        <meta name="description" content="AiMl service" />,
+      </Head>,
+      <main>,
+        <h1>AiMl</h1>,
+        <p>Service details coming soon...</p>,
+        <Link href="/services">Back to Services</Link>,
+      </main>,
+    </div>,
+  ),};

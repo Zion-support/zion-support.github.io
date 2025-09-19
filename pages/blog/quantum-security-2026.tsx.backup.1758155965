@@ -1,0 +1,103 @@
+<<<<<<< HEAD
+import Head from 'next/head'
+import Link from 'next/link'
+import React from 'react'
+
+export default function QuantumSecurity2026() {
+  return (
+    <>
+      <Head>
+        <title>Quantum Security 2026: Readiness Checklist | Zion Tech Group</title>
+        <meta name='description' content='A pragmatic checklist to prepare your organization for the quantum threat landscape in 2026.' />
+        <meta property='og:title' content='Quantum Security 2026' />
+        <meta property='og:description' content='Concrete steps for crypto-agility, PQC migration, and key management.' />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
+
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <div className='max-w-4xl mx-auto'>
+            <nav className='mb-8'>
+              <Link href='/blog' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
+                ← Back to Blog
+              </Link>
+            </nav>
+
+            <article className='prose prose-invert prose-lg max-w-none'>
+              <header className='mb-12 text-center'>
+                <div className='flex items-center gap-3 justify-center mb-4'>
+                  <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
+                    Quantum Security
+                  </span>
+                  <span className='text-white/60 text-sm'>September 16, 2025</span>
+                  <span className='text-white/60 text-sm'>•</span>
+                  <span className='text-white/60 text-sm'>7 min read</span>
+                </div>
+                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
+                  Quantum Security 2026: Readiness Checklist
+                </h1>
+                <p className='text-xl text-white/80 max-w-3xl mx-auto'>
+                  Get crypto-agile, plan PQC migration, and upgrade key management before the clock runs out.
+                </p>
+              </header>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
+                  Inventory and Impact Assessment
+                </h2>
+                <ul className='space-y-2 text-white/80 mb-6'>
+                  <li>• Map cryptography usage across services, storage, and in-transit systems</li>
+                  <li>• Identify long-lived secrets, certificates, and archived data</li>
+                  <li>• Prioritize high-risk systems affected by store-now-decrypt-later</li>
+                </ul>
+              </section>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
+                  Crypto-Agility and PQC Pilots
+                </h2>
+                <p className='text-white/90 mb-4'>
+                  Introduce abstraction layers, enable algorithm agility, and pilot NIST PQC candidates in non-critical paths.
+                </p>
+              </section>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-emerald-400'>
+                  Keys, Certificates, and Governance
+                </h2>
+                <p className='text-white/90 mb-4'>
+                  Refresh key management, rotate frequently, and establish governance for crypto lifecycle and incident response.
+                </p>
+              </section>
+            </article>
+          </div>
+        </main>
+      </div>
+    </>
+  )
+}
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const QuantumSecurity2026: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>QuantumSecurity2026 - Zion Tech Solutions</title>
+        <meta name="description" content="QuantumSecurity2026 blog post" />
+      </Head>
+      
+      <main>
+        <h1>QuantumSecurity2026</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default QuantumSecurity2026;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

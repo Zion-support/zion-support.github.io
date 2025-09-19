@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  padding: 2rem;
+}
+
+.App-header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App-header h1 {
+  color: #646cff;
+  margin-bottom: 1rem;
+}
+
+.App-header p {
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .feature-card {
+    background: #2a2a2a;
+    color: #fff;
+  }
+  
+  .feature-card h3 {
+    color: #fff;
+  }
+  
+  .feature-card p {
+    color: #ccc;
+  }
+  
+  .App-header p {
+    color: #ccc;
+  }
+}

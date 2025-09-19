@@ -1,0 +1,19 @@
+import React from "react";
+const FutureTechTrends2025 = () => {,
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center mb-16">,
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
+            Future Tech Trends 2025,
+          </h1>,
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
+            Discover the revolutionary technology trends that will shape the future,
+          </p>,
+        </div>,
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          </div>,
+      </div>,
+    </div>,
+  ),};
+export default FutureTechTrends2025;
