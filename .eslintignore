@@ -16,25 +16,34 @@ node_modules/
 **/*.lock
 
 # Disabled/backup directories
+zion-os.disabled/
 zion-os/
 zion-website/
 zion.app/
 zion_academy/
+zion-ai-assistant/
+token/
+dao/
+server/
+src-clean/
+apps/
+apps.backup/
 automation/
 backup/
 backups/
+backup-merge-conflicts/
+broken_components/
+broken_files_backup/
+app-disabled/
+app-minimal/
+api-backup/
+api.disabled/
+api.disabled.temp/
 recovered-branches/
 temp_*/
 
 # Public assets
 public/
-
-# Scripts and automation
-scripts/
-**/*.cjs
-**/*.mjs
-**/*.sh
-**/*.py
 
 # Reports and logs
 **/*-report*
@@ -44,6 +53,48 @@ scripts/
 **/performance-reports/
 **/link-reports/
 **/monitoring/
+
+# Scripts and automation
+scripts/
+**/*.cjs
+**/*.mjs
+**/*.sh
+**/*.py
+**/scripts/
+**/pm2-*
+**/fix-*
+**/clean-*
+**/batch-*
+**/merge-*
+**/resolve-*
+**/systematic-*
+**/ultimate-*
+**/structural-*
+**/quick-*
+**/comprehensive-*
+**/enhanced-*
+**/complete-*
+**/app-optimizer.*
+**/improve-*
+**/find-*
+**/git-ops.*
+**/pr-manager.*
+**/merge-strategy.*
+**/resolve-and-merge-*
+**/merge-all-*
+**/merge-prs.*
+**/pr-*
+**/batch_*
+**/check_*
+**/commit-*
+**/complete_*
+**/deploy-*
+**/fix_*
+**/git_*
+**/health-*
+**/run-*
+**/start-*
+**/test-*
 
 # Specific file patterns
 **/Dockerfile*
@@ -61,3 +112,7 @@ scripts/
 **/webpack.config.*
 **/tailwind.config.*
 **/next.config.*
+
+# Disabled components
+**/components-disabled/**
+**/utils-disabled/**
