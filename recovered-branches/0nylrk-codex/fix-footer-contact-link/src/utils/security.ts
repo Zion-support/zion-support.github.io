@@ -1,0 +1,220 @@
+// Security utilities and helpers,
+export interface SecurityConfig {,
+  csp: string;
+  xssProtection: boolean;
+  csrfToken?: string;
+  rateLimit?: {,
+    maxRequests: number;
+    windowMs: number,};
+}
+,
+export class SecurityManager {,
+  private config: SecurityConfig;
+  constructor(config: SecurityConfig) {,
+    this.config = config;
+    this.initializeSecurity(),
+  }
+,
+  private initializeSecurity() {,
+    this.setupCSP();
+    this.setupXSSProtection();
+    this.setupCSRFProtection();
+    this.setupRateLimiting();
+  }
+,
+  private setupCSP() {,
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = this.config.csp;
+    document.head.appendChild(meta);
+  }
+,
+  private setupXSSProtection() {,
+    if (this.config.xssProtection) {,
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'X-XSS-Protection';
+      meta.content = '1, mode=block';
+      document.head.appendChild(meta);
+    }
+  }
+,
+  private setupCSRFProtection() {,
+    if (this.config.csrfToken) {,
+      // Add CSRF token to all forms,
+      const forms = document.querySelectorAll('form');
+      forms.forEach(form => {,
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_token';
+        input.value = this.config.csrfToken!;
+        form.appendChild(input);
+      });
+    }
+  }
+,
+  private setupRateLimiting() {,
+    if (this.config.rateLimit) {,
+      const { maxRequests, windowMs } = this.config.rateLimit;
+      const requests: number[] = [];
+      // Intercept fetch requests,
+      const originalFetch = window.fetch;
+      window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {,
+        const now = Date.now();
+        // Remove old requests outside the window,
+        while (requests.length > 0 && requests[0] <= now - windowMs) {,
+          requests.shift();
+        }
+,
+        // Check if we're within rate limit,
+        if (requests.length >= maxRequests) {,
+          throw new Error('Rate limit exceeded');
+        }
+,
+        requests.push(now);
+        return originalFetch(input, init);
+      };
+    }
+  }
+}
+,
+// Input sanitization,
+export const sanitizeInput = (input: string): string => {,
+  return input,
+    .replace(/[<>]/g, '') // Remove potential HTML tags,
+    .replace(/javascript:/gi, '') // Remove javascript: protocol,
+    .replace(/on\w+=/gi, '') // Remove event handlers,
+    .trim();
+};
+// XSS protection,
+export const escapeHtml = (text: string): string => {,
+  const map: { [key: string]: string ,} = {,
+    '&': '&amp,<': '&lt,>': '&gt,"': '&quot,';
+    "'": '&#039,',
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
+};
+// CSRF token generation,
+export const generateCSRFToken = (): string => {,
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+};
+// Secure random string generation,
+export const generateSecureRandomString = (length: number = 32): string => {,
+  const array = new Uint8Array(length);
+  crypto.getRandomValues(array);
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+};
+// Password strength validation,
+export const validatePasswordStrength = (password: string): {,
+  isValid: boolean;
+  score: number;
+  feedback: string[],} => {,
+  const feedback: string[] = [];
+  let score = 0;
+  if (password.length >= 8) {,
+    score += 1,
+  } else {,
+    feedback.push('Password should be at least 8 characters long');
+  }
+,
+  if (/[a-z]/.test(password)) {,
+    score += 1;
+  } else {,
+    feedback.push('Password should contain lowercase letters');
+  }
+,
+  if (/[A-Z]/.test(password)) {,
+    score += 1;
+  } else {,
+    feedback.push('Password should contain uppercase letters');
+  }
+,
+  if (/[0-9]/.test(password)) {,
+    score += 1;
+  } else {,
+    feedback.push('Password should contain numbers');
+  }
+,
+  if (/[^A-Za-z0-9]/.test(password)) {,
+    score += 1;
+  } else {,
+    feedback.push('Password should contain special characters');
+  }
+,
+  return {,
+    isValid: score >= 4;
+    score;
+    feedback,
+  };
+};
+// URL validation,
+export const isValidUrl = (url: string): boolean => {,
+  try {,
+    new URL(url);
+    return true,
+  } catch {,
+    return false;
+  }
+};
+// Email validation,
+export const isValidEmail = (email: string): boolean => {,
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email),
+};
+// Content Security Policy builder,
+export const buildCSP = (options: {,
+  defaultSrc?: string[];
+  scriptSrc?: string[];
+  styleSrc?: string[];
+  imgSrc?: string[];
+  connectSrc?: string[];
+  fontSrc?: string[];
+  objectSrc?: string[];
+  mediaSrc?: string[];
+  frameSrc?: string[];
+  workerSrc?: string[];
+  manifestSrc?: string[];
+  formAction?: string[];
+  frameAncestors?: string[];
+  baseUri?: string[];
+  upgradeInsecureRequests?: boolean;
+  blockAllMixedContent?: boolean,
+}): string => {,
+  const directives: string[] = [];
+  Object.entries(options).forEach(([key, value]) => {,
+    if (value && Array.isArray(value)) {,
+      const directive = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+      directives.push(`${directive} ${value.join(' ')}`);
+    } else if (value === true) {,
+      const directive = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+      directives.push(directive);
+    }
+  });
+  return directives.join();
+};
+// Default security configuration,
+export const defaultSecurityConfig: SecurityConfig = {,
+  csp: buildCSP({,
+    defaultSrc: ["'self'"];
+    scriptSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"];
+    styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"];
+    imgSrc: ["'self'", "data:", "https:"];
+    connectSrc: ["'self'"];
+    fontSrc: ["'self'", "https://fonts.gstatic.com"];
+    objectSrc: ["'none'"];
+    mediaSrc: ["'self'"];
+    frameSrc: ["'none'"];
+    workerSrc: ["'self'"];
+    manifestSrc: ["'self'"];
+    formAction: ["'self'"];
+    frameAncestors: ["'none'"];
+    baseUri: ["'self'"];
+    upgradeInsecureRequests: true;
+    blockAllMixedContent: true,});
+  xssProtection: true;
+  rateLimit: {,
+    maxRequests: 100;
+    windowMs: 60000 // 1 minute,}
+};
+export default SecurityManager;

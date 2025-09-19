@@ -1,0 +1,170 @@
+'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+interface AnalyticsEvent {,
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+  custom_parameters?: Record<string, any>;
+}
+,
+interface PageViewEvent {,
+  page_title: string;
+  page_location: string;
+  page_path: string;
+  custom_parameters?: Record<string, any>;
+}
+,
+export default function Analytics() {,
+  const router = useRouter();
+  useEffect(() => {,
+    // Track page views,
+    const trackPageView = (url: string) => {,
+      const pageViewData: PageViewEvent = {,
+        page_title: document.title;
+        page_location: window.location.href;
+        page_path: url;
+        custom_parameters: {,
+          timestamp: Date.now();
+          user_agent: navigator.userAgent;
+          referrer: document.referrer;
+          screen_resolution: `${screen.width,}x${screen.height}`;
+          viewport_size: `${window.innerWidth,}x${window.innerHeight}`,
+        }
+      };
+      // Send to analytics API,
+      fetch('/api/analytics/pageview', {,
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' ,};
+        body: JSON.stringify(pageViewData),}).catch(console.error);
+    };
+    // Track initial page view,
+    trackPageView(window.location.pathname);
+    // Track route changes (for SPA navigation),
+    const handleRouteChange = (url: string) => {,
+      trackPageView(url),};
+    // Listen for popstate events (back/forward navigation),
+    window.addEventListener('popstate', () => {,
+      handleRouteChange(window.location.pathname);
+    });
+    return () => {,
+      window.removeEventListener('popstate', () => {,
+        handleRouteChange(window.location.pathname);
+      });
+    };
+  }, [router]);
+  return null;
+}
+,
+// Analytics utility functions,
+export const analytics = {,
+  // Track custom events,
+  trackEvent: (eventData: AnalyticsEvent) => {,
+    if (typeof window === 'undefined') return;
+    const fullEventData = {,
+      ...eventData;
+      timestamp: Date.now();
+      page_url: window.location.href;
+      page_title: document.title,};
+    fetch('/api/analytics/event', {,
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' ,};
+      body: JSON.stringify(fullEventData),}).catch(console.error);
+  };
+  // Track user interactions,
+  trackClick: (element: string, category: string = 'engagement') => {,
+    analytics.trackEvent({,
+      action: 'click';
+      category;
+      label: element,});
+  };
+  // Track form submissions,
+  trackFormSubmit: (formName: string, success: boolean = true) => {,
+    analytics.trackEvent({,
+      action: 'form_submit';
+      category: 'engagement';
+      label: formName;
+      value: success ? 1 : 0,});
+  };
+  // Track downloads,
+  trackDownload: (fileName: string, fileType: string) => {,
+    analytics.trackEvent({,
+      action: 'download';
+      category: 'engagement';
+      label: fileName;
+      custom_parameters: { file_type: fileType ,}
+    });
+  };
+  // Track external link clicks,
+  trackExternalLink: (url: string, linkText: string) => {,
+    analytics.trackEvent({,
+      action: 'external_link_click';
+      category: 'navigation';
+      label: linkText;
+      custom_parameters: { external_url: url ,}
+    });
+  };
+  // Track scroll depth,
+  trackScrollDepth: (depth: number) => {,
+    analytics.trackEvent({,
+      action: 'scroll';
+      category: 'engagement';
+      label: 'scroll_depth';
+      value: depth,});
+  };
+  // Track time on page,
+  trackTimeOnPage: (timeInSeconds: number) => {,
+    analytics.trackEvent({,
+      action: 'time_on_page';
+      category: 'engagement';
+      label: 'page_duration';
+      value: timeInSeconds,});
+  };
+  // Track search queries,
+  trackSearch: (query: string, resultsCount: number) => {,
+    analytics.trackEvent({,
+      action: 'search';
+      category: 'engagement';
+      label: query;
+      value: resultsCount,});
+  };
+  // Track video interactions,
+  trackVideo: (action: 'play' | 'pause' | 'complete', videoTitle: string, progress?: number) => {,
+    analytics.trackEvent({,
+      action: `video_${action,}`;
+      category: 'media';
+      label: videoTitle;
+      value: progress;
+      custom_parameters: { video_title: videoTitle ,}
+    });
+  }
+};
+// Hook for tracking scroll depth,
+export const useScrollTracking = () => {,
+  useEffect(() => {,
+    let maxScrollDepth = 0;
+    let scrollTimeout: NodeJS.Timeout;
+    const trackScroll = () => {,
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      if (scrollPercent > maxScrollDepth) {,
+        maxScrollDepth = scrollPercent;
+        // Track at 25%, 50%, 75%, and 100%,
+        if ([25, 50, 75, 100].includes(scrollPercent)) {,
+          analytics.trackScrollDepth(scrollPercent);
+        }
+      }
+    };
+    const throttledTrackScroll = () => {,
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(trackScroll, 100);
+    };
+    window.addEventListener('scroll', throttledTrackScroll, { passive: true ,});
+    return () => {,
+      window.removeEventListener('scroll', throttledTrackScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
+};

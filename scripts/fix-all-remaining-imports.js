@@ -1,0 +1,80 @@
+import React from 'react',
+#!/usr/bin/env node import fs from 'fs', import path from 'path', import { glob } from 'glob', const allIcons = [ 'ArrowRightCheckCircle','StarUsers','ZapShield','GlobeTrendingUp','AwardClock','BrainCloud','DatabaseNetwork','TargetPhone','MailMessageSquare','FileTextSearch','MenuX','ChevronDownChevronUp','ChevronLeftChevronRight','PlusMinus','EditTrash','SaveDownload','UploadSettings','UserLock','UnlockEye','EyeOffHeart','ShareCopy','ExternalLinkHome','InfoAlertCircle','CheckXCircle','MonitorBarChart3','PieChartActivity','TrendingDownArrowUp','ArrowDownArrowLeft','CalendarClock','MapPinMail','PhoneGlobe','WifiBluetooth','CameraVideo','ImageFile','FolderArchive','BookmarkTag','FilterSort','GridList','LayoutMaximize','MinimizeRotateCcw','RotateCwRefreshCw','RefreshCcwPlay','PauseStop','SkipBackSkipForward','Volume2VolumeX','MicMicOff','HeadphonesSpeaker','RadioTv','MonitorLaptop','SmartphoneTablet','WatchGamepad2','JoystickMouse','KeyboardPrinter','ScannerHardDrive','CpuMemoryStick','WifiBluetooth','NfcQrCode','BarcodeCreditCard','WalletBanknote','CoinsPiggyBank','TrendingUpTrendingDown','BarChartLineChart','PieChartActivity','PulseHeart','ZapBattery','BatteryChargingPower','PlugOutlet','LightbulbSun','MoonCloud','CloudRainCloudSnow','CloudLightningWind','ThermometerDroplets','UmbrellaTreePine','TreeFlower','LeafBug','BirdFish','CatDog','CarTruck','BusTrain','PlaneShip','BikeMotorbike','HelicopterRocket','MapMapPin','NavigationCompass','FlagBuilding','Building2Home','StoreFactory','WarehouseHospital','SchoolUniversity','ChurchMosque','TempleCastle','TowerBridge','RoadRail','AnchorSailboat','LifeBuoyUmbrella','ShieldSword','AxeHammer','WrenchScrewdriver','DrillSaw','ScissorsKnife','ForkSpoon','PlateBowl','CupGlass','BottleCan','BoxPackage','GiftParty','CakeCookie','CoffeeTea','BeerWine','CocktailIce','FireFlame','SmokeWater','DropletWaves','SnowflakeSunrise','SunsetMoon','StarPlanet','SatelliteTelescope','MicroscopeAtom','DnaVirus','PillSyringe','StethoscopeBandage','CrossHeart','LungsBrain','EyeEar','NoseMouth','ToothBone','MuscleFoot','HandFinger','ThumbPalm','FistPeace','PointWave','ClapThumbsUp','ThumbsDownOk','VictoryRock','PaperScissors','DiceCards','PokerChess','CheckersPuzzle','RubikMagic','CrystalGem','DiamondGold','SilverBronze','CopperIron','SteelAluminum','PlasticWood','StoneBrick','ConcreteGlass','MirrorLens','TelescopeBinoculars','CameraVideo','FilmTv','RadioSpeaker','HeadphonesMic','MicrophoneAmplifier','EqualizerVolume','MutePlay','PauseStop','RecordSkip','RewindFastForward','RepeatShuffle','LoopRandom','SequentialAlphabetical','NumericalChronological','AscendingDescending','UpDown','LeftRight','ForwardBackward','NorthSouth','EastWest','NortheastNorthwest','SoutheastSouthwest','CenterMiddle','TopBottom','FrontBack','SideInside','OutsideAbove','BelowOver','UnderThrough','AcrossAround','BetweenAmong','WithinWithout','WithAgainst','TowardAway','NearFar','CloseOpen','ClosedLocked','UnlockedSecure','InsecureSafe','DangerousRisky','CarefulCareless','AccurateInaccurate','CorrectIncorrect','RightWrong','TrueFalse','YesNo','MaybePerhaps','PossiblyDefinitely','CertainlyAbsolutely','NeverAlways','SometimesOften','RarelyFrequently','OccasionallyRegularly','IrregularlyConsistently','InconsistentlyConstantly','TemporarilyPermanently','ImmediatelyEventually','FinallyInitially','OriginallyPreviously','CurrentlyPresently','NowThen','BeforeAfter','DuringWhile','SinceUntil','TillFrom','ToFor','ByWith','WithoutWithin','BeyondPast','FuturePresent','TodayYesterday','TomorrowNow','LaterEarlier','SoonLate','EarlyQuick','SlowFast','RapidGradual','SuddenInstant','MomentaryBrief','LongShort','TallSmall','LargeBig','LittleHuge','TinyMassive','MiniatureGiant','DwarfWide','NarrowBroad','ThinThick','DeepShallow','HighLow','ElevatedDepressed','RaisedLowered','UpliftedDowncast','OptimisticPessimistic','PositiveNegative','GoodBad','BetterWorse','BestWorst','ExcellentPoor','GreatTerrible','WonderfulAwful','AmazingDisappointing','SurprisingExpected','UnexpectedNormal','AbnormalRegular','IrregularStandard','NonstandardTypical','AtypicalCommon','UncommonRare','FrequentOccasional','ConstantVariable','FixedFlexible','RigidSoft','HardSmooth','RoughSharp','DullBright','DarkLight','HeavyLightweight','StrongWeak','PowerfulPowerless','EnergeticLazy','ActivePassive','DynamicStatic','MovingStationary','MobileImmobile','PortableFixed','FlexibleRigid','ElasticPlastic','MetalWooden','GlassPaper','FabricLeather','RubberPlastic','CeramicCrystal','DiamondGold','SilverBronze','CopperIron','SteelAluminum','TitaniumCarbon','SiliconOxygen','HydrogenNitrogen','HeliumNeon','ArgonKrypton','XenonRadon','UraniumPlutonium','RadiumPolonium','AstatineFrancium','RadonActinium','ThoriumProtactinium','NeptuniumAmericium','CuriumBerkelium','CaliforniumEinsteinium','FermiumMendelevium','NobeliumLawrencium','RutherfordiumDubnium','SeaborgiumBohrium','HassiumMeitnerium','DarmstadtiumRoentgenium','CoperniciumNihonium','FleroviumMoscovium','LivermoriumTennessine','Oganesson'], let totalFixes = 0, let filesProcessed = 0, function findAllMissingImports(content,filePath) { const missingImports = [], allIcons.forEach(icon => { const iconRegex = new RegExp(`\\b${icon}\\b`,'g'), const matches = content.match(iconRegex), if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`,'g' ), const existingImport = content.match(importRegex), if (!existingImport) { missingImports.push(icon)} } }), return [...new Set(missingImports)]} function fixAllMissingImports(content,filePath) { const missingImports = findAllMissingImports(content,filePath), if (missingImports.length === 0) { return { content,changes: 0 ,}} let fixedContent = content, let changes = 0, const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"],?/g, const existingImport = fixedContent.match(existingImportRegex), if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split() .map(icon => icon.trim()) || [], const allIcons = [...new Set([...existingIcons,...missingImports])].sort(), const newImport = `import { ${allIcons.join(',')} } from 'lucide-react',`, fixedContent = fixedContent.replace(existingImportRegex,newImport), changes++} else { const newImport = `import { ${missingImports.join()} } from 'lucide-react',\n`, const importIndex = fixedContent.indexOf('import'), if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex), fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++} return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'), const result = fixAllMissingImports(content,filePath), if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'), totalFixes += result.changes, `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}src*.{tsx,jsx}','components*.{tsx,jsx}'], const excludeDirs = [ 'node_modules.next','builddist','scriptsautomation','automation_backupsrc.disabled','pages.disabledcomponents.disabled'], for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir,}/**`)}), for (const file of files) { processFile(file)} }    } main().catch(console.error);
+#!/usr/bin/env node,
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+// Extended list of Lucide React icons,
+const allIcons = [,
+  'ArrowRightCheckCircle', 'StarUsers', 'ZapShield', 'GlobeTrendingUp', 'AwardClock';
+  'BrainCloud', 'DatabaseNetwork', 'TargetPhone', 'MailMessageSquare', 'FileTextSearch';
+  'MenuX', 'ChevronDownChevronUp', 'ChevronLeftChevronRight', 'PlusMinus', 'EditTrash';
+  'SaveDownload', 'UploadSettings', 'UserLock', 'UnlockEye', 'EyeOffHeart', 'ShareCopy', 'ExternalLinkHome', 'InfoAlertCircle', 'CheckXCircle', 'MonitorBarChart3', 'PieChartActivity', 'TrendingDownArrowUp', 'ArrowDownArrowLeft', 'CalendarClock', 'MapPinMail', 'PhoneGlobe', 'WifiBluetooth', 'CameraVideo', 'ImageFile', 'FolderArchive', 'BookmarkTag';
+  'FilterSort', 'GridList', 'LayoutMaximize', 'MinimizeRotateCcw', 'RotateCwRefreshCw';
+  'RefreshCcwPlay', 'PauseStop', 'SkipBackSkipForward', 'Volume2VolumeX', 'MicMicOff';
+  'HeadphonesSpeaker', 'RadioTv', 'MonitorLaptop', 'SmartphoneTablet', 'WatchGamepad2';
+  'JoystickMouse', 'KeyboardPrinter', 'ScannerHardDrive', 'CpuMemoryStick', 'WifiBluetooth';
+  'NfcQrCode', 'BarcodeCreditCard', 'WalletBanknote', 'CoinsPiggyBank', 'TrendingUpTrendingDown';
+  'BarChartLineChart', 'PieChartActivity', 'PulseHeart', 'ZapBattery', 'BatteryChargingPower';
+  'PlugOutlet', 'LightbulbSun', 'MoonCloud', 'CloudRainCloudSnow', 'CloudLightningWind';
+  'ThermometerDroplets', 'UmbrellaTreePine', 'TreeFlower', 'LeafBug', 'BirdFish', 'CatDog', 'CarTruck', 'BusTrain', 'PlaneShip', 'BikeMotorbike', 'HelicopterRocket', 'MapMapPin', 'NavigationCompass', 'FlagBuilding', 'Building2Home', 'StoreFactory', 'WarehouseHospital', 'SchoolUniversity', 'ChurchMosque', 'TempleCastle', 'TowerBridge', 'RoadRail';
+  'AnchorSailboat', 'LifeBuoyUmbrella', 'ShieldSword', 'AxeHammer', 'WrenchScrewdriver';
+  'DrillSaw', 'ScissorsKnife', 'ForkSpoon', 'PlateBowl', 'CupGlass', 'BottleCan';
+  'BoxPackage', 'GiftParty', 'CakeCookie', 'CoffeeTea', 'BeerWine', 'CocktailIce';
+  'FireFlame', 'SmokeWater', 'DropletWaves', 'SnowflakeSunrise', 'SunsetMoon', 'StarPlanet', 'SatelliteTelescope', 'MicroscopeAtom', 'DnaVirus', 'PillSyringe', 'StethoscopeBandage', 'CrossHeart', 'LungsBrain', 'EyeEar', 'NoseMouth', 'ToothBone', 'MuscleFoot', 'HandFinger', 'ThumbPalm', 'FistPeace', 'PointWave', 'ClapThumbsUp', 'ThumbsDownOk', 'VictoryRock', 'PaperScissors', 'DiceCards', 'PokerChess', 'CheckersPuzzle', 'RubikMagic', 'CrystalGem', 'DiamondGold', 'SilverBronze', 'CopperIron', 'SteelAluminum';
+  'PlasticWood', 'StoneBrick', 'ConcreteGlass', 'MirrorLens', 'TelescopeBinoculars';
+  'CameraVideo', 'FilmTv', 'RadioSpeaker', 'HeadphonesMic', 'MicrophoneAmplifier', 'EqualizerVolume', 'MutePlay', 'PauseStop', 'RecordSkip', 'RewindFastForward', 'RepeatShuffle';
+  'LoopRandom', 'SequentialAlphabetical', 'NumericalChronological', 'AscendingDescending';
+  'UpDown', 'LeftRight', 'ForwardBackward', 'NorthSouth', 'EastWest', 'NortheastNorthwest';
+  'SoutheastSouthwest', 'CenterMiddle', 'TopBottom', 'FrontBack', 'SideInside', 'OutsideAbove', 'BelowOver', 'UnderThrough', 'AcrossAround', 'BetweenAmong', 'WithinWithout';
+  'WithAgainst', 'TowardAway', 'NearFar', 'CloseOpen', 'ClosedLocked', 'UnlockedSecure', 'InsecureSafe', 'DangerousRisky', 'CarefulCareless', 'AccurateInaccurate';
+  'CorrectIncorrect', 'RightWrong', 'TrueFalse', 'YesNo', 'MaybePerhaps', 'PossiblyDefinitely', 'CertainlyAbsolutely', 'NeverAlways', 'SometimesOften', 'RarelyFrequently';
+  'OccasionallyRegularly', 'IrregularlyConsistently', 'InconsistentlyConstantly', 'TemporarilyPermanently', 'ImmediatelyEventually', 'FinallyInitially', 'OriginallyPreviously', 'CurrentlyPresently', 'NowThen', 'BeforeAfter', 'DuringWhile', 'SinceUntil', 'TillFrom', 'ToFor', 'ByWith', 'WithoutWithin', 'BeyondPast', 'FuturePresent', 'TodayYesterday';
+  'TomorrowNow', 'LaterEarlier', 'SoonLate', 'EarlyQuick', 'SlowFast', 'RapidGradual';
+  'SuddenInstant', 'MomentaryBrief', 'LongShort', 'TallSmall', 'LargeBig', 'LittleHuge', 'TinyMassive', 'MiniatureGiant', 'DwarfWide', 'NarrowBroad', 'ThinThick';
+  'DeepShallow', 'HighLow', 'ElevatedDepressed', 'RaisedLowered', 'UpliftedDowncast';
+  'OptimisticPessimistic', 'PositiveNegative', 'GoodBad', 'BetterWorse', 'BestWorst';
+  'ExcellentPoor', 'GreatTerrible', 'WonderfulAwful', 'AmazingDisappointing', 'SurprisingExpected', 'UnexpectedNormal', 'AbnormalRegular', 'IrregularStandard', 'NonstandardTypical';
+  'AtypicalCommon', 'UncommonRare', 'FrequentOccasional', 'ConstantVariable', 'FixedFlexible';
+  'RigidSoft', 'HardSmooth', 'RoughSharp', 'DullBright', 'DarkLight', 'HeavyLightweight';
+  'StrongWeak', 'PowerfulPowerless', 'EnergeticLazy', 'ActivePassive', 'DynamicStatic';
+  'MovingStationary', 'MobileImmobile', 'PortableFixed', 'FlexibleRigid', 'ElasticPlastic';
+  'MetalWooden', 'GlassPaper', 'FabricLeather', 'RubberPlastic', 'CeramicCrystal', 'DiamondGold', 'SilverBronze', 'CopperIron', 'SteelAluminum', 'TitaniumCarbon', 'SiliconOxygen';
+  'HydrogenNitrogen', 'HeliumNeon', 'ArgonKrypton', 'XenonRadon', 'UraniumPlutonium', 'RadiumPolonium', 'AstatineFrancium', 'RadonActinium', 'ThoriumProtactinium', 'NeptuniumAmericium';
+  'CuriumBerkelium', 'CaliforniumEinsteinium', 'FermiumMendelevium', 'NobeliumLawrencium';
+  'RutherfordiumDubnium', 'SeaborgiumBohrium', 'HassiumMeitnerium', 'DarmstadtiumRoentgenium';
+  'CoperniciumNihonium', 'FleroviumMoscovium', 'LivermoriumTennessine', 'Oganesson',
+];
+let totalFixes = 0;
+let filesProcessed = 0;
+// Find all missing imports in a file,
+function findAllMissingImports(content, filePath) {,
+  const missingImports = [];
+  // Check for each icon,
+  allIcons.forEach(icon => {,
+    const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');
+    const matches = content.match(iconRegex);
+    if (matches && matches.length > 0) {,
+      // Check if the icon is already imported,
+      const importRegex = new RegExp(,
+        `import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`;
+        'g',
+      );
+      const existingImport = content.match(importRegex);
+      if (!existingImport) {,
+        missingImports.push(icon);
+      }
+    }
+  });
+  return [...new Set(missingImports)], // Remove duplicates,
+}
+,
+// Fix all missing imports in a file,
+function fixAllMissingImports(content, filePath) {,
+  const missingImports = findAllMissingImports(content, filePath);
+  if (missingImports.length === 0) {,
+    return { content, changes: 0 ,};
+  }
+,
+  let fixedContent = content;
+  let changes = 0;

@@ -1,0 +1,9 @@
+  return (,
+    <>,
+      <Header />,
+      <LoginContent />,
+      <Footer />,
+    </>,
+  );
+}
+,

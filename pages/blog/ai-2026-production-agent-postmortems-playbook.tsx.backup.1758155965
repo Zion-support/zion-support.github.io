@@ -1,0 +1,100 @@
+<<<<<<< HEAD
+import Head from 'next/head'
+
+export default function ProductionAgentPostmortemsPlaybook() {
+  return (
+    <>
+      <Head>
+        <title>Production Agent Postmortems — Playbook (2026) | Zion Tech Group</title>
+        <meta name="description" content="Blameless, evidence‑driven postmortems that improve agent safety and delivery speed." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-production-agent-postmortems-playbook" />
+      </Head>
+      <main className="container mx-auto px-4 py-16 prose prose-invert">
+        <h1>Production Agent Postmortems — Playbook (2026)</h1>
+        <p>
+          Turn incidents into lasting improvements with structured postmortems that
+          link evaluation failures, policy events, and traces to action items.
+        </p>
+        <h2>Core Steps</h2>
+        <ol>
+          <li>Capture evidence bundle (evals, traces, incidents, approvals)</li>
+          <li>Identify contributing factors and missing guardrails</li>
+          <li>Define remediations and verification tests</li>
+        </ol>
+      </main>
+    </>
+  )
+}
+
+import React from 'react';
+import Link from 'next/link';
+
+export default function AI2026ProductionAgentPostmortemsPlaybook() {
+  return (
+    <main className="min-h-screen bg-white">
+      <section className="bg-gradient-to-r from-rose-600 via-orange-600 to-amber-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Production Agentic Incident Postmortems — Playbook</h1>
+          <p className="text-lg md:text-xl opacity-90">A practical guide for evidence-led, blameless postmortems for agentic systems in production.</p>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-rose">
+          <p>
+            Agentic systems introduce new failure modes: emergent tool misuse, cascading routing errors, and latent
+            alignment drift under changing contexts. This playbook outlines a lightweight, repeatable approach to
+            postmortems tailored to production agent workflows.
+          </p>
+          <h2>Objectives</h2>
+          <ul>
+            <li>Capture durable evidence bundles across tools, prompts, contexts, and outputs</li>
+            <li>Codify remediation as policies: eval gates, routing constraints, and guardrails</li>
+            <li>Close the loop with experiments, canaries, and verified regressions prevented</li>
+          </ul>
+          <h2>Postmortem Template</h2>
+          <ol>
+            <li>Summary and customer impact</li>
+            <li>Timeline with evidence references (artifacts, logs, eval traces)</li>
+            <li>Root contributing factors (systems, data, policy, human-in-the-loop)</li>
+            <li>Mitigations mapped to SLOs and safety constraints</li>
+            <li>Follow-ups with owners, deadlines, and verification checks</li>
+          </ol>
+          <h2>Starter Kit</h2>
+          <p>
+            Begin with a minimal evidence schema, a shared library for incident tags, and policy-as-code PR checks.
+            Tie everything to business KPIs and reliability targets so improvements are measurable.
+          </p>
+          <div className="mt-8">
+            <Link href="/" className="text-rose-600 font-semibold hover:text-rose-800">← Back to Home</Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Ai2026ProductionAgentPostmortemsPlaybook: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Ai2026ProductionAgentPostmortemsPlaybook - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026ProductionAgentPostmortemsPlaybook blog post" />
+      </Head>
+      
+      <main>
+        <h1>Ai2026ProductionAgentPostmortemsPlaybook</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default Ai2026ProductionAgentPostmortemsPlaybook;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

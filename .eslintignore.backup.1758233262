@@ -1,0 +1,89 @@
+# Ignore all build artifacts and disabled directories
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+
+# Disabled and backup directories
+zion-os/
+zion-os.disabled/
+zion-website/
+zion.app/
+zion_academy/
+zion_academy/
+backup*/
+backups/
+automation/
+netlify/
+apps/
+server/
+api.disabled/
+api-disabled/
+app-disabled/
+broken_components/
+broken_files_backup/
+
+# Config files
+*.config.js
+*.config.ts
+*.config.cjs
+postcss.config.js
+tailwind.config.js
+next.config.js
+babel.config.js
+babel.config.cjs
+
+# Build artifacts and chunks
+**/.next/**
+**/static/**
+**/chunks/**
+**/server/**
+**/middleware-*
+**/server-reference-*
+**/_buildManifest.js
+**/_ssgManifest.js
+
+# Service workers and static JS
+**/sw.js
+**/analytics.js
+**/feedback.js
+**/integration.js
+
+# Legacy and backup files
+*.backup.*
+*.backup
+*_backup.*
+*_backup
+
+# Automation and scripts
+*.cjs
+*.js
+*.jsx
+scripts/
+automation/
+
+# Test files (if not needed for linting)
+**/*.test.js
+**/*.test.ts
+**/*.test.tsx
+__tests__/
+__mocks__/
+
+# Generated files
+*.generated.*
+*.auto.*
+
+# Logs and reports
+*.log
+*.md
+*.txt
+*.json
+*.tsv
+*.report.*
+
+# Temporary files
+*.tmp
+*.temp
+*~
