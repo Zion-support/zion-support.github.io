@@ -1,9 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechBlog2026: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -243,19 +240,21 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
-            Join our community of innovators, researchers, and technology enthusiasts who are shaping the future</p>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join our community of innovators, researchers, and technology enthusiasts who are shaping the future
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
-              Join Our Community</button>
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Join Our Community
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"></button>
-              Contact Our Team</button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+              Contact Our Team
             </button>
-    </>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default RevolutionaryTechBlog2026;
-  </div>
