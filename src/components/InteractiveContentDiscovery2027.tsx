@@ -1,4 +1,1 @@
-    </div>,
-  );
-  };
-export default InteractiveContentDiscovery2027;
+ </div>, ""); "}; export default InteractiveContentDiscovery2027"

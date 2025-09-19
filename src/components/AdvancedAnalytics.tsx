@@ -1,6 +1,1 @@
-"use client";
-'use client';
-    </div>,
-  );
-};
-export default AdvancedAnalytics;
+"use client"; 'use client'; </div>, ""); "}; export default AdvancedAnalytics"

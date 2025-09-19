@@ -1,4 +1,1 @@
-    </div>,
-  );
-};
-export default NewContentPromotionBanner2025;
+ </div>, ""); "}; export default NewContentPromotionBanner2025"

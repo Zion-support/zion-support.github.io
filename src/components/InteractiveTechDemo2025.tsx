@@ -1,5 +1,1 @@
-      </div>,
-    </div>,
-  );
-  };
-export default InteractiveTechDemo2025;
+ </div> </div>, ""); "}; export default InteractiveTechDemo2025"

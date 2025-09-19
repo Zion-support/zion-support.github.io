@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const footerLinks = {
     company: [
       { name: 'About Us', path: '/about' },

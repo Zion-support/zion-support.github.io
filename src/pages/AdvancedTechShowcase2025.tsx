@@ -1,4 +1,1 @@
-    </div>,
-  );
-};
-export default AdvancedTechShowcase2025;
+ </div>, ""); "}; export default AdvancedTechShowcase2025"

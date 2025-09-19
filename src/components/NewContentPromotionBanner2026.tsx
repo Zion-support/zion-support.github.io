@@ -1,4 +1,1 @@
-import React from 'react';
-  );
-  };
-export default NewContentPromotionBanner2026;
+import React from 'react'; ); }; export default NewContentPromotionBanner2026;

@@ -1,5 +1,1 @@
-        </div>,
-      </div>,
-    </div>,
-  );
-export default InteractiveTechDemo2026;
+ </div> </div> </div>, "); export default InteractiveTechDemo2026"

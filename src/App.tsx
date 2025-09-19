@@ -1,63 +1,66 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import './App.css'
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import './App.css';
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(new Date())
+  const [currentTime, setCurrentTime] = useState(new Date());
   const [darkMode, setDarkMode] = useState(() => {
     // Check for saved theme preference or default to system preference
-    const saved = localStorage.getItem('darkMode')
-    if (saved !== null) return JSON.parse(saved)
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-  })
-  const [animatedCounts, setAnimatedCounts] = useState({ projects: 0, clients: 0, years: 0 })
-  const [isLoading, setIsLoading] = useState(true)
+    const saved = localStorage.getItem('darkMode');
+    if (saved !== null) return JSON.parse(saved);
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+  const [animatedCounts, setAnimatedCounts] = useState({
+    projects: 0,
+    clients: 0,
+    years: 0
+  });
+  const [isLoading, setIsLoading] = useState(true);
 
   // Update time every second
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [])
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   // Persist dark mode preference
   useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(darkMode))
-    document.body.classList.toggle('dark-mode', darkMode)
-  }, [darkMode])
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    document.body.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
 
   // Animate counters on component mount
   useEffect(() => {
     const animateCount = (key: keyof typeof animatedCounts, target: number) => {
-      const duration = 2000
-      const steps = 60
-      const increment = target / steps
-      let current = 0
-      
+      const duration = 2000;
+      const steps = 60;
+      const increment = target / steps;
+      let current = 0;
       const timer = setInterval(() => {
-        current += increment
+        current += increment;
         if (current >= target) {
-          current = target
-          clearInterval(timer)
+          current = target;
+          clearInterval(timer);
         }
-        setAnimatedCounts(prev => ({ ...prev, [key]: Math.floor(current) }))
-      }, duration / steps)
-    }
+        setAnimatedCounts(prev => ({ ...prev, [key]: Math.floor(current) }));
+      }, duration / steps);
+    };
 
     // Simulate loading time for better UX
     const loadingTimer = setTimeout(() => {
-      setIsLoading(false)
-      animateCount('projects', 150)
-      animateCount('clients', 500)
-      animateCount('years', 10)
-    }, 1000)
+      setIsLoading(false);
+      animateCount('projects', 150);
+      animateCount('clients', 500);
+      animateCount('years', 10);
+    }, 1000);
 
-    return () => clearTimeout(loadingTimer)
-  }, [])
+    return () => clearTimeout(loadingTimer);
+  }, []);
 
   const toggleDarkMode = useCallback(() => {
-    setDarkMode(prev => !prev)
-  }, [])
+    setDarkMode(prev => !prev);
+  }, []);
 
   const features = useMemo(() => [
     {
@@ -84,7 +87,7 @@ function App() {
       icon: "⚛️",
       color: "#8b5cf6"
     }
-  ], [])
+  ], []);
 
   if (isLoading) {
     return (
@@ -94,15 +97,15 @@ function App() {
           <h2>Loading Zion Tech Group...</h2>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <header className="App-header">
         <div className="header-controls">
-          <button 
-            className="theme-toggle" 
+          <button
+            className="theme-toggle"
             onClick={toggleDarkMode}
             aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
             title={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
@@ -113,12 +116,10 @@ function App() {
             {currentTime.toLocaleTimeString()}
           </div>
         </div>
-        
         <h1 className="main-title">
           <span className="title-highlight">Zion Tech Group</span>
         </h1>
         <p className="subtitle">Welcome to our innovative technology solutions</p>
-        
         <div className="stats-container">
           <div className="stat-card">
             <div className="stat-number">{animatedCounts.projects}+</div>
@@ -133,10 +134,9 @@ function App() {
             <div className="stat-label">Years Experience</div>
           </div>
         </div>
-
         <div className="features">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="feature-card"
               style={{ '--card-color': feature.color } as React.CSSProperties}
@@ -148,7 +148,6 @@ function App() {
             </div>
           ))}
         </div>
-
         <div className="cta-section">
           <h2>Ready to Transform Your Business?</h2>
           <p>Get started with our cutting-edge technology solutions today.</p>
@@ -159,7 +158,7 @@ function App() {
         </div>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

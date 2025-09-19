@@ -1,4 +1,1 @@
-// Notification hook,
-import { useContext }  from 'react';
-import { NotificationContext }  from './NotificationContext';
-export const useNotifications = () => useContext(NotificationContext);
+// Notification hook import { useContext } from 'react'; import { NotificationContext } from './NotificationContext'; export const useNotifications = () => useContext(NotificationContext);

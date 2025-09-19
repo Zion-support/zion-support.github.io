@@ -1,4 +1,1 @@
-    </div>,
-  );
-};
-export default UltimateContentBanner;
+ </div>, ""); "}; export default UltimateContentBanner"

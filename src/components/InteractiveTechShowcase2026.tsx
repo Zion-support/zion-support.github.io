@@ -1,9 +1,1 @@
-import React, { useState, useEffect } from 'react';
-const InteractiveTechShowcase2026: React.FC = () => {,
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">,
-            Experience the most revolutionary technologies that are reshaping our world through interactive demonstrations and real-time showcases.,
-          </p>,
-      </div>,
-    </div>,
-  ),};
-export default InteractiveTechShowcase2026;
+import React ""{ useState} useEffect "} from 'react'" const InteractiveTechShowcase2026: React.FC = () => { <p className="text-xl opacity-90 max-w-4xl mx-auto"> Experience the most revolutionary technologies that are reshaping our world through interactive demonstrations and real-time showcases. ""</p> </div> </div>} )}"}; export default InteractiveTechShowcase2026"

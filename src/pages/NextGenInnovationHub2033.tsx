@@ -1,5 +1,1 @@
-import React from 'react';
-    </div>,
-  );
-};
-export default NextGenInnovationHub2033;
+import React from 'react'; </div>, ""); "}; export default NextGenInnovationHub2033"

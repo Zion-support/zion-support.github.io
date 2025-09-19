@@ -1,5 +1,1 @@
-import React from 'react';
-        </div>,
-      </div>,
-    </div>,
-  );
+import React from 'react'; </div> </div> </div>, ")"

@@ -1,5 +1,1 @@
-import React from 'react',
-
-const NewContentBanner2026: React.FC = () => {,
-  return (),};
-export default NewContentBanner2026;
+import React from 'react' const NewContentBanner2026: React.FC = () => {, ""return ()}"}; export default NewContentBanner2026"
