@@ -24,7 +24,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
-  const { toasts, showSuccess, showError, showInfo } = useToast();
+  const { toasts, showSuccess, showInfo } = useToast();
 
   // Update time every second
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
     };
     const handleOffline = () => {
       setIsOnline(false);
-      showWarning('You are now offline. Some features may be limited.');
+      showInfo('You are now offline. Some features may be limited.');
     };
 
     window.addEventListener('online', handleOnline);
@@ -58,7 +58,7 @@ function App() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, [showSuccess, showWarning]);
+  }, [showSuccess, showInfo]);
 
   // Animate counters on component mount
   useEffect(() => {

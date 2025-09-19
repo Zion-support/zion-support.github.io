@@ -12,8 +12,7 @@ const Toast: React.FC<ToastProps> = ({
   message, 
   type = 'info', 
   duration = 5000, 
-  onClose,
-  id 
+  onClose
 }) => {
   const [isVisible, setIsVisible] = useState(true);
 

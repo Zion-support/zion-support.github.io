@@ -8,6 +8,10 @@ export interface ToastItem extends ToastProps {
 export const useToast = () => {
   const [toasts, setToasts] = useState<ToastItem[]>([]);
 
+  const removeToast = useCallback((id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id));
+  }, []);
+
   const addToast = useCallback((toast: Omit<ToastProps, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newToast: ToastItem = {
@@ -18,11 +22,7 @@ export const useToast = () => {
     
     setToasts(prev => [...prev, newToast]);
     return id;
-  }, []);
-
-  const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }, []);
+  }, [removeToast]);
 
   const removeAllToasts = useCallback(() => {
     setToasts([]);
