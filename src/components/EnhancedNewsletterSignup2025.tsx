@@ -49,16 +49,10 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <span className="text-4xl animate-bounce">🚀</span>
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
             <span className="text-4xl animate-bounce">🚀</span>
-<<<<<<< HEAD
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
-            Get exclusive access to our revolutionary technology breakthroughs, </p>
-            AI consciousness updates, and quantum computing innovations.</p>
-=======
           </div>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Get exclusive access to our revolutionary technology breakthroughs, 
             AI consciousness updates, and quantum computing innovations.
->>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
           </p>
         </div>
 
@@ -76,16 +70,10 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               type="submit"
               disabled={isLoading}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-<<<<<<< HEAD
-            ></button>
-              {isLoading ? 'Joining...' : 'Join Revolution'}</button>
+            >
+              {isLoading ? 'Joining...' : 'Join Revolution'}
             </button>
           </form>
-        ) : (
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-green-400 mb-4">Welcome to the Revolution!</h3>
-            <p className="text-lg opacity-90">You're now part of the future.</p>
-        )}
 
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">

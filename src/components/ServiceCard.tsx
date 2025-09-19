@@ -37,6 +37,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       <div className="service-icon" role="img" aria-label={`${title} icon`}>
         {icon}
+      </div>
       <h3 className="service-title">{title}</h3>
       <p className="service-description">{description}</p>
       <ul className="service-features">

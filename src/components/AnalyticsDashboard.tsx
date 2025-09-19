@@ -58,9 +58,9 @@ const AnalyticsDashboard: React.FC = () => {
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300"
-        title="Toggle Analytics Dashboard"</button>
-      ></button>
-        📊</button>
+        title="Toggle Analytics Dashboard"
+      >
+        📊
       </button>
       {/* Analytics Dashboard */}
       {isVisible && (
