@@ -159,16 +159,20 @@ const RevolutionaryTechBreakthrough2036: React.FC = () => {
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-violet-600 to-purple-600 rounded-3xl p-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transcend Reality?</h2>
-          <p className="text-xl text-violet-100 mb-8 max-w-3xl mx-auto"></p>
-            Join the most revolutionary breakthrough in human history. Experience technology that transcends all limitations.</p>
+          <p className="text-xl text-violet-100 mb-8 max-w-3xl mx-auto">
+            Join the most revolutionary breakthrough in human history. Experience technology that transcends all limitations.
           </p>
           <div className="flex justify-center space-x-6">
-            <button className="bg-white text-violet-600 px-10 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-lg"></button>
-              Join the Revolution</button>
+            <button className="bg-white text-violet-600 px-10 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-lg">
+              Join the Revolution
             </button>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold text-lg"></button>
-              Experience Demo</button>
+            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold text-lg">
+              Experience Demo
             </button>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };
 
