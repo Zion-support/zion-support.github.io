@@ -73,7 +73,15 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             >
               {isLoading ? 'Joining...' : 'Join Revolution'}
             </button>
-        {!isSubscribed ? (
+          </form>
+        ) : (
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-green-400 mb-4">Welcome to the Revolution!</h3>
+            <p className="text-lg opacity-90">You're now part of the future.</p>
+          </div>
+        )}
+
+        <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
               <input

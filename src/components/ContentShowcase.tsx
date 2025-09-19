@@ -305,14 +305,14 @@ const ContentShowcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <divbutton
+                  <button
                     className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
                   >
                     <span>View Full Study</span>
                     <ArrowRight className="w-4 h-4" />
-                  </divbutton>
+                  </button>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         );
@@ -373,7 +373,7 @@ const ContentShowcase: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         );
@@ -431,7 +431,7 @@ const ContentShowcase: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         );
@@ -461,7 +461,7 @@ const ContentShowcase: React.FC = () => {
             Stay ahead with our latest insights, case studies, and expert resources. 
             Discover how cutting-edge technology is transforming businesses worldwide.
           </p>
-        </divdiv>
+        </div>
 
         {/* Tab Navigation */}
         <divdiv
@@ -488,18 +488,18 @@ const ContentShowcase: React.FC = () => {
               </divbutton>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Content */}
-          <divdiv
+          <div
             key={activeTab}
           >
             {renderContent()}
-          </divdiv>
+          </div>
         </div>
 
         {/* Newsletter Signup */}
-        <divdiv
+        <div
           className="mt-20"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center">
