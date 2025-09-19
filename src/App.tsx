@@ -23,6 +23,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const { toasts, showSuccess, showInfo, showWarning } = useToast();
 
   // Update time every second
@@ -181,10 +182,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const services = useMemo(() => [
     {
       title: "AI Solutions",
@@ -209,6 +206,27 @@ function App() {
       description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
       icon: "⚛️",
       color: "#8b5cf6"
+    }
+  ], []);
+
+  const features = useMemo(() => [
+    {
+      title: "Innovation",
+      description: "Cutting-edge technology solutions that drive business growth and efficiency.",
+      icon: "🚀",
+      color: "#3b82f6"
+    },
+    {
+      title: "Reliability",
+      description: "Robust and scalable systems designed for enterprise-grade performance.",
+      icon: "🛡️",
+      color: "#10b981"
+    },
+    {
+      title: "Expertise",
+      description: "Deep technical knowledge and industry experience across multiple domains.",
+      icon: "🎯",
+      color: "#f59e0b"
     }
   ], []);
 
