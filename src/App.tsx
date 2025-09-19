@@ -5,17 +5,16 @@ import LoadingSpinner from './components/LoadingSpinner';
 import ThemeToggle from './components/ThemeToggle';
 import Toast from './components/Toast';
 import PerformanceMetrics from './components/PerformanceMetrics';
+import ErrorBoundary from './components/ErrorBoundary';
 import { useToast } from './hooks/useToast';
+import useLocalStorage from './hooks/useLocalStorage';
 import './App.css';
 
 function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [darkMode, setDarkMode] = useState(() => {
-    // Check for saved theme preference or default to system preference
-    const saved = localStorage.getItem('darkMode');
-    if (saved !== null) return JSON.parse(saved);
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  const [darkMode, setDarkMode] = useLocalStorage('darkMode', 
+    typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false
+  );
   const [animatedCounts, setAnimatedCounts] = useState({
     projects: 0,
     clients: 0,
@@ -34,9 +33,8 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
-  // Persist dark mode preference
+  // Apply dark mode to document
   useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
     document.body.classList.toggle('dark-mode', darkMode);
   }, [darkMode]);
 
@@ -173,11 +171,12 @@ function App() {
   }
 
   return (
-    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
-      <Helmet>
-        <title>Zion Tech Group - Innovative Technology Solutions</title>
-        <meta name="description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, blockchain technology, IT services, quantum computing, digital transformation" />
+    <ErrorBoundary>
+      <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+        <Helmet>
+          <title>Zion Tech Group - Innovative Technology Solutions</title>
+          <meta name="description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions. Transform your business with cutting-edge technology." />
+          <meta name="keywords" content="AI solutions, blockchain technology, IT services, quantum computing, digital transformation" />
         <meta property="og:title" content="Zion Tech Group - Innovative Technology Solutions" />
         <meta property="og:description" content="Leading provider of AI, blockchain, IT services, and quantum computing solutions." />
         <meta property="og:type" content="website" />
@@ -271,7 +270,8 @@ function App() {
       
       {/* Performance Metrics (Development Only) */}
       <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 }
 
