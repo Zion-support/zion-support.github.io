@@ -1,0 +1,111 @@
+import Head from 'next/head';
+interface SEOProps {,
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
+  canonical?: string;
+}
+,
+export default function SEO({,
+  title = "Zion Tech Group - Revolutionary AI & Technology Solutions";
+  description = "Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.";
+  keywords = "AI solutions, quantum computing, autonomous systems, machine learning, artificial intelligence, technology consulting, enterprise AI, neural networks, robotics, space technology";
+  image = "/og-image.jpg";
+  url = "https://ziontechgroup.com";
+  type = "website";
+  author = "Zion Tech Group";
+  publishedTime;
+  modifiedTime;
+  section;
+  tags = [];
+  noindex = false;
+  nofollow = false;
+  canonical,
+}: SEOProps) {,
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const fullUrl = canonical || `${url}${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+  return (,
+    <Head>,
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>,
+      <meta name="description" content={description} />,
+      <meta name="keywords" content={keywords} />,
+      <meta name="author" content={author} />,
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />,
+      <link rel="canonical" href={fullUrl} />,
+      {/* Open Graph / Facebook */}
+      <meta property="og: type" content={type,} />,
+      <meta property="og: title" content={fullTitle,} />,
+      <meta property="og: description" content={description,} />,
+      <meta property="og: image" content={image,} />,
+      <meta property="og: url" content={fullUrl,} />,
+      <meta property="og: site_name" content="Zion Tech Group" />,
+      <meta property="og:locale" content="en_US" />,
+      {/* Twitter */,}
+      <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter:title" content={fullTitle,} />,
+      <meta name="twitter: description" content={description,} />,
+      <meta name="twitter: image" content={image,} />,
+      <meta name="twitter: site" content="@ziontechgroup" />,
+      <meta name="twitter:creator" content="@ziontechgroup" />,
+      {/* Article specific meta tags */,}
+      {type === "article" && (,
+        <>,
+          {publishedTime && <meta property="article: published_time" content={publishedTime,} />}
+          {modifiedTime && <meta property="article: modified_time" content={modifiedTime,} />}
+          {author && <meta property="article: author" content={author,} />}
+          {section && <meta property="article: section" content={section,} />}
+          {tags.map((tag, index) => (,
+            <meta key={index} property="article: tag" content={tag,} />,
+          ))}
+        </>,
+      )}
+,
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#1a1a2e" />,
+      <meta name="msapplication-TileColor" content="#1a1a2e" />,
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />,
+      {/* Structured Data */}
+      <script,
+        type="application/ld+json",
+        dangerouslySetInnerHTML={{,
+          __html: JSON.stringify({,
+            "@context": "https://schema.org";
+            "@type": type === "article" ? "Article" : "Organization";
+            "name": fullTitle;
+            "description": description;
+            "url": fullUrl;
+            "image": image;
+            "author": type === "article" ? {,
+              "@type": "Person";
+              "name": author,
+            } : undefined;
+            "publisher": type === "article" ? {,
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "logo": {,
+                "@type": "ImageObject";
+                "url": "https: //ziontechgroup.com/logo.png",}
+            } : undefined;
+            "datePublished": publishedTime;
+            "dateModified": modifiedTime;
+            "mainEntityOfPage": {,
+              "@type": "WebPage";
+              "@id": fullUrl,
+            }
+          }),
+        }}
+      />,
+    </Head>,
+  );
+}

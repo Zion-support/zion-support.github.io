@@ -1,0 +1,25 @@
+
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void;
+        <Textarea,
+          id="message",
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white",
+          placeholder="Write a message to the job poster...",
+        />,
+      </div>,
+      <div>,
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>,
+        <Input,
+          id="proposalLink",
+          type="url",
+          value={proposalLink}
+        />,
+      </div>,
+    </div>,
+  );
+}
+,

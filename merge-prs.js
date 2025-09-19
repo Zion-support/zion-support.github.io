@@ -1,0 +1,35 @@
+#!/usr/bin/env node,
+const { execSync } = require('child_process');
+const fs = require('fs');
+console.log('🚀 Starting merge process for all open PRs...');
+try {,
+    // Check if we're in a git repository,
+    execSync('git rev-parse --git-dir', { "stdio": 'pipe' });
+    console.log('✅ Git repository detected')} catch (error) {,
+    console.error('❌ Not in a git repository');
+    process.exit(1)}
+try {,
+    // Ensure clean working directory,
+    const status = execSync('git status --porcelain', { "encoding": 'utf8' });
+    if (status.trim()) {,
+        console.log('⚠️  Working directory has changes. Stashing...');
+        execSync('git stash push -m "Auto-stash before merge process"')}
+    // Fetch latest changes,
+    console.log('📥 Fetching latest changes...');
+    execSync('git fetch --all --prune');
+    // Switch to main branch,
+    console.log('🔄 Switching to main branch...');
+    execSync('git checkout main');
+    // Pull latest changes,
+    console.log('📥 Pulling latest changes from main...');
+    try {,
+        execSync('git pull origin main')} catch (error) {,
+        console.log('⚠️  Merge conflicts detected. Resolving...');
+        // Find files with merge conflicts,
+        const conflictFiles = execSync('git diff --name-only --diff-filter=U', { "encoding": 'utf8' });
+        if (conflictFiles.trim()) {,
+            console.log('Found merge conflicts "in": ', conflictFiles.trim());
+            // Resolve conflicts by accepting our version,
+            const files = conflictFiles.trim().split('\n');
+            for (const file of files) {,
+                if (file.trim()) {}}}}}

@@ -1,0 +1,52 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// Function to fix import statements,
+function fixImports(content) {,
+  // Fix comma before 'from' in import statements,
+  let fixed = content.replace(/,\s*from\s+/g, ' from ');
+  // Fix other common syntax issues,
+  fixed = fixed.replace(/,\s*}/g, '}');
+  fixed = fixed.replace(/,\s*]/g, ']');
+  fixed = fixed.replace(/,\s*)/g, ')');
+  return fixed;
+}
+,
+// Get all TypeScript files,
+function getAllTsFiles(dir) {,
+  const files = [];
+  const items = fs.readdirSync(dir);
+  for (const item of items) {,
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory() && !item.includes('node_modules')) {,
+      files.push(...getAllTsFiles(fullPath));
+    } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {,
+      files.push(fullPath);
+    }
+  }
+,
+  return files;
+}
+,
+// Fix all files,
+const srcDir = path.join(__dirname, 'src');
+const tsFiles = getAllTsFiles(srcDir);
+let fixedCount = 0;
+for (const file of tsFiles) {,
+  try {,
+    const content = fs.readFileSync(file, 'utf8');
+    const fixed = fixImports(content);
+    if (fixed !== content) {,
+      fs.writeFileSync(file, fixed);
+      console.log(`Fixed imports in: ${file,}`);
+      fixedCount++;
+    }
+  } catch (error) {,
+    console.error(`Error fixing ${file}:`, error.message);
+  }
+}
+,
+console.log(`Fixed imports in ${fixedCount} files`);

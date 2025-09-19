@@ -1,52 +1,164 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
-const Home: NextPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
-        <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
-      </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
-            </Link>
-            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get in Touch
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-};
-
-export default Home;
+export default function Home() {,
+  const [animationState, setAnimationState] = useState<AnimationState>({,
+    isLoaded: false;
+    hasError: false,});
+  useEffect(() => {,
+    const timer = setTimeout(() => {,
+      setAnimationState(prev => ({ ...prev, isLoaded: true ,})),
+    }, 100);
+    return () => clearTimeout(timer),
+  }, []);
+  if (animationState.hasError) {,
+    return (,
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center">,
+        <div className="text-center text-white">,
+          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>,
+          <button,
+            onClick={() => window.location.reload()} ,
+            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700",
+          >,
+            Reload Page,
+          </button>,
+        </div>,
+      </div>,
+    ),}
+,
+  const contact: ContactInfo = {,
+    phone: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    site: 'https://ziontechgroup.com',};
+  return (,
+    <>,
+      <Head>,
+        <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>,
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />,
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />,
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />,
+        <meta name="robots" content="index, follow" />,
+        <meta name="author" content="Zion Tech Group" />,
+        <meta name="language" content="en-US" />,
+        <link rel="canonical" href={contact.site} />,
+        <link rel="icon" href="/favicon.ico" />,
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />,
+        <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />,
+        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />,
+        <meta property="og: url" content={contact.site,} />,
+        <meta property="og: type" content="website" />,
+        <meta property="og:site_name" content="Zion Tech Group" />,
+        <meta property="og:locale" content="en_US" />,
+        <meta name="twitter:card" content="summary_large_image" />,
+        <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />,
+        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />,
+        <meta name="twitter: site" content="@ziontechgroup" />,
+        <meta name="twitter:creator" content="@ziontechgroup" />,
+        <script,
+          type="application/ld+json",
+          dangerouslySetInnerHTML={{,
+            __html: JSON.stringify({,
+              "@context": "https://schema.org";
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "url": contact.site;
+              "logo": `${contact.site}/favicon.svg`;
+              "description": "Leading provider of micro SaaS products, AI services, and IT solutions";
+              "address": {,
+                "@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 1008";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
+                "addressCountry": "US",
+              };
+              "contactPoint": {,
+                "@type": "ContactPoint";
+                "telephone": contact.phone;
+                "contactType": "customer service";
+                "email": contact.email,
+              };
+              "sameAs": [contact.site],
+            }),
+          }}
+        />,
+      </Head>,
+      <ErrorBoundary level="page">,
+        <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>,
+          <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">,
+            {/* Hero Section */}
+            <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">,
+              <div className="max-w-4xl mx-auto">,
+                <h1,
+                  id="hero-title",
+                  className={`text-5xl md: text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${,
+                    animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',}`}
+                >,
+                  Zion Tech Group,
+                </h1>,
+                <p,
+                  className={`text-xl md: text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${,
+                    animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',}`}
+                >,
+                  Innovative Micro SaaS, AI Services & IT Solutions,
+                </p>,
+                <p,
+                  className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${,
+                    animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+                  }`}
+                >,
+                  We deliver cutting-edge technology solutions with 150+ micro SaaS products;
+                  100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization,
+                  to AI automation, quantum computing to blockchain solutions, we help businesses scale,
+                  efficiently and securely in the digital age.,
+                </p>,
+                <div,
+                  className={`flex flex-col sm: flex-row items-center justify-center gap-4 mb-16 transition-all duration-1000 delay-600 ${,
+                    animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',}`}
+                >,
+                  <Link,
+                    href="/services",
+                    className="group px-8 py-4 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2",
+                  >,
+                    View All Services,
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M9 5l7 7-7 7" />,
+                    </svg>,
+                  </Link>,
+                  <Link,
+                    href="/contact",
+                    className="px-8 py-4 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105",
+                  >,
+                    Get Quote,
+                  </Link>,
+                  <Link,
+                    href="/about",
+                    className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105",
+                  >,
+                    Learn More,
+                  </Link>,
+                </div>,
+              </div>,
+            </section>,
+            {/* Stats Section */,}
+            <section className="py-20 px-4 bg-slate-900/40">,
+              <div className="max-w-6xl mx-auto">,
+                <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">,
+                    <div className="text-3xl font-bold text-white mb-1">150+</div>,
+                    <div className="text-slate-400 text-sm">Micro SaaS Products</div>,
+                  </div>,
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">,
+                    <div className="text-3xl font-bold text-white mb-1">100+</div>,
+                    <div className="text-slate-400 text-sm">AI Services</div>,
+                  </div>,
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">,
+                    <div className="text-3xl font-bold text-white mb-1">100+</div>,
+                    <div className="text-slate-400 text-sm">IT Solutions</div>,
+                  </div>,
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">,
+                    <div className="text-3xl font-bold text-white mb-1">99.9%</div>,
+                    <div className="text-slate-400 text-sm">Uptime</div>,
+                  </div>,
+                </div>,
+              </div>,
+            </section>,
+})

@@ -1,0 +1,161 @@
+'use client';
+import { useEffect, useState } from 'react';
+interface PWAInstallPrompt {,
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' ,}>;
+}
+,
+export default function ProgressiveWebApp() {,
+  const [installPrompt, setInstallPrompt] = useState<PWAInstallPrompt | null>(null);
+  const [isInstalled, setIsInstalled] = useState(false);
+  const [showInstallBanner, setShowInstallBanner] = useState(false);
+  useEffect(() => {,
+    // Check if app is already installed,
+    const checkIfInstalled = () => {,
+      if (window.matchMedia('(display-mode: standalone)').matches) {,
+        setIsInstalled(true);
+        return,
+      }
+,
+      // Check for iOS Safari,
+      if (window.navigator.standalone === true) {,
+        setIsInstalled(true);
+        return;
+      }
+    };
+    checkIfInstalled();
+    // Listen for beforeinstallprompt event,
+    const handleBeforeInstallPrompt = (e: Event) => {,
+      e.preventDefault();
+      setInstallPrompt(e as any);
+      setShowInstallBanner(true),
+    };
+    // Listen for appinstalled event,
+    const handleAppInstalled = () => {,
+      setIsInstalled(true);
+      setShowInstallBanner(false);
+      setInstallPrompt(null);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
+    return () => {,
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
+    };
+  }, []);
+  const handleInstallClick = async () => {,
+    if (!installPrompt) return;
+    try {,
+      await installPrompt.prompt();
+      const choiceResult = await installPrompt.userChoice;
+      if (choiceResult.outcome === 'accepted') {,
+        console.log('User accepted the install prompt');
+      } else {,
+        console.log('User dismissed the install prompt');
+      }
+,
+      setInstallPrompt(null);
+      setShowInstallBanner(false);
+    } catch (error) {,
+      console.error('Error during installation:', error);
+    }
+  };
+  const handleDismissBanner = () => {,
+    setShowInstallBanner(false);
+    // Don't show again for this session,
+    sessionStorage.setItem('pwa-banner-dismissedtrue');
+  };
+  // Don't show banner if already installed or dismissed,
+  if (isInstalled || !showInstallBanner || sessionStorage.getItem('pwa-banner-dismissed')) {,
+    return null;
+  }
+,
+  return (,
+    <div className="fixed bottom-4 left-4 right-4 z-50 md: left-auto md:right-4 md:max-w-sm">,
+      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">,
+        <div className="flex items-start">,
+          <div className="flex-shrink-0">,
+            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">,
+              <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />,
+              </svg>,
+            </div>,
+          </div>,
+          <div className="ml-3 flex-1">,
+            <h3 className="text-sm font-medium text-gray-900">,
+              Install Zion Tech Group,
+            </h3>,
+            <p className="mt-1 text-sm text-gray-500">,
+              Get quick access to our platform with the app.,
+            </p>,
+            <div className="mt-3 flex space-x-2">,
+              <button,
+                onClick={handleInstallClick}
+                className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+              >,
+                Install,
+              </button>,
+              <button,
+                onClick={handleDismissBanner,}
+                className="inline-flex items-center px-3 py-1.5 border border-gray-300 text-xs font-medium rounded text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+              >,
+                Not now,
+              </button>,
+            </div>,
+          </div>,
+          <div className="ml-2 flex-shrink-0">,
+            <button,
+              onClick={handleDismissBanner,}
+              className="bg-white rounded-md inline-flex text-gray-400 hover: text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+            >,
+              <span className="sr-only">Close</span>,
+              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">,
+                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />,
+              </svg>,
+            </button>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,
+  ),}
+,
+// PWA utility functions,
+export const pwaUtils = {,
+  // Check if PWA is installable,
+  isInstallable: () => {,
+    return typeof window !== 'undefined' && 'serviceWorker' in navigator,};
+  // Check if PWA is already installed,
+  isInstalled: () => {,
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(display-mode: standalone)').matches ||,
+           (window.navigator as any).standalone === true,};
+  // Register service worker,
+  registerServiceWorker: async () => {,
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {,
+      return false,}
+,
+    try {,
+      const registration = await navigator.serviceWorker.register('/sw.js');
+      console.log('Service Worker registered:', registration);
+      return true;
+    } catch (error) {,
+      console.error('Service Worker registration failed:', error);
+      return false;
+    }
+  };
+  // Unregister service worker,
+  unregisterServiceWorker: async () => {,
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {,
+      return false,}
+,
+    try {,
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map(registration => registration.unregister()));
+      console.log('Service Workers unregistered');
+      return true;
+    } catch (error) {,
+      console.error('Service Worker unregistration failed:', error);
+      return false;
+    }
+  }
+};
