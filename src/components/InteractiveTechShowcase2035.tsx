@@ -55,7 +55,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Interactive Technology Showcase 2035
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences</p>
           </p>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -102,7 +102,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
             <div className="text-sm text-orange-200">Possibilities
         {/* Call to Action */}
             </button>
-            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
+            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg"></button>
               📚 Learn More</button>
             </button>
         <div className="text-center">
@@ -125,3 +125,31 @@ const InteractiveTechShowcase2035: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2035;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

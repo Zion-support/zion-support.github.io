@@ -7,3 +7,5 @@ export default function UltimateAIConsciousness2030(): JSX.Element {
       <p className="text-gray-600 mt-2">Placeholder page to resolve missing import.</p>
   )
 }
+  </div>
+  </div>

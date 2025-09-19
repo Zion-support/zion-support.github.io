@@ -1,26 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const UltimateTechShowcase2026: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const technologies = [
+    {
+      id: 'ai',
+      name: 'AI Consciousness',
+      icon: '🧠',
+      description: 'Breakthrough artificial intelligence achieving true consciousness',
+      features: ['Self-awareness', 'Creative thinking', 'Emotional intelligence', 'Collaborative learning'],
+      status: 'Active',
+      progress: 95
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: '⚛️',
+      description: 'Revolutionary quantum processors transcending classical limits',
+      features: ['Exponential speed', 'Quantum entanglement', 'Parallel processing', 'Unbreakable encryption'],
+      status: 'Development',
+      progress: 78
+    },
+    {
+      id: 'neural',
+      name: 'Neural Interfaces',
+      icon: '🧬',
+      description: 'Direct brain-computer interfaces for enhanced cognition',
+      features: ['Memory augmentation', 'Enhanced learning', 'Neural communication', 'Cognitive boost'],
+      status: 'Research',
+      progress: 65
+    },
+    {
+      id: 'space',
+      name: 'Space Technology',
+      icon: '🚀',
+      description: 'Advanced technologies for space exploration and colonization',
+      features: ['Faster-than-light travel', 'Space habitats', 'Resource extraction', 'Interstellar communication'],
+      status: 'Concept',
+      progress: 40
+    },
+    {
+      id: 'energy',
+      name: 'Zero-Point Energy',
+      icon: '⚡',
+      description: 'Unlimited clean energy from quantum vacuum fluctuations',
+      features: ['Infinite power', 'Zero emissions', 'Portable generation', 'Revolutionary efficiency'],
+      status: 'Research',
+      progress: 55
+    },
+    {
+      id: 'reality',
+      name: 'Reality Engine',
+      icon: '🌌',
+      description: 'Technology that manipulates the fundamental fabric of reality',
+      features: ['Matter manipulation', 'Gravity control', 'Time dilation', 'Dimensional portals'],
+      status: 'Concept',
+      progress: 25
+    }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Technologies', icon: '🌟' },
+    { id: 'ai', name: 'AI & Consciousness', icon: '🤖' },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
+    { id: 'neural', name: 'Neural Interfaces', icon: '🧬' },
+    { id: 'space', name: 'Space Technology', icon: '🚀' },
+    { id: 'energy', name: 'Energy Systems', icon: '⚡' },
+    { id: 'reality', name: 'Reality Tech', icon: '🌌' }
+  ];
+
+  const filteredTechnologies = selectedCategory === 'all' 
+    ? technologies 
+    : technologies.filter(tech => tech.category === selectedCategory);
+
   return (
-        {/* Revolutionary Stats */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-cyan-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold mb-6">Revolutionary Impact Statistics</h2>
-            <p className="text-2xl opacity-90">The numbers that prove our technology is changing the world</p>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-cyan-400 mb-2">99.9%
-              <div className="text-xl text-cyan-200">Consciousness Accuracy
-            <div className="text-center">
-              <div className="text-6xl font-bold text-purple-400 mb-2">∞
-              <div className="text-xl text-purple-200">Computational Power
-            <div className="text-center">
-              <div className="text-6xl font-bold text-emerald-400 mb-2">1000+
-              <div className="text-xl text-emerald-200">Dimensions Accessed
-            <div className="text-center">
-              <div className="text-6xl font-bold text-rose-400 mb-2">0ms
-              <div className="text-xl text-rose-200">Reality Lag Time
-=======
     <>
       <Helmet>
         <title>Ultimate Tech Showcase 2026 - Zion Tech Group</title>
@@ -30,107 +85,125 @@ const UltimateTechShowcase2026: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            <div className="text-center">
+              <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
                 🚀 ULTIMATE TECH SHOWCASE • 2026
-              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                Ultimate Tech Showcase
+              </div>
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                Ultimate Tech Showcase 2026
               </h1>
-              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-                Experience the most comprehensive collection of revolutionary technologies that are reshaping our world and defining the future of human civilization.</p>
+              <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+                Experience the most comprehensive collection of revolutionary technologies that will reshape our world. 
+                From AI consciousness to quantum computing, discover the future today.
               </p>
-            </motion.div>
-        {/* Stats Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+                  Explore Technologies →
+                </button>
+                <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-black transition-all duration-300 font-semibold text-lg">
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category Filter */}
+        <div className="container mx-auto px-4 py-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Technology Categories</h2>
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-emerald-600 to-cyan-600 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
               >
-                <div className="text-4xl mb-4">{stat.icon}
-                <div className="text-3xl font-bold mb-2 text-emerald-400">{stat.value}
-                <div className="text-gray-300">{stat.label}
-              </motion.div>
+                <span className="mr-2">{category.icon}</span>
+                {category.name}
+              </button>
             ))}
-        {/* Technologies Grid */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Explore the cutting-edge technologies that are transforming industries and reshaping human potential</p>
-            </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech) => (
-              <motion.div
+          </div>
+
+          {/* Technologies Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {filteredTechnologies.map((tech) => (
+              <div
                 key={tech.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-4xl">{tech.icon}
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    tech.status === 'Available Now' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
-                    tech.status === 'Beta Testing' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
-                    tech.status === 'In Development' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
-                    'bg-purple-500/20 text-purple-400 border border-purple-500/30'
-                  }`}>
-                    {tech.status}
-                  </span>
-                <h3 className="text-2xl font-bold mb-4 text-white">{tech.name}</h3>
+                <div className="text-4xl mb-4">{tech.icon}</div>
+                <h3 className="text-2xl font-bold mb-3">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
-                <div className="mb-6">
-                  <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {tech.category}
-                  </span>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold mb-3 text-emerald-400">Key Features:</h4>
-                  <ul className="space-y-2">
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-400">Status:</span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      tech.status === 'Active' ? 'bg-green-500/20 text-green-400' :
+                      tech.status === 'Development' ? 'bg-yellow-500/20 text-yellow-400' :
+                      tech.status === 'Research' ? 'bg-blue-500/20 text-blue-400' :
+                      'bg-gray-500/20 text-gray-400'
+                    }`}>
+                      {tech.status}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-400">Progress:</span>
+                    <span className="text-sm font-semibold">{tech.progress}%</span>
+                  </div>
+                  
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div 
+                      className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-2 rounded-full transition-all duration-500"
+                      style={{ width: `${tech.progress}%` }}
+                    ></div>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-300 space-y-1">
                     {tech.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
-                        <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                      <li key={index} className="flex items-center">
+                        <span className="text-emerald-400 mr-2">✓</span>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">Impact Level:</span>
-                  <span className="text-sm font-semibold text-emerald-400">{tech.impact}</span>
-              </motion.div>
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
             ))}
-        {/* Call to Action */}
-=======
-        <div className="container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Join us in exploring these revolutionary technologies and discover how they can transform your business and unlock unprecedented possibilities.</p>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready for the Future?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join us in shaping the next generation of revolutionary technology
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Schedule Demo</button>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+                Get Early Access →
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
-                Contact Our Experts</button>
+              <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-black transition-all duration-300 font-semibold text-lg">
+                Contact Our Team
               </button>
-          </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

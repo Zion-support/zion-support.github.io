@@ -195,8 +195,8 @@ const RevolutionaryServicesShowcase2026 = () => {
     { label: "Success Rate", value: "99.8%", icon: CheckCircle },
     { label: "Cost Reduction", value: "85%", icon: TrendingUp },
     { label: "Client Satisfaction", value: "4.9/5", icon: Star }
-  ];
-
+  ];</p>
+</p>
   return (</p>
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -209,8 +209,8 @@ const RevolutionaryServicesShowcase2026 = () => {
             Transform Your Business with
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Next-Gen AI</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Our cutting-edge AI services are designed to revolutionize how you do business, 
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"></p>
+            Our cutting-edge AI services are designed to revolutionize how you do business, </p>
             providing unprecedented efficiency, intelligence, and competitive advantage.</p>
           </p>
         {/* Stats */}
@@ -249,8 +249,8 @@ const RevolutionaryServicesShowcase2026 = () => {
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
               }`}
-            >
-              {category.icon}
+            ></button>
+              {category.icon}</button>
               {category.name}</button>
             </button>
           ))}
@@ -288,7 +288,7 @@ const RevolutionaryServicesShowcase2026 = () => {
                   <h4 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                     {service.title}
                   </h4>
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3"></p>
                     {service.description}</p>
                   </p>
                   {/* Price */}
@@ -355,7 +355,7 @@ const RevolutionaryServicesShowcase2026 = () => {
                 <h4 className="text-lg font-semibold text-white mb-2 line-clamp-2">
                   {service.title}
                 </h4>
-                <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+                <p className="text-gray-300 text-sm mb-3 line-clamp-2"></p>
                   {service.description}</p>
                 </p>
                 <div className="flex items-center justify-between">
@@ -383,7 +383,7 @@ const RevolutionaryServicesShowcase2026 = () => {
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Join the revolution and be among the first to experience technologies that will reshape the future.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -440,7 +440,7 @@ const RevolutionaryServicesShowcase2026 = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-gray-600 leading-relaxed mb-4"></p>
                     {service.description}</p>
                   </p>
                 <div className="mb-6">
@@ -470,8 +470,8 @@ const RevolutionaryServicesShowcase2026 = () => {
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of forward-thinking companies already using our revolutionary AI services 
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"></p>
+            Join hundreds of forward-thinking companies already using our revolutionary AI services </p>
             to gain competitive advantage and drive unprecedented growth.</p>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -493,3 +493,85 @@ const RevolutionaryServicesShowcase2026 = () => {
 };
 
 export default RevolutionaryServicesShowcase2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

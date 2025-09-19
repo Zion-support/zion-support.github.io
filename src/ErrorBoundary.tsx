@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
             className="btn-primary"
             type="button"
           >
-            Refresh Page</button>
+            Refresh Page
           </button>
           {process.env.NODE_ENV === 'development' && this.state.error && (
             <details style={{ marginTop: '1rem' }}>
@@ -65,10 +65,11 @@ class ErrorBoundary extends Component<Props, State> {
                 fontSize: '12px'
               }}>
                 {this.state.error.toString()}
-                {this.state.errorInfo?.componentStack}</p>
+                {this.state.errorInfo?.componentStack}
               </pre>
             </details>
           )}
+        </details>
       )
     }
 

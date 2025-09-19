@@ -118,8 +118,8 @@ const InteractiveTechDemo2042: React.FC = () => {
                   activeDemo === index
                     ? 'bg-white text-gray-900 font-semibold'
                     : 'text-white hover:bg-white/20'
-                }`}
-              >
+                }`}</button>
+              ></button>
                 {demo.icon} {demo.title.split(' ')[0]}</button>
               </button>
             ))}
@@ -147,7 +147,7 @@ const InteractiveTechDemo2042: React.FC = () => {
                       ? 'bg-gray-500 cursor-not-allowed'
                       : `bg-gradient-to-r ${demos[activeDemo].color} hover:shadow-lg`
                   }`}
-                >
+                ></button>
                   {isRunning ? 'Running...' : '▶️ Start Demo'}</button>
                 </button>
                 <button
@@ -158,7 +158,7 @@ const InteractiveTechDemo2042: React.FC = () => {
                       ? 'bg-gray-500 cursor-not-allowed'
                       : 'bg-red-600 hover:bg-red-700'
                   }`}
-                >
+                ></button>
                   ⏹️ Stop Demo</button>
                 </button>
             <div className="flex flex-col justify-center">
@@ -206,8 +206,8 @@ const InteractiveTechDemo2042: React.FC = () => {
               onClick={() => setActiveDemo(demo.id - 1)}
               className={`bg-gradient-to-r ${demo.color} text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm ${
                 activeDemo === demo.id - 1 ? 'ring-2 ring-white' : ''
-              }`}
-            >
+              }`}</button>
+            ></button>
               {demo.icon} {demo.title.split(' ')[0]}</button>
             </button>
           ))}
@@ -215,3 +215,35 @@ const InteractiveTechDemo2042: React.FC = () => {
 };
 
 export default InteractiveTechDemo2042;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

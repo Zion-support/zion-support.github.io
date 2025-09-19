@@ -175,8 +175,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
           <h2 className="text-5xl font-bold text-white mb-6">
             Interactive Technology Showcase 2027
           </h2>
-          <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8">
-            Explore our revolutionary 2027 technologies through interactive experiences. 
+          <p className="text-xl text-purple-100 max-w-4xl mx-auto mb-8"></p>
+            Explore our revolutionary 2027 technologies through interactive experiences. </p>
             Click, hover, and discover the future of quantum computing, AI consciousness, and reality manipulation.</p>
           </p>
         {/* Tab Navigation */}
@@ -188,8 +188,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeTab === index
                   ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'</button>
+              }`}</button>
             ></button>
               <span className="text-2xl mr-2">{category.icon}</span>
               {category.title}
@@ -211,8 +211,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   activeTab === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
+                    : 'text-white/70 hover:text-white hover:bg-white/10'</button>
+                }`}</button>
               ></button>
                 <span className="text-2xl mr-2">{category.icon}</span>
                 {category.title}
@@ -251,7 +251,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
                 >
                   Explore →
                 </a>
-                <button className="border-2 border-white/30 text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
+                <button className="border-2 border-white/30 text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300"></button>
                   Demo</button>
                 </button>
               {hoveredCard === index && (
@@ -262,7 +262,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold text-white mb-6">Interactive Features</h3>
-            <p className="text-xl text-purple-100 max-w-4xl mx-auto">
+            <p className="text-xl text-purple-100 max-w-4xl mx-auto"></p>
               Experience our technologies through immersive interactive features and real-time demonstrations</p>
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -287,18 +287,54 @@ const InteractiveTechShowcase2027: React.FC = () => {
           <h3 className="text-4xl font-bold text-white mb-6">
             Ready to Experience the Future?
           </h3>
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Dive into our interactive technology showcase and experience the most revolutionary 
+          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto"></p>
+            Dive into our interactive technology showcase and experience the most revolutionary </p>
             technologies of 2027. The future is here, and it's interactive.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+            <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl"></button>
               Start Interactive Experience →</button>
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
+            <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl"></button>
               Schedule Private Demo</button>
             </button>
   );
 };
 
 export default InteractiveTechShowcase2027;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

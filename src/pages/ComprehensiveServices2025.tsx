@@ -149,7 +149,7 @@ const ComprehensiveServices2025: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Comprehensive Services 2025
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
               Discover our complete range of revolutionary services that are transforming industries and creating infinite possibilities</p>
             </p>
           </motion.div>
@@ -161,7 +161,7 @@ const ComprehensiveServices2025: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6">Comprehensive Services2025</h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
             Discover the latest innovations and breakthrough technologies in comprehensive services2025</p>
           </p>
         <div className="grid md:grid-cols-3 gap-8">
@@ -180,7 +180,7 @@ const ComprehensiveServices2025: React.FC = () => {
                 <h2 className="text-4xl font-bold text-white mb-4">
                   {serviceCategories[activeCategory as keyof typeof serviceCategories].title}
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                   {serviceCategories[activeCategory as keyof typeof serviceCategories].description}</p>
                 </p>
               <div className="grid md:grid-cols-3 gap-8">
@@ -211,24 +211,48 @@ const ComprehensiveServices2025: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Comprehensive Technology Services
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Transform your business with our revolutionary technology services that push the boundaries of what's possible</p>
           </p>
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
               Join thousands of forward-thinking organizations already using our revolutionary technologies to achieve unprecedented success.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Start Your Transformation →</button>
               </button>
-              <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg">
+              <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors font-semibold text-lg"></button>
                 Schedule Consultation</button>
               </button>
   );
 };
 
 export default ComprehensiveServices2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

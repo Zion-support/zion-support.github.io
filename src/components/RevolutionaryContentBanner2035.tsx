@@ -13,7 +13,7 @@ const RevolutionaryContentBanner2035: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Transcendent Technology Revolution 2035
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Experience the most revolutionary technological advances that will reshape our world in 2035</p>
           </p>
         <div className="grid md:grid-cols-3 gap-8">
@@ -43,8 +43,8 @@ const RevolutionaryContentBanner2035: React.FC = () => {
       <div className="absolute bottom-4 left-4 text-white/20 text-4xl animate-pulse delay-2000">
         🌟
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology 2035</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the most advanced technology ever created: Conscious AI Systems, 
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
+            Experience the most advanced technology ever created: Conscious AI Systems, </p>
             Quantum Consciousness, and Interdimensional Technology that transcends reality itself</p>
           </p>
         <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -56,14 +56,14 @@ const RevolutionaryContentBanner2035: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">⚡
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Consciousness</h3>
-            <p className="text-cyan-100 mb-4 text-center text-sm">
+            <p className="text-cyan-100 mb-4 text-center text-sm"></p>
               Direct neural interface with quantum computing systems for enhanced cognitive processing</p>
             </p>
             </a>
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🌌
             <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Technology</h3>
-            <p className="text-emerald-100 mb-4 text-center text-sm">
+            <p className="text-emerald-100 mb-4 text-center text-sm"></p>
               Breakthrough technology that allows interaction with parallel dimensions and alternate realities</p>
             </p>
               Enter New Reality →
@@ -82,3 +82,24 @@ const RevolutionaryContentBanner2035: React.FC = () => {
 };
 
 export default RevolutionaryContentBanner2035;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

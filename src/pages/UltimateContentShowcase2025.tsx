@@ -181,14 +181,14 @@ const UltimateContentShowcase2025: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Content Showcase 2025
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Discover the most comprehensive collection of cutting-edge technology content, research, and insights</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
               Explore All Content</button>
             </button>
-            <button className="border border-white/30 px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold">
+            <button className="border border-white/30 px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold"></button>
               Subscribe for Updates</button>
             </button>
         </motion.div>
@@ -228,7 +228,7 @@ const UltimateContentShowcase2025: React.FC = () => {
                       {tag}
                     </span>
                   ))}
-                <button className={`w-full bg-gradient-to-r ${item.color} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                <button className={`w-full bg-gradient-to-r ${item.color} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                   Read More</button>
                 </button>
               </motion.div>
@@ -250,8 +250,8 @@ const UltimateContentShowcase2025: React.FC = () => {
                 className={`px-6 py-3 rounded-lg transition-all duration-300 font-semibold ${
                   activeCategory === category.id
                     ? 'bg-white text-blue-900'
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}
+                    : 'bg-white/10 text-white hover:bg-white/20'</button>
+                }`}</button>
               ></button>
                 <span className="mr-2">{category.icon}</span>
                 {category.name}
@@ -298,7 +298,7 @@ const UltimateContentShowcase2025: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                  <button className={`w-full bg-gradient-to-r ${item.color} py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}>
+                  <button className={`w-full bg-gradient-to-r ${item.color} py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}></button>
                     Read More</button>
                   </button>
                 </motion.div>
@@ -314,17 +314,17 @@ const UltimateContentShowcase2025: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
             <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
               Get exclusive access to the latest technology insights, research papers, and breakthrough discoveries</p>
             </p>
             <div className="flex justify-center space-x-6">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Subscribe Now</button>
               </button>
-              <button className="border border-white/30 px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
+              <button className="border border-white/30 px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"></button>
                 Download Resources</button>
               </button>
-              <button className="bg-gradient-to-r from-green-500 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              <button className="bg-gradient-to-r from-green-500 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                 Join Community</button>
               </button>
         </motion.div>

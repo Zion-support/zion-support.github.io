@@ -157,7 +157,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
           Interactive Tech Showcase 2034
         </h2>
-        <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+        <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
           Explore our revolutionary 2034 technologies with interactive demonstrations and real-time capabilities</p>
         </p>
       <div className="grid md:grid-cols-4 gap-4 mb-8">
@@ -168,8 +168,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
             className={`p-4 rounded-xl transition-all duration-300 ${
               activeTab === key
                 ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                : 'bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20'
-            }`}
+                : 'bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20'</button>
+            }`}</button>
           ></button>
             <div className="text-3xl mb-2">{tech.icon}
             <div className="font-semibold text-sm">{tech.title}
@@ -181,7 +181,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
             <div className="flex items-center mb-4">
               <span className="text-4xl mr-4">{technologies[activeTab as keyof typeof technologies].icon}</span>
               <h3 className="text-3xl font-bold">{technologies[activeTab as keyof typeof technologies].title}</h3>
-            <p className="text-xl text-gray-300 mb-6">
+            <p className="text-xl text-gray-300 mb-6"></p>
               {technologies[activeTab as keyof typeof technologies].description}</p>
             </p>
             <ul className="space-y-3">
@@ -193,7 +193,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
               ))}
             </ul>
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
             Experience our revolutionary technologies through interactive demonstrations and real-time data</p>
           </p>
         {/* Tab Navigation */}
@@ -211,8 +211,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 }}
                 className={`w-full p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
                   activeTech === index
-                    ? `bg-gradient-to-r ${tech.bgColor} ${tech.borderColor} border-2`
-                    : 'bg-gray-800/50 border-gray-600 hover:border-gray-400'
+                    ? `bg-gradient-to-r ${tech.bgColor} ${tech.borderColor} border-2`</button>
+                    : 'bg-gray-800/50 border-gray-600 hover:border-gray-400'</button>
   return (</button>
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -223,7 +223,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
           <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2034
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed"></p>
             Experience the future with interactive demonstrations of the most revolutionary technologies ever created</p>
           </p>
         {/* Technology Grid */}
@@ -294,7 +294,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     <div className="text-sm text-cyan-200">{key}
                 ))}
               <div className="text-center">
-                <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105`}></button>
                   Experience {currentTech.name} →</button>
                 </button>
               {/* Metrics */}
@@ -315,10 +315,10 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   🎮 Try Interactive Demo
                 </a>
                 <div className="grid grid-cols-2 gap-4">
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105"></button>
                     📊 View Analytics</button>
                   </button>
-                  <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105"></button>
                     🔬 Deep Dive</button>
                   </button>
           <div className="space-y-8">
@@ -338,7 +338,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   <div className="text-purple-400">Establishing neural connections...
                   <div className="text-green-400">✓ System ready for interaction
                   <div className="text-white">> Ready to demonstrate capabilities
-              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
                 Start Interactive Demo</button>
               </button>
             {/* Real-time Data Visualization */}
@@ -378,21 +378,21 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 <div className="text-6xl mb-4">🎮
                 <h4 className="text-2xl font-bold mb-4">Interactive Simulations</h4>
                 <p className="text-gray-300 mb-6">Experience our technologies through hands-on interactive demos</p>
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"></button>
                   Start Demo</button>
                 </button>
               <div className="text-center">
                 <div className="text-6xl mb-4">🔬
                 <h4 className="text-2xl font-bold mb-4">Real-time Analysis</h4>
                 <p className="text-gray-300 mb-6">Watch our AI systems work in real-time with live data processing</p>
-                <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"></button>
                   View Analysis</button>
                 </button>
               <div className="text-center">
                 <div className="text-6xl mb-4">🌐
                 <h4 className="text-2xl font-bold mb-4">Multi-dimensional View</h4>
                 <p className="text-gray-300 mb-6">Explore our technologies across multiple dimensions and realities</p>
-                <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"></button>
                   Enter Dimensions</button>
                 </button>
         {/* Live Demo Section */}
@@ -403,35 +403,35 @@ const InteractiveTechShowcase2034: React.FC = () => {
               <div className="text-6xl mb-4">🎯
               <h4 className="text-2xl font-bold mb-4">AI Consciousness Test</h4>
               <p className="text-lg opacity-90 mb-6">Test the consciousness level of our AI systems through interactive conversations</p>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300"></button>
                 Start Test →</button>
               </button>
             <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="text-6xl mb-4">⚡
               <h4 className="text-2xl font-bold mb-4">Quantum Simulator</h4>
               <p className="text-lg opacity-90 mb-6">Experience quantum computing through our interactive quantum simulator</p>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300"></button>
                 Launch Simulator →</button>
               </button>
             <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="text-6xl mb-4">🌌
               <h4 className="text-2xl font-bold mb-4">Dimension Explorer</h4>
               <p className="text-lg opacity-90 mb-6">Explore different dimensions and realities through our portal interface</p>
-              <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
+              <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300"></button>
                 Enter Portal →</button>
               </button>
             <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="text-6xl mb-4">🧬
               <h4 className="text-2xl font-bold mb-4">Neural Interface</h4>
               <p className="text-lg opacity-90 mb-6">Connect your mind directly to our AI systems through neural interface</p>
-              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
+              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300"></button>
                 Connect Mind →</button>
               </button>
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-16">
           <h3 className="text-5xl font-bold mb-8">Experience the Future Today</h3>
-          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
-            Don't just read about the future - experience it firsthand with our revolutionary technology showcase. 
+          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto"></p>
+            Don't just read about the future - experience it firsthand with our revolutionary technology showcase. </p>
             Book your interactive demo session today.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -464,14 +464,14 @@ const InteractiveTechShowcase2034: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join thousands of organizations already using our revolutionary technologies to transform their operations and achieve unprecedented success.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Your Journey</button>
             </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg"></button>
               Schedule Demo</button>
             </button>
             <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -484,3 +484,132 @@ const InteractiveTechShowcase2034: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2034;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

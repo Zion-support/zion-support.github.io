@@ -57,7 +57,7 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Revolutionary Case Studies 2026
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
             Real results from real companies using our revolutionary technologies</p>
           </p>
         {/* Case Study Carousel */}
@@ -109,8 +109,8 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                   onClick={() => setActiveCase(index)}
                   className={`w-4 h-4 rounded-full transition-colors ${
                     activeCase === index ? 'bg-indigo-400' : 'bg-gray-500'
-                  }`}
-                />
+                  }`}</button>
+                /></button>
               ))}</button>
         {/* Metrics Section */}
         <motion.div
@@ -168,17 +168,17 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
             <h3 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
-            <p className="text-xl opacity-90 mb-8">
+            <p className="text-xl opacity-90 mb-8"></p>
               Join the companies that have transformed their operations with our revolutionary technologies</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"></button>
                 Start Your Transformation →</button>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors"></button>
                 View All Case Studies</button>
               </button>
-            <p className="text-lg text-gray-300 mb-6">
+            <p className="text-lg text-gray-300 mb-6"></p>
               {caseStudies[currentStudy].description}</p>
             </p>
             <div className="flex items-center justify-between">
@@ -201,11 +201,59 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
               onClick={() => setCurrentStudy(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentStudy ? 'bg-purple-400' : 'bg-white/30'
-              }`}
-            />
+              }`}</button>
+            /></button>
           ))}</button>
     </motion.div>
   );
 };
 
 export default RevolutionaryCaseStudiesBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -66,7 +66,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Interactive Technology Showcase 2034-2036
         </h2>
-        <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+        <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
           Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself</p>
         </p>
       {/* Tab Navigation */}
@@ -80,8 +80,8 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                 ? 'bg-white text-purple-600 shadow-lg'
                 : 'bg-white/20 text-white hover:bg-white/30'
             }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}</button>
+            whileTap={{ scale: 0.95 }}</button>
           ></button>
             <span className="mr-2">{item.icon}</span>
             {item.title.split(' ')[0]} {item.title.split(' ')[1]}
@@ -108,7 +108,7 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                     {contentItems[activeTab].title}
                   </h3>
                   <div className={`w-16 h-1 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}>
-              <p className="text-lg text-gray-300 mb-8">
+              <p className="text-lg text-gray-300 mb-8"></p>
                 {contentItems[activeTab].description}</p>
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -180,3 +180,64 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
 };
 
 export default InteractiveContentShowcase2034_2036;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

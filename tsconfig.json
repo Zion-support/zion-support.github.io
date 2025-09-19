@@ -37,6 +37,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/types/offline-shims.d.ts",
+    "App.tsx",
     "vite.config.ts",
     "vite.config.js",
     "tailwind.config.js",

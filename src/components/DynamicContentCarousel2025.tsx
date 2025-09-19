@@ -96,7 +96,7 @@ const DynamicContentCarousel2025: React.FC = () => {
             Discover
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Explore our latest breakthroughs and cutting-edge solutions that are shaping the future of technology.</p>
           </p>
         {/* Carousel */}
@@ -125,7 +125,7 @@ const DynamicContentCarousel2025: React.FC = () => {
                     <h3 className="text-4xl font-bold text-white mb-6">
                       {currentItem.title}
                     </h3>
-                    <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                    <p className="text-xl text-gray-300 leading-relaxed mb-8"></p>
                       {currentItem.description}</p>
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
@@ -171,8 +171,8 @@ const DynamicContentCarousel2025: React.FC = () => {
                     index === currentIndex
                       ? 'bg-gradient-to-r from-indigo-400 to-purple-400 scale-125'
                       : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
+                  }`}</button>
+                /></button>
               ))}</button>
             <div className="flex gap-4">
               <button
@@ -192,8 +192,8 @@ const DynamicContentCarousel2025: React.FC = () => {
                 className={`p-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${
                   isAutoPlaying
                     ? 'bg-green-500/20 border-green-500/50 text-green-400'
-                    : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
-                }`}
+                    : 'bg-white/10 border-white/20 text-white hover:bg-white/20'</button>
+                }`}</button>
               ></button>
                 <Play className={`w-6 h-6 ${isAutoPlaying ? 'fill-current' : ''}`} />
               </button>
@@ -202,3 +202,19 @@ const DynamicContentCarousel2025: React.FC = () => {
 };
 
 export default DynamicContentCarousel2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

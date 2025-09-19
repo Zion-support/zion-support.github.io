@@ -567,5 +567,3 @@ const QuantumComputingRevolution2025: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2025;
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01

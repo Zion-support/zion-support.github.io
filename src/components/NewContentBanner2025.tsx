@@ -11,7 +11,7 @@ const NewContentBanner2025: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
             Latest Revolutionary Content
           </h2>
-          <p className="text-lg opacity-90 max-w-3xl mx-auto mb-6">
+          <p className="text-lg opacity-90 max-w-3xl mx-auto mb-6"></p>
             Discover our newest technology showcases, AI solutions, and revolutionary content</p>
           </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,3 +53,39 @@ const NewContentBanner2025: React.FC = () => {
 };
 
 export default NewContentBanner2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
