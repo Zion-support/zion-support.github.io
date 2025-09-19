@@ -117,7 +117,7 @@ function App() {
         firstContentfulPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
       };
       
-      console.log('Performance Metrics:', perfData);
+      // Performance metrics collected
       trackFeatureInteraction('performance_metrics', perfData);
     }
   }, []);
@@ -153,14 +153,14 @@ function App() {
 
   // Register service worker for PWA capabilities
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
+    if (typeof window !== 'undefined' && 'serviceWorker' in window.navigator) {
+      window.navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
+          // Service Worker registered successfully
           trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
+          // Service Worker registration failed
           trackFeatureInteraction('service_worker_failed', { error: error.message });
         });
     }
