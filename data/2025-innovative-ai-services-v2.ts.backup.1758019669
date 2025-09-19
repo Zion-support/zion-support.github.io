@@ -1,0 +1,93 @@
+<<<<<<< HEAD
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+    category: 'Quantum & AI',
+    price: {
+      monthly: 499,
+      yearly: 4990,
+      currency: 'USD',
+      'Solve problems 1000x faster than classical computers',
+      'Enable new types of AI applications',
+      'Optimize complex systems efficiently',
+      'Advance scientific research capabilities',
+      'Research institutions',
+      'Pharmaceutical companies',
+      'Financial services',
+      'Logistics companies',
+      'Energy companies',
+      'Drug discovery',
+      'Financial modeling',
+      'Supply chain optimization',
+      'Climate modeling',
+      'Cryptography',
+    category: 'AI & Consciousness',
+    price: {
+      monthly: 399,
+      yearly: 3990,
+      currency: 'USD',
+      'Reduce AI management overhead by 80%',
+      'Improve system performance automatically',
+      'Enable continuous optimization',
+      'Scale AI operations effortlessly',
+      'Large enterprises',
+      'Technology companies',
+      'Research organizations',
+      'Government agencies',
+      'Financial institutions',
+      'AI system management',
+      'Automated optimization',
+      'Continuous learning',
+      'Resource management',
+      'Performance monitoring',
+    category: 'AI & Consciousness',
+    price: {
+      monthly: 249,
+      yearly: 2490,
+      currency: 'USD',
+      'Custom model training',
+      'API for all modalities',
+      'Advanced analytics',
+      'Performance optimization',
+      'Content analysis',
+      'Media processing',
+      'Customer interaction',
+      'Research automation',
+      'Quality control',
+    price: {
+      monthly: 179,
+      yearly: 1790,
+      currency: 'USD',
+      'Bias detection and mitigation',
+      'Ethical AI guidelines',
+      'Governance frameworks',
+      'Compliance monitoring',
+      'Transparency tools',
+      'Accountability tracking',
+      'Risk assessment',
+      'Audit trails',
+      'Policy management',
+      'Ensure AI compliance with regulations',
+      'Reduce bias and discrimination risks',
+      'Build trust with stakeholders',
+      'Meet ethical AI requirements',
+      'AI development companies',
+      'Enterprises using AI',
+      'Government agencies',
+      'Healthcare organizations',
+      'Financial institutions',
+      'AI bias detection',
+      'Ethical compliance',
+      'Governance automation',
+      'Risk assessment',
+      'Audit preparation',
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
