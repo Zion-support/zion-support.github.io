@@ -7,7 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 export default [
   js.configs.recommended,
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'App.tsx', 'main.tsx', 'index.tsx'],
+    files: ['src/**/*.{ts,tsx,js,jsx}', '*.{ts,tsx,js,jsx}', 'App.tsx', 'main.tsx', 'index.tsx'],
     ignores: [
       // Build outputs
       'dist/**',
@@ -306,6 +306,7 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        project: './tsconfig.json',
         ecmaFeatures: {
           jsx: true
         }
