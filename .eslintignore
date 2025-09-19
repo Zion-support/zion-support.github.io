@@ -1,0 +1,31 @@
+# Build outputs
+dist/
+build/
+out/
+.next/
+*.min.js
+*.bundle.js
+
+# Dependencies
+node_modules/
+
+# Disabled/legacy directories
+zion-os.disabled/
+zion-os/
+zion-website/
+zion.app/
+zion_academy/
+
+# Public assets
+public/
+
+# Generated files
+*.generated.js
+*.generated.ts
+
+# Test files (optional - uncomment if you want to exclude tests)
+# __tests__/
+# *.test.js
+# *.test.ts
+# *.spec.js
+# *.spec.ts
