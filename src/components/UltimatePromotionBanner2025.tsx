@@ -1,6 +1,0 @@
-        </div>,
-      </div>,
-    </div>,
-  );
-  };
-export default UltimatePromotionBanner2025;

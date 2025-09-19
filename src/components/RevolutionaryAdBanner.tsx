@@ -1,4 +1,0 @@
-    </div>,
-  );
-};
-export default RevolutionaryAdBanner;
