@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+name: Cursor Chat
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cursor-chat-${{ github.ref }}
+  cancel-in-progress: true
+
+=======
+name: cursor-chat
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */2 * * *
+permissions:
+  contents: write
+  actions: read
+>>>>>>> origin/pm2-automation-fixes
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+<<<<<<< HEAD
+    timeout-minutes: 20
+=======
+>>>>>>> origin/pm2-automation-fixes
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+<<<<<<< HEAD
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+=======
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: |
+          echo "Workflow completed successfully"
+          
+>>>>>>> origin/pm2-automation-fixes

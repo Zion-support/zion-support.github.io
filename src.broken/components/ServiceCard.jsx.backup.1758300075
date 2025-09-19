@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+import React from 'react';
+const ServiceCard: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">ServiceCard</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default ServiceCard;
+=======
+import React from "react";
+
+export default function ServiceCard({ service, onSelect }) {
+  const handleClick = () => {
+    if (onSelect) {
+      onSelect(service.id);
+    }
+  };
+
+  return (
+    <div
+      data-testid={`service-card-${service.id}`}
+      onClick={handleClick}
+      className="cursor-pointer p-4 border border-zion-blue-light rounded-lg bg-zion-blue-dark hover:border-zion-purple/50"
+    >
+      <h3 className="text-white font-medium">{service.title}</h3>
+    </div>
+  );
+}
+>>>>>>> origin/pm2-automation-fixes

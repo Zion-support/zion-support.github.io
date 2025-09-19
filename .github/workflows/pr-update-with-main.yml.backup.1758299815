@@ -1,0 +1,88 @@
+<<<<<<< HEAD
+name: Pr Update With Main
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+=======
+name: pr-update-with-main
+'on':
+  schedule:
+    - cron: 0 2 * * *
+  workflow_dispatch: null
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: pr-update-with-main-${{ github.ref }}
+  cancel-in-progress: true
+>>>>>>> origin/pm2-automation-fixes
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+<<<<<<< HEAD
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+=======
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
+
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+  update:
+        include: ${{ fromJSON(needs.list.outputs.prs) }}
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run pr update with main
+        run: 
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+    runs_on: ubuntu-latest
+>>>>>>> origin/pm2-automation-fixes

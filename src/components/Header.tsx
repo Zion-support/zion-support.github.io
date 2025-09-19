@@ -1,94 +1,147 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Rocket, Menu, X, Moon, Sun } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import '../styles/futuristic.css';
 
-interface HeaderProps {
-  darkMode: boolean;
-  onToggleDarkMode: () => void;
-  onButtonClick: (action: string, location: string) => void;
-}
+export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode, onButtonClick }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Home', path: '/', icon: '🏠' },
+    { name: 'Services', path: '/services', icon: '🚀' },
+    { name: 'AI Solutions', path: '/ai-solutions', icon: '🤖' },
+    { name: 'Micro SAAS', path: '/micro-saas', icon: '💻' },
+    { name: 'IT Services', path: '/it-services', icon: '🖥️' },
+    { name: 'About', path: '/about', icon: 'ℹ️' },
+    { name: 'Contact', path: '/contact', icon: '📞' }
   ];
 
-  const handleNavClick = (itemName: string) => {
-    onButtonClick(`nav_${itemName.toLowerCase()}`, 'header');
-    setIsMenuOpen(false);
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
   };
 
   return (
-    <header className="bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" onClick={() => handleNavClick('home')}>
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Rocket className="w-6 h-6 text-white" />
+    <header className="bg-white shadow-sm border-b">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <h1 className="text-xl font-bold text-gray-900">Zion Tech Group</h1>
+            </Link>
+          </div>
+          
+          <nav className="hidden md:flex space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Home
+            </Link>
+            
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+                Services
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    All Services
+                  </Link>
+                  <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Micro SAAS Services
+                  </Link>
+                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    AI & Machine Learning
+                  </Link>
+                  <Link to="/cloud-devops-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Cloud & DevOps
+                  </Link>
+                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Enterprise Solutions
+                  </Link>
+                  <Link to="/it-onsite-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    IT Onsite Services
+                  </Link>
+                </div>
+              </div>
             </div>
-            <span className="text-xl font-bold">Zion Tech Group</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={() => handleNavClick(item.name)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+                Solutions
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link to="/ai-business-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    AI Business Solutions
+                  </Link>
+                  <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Digital Transformation
+                  </Link>
+                  <Link to="/industry-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Industry Solutions
+                  </Link>
+                  <Link to="/green-it" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Green IT Solutions
+                  </Link>
+                  <Link to="/5g-enterprise-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    5G Enterprise Solutions
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            <Link to="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              About
+            </Link>
+            
+            <Link to="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Blog
+            </Link>
+            
+            <Link to="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              Contact
+            </Link>
           </nav>
-
-          {/* Theme Toggle & Mobile Menu Button */}
+          
           <div className="flex items-center space-x-4">
-            <button
-              onClick={onToggleDarkMode}
-              className="p-2 rounded-lg hover:bg-white/10 transition-colors"
-              aria-label="Toggle dark mode"
-            >
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-              aria-label="Toggle mobile menu"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <Link to="/faq">
+              <Button variant="outline" size="sm">
+                Help
+              </Button>
+            </Link>
+            <Link to="/login">
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button size="sm">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-white/20">
-            <div className="flex flex-col space-y-2 pt-4">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
-                  onClick={() => handleNavClick(item.name)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </nav>
-        )}
       </div>
     </header>
   );
-};
-
-export default Header;
+}

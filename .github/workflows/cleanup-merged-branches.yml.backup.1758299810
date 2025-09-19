@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+name: Cleanup Merged Branches
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+=======
+name: cleanup-merged-branches
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */2 * * *
+permissions:
+  contents: write
+  actions: read
+>>>>>>> origin/pm2-automation-fixes
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+<<<<<<< HEAD
+=======
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
+
+  cleanup:
+      - name: List open PR heads
+        id: list
+          script: |
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            const heads = prs.map(pr => pr.head.ref);
+            const fs = require('fs');
+            fs.writeFileSync('open_pr_heads.txt', heads.join('\n'));
+            core.info(`Open PR heads: ${heads.length}`);
+    steps:
+>>>>>>> origin/pm2-automation-fixes
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+<<<<<<< HEAD
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+=======
+      - name: Prune merged branches
+        run: |
+          echo "Workflow completed successfully"
+          
+>>>>>>> origin/pm2-automation-fixes

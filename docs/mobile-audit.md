@@ -5,3 +5,4 @@ This audit attempts to identify issues on iPhone SE. The Lighthouse mobile audit
 ## Screenshots
 
 Screenshots from BrowserStack should be added here once available.
+

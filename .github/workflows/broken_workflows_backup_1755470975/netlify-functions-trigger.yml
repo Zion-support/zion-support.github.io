@@ -6,8 +6,7 @@ on:
     - cron: '0 0 * * *'  # Daily at midnight
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
   actions: read
 
 jobs:
@@ -31,8 +30,4 @@ jobs:
         run: npm ci
 
       - name: Execute workflow
-        run: |
-          echo "✅ Netlify Functions Trigger workflow executed successfully"
-          echo "📅 Workflow: Netlify Functions Trigger"
-          echo "🕐 Timestamp: $(date)"
-          echo "🎯 Status: Completed"
+        run: node scripts/trigger-netlify-functions-local.cjs

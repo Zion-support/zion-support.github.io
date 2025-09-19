@@ -1,38 +1,36 @@
-name: README Autogeneration
-
-on:
+name: readme-autogen
+'on':
   schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch: {}
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
-
+  contents: read
+  actions: read
+concurrency:
+  group: readme-autogen-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  build:
+  main:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
         run: npm ci
-
-      - name: Generate README
-        run: npm run readme:generate
-
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "docs: auto‑generate README [skip ci]"
-          git push
+      - name: Run readme auto generator
+        run: 
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+    runs_on: ubuntu-latest

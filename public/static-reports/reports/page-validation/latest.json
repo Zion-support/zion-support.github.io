@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "totalFiles": 4,
+    "filesWithIssues": 4,
+    "totalIssues": 0,
+    "totalWarnings": 4,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [
+    {
+      "file": "pages/_app.tsx",
+      "issues": [],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+          "line": 0,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/index.tsx",
+      "issues": [
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_COMPONENT_DECLARATION",
+          "message": "Missing component function/class declaration",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_RETURN_STATEMENT",
+          "message": "Missing return statement or JSX",
+          "line": 0,
+          "severity": "error"
+        }
+      ],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "PAGE_TOO_SHORT",
+          "message": "Page content seems too short, may be incomplete",
+          "line": 0,
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T19:21:03.555Z"
+=======
+  "generatedAt": "2025-08-20T20:44:48.331Z"
+}

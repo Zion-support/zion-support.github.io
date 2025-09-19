@@ -1,57 +1,45 @@
 #!/usr/bin/env node
 
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
 
-const START = '<!-- AUTO-GENERATED: BADGES_START -->';
-const END = '<!-- AUTO-GENERATED: BADGES_END -->';
+function ensureReadmeBadges() {
+  const readmePath = path.resolve(process.cwd(), 'README.md');
+  const now = new Date().toISOString();
+  let content = '';
+  try {
+    content = fs.readFileSync(readmePath, 'utf8');
+  } catch {
+    content = '# Project\n\n';
+  }
 
-function read(file) { try { return fs.readFileSync(file, 'utf8'); } catch { return ''; } }
-function write(file, content) { fs.writeFileSync(file, content, 'utf8'); }
-
-function buildBlock() {
-  const ts = new Date().toISOString();
-  return [
-    START,
+  const start = '<!-- AUTO-BADGES: START -->';
+  const end = '<!-- AUTO-BADGES: END -->';
+  const badgeBlock = [
+    start,
     '',
-    '<p align="left">',
-    `  <a href="/.netlify/functions/trigger-all-and-commit"><img alt="Cloud Automations" src="https://img.shields.io/badge/cloud_automations-live-22c55e?style=for-the-badge" /></a>`,
-    `  <a href="/.netlify/functions/robots-and-headers-optimizer"><img alt="Robots/Headers" src="https://img.shields.io/badge/robots%2Fheaders-optimized-06b6d4?style=for-the-badge" /></a>`,
-    `  <a href="/.netlify/functions/navigation-directory-builder"><img alt="Directory Builder" src="https://img.shields.io/badge/directory-builder-8b5cf6?style=for-the-badge" /></a>`,
-    `  <a href="/.netlify/functions/readme-badges-updater"><img alt="README Badges" src="https://img.shields.io/badge/readme-badges-auto-ec4899?style=for-the-badge" /></a>`,
-    '</p>',
+    `![Automation](https://img.shields.io/badge/automation-active-34d399?labelColor=0b1020)`,
+    `![Cloud](https://img.shields.io/badge/cloud-netlify-06b6d4?labelColor=0b1020)`,
+    `![Last Run](https://img.shields.io/badge/last_run-${encodeURIComponent(now)}-a78bfa?labelColor=0b1020)`,
     '',
-    `<sub>Last updated: ${ts}</sub>`,
-    '',
-    END,
+    end,
   ].join('\n');
+
+  if (content.includes(start) && content.includes(end)) {
+    const newContent = content.replace(new RegExp(`${start}[\s\S]*?${end}`), badgeBlock);
+    fs.writeFileSync(readmePath, newContent);
+    console.log('Updated badges in README.md');
+  } else {
+    const newContent = `${badgeBlock}\n\n${content}`;
+    fs.writeFileSync(readmePath, newContent);
+    console.log('Inserted badges in README.md');
+  }
 }
 
-(function main() {
-  const root = process.cwd();
-  const readmePath = path.join(root, 'README.md');
-  const original = read(readmePath);
-  if (!original) {
-    console.log('[badges] README.md not found, skipping');
-    process.exit(0);
-  }
-  const startIdx = original.indexOf(START);
-  const endIdx = original.indexOf(END);
-  const block = buildBlock();
-  let updated;
-  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
-    const before = original.slice(0, startIdx);
-    const after = original.slice(endIdx + END.length);
-    updated = `${before}${block}${after}`;
-  } else {
-    updated = `${original}\n\n${block}\n`;
-  }
-  if (updated !== original) {
-    write(readmePath, updated);
-    console.log('[badges] README badges updated.');
-  } else {
-    console.log('[badges] No changes needed.');
-  }
-})();
+function main() {
+  ensureReadmeBadges();
+}
+
+if (require.main === module) {
+  main();
+}

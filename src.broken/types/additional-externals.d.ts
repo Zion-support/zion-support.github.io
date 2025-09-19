@@ -20,4 +20,6 @@ declare module 'react-beautiful-dnd';
 declare module 'react-redux';
 declare module 'semver';
 declare module 'ws';
+
 declare module 'vite/client';
+declare module 'react-router-dom';

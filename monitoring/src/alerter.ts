@@ -2,161 +2,140 @@ import { exec } from 'child_process';
 import axios from 'axios';
 import logger from './logger';
 import { EndpointTestResult } from './latencyTester';
-export interface PatchedPackageInfo {,
-  name: string;
-  version: string;
-  previousVersion?: string, // Optional, if available,
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Define the structure of the configuration file
+interface MonitoringConfig {
+  alertThresholdMs: number;
+  consecutiveChecksLimit: number;
+  // We don't need the full endpoints array structure here, just the thresholds
 }
-,
-export interface TestStatusInfo {,
-  passed: number;
-  failed: number;
-  total: number;
-  coverage: number, // Percentage,
+
+// Function to read and parse the configuration file for alert thresholds
+function loadAlertConfig(): { alertThresholdMs: number; consecutiveChecksLimit: number } {
+  const configPath = path.join(__dirname, '../../monitoring-config.json'); // Adjust path as necessary
+  try {
+    const configFile = fs.readFileSync(configPath, 'utf-8');
+    const parsedConfig = JSON.parse(configFile) as MonitoringConfig;
+    return {
+      alertThresholdMs: parsedConfig.alertThresholdMs,
+      consecutiveChecksLimit: parsedConfig.consecutiveChecksLimit,
+    };
+  } catch (error) {
+    logger.error('Error reading or parsing monitoring-config.json in alerter.ts:', error);
+    // Return default values if config loading fails
+    return {
+      alertThresholdMs: 1000, // Default threshold
+      consecutiveChecksLimit: 3, // Default limit
+    };
+  }
 }
-,
-export interface NotificationPayload {,
-  slowEndpoints?: EndpointTestResult[], // Reuse existing EndpointTestResult,
-  patchedPackages?: PatchedPackageInfo[];
-  testStatus?: TestStatusInfo;
-  commitLink?: string;
-  customMessage?: string, // For general messages or errors,
-}
-,
-const ALERT_THRESHOLD_MS = 500;
+
+const { alertThresholdMs: ALERT_THRESHOLD_MS, consecutiveChecksLimit: CONSECUTIVE_CHECKS_LIMIT } = loadAlertConfig();
 const ALERT_WEBHOOK_URL = process.env.ALERT_WEBHOOK_URL;
-// Basic mapping from endpoint name to a hypothetical service identifier,
-// This will likely need to be more sophisticated or configurable,
-function getServiceName(endpointName: string): string | null {,
-  if (endpointName.toLowerCase().includes('django')) return 'django-service';
-  if (endpointName.toLowerCase().includes('next.js')) return 'nextjs-service';
-  if (endpointName.toLowerCase().includes('custom server')) return 'custom-server-service';
-  // Add more specific mappings as needed,
-  // e.g., 'Next.js Marketplace' -> 'marketplace-next-app',
-  return null;
-}
-,
-async function restartService(serviceName: string): Promise<void> {,
-  // IMPORTANT: This is a placeholder. Actual commands depend on deployment (PM2, Docker, etc.),
-  // We'll try a PM2 restart command as a common example.,
-  const command = `pm2 restart ${serviceName}`;
-  logger.info(`Attempting to restart service: '${serviceName,}' with command: '${command,}'`);
-  return new Promise((resolve, reject) => {,
-    exec(command, (error, stdout, stderr) => {,
-      if (error) {,
-        logger.error(`Failed to restart service '${serviceName}'. Error: ${error.message,}`, { stdout, stderr });
-        reject(error);
-        return;
-      }
-      if (stderr) {,
-        logger.warn(`Service restart for '${serviceName}' produced stderr: ${stderr,}`, { stdout });
-        // Still resolve if stderr is present but no actual error code, as some tools output to stderr for info,
-      }
-      logger.info(`Service '${serviceName}' restart command executed. Output: ${stdout,}`);
-      resolve();
-    });
-  });
-}
-,
-async function sendWebhookNotification(payload: NotificationPayload): Promise<void> {,
-  if (!ALERT_WEBHOOK_URL) {,
+
+// Map to store consecutive high latency counts for each endpoint
+const alertConsecutiveCounts: Map<string, number> = new Map();
+
+// sendWebhookNotification remains unchanged from the previous version
+async function sendWebhookNotification(result: EndpointTestResult, messageSuffix: string = "Attempting service remediation... (if applicable)"): Promise<void> {
+  if (!ALERT_WEBHOOK_URL) {
     logger.warn('ALERT_WEBHOOK_URL is not set. Skipping notification.');
-    return,
-  }
-,
-  let messageParts: string[] = [];
-  if (payload.customMessage) {,
-    messageParts.push(payload.customMessage),
-  }
-,
-  if (payload.slowEndpoints && payload.slowEndpoints.length > 0) {,
-    payload.slowEndpoints.forEach(result => {,
-      messageParts.push(,
-        `🚨 *High Latency Alert* 🚨,
-Endpoint: \`${result.name,}\` (\`${result.url}\`),
-Method: \`${result.method,}\`,
-Latency: \`${result.latencyMs,}ms\` (Threshold: \`${ALERT_THRESHOLD_MS,}ms\`),
-Status: \`${result.status,}\`,
-Timestamp: \`${result.timestamp,}\``,
-      );
-    });
-    // Add a note about service restart if slowEndpoints are reported,
-    messageParts.push("Attempting service restart for affected services... (if applicable)");
-  }
-,
-  if (payload.patchedPackages && payload.patchedPackages.length > 0) {,
-    messageParts.push("*Updated Packages: *");
-    payload.patchedPackages.forEach(pkg => {,
-      let pkgStr = `  - ${pkg.name} (${pkg.version}`;
-      if (pkg.previousVersion) {,
-        pkgStr += `, previously ${pkg.previousVersion}`;
-      }
-      pkgStr += ")";
-      messageParts.push(pkgStr);
-    });
-  }
-,
-  if (payload.testStatus) {,
-    messageParts.push(,
-      `*Test Status: *,
-Tests: ${payload.testStatus.passed,}/${payload.testStatus.total} passed,
-Coverage: ${payload.testStatus.coverage,}%`,
-    );
-  }
-,
-  if (payload.commitLink) {,
-    messageParts.push(`Commit: ${payload.commitLink,}`);
-  }
-,
-  if (messageParts.length === 0) {,
-    logger.warn("No information to send in notification. Skipping.");
     return;
   }
-,
-  const formattedMessageString = messageParts.join('\n\n');
-  const webhookPayload = { text: formattedMessageString ,};
-  try {,
-    logger.info(`Sending notification to ${ALERT_WEBHOOK_URL}`);
-    await axios.post(ALERT_WEBHOOK_URL, webhookPayload, { timeout: 10000 ,});
-    logger.info(`Notification sent successfully.`);
-  } catch (error) {,
+
+  // Ensure serviceName is included in the webhook if available
+  const serviceNameText = result.serviceName ? `\nService: \`${result.serviceName}\`` : "";
+
+  const payload = {
+    text: `🚨 High Latency Alert 🚨
+Endpoint: \`${result.name}\` (\`${result.url}\`)
+Method: \`${result.method}\`
+Latency: \`${result.latencyMs}ms\` (Threshold: \`${ALERT_THRESHOLD_MS}ms\`)
+Status: \`${result.status}\`
+Timestamp: \`${result.timestamp}\`${serviceNameText}
+${messageSuffix}`, // Use the dynamic message suffix
+    // Add more structured data if your webhook receiver supports it (e.g., Slack blocks)
+  };
+
+  try {
+    logger.info(`Sending webhook notification for ${result.name} (Service: ${result.serviceName || 'N/A'}) to ${ALERT_WEBHOOK_URL}`);
+    await axios.post(ALERT_WEBHOOK_URL, payload, { timeout: 10000 });
+    logger.info(`Webhook notification sent successfully for ${result.name} (Service: ${result.serviceName || 'N/A'}).`);
+  } catch (error) {
     let errorMessage = 'Unknown error';
-    if (axios.isAxiosError(error)) {,
+    if (axios.isAxiosError(error)) {
       errorMessage = error.message;
-      if (error.response) {,
-        logger.error('Notification failed with response:', {,
-            status: error.response.status, data: error.response.data,});
+      if (error.response) {
+        logger.error('Notification failed with response:', {
+            status: error.response.status, data: error.response.data
+        });
       }
-    } else if (error instanceof Error) {,
+    } else if (error instanceof Error) {
       errorMessage = error.message;
     }
-    logger.error(`Failed to send notification. Error: ${errorMessage,}`);
+    logger.error(`Failed to send notification. Error: ${errorMessage}`);
   }
 }
-,
-export async function triggerAlerts(result: EndpointTestResult): Promise<void> {,
-  if (result.error || !result.latencyMs) {,
-    // Don't alert for endpoints that had errors, only for high latency on success,
+
+export async function triggerAlerts(result: EndpointTestResult): Promise<void> {
+  // If the test resulted in an error or latency couldn't be measured, reset consecutive count and do nothing.
+  if (result.error || typeof result.latencyMs === 'undefined') {
+    logger.debug(`Test for ${result.name} resulted in error or no latency. Resetting consecutive count.`);
+    alertConsecutiveCounts.set(result.name, 0);
     return;
   }
-,
-  if (result.latencyMs > ALERT_THRESHOLD_MS) {,
-    logger.warn(`High latency detected for ${result.name} (${result.url}): ${result.latencyMs}ms. Triggering alerts.`);
-    // 1. Send Webhook Notification (send this first, so team is aware before/during restart),
-    await sendWebhookNotification({ slowEndpoints: [result] ,});
-    // 2. Attempt to Restart Service,
-    const serviceName = getServiceName(result.name);
-    if (serviceName) {,
-      try {,
-        await restartService(serviceName);
-        logger.info(`Service restart process initiated for ${serviceName} due to high latency on ${result.name}.`);
-      } catch (restartError) {,
-        logger.error(`Service restart attempt failed for ${serviceName}.`, restartError);
-        // Optionally send another webhook if restart fails critically,
+
+  if (result.latencyMs > ALERT_THRESHOLD_MS) {
+    const currentCount = (alertConsecutiveCounts.get(result.name) || 0) + 1;
+    alertConsecutiveCounts.set(result.name, currentCount);
+
+    if (currentCount >= CONSECUTIVE_CHECKS_LIMIT) {
+      logger.warn(`High latency ALERT for ${result.name} (${result.url}): ${result.latencyMs}ms. Consecutive count: ${currentCount}/${CONSECUTIVE_CHECKS_LIMIT}. Threshold met.`);
+
+      const serviceName = result.serviceName;
+      let webhookMessageSuffix: string = "Attempting service remediation..."; // Default suffix
+
+      if (serviceName) {
+        // Remediation will be attempted
+        logger.info(`High latency alert for ${result.name}. ${webhookMessageSuffix}`);
+        await sendWebhookNotification(result, webhookMessageSuffix);
+
+        // Construct path to the remediation script
+        const remediationScriptPath = path.join(__dirname, '..', 'remediate.sh');
+        // Ensure arguments are quoted to handle spaces or special characters
+        const command = `bash "${remediationScriptPath}" "${serviceName}" "${result.url}" "${result.latencyMs || 0}"`;
+
+        logger.info(`Attempting to execute remediation script for ${serviceName}: ${command}`);
+        exec(command, (error, stdout, stderr) => {
+          if (error) {
+            logger.error(`Remediation script error for ${serviceName} ('${result.name}'): ${error.message}`, { command, stdout, stderr });
+            // Optionally send another webhook if remediation script fails
+            return;
+          }
+          if (stderr) {
+            logger.warn(`Remediation script for ${serviceName} ('${result.name}') produced stderr: ${stderr}`, { command, stdout });
+          }
+          logger.info(`Remediation script for ${serviceName} ('${result.name}') executed. Output: ${stdout}`);
+        });
+      } else {
+        // No serviceName, so no remediation script to call.
+        webhookMessageSuffix = "No specific serviceName defined for remediation.";
+        logger.warn(`High latency alert for ${result.name}. ${webhookMessageSuffix} No remediation attempted.`);
+        await sendWebhookNotification(result, webhookMessageSuffix);
       }
-    } else {,
-      logger.warn(`No service mapping found for endpoint '${result.name}'. Cannot attempt restart.`);
+
+      // Reset count after alert and remediation attempt (or decision not to attempt)
+      alertConsecutiveCounts.set(result.name, 0);
+    } else {
+      logger.warn(`High latency detected for ${result.name} (${result.url}): ${result.latencyMs}ms. Consecutive count: ${currentCount}/${CONSECUTIVE_CHECKS_LIMIT}. No alert triggered yet.`);
     }
+  } else {
+    // Latency is fine, reset consecutive count for this endpoint.
+    if (alertConsecutiveCounts.get(result.name) !== 0) { // Only log if it was previously not 0
+        logger.info(`Latency for ${result.name} is normal (${result.latencyMs}ms). Resetting consecutive count.`);
+    }
+    alertConsecutiveCounts.set(result.name, 0);
   }
 }
-,

@@ -1,6 +1,35 @@
 [
   {
-    "id": "cursor-prompt-1755575061299-0",
+<<<<<<< Updated upstream
+    "id": "cursor-prompt-1755536747329-0",
+=======
+    "id": "cursor-prompt-1755537252462-0",
+>>>>>>> Stashed changes
+    "gap": {
+      "type": "missing_content",
+      "category": "insights",
+      "current": 1,
+      "target": 50,
+      "priority": 49,
+      "description": "Need 49 more insights pages"
+    },
+    "prompt": "You are a content generation agent for Zion Tech Group (https://ziontechgroup.com).\n\nTASK: Complete missing content based on the following gap analysis:\n\nGAP TYPE: missing_content\nCATEGORY: insights\nPRIORITY: 49\nDESCRIPTION: Need 49 more insights pages\n\nREQUIREMENTS:\n- Create high-quality, SEO-optimized content\n- Follow the existing site's design patterns and tone\n- Include relevant keywords and internal links\n- Ensure content is valuable and actionable\n- Maintain consistency with existing content structure\n\nCONTEXT:\n- Site: https://ziontechgroup.com\n- Technology focus: AI, cloud computing, automation, digital transformation\n- Target audience: Business leaders, developers, IT professionals\n- Content style: Professional, informative, forward-thinking\n\nPlease generate the missing content and provide it in a format that can be directly integrated into the site.",
+    "status": "sent",
+<<<<<<< Updated upstream
+    "createdAt": "2025-08-18T17:05:47.329Z",
+    "priority": 49,
+    "sentAt": "2025-08-18T17:05:47.331Z"
+  },
+  {
+    "id": "cursor-prompt-1755536747329-1",
+=======
+    "createdAt": "2025-08-18T17:14:12.462Z",
+    "priority": 2,
+    "sentAt": "2025-08-18T17:14:12.463Z"
+  },
+  {
+    "id": "cursor-prompt-1755537252462-1",
+>>>>>>> Stashed changes
     "gap": {
       "type": "missing_content",
       "category": "dossiers",
@@ -11,12 +40,21 @@
     },
     "prompt": "You are a content generation agent for Zion Tech Group (https://ziontechgroup.com).\n\nTASK: Complete missing content based on the following gap analysis:\n\nGAP TYPE: missing_content\nCATEGORY: dossiers\nPRIORITY: 24\nDESCRIPTION: Need 24 more dossiers pages\n\nREQUIREMENTS:\n- Create high-quality, SEO-optimized content\n- Follow the existing site's design patterns and tone\n- Include relevant keywords and internal links\n- Ensure content is valuable and actionable\n- Maintain consistency with existing content structure\n\nCONTEXT:\n- Site: https://ziontechgroup.com\n- Technology focus: AI, cloud computing, automation, digital transformation\n- Target audience: Business leaders, developers, IT professionals\n- Content style: Professional, informative, forward-thinking\n\nPlease generate the missing content and provide it in a format that can be directly integrated into the site.",
     "status": "sent",
-    "createdAt": "2025-08-19T03:44:21.299Z",
+<<<<<<< Updated upstream
+    "createdAt": "2025-08-18T17:05:47.329Z",
     "priority": 24,
-    "sentAt": "2025-08-19T03:44:23.113Z"
+    "sentAt": "2025-08-18T17:05:47.331Z"
   },
   {
-    "id": "cursor-prompt-1755575061299-1",
+    "id": "cursor-prompt-1755536747329-2",
+=======
+    "createdAt": "2025-08-18T17:14:12.462Z",
+    "priority": 2,
+    "sentAt": "2025-08-18T17:14:15.466Z"
+  },
+  {
+    "id": "cursor-prompt-1755537252462-2",
+>>>>>>> Stashed changes
     "gap": {
       "type": "content_quality",
       "url": "https://ziontechgroup.com/components/form-demo",
@@ -27,12 +65,21 @@
     },
     "prompt": "You are a content generation agent for Zion Tech Group (https://ziontechgroup.com).\n\nTASK: Complete missing content based on the following gap analysis:\n\nGAP TYPE: content_quality\nCATEGORY: N/A\nPRIORITY: 3\nDESCRIPTION: Content too short (465 chars), needs expansion\n\nREQUIREMENTS:\n- Create high-quality, SEO-optimized content\n- Follow the existing site's design patterns and tone\n- Include relevant keywords and internal links\n- Ensure content is valuable and actionable\n- Maintain consistency with existing content structure\n\nCONTEXT:\n- Site: https://ziontechgroup.com\n- Technology focus: AI, cloud computing, automation, digital transformation\n- Target audience: Business leaders, developers, IT professionals\n- Content style: Professional, informative, forward-thinking\n\nPlease generate the missing content and provide it in a format that can be directly integrated into the site.",
     "status": "sent",
-    "createdAt": "2025-08-19T03:44:21.299Z",
+<<<<<<< Updated upstream
+    "createdAt": "2025-08-18T17:05:47.329Z",
     "priority": 3,
-    "sentAt": "2025-08-19T03:44:23.316Z"
+    "sentAt": "2025-08-18T17:05:47.332Z"
   },
   {
-    "id": "cursor-prompt-1755575061299-2",
+    "id": "cursor-prompt-1755536747329-3",
+=======
+    "createdAt": "2025-08-18T17:14:12.462Z",
+    "priority": 2,
+    "sentAt": "2025-08-18T17:14:18.470Z"
+  },
+  {
+    "id": "cursor-prompt-1755537252462-3",
+>>>>>>> Stashed changes
     "gap": {
       "type": "content_quality",
       "url": "https://ziontechgroup.com/components/modal-demo",
@@ -43,12 +90,13 @@
     },
     "prompt": "You are a content generation agent for Zion Tech Group (https://ziontechgroup.com).\n\nTASK: Complete missing content based on the following gap analysis:\n\nGAP TYPE: content_quality\nCATEGORY: N/A\nPRIORITY: 3\nDESCRIPTION: Content too short (451 chars), needs expansion\n\nREQUIREMENTS:\n- Create high-quality, SEO-optimized content\n- Follow the existing site's design patterns and tone\n- Include relevant keywords and internal links\n- Ensure content is valuable and actionable\n- Maintain consistency with existing content structure\n\nCONTEXT:\n- Site: https://ziontechgroup.com\n- Technology focus: AI, cloud computing, automation, digital transformation\n- Target audience: Business leaders, developers, IT professionals\n- Content style: Professional, informative, forward-thinking\n\nPlease generate the missing content and provide it in a format that can be directly integrated into the site.",
     "status": "sent",
-    "createdAt": "2025-08-19T03:44:21.299Z",
+<<<<<<< Updated upstream
+    "createdAt": "2025-08-18T17:05:47.329Z",
     "priority": 3,
-    "sentAt": "2025-08-19T03:44:23.317Z"
+    "sentAt": "2025-08-18T17:05:47.332Z"
   },
   {
-    "id": "cursor-prompt-1755575061299-3",
+    "id": "cursor-prompt-1755536747329-4",
     "gap": {
       "type": "content_quality",
       "url": "https://ziontechgroup.com/components/pagination-demo",
@@ -59,12 +107,12 @@
     },
     "prompt": "You are a content generation agent for Zion Tech Group (https://ziontechgroup.com).\n\nTASK: Complete missing content based on the following gap analysis:\n\nGAP TYPE: content_quality\nCATEGORY: N/A\nPRIORITY: 3\nDESCRIPTION: Content too short (496 chars), needs expansion\n\nREQUIREMENTS:\n- Create high-quality, SEO-optimized content\n- Follow the existing site's design patterns and tone\n- Include relevant keywords and internal links\n- Ensure content is valuable and actionable\n- Maintain consistency with existing content structure\n\nCONTEXT:\n- Site: https://ziontechgroup.com\n- Technology focus: AI, cloud computing, automation, digital transformation\n- Target audience: Business leaders, developers, IT professionals\n- Content style: Professional, informative, forward-thinking\n\nPlease generate the missing content and provide it in a format that can be directly integrated into the site.",
     "status": "sent",
-    "createdAt": "2025-08-19T03:44:21.299Z",
+    "createdAt": "2025-08-18T17:05:47.329Z",
     "priority": 3,
-    "sentAt": "2025-08-19T03:44:23.318Z"
+    "sentAt": "2025-08-18T17:05:47.332Z"
   },
   {
-    "id": "cursor-prompt-1755575061299-4",
+    "id": "cursor-prompt-1755536747329-5",
     "gap": {
       "type": "content_quality",
       "url": "https://ziontechgroup.com/contact",
@@ -75,8 +123,13 @@
     },
     "prompt": "You are a content generation agent for Zion Tech Group (https://ziontechgroup.com).\n\nTASK: Complete missing content based on the following gap analysis:\n\nGAP TYPE: content_quality\nCATEGORY: N/A\nPRIORITY: 3\nDESCRIPTION: Content too short (477 chars), needs expansion\n\nREQUIREMENTS:\n- Create high-quality, SEO-optimized content\n- Follow the existing site's design patterns and tone\n- Include relevant keywords and internal links\n- Ensure content is valuable and actionable\n- Maintain consistency with existing content structure\n\nCONTEXT:\n- Site: https://ziontechgroup.com\n- Technology focus: AI, cloud computing, automation, digital transformation\n- Target audience: Business leaders, developers, IT professionals\n- Content style: Professional, informative, forward-thinking\n\nPlease generate the missing content and provide it in a format that can be directly integrated into the site.",
     "status": "sent",
-    "createdAt": "2025-08-19T03:44:21.299Z",
+    "createdAt": "2025-08-18T17:05:47.329Z",
     "priority": 3,
-    "sentAt": "2025-08-19T03:44:23.319Z"
+    "sentAt": "2025-08-18T17:05:52.249Z"
+=======
+    "createdAt": "2025-08-18T17:14:12.462Z",
+    "priority": 2,
+    "sentAt": "2025-08-18T17:14:21.473Z"
+>>>>>>> Stashed changes
   }
 ]

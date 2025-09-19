@@ -1,12 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Make sure the script fails if any command fails
 set -e
 
 # Normalize proxy environment variables to avoid npm warnings
 # Some restricted shells do not fully support the '[' alias used in Bash
-# conditionals. Use 'test' directly for maximum portability and keep 'then'
-# on its own line to satisfy shells that reject the single-line form.
+# conditionals. Use 'test' directly for maximum portability. Separate the
+# 'then' onto its own line for shells that do not allow the single-line form.
 if test -n "$npm_config_http_proxy"
 then
   export npm_config_proxy="$npm_config_http_proxy"
@@ -32,7 +32,7 @@ rm -f src/types/offline-shims.d.ts
 
 # Install dependencies
 echo "Installing dependencies..."
-$PM install
+$PM install --legacy-peer-deps
 
 # Generate Prisma client after dependencies are installed
 if command -v npx >/dev/null 2>&1; then

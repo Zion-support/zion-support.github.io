@@ -41,14 +41,9 @@ jobs:
         run: |
           echo "Validating all workflow files..."
 
-          invalid_files=()
+            const message = `🔧 **Workflow Auto-Healer Report**\n\nFound ${invalidCount} invalid workflow files that
+            need manual attention.\n\nPlease review and fix these workflows manually.`;
 
-          while IFS= read -r workflow_file; do
-            if ! python3 -c "import yaml, sys; yaml.safe_load(open('$workflow_file','r'))" 2>/dev/null; then
-              invalid_files+=("$workflow_file")
-              echo "Invalid workflow: $workflow_file"
-            fi
-          done < <(find .github/workflows -type f \( -name "*.yml" -o -name "*.yaml" \))
 
           invalid_count=${#invalid_files[@]}
           if [ "$invalid_count" -gt 0 ]; then

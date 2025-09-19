@@ -1,10 +1,9 @@
-import React from 'react';
-export function toaster() {,
-  return (,
-    <div>,
-      <h1>Component</h1>,
-      <p>Component placeholder</p>,
-    </div>,
+
+import * as React from "react";
+import { Toaster as HotToaster } from "react-hot-toast";
+
+export function Toaster() {
+  return (
+    <HotToaster position="top-right" />
   );
 }
-,

@@ -1,0 +1,16 @@
+import type { StorybookConfig } from '@storybook/react-vite';
+
+const config: StorybookConfig = {
+  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+<<<<<<< HEAD
+  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
+=======
+  addons: ['@storybook/addon-essentials'],
+>>>>>>> origin/pm2-automation-fixes
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
+};
+
+export default config;

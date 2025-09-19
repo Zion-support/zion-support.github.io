@@ -1,16 +1,11 @@
----
 name: labeler
-on:
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
-  pull-requests: write
-concurrency:
-  group: workflow-${{ github.ref }}
-  cancel-in-progress: false
 jobs:
   main:
     name: Main Job

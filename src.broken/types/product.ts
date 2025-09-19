@@ -1,3 +1,7 @@
-// Type definitions for product;
-interface product {;
-  // TODO: Add proper type definitions,};
+export interface Product {
+  id: string | number; // Allow string or number for flexibility
+  name: string;
+  price: number;
+  description?: string;
+  imageUrl?: string;
+}
