@@ -22,15 +22,9 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
         <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
-<<<<<<< HEAD
-        <p className="text-xl opacity-90 mb-6"></p>
-          You're now part of our revolutionary technology community. </p>
-          Get ready for exclusive access to breakthrough innovations.</p>
-=======
         <p className="text-xl opacity-90 mb-6">
           You&apos;re now part of our revolutionary technology community. 
           Get ready for exclusive access to breakthrough innovations.
->>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
         </p>
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
           <h4 className="text-xl font-semibold mb-4">What you&apos;ll receive:</h4>

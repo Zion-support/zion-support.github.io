@@ -36,15 +36,9 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             </h1>
 
             {/* Subtitle */}
-<<<<<<< HEAD
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
-              Explore groundbreaking insights into Quantum Neural Networks, Autonomous AI Systems, </p>
-              Neural Interfaces, Consciousness Computing, and Interdimensional Technology</p>
-=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Explore groundbreaking insights into Quantum Neural Networks, Autonomous AI Systems, 
               Neural Interfaces, Consciousness Computing, and Interdimensional Technology
->>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
             </p>
 
             {/* CTA Buttons */}
