@@ -58,13 +58,16 @@ const Toast: React.FC<ToastProps> = ({
         <span className="text-lg">{icons[type]}</span>
         <div className="flex-1">
           <p className="text-sm font-medium">{message}</p>
+        </div>
         <button
           onClick={handleClose}
           className="flex-shrink-0 ml-2 text-current hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-current focus:ring-opacity-50 rounded"
           aria-label="Close notification"
-        ></button>
+        >
           <span className="text-lg">×</span>
         </button>
+      </div>
+    </div>
   );
 };
 

@@ -244,6 +244,8 @@ function App() {
         </Helmet>
         <div className="loading-screen">
           <LoadingSpinner size="large" text="Loading Zion Tech Group..." />
+        </div>
+      </div>
     );
   }
 
@@ -265,6 +267,7 @@ function App() {
       {!isOnline && (
         <div className="offline-banner" role="alert" aria-live="polite">
           <span>⚠️ You&apos;re currently offline. Some features may be limited.</span>
+        </div>
       )}
       <header className="App-header">
         <div className="header-controls">
@@ -275,58 +278,71 @@ function App() {
           />
           <div className="current-time" role="timer" aria-live="polite">
             {currentTime.toLocaleTimeString()}
+          </div>
+        </div>
         <h1 className="main-title">
           <span className="title-highlight">Zion Tech Group</span>
         </h1>
         <p className="subtitle">Welcome to our innovative technology solutions</p>
         <div className="stats-container">
           <div className="stat-card">
-            <div className="stat-number">{animatedCounts.projects}+
-            <div className="stat-label">Projects Completed
+            <div className="stat-number">{animatedCounts.projects}+</div>
+            <div className="stat-label">Projects Completed</div>
+          </div>
           <div className="stat-card">
-            <div className="stat-number">{animatedCounts.clients}+
-            <div className="stat-label">Happy Clients
+            <div className="stat-number">{animatedCounts.clients}+</div>
+            <div className="stat-label">Happy Clients</div>
+          </div>
           <div className="stat-card">
-            <div className="stat-number">{animatedCounts.years}+
-            <div className="stat-label">Years Experience
-        <div className="features">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="feature-card"
-              style={{ '--card-color': feature.color } as React.CSSProperties}
-            >
-              <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
-                {feature.icon}
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-              <button 
-                className="learn-more-btn"
-                onClick={() => {
-                  trackFeatureInteraction(feature.title, 'learn_more_clicked');
-                }}
-                aria-label={`Learn more about ${feature.title}`}
-              >
-                Learn More
-              </button>
-          ))}
-        <div className="cta-section">
-          <h2>Ready to Transform Your Business?</h2>
-          <p>Get started with our cutting-edge technology solutions today.</p>
-          <div className="cta-buttons">
-            <button 
-              className="btn-primary"
-              onClick={() => trackButtonClick('get_started', 'cta_section')}
-            >
-              Get Started
-            </button>
-            <button 
-              className="btn-secondary"
-              onClick={() => trackButtonClick('contact_us', 'cta_section')}
-            >
-              Contact Us
-            </button>
+            <div className="stat-number">{animatedCounts.years}+</div>
+            <div className="stat-label">Years Experience</div>
+          </div>
+        </div>
       </header>
+      
+      <div className="features">
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            className="feature-card"
+            style={{ '--card-color': feature.color } as React.CSSProperties}
+          >
+            <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
+              {feature.icon}
+            </div>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+            <button 
+              className="learn-more-btn"
+              onClick={() => {
+                trackFeatureInteraction(feature.title, 'learn_more_clicked');
+              }}
+              aria-label={`Learn more about ${feature.title}`}
+            >
+              Learn More
+            </button>
+          </div>
+        ))}
+      </div>
+      
+      <div className="cta-section">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Get started with our cutting-edge technology solutions today.</p>
+        <div className="cta-buttons">
+          <button 
+            className="btn-primary"
+            onClick={() => trackButtonClick('get_started', 'cta_section')}
+          >
+            Get Started
+          </button>
+          <button 
+            className="btn-secondary"
+            onClick={() => trackButtonClick('contact_us', 'cta_section')}
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
       {/* Toast Notifications */}
       {toasts.map((toast) => (
         <Toast key={toast.id} {...toast} />
@@ -334,6 +350,7 @@ function App() {
       
       {/* Performance Metrics (Development Only) */}
       <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
+      </div>
     </ErrorBoundary>
   );
 }
