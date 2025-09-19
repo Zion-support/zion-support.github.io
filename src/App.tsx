@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import './App.css'
 
 function App() {
   const [currentTime, setCurrentTime] = useState(new Date())
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check for saved theme preference or default to system preference
+    const saved = localStorage.getItem('darkMode')
+    if (saved !== null) return JSON.parse(saved)
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
   const [animatedCounts, setAnimatedCounts] = useState({ projects: 0, clients: 0, years: 0 })
+  const [isLoading, setIsLoading] = useState(true)
 
   // Update time every second
   useEffect(() => {
@@ -13,6 +19,12 @@ function App() {
     }, 1000)
     return () => clearInterval(timer)
   }, [])
+
+  // Persist dark mode preference
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode))
+    document.body.classList.toggle('dark-mode', darkMode)
+  }, [darkMode])
 
   // Animate counters on component mount
   useEffect(() => {
@@ -32,17 +44,22 @@ function App() {
       }, duration / steps)
     }
 
-    animateCount('projects', 150)
-    animateCount('clients', 500)
-    animateCount('years', 10)
+    // Simulate loading time for better UX
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false)
+      animateCount('projects', 150)
+      animateCount('clients', 500)
+      animateCount('years', 10)
+    }, 1000)
+
+    return () => clearTimeout(loadingTimer)
   }, [])
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    document.body.classList.toggle('dark-mode')
-  }
+  const toggleDarkMode = useCallback(() => {
+    setDarkMode(prev => !prev)
+  }, [])
 
-  const features = [
+  const features = useMemo(() => [
     {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
@@ -67,16 +84,32 @@ function App() {
       icon: "⚛️",
       color: "#8b5cf6"
     }
-  ]
+  ], [])
+
+  if (isLoading) {
+    return (
+      <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+        <div className="loading-screen">
+          <div className="loading-spinner"></div>
+          <h2>Loading Zion Tech Group...</h2>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <header className="App-header">
         <div className="header-controls">
-          <button className="theme-toggle" onClick={toggleDarkMode}>
+          <button 
+            className="theme-toggle" 
+            onClick={toggleDarkMode}
+            aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
+            title={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
+          >
             {darkMode ? '☀️' : '🌙'}
           </button>
-          <div className="current-time">
+          <div className="current-time" role="timer" aria-live="polite">
             {currentTime.toLocaleTimeString()}
           </div>
         </div>
