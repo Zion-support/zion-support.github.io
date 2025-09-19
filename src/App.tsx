@@ -6,6 +6,8 @@ import ThemeToggle from './components/ThemeToggle';
 import Toast from './components/Toast';
 import PerformanceMetrics from './components/PerformanceMetrics';
 import ErrorBoundary from './components/ErrorBoundary';
+import ServiceCard from './components/ServiceCard';
+import ContactForm from './components/ContactForm';
 import { useToast } from './hooks/useToast';
 import useLocalStorage from './hooks/useLocalStorage';
 import './App.css';
@@ -106,30 +108,62 @@ function App() {
     trackPageView('home');
   }, []);
 
-  const features = useMemo(() => [
+  const services = useMemo(() => [
     {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
       icon: "🤖",
-      color: "#6366f1"
+      color: "#6366f1",
+      features: [
+        "Machine Learning Models",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+        "AI Chatbots"
+      ],
+      pricing: "$5,000/month"
     },
     {
       title: "Blockchain Technology",
       description: "Secure and decentralized solutions for modern businesses with smart contracts and DeFi platforms.",
       icon: "⛓️",
-      color: "#10b981"
+      color: "#10b981",
+      features: [
+        "Smart Contract Development",
+        "DeFi Platform Creation",
+        "NFT Marketplaces",
+        "Cryptocurrency Integration",
+        "Blockchain Consulting"
+      ],
+      pricing: "$8,000/month"
     },
     {
       title: "IT Services",
       description: "Comprehensive IT infrastructure management, cloud solutions, and digital transformation services.",
       icon: "💻",
-      color: "#f59e0b"
+      color: "#f59e0b",
+      features: [
+        "Cloud Migration",
+        "Infrastructure Management",
+        "Cybersecurity Solutions",
+        "24/7 Support",
+        "Digital Transformation"
+      ],
+      pricing: "$3,000/month"
     },
     {
       title: "Quantum Computing",
       description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
       icon: "⚛️",
-      color: "#8b5cf6"
+      color: "#8b5cf6",
+      features: [
+        "Quantum Algorithm Development",
+        "Optimization Solutions",
+        "Research & Development",
+        "Quantum Simulation",
+        "Future-Ready Technology"
+      ],
+      pricing: "$15,000/month"
     }
   ], []);
 
@@ -220,27 +254,19 @@ function App() {
           </div>
         </div>
         <div className="features">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="feature-card"
-              style={{ '--card-color': feature.color } as React.CSSProperties}
-            >
-              <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
-                {feature.icon}
-              </div>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-              <button 
-                className="learn-more-btn"
-                onClick={() => {
-                  trackFeatureInteraction(feature.title, 'learn_more_clicked');
-                }}
-                aria-label={`Learn more about ${feature.title}`}
-              >
-                Learn More
-              </button>
-            </div>
+          {services.map((service) => (
+            <ServiceCard
+              key={service.title}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              color={service.color}
+              features={service.features}
+              pricing={service.pricing}
+              onClick={() => {
+                trackFeatureInteraction(service.title, 'learn_more_clicked');
+              }}
+            />
           ))}
         </div>
         <div className="cta-section">
@@ -262,6 +288,12 @@ function App() {
           </div>
         </div>
       </header>
+      
+      <main className="main-content">
+        <section className="contact-section">
+          <ContactForm />
+        </section>
+      </main>
       
       {/* Toast Notifications */}
       {toasts.map((toast) => (
