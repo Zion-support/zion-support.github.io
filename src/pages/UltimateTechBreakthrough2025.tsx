@@ -546,8 +546,3 @@ const UltimateTechBreakthrough2025: React.FC = () => {
 };
 
 export default UltimateTechBreakthrough2025;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01
->>>>>>> cursor/create-and-deploy-new-content-ec50

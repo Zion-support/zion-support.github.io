@@ -5,7 +5,7 @@ import './index.css'
 import './utils/performanceMonitor'
 
 // Register service worker for PWA functionality
-if ('serviceWorker' in navigator) {
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
