@@ -4,10 +4,6 @@ import { SEO } from '../components/SEO.jsx';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 
-=======
-import { SEO } from '../components/SEO';
-import { ProfileLoadingState } from '../components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '../components/profile/ProfileErrorState';
 
 export default function TalentProfilePage() {
     const { id } = useParams();

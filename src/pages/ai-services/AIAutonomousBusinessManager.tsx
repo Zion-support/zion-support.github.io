@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
 import { SEO } from '../components/SEO.jsx';
 
-=======
-import { SEO } from '../components/SEO';
 
 const features = [
     {
