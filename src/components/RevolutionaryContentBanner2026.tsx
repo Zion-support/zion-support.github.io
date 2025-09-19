@@ -143,15 +143,9 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-<<<<<<< HEAD
-            <p className="text-gray-300 mb-6 text-lg"></p>
-              Don't miss out on the technological revolution. Join thousands of innovators, researchers, and business leaders </p>
-              who are already exploring the future of AI and technology.</p>
-=======
             <p className="text-gray-300 mb-6 text-lg">
               Don't miss out on the technological revolution. Join thousands of innovators, researchers, and business leaders 
               who are already exploring the future of AI and technology.
->>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
             </p>
             <Link
               to="/revolutionary-content-2026"
