@@ -398,114 +398,16 @@ const UltimateTechRevolution2032: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Ready for the Ultimate Revolution?
             </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Join the pioneers of tomorrow's technology. Experience innovations that transcend the boundaries of reality itself.</p>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the pioneers of tomorrow's technology. Experience innovations that transcend the boundaries of reality itself.
             </p>
-            <divbutton
+            <button
               className="bg-gradient-to-r from-purple-600 to-blue-600 px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 mx-auto hover:shadow-lg hover:shadow-purple-500/25 transition-all"
             >
               Transform Your Reality <ArrowRight className="w-6 h-6" />
-            </divbutton>
+            </button>
       </section>
   );
 };
 
 export default UltimateTechRevolution2032;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
