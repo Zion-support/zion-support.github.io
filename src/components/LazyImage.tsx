@@ -3,8 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 interface LazyImageProps {
   src: string;
   alt: string;
-  className?: string;
   placeholder?: string;
+  className?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -12,10 +12,10 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PC9zdmc+',
   className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5YTNhZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -30,7 +30,10 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
     );
 
     if (imgRef.current) {
@@ -57,6 +60,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           src={placeholder}
           alt=""
           className="lazy-image-placeholder"
+          style={{ filter: 'blur(5px)' }}
         />
       ) : (
         <>
@@ -65,31 +69,29 @@ const LazyImage: React.FC<LazyImageProps> = ({
               src={placeholder}
               alt=""
               className="lazy-image-placeholder"
+              style={{ filter: 'blur(5px)' }}
             />
           )}
           <img
             src={src}
             alt={alt}
-            className={`lazy-image ${isLoaded ? 'loaded' : 'loading'}`}
+            className={`lazy-image ${isLoaded ? 'loaded' : ''}`}
             onLoad={handleLoad}
             onError={handleError}
-            style={{ opacity: isLoaded ? 1 : 0 }}
+            style={{
+              opacity: isLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease',
+            }}
           />
           {hasError && (
             <div className="lazy-image-error">
               <span>Failed to load image</span>
+            </div>
           )}
         </>
       )}
+    </div>
   );
 };
 
 export default LazyImage;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
