@@ -228,7 +228,7 @@ function App() {
             onClick={() => window.location.reload()}
             aria-label="Reload page"
           >
-            Try Again
+            Try Again</button>
           </button>
         </div>
       </div>
@@ -306,8 +306,8 @@ function App() {
                   trackFeatureInteraction(feature.title, 'learn_more_clicked');
                 }}
                 aria-label={`Learn more about ${feature.title}`}
-              >
-                Learn More
+              ></button>
+                Learn More</button>
               </button>
           ))}
         <div className="cta-section">
@@ -317,14 +317,14 @@ function App() {
             <button 
               className="btn-primary"
               onClick={() => trackButtonClick('get_started', 'cta_section')}
-            >
-              Get Started
+            ></button>
+              Get Started</button>
             </button>
             <button 
               className="btn-secondary"
               onClick={() => trackButtonClick('contact_us', 'cta_section')}
-            >
-              Contact Us
+            ></button>
+              Contact Us</button>
             </button>
       </header>
       {/* Toast Notifications */}
@@ -339,3 +339,42 @@ function App() {
 }
 
 export default App;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

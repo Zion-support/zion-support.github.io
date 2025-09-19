@@ -33,7 +33,7 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2025
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Discover the most revolutionary technologies reshaping our world with infinite possibilities</p>
           </p>
         <div className="grid md:grid-cols-4 gap-6 mb-8">
@@ -105,8 +105,8 @@ const RevolutionaryTechBanner2025: React.FC = () => {
             Revolutionary Tech Breakthrough 2025
           </h2>
           {/* Subheading */}
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology innovations that are reshaping our world. 
+          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
+            Experience the most advanced technology innovations that are reshaping our world. </p>
             From AI consciousness to quantum reality engines and neural interfaces.</p>
           </p>
           {/* Feature Highlights */}
@@ -150,3 +150,78 @@ const RevolutionaryTechBanner2025: React.FC = () => {
 };
 
 export default RevolutionaryTechBanner2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -30,16 +30,16 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Experience the most advanced technologies of 2032 through our interactive showcase</p>
           </p>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Interactive showcase of cutting-edge technologies that will define the future of human civilization</p>
           </p>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
               Schedule Demo</button>
             </button>
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -112,20 +112,20 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the most revolutionary technologies that will shape 
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
+            Join us in exploring the most revolutionary technologies that will shape </p>
             the future of human civilization and consciousness.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl"></button>
               Explore Technologies</button>
             </button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-xl">
+            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-xl"></button>
               Contact Our Team</button>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Interactive showcase of cutting-edge technologies that will define the future of human civilization</p>
           </p>
         {/* Interactive Technology Demos */}
@@ -200,7 +200,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🎮 Interactive Technology Demos</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto"></p>
               Experience our revolutionary technologies through interactive demonstrations and real-time simulations</p>
             </p>
           <div className="relative">
@@ -215,7 +215,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                       <div className="text-center">
                         <div className="text-6xl mb-6">{demo.icon}
                         <h3 className="text-3xl font-bold mb-4">{demo.title}</h3>
-                        <p className="text-lg mb-6 max-w-3xl mx-auto opacity-90">
+                        <p className="text-lg mb-6 max-w-3xl mx-auto opacity-90"></p>
                           {demo.description}</p>
                         </p>
                         <div className="grid md:grid-cols-3 gap-4 mb-6">
@@ -223,7 +223,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                               <span className="text-sm font-semibold">{feature}</span>
                           ))}
-                        <button className="bg-white text-gray-800 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                        <button className="bg-white text-gray-800 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
                           Try Demo →</button>
                         </button>
                 ))}
@@ -236,8 +236,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === activeDemo ? 'bg-white' : 'bg-white/30'
                   }`}
-                />
-              ))}
+                /></button>
+              ))}</button>
         {/* Interactive Technology Selector */}</button>
         <div className="mb-16">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -248,8 +248,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTech === index
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                }`}
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'</button>
+                }`}</button>
               ></button>
                 <span className="mr-2">{tech.icon}</span>
                 {tech.name}
@@ -279,7 +279,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                     <div className="text-center">
                       <div className="text-6xl mb-4">🎮
                       <p className="text-lg mb-6">Experience this technology in action</p>
-                      <button className={`bg-gradient-to-r ${technologies[activeTech].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                      <button className={`bg-gradient-to-r ${technologies[activeTech].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                         Launch Interactive Demo</button>
                       </button>
         {/* Technology Grid */}
@@ -295,7 +295,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
               <div className="text-6xl mb-4 text-center">{tech.icon}
               <h3 className="text-2xl font-bold mb-4 text-center">{tech.name}</h3>
               <p className="text-white/80 mb-6 text-center">{tech.description}</p>
-              <button className={`block w-full bg-gradient-to-r ${tech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}>
+              <button className={`block w-full bg-gradient-to-r ${tech.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}></button>
                 Explore Technology</button>
               </button>
           ))}
@@ -324,28 +324,159 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolution?</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8"></p>
             Join the most advanced technological revolution in human history. Transform your reality with conscious AI, quantum computing, and interdimensional technology.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Your Journey</button>
             </button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
               Schedule Demo</button>
         <div className="text-center bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join us in exploring the most revolutionary technologies of 2032. Be among the first to experience the future of computing.</p>
           </p>
           <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Interactive Demo</button>
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
+            <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg"></button>
               Schedule Consultation</button>
             </button>
   );
 };
 
 export default RevolutionaryTechShowcase2032;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

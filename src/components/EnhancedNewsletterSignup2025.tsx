@@ -22,8 +22,8 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
         <div className="text-6xl mb-4">🎉
         <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
-        <p className="text-xl opacity-90 mb-6">
-          You're now part of our revolutionary technology community. 
+        <p className="text-xl opacity-90 mb-6"></p>
+          You're now part of our revolutionary technology community. </p>
           Get ready for exclusive access to breakthrough innovations.</p>
         </p>
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
@@ -47,8 +47,8 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <span className="text-4xl animate-bounce">🚀</span>
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
             <span className="text-4xl animate-bounce">🚀</span>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Get exclusive access to our revolutionary technology breakthroughs, 
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
+            Get exclusive access to our revolutionary technology breakthroughs, </p>
             AI consciousness updates, and quantum computing innovations.</p>
           </p>
         <div className="max-w-4xl mx-auto">
@@ -65,7 +65,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               type="submit"
               disabled={isLoading}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+            ></button>
               {isLoading ? 'Joining...' : 'Join Revolution'}</button>
             </button>
           </form>
@@ -89,10 +89,10 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <button
                 type="submit"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg hover:scale-105"
-              >
+              ></button>
                 Subscribe Now →</button>
               </button>
-            <p className="text-sm opacity-75 text-center mt-4">
+            <p className="text-sm opacity-75 text-center mt-4"></p>
               Join 50,000+ tech enthusiasts and industry leaders</p>
             </p>
           </form>
@@ -121,3 +121,25 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
 };
 
 export default EnhancedNewsletterSignup2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

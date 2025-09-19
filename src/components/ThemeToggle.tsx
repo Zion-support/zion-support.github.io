@@ -17,7 +17,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ darkMode, onToggle, className
       }`}
       aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
       title={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
-    >
+    ></button>
       <span
         className={`inline-block w-4 h-4 bg-white rounded-full shadow-lg transform transition-transform duration-200 ${
           darkMode ? 'translate-x-3' : '-translate-x-3'

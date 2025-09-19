@@ -37,8 +37,8 @@ const Header: React.FC = () => {
           </nav>
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}</button>
+            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"</button>
           ></button>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -63,3 +63,6 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+  </div>
+  </div>
+  </div>

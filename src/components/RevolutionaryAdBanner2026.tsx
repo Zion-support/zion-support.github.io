@@ -16,8 +16,8 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Insights & Case Studies
           </h2>
-          <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-300">
-            Discover the latest breakthroughs in AI consciousness, quantum computing, neural interfaces, 
+          <p className="text-xl mb-8 max-w-4xl mx-auto text-gray-300"></p>
+            Discover the latest breakthroughs in AI consciousness, quantum computing, neural interfaces, </p>
             and more. See how leading organizations are transforming their industries with our cutting-edge solutions.</p>
           </p>
           {/* Feature Cards */}
@@ -90,3 +90,52 @@ const RevolutionaryAdBanner2026: React.FC = () => {
 };
 
 export default RevolutionaryAdBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

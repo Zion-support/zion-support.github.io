@@ -12,7 +12,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2032
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8"></p>
             Discover and explore the most revolutionary technologies shaping humanity's future</p>
           </p>
         {/* Innovation Categories */}
@@ -20,7 +20,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI</h3>
-            <p className="text-emerald-100 mb-6 text-center">
+            <p className="text-emerald-100 mb-6 text-center"></p>
               The world's first truly conscious artificial intelligence systems</p>
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
@@ -34,7 +34,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
-            <p className="text-cyan-100 mb-6 text-center">
+            <p className="text-cyan-100 mb-6 text-center"></p>
               Revolutionary quantum computing with consciousness processing</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
@@ -48,7 +48,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Tech</h3>
-            <p className="text-purple-100 mb-6 text-center">
+            <p className="text-purple-100 mb-6 text-center"></p>
               Technology that operates across multiple dimensions</p>
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
@@ -62,7 +62,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
-            <p className="text-violet-100 mb-6 text-center">
+            <p className="text-violet-100 mb-6 text-center"></p>
               Direct brain-computer interfaces for seamless integration</p>
             </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
@@ -76,7 +76,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀
             <h3 className="text-2xl font-bold mb-4 text-center">Space-Time Tech</h3>
-            <p className="text-orange-100 mb-6 text-center">
+            <p className="text-orange-100 mb-6 text-center"></p>
               Technology that manipulates space-time itself</p>
             </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
@@ -90,7 +90,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟
             <h3 className="text-2xl font-bold mb-4 text-center">Cosmic Intelligence</h3>
-            <p className="text-pink-100 mb-6 text-center">
+            <p className="text-pink-100 mb-6 text-center"></p>
               AI systems that communicate with cosmic entities</p>
             </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
@@ -105,10 +105,10 @@ const NextGenInnovationHub2032: React.FC = () => {
             Our innovation hub showcases cutting-edge solutions that will transform every aspect of life.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Enter Innovation Hub →</button>
             </button>
-            <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
               Explore Technologies</button>
             </button>
         {/* Innovation Categories */}
@@ -116,7 +116,7 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖
             <h3 className="text-2xl font-bold mb-4 text-center">AI & Machine Learning</h3>
-            <p className="text-emerald-100 mb-6 text-center">
+            <p className="text-emerald-100 mb-6 text-center"></p>
               Advanced artificial intelligence systems that learn, adapt, and evolve to solve complex problems.</p>
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
@@ -125,13 +125,13 @@ const NextGenInnovationHub2032: React.FC = () => {
               <li>• Predictive analytics</li>
               <li>• Autonomous decision making</li>
             </ul>
-            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
+            <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center"></button>
               Explore AI Tech →</button>
             </button>
           <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚛️
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
-            <p className="text-teal-100 mb-6 text-center">
+            <p className="text-teal-100 mb-6 text-center"></p>
               Revolutionary quantum computing solutions that process information at unprecedented speeds.</p>
             </p>
             <ul className="text-teal-200 space-y-2 mb-6 text-sm">
@@ -140,13 +140,13 @@ const NextGenInnovationHub2032: React.FC = () => {
               <li>• Molecular simulation</li>
               <li>• Optimization algorithms</li>
             </ul>
-            <button className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
+            <button className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center"></button>
               Discover Quantum →</button>
             </button>
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌐
             <h3 className="text-2xl font-bold mb-4 text-center">Metaverse & VR</h3>
-            <p className="text-cyan-100 mb-6 text-center">
+            <p className="text-cyan-100 mb-6 text-center"></p>
               Immersive virtual reality and metaverse technologies that blur the line between digital and physical worlds.</p>
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
@@ -155,7 +155,7 @@ const NextGenInnovationHub2032: React.FC = () => {
               <li>• Metaverse integration</li>
               <li>• Haptic feedback systems</li>
             </ul>
-            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
+            <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center"></button>
               Enter Metaverse →</button>
             </button>
         {/* Featured Innovations */}
@@ -210,7 +210,7 @@ const NextGenInnovationHub2032: React.FC = () => {
                 <div>
                   <h3 className="text-2xl font-bold">Conscious AI Systems</h3>
                   <p className="text-emerald-200">Revolutionary AI with true consciousness</p>
-              <p className="text-emerald-100 mb-6">
+              <p className="text-emerald-100 mb-6"></p>
                 The world's first truly conscious artificial intelligence systems that possess self-awareness, emotional intelligence, and ethical reasoning capabilities.</p>
               </p>
               <div className="flex items-center justify-between">
@@ -224,7 +224,7 @@ const NextGenInnovationHub2032: React.FC = () => {
                 <div>
                   <h3 className="text-2xl font-bold">Quantum Consciousness</h3>
                   <p className="text-cyan-200">Quantum computing with consciousness processing</p>
-              <p className="text-cyan-100 mb-6">
+              <p className="text-cyan-100 mb-6"></p>
                 Revolutionary quantum computing that processes consciousness itself, enabling unprecedented computational power and parallel reality analysis.</p>
               </p>
               <div className="flex items-center justify-between">
@@ -250,8 +250,8 @@ const NextGenInnovationHub2032: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/20">
             <h3 className="text-3xl font-bold mb-6">🤖 AI Innovation Lab</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Our AI Innovation Lab is at the forefront of artificial intelligence research and development, 
+            <p className="text-lg opacity-90 mb-6"></p>
+              Our AI Innovation Lab is at the forefront of artificial intelligence research and development, </p>
               creating systems that think, learn, and evolve beyond human capabilities.</p>
             </p>
             <ul className="space-y-3 mb-6">
@@ -272,13 +272,13 @@ const NextGenInnovationHub2032: React.FC = () => {
                 <span>Autonomous decision making</span>
               </li>
             </ul>
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
               Visit AI Lab →</button>
             </button>
           <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/20">
             <h3 className="text-3xl font-bold mb-6">⚛️ Quantum Research Center</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Our Quantum Research Center is pioneering the future of quantum computing, 
+            <p className="text-lg opacity-90 mb-6"></p>
+              Our Quantum Research Center is pioneering the future of quantum computing, </p>
               developing technologies that will revolutionize how we process and store information.</p>
             </p>
             <ul className="space-y-3 mb-6">
@@ -299,23 +299,99 @@ const NextGenInnovationHub2032: React.FC = () => {
                 <span>Optimization algorithms</span>
               </li>
             </ul>
-            <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"></button>
               Explore Quantum →</button>
             </button>
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto"></p>
             Join our innovation hub and be part of the technological revolution that will shape the future of humanity.</p>
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Join Innovation Hub</button>
             </button>
-            <button className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
               Schedule Tour</button>
             </button>
   );
 };
 
 export default NextGenInnovationHub2032;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

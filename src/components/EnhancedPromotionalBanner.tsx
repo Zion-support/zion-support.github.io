@@ -55,7 +55,7 @@ const EnhancedPromotionalBanner: React.FC = () => {
             >
               Explore Now →
             </a>
-            <button className="text-white/80 hover:text-white transition-colors">
+            <button className="text-white/80 hover:text-white transition-colors"></button>
               ✕</button>
             </button>
           </motion.div>
@@ -64,3 +64,15 @@ const EnhancedPromotionalBanner: React.FC = () => {
 };
 
 export default EnhancedPromotionalBanner;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

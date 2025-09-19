@@ -127,8 +127,8 @@ const UltimatePromotionalBanner2026: React.FC = () => {
               <h2 className="text-lg font-bold text-white">Latest Breakthroughs 2026</h2>
               <p className="text-white/80 text-sm">Revolutionary AI innovations now available</p>
           <button
-            onClick={() => setIsVisible(false)}
-            className="text-white/60 hover:text-white transition-colors"
+            onClick={() => setIsVisible(false)}</button>
+            className="text-white/60 hover:text-white transition-colors"</button>
           ></button>
             <X className="w-5 h-5" />
           </button>
@@ -193,8 +193,8 @@ const UltimatePromotionalBanner2026: React.FC = () => {
                 index === currentPromo 
                   ? 'bg-white scale-125' 
                   : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
+              }`}</button>
+            /></button>
           ))}</button>
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -205,3 +205,47 @@ const UltimatePromotionalBanner2026: React.FC = () => {
 };
 
 export default UltimatePromotionalBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

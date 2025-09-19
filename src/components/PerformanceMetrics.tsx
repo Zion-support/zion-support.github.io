@@ -77,8 +77,8 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
           <button
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-white transition-colors"
-            aria-label="Close performance metrics"
-          >
+            aria-label="Close performance metrics"</button>
+          ></button>
             ×</button>
           </button>
         <div className="space-y-1 text-xs">
@@ -100,3 +100,16 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
 };
 
 export default PerformanceMetrics;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

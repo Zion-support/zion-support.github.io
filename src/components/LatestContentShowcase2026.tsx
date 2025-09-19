@@ -16,8 +16,8 @@ const LatestContentShowcase2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Latest Content & Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our cutting-edge technology insights, revolutionary services, 
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+            Stay ahead with our cutting-edge technology insights, revolutionary services, </p>
             and industry-leading solutions that are shaping the future.</p>
           </p>
         {/* Latest Blog Posts */}
@@ -53,7 +53,7 @@ const LatestContentShowcase2026: React.FC = () => {
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
                     {post.title}
                   </h4>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 mb-4 line-clamp-3"></p>
                     {post.excerpt}</p>
                   </p>
                   <div className="flex items-center justify-between">
@@ -115,7 +115,7 @@ const LatestContentShowcase2026: React.FC = () => {
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
                     {service.title}
                   </h4>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 mb-4 line-clamp-3"></p>
                     {service.description}</p>
                   </p>
                   <div className="flex items-center justify-between mb-4">
@@ -146,8 +146,8 @@ const LatestContentShowcase2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join thousands of companies already using our revolutionary AI solutions 
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto"></p>
+              Join thousands of companies already using our revolutionary AI solutions </p>
               to drive innovation and achieve unprecedented results.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,3 +167,51 @@ const LatestContentShowcase2026: React.FC = () => {
 };
 
 export default LatestContentShowcase2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

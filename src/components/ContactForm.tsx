@@ -184,7 +184,7 @@ const ContactForm: React.FC = () => {
           className="submit-btn"
           disabled={!isFormValid || isSubmitting}
           aria-describedby="submit-status"
-        >
+        ></button>
           {isSubmitting ? 'Sending...' : 'Send Message'}</button>
         </button>
       </form>
@@ -192,3 +192,25 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

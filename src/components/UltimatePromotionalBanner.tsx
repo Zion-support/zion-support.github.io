@@ -92,7 +92,7 @@ const UltimatePromotionalBanner: React.FC = () => {
                   <h3 className={`text-2xl font-bold ${currentContent.textColor} mb-1`}>
                     {currentContent.title}
                   </h3>
-                  <p className={`text-lg ${currentContent.textColor} opacity-90`}>
+                  <p className={`text-lg ${currentContent.textColor} opacity-90`}></p>
                     {currentContent.subtitle}</p>
                   </p>
             </motion.div>
@@ -104,7 +104,7 @@ const UltimatePromotionalBanner: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="hidden md:block flex-1 text-center"
             >
-              <p className={`text-lg ${currentContent.textColor} opacity-90`}>
+              <p className={`text-lg ${currentContent.textColor} opacity-90`}></p>
                 {currentContent.description}</p>
               </p>
             </motion.div>
@@ -132,8 +132,8 @@ const UltimatePromotionalBanner: React.FC = () => {
                 Explore Now →
               </motion.a>
               <button
-                onClick={() => setIsVisible(false)}
-                className={`${currentContent.textColor} opacity-70 hover:opacity-100 transition-opacity`}
+                onClick={() => setIsVisible(false)}</button>
+                className={`${currentContent.textColor} opacity-70 hover:opacity-100 transition-opacity`}</button>
               ></button>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></p>
@@ -150,8 +150,8 @@ const UltimatePromotionalBanner: React.FC = () => {
                   index === currentSlide 
                     ? 'bg-white scale-125' 
                     : 'bg-white/50 hover:bg-white/75'
-                }`}
-              />
+                }`}</button>
+              /></button>
             ))}</button>
       {/* Animated Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -189,3 +189,15 @@ const UltimatePromotionalBanner: React.FC = () => {
     </divsection>
   );
 }
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

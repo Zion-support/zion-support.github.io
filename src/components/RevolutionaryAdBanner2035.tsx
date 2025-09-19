@@ -132,7 +132,7 @@ const RevolutionaryAdBanner2035: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <h3 className="text-3xl font-bold mb-4">🌟 Don't Miss the Future!</h3>
-            <p className="text-xl opacity-90 mb-6">
+            <p className="text-xl opacity-90 mb-6"></p>
               Join millions of users experiencing the most revolutionary technologies in human history</p>
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -154,3 +154,17 @@ const RevolutionaryAdBanner2035: React.FC = () => {
 };
 
 export default RevolutionaryAdBanner2035;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

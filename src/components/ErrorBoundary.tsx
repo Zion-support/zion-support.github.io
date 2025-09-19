@@ -39,8 +39,8 @@ class ErrorBoundary extends Component<Props, State> {
             <p>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
             <button 
               onClick={() => window.location.reload()}
-              className="retry-button"
-            >
+              className="retry-button"</button>
+            ></button>
               Refresh Page</button>
             </button>
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -57,3 +57,4 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+  </div>

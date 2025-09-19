@@ -41,7 +41,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="text-gray-300 mb-4">{item.description}</p>
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300"></button>
                   Learn More</button>
                 </button>
           ))}
@@ -49,3 +49,15 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 };
 
 export default RevolutionaryContentShowcase2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

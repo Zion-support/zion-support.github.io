@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           <h1 className="text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
             Zion Tech Group 2026
           </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-2xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed"></p>
             Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business and reshape reality itself.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-16">
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
               Latest Innovations 2026
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Discover our groundbreaking technologies that are reshaping the future of computing and artificial intelligence.</p>
             </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,3 +113,51 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

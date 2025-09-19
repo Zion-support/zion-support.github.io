@@ -169,7 +169,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Revolutionary Tech Showcase 2025
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed"></p>
               Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.</p>
             </p>
           {/* Technology Grid */}
@@ -184,7 +184,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               >
                 <div className="text-6xl mb-4 text-center">{tech.icon}
                 <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
                   {tech.description}</p>
                 </p>
                 <ul className="text-gray-400 space-y-2 mb-6 text-xs">
@@ -195,7 +195,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                   Explore Technology →</button>
                 </button>
               </motion.div>
@@ -262,14 +262,14 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           >
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
               <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-xl mb-8 opacity-90"></p>
                 Join thousands of companies already using our revolutionary technologies</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"></button>
                   Start Your Journey →</button>
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"></button>
                   Schedule Demo</button>
                 </button>
           </motion.div>
@@ -280,3 +280,27 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 };
 
 export default RevolutionaryTechShowcase2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

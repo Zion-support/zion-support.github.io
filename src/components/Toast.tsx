@@ -69,3 +69,9 @@ const Toast: React.FC<ToastProps> = ({
 };
 
 export default Toast;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

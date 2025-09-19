@@ -83,7 +83,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Experience the Future Today
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
             Discover groundbreaking technologies that are reshaping our world and defining the next decade</p>
           </p>
         {/* Main Showcase */}
@@ -108,8 +108,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           {/* Auto-play Toggle */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="absolute top-4 right-4 z-10 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 text-sm"
-          >
+            className="absolute top-4 right-4 z-10 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 text-sm"</button>
+          ></button>
             {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}</button>
           </button>
           {/* Content Slides */}
@@ -159,8 +159,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                   index === activeIndex 
                     ? 'bg-purple-500 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
+                }`}</button>
+              /></button>
             ))}</button>
         {/* Quick Access Grid */}
         <div className="mt-16">
@@ -183,3 +183,27 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 };
 
 export default RevolutionaryContentShowcase2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

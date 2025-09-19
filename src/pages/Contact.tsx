@@ -83,8 +83,8 @@ const Contact: React.FC = () => {
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Contact Us
           </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Ready to transform your business with revolutionary technology? 
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto"></p>
+            Ready to transform your business with revolutionary technology? </p>
             Get in touch with our experts and discover what's possible.</p>
           </p>
       </section>
@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Tell us about your project and we'll get back to you within 24 hours</p>
               </p>
             {isSubmitted ? (
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
               >
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-300"></p>
                   Thank you for reaching out. We'll get back to you soon.</p>
                 </p>
             ) : (
@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
-                >
+                ></button>
                   {isSubmitting ? (</button>
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white">
@@ -218,7 +218,7 @@ const Contact: React.FC = () => {
             className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
           >
             <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6"></p>
               Need immediate assistance? Our 24/7 emergency support team is here to help.</p>
             </p>
       </section>
@@ -235,8 +235,8 @@ const Contact: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven business strategies to deliver 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              We combine cutting-edge technology with proven business strategies to deliver </p>
               exceptional results for our clients.</p>
             </p>
           </motion.div>
@@ -268,3 +268,15 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

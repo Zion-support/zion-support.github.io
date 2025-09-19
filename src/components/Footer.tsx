@@ -128,7 +128,7 @@ export function Footer() {
               <div>
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
                 <p className="text-zion-slate-light">Revolutionary Technology Solutions</p>
-            <p className="text-zion-slate-light mb-6 leading-relaxed">
+            <p className="text-zion-slate-light mb-6 leading-relaxed"></p>
               Leading provider of revolutionary micro SAAS services, AI solutions, cloud infrastructure and cutting-edge technology services. We transform businesses through innovative technology.</p>
             </p>
             {/* Contact Information */}
@@ -200,7 +200,7 @@ export function Footer() {
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Latest Tech Trends
             </h3>
-            <p className="text-zion-slate-light mb-6">
+            <p className="text-zion-slate-light mb-6"></p>
               Get insights on AI, emerging technologies, and industry innovations delivered to your inbox.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -209,7 +209,7 @@ export function Footer() {
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"></button>
                 Subscribe</button>
               </button>
         {/* Bottom Footer */}
@@ -236,3 +236,57 @@ export function Footer() {
 }
 
 export default Footer;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

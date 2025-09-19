@@ -29,8 +29,8 @@ const RevolutionaryContentBanner2026: React.FC = () => {
               is Here
             </h1>
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Explore groundbreaking insights into Quantum Neural Networks, Autonomous AI Systems, 
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
+              Explore groundbreaking insights into Quantum Neural Networks, Autonomous AI Systems, </p>
               Neural Interfaces, Consciousness Computing, and Interdimensional Technology</p>
             </p>
             {/* CTA Buttons */}
@@ -111,8 +111,8 @@ const RevolutionaryContentBanner2026: React.FC = () => {
                 <div className="text-gray-300">Innovation Focused
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <p className="text-gray-300 mb-6 text-lg">
-              Don't miss out on the technological revolution. Join thousands of innovators, researchers, and business leaders 
+            <p className="text-gray-300 mb-6 text-lg"></p>
+              Don't miss out on the technological revolution. Join thousands of innovators, researchers, and business leaders </p>
               who are already exploring the future of AI and technology.</p>
             </p>
             <Link
@@ -133,3 +133,71 @@ const RevolutionaryContentBanner2026: React.FC = () => {
 };
 
 export default RevolutionaryContentBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
