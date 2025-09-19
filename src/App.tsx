@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { trackPageView, trackButtonClick, trackFeatureInteraction } from './utils/analytics';
+import LoadingSpinner from './components/LoadingSpinner';
+import ThemeToggle from './components/ThemeToggle';
+import Toast from './components/Toast';
+import PerformanceMetrics from './components/PerformanceMetrics';
+import { useToast } from './hooks/useToast';
 import './App.css';
 
 function App() {
@@ -19,6 +24,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
+  const { toasts, showSuccess, showError, showInfo } = useToast();
 
   // Update time every second
   useEffect(() => {
@@ -36,8 +42,14 @@ function App() {
 
   // Handle online/offline status
   useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
+    const handleOnline = () => {
+      setIsOnline(true);
+      showSuccess('Connection restored!');
+    };
+    const handleOffline = () => {
+      setIsOnline(false);
+      showWarning('You are now offline. Some features may be limited.');
+    };
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -46,7 +58,7 @@ function App() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, []);
+  }, [showSuccess, showWarning]);
 
   // Animate counters on component mount
   useEffect(() => {
@@ -86,9 +98,10 @@ function App() {
     setDarkMode((prev: boolean) => {
       const newMode = !prev;
       trackButtonClick('theme_toggle', newMode ? 'dark' : 'light');
+      showInfo(`Switched to ${newMode ? 'dark' : 'light'} mode`);
       return newMode;
     });
-  }, []);
+  }, [showInfo]);
 
   // Track page view on mount
   useEffect(() => {
@@ -153,8 +166,7 @@ function App() {
           <meta name="description" content="Loading innovative technology solutions" />
         </Helmet>
         <div className="loading-screen">
-          <div className="loading-spinner"></div>
-          <h2>Loading Zion Tech Group...</h2>
+          <LoadingSpinner size="large" text="Loading Zion Tech Group..." />
         </div>
       </div>
     );
@@ -181,14 +193,11 @@ function App() {
       )}
       <header className="App-header">
         <div className="header-controls">
-          <button
-            className="theme-toggle"
-            onClick={toggleDarkMode}
-            aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
-            title={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
-          >
-            {darkMode ? '☀️' : '🌙'}
-          </button>
+          <ThemeToggle 
+            darkMode={darkMode} 
+            onToggle={toggleDarkMode}
+            className="mr-4"
+          />
           <div className="current-time" role="timer" aria-live="polite">
             {currentTime.toLocaleTimeString()}
           </div>
@@ -254,6 +263,14 @@ function App() {
           </div>
         </div>
       </header>
+      
+      {/* Toast Notifications */}
+      {toasts.map((toast) => (
+        <Toast key={toast.id} {...toast} />
+      ))}
+      
+      {/* Performance Metrics (Development Only) */}
+      <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
     </div>
   );
 }
