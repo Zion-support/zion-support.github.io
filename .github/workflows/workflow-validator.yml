@@ -14,24 +14,12 @@ on:
     paths:
     - .github/workflows/**
   workflow_dispatch: {}
-<<<<<<< HEAD
-
-permissions:
-  contents: read
-  actions: read
-
-concurrency:
-  group: workflow-validator-\${{ github.ref }}
-  cancel-in-progress: false
-
-=======
 permissions:
   contents: read
   actions: read
 concurrency:
   group: workflow-${{ github.ref }}
   cancel-in-progress: false
->>>>>>> origin/auto/autonomy-17186719616
 jobs:
   validate:
     name: Validate Workflows
@@ -43,11 +31,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Python
-<<<<<<< HEAD
-        uses: actions/setup-python@v4
-=======
         uses: actions/setup-python@v5
->>>>>>> origin/auto/autonomy-17186719616
         with:
           python-version: '3.11'
       - name: Install dependencies

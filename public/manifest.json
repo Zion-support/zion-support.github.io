@@ -1,12 +1,15 @@
 {
-  "name": "Zion Tech Group",
-  "short_name": "ZionTech",
-  "description": "Your trusted partner in AI and technology solutions",
+  "name": "Zion Tech Group - Advanced Technology Solutions",
+  "short_name": "Zion Tech",
+  "description": "Leading provider of AI, blockchain, quantum computing, and IT solutions for modern businesses",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#6366f1",
   "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["technology", "business", "productivity"],
   "icons": [
     {
       "src": "/icon-192.png",
@@ -21,22 +24,34 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["business", "technology", "ai"],
-  "lang": "en-US",
-  "dir": "ltr",
-  "scope": "/",
   "screenshots": [
     {
-      "src": "/screenshot-wide.png",
+      "src": "/screenshot-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "/screenshot-narrow.png",
-      "sizes": "640x1136",
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore our AI services",
+      "url": "/services/ai",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

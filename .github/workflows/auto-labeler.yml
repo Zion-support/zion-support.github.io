@@ -9,11 +9,7 @@ permissions:
   pull-requests: write
 
 jobs:
-<<<<<<< HEAD
-  triage:
-=======
   label:
->>>>>>> origin/auto/autonomy-17186719616
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v5

@@ -4,7 +4,8 @@ interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
-  color: string;
+  color?: string;
+  gradient?: string;
   features: string[];
   pricing?: string;
   onClick?: () => void;
@@ -15,14 +16,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   icon,
   color,
+  gradient,
   features,
   pricing,
   onClick
 }) => {
   return (
     <div 
-      className="service-card"
-      style={{ '--card-color': color } as React.CSSProperties}
+      className={`service-card ${gradient ? `bg-gradient-to-r ${gradient}` : ''}`}
+      style={color ? { '--card-color': color } as React.CSSProperties : {}}
       onClick={onClick}
       role="button"
       tabIndex={0}

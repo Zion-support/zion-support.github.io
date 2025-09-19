@@ -10,14 +10,6 @@ interface State {
   error?: Error;
 }
 
-// Extend Window interface to include gtag
-declare global {
-  interface Window {
-    // eslint-disable-next-line no-unused-vars
-    gtag?: (command: string, action: string, parameters?: Record<string, unknown>) => void;
-  }
-}
-
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
@@ -27,12 +19,8 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error for debugging (in production, this would go to a logging service)
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+  public componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
     // Track error for analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {

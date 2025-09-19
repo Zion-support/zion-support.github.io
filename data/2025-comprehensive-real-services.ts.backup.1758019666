@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+=======
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  }
+];
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

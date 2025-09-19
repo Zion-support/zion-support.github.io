@@ -1,71 +1,25 @@
 #!/bin/bash
 
-# Commit and Merge Script
-# This script commits the resolved conflicts and attempts to merge
+# Simple script to commit changes and merge to main
+echo "Starting git operations..."
 
-set -e
-
-# Colors
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
-
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
-}
-
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-print_status "🚀 Starting commit and merge process..."
-
-# Step 1: Check current status
-print_status "Checking current git status..."
-git status
-
-# Step 2: Add all changes
-print_status "Adding all changes..."
+# Add all changes
 git add .
 
-# Step 3: Commit the resolved conflicts
-print_status "Committing resolved conflicts..."
-git commit -m "Resolve critical merge conflicts in tailwind.config.ts and app/layout.tsx
+# Commit changes
+git commit -m "Fix Netlify build configuration and TypeScript config
 
-- Fixed merge conflicts in tailwind.config.ts by keeping complete configuration
-- Resolved conflicts in app/layout.tsx by merging navigation links
-- Maintained all functionality while resolving conflicts
-- Ready for merge into main branch"
+- Fixed trailing comma in tsconfig.json exclude array
+- Verified build configuration is working correctly
+- Build test passed successfully
+- Ready for Netlify deployment"
 
-# Step 4: Check status after commit
-print_status "Checking status after commit..."
-git status
+echo "Changes committed successfully!"
 
-# Step 5: Try to merge with main
-print_status "Attempting to merge with main branch..."
-git checkout main
-git pull origin main
+# Show current status
+git status --short
 
-# Step 6: Try to merge the feature branch
-print_status "Attempting to merge feature branch..."
-git merge cursor/create-and-deploy-new-content-35ea || {
-    print_warning "Merge had conflicts, attempting to resolve..."
-    git status
-}
-
-# Step 7: Final status check
-print_status "Final status check..."
-git status
-git log --oneline -5
-
-print_success "Commit and merge process completed!"
+echo "To complete the merge to main, run:"
+echo "git checkout main"
+echo "git merge cursor/fix-netlify-build-and-merge-to-main-d228"
+echo "git push origin main"

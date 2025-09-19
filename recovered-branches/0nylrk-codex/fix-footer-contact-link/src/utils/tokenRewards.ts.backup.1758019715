@@ -1,0 +1,22 @@
+
+
+export async function rewardOnboarding(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+<<<<<<< HEAD
+=======
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+}
+
+export async function rewardReferral(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+}
+
+export async function rewardFiveStarReview(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+}
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

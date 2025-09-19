@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+=======
+export interface EnterpriseITBreakthroughService2029 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  }
+];
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
