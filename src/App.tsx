@@ -8,9 +8,10 @@ import InteractiveTechShowcase from './components/InteractiveTechShowcase';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
 import AnalyticsDashboard from './components/AnalyticsDashboard';
+import ErrorBoundary from './components/ErrorBoundary';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { trackPageView, trackButtonClick } from './utils/analytics';
-import { trackPageView as trackEnhancedPageView } from './utils/enhancedAnalytics';
+import { trackPageView as trackEnhancedPageView, enhancedAnalytics } from './utils/enhancedAnalytics';
 import './index.css';
 
 const App: React.FC = () => {
@@ -64,16 +65,19 @@ const App: React.FC = () => {
           event.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
           trackButtonClick('keyboard_shortcut_home', 'accessibility');
+          enhancedAnalytics.trackEvent('keyboard_shortcut', 'accessibility', 'scroll_to_top', 'app', 1);
           break;
         case 'l':
           event.preventDefault();
           document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
           trackButtonClick('keyboard_shortcut_contact', 'accessibility');
+          enhancedAnalytics.trackEvent('keyboard_shortcut', 'accessibility', 'scroll_to_contact', 'app', 1);
           break;
         case 'k':
           event.preventDefault();
           // Toggle dark mode if available
           trackButtonClick('keyboard_shortcut_theme', 'accessibility');
+          enhancedAnalytics.trackEvent('keyboard_shortcut', 'accessibility', 'theme_toggle', 'app', 1);
           break;
       }
     }
@@ -85,12 +89,13 @@ const App: React.FC = () => {
   }, [handleKeyDown]);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <Header />
-        
-        <Routes>
+    <ErrorBoundary>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+          <Header />
+          
+          <Routes>
           <Route path="/" element={
             <div className="space-y-0">
               {/* Hero Section */}
@@ -107,6 +112,7 @@ const App: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2"
                     onClick={() => {
                       trackButtonClick('get_started', 'hero_section');
+                      enhancedAnalytics.trackEvent('button_click', 'cta', 'get_started', 'hero_section', 1);
                       document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     aria-label="Get started with our services"
@@ -220,7 +226,8 @@ const App: React.FC = () => {
                               onClick={(e) => {
                                 e.preventDefault();
                                 trackButtonClick('contact_form_submit', 'contact_section');
-                                // console.log('Thank you for your message! We\'ll get back to you soon.');
+                                enhancedAnalytics.trackEvent('form_submit', 'contact', 'contact_form', 'contact_section', 1);
+                                alert('Thank you for your message! We\'ll get back to you soon.');
                               }}
                             >
                               Send Message
@@ -238,7 +245,7 @@ const App: React.FC = () => {
         
         <Footer />
         
-        {/* Analytics Dashboard (Development Only) */}
+        {/* Development Tools */}
         <AnalyticsDashboard />
         
         {/* Performance Monitor (Development Only) */}
@@ -250,8 +257,9 @@ const App: React.FC = () => {
             </div>
           </div>
         )}
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 };
 
