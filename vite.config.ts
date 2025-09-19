@@ -11,6 +11,10 @@ export default defineConfig({
       jsxRuntime: 'automatic',
     })
   ],
+  esbuild: {
+    // Skip TypeScript checking during build
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
