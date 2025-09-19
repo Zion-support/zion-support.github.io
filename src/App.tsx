@@ -6,8 +6,7 @@ import ServiceCard from './components/ServiceCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
-import ToastContainer from './components/ToastContainer';
-import { ThemeProvider } from './components/ThemeProvider';
+import Toast from './components/Toast';
 import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
 import About from './pages/About';
@@ -18,28 +17,26 @@ import Pricing from './pages/Pricing';
 
 function App() {
   return (
-    <ThemeProvider>
-      <ErrorBoundary>
-        <Router>
-          <ScrollToTop />
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/pricing" element={<Pricing />} />
-              </Routes>
-            </main>
-            <Footer />
-            <ToastContainer />
-            <BackToTop />
-          </div>
-        </Router>
-      </ErrorBoundary>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/pricing" element={<Pricing />} />
+            </Routes>
+          </main>
+          <Footer />
+          <Toast />
+          <BackToTop />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
