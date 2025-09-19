@@ -36,7 +36,12 @@
     "pm2:status": "pm2 status",
     "pm2:delete": "pm2 delete all",
     "pm2:save": "pm2 save",
-    "pm2:startup": "pm2 startup"
+    "pm2:startup": "pm2 startup",
+    "improve:performance": "node scripts/improvements/performance-optimizer.cjs",
+    "improve:security": "node scripts/improvements/security-enhancer.cjs",
+    "improve:seo": "node scripts/seo-audit.js",
+    "improve:all": "node scripts/improvements/automation-orchestrator.cjs",
+    "improve:run-all": "npm run improve:all && echo 'All improvements completed successfully'"
   },
   "npmConfig": {
     "optional": false,
