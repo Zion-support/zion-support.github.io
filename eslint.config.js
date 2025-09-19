@@ -59,7 +59,6 @@ export default [
       'src/Footer.tsx',
       'src/Header.tsx',
       'src/main.js',
-      'src/main.tsx',
       
       // Generated files
       '**/*.backup.*',

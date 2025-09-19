@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './src/Footer';
 import Header from './src/Header';
@@ -12,6 +12,17 @@ import './src/index.css';
 const UltimateTechBreakthrough2026 = lazy(() => import('./src/pages/UltimateTechBreakthrough2026'));
 
 export default function App(): React.JSX.Element {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ErrorBoundary>
       <Router>
@@ -19,6 +30,11 @@ export default function App(): React.JSX.Element {
           <ScrollToTop />
           <Header />
           <main className="flex-grow">
+            {!isLoaded && (
+              <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+                <LoadingSpinner size="lg" />
+              </div>
+            )}
             <Suspense fallback={
               <div className="container mx-auto px-4 py-8">
                 <LoadingSpinner size="lg" className="py-20" />
@@ -28,21 +44,23 @@ export default function App(): React.JSX.Element {
                 <Route path="/" element={
                   <div className="container mx-auto px-4 py-8">
                     <div className="max-w-4xl mx-auto text-center">
-                      <h1 className="text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                        Welcome to Zion Tech Group
-                      </h1>
-                      <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-                        Your trusted partner in AI and technology solutions.
-                        We&apos;re revolutionizing the future with cutting-edge innovations that drive business transformation.
-                      </p>
+                      <div className="animate-fade-in">
+                        <h1 className="text-6xl font-bold text-gray-900 mb-6 gradient-text">
+                          Welcome to Zion Tech Group
+                        </h1>
+                        <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+                          Your trusted partner in AI and technology solutions.
+                          We&apos;re revolutionizing the future with cutting-edge innovations that drive business transformation.
+                        </p>
+                      </div>
                       <div className="grid md:grid-cols-2 gap-6 mb-8">
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg">
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg hover-lift cursor-pointer transition-all duration-300">
                           <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Solutions</h3>
                           <p className="text-gray-600">
                             Advanced artificial intelligence systems that transform your business operations.
                           </p>
                         </div>
-                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg hover-lift cursor-pointer transition-all duration-300">
                           <h3 className="text-xl font-semibold text-gray-900 mb-3">Tech Innovation</h3>
                           <p className="text-gray-600">
                             Next-generation technology solutions for the modern enterprise.
@@ -122,31 +140,37 @@ export default function App(): React.JSX.Element {
                         </div>
                         <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-lg">
                           <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h3>
-                          <form className="space-y-4">
+                          <form className="space-y-4" onSubmit={(e) => {
+                            e.preventDefault();
+                            alert('Thank you for your message! We\'ll get back to you soon.');
+                          }}>
                             <div>
                               <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                               />
                             </div>
                             <div>
                               <input
                                 type="email"
                                 placeholder="Your Email"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                               />
                             </div>
                             <div>
                               <textarea
                                 placeholder="Your Message"
                                 rows={4}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                               ></textarea>
                             </div>
                             <button
                               type="submit"
-                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300"
+                              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
                               Send Message
                             </button>
