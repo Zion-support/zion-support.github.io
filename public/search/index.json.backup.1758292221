@@ -2210,11 +2210,14 @@
     "h1": "AI 2026: Operational Evals — Blueprint"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-operational-risk-metrics-for-agents",
     "title": "AI 2026: Operational Risk Metrics for Agents | Zion Tech Group",
     "h1": "AI 2026: Operational Risk Metrics for Agents"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-071859
     "route": "/blog/ai-2026-operationalizing-agentic-workflows",
     "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
     "h1": "Operationalizing Agentic Workflows in 2026"
@@ -2235,11 +2238,14 @@
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
   },
   {
+>>>>>>> origin/bulk-merge-backup-20250916-071859
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
