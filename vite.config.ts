@@ -1,52 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { fileURLToPath } from 'node:url'
-import { SAMPLE_SERVICES } from './src/data/sampleServices'
+import path from 'path'
 
-const srcDir = fileURLToPath(new URL('./src', import.meta.url))
-const axiosPath = fileURLToPath(new URL('./src/lib/axios.ts', import.meta.url))
-
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    visualizer({ open: true, filename: 'bundle-stats.html' }),
-    {
-      name: 'mock-api',
-      configureServer(server) {
-        server.middlewares.use('/api/services', (req, res) => {
-          const url = new URL(req.originalUrl || req.url, 'http://localhost')
-          const category = url.searchParams.get('category')
-          const q = (url.searchParams.get('q') || '').toLowerCase()
-          const data = SAMPLE_SERVICES.filter((item) => {
-            if (category && item.category !== category) return false
-            if (q && !item.title.toLowerCase().includes(q)) return false
-            return true
-          })
-          res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify(data))
-        })
-      },
-    },
-  ],
-  build: {
-    sourcemap: false,
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        inlineDynamicImports: false,
-      },
-      // Bundle axios with the app to avoid missing module errors
-    },
-  },
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      'axios': path.resolve(__dirname, './src/lib/axios.ts')
-    }
+    },
+  },
+  build: {
+    target: 'esnext',
+    outDir: 'dist',
   },
   server: {
-    port: 5174,
-    // allowedHosts: ['devserver-preview--ziontechgroup.netlify.app'],
+    port: 3000,
+    host: true,
   },
-});
+})
