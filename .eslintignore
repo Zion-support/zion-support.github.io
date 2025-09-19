@@ -1,105 +1,47 @@
 # Build outputs
 dist/
-build/
 .next/
-out/
 node_modules/
 
-# Disabled/backup directories
+# Disabled/broken directories
 zion-os.disabled/
 zion-os/
 zion-website/
 zion.app/
 zion_academy/
-zion-ai-assistant/
-token/
-dao/
-server/
-netlify/
-src-clean/
-apps/
-apps.backup/
-automation/
-backup/
-backups/
-backup-merge-conflicts/
-broken_components/
-broken_files_backup/
-app-disabled/
-app-minimal/
-api-backup/
-api.disabled/
-api.disabled.temp/
-recovered-branches/
-temp_*/
 
-# Generated files
-**/*.backup.*
-**/*.old.*
-**/*.disabled.*
-**/*.broken.*
-**/*.corrupted.*
-**/*.temp.*
-**/*.test.*
-**/*.spec.*
-**/*.config.*
-**/*.log
-**/*.lock
+# Backup and temporary files
+*.backup
+*.backup.*
+*.min.js
+*.bundle.js
+*.chunk.js
+sw.js
+sw-*.js
+service-worker.js
 
-# Public assets
+# Static assets
 public/
+static/
 
-# Reports and logs
-**/*-report*
-**/*-summary*
-**/*-logs*
-**/automation-reports/
-**/performance-reports/
-**/link-reports/
-**/monitoring/
+# Disabled source directories
+src/components-disabled/
+src/components/
+src/utils-disabled/
+src/pages-disabled/
+src.disabled/
+src.broken/
+src.corrupted/
+src-corrupted/
+src-clean/
+src_backup_temp/
 
-# Scripts and automation
-scripts/
-**/*.cjs
-**/*.mjs
-**/*.sh
-**/*.py
-**/scripts/
-**/automation/
-**/pm2-*
-**/fix-*
-**/clean-*
-**/batch-*
-**/merge-*
-**/resolve-*
-**/systematic-*
-**/ultimate-*
-**/structural-*
-**/quick-*
-**/comprehensive-*
-**/enhanced-*
-**/complete-*
-**/app-optimizer.*
-**/improve-*
-**/find-*
-**/git-ops.*
-**/pr-manager.*
-**/merge-strategy.*
-**/resolve-and-merge-*
-**/merge-all-*
-**/merge-prs.*
-**/pr-*
-**/batch_*
-**/check_*
-**/commit-*
-**/complete_*
-**/deploy-*
-**/fix_*
-**/git_*
-**/health-*
-**/run-*
-**/start-*
-**/test-*
+# All nested disabled directories
+**/zion-os.disabled/**
+**/zion-os/**
+**/zion-website/**
+**/zion.app/**
+**/zion_academy/**
 
 # Additional problematic directories
 **/src-clean/
@@ -119,9 +61,6 @@ scripts/
 **/zion.app/
 **/zion_academy/
 **/zion-ai-assistant/
-**/zion.app/
-**/zion_academy/
-**/zion-ai-assistant/
 **/automation/
 **/backup/
 **/backups/
@@ -136,37 +75,13 @@ scripts/
 **/temp_*/
 **/utils/
 **/tests/
-**/workbox-config.js
-**/vite.config.js
-**/sentry.*.config.js
-**/server.mjs
-**/server.app.cjs
-**/simple-*.js
-**/simple_*.js
-**/start-*.js
-**/test-*.js
-**/syntax-*.js
-**/ultimate-*.cjs
-**/ultimate_*.cjs
-**/temp_*.cjs
-**/seed.js
-**/selective-*.js
-**/seo-*.js
-**/security-*.cjs
-**/security-*.js
-**/simple-*.js
-**/simple_*.js
-**/start-*.js
-**/test-*.js
-**/syntax-*.js
-**/ultimate-*.cjs
-**/ultimate_*.cjs
-**/temp_*.cjs
-**/seed.js
-**/selective-*.js
-**/seo-*.js
-**/security-*.cjs
-**/security-*.js
+
+# All build outputs
+**/.next/**
+**/node_modules/**
+**/*.min.js
+**/*.bundle.js
+**/*.chunk.js
 
 # Specific file patterns
 **/Dockerfile*
@@ -184,6 +99,23 @@ scripts/
 **/webpack.config.*
 **/tailwind.config.*
 **/next.config.*
+**/workbox-config.js
+**/sentry.*.config.js
+**/server.mjs
+**/server.app.cjs
+**/simple-*.js
+**/simple_*.js
+**/start-*.js
+**/test-*.js
+**/syntax-*.js
+**/ultimate-*.cjs
+**/ultimate_*.cjs
+**/temp_*.cjs
+**/seed.js
+**/selective-*.js
+**/seo-*.js
+**/security-*.cjs
+**/security-*.js
 
 # Disabled components
 **/components-disabled/**

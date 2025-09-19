@@ -37,6 +37,7 @@
     "zion-website/",
     "zion.app/",
     "zion_academy/",
+    "zion_academy/",
     "*.backup",
     "*.backup.*",
     "*.min.js",
@@ -56,6 +57,11 @@
     "src.corrupted/",
     "src-corrupted/",
     "src-clean/",
-    "src_backup_temp/"
+    "src_backup_temp/",
+    "**/.next/**",
+    "**/node_modules/**",
+    "**/*.min.js",
+    "**/*.bundle.js",
+    "**/*.chunk.js"
   ]
 }
