@@ -2330,6 +2330,8 @@
     "h1": "AI 2026: Enterprise Agent Risk Mitigation"
   },
   {
+    "route": "/blog/ai-2026-evaluation-cookbook",
+    "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
     "route": "/blog/ai-2026-enterprise-architecture-modernization",
     "title": "Enterprise Architecture Modernization (2026) | Zion Tech Group",
     "h1": "Enterprise Architecture Modernization (2026)"
@@ -2342,6 +2344,7 @@
   {
     "route": "/blog/ai-2026-evaluation-cookbook",
     "title": "",
+main
     "h1": "AI 2026: Evaluation Cookbook"
   },
   {
@@ -2365,6 +2368,7 @@
     "h1": "AI 2026: Executive Guide to Agent SLO Scorecards"
   },
   {
+main
     "route": "/blog/ai-2026-foundation-model-quality-engineering",
     "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
     "h1": "Foundation Model Quality Engineering (2026)"
@@ -2385,6 +2389,7 @@
     "h1": "Governed Tool Approvals (2026)"
   },
   {
+main
     "route": "/blog/ai-2026-governed-tool-use-case-studies",
     "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
     "h1": "Governed Tool Use — Case Studies (2026)"
@@ -2400,17 +2405,46 @@
     "h1": "AI 2026: Low-Latency Agent Observability"
   },
   {
+main
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
   },
   {
+    "route": "/blog/ai-2026-operational-risk-metrics-for-agents",
+    "title": "AI 2026: Operational Risk Metrics for Agents | Zion Tech Group",
+    "h1": "AI 2026: Operational Risk Metrics for Agents"
+  },
+  {
+main
     "route": "/blog/ai-2026-operationalizing-agentic-workflows",
     "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
     "h1": "Operationalizing Agentic Workflows in 2026"
   },
   {
-=======
+    "route": "/blog/ai-2026-production-agent-postmortems-playbook",
+    "title": "",
+    "h1": "AI 2026: Production Agentic Incident Postmortems — Playbook"
+  },
+  {
+main
+    "route": "/blog/ai-2026-production-eval-gates-live-ops",
+    "title": "Production Eval Gates (2026) | Zion Tech Group",
+    "h1": "Production Eval Gates (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-production-evidence-hub-blueprint",
+    "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Production Evidence Hub Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-real-time-evals-inference-guardrails",
+    "title": "AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group",
+    "h1": "AI 2026: Real-Time Evals & Inference Guardrails"
+  },
+  {
+223483ef1209b0284879b571c698436a9a71d005
+main
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
     "title": "",
     "h1": "AI 2026: Real-Time Retrieval Architectures"
@@ -2421,6 +2455,7 @@
     "h1": "Release Evidence Scorecards — Blueprint"
   },
   {
+main
     "route": "/blog/ai-2026-reliable-autonomy-operations",
     "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
     "h1": "AI 2026: Reliable Autonomy Operations"
@@ -2431,6 +2466,8 @@
     "h1": "Reliable Real‑Time Agents (2026)"
   },
   {
+    "route": "/blog/ai-2026-runtime-guardrails-blueprint",
+    "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
     "route": "/blog/ai-2026-runtime-evidence-bundles",
     "title": "Runtime Evidence Bundles (2026) | Zion Tech Group",
     "h1": "Runtime Evidence Bundles (2026)"
@@ -2438,6 +2475,7 @@
   {
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
     "title": "",
+main
     "h1": "AI 2026: Runtime Guardrails Blueprint"
   },
   {
@@ -2451,9 +2489,31 @@
     "h1": "Safe Tooling Permissions — In Practice (2026)"
   },
   {
+main
     "route": "/blog/ai-2026-safety-evals-operational-checklist",
     "title": "",
     "h1": "AI 2026: Safety Evals Operational Checklist"
+  },
+  {
+main
+    "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
+    "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
+    "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
+    "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
+    "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
+  },
+  {
+    "route": "/blog/ai-2026-trustworthy-model-routing-starter",
+    "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
+    "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
     "route": "/blog/ai-2026-zero-trust-agents",
@@ -2461,12 +2521,19 @@
     "h1": "Zero‑Trust Agents (2026)"
   },
   {
-=======
+223483ef1209b0284879b571c698436a9a71d005
+main
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
   },
   {
+    "route": "/blog/ai-roadmap-2026",
+    "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
+    "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
+  },
+  {
+main
     "route": "/blog/autonomous-evaluation-playbooks-2025",
     "title": "Autonomous Evaluation Playbooks (2025) | Zion Tech Group",
     "h1": "Autonomous Evaluation Playbooks (2025)"
@@ -2487,6 +2554,12 @@
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
+    "route": "/blog/genai-2025-evidence-driven-ai-governance",
+    "title": "GenAI 2025: Evidence‑Driven AI Governance | Zion Tech Group",
+    "h1": "Evidence‑Driven AI Governance (2025)"
+  },
+  {
+main
     "route": "/blog/genai-2025-practical-compliance-patterns",
     "title": "GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group",
     "h1": "GenAI for Regulated Industries (2025): Practical Compliance Patterns"
