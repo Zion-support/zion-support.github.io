@@ -43,7 +43,6 @@ import RevolutionaryContentShowcase from './src/components/RevolutionaryContentS
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import SEOAnalyzer from './src/components/SEOAnalyzer';
 import SEOOptimizer from './src/components/SEOOptimizer';
-import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprovements2025';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
@@ -54,7 +53,6 @@ import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution
 import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
-import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
