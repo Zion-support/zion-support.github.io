@@ -110,7 +110,6 @@ const UltimateContentCarousel2025: React.FC = () => {,
                 }`}
               />,
             ))}
->>>>>>> 05fabbf610e8ccaf3f54e32b18aef1bf80799814,
       </div>,
   );
 export default UltimateContentCarousel2025;
