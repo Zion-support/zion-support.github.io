@@ -1,58 +1,63 @@
 # Build outputs
 dist/
 build/
-out/
 .next/
+out/
 node_modules/
 
-# Disabled directories
-zion-os.disabled/
+# Generated files
+**/static/**
+**/chunks/**
+**/server/**
+**/*.backup.*
+**/*.disabled.*
+**/*.config.*
+**/*.log
+**/*.lock
+
+# Disabled/backup directories
 zion-os/
 zion-website/
 zion.app/
 zion_academy/
-
-# Static files
-static/
-public/
-*.min.js
-*.bundle.js
-
-# Config files
-*.config.js
-*.config.ts
-*.config.cjs
-
-# Scripts
-scripts/
-
-# Automation
 automation/
+backup/
+backups/
+recovered-branches/
+temp_*/
 
-# Netlify
-netlify/
+# Public assets
+public/
 
-# Apps
-apps/
+# Scripts and automation
+scripts/
+**/*.cjs
+**/*.mjs
+**/*.sh
+**/*.py
 
-# Disabled components
-**/components-disabled/**
-**/utils-disabled/**
-src/components-disabled/**
-src/utils-disabled/**
+# Reports and logs
+**/*-report*
+**/*-summary*
+**/*-logs*
+**/automation-reports/
+**/performance-reports/
+**/link-reports/
+**/monitoring/
 
-# Generated files
-**/chunks/**
-**/static/chunks/**
-**/server/**
-**/middleware-**
-**/server-reference-**
-**/_buildManifest.js
-**/_ssgManifest.js
-
-# Service workers
-**/sw.js
-**/service-worker.js
-
-# Academy static files
-zion_academy/static/js/
+# Specific file patterns
+**/Dockerfile*
+**/docker-compose*
+**/ecosystem.config.*
+**/bundle-analyzer.config.*
+**/csp-config.*
+**/vite.config.*
+**/postcss.config.*
+**/playwright.config.*
+**/cypress.config.*
+**/jest.config.*
+**/jest.setup.*
+**/test-utils.*
+**/webpack.config.*
+**/tailwind.config.*
+**/next.config.*
