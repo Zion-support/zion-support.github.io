@@ -1,21 +1,42 @@
+# Build artifacts and generated files
 dist/
 build/
 out/
+.next/
 node_modules/
 public/
+server/
+*.min.js
+*.bundle.js
+*.chunk.js
+
+# Disabled directories
 zion-os.disabled/
 zion-os/
 zion-website/
-zion.app/
 zion_academy/
+zion.app/
+zion.app/
+recovered-branches/
+automation/
+
+# Backup files
 backup/
 backups/
 cache/
 artifacts/
 *.backup.*
+*backup*/
 *.disabled
-.next/
-server/
-*.min.js
-*.bundle.js
-*.chunk.js
+
+# Large generated files
+*.log
+*.txt
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
