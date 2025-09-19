@@ -17,8 +17,4 @@ const EnhancedHome = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedHome;
-=======
-export default EnhancedHome;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

@@ -17,8 +17,4 @@ const BlockchainSolutions = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BlockchainSolutions;
-=======
-export default BlockchainSolutions;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
