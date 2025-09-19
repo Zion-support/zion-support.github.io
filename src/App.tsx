@@ -10,7 +10,7 @@ import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentS
 import AnalyticsDashboard from './components/AnalyticsDashboard';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { trackPageView, trackButtonClick } from './utils/analytics';
-import { trackPageView as trackEnhancedPageView, trackButtonClick as trackEnhancedButtonClick } from './utils/enhancedAnalytics';
+import { trackPageView as trackEnhancedPageView } from './utils/enhancedAnalytics';
 import './index.css';
 
 const App: React.FC = () => {

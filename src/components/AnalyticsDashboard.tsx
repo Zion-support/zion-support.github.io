@@ -102,8 +102,10 @@ const AnalyticsDashboard: React.FC = () => {
             <button
               onClick={() => {
                 const sessionData = enhancedAnalytics.exportSessionData();
-                console.log('Session Data:', sessionData);
-                navigator.clipboard.writeText(sessionData);
+                // console.log('Session Data:', sessionData);
+                if (typeof window !== 'undefined' && window.navigator?.clipboard) {
+                  window.navigator.clipboard.writeText(sessionData);
+                }
               }}
               className="w-full bg-gray-700 hover:bg-gray-600 text-white py-1 px-2 rounded text-xs transition-colors duration-200"
             >

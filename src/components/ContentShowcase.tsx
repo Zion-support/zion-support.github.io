@@ -515,14 +515,14 @@ const ContentShowcase: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <divbutton
+              <button
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Subscribe
-              </divbutton>
+              </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
