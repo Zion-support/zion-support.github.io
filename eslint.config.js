@@ -368,7 +368,7 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',

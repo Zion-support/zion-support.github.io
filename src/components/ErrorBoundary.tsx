@@ -20,7 +20,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Log error for debugging (in production, this would go to a logging service)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
     
     // Track error for analytics
     if (typeof window !== 'undefined' && window.gtag) {
@@ -37,7 +41,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="error-boundary">
           <div className="error-content">
             <h2>Oops! Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+            <p>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
             <button 
               onClick={() => window.location.reload()}
               className="retry-button"

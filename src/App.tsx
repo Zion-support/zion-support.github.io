@@ -99,7 +99,7 @@ function App() {
       showInfo(`Switched to ${newMode ? 'dark' : 'light'} mode`);
       return newMode;
     });
-  }, [showInfo]);
+  }, [setDarkMode, showInfo]);
 
   // Track page view on mount
   useEffect(() => {
