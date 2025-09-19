@@ -1,0 +1,49 @@
+# Build outputs
+dist/
+build/
+out/
+.next/
+**/.next/
+**/static/
+**/chunks/
+**/server/
+**/polyfills-*.js
+**/webpack-*.js
+**/main-*.js
+**/pages/
+**/app/
+**/middleware-*.js
+**/server-reference-*.js
+**/_buildManifest.js
+**/_ssgManifest.js
+
+# Disabled directories
+*.disabled/
+*.disabled/**
+zion-os.disabled/
+zion-website/
+zion-os/
+zion_academy/
+zion.app/
+
+# Config files
+postcss.config.js
+next.config.js
+sw.js
+performance-check.js
+tailwind.config.js
+
+# Automation files
+**/evaluate.cjs
+**/evolve.cjs
+**/ai-it-content-factory.cjs
+**/ai-it-researcher.cjs
+**/analytics.js
+**/feedback.js
+**/integration.js
+
+# Node modules
+node_modules/
+
+# Public assets
+public/
