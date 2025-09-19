@@ -21,6 +21,7 @@
     "prebuild": "echo 'Skipping lint for build fix'"
   },
   "dependencies": {
+    "lucide-react": "^0.544.0",
     "node-fetch": "^3.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.5.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^8.15.0",

@@ -83,7 +83,7 @@ function App() {
   }, []);
 
   const toggleDarkMode = useCallback(() => {
-    setDarkMode(prev => {
+    setDarkMode((prev: boolean) => {
       const newMode = !prev;
       trackButtonClick('theme_toggle', newMode ? 'dark' : 'light');
       return newMode;

@@ -180,7 +180,7 @@ export function Footer() {
             <div key={section.title}>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                  <section.icon className="w-4 h-4 text-white" />
+                  {section.icon && <section.icon className="w-4 h-4 text-white" />}
                 </div>
                 <h4 className="text-lg font-semibold text-white">{section.title}</h4>
               </div>
