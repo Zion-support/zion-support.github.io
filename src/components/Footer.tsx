@@ -1,10 +1,23 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight, Star, Shield, Zap, Brain, Rocket } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight, Star, Shield, Zap, Brain, Rocket, LucideIcon } from 'lucide-react';
+
+interface FooterLink {
+  name: string;
+  href: string;
+  description?: string;
+}
+
+interface FooterSection {
+  title: string;
+  icon: LucideIcon;
+  description?: string;
+  links: FooterLink[];
+}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
   
-  const footerSections = [
+  const footerSections: FooterSection[] = [
     {
       title: "AI & Micro SAAS",
       icon: Brain,
@@ -24,14 +37,14 @@ export function Footer() {
       icon: Rocket,
       description: "Industry-specific solutions for modern businesses",
       links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise", description: "Large-scale transformation" },
-        { label: "Healthcare Technology", path: "/solutions/healthcare", description: "Medical innovation" },
-        { label: "Financial Services", path: "/solutions/financial", description: "Fintech solutions" },
-        { label: "Manufacturing Intelligence", path: "/solutions/manufacturing", description: "Smart manufacturing" },
-        { label: "Retail Technology", path: "/solutions/retail", description: "Digital retail transformation" },
-        { label: "Government Solutions", path: "/solutions/government", description: "Public sector innovation" },
-        { label: "Education Technology", path: "/solutions/education", description: "Learning innovation" },
-        { label: "Energy Management", path: "/solutions/energy", description: "Sustainable energy solutions" }
+        { name: "Enterprise Solutions", href: "/solutions/enterprise", description: "Large-scale transformation" },
+        { name: "Healthcare Technology", href: "/solutions/healthcare", description: "Medical innovation" },
+        { name: "Financial Services", href: "/solutions/financial", description: "Fintech solutions" },
+        { name: "Manufacturing Intelligence", href: "/solutions/manufacturing", description: "Smart manufacturing" },
+        { name: "Retail Technology", href: "/solutions/retail", description: "Digital retail transformation" },
+        { name: "Government Solutions", href: "/solutions/government", description: "Public sector innovation" },
+        { name: "Education Technology", href: "/solutions/education", description: "Learning innovation" },
+        { name: "Energy Management", href: "/solutions/energy", description: "Sustainable energy solutions" }
       ]
     },
     {
@@ -39,14 +52,14 @@ export function Footer() {
       icon: Zap,
       description: "Cutting-edge technologies for tomorrow's challenges",
       links: [
-        { label: "Quantum Computing", path: "/emerging-tech", description: "Next-generation computing" },
-        { label: "Blockchain & DeFi", path: "/emerging-tech", description: "Decentralized finance" },
-        { label: "IoT & Edge Computing", path: "/emerging-tech", description: "Connected device management" },
-        { label: "Extended Reality (XR)", path: "/emerging-tech", description: "Immersive experiences" },
-        { label: "5G & Networks", path: "/emerging-tech", description: "High-speed connectivity" },
-        { label: "Green Technology", path: "/emerging-tech", description: "Sustainable solutions" },
-        { label: "Digital Twins", path: "/emerging-tech", description: "Virtual asset replicas" },
-        { label: "Neuromorphic Computing", path: "/emerging-tech", description: "Brain-inspired AI" }
+        { name: "Quantum Computing", href: "/emerging-tech", description: "Next-generation computing" },
+        { name: "Blockchain & DeFi", href: "/emerging-tech", description: "Decentralized finance" },
+        { name: "IoT & Edge Computing", href: "/emerging-tech", description: "Connected device management" },
+        { name: "Extended Reality (XR)", href: "/emerging-tech", description: "Immersive experiences" },
+        { name: "5G & Networks", href: "/emerging-tech", description: "High-speed connectivity" },
+        { name: "Green Technology", href: "/emerging-tech", description: "Sustainable solutions" },
+        { name: "Digital Twins", href: "/emerging-tech", description: "Virtual asset replicas" },
+        { name: "Neuromorphic Computing", href: "/emerging-tech", description: "Brain-inspired AI" }
       ]
     },
     {
@@ -64,6 +77,7 @@ export function Footer() {
     },
     {
       title: "Resources",
+      icon: Shield,
       links: [
         { name: "Documentation", href: "/docs" },
         { name: "Help Center", href: "/help" },
@@ -171,14 +185,14 @@ export function Footer() {
               <p className="text-sm text-zion-slate-light mb-4">{section.description}</p>
               <ul className="space-y-2">
                 {section.links.map((link) => (
-                  <li key={link.label || link.name}>
+                  <li key={link.name}>
                     <Link
-                      to={link.path || link.href}
+                      to={link.href}
                       className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors group flex items-center"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {link.label || link.name}
+                        {link.name}
                       </span>
                     </Link>
                   </li>
