@@ -6,8 +6,6 @@ import ThemeToggle from './components/ThemeToggle';
 import Toast from './components/Toast';
 import PerformanceMetrics from './components/PerformanceMetrics';
 import ErrorBoundary from './components/ErrorBoundary';
-import ServiceCard from './components/ServiceCard';
-import ContactForm from './components/ContactForm';
 import { useToast } from './hooks/useToast';
 import useLocalStorage from './hooks/useLocalStorage';
 import './App.css';
@@ -25,7 +23,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isOnline, setIsOnline] = useState(typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.onLine : true);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const { toasts, showSuccess, showInfo, showWarning } = useToast();
 
   // Update time every second
@@ -102,11 +99,24 @@ function App() {
       showInfo(`Switched to ${newMode ? 'dark' : 'light'} mode`);
       return newMode;
     });
-  }, [setDarkMode, showInfo]);
+  }, [showInfo, setDarkMode]);
 
   // Track page view on mount
   useEffect(() => {
     trackPageView('home');
+    
+    // Track performance metrics
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const perfData = {
+        loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,
+        domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
+        firstPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+      };
+      
+      // Performance metrics collected
+      trackFeatureInteraction('performance_metrics', perfData);
+    }
   }, []);
 
   // Add keyboard shortcuts
@@ -138,6 +148,21 @@ function App() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [toggleDarkMode]);
 
+  // Register service worker for PWA capabilities
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in window.navigator) {
+      window.navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          // Service Worker registered successfully
+          trackFeatureInteraction('service_worker_registered', { scope: registration.scope });
+        })
+        .catch((error) => {
+          // Service Worker registration failed
+          trackFeatureInteraction('service_worker_failed', { error: error.message });
+        });
+    }
+  }, []);
+
   // Handle scroll to top button with throttling for performance
   useEffect(() => {
     let ticking = false;
@@ -165,84 +190,27 @@ function App() {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
       icon: "🤖",
-      color: "#6366f1",
-      features: [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "AI Chatbots"
-      ],
-      pricing: "$5,000/month"
+      color: "#6366f1"
     },
     {
       title: "Blockchain Technology",
       description: "Secure and decentralized solutions for modern businesses with smart contracts and DeFi platforms.",
       icon: "⛓️",
-      color: "#10b981",
-      features: [
-        "Smart Contract Development",
-        "DeFi Platform Creation",
-        "NFT Marketplaces",
-        "Cryptocurrency Integration",
-        "Blockchain Consulting"
-      ],
-      pricing: "$8,000/month"
+      color: "#10b981"
     },
     {
       title: "IT Services",
       description: "Comprehensive IT infrastructure management, cloud solutions, and digital transformation services.",
       icon: "💻",
-      color: "#f59e0b",
-      features: [
-        "Cloud Migration",
-        "Infrastructure Management",
-        "Cybersecurity Solutions",
-        "24/7 Support",
-        "Digital Transformation"
-      ],
-      pricing: "$3,000/month"
+      color: "#f59e0b"
     },
     {
       title: "Quantum Computing",
       description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
       icon: "⚛️",
-      color: "#8b5cf6",
-      features: [
-        "Quantum Algorithm Development",
-        "Optimization Solutions",
-        "Research & Development",
-        "Quantum Simulation",
-        "Future-Ready Technology"
-      ],
-      pricing: "$15,000/month"
+      color: "#8b5cf6"
     }
   ], []);
-
-  // Enhanced accessibility: Focus management
-  useEffect(() => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey && document.activeElement === firstElement) {
-          e.preventDefault();
-          lastElement?.focus();
-        } else if (!e.shiftKey && document.activeElement === lastElement) {
-          e.preventDefault();
-          firstElement?.focus();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   if (error) {
     return (
@@ -331,19 +299,27 @@ function App() {
           </div>
         </div>
         <div className="features">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              color={service.color}
-              features={service.features}
-              pricing={service.pricing}
-              onClick={() => {
-                trackFeatureInteraction(service.title, 'learn_more_clicked');
-              }}
-            />
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="feature-card"
+              style={{ '--card-color': feature.color } as React.CSSProperties}
+            >
+              <div className="feature-icon" role="img" aria-label={`${feature.title} icon`}>
+                {feature.icon}
+              </div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+              <button 
+                className="learn-more-btn"
+                onClick={() => {
+                  trackFeatureInteraction(feature.title, 'learn_more_clicked');
+                }}
+                aria-label={`Learn more about ${feature.title}`}
+              >
+                Learn More
+              </button>
+            </div>
           ))}
         </div>
         <div className="cta-section">
@@ -366,12 +342,6 @@ function App() {
         </div>
       </header>
       
-      <main className="main-content">
-        <section className="contact-section" id="contact-form">
-          <ContactForm />
-        </section>
-      </main>
-      
       {/* Toast Notifications */}
       {toasts.map((toast) => (
         <Toast key={toast.id} {...toast} />
@@ -379,19 +349,6 @@ function App() {
       
       {/* Performance Metrics (Development Only) */}
       <PerformanceMetrics show={process.env.NODE_ENV === 'development'} />
-      
-      {/* Scroll to Top Button */}
-      {showScrollToTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="Scroll to top"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
-        </button>
-      )}
       </div>
     </ErrorBoundary>
   );

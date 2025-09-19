@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="description" content="Zion Tech Group - Advanced technology solutions including AI, blockchain, and cloud services" />
+    <meta name="keywords" content="technology, AI, blockchain, cloud, cybersecurity, quantum computing" />
+    <meta name="author" content="Zion Tech Group" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="og:description" content="Advanced technology solutions including AI, blockchain, and cloud services" />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="twitter:description" content="Advanced technology solutions including AI, blockchain, and cloud services" />
+    <meta property="twitter:image" content="/og-image.jpg" />
+    
+    <title>Zion Tech Group - Technology Solutions</title>
+=======
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+    <meta name="msapplication-TileColor" content="#6366f1" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Zion Tech Group - Advanced Technology Solutions | AI, Blockchain, Quantum Computing</title>
+    <meta name="description" content="Leading provider of AI, blockchain, quantum computing, and IT solutions for modern businesses. Transform your business with cutting-edge technology." />
+    <meta name="keywords" content="AI solutions, blockchain technology, quantum computing, IT services, software development, digital transformation" />
+    <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zion Tech Group - Advanced Technology Solutions" />
+    <meta property="og:description" content="Leading provider of AI, blockchain, quantum computing, and IT solutions for modern businesses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zion Tech Group - Advanced Technology Solutions" />
+    <meta name="twitter:description" content="Leading provider of AI, blockchain, quantum computing, and IT solutions for modern businesses." />
+    <meta name="twitter:image" content="/twitter-image.jpg" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading provider of AI, blockchain, quantum computing, and IT solutions for modern businesses",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-ZION-TECH",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "description": "AI, blockchain, quantum computing, and IT solutions",
+        "category": "Technology Services"
+      }
+    }
+    </script>
+>>>>>>> origin/additional-improvements-20250919-142013
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
