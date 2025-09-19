@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './App.css';
 
 function App() {
+<<<<<<< HEAD
   const [currentTime, setCurrentTime] = useState(new Date());
   const [darkMode, setDarkMode] = useState(() => {
     // Check for saved theme preference or default to system preference
@@ -15,6 +16,14 @@ function App() {
     years: 0
   });
   const [isLoading, setIsLoading] = useState(true);
+=======
+  const [currentTime, setCurrentTime] = useState(new Date())
+  const [darkMode, setDarkMode] = useState(false)
+  const [animatedCounts, setAnimatedCounts] = useState({ projects: 0, clients: 0, years: 0 })
+  const [showContactForm, setShowContactForm] = useState(false)
+  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' })
+  const [isLoading, setIsLoading] = useState(false)
+>>>>>>> 0d73393f86ce (🎨 Add interactive contact form with modal and enhanced UX)
 
   // Update time every second
   useEffect(() => {
@@ -58,11 +67,33 @@ function App() {
     return () => clearTimeout(loadingTimer);
   }, []);
 
+<<<<<<< HEAD
   const toggleDarkMode = useCallback(() => {
     setDarkMode(prev => !prev);
   }, []);
 
   const features = useMemo(() => [
+=======
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
+    alert('Thank you for your message! We will get back to you soon.')
+    setContactForm({ name: '', email: '', message: '' })
+    setShowContactForm(false)
+    setIsLoading(false)
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setContactForm(prev => ({ ...prev, [name]: value }))
+  }
+
+  const features = [
+>>>>>>> 0d73393f86ce (🎨 Add interactive contact form with modal and enhanced UX)
     {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.",
@@ -153,9 +184,58 @@ function App() {
           <p>Get started with our cutting-edge technology solutions today.</p>
           <div className="cta-buttons">
             <button className="btn-primary">Get Started</button>
-            <button className="btn-secondary">Contact Us</button>
+            <button className="btn-secondary" onClick={() => setShowContactForm(true)}>Contact Us</button>
           </div>
         </div>
+
+        {showContactForm && (
+          <div className="contact-modal">
+            <div className="contact-form-container">
+              <div className="contact-form-header">
+                <h3>Contact Us</h3>
+                <button className="close-btn" onClick={() => setShowContactForm(false)}>×</button>
+              </div>
+              <form onSubmit={handleContactSubmit} className="contact-form">
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={contactForm.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={contactForm.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    required
+                  />
+                </div>
+                <button type="submit" className="btn-submit" disabled={isLoading}>
+                  {isLoading ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
       </header>
     </div>
   );
