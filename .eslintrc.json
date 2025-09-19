@@ -16,7 +16,8 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "react",
@@ -82,7 +83,6 @@
     "public/",
     "static/",
     "src/components-disabled/",
-    "src/components/",
     "src/utils-disabled/",
     "src/pages-disabled/",
     "src.disabled/",
