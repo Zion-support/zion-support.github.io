@@ -109,7 +109,6 @@ const AdvancedAnalyticsTracker2025: React.FC = () => {,
       timestamp: Date.now(),
     setEvents(prev => [...prev.slice(-99), analyticsEvent]), // Keep last 100 events,
     // Send to analytics service (simulated),
-    console.log('Analytics Event:', analyticsEvent);
     // In a real implementation, you would send this to your analytics service,
     // Example: gtag('event', action, { event_category: category, event_label: label, value: value ,});
   };

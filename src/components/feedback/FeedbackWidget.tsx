@@ -4,7 +4,7 @@ export type FeedbackWidgetProps = {,
   responseId?: string;
   aiModel?: string;
 };
-export default function FeedbackWidget({,
+export default React.memo(function FeedbackWidget({,
   responseId;
   aiModel,
 }: FeedbackWidgetProps) {,

@@ -3,7 +3,6 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 export const productionLogger = {,
   log: (...args) => {,
     if (isDevelopment) {,
-      console.log(...args),}
   };
   warn: (...args) => {,
     if (isDevelopment) {,

@@ -40,7 +40,6 @@ const AdvancedPerformanceOptimizer2025: React.FC = () => {,
       const entries = list.getEntries();
       entries.forEach((entry) => {,
         if (entry.entryType === 'navigation') {,
-          console.log('Navigation performance:', entry);
         }
     });
     observer.observe({ entryTypes: ['navigationmeasure'] ,});

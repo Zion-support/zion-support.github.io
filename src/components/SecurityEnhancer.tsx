@@ -7,7 +7,7 @@ interface SecurityStatus {,
   clickjackingProtection: boolean;
   secureHeaders: boolean;
   vulnerabilityScan: boolean,}
-export default function SecurityEnhancer() {,
+export default React.memo(function SecurityEnhancer() {,
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({,
     httpsEnabled: false;
     contentSecurityPolicy: false;

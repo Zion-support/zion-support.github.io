@@ -15,7 +15,7 @@ import {,
   Target;
   Lightbulb,
 } from 'lucide-react';
-export default function NewContentShowcaseBanner2026() {,
+export default React.memo(function NewContentShowcaseBanner2026() {,
   const newContent = [,
     {,
       title: "AI Trends 2026 Ultimate";
