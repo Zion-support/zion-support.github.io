@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export interface InnovativeMicroSaasSolution {
   id: string;
   name: string;
@@ -370,3 +372,4 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaasSolution[] = [
     reviews: 456
   }
 ];
+>>>>>>> origin/merge-progress-backup-20250823-223504

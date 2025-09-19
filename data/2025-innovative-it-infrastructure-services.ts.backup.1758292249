@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeITInfrastructureService {
@@ -307,3 +309,4 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     reviews: 23
   }
 ];
+>>>>>>> origin/merge-progress-backup-20250823-223504

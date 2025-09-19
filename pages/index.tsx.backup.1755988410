@@ -1,18 +1,29 @@
 import React from 'react';
-import Homepage2026 from '../components/Homepage2026';
+import Homepage2045 from '../components/Homepage2045';
 import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
+import Analytics from '../components/Analytics';
 import ErrorBoundary from '../components/ErrorBoundary';
-import EnhancedPerformanceOptimizer from '../components/EnhancedPerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from '../components/EnhancedAccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 
 const HomePage: React.FC = () => {
   return (
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
-      <Homepage2026 />
+<<<<<<< HEAD
+      <PerformanceOptimizer showMetrics={true} autoOptimize={true} />
+      <AccessibilityEnhancer showPanel={true} autoOptimize={true} />
+      <MobileOptimizer showDebugInfo={false}>
+        <Homepage2045 />
+=======
+      <PerformanceOptimizer />
+      <AccessibilityEnhancer />
+      <MobileOptimizer showDebugInfo={false}>
+        <Homepage2025 />
+>>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e1f5
+        <PerformanceMonitor showUI={true} />
+      </MobileOptimizer>
     </ErrorBoundary>
   );
 };

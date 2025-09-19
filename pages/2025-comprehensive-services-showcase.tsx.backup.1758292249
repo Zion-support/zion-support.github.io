@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -426,3 +428,4 @@ export default function Comprehensive2025ServicesShowcase() {
     </>
   );
 }
+>>>>>>> origin/merge-progress-backup-20250823-223504

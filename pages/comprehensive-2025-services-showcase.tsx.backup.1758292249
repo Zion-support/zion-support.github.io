@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -414,3 +416,4 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
 };
 
 export default Comprehensive2025ServicesShowcase;
+>>>>>>> origin/merge-progress-backup-20250823-223504

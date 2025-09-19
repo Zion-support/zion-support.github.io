@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeAIAutomationService {
@@ -307,3 +309,4 @@ export const innovativeAIAutomationServices2025: InnovativeAIAutomationService[]
     reviews: 95
   }
 ];
+>>>>>>> origin/merge-progress-backup-20250823-223504
