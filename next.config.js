@@ -11,8 +11,7 @@ const nextConfig = {
     missingSuspenseWithCSRBailout: false,
   },
   
-  // Disable static generation temporarily
-  generateStaticParams: false,
+  // Disable static generation temporarily - removed invalid option
 
   // Performance optimizations
   compress: true,

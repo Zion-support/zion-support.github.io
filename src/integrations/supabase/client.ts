@@ -6,16 +6,8 @@ export const supabase = {
         single: () => Promise.resolve({ data: null, error: null })
       })
     }),
-    insert: () => ({
-      select: () => Promise.resolve({ data: null, error: null })
-    }),
-    update: () => ({
-      eq: () => ({
-        select: () => Promise.resolve({ data: null, error: null })
-      })
-    }),
-    delete: () => ({
-      eq: () => Promise.resolve({ data: null, error: null })
-    })
+    insert: () => Promise.resolve({ data: null, error: null }),
+    update: () => Promise.resolve({ data: null, error: null }),
+    delete: () => Promise.resolve({ data: null, error: null })
   })
 };
