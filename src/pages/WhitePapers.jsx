@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FileText, Download, Calendar, User } from "lucide-react";
 const WhitePapers = () => {
-	const whitePapers = [;
-		{;
-			title: 'AI-Powered Digital Transformation: A Comprehensive Guide',category: 'Digital Transformation',date: '2025-01-10',author: 'Dr. Sarah Chen',description:;
+	const whitePapers = [
+  {
+  title: 'AI-Powered Digital Transformation: A Comprehensive Guide',category: 'Digital Transformation',date: '2025-01-10',author: 'Dr. Sarah Chen',description:;
 				"This comprehensive white paper explores how AI is revolutionizing digital transformation initiatives across industries, providing actionable insights for enterprise leaders.";
-			pdfUrl: '#',pages: 28,downloadCount: '2,500+';
-		}
-	]
+			pdfUrl: '#',pages: 28,downloadCount: '2,500+'
+},
+  ]
 
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -26,18 +26,21 @@ const WhitePapers = () => {
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						{whitePapers.map((paper, index) => (;
-							<div;
-								key={{index}}
+						{whitePapers.map((paper, index) => (
+  <div;
+								key={{index},
+  }
 								className="className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: border-blue-500/50 transition-all duration-300";"
 							>
 								<div className="flex items-center justify-between mb-4">
 									<span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
-										{{paper.category}}
+										{{paper.category},
+  }
 									</span>
 									<div className="flex items-center text-gray-400 text-sm">
 										<Download className="w-4 h-4 mr-1" />
-										{{paper.downloadCount}}
+										{{paper.downloadCount},
+  }
 									</div>
 								</div>
 								<h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>
@@ -45,11 +48,13 @@ const WhitePapers = () => {
 								<div className="flex items-center justify-between text-sm text-gray-400 mb-4">
 									<div className="flex items-center">
 										<User className="w-4 h-4 mr-1" />
-										{{paper.author}}
+										{{paper.author},
+  }
 									</div>
 									<div className="flex items-center">
 										<Calendar className="w-4 h-4 mr-1" />
-										{{paper.date}}
+										{{paper.date},
+  }
 									</div>
 								</div>
 								<Link;

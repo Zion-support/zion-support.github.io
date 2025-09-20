@@ -2,28 +2,28 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare } from "lucide-react";
-export default function MicroSaaS() {;
-  const products = [;
-    {;
-      name: 'AI Email Responder',price: '$39/mo',features: ['Auto-categorize and draft repliesGmail/Outlook add-on', 'Team approval workflows']
-      link: '/contact';
-    }
-    {;
-      name: 'SEO Content Optimizer',price: '$49/mo',features: ['Topic clustering and briefsInternal link suggestions', 'On-page optimization scores']
-      link: '/contact';
-    }
-    {;
-      name: 'Internal Linking (WordPress)',price: '$29/mo',features: ['Auto link graph builderContext-aware suggestions', 'Bulk fix orphan pages']
-      link: '/contact';
-    }
-    {;
-      name: 'Review Booster (eCommerce)',price: '$59/mo',features: ['Post-purchase review flowsPhoto/video prompts', 'Fraud/spam detection']
-      link: '/contact';
-    }
-    {;
-      name: 'Smart Surveys',price: '$25/mo',features: ['Mobile-firstBranching logic', 'AI summaries']
-      link: '/contact';
-    }
+export default function MicroSaaS() {
+  const products = [
+  {
+  name: 'AI Email Responder',price: '$39/mo',features: ['Auto-categorize and draft repliesGmail/Outlook add-on', 'Team approval workflows']
+      link: '/contact'
+},
+  {
+  name: 'SEO Content Optimizer',price: '$49/mo',features: ['Topic clustering and briefsInternal link suggestions', 'On-page optimization scores']
+      link: '/contact'
+},
+  {
+  name: 'Internal Linking (WordPress)',price: '$29/mo',features: ['Auto link graph builderContext-aware suggestions', 'Bulk fix orphan pages']
+      link: '/contact'
+},
+  {
+  name: 'Review Booster (eCommerce)',price: '$59/mo',features: ['Post-purchase review flowsPhoto/video prompts', 'Fraud/spam detection']
+      link: '/contact'
+},
+  {
+  name: 'Smart Surveys',price: '$25/mo',features: ['Mobile-firstBranching logic', 'AI summaries']
+      link: '/contact'
+},
   ]
   return (
     <div className="min-h-screen bg-futuristic">
@@ -41,13 +41,13 @@ export default function MicroSaaS() {;
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {products.map((p) => (;
-              <div key={p.name} className="card-futuristic">
+            {products.map((p) => (
+  <div key={p.name} className="card-futuristic">
                 <h3 className="text-white font-semibold">{p.name}</h3>
                 <div className="mt-1 text-slate-400">{p.price}</div>
                 <ul className="mt-4 space-y-2 text-slate-300">
-                  {p.features.map((f) => (;
-                    <li key={f}>• {f}</li>
+                  {p.features.map((f) => (
+  <li key={f}>• {f}</li>
                   ))}
                 </ul>
                 <Link to={p.link} className="mt-6 inline-flex btn-futuristic">Start</Link>

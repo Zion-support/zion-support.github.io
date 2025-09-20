@@ -40,24 +40,24 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   welcomeMessage = "Hello! I'm Zion, your AI assistant. How can I help you today?"
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
+const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',type: 'assistant',content: welcomeMessage,timestamp: new Date()
-    }
+    },
   ]);
-  const [inputValue, setIsInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+const [inputValue, setIsInputValue] = useState('');
+const [isTyping, setIsTyping] = useState(false);
+const [isListening, setIsListening] = useState(false);
+const [isMuted, setIsMuted] = useState(false);
+const [showSettings, setShowSettings] = useState(false);
+const [isMinimized, setIsMinimized] = useState(false);
+const messagesEndRef = useRef<HTMLDivElement>(null);
+const inputRef = useRef<HTMLInputElement>(null);
+const recognitionRef = useRef<any>(null);
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+}, [messages]),
 
   // Initialize speech recognition
   useEffect(() => {
@@ -69,16 +69,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.lang = 'en-US',
 
       recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
+        const transcript = event.results[0],
+  [0].transcript;
         setIsInputValue(transcript);
         setIsListening(false)
       },
 
       recognitionRef.current.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      },
-    }
+        setIsListening(false)
+},
+    },
   }, []),
 
   // Handle speech recognition
@@ -90,22 +91,22 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
     if (isListening) {
       recognitionRef.current.stop();
-      setIsListening(false);
-    } else {
+      setIsListening(false)
+} else {
       recognitionRef.current.start();
-      setIsListening(true);
-    }
+      setIsListening(true)
+},
   }, [isListening]),
 
   // Toggle mute
   const toggleMute = useCallback(() => {
-    setIsMuted(!isMuted);
-  }, [isMuted]),
+    setIsMuted(!isMuted)
+}, [isMuted]),
 
   // Send message
   const sendMessage = useCallback(async (content: string) => {
     if (!content.trim()) return;
-    const userMessage: Message = {
+const userMessage: Message = {
       id: Date.now().toString(),type: 'user',content: content.trim(),timestamp: new Date()
     };
     setMessages(prev => [...prev, userMessage]);
@@ -114,19 +115,19 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     // Simulate AI response (replace with actual AI API call)
     try {
       const response = await generateAIResponse(content);
-      const assistantMessage: Message = {
+const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),type: 'assistant',content: response,timestamp: new Date()
       };
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
+      setMessages(prev => [...prev, assistantMessage])
+} catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),type: 'assistant',content: 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),error: 'Failed to generate response'
       };
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsTyping(false);
-    }
+      setMessages(prev => [...prev, errorMessage])
+} finally {
+      setIsTyping(false)
+},
   }, []),
 
   // Generate AI response (simulated)
@@ -156,8 +157,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       return "Cybersecurity is crucial in today's digital landscape. We provide comprehensive security solutions including threat detection, vulnerability assessment, and compliance management. Would you like a security consultation?",
     }
 
-    return randomResponse;
-  },
+    return randomResponse
+},
 
   // Handle form submission
   const handleSubmit = useCallback((e: React.FormEvent) => {
@@ -170,20 +171,25 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     { text: 'AI Services', icon: Brain, action: () => sendMessage('Tell me about your AI services') };
     { text: 'Cloud Solutions', icon: Cloud, action: () => sendMessage('What cloud solutions do you offer?') };
     { text: 'Security', icon: Shield, action: () => sendMessage('Tell me about your security services') };
-    { text: 'Innovation', icon: Rocket, action: () => sendMessage('What makes Zion Tech Group innovative?') }
+    { text: 'Innovation', icon: Rocket, action: () => sendMessage('What makes Zion Tech Group innovative?') },
   ];
   // Position classes
   const positionClasses = {
     'bottom-right': 'bottom-4 right-4bottom-left': 'bottom-4 left-4top-right': 'top-4 right-4top-left': 'top-4 left-4'
   };
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+    <div className={`fixed ${positionClasses[position],
+  } z-50`}>
       {/* Chat Toggle Button */}
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        initial={{ scale: 0 },
+  }
+        animate={{ scale: 1 },
+  }
+        whileHover={{ scale: 1.1 },
+  }
+        whileTap={{ scale: 0.9 },
+  }
         onClick={() => setIsOpen(!isOpen)}
         className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
         aria-label="Open chat assistant"
@@ -195,10 +201,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            initial={{ opacity: 0, scale: 0.8, y: 20 },
+  }
+            animate={{ opacity: 1, scale: 1, y: 0 },
+  }
+            exit={{ opacity: 0, scale: 0.8, y: 20 },
+  }
+            transition={{ type: "spring", stiffness: 300, damping: 30 },
+  }
             className={`absolute bottom-16 right-0 w-96 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl overflow-hidden ${isMinimized ? 'h-16' : ''}`}
           >
             {/* Header */}
@@ -243,13 +253,16 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                 {/* Messages */}
                 <div 
                   className="flex-1 overflow-y-auto p-4 space-y-4"
-                  style={{ maxHeight: maxHeight }}
+                  style={{ maxHeight: maxHeight },
+  }
                 >
                   {messages.map((message) => (
                     <motion.div
                       key={message.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 10 },
+  }
+                      animate={{ opacity: 1, y: 0 },
+  }
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
@@ -278,13 +291,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                         </p>
                       </div>
                     </motion.div>
-                  ))}
-
-                  {/* Typing indicator */}
-                  {isTyping && (
+                  ))},
+  {/* Typing indicator */},
+  {isTyping && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 10 },
+  }
+                      animate={{ opacity: 1, y: 0 },
+  }
                       className="flex justify-start"
                     >
                       <div className="bg-slate-700/50 text-slate-200 border border-slate-600/50 rounded-2xl p-3">
@@ -292,8 +306,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                           <Bot className="w-4 h-4 text-cyan-400" />
                           <div className="flex space-x-1">
                             <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' },
+  }></div>
+                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' },
+  }></div>
                           </div>
                         </div>
                       </div>
@@ -303,17 +319,20 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   <div ref={messagesEndRef} />
                 </div>
 
-                {/* Quick Actions */}
-                {messages.length === 1 && (
+                {/* Quick Actions */},
+  {messages.length === 1 && (
                   <div className="px-4 pb-4">
                     <p className="text-xs text-slate-400 mb-3">Quick actions:</p>
                     <div className="grid grid-cols-2 gap-2">
                       {quickActions.map((action, index) => (
                         <motion.button
                           key={action.text}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.1 }}
+                          initial={{ opacity: 0, scale: 0.9 },
+  }
+                          animate={{ opacity: 1, scale: 1 },
+  }
+                          transition={{ delay: index * 0.1 },
+  }
                           onClick={action.action}
                           className="flex items-center gap-2 p-2 bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 text-xs rounded-lg transition-colors border border-slate-600/50"
                         >
@@ -323,9 +342,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       ))}
                     </div>
                   </div>
-                )}
-
-                {/* Input Form */}
+                )},
+  {/* Input Form */}
                 <form onSubmit={handleSubmit} className="p-4 border-t border-slate-600/50">
                   <div className="flex items-center gap-2">
                     <div className="flex-1 relative">
@@ -398,9 +416,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       <AnimatePresence>
         {showSettings && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.8 },
+  }
+            animate={{ opacity: 1, scale: 1 },
+  }
+            exit={{ opacity: 0, scale: 0.8 },
+  }
             className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl p-4"
           >
             <div className="flex items-center justify-between mb-4">
@@ -442,9 +463,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   onClick={() => {
                     setMessages([{
                       id: '1',type: 'assistant',content: welcomeMessage,timestamp: new Date()
-                    }]);
-                    setShowSettings(false);
-                  }}
+                    },
+  ]);
+                    setShowSettings(false)
+},
+  }
                   className="w-full px-4 py-2 bg-slate-700/50 hover: bg-slate-600/50 text-white rounded-lg transition-colors"
                 >
                   Clear Chat History
@@ -455,5 +478,5 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 };

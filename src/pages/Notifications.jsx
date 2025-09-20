@@ -9,9 +9,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import SEO from "@/components/SEO";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-const getNotificationIcon = (type, className = "h-5 w-5") => {;
-    switch (type) {;
-        case 'message':;
+const getNotificationIcon = (type, className = "h-5 w-5") => {
+  switch (type) {
+  case 'message':;
             return <MessageCircle className={cn(className, "text-blue-500")}/>;
         case 'quote_request':;
             return <Briefcase className={cn(className, "text-purple-500")}/>;
@@ -24,12 +24,12 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {;
         case 'system':;
             return <AlertCircle className={cn(className, "text-yellow-500")}/>;
         default:;
-            return <Bell className={cn(className, "text-gray-500")}/>;
-    }
-}
-const getNotificationTypeBadge = (type) => {;
-    switch (type) {;
-        case 'message':;
+            return <Bell className={cn(className, "text-gray-500")}/>
+},
+  }
+const getNotificationTypeBadge = (type) => {
+  switch (type) {
+  case 'message':;
             return <Badge className="bg-blue-500">Message</Badge>;
         case 'quote_request':;
             return <Badge className="bg-purple-500">Quote Request</Badge>;
@@ -42,33 +42,38 @@ const getNotificationTypeBadge = (type) => {;
         case 'system':;
             return <Badge className="bg-yellow-500">System</Badge>;
         default: return <Badge variant="outline">Notification</Badge>
-    }
-}
-const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {;
-    const navigate = useNavigate()
+    },
+  }
+const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
+  const navigate = useNavigate()
     const handleAction = () => {
-        if (if (!notification.read) {;) {
+        if (if (!notification.read) {
+  ) {
             onMarkAsRead(notification.id)
         }
-        if (if (notification.action_url) {;) {
+        if (if (notification.action_url) {
+  ) {
             navigate(notification.action_url)
-        }
-    }
+        },
+  }
     return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
         <div className="mt-1">
-          {{getNotificationIcon(notification.type, "h-6 w-6")}}
+          {{getNotificationIcon(notification.type, "h-6 w-6")},
+  }
         </div>
         <div className="flex-1">
           <div className="flex justify-between">
             <div className="flex flex-col">
               <h3 className="font-medium text-white">{notification.title}</h3>
               <div className="flex items-center gap-2 mb-2">
-                {{getNotificationTypeBadge(notification.type)}}
+                {{getNotificationTypeBadge(notification.type)},
+  }
                 <span className="text-xs text-zion-slate-light">
                   {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
                 </span>
-                {{!notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>)}}
+                {{!notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>)},
+  }
               </div>
             </div>
             ;
@@ -87,15 +92,16 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {;
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           ;
           {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
-              {{notification.action_text}}
+              {{notification.action_text},
+  }
               <ChevronRight className="ml-1 h-4 w-4"/>
             </Button>)}
         </div>
       </div>
     </div>)
 }
-export default function NotificationsPage() {;
-    const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications()
+export default function NotificationsPage() {
+  const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications()
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
       ;

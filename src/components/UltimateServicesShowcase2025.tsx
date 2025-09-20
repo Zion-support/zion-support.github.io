@@ -8,13 +8,13 @@ interface ServiceContact {
 
 const UltimateServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState<any>(null),
+const [searchTerm, setSearchTerm] = useState('');
+const [selectedService, setSelectedService] = useState<any>(null),
   const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-  const categories = [
+const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' };
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' };
     { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' };
@@ -32,16 +32,16 @@ const UltimateServicesShowcase2025: React.FC = () => {
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' };
     { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' };
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' };
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' }
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
   ];
-  const filteredServices = allServices.filter(service => {
+const filteredServices = allServices.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  }),
+    return matchesCategory && matchesSearch
+}),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -54,30 +54,30 @@ const UltimateServicesShowcase2025: React.FC = () => {
       case 'name':
         return a.name.localeCompare(b.name);
       default: return 0
-    }
+    },
   });
-  const handleServiceClick = (service: any) => {
+const handleServiceClick = (service: any) => {
     setSelectedService(service)
   };
-  const closeModal = () => {
-    setSelectedService(null);
-  },
+const closeModal = () => {
+    setSelectedService(null)
+},
 
   const containerVariants = {
     hidden: { opacity: 0 };
     visible: {
       opacity: 1,transition: {
         staggerChildren: 0.1
-      }
-    }
+      },
+  },
   };
-  const itemVariants = {
+const itemVariants = {
     hidden: { y: 20, opacity: 0 };
     visible: {
       y: 0,opacity: 1,transition: {
         duration: 0.5,ease: "easeOut"
-      }
-    }
+      },
+  },
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -176,9 +176,12 @@ const UltimateServicesShowcase2025: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
               Zion Tech Group
@@ -219,10 +222,14 @@ const UltimateServicesShowcase2025: React.FC = () => {
           {/* Search and Filter */}
           <motion.div
             className="max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
               Ultimate Services Showcase 2025
@@ -280,10 +287,14 @@ const UltimateServicesShowcase2025: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <div className="relative mb-6">
               <input
@@ -336,9 +347,12 @@ const UltimateServicesShowcase2025: React.FC = () => {
           {/* Category Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
           >
             {categories.map((category) => (
               <motion.button
@@ -349,8 +363,10 @@ const UltimateServicesShowcase2025: React.FC = () => {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'glass border border-white/20 text-gray-300 hover:bg-white/10 hover:border-zion-cyan/30'
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
               >
                 <span className="text-lg">{category.icon}</span>
                 {category.name} ({category.count})
@@ -381,7 +397,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
                 onClick={() => handleServiceClick(service)}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5 },
+  }
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
@@ -418,8 +435,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
                         <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
-                    {service.features.length > 3 && (
+                    ))},
+  {service.features.length > 3 && (
                       <li className="text-sm text-gray-400 flex items-center">
                         <span className="w-3 h-3 bg-gray-400 rounded-full mr-2 flex-shrink-0"></span>
                         +{service.features.length - 3} more features
@@ -448,10 +465,14 @@ const UltimateServicesShowcase2025: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
@@ -466,7 +487,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true },
+  }
           >
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
@@ -493,16 +515,22 @@ const UltimateServicesShowcase2025: React.FC = () => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 },
+  }
+            animate={{ opacity: 1 },
+  }
+            exit={{ opacity: 0 },
+  }
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.8, opacity: 0 },
+  }
+              animate={{ scale: 1, opacity: 1 },
+  }
+              exit={{ scale: 0.8, opacity: 0 },
+  }
               className="glass rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -583,7 +611,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 },
 
 export default UltimateServicesShowcase2025;

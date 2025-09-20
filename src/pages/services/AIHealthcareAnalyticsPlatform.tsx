@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Heart;
-  Activity, ;
-  TrendingUp, ;
-  CheckCircle, ;
+  Activity,
+  TrendingUp,
+  CheckCircle,
   ArrowRight;
   Play;
   Settings;
@@ -319,120 +319,124 @@ import { ;
   CloudFog10;
   CloudHail10;
   CloudSnow10;
-  CloudSleet10;
+  CloudSleet10
 } from "lucide-react";
 const AIHealthcareAnalyticsPlatform = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Patient Analytics',description: 'Advanced machine learning algorithms analyze patient data for predictive insights';
-    }
-    {;
-      icon: Heart,title: 'Clinical Decision Support',description: 'AI-driven recommendations for treatment plans and medication management';
-    }
-    {;
-      icon: Activity,title: 'Real-time Health Monitoring',description: 'Continuous monitoring of patient vitals and health indicators';
-    }
-    {;
-      icon: TrendingUp,title: 'Predictive Health Analytics',description: 'Forecast patient outcomes and identify at-risk populations';
-    }
-    {;
-      icon: Shield,title: 'HIPAA-Compliant Security',description: 'Enterprise-grade security with full HIPAA compliance and data encryption';
-    }
-    {;
-      icon: BarChart4,title: 'Population Health Insights',description: 'Comprehensive analytics for population health management and public health';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Patient Analytics',description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
+},
+  {
+  icon: Heart,title: 'Clinical Decision Support',description: 'AI-driven recommendations for treatment plans and medication management'
+},
+  {
+  icon: Activity,title: 'Real-time Health Monitoring',description: 'Continuous monitoring of patient vitals and health indicators'
+},
+  {
+  icon: TrendingUp,title: 'Predictive Health Analytics',description: 'Forecast patient outcomes and identify at-risk populations'
+},
+  {
+  icon: Shield,title: 'HIPAA-Compliant Security',description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
+},
+  {
+  icon: BarChart4,title: 'Population Health Insights',description: 'Comprehensive analytics for population health management and public health'
+},
   ]
-  const benefits = [;
-    'Improve patient outcomes by 35%Reduce readmission rates by 40%';
+  const benefits = [
+  'Improve patient outcomes by 35%Reduce readmission rates by 40%';
     'Lower healthcare costs by 25-30%Enhance clinical decision-making by 50%';
-    'Streamline administrative processes by 60%Ensure 99.9% HIPAA compliance';
+    'Streamline administrative processes by 60%Ensure 99.9% HIPAA compliance'
+]
+
+  const useCases = [
+  {
+  industry: 'Hospitals & Health Systems',description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
+},
+  {
+  industry: 'Primary Care Practices',description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
+},
+  {
+  industry: 'Specialty Clinics',description: 'Streamline specialty care workflows and improve treatment outcomes'
+},
+  {
+  industry: 'Health Insurance',description: 'Risk assessment, fraud detection, and population health management'
+},
   ]
 
-  const useCases = [;
-    {;
-      industry: 'Hospitals & Health Systems',description: 'Optimize patient care, reduce readmissions, and improve operational efficiency';
-    }
-    {;
-      industry: 'Primary Care Practices',description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement';
-    }
-    {;
-      industry: 'Specialty Clinics',description: 'Streamline specialty care workflows and improve treatment outcomes';
-    }
-    {;
-      industry: 'Health Insurance',description: 'Risk assessment, fraud detection, and population health management';
-    }
-  ]
-
-  const pricing = [;
-    {;
-      plan: 'Starter',price: '$2,800/month';
-      features: [;
-        'Up to 50 providersBasic AI analytics';
+  const pricing = [
+  {
+  plan: 'Starter',price: '$2,800/month';
+      features: [
+  'Up to 50 providersBasic AI analytics';
         'Patient monitoringClinical decision support';
-        'Basic reportingEmail support';
-      ]
-    }
-    {;
-      plan: 'Professional',price: '$5,500/month';
-      features: [;
-        'Up to 200 providersAdvanced AI analytics';
+        'Basic reportingEmail support'
+],
+  },
+  {
+  plan: 'Professional',price: '$5,500/month';
+      features: [
+  'Up to 200 providersAdvanced AI analytics';
         'Population health insightsCustom workflows';
         'Advanced reportingPriority support';
-        'API access';
-      ]
-    }
-    {;
-      plan: 'Enterprise',price: '$12,000/month';
-      features: [;
-        'Unlimited providersFull AI capabilities';
+        'API access'
+],
+  },
+  {
+  plan: 'Enterprise',price: '$12,000/month';
+      features: [
+  'Unlimited providersFull AI capabilities';
         'Custom integrationsWhite-label options';
         'Dedicated health manager24/7 phone support';
-        'Custom training';
-      ]
-    }
+        'Custom training'
+],
+  },
   ]
 
-  const integrations = [;
-    'Epic EHRCerner';
+  const integrations = [
+  'Epic EHRCerner';
     'AllscriptsMeditech';
     'AthenahealthPractice Fusion';
     'eClinicalWorksNextGen';
     'Greenway HealthDrChrono';
-    'KareoWebhook APIs';
-  ]
+    'KareoWebhook APIs'
+]
 
-  const keyMetrics = [;
-    {;
-      metric: '35%',label: 'Patient Outcome Improvement';
-    }
-    {;
-      metric: '40%',label: 'Readmission Rate Reduction';
-    }
-    {;
-      metric: '30%',label: 'Cost Reduction';
-    }
-    {;
-      metric: '50%',label: 'Decision Enhancement';
-    }
+  const keyMetrics = [
+  {
+  metric: '35%',label: 'Patient Outcome Improvement'
+},
+  {
+  metric: '40%',label: 'Readmission Rate Reduction'
+},
+  {
+  metric: '30%',label: 'Cost Reduction'
+},
+  {
+  metric: '50%',label: 'Decision Enhancement'
+},
   ]
-  const complianceStandards = [;
-    'HIPAAHITECH';
+  const complianceStandards = [
+  'HIPAAHITECH';
     'SOC 2 Type IIISO 27001';
     'HITRUSTGDPR';
     'CCPAFDA 21 CFR Part 11';
     'ONC Health ITMeaningful Use';
-    'MIPSAPMs';
-  ]
+    'MIPSAPMs'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">
@@ -451,16 +455,20 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200";"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <Settings className="w-5 h-5 mr-2" />
@@ -471,16 +479,21 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Key Metrics Section */}}
+      {{/* Key Metrics Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {keyMetrics.map((item, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="text-center";"
               >
                 <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">{item.metric}</div>
@@ -491,13 +504,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -509,12 +526,16 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -528,13 +549,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -546,12 +571,16 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: -20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="flex items-start space-x-3";"
               >
                 <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
@@ -562,13 +591,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -580,12 +613,16 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20";"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
@@ -596,13 +633,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Compliance Standards Section */}}
+      {{/* Compliance Standards Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -614,12 +655,16 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {complianceStandards.map((standard, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-pink-400/40 transition-all duration-300";"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{standard}</span>
@@ -629,13 +674,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -647,30 +696,34 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${;
-                  index === 1 ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
+  index === 1 ;
                     ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' ;
-                    : 'border-zion-slate-light/20';
-                }`}
+                    : 'border-zion-slate-light/20'
+}`}
               >
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
-                  {index === 1 && (;
-                    <span className="inline-block bg-pink-500 text-white text-sm px-3 py-1 rounded-full">
+                  {index === 1 && (
+  <span className="inline-block bg-pink-500 text-white text-sm px-3 py-1 rounded-full">
                       Most Popular;
                     </span>
                   )}
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
@@ -685,13 +738,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Integrations Section */}}
+      {{/* Integrations Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -703,12 +760,16 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {integrations.map((integration, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
@@ -718,13 +779,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?;
@@ -734,16 +799,20 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Start Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -754,13 +823,17 @@ const AIHealthcareAnalyticsPlatform = () => {
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Get in Touch;

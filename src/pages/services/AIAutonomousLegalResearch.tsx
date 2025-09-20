@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   BookOpen;
-  Brain, ;
-  Target, ;
-  BarChart3, ;
+  Brain,
+  Target,
+  BarChart3,
   CheckCircle;
   ArrowRight;
   Star;
@@ -24,44 +24,48 @@ import { ;
   Zap;
   Shield;
   Users;
-  Scale;
+  Scale
 } from "lucide-react";
 const AIAutonomousLegalResearch: React.FC = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Legal Research',description: 'Advanced machine learning for autonomous legal research and case analysis';
-    }
-    {;
-      icon: BookOpen,title: 'Case Law Analysis',description: 'Comprehensive analysis of case law with AI-driven insights and precedents';
-    }
-    {;
-      icon: Target,title: 'Legal Document Review',description: 'Automated review and analysis of legal documents and contracts';
-    }
-    {;
-      icon: BarChart3,title: 'Legal Analytics',description: 'Data-driven legal insights and predictive analytics for case outcomes';
-    }
-    {;
-      icon: Scale,title: 'Compliance Monitoring',description: 'Continuous monitoring of legal compliance and regulatory changes';
-    }
-    {;
-      icon: Shield,title: 'Legal Risk Assessment',description: 'AI-powered risk assessment and mitigation strategies';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Legal Research',description: 'Advanced machine learning for autonomous legal research and case analysis'
+},
+  {
+  icon: BookOpen,title: 'Case Law Analysis',description: 'Comprehensive analysis of case law with AI-driven insights and precedents'
+},
+  {
+  icon: Target,title: 'Legal Document Review',description: 'Automated review and analysis of legal documents and contracts'
+},
+  {
+  icon: BarChart3,title: 'Legal Analytics',description: 'Data-driven legal insights and predictive analytics for case outcomes'
+},
+  {
+  icon: Scale,title: 'Compliance Monitoring',description: 'Continuous monitoring of legal compliance and regulatory changes'
+},
+  {
+  icon: Shield,title: 'Legal Risk Assessment',description: 'AI-powered risk assessment and mitigation strategies'
+},
   ]
-  const benefits = [;
-    'Reduce research time by 75%Improve case analysis by 80%';
+  const benefits = [
+  'Reduce research time by 75%Improve case analysis by 80%';
     'Enhance legal accuracy by 90%Automate document review';
-    '24/7 autonomous operationReal-time legal updates';
-  ]
+    '24/7 autonomous operationReal-time legal updates'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4 mr-2" />
@@ -90,14 +94,19 @@ const AIAutonomousLegalResearch: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -109,13 +118,18 @@ const AIAutonomousLegalResearch: React.FC = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
@@ -129,14 +143,19 @@ const AIAutonomousLegalResearch: React.FC = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -149,15 +168,19 @@ const AIAutonomousLegalResearch: React.FC = () => {
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (;
-                  <div key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => (
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -166,10 +189,14 @@ const AIAutonomousLegalResearch: React.FC = () => {
             </motion.div>
             ;
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8";"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Legal Research?</h3>
@@ -184,14 +211,19 @@ const AIAutonomousLegalResearch: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Legal Research?;

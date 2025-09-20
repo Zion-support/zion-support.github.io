@@ -6,22 +6,22 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
-export default function AdvancedServicesPage() {;
-    const [searchQuery, setSearchQuery] = useState('')
+export default function AdvancedServicesPage() {
+  const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [sortBy, setSortBy] = useState('featured')
     // Filter services based on search and category;
-    const filteredServices = ADVANCED_SERVICES.filter(service => {;
-        const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const filteredServices = ADVANCED_SERVICES.filter(service => {
+  const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
         const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    })
+        return matchesSearch && matchesCategory
+})
     // Sort services;
-    const sortedServices = [...filteredServices].sort((a, b) => {;
-        switch (sortBy) {;
-            case 'price-low':;
+const sortedServices = [...filteredServices].sort((a, b) => {
+  switch (sortBy) {
+  case 'price-low':;
                 return (a.price || 0) - (b.price || 0)
             case 'price-high':;
                 return (b.price || 0) - (a.price || 0)
@@ -30,13 +30,14 @@ export default function AdvancedServicesPage() {;
             case 'ai-score':;
                 return (b.aiScore || 0) - (a.aiScore || 0)
             default: return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
-        }
-    })
+        },
+  })
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)))
     return (<div className="min-h-screen bg-background">
       <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -47,7 +48,8 @@ export default function AdvancedServicesPage() {;
             Expert solutions designed for the modern enterprise.;
           </p>
           ;
-          {{/* Contact Information */}}
+          {{/* Contact Information */},
+  }
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
               <Phone className="w-5 h-5"/>
@@ -74,7 +76,8 @@ export default function AdvancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Search and Filter Section */}}
+      {{/* Search and Filter Section */},
+  }
       <section className="py-8 bg-zion-blue-dark border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
@@ -101,7 +104,8 @@ export default function AdvancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Service Categories Overview */}}
+      {{/* Service Categories Overview */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -117,7 +121,8 @@ export default function AdvancedServicesPage() {;
                   <div className="text-4xl mb-2">{category.icon}</div>
                   <CardTitle className="text-xl">{category.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {{category.description}}
+                    {{category.description},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -130,7 +135,8 @@ export default function AdvancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -148,7 +154,8 @@ export default function AdvancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Pricing Tiers */}}
+      {{/* Pricing Tiers */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -164,7 +171,8 @@ export default function AdvancedServicesPage() {;
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>
                   <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>
                   <CardDescription className="text-zion-slate-light">
-                    {{tier.description}}
+                    {{tier.description},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -183,7 +191,8 @@ export default function AdvancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Why Choose Zion Tech Group */}}
+      {{/* Why Choose Zion Tech Group */},
+  }
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -229,7 +238,8 @@ export default function AdvancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
@@ -261,10 +271,11 @@ export default function AdvancedServicesPage() {;
     </div>)
 }
 // Service Card Component;
-function ServiceCard({ service }) {;
-    return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
+function ServiceCard({ service }) {
+  return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
       <div className="relative">
-        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+        <img src={service.images[0],
+  } alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
         {service.featured && (<Badge className="absolute top-3 right-3 bg-zion-cyan text-zion-blue">
             Featured;
           </Badge>)}
@@ -275,26 +286,32 @@ function ServiceCard({ service }) {;
           <CardTitle className="text-xl text-zion-blue line-clamp-2">{service.title}</CardTitle>
           <div className="text-right">
             <div className="text-2xl font-bold text-zion-cyan">
-              {service.currency}{{service.price?.toLocaleString()}}
+              {service.currency},
+  {{service.price?.toLocaleString()},
+  }
             </div>
             <div className="text-sm text-zion-slate">Starting Price</div>
           </div>
         </div>
         ;
         <CardDescription className="text-zion-slate line-clamp-3">
-          {{service.description}}
+          {{service.description},
+  }
         </CardDescription>
       </CardHeader>
       ;
       <CardContent className="space-y-4">
-        {{/* Tags */}}
+        {{/* Tags */},
+  }
         <div className="flex flex-wrap gap-2">
           {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
-              {{tag}}
+              {{tag},
+  }
             </Badge>))}
         </div>
         ;
-        {{/* Service Details */}}
+        {{/* Service Details */},
+  }
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center gap-2 text-zion-slate">
             <Star className="w-4 h-4 text-yellow-500"/>
@@ -314,13 +331,16 @@ function ServiceCard({ service }) {;
           </div>
         </div>
         ;
-        {{/* Category */}}
+        {{/* Category */},
+  }
         <div className="text-sm text-zion-slate">
-          <strong>Category:</strong> {{service.category}}
-          {service.subcategory && (<span className="ml-2 text-zion-cyan">• {service.subcategory}</span>)}
+          <strong>Category:</strong> {{service.category},
+  },
+  {service.subcategory && (<span className="ml-2 text-zion-cyan">• {service.subcategory}</span>)}
         </div>
         ;
-        {{/* CTA Buttons */}}
+        {{/* CTA Buttons */},
+  }
         <div className="flex gap-2">
           <Button className="flex-1 bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold">
             Get Quote;

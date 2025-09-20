@@ -17,11 +17,11 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from "lucide-react";
-function ProjectDetailsContent() {;
-    const router = useRouter()
+function ProjectDetailsContent() {
+  const router = useRouter()
     // Get projectId from Next.js router query params;
-    const { projectId } = router.query;
-    const { user } = useAuth()
+const { projectId } = router.query;
+const { user } = useAuth()
     const { getProjectById, updateProjectStatus } = useProjects()
     const [project, setProject] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
@@ -31,29 +31,30 @@ function ProjectDetailsContent() {;
     const [activeTab, setActiveTab] = useState("details")
     // Load project data;
     useEffect(() => {
-        async function loadProject() {;
-            if (!projectId)
+        async function loadProject() {
+  if (!projectId)
                 return;
             setIsLoading(true)
             const projectData = await getProjectById(projectId)
-            if (if (projectData) {;) {
+            if (if (projectData) {
+  ) {
                 setProject(projectData)
                 // Now fetch notes;
                 fetchProjectNotes(projectId)
             }
             else {
-                toast({;
-                    title: "Project not found",description: "The requested project could not be found.",variant: "destructive";
-                })
+                toast({
+  title: "Project not found",description: "The requested project could not be found.",variant: "destructive"
+})
                 router.push("/dashboard")
             }
             setIsLoading(false)
         }
         loadProject()
     }, [projectId])
-    const fetchProjectNotes = async (projectId) => {;
-        try {;
-            const { data, error } = await supabase;
+    const fetchProjectNotes = async (projectId) => {
+  try {
+  const { data, error } = await supabase;
                 .from("project_notes")
                 .select(`;
           *;
@@ -65,60 +66,62 @@ function ProjectDetailsContent() {;
                 throw error;
             setNotes(data || [])
         }
-        catch (err) {;
-            console.error("Error fetching project notes:", err)
-        }
-    }
+        catch (err) {
+  console.error("Error fetching project notes:", err)
+        },
+  }
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
             return;
         setIsSubmittingNote(true)
-        try {;
-            const { data, error } = await supabase;
+        try {
+  const { data, error } = await supabase;
                 .from("project_notes")
-                .insert({;
-                project_id: project.id,user_id: user.id,content: newNote;
-            })
+                .insert({
+  project_id: project.id,user_id: user.id,content: newNote
+})
                 .select()
             if (error)
                 throw error;
             // Refresh notes;
             fetchProjectNotes(project.id)
             setNewNote("")
-            toast({;
-                title: "Note added",description: "Your note has been added to the project.";
-            })
+            toast({
+  title: "Note added",description: "Your note has been added to the project."
+})
         }
-        catch (err) {;
-            console.error("Error adding note:", err)
-            toast({;
-                title: "Failed to add note",description: err.message || "An error occurred while adding your note.",variant: "destructive";
-            })
+        catch (err) {
+  console.error("Error adding note:", err)
+            toast({
+  title: "Failed to add note",description: err.message || "An error occurred while adding your note.",variant: "destructive"
+})
         }
-        finally {;
-            setIsSubmittingNote(false)
-        }
-    }
-    const handleStatusChange = async (newStatus) => {;
-        if (!project)
+        finally {
+  setIsSubmittingNote(false)
+        },
+  }
+    const handleStatusChange = async (newStatus) => {
+  if (!project)
             return;
-        const success = await updateProjectStatus(project.id, newStatus)
-        if (if (success) {;) {
-            setProject({;
-                ...project;
-                status: newStatus;
-            })
+const success = await updateProjectStatus(project.id, newStatus)
+        if (if (success) {
+  ) {
+            setProject({
+  ...project;
+                status: newStatus
+})
             // If offer was accepted, show a special toast;
-            if (if (newStatus === "offer_accepted") {;) {
-                toast({;
-                    title: "Offer Accepted! 🎉",description: "The project is now in progress. Congratulations!";
-                })
-            }
-        }
-    }
-    const getStatusBadge = (status) => {;
-        switch (status) {;
-            case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
+            if (if (newStatus === "offer_accepted") {
+  ) {
+                toast({
+  title: "Offer Accepted! 🎉",description: "The project is now in progress. Congratulations!"
+})
+            },
+  },
+  }
+    const getStatusBadge = (status) => {
+  switch (status) {
+  case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
             case "offer_accepted":;
                 return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
             case "changes_requested":;
@@ -130,9 +133,10 @@ function ProjectDetailsContent() {;
             case "canceled":;
                 return <Badge variant="destructive">Canceled</Badge>;
             default: return <Badge variant="outline">{status}</Badge>
-        }
-    }
-    if (if (isLoading) {;) {
+        },
+  }
+    if (if (isLoading) {
+  ) {
         return (<div className="container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
           <div className="text-center">
@@ -142,7 +146,8 @@ function ProjectDetailsContent() {;
         </div>
       </div>)
     }
-    if (if (!project) {;) {
+    if (if (!project) {
+  ) {
         return (<div className="container mx-auto py-8">
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-10">
@@ -159,14 +164,15 @@ function ProjectDetailsContent() {;
       </div>)
     }
     // Check if user is either the client or the talent;
-    const isClient = user?.id === project.client_id;
-    const isTalent = user?.id === project.talent_id;
-    if (if (!isClient && !isTalent) {;) {
+const isClient = user?.id === project.client_id;
+const isTalent = user?.id === project.talent_id;
+    if (if (!isClient && !isTalent) {
+  ) {
         router.push("/unauthorized")
-        return null;
-    }
+        return null
+}
     const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status)
+const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status)
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status)
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
@@ -177,14 +183,17 @@ function ProjectDetailsContent() {;
             <div>
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
-                {{getStatusBadge(project.status)}}
+                {{getStatusBadge(project.status)},
+  }
                 <span className="text-muted-foreground">
-                  Started on {{format(new Date(project.start_date), "PPP")}}
+                  Started on {{format(new Date(project.start_date), "PPP")},
+  }
                 </span>
               </div>
             </div>
             ;
-            {{/* Action Buttons Based on Role and Status */}}
+            {{/* Action Buttons Based on Role and Status */},
+  }
             <div className="space-x-2">
               {isTalent && isOfferPending && (<>
                   <AlertDialog>
@@ -242,9 +251,8 @@ function ProjectDetailsContent() {;
                   <Link href={`/project/${project.id}/milestones`}>
                     <Layers className="mr-2 h-4 w-4"/> Milestones;
                   </Link>
-                </Button>)}
-
-              {isActiveProject && (<Button variant="outline" asChild>
+                </Button>)},
+  {isActiveProject && (<Button variant="outline" asChild>
                   <Link href={`/project/${project.id}/room`}>
                     <Video className="mr-2 h-4 w-4"/> Project Room;
                   </Link>
@@ -265,7 +273,8 @@ function ProjectDetailsContent() {;
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>
                 <TabsTrigger value="documents">Documents</TabsTrigger>
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>
-                {{project.status === "completed" && (<TabsTrigger value="reviews">Reviews</TabsTrigger>)}}
+                {{project.status === "completed" && (<TabsTrigger value="reviews">Reviews</TabsTrigger>)},
+  }
               </TabsList>
               ;
               <TabsContent value="details">
@@ -326,7 +335,8 @@ function ProjectDetailsContent() {;
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
-                            {{getStatusBadge(project.status)}}
+                            {{getStatusBadge(project.status)},
+  }
                           </div>
                         </div>
                       </div>
@@ -387,10 +397,12 @@ function ProjectDetailsContent() {;
                                   {note.created_by_profile?.avatar_url ? (<img loading="lazy" src={note.created_by_profile.avatar_url} alt={note.created_by_profile.display_name}/>) : (<User className="h-4 w-4"/>)}
                                 </Avatar>
                                 <span className="font-medium text-sm">
-                                  {{note.created_by_profile?.display_name || "User"}}
+                                  {{note.created_by_profile?.display_name || "User"},
+  }
                                 </span>
                                 <span className="text-xs text-muted-foreground">
-                                  {{format(new Date(note.created_at), "PPp")}}
+                                  {{format(new Date(note.created_at), "PPp")},
+  }
                                 </span>
                               </div>
                               <p className="text-sm whitespace-pre-wrap">{note.content}</p>
@@ -405,7 +417,8 @@ function ProjectDetailsContent() {;
                       {isOfferAccepted && (<div>
                           <Textarea placeholder="Add a note or update to the project..." value={newNote} onChange={(e) => setNewNote(e.target.value)} className="min-h-[100px] mb-2"/>
                           <Button onClick={handleSubmitNote} disabled={!newNote.trim() || isSubmittingNote}>
-                            {{isSubmittingNote ? "Posting..." : "Post Note"}}
+                            {{isSubmittingNote ? "Posting..." : "Post Note"},
+  }
                           </Button>
                         </div>)}
                     </div>
@@ -432,10 +445,12 @@ function ProjectDetailsContent() {;
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {{project.talent_profile?.full_name || "Talent"}}
+                        {{project.talent_profile?.full_name || "Talent"},
+  }
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {{project.talent_profile?.professional_title || "Professional"}}
+                        {{project.talent_profile?.professional_title || "Professional"},
+  }
                       </p>
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message;
@@ -449,7 +464,8 @@ function ProjectDetailsContent() {;
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {{project.talent_profile?.full_name || "Client"}}
+                        {{project.talent_profile?.full_name || "Client"},
+  }
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
@@ -461,7 +477,8 @@ function ProjectDetailsContent() {;
               </CardContent>
             </Card>
             ;
-            {{/* Project Status Card */}}
+            {{/* Project Status Card */},
+  }
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
@@ -476,21 +493,24 @@ function ProjectDetailsContent() {;
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
-                      {{format(new Date(project.created_at), "PPP")}}
+                      {{format(new Date(project.created_at), "PPP")},
+  }
                     </span>
                   </div>
                   ;
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
-                      {{format(new Date(project.start_date), "PPP")}}
+                      {{format(new Date(project.start_date), "PPP")},
+  }
                     </span>
                   </div>
                 </div>
               </CardContent>
               ;
-              {{/* Conditional Footer Based on Status */}}
-              {project.status === "changes_requested" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
+              {{/* Conditional Footer Based on Status */},
+  },
+  {project.status === "changes_requested" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.;
                   </p>
@@ -523,8 +543,8 @@ function ProjectDetailsContent() {;
       ;
     </>)
 }
-export default function ProjectDetails() {;
-    return (<ProtectedRoute>
+export default function ProjectDetails() {
+  return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)
 }

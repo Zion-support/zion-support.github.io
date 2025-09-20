@@ -8,23 +8,23 @@ interface User {
 const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]),
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null),
+const [error, setError] = useState<string | null>(null),
   const [newUser, setNewUser] = useState({ name: '', email: '' });
-  const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
+const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
 
   // Check API health on component mount
   useEffect(() => {
     checkHealth();
-    fetchUsers();
-  }, []),
+    fetchUsers()
+}, []),
 
   const checkHealth = async () => {
     try {
       const response = await api.health();
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
-    } catch (err) {
-      setHealthStatus('❌ API Unhealthy');
-    }
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`)
+} catch (err) {
+      setHealthStatus('❌ API Unhealthy')
+},
   },
 
   const fetchUsers = async () => {
@@ -33,13 +33,13 @@ const ApiDemo: React.FC = () => {
     try {
       const response = await api.getUsers();
       if (response.success && response.data) {
-        setUsers(response.data);
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch users');
-    } finally {
-      setLoading(false);
-    }
+        setUsers(response.data)
+},
+  } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to fetch users')
+} finally {
+      setLoading(false)
+},
   },
 
   const handleCreateUser = async (e: React.FormEvent) => {
@@ -55,13 +55,13 @@ const ApiDemo: React.FC = () => {
       const response = await api.createUser(newUser);
       if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!]);
-        setNewUser({ name: '', email: '' });
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to create user');
-    } finally {
-      setLoading(false);
-    }
+        setNewUser({ name: '', email: '' })
+},
+  } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create user')
+} finally {
+      setLoading(false)
+},
   },
 
   return (
@@ -109,14 +109,13 @@ const ApiDemo: React.FC = () => {
           </form>
         </div>
 
-        {/* Error Display */}
-        {error && (
+        {/* Error Display */},
+  {error && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-red-700">{error}</p>
           </div>
-        )}
-
-        {/* Users List */}
+        )},
+  {/* Users List */}
         <div className="p-4 bg-gray-50 rounded-lg">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-700">Users ({users.length})</h3>

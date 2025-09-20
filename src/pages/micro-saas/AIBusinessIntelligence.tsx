@@ -1,45 +1,49 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target } from "lucide-react";
-export default function AIBusinessIntelligence() {;
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Insights',description: 'Intelligent analysis and predictive modeling';
-    }
-    {;
-      icon: BarChart3,title: 'Real-time Analytics',description: 'Live data visualization and reporting';
-    }
-    {;
-      icon: Zap,title: 'Automated Intelligence',description: 'Smart automation of business processes';
-    }
-    {;
-      icon: Eye,title: 'Predictive Analytics',description: 'Forecast trends and identify opportunities';
-    }
+export default function AIBusinessIntelligence() {
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Insights',description: 'Intelligent analysis and predictive modeling'
+},
+  {
+  icon: BarChart3,title: 'Real-time Analytics',description: 'Live data visualization and reporting'
+},
+  {
+  icon: Zap,title: 'Automated Intelligence',description: 'Smart automation of business processes'
+},
+  {
+  icon: Eye,title: 'Predictive Analytics',description: 'Forecast trends and identify opportunities'
+},
   ]
-  const capabilities = [;
-    {;
-      title: 'Business Intelligence Dashboard',description: 'Comprehensive view of all business metrics and KPIs',icon: BarChart3;
-    }
-    {;
-      title: 'Predictive Modeling',description: 'AI algorithms to forecast business outcomes',icon: TrendingUp;
-    }
-    {;
-      title: 'Natural Language Query',description: 'Ask questions in plain English and get instant answers',icon: Database;
-    }
-    {;
-      title: 'Automated Reporting',description: 'Generate reports automatically with AI insights',icon: Target;
-    }
+  const capabilities = [
+  {
+  title: 'Business Intelligence Dashboard',description: 'Comprehensive view of all business metrics and KPIs',icon: BarChart3
+},
+  {
+  title: 'Predictive Modeling',description: 'AI algorithms to forecast business outcomes',icon: TrendingUp
+},
+  {
+  title: 'Natural Language Query',description: 'Ask questions in plain English and get instant answers',icon: Database
+},
+  {
+  title: 'Automated Reporting',description: 'Generate reports automatically with AI insights',icon: Target
+},
   ]
   return (
     <div className="min-h-screen bg-futuristic">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center space-x-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-2 mb-6">
@@ -70,14 +74,19 @@ export default function AIBusinessIntelligence() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -89,13 +98,18 @@ export default function AIBusinessIntelligence() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -109,14 +123,19 @@ export default function AIBusinessIntelligence() {;
         </div>
       </section>
 
-      {{/* Capabilities Section */}}
+      {{/* Capabilities Section */},
+  }
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -128,13 +147,18 @@ export default function AIBusinessIntelligence() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (;
-              <motion.div;
-                key={{capability.title}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {capabilities.map((capability, index) => (
+  <motion.div;
+                key={{capability.title},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 <div className="flex items-start space-x-4">
@@ -152,14 +176,19 @@ export default function AIBusinessIntelligence() {;
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -171,12 +200,17 @@ export default function AIBusinessIntelligence() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {{/* Starter Plan */}}
+            {{/* Starter Plan */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.1 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300";"
             >
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
@@ -198,12 +232,17 @@ export default function AIBusinessIntelligence() {;
               <button className="w-full btn-outline py-3">Get Started</button>
             </motion.div>
 
-            {{/* Pro Plan */}}
+            {{/* Pro Plan */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.2 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative";"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-black px-4 py-1 rounded-full text-sm font-semibold">
@@ -234,12 +273,17 @@ export default function AIBusinessIntelligence() {;
               </button>
             </motion.div>
 
-            {{/* Enterprise Plan */}}
+            {{/* Enterprise Plan */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.3 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300";"
             >
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
@@ -268,14 +312,19 @@ export default function AIBusinessIntelligence() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
+            viewport={{ once: true },
+  }
             className="className="bg-gradient-to-r from-violet-600 to-violet-700 rounded-3xl p-12 text-center relative overflow-hidden";"
           >
             <div className="absolute inset-0 bg-black/20"></div>
@@ -303,7 +352,7 @@ export default function AIBusinessIntelligence() {;
 }
 
 // Missing icon component;
-const CheckCircle = ({ className }: { className?: string }) => (;
+const CheckCircle = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>

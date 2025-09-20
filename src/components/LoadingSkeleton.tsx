@@ -16,22 +16,24 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true 
 }) => {
   const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? 'rounded' : ''}`;
-  const classes = `${baseClasses} ${className}`;
+const classes = `${baseClasses} ${className}`;
   if (!animated) {
-    return <div className={classes} />;
-  }
+    return <div className={classes} />
+}
   
   return (
     <motion.div
       className={classes}
       animate={{
-        opacity: [0.5, 1, 0.5]
-      }}
+        opacity: [0.5, 1, 0.5],
+  },
+  }
       transition={{
         duration: 1.5,repeat: Infinity,ease: "easeInOut"
-      }}
+      },
+  }
     />
-  );
+  )
 },
 
 interface LoadingSkeletonProps {
@@ -99,8 +101,8 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                 <Skeleton key={index} height="h-4" width="w-24" />
               ))}
             </div>
-            {/* Rows */}
-            {Array.from({ length: count }).map((_, index) => (
+            {/* Rows */},
+  {Array.from({ length: count }).map((_, index) => (
               <div key={index} className="flex space-x-4 p-4 border-b">
                 {Array.from({ length: 4 }).map((_, cellIndex) => (
                   <Skeleton key={cellIndex} height="h-4" width="w-24" />
@@ -130,13 +132,13 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
         ),
         
       default: return <Skeleton />
-    }
+    },
   };
   return (
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  );
+  )
 },
 
 // Specialized skeleton components

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   BarChart3;
   TrendingUp;
   Database;
@@ -26,72 +26,80 @@ import {;
   Share2;
   Cpu;
   Network;
-  FileText;
+  FileText
 } from "lucide-react";
 import { SEO } from "../../components/SEO";
-export default function DataAnalytics() {;
-  const features = [;
-    {;
-      icon: Database,title: 'Data Integration',description: 'Connect and consolidate data from multiple sources into a unified analytics platform.';
-    }
-    {;
-      icon: Brain,title: 'Advanced Analytics',description: 'Leverage machine learning and AI for predictive insights and pattern recognition.';
-    }
-    {;
-      icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that provide instant insights into your business performance.';
-    }
-    {;
-      icon: Zap,title: 'Automated Reporting',description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.';
-    }
+export default function DataAnalytics() {
+  const features = [
+  {
+  icon: Database,title: 'Data Integration',description: 'Connect and consolidate data from multiple sources into a unified analytics platform.'
+},
+  {
+  icon: Brain,title: 'Advanced Analytics',description: 'Leverage machine learning and AI for predictive insights and pattern recognition.'
+},
+  {
+  icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that provide instant insights into your business performance.'
+},
+  {
+  icon: Zap,title: 'Automated Reporting',description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
+},
   ]
 
-  const solutions = [;
-    {;
-      title: 'Business Intelligence',description: 'Transform raw data into actionable insights with interactive dashboards and reports',icon: BarChart3,benefits: [['Real-time monitoringCustom dashboards', 'Automated reportingMobile access'];]
-    }
-    {;
-      title: 'Predictive Analytics',description: 'Forecast future trends and outcomes using advanced statistical models and ML algorithms',icon: Brain,benefits: [['Trend forecastingRisk assessment', 'Opportunity identificationScenario planning'];]
-    }
-    {;
-      title: 'Data Mining',description: 'Discover hidden patterns and relationships in large datasets',icon: Search,benefits: [['Pattern recognitionAnomaly detection', 'Customer segmentationMarket insights'];]
-    }
-    {;
-      title: 'Performance Analytics',description: 'Monitor and optimize business performance across all key metrics',icon: Activity,benefits: [['KPI trackingPerformance optimization', 'BenchmarkingGoal alignment'];]
-    }
+  const solutions = [
+  {
+  title: 'Business Intelligence',description: 'Transform raw data into actionable insights with interactive dashboards and reports',icon: BarChart3,benefits: [['Real-time monitoringCustom dashboards', 'Automated reportingMobile access'],
+  ],
+  },
+  {
+  title: 'Predictive Analytics',description: 'Forecast future trends and outcomes using advanced statistical models and ML algorithms',icon: Brain,benefits: [['Trend forecastingRisk assessment', 'Opportunity identificationScenario planning'],
+  ],
+  },
+  {
+  title: 'Data Mining',description: 'Discover hidden patterns and relationships in large datasets',icon: Search,benefits: [['Pattern recognitionAnomaly detection', 'Customer segmentationMarket insights'],
+  ],
+  },
+  {
+  title: 'Performance Analytics',description: 'Monitor and optimize business performance across all key metrics',icon: Activity,benefits: [['KPI trackingPerformance optimization', 'BenchmarkingGoal alignment'],
+  ],
+  },
   ]
 
-  const useCases = [;
-    {;
-      industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting';
-      icon: Users,metrics: [['Customer Lifetime ValueInventory Turnover', 'Sales GrowthConversion Rates'];]
-    }
-    {;
-      industry: 'Finance',description: 'Risk assessment, fraud detection, and investment portfolio optimization';
-      icon: Shield,metrics: [['Risk ScoreFraud Detection Rate', 'Portfolio PerformanceCompliance Metrics'];]
-    }
-    {;
-      industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness';
-      icon: Activity,metrics: [['Patient OutcomesResource Utilization', 'Treatment Success RateCost Efficiency'];]
-    }
-    {;
-      industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization';
-      icon: Cpu,metrics: [['Equipment UptimeQuality Score', 'Production EfficiencyCost Reduction'];]
-    }
+  const useCases = [
+  {
+  industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting';
+      icon: Users,metrics: [['Customer Lifetime ValueInventory Turnover', 'Sales GrowthConversion Rates'],
+  ],
+  },
+  {
+  industry: 'Finance',description: 'Risk assessment, fraud detection, and investment portfolio optimization';
+      icon: Shield,metrics: [['Risk ScoreFraud Detection Rate', 'Portfolio PerformanceCompliance Metrics'],
+  ],
+  },
+  {
+  industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness';
+      icon: Activity,metrics: [['Patient OutcomesResource Utilization', 'Treatment Success RateCost Efficiency'],
+  ],
+  },
+  {
+  industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization';
+      icon: Cpu,metrics: [['Equipment UptimeQuality Score', 'Production EfficiencyCost Reduction'],
+  ],
+  },
   ]
 
-  const benefits = [;
-    {;
-      icon: TrendingUp,title: 'Improved Decision Making',description: 'Make data-driven decisions with confidence using real-time insights and analytics';
-    }
-    {;
-      icon: Zap,title: 'Operational Efficiency',description: 'Streamline processes and optimize operations based on data-driven insights';
-    }
-    {;
-      icon: Eye,title: 'Better Visibility',description: 'Gain comprehensive visibility into all aspects of your business performance';
-    }
-    {;
-      icon: Target,title: 'Strategic Planning',description: 'Develop informed strategies and plans based on predictive analytics and trends';
-    }
+  const benefits = [
+  {
+  icon: TrendingUp,title: 'Improved Decision Making',description: 'Make data-driven decisions with confidence using real-time insights and analytics'
+},
+  {
+  icon: Zap,title: 'Operational Efficiency',description: 'Streamline processes and optimize operations based on data-driven insights'
+},
+  {
+  icon: Eye,title: 'Better Visibility',description: 'Gain comprehensive visibility into all aspects of your business performance'
+},
+  {
+  icon: Target,title: 'Strategic Planning',description: 'Develop informed strategies and plans based on predictive analytics and trends'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -100,14 +108,18 @@ export default function DataAnalytics() {;
         description="Transform your business data into actionable insights with our comprehensive data analytics solutions. Real-time dashboards, predictive analytics, and automated reporting.";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -134,14 +146,18 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* What is Data Analytics */}}
+      {{/* What is Data Analytics */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Data Analytics?;
@@ -177,9 +193,12 @@ export default function DataAnalytics() {;
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="relative";"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
@@ -217,13 +236,17 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* Key Features */}}
+      {{/* Key Features */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -236,12 +259,16 @@ export default function DataAnalytics() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -255,13 +282,17 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* Core Solutions */}}
+      {{/* Core Solutions */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -274,12 +305,16 @@ export default function DataAnalytics() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {solutions.map((solution, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -290,10 +325,11 @@ export default function DataAnalytics() {;
                 </div>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <div className="space-y-2">
-                  {solution.benefits.map((benefit, benefitIndex) => (;
-                    <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                  {solution.benefits.map((benefit, benefitIndex) => (
+  <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {{benefit}}
+                      {{benefit},
+  }
                     </div>
                   ))}
                 </div>
@@ -303,13 +339,17 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* Industry Use Cases */}}
+      {{/* Industry Use Cases */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -322,12 +362,16 @@ export default function DataAnalytics() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -338,10 +382,11 @@ export default function DataAnalytics() {;
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (;
-                    <div key={metricIndex} className="flex items-center text-sm text-gray-400">
+                  {useCase.metrics.map((metric, metricIndex) => (
+  <div key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <Target className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {{metric}}
+                      {{metric},
+  }
                     </div>
                   ))}
                 </div>
@@ -351,13 +396,17 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* Benefits */}}
+      {{/* Benefits */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -370,12 +419,16 @@ export default function DataAnalytics() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -389,13 +442,17 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* Implementation Process */}}
+      {{/* Implementation Process */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -407,29 +464,34 @@ export default function DataAnalytics() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[;
-              {;
-                step: '01',title: 'Assessment',description: 'Evaluate your current data infrastructure and analytics needs';
-              }
-              {;
-                step: '02',title: 'Strategy',description: 'Develop comprehensive analytics strategy and implementation roadmap';
-              }
-              {;
-                step: '03',title: 'Implementation',description: 'Deploy analytics solutions and configure custom dashboards';
-              }
-              {;
-                step: '04',title: 'Optimization',description: 'Monitor performance and continuously improve analytics capabilities';
-              }
-            ].map((phase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {[
+  {
+  step: '01',title: 'Assessment',description: 'Evaluate your current data infrastructure and analytics needs'
+},
+  {
+  step: '02',title: 'Strategy',description: 'Develop comprehensive analytics strategy and implementation roadmap'
+},
+  {
+  step: '03',title: 'Implementation',description: 'Deploy analytics solutions and configure custom dashboards'
+},
+  {
+  step: '04',title: 'Optimization',description: 'Monitor performance and continuously improve analytics capabilities'
+},
+  ].map((phase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="text-center";"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                  {{phase.step}}
+                  {{phase.step},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
@@ -439,13 +501,17 @@ export default function DataAnalytics() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data?;

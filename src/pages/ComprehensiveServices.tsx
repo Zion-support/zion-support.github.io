@@ -1,40 +1,42 @@
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
-import {;
-    ArrowRight, Cloud as CloudIcon;
-    Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star;
+import {
+  ArrowRight, Cloud as CloudIcon;
+    Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star
 } from "lucide-react";
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
 import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
 // Section component for displaying service categories;
-const Section: React.FC<{;
-  icon: React.ReactNode,title: string,description: string,items: any[],gradient: string;
-}> = ({ icon, title, description, items, gradient }) => (;
+const Section: React.FC<{
+  icon: React.ReactNode,title: string,description: string,items: any[],gradient: string
+}> = ({ icon, title, description, items, gradient }) => (
   <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r ${gradient}`}>
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-6">
-          {{icon}}
+          {{icon},
+  }
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{title}</h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">{description}</p>
       </div>
       ;
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {items.slice(0, 6).map((item, index) => (;
-          <ServiceCard key={index} service={item} index={index} />
+        {items.slice(0, 6).map((item, index) => (
+  <ServiceCard key={index} service={item} index={index} />
         ))}
       </div>
       ;
-      {items.length > 6 && (;
-        <div className="text-center mt-12">
+      {items.length > 6 && (
+  <div className="text-center mt-12">
           <Link;
             to="/services";
             className="className="inline-flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500/10 transition-all duration-300";"
           >
-            View All {{title}}
+            View All {{title},
+  }
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
@@ -43,18 +45,22 @@ const Section: React.FC<{;
   </section>
 )
 // Service Card component;
-const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (;
+const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
   <motion.div;
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    viewport={{ once: true }}
+    initial={{ opacity: 0, y: 20 },
+  }
+    whileInView={{ opacity: 1, y: 0 },
+  }
+    transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+    viewport={{ once: true },
+  }
     className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200";"
   >
     <div className="flex items-center justify-between mb-4">
       <h3 className="text-xl font-semibold text-white">{service.name || service.title}</h3>
-      {service.isPopular && (;
-        <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Popular</span>
+      {service.isPopular && (
+  <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Popular</span>
       )}
     </div>
     <p className="text-gray-300 mb-4">{service.description || service.desc}</p>
@@ -64,8 +70,8 @@ const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index
     <div className="mb-4">
       <div className="flex items-center mb-2">
         <div className="flex text-yellow-400">
-          {[...Array(5)].map((_, i) => (;
-            <Star key={i} className={`w-4 h-4 ${i < (service.rating || 4) ? "text-yellow-400" : "text-gray-600"}`} />
+          {[...Array(5)].map((_, i) => (
+  <Star key={i} className={`w-4 h-4 ${i < (service.rating || 4) ? "text-yellow-400" : "text-gray-600"}`} />
           ))}
         </div>
         <span className="text-sm text-gray-400 ml-2">({service.reviews || 25} reviews)</span>
@@ -74,16 +80,18 @@ const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index
     <div className="mb-4">
       <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
       <div className="grid grid-cols-1 gap-1">
-        {(service.features || []).slice(0, 3).map((feature: string, idx: number) => (;
-          <div key={idx} className="flex items-center text-sm text-gray-300">
+        {(service.features || []).slice(0, 3).map((feature: string, idx: number) => (
+  <div key={idx} className="flex items-center text-sm text-gray-300">
             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-            {{feature}}
+            {{feature},
+  }
           </div>
         ))}
       </div>
     </div>
     <Link;
-      to={{service.cta || '#'}}
+      to={{service.cta || '#'},
+  }
       className="className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium";"
     >
       Learn More;
@@ -91,27 +99,28 @@ const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index
     </Link>
   </motion.div>
 )
-export default function ComprehensiveServices() {;
+export default function ComprehensiveServices() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [sortBy, setSortBy] = useState<string>('popular')
 
   // Combine all services;
-  const allServices = [[...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];]
+const allServices = [[...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029],
+  ]
 
   // Filter services based on search and category;
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+const filteredServices = allServices.filter(service => {
+  const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase()
-    return matchesSearch && matchesCategory;
-  })
+    return matchesSearch && matchesCategory
+})
 
   // Sort services;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price-low':;
+const sortedServices = [...filteredServices].sort((a, b) => {
+  switch (sortBy) {
+  case 'price-low':;
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
       case 'price-high':;
         return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
@@ -119,14 +128,15 @@ export default function ComprehensiveServices() {;
         return b.rating - a.rating;
       case 'newest':;
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-      default: return b.isPopular ? 1 : -1;
-    }
+      default: return b.isPopular ? 1 : -1
+},
   })
   // Get unique categories;
-  const categories = [['all', ...Array.from(new Set(allServices.map(service => service.category)))];]
+const categories = [['all', ...Array.from(new Set(allServices.map(service => service.category)))],
+  ]
 
   // Sample data for sections;
-  const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6)
+const microSaaS = allServices.filter(service => service.category === 'Micro SaaS').slice(0, 6)
   const itServices = allServices.filter(service => service.category === 'IT Services').slice(0, 6)
   const aiSolutions = allServices.filter(service => service.category === 'AI Solutions').slice(0, 6)
   return (
@@ -138,7 +148,8 @@ export default function ComprehensiveServices() {;
         canonical="https://ziontechgroup.com/comprehensive-services";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
@@ -146,9 +157,12 @@ export default function ComprehensiveServices() {;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -182,32 +196,40 @@ export default function ComprehensiveServices() {;
         </div>
       </section>
 
-      {{/* Sections */}}
+      {{/* Sections */},
+  }
       <Section;
-        icon={{<Sparkles className="h-6 w-6" />}}
+        icon={{<Sparkles className="h-6 w-6" />},
+  }
         title="Micro SaaS Products";
         description="Subscription software for security, legal, revenue, and operations with fast time-to-value.";
-        items={{microSaaS}}
+        items={{microSaaS},
+  }
         gradient="from-violet-900/60 to-indigo-900/40";
       />
 
       <Section;
-        icon={{<CloudIcon className="h-6 w-6" />}}
+        icon={{<CloudIcon className="h-6 w-6" />},
+  }
         title="IT Services";
         description="Cloud, platform, and security engagements by seasoned architects and SREs.";
-        items={{itServices}}
+        items={{itServices},
+  }
         gradient="from-sky-900/60 to-teal-900/40";
       />
 
       <Section;
-        icon={{<Cpu className="h-6 w-6" />}}
+        icon={{<Cpu className="h-6 w-6" />},
+  }
         title="AI Solutions";
         description="Applied AI with governance, privacy, and business outcomes at the core.";
-        items={{aiSolutions}}
+        items={{aiSolutions},
+  }
         gradient="from-fuchsia-900/60 to-rose-900/40";
       />
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <section className="py-16">
         <motion.div className="max-w-5xl mx-auto px-6">
           <div className="rounded-2xl border border-white/10 p-8 bg-white/5">

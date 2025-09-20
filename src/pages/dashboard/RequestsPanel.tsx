@@ -6,20 +6,20 @@ import { useTalentQuotes } from "@/hooks/useTalentQuotes";
 import { useAuth } from "@/hooks/useAuth";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import {;
+import {
   RequestsHeader;
-  QuoteRequestsList;
+  QuoteRequestsList
 } from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function RequestsPanel() {;
+export default function RequestsPanel() {
   const { user } = useAuth()
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null)
   const [showDetails, setShowDetails] = useState(false)
 
-  const {;
-    quotes;
+  const {
+  quotes;
     unreadCount;
     isLoading;
     statusFilter;
@@ -28,20 +28,21 @@ export default function RequestsPanel() {;
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
-    toggleArchive;
-  } = useTalentQuotes()
-  const handleViewDetails = (quote: QuoteRequest) => {;
-    setSelectedQuote(quote)
+    toggleArchive
+} = useTalentQuotes()
+  const handleViewDetails = (quote: QuoteRequest) => {
+  setSelectedQuote(quote)
     setShowDetails(true)
 
     // If status is new, mark as viewed;
-    if (if (quote.status === 'new') {;) {
+    if (if (quote.status === 'new') {
+  ) {
       markAsViewed(quote.id)
-    }
+    },
   }
 
   // Filter quotes by archive status;
-  const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived)
+const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived)
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived)
   return (
     <ProtectedRoute>
@@ -50,14 +51,20 @@ export default function RequestsPanel() {;
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader;
-              unreadCount={{unreadCount}}
-              statusFilter={{statusFilter}}
-              setStatusFilter={{setStatusFilter}}
-              archiveFilter={{archiveFilter}}
-              setArchiveFilter={{setArchiveFilter}}
+              unreadCount={{unreadCount},
+  }
+              statusFilter={{statusFilter},
+  }
+              setStatusFilter={{setStatusFilter},
+  }
+              archiveFilter={{archiveFilter},
+  }
+              setArchiveFilter={{setArchiveFilter},
+  }
             />
 
-            {{/* Main Content */}}
+            {{/* Main Content */},
+  }
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Requests</TabsTrigger>
@@ -66,37 +73,53 @@ export default function RequestsPanel() {;
 
               <TabsContent value="active">
                 <QuoteRequestsList;
-                  quotes={{activeQuotes}}
-                  isLoading={{isLoading}}
-                  isArchived={{false}}
-                  onViewDetails={{handleViewDetails}}
-                  onMarkAsResponded={{markAsResponded}}
-                  onToggleArchive={{toggleArchive}}
+                  quotes={{activeQuotes},
+  }
+                  isLoading={{isLoading},
+  }
+                  isArchived={{false},
+  }
+                  onViewDetails={{handleViewDetails},
+  }
+                  onMarkAsResponded={{markAsResponded},
+  }
+                  onToggleArchive={{toggleArchive},
+  }
                 />
               </TabsContent>
 
               <TabsContent value="archived">
                 <QuoteRequestsList;
-                  quotes={{archivedQuotes}}
-                  isLoading={{isLoading}}
-                  isArchived={{true}}
-                  onViewDetails={{handleViewDetails}}
-                  onMarkAsResponded={{markAsResponded}}
-                  onToggleArchive={{toggleArchive}}
+                  quotes={{archivedQuotes},
+  }
+                  isLoading={{isLoading},
+  }
+                  isArchived={{true},
+  }
+                  onViewDetails={{handleViewDetails},
+  }
+                  onMarkAsResponded={{markAsResponded},
+  }
+                  onToggleArchive={{toggleArchive},
+  }
                 />
               </TabsContent>
             </Tabs>
           </div>
         </div>
 
-        {{/* Quote Details Modal */}}
+        {{/* Quote Details Modal */},
+  }
         <QuoteDetails;
-          quote={{selectedQuote}}
-          isOpen={{showDetails}}
+          quote={{selectedQuote},
+  }
+          isOpen={{showDetails},
+  }
           onClose={() => {
             setShowDetails(false)
             setSelectedQuote(null)
-          }}
+          },
+  }
         />
 
 

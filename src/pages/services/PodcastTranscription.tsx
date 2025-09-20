@@ -1,6 +1,6 @@
 import React from "react";
 import SEO from "@/components/SEO";
-function PodcastTranscription() {;
+function PodcastTranscription() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO;

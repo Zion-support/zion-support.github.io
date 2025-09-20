@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Brain;
-  Cloud, ;
-  Shield, ;
-  Rocket, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
+  Cloud,
+  Shield,
+  Rocket,
+  Zap,
+  Users,
+  Globe,
   Cpu;
   Lock;
   Heart;
@@ -88,54 +88,79 @@ import { ;
   Award as AwardIcon;
   Phone as PhoneIcon;
   MapPin as MapPinIcon;
-  Infinity as InfinityIcon;
+  Infinity as InfinityIcon
 } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "../data/comprehensiveInnovativeServices2030";
-export default function EnhancedServicesLanding() {;
+export default function EnhancedServicesLanding() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('rating')
   // Get unique categories from services;
-  const categories = [;
-    {{ id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' }}
-    {{ id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' }}
-    {{ id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' }}
-    {{ id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' }}
-    {{ id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' }}
-    {{ id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' }}
-    {{ id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' }}
-    {{ id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' }}
-    {{ id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' }}
-    {{ id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' }}
-    {{ id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' }}
-    {{ id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' }}
-    {{ id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' }}
-    {{ id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' }}
-    {{ id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' }}
-    {{ id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' }}
-    {{ id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' }}
-    {{ id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' }}
-    {{ id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' }}
-    {{ id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' }}
-    {{ id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' }}
-    {{ id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' }}
-    {{ id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' }}
-    {{ id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' }}
-    {{ id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }}
+const categories = [
+  {{ id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
+  },
+  {{ id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
+  },
+  {{ id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
+  },
+  {{ id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
+  },
+  {{ id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
+  },
+  {{ id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
+  },
+  {{ id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
+  },
+  {{ id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
+  },
+  {{ id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
+  },
+  {{ id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
+  },
+  {{ id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
+  },
+  {{ id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
+  },
+  {{ id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
+  },
+  {{ id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
+  },
+  {{ id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' },
+  },
+  {{ id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' },
+  },
+  {{ id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
+  },
+  {{ id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' },
+  },
+  {{ id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
+  },
+  {{ id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
+  },
+  {{ id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
+  },
+  {{ id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
+  },
+  {{ id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
+  },
+  {{ id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
+  },
+  {{ id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
+  },
   ]
-  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {;
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch;
-  })
+    return matchesCategory && matchesSearch
+})
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'rating':;
+  const sortedServices = [...filteredServices].sort((a, b) => {
+  switch (sortBy) {
+  case 'rating':;
         return b.rating - a.rating;
       case 'price':;
         return a.price - b.price;
@@ -143,11 +168,12 @@ export default function EnhancedServicesLanding() {;
         return b.reviewCount - a.reviewCount;
       case 'name':;
         return a.title.localeCompare(b.title)
-      default: return 0;
-    }
+      default: return 0
+},
   })
-  const getCategoryIcon = (category: string) => {;
-    const const iconMap: { [key: string]: React.ReactNode } = {; = {
+  const getCategoryIcon = (category: string) => {
+  const const iconMap: { [key: string]: React.ReactNode } = {
+  = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />
       'Cybersecurity': <Shield className="w-6 h-6" />;
       'Cloud & DevOps': <Cloud className="w-6 h-6" />;
@@ -173,8 +199,8 @@ export default function EnhancedServicesLanding() {;
       'AI & Education': <GraduationCap className="w-6 h-6" />;
       'AI & Entertainment': <Gamepad2 className="w-6 h-6" />
     }
-    return iconMap[category] || <Sparkles className="w-6 h-6" />;
-  }
+    return iconMap[category] || <Sparkles className="w-6 h-6" />
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -183,13 +209,17 @@ export default function EnhancedServicesLanding() {;
         description="Discover our comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -222,7 +252,8 @@ export default function EnhancedServicesLanding() {;
         </div>
       </section>
 
-      {{/* Contact Information Banner */}}
+      {{/* Contact Information Banner */},
+  }
       <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
@@ -245,13 +276,17 @@ export default function EnhancedServicesLanding() {;
         </div>
       </section>
 
-      {{/* Services Overview */}}
+      {{/* Services Overview */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -263,16 +298,23 @@ export default function EnhancedServicesLanding() {;
             </p>
           </motion.div>
 
-          {{/* Service Categories Grid */}}
+          {{/* Service Categories Grid */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-            {categories.slice(1).map((category, index) => (;
-              <motion.div;
-                key={{category.id}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {categories.slice(1).map((category, index) => (
+  <motion.div;
+                key={{category.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300`}
-                onClick={{onClick={() => setActiveCategory(category.id)}}}
+                onClick={{onClick={() => setActiveCategory(category.id)},
+  },
+  }
               >
                 <div className="text-3xl mb-3">{category.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{category.name}</h3>
@@ -281,21 +323,26 @@ export default function EnhancedServicesLanding() {;
             ))}
           </div>
 
-          {{/* Search and Filter */}}
+          {{/* Search and Filter */},
+  }
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input;
                 type="text";
                 placeholder="Search services...";
-                value={{searchTerm}}
-                onChange={{(e) => setSearchTerm(e.target.value)}}
+                value={{searchTerm},
+  }
+                onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                 className="className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500";"
               />
             </div>
             <select;
-              value={{sortBy}}
-              onChange={{(e) => setSortBy(e.target.value)}}
+              value={{sortBy},
+  }
+              onChange={{(e) => setSortBy(e.target.value)},
+  }
               className="className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500";"
             >
               <option value="rating">Sort by Rating</option>
@@ -305,22 +352,29 @@ export default function EnhancedServicesLanding() {;
             </select>
           </div>
 
-          {{/* Services Grid */}}
+          {{/* Services Grid */},
+  }
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {sortedServices.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 transform hover:scale-105";"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
-                    {{getCategoryIcon(service.category)}}
+                    {{getCategoryIcon(service.category)},
+  }
                     <div>
                       <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">
-                        {{service.category}}
+                        {{service.category},
+  }
                       </span>
                     </div>
                   </div>
@@ -356,12 +410,14 @@ export default function EnhancedServicesLanding() {;
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-400 mb-2">Key Features:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, tagIndex) => (;
-                      <span;
-                        key={{tagIndex}}
+                    {service.tags.slice(0, 4).map((tag, tagIndex) => (
+  <span;
+                        key={{tagIndex},
+  }
                         className="className="px-2 py-1 text-xs bg-slate-700 text-gray-300 rounded-full";"
                       >
-                        {{tag}}
+                        {{tag},
+  }
                       </span>
                     ))}
                   </div>
@@ -386,13 +442,17 @@ export default function EnhancedServicesLanding() {;
         </div>
       </section>
 
-      {{/* Why Choose Zion Tech Group */}}
+      {{/* Why Choose Zion Tech Group */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -405,31 +465,35 @@ export default function EnhancedServicesLanding() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[;
-              {;
-                icon: <Brain className="w-12 h-12 text-cyan-400" />,title: "AI-First Approach",description: "Every solution is built with AI at its core, ensuring maximum intelligence and automation capabilities.";
-              }
-              {;
-                icon: <Award className="w-12 h-12 text-cyan-400" />,title: "Proven Results",description: "Our solutions deliver measurable ROI with documented success stories across industries.";
-              }
-              {;
-                icon: <Globe className="w-12 h-12 text-cyan-400" />,title: "Global Expertise",description: "Serving clients worldwide with localized solutions and 24/7 support capabilities.";
-              }
-              {;
-                icon: <Zap className="w-12 h-12 text-cyan-400" />,title: "Rapid Deployment",description: "Quick implementation with minimal disruption to your existing operations.";
-              }
-              {;
-                icon: <Shield className="w-12 h-12 text-cyan-400" />,title: "Enterprise Security",description: "Bank-grade security and compliance with industry standards and regulations.";
-              }
-              {;
-                icon: <Users className="w-12 h-12 text-cyan-400" />,title: "Expert Team",description: "Experienced professionals with deep expertise in AI, cloud, and enterprise solutions.";
-              }
-            ].map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+            {[
+  {
+  icon: <Brain className="w-12 h-12 text-cyan-400" />,title: "AI-First Approach",description: "Every solution is built with AI at its core, ensuring maximum intelligence and automation capabilities."
+},
+  {
+  icon: <Award className="w-12 h-12 text-cyan-400" />,title: "Proven Results",description: "Our solutions deliver measurable ROI with documented success stories across industries."
+},
+  {
+  icon: <Globe className="w-12 h-12 text-cyan-400" />,title: "Global Expertise",description: "Serving clients worldwide with localized solutions and 24/7 support capabilities."
+},
+  {
+  icon: <Zap className="w-12 h-12 text-cyan-400" />,title: "Rapid Deployment",description: "Quick implementation with minimal disruption to your existing operations."
+},
+  {
+  icon: <Shield className="w-12 h-12 text-cyan-400" />,title: "Enterprise Security",description: "Bank-grade security and compliance with industry standards and regulations."
+},
+  {
+  icon: <Users className="w-12 h-12 text-cyan-400" />,title: "Expert Team",description: "Experienced professionals with deep expertise in AI, cloud, and enterprise solutions."
+},
+  ].map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 },
+  }
                 className="className="text-center p-6";"
               >
                 <div className="flex justify-center mb-4">{feature.icon}</div>
@@ -441,13 +505,17 @@ export default function EnhancedServicesLanding() {;
         </div>
       </section>
 
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.6 },
+  }
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -480,7 +548,7 @@ export default function EnhancedServicesLanding() {;
 }
 
 // Settings icon component;
-const Settings = ({ className }: { className?: string }) => (;
+const Settings = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

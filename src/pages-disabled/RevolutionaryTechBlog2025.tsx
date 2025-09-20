@@ -3,7 +3,8 @@ const RevolutionaryTechBlog2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             📰 REVOLUTIONARY INSIGHTS • JANUARY 2025;
@@ -59,7 +60,8 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {{/* Latest Articles */}}
+        {{/* Latest Articles */},
+  }
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
           <div className="space-y-8">
@@ -131,7 +133,8 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {{/* Technology Categories */}}
+        {{/* Technology Categories */},
+  }
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Technology Categories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -165,7 +168,8 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {{/* Newsletter Signup */}}
+        {{/* Newsletter Signup */},
+  }
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated with Latest Tech Insights</h2>
@@ -183,13 +187,15 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           </div>
         </div>
 
-        {{/* Popular Tags */}}
+        {{/* Popular Tags */},
+  }
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center">Popular Tags</h2>
           <div className="flex flex-wrap gap-4 justify-center">
-            {['AIQuantum Computing', 'Neural InterfacesMachine Learning', 'BlockchainIoT', 'Edge Computing5G', 'AR/VRRobotics', 'CybersecurityCloud Computing'].map((tag) => (;
-              <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover: bg-white/20 transition-all duration-300 cursor-pointer">
-                #{{tag}}
+            {['AIQuantum Computing', 'Neural InterfacesMachine Learning', 'BlockchainIoT', 'Edge Computing5G', 'AR/VRRobotics', 'CybersecurityCloud Computing'].map((tag) => (
+  <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold hover: bg-white/20 transition-all duration-300 cursor-pointer">
+                #{{tag},
+  }
               </span>
             ))}
           </div>

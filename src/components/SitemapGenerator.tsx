@@ -55,11 +55,11 @@ interface SitemapRoute {
 export const SitemapGenerator: React.FC = () => {
   const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]),
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+const [selectedCategory, setSelectedCategory] = useState<string>('all');
   useEffect(() => {
-    generateSitemap();
-  }, []);
-  const generateSitemap = () => {
+    generateSitemap()
+}, []);
+const generateSitemap = () => {
     const sitemap: SitemapSection[] = [
       {
         title: 'Main Pages',icon: Globe,description: 'Core website pages and navigation',routes: [
@@ -70,17 +70,17 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/partners', name: 'Partners', description: 'Strategic partnerships and collaborations', icon: Users, category: 'Main' };
           { path: '/blog', name: 'Blog', description: 'Latest news and insights', icon: Newspaper, category: 'Main' };
           { path: '/news', name: 'News', description: 'Company news and announcements', icon: Newspaper, category: 'Main' };
-          { path: '/events', name: 'Events', description: 'Upcoming events and webinars', icon: Calendar, category: 'Main' }
-        ]
-      };
+          { path: '/events', name: 'Events', description: 'Upcoming events and webinars', icon: Calendar, category: 'Main' },
+  ],
+  };
       {
         title: 'Featured Services 2026-2027',icon: Star,description: 'Latest and most innovative service offerings',featured: true,routes: [
           { path: '/services2026', name: '2026 Services Overview', description: 'Revolutionary AI & Quantum Solutions', icon: Star, category: 'Featured', featured: true };
           { path: '/services2027', name: '2027 Services Overview', description: 'Cutting-edge Innovation & Emerging Tech', icon: Star, category: 'Featured', featured: true };
           { path: '/ultimate-services-showcase-2026', name: 'Ultimate Services 2026', description: 'Comprehensive service portfolio', icon: Crown, category: 'Featured', featured: true };
-          { path: '/comprehensive-services-showcase-2025', name: 'Comprehensive Services 2025', description: 'Full service catalog overview', icon: Globe, category: 'Featured', featured: true }
-        ]
-      };
+          { path: '/comprehensive-services-showcase-2025', name: 'Comprehensive Services 2025', description: 'Full service catalog overview', icon: Globe, category: 'Featured', featured: true },
+  ],
+  };
       {
         title: 'AI & Machine Learning Services',icon: Brain,description: 'Advanced artificial intelligence and machine learning solutions',routes: [
           { path: '/services/ai-business-intelligence', name: 'AI Business Intelligence', description: 'Advanced analytics & ML insights', icon: BarChart3, category: 'AI & ML' };
@@ -97,9 +97,9 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/ai-project-management', name: 'AI Project Management', description: 'Intelligent project coordination', icon: Target, category: 'AI & ML' };
           { path: '/services/ai-customer-support-automation', name: 'AI Customer Support Automation', description: 'Automated customer service', icon: MessageCircle, category: 'AI & ML' };
           { path: '/services/ai-financial-analytics', name: 'AI Financial Analytics', description: 'Financial data analysis and insights', icon: DollarSign, category: 'AI & ML' };
-          { path: '/services/ai-marketing-automation', name: 'AI Marketing Automation', description: 'Intelligent marketing workflows', icon: TrendingUp, category: 'AI & ML' }
-        ]
-      };
+          { path: '/services/ai-marketing-automation', name: 'AI Marketing Automation', description: 'Intelligent marketing workflows', icon: TrendingUp, category: 'AI & ML' },
+  ],
+  };
       {
         title: 'Cloud & DevOps Services',icon: Cloud,description: 'Cloud infrastructure and development operations solutions',routes: [
           { path: '/services/cloud-devops', name: 'Cloud DevOps', description: 'Infrastructure automation & scaling', icon: Cloud, category: 'Cloud & DevOps' };
@@ -107,18 +107,18 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/finops-advisor', name: 'FinOps Advisor', description: 'Cloud cost optimization', icon: DollarSign, category: 'Cloud & DevOps' };
           { path: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer', description: 'Financial operations automation', icon: BarChart3, category: 'Cloud & DevOps' };
           { path: '/services/digital-transformation', name: 'Digital Transformation', description: 'Strategic technology consulting', icon: Zap, category: 'Cloud & DevOps' };
-          { path: '/services/digital-twin', name: 'Digital Twin', description: 'Virtual system replicas', icon: Eye, category: 'Cloud & DevOps' }
-        ]
-      };
+          { path: '/services/digital-twin', name: 'Digital Twin', description: 'Virtual system replicas', icon: Eye, category: 'Cloud & DevOps' },
+  ],
+  };
       {
         title: 'Cybersecurity & Privacy',icon: Shield,description: 'Security solutions and privacy protection services',routes: [
           { path: '/services/security-headers-csp', name: 'Security Headers & CSP', description: 'Web security hardening', icon: Lock, category: 'Cybersecurity' };
           { path: '/services/dsr-portal', name: 'DSR Privacy Portal', description: 'GDPR/CCPA compliance', icon: Shield, category: 'Cybersecurity' };
           { path: '/services/zero-trust-network-access', name: 'Zero Trust Network Access', description: 'Advanced network security', icon: Lock, category: 'Cybersecurity' };
           { path: '/privacy', name: 'Privacy Policy', description: 'Data protection and privacy', icon: Shield, category: 'Cybersecurity' };
-          { path: '/security', name: 'Security', description: 'Security information and policies', icon: Shield, category: 'Cybersecurity' }
-        ]
-      };
+          { path: '/security', name: 'Security', description: 'Security information and policies', icon: Shield, category: 'Cybersecurity' },
+  ],
+  };
       {
         title: 'Emerging Technologies',icon: Atom,description: 'Cutting-edge and next-generation technology solutions',routes: [
           { path: '/services/quantum-computing', name: 'Quantum Computing', description: 'Next-gen computational power', icon: Atom, category: 'Emerging Tech' };
@@ -127,17 +127,17 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/ai-hr-platform', name: 'AI HR Platform', description: 'Human resources automation', icon: Users, category: 'Emerging Tech' };
           { path: '/services/sustainable-technology', name: 'Sustainable Technology', description: 'Green and eco-friendly solutions', icon: Globe, category: 'Emerging Tech' };
           { path: '/services/ai-predictive-maintenance', name: 'AI Predictive Maintenance', description: 'Predictive analytics for maintenance', icon: TrendingUp, category: 'Emerging Tech' };
-          { path: '/services/quantum-machine-learning', name: 'Quantum Machine Learning', description: 'Quantum-enhanced ML algorithms', icon: Brain, category: 'Emerging Tech' }
-        ]
-      };
+          { path: '/services/quantum-machine-learning', name: 'Quantum Machine Learning', description: 'Quantum-enhanced ML algorithms', icon: Brain, category: 'Emerging Tech' },
+  ],
+  };
       {
         title: 'Data & Analytics',icon: BarChart3,description: 'Business intelligence and data analysis services',routes: [
           { path: '/services/data-analytics', name: 'Data Analytics', description: 'Business intelligence & insights', icon: BarChart3, category: 'Data & Analytics' };
           { path: '/services/website-analytics', name: 'Website Analytics', description: 'Web performance and user behavior', icon: BarChart3, category: 'Data & Analytics' };
           { path: '/services/affiliate-tracking', name: 'Affiliate Tracking', description: 'Affiliate program management', icon: TrendingUp, category: 'Data & Analytics' };
-          { path: '/analytics', name: 'Analytics Dashboard', description: 'Performance metrics and reporting', icon: BarChart3, category: 'Data & Analytics' }
-        ]
-      };
+          { path: '/analytics', name: 'Analytics Dashboard', description: 'Performance metrics and reporting', icon: BarChart3, category: 'Data & Analytics' },
+  ],
+  };
       {
         title: 'Micro SaaS Solutions',icon: Zap,description: 'Specialized software-as-a-service applications',routes: [
           { path: '/services/micro-saas-solutions', name: 'Micro SaaS Platform', description: 'Niche software solutions', icon: ShoppingCart, category: 'Micro SaaS' };
@@ -150,9 +150,9 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/services/returns-management', name: 'Returns Management', description: 'Product returns processing', icon: ShoppingCart, category: 'Micro SaaS' };
           { path: '/services/email-sequencer', name: 'Email Sequencer', description: 'Automated email sequences', icon: MessageCircle, category: 'Micro SaaS' };
           { path: '/services/podcast-transcription', name: 'Podcast Transcription', description: 'Audio content transcription', icon: MessageCircle, category: 'Micro SaaS' };
-          { path: '/services/mobile-survey', name: 'Mobile Survey', description: 'Mobile survey solutions', icon: MessageCircle, category: 'Micro SaaS' }
-        ]
-      };
+          { path: '/services/mobile-survey', name: 'Mobile Survey', description: 'Mobile survey solutions', icon: MessageCircle, category: 'Micro SaaS' },
+  ],
+  };
       {
         title: 'Business & Support',icon: Building,description: 'Business solutions and customer support services',routes: [
           { path: '/marketplace', name: 'Marketplace', description: 'Product and service marketplace', icon: ShoppingCart, category: 'Business' };
@@ -167,21 +167,21 @@ export const SitemapGenerator: React.FC = () => {
           { path: '/white-papers', name: 'White Papers', description: 'Technical documentation and research', icon: FileText, category: 'Business' };
           { path: '/documentation', name: 'Documentation', description: 'Technical documentation and guides', icon: FileText, category: 'Business' };
           { path: '/developers', name: 'Developer Portal', description: 'Developer resources and APIs', icon: Code, category: 'Business' };
-          { path: '/api', name: 'API', description: 'Application programming interfaces', icon: Code, category: 'Business' }
-        ]
-      };
+          { path: '/api', name: 'API', description: 'Application programming interfaces', icon: Code, category: 'Business' },
+  ],
+  };
       {
         title: 'Legal & Information',icon: FileText,description: 'Legal documents and company information',routes: [
           { path: '/terms', name: 'Terms of Service', description: 'Service terms and conditions', icon: FileText, category: 'Legal' };
           { path: '/cookies', name: 'Cookie Policy', description: 'Cookie usage and privacy', icon: FileText, category: 'Legal' };
           { path: '/sitemap', name: 'Sitemap', description: 'Complete website structure', icon: FileText, category: 'Legal' };
           { path: '/status', name: 'System Status', description: 'Service status and uptime', icon: Activity, category: 'Legal' };
-          { path: '/system-status', name: 'System Status', description: 'Detailed system information', icon: Activity, category: 'Legal' }
-        ]
-      }
-    ];
-    setSitemapData(sitemap);
+          { path: '/system-status', name: 'System Status', description: 'Detailed system information', icon: Activity, category: 'Legal' },
+  ],
   },
+  ];
+    setSitemapData(sitemap)
+},
 
   const filteredSitemap = sitemapData.map(section => ({
     ...section;
@@ -189,11 +189,11 @@ export const SitemapGenerator: React.FC = () => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
+const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
       return matchesSearch && matchesCategory
     })
   })).filter(section => section.routes.length > 0);
-  const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
+const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
     section.routes.map(route => route.category)
   )))],
 
@@ -204,23 +204,24 @@ ${sitemapData.flatMap(section =>
   section.routes.map(route => 
     `  <url>
     <loc>https://ziontechgroup.com${route.path}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <lastmod>${new Date().toISOString().split('T')[0],
+  }</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>`
   )
 ).join('\n')}
 </urlset>`;
-    const blob = new Blob([sitemapXml], { type: 'application/xml' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+const blob = new Blob([sitemapXml], { type: 'application/xml' });
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
     a.href = url,
     a.download = 'sitemap.xml',
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  },
+    URL.revokeObjectURL(url)
+},
 
   const exportCSV = () => {
     const csvContent = [
@@ -235,16 +236,16 @@ ${sitemapData.flatMap(section =>
         ])
       )
     ].map(row => row.map(field => `"${field}"`).join()).join('\n');
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+const blob = new Blob([csvContent], { type: 'text/csv' });
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
     a.href = url,
     a.download = 'sitemap.csv',
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  },
+    URL.revokeObjectURL(url)
+},
 
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
@@ -309,8 +310,8 @@ ${sitemapData.flatMap(section =>
               <div className="flex items-center mb-4">
                 <section.icon className="w-6 h-6 text-blue-600 mr-3" />
                 <h2 className={`text-xl font-semibold ${section.featured ? 'text-blue-600' : 'text-gray-900'}`}>
-                  {section.title}
-                  {section.featured && <Star className="w-5 h-5 text-yellow-500 ml-2 inline" />}
+                  {section.title},
+  {section.featured && <Star className="w-5 h-5 text-yellow-500 ml-2 inline" />}
                 </h2>
               </div>
               <p className="text-gray-600 mb-4">{section.description}</p>

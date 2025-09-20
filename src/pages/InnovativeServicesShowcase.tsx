@@ -6,26 +6,38 @@ const InnovativeServicesShowcase: React.FC = () => {
   const [priceRange, setPriceRange] = useState('all')
   const [sortBy, setSortBy] = useState('rating')
 
-  const categories = [['allAI Services', 'IT ServicesMicro SAAS', 'BusinessDevelopment'];]
-  const priceRanges = [;
-    {{ label: 'All Prices', value: 'all' }}
-    {{ label: 'Under $100', value: '0-100' }}
-    {{ label: '$100 - $500', value: '100-500' }}
-    {{ label: '$500 - $1000', value: '500-1000' }}
-    {{ label: '$1000 - $3000', value: '1000-3000' }}
-    {{ label: 'Over $3000', value: '3000+' }}
+  const categories = [['allAI Services', 'IT ServicesMicro SAAS', 'BusinessDevelopment'],
   ]
-  const sortOptions = [;
-    {{ label: 'Highest Rated', value: 'rating' }}
-    {{ label: 'Highest AI Score', value: 'aiScore' }}
-    {{ label: 'Lowest Price', value: 'price' }}
-    {{ label: 'Newest Launch', value: 'launchDate' }}
+  const priceRanges = [
+  {{ label: 'All Prices', value: 'all' },
+  },
+  {{ label: 'Under $100', value: '0-100' },
+  },
+  {{ label: '$100 - $500', value: '100-500' },
+  },
+  {{ label: '$500 - $1000', value: '500-1000' },
+  },
+  {{ label: '$1000 - $3000', value: '1000-3000' },
+  },
+  {{ label: 'Over $3000', value: '3000+' },
+  },
+  ]
+  const sortOptions = [
+  {{ label: 'Highest Rated', value: 'rating' },
+  },
+  {{ label: 'Highest AI Score', value: 'aiScore' },
+  },
+  {{ label: 'Lowest Price', value: 'price' },
+  },
+  {{ label: 'Newest Launch', value: 'launchDate' },
+  },
   ]
   const filteredServices = useMemo(() => {
     let filtered = INNOVATIVE_SERVICES_2025;
 
     // Filter by search term;
-    if (if (searchTerm) {;) {
+    if (if (searchTerm) {
+  ) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -34,23 +46,26 @@ const InnovativeServicesShowcase: React.FC = () => {
     }
 
     // Filter by category;
-    if (if (selectedCategory !== 'all') {;) {
+    if (if (selectedCategory !== 'all') {
+  ) {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
     // Filter by price range;
-    if (if (priceRange !== 'all') {;) {
+    if (if (priceRange !== 'all') {
+  ) {
       const [min, max] = priceRange.split('-').map(Number)
-      if (if (priceRange === '3000+') {;) {
+      if (if (priceRange === '3000+') {
+  ) {
         filtered = filtered.filter(service => service.price >= 3000)
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max)
-      }
-    }
+      },
+  }
 
     // Sort services;
-    switch (sortBy) {;
-      case 'rating':;
+    switch (sortBy) {
+  case 'rating':;
         filtered.sort((a, b) => b.rating - a.rating)
         break;
       case 'aiScore':;
@@ -61,14 +76,15 @@ const InnovativeServicesShowcase: React.FC = () => {
         break;
       case 'launchDate':;
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
-        break;
-    }
+        break
+}
 
-    return filtered;
-  }, [searchTerm, selectedCategory, priceRange, sortBy])
+    return filtered
+}, [searchTerm, selectedCategory, priceRange, sortBy])
 
-  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (;
-    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0],
+  }> = ({ service }) => (
+  <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
         <div className="flex items-center space-x-2">
@@ -83,17 +99,19 @@ const InnovativeServicesShowcase: React.FC = () => {
       <div className="flex items-center justify-between mb-4">
         <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
-          AI Score: {{service.aiScore}}
+          AI Score: {{service.aiScore},
+  }
         </span>
       </div>
 
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
         <ul className="text-sm text-gray-600 space-y-1">
-          {service.features.slice(0, 4).map((feature, index) => (;
-            <li key={index} className="flex items-center">
+          {service.features.slice(0, 4).map((feature, index) => (
+  <li key={index} className="flex items-center">
               <span className="text-green-500 mr-2">✓</span>
-              {{feature}}
+              {{feature},
+  }
             </li>
           ))}
         </ul>
@@ -102,10 +120,11 @@ const InnovativeServicesShowcase: React.FC = () => {
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
         <ul className="text-sm text-gray-600 space-y-1">
-          {service.benefits.slice(0, 3).map((benefit, index) => (;
-            <li key={index} className="flex items-center">
+          {service.benefits.slice(0, 3).map((benefit, index) => (
+  <li key={index} className="flex items-center">
               <span className="text-blue-500 mr-2">→</span>
-              {{benefit}}
+              {{benefit},
+  }
             </li>
           ))}
         </ul>
@@ -114,9 +133,10 @@ const InnovativeServicesShowcase: React.FC = () => {
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Technology Stack:</h4>
         <div className="flex flex-wrap gap-2">
-          {service.technology.map((tech, index) => (;
-            <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-              {{tech}}
+          {service.technology.map((tech, index) => (
+  <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+              {{tech},
+  }
             </span>
           ))}
         </div>
@@ -141,7 +161,8 @@ const InnovativeServicesShowcase: React.FC = () => {
   )
   return (
     <div className="min-h-screen bg-gray-50">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Innovative Services 2025</h1>
@@ -159,7 +180,8 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
       </div>
 
-      {{/* Contact Info Banner */}}
+      {{/* Contact Info Banner */},
+  }
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
@@ -185,7 +207,8 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
       </div>
 
-      {{/* Filters and Search */}}
+      {{/* Filters and Search */},
+  }
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -194,8 +217,10 @@ const InnovativeServicesShowcase: React.FC = () => {
               <input;
                 type="text";
                 placeholder="Search by name, description, or category...";
-                value={{searchTerm}}
-                onChange={{(e) => setSearchTerm(e.target.value)}}
+                value={{searchTerm},
+  }
+                onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500";"
               />
             </div>
@@ -203,13 +228,16 @@ const InnovativeServicesShowcase: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
               <select;
-                value={{selectedCategory}}
-                onChange={{(e) => setSelectedCategory(e.target.value)}}
+                value={{selectedCategory},
+  }
+                onChange={{(e) => setSelectedCategory(e.target.value)},
+  }
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";"
               >
-                {categories.map(category => (;
-                  <option key={category} value={category}>
-                    {{category === 'all' ? 'All Categories' : category}}
+                {categories.map(category => (
+  <option key={category} value={category}>
+                    {{category === 'all' ? 'All Categories' : category},
+  }
                   </option>
                 ))}
               </select>
@@ -218,12 +246,14 @@ const InnovativeServicesShowcase: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <select;
-                value={{priceRange}}
-                onChange={{(e) => setPriceRange(e.target.value)}}
+                value={{priceRange},
+  }
+                onChange={{(e) => setPriceRange(e.target.value)},
+  }
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";"
               >
-                {priceRanges.map(range => (;
-                  <option key={range.value} value={range.value}>{range.label}</option>
+                {priceRanges.map(range => (
+  <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
               </select>
             </div>
@@ -231,42 +261,48 @@ const InnovativeServicesShowcase: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
               <select;
-                value={{sortBy}}
-                onChange={{(e) => setSortBy(e.target.value)}}
+                value={{sortBy},
+  }
+                onChange={{(e) => setSortBy(e.target.value)},
+  }
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";"
               >
-                {sortOptions.map(option => (;
-                  <option key={option.value} value={option.value}>{option.label}</option>
+                {sortOptions.map(option => (
+  <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
               </select>
             </div>
           </div>
         </div>
 
-        {{/* Results Count */}}
+        {{/* Results Count */},
+  }
         <div className="mb-6">
           <p className="text-gray-600">
             Showing {filteredServices.length} of {INNOVATIVE_SERVICES_2025.length} services;
           </p>
         </div>
 
-        {{/* Services Grid */}}
+        {{/* Services Grid */},
+  }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (;
-            <ServiceCard key={service.id} service={service} />
+          {filteredServices.map((service) => (
+  <ServiceCard key={service.id} service={service} />
           ))}
         </div>
 
-        {{/* No Results */}}
-        {filteredServices.length === 0 && (;
-          <div className="text-center py-12">
+        {{/* No Results */},
+  },
+  {filteredServices.length === 0 && (
+  <div className="text-center py-12">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
             <p className="text-gray-600">Try adjusting your search criteria or filters</p>
           </div>
         )}
       </div>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <div className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>

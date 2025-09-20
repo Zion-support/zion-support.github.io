@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   BarChart3;
-  TrendingUp, ;
-  PieChart, ;
-  Activity, ;
-  Database, ;
-  Zap, ;
-  Shield, ;
-  Users, ;
-  CheckCircle, ;
+  TrendingUp,
+  PieChart,
+  Activity,
+  Database,
+  Zap,
+  Shield,
+  Users,
+  CheckCircle,
   ArrowRight;
   Star;
   Globe;
@@ -38,56 +38,66 @@ import { ;
   BarChart;
   LineChart;
   AreaChart;
-  ScatterPlot;
+  ScatterPlot
 } from "lucide-react";
 import SEO from "../components/SEO";
 const Analytics: React.FC = () => {
-  const analyticsFeatures = [;
-    {;
-      title: "Real-time Monitoring",description: "Monitor your business metrics and performance indicators in real-time",icon: Activity,color: "from-green-400 to-emerald-500";
-    }
-    {;
-      title: "Advanced Visualizations",description: "Interactive charts, graphs, and dashboards for better insights";
-      icon: BarChart3,color: "from-blue-400 to-cyan-500";
-    }
-    {;
-      title: "Predictive Analytics",description: "AI-powered forecasting and trend analysis for strategic planning",icon: TrendingUp,color: "from-purple-400 to-pink-500";
-    }
-    {;
-      title: "Custom Dashboards",description: "Build personalized dashboards tailored to your business needs",icon: Target,color: "from-orange-400 to-red-500";
-    }
+  const analyticsFeatures = [
+  {
+  title: "Real-time Monitoring",description: "Monitor your business metrics and performance indicators in real-time",icon: Activity,color: "from-green-400 to-emerald-500"
+},
+  {
+  title: "Advanced Visualizations",description: "Interactive charts, graphs, and dashboards for better insights";
+      icon: BarChart3,color: "from-blue-400 to-cyan-500"
+},
+  {
+  title: "Predictive Analytics",description: "AI-powered forecasting and trend analysis for strategic planning",icon: TrendingUp,color: "from-purple-400 to-pink-500"
+},
+  {
+  title: "Custom Dashboards",description: "Build personalized dashboards tailored to your business needs",icon: Target,color: "from-orange-400 to-red-500"
+},
   ]
-  const analyticsTypes = [;
-    {;
-      name: "Business Intelligence",description: "Comprehensive business analytics and reporting",icon: BarChart3,features: ["KPI tracking", "Performance metrics", "Business reports", "Executive dashboards"]
-      path: "/services/ai-business-intelligence";
-    }
-    {;
-      name: "Website Analytics",description: "Track website performance and user behavior",icon: Globe,features: ["Traffic analysis", "User engagement", "Conversion tracking", "SEO insights"]
-      path: "/services/website-analytics";
-    }
-    {;
-      name: "AI Data Analytics",description: "Advanced AI-powered data analysis and insights",icon: Zap,features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"]
-      path: "/services/ai-data-analytics";
-    }
-    {;
-      name: "Financial Analytics",description: "Financial performance tracking and optimization",icon: DollarSign,features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"]
-      path: "/services/ai-financial-analytics";
-    }
+  const analyticsTypes = [
+  {
+  name: "Business Intelligence",description: "Comprehensive business analytics and reporting",icon: BarChart3,features: ["KPI tracking", "Performance metrics", "Business reports", "Executive dashboards"]
+      path: "/services/ai-business-intelligence"
+},
+  {
+  name: "Website Analytics",description: "Track website performance and user behavior",icon: Globe,features: ["Traffic analysis", "User engagement", "Conversion tracking", "SEO insights"]
+      path: "/services/website-analytics"
+},
+  {
+  name: "AI Data Analytics",description: "Advanced AI-powered data analysis and insights",icon: Zap,features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"]
+      path: "/services/ai-data-analytics"
+},
+  {
+  name: "Financial Analytics",description: "Financial performance tracking and optimization",icon: DollarSign,features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"]
+      path: "/services/ai-financial-analytics"
+},
   ]
-  const metrics = [;
-    {{ icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" }}
-    {{ icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" }}
-    {{ icon: Globe, value: "25+", label: "Countries", description: "Global reach" }}
-    {{ icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" }}
+  const metrics = [
+  {{ icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },
+  },
+  {{ icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },
+  },
+  {{ icon: Globe, value: "25+", label: "Countries", description: "Global reach" },
+  },
+  {{ icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" },
+  },
   ]
-  const integrations = [;
-    {{ name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" }}
-    {{ name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" }}
-    {{ name: "Stripe", icon: "💳", description: "Payment and revenue data" }}
-    {{ name: "Slack", icon: "💬", description: "Team communication metrics" }}
-    {{ name: "HubSpot", icon: "🎯", description: "Marketing and lead data" }}
-    {{ name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" }}
+  const integrations = [
+  {{ name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },
+  },
+  {{ name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },
+  },
+  {{ name: "Stripe", icon: "💳", description: "Payment and revenue data" },
+  },
+  {{ name: "Slack", icon: "💬", description: "Team communication metrics" },
+  },
+  {{ name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },
+  },
+  {{ name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" },
+  },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -97,14 +107,18 @@ const Analytics: React.FC = () => {
         keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="flex items-center justify-center mb-6">
@@ -145,16 +159,21 @@ const Analytics: React.FC = () => {
         </div>
       </section>
 
-      {{/* Metrics Section */}}
+      {{/* Metrics Section */},
+  }
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {metrics.map((metric, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -169,13 +188,17 @@ const Analytics: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -188,12 +211,16 @@ const Analytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsFeatures.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {analyticsFeatures.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105";"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -208,13 +235,17 @@ const Analytics: React.FC = () => {
         </div>
       </section>
 
-      {{/* Analytics Types Section */}}
+      {{/* Analytics Types Section */},
+  }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -227,12 +258,16 @@ const Analytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {analyticsTypes.map((type, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -243,16 +278,18 @@ const Analytics: React.FC = () => {
                 <p className="text-slate-300 mb-6">{type.description}</p>
                 ;
                 <div className="space-y-3 mb-6">
-                  {type.features.map((feature, featureIndex) => (;
-                    <div key={featureIndex} className="flex items-center text-slate-400">
+                  {type.features.map((feature, featureIndex) => (
+  <div key={featureIndex} className="flex items-center text-slate-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </div>
                   ))}
                 </div>
                 ;
                 <Link;
-                  to={{type.path}}
+                  to={{type.path},
+  }
                   className="className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors";"
                 >
                   Learn More;
@@ -264,13 +301,17 @@ const Analytics: React.FC = () => {
         </div>
       </section>
 
-      {{/* Integrations Section */}}
+      {{/* Integrations Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -283,12 +324,16 @@ const Analytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {integrations.map((integration, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300 hover:scale-105";"
               >
                 <div className="text-4xl mb-3">{integration.icon}</div>
@@ -300,13 +345,17 @@ const Analytics: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data?;

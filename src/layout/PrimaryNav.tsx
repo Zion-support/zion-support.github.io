@@ -18,34 +18,34 @@ import { Menu, X, ShoppingCart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/store";
-export function PrimaryNav() {;
+export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const { user } = useAuth()
   const isLoggedIn = !!user;
-  const isMobile = useIsMobile()
+const isMobile = useIsMobile()
   const { t } = useTranslation()
   const router = useLocation()
   const [query, setQuery] = React.useState('')
   const suggestions = generateSearchSuggestions()
 
   let unreadCount = 0;
-  try {;
-    const messaging = useMessaging()
-    unreadCount = messaging.unreadCount;
-  } catch {;
-    // context not available;
-  }
+  try {
+  const messaging = useMessaging()
+    unreadCount = messaging.unreadCount
+} catch {
+  // context not available
+}
 
   const cartCount = useSelector((s: RootState) =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0)
   )
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault()
-    if (query.trim()) {;
-      console.log('PrimaryNav search submit:', query)
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault()
+    if (query.trim()) {
+  console.log('PrimaryNav search submit:', query)
       router.push(`/search/${slugify(query)}`)
       setQuery('')
-    }
+    },
   }
 
   return (
@@ -59,28 +59,36 @@ export function PrimaryNav() {;
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
 
-          {{/* Navigation - hidden on mobile, shown on desktop */}}
+          {{/* Navigation - hidden on mobile, shown on desktop */},
+  }
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
 
-          {{/* Actions container with responsive layout */}}
+          {{/* Actions container with responsive layout */},
+  }
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {{/* Search form with clamped width */}}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+            {{/* Search form with clamped width */},
+  }
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' },
+  }>
               <EnhancedSearchInput;
-                value={{query}}
-                onChange={{setQuery}}
-                onSelectSuggestion={(sugg) => {;
-                  console.log('PrimaryNav search suggestion selected:', sugg)
+                value={{query},
+  }
+                onChange={{setQuery},
+  }
+                onSelectSuggestion={(sugg) => {
+  console.log('PrimaryNav search suggestion selected:', sugg)
                   // Handle different suggestion types with proper navigation;
-                  if (if (sugg.id) {;) {
+                  if (if (sugg.id) {
+  ) {
                     // Product listings with IDs go to product detail page;
                     router.push(`/marketplace/listing/${sugg.id}`)
-                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-                    // Documentation suggestions navigate directly to their path;
+                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+  // Documentation suggestions navigate directly to their path;
                     router.push(sugg.slug)
-                  } else if (if (sugg.type === 'blog' && sugg.slug) {;) {
+                  } else if (if (sugg.type === 'blog' && sugg.slug) {
+  ) {
                     // Blog posts navigate to blog detail page;
                     router.push(`/blog/${sugg.slug}`)
                   } else {
@@ -90,17 +98,21 @@ export function PrimaryNav() {;
                   setQuery('')
 
                   // Track analytics event;
-                  if (if (typeof window !== 'undefined' && window.gtag) {;) {
-                    window.gtag('eventsearch_suggestion_click', {;
-                      search_term: sugg.text,suggestion_type: sugg.type,suggestion_id: sugg.id || sugg.slug;
-                    })
-                  }
-                }}
-                searchSuggestions={{suggestions}}
+                  if (if (typeof window !== 'undefined' && window.gtag) {
+  ) {
+                    window.gtag('eventsearch_suggestion_click', {
+  search_term: sugg.text,suggestion_type: sugg.type,suggestion_id: sugg.id || sugg.slug
+})
+                  },
+  },
+  }
+                searchSuggestions={{suggestions},
+  }
               />
             </form>
 
-            {{/* Compact actions group */}}
+            {{/* Compact actions group */},
+  }
             <div className="flex items-center gap-1">
               <PointsBadge />
               <HoverCard openDelay={100}>
@@ -108,12 +120,14 @@ export function PrimaryNav() {;
                   <Link;
                     href="/cart";
                     className="className="relative p-1";"
-                    aria-label={{t('nav.cartCart')}}
+                    aria-label={{t('nav.cartCart')},
+  }
                   >
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
-                    {cartCount > 0 && (;
-                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
-                        {{cartCount}}
+                    {cartCount > 0 && (
+  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+                        {{cartCount},
+  }
                       </span>
                     )}
                   </Link>
@@ -124,66 +138,80 @@ export function PrimaryNav() {;
               </HoverCard>
             </div>
 
-            {{/* Compact controls group */}}
+            {{/* Compact controls group */},
+  }
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
 
-            {{/* Auth links - flex wrap for very small screens */}}
+            {{/* Auth links - flex wrap for very small screens */},
+  }
             <div className="flex items-center gap-1 flex-wrap">
-              {!isLoggedIn && (;
-                <>
+              {!isLoggedIn && (
+  <>
                   <Link;
                     href="/auth/login";
                     className="className="text-sm hover:text-primary whitespace-nowrap";"
                     data-testid="login-link";
                   >
-                    {{t('auth.login')}}
+                    {{t('auth.login')},
+  }
                   </Link>
                   <Link;
                     href="/signup";
                     className="className="text-sm hover:text-primary whitespace-nowrap";"
                   >
-                    {{t('auth.signup')}}
+                    {{t('auth.signup')},
+  }
                   </Link>
                 </>
-              )}
-            {{isLoggedIn && <UserMenu />}}
+              )},
+  {{isLoggedIn && <UserMenu />},
+  }
             </div>
           </div>
 
-          {{/* Mobile menu button */}}
+          {{/* Mobile menu button */},
+  }
           <button;
             className="className="md:hidden p-2 rounded focus:outline-none flex-shrink-0";"
-            onClick={{onClick={() => setMobileMenuOpen(!mobileMenuOpen)}}}
-            aria-expanded={{mobileMenuOpen}}
-            aria-label={{t('general.toggle_mobile_menu')}}
+            onClick={{onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
+  },
+  }
+            aria-expanded={{mobileMenuOpen},
+  }
+            aria-label={{t('general.toggle_mobile_menu')},
+  }
           >
-            {mobileMenuOpen ? (;
-              <X className="h-6 w-6" />
-            ) : (;
-              <Menu className="h-6 w-6" />
+            {mobileMenuOpen ? (
+  <X className="h-6 w-6" />
+            ) : (
+  <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
       </header>
-      {mobileMenuOpen && (;
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
+      {mobileMenuOpen && (
+  <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div;
             className="className="absolute inset-0 bg-black/50 backdrop-blur-sm";"
-            onClick={{onClick={() => setMobileMenuOpen(false)}}}
+            onClick={{onClick={() => setMobileMenuOpen(false)},
+  },
+  }
             aria-hidden="true";
           />
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu;
-              unreadCount={{unreadCount}}
-              onClose={{() => setMobileMenuOpen(false)}}
+              unreadCount={{unreadCount},
+  }
+              onClose={{() => setMobileMenuOpen(false)},
+  }
             />
           </div>
         </div>
-      )}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+      )},
+  {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import SEO from "../components/SEO";
 import { motion } from "framer-motion";
-import {;
+import {
   Code;
   BookOpen;
   Zap;
@@ -31,50 +31,50 @@ import {;
   BarChart3;
   Target;
   Award;
-  Lightbulb;
+  Lightbulb
 } from "lucide-react";
 const DeveloperPortal: React.FC = () => {
-  const tools = [;
-    {;
-      icon: Code,title: 'Code Examples',description: 'Ready-to-use code snippets in multiple languages',category: 'Development';
-    }
-    {;
-      icon: Terminal,title: 'API Playground',description: 'Test APIs directly in your browser',category: 'Testing';
-    }
-    {;
-      icon: BookOpen,title: 'Documentation',description: 'Comprehensive guides and tutorials',category: 'Learning';
-    }
-    {;
-      icon: Download,title: 'SDKs & Libraries',description: 'Official client libraries for all platforms',category: 'Integration';
-    }
+  const tools = [
+  {
+  icon: Code,title: 'Code Examples',description: 'Ready-to-use code snippets in multiple languages',category: 'Development'
+},
+  {
+  icon: Terminal,title: 'API Playground',description: 'Test APIs directly in your browser',category: 'Testing'
+},
+  {
+  icon: BookOpen,title: 'Documentation',description: 'Comprehensive guides and tutorials',category: 'Learning'
+},
+  {
+  icon: Download,title: 'SDKs & Libraries',description: 'Official client libraries for all platforms',category: 'Integration'
+},
   ]
-  const resources = [;
-    {;
-      title: 'Getting Started Guide',description: 'Quick start tutorial for new developers',icon: '🚀',difficulty: 'Beginner';
-    }
-    {;
-      title: 'API Reference',description: 'Complete endpoint documentation',icon: '📚',difficulty: 'All Levels';
-    }
-    {;
-      title: 'Best Practices',description: 'Development guidelines and patterns',icon: '⭐',difficulty: 'Intermediate';
-    }
-    {;
-      title: 'Code Samples',description: 'Real-world implementation examples',icon: '💻',difficulty: 'All Levels';
-    }
+  const resources = [
+  {
+  title: 'Getting Started Guide',description: 'Quick start tutorial for new developers',icon: '🚀',difficulty: 'Beginner'
+},
+  {
+  title: 'API Reference',description: 'Complete endpoint documentation',icon: '📚',difficulty: 'All Levels'
+},
+  {
+  title: 'Best Practices',description: 'Development guidelines and patterns',icon: '⭐',difficulty: 'Intermediate'
+},
+  {
+  title: 'Code Samples',description: 'Real-world implementation examples',icon: '💻',difficulty: 'All Levels'
+},
   ]
-  const community = [;
-    {;
-      name: 'Developer Forum',description: 'Get help from our community',members: '2.5K+',icon: '💬';
-    }
-    {;
-      name: 'GitHub Discussions',description: 'Open source collaboration',members: '1.8K+',icon: '🐙';
-    }
-    {;
-      name: 'Discord Server',description: 'Real-time developer chat',members: '3.2K+',icon: '🎮';
-    }
-    {;
-      name: 'Stack Overflow',description: 'Q&A platform integration',members: '5K+',icon: '📝';
-    }
+  const community = [
+  {
+  name: 'Developer Forum',description: 'Get help from our community',members: '2.5K+',icon: '💬'
+},
+  {
+  name: 'GitHub Discussions',description: 'Open source collaboration',members: '1.8K+',icon: '🐙'
+},
+  {
+  name: 'Discord Server',description: 'Real-time developer chat',members: '3.2K+',icon: '🎮'
+},
+  {
+  name: 'Stack Overflow',description: 'Q&A platform integration',members: '5K+',icon: '📝'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -83,7 +83,8 @@ const DeveloperPortal: React.FC = () => {
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -98,7 +99,8 @@ const DeveloperPortal: React.FC = () => {
           </div>
 
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-            Developer{{' '}}
+            Developer{{' '},
+  }
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Portal;
             </span>
@@ -119,13 +121,17 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {{/* Tools Section */}}
+      {{/* Tools Section */},
+  }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -137,18 +143,24 @@ const DeveloperPortal: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (;
-              <motion.div;
-                key={{tool.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {tools.map((tool, index) => (
+  <motion.div;
+                key={{tool.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105";"
               >
-                {{/* Step Number */}}
+                {{/* Step Number */},
+  }
                 <div className="absolute -top-4 left-6">
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {{step.step}}
+                    {{step.step},
+  }
                   </div>
                 </div>
 
@@ -161,11 +173,13 @@ const DeveloperPortal: React.FC = () => {
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{step.description}</p>
 
                   <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
-                    {{step.action}}
+                    {{step.action},
+  }
                   </button>
                 </div>
                 <span className="inline-block px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mb-3">
-                  {{tool.category}}
+                  {{tool.category},
+  }
                 </span>
                 <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>
                 <p className="text-gray-300">{tool.description}</p>
@@ -175,13 +189,17 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {{/* Resources Section */}}
+      {{/* Resources Section */},
+  }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -193,12 +211,16 @@ const DeveloperPortal: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {apiFeatures.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
@@ -209,10 +231,11 @@ const DeveloperPortal: React.FC = () => {
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{feature.description}</p>
 
                 <div className="flex items-center justify-between">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
-                    feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400';
-                  }`}>
-                    {{feature.status}}
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+  feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
+}`}>
+                    {{feature.status},
+  }
                   </span>
 
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm">
@@ -225,7 +248,8 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {{/* Code Examples */}}
+      {{/* Code Examples */},
+  }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -238,12 +262,16 @@ const DeveloperPortal: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {codeExamples.map((example, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="p-6">
@@ -268,7 +296,8 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {{/* Resources */}}
+      {{/* Resources */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -281,12 +310,16 @@ const DeveloperPortal: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index) => (;
-              <motion.div;
-                key={{resource.title}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {resources.map((resource, index) => (
+  <motion.div;
+                key={{resource.title},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -294,12 +327,13 @@ const DeveloperPortal: React.FC = () => {
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-xl font-semibold text-white">{resource.title}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs ${;
-                        resource.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :;
+                      <span className={`px-2 py-1 rounded-full text-xs ${
+  resource.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :;
                         resource.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :;
-                        'bg-blue-500/20 text-blue-400';
-                      }`}>
-                        {{resource.difficulty}}
+                        'bg-blue-500/20 text-blue-400'
+}`}>
+                        {{resource.difficulty},
+  }
                       </span>
                     </div>
                     <p className="text-gray-300">{resource.description}</p>
@@ -310,15 +344,16 @@ const DeveloperPortal: React.FC = () => {
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
 
                 <div className="flex items-center justify-between">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
-                    resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :;
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+  resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :;
                     resource.badge === 'Beginner' ? 'bg-blue-500/20 text-blue-400' :;
                     resource.badge === 'Examples' ? 'bg-purple-500/20 text-purple-400' :;
                     resource.badge === 'Download' ? 'bg-orange-500/20 text-orange-400' :;
                     resource.badge === 'Community' ? 'bg-indigo-500/20 text-indigo-400' :;
-                    'bg-green-500/20 text-green-400';
-                  }`}>
-                    {{resource.badge}}
+                    'bg-green-500/20 text-green-400'
+}`}>
+                    {{resource.badge},
+  }
                   </span>
 
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300">
@@ -331,13 +366,17 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {{/* Quick Start Section */}}
+      {{/* Quick Start Section */},
+  }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -349,9 +388,12 @@ const DeveloperPortal: React.FC = () => {
           </motion.div>
 
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6, delay: 0.2 },
+  }
             className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8";"
           >
             <div className="space-y-6">
@@ -387,7 +429,8 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">

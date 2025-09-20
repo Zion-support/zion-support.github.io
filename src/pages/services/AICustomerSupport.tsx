@@ -2,87 +2,87 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from "lucide-react";
 import { SEO } from "@/components/SEO";
-export default function AICustomerSupport() {;
-  const features = [;
-    {;
-      title: "24/7 AI Chat Support",description: "Intelligent chatbots that handle customer inquiries around the clock with human-like responses",icon: Bot,color: "from-blue-500 to-cyan-500";
-    }
-    {;
-      title: "Multi-Language Support",description: "Automatically detect and respond in over 50 languages to serve global customers",icon: Globe,color: "from-purple-500 to-pink-500";
-    }
-    {;
-      title: "Smart Ticket Routing",description: "AI automatically categorizes and routes complex issues to the right human agents",icon: MessageCircle,color: "from-orange-500 to-red-500";
-    }
-    {;
-      title: "Sentiment Analysis",description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction",icon: BarChart3,color: "from-green-500 to-emerald-500";
-    }
-    {;
-      title: "Knowledge Base Integration",description: "Seamlessly connects with your existing documentation to provide accurate answers instantly",icon: Shield,color: "from-indigo-500 to-blue-500";
-    }
-    {;
-      title: "Omnichannel Support",description: "Unified support across chat, email, social media, and phone channels";
-      icon: Smartphone,color: "from-teal-500 to-cyan-500";
-    }
+export default function AICustomerSupport() {
+  const features = [
+  {
+  title: "24/7 AI Chat Support",description: "Intelligent chatbots that handle customer inquiries around the clock with human-like responses",icon: Bot,color: "from-blue-500 to-cyan-500"
+},
+  {
+  title: "Multi-Language Support",description: "Automatically detect and respond in over 50 languages to serve global customers",icon: Globe,color: "from-purple-500 to-pink-500"
+},
+  {
+  title: "Smart Ticket Routing",description: "AI automatically categorizes and routes complex issues to the right human agents",icon: MessageCircle,color: "from-orange-500 to-red-500"
+},
+  {
+  title: "Sentiment Analysis",description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction",icon: BarChart3,color: "from-green-500 to-emerald-500"
+},
+  {
+  title: "Knowledge Base Integration",description: "Seamlessly connects with your existing documentation to provide accurate answers instantly",icon: Shield,color: "from-indigo-500 to-blue-500"
+},
+  {
+  title: "Omnichannel Support",description: "Unified support across chat, email, social media, and phone channels";
+      icon: Smartphone,color: "from-teal-500 to-cyan-500"
+},
   ]
-  const pricingPlans = [;
-    {;
-      name: "Starter",price: "$39",period: "/month",description: "Perfect for small businesses",features: [;
-        "Up to 1,000 conversations/month";
+  const pricingPlans = [
+  {
+  name: "Starter",price: "$39",period: "/month",description: "Perfect for small businesses",features: [
+  "Up to 1,000 conversations/month";
         "Basic AI chatbot";
         "Email support";
         "Knowledge base integration";
-        "Mobile app access";
-      ]
-      cta: "Start Free Trial",popular: false;
-    }
-    {;
-      name: "Professional",price: "$99",period: "/month",description: "Ideal for growing businesses",features: [;
-        "Up to 10,000 conversations/month";
+        "Mobile app access"
+]
+      cta: "Start Free Trial",popular: false
+},
+  {
+  name: "Professional",price: "$99",period: "/month",description: "Ideal for growing businesses",features: [
+  "Up to 10,000 conversations/month";
         "Advanced AI with sentiment analysis";
         "Multi-language support";
         "Priority support";
         "API access";
-        "Advanced analytics";
-      ]
-      cta: "Start Free Trial",popular: true;
-    }
-    {;
-      name: "Enterprise",price: "$299",period: "/month",description: "For large organizations",features: [;
-        "Unlimited conversations";
+        "Advanced analytics"
+]
+      cta: "Start Free Trial",popular: true
+},
+  {
+  name: "Enterprise",price: "$299",period: "/month",description: "For large organizations",features: [
+  "Unlimited conversations";
         "Custom AI models";
         "White-label solution";
         "Dedicated support";
         "Advanced security";
-        "Custom integrations";
-      ]
-      cta: "Contact Sales",popular: false;
-    }
+        "Custom integrations"
+]
+      cta: "Contact Sales",popular: false
+},
   ]
-  const benefits = [;
-    {;
-      title: "90% Faster Response Time",description: "AI responds instantly, reducing customer wait times dramatically";
-      icon: Clock,metric: "90%";
-    }
-    {;
-      title: "70% Cost Reduction",description: "Automate routine inquiries and reduce support staff overhead",icon: TrendingUp,metric: "70%";
-    }
-    {;
-      title: "95% Customer Satisfaction",description: "AI-powered support consistently delivers high-quality assistance",icon: Users,metric: "95%";
-    }
+  const benefits = [
+  {
+  title: "90% Faster Response Time",description: "AI responds instantly, reducing customer wait times dramatically";
+      icon: Clock,metric: "90%"
+},
+  {
+  title: "70% Cost Reduction",description: "Automate routine inquiries and reduce support staff overhead",icon: TrendingUp,metric: "70%"
+},
+  {
+  title: "95% Customer Satisfaction",description: "AI-powered support consistently delivers high-quality assistance",icon: Users,metric: "95%"
+},
   ]
-  const integrations = [;
-    {;
-      name: "Slack",description: "Integrate support directly into your team's communication platform",icon: MessageCircle,color: "from-purple-500 to-pink-500";
-    }
-    {;
-      name: "Zendesk",description: "Seamlessly connect with existing helpdesk systems",icon: Headphones,color: "from-blue-500 to-cyan-500";
-    }
-    {;
-      name: "Salesforce",description: "Sync customer data and support history automatically",icon: Users,color: "from-green-500 to-emerald-500";
-    }
-    {;
-      name: "Shopify",description: "Provide instant support for e-commerce customers",icon: Globe,color: "from-orange-500 to-red-500";
-    }
+  const integrations = [
+  {
+  name: "Slack",description: "Integrate support directly into your team's communication platform",icon: MessageCircle,color: "from-purple-500 to-pink-500"
+},
+  {
+  name: "Zendesk",description: "Seamlessly connect with existing helpdesk systems",icon: Headphones,color: "from-blue-500 to-cyan-500"
+},
+  {
+  name: "Salesforce",description: "Sync customer data and support history automatically",icon: Users,color: "from-green-500 to-emerald-500"
+},
+  {
+  name: "Shopify",description: "Provide instant support for e-commerce customers",icon: Globe,color: "from-orange-500 to-red-500"
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -92,7 +92,8 @@ export default function AICustomerSupport() {;
         keywords="AI customer support, chatbot, customer service automation, AI support, customer service software";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
@@ -100,9 +101,12 @@ export default function AICustomerSupport() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div ;
             className="className="text-center";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI Customer Support;
@@ -122,15 +126,20 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by Advanced AI;
@@ -141,15 +150,21 @@ export default function AICustomerSupport() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300";"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                whileHover={{ y: -5, scale: 1.02 },
+  }
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -162,15 +177,20 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Proven Results;
@@ -181,14 +201,19 @@ export default function AICustomerSupport() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="text-center";"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.6, delay: index * 0.2 },
+  }
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
@@ -202,15 +227,20 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* Integrations Section */}}
+      {{/* Integrations Section */},
+  }
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations;
@@ -221,14 +251,19 @@ export default function AICustomerSupport() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, index) => (;
-              <motion.div;
-                key={{index}}
+            {integrations.map((integration, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="text-center";"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className={`w-20 h-20 bg-gradient-to-r ${integration.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <integration.icon className="w-10 h-10 text-white" />
@@ -241,15 +276,20 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing;
@@ -260,20 +300,26 @@ export default function AICustomerSupport() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${;
-                  plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10';
-                }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
+            {pricingPlans.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+  plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
+}`}
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                whileHover={{ y: -5, scale: 1.02 },
+  }
               >
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -290,20 +336,21 @@ export default function AICustomerSupport() {;
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
-                  plan.popular;
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+  plan.popular;
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700';
-                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20';
-                }`}>
-                  {{plan.cta}}
+                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+}`}>
+                  {{plan.cta},
+  }
                 </button>
               </motion.div>
             ))}
@@ -311,14 +358,19 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Customer Support?;

@@ -1,52 +1,60 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp } from "lucide-react";
-export default function AICustomerExperienceSupport() {;
-  const features = [;
-    'AI-powered chatbot with 95% accuracy and natural language processingIntelligent ticket routing and priority classification';
+export default function AICustomerExperienceSupport() {
+  const features = [
+  'AI-powered chatbot with 95% accuracy and natural language processingIntelligent ticket routing and priority classification';
     'Automated customer sentiment analysis and satisfaction trackingMulti-channel support integration (email, chat, phone, social media)';
     'Predictive customer behavior analysis and proactive supportPersonalized customer journey mapping and optimization';
-    'Real-time analytics and performance monitoring dashboardIntegration with CRM, helpdesk, and e-commerce platforms';
-  ]
+    'Real-time analytics and performance monitoring dashboardIntegration with CRM, helpdesk, and e-commerce platforms'
+]
 
-  const benefits = [;
-    'Increase customer satisfaction scores by 35-50%Reduce support response time by 80% with AI automation';
+  const benefits = [
+  'Increase customer satisfaction scores by 35-50%Reduce support response time by 80% with AI automation';
     'Cut support costs by 40-60% through intelligent automationImprove customer retention rates by 25-40%';
-    'Generate 20-30% more upsell opportunitiesAchieve 99.9% support ticket resolution rate';
-  ]
+    'Generate 20-30% more upsell opportunitiesAchieve 99.9% support ticket resolution rate'
+]
 
-  const supportChannels = [;
-    'Live Chat & MessagingEmail Support Automation';
+  const supportChannels = [
+  'Live Chat & MessagingEmail Support Automation';
     'Phone Support IntegrationSocial Media Monitoring';
     'Self-Service Knowledge BaseVideo Call Support';
     'Mobile App SupportVoice Assistant Integration';
-    'WhatsApp Business APISMS Support Automation';
-  ]
+    'WhatsApp Business APISMS Support Automation'
+]
 
-  const aiCapabilities = [;
-    'Natural Language ProcessingSentiment Analysis';
+  const aiCapabilities = [
+  'Natural Language ProcessingSentiment Analysis';
     'Intent RecognitionAutomated Responses';
     'Smart EscalationPredictive Analytics';
     'Customer SegmentationBehavioral Analysis';
-    'Proactive SupportPerformance Optimization';
-  ]
+    'Proactive SupportPerformance Optimization'
+]
 
-  const integrations = [;
-    'Salesforce Service CloudZendesk Support';
+  const integrations = [
+  'Salesforce Service CloudZendesk Support';
     'HubSpot Service HubIntercom';
     'FreshdeskShopify';
     'WooCommerceMagento';
-    'SlackMicrosoft Teams';
-  ]
-  const stack = [;
-    {{ name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' }}
-    {{ name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' }}
-    {{ name: 'Twilio', url: 'https://www.twilio.com/' }}
-    {{ name: 'Intercom', url: 'https://www.intercom.com/' }}
-    {{ name: 'Zendesk', url: 'https://www.zendesk.com/' }}
-    {{ name: 'HubSpot', url: 'https://www.hubspot.com/' }}
-    {{ name: 'Salesforce', url: 'https://www.salesforce.com/' }}
-    {{ name: 'Analytics', url: 'https://analytics.google.com/' }}
+    'SlackMicrosoft Teams'
+]
+  const stack = [
+  {{ name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
+  },
+  {{ name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },
+  },
+  {{ name: 'Twilio', url: 'https://www.twilio.com/' },
+  },
+  {{ name: 'Intercom', url: 'https://www.intercom.com/' },
+  },
+  {{ name: 'Zendesk', url: 'https://www.zendesk.com/' },
+  },
+  {{ name: 'HubSpot', url: 'https://www.hubspot.com/' },
+  },
+  {{ name: 'Salesforce', url: 'https://www.salesforce.com/' },
+  },
+  {{ name: 'Analytics', url: 'https://analytics.google.com/' },
+  },
   ]
   return (
     <div className="min-h-screen bg-futuristic">
@@ -88,10 +96,11 @@ export default function AICustomerExperienceSupport() {;
               <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
             </div>
             <ul className="space-y-3">
-              {features.slice(0, 4).map((item) => (;
-                <li key={item} className="flex items-center text-slate-300">
+              {features.slice(0, 4).map((item) => (
+  <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
-                  {{item}}
+                  {{item},
+  }
                 </li>
               ))}
             </ul>
@@ -105,10 +114,11 @@ export default function AICustomerExperienceSupport() {;
               <h3 className="ml-3 text-xl font-semibold text-white">Support Channels</h3>
             </div>
             <ul className="space-y-3">
-              {supportChannels.slice(0, 5).map((item) => (;
-                <li key={item} className="flex items-center text-slate-300">
+              {supportChannels.slice(0, 5).map((item) => (
+  <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
-                  {{item}}
+                  {{item},
+  }
                 </li>
               ))}
             </ul>
@@ -182,9 +192,10 @@ export default function AICustomerExperienceSupport() {;
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>
           <div className="flex flex-wrap gap-3">
-            {aiCapabilities.map((capability) => (;
-              <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-                {{capability}}
+            {aiCapabilities.map((capability) => (
+  <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+                {{capability},
+  }
               </span>
             ))}
           </div>
@@ -195,9 +206,10 @@ export default function AICustomerExperienceSupport() {;
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>
           <div className="flex flex-wrap gap-3">
-            {integrations.map((integration) => (;
-              <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-                {{integration}}
+            {integrations.map((integration) => (
+  <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+                {{integration},
+  }
               </span>
             ))}
           </div>
@@ -208,9 +220,10 @@ export default function AICustomerExperienceSupport() {;
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>
           <div className="flex flex-wrap gap-3">
-            {stack.map((s) => (;
-              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
-                {{s.name}}
+            {stack.map((s) => (
+  <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
+                {{s.name},
+  }
               </a>
             ))}
           </div>

@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   MessageCircle;
-  Users, ;
-  Ticket, ;
-  Clock, ;
-  CheckCircle, ;
-  AlertCircle, ;
-  Search, ;
+  Users,
+  Ticket,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Search,
   Filter;
   ArrowRight;
   Star;
@@ -42,57 +42,65 @@ import { ;
   UserX;
   TrendingUp;
   PieChart;
-  LineChart;
+  LineChart
 } from "lucide-react";
-export default function HelpdeskPlatform() {;
-  const features = [;
-    {;
-      icon: Ticket,title: "Ticket Management",description: "Comprehensive ticket tracking and resolution workflow",color: "from-blue-500 to-cyan-500";
-    }
-    {;
-      icon: Users,title: "Team Collaboration",description: "Multi-agent support with role-based access control",color: "from-green-500 to-emerald-500";
-    }
-    {;
-      icon: Clock,title: "Response Time Tracking",description: "Monitor and optimize support response times",color: "from-yellow-500 to-orange-500";
-    }
-    {;
-      icon: BarChart3,title: "Analytics & Reporting",description: "Comprehensive performance metrics and insights",color: "from-purple-500 to-pink-500";
-    }
-    {;
-      icon: Shield,title: "Security & Compliance",description: "Enterprise-grade security and data protection",color: "from-red-500 to-pink-500";
-    }
-    {;
-      icon: Cloud,title: "Cloud Platform",description: "Scalable cloud infrastructure for global support",color: "from-indigo-500 to-blue-500";
-    }
+export default function HelpdeskPlatform() {
+  const features = [
+  {
+  icon: Ticket,title: "Ticket Management",description: "Comprehensive ticket tracking and resolution workflow",color: "from-blue-500 to-cyan-500"
+},
+  {
+  icon: Users,title: "Team Collaboration",description: "Multi-agent support with role-based access control",color: "from-green-500 to-emerald-500"
+},
+  {
+  icon: Clock,title: "Response Time Tracking",description: "Monitor and optimize support response times",color: "from-yellow-500 to-orange-500"
+},
+  {
+  icon: BarChart3,title: "Analytics & Reporting",description: "Comprehensive performance metrics and insights",color: "from-purple-500 to-pink-500"
+},
+  {
+  icon: Shield,title: "Security & Compliance",description: "Enterprise-grade security and data protection",color: "from-red-500 to-pink-500"
+},
+  {
+  icon: Cloud,title: "Cloud Platform",description: "Scalable cloud infrastructure for global support",color: "from-indigo-500 to-blue-500"
+},
   ]
-  const services = [;
-    {;
-      title: "Customer Support",description: "Multi-channel customer support and ticket management",icon: MessageCircle,benefits: [["Email support", "Live chat", "Phone support", "Social media integration"];]
-    }
-    {;
-      title: "Internal IT Support",description: "Employee IT support and technical assistance",icon: Cpu,benefits: [["Hardware support", "Software assistance", "Network issues", "Access management"];]
-    }
-    {;
-      title: "Knowledge Base",description: "Self-service knowledge base and documentation",icon: FileText,benefits: [["FAQ management", "Documentation", "Video tutorials", "Search functionality"];]
-    }
-    {;
-      title: "Automation & AI",description: "AI-powered automation and intelligent routing",icon: Brain,benefits: [["Auto-routing", "Chatbots", "Predictive analytics", "Smart suggestions"];]
-    }
+  const services = [
+  {
+  title: "Customer Support",description: "Multi-channel customer support and ticket management",icon: MessageCircle,benefits: [["Email support", "Live chat", "Phone support", "Social media integration"],
+  ],
+  },
+  {
+  title: "Internal IT Support",description: "Employee IT support and technical assistance",icon: Cpu,benefits: [["Hardware support", "Software assistance", "Network issues", "Access management"],
+  ],
+  },
+  {
+  title: "Knowledge Base",description: "Self-service knowledge base and documentation",icon: FileText,benefits: [["FAQ management", "Documentation", "Video tutorials", "Search functionality"],
+  ],
+  },
+  {
+  title: "Automation & AI",description: "AI-powered automation and intelligent routing",icon: Brain,benefits: [["Auto-routing", "Chatbots", "Predictive analytics", "Smart suggestions"],
+  ],
+  },
   ]
 
-  const integrations = [;
-    "CRM Systems", "Email Platforms", "Chat Tools", "Social Media", ;
-    "Project Management", "Analytics Tools", "Cloud Services", "Mobile Apps", "API Access", "Webhooks";
-  ]
+  const integrations = [
+  "CRM Systems", "Email Platforms", "Chat Tools", "Social Media",
+  "Project Management", "Analytics Tools", "Cloud Services", "Mobile Apps", "API Access", "Webhooks"
+]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -122,14 +130,19 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -142,13 +155,18 @@ export default function HelpdeskPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -162,14 +180,19 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Services Section */}}
+      {{/* Services Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -181,13 +204,18 @@ export default function HelpdeskPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {services.map((service, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
@@ -198,10 +226,11 @@ export default function HelpdeskPlatform() {;
                 </div>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.benefits.map((benefit, benefitIndex) => (;
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                  {service.benefits.map((benefit, benefitIndex) => (
+  <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {{benefit}}
+                      {{benefit},
+  }
                     </li>
                   ))}
                 </ul>
@@ -211,14 +240,19 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Integrations Section */}}
+      {{/* Integrations Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -230,13 +264,18 @@ export default function HelpdeskPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {integrations.map((integration, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 text-center hover:bg-white/10 hover:border-green-400/40 transition-all duration-300";"
               >
                 <span className="text-white font-medium">{integration}</span>
@@ -246,14 +285,19 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Support Operations?;

@@ -24,8 +24,9 @@ import {
   Lightbulb
 } from "lucide-react";
 interface HeroSlide {
-  id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[];
-}
+  id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> },
+  [],
+  }
 
 const heroSlides: HeroSlide[] = [
   {
@@ -37,8 +38,8 @@ const heroSlides: HeroSlide[] = [
     gradient: "from-cyan-500 via-blue-500 to-purple-600",icon: Brain,stats: [
       { label: "AI Accuracy Rate", value: "97.3%", icon: Target };
       { label: "ROI Increase", value: "450%", icon: TrendingUp };
-      { label: "Market Growth", value: "280%", icon: Rocket }
-    ]
+      { label: "Market Growth", value: "280%", icon: Rocket },
+  ],
   };
   {
     id: 'enterprise-it',title: "Enterprise IT Excellence",subtitle: "Comprehensive technology solutions for modern enterprises",description: "Zion Tech Group delivers enterprise-grade IT solutions that scale with your business. From cloud infrastructure to cybersecurity, we ensure your digital foundation is robust, secure, and future-ready.",
@@ -49,8 +50,8 @@ const heroSlides: HeroSlide[] = [
     gradient: "from-blue-500 via-purple-500 to-pink-500",icon: Shield,stats: [
       { label: "System Uptime", value: "99.99%", icon: Target };
       { label: "Cost Savings", value: "60%", icon: TrendingUp };
-      { label: "Response Time", value: "<2min", icon: Rocket }
-    ]
+      { label: "Response Time", value: "<2min", icon: Rocket },
+  ],
   };
   {
     id: 'green-tech',title: "Sustainable Technology Solutions",subtitle: "Driving innovation while protecting our planet",description: "Join the green technology revolution with Zion's sustainable IT solutions. We help organizations reduce their carbon footprint while maximizing performance and driving business value.",image: "/images/hero-green-tech.jpg",
@@ -60,8 +61,8 @@ const heroSlides: HeroSlide[] = [
     gradient: "from-green-500 via-emerald-500 to-teal-500",icon: Globe,stats: [
       { label: "Energy Savings", value: "75%", icon: Target };
       { label: "Carbon Reduction", value: "85%", icon: TrendingUp };
-      { label: "Cost Reduction", value: "40%", icon: Rocket }
-    ]
+      { label: "Cost Reduction", value: "40%", icon: Rocket },
+  ],
   };
   {
     id: 'digital-innovation',title: "Digital Innovation Hub",subtitle: "Accelerating digital transformation for forward-thinking organizations",description: "Zion Tech Group is your strategic partner in digital innovation. We combine cutting-edge technologies with deep industry expertise to create transformative solutions that drive competitive advantage.",image: "/images/hero-digital-innovation.jpg",
@@ -71,10 +72,10 @@ const heroSlides: HeroSlide[] = [
     gradient: "from-purple-500 via-pink-500 to-red-500",icon: Lightbulb,stats: [
       { label: "Innovation Rate", value: "300%", icon: Target };
       { label: "Digital Maturity", value: "95%", icon: TrendingUp };
-      { label: "Time to Market", value: "-70%", icon: Rocket }
-    ]
-  }
-];
+      { label: "Time to Market", value: "-70%", icon: Rocket },
+  ],
+  },
+  ];
 const slideVariants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 1000 : -1000,opacity: 0
@@ -92,9 +93,9 @@ const swipePower = (offset: number, velocity: number) => {
 };
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+const [direction, setDirection] = useState(0);
+const [isLoading, setIsLoading] = useState(true);
   // Memoize slides to prevent unnecessary re-renders
   const memoizedSlides = useMemo(() => heroSlides, []),
 
@@ -102,15 +103,15 @@ export default function HeroSection() {
   const nextSlide = useCallback(() => {
     setDirection(1);
     setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
-    setIsAutoPlaying(false);
-  }, [memoizedSlides.length]),
+    setIsAutoPlaying(false)
+}, [memoizedSlides.length]),
 
   const prevSlide = useCallback(() => {
     setDirection(-1);
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
-    setIsAutoPlaying(false);
-  }, [memoizedSlides.length]);
-  const goToSlide = useCallback((index: number) => {
+    setIsAutoPlaying(false)
+}, [memoizedSlides.length]);
+const goToSlide = useCallback((index: number) => {
     setDirection(index > currentSlide ? 1 : -1);
     setCurrentSlide(index);
     setIsAutoPlaying(false)
@@ -125,8 +126,8 @@ export default function HeroSection() {
       setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
     }, 7000),
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, memoizedSlides.length]),
+    return () => clearInterval(interval)
+}, [isAutoPlaying, memoizedSlides.length]),
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -136,12 +137,12 @@ export default function HeroSection() {
       if (e.key === ' ') {
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)
-      }
-    },
+      },
+  },
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [prevSlide, nextSlide, isAutoPlaying]),
+    return () => window.removeEventListener('keydown', handleKeyDown)
+}, [prevSlide, nextSlide, isAutoPlaying]),
 
   // Handle image loading
   useEffect(() => {
@@ -156,11 +157,11 @@ export default function HeroSection() {
       }),
 
       await Promise.all(imagePromises);
-      setIsLoading(false);
-    },
+      setIsLoading(false)
+},
 
-    preloadImages();
-  }, [memoizedSlides]),
+    preloadImages()
+}, [memoizedSlides]),
 
   const currentSlideData = memoizedSlides[currentSlide];
   if (isLoading) {
@@ -171,8 +172,8 @@ export default function HeroSection() {
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
       </div>
-    );
-  }
+    )
+}
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -184,8 +185,10 @@ export default function HeroSection() {
       {/* Navigation Controls */}
       <div className="absolute top-1/2 left-4 z-20 transform -translate-y-1/2">
         <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
           onClick={prevSlide}
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
@@ -195,8 +198,10 @@ export default function HeroSection() {
 
       <div className="absolute top-1/2 right-4 z-20 transform -translate-y-1/2">
         <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
           onClick={nextSlide}
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
@@ -207,8 +212,10 @@ export default function HeroSection() {
       {/* Auto-play Toggle */}
       <div className="absolute top-4 right-4 z-20">
         <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
           className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
@@ -221,8 +228,10 @@ export default function HeroSection() {
         {memoizedSlides.map((_, index) => (
           <motion.button
             key={index}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.2 },
+  }
+            whileTap={{ scale: 0.8 },
+  }
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
@@ -245,34 +254,43 @@ export default function HeroSection() {
             exit="exit"
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 };
-              opacity: { duration: 0.2 }
-            }}
+              opacity: { duration: 0.2 },
+  },
+  }
             drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
+            dragConstraints={{ left: 0, right: 0 },
+  }
             dragElastic={1}
             onDragEnd={(e, { offset, velocity }) => {
               const swipe = swipePower(offset.x, velocity.x);
               if (swipe < -swipeConfidenceThreshold) {
-                nextSlide();
-              } else if (swipe > swipeConfidenceThreshold) {
-                prevSlide();
-              }
-            }}
+                nextSlide()
+} else if (swipe > swipeConfidenceThreshold) {
+                prevSlide()
+},
+  },
+  }
             className="w-full max-w-6xl mx-auto text-center"
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <motion.div 
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0, y: 50 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.2 },
+  }
                 className="space-y-8"
               >
                 <div className="space-y-4">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    initial={{ opacity: 0, scale: 0.8 },
+  }
+                    animate={{ opacity: 1, scale: 1 },
+  }
+                    transition={{ duration: 0.6, delay: 0.3 },
+  }
                     className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium"
                   >
                     <currentSlideData.icon className="w-4 h-4 mr-2" />
@@ -280,18 +298,24 @@ export default function HeroSection() {
                   </motion.div>
 
                   <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
+                    initial={{ opacity: 0, y: 30 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.8, delay: 0.4 },
+  }
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
                   >
                     {currentSlideData.title}
                   </motion.h1>
 
                   <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    initial={{ opacity: 0, y: 30 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.8, delay: 0.6 },
+  }
                     className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
                   >
                     {currentSlideData.description}
@@ -300,9 +324,12 @@ export default function HeroSection() {
 
                 {/* Features */}
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.8, delay: 0.8 },
+  }
                   className="grid grid-cols-2 gap-4"
                 >
                   {currentSlideData.features.map((feature, index) => (
@@ -315,9 +342,12 @@ export default function HeroSection() {
 
                 {/* CTA Button */}
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 1 }}
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.8, delay: 1 },
+  }
                 >
                   <Link
                     to={currentSlideData.path}
@@ -331,9 +361,12 @@ export default function HeroSection() {
 
               {/* Visual Content */}
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0, x: 50 },
+  }
+                animate={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.4 },
+  }
                 className="relative"
               >
                 <div className={`relative p-8 rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} shadow-2xl`}>
@@ -348,9 +381,12 @@ export default function HeroSection() {
                       {currentSlideData.stats.map((stat, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                          initial={{ opacity: 0, scale: 0.8 },
+  }
+                          animate={{ opacity: 1, scale: 1 },
+  }
+                          transition={{ duration: 0.6, delay: 0.8 + index * 0.1 },
+  }
                           className="text-center"
                         >
                           <div className="text-2xl font-bold text-white">{stat.value}</div>
@@ -366,7 +402,7 @@ export default function HeroSection() {
         </AnimatePresence>
       </div>
     </section>
-  );
+  )
 }
 
 export { HeroSection };

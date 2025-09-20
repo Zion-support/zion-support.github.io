@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {;
+import {
   Eye;
   Shield;
   CheckCircle;
@@ -17,86 +17,90 @@ import {;
   FileText;
   Phone;
   Mail;
-  MessageCircle;
+  MessageCircle
 } from "lucide-react";
-export default function AccessibilityPage() {;
+export default function AccessibilityPage() {
   const currentYear = new Date().getFullYear()
-  const accessibilityFeatures = [;
-    {;
-      category: 'Visual Accessibility',icon: Eye,features: [;
-        'High contrast mode supportAdjustable font sizes';
+  const accessibilityFeatures = [
+  {
+  category: 'Visual Accessibility',icon: Eye,features: [
+  'High contrast mode supportAdjustable font sizes';
         'Color-blind friendly designClear typography and spacing';
-        'Alternative text for imagesFocus indicators for navigation';
-      ]
-    }
-    {;
-      category: 'Auditory Accessibility',icon: Ear,features: [;
-        'Closed captions for videosAudio descriptions';
+        'Alternative text for imagesFocus indicators for navigation'
+],
+  },
+  {
+  category: 'Auditory Accessibility',icon: Ear,features: [
+  'Closed captions for videosAudio descriptions';
         'Volume controlsVisual alerts and notifications';
-        'Transcripts for audio content';
-      ]
-    }
-    {;
-      category: 'Motor Accessibility',icon: Hand,features: [;
-        'Keyboard navigation supportVoice control compatibility';
+        'Transcripts for audio content'
+],
+  },
+  {
+  category: 'Motor Accessibility',icon: Hand,features: [
+  'Keyboard navigation supportVoice control compatibility';
         'Large click targetsCustomizable timing';
-        'Alternative input methods';
-      ]
-    }
-    {;
-      category: 'Cognitive Accessibility',icon: Brain,features: [;
-        'Clear and simple languageConsistent navigation structure';
+        'Alternative input methods'
+],
+  },
+  {
+  category: 'Cognitive Accessibility',icon: Brain,features: [
+  'Clear and simple languageConsistent navigation structure';
         'Logical content organizationReduced distractions';
-        'Step-by-step instructions';
-      ]
-    }
+        'Step-by-step instructions'
+],
+  },
   ]
 
-  const complianceStandards = [;
-    {;
-      standard: 'WCAG 2.1 AA',status: 'Compliant',icon: CheckCircle,description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',color: 'text-green-500';
-    }
-    {;
-      standard: 'Section 508',status: 'Compliant',icon: CheckCircle,description: 'Federal accessibility requirements for electronic and information technology',color: 'text-green-500';
-    }
-    {;
-      standard: 'ADA Title III',status: 'Compliant',icon: CheckCircle,description: 'Americans with Disabilities Act requirements for public accommodations',color: 'text-green-500';
-    }
-    {;
-      standard: 'EN 301 549',status: 'Compliant',icon: CheckCircle,description: 'European accessibility requirements for ICT products and services',color: 'text-green-500';
-    }
+  const complianceStandards = [
+  {
+  standard: 'WCAG 2.1 AA',status: 'Compliant',icon: CheckCircle,description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',color: 'text-green-500'
+},
+  {
+  standard: 'Section 508',status: 'Compliant',icon: CheckCircle,description: 'Federal accessibility requirements for electronic and information technology',color: 'text-green-500'
+},
+  {
+  standard: 'ADA Title III',status: 'Compliant',icon: CheckCircle,description: 'Americans with Disabilities Act requirements for public accommodations',color: 'text-green-500'
+},
+  {
+  standard: 'EN 301 549',status: 'Compliant',icon: CheckCircle,description: 'European accessibility requirements for ICT products and services',color: 'text-green-500'
+},
   ]
-  const accessibilityTools = [;
-    {;
-      name: 'Screen Reader Support',description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver';
-      icon: Monitor;
-    }
-    {;
-      name: 'Mobile Accessibility',description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',icon: Smartphone;
-    }
-    {;
-      name: 'Voice Navigation',description: 'Voice control support for hands-free navigation and interaction',icon: Globe;
-    }
-    {;
-      name: 'Customizable Interface',description: 'Personalizable themes, fonts, and layout options to meet individual needs';
-      icon: Zap;
-    }
+  const accessibilityTools = [
+  {
+  name: 'Screen Reader Support',description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver';
+      icon: Monitor
+},
+  {
+  name: 'Mobile Accessibility',description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',icon: Smartphone
+},
+  {
+  name: 'Voice Navigation',description: 'Voice control support for hands-free navigation and interaction',icon: Globe
+},
+  {
+  name: 'Customizable Interface',description: 'Personalizable themes, fonts, and layout options to meet individual needs';
+      icon: Zap
+},
   ]
-  const const containerVariants = {; = {
-    hidden: {{ opacity: 0 }}
-    visible: {;
-      opacity: 1,transition: {;
-        staggerChildren: 0.1;
-      }
-    }
+  const const containerVariants = {
+  = {
+    hidden: {{ opacity: 0 },
   }
-  const const itemVariants = {; = {
-    hidden: {{ opacity: 0, y: 20 }}
-    visible: {;
-      opacity: 1,y: 0,transition: {;
-        duration: 0.5;
-      }
-    }
+    visible: {
+  opacity: 1,transition: {
+  staggerChildren: 0.1
+},
+  },
+  }
+  const const itemVariants = {
+  = {
+    hidden: {{ opacity: 0, y: 20 },
+  }
+    visible: {
+  opacity: 1,y: 0,transition: {
+  duration: 0.5
+},
+  },
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -116,12 +120,13 @@ export default function AccessibilityPage() {;
             </p>
           </div>
 
-          {{/* Key Features */}}
+          {{/* Key Features */},
+  }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (;
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {features.map((feature, index) => (
+  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 text-sm">{feature.description}</p>
@@ -130,13 +135,14 @@ export default function AccessibilityPage() {;
             </div>
           </div>
 
-          {{/* Compliance Standards */}}
+          {{/* Compliance Standards */},
+  }
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                {complianceStandards.map((standard, index) => (;
-                  <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+                {complianceStandards.map((standard, index) => (
+  <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
                   </div>
                 ))}
@@ -144,18 +150,20 @@ export default function AccessibilityPage() {;
             </div>
           </div>
 
-          {{/* Testing Areas */}}
+          {{/* Testing Areas */},
+  }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {testingAreas.map((area, index) => (;
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {testingAreas.map((area, index) => (
+  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">
-                    {area.items.map((item, idx) => (;
-                      <li key={idx} className="flex items-center text-gray-300">
+                    {area.items.map((item, idx) => (
+  <li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                        {{item}}
+                        {{item},
+  }
                       </li>
                     ))}
                   </ul>
@@ -164,7 +172,8 @@ export default function AccessibilityPage() {;
             </div>
           </div>
 
-          {{/* Process */}}
+          {{/* Process */},
+  }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -202,7 +211,8 @@ export default function AccessibilityPage() {;
             </div>
           </div>
 
-          {{/* Benefits */}}
+          {{/* Benefits */},
+  }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -252,7 +262,8 @@ export default function AccessibilityPage() {;
             </div>
           </div>
 
-          {{/* CTA Section */}}
+          {{/* CTA Section */},
+  }
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Make Your Digital Products Accessible?</h3>

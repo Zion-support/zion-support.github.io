@@ -1,37 +1,37 @@
 import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award } from "lucide-react";
-export default function AIBusinessProcessOptimizer() {;
-  const features = [;
-    'AI-powered process mining and discoveryReal-time performance monitoring and alerts';
+export default function AIBusinessProcessOptimizer() {
+  const features = [
+  'AI-powered process mining and discoveryReal-time performance monitoring and alerts';
     'Predictive analytics for process bottlenecksAutomated workflow optimization recommendations';
     'Resource allocation optimizationROI tracking and performance metrics';
     'Integration with 50+ business toolsCustom AI model training for your industry';
-    '24/7 process monitoring and alertingExecutive dashboard with KPI tracking';
-  ]
+    '24/7 process monitoring and alertingExecutive dashboard with KPI tracking'
+]
 
-  const benefits = [;
-    'Reduce process costs by 30-50%Improve efficiency by 40-70%';
+  const benefits = [
+  'Reduce process costs by 30-50%Improve efficiency by 40-70%';
     'Eliminate manual bottlenecksReal-time visibility into operations';
-    'Data-driven decision makingScalable process optimization';
-  ]
+    'Data-driven decision makingScalable process optimization'
+]
 
-  const useCases = [;
-    'Manufacturing process optimizationCustomer service workflow automation';
+  const useCases = [
+  'Manufacturing process optimizationCustomer service workflow automation';
     'Supply chain process improvementFinancial operations streamlining';
-    'HR process automationSales process optimization';
-  ]
-  const tiers = [;
-    { ;
-      name: 'Starter',price: '$1,999/mo', ;
-      details: ['Up to 10 processesBasic AI insights', 'Email supportStandard integrations'] ;
-    }
-    { ;
-      name: 'Professional',price: '$4,999/mo', ;
-      details: ['Up to 50 processesAdvanced AI analytics', 'Priority supportCustom integrations'] ;
-    }
-    { ;
-      name: 'Enterprise',price: '$12,999/mo', ;
-      details: ['Unlimited processesCustom AI models', 'Dedicated supportWhite-label solution'] ;
-    }
+    'HR process automationSales process optimization'
+]
+  const tiers = [
+  {
+  name: 'Starter',price: '$1,999/mo',
+  details: ['Up to 10 processesBasic AI insights', 'Email supportStandard integrations'],
+  },
+  {
+  name: 'Professional',price: '$4,999/mo',
+  details: ['Up to 50 processesAdvanced AI analytics', 'Priority supportCustom integrations'],
+  },
+  {
+  name: 'Enterprise',price: '$12,999/mo',
+  details: ['Unlimited processesCustom AI models', 'Dedicated supportWhite-label solution'],
+  },
   ]
   return (
     <div className="min-h-screen bg-white">
@@ -50,8 +50,8 @@ export default function AIBusinessProcessOptimizer() {;
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Revolutionary Features</h2>
             <ul className="space-y-3">
-              {features.map((f) => (;
-                <li key={f} className="flex items-start">
+              {features.map((f) => (
+  <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{f}</span>
                 </li>
@@ -64,8 +64,8 @@ export default function AIBusinessProcessOptimizer() {;
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-1 gap-4">
-              {tiers.map((t) => (;
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+              {tiers.map((t) => (
+  <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
                   <ul className="text-sm text-zion-slate-dark space-y-1">
@@ -89,8 +89,8 @@ export default function AIBusinessProcessOptimizer() {;
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Key Benefits</h3>
             <ul className="space-y-3">
-              {benefits.map((b) => (;
-                <li key={b} className="flex items-start">
+              {benefits.map((b) => (
+  <li key={b} className="flex items-start">
                   <TrendingUp className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{b}</span>
                 </li>
@@ -100,8 +100,8 @@ export default function AIBusinessProcessOptimizer() {;
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Use Cases</h3>
             <ul className="space-y-3">
-              {useCases.map((u) => (;
-                <li key={u} className="flex items-start">
+              {useCases.map((u) => (
+  <li key={u} className="flex items-start">
                   <Target className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{u}</span>
                 </li>
@@ -111,8 +111,8 @@ export default function AIBusinessProcessOptimizer() {;
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['Real-time monitoringAI-powered insights', 'Process automation'].map((t) => (;
-            <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+          {['Real-time monitoringAI-powered insights', 'Process automation'].map((t) => (
+  <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{t}</div>
             </div>

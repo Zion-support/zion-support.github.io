@@ -18,24 +18,24 @@ const featuredListings = [
   {
     id: 4,title: "IoT Edge Computing Platform",description: "Real-time IoT data processing and analytics at the edge for instant insights.",category: "IoT",price: "$449/month",image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",rating: 4.6,reviews: 178,features: ["Edge processing", "Real-time analytics", "Device management"],
     link: "/services/iot-platform"
-  }
-];
+  },
+  ];
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
-  const filteredListings = selectedCategory === "All"
+const [hoveredListing, setHoveredListing] = useState<number | null>(null);
+const [showFilters, setShowFilters] = useState(false);
+const filteredListings = selectedCategory === "All"
     ? featuredListings
     : featuredListings.filter(listing => listing.category === selectedCategory);
-  const containerVariants = {
+const containerVariants = {
     hidden: { opacity: 0 };
     visible: {
       opacity: 1,transition: {
         staggerChildren: 0.15,delayChildren: 0.1
-      }
-    }
+      },
+  },
   };
-  const renderStars = (rating: number) => {
+const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
@@ -47,10 +47,14 @@ export function FeaturedListingsSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6 },
+  }
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured Services
@@ -65,10 +69,14 @@ export function FeaturedListingsSection() {
             <motion.div 
               key={listing.id} 
               className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              viewport={{ once: true },
+  }
+              transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               onHoverStart={() => setHoveredListing(listing.id)}
               onHoverEnd={() => setHoveredListing(null)}
             >
@@ -136,10 +144,14 @@ export function FeaturedListingsSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6, delay: 0.4 },
+  }
         >
           <Link 
             to="/services"

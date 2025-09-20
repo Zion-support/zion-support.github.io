@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { User, LogOut, Settings, Bell } from "lucide-react";
-export function UserMenu() {;
+export function UserMenu() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div className="relative">
       <button;
-        onClick={{onClick={() => setIsOpen(!isOpen)}}}
+        onClick={{onClick={() => setIsOpen(!isOpen)},
+  },
+  }
         className="className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200";"
       >
         <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
@@ -14,8 +16,8 @@ export function UserMenu() {;
         <span className="hidden md:block text-sm font-medium">Account</span>
       </button>
 
-      {isOpen && (;
-        <div className="absolute right-0 mt-2 w-48 bg-zion-blue-dark border border-zion-blue-light/20 rounded-lg shadow-xl z-50">
+      {isOpen && (
+  <div className="absolute right-0 mt-2 w-48 bg-zion-blue-dark border border-zion-blue-light/20 rounded-lg shadow-xl z-50">
           <div className="py-2">
             <a;
               href="/profile";

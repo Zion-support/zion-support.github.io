@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Users;
-  Award, ;
-  Star, ;
-  Target, ;
-  TrendingUp, ;
-  Globe, ;
-  Zap, ;
-  Shield, ;
-  Brain, ;
+  Award,
+  Star,
+  Target,
+  TrendingUp,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
   Rocket;
   Building;
   Heart;
@@ -19,57 +19,57 @@ import { ;
   Linkedin;
   Mail;
   Phone;
-  MapPin;
+  MapPin
 } from "lucide-react";
 import SEO from "../components/SEO";
-export default function Leadership() {;
-  const leadershipTeam = [;
-    {;
-      name: 'Kleber Santos',title: 'Founder & CEO',image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',bio: 'Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.',expertise: ['AI & Machine LearningBusiness Strategy', 'Technology InnovationTeam Leadership']
-      linkedin: 'https://linkedin.com/in/klebersantos',email: 'kleber@ziontechgroup.com',phone: '+1 302 464 0950';
-    }
-    {;
-      name: 'Dr. Sarah Chen',title: 'Chief Technology Officer',image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',bio: 'PhD in Computer Science with expertise in artificial intelligence, quantum computing, and emerging technologies. Leads our R&D initiatives and technology strategy.';
+export default function Leadership() {
+  const leadershipTeam = [
+  {
+  name: 'Kleber Santos',title: 'Founder & CEO',image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',bio: 'Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.',expertise: ['AI & Machine LearningBusiness Strategy', 'Technology InnovationTeam Leadership']
+      linkedin: 'https://linkedin.com/in/klebersantos',email: 'kleber@ziontechgroup.com',phone: '+1 302 464 0950'
+},
+  {
+  name: 'Dr. Sarah Chen',title: 'Chief Technology Officer',image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',bio: 'PhD in Computer Science with expertise in artificial intelligence, quantum computing, and emerging technologies. Leads our R&D initiatives and technology strategy.';
       expertise: ['Quantum ComputingAI Research', 'Technology ArchitectureInnovation Strategy']
-      linkedin: 'https://linkedin.com/in/sarahchen',email: 'sarah@ziontechgroup.com',phone: '+1 302 464 0951';
-    }
-    {;
-      name: 'Michael Rodriguez',title: 'Chief Operations Officer',image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',bio: 'Operations expert with deep experience in scaling technology companies and optimizing business processes. Ensures seamless delivery of our innovative solutions.',expertise: ['Operations ManagementProcess Optimization', 'Client SuccessTeam Development']
-      linkedin: 'https://linkedin.com/in/michaelrodriguez',email: 'michael@ziontechgroup.com',phone: '+1 302 464 0952';
-    }
-    {;
-      name: 'Dr. Emily Watson',title: 'Head of AI Research',image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',expertise: ['Machine LearningDeep Learning', 'AI EthicsResearch & Development']
-      linkedin: 'https://linkedin.com/in/emilywatson',email: 'emily@ziontechgroup.com',phone: '+1 302 464 0953';
-    }
+      linkedin: 'https://linkedin.com/in/sarahchen',email: 'sarah@ziontechgroup.com',phone: '+1 302 464 0951'
+},
+  {
+  name: 'Michael Rodriguez',title: 'Chief Operations Officer',image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',bio: 'Operations expert with deep experience in scaling technology companies and optimizing business processes. Ensures seamless delivery of our innovative solutions.',expertise: ['Operations ManagementProcess Optimization', 'Client SuccessTeam Development']
+      linkedin: 'https://linkedin.com/in/michaelrodriguez',email: 'michael@ziontechgroup.com',phone: '+1 302 464 0952'
+},
+  {
+  name: 'Dr. Emily Watson',title: 'Head of AI Research',image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',expertise: ['Machine LearningDeep Learning', 'AI EthicsResearch & Development']
+      linkedin: 'https://linkedin.com/in/emilywatson',email: 'emily@ziontechgroup.com',phone: '+1 302 464 0953'
+},
   ]
-  const values = [;
-    {;
-      icon: Brain,title: 'Innovation First',description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative problem-solving.';
-    }
-    {;
-      icon: Heart,title: 'Client Success',description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.';
-    }
-    {;
-      icon: Shield,title: 'Trust & Security',description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
-    }
-    {;
-      icon: Globe,title: 'Global Impact',description: 'We believe technology should make the world better for everyone, everywhere.';
-    }
+  const values = [
+  {
+  icon: Brain,title: 'Innovation First',description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative problem-solving.'
+},
+  {
+  icon: Heart,title: 'Client Success',description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.'
+},
+  {
+  icon: Shield,title: 'Trust & Security',description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
+},
+  {
+  icon: Globe,title: 'Global Impact',description: 'We believe technology should make the world better for everyone, everywhere.'
+},
   ]
 
-  const achievements = [;
-    {;
-      metric: '500+',label: 'AI Solutions Deployed',description: 'Successfully implemented AI solutions across diverse industries';
-    }
-    {;
-      metric: '50+',label: 'Enterprise Clients',description: 'Trusted by leading companies worldwide';
-    }
-    {;
-      metric: '95%',label: 'Client Satisfaction',description: 'Consistently high satisfaction ratings from our clients';
-    }
-    {;
-      metric: '25+',label: 'Industry Awards',description: 'Recognition for innovation and excellence in technology';
-    }
+  const achievements = [
+  {
+  metric: '500+',label: 'AI Solutions Deployed',description: 'Successfully implemented AI solutions across diverse industries'
+},
+  {
+  metric: '50+',label: 'Enterprise Clients',description: 'Trusted by leading companies worldwide'
+},
+  {
+  metric: '95%',label: 'Client Satisfaction',description: 'Consistently high satisfaction ratings from our clients'
+},
+  {
+  metric: '25+',label: 'Industry Awards',description: 'Recognition for innovation and excellence in technology'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -78,7 +78,8 @@ export default function Leadership() {;
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
@@ -95,7 +96,8 @@ export default function Leadership() {;
         </div>
       </section>
 
-      {{/* Leadership Team */}}
+      {{/* Leadership Team */},
+  }
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -108,13 +110,14 @@ export default function Leadership() {;
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {leadershipTeam.map((leader, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {leadershipTeam.map((leader, index) => (
+  <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
                   <div className="flex-shrink-0">
                     <img ;
                       src={leader.image} ;
-                      alt={{leader.name}}
+                      alt={{leader.name},
+  }
                       className="className="w-32 h-32 rounded-2xl object-cover border-4 border-cyan-400/20";"
                     />
                   </div>
@@ -126,12 +129,14 @@ export default function Leadership() {;
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Areas of Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {leader.expertise.map((skill, skillIndex) => (;
-                          <span ;
-                            key={{skillIndex}}
+                        {leader.expertise.map((skill, skillIndex) => (
+  <span ;
+                            key={{skillIndex},
+  }
                             className="className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20";"
                           >
-                            {{skill}}
+                            {{skill},
+  }
                           </span>
                         ))}
                       </div>
@@ -139,7 +144,8 @@ export default function Leadership() {;
 
                     <div className="flex items-center space-x-4">
                       <a;
-                        href={{leader.linkedin}}
+                        href={{leader.linkedin},
+  }
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors";"
@@ -170,7 +176,8 @@ export default function Leadership() {;
         </div>
       </section>
 
-      {{/* Company Values */}}
+      {{/* Company Values */},
+  }
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -183,8 +190,8 @@ export default function Leadership() {;
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (;
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {values.map((value, index) => (
+  <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -196,7 +203,8 @@ export default function Leadership() {;
         </div>
       </section>
 
-      {{/* Achievements */}}
+      {{/* Achievements */},
+  }
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -209,8 +217,8 @@ export default function Leadership() {;
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (;
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {achievements.map((achievement, index) => (
+  <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{achievement.metric}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{achievement.label}</h3>
                 <p className="text-slate-300 text-sm">{achievement.description}</p>
@@ -220,7 +228,8 @@ export default function Leadership() {;
         </div>
       </section>
 
-      {{/* Company Culture */}}
+      {{/* Company Culture */},
+  }
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -250,7 +259,8 @@ export default function Leadership() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border border-cyan-400/20">

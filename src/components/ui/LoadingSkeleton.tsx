@@ -26,16 +26,18 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             key={index}
             className={`animate-pulse ${baseClasses}`}
             animate={{
-              opacity: [0.5, 1, 0.5]
-            }}
+              opacity: [0.5, 1, 0.5],
+  },
+  }
             transition={{
               duration: 1.5,repeat: Infinity,ease: "easeInOut"
-            }}
+            },
+  }
           />
         ))}
       </>
-    );
-  }
+    )
+}
   
   return (
     <>
@@ -132,7 +134,7 @@ export function TableSkeleton({
 interface ListSkeletonProps {
   items?: number,
   className?: string,
-  showAvatar?: boolean;
+  showAvatar?: boolean
 }
 
 export function ListSkeleton({ 
@@ -154,7 +156,7 @@ export function ListSkeleton({
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 interface GridSkeletonProps {
@@ -178,5 +180,5 @@ export function GridSkeleton({
         />
       ))}
     </div>
-  );
+  )
 }

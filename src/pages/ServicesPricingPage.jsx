@@ -6,19 +6,21 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from "lucide-react";
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
 import SEO from "@/components/SEO";
-export default function ServicesPricingPage() {;
-    // Group services by category for pricing table;
-    const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {;
-        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category)
-        if (if (categoryServices.length > 0) {;) {
-            acc[category] = categoryServices;
-        }
-        return acc;
-    }, {})
+export default function ServicesPricingPage() {
+  // Group services by category for pricing table;
+const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
+  const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category)
+        if (if (categoryServices.length > 0) {
+  ) {
+            acc[category] = categoryServices
+}
+        return acc
+}, {})
     return (<div className="min-h-screen bg-zion-blue-dark">
       <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https://ziontechgroup.com/services-pricing"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -44,7 +46,8 @@ export default function ServicesPricingPage() {;
         </div>
       </div>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-8 text-white">
@@ -70,7 +73,8 @@ export default function ServicesPricingPage() {;
         </div>
       </div>
 
-      {{/* Pricing Tiers */}}
+      {{/* Pricing Tiers */},
+  }
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -121,7 +125,8 @@ export default function ServicesPricingPage() {;
         </div>
       </div>
 
-      {{/* Service-Specific Pricing */}}
+      {{/* Service-Specific Pricing */},
+  }
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -141,17 +146,20 @@ export default function ServicesPricingPage() {;
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="text-white font-medium">{service.title}</h4>
                         <Badge variant="outline" className="border-zion-cyan text-zion-cyan text-xs">
-                          {{service.pricingTier}}
+                          {{service.pricingTier},
+  }
                         </Badge>
                       </div>
                       <p className="text-zion-slate-light text-sm mb-3 line-clamp-2">
-                        {{service.description}}
+                        {{service.description},
+  }
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <DollarSign className="w-4 h-4 text-zion-cyan"/>
                           <span className="text-white font-semibold">
-                            {{service.price?.toLocaleString()}}
+                            {{service.price?.toLocaleString()},
+  }
                           </span>
                         </div>
                         <div className="flex items-center gap-1">
@@ -166,7 +174,8 @@ export default function ServicesPricingPage() {;
         </div>
       </div>
 
-      {{/* Why Choose Zion Tech Group */}}
+      {{/* Why Choose Zion Tech Group */},
+  }
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -179,22 +188,23 @@ export default function ServicesPricingPage() {;
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {[;
-            {;
-                icon: <Zap className="w-8 h-8"/>,title: "Competitive Pricing",description: "Market-leading rates without compromising on quality or features";
-            }
-            {;
-                icon: <Shield className="w-8 h-8"/>,title: "No Hidden Fees",description: "Transparent pricing with clear breakdowns of all costs";
-            }
-            {;
-                icon: <Users className="w-8 h-8"/>,title: "Flexible Plans",description: "Customizable solutions that grow with your business needs";
-            }
-            {;
-                icon: <Building className="w-8 h-8"/>,title: "Proven ROI",description: "Measurable business outcomes and return on investment";
-            }
-        ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
+            {[
+  {
+  icon: <Zap className="w-8 h-8"/>,title: "Competitive Pricing",description: "Market-leading rates without compromising on quality or features"
+},
+  {
+  icon: <Shield className="w-8 h-8"/>,title: "No Hidden Fees",description: "Transparent pricing with clear breakdowns of all costs"
+},
+  {
+  icon: <Users className="w-8 h-8"/>,title: "Flexible Plans",description: "Customizable solutions that grow with your business needs"
+},
+  {
+  icon: <Building className="w-8 h-8"/>,title: "Proven ROI",description: "Measurable business outcomes and return on investment"
+},
+  ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
-                  {{feature.icon}}
+                  {{feature.icon},
+  }
                 </div>
                 <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
@@ -203,7 +213,8 @@ export default function ServicesPricingPage() {;
         </div>
       </div>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

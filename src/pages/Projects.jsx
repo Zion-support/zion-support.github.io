@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Clock, Briefcase } from "lucide-react";
-function ProjectsContent() {;
-    const { projects, isLoading } = useProjects()
+function ProjectsContent() {
+  const { projects, isLoading } = useProjects()
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
       ;
@@ -27,13 +27,15 @@ function ProjectsContent() {;
                     <Badge variant="outline">{project.status}</Badge>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3"/>
-                      Started {{new Date(project.start_date).toLocaleDateString()}}
+                      Started {{new Date(project.start_date).toLocaleDateString()},
+  }
                     </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground line-clamp-2">
-                    {{project.job?.description || "Project details"}}
+                    {{project.job?.description || "Project details"},
+  }
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -47,6 +49,6 @@ function ProjectsContent() {;
       ;
     </>)
 }
-export default function Projects() {;
-    return <ProjectsContent />
+export default function Projects() {
+  return <ProjectsContent />
 }

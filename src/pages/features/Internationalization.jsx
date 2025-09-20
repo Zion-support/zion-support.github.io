@@ -5,18 +5,21 @@ import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-export default function Internationalization() {;
-    const const schema = {; = {
+export default function Internationalization() {
+  const const schema = {
+  = {
         "@context": "https: //schema.org";
         "@type": "WebPage";
         "name": "Internationalization";
         "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.";
-        "url": "https: //app.ziontechgroup.com/features/internationalization";
-    }
+        "url": "https: //app.ziontechgroup.com/features/internationalization"
+}
     return (<>
       <SEO title="Internationalization" description="Reach a global audience with multi-language support across the Zion platform." keywords="i18n, multi-language marketplace, localized listings" canonical="https://app.ziontechgroup.com/features/internationalization"/>
-      {{/* Use a normal script tag so JSON-LD is correctly parsed */}}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      {{/* Use a normal script tag so JSON-LD is correctly parsed */},
+  }
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) },
+  }></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">

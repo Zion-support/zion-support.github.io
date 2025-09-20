@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {;
+import {
   Brain;
   Cloud;
   Shield;
@@ -27,11 +27,12 @@ import {;
   ArrowRight;
   Search;
   Filter;
-  Sparkles;
+  Sparkles
 } from "lucide-react";
-  const getServicePrice = (service: any) => {;
-    if (if (typeof service.price === 'number') {;) {
-      return service.price;
-    }
-    return service.pricing?.basic || 0;
-  }
+const getServicePrice = (service: any) => {
+  if (if (typeof service.price === 'number') {
+  ) {
+      return service.price
+}
+    return service.pricing?.basic || 0
+}

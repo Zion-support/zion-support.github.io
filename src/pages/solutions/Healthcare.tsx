@@ -1,5 +1,5 @@
 import React from "react";
-export default function HealthcareSolutions() {;
+export default function HealthcareSolutions() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">

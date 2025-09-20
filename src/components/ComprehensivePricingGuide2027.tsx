@@ -27,7 +27,7 @@ import { servicesCatalog } from "../data/servicesCatalog";
 import { innovativeServices2027 } from "../data/innovativeServices2027";
 export const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
+const [selectedCategory, setSelectedCategory] = useState<string>('All'),
   const [priceRange, setPriceRange] = useState<string>('All'),
   const [sortBy, setSortBy] = useState<string>('name'),
   const [isVisible, setIsVisible] = useState(false);
@@ -35,18 +35,18 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      };
+          setIsVisible(true)
+},
+  };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('comprehensive-pricing-guide');
+const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)
+}
 
-    return () => observer.disconnect();
-  }, []),
+    return () => observer.disconnect()
+}, []),
 
   // Combine all services
   const allServices = [
@@ -66,14 +66,14 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesPrice = priceRange === 'All' ||
+const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000),
 
-    return matchesSearch && matchesCategory && matchesPrice;
-  }),
+    return matchesSearch && matchesCategory && matchesPrice
+}),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -85,20 +85,20 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       case 'category':
         return a.category.localeCompare(b.category);
       default: return 0
-    }
+    },
   });
-  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
+const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
   const priceRanges = ['AllLow (<$100)', 'Medium ($100-$999)High ($1000+)'],
 
   const contactInfo = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-  const getPriceRange = (price: string) => {
+const getPriceRange = (price: string) => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, '')),
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
-    return 'High';
-  },
+    return 'High'
+},
 
   const getPriceColor = (price: string) => {
     const range = getPriceRange(price);
@@ -107,9 +107,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       case 'Medium': return 'text-yellow-400';
       case 'High': return 'text-red-400';
       default: return 'text-white'
-    }
+    },
   };
-  const getCategoryIcon = (category: string) => {
+const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain;
       'Micro SaaS': Zap,
@@ -132,8 +132,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       'Real Estate Tech': Home,
       'Supply Chain Solutions': Truck
     },
-    return iconMap[category] || Target;
-  },
+    return iconMap[category] || Target
+},
 
   return (
     <section id="comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -146,9 +146,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+  }
+          transition={{ duration: 0.8 },
+  }
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
@@ -172,9 +175,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+  }
+          transition={{ duration: 0.8, delay: 0.2 },
+  }
           className="mb-12"
         >
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
@@ -245,17 +251,23 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map((service, index) => (
             <motion.div
               key={`${service.source}-${service.id}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+  }
+              transition={{ duration: 0.6, delay: index * 0.05 },
+  }
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -275,8 +287,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Features Preview */}
-                {service.features && service.features.length > 0 && (
+                {/* Features Preview */},
+  {service.features && service.features.length > 0 && (
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -286,33 +298,32 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                         >
                           {feature}
                         </span>
-                      ))}
-                      {service.features.length > 3 && (
+                      ))},
+  {service.features.length > 3 && (
                         <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
                           +{service.features.length - 3}
                         </span>
                       )}
                     </div>
                   </div>
-                )}
-
-                {/* Pricing & Billing */}
+                )},
+  {/* Pricing & Billing */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between">
                     <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
                       {service.price}
                     </div>
                     <div className="text-gray-400 text-sm">
-                      {service.billing === 'month' && 'per month'}
-                      {service.billing === 'project' && 'per project'}
-                      {service.billing === 'hour' && 'per hour'}
-                      {service.billing === 'year' && 'per year'}
+                      {service.billing === 'month' && 'per month'},
+  {service.billing === 'project' && 'per project'},
+  {service.billing === 'hour' && 'per hour'},
+  {service.billing === 'year' && 'per year'}
                     </div>
                   </div>
                 </div>
 
-                {/* Additional Info for Innovative Services */}
-                {service.source === 'innovative' && 'marketSize' in service && (
+                {/* Additional Info for Innovative Services */},
+  {service.source === 'innovative' && 'marketSize' in service && (
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="text-center">
                       <div className="text-zion-cyan font-bold text-sm">{service.marketSize}</div>
@@ -323,9 +334,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                       <div className="text-gray-400 text-xs">ROI</div>
                     </div>
                   </div>
-                )}
-
-                {/* CTA Button */}
+                )},
+  {/* CTA Button */}
                 <a
                   href={service.href}
                   target={service.external ? "_blank" : "_self"}
@@ -343,9 +353,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
 
         {/* Contact Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+  }
+          transition={{ duration: 0.8, delay: 0.6 },
+  }
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">

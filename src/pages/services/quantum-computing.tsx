@@ -3,39 +3,39 @@ import SEO from "../../components/SEO";
 import { motion } from "framer-motion";
 import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from "lucide-react";
 const QuantumComputing: React.FC = () => {
-  const features = [;
-    {;
-      icon: Zap,title: 'Quantum Supremacy',description: 'Achieve computational power beyond classical computers';
-    }
-    {;
-      icon: Brain,title: 'AI Acceleration',description: 'Train machine learning models exponentially faster';
-    }
-    {;
-      icon: Shield,title: 'Quantum Cryptography',description: 'Unbreakable encryption for next-generation security';
-    }
-    {;
-      icon: Cpu,title: 'Quantum Simulation',description: 'Model complex molecular and physical systems';
-    }
+  const features = [
+  {
+  icon: Zap,title: 'Quantum Supremacy',description: 'Achieve computational power beyond classical computers'
+},
+  {
+  icon: Brain,title: 'AI Acceleration',description: 'Train machine learning models exponentially faster'
+},
+  {
+  icon: Shield,title: 'Quantum Cryptography',description: 'Unbreakable encryption for next-generation security'
+},
+  {
+  icon: Cpu,title: 'Quantum Simulation',description: 'Model complex molecular and physical systems'
+},
   ]
-  const useCases = [;
-    {;
-      title: 'Drug Discovery',description: 'Accelerate pharmaceutical research and development',icon: '💊';
-    }
-    {;
-      title: 'Financial Modeling',description: 'Optimize portfolio management and risk assessment',icon: '💰';
-    }
-    {;
-      title: 'Climate Research',description: 'Advanced climate modeling and prediction',icon: '🌍';
-    }
-    {;
-      title: 'Logistics Optimization',description: 'Solve complex routing and supply chain problems',icon: '🚚';
-    }
+  const useCases = [
+  {
+  title: 'Drug Discovery',description: 'Accelerate pharmaceutical research and development',icon: '💊'
+},
+  {
+  title: 'Financial Modeling',description: 'Optimize portfolio management and risk assessment',icon: '💰'
+},
+  {
+  title: 'Climate Research',description: 'Advanced climate modeling and prediction',icon: '🌍'
+},
+  {
+  title: 'Logistics Optimization',description: 'Solve complex routing and supply chain problems',icon: '🚚'
+},
   ]
-  const benefits = [;
-    'Exponential speedup for specific algorithmsUnprecedented computational power';
+  const benefits = [
+  'Exponential speedup for specific algorithmsUnprecedented computational power';
     'Breakthrough capabilities in cryptographyRevolutionary AI and machine learning';
-    'Advanced scientific research capabilitiesCompetitive advantage in innovation';
-  ]
+    'Advanced scientific research capabilitiesCompetitive advantage in innovation'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -44,13 +44,17 @@ const QuantumComputing: React.FC = () => {
         description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-400/30 mb-6">
@@ -82,13 +86,17 @@ const QuantumComputing: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -100,12 +108,16 @@ const QuantumComputing: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -119,13 +131,17 @@ const QuantumComputing: React.FC = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -137,12 +153,16 @@ const QuantumComputing: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{useCase.title}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{useCase.title},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -158,13 +178,17 @@ const QuantumComputing: React.FC = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -177,15 +201,18 @@ const QuantumComputing: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8";"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (;
-                  <li key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
@@ -194,9 +221,12 @@ const QuantumComputing: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-8";"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
@@ -212,13 +242,17 @@ const QuantumComputing: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready for the Quantum Future?;

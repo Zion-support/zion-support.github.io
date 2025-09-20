@@ -2,68 +2,80 @@
 
 
 // Generic API response type;
-interface ApiResponse<T = any> {;
+interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
-  count?: number;
+  count?: number
 }
 
 // Generic API error;
-class ApiError extends Error {;
-  constructor(public status: number, message: string) {;
-    super(message)
-    this.name = 'ApiError';
+class ApiError extends Error {
+  constructor(public status: number, message: string) {
+  super(message)
+    this.name = 'ApiError'
+},
   }
-}
 
 
 
-interface ApiClientOptions {;
+interface ApiClientOptions {
   method?: string;
   body?: string;
-  headers: Record<string, string>;
+  headers: Record<string, string>
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = { headers: {} }) {;
-  const { method = 'GET', body, headers = {} } = options;
-  const const config: RequestInit = {; = {
+export async function apiClient(endpoint: string, options: ApiClientOptions = { headers: {},
+  }) {
+  const { method = 'GET', body, headers = {},
+  } = options;
+const const config: RequestInit = {
+  = {
     method;
-    headers: {;
-      'Content-Type': 'application/json';
-      ...headers;
-    }
+    headers: {
+  'Content-Type': 'application/json';
+      ...headers
+},
   }
 
-  if (if (body) {;) {
-    config.body = body;
-  }
+  if (if (body) {
+  ) {
+    config.body = body
+}
 
-  try {;
-    const response = await fetch(endpoint, config)
+  try {
+  const response = await fetch(endpoint, config)
     ;
-    if (if (!response.ok) {;) {
+    if (if (!response.ok) {
+  ) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
     ;
     return await response.json()
-  } catch (error) {;
-    console.error('API request failed:', error)
-    throw error;
+  } catch (error) {
+  console.error('API request failed:', error)
+    throw error
+},
   }
-}
 
-export const const api = {; = {
+export const const api = {
+  = {
   get: (endpoint: string, headers?: Record<string, string>) => ;
-    apiClient(endpoint, { method: 'GET', headers: headers || {} })
+    apiClient(endpoint, { method: 'GET', headers: headers || {},
+  })
   post: (endpoint: string, data: any, headers?: Record<string, string>) => ;
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} })
+    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {},
+  })
   put: (endpoint: string, data: any, headers?: Record<string, string>) => ;
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} })
+    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {},
+  })
   delete: (endpoint: string, headers?: Record<string, string>) => ;
-    apiClient(endpoint, { method: 'DELETE', headers: headers || {} })
+    apiClient(endpoint, { method: 'DELETE', headers: headers || {},
+  })
 }
 // Export types for use in components;
-export type {{ ApiResponse }}
-export {{ ApiError }}
+export type {{ ApiResponse },
+  }
+export {{ ApiError },
+  }

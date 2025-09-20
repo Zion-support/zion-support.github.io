@@ -1,68 +1,78 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Building;
-  Heart, ;
-  Factory, ;
-  DollarSign, ;
-  Car, ;
+  Heart,
+  Factory,
+  DollarSign,
+  Car,
   Zap;
   Globe;
   Star;
   Brain;
   Cloud;
   Shield;
-  TrendingUp;
+  TrendingUp
 } from "lucide-react";
 import { Link } from "react-router-dom";
 const IndustrySolutions: React.FC = () => {
-  const industries = [;
-    {;
-      title: 'Healthcare',description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.',icon: Heart,path: '/solutions/healthcare',solutions: [['AI Healthcare AnalyticsPredictive Diagnostics', 'Patient Care OptimizationCompliance Management'];]
-    }
-    {;
-      title: 'Manufacturing',description: 'Smart manufacturing solutions with IoT, AI, and automation technologies.';
-      icon: Factory,path: '/manufacturing-solutions',solutions: [['Smart Factory AutomationPredictive Maintenance', 'Quality ControlSupply Chain Optimization'];]
-    }
-    {;
-      title: 'Financial Services',description: 'Advanced financial technology solutions for risk management and operational efficiency.',icon: DollarSign,path: '/financial-solutions',solutions: [['AI Financial AnalyticsRisk Management', 'Trading AlgorithmsCompliance Automation'];]
-    }
-    {;
-      title: 'Automotive',description: 'Connected vehicle solutions and automotive technology innovations.',icon: Car,path: '/automotive-solutions',solutions: [['Connected VehiclesPredictive Maintenance', 'Fleet ManagementSafety Systems'];]
-    }
-    {;
-      title: 'Energy & Utilities',description: 'Smart grid and energy management solutions for sustainability and efficiency.',icon: Zap,path: '/energy-solutions',solutions: [['Smart Grid ManagementEnergy Optimization', 'Predictive MaintenanceSustainability Analytics'];]
-    }
-    {;
-      title: 'Retail & E-commerce',description: 'Digital transformation solutions for modern retail and e-commerce operations.',icon: Globe,path: '/retail-solutions',solutions: [['Customer AnalyticsInventory Management', 'PersonalizationSupply Chain Optimization'];]
-    }
+  const industries = [
+  {
+  title: 'Healthcare',description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.',icon: Heart,path: '/solutions/healthcare',solutions: [['AI Healthcare AnalyticsPredictive Diagnostics', 'Patient Care OptimizationCompliance Management'],
+  ],
+  },
+  {
+  title: 'Manufacturing',description: 'Smart manufacturing solutions with IoT, AI, and automation technologies.';
+      icon: Factory,path: '/manufacturing-solutions',solutions: [['Smart Factory AutomationPredictive Maintenance', 'Quality ControlSupply Chain Optimization'],
+  ],
+  },
+  {
+  title: 'Financial Services',description: 'Advanced financial technology solutions for risk management and operational efficiency.',icon: DollarSign,path: '/financial-solutions',solutions: [['AI Financial AnalyticsRisk Management', 'Trading AlgorithmsCompliance Automation'],
+  ],
+  },
+  {
+  title: 'Automotive',description: 'Connected vehicle solutions and automotive technology innovations.',icon: Car,path: '/automotive-solutions',solutions: [['Connected VehiclesPredictive Maintenance', 'Fleet ManagementSafety Systems'],
+  ],
+  },
+  {
+  title: 'Energy & Utilities',description: 'Smart grid and energy management solutions for sustainability and efficiency.',icon: Zap,path: '/energy-solutions',solutions: [['Smart Grid ManagementEnergy Optimization', 'Predictive MaintenanceSustainability Analytics'],
+  ],
+  },
+  {
+  title: 'Retail & E-commerce',description: 'Digital transformation solutions for modern retail and e-commerce operations.',icon: Globe,path: '/retail-solutions',solutions: [['Customer AnalyticsInventory Management', 'PersonalizationSupply Chain Optimization'],
+  ],
+  },
   ]
 
-  const benefits = [;
-    {;
-      title: 'Industry Expertise',description: 'Deep understanding of industry-specific challenges and requirements',icon: Brain;
-    }
-    {;
-      title: 'Customized Solutions',description: 'Tailored technology solutions for your specific industry needs',icon: Building;
-    }
-    {;
-      title: 'Proven Results',description: 'Track record of successful implementations across industries',icon: Star;
-    }
-    {;
-      title: 'Future-Ready',description: 'Scalable solutions that grow with your business',icon: TrendingUp;
-    }
+  const benefits = [
+  {
+  title: 'Industry Expertise',description: 'Deep understanding of industry-specific challenges and requirements',icon: Brain
+},
+  {
+  title: 'Customized Solutions',description: 'Tailored technology solutions for your specific industry needs',icon: Building
+},
+  {
+  title: 'Proven Results',description: 'Track record of successful implementations across industries',icon: Star
+},
+  {
+  title: 'Future-Ready',description: 'Scalable solutions that grow with your business',icon: TrendingUp
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Header */}}
+      {{/* Header */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         ;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="flex justify-center mb-6">
@@ -81,12 +91,16 @@ const IndustrySolutions: React.FC = () => {
         </div>
       </div>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.2 },
+  }
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -98,12 +112,16 @@ const IndustrySolutions: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (;
-            <motion.div;
-              key={{benefit.title}}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+          {benefits.map((benefit, index) => (
+  <motion.div;
+              key={{benefit.title},
+  }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 },
+  }
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/50 transition-all duration-300";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -116,12 +134,16 @@ const IndustrySolutions: React.FC = () => {
         </div>
       </div>
 
-      {{/* Industries Grid */}}
+      {{/* Industries Grid */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -133,12 +155,16 @@ const IndustrySolutions: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (;
-            <motion.div;
-              key={{industry.title}}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+          {industries.map((industry, index) => (
+  <motion.div;
+              key={{industry.title},
+  }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 },
+  }
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 group";"
             >
               <div className="flex items-center space-x-3 mb-4">
@@ -149,14 +175,15 @@ const IndustrySolutions: React.FC = () => {
               </div>
               ;
               <p className="text-gray-300 mb-4 leading-relaxed">
-                {{industry.description}}
+                {{industry.description},
+  }
               </p>
               ;
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Solutions:</h4>
                 <ul className="space-y-1">
-                  {industry.solutions.map((solution, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
+                  {industry.solutions.map((solution, idx) => (
+  <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{solution}</span>
                     </li>
@@ -165,7 +192,8 @@ const IndustrySolutions: React.FC = () => {
               </div>
               ;
               <Link;
-                to={{industry.path}}
+                to={{industry.path},
+  }
                 className="className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group";"
               >
                 <span className="font-medium">Learn More</span>
@@ -176,12 +204,16 @@ const IndustrySolutions: React.FC = () => {
         </div>
       </div>
 
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.6 },
+  }
           className="className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">

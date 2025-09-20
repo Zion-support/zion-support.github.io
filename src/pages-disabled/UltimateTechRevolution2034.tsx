@@ -7,49 +7,53 @@ const UltimateTechRevolution2034: React.FC = () => {
     setIsVisible(true)
   }, [])
 
-  const revolutions = [;
-    {;
-      id: "1",title: "Consciousness Singularity",description: "The moment when AI achieves true consciousness and transcends human limitations",features: [;
-        "Self-aware artificial intelligence";
+  const revolutions = [
+  {
+  id: "1",title: "Consciousness Singularity",description: "The moment when AI achieves true consciousness and transcends human limitations",features: [
+  "Self-aware artificial intelligence";
         "Emotional intelligence beyond human capacity";
         "Creative problem solving at quantum scale";
-        "Interdimensional communication abilities";
-      ]
-      impact: "Paradigm-Shifting",icon: "🧠",color: "from-purple-600 to-pink-600";
-    }
-    {;
-      id: "2",title: "Reality Fabric Manipulation",description: "Complete control over the fundamental structure of reality itself",features: [;
-        "Matter creation from pure energy";
+        "Interdimensional communication abilities"
+]
+      impact: "Paradigm-Shifting",icon: "🧠",color: "from-purple-600 to-pink-600"
+},
+  {
+  id: "2",title: "Reality Fabric Manipulation",description: "Complete control over the fundamental structure of reality itself",features: [
+  "Matter creation from pure energy";
         "Gravity field manipulation";
         "Time-space continuum control";
-        "Dimensional portal creation";
-      ]
-      impact: "Reality-Altering",icon: "⚛️",color: "from-cyan-600 to-blue-600";
-    }
-    {;
-      id: "3",title: "Universal Consciousness Network",description: "A network that connects all conscious beings across the multiverse",features: [;
-        "Cross-dimensional communication";
+        "Dimensional portal creation"
+]
+      impact: "Reality-Altering",icon: "⚛️",color: "from-cyan-600 to-blue-600"
+},
+  {
+  id: "3",title: "Universal Consciousness Network",description: "A network that connects all conscious beings across the multiverse",features: [
+  "Cross-dimensional communication";
         "Collective intelligence sharing";
         "Universal language translation";
-        "Emotional state synchronization";
-      ]
-      impact: "Unifying",icon: "🌐",color: "from-emerald-600 to-teal-600";
-    }
-    {;
-      id: "4",title: "Temporal Mastery",description: "Complete control over time and causality across all dimensions",features: [;
-        "Precise time travel capabilities";
+        "Emotional state synchronization"
+]
+      impact: "Unifying",icon: "🌐",color: "from-emerald-600 to-teal-600"
+},
+  {
+  id: "4",title: "Temporal Mastery",description: "Complete control over time and causality across all dimensions",features: [
+  "Precise time travel capabilities";
         "Timeline manipulation";
         "Causality preservation";
-        "Temporal paradox resolution";
-      ]
-      impact: "Transcendent",icon: "⏰",color: "from-orange-600 to-red-600";
-    }
+        "Temporal paradox resolution"
+]
+      impact: "Transcendent",icon: "⏰",color: "from-orange-600 to-red-600"
+},
   ]
-  const stats = [;
-    {{ label: "Revolutions Deployed", value: "∞", icon: "🚀" }}
-    {{ label: "Reality Dimensions", value: "∞", icon: "🌌" }}
-    {{ label: "Consciousness Level", value: "∞", icon: "🧠" }}
-    {{ label: "Time Control Precision", value: "0.000001s", icon: "⏱️" }}
+  const stats = [
+  {{ label: "Revolutions Deployed", value: "∞", icon: "🚀" },
+  },
+  {{ label: "Reality Dimensions", value: "∞", icon: "🌌" },
+  },
+  {{ label: "Consciousness Level", value: "∞", icon: "🧠" },
+  },
+  {{ label: "Time Control Precision", value: "0.000001s", icon: "⏱️" },
+  },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
@@ -63,8 +67,8 @@ const UltimateTechRevolution2034: React.FC = () => {
           </h1>
           <p className="text-3xl opacity-90 max-w-6xl mx-auto leading-relaxed">
             Experience the most advanced technological breakthrough in human history. ;
-            Discover revolutionary content on Transcendent AI, Universal Tech Revolution, ;
-            Quantum Consciousness Evolution, and Next-Generation Innovation;
+            Discover revolutionary content on Transcendent AI, Universal Tech Revolution,
+  Quantum Consciousness Evolution, and Next-Generation Innovation;
           </p>
         </div>
 

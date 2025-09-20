@@ -4,9 +4,8 @@ import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "luc
 import { Link, useNavigate } from "react-router-dom";
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
     const navigate = useNavigate();
-    const maxRetries = 3;
-    
-    const handleRetry = () => {
+const maxRetries = 3;
+const handleRetry = () => {
         if (retryCount < maxRetries) {
             resetError();
         } else {
@@ -14,8 +13,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
             navigate('/');
         }
     };
-
-    const getErrorType = (error) => {
+const getErrorType = (error) => {
         if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
             return 'network';
         }
@@ -27,10 +25,8 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
         }
         return 'general';
     };
-
-    const errorType = getErrorType(error);
-    
-    const errorMessages = {
+const errorType = getErrorType(error);
+const errorMessages = {
         network: {
             title: 'Connection Error',
             description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',
@@ -54,10 +50,10 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
             description: 'We encountered an unexpected error. Don\'t worry, our team has been notified.',
             icon: AlertTriangle,
             color: 'text-zion-purple'
-        }
-    };
-    const currentError = errorMessages[errorType];
-    const IconComponent = currentError.icon;
+        },
+  };
+const currentError = errorMessages[errorType];
+const IconComponent = currentError.icon;
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
@@ -151,13 +147,13 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
-    const [error, setError] = useState(null);
-    const [retryCount, setRetryCount] = useState(0);
+const [error, setError] = useState(null);
+const [retryCount, setRetryCount] = useState(0);
 
     useEffect(() => {
         const handleError = (event) => {
@@ -171,7 +167,6 @@ function ErrorBoundary({ children, fallback, onError }) {
                 console.error('ErrorBoundary caught an error:', event.error);
             }
         };
-
         const handleUnhandledRejection = (event) => {
             setHasError(true);
             setError(new Error(event.reason));
@@ -192,7 +187,6 @@ function ErrorBoundary({ children, fallback, onError }) {
             window.removeEventListener('unhandledrejection', handleUnhandledRejection);
         };
     }, [onError]);
-
     const resetError = () => {
         setHasError(false);
         setError(null);
@@ -201,29 +195,27 @@ function ErrorBoundary({ children, fallback, onError }) {
 
     if (hasError) {
         if (fallback) {
-            return fallback;
-        }
+            return fallback
+}
         return (
             <ErrorFallback 
                 error={error || undefined} 
                 resetError={resetError}
                 retryCount={retryCount}
             />
-        );
-    }
+        )
+}
 
-    return <>{children}</>;
+    return <>{children}</>
 }
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
     const [error, setError] = useState(null);
-
     const handleError = (error) => {
         setError(error);
         console.error('useErrorHandler caught an error:', error);
     };
-
     const clearError = () => {
         setError(null);
     };

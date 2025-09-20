@@ -15,7 +15,7 @@ export class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,error: null,errorInfo: null
-    };
+    },
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -23,7 +23,7 @@ export class ErrorBoundary extends Component<Props, State> {
       hasError: true;
       error,
       errorInfo: null
-    };
+    },
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -34,28 +34,28 @@ error;
 });
     // Call the onError callback if provided
     if (this.props.onError) {
-      this.props.onError(error);
-    }
+      this.props.onError(error)
+}
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
+},
   }
 
   handleRetry = () => {
     this.setState({
 hasError: false,error: null,errorInfo: null
     
-});
-  },
+})
+},
 
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback
+}
 
       // Default error UI
       return (
@@ -106,8 +106,8 @@ hasError: false,error: null,errorInfo: null
       )
     }
 
-    return this.props.children;
+    return this.props.children
+},
   }
-}
 
 export default ErrorBoundary;

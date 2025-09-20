@@ -1,13 +1,13 @@
 import React from "react";
 import { SEO } from "../../components/SEO";
-import { ;
+import {
   Heart;
-  Brain, ;
-  Shield, ;
-  Zap, ;
-  Users, ;
-  Clock, ;
-  TrendingUp, ;
+  Brain,
+  Shield,
+  Zap,
+  Users,
+  Clock,
+  TrendingUp,
   CheckCircle;
   Stethoscope;
   Microscope;
@@ -20,54 +20,54 @@ import { ;
   Monitor;
   AlertTriangle;
   FileText;
-  BarChart3;
+  BarChart3
 } from "lucide-react";
 const AIHealthcarePlatform: React.FC = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Diagnostics',description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis';
-    }
-    {;
-      icon: Heart,title: 'Patient Monitoring',description: 'Real-time health monitoring with predictive analytics and early warning systems';
-    }
-    {;
-      icon: Shield,title: 'HIPAA Compliant',description: 'Enterprise-grade security with full HIPAA compliance and data protection';
-    }
-    {;
-      icon: Zap,title: 'Real-time Analytics',description: 'Instant insights and actionable intelligence for healthcare providers';
-    }
-    {;
-      icon: Users,title: 'Multi-user Access',description: 'Role-based access control for doctors, nurses, and administrators';
-    }
-    {;
-      icon: Clock,title: '24/7 Availability',description: 'Round-the-clock monitoring and support for critical care scenarios';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Diagnostics',description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
+},
+  {
+  icon: Heart,title: 'Patient Monitoring',description: 'Real-time health monitoring with predictive analytics and early warning systems'
+},
+  {
+  icon: Shield,title: 'HIPAA Compliant',description: 'Enterprise-grade security with full HIPAA compliance and data protection'
+},
+  {
+  icon: Zap,title: 'Real-time Analytics',description: 'Instant insights and actionable intelligence for healthcare providers'
+},
+  {
+  icon: Users,title: 'Multi-user Access',description: 'Role-based access control for doctors, nurses, and administrators'
+},
+  {
+  icon: Clock,title: '24/7 Availability',description: 'Round-the-clock monitoring and support for critical care scenarios'
+},
   ]
-  const solutions = [;
-    {;
-      icon: Stethoscope,title: 'Clinical Decision Support',description: 'AI-powered recommendations for treatment plans and medication management';
-    }
-    {;
-      icon: Microscope,title: 'Medical Imaging Analysis',description: 'Computer vision for X-rays, MRIs, and CT scans with 99.9% accuracy';
-    }
-    {;
-      icon: Pill,title: 'Drug Interaction Checker',description: 'Real-time medication interaction analysis and dosage optimization';
-    }
-    {;
-      icon: Activity,title: 'Vital Signs Monitoring',description: 'Continuous monitoring of heart rate, blood pressure, and oxygen levels';
-    }
-    {;
-      icon: Database,title: 'Electronic Health Records',description: 'Intelligent EHR system with natural language processing capabilities';
-    }
-    {;
-      icon: Lock,title: 'Secure Data Exchange',description: 'Blockchain-based secure sharing of patient data between facilities';
-    }
+  const solutions = [
+  {
+  icon: Stethoscope,title: 'Clinical Decision Support',description: 'AI-powered recommendations for treatment plans and medication management'
+},
+  {
+  icon: Microscope,title: 'Medical Imaging Analysis',description: 'Computer vision for X-rays, MRIs, and CT scans with 99.9% accuracy'
+},
+  {
+  icon: Pill,title: 'Drug Interaction Checker',description: 'Real-time medication interaction analysis and dosage optimization'
+},
+  {
+  icon: Activity,title: 'Vital Signs Monitoring',description: 'Continuous monitoring of heart rate, blood pressure, and oxygen levels'
+},
+  {
+  icon: Database,title: 'Electronic Health Records',description: 'Intelligent EHR system with natural language processing capabilities'
+},
+  {
+  icon: Lock,title: 'Secure Data Exchange',description: 'Blockchain-based secure sharing of patient data between facilities'
+},
   ]
-  const benefits = [;
-    'Reduce diagnostic errors by up to 85%Improve patient outcomes by 60%';
+  const benefits = [
+  'Reduce diagnostic errors by up to 85%Improve patient outcomes by 60%';
     'Cut healthcare costs by 30%Increase operational efficiency by 45%';
-    'Enable early disease detectionStreamline administrative processes';
-  ]
+    'Enable early disease detectionStreamline administrative processes'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -76,7 +76,8 @@ const AIHealthcarePlatform: React.FC = () => {
         description="Revolutionary AI-powered healthcare platform with advanced diagnostics, patient monitoring, and clinical decision support. HIPAA compliant and enterprise-ready.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
         <div className="container-responsive relative z-10">
@@ -90,8 +91,8 @@ const AIHealthcarePlatform: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionizing healthcare with artificial intelligence. Our platform combines advanced AI;
-              machine learning, and medical expertise to deliver unprecedented diagnostic accuracy, ;
-              patient monitoring, and clinical decision support.;
+              machine learning, and medical expertise to deliver unprecedented diagnostic accuracy,
+  patient monitoring, and clinical decision support.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">
@@ -105,7 +106,8 @@ const AIHealthcarePlatform: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -119,14 +121,15 @@ const AIHealthcarePlatform: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {features.map((feature, index) => (
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                  {{feature.description}}
+                  {{feature.description},
+  }
                 </p>
               </div>
             ))}
@@ -134,7 +137,8 @@ const AIHealthcarePlatform: React.FC = () => {
         </div>
       </section>
 
-      {{/* Solutions Section */}}
+      {{/* Solutions Section */},
+  }
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -147,14 +151,15 @@ const AIHealthcarePlatform: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (;
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {solutions.map((solution, index) => (
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200">
                   <solution.icon className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                  {{solution.description}}
+                  {{solution.description},
+  }
                 </p>
               </div>
             ))}
@@ -162,7 +167,8 @@ const AIHealthcarePlatform: React.FC = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -175,8 +181,8 @@ const AIHealthcarePlatform: React.FC = () => {
                 measurable improvements in patient care and operational efficiency.;
               </p>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (;
-                  <div key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => (
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -213,7 +219,8 @@ const AIHealthcarePlatform: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20">
         <div className="container-responsive text-center">
           <h2 className="text-4xl font-bold text-white mb-6">

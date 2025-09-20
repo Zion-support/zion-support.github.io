@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {;
+import {
   MessageCircle;
   X;
   ArrowRight;
@@ -95,45 +95,62 @@ import {;
   Mic;
   MicOff;
   Volume2;
-  VolumeX;
+  VolumeX
 } from "lucide-react";
-export function FloatingCTA() {;
+export function FloatingCTA() {
   const [isExpanded, setIsExpanded] = useState(false)
   return (
     <>
-      {{/* Floating Action Button */}}
+      {{/* Floating Action Button */},
+  }
       <motion.div;
         className="className="fixed bottom-6 right-6 z-50";"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3, delay: 2 }}
+        initial={{ scale: 0 },
+  }
+        animate={{ scale: 1 },
+  }
+        transition={{ duration: 0.3, delay: 2 },
+  }
       >
         <div className="relative">
-          {{/* Main Button */}}
+          {{/* Main Button */},
+  }
           <motion.button;
-            onClick={{onClick={() => setIsExpanded(!isExpanded)}}}
+            onClick={{onClick={() => setIsExpanded(!isExpanded)},
+  },
+  }
             className="className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl";"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 },
+  }
+            whileTap={{ scale: 0.9 },
+  }
           >
-            {{isExpanded ? '✕' : '💬'}}
+            {{isExpanded ? '✕' : '💬'},
+  }
           </motion.button>
 
-          {{/* Expanded Menu */}}
+          {{/* Expanded Menu */},
+  }
           <AnimatePresence>
-            {isExpanded && (;
-              <motion.div;
+            {isExpanded && (
+  <motion.div;
                 className="className="absolute bottom-20 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 min-w-[200px]";"
-                initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                transition={{ duration: 0.2 }}
+                initial={{ opacity: 0, scale: 0.8, y: 10 },
+  }
+                animate={{ opacity: 1, scale: 1, y: 0 },
+  }
+                exit={{ opacity: 0, scale: 0.8, y: 10 },
+  }
+                transition={{ duration: 0.2 },
+  }
               >
                 <div className="space-y-3">
                   <Link;
                     to="/contact";
                     className="className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white";"
-                    onClick={{onClick={() => setIsExpanded(false)}}}
+                    onClick={{onClick={() => setIsExpanded(false)},
+  },
+  }
                   >
                     <span className="text-xl">📞</span>
                     <div>
@@ -145,7 +162,9 @@ export function FloatingCTA() {;
                   <Link;
                     to="/services";
                     className="className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white";"
-                    onClick={{onClick={() => setIsExpanded(false)}}}
+                    onClick={{onClick={() => setIsExpanded(false)},
+  },
+  }
                   >
                     <span className="text-xl">🚀</span>
                     <div>
@@ -157,7 +176,9 @@ export function FloatingCTA() {;
                   <Link;
                     to="/quote";
                     className="className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white";"
-                    onClick={{onClick={() => setIsExpanded(false)}}}
+                    onClick={{onClick={() => setIsExpanded(false)},
+  },
+  }
                   >
                     <span className="text-xl">💰</span>
                     <div>
@@ -182,15 +203,21 @@ export function FloatingCTA() {;
         </div>
       </motion.div>
 
-      {{/* Backdrop */}}
+      {{/* Backdrop */},
+  }
       <AnimatePresence>
-        {isExpanded && (;
-          <motion.div;
+        {isExpanded && (
+  <motion.div;
             className="className="fixed inset-0 bg-black/20 z-40";"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={{onClick={() => setIsExpanded(false)}}}
+            initial={{ opacity: 0 },
+  }
+            animate={{ opacity: 1 },
+  }
+            exit={{ opacity: 0 },
+  }
+            onClick={{onClick={() => setIsExpanded(false)},
+  },
+  }
           />
         )}
       </AnimatePresence>
