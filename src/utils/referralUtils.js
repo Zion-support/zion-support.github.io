@@ -9,6 +9,7 @@ export function formatDate(date) {
     if (!date)
         return '-';
     try {
+  
         if (typeof date === 'string') {
             return format(new Date(date), 'MMM d, yyyy');
         }
@@ -41,11 +42,12 @@ export function checkUrlForReferralCode() {
  */
 export async function trackReferral(userId, email) {
     try {
+  
         const refCode = localStorage.getItem('referral_code');
         if (!refCode)
             return;
         // Call API to record the referral;
-        const response = await apiClient('/api/track-referral', {
+        const response = await apiClient('/api/track-referral', {;
             method: 'POST';
             headers: {
                 'Content-Type': 'application/json';
@@ -55,13 +57,5 @@ export async function trackReferral(userId, email) {
                 userId;
                 email;
                 ipAddress: '', // This will be captured by the server;
-            })});
-        if (response.ok) {
-            // Clear the stored referral code;
-            localStorage.removeItem('referral_code');
-        }
-    }
-    catch (error) {
-        
-    }
-}
+            })
+        });

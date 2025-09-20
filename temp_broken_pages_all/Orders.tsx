@@ -1,19 +1,23 @@
+<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 } from '@/components/ui/table';
-import { Badge,  } from '@/components/ui/badge';
-import { FileText,, CheckCircle2,, Clock,, ShieldAlert,  } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom,
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useGetOrdersQuery,  } from '@/hooks/useOrders';
+import { Badge } from "@/components/ui/badge";
+import { FileText, CheckCircle2, Clock, ShieldAlert } from "lucide-react";
+import Link from 'next/link', // Changed from react-router-dom;
+import { useAuth } from "@/hooks/useAuth";
+import { useGetOrdersQuery } from "@/hooks/useOrders";
 import { Table;
-,, TableBody;
-,, TableCell;
-,, TableHead;
-,, TableHeader;
-,, TableRow,  } from '@/components/ui/table';
-import { Badge,, ,  } from '@/components/ui/badge';
+, TableBody;
+, TableCell;
+, TableHead;
+, TableHeader;
+, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 import Skeleton from '@/components/ui/skeleton';
-import { EmptyState,  } from '@/components/ui/empty-state';
+import { EmptyState } from "@/components/ui/empty-state";
 export default function OrdersPage() {
+  return (
+  return (
+  return (
   const { user } = useAuth();
   const { data: orders isLoading } = useGetOrdersQuery(user?.id);
 return (
@@ -31,7 +35,7 @@ return (
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Array.from({ length: 3 }).map((_ i,) => (
+            {Array.from({ length: 3 }).map((_ i) => (
               <TableRow key={i}>
                 <TableCell>
                   <Skeleton className='h-4 w-20' />
@@ -76,8 +80,7 @@ icon={<FileText className='h-10 w-10' />}
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
-href={`/orders/${order.orderId}`} // Changed to href,
-className='text-zion-purple underline'
+href={`/orders/${order.orderId}`} // Changed to href className='text-zion-purple underline'
                   >
                     View
                   </Link>
@@ -87,6 +90,16 @@ className='text-zion-purple underline'
           </TableBody>
         </Table>
       )}
+import React from 'react';
+
+export default function Orders() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Orders</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Orders.tsx
     </div>
   );
 }

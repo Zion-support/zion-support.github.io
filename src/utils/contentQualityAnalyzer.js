@@ -1,4 +1,5 @@
 export class ContentQualityAnalyzer {
+  
     static instance;
     analyzedPages = new Map();
     static getInstance() {
@@ -21,40 +22,38 @@ export class ContentQualityAnalyzer {
         const hasStructuredData = this.checkStructuredData(content);
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSeoScore({
-            title;
-            wordCount;
-            headingCount;
-            imageCount;
-            linkCount;
-            metaDescriptionLength;
+            title,
+            wordCount,
+            headingCount,
+            imageCount,;
+            linkCount,;
+            metaDescriptionLength,;
             hasStructuredData;
         });
-
-  const issues = this.identifyIssues({
-            title;
-            wordCount;
-            headingCount;
-            imageCount;
-            linkCount;
-            metaDescriptionLength;
+        const issues = this.identifyIssues({
+            title,
+            wordCount,
+            headingCount,
+            imageCount,;
+            linkCount,;
+            metaDescriptionLength,;
             hasStructuredData;
         });
-
-  const recommendations = this.generateRecommendations(issues);
+        const recommendations = this.generateRecommendations(issues);
         const overallScore = Math.round((readabilityScore + seoScore) / 2);
         const metrics = {
-            pageUrl;
-            title;
-            wordCount;
-            headingCount;
-            imageCount;
-            linkCount;
-            metaDescriptionLength;
-            hasStructuredData;
-            readabilityScore;
-            seoScore;
-            overallScore;
-            issues;
+            pageUrl,
+            title,
+            wordCount,
+            headingCount,
+            imageCount,
+            linkCount,
+            metaDescriptionLength,
+            hasStructuredData,
+            readabilityScore,
+            seoScore,;
+            overallScore,;
+            issues,;
             recommendations;
         };
         this.analyzedPages.set(pageUrl, metrics);
@@ -105,6 +104,7 @@ export class ContentQualityAnalyzer {
                 syllableCount += 1;
             }
             else {
+  
                 // Count vowel groups;
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
@@ -232,19 +232,18 @@ export class ContentQualityAnalyzer {
         recommendations.push('Include relevant keywords naturally throughout the content');
         return recommendations;
     }
-    generateReport() {
-        const pageMetrics = Array.from(this.analyzedPages.values());
+    generateReport() {const pageMetrics = Array.from(this.analyzedPages.values());
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
+  
                 totalPages: 0;
                 averageWordCount: 0;
                 averageSeoScore: 0;
                 pagesWithIssues: 0;
                 topIssues: [];
                 pageMetrics: [];
-                summary: 'No pages analyzed yet';
-  };
+                summary: 'No pages analyzed yet'};
      }
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
@@ -256,19 +255,19 @@ export class ContentQualityAnalyzer {
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;
             });
         });
-
-  const topIssues = Object.entries(issueCounts)
-            .sort(([, a], [, b]) => b - a)
-            .slice(0, 5)
+        const topIssues = Object.entries(issueCounts);
+            .sort(([, a], [, b]) => b - a);
+            .slice(0, 5);
             .map(([issue]) => issue);
         const summary = this.generateSummary(pageMetrics, topIssues);
         return {
-            totalPages;
-            averageWordCount;
-            averageSeoScore;
-            pagesWithIssues;
-            topIssues;
-            pageMetrics;
+  
+            totalPages,
+            averageWordCount,
+            averageSeoScore,
+            pagesWithIssues,
+            topIssues,
+            pageMetrics,
             summary;
         };
     }

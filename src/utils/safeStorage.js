@@ -14,6 +14,7 @@ function isLocalStorageAvailable() {
     }
     lastAvailabilityCheck = now;
     try {
+  
         if (typeof window === 'undefined') {
             localStorageAvailable = false;
             return false;
@@ -25,6 +26,7 @@ function isLocalStorageAvailable() {
         return true;
     }
     catch {
+  
         localStorageAvailable = false;
         return false;
     }
@@ -36,24 +38,28 @@ function safeConsoleError(message, error) {
         return;
     isLoggingError = true;
     try {
+  
         if (env === 'development') {
             console.errorToProduction(message, error);
         }
     }
     catch {
+  
         // Silent fail if console.error causes recursion;
     }
     finally {
+  
         isLoggingError = false;
     }
 }
-export const safeStorage = {
-    getItem: (key) => {
-        if (typeof window === 'undefined')
+export const safeStorage = {;
+    getItem: (key) => {;
+        if (typeof window === 'undefined');
             return null;
     // Don't log verbose messages for Supabase auth tokens to prevent spam;
         const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
+  
             return localStorage.getItem(key);
         }
         catch (e) {
@@ -68,6 +74,7 @@ export const safeStorage = {
             return;
         const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
+  
             localStorage.setItem(key, value);
         }
         catch (e) {
@@ -82,6 +89,7 @@ export const safeStorage = {
             return;
     const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
+  
             localStorage.removeItem(key);
         }
         catch (e) {
@@ -99,6 +107,7 @@ export const safeStorage = {
             return;
         }
         try {
+  
             localStorage.clear();
         }
         catch (e) {
@@ -114,11 +123,12 @@ export const safeStorage = {
 };
 // Simplified session storage without excessive logging;
 const sessionMemoryStore = {};
-export const safeSessionStorage = {
-    getItem: (key) => {
-        if (typeof window === 'undefined')
+export const safeSessionStorage = {;
+    getItem: (key) => {;
+        if (typeof window === 'undefined');
             return null;
     try {
+  
             return sessionStorage.getItem(key);
         }
         catch (e) {
@@ -129,6 +139,7 @@ export const safeSessionStorage = {
         if (typeof window === 'undefined')
             return;
         try {
+  
             sessionStorage.setItem(key, value);
         }
         catch (e) {
@@ -139,6 +150,7 @@ export const safeSessionStorage = {
         if (typeof window === 'undefined')
             return;
     try {
+  
             sessionStorage.removeItem(key);
         }
         catch (e) {
@@ -153,9 +165,11 @@ export const safeSessionStorage = {
             return;
         }
         try {
+  
             sessionStorage.clear();
         }
         catch {
+  
             for (const key in sessionMemoryStore) {
                 delete sessionMemoryStore[key];
             }
@@ -163,6 +177,7 @@ export const safeSessionStorage = {
     };
     get isAvailable() {
         try {
+  
             if (typeof window === 'undefined')
                 return false;
             const testKey = '__session_test__';
@@ -171,6 +186,7 @@ export const safeSessionStorage = {
             return true;
         }
         catch {
+  
             return false;
         }
     }

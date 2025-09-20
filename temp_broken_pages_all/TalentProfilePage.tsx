@@ -1,27 +1,27 @@
+<<<<<<< HEAD:temp_broken_pages_all/TalentProfilePage.tsx
 import React { useState useEffect } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { TalentProfile,  } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState,  } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState,  } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton,  } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile,  } from "@/hooks/useTalentProfile",
-import { HireRequestModal,  } from "@/components/profile/hire-request",
-import { useAuthStatus,  } from "@/hooks/talent",
-import { MessageTalentModal,  } from "@/components/messaging/MessageTalentModal",
-import { StickyAction,  } from "@/components/ui/sticky-action",
-import { Handshake,, MessageSquare,  } from 'lucide-react'
-import { Button,  } from "@/components/ui/button",
-import { useAuth,  } from "@/hooks/useAuth",
-import { UserProfile,  } from "@/types/auth",
-import { toast,  } from "@/hooks/use-toast";
-import { SEO,  } from "@/components/SEO";
-export default function TalentProfilePage() {
-return (
+import { useRouter } from "next/router";
+import { TalentProfile } from "@/components/profile/TalentProfile";,
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";,
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState";,
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton";,
+import { useTalentProfile } from "@/hooks/useTalentProfile";,
+import { HireRequestModal } from "@/components/profile/hire-request";,
+import { useAuthStatus } from "@/hooks/talent";,
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";,
+import { StickyAction } from "@/components/ui/sticky-action";,
+import { Handshake, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";,
+import { useAuth } from "@/hooks/useAuth";,
+import { UserProfile } from "@/types/auth";,
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+export default function TalentProfilePage() {return (
     <>
       <SEO
-title = {profile.full_name,}
-        description = {profile.bio |'Talent profile',}
-        ogImage = {profile.profile_picture_url,}
+title = {profile.full_name}
+        description = {profile.bio |'Talent profile'}
+        ogImage = {profile.profile_picture_url}
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
         <TalentProfile
@@ -66,56 +66,34 @@ talent={profile}
           onClose={() => setIsMessageModalOpen(false)}
         />
       </div>
-    </>
+</>
   )
 }, [error])
-return,
+return
 }setIsHireModalOpen (true)
 }
-const handleMessageTalent = () => {
-  if (!isAuthenticated) {
+const handleMessageTalent = () => {if (!isAuthenticated) {
   toast ({
-  return,
-}setIsMessageModalOpen (true)
+  return}setIsMessageModalOpen (true)
 }
-return (<> <SEO title= {
-  profile.full name,
-}description= {'
+return (<> <SEO title= {profile.full name}description= {'
   profile.bio |'Talent profile'
-}ogImage= {
-  profile.profile picture url,
-}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {
-  profile,
-}onRequestHire= {
-  handleRequestHire,
-}onMessageTalent= {
-  handleMessageTalent,
-}/> <BackToDirectoryButton /> {
+}ogImage= {profile.profile picture url}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {profile}onRequestHire= {handleRequestHire}onMessageTalent= {handleMessageTalent}/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ "
 }<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
   /* Request to Hire Modal */
-}<HireRequestModal talent= {
-  profile,
-}isOpen= {
-  isHireModalOpen,
-}onClose= {
+}<HireRequestModal talent= {profile}isOpen= {isHireModalOpen}onClose= {
   () => setIsHireModalOpen (false)
-}userDetails= {
-  userProfile,
-}/> {
+}userDetails= {userProfile}/> {
   /* Message Talent Modal */
-}<MessageTalentModal talent= {
-  profile,
-}isOpen= {
-  isMessageModalOpen,
-}onClose= {
+}<MessageTalentModal talent= {profile}isOpen= {isMessageModalOpen}onClose= {
   () => setIsMessageModalOpen (false)
 }/> </div> </>)
 }'"      <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
-profile = {profile,}
-        onRequestHire = {handleRequestHire,}
-        onMessageTalent = {handleMessageTalent,}
+profile = {profile}
+        onRequestHire = {handleRequestHire}
+        onMessageTalent = {handleMessageTalent}
       />
       <BackToDirectoryButton />
       {/* Sticky action buttons that appear when scrolling */}
@@ -124,7 +102,7 @@ profile = {profile,}
           <Button
 size="sm"
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick = {handleRequestHire,}
+            onClick = {handleRequestHire}
           >
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
@@ -133,7 +111,7 @@ size="sm"
 size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            onClick = {handleMessageTalent,}
+            onClick = {handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
             Message
@@ -142,17 +120,30 @@ size="sm"
       </StickyAction>
       {/* Request to Hire Modal */}
       <HireRequestModal
-talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {(,) => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
+talent = {profile}
+        isOpen = {isHireModalOpen}
+        onClose = {(,) => setIsHireModalOpen(false)}
+        userDetails = {userProfile}
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
-talent = {profile,}
-        isOpen = {isMessageModalOpen,}
-        onClose = {() => setIsMessageModalOpen(false),}      />
+talent = {profile}
+        isOpen = {isMessageModalOpen}
+        onClose = {() => setIsMessageModalOpen(false)}      />
     </div>
-    </>
-  )
+</>;
+  );
+};
+import React from 'react';
+
+export default function TalentProfilePage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">TalentProfilePage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentProfilePage.tsx

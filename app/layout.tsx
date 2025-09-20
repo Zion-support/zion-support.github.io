@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
-// import './globals.css'
 
-function Header() : any {
+function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav id="navigation" className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
@@ -60,7 +59,7 @@ function Header() : any {
     </header>
   )
 }
-function Footer() : any {
+function Footer() {
   return (
     <footer id="footer" className="border-t border-gray-200 mt-10 py-12 bg-gray-50" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,26 +210,6 @@ export default function RootLayout({
         <main id="main-content" className="flex-1" role="main">{children}</main>
         <Footer />
         
-        {/* Advanced Improvements Script */}
-        <Script
-          src="/comprehensive-improvements-advanced.js"
-          strategy="afterInteractive"
-        />
-        
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [],
-            function gtag(): any {dataLayer.push(arguments);
-  }
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </Script>
       </body>
     </html>
   )

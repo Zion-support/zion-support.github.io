@@ -1,4 +1,0 @@
-import { render,screen  } from "@testing-library/reactimport EnhancedTestimonials from ./EnhancedTestimonialsdescribe(EnhancedTestimonials,() => {" it(renders without crashing",() => {" render(<EnhancedTestimonials />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()});
-
-    it("displays expected content, ",() => { render(<EnhancedTestimonials />)
-}}))</EnhancedTestimonials /><//EnhancedTestimonials />

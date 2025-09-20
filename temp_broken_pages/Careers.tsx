@@ -1,3 +1,30 @@
+<<<<<<< HEAD:temp_broken_pages/Careers.tsx
+<<<<<<< HEAD:temp_broken_pages/Careers.tsx
+<<<<<<< HEAD:src/pages/Careers.tsx
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardContent } from "@/components/ui/card";,
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
+
+export default function Careers() {
+<<<<<<< HEAD:temp_broken_pages/Careers.tsx
+  return (
+  return (
+  return (
+    <>
+      <SEO
+title='Careers at Zion - Join Our Team'
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -12,6 +39,16 @@ export default function Careers() {
     <>
       <SEO
         title='Careers at Zion - Join Our Team'
+>>>>>>> 9ed9c11c4cc6835af67936874b7aa0ffe8bbcb03:temp_broken_pages/Careers.tsx
+=======
+  const featuredJobs = CAREER_JOBS.filter(job => job.featured);
+  const allJobs = CAREER_JOBS;
+
+  return (
+    <>
+      <SEO
+        title='Careers at Zion - Join Our Team'
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers AI jobs tech careers remote work startup jobs'
         canonical='https://app.ziontechgroup.com/careers'
@@ -20,154 +57,85 @@ export default function Careers() {
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <GradientHeading>Join Our Team</GradientHeading>
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-              Help us build the future of AI and technology
+            <p className='text-zion-slate-light text-lg max-w-3xl mx-auto mt-6'>
+              Be part of the future of AI and technology. We're looking for passionate individuals who want to make a difference in the world.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
-            <div>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Why Work at Zion?
-              </h2>
-              <p className='text-zion-slate-light text-lg whitespace-pre-line'>
-                {whyWork}
-              </p>
-            </div>
-            <div className='rounded-lg overflow-hidden relative w-full h-full'>
-              <img,
-src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80'
-                alt='Team collaboration'
-                className='object-cover'
-              />
-            </div>
-          </div>
-          <div className='mb-24'>
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-              Our Benefits
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {benefits.map((benefit index) => (
-                <div,
-key={index}
-                  className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
-                >
-                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit.icon}
-                  </div>
-                  <h3 className='text-xl font-bold text-white mb-3'>
-                    {benefit.title}
-                  </h3>
-                  <p className='text-zion-slate-light'>{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className='mb-24'>
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-              Open Positions
-            </h2>
-            <Tabs defaultValue='engineering' className='w-full'>
-              <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>
-                <TabsTrigger,
-value='engineering'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
-                >
-                  Engineering
-                </TabsTrigger>
-                <TabsTrigger,
-value='product'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
-                >
-                  Product
-                </TabsTrigger>
-                <TabsTrigger,
-value='marketing'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
-                >
-                  Marketing
-                </TabsTrigger>
-                <TabsTrigger,
-value='operations'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
-                >
-                  Operations
-                </TabsTrigger>
-              </TabsList>
-              {Object.entries(jobs).map(([department jobList]) => (
-                <TabsContent,
-key={department}
-                  value={department}
-                  className='space-y-6'
-                >
-                  {jobList.map((job index) => (
-                    <Card,
-key={index}
-                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
-                    >
-                      <CardContent className='p-6'>
-                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
-                            <h3 className='text-xl font-bold text-white mb-2'>
-                              {job.title}
-                            </h3>
-                            <div className='flex flex-wrap gap-2 mb-4'>
-                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
-                                {job.location}
-                              </span>
-                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
-                                {job.type}
-                              </span>
-                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
-                                {job.department}
-                              </span>
-                            </div>
-                            <p className='text-zion-slate-light mb-4'>
-                              {job.description}
-                            </p>
+
+          <Tabs defaultValue="featured" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="featured">Featured Positions</TabsTrigger>
+              <TabsTrigger value="all">All Positions</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="featured" className="space-y-6">
+              <div className="grid gap-6">
+                {featuredJobs.map((job) => (
+                  <Card key={job.id} className="bg-white/10 backdrop-blur-sm border-white/20">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="text-xl font-semibold text-white mb-2">{job.title}</h3>
+                          <div className="flex items-center gap-4 text-sm text-gray-300">
+                            <span>{job.department}</span>
+                            <span>•</span>
+                            <span>{job.location}</span>
+                            <span>•</span>
+                            <span>{job.type}</span>
                           </div>
-                          <Button,
-asChild,
-className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-                          >
-                            <Link href={`/careers/${job.id}`}>
-                              View Details
-                            </Link>
-                          </Button>
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </TabsContent>
-              ))}
-            </Tabs>
-          </div>
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-              Don't see the right position?
-            </h2>
-            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-              We're always looking for talented individuals who are passionate,
-about AI and technology. Send us your resume and let's start a,
-conversation. You can also apply directly by emailing us at
-              <a,
-href={`mailto:${applyEmail}`}
-                className='text-zion-cyan hover:text-zion-purple transition-colors'
-              >
-                {applyEmail}
-              </a>
-              .
-            </p>
-            <Button,
-asChild,
-className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-            >
-              <a href={`mailto:${applyEmail}`}>Send General Application</a>
-            </Button>
-          </div>
+                        <Button className="bg-blue-600 hover:bg-blue-700">
+                          Apply Now
+                        </Button>
+                      </div>
+                      <p className="text-gray-300 mb-4">{job.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {job.benefits.slice(0, 3).map((benefit, index) => (
+                          <span key={index} className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="all" className="space-y-6">
+              <div className="grid gap-6">
+                {allJobs.map((job) => (
+                  <Card key={job.id} className="bg-white/10 backdrop-blur-sm border-white/20">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="text-xl font-semibold text-white mb-2">{job.title}</h3>
+                          <div className="flex items-center gap-4 text-sm text-gray-300">
+                            <span>{job.department}</span>
+                            <span>•</span>
+                            <span>{job.location}</span>
+                            <span>•</span>
+                            <span>{job.type}</span>
+                          </div>
+                        </div>
+                        <Button className="bg-blue-600 hover:bg-blue-700">
+                          Apply Now
+                        </Button>
+                      </div>
+                      <p className="text-gray-300">{job.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </main>
-    </>
+<<<<<<< HEAD:temp_broken_pages/Careers.tsx
+</>
   )
-import React from 'react'
-import { SEO,  } from '../components/SEO'
+import React from 'react';
+import { SEO } from "../components/SEO";
 const Careers: React.FC = () => {
   return(<>
       <SEO title="Careers - Zion Tech Group" />
@@ -177,8 +145,24 @@ const Careers: React.FC = () => {
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
       </div>
-    </>
+</>
   )
 }
-export default Careers,
+export default Careers
+import React from 'react';
+
+export default function Careers() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
+        <p className="text-lg text-gray-600">Join our team...</p>
+      </div>
+    </div>
+  );
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Careers.tsx
+=======
+    </>
+  );
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
 }
