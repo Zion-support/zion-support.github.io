@@ -67,9 +67,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const [selectedType, setSelectedType] = useState<string>('all'),
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
   const [selectedPriority, setSelectedPriority] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid'),
-  const [showResourceForm, setShowResourceForm] = useState(false),
+  const [showResourceForm, setShowResourceForm] = useState(false);
   const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
   // Sample resource data
@@ -97,8 +97,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         description: 'Complete DevOps toolchain for continuous integration and deployment',manager: 'Alex Wong',utilization: 90
       }
     ];
-    setResources(sampleResources),
-    setFilteredResources(sampleResources),
+    setResources(sampleResources);
+    setFilteredResources(sampleResources);
   }, []),
 
   // Filter resources
@@ -106,15 +106,15 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     let filtered = resources,
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType),
+      filtered = filtered.filter(r => r.type === selectedType);
     }
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus),
+      filtered = filtered.filter(r => r.status === selectedStatus);
     }
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(r => r.priority === selectedPriority),
+      filtered = filtered.filter(r => r.priority === selectedPriority);
     }
 
     if (searchQuery) {
@@ -137,7 +137,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     topDepartments: (() => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1,
-        return acc,
+        return acc;
       }, {} as Record<string, number>),
 
       return Object.entries(deptCounts)
@@ -147,7 +147,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           percentage: (count / resources.length) * 100
         }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 5),
+        .slice(0, 5);
     })()
   },
 
@@ -171,10 +171,10 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'human': return <Users className="w-5 h-5" />;
-      case 'infrastructure': return <Server className="w-5 h-5" />,
-      case 'software': return <Database className="w-5 h-5" />,
-      case 'equipment': return <Briefcase className="w-5 h-5" />,
-      case 'facility': return <Building className="w-5 h-5" />,
+      case 'infrastructure': return <Server className="w-5 h-5" />;
+      case 'software': return <Database className="w-5 h-5" />;
+      case 'equipment': return <Briefcase className="w-5 h-5" />;
+      case 'facility': return <Building className="w-5 h-5" />;
       default: return <Globe className="w-5 h-5" />
     }
   };
@@ -182,9 +182,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
-      case 'high': return 'text-orange-400 bg-orange-400/20',
-      case 'critical': return 'text-red-400 bg-red-400/20',
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
+      case 'high': return 'text-orange-400 bg-orange-400/20';
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -198,11 +198,10 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   // Get utilization color
   const getUtilizationColor = (utilization: number) => {
     if (utilization >= 90) return 'text-red-400';
-    if (utilization >= 75) return 'text-yellow-400',
-    if (utilization >= 50) return 'text-blue-400',
+    if (utilization >= 75) return 'text-yellow-400';
+    if (utilization >= 50) return 'text-blue-400';
     return 'text-green-400'
-  },
-
+  };
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}

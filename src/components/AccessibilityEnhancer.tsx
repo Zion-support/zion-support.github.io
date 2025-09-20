@@ -49,7 +49,7 @@ export default function AccessibilityEnhancer({ children }: { children: React.Re
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
         setIsVisible(!isVisible);
-        announce('Accessibility panel toggled')
+        announce('Accessibility panel toggled');
       }
     };
 

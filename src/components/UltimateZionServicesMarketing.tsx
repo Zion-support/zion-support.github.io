@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 const UltimateZionServicesMarketing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = [
     { 
       id: 'quantum-computing',name: 'Quantum Computing & AI',icon: '⚛️',color: 'from-blue-600 to-cyan-600',description: 'Revolutionary quantum computing solutions that solve previously impossible problems',marketSize: '$65.4 billion by 2027',growthRate: '500% annually'
@@ -30,10 +29,8 @@ const UltimateZionServicesMarketing: React.FC = () => {
   const getServicesByCategory = (categoryId: string) => {
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId)
-  },
-
-  const selectedServices = getServicesByCategory(selectedCategory),
-
+  };
+  const selectedServices = getServicesByCategory(selectedCategory);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -165,8 +162,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             {(() => {
               const category = categories.find(c => c.id === selectedCategory);
-              if (!category) return null,
-              
+              if (!category) return null;
               return (
                 <motion.div 
                   className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"

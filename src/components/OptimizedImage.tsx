@@ -40,18 +40,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   hover = false
 }) => {
   const [imageSrc, setImageSrc] = useState<string>(src),
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isIntersecting, setIsIntersecting] = useState(priority),
-  const [isLoaded, setIsLoaded] = useState(false),
-  
-  const imgRef = useRef<HTMLImageElement>(null),
-  const observerRef = useRef<IntersectionObserver | null>(null),
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority || !lazy) {
-      setIsIntersecting(true),
+      setIsIntersecting(true);
       return,
     }
 
@@ -60,39 +58,38 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsIntersecting(true),
-          observerRef.current?.disconnect(),
+          setIsIntersecting(true);
+          observerRef.current?.disconnect();
         }
       },
       {
         rootMargin: '50px',threshold: 0.1
       }
     );
-    observerRef.current.observe(imgRef.current),
-
+    observerRef.current.observe(imgRef.current);
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
+        observerRef.current.disconnect();
       }
     },
   }, [priority, lazy]),
 
   // Handle image load
   const handleImageLoad = () => {
-    setIsLoading(false),
-    setIsLoaded(true),
+    setIsLoading(false);
+    setIsLoaded(true);
     onLoad?.(),
   },
 
   // Handle image error
   const handleImageError = () => {
     if (imageSrc !== fallbackSrc) {
-      setImageSrc(fallbackSrc),
-      setHasError(false),
-      setIsLoading(true),
+      setImageSrc(fallbackSrc);
+      setHasError(false);
+      setIsLoading(true);
     } else {
-      setHasError(true),
-      setIsLoading(false),
+      setHasError(true);
+      setIsLoading(false);
       onError?.(new Error(`Failed to load image: ${src}`));
     }
   },
@@ -101,7 +98,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
+        observerRef.current.disconnect();
       }
     },
   }, []),
@@ -116,20 +113,19 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     try {
       const url = new URL(src);
       if (url.searchParams.has('quality')) {
-        return src,
+        return src;
       }
       url.searchParams.set('quality', quality.toString()),
-      return url.toString(),
+      return url.toString();
     } catch {
-      return src,
+      return src;
     }
   },
 
-  const optimizedSrc = getOptimizedSrc(imageSrc),
-
+  const optimizedSrc = getOptimizedSrc(imageSrc);
   // Base classes
   const baseClasses = [
-    'transition-all duration-300',
+    'transition-all duration-300';
     rounded ? 'rounded-lg' : '',
     shadow ? 'shadow-lg' : '',
     hover ? 'hover: scale-105 hover:shadow-xl' : '';
@@ -139,8 +135,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     objectFit === 'none' ? 'object-none' : '',
     objectFit === 'scale-down' ? 'object-scale-down' : '',
     className
-  ].filter(Boolean).join(' '),
-
+  ].filter(Boolean).join(' ');
   // Loading skeleton
   if (!isIntersecting) {
     return (
@@ -234,7 +229,7 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
       rounded={false}
       objectFit="cover"
     />
-  ),
+  );
 },
 
 export const CardImage: React.FC<OptimizedImageProps> = (props) => (

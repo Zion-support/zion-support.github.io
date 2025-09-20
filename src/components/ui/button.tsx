@@ -45,7 +45,7 @@ export function Button({
     >
       {children}
     </button>
-  ),
+  );
 }
 // Export button variants for use in other components
 export const buttonVariants = {

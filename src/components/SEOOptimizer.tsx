@@ -51,9 +51,9 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   onAnalysisComplete
 }) => {
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [currentUrl, setCurrentUrl] = useState(url || window.location.href),
-  const [showAdvanced, setShowAdvanced] = useState(false),
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
+  const [showAdvanced, setShowAdvanced] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
@@ -92,43 +92,40 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Analyze SEO
   const analyzeSEO = useCallback(async () => {
-    setIsAnalyzing(true),
-
+    setIsAnalyzing(true);
     // Simulate analysis delay
     await new Promise(resolve => setTimeout(resolve, 2000)),
 
-    setAnalysis(mockAnalysis),
-    setIsAnalyzing(false),
+    setAnalysis(mockAnalysis);
+    setIsAnalyzing(false);
     onAnalysisComplete?.(mockAnalysis),
   }, [mockAnalysis, onAnalysisComplete]),
 
   // Auto-analyze on mount
   useEffect(() => {
     if (autoAnalyze) {
-      analyzeSEO(),
+      analyzeSEO();
     }
   }, [autoAnalyze, analyzeSEO]),
 
   // Get score color
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500',
+    if (score >= 70) return 'text-yellow-500';
     return 'text-red-500'
-  },
-
+  };
   // Get score background
   const getScoreBackground = (score: number) => {
     if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100',
+    if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100'
-  },
-
+  };
   // Get impact color
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'text-red-500';
-      case 'medium': return 'text-yellow-500',
-      case 'low': return 'text-blue-500',
+      case 'medium': return 'text-yellow-500';
+      case 'low': return 'text-blue-500';
       default: return 'text-zion-slate'
     }
   };
@@ -136,22 +133,22 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
-      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200',
-      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200',
+      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
       default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'
     }
   };
   // Filter issues by category
   const filteredIssues = useMemo(() => {
-    if (selectedCategory === 'all') return analysis?.issues || [],
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [],
+    if (selectedCategory === 'all') return analysis?.issues || [];
+    return analysis?.issues.filter(issue => issue.category === selectedCategory) || [];
   }, [analysis, selectedCategory]),
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
       const priorityOrder = { high: 3, medium: 2, low: 1 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority],
+      return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [],
   }, [analysis]),
 
@@ -438,13 +435,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 // Hook for using SEO optimization
 export const useSEOOptimization = () => {
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),
-  const [isOptimizing, setIsOptimizing] = useState(false),
-
+  const [isOptimizing, setIsOptimizing] = useState(false);
   const optimizePage = useCallback(async () => {
-    setIsOptimizing(true),
+    setIsOptimizing(true);
     // Implement actual optimization logic here
     await new Promise(resolve => setTimeout(resolve, 3000)),
-    setIsOptimizing(false),
+    setIsOptimizing(false);
   }, []),
 
   return {

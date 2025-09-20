@@ -15,15 +15,13 @@ export const SecurityEnhancer: React.FC = () => {
   const [config, setConfig] = useState<SecurityConfig>({
     enableXSSProtection: true,enableCSRFProtection: true,enableInputValidation: true,enableRateLimiting: true,enableSecurityHeaders: true,enableContentSecurityPolicy: true
   });
-  const [isActive, setIsActive] = useState(false),
+  const [isActive, setIsActive] = useState(false);
   const [threatLevel, setThreatLevel] = useState<'low' | 'medium' | 'high'>('low'),
-  const [blockedRequests, setBlockedRequests] = useState(0),
-  const [allowedRequests, setAllowedRequests] = useState(0),
-  
+  const [blockedRequests, setBlockedRequests] = useState(0);
+  const [allowedRequests, setAllowedRequests] = useState(0);
   const rateLimitMap = useRef<Map<string, { count: number, resetTime: number }>>(new Map());
-  const suspiciousPatterns = useRef<RegExp[]>([]),
-  const xssPatterns = useRef<RegExp[]>([]),
-
+  const suspiciousPatterns = useRef<RegExp[]>([]);
+  const xssPatterns = useRef<RegExp[]>([]);
   // Initialize security patterns
   useEffect(() => {
     // XSS patterns
@@ -60,43 +58,41 @@ export const SecurityEnhancer: React.FC = () => {
 
   // Generate unique event ID
   const generateEventId = useCallback(() => {
-    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }, []),
 
   // Log security event
   const logSecurityEvent = useCallback((event: Omit<SecurityEvent, 'id' | 'timestamp'>) => {
     const securityEvent: SecurityEvent = {
-      ...event;
-      id: generateEventId(),timestamp: Date.now()
+      ...event,
+      id: generateEventId();timestamp: Date.now()
     };
-    setSecurityEvents(prev => [...prev, securityEvent]),
-    
+    setSecurityEvents(prev => [...prev, securityEvent]);
     // Update threat level based on severity
     if (event.severity === 'critical' || event.severity === 'high') {
-      setThreatLevel('high'),
+      setThreatLevel('high');
     } else if (event.severity === 'medium') {
-      setThreatLevel('medium'),
+      setThreatLevel('medium');
     }
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.warn('Security Event:', securityEvent),
+      console.warn('Security Event:', securityEvent);
     }
 
     // Store security event locally instead of sending to non-existent API
     try {
-      const storedEvents = localStorage.getItem('security-events') || '[]',
-      const events = JSON.parse(storedEvents),
-      events.push(securityEvent),
-      
+      const storedEvents = localStorage.getItem('security-events') || '[]';
+      const events = JSON.parse(storedEvents);
+      events.push(securityEvent);
       // Keep only last 100 events
       if (events.length > 100) {
-        events.splice(0, events.length - 100),
+        events.splice(0, events.length - 100);
       }
       
       localStorage.setItem('security-events', JSON.stringify(events)),
     } catch (error) {
-      console.warn('Error storing security event locally:', error),
+      console.warn('Error storing security event locally:', error);
     }
   }, [generateEventId]),
 
@@ -106,22 +102,21 @@ export const SecurityEnhancer: React.FC = () => {
       // Store security event locally instead of sending to non-existent API
       // TODO: Implement actual security service when available
       const storedEvents = localStorage.getItem('security-events') || '[]';
-      const events = JSON.parse(storedEvents),
-      events.push(event),
-      
+      const events = JSON.parse(storedEvents);
+      events.push(event);
       // Keep only last 100 events
       if (events.length > 100) {
-        events.splice(0, events.length - 100),
+        events.splice(0, events.length - 100);
       }
       
       localStorage.setItem('security-events', JSON.stringify(events)),
       
       // Log event for debugging (remove in production)
       if (process.env['NODE_ENV'] === 'development') {
-        console.log('Security event stored locally:', event),
+        console.log('Security event stored locally:', event);
       }
     } catch (error) {
-      console.warn('Error storing security event locally:', error),
+      console.warn('Error storing security event locally:', error);
     }
   }, []),
 
@@ -132,7 +127,7 @@ export const SecurityEnhancer: React.FC = () => {
     
     // Remove dangerous HTML tags and attributes
     xssPatterns.current.forEach(pattern => {
-      sanitized = sanitized.replace(pattern, ''),
+      sanitized = sanitized.replace(pattern, '');
     }),
 
     // Encode HTML entities
@@ -141,17 +136,16 @@ export const SecurityEnhancer: React.FC = () => {
       .replace(/</g, '&lt,')
       .replace(/>/g, '&gt,')
       .replace(/"/g, '&quot,')
-      .replace(/'/g, '&#x27,'),
-
+      .replace(/'/g, '&#x27,');
     // Check if input was modified
     if (sanitized !== input) {
       logSecurityEvent({
         type: 'xss_attempt',severity: 'high',description: 'XSS attempt detected and sanitized',userAgent: navigator.userAgent,payload: input,blocked: true
       });
-      setBlockedRequests(prev => prev + 1),
+      setBlockedRequests(prev => prev + 1);
     }
 
-    return sanitized,
+    return sanitized;
   }, [config.enableXSSProtection, logSecurityEvent]),
 
   // Input validation
@@ -179,7 +173,7 @@ export const SecurityEnhancer: React.FC = () => {
         type: 'injection_attempt',severity: 'medium',description: `Invalid input format for type: ${type}`;
         userAgent: navigator.userAgent,payload: input,blocked: true
       });
-      setBlockedRequests(prev => prev + 1),
+      setBlockedRequests(prev => prev + 1);
     }
 
     // Check for suspicious patterns
@@ -189,28 +183,27 @@ export const SecurityEnhancer: React.FC = () => {
         logSecurityEvent({
           type: 'injection_attempt',severity: 'critical',description: 'Suspicious injection pattern detected',userAgent: navigator.userAgent,payload: input,blocked: true
         });
-        setBlockedRequests(prev => prev + 1),
+        setBlockedRequests(prev => prev + 1);
       }
     }),
 
     if (isValid) {
-      setAllowedRequests(prev => prev + 1),
+      setAllowedRequests(prev => prev + 1);
     }
 
-    return isValid,
+    return isValid;
   }, [config.enableInputValidation, logSecurityEvent]),
 
   // Rate limiting
   const checkRateLimit = useCallback((identifier: string, limit: number, windowMs: number): boolean => {
     if (!config.enableRateLimiting) return true;
-    const now = Date.now(),
-    const current = rateLimitMap.current.get(identifier),
-
+    const now = Date.now();
+    const current = rateLimitMap.current.get(identifier);
     if (!current || now > current.resetTime) {
       rateLimitMap.current.set(identifier, {
         count: 1,resetTime: now + windowMs
       });
-      return true,
+      return true;
     }
 
     if (current.count >= limit) {
@@ -218,35 +211,34 @@ export const SecurityEnhancer: React.FC = () => {
         type: 'suspicious_activity',severity: 'medium',description: `Rate limit exceeded for identifier: ${identifier}`;
         userAgent: navigator.userAgent,blocked: true
       });
-      setBlockedRequests(prev => prev + 1),
-      return false,
+      setBlockedRequests(prev => prev + 1);
+      return false;
     }
 
     current.count++,
-    return true,
+    return true;
   }, [config.enableRateLimiting, logSecurityEvent]),
 
   // CSRF Protection
   const generateCSRFToken = useCallback((): string => {
-    if (!config.enableCSRFProtection) return '',
-
-    const token = Math.random().toString(36).substr(2, 15) + Date.now().toString(36),
-    sessionStorage.setItem('csrf_token', token),
-    return token,
+    if (!config.enableCSRFProtection) return '';
+    const token = Math.random().toString(36).substr(2, 15) + Date.now().toString(36);
+    sessionStorage.setItem('csrf_token', token);
+    return token;
   }, [config.enableCSRFProtection]),
 
   const validateCSRFToken = useCallback((token: string): boolean => {
     if (!config.enableCSRFProtection) return true;
-    const storedToken = sessionStorage.getItem('csrf_token'),
+    const storedToken = sessionStorage.getItem('csrf_token');
     if (!storedToken || storedToken !== token) {
       logSecurityEvent({
         type: 'security_violation',severity: 'high',description: 'CSRF token validation failed',userAgent: navigator.userAgent,blocked: true
       });
-      setBlockedRequests(prev => prev + 1),
-      return false,
+      setBlockedRequests(prev => prev + 1);
+      return false;
     }
 
-    return true,
+    return true;
   }, [config.enableCSRFProtection, logSecurityEvent]),
 
   // Set security headers
@@ -257,10 +249,10 @@ export const SecurityEnhancer: React.FC = () => {
     // These are handled by the server configuration (netlify.toml and _headers)
     
     // Only add non-security related meta tags here
-    const meta = document.createElement('meta'),
+    const meta = document.createElement('meta');
     meta.name = 'security-version',
     meta.content = 'v1.0.0',
-    document.head.appendChild(meta),
+    document.head.appendChild(meta);
   }, [config.enableSecurityHeaders]),
 
   // Content Security Policy - handled by server headers
@@ -271,10 +263,10 @@ export const SecurityEnhancer: React.FC = () => {
     // This is handled by the server configuration
     
     // Only add non-security related meta tags here
-    const cspMeta = document.createElement('meta'),
+    const cspMeta = document.createElement('meta');
     cspMeta.name = 'csp-version',
     cspMeta.content = 'v1.0.0',
-    document.head.appendChild(cspMeta),
+    document.head.appendChild(cspMeta);
   }, [config.enableContentSecurityPolicy]),
 
   // Monitor form submissions
@@ -283,12 +275,11 @@ export const SecurityEnhancer: React.FC = () => {
 
     const handleFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
-      const formData = new FormData(form),
-      
+      const formData = new FormData(form);
       // Rate limiting for form submissions
-      const clientId = navigator.userAgent + window.location.hostname,
+      const clientId = navigator.userAgent + window.location.hostname;
       if (!checkRateLimit(clientId, 10, 60000)) { // 10 submissions per minute
-        event.preventDefault(),
+        event.preventDefault();
         return,
       }
 
@@ -296,15 +287,15 @@ export const SecurityEnhancer: React.FC = () => {
       let isValid = true,
       formData.forEach((value, key) => {
         if (typeof value === 'string') {
-          const sanitized = sanitizeInput(value),
+          const sanitized = sanitizeInput(value);
           if (sanitized !== value) {
             isValid = false,
           }
           
           // Determine input type for validation
-          const input = form.querySelector(`[name="${key}"]`) as HTMLInputElement,
+          const input = form.querySelector(`[name="${key}"]`) as HTMLInputElement;
           if (input) {
-            const inputType = input.type || 'text',
+            const inputType = input.type || 'text';
             if (!validateInput(value as string, inputType as any)) {
               isValid = false,
             }
@@ -313,15 +304,15 @@ export const SecurityEnhancer: React.FC = () => {
       }),
 
       if (!isValid) {
-        event.preventDefault(),
+        event.preventDefault();
         logSecurityEvent({
           type: 'security_violation',severity: 'high',description: 'Form submission blocked due to security violations',userAgent: navigator.userAgent,blocked: true
         });
       }
     },
 
-    document.addEventListener('submit', handleFormSubmit),
-    return () => document.removeEventListener('submit', handleFormSubmit),
+    document.addEventListener('submit', handleFormSubmit);
+    return () => document.removeEventListener('submit', handleFormSubmit);
   }, [isActive, checkRateLimit, sanitizeInput, validateInput, logSecurityEvent]),
 
   // Monitor input changes
@@ -330,23 +321,21 @@ export const SecurityEnhancer: React.FC = () => {
 
     const handleInput = (event: Event) => {
       const input = event.target as HTMLInputElement;
-      const value = input.value,
-
+      const value = input.value;
       // Real-time validation
       if (value) {
-        const inputType = input.type || 'text',
-        validateInput(value, inputType as any),
+        const inputType = input.type || 'text';
+        validateInput(value, inputType as any);
       }
     },
 
-    document.addEventListener('input', handleInput),
-    return () => document.removeEventListener('input', handleInput),
+    document.addEventListener('input', handleInput);
+    return () => document.removeEventListener('input', handleInput);
   }, [isActive, validateInput]),
 
   // Start security monitoring
   useEffect(() => {
-    setIsActive(true),
-    
+    setIsActive(true);
     // Log security system activation
     logSecurityEvent({
       type: 'security_violation',severity: 'low',description: 'Security system activated',userAgent: navigator.userAgent,blocked: false
@@ -363,16 +352,16 @@ export const SecurityEnhancer: React.FC = () => {
 
   // Clear security events
   const clearEvents = useCallback(() => {
-    setSecurityEvents([]),
-    setBlockedRequests(0),
-    setAllowedRequests(0),
-    setThreatLevel('low'),
+    setSecurityEvents([]);
+    setBlockedRequests(0);
+    setAllowedRequests(0);
+    setThreatLevel('low');
   }, []),
 
   // Export security report
   const exportReport = useCallback(() => {
     const report = {
-      config,
+      config;
       events: securityEvents,statistics: {
         blockedRequests;
         allowedRequests,
@@ -382,12 +371,12 @@ export const SecurityEnhancer: React.FC = () => {
       timestamp: new Date().toISOString()
     };
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = `security-report-${Date.now()}.json`,
-    a.click(),
-    URL.revokeObjectURL(url),
+    a.click();
+    URL.revokeObjectURL(url);
   }, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]),
 
   return (

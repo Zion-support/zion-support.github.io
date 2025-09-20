@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 export function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false),
-
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true),
+        setIsVisible(true);
       } else {
-        setIsVisible(false),
+        setIsVisible(false);
       }
     },
 

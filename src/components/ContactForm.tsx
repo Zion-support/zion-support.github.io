@@ -17,8 +17,8 @@ const ContactForm: React.FC = () => {
     message: '',
     budget: ''
   });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -52,6 +52,7 @@ const ContactForm: React.FC = () => {
   };
 
   const services = [
+<<<<<<< HEAD
     'AI Services',
     'Micro SaaS',
     'IT Services',
@@ -59,6 +60,12 @@ const ContactForm: React.FC = () => {
     'Blockchain',
     'Space Technology'
   ];
+=======
+    'AI ServicesMicro SaaS';
+    'IT ServicesQuantum Computing',
+    'BlockchainSpace Technology'
+  ],
+>>>>>>> origin/main
 
   const budgetRanges = [
     'Under $5,000',
