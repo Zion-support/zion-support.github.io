@@ -6,71 +6,106 @@ import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "luci
 
 interface Application {
   id: string;
+  jobTitle: string;
   company: string;
-  position: string;
   location: string;
-  status: string;
+  status: 'pending' | 'reviewed' | 'interviewed' | 'accepted' | 'rejected';
   appliedDate: string;
+  salary?: string;
 }
 
 export function ApplicationsTracker() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-semibold">Application Tracker</h2>
-      <p>Track your job applications here.</p>
-    </div>
-  );
-}
-
-export default function Applications() {
   const applications: Application[] = [
     {
-      id: "1",
-      company: "Tech Corp",
-      position: "Software Engineer",
-      location: "San Francisco, CA",
-      status: "pending",
-      appliedDate: "2024-01-15"
+      id: '1',
+      jobTitle: 'Frontend Developer',
+      company: 'Tech Corp',
+      location: 'San Francisco, CA',
+      status: 'pending',
+      appliedDate: '2024-01-15',
+      salary: '$80,000 - $100,000'
     }
   ];
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: Application['status']) => {
     switch (status) {
-      case "accepted":
+      case 'pending':
+        return <Clock className="h-4 w-4" />;
+      case 'reviewed':
+        return <CheckCircle className="h-4 w-4" />;
+      case 'interviewed':
+        return <AlertCircle className="h-4 w-4" />;
+      case 'accepted':
         return <CheckCircle className="h-4 w-4 text-green-500" />;
-      case "rejected":
+      case 'rejected':
         return <XCircle className="h-4 w-4 text-red-500" />;
-      case "pending":
-        return <Clock className="h-4 w-4 text-yellow-500" />;
       default:
-        return <AlertCircle className="h-4 w-4 text-gray-500" />;
+        return <Clock className="h-4 w-4" />;
+    }
+  };
+
+  const getStatusColor = (status: Application['status']) => {
+    switch (status) {
+      case 'pending':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'reviewed':
+        return 'bg-blue-100 text-blue-800';
+      case 'interviewed':
+        return 'bg-purple-100 text-purple-800';
+      case 'accepted':
+        return 'bg-green-100 text-green-800';
+      case 'rejected':
+        return 'bg-red-100 text-red-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
   return (
-    <div className="space-y-4">
-      {applications.map((app) => (
-        <Card key={app.id}>
-          <CardHeader>
-            <CardTitle className="flex items-center justify-between">
-              <span>{app.position}</span>
-              <Badge variant="outline">{app.status}</Badge>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Building className="h-4 w-4" />
-              <span>{app.company}</span>
-              <MapPin className="h-4 w-4" />
-              <span>{app.location}</span>
-            </div>
-            <div className="mt-2 flex items-center space-x-2 text-sm text-gray-500">
-              {getStatusIcon(app.status)}
-              <span>Applied on {app.appliedDate}</span>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Job Applications</h1>
+      <div className="grid gap-4">
+        {applications.map((application) => (
+          <Card key={application.id}>
+            <CardHeader>
+              <CardTitle className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold">{application.jobTitle}</h3>
+                  <div className="flex items-center gap-2 text-sm text-gray-600 mt-1">
+                    <Building className="h-4 w-4" />
+                    <span>{application.company}</span>
+                    <MapPin className="h-4 w-4" />
+                    <span>{application.location}</span>
+                  </div>
+                </div>
+                <Badge className={getStatusColor(application.status)}>
+                  <div className="flex items-center gap-1">
+                    {getStatusIcon(application.status)}
+                    <span className="capitalize">{application.status}</span>
+                  </div>
+                </Badge>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex justify-between items-center">
+                <div>
+                  <p className="text-sm text-gray-600">
+                    Applied on {new Date(application.appliedDate).toLocaleDateString()}
+                  </p>
+                  {application.salary && (
+                    <p className="text-sm font-medium text-green-600 mt-1">
+                      {application.salary}
+                    </p>
+                  )}
+                </div>
+                <Button variant="outline" size="sm">
+                  View Details
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }
