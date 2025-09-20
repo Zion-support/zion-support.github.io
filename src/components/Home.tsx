@@ -44,14 +44,16 @@ const Home: React.FC = () => {
       description: "Next-generation quantum computing solutions.",
       icon: "⚛️",
       features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
-      gradient: "from-indigo-500 to-purple-500",price: "Starting at $10,000/month"
+      gradient: "from-indigo-500 to-purple-500",
+      price: "Starting at $10,000/month"
     },
     {
       title: "Blockchain",
       description: "Decentralized solutions and smart contracts.",
       icon: "🔗",
       features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"],
-      gradient: "from-orange-500 to-red-500",price: "Starting at $4,000/month"
+      gradient: "from-orange-500 to-red-500",
+      price: "Starting at $4,000/month"
     },
     {
       title: "Space Technology",
@@ -211,7 +213,7 @@ const Home: React.FC = () => {
                   ].map((news, index) => (
                     <div
                       key={index}
-                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover: bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                     >
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full">

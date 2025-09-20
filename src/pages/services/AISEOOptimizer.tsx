@@ -5,10 +5,10 @@ const AISEOOptimizer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <header className="mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-amber-400 to-pink-400 bg-clip-text text-transparent">
-            AI SEO Content Optimizer
+            AI SEO Content Optimizer;
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Improve rankings with AI-assisted content briefs, on-page audits, FAQ schema, and internal linking.
+            Improve rankings with AI-assisted content briefs, on-page audits, FAQ schema, and internal linking.;
           </p>
         </header>
 

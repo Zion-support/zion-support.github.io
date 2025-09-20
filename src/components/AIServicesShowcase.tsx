@@ -9,7 +9,7 @@ export const AIServicesShowcase = () => {
             AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence and machine learning solutions
+            Transform your business with cutting-edge artificial intelligence and machine learning solutions;
           </p>
         </div>
 
@@ -19,7 +19,7 @@ export const AIServicesShowcase = () => {
             <h3 className="text-xl font-semibold text-white mb-3">AI Analytics</h3>
             <p className="text-gray-300 mb-4">Advanced analytics powered by machine learning algorithms</p>
             <Link to="/services/ai-analytics" className="text-cyan-400 hover:text-cyan-300">
-              Learn More →
+              Learn More →;
             </Link>
           </div>
 
@@ -28,7 +28,7 @@ export const AIServicesShowcase = () => {
             <h3 className="text-xl font-semibold text-white mb-3">Predictive Insights</h3>
             <p className="text-gray-300 mb-4">Forecast trends and make data-driven decisions</p>
             <Link to="/services/predictive-analytics" className="text-cyan-400 hover:text-cyan-300">
-              Learn More →
+              Learn More →;
             </Link>
           </div>
 
@@ -37,12 +37,12 @@ export const AIServicesShowcase = () => {
             <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
             <p className="text-gray-300 mb-4">Streamline operations with intelligent automation</p>
             <Link to="/services/automation" className="text-cyan-400 hover:text-cyan-300">
-              Learn More →
+              Learn More →;
             </Link>
           </div>
         </div>
       </div>
     </section>
   )
-};
+}
 export default AIServicesShowcase;

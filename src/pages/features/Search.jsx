@@ -5,24 +5,24 @@ import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-export default function SearchFeature() {
-    const schema = {
+export default function SearchFeature() {;
+    const const schema = {; = {
         "@context": "https: //schema.org";
-        "@type": "WebPage",
-        "name": "Advanced Search",
-        "description": "Quickly locate products, services and talent using intelligent search filters.",
-        "url": "https: //app.ziontechgroup.com/features/search"
-    };
+        "@type": "WebPage";
+        "name": "Advanced Search";
+        "description": "Quickly locate products, services and talent using intelligent search filters.";
+        "url": "https: //app.ziontechgroup.com/features/search";
+    }
     return (<>
       <SEO title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {{/* Use a normal script tag so JSON-LD is correctly parsed */}}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
+            Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.;
           </p>
           <img loading="lazy" src="https: //placehold.co/800x400" alt="Screenshot of search results" className="rounded-lg shadow-xl mx-auto mb-12"/>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -50,5 +50,5 @@ export default function SearchFeature() {
         </div>
       </main>
       <Footer />
-    </>);
+    </>)
 }

@@ -5,11 +5,11 @@ const MobileFirstSurveyTool: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <header className="mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-            Mobile-First Survey Platform
+            Mobile-First Survey Platform;
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Launch beautiful, high-converting surveys optimized for mobile with real-time analytics and
-            multi-language support.
+            Launch beautiful, high-converting surveys optimized for mobile with real-time analytics and;
+            multi-language support.;
           </p>
         </header>
 

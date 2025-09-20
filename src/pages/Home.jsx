@@ -12,16 +12,16 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
-export default function Home() {
+export default function Home() {;
   return (
     <>
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
-        canonical="/"
-        url="https: //ziontechgroup.com"
+      <SEO ;
+        title="Zion Tech Group - Leading AI & Technology Solutions";
+        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem.";
+        canonical="/";
+        url="https: //ziontechgroup.com";
       />
-      
+      ;
       <HeroSection />
       <QuickAccess />
       <FeatureCTAs />
