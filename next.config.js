@@ -38,7 +38,7 @@ const nextConfig = {
     // Add path alias resolution
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, 'src'),
+      '@': require('path').resolve(__dirname, '.'),
     };
     
     if (!dev && !isServer) {
