@@ -1,26 +1,26 @@
-import { useState, useEffect } from "react";,
-import { JobsList } from "@/components/jobs/JobsList";,
-import { Button } from "@/components/ui/button";,
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
-import Link from "next/link",;
-import { JobStatus } from "@/types/jobs";,
-import { SEO } from "@/components/SEO";,
+import React, { useState, useEffect } from "react";
+import { JobsList } from "@/components/jobs/JobsList";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { JobStatus } from "@/types/jobs";
+import { SEO } from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";,
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";,
-import { useJobs } from "@/hooks/useJobs";,
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";,
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";,
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";,
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";,
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";,
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { useJobs } from "@/hooks/useJobs";
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = null;
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
+  const isMobile = useIsMobile();
   return (
     <>
       <SEO
