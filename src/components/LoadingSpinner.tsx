@@ -2,12 +2,14 @@ import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'small' | 'medium' | 'large';
-  className?: string;
+  color?: string;
+  text?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'medium', 
-  className = '' 
+  color = '#8B5CF6', 
+  text 
 }) => {
   const sizeClasses = {
     small: 'w-4 h-4',
@@ -16,14 +18,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className={`flex justify-center items-center ${className}`}>
+    <div className="loading-spinner-container">
       <div 
-        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}
-        role="status"
-        aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
-      </div>
+        className={`loading-spinner ${sizeClasses[size]}`}
+        style={{ borderColor: `${color} transparent transparent transparent` }}
+      />
+      {text && <p className="loading-text">{text}</p>}
     </div>
   );
 };

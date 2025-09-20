@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  from 'lucide-react';
 import { Link, useNavigate  } from 'react-router-dom';
 
@@ -266,3 +267,7 @@ export function withErrorBoundary(Component, fallback = null) {
     );
   };
 }
+=======
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

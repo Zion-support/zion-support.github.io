@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  from 'lucide-react';
 
 export function NewsletterSection() {
@@ -248,3 +249,7 @@ export function NewsletterSection() {
     </section>) ;
 }
 '"
+=======
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

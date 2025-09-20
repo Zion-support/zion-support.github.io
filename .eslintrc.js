@@ -1,3 +1,4 @@
+module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -9,6 +10,8 @@
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-empty-object-type': 'warn',
     '@next/next/no-html-link-for-pages': 'warn'
+  },
+  ignorePatterns: [
     'zion-os/',
     'zion-website/',
     'zion.app/',
@@ -21,3 +24,5 @@
     '*.broken/',
     '*.corrupted/',
     '*.disabled'
+  ]
+};

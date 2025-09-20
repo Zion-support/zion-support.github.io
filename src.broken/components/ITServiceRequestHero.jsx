@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from '../ui / GradientHeading';
 export default function Page() {
  className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">"
@@ -13,3 +14,6 @@ export default function Page() {
       </div>
     </section>)}
 '"
+=======
+import React from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
@@ -132,6 +133,14 @@ export function ChatAssistant({
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
+=======
+import React from 'react';
+export function ErrorBoundary() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder - needs implementation</p>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
     </div>
   );
 }

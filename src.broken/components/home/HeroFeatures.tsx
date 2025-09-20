@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface HeroFeature {
 icon: React.ComponentType<{ className?: string}>;
@@ -82,3 +83,5 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   )};
 
 export default HeroFeatures}}'"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

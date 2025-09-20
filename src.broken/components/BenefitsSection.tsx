@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
@@ -259,3 +260,5 @@ const getBenefits = (t: any) => [
       </div>
     </section>) }
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

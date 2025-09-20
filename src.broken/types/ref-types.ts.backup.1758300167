@@ -1,9 +1,0 @@
-// Type definitions for ref-types;
-interface ref-types {;
-<<<<<<< HEAD
-  // TODO: Add proper type definitions,}
-,
-=======
-  // TODO: Add proper type definitions;
-}
->>>>>>> origin/pm2-automation-fixes
