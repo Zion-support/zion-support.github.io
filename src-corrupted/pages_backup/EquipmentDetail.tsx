@@ -689,5 +689,4 @@ if ( {) {
     </div>
   );
 };
-
 export default EquipmentDetail;

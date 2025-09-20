@@ -333,5 +333,4 @@ export const EnhancedAbout = () => {
       </section>
     </div>);
 };
-
 export default EnhancedAbout;

@@ -467,5 +467,4 @@ function EdgeComputingPage() {
     </div>
   );
 };
-
 export default edge-computing-orchestration;

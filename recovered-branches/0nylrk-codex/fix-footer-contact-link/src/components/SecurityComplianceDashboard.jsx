@@ -436,5 +436,4 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       </AnimatePresence>
     </div>);
 };
-
 export default SecurityComplianceDashboard;

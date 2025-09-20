@@ -297,5 +297,4 @@ export default function Marketplace() {
     </div>
   );
 };
-
 export default Marketplace;

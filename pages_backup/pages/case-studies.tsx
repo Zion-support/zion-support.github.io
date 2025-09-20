@@ -283,5 +283,4 @@ const stats = [
     </div>
   );
 };
-
 export default case-studies;

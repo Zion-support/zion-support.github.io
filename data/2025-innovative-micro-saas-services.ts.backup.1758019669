@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+    tagline: 'Revolutionary AI-powered content creation and management',
+    price: '$15,000',
+    period: '/month',
+    description: 'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.',
+    features: [
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

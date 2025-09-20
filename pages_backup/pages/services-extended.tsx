@@ -230,5 +230,4 @@ export default function ServicesExtendedPage() {
     </div>
   );
 };
-
 export default services-extended;

@@ -19,5 +19,4 @@ export default function Revenueops() {
     </div>
   );
 };
-
 export default revenue-ops;

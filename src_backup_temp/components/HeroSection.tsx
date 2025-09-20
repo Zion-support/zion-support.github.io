@@ -85,5 +85,4 @@ const "heroSlides": "HeroSlid e[] = [  {;
     [currentSlide];
   );
 };
-
 export default HeroSection;

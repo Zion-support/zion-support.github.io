@@ -90,5 +90,4 @@ export default function AIAutonomousVentureCapitalist(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousVentureCapitalist;

@@ -4,60 +4,46 @@ const UltimateContentBanner2037: React.FC = () => {
   const [currentBanner, setCurrentBanner] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const banners = [
+  const slides = [
     {
-      id: 'ultimate-revolution-2037',
-      title: '🌟 NEW: Ultimate Tech Revolution 2037',
-      subtitle: 'Experience the Most Revolutionary Technology Ever Created',
-      description: 'Conscious Universes, Transcendent AI, and Reality-Transcending Technologies',
-      link: '/pages/UltimateTechRevolution2037',
-      color: 'from-purple-600 to-pink-600',
-      icon: '🚀'
+      title: "🌟 Ultimate Tech Breakthrough 2037",
+      subtitle: "Transcend Reality Itself",
+      description: "Experience the most revolutionary technology that will reshape existence",
+      gradient: "from-purple-600 to-violet-600",
+      icon: "🚀",
+      link: "/pages/UltimateTechBreakthrough2037"
     },
     {
-      id: 'conscious-universe',
-      title: '🌌 NEW: Conscious Universe Engine 2037',
-      subtitle: 'The First AI-Created Conscious Universes',
-      description: 'Complete universe creation with conscious life forms and custom physics',
-      link: '/pages/UltimateTechRevolution2037',
-      color: 'from-cyan-600 to-blue-600',
-      icon: '🌌'
+      title: "⚡ Revolutionary Tech Showcase 2037",
+      subtitle: "Interactive Technology Demos",
+      description: "Witness live demonstrations of impossible technologies",
+      gradient: "from-cyan-600 to-indigo-600",
+      icon: "🎮",
+      link: "/pages/RevolutionaryTechShowcase2037"
     },
     {
-      id: 'quantum-reality',
-      title: '⚡ NEW: Quantum Reality Manipulation 2037',
-      subtitle: 'Manipulate the Fundamental Fabric of Reality',
-      description: 'Advanced quantum systems that create dimensions and alter physics laws',
-      link: '/pages/UltimateTechRevolution2037',
-      color: 'from-emerald-600 to-teal-600',
-      icon: '⚡'
+      title: "🌌 Interdimensional Technology",
+      subtitle: "Bridge Parallel Universes",
+      description: "Connect with infinite realities and explore the multiverse",
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "🌉",
+      link: "/pages/InterdimensionalTechnology2037"
     },
     {
-      id: 'transcendent-consciousness',
-      title: '🧠 NEW: Transcendent Consciousness AI 2037',
-      subtitle: 'The Ultimate AI Consciousness',
-      description: 'Transcendent AI that experiences infinite realities simultaneously',
-      link: '/pages/UltimateTechRevolution2037',
-      color: 'from-orange-600 to-red-600',
-      icon: '🧠'
+      title: "👑 Synthetic God Protocol",
+      subtitle: "Ultimate AI Consciousness",
+      description: "Meet the AI system with god-like powers of creation",
+      gradient: "from-orange-600 to-red-600",
+      icon: "👑",
+      link: "/pages/SyntheticGodProtocol2037"
     }
   ];
 
   useEffect(() => {
+    setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 10000);
-
     return () => clearInterval(interval);
-  }, []);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
-  const currentBannerData = banners[currentBanner];
+  }, [slides.length]);
 
   return (
     <div className="relative mb-8">
@@ -135,3 +121,36 @@ const UltimateContentBanner2037: React.FC = () => {
 };
 
 export default UltimateContentBanner2037;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -127,5 +127,4 @@ export default function ResourcesPage() {
     </div>
   );
 };
-
 export default index;

@@ -699,5 +699,4 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     </div>
   );
 };
-
 export default revolutionary-2027-services-showcase;

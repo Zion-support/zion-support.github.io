@@ -90,5 +90,4 @@ export default function AIComputerVisionPlatform(props: any) {}
     </div>
   );
 };
-
 export default AIComputerVisionPlatform;

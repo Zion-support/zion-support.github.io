@@ -89,5 +89,4 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
     </div>
   );
 };
-
 export default FuturisticNeonButton;

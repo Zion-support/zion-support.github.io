@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
-class PublicApiConfig(AppConfig):
+class PrivacyConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'public_api'
+    name = 'privacy'

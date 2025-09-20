@@ -2,6 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+  Star, TrendingUp, Zap, Brain, Rocket, Shield, 
+  DollarSign, Users, Clock, CheckCircle, ArrowRight,
+  Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -44,6 +47,10 @@ export default function InnovativeServicesShowcase() {
       title: '🔐 Quantum Internet Security Platform',
       description: 'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month',
+      marketData: '$150B cybersecurity market, 300% annual growth',
+      competitors: 'Traditional cybersecurity solutions',
+      savings: 'Quantum-level protection vs. traditional methods',
+      features: ['Quantum key distribution (QKD)', 'Post-quantum cryptography', 'Quantum-resistant VPN tunnels', 'Real-time threat detection', 'Zero-trust architecture'],
       link: 'https://ziontechgroup.com/quantum-internet-security-platform',
       color: 'from-indigo-600 to-purple-700'
     },
@@ -51,6 +58,10 @@ export default function InnovativeServicesShowcase() {
       title: '🧬 AI-Powered Quantum Drug Discovery',
       description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.',
       price: '$12,999/month',
+      marketData: '$150B AI in healthcare, 400% annual growth',
+      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
+      savings: '100x faster drug discovery vs. traditional methods',
+      features: ['Quantum molecular simulation', 'AI-powered drug screening', 'Protein folding prediction', 'Drug interaction modeling', 'Clinical trial optimization'],
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
       color: 'from-emerald-600 to-teal-700'
     },
@@ -58,6 +69,10 @@ export default function InnovativeServicesShowcase() {
       title: '💰 Autonomous Quantum Trading System',
       description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.',
       price: '$15,999/month',
+      marketData: '$15T algorithmic trading, 200% annual growth',
+      competitors: 'Renaissance Technologies, Two Sigma, Citadel',
+      savings: 'Accessible quantum AI for smaller firms',
+      features: ['Quantum AI trading algorithms', 'Nanosecond execution', 'Real-time market analysis', 'Risk management', 'Portfolio optimization'],
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
       color: 'from-yellow-600 to-orange-700'
     },
@@ -65,6 +80,10 @@ export default function InnovativeServicesShowcase() {
       title: '🧠 Neural Interface Development Platform',
       description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.',
       price: '$19,999/month',
+      marketData: '$5B neural interface market, 500% annual growth',
+      competitors: 'Basic research tools, Traditional medical devices',
+      savings: 'First comprehensive neural interface platform',
+      features: ['Neural signal processing', 'Brain activity monitoring', 'AI-powered interpretation', 'Real-time communication', 'Safety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
       color: 'from-purple-600 to-indigo-700'
     }
@@ -75,6 +94,8 @@ export default function InnovativeServicesShowcase() {
       <div className="min-h-screen">
         <Head>
           <title>Innovative Services Showcase - Zion Tech Group | Cutting-Edge Technology</title>
+          <meta name="description" content="Discover our most innovative and cutting-edge services including quantum internet security, AI drug discovery, quantum trading, and neural interfaces. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="innovative services, quantum security, AI drug discovery, quantum trading, neural interfaces, cutting-edge technology" />
           <meta property="og:title" content="Innovative Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Cutting-edge technology services showcase" />
           <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />
@@ -88,6 +109,7 @@ export default function InnovativeServicesShowcase() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -140,10 +162,17 @@ export default function InnovativeServicesShowcase() {
                 </span> Innovative Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our most revolutionary services that are pushing the boundaries of what's possible
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"
                 >
@@ -160,6 +189,7 @@ export default function InnovativeServicesShowcase() {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
+                        {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
@@ -171,14 +201,14 @@ export default function InnovativeServicesShowcase() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
                         href={service.link}
-                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"
                       >
                         <span>Learn More</span>
                         <ExternalLink className="w-5 h-5" />
                       </a>
                       <a
                         href="/contact"
-                        className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                        className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:scale-105"
                       >
                         Get Started
                       </a>
@@ -211,10 +241,12 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                              {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
@@ -247,7 +279,7 @@ export default function InnovativeServicesShowcase() {
             >
               <motion.a
                 href="/services"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -279,10 +311,12 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
@@ -315,7 +349,7 @@ export default function InnovativeServicesShowcase() {
             >
               <motion.a
                 href="/services"
-                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
+                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -345,7 +379,7 @@ export default function InnovativeServicesShowcase() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started Today
                 </a>

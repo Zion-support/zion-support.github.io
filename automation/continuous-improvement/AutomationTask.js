@@ -1,27 +1,26 @@
-class AutomationTask {
-  constructor(config = {}) {
+class AutomationTask {,
+  constructor(config = {}) {,
     this.config = config;
     this.lastRun = null;
     this.lastStatus = pending';
     this.lastError = null;
   }
-
-  async run() {
+,
+  async run() {,
     throw new Error('run() must be implemented by subclass');
   }
-
-  getStatus() {
-    return {
-      lastRun: this.lastRun,
-      lastStatus: this.lastStatus,
-      lastError: this.lastError,
-      config: this.config
-    };
+,
+  getStatus() {,
+    return {,
+      lastRun: this.lastRun;
+      lastStatus: this.lastStatus;
+      lastError: this.lastError;
+      config: this.config,};
   }
-
-  getConfig() {
+,
+  getConfig() {,
     return this.config;
   }
 }
-
-module.exports = AutomationTask; 
+,
+module.exports = AutomationTask;

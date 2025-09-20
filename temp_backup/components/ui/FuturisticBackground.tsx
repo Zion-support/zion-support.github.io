@@ -14,5 +14,4 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
     </div>
   );
 };
-
 export default FuturisticBackground;

@@ -5,16 +5,13 @@ permissions:
   contents: read
   actions: read
   schedule:
-    - cron: '0 0 * * *'
+    - cron: 17 5 * * *
   workflow_dispatch: {}
 
 
 concurrency:
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
-
-  contents: write
-
 jobs:
 
   generate:
@@ -40,3 +37,4 @@ jobs:
           else
             echo "No changes to push"
           fi
+    runs_on: ubuntu-latest

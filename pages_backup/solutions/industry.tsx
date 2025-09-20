@@ -255,5 +255,4 @@ export default function IndustrySolutionsPage() {
     </Layout>;
   );
 };
-
 export default industry;

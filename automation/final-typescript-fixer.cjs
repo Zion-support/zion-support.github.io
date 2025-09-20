@@ -11,8 +11,7 @@ class $1 {;
     this.$1 = []}
 ;
   log(message, type = "INFO") {;
-  const timestamp = new Date().toISOString();
-    ,}
+  const timestamp = new Date().toISOString(),}
 ;
   async fixCorruptedImports() {;
   this.log("🔧 Fixing corrupted import statements...");

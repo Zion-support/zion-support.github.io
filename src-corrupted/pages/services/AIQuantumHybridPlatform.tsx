@@ -167,5 +167,4 @@ export { AIQuantumHybridPlatform }() {
     </div>
   );
 };
-
 export default AIQuantumHybridPlatform;

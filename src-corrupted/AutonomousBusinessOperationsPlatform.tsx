@@ -301,5 +301,4 @@ export default function AutonomousBusinessOperationsPlatform() {}
     </div>
   );
 };
-
 export default AutonomousBusinessOperationsPlatform;

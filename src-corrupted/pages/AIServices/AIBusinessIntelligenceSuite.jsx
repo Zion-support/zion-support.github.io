@@ -90,5 +90,4 @@ export default function AIBusinessIntelligenceSuite(props: any) {}
     </div>
   );
 };
-
 export default AIBusinessIntelligenceSuite;

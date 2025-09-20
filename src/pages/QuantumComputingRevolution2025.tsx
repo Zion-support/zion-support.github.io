@@ -20,13 +20,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ QUANTUM BREAKTHROUGH • JANUARY 2025
+            ⚛️ QUANTUM BREAKTHROUGH • JANUARY 2025
           </div>
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             Quantum Computing Revolution 2025
           </h1>
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Experience exponential computing power with our quantum solutions that solve impossible problems and unlock new possibilities across industries.
+            Experience the power of quantum computing that's solving impossible problems and unlocking new possibilities across all sectors.
           </p>
         </div>
 
@@ -36,35 +36,35 @@ const QuantumComputingRevolution2025: React.FC = () => {
             <div className="text-6xl mb-6 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-cyan-800">Quantum Supremacy</h3>
             <p className="text-gray-600 mb-6 text-center">
-              Achieve computational advantages that are impossible with classical computers, solving problems in seconds that would take millennia.
+              Achieve computational supremacy with quantum processors that outperform classical computers by orders of magnitude.
             </p>
             <ul className="text-cyan-700 space-y-2 text-sm">
-              <li>• 10^18x speed improvement</li>
-              <li>• Quantum entanglement</li>
-              <li>• Superposition states</li>
-              <li>• Quantum interference</li>
+              <li>• 1000+ logical qubits</li>
+              <li>• Quantum error correction</li>
+              <li>• Coherence time optimization</li>
+              <li>• Scalable architecture</li>
             </ul>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-200">
-            <div className="text-6xl mb-6 text-center">🔐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-blue-800">Quantum Cryptography</h3>
+            <div className="text-6xl mb-6 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-blue-800">Molecular Simulation</h3>
             <p className="text-gray-600 mb-6 text-center">
-              Unbreakable security protocols using quantum principles that guarantee absolute data protection against any future threats.
+              Simulate complex molecular structures and chemical reactions with unprecedented accuracy and speed.
             </p>
             <ul className="text-blue-700 space-y-2 text-sm">
-              <li>• Quantum key distribution</li>
-              <li>• Unhackable encryption</li>
-              <li>• Quantum random numbers</li>
-              <li>• Future-proof security</li>
+              <li>• Drug discovery acceleration</li>
+              <li>• Material science breakthroughs</li>
+              <li>• Climate modeling</li>
+              <li>• Protein folding</li>
             </ul>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-indigo-200">
-            <div className="text-6xl mb-6 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-indigo-800">Molecular Simulation</h3>
+            <div className="text-6xl mb-6 text-center">🔐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-indigo-800">Quantum Cryptography</h3>
             <p className="text-gray-600 mb-6 text-center">
-              Simulate complex molecular interactions with unprecedented accuracy, accelerating drug discovery and materials science.
+              Unbreakable encryption and secure communication protocols powered by quantum mechanics principles.
             </p>
             <ul className="text-indigo-700 space-y-2 text-sm">
               <li>• Drug discovery acceleration</li>

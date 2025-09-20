@@ -1,57 +1,33 @@
 #!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path');
 
-function sh(cmd) {
+function run(cmd) {
+  return execSync(cmd, { stdio: 'pipe', encoding: 'utf8' }).trim();
+}
+
+function getLatestTag() {
+  try { return run('git describe --tags --abbrev=0'); } catch { return null; }
+}
+
+function getLogSince(ref) {
+  const range = ref ? `${ref}..HEAD` : '';
   try {
-    return execSync(cmd, { encoding: 'utf8' }).trim();
-  } catch (e) {
+    return run(`git log ${range} --pretty=format:'- %s (%h)'`);
+  } catch {
     return '';
   }
 }
 
-function getCommits() {
-  // Last 200 commits on current branch
-  const raw = sh('git log -n 200 --pretty=format:%H%x09%ad%x09%s --date=short');
-  return raw
-    .split('\n')
-    .filter(Boolean)
-    .map((line) => {
-      const [hash, date, ...rest] = line.split('\t');
-      return { hash, date, subject: rest.join('\t') };
-    });
-}
-
-function formatChangelog(commits) {
-  const byDate = new Map();
-  for (const c of commits) {
-    if (!byDate.has(c.date)) byDate.set(c.date, []);
-    byDate.get(c.date).push(c);
-  }
-  const days = Array.from(byDate.keys()).sort((a, b) => (a < b ? 1 : -1));
-  let out = '# Changelog\n\n';
-  out += `Generated on ${new Date().toISOString()}\n\n`;
-  for (const day of days) {
-    out += `## ${day}\n`;
-    const items = byDate.get(day).slice(0, 30);
-    for (const c of items) {
-      const short = c.hash.slice(0, 7);
-      out += `- ${c.subject} (${short})\n`;
-    }
-    out += '\n';
-  }
-  return out;
-}
-
-function main() {
-  const commits = getCommits();
-  if (!commits.length) return;
-  const content = formatChangelog(commits);
-  const file = path.join(process.cwd(), 'CHANGELOG.md');
-  fs.writeFileSync(file, content);
-  console.log(`Wrote ${file}`);
-}
-
-main();
+(function main(){
+  const latestTag = getLatestTag();
+  const log = getLogSince(latestTag);
+  if (!log) { console.log('No commits to include in changelog.'); return; }
+  const ts = new Date().toISOString();
+  const section = `\n\n## ${ts}\n${log}\n`;
+  const path = 'CHANGELOG.md';
+  let prev = '';
+  try { prev = fs.readFileSync(path, 'utf8'); } catch {}
+  fs.writeFileSync(path, prev + section, 'utf8');
+  console.log('Changelog updated.');
+})();

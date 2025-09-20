@@ -65,5 +65,4 @@ export default function ManufacturingAISolutions() {
     </div>
   );
 };
-
 export default manufacturing-ai-solutions;

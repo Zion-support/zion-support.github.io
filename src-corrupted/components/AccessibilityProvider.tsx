@@ -161,5 +161,4 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     </div>
   );
 };
-
 export default AccessibilityProvider;

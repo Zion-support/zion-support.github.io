@@ -183,5 +183,4 @@ export default function Accessibility() {
     </div>
   );
 };
-
 export default Accessibility;

@@ -105,5 +105,4 @@ export default function CloudServicesPage() {
     </div>
   );
 };
-
 export default cloud;

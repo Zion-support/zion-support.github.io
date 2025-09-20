@@ -1,37 +1,28 @@
 import fs from 'fs';
-
-// Read the App.tsx file
+// Read the App.tsx file,
 const filePath = '/workspace/App.tsx';
 let content = fs.readFileSync(filePath, 'utf8');
-
-// Fix common JSX issues
+// Fix common JSX issues,
 let fixed = content;
-
-// Fix missing closing tags for common patterns
-const fixes = [
-  // Fix missing closing tags for <a> elements
-  {
-    pattern: /<a([^>]*)>\s*([^<]+)\s*$/gm,
-    replacement: '<a$1>$2</a>'
-  },
-  // Fix missing closing tags for <div> elements
-  {
-    pattern: /<div([^>]*)>\s*$/gm,
-    replacement: '<div$1></div>'
-  },
-  // Fix missing closing tags for <p> elements
-  {
-    pattern: /<p([^>]*)>\s*([^<]+)\s*$/gm,
-    replacement: '<p$1>$2</p>'
-  }
+// Fix missing closing tags for common patterns,
+const fixes = [,
+  // Fix missing closing tags for <a> elements,
+  {,
+    pattern: /<a([^>]*)>\s*([^<]+)\s*$/gm;
+    replacement: '<a$1>$2</a>',};
+  // Fix missing closing tags for <div> elements,
+  {,
+    pattern: /<div([^>]*)>\s*$/gm;
+    replacement: '<div$1></div>',};
+  // Fix missing closing tags for <p> elements,
+  {,
+    pattern: /<p([^>]*)>\s*([^<]+)\s*$/gm;
+    replacement: '<p$1>$2</p>',}
 ];
-
-// Apply fixes
-fixes.forEach(fix => {
+// Apply fixes,
+fixes.forEach(fix => {,
   fixed = fixed.replace(fix.pattern, fix.replacement);
 });
-
-// Write the fixed content back
+// Write the fixed content back,
 fs.writeFileSync(filePath, fixed, 'utf8');
-
 console.log('JSX syntax issues fixed!');

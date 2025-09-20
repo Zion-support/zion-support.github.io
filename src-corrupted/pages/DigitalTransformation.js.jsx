@@ -63,5 +63,4 @@ export {DigitalTransformation}() {
     </div>
   );
 };
-
 export default DigitalTransformation.js;

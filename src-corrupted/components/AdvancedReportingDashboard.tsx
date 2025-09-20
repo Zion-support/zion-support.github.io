@@ -349,5 +349,4 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     </div>
   );
 };
-
 export default AdvancedReportingDashboard;

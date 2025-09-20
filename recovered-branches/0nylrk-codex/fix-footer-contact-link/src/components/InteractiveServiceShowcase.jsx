@@ -253,5 +253,4 @@ const InteractiveServiceShowcase = () => {
       </div>
     </section>);
 };
-
 export default InteractiveServiceShowcase;

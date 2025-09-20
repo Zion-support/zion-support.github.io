@@ -83,5 +83,4 @@ const AISEO: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AISEO;

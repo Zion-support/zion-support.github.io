@@ -82,5 +82,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </div>
   );
 };
-
 export default CategoriesSection;

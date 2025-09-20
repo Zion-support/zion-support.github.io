@@ -19,5 +19,4 @@ export default function Smartchurn() {
     </div>
   );
 };
-
 export default smart-churn;

@@ -44,5 +44,4 @@ const Revolutionary2027Hero = () => {
     </div>
   );
 };
-
 export default Revolutionary2027Hero;

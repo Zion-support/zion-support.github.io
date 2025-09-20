@@ -1544,5 +1544,4 @@ const serviceCategories = [
     </div>
   );
 };
-
 export default revolutionary-2025-services-showcase;

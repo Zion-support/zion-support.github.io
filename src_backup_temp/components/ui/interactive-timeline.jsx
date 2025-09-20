@@ -91,5 +91,4 @@ export function InteractiveTimeline($1) {}
             'Team': Users,''
   'Launch': Award;'
 };
-
 export default interactive-timeline;

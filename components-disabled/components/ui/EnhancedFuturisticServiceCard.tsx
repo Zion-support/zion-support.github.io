@@ -111,5 +111,4 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
     </div>
   );
 };
-
 export default EnhancedFuturisticServiceCard;

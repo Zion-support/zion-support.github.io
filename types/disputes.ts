@@ -7,13 +7,12 @@ export type DisputeReason =
   | 'Communication Breakdown'
   | 'Other';
 
-
 export type DisputeAttachment = {
   id: string;
   fileName: string;
   fileSize: number;
   mimeType: string;
-
+};
 
 export type DisputeMessage = {
   id: string;
@@ -21,14 +20,12 @@ export type DisputeMessage = {
   authorRole: 'client' | 'talent' | 'admin';
   body: string;
   createdAt: string;
-
   clientUserId: string;
   talentUserId: string;
-  createdAt: string;
   updatedAt: string;
-
+};
 
 export type UserSummary = {
   id: string;
   name: string;
-
+};

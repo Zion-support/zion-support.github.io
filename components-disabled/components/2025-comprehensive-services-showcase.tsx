@@ -1169,5 +1169,4 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
     </div>
   );
 };
-
 export default 2025-comprehensive-services-showcase;

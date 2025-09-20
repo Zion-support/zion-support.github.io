@@ -143,5 +143,4 @@ export default function DocumentationPage() {
     </div>
   );
 };
-
 export default index;

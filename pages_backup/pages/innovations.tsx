@@ -78,5 +78,4 @@ export default function InnovationsPage() {
     </div>
   );
 };
-
 export default innovations;

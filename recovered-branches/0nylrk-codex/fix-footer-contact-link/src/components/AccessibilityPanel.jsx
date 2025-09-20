@@ -275,5 +275,4 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
       </AnimatePresence>
     </>);
 };
-
 export default AccessibilityPanel;

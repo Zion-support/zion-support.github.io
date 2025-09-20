@@ -30,5 +30,4 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
     null
   );
 };
-
 export default EnhancedAnalytics;

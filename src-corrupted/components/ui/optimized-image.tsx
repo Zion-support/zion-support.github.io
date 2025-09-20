@@ -794,5 +794,4 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
     </div>
   );
 };
-
 export default optimized-image;

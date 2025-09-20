@@ -20,5 +20,4 @@ export default function QuantumInternetSecurity() {
     </div>
   );
 };
-
 export default quantum-internet-security;

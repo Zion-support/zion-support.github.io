@@ -20,5 +20,4 @@ export default function AutonomousSystems() {
     </div>
   );
 };
-
 export default autonomous-systems;

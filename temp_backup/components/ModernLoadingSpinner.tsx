@@ -175,5 +175,4 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     </div>
   );
 };
-
 export default ModernLoadingSpinner;

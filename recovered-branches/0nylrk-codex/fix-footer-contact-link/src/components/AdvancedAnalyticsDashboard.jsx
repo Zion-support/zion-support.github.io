@@ -322,5 +322,4 @@ const AdvancedAnalyticsDashboard = () => {
       </motion.div>
     </div>);
 };
-
 export default AdvancedAnalyticsDashboard;

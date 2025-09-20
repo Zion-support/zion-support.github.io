@@ -29,5 +29,4 @@ export {EnterpriseIT}() {
     </div>
   );
 };
-
 export default EnterpriseIT.js;

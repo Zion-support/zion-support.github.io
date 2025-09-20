@@ -558,5 +558,4 @@ export default function SearchPage(req, res) {
     </div>
   );
 };
-
 export default search;

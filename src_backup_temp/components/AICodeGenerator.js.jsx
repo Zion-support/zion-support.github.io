@@ -784,5 +784,4 @@ const handleClearHistory = useCallback(() => {}""
                                     </div>
   );
 };
-
 export default AICodeGenerator.js;

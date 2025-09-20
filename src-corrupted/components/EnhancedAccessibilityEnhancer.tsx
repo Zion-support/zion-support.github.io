@@ -29,5 +29,4 @@ export default function Page(props: any) {
     [settings]
   );
 };
-
 export default EnhancedAccessibilityEnhancer;

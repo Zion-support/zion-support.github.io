@@ -433,5 +433,4 @@ if (return b.customers - a.customers, ) {
     </div>
   );
 };
-
 export default revolutionary-2026-pricing;

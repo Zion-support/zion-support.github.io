@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const aiServices = [
@@ -8,36 +9,42 @@ const aiServices = [
     description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
     icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-consciousness-evolution-2029',
+    features: ['Emotional Intelligence', 'Consciousness Development', 'Ethical AI Framework']
   },
   {
     title: 'AI Autonomous Research',
     description: 'Self-directed AI research assistants for breakthrough discoveries',
     icon: <Target className="w-8 h-8 text-purple-400" />,
     href: '/ai-autonomous-research-assistant',
+    features: ['Independent Research', 'Data Analysis', 'Hypothesis Generation']
   },
   {
     title: 'AI Predictive Maintenance',
     description: 'Predictive analytics for industrial equipment and systems',
     icon: <Zap className="w-8 h-8 text-yellow-400" />,
     href: '/ai-predictive-maintenance-platform',
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Cost Optimization']
   },
   {
     title: 'AI Content Personalization',
     description: 'Dynamic content adaptation based on user behavior and preferences',
     icon: <Users className="w-8 h-8 text-green-400" />,
     href: '/ai-content-personalization-engine',
+    features: ['User Profiling', 'Dynamic Content', 'Engagement Optimization']
   },
   {
     title: 'AI Autonomous Business Operations',
     description: 'End-to-end automation of business processes and decision-making',
     icon: <Rocket className="w-8 h-8 text-blue-400" />,
     href: '/autonomous-business-operations-platform',
+    features: ['Process Automation', 'Decision Intelligence', 'Operational Efficiency']
   },
   {
     title: 'AI Ethics & Governance',
     description: 'Framework for responsible AI development and deployment',
     icon: <Shield className="w-8 h-8 text-red-400" />,
     href: '/ai-ethics-governance-framework',
+    features: ['Ethical Guidelines', 'Governance Framework', 'Compliance Monitoring']
   }
 ];
 
@@ -46,6 +53,7 @@ export default function AIServices() {
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
         <title>AI Services | Zion Tech Group</title>
+        <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
 
@@ -53,6 +61,7 @@ export default function AIServices() {
         <ServiceAds heading="Featured AI Services" subheading="Production-ready offerings with transparent pricing." items={featuredAIAds} />
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Services</h1>
+          <p className="text-xl text-gray-300">From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -87,6 +96,7 @@ export default function AIServices() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -98,10 +108,12 @@ export default function AIServices() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
                 >
                   <div className="mb-6">
@@ -114,6 +126,7 @@ export default function AIServices() {
                     {service.description}
                   </p>
                   <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -139,11 +152,13 @@ export default function AIServices() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business with AI?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
+                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button

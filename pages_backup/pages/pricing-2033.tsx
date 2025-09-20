@@ -315,5 +315,4 @@ export default function Pricing2033Page(req, res) {
     </div>
   );
 };
-
 export default pricing-2033;

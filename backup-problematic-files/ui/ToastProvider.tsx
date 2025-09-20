@@ -90,5 +90,4 @@ if ( {) {
     </div>
   );
 };
-
 export default ToastProvider;

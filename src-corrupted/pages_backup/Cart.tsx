@@ -217,5 +217,4 @@ export default function CartPage(function CartPage(function CartPage() {): any {
     </div>
   );
 };
-
 export default Cart;

@@ -12,5 +12,4 @@ import { Loader2 export function LoadingFallback(props: any) {
 
 
 };
-
 export default LoadingFallback;

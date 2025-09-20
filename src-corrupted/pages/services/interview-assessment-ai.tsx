@@ -99,5 +99,4 @@ export { InterviewAssessmentAI }(...args: an y[]): any {
     </div>
   );
 };
-
 export default interview-assessment-ai;

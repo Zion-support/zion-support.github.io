@@ -1,0 +1,15 @@
+export default {
+<<<<<<< HEAD
+	plugins: {
+		tailwindcss: {},
+		autoprefixer: {},
+	},
+};
+=======
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+  }
+}
+
+>>>>>>> origin/pm2-automation-fixes

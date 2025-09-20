@@ -118,5 +118,4 @@ export default function ProductsIndex() {
     </div>
   );
 };
-
 export default index;

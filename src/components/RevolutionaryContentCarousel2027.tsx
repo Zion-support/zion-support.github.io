@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -152,23 +153,19 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY CONTENT • 2027
-          </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Technology Showcase
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the future with our groundbreaking 2027 technology innovations
+          <p className="text-xl opacity-90 max-w-4xl mx-auto"></p>
+            Experience the future with our groundbreaking 2027 technology innovations</p>
           </p>
-        </div>
-
         {/* Main Carousel */}
         <div className="relative">
           {/* Slide Container */}
@@ -188,32 +185,26 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               >
                 <div className={`h-full bg-gradient-to-br ${slide.bgColor} backdrop-blur-sm relative overflow-hidden`}>
                   {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
-                  
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent">
                   <div className="relative z-10 h-full flex items-center">
                     <div className="container mx-auto px-8">
                       <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Content */}
                         <div className="space-y-8">
                           <div className="space-y-4">
-                            <div className="text-6xl animate-bounce">{slide.icon}</div>
+                            <div className="text-6xl animate-bounce">{slide.icon}
                             <h3 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                               {slide.title}
                             </h3>
                             <h4 className="text-2xl font-semibold text-cyan-300">{slide.subtitle}</h4>
                             <p className="text-xl opacity-90 leading-relaxed">{slide.description}</p>
-                          </div>
-                          
                           {/* Features */}
                           <div className="grid grid-cols-2 gap-4">
                             {slide.features.map((feature, featureIndex) => (
                               <div key={featureIndex} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
                                 <span className="font-semibold">{feature}</span>
-                              </div>
                             ))}
-                          </div>
-                          
                           {/* CTA Button */}
                           <div className="pt-4">
                             <a
@@ -222,16 +213,12 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             >
                               {slide.cta} →
                             </a>
-                          </div>
-                        </div>
-                        
                         {/* Visual Element */}
                         <div className="relative">
                           <div className={`w-full h-80 bg-gradient-to-br ${slide.color} rounded-2xl flex items-center justify-center text-8xl animate-pulse`}>
                             {slide.icon}
-                          </div>
-                          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-20 animate-ping"></div>
-                          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse"></div>
+                          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-20 animate-ping">
+                          <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse">
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 5000);
@@ -252,14 +239,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 
   return (
     <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10">
       <div className="relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Showcase 2027</h2>
           <p className="text-xl text-gray-300">Discover the most advanced technologies that are reshaping reality itself</p>
-        </div>
-
         <div className="relative">
           {/* Main Carousel */}
           <div className="overflow-hidden rounded-xl">
@@ -267,69 +251,28 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-8 text-white`}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="text-8xl mb-6 text-center md:text-left">{item.image}</div>
-                        <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-                        <p className="text-xl opacity-90 mb-6">{item.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {item.features.map((feature, index) => (
-                            <span key={index} className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <a 
-                          href={item.link}
-                          className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                        >
-                          Explore {item.title} →
-                        </a>
-                      </div>
-                      <div className="hidden md:block">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                          <h4 className="text-xl font-bold mb-4">Key Features</h4>
-                          <ul className="space-y-2">
-                            {item.features.map((feature, index) => (
-                              <li key={index} className="flex items-center space-x-2">
-                                <span className="w-2 h-2 bg-white rounded-full"></span>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {currentItems.map((item, index) => (
+                <div key={item.id} className="w-1/3 flex-shrink-0 px-4">
+                  {renderItem(item)}
             ))}
-          </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center space-x-4 mt-8">
             <button
               onClick={prevSlide}
               className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
+            ></button>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></p>
               </svg>
             </button>
-            
             <button
               onClick={nextSlide}
               className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-            >
+            ></button>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></p>
               </svg>
             </button>
-          </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -340,12 +283,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                   index === currentSlide
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125'
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
+                }`}</button>
+              /></button>
+            ))}</button>
         {/* Auto-play Toggle */}
         <div className="text-center mt-8">
           <button
@@ -354,34 +294,28 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               isAutoPlaying
                 ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
                 : 'bg-white/20 backdrop-blur-sm text-white/70 hover:text-white'
-            }`}
-          >
-            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation
+            }`}</button>
+          ></button>
+            {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation</button>
           </button>
               ))}
-            </div>
-          </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
+          ></button>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></p>
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
+          ></button>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></p>
             </svg>
           </button>
-        </div>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {contentItems.map((_, index) => (
@@ -414,4 +348,50 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     </div>
   );
 };
+
 export default RevolutionaryContentCarousel2027;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

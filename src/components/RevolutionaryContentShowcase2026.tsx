@@ -114,93 +114,21 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <divdiv
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT 2026 • EXCLUSIVE
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY CONTENT 2026 • BREAKTHROUGH TECHNOLOGY
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-            Revolutionary Content Showcase 2026
-          </h2>
-          <p className="text-2xl text-purple-100 max-w-4xl mx-auto">
-            Discover our most advanced technologies and insights that are reshaping the future of human-AI collaboration
-          </p>
-        </motion.div>
-
-        {/* Main Carousel */}
-        <div className="relative max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+        <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Content Showcase 2026</h2>
+        <p className="text-center text-lg mb-12">Discover our latest innovations and breakthrough technologies</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {contentItems.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <span className="text-6xl">{featuredContent[currentSlide].image}</span>
-                    <div>
-                      <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs rounded-full font-bold">
-                        {featuredContent[currentSlide].badge}
-                      </span>
-                    </div>
+              <div className="h-48 bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold">{item.category.charAt(0)}</span>
                   </div>
-                  <h3 className="text-4xl font-bold mb-4">{featuredContent[currentSlide].title}</h3>
-                  <p className="text-xl text-purple-100 mb-6">{featuredContent[currentSlide].description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {featuredContent[currentSlide].features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <span className="text-green-400 text-lg">✓</span>
-                        <span className="text-purple-200 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex space-x-4">
-                    <a
-                      href={featuredContent[currentSlide].link}
-                      className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-                    >
-                      Explore Now →
-                    </a>
-                    <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className={`bg-gradient-to-br ${featuredContent[currentSlide].color} rounded-2xl p-8 text-center`}>
-                    <div className="text-8xl mb-4">{featuredContent[currentSlide].image}</div>
-                    <h4 className="text-2xl font-bold mb-2">{featuredContent[currentSlide].title}</h4>
-                    <p className="text-lg opacity-90">{featuredContent[currentSlide].description}</p>
-                  </div>
+                  <h3 className="text-lg font-semibold">{item.category}</h3>
                 </div>
               </div>
             </motion.div>
@@ -310,31 +238,7 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
               🎮
             </div>
-            <h4 className="text-xl font-semibold mb-2">Interactive Demos</h4>
-            <p className="text-gray-400">
-              Hands-on demonstrations of cutting-edge technologies
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-              🔬
-            </div>
-            <h4 className="text-xl font-semibold mb-2">Live Simulations</h4>
-            <p className="text-gray-400">
-              Real-time simulations of quantum and neural technologies
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-              🚀
-            </div>
-            <h4 className="text-xl font-semibold mb-2">Future Vision</h4>
-            <p className="text-gray-400">
-              Explore how these technologies will shape our future
-            </p>
-          </div>
+          ))}
         </div>
         </div>
       </div>

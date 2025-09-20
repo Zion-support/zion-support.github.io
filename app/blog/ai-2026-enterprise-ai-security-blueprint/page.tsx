@@ -56,5 +56,4 @@ const EnterpriseAISecurityBlueprint2026 = () => {
     </div>
   );
 };
-
 export default page;

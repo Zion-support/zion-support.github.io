@@ -392,5 +392,4 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         }}/>
     </>);
 };
-
 export default accessibility-panel;

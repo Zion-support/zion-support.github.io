@@ -217,5 +217,4 @@ export default function Pricing2025(req, res) {
     </div>
   );
 };
-
 export default pricing-2025;

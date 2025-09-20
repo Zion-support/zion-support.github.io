@@ -151,5 +151,4 @@ export default function Manufacturing() {
     </div>
   );
 };
-
 export default manufacturing;

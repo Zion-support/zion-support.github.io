@@ -113,5 +113,4 @@ export default function RetailPage() {
     </div>
   );
 };
-
 export default retail;

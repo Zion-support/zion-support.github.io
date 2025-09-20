@@ -1,12 +1,36 @@
-import React from 'react';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+export default function Page() {
+`);
+    if(!res.ok) throw new Error('Failed to load');
+    return await res.json();
+  }
+);
+const wishlistSlice = createSlice({
 
-const wishlistSlice.js: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">wishlistSlice.js</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
+  name: 'wishlist',
+  initialState,
+  reducers: {
 
-export default wishlistSlice.js;
+    addToWishlist(state, action) {
+
+      const exists = state.items.some()
+        item =>
+          item.id === action.payload.id && item.type === action.payload.type
+      );
+      if(!exists) state.items.push(action.payload);
+    },
+    removeFromWishlist(state, action) {
+
+      state.items = state.items.filter(item => item.id !== action.payload.id);
+    }},
+  extraReducers: builder => {
+
+    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
+
+      state.items = action.payload;
+    });
+  }});
+export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
+export { wishlistSlice };
+export default wishlistSlice.reducer;
+'`

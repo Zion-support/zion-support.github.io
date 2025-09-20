@@ -163,5 +163,4 @@ export default function RetailSolutionsPage() {
     </div>
   );
 };
-
 export default retail;

@@ -11,8 +11,8 @@
 
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
-      "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
-      ""web": {lcp: 0,        fid": 0,","cls": 0,,        "fcp": 0,        "ttfb"}
+      "application": {"buildSize": 0,        "bundleSize": 0,"loadTime": 0,"}
+      ""web": {lcp: 0,        fid": 0,","cls": 0,        "fcp": 0,        "ttfb"}
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
@@ -217,9 +217,9 @@ const { execSync } = require("child_process")
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      "system: {        memory: {},        cpu": {},";        process: {},,},
-      application: {        "buildSize": 0,        bundleSize: 0,        loadTime: 0,,"},
-      "web: {        lcp: 0,        fid": 0,";        cls: 0,        fcp: 0,        "ttfb": 0,,},,,,
+      "system: {        memory: {},        cpu": {},";        process: {},},
+      application: {        "buildSize": 0,        bundleSize: 0,        loadTime: 0,"},
+      "web: {        lcp: 0,        fid": 0,";        cls: 0,        fcp: 0,        "ttfb": 0,},,
 }
     this.reportFile = path.join(process.cwd(), "performance-report.json")"}";
   async collectSystemMetrics() {
@@ -245,12 +245,12 @@ class PerformanceMonitor {
       build: {
         hasBuildArtifacts: false,
         buildTime: 0,
-        bundleSize: 0,,
+        bundleSize: 0,
 }
     }
   }
   async sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms)),,
+    return new Promise(resolve => setTimeout(resolve, ms)),
 }
   async monitor() {
     try {
@@ -265,9 +265,9 @@ class PerformanceMonitor {
       await this.saveMetrics()
       // Display summary;
       this.displaySummary()
-      console.log("✅ Performance monitoring completed"),,
+      console.log("✅ Performance monitoring completed"),
 } catch (error) {
-      console.error("❌ Error during performance monitoring: ", error.message),,
+      console.error("❌ Error during performance monitoring: ", error.message),
 }
 const { execSync } = require("child_process")
 class PerformanceMonitor {
@@ -287,7 +287,7 @@ class PerformanceMonitor {
         cls: 0,
         fcp: 0,
         ttfb: 0}}
-    this.reportFile = path.join(process.cwd(), "performance-report.json"),,
+    this.reportFile = path.join(process.cwd(), "performance-report.json"),
 }
     try {}
 
@@ -301,7 +301,7 @@ class PerformanceMonitor {
         rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB;
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;
         heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB;
-        external: Math.round(memoryInfo.external / 1024 / 1024) // MB,,
+        external: Math.round(memoryInfo.external / 1024 / 1024) // MB,
 }
       // CPU usage;
       const startUsage = process.cpuUsage()
@@ -309,7 +309,7 @@ class PerformanceMonitor {
       const endUsage = process.cpuUsage(startUsage)
       this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms;
-        system: Math.round(endUsage.system / 1000) // ms,,
+        system: Math.round(endUsage.system / 1000) // ms,
 }
       // Process info;
       this.metrics.system.process = {
@@ -317,9 +317,9 @@ class PerformanceMonitor {
         uptime: Math.round(process.uptime()),
         version: process.version,
         platform: process.platform,
-        arch: process.arch,,
+        arch: process.arch,
 }
-      console.log("✅ System metrics collected"),,
+      console.log("✅ System metrics collected"),
 } catch (error) {
       console.warn("⚠️  Could not collect system metrics: ", error.message)}
   }
@@ -330,29 +330,29 @@ class PerformanceMonitor {
       const distPath = path.join(this.projectRoot, "dist")
       if (fs.existsSync(distPath)) {
         const distSize = this.getDirectorySize(distPath)
-        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024) // MB,,
+        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024) // MB,
 }
       // Check node_modules size;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath)
-        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB,,
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB,
 }
       // Check source code size;
       const srcPath = path.join(this.projectRoot, "src")
       if (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath)
-        this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB,,
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB,
 }
       // Count files;
       this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),
         components: this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),
-        pages: this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"]),,
+        pages: this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"]),
 }
-      console.log("✅ Application metrics collected"),,
+      console.log("✅ Application metrics collected"),
 } catch (error) {
-      console.warn("⚠️  Could not collect application metrics: ", error.message),,
+      console.warn("⚠️  Could not collect application metrics: ", error.message),
 }
   }
   async collectBuildMetrics() {
@@ -372,9 +372,9 @@ class PerformanceMonitor {
       const packageJsonPath = path.join(this.projectRoot, "package.json")
       if (fs.existsSync(packageJsonPath)) {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
-        this.metrics.build.scripts = Object.keys(packageJson.scripts || {}),,
+        this.metrics.build.scripts = Object.keys(packageJson.scripts || {}),
 }
-      console.log("✅ Build metrics collected"),,
+      console.log("✅ Build metrics collected"),
 } catch (error) {
       console.warn("⚠️  Could not collect build metrics: ", error.message)
       // Check if build directory exists;
@@ -382,7 +382,7 @@ class PerformanceMonitor {
       if (fs.existsSync(buildDir)) {
         const buildSize = this.getDirectorySize(buildDir)
         this.metrics.application.buildSize = Math.round(
-          buildSize / 1024 / 1024),,
+          buildSize / 1024 / 1024),
 }
       // Check bundle size;
       const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
@@ -390,9 +390,9 @@ class PerformanceMonitor {
       const devDependencies = Object.keys(
         packageJson.devDependencies || {}
       ).length;
-      this.metrics.application.bundleSize = dependencies + devDependencies,,
+      this.metrics.application.bundleSize = dependencies + devDependencies,
 } catch (error) {
-      console.error("Error collecting application metrics: ", error.message),,
+      console.error("Error collecting application metrics: ", error.message),
 }
   }
   async collectWebMetrics() {
@@ -403,10 +403,10 @@ class PerformanceMonitor {
         fid: Math.random() * 100 + 10, // 10-110ms;
         cls: Math.random() * 0.1, // 0-0.1;
         fcp: Math.random() * 2000 + 500, // 0.5-2.5 seconds;
-        ttfb: Math.random() * 500 + 100, // 100-600ms,,
+        ttfb: Math.random() * 500 + 100, // 100-600ms,
 }
     } catch (error) {
-      console.error("Error collecting web metrics: ", error.message),,
+      console.error("Error collecting web metrics: ", error.message),
 }
       console.warn("⚠️  Could not collect build metrics: ", error.message)}
 
@@ -475,7 +475,7 @@ class PerformanceMonitor {
     return Math.max(0, score)}
   saveReport() {
     try {
-      const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations": this.getRecommendations()}
+      const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,        "score": this.calculatePerformanceScore(),        "recommendations": this.getRecommendations()}
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
       "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
@@ -530,7 +530,7 @@ class PerformanceMonitor {
     console.log("\n� Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");"
     console.log(`\n Performance "Score": ${score}/100`);
       console.log(" Excellent performance!")} else if (score >= 70) {      console.log("⚠  Good performance, room for improvement")} else {      console.log(" Performance needs attention")}"
-      const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations"}
+      const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,        "score": this.calculatePerformanceScore(),        "recommendations"}
       console.log("\n� Report saved "to": ${this.reportFile}");"} catch (error) {console.error("Error saving report":", error.message),"}"
     if (this.metrics.web.lcp > 2500) {recommendations.push(),"Optimize Largest Contentful Paint - consider image optimization and code splitting""),"}
     if (this.metrics.web.fid > 100) {recommendations.push(),"Reduce First Input Delay - minimize JavaScript execution time""),"}

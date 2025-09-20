@@ -58,31 +58,28 @@ const NewContentPromotionBanner2025: React.FC = () => {
   return (
     <div className={`relative overflow-hidden bg-gradient-to-r ${currentPromotion.bgColor} backdrop-blur-sm border border-white/20 rounded-2xl mb-8 transition-all duration-500`}>
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
-      
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse">
       {/* Close Button */}
       <button
-        onClick={() => setIsVisible(false)}
-        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
-      >
+        onClick={() => setIsVisible(false)}</button>
+        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"</button>
+      ></button>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></p>
         </svg>
       </button>
-
       <div className="relative z-10 p-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Content */}
           <div className="flex-1 mb-4 md:mb-0">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse">
               <span className="text-sm font-semibold text-yellow-300">LIVE NOW</span>
-            </div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
               {currentPromotion.title}
             </h3>
-            <p className="text-white/90 text-lg mb-4">
-              {currentPromotion.description}
+            <p className="text-white/90 text-lg mb-4"></p>
+              {currentPromotion.description}</p>
             </p>
             <div className="flex items-center space-x-4">
               <a
@@ -91,15 +88,11 @@ const NewContentPromotionBanner2025: React.FC = () => {
               >
                 <span>{currentPromotion.cta}</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></p>
                 </svg>
               </a>
               <div className="text-white/70 text-sm">
                 <span className="font-semibold">Limited Time:</span> 50% off first month
-              </div>
-            </div>
-          </div>
-
           {/* Visual Element */}
           <div className="flex-shrink-0 ml-6">
             <div className="relative">
@@ -110,17 +103,10 @@ const NewContentPromotionBanner2025: React.FC = () => {
                     {currentPromo === 1 && "⚡"}
                     {currentPromo === 2 && "🧠"}
                     {currentPromo === 3 && "🌟"}
-                  </div>
-                </div>
-              </div>
               {/* Floating particles */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-cyan-400 rounded-full animate-bounce delay-300"></div>
-              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-700"></div>
-            </div>
-          </div>
-        </div>
-
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-bounce">
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-cyan-400 rounded-full animate-bounce delay-300">
+              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-700">
         {/* Progress Indicator */}
         <div className="mt-4 flex space-x-2">
           {promotions.map((_, index) => (
@@ -131,9 +117,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
               }`}
             />
           ))}
-        </div>
-      </div>
-
       {/* Animated Border */}
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x"></div>
     </div>

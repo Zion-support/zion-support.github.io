@@ -36,5 +36,4 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
   ;
   'Emerging': 'from-green-600 to-emerald-700';
 };
-
 export default UltimateServicesShowcase;

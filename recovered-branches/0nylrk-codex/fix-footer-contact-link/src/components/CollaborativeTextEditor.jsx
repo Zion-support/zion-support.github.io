@@ -427,5 +427,4 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         </div>)}
     </div>);
 };
-
 export default CollaborativeTextEditor;

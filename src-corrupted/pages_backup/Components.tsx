@@ -41,5 +41,4 @@ const Components: React.FC = () => {,
     </div>
   );
 };
-
 export default Components;

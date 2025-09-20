@@ -74,5 +74,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Footer;

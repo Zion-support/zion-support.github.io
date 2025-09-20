@@ -1,40 +1,62 @@
 {
-  "timestamp": "2025-09-03T17:32:53.642Z",
-  "checks": {
-    "Node.js Version": {
+  "timestamp": "2025-09-03T21:30:05.200Z",
+  "status": "completed",
+  "checks": [
+    {
+      "name": "Package.json Validation",
       "status": "passed",
-      "message": "Node.js v22.16.0"
+      "result": {
+        "name": "ziontechgroup.com",
+        "version": "0.1.0"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
-    "Package.json": {
+    {
+      "name": "Dependencies Check",
       "status": "passed",
-      "message": "package.json exists"
+      "result": {
+        "status": "dependencies_installed"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
-    "Dependencies": {
+    {
+      "name": "Build Directory Check",
       "status": "passed",
-      "message": "Dependencies installed"
+      "result": {
+        "status": "build_directory_exists"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
-    "Disk Space": {
+    {
+      "name": "PM2 Process Check",
+      "status": "failed",
+      "error": "PM2 not available or no processes running",
+      "timestamp": "2025-09-03T21:30:05.476Z"
+    },
+    {
+      "name": "Disk Space Check",
       "status": "passed",
-      "message": "Disk usage: 12%"
+      "result": {
+        "available": "105G",
+        "used": "15G",
+        "total": "126G"
+      },
+      "timestamp": "2025-09-03T21:30:05.484Z"
     },
-    "Memory Usage": {
+    {
+      "name": "Memory Check",
       "status": "passed",
-      "message": "Memory usage: 9%"
-    },
-    "Build Test": {
-      "status": "passed",
-      "message": "Build successful"
-    },
-    "Linting": {
-      "status": "warning",
-      "warning": true,
-      "message": "Linting errors found"
+      "result": {
+        "total": "16017MB",
+        "used": "2433MB",
+        "available": "13584MB"
+      },
+      "timestamp": "2025-09-03T21:30:05.512Z"
     }
-  },
+  ],
   "summary": {
-    "total": 7,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 1
+    "total": 6,
+    "passed": 5,
+    "failed": 1
   }
 }

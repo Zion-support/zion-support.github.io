@@ -85,5 +85,4 @@ const AIContentGenerationSuite = (props: any) => {
     </div>
   );
 };
-
 export default ai-content-generation-suite;

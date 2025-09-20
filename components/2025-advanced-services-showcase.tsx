@@ -2,6 +2,15 @@ import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
+  Brain, Atom, Shield, Building, Globe,
+  Users, TrendingUp, Award, Phone, Mail, MapPin
+} from 'lucide-react';
+
+// Import our new service data
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -11,12 +20,16 @@ const contactInfo = {
 };
 
 const allServices = [
+  ...advancedEnterpriseServices2025,
+      ...innovativeMicroSaasExpansion2025,
+  ...cuttingEdgeITInfrastructureServices
 ];
 
 const categories = [
   {
     id: 'all',
     name: 'All Services',
+    icon: <Grid className="w-6 h-6" />,
     color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   },
@@ -51,6 +64,7 @@ const categories = [
   {
     id: 'quantum',
     name: 'Quantum Computing',
+    icon: <Atom className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
@@ -77,6 +91,10 @@ const getServiceFeatures = (service: any) => {
 
 
 export default function AdvancedServicesShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredServices, setFilteredServices] = useState(allServices);
 
   useEffect(() => {
     let filtered = allServices;
@@ -105,6 +123,7 @@ export default function AdvancedServicesShowcase() {
     }
 
     setFilteredServices(filtered);
+  }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -170,6 +189,7 @@ export default function AdvancedServicesShowcase() {
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
+            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
               <div key={index} className="flex items-center gap-2">
                 <Check className="w-3 h-3 text-green-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -219,6 +239,8 @@ export default function AdvancedServicesShowcase() {
 
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
@@ -281,6 +303,7 @@ export default function AdvancedServicesShowcase() {
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
+                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
                     <div key={index} className="flex items-center gap-2">
                       <Check className="w-3 h-3 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -328,6 +351,8 @@ export default function AdvancedServicesShowcase() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
+        description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
+        keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
       />
       
       {/* Hero Section */}
@@ -346,11 +371,16 @@ export default function AdvancedServicesShowcase() {
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
+            >
+              Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">
@@ -437,6 +467,7 @@ export default function AdvancedServicesShowcase() {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
+                  <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}

@@ -256,5 +256,4 @@ export default function InnovativeServicesShowcase2025(...args: unknow n[]): unk
     </div>
   );
 };
-
 export default InnovativeServicesShowcase2025;

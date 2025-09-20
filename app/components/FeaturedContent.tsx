@@ -71,5 +71,4 @@ export default function FeaturedContent() {
     </section>
   );
 };
-
 export default FeaturedContent;

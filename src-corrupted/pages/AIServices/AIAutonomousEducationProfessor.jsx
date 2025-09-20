@@ -90,5 +90,4 @@ export default function AIAutonomousEducationProfessor(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousEducationProfessor;

@@ -3,12 +3,31 @@ import React, { useState, useEffect } from 'react';
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cpu, 
+  Atom,
+  Globe,
+  Rocket,
+  Sparkles,
+  ChevronRight,
+  Play,
+  Pause,
+  RotateCcw
+} from 'lucide-react';
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+const InteractiveTechShowcase2026: React.FC = () => {
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [progress, setProgress] = useState(0);
 
-  const technologies = [
+  const techDemos = [
+
+  const showcases = [
     {
       id: 'ai-systems',
       name: 'Advanced AI Systems',
@@ -16,42 +35,76 @@ const InteractiveTechShowcase2026: React.FC = () => {
       description: 'Revolutionary AI with autonomous learning and quantum processing',
       features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
       color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-600/30 to-pink-600/30'
     },
     {
-      id: 'quantum-computing',
-      name: 'Quantum Computing',
+      title: 'Quantum Reality Engine',
+      description: 'Immersive virtual environments powered by quantum computing',
       icon: '⚡',
-      description: 'Exponential computing power for complex problem solving',
-      features: ['Quantum Supremacy', 'Cryptography', 'Optimization'],
-      color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/30 to-blue-600/30'
     },
     {
-      id: 'neural-interfaces',
-      name: 'Neural Interfaces',
+      title: 'Neural Interface Pro',
+      description: 'Direct brain-computer interface for seamless interaction',
       icon: '🧬',
-      description: 'Direct brain-computer interfaces for enhanced capabilities',
-      features: ['BCI Technology', 'Thought Control', 'Neural Feedback'],
-      color: 'from-emerald-600 to-teal-600',
-      bgColor: 'from-emerald-600/30 to-teal-600/30'
     }
   ];
 
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/20"></div>
-      </div>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDemo((prev) => (prev + 1) % demos.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [demos.length]);
+      id: 'quantum-computing',
+      title: 'Quantum Computing Demo',
+      icon: '⚡',
+      description: 'Watch quantum algorithms solve complex problems using quantum supremacy',
+      features: [
+        'Real-time quantum state visualization',
+        'Quantum algorithm execution',
+        'Performance metrics display',
+        'Interactive quantum gates'
+      ],
+      link: '/pages/QuantumSupremacyAchieved2026'
+    },
+    {
+      id: 'neural-interfaces',
+      title: 'Neural Interface Simulator',
+      icon: '🧬',
+      description: 'Experience direct brain-computer interfaces and neural control systems',
+      features: [
+        'Thought-to-text conversion',
+        'Neural control simulation',
+        'Sensory augmentation demo',
+        'Memory enhancement showcase'
+      ],
+      link: '/pages/NextGenTechRevolution2026'
+    },
+    {
+      id: 'synthetic-reality',
+      title: 'Synthetic Reality Engine',
+      icon: '🌍',
+      description: 'Create and explore completely synthetic realities indistinguishable from physical reality',
+      features: [
+        'Reality creation tools',
+        'Sensory replication demo',
+        'Infinite world generation',
+        'Physical sensation simulation'
+      ],
+      link: '/pages/NextGenTechRevolution2026'
+    }
+  ];
 
-      <div className="relative z-10 container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-bounce">
-            🚀 INTERACTIVE TECH SHOWCASE 2026
-          </div>
+  const startDemo = () => {
+    setIsRunning(true);
+    setTimeout(() => setIsRunning(false), 3000);
+  };
+
+  return (
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+            Experience the Future
           </h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience the most revolutionary technologies that are reshaping our world through interactive demonstrations and real-time showcases.
@@ -91,3 +144,85 @@ const InteractiveTechShowcase2026: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

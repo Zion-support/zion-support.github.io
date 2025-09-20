@@ -1,10 +1,7 @@
 {
   "exclude": [
-    "autonomous-guardian.cjs",
-    "autonomous-guardian.js",
-    "site-link-factory.cjs",
-    "cursor-agents",
-    "logs"
+    "agent-open-modal-from-url-params-*.cjs",
+    "tmp-scan-debug.cjs"
   ]
 }
 

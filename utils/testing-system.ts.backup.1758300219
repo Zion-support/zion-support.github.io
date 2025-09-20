@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+export class TestingSystem {,
+  static async testUserInteraction(element: HTMLElementaction: 'click' | 'type' | 'hover') {,
+    switch (action) {,
+      case 'click':,
+=======
+import React from 'react.ts';
+export class TestingSystem {
+  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
+    switch (action) {
+
+      case 'click':
+>>>>>>> origin/pm2-automation-fixes
+        element.click();
+        break;
+      case 'type': // Handle typing,
+        break;
+      case 'hover': // Handle hover,
+        break,
+    }
+  }
+}

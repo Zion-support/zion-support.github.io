@@ -469,5 +469,4 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
       `}</style>
     </>);
 };
-
 export default BrokenLinkFixer;

@@ -204,8 +204,4 @@ if (require.main === module) {}
   }
 });
 };
-<<<<<<< HEAD
-module.exports = LintFixer;
-=======
-module.exports = LintFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

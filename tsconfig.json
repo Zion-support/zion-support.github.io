@@ -34,12 +34,24 @@
     "types": ["vite/client", "node"]
   },
   "include": [
-    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "src/types/offline-shims.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "App.tsx",
+    "vite.config.ts",
+    "vite.config.js",
     "tailwind.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    ".eslintrc.js",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

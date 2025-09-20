@@ -303,5 +303,4 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </form>
     </motion.div>);
 };
-
 export default AdvancedForm;

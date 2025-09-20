@@ -158,5 +158,4 @@ export { AIHealthcareDiagnostics }(...args: an y[]): any {
     </div>
   );
 };
-
 export default AIHealthcareDiagnostics;

@@ -1,12 +1,4 @@
-// Notification utilities
-interface NotificationOptions {
-// Notifications utility for handling browser notifications and toast messages
-
-interface NotificationOptions {
-/**
- * Notification utility for handling browser notifications
- * with fallbacks and error handling
- */
+// Notification utilities for user feedback
 
 export interface NotificationOptions {
 // Notification utilities
@@ -23,46 +15,78 @@ interface NotificationOptions {
   actions?: NotificationAction[];
 }
 
-interface NotificationAction {
-  action: string;
-  title: string;
-  icon?: string;
+export interface Notification {
+  id: string;
+  message: string;
+  type: 'success' | 'error' | 'warning' | 'info';
+  duration: number;
+  position: string;
+  closable: boolean;
+  timestamp: number;
 }
 
 class NotificationManager {
-  private permission: NotificationPermission = 'default';
+  private notifications: Notification[] = [];
+  private listeners: ((notifications: Notification[]) => void)[] = [];
 
-  async requestPermission(): Promise<NotificationPermission> {
-    if ('Notification' in window) {
-      this.permission = await Notification.requestPermission();
+  // Add a new notification
+  add(message: string, options: NotificationOptions = {}): string {
+    const id = Math.random().toString(36).substr(2, 9);
+    const notification: Notification = {
+      id,
+      message,
+      type: options.type || 'info',
+      duration: options.duration || 5000,
+      position: options.position || 'top-right',
+      closable: options.closable !== false,
+      timestamp: Date.now(),
+    };
+
+    this.notifications.push(notification);
+    this.notifyListeners();
+
+    // Auto-remove after duration
+    if (notification.duration > 0) {
+      setTimeout(() => {
+        this.remove(id);
+      }, notification.duration);
     }
-    return this.permission;
+
+    return id;
   }
 
-  async showNotification(options: NotificationOptions): Promise<Notification | null> {
-    if (!('Notification' in window)) {
-      console.warn('This browser does not support notifications');
-      return null;
-    }
+  // Remove a notification
+  remove(id: string): void {
+    this.notifications = this.notifications.filter(n => n.id !== id);
+    this.notifyListeners();
+  }
 
-    if (this.permission !== 'granted') {
-      this.permission = await this.requestPermission();
-      if (this.permission !== 'granted') {
-        console.warn('Notification permission denied');
-        return null;
-      }
-  requireInteraction?: boolean;
-  silent?: boolean;
-  vibrate?: number[];
+  // Clear all notifications
+  clear(): void {
+    this.notifications = [];
+    this.notifyListeners();
+  }
+
+  // Get all notifications
+  getAll(): Notification[] {
+    return [...this.notifications];
+  }
+
+  // Subscribe to notification changes
+  subscribe(listener: (notifications: Notification[]) => void): () => void {
+    this.listeners.push(listener);
+    return () => {
+      this.listeners = this.listeners.filter(l => l !== listener);
+    };
+  }
+
+  private notifyListeners(): void {
+    this.listeners.forEach(listener => listener([...this.notifications]));
+  }
 }
 
-export const notifications = {
-  /**
-   * Check if notifications are supported
-   */
-  isSupported: (): boolean => {
-    return typeof window !== 'undefined' && 'Notification' in window;
-  },
+// Create singleton instance
+export const notificationManager = new NotificationManager();
 
   /**
    * Check if notifications are permitted
@@ -234,29 +258,4 @@ export default notificationManager;
   }
 };
 
-export default notifications;
-      requireInteraction: true,
-    });
-  }
-
-  showInfo(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/info.png',
-      tag: 'info',
-    });
-  }
-
-  showWarning(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/warning.png',
-      tag: 'warning',
-    });
-  }
-}
-
-export const notificationManager = new NotificationManager();
 export default notificationManager;

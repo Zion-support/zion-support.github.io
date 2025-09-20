@@ -30,5 +30,4 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
       {children}
     </motion.div>);
 };
-
 export default LazyWrapper;

@@ -1,10 +1,9 @@
-export interface BlogAuthor {
+export interface BlogAuthor {,
   name: string;
   title: string;
-  avatarUrl: string;
-}
-
-export interface BlogPost {
+  avatarUrl: string,}
+,
+export interface BlogPost {,
   id: string;
   title: string;
   slug: string;
@@ -19,23 +18,23 @@ export interface BlogPost {
   isFeatured?: boolean;
   isPublished?: boolean;
   createdBy?: string;
-  updatedAt?: string;
+  updatedAt?: string,
 }
-
-// Type for generated blog content
-export interface GeneratedBlogContent {
+,
+// Type for generated blog content,
+export interface GeneratedBlogContent {,
   title: string;
   metaDescription: string;
   body: string;
   tags: string[];
   tweetSummary?: string;
-  imagePrompt?: string;
+  imagePrompt?: string,
 }
-
-// Type for generated newsletter content
-export interface GeneratedNewsletterContent {
+,
+// Type for generated newsletter content,
+export interface GeneratedNewsletterContent {,
   subject: string;
   previewText: string;
   body: string;
-  cta: string;
-}
+  cta: string,}
+,

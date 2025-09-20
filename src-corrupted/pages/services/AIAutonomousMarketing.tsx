@@ -84,5 +84,4 @@ const AIAutonomousMarketing: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIAutonomousMarketing;

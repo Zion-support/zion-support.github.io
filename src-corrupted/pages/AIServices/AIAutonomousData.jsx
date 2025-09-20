@@ -90,5 +90,4 @@ export default function AIAutonomousData(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousData;

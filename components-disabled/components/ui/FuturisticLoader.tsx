@@ -121,5 +121,4 @@ export default function FuturisticLoader({
     </div>
   );
 };
-
 export default FuturisticLoader;

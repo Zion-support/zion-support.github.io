@@ -103,5 +103,4 @@ const SmartCRMPlatform = (props: any) => {
     </div>
   );
 };
-
 export default smart-crm-platform;

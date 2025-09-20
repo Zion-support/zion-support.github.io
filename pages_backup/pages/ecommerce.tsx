@@ -91,5 +91,4 @@ export default function EcommercePage() {
     </div>
   );
 };
-
 export default ecommerce;

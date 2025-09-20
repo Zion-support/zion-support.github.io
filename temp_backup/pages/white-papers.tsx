@@ -68,5 +68,4 @@ export default function WhitePapersPage() {
     </div>
   );
 };
-
 export default white-papers;

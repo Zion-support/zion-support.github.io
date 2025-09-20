@@ -48,5 +48,4 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
-
 export default LazyImage;

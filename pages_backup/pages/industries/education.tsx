@@ -102,5 +102,4 @@ export default function Education() {
     </div>
   );
 };
-
 export default education;

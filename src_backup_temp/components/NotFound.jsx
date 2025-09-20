@@ -376,5 +376,4 @@ export default function NotFound.js({ }: NotFound.jsProps) {
     </div>
   );
 };
-
 export default NotFound;

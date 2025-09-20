@@ -31,5 +31,4 @@ export default function QuantumCybersecurityServices() {
     </div>
   );
 };
-
 export default quantum-cybersecurity-services;

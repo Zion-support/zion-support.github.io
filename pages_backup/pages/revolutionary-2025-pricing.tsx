@@ -524,5 +524,4 @@ export default function Revolutionary2025Pricing() {
     </div>
   );
 };
-
 export default revolutionary-2025-pricing;

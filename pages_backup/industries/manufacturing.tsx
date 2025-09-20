@@ -114,5 +114,4 @@ export default function ManufacturingPage() {
     </div>
   );
 };
-
 export default manufacturing;

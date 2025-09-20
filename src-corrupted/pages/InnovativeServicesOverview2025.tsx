@@ -96,5 +96,4 @@ export default function Page(...args: an y[]): any {): unknown {): unknown {}
     </div>
   );
 };
-
 export default InnovativeServicesOverview2025;

@@ -237,5 +237,4 @@ export default function AutonomousBusinessOperationsPlatform(props: any) {}"""
     </div>
   );
 };
-
 export default AutonomousBusinessOperationsPlatform;

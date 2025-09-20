@@ -20,6 +20,4 @@ export default function QuantumMaterialsDiscovery() {
     </div>
   );
 };
-
-
 export default UltimateTechRevolution2042;

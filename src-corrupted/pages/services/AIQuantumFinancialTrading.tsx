@@ -125,5 +125,4 @@ const AIQuantumFinancialTrading = (props: any) => {
     </div>
   );
 };
-
 export default AIQuantumFinancialTrading;

@@ -217,5 +217,4 @@ export default function ComprehensivePricing2029(req, res) {
     </div>
   );
 };
-
 export default 2029-comprehensive-pricing;

@@ -47,9 +47,7 @@ app.post('/jobs/generate', async (req, reply) => {
     await client.query(
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`,
-      [
-  {
-    userId, role, description, body.location || null, body.tags || null]
+      [userId, role, description, body.location || null, body.tags || null]
     );
   });
   return { saved: Boolean(userId), description };
@@ -69,9 +67,7 @@ app.get('/talent/search', async (req, reply) => {
            ))
        ORDER BY created_at DESC
        LIMIT 25`,
-      [
-  {
-    country || null, q || null]
+      [country || null, q || null]
     );
     return res.rows;
   });
@@ -83,9 +79,7 @@ app.get('/projects/:name/track', async (req, reply) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const project = await withUser(userId, async (client) => {
-    const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [
-  {
-    name]);
+    const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
     return res.rows[0];
   });
   if (!project) return reply.code(404).send({ error: 'not found' });

@@ -149,5 +149,4 @@ export default function UltraFuturisticServiceCard2036({
     </div>
   );
 };
-
 export default UltraFuturisticServiceCard2036;

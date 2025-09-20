@@ -164,5 +164,4 @@ export default function EnterpriseSolutionsPage() {
     </div>
   );
 };
-
 export default enterprise-solutions;

@@ -143,5 +143,4 @@ export default function CloudMigrationPage() {
     </div>
   );
 };
-
 export default cloud-migration;

@@ -40,5 +40,4 @@ const PricingCard = ({ service, index }: { service: any; index: number }) => {
     </div>
   );
 };
-
 export default pricing-2025-comprehensive;

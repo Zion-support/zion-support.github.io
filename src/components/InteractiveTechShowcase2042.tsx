@@ -69,8 +69,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">🚀 Interactive Tech Showcase 2042</h2>
         <p className="text-xl opacity-90">Explore the most revolutionary technologies with interactive demos</p>
-      </div>
-
       {/* Tab Navigation */}
       <div className="flex justify-center mb-8">
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20">

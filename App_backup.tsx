@@ -406,10 +406,9 @@ export default function App(): JSX.Element {
                 </div>
 
                 {/* Revolutionary Content Showcase */}
-                <div className="mb-12">
-                  <RevolutionaryContentShowcase />
-                </div>
-
+                <div className="mb-12">,
+                  <RevolutionaryContentShowcase />,
+                </div>,
                 {/* Revolutionary Content Showcase 2026 */}
                 <div className="mb-12">
                 </div>
@@ -725,10 +724,9 @@ export default function App(): JSX.Element {
                 </div>
 
                 {/* Interactive Tech Demo 2027 */}
-                <div className="mb-12">
-                  <InteractiveTechDemo2027 />
-                </div>
-
+                <div className="mb-12">,
+                  <InteractiveTechDemo2027 />,
+                </div>,
                 {/* Interactive Technology Showcase 2027 */}
                 <div className="mb-12">
                 </div>
@@ -814,3 +812,4 @@ export default function App(): JSX.Element {
     </Router>
   );
 }
+,

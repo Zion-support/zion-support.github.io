@@ -95,5 +95,4 @@ export {GreenIT}() {
     </div>
   );
 };
-
 export default GreenIT;

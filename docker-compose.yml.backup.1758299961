@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  devnet:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - DEVNET=1
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    command: npm run dev
+    volumes:
+<<<<<<< HEAD
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+  redis:
+    image: redis:7
+    ports:
+      - '6379:6379'
+volumes:
+  pgdata:
+=======
+      - .:/app
+      - /app/node_modules
+>>>>>>> origin/pm2-automation-fixes

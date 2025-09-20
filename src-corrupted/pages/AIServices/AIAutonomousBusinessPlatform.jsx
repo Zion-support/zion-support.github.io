@@ -119,5 +119,4 @@ export default function AIAutonomousBusinessPlatform(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousBusinessPlatform;

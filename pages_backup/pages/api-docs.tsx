@@ -57,5 +57,4 @@ export default function APIDocsPage() {
     </div>
   );
 };
-
 export default api-docs;

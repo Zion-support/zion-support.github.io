@@ -1479,5 +1479,4 @@ const HelpCenter = () => {
     </div>
   );
 };
-
 export default HelpCenter;

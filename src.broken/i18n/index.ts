@@ -9,45 +9,41 @@ import esTranslation from '../../public/locales/es-ES/common.json';
 
 // Initialize i18next
 i18n
-  .use(LanguageDetector) // Detect user language
-  .use(initReactI18next) // Initialize react-i18next
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources: {
-      'en-US': {
+      en: {
         translation: enTranslation
       },
-      'es-ES': {
+      es: {
         translation: esTranslation
       }
     },
-    fallbackLng: 'en-US', // Default language
-    debug: process.env.NODE_ENV === 'development',
+    fallbackLng: 'en',
+    debug: process.env.NODE_ENV === 'development', // Assuming process.env.NODE_ENV is available
     interpolation: {
-      escapeValue: false, // React already escapes by default
+      escapeValue: false // React already escapes by default
     },
-    // Performance optimizations
-    load: 'languageOnly',
-    cleanCode: true, // Clean up language codes
-    nonExplicitSupportedLngs: false, // Don't auto-detect non-explicit languages
-    initImmediate: false, // Initialize synchronously to avoid missing key warnings
     detection: {
+      // Prefer cookie, then localStorage, then browser navigator
       order: ['cookie', 'localStorage', 'navigator'],
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
-      caches: ['cookie']
+      caches: ['cookie'],
+    },
+  })
   .catch(error => {
-    logErrorToProduction('Error initializing i18next or its detector:', { data: error });
+    console.error("Error initializing i18next or its detector:", error);
     // This helps prevent an unhandled promise rejection if init fails.
   });
 
-  // Add this check at the beginning of the relevant section
-  if (typeof window !== 'undefined') {
-    // For RTL language support
-    document.documentElement.dir = i18n.dir();
+// For RTL language support
+document.documentElement.dir = i18n.dir();
 
-    // Listen for language changes to update RTL/LTR direction
-    i18n.on('languageChanged', (lng) => {
-      document.documentElement.dir = i18n.dir();
+// Listen for language changes to update RTL/LTR direction
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.dir = i18n.dir();
 
   // Save language preference to cookie and localStorage
   Cookies.set('zion_language', lng, { expires: 365 });

@@ -131,5 +131,4 @@ const ServiceCard = ({ service, index, isVisible }) => {
       </div>
     </motion.div>);
 };
-
 export default FuturisticServicesShowcase;

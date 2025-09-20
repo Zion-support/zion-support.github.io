@@ -90,5 +90,4 @@ export default function AIAutonomousLogistics(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousLogistics;

@@ -90,5 +90,4 @@ export default function AIAutonomousHealthcarePhysician(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousHealthcarePhysician;

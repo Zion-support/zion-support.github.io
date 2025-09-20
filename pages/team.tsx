@@ -1058,6 +1058,7 @@ export default function TeamPage() {;
 }
 import React from 'react';
 import SEO from '../components/SEO';
+
 export default function TeamPage() {
 	return (
 		<>
@@ -1067,8 +1068,7 @@ export default function TeamPage() {
 				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
 			</div>
 		</>
-	)
-
+	);
 }
     </Layout>);
 }

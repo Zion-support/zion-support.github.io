@@ -166,5 +166,4 @@ export const AccessibilityPanel = (props: any) => {
         </AnimatePresence>
     );
 };
-
 export default AccessibilityPanel;

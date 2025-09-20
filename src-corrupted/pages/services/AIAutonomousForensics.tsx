@@ -85,5 +85,4 @@ const AIAutonomousForensics: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIAutonomousForensics;

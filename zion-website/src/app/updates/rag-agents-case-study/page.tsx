@@ -6,34 +6,31 @@ export default function RagAgentsCaseStudyPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Case Study: RAG Agents Reduce MTTR by 42%</h1>
+        <div className="mb-6 flex items-center gap-3 text-xs text-gray-400">
+          <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-emerald-300">Case Study</span>
+          <time dateTime="2025-09-16">September 16, 2025</time>
+        </div>
+        <h1 className="text-4xl font-bold tracking-tight text-white">Case Study: 40% Cost Reduction with Agent Routing</h1>
         <p className="mt-4 text-lg leading-8 text-gray-300">
-          How observability-driven retrieval-augmented agents reduced incident mean time to resolution
-          and support costs in a Fortune 500 environment.
+          How dynamic agent routing and cache-first retrieval reduced inference costs by 40% while improving answer
+          quality and latency for a large enterprise knowledge assistant.
         </p>
-
         <div className="mt-10 space-y-6 text-gray-300">
-          <section>
-            <h2 className="text-xl font-semibold text-white">Highlights</h2>
-            <ul className="mt-3 list-disc list-inside space-y-2">
-              <li>42% reduction in MTTR across high-severity incidents</li>
-              <li>38% reduction in L2/L3 support handoffs</li>
-              <li>End-to-end traceability with retrieval observability</li>
-              <li>Guardrails for safety and cost-aware model routing</li>
-            </ul>
-          </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white">Architecture</h2>
-              <p className="mt-2">Hybrid retrieval, structured tools, and feedback loops powering rapid diagnosis.</p>
-            </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-white">Learn more</h2>
-            <a href="/contact" className="inline-block mt-4 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-              Request the full case study <span aria-hidden>→</span>
-            </a>
-          </section>
+          <h2 className="text-2xl font-semibold text-white">Highlights</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Tiered models with confidence-aware fallbacks</li>
+            <li>Hybrid retrieval with query analyzers and pre-warm caches</li>
+            <li>Grounding checks and hallucination penalties in routing</li>
+            <li>Outcome: −40% cost, −27% p95 latency, +8% factuality</li>
+          </ul>
+          <p>
+            We include a reference architecture, routing rules, and KPI templates you can adapt to your environment.
+          </p>
+        </div>
+        <div className="mt-10">
+          <a href="/contact" className="text-sm font-semibold leading-6 text-emerald-400 hover:text-emerald-300">
+            Request the full report →
+          </a>
         </div>
       </div>
     </div>

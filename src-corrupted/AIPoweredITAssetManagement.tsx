@@ -420,5 +420,4 @@ const AIPoweredITAssetManagement: React.FC = () => {}
     </div>
   );
 };
-
 export default AIPoweredITAssetManagement;

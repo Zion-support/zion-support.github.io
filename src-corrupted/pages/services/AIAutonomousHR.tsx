@@ -83,5 +83,4 @@ const AIAutonomousHR: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIAutonomousHR;

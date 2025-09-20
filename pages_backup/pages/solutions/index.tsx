@@ -33,5 +33,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default index;

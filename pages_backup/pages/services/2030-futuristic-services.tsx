@@ -237,5 +237,4 @@ export default function FuturisticServices2030Page(req, res) {
     </div>
   );
 };
-
 export default 2030-futuristic-services;

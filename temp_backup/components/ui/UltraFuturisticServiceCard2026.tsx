@@ -138,5 +138,4 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
     </div>
   );
 };
-
 export default UltraFuturisticServiceCard2026;

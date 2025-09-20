@@ -348,5 +348,4 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     </div>
   );
 };
-
 export default ultimate-2026-services-showcase;

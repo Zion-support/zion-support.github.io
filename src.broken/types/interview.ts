@@ -1,4 +1,3 @@
 // Type definitions for interview;
 interface interview {;
-  // TODO: Add proper type definitions;
-};
+  // TODO: Add proper type definitions,};

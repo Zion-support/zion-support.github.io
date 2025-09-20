@@ -308,5 +308,4 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         </div>)}
     </div>);
 };
-
 export default AdvancedDataTable;

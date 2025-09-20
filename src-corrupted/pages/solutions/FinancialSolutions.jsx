@@ -96,5 +96,4 @@ export { FinancialSolutions }() {
     </div>
   );
 };
-
 export default FinancialSolutions;

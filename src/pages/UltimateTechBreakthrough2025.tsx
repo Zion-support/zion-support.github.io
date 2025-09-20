@@ -259,77 +259,8 @@ const UltimateTechBreakthrough2025: React.FC = () => {
 
           {/* Applications Section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-20"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Applications</h2>
-              <p className="text-xl opacity-90">Transforming every aspect of human existence</p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applications.map((app, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                  transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 text-center"
-                >
-                  <div className="text-5xl mb-4">{app.icon}</div>
-                  <h3 className="text-xl font-bold mb-4">{app.category}</h3>
-                  <p className="text-gray-300 mb-6 text-sm">{app.description}</p>
-                  <ul className="text-gray-400 space-y-2 text-xs text-left">
-                    {app.examples.map((example, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Expert Testimonials */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-20"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">💬 Expert Testimonials</h2>
-              <p className="text-xl opacity-90">Hear from leading experts in the field</p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                  transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-                >
-                  <div className="text-4xl mb-4 text-center">{testimonial.avatar}</div>
-                  <p className="text-gray-300 mb-6 text-center italic">"{testimonial.content}"</p>
-                  <div className="text-center">
-                    <h4 className="text-lg font-bold">{testimonial.name}</h4>
-                    <p className="text-purple-300 text-sm">{testimonial.role}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+            initial={{ scale: 0.9 }}
+            animate={{ scale: isVisible ? 1 : 0.9 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-center"
           >

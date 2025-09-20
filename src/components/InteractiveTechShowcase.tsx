@@ -4,30 +4,18 @@
       link: "/pages/AIInnovationHub2026"
     },
     {
-      id: 2,
-      name: 'Neural Reality Engine 2030',
-      icon: '🌌',
-      description: 'Fully immersive consciousness-driven virtual worlds',
-      color: 'from-cyan-500 to-blue-500',
-      features: ["Virtual Reality", "Consciousness Transfer", "Immersive Worlds", "Neural Interfaces"],
-      demo: "Enter Virtual World",
-      link: "/pages/NeuralRealityEngine2030"
+      name: "Cloud Computing",
+      description: "Scalable cloud infrastructure and services",
+      features: ["AWS Integration", "Azure Solutions", "Google Cloud", "Hybrid Cloud"],
+      color: "from-green-500 to-blue-600"
     },
     {
-      id: 3,
-      name: "Analytics Dashboard 2026",
-      description: "AI-powered analytics with real-time insights and predictive modeling",
-      icon: "📊",
-      color: "from-slate-600 to-gray-600",
-      features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
-      demo: "View Live Dashboard",
-      link: "/pages/AdvancedAnalyticsDashboard2026"
+      name: "Data Analytics",
+      description: "Advanced analytics and business intelligence",
+      features: ["Real-time Analytics", "Predictive Modeling", "Data Visualization", "Machine Learning"],
+      color: "from-purple-500 to-pink-600"
     }
   ];
-
-      ]
-    }
-  };
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -488,24 +476,11 @@ const InteractiveTechShowcase: React.FC = () => {
 };
 
 export default InteractiveTechShowcase;
-
-              {/* Demo Button */}
-              <div className="text-center">
-                <motion.a
-                  href={currentTech.link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentTech.color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
-                >
-                  <span className="mr-2">{currentTech.demo}</span>
-                  <span>→</span>
-                </motion.a>
-              </div>
-            </div>
-          </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -144,5 +144,4 @@ export default function StartupSolutionsPage() {
     </div>
   );
 };
-
 export default startup;

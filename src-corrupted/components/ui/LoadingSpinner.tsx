@@ -4,13 +4,11 @@ import React from 'react'; import { motion  } from 'framer-motion'; interface Lo
  size?: 'sm' | 'md' | 'lg' | 'xl'; color?: 'primary' | 'secondary' | 'white'; text?: string; fullScreen?: boolean; 
 } export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({ size = 'md', color = 'primary', text, fullScreen = false }) => { const sizeClasses = { sm: 'w-4 h-4', md: 'w-8 h-8', lg: 'w-12 h-12', xl: 'w-16 h-16' }; const colorClasses = { primary: 'border-cyan-500', secondary: 'border-purple-500', white: 'border-white' }; const spinner = ( <div className="flex flex-col items-center justify-center"> <motion.div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}`} animate={{ rotate: 36 0   }} transition={{ duration: 1, repeat: Infinit y, ease: 'linear' }} /> {text && ( <motion.p className="mt-4 text-gray-600 text-sm" initial={{ opacity: 0   }} animate={{ opacity: 1   }} transition={{ delay: 0.2   }} > {text} </motion.p> )} </div> ); if(fullScreen) { return (<div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3   }} > {spinner} </motion.div> </div> ); } return spinner; };
 
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LoadingSpinner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+const LoadingSpinner: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">LoadingSpinner</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
 export default LoadingSpinner;

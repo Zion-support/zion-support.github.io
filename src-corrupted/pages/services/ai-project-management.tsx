@@ -99,5 +99,4 @@ export { AIProjectManagement }(...args: an y[]): any {
     </div>
   );
 };
-
 export default ai-project-management;

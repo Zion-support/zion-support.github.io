@@ -76,5 +76,4 @@ export default function SMBSolutionsPage() {
     </div>
   );
 };
-
 export default smb;

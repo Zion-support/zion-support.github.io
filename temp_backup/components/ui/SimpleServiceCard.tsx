@@ -29,5 +29,4 @@ const SimpleServiceCard: React.FC<SimpleServiceCardProps> = ({ service }) => {
     </div>
   );
 };
-
 export default SimpleServiceCard;

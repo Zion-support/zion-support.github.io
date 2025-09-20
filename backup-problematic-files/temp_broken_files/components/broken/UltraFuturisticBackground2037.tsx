@@ -982,5 +982,4 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
     </div>
   );
 };
-
 export default UltraFuturisticBackground2037;

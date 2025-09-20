@@ -123,5 +123,4 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
     </div>
   );
 };
-
 export default UltraFuturisticBackground2045;

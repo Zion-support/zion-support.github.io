@@ -144,5 +144,4 @@ export default function DatabaseSolutionsPage() {
     </div>
   );
 };
-
 export default database-solutions;

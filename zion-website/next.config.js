@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
 const path = require('path')
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     optimizeCss: true,
@@ -198,6 +199,8 @@ const nextConfig = {
     
     return config
   },
+  // Silence workspace root inference warning in monorepo
+  outputFileTracingRoot: path.join(__dirname, '..')
 }
 
 module.exports = nextConfig

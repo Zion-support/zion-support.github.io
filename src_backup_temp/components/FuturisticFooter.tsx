@@ -4,5 +4,4 @@ import { motion } from 'framer-motion';'
 import {}
   // TODO: Implement;
 };
-
 export default FuturisticFooter;

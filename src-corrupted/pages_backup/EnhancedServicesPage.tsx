@@ -24,5 +24,4 @@ const EnhancedServiceCard = ({ service, onViewDetails }: { service: ProductListi
     </div>
   );
 };
-
 export default EnhancedServicesPage;

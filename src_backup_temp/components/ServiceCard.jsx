@@ -191,5 +191,4 @@ export default function ServiceCard.js({ }: ServiceCard.jsProps) {
     </div>
   );
 };
-
 export default ServiceCard;

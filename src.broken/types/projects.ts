@@ -1,4 +1,3 @@
 // Type definitions for projects;
 interface projects {;
-  // TODO: Add proper type definitions;
-};
+  // TODO: Add proper type definitions,};

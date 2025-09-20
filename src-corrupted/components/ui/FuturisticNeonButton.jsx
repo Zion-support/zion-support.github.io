@@ -85,5 +85,4 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
       </div>
     </motion.button>);
 };
-
 export default FuturisticNeonButton;

@@ -19,5 +19,4 @@ export default function Platformengineering() {
     </div>
   );
 };
-
 export default platform-engineering;

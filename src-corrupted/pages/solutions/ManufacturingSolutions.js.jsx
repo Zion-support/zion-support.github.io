@@ -92,5 +92,4 @@ export {ManufacturingSolutions}() {
     </div>
   );
 };
-
 export default ManufacturingSolutions.js;

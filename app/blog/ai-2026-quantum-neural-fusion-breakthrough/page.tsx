@@ -420,5 +420,4 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
     </div>
   );
 };
-
 export default page;

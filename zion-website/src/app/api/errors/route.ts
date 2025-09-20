@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-
 export async function POST(request: NextRequest) {
   try {
     const errorData = await request.json();
@@ -17,14 +16,13 @@ export async function POST(request: NextRequest) {
       ...errorData,
       timestamp: new Date().toISOString(),
       ip: request.ip || request.headers.get('x-forwarded-for') || 'unknown',
-      userAgent: request.headers.get('user-agent') || 'unknown'
+      userAgent: request.headers.get('user-agent') || 'unknown',
     });
-
+    
     // In production, you would:
     // 1. Send to Sentry, Bugsnag, Rollbar, etc.
     // 2. Store in your database for analysis
     // 3. Send alerts for critical errors
-    
     // Example: Send to Sentry
     // Sentry.captureException(new Error(errorData.error.message), {
     //   tags: {
@@ -37,7 +35,7 @@ export async function POST(request: NextRequest) {
     //     userAgent: errorData.userAgent
     //   }
     // });
-
+    
     // Check for critical errors that might need immediate attention
     const criticalPatterns = [
       /chunk load failed/i,
@@ -45,19 +43,19 @@ export async function POST(request: NextRequest) {
       /network error/i,
       /timeout/i
     ];
-
-    const isCritical = criticalPatterns.some(pattern => 
+    
+    const isCritical = criticalPatterns.some(pattern =>
       pattern.test(errorData.error.message)
     );
-
+    
     if (isCritical) {
       console.warn('Critical error detected:', errorData.error.message);
       // In production, you might send immediate alerts
     }
 
-    return NextResponse.json({ 
-      success: true, 
-      critical: isCritical 
+    return NextResponse.json({
+      success: true,
+      critical: isCritical,
     });
   } catch (error) {
     console.error('Error reporting error:', error);

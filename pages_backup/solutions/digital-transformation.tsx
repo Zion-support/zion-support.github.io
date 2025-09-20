@@ -36,5 +36,4 @@ export default function DigitalTransformationPage() {
     </div>
   );
 };
-
 export default digital-transformation;

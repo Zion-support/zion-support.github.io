@@ -587,5 +587,4 @@ export const MachineLearningDashboard = ({ className = '' }) => {
       </div>
     </div>);
 };
-
 export default MachineLearningDashboard;

@@ -33,5 +33,4 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     null
   );
 };
-
 export default EnhancedAnalytics;

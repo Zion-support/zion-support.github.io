@@ -23,41 +23,33 @@
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {
+  contactInfo: {,
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string,};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const contact = {,
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com',};
+    ];
+    capabilities: [,
+      'Production optimizationPredictive maintenance';
+      'Quality controlSupply chain optimization';
+      'Energy managementPerformance analytics',
+    ];
+    marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.';
+    averageMarketPrice: '$500-2000/month';
+    featuresCapabilities: [,
+      'AI production optimizationPredictive maintenance';
+      'Quality controlSupply chain optimization';
+      'Energy managementPerformance analytics',
     ],
-    capabilities: [
-      'Production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ],
-    marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
-    averageMarketPrice: '$500-2000/month',
-    featuresCapabilities: [
-      'AI production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ]
 ];

@@ -302,5 +302,4 @@ export default function AIEmotionIntelligencePlatform() {
     </div>
   );
 };
-
 export default ai-emotion-intelligence-platform;

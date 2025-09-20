@@ -88,5 +88,4 @@ export default function IndustriesPage() {
     </div>
   );
 };
-
 export default index;

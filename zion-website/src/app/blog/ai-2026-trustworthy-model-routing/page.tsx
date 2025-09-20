@@ -55,5 +55,5 @@ export default function TrustworthyModelRoutingPage() {
         </section>
       </article>
     </div>
-  );
-}
+  ) 
+} 

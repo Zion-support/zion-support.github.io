@@ -1,9 +1,11 @@
 import React from 'react';
-export function ToastProvider() {
+import { Toaster as SonnerToaster } from 'sonner';
+
+export default function ToastProvider({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
+    <>
+      <SonnerToaster position="top-right" />
+      {children}
+    </>
   );
 }

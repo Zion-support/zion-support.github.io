@@ -85,5 +85,4 @@ const AIAutonomousLegalResearch: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIAutonomousLegalResearch;

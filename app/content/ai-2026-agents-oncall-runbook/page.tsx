@@ -1,78 +1,67 @@
 import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
-
-export const metadata = {
-  title: 'AI 2026: Agents‑On‑Call Runbook | Zion Tech Group',
-  description:
-    'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.',
-  keywords: ['agents-on-call', 'ai ops', 'incident response', 'evals', 'runbook'],
+export const metadata = {,
+  title: 'AI 2026: Agents‑On‑Call Runbook | Zion Tech Group';
+  description:,
+    'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.';
+  keywords: ['agents-on-callai ops', 'incident responseevals', 'runbook'],
 };
-
-const AgentsOnCallRunbook2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Agents‑On‑Call Runbook"
-        description="Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation."
-        keywords="agents-on-call, ai ops, incident response, evals, runbook"
-        url="/content/ai-2026-agents-oncall-runbook"
-      />
-
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Operations</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Agents‑On‑Call Runbook</h1>
-          <p className="text-lg text-gray-600 mt-4">
-            Practical runbook to operate autonomous Agents‑On‑Call safely with eval gates, guardrails, and human‑in‑the‑loop.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
-          <h2>Objectives</h2>
-          <ul>
-            <li>Restore service quickly with automated triage and mitigation</li>
-            <li>Contain risk via policy‑as‑code guardrails and evaluation gates</li>
-            <li>Ensure clear escalation paths and auditability</li>
-          </ul>
-
-          <h2>Runbook Flow</h2>
-          <ol>
-            <li>Detect: Alerts trigger incident context packaging and hypothesis generation</li>
-            <li>Triage: Classify severity and blast radius, fetch known fixes</li>
-            <li>Mitigate: Propose actions; execute only if evals pass and risk &lt; threshold</li>
-            <li>Escalate: Route to on‑call with summarized context and safe suggestions</li>
-            <li>Verify: Post‑action checks, rollback plan, and customer comms</li>
-          </ol>
-
-          <h2>Policy & Evals</h2>
-          <pre>
-{`risk_policies:
-  P0:
-    actions: [rollback, traffic_shift]
-    eval_gates: [safety_regression < 0.5, blast_radius <= service]
-  P1:
-    actions: [cache_flush, service_restart]
-    eval_gates: [error_budget_remaining > 20%]
-`}
-          </pre>
-
-          <h2>Metrics & SLOs</h2>
-          <ul>
-            <li>MTTD, MTTR, change failure rate</li>
-            <li>Intervention automation rate, safe‑action pass rate</li>
-            <li>Customer impact minutes avoided</li>
-          </ul>
-        </div>
-
-        <footer className="mt-12 flex items-center justify-between">
-          <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Request Advisory</Link>
-        </footer>
-      </article>
-    </div>
-  );
-};
-
+const AgentsOnCallRunbook2026: React.FC = () => {,
+  return (,
+    <div className="min-h-screen bg-white">,
+      <SEO,
+        title="AI 2026: Agents‑On‑Call Runbook",
+        description="Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.",
+        keywords="agents-on-call, ai ops, incident response, evals, runbook",
+        url="/content/ai-2026-agents-oncall-runbook",
+      />,
+      <article className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
+        <header className="mb-10">,
+          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Operations</p>,
+          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Agents‑On‑Call Runbook</h1>,
+          <p className="text-lg text-gray-600 mt-4">,
+            Practical runbook to operate autonomous Agents‑On‑Call safely with eval gates, guardrails, and human‑in‑the‑loop.,
+          </p>,
+        </header>,
+        <div className="prose prose-lg max-w-none">,
+          <h2>Objectives</h2>,
+          <ul>,
+            <li>Restore service quickly with automated triage and mitigation</li>,
+            <li>Contain risk via policy‑as‑code guardrails and evaluation gates</li>,
+            <li>Ensure clear escalation paths and auditability</li>,
+          </ul>,
+          <h2>Runbook Flow</h2>,
+          <ol>,
+            <li>Detect: Alerts trigger incident context packaging and hypothesis generation</li>,
+            <li>Triage: Classify severity and blast radius, fetch known fixes</li>,
+            <li>Mitigate: Propose actions, execute only if evals pass and risk &lt, threshold</li>,
+            <li>Escalate: Route to on‑call with summarized context and safe suggestions</li>,
+            <li>Verify: Post‑action checks, rollback plan, and customer comms</li>,
+          </ol>,
+          <h2>Policy & Evals</h2>,
+          <pre>,
+{`risk_policies: ,
+  P0:,
+    actions: [rollback, traffic_shift],
+    eval_gates: [safety_regression < 0.5, blast_radius <= service],
+  P1:,
+    actions: [cache_flush, service_restart],
+    eval_gates: [error_budget_remaining > 20%],
+`,}
+          </pre>,
+          <h2>Metrics & SLOs</h2>,
+          <ul>,
+            <li>MTTD, MTTR, change failure rate</li>,
+            <li>Intervention automation rate, safe‑action pass rate</li>,
+            <li>Customer impact minutes avoided</li>,
+          </ul>,
+        </div>,
+        <footer className="mt-12 flex items-center justify-between">,
+          <Link href="/content" className="text-purple-600 font-semibold hover: text-purple-800">← Back to Content</Link>,
+          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Request Advisory</Link>,
+        </footer>,
+      </article>,
+    </div>,
+  ),};
 export default AgentsOnCallRunbook2026;
-

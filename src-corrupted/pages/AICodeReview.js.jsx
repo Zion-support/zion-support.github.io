@@ -123,5 +123,4 @@ export {AICodeReview}() {
     </div>
   );
 };
-
 export default AICodeReview.js;

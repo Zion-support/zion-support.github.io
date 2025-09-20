@@ -90,5 +90,4 @@ export default function AIContentGenerationPro(props: any) {}
     </div>
   );
 };
-
 export default AIContentGenerationPro;

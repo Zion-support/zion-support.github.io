@@ -109,5 +109,4 @@ export const ContactForm: Reac t.FC = () => {';';';
     </div>
   );
 };
-
 export default ContactForm;

@@ -102,5 +102,4 @@ export default function AnalyticsServicesPage() {
     </div>
   );
 };
-
 export default analytics;

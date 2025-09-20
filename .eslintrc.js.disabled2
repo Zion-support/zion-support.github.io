@@ -1,0 +1,156 @@
+module.exports = {
+  root: true,
+  env: { 
+    browser: true, 
+    es2020: true,
+    node: true
+  },
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+  ],
+  ignorePatterns: [
+    'dist',
+    'build',
+    'out',
+    'node_modules',
+    'public',
+    '*.disabled',
+    '*.disabled/**',
+    'zion-os.disabled',
+    'zion-os.disabled/**',
+    'zion-website',
+    'zion-website/**',
+    'zion-os',
+    'zion-os/**',
+    'zion_academy',
+    'zion_academy/**',
+    'zion.app',
+    'zion.app/**',
+    '.next',
+    '.next/**',
+    '**/.next/**',
+    '**/static/**',
+    '**/chunks/**',
+    '**/server/**',
+    '**/polyfills-*.js',
+    '**/webpack-*.js',
+    '**/main-*.js',
+    '**/pages/**',
+    '**/app/**',
+    '**/middleware-*.js',
+    '**/server-reference-*.js',
+    '**/_buildManifest.js',
+    '**/_ssgManifest.js',
+    '**/postcss.config.js',
+    '**/next.config.js',
+    '**/sw.js',
+    '**/performance-check.js',
+    '**/tailwind.config.js',
+    '**/evaluate.cjs',
+    '**/evolve.cjs',
+    '**/ai-it-content-factory.cjs',
+    '**/ai-it-researcher.cjs',
+    '**/analytics.js',
+    '**/feedback.js',
+    '**/integration.js',
+    'backup',
+    'backups',
+    'cache',
+    'artifacts',
+    '*.backup.*',
+    'server',
+    '*.min.js',
+    '*.bundle.js',
+    '*.chunk.js',
+    '.eslintrc.js',
+    'AIAgentOrchestrator.jsx',
+    'AIAnalytics.jsx',
+    'AIAnalyticsCopilot.jsx',
+    'AIAutonomousBusinessManager.jsx',
+    '.scripts/**',
+    'automation/**',
+    'zion-os.disabled/**',
+    'zion-website/**',
+    'zion-os/**',
+    'zion_academy/**',
+    'zion.app/**',
+    'zion-ai-assistant/**',
+    'apps.backup/**',
+    'src-clean/**',
+    'dao/**',
+    'netlify/functions/**',
+    'recovered-branches/**',
+    'token/**',
+    'src/pages-disabled/**',
+    'src/utils-disabled/**',
+    'src.disabled/**',
+    'src/backup/**',
+    'src/components-disabled/**',
+    '.eslintrc.js',
+    '.scripts/**',
+    'automation/**'
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
+    project: './tsconfig.json'
+  },
+  plugins: ['react-refresh'],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true }
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    'no-undef': 'off', // Turn off for JS files
+    'no-unused-vars': 'off' // Use TypeScript version instead
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    }
+  },
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      parser: '@babel/eslint-parser',
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          presets: ['@babel/preset-react']
+        }
+      },
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': 'warn'
+      }
+    },
+    {
+      files: ['.eslintrc.js', '.scripts/**/*.js', 'automation/**/*.js'],
+      env: {
+        node: true,
+        commonjs: true
+      },
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': 'warn',
+        'no-undef': 'off'
+      }
+    }
+  ]
+};

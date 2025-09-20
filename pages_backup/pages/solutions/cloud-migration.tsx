@@ -156,5 +156,4 @@ export default function CloudMigration() {
     </div>
   );
 };
-
 export default cloud-migration;

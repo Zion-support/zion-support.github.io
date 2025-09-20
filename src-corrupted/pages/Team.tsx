@@ -133,5 +133,4 @@ const Team = (props: any) => {
     </div>
   );
 };
-
 export default Team;

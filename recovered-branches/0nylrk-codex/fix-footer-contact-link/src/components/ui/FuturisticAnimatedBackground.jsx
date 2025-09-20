@@ -246,5 +246,4 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
       </div>
     </div>);
 };
-
 export default FuturisticAnimatedBackground;

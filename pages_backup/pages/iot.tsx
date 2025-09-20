@@ -93,5 +93,4 @@ export default function IoTPage() {
     </div>
   );
 };
-
 export default iot;

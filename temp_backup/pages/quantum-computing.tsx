@@ -59,5 +59,4 @@ export default function QuantumComputing() {
     </div>
   );
 };
-
 export default quantum-computing;

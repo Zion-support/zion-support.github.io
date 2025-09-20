@@ -92,5 +92,4 @@ const DigitalTransformation = (props: any) => {
     </div>
   );
 };
-
 export default DigitalTransformation;

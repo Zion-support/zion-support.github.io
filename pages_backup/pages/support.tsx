@@ -209,5 +209,4 @@ export default function Support() {
     </div>
   );
 };
-
 export default support;

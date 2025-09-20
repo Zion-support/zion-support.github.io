@@ -1168,5 +1168,4 @@ export default function NewsPage() {
     </div>
   );
 };
-
 export default news;

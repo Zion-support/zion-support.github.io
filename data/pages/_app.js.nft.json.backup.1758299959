@@ -1,0 +1,5 @@
+<<<<<<< HEAD:data/pages/_app.js.nft.json
+{"version":1,"files":["../../../node_modules/next/dist/pages/_app.js","../../../node_modules/react/cjs/react-jsx-runtime.development.js","../../../node_modules/react/cjs/react-jsx-runtime.production.js","../../../node_modules/react/cjs/react.development.js","../../../node_modules/react/cjs/react.production.js","../../../node_modules/react/index.js","../../../node_modules/react/jsx-runtime.js","../../../node_modules/react/package.json","../../../package.json","../../package.json","../webpack-runtime.js"]}
+=======
+{"version":1,"files":["../webpack-runtime.js","../vendors.js","../common.js","../../../pages/_app.tsx","../../../package.json"]}
+>>>>>>> origin/pm2-automation-fixes:.next/server/pages/_app.js.nft.json
