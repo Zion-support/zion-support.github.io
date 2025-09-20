@@ -1,10 +1,10 @@
 import React from "react";
-import { ServiceLandingTemplate,  } from "@/components/services/ServiceLandingTemplate";
-import { Bot,, Users,, TrendingUp,  } from 'lucide-react'
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
-return (
-    <ServiceLandingTemplate,
+  return (
+    <ServiceLandingTemplate
 title="AI Talent Matching"
       subtitle="Find the perfect talent with our AI-powered matching system"
       description="Our advanced AI technology analyzes skills experience and cultural fit to match the right candidates with the right opportunities ensuring successful placements and satisfied clients."

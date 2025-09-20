@@ -4,11 +4,13 @@ import os
 import re
 import glob
 
-def fix_syntax_errors():
-    """Fix common syntax errors from merge conflicts"""
+def quick_fix():
+    """Quick fix for common syntax errors"""
     
     # Find all TypeScript/JavaScript files
-    files = glob.glob("src/**/*.{ts,tsx,js,jsx}", recursive=True)
+    files = glob.glob("*.{ts,tsx,js,jsx}")
+    files.extend(glob.glob("src/**/*.{ts,tsx,js,jsx}", recursive=True))
+    files = [f for f in files if not f.startswith('node_modules') and not f.startswith('.next') and not f.startswith('.git')]
     
     print(f"Found {len(files)} files to process")
     
@@ -19,8 +21,7 @@ def fix_syntax_errors():
             
             original_content = content
             
-            # Fix common issues
-            # Fix double commas in imports
+            # Fix double commas
             content = re.sub(r',\s*,', ',', content)
             content = re.sub(r',\s*\)', ')', content)
             content = re.sub(r'\(\s*,', '(', content)
@@ -29,16 +30,17 @@ def fix_syntax_errors():
             if content.strip().startswith('return (') and 'function' not in content:
                 content = 'export default function Component() {\n' + content + '\n}'
             
-            # Fix missing imports
-            if 'import React' not in content and 'from "react"' in content:
+            # Fix missing React import
+            if 'import React' not in content and ('from "react"' in content or 'from \'react\'' in content):
                 content = 'import React from "react";\n' + content
             
-            # Fix trailing commas in objects
+            # Fix trailing commas
             content = re.sub(r',\s*}', '}', content)
             content = re.sub(r',\s*]', ']', content)
             
-            # Fix missing semicolons
-            content = re.sub(r'}\s*$', '};\n', content, flags=re.MULTILINE)
+            # Fix JSX syntax
+            content = re.sub(r'<(\w+),\s*', r'<\1 ', content)
+            content = re.sub(r',\s*>', '>', content)
             
             if content != original_content:
                 with open(file_path, 'w', encoding='utf-8') as f:
@@ -49,4 +51,4 @@ def fix_syntax_errors():
             print(f"Error processing {file_path}: {e}")
 
 if __name__ == "__main__":
-    fix_syntax_errors()
+    quick_fix()

@@ -1,13 +1,15 @@
 
-import { useState,, ,  } from 'react';
-import { useLocalStorage,, ,  } from '@/hooks';
-import { Header,, ,  } from '@/components/Header';
-import { SEO,, ,  } from '@/components/SEO';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { Button,, ,  } from '@/components/ui/button';
-import { Input,, ,  } from '@/components/ui/input';
-import { Wallet,, Database,, Save,  } from 'lucide-react'
-return (
+import React, { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from 'lucide-react'
+
+export default function AccountSettings() {
+  return (
     <>
       <SEO title='Account Settings' description='Manage your account' />
       <Header />
