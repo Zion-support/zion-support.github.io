@@ -101,15 +101,42 @@ zion-ai-assistant/
 zion-os/
 zion-website/
 
+# Additional problematic files
+*.js
+<<<<<<< HEAD
+*.jsx
+*.ts
+*.tsx
+!src/**/*.js
+!src/**/*.jsx
+!src/**/*.ts
+!src/**/*.tsx
+!App.tsx
+!main.jsx
+!index.html
+quantum-ai-*/
+src-corrupted/
+out/
+extension/
+sdk/
+public/
+
 # Root level files that don't need linting
 *.md
 *.txt
-*.json
 *.tsv
 *.py
 *.sh
-*.cjs
 *.js
+*.cjs
+*.mjs
+*.ts
+*.tsx
+*.jsx
+
+# Only include specific files for linting
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-19e8
 !src/**/*.ts
 !src/**/*.tsx
 !src/**/*.js
@@ -117,6 +144,53 @@ zion-website/
 !App.tsx
 !index.html
 !main.jsx
+<<<<<<< HEAD
+!vite.config.ts
+!tailwind.config.js
+!postcss.config.js
+!tsconfig.json
+
+# Exclude problematic directories and files
+node_modules/
+dist/
+build/
+*.backup*
+*_backup*/
+temp_*/
+src_backup*/
+src.disabled/
+src.corrupted/
+src-corrupted/
+src-clean/
+quantum-ai-*/
+*.config.js
+*.config.cjs
+*.config.mjs
+ecosystem.*
+*.automation.*
+*.merge.*
+*.fix.*
+*.resolve.*
+*.simple.*
+*.test.*
+*.spec.*
+debug-*
+extract*
+final-*
+improve-*
+monitor*
+optimize*
+performance*
+quick-*
+run-*
+script.js
+seed.*
+selective-*
+sentry.*
+simple-*
+start-*
+syntax-*
+=======
 !main.tsx
 !main.js
 
@@ -154,3 +228,4 @@ ai-solutions/
 ai-optimization-backups/
 automation_logs/
 automation-reports/
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-19e8
