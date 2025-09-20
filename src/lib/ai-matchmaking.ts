@@ -2,25 +2,17 @@ export interface MatchResultItem {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
   category: string;
   price: number;
   rating: number;
   imageUrl?: string;
   tags: string[];
   matchScore: number;
-=======
-  price: number;
-  rating: number;
-  category: string;
-  tags: string[];
->>>>>>> d77626155c92c5bbcaae01bf3c76fc08ebcf7238
   provider: {
     name: string;
     avatar?: string;
     verified: boolean;
   };
-<<<<<<< HEAD
   createdAt: string;
   updatedAt: string;
 }
@@ -139,7 +131,4 @@ export async function findMatches(filters: MatchmakingFilters): Promise<Matchmak
     hasMore: false,
     nextCursor: undefined
   };
-=======
-  matchScore: number;
->>>>>>> d77626155c92c5bbcaae01bf3c76fc08ebcf7238
 }
