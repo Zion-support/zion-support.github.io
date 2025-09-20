@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { Metadata } from 'next'
+import SEO from '../../components/SEO'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'AI 2025 Ultimate Business Transformation Guide',
   description: 'Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.',
   keywords: ['AI transformation', 'business AI', 'AI implementation', 'digital transformation', 'AI ROI', '2025 AI trends']
@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 export default function AI2025UltimateBusinessTransformationPage() {
   return (
     <div>
+      <SEO
+        title="AI 2025 Ultimate Business Transformation Guide"
+        description="Discover the revolutionary AI technologies and strategies that will transform your business in 2025"
+        keywords="AI transformation, business AI, AI implementation, digital transformation, AI ROI, 2025 AI trends"
+        url="/ai-2025-ultimate-business-transformation"
+      />
       <div>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
@@ -31,6 +37,7 @@ export default function AI2025UltimateBusinessTransformationPage() {
                   href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
+<<<<<<< HEAD
                   Get Transformation Guide
                 </Link>
                 <Link
@@ -38,11 +45,21 @@ export default function AI2025UltimateBusinessTransformationPage() {
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Explore AI Services
+=======
+                  Start Your AI Transformation
+                </Link>
+                <Link
+                  href="/tools/ai-readiness-assessment"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Take AI Readiness Assessment
+>>>>>>> 14c2f1a97894d257b2a27ebaae06871d9e3a0e3c
                 </Link>
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Key Transformation Areas */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -127,10 +144,41 @@ export default function AI2025UltimateBusinessTransformationPage() {
                   <li>• Fraud prevention</li>
                   <li>• Compliance monitoring</li>
                 </ul>
+=======
+
+        {/* Key Benefits Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Why AI Transformation is Essential in 2025
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">340% Average ROI</h3>
+                <p className="text-gray-600">
+                  Companies implementing AI solutions see an average ROI of 340% within the first year.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">60% Cost Reduction</h3>
+                <p className="text-gray-600">
+                  Automated processes and intelligent systems reduce operational costs by up to 60%.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">85% Efficiency Gain</h3>
+                <p className="text-gray-600">
+                  AI-powered automation increases process efficiency and productivity by 85%.
+                </p>
+>>>>>>> 14c2f1a97894d257b2a27ebaae06871d9e3a0e3c
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* ROI Statistics */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -201,24 +249,70 @@ export default function AI2025UltimateBusinessTransformationPage() {
                   <li>• Continuous improvement</li>
                   <li>• ROI measurement</li>
                   <li>• Future planning</li>
+=======
+
+        {/* Implementation Roadmap */}
+        <section className="bg-gray-50 py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              AI Implementation Roadmap
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-blue-600 font-bold text-lg mb-4">Phase 1: Foundation (Months 1-2)</div>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• AI readiness assessment</li>
+                  <li>• Data infrastructure setup</li>
+                  <li>• Team training and upskilling</li>
+                  <li>• Pilot project selection</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-green-600 font-bold text-lg mb-4">Phase 2: Implementation (Months 3-4)</div>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• AI model deployment</li>
+                  <li>• Process integration</li>
+                  <li>• Performance monitoring</li>
+                  <li>• User training</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-purple-600 font-bold text-lg mb-4">Phase 3: Optimization (Months 5-6)</div>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Performance optimization</li>
+                  <li>• Scale-up planning</li>
+                  <li>• Advanced features</li>
+                  <li>• ROI measurement</li>
+>>>>>>> 14c2f1a97894d257b2a27ebaae06871d9e3a0e3c
                 </ul>
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+=======
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+>>>>>>> 14c2f1a97894d257b2a27ebaae06871d9e3a0e3c
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl mb-8">
+<<<<<<< HEAD
               Join hundreds of successful companies that have revolutionized their operations
               with our AI transformation solutions.
+=======
+              Join thousands of companies already using our AI solutions to drive innovation and growth.
+>>>>>>> 14c2f1a97894d257b2a27ebaae06871d9e3a0e3c
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
+<<<<<<< HEAD
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Transformation
@@ -228,6 +322,17 @@ export default function AI2025UltimateBusinessTransformationPage() {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View Our Services
+=======
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Free Consultation
+              </Link>
+              <Link
+                href="/tools/ai-readiness-assessment"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Take AI Readiness Assessment
+>>>>>>> 14c2f1a97894d257b2a27ebaae06871d9e3a0e3c
               </Link>
             </div>
           </div>
