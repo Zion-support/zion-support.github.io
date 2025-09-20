@@ -42,7 +42,7 @@ const App: React.FC = () => {
           </React.Suspense>
         </EnhancedAccessibility>
       </ThemeProvider>
-      </EnhancedErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 
