@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './App.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -7,12 +7,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { useTheme } from './context/ThemeContext';
 import SEOOptimizer from './utils/seoOptimizer';
-
-// Lazy load heavy components for better performance
-const VirtualList = lazy(() => import('./components/VirtualList'));
-const MemoizedComponent = lazy(() => import('./components/MemoizedComponent'));
-const LoadingSpinner = lazy(() => import('./components/LoadingSpinner'));
-const SkeletonLoader = lazy(() => import('./components/SkeletonLoader'));
 
 // Service data with more details
 const services = [
