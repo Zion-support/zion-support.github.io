@@ -7,14 +7,13 @@ interface ServiceContact {
 }
 
 const UltimateServicesShowcase2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null),
-  const [sortBy, setSortBy] = useState('rating'),
+  const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' };
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' };
@@ -36,24 +35,24 @@ const UltimateServicesShowcase2025: React.FC = () => {
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    return matchesCategory && matchesSearch,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'reviews':
-        return b.reviews - a.reviews,
+        return b.reviews - a.reviews;
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       default: return 0
     }
   });
@@ -61,7 +60,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
     setSelectedService(service)
   };
   const closeModal = () => {
-    setSelectedService(null),
+    setSelectedService(null);
   },
 
   const containerVariants = {

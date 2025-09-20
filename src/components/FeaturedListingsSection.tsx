@@ -21,7 +21,7 @@ const featuredListings = [
   }
 ];
 export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All"),
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const filteredListings = selectedCategory === "All"

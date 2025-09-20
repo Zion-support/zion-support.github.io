@@ -55,18 +55,17 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('innovative-services-2027'),
+    const element = document.getElementById('innovative-services-2027');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
 
-    return () => observer.disconnect(),
+    return () => observer.disconnect();
   }, []),
 
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
-    : getServicesByCategory(selectedCategory),
-
+    : getServicesByCategory(selectedCategory);
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   };

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from "@heroicons/react/24/outline";
 class EnhancedErrorBoundary extends Component {
     constructor(props) {
-        super(props),
+        super(props);
         this.state = {
             hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
         };
@@ -20,15 +20,15 @@ class EnhancedErrorBoundary extends Component {
     componentDidCatch(error, errorInfo) {
         this.setState({
 errorInfo 
-}),
+});
         // Log error to console
-        console.error('Error caught by boundary:', error, errorInfo),
+        console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
-            this.props.onError(error, errorInfo),
+            this.props.onError(error, errorInfo);
         }
         // Send error to error reporting service (if available)
-        this.reportError(error, errorInfo),
+        this.reportError(error, errorInfo);
     }
 
     static generateErrorId() {
@@ -51,10 +51,10 @@ errorInfo
         };
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
-            console.group('Error Report'),
-            console.log('Error ID:', errorReport.id),
-            console.log('Error Details:', errorReport),
-            console.groupEnd(),
+            console.group('Error Report');
+            console.log('Error ID:', errorReport.id);
+            console.log('Error Details:', errorReport);
+            console.groupEnd();
         }
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
@@ -72,8 +72,8 @@ hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
     }
 
     handleReportIssue() {
-        const error = this.state.error,
-        const errorInfo = this.state.errorInfo,
+        const error = this.state.error;
+        const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
             const issueBody = `
 ## Error Report
@@ -100,7 +100,7 @@ Please provide any additional context about what you were doing when this error 
             `;
             // Open email client with pre-filled error report
             const mailtoLink = `mailto: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
-            window.open(mailtoLink),
+            window.open(mailtoLink);
         }
     }
 
@@ -112,7 +112,7 @@ Please provide any additional context about what you were doing when this error 
         if (this.state.hasError) {
             // Custom fallback UI
             if (this.props.fallback) {
-                return this.props.fallback,
+                return this.props.fallback;
             }
             // Default error UI
             return (

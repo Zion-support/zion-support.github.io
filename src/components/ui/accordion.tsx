@@ -35,7 +35,7 @@ export function Accordion({
             isOpen: openItems.includes(child.props.value),onToggle: () => handleToggle(child.props.value)
           });
         }
-        return child,
+        return child;
       })}
     </div>
   ),

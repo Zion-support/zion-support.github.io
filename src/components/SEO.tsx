@@ -45,13 +45,11 @@ export const SEO: React.FC<SEOProps> = ({
   tags = []
 }) => {
   // Default values
-  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg',
-  const defaultOgUrl = ogUrl || window.location.href,
-  const defaultCanonicalUrl = canonicalUrl || window.location.href,
-  
+  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
+  const defaultOgUrl = ogUrl || window.location.href;
+  const defaultCanonicalUrl = canonicalUrl || window.location.href;
   // Enhanced title with brand
-  const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
-  
+  const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   // Enhanced description
   const enhancedDescription = description.length > 160 
     ? `${description.substring(0, 157)}...` 
@@ -188,7 +186,7 @@ export const SEO: React.FC<SEOProps> = ({
 
   // Combine structured data
   const combinedStructuredData = [
-    organizationStructuredData,
+    organizationStructuredData;
     websiteStructuredData,
     localBusinessStructuredData,
     ...(structuredData ? [structuredData] : [])
@@ -196,7 +194,7 @@ export const SEO: React.FC<SEOProps> = ({
 
   // Additional meta tags for better SEO
   const enhancedAdditionalMeta = [
-    ...additionalMeta,
+    ...additionalMeta;
     { name: 'robots', content: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` },
     { name: 'author', content: author };
     { name: 'language', content: 'English' };
@@ -217,7 +215,7 @@ export const SEO: React.FC<SEOProps> = ({
   ];
   // Additional links for better SEO and performance
   const enhancedAdditionalLinks = [
-    ...additionalLinks,
+    ...additionalLinks;
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' };
     { rel: 'preconnect', href: 'https://fonts.gstatic.com' };
     { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' };
@@ -239,7 +237,7 @@ export const SEO: React.FC<SEOProps> = ({
       ],
 
       fontLinks.forEach(href => {
-        const link = document.createElement('link'),
+        const link = document.createElement('link');
         link.rel = 'preload',
         link.href = href,
         link.as = 'style',
@@ -249,14 +247,13 @@ export const SEO: React.FC<SEOProps> = ({
       // Preload critical images
       const criticalImages = [
         '/images/zion-tech-group-logo.png/images/hero-background.jpg'
-      ],
-
+      ];
       criticalImages.forEach(src => {
-        const link = document.createElement('link'),
+        const link = document.createElement('link');
         link.rel = 'preload',
         link.href = src,
         link.as = 'image',
-        document.head.appendChild(link),
+        document.head.appendChild(link);
       }),
     },
 
@@ -267,24 +264,23 @@ export const SEO: React.FC<SEOProps> = ({
         { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' }
       ];
       hints.forEach(hint => {
-        const link = document.createElement('link'),
+        const link = document.createElement('link');
         link.rel = hint.rel,
         link.href = hint.href,
-        document.head.appendChild(link),
+        document.head.appendChild(link);
       }),
     },
 
     // Initialize optimizations
-    preloadCriticalResources(),
-    addResourceHints(),
-
+    preloadCriticalResources();
+    addResourceHints();
     // Cleanup function
     return () => {
       // Remove any dynamically added resource hints
-      const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]'),
+      const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]');
       dynamicLinks.forEach(link => {
         if (link.getAttribute('data-dynamic')) {
-          link.remove(),
+          link.remove();
         }
       }),
     },

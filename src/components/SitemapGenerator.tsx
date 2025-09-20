@@ -54,7 +54,7 @@ interface SitemapRoute {
 
 export const SitemapGenerator: React.FC = () => {
   const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   useEffect(() => {
     generateSitemap();
@@ -180,20 +180,19 @@ export const SitemapGenerator: React.FC = () => {
         ]
       }
     ];
-    setSitemapData(sitemap),
+    setSitemapData(sitemap);
   },
 
   const filteredSitemap = sitemapData.map(section => ({
-    ...section,
+    ...section;
     routes: section.routes.filter(route => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory,
+      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
       return matchesSearch && matchesCategory
     })
-  })).filter(section => section.routes.length > 0),
-
+  })).filter(section => section.routes.length > 0);
   const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
     section.routes.map(route => route.category)
   )))],
@@ -213,14 +212,14 @@ ${sitemapData.flatMap(section =>
 ).join('\n')}
 </urlset>`;
     const blob = new Blob([sitemapXml], { type: 'application/xml' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = 'sitemap.xml',
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   },
 
   const exportCSV = () => {
@@ -235,17 +234,16 @@ ${sitemapData.flatMap(section =>
           route.featured ? 'Yes' : 'No'
         ])
       )
-    ].map(row => row.map(field => `"${field}"`).join()).join('\n'),
-
+    ].map(row => row.map(field => `"${field}"`).join()).join('\n');
     const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob),
-    const a = document.createElement('a'),
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = 'sitemap.csv',
-    document.body.appendChild(a),
-    a.click(),
-    document.body.removeChild(a),
-    URL.revokeObjectURL(url),
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   },
 
   return (
@@ -398,9 +396,8 @@ ${sitemapData.flatMap(section =>
 },
 
 // Missing icon components
-const Home = () => <Globe className="w-4 h-4" />,
-const Calendar = () => <BookOpen className="w-4 h-4" />,
-const Video = () => <MessageCircle className="w-4 h-4" />,
-const Code = () => <Settings className="w-4 h-4" />,
-
+const Home = () => <Globe className="w-4 h-4" />;
+const Calendar = () => <BookOpen className="w-4 h-4" />;
+const Video = () => <MessageCircle className="w-4 h-4" />;
+const Code = () => <Settings className="w-4 h-4" />;
 export default SitemapGenerator;

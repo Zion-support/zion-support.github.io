@@ -29,7 +29,7 @@ export function Skeleton({
   return (
     <div
       className={cn(
-        baseClasses,
+        baseClasses;
         variantClasses[variant],
         animationClasses[animation],
         className

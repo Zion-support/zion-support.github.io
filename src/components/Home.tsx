@@ -1,45 +1,67 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 const Home: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [scrollY, setScrollY] = useState(0),
-  const [hoveredService, setHoveredService] = useState<number | null>(null),
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   const handleScroll = useCallback(() => {
-    setScrollY(window.scrollY),
-  }, []),
+    setScrollY(window.scrollY);
+  }, []);
 
   useEffect(() => {
-    setIsLoaded(true),
+    setIsLoaded(true);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, [handleScroll]),
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   const services = useMemo(() => [
     {
-      title: "AI Services",description: "Cutting-edge artificial intelligence solutions for your business needs.",icon: "🤖",features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-      gradient: "from-purple-500 to-pink-500",price: "Starting at $5,000/month"
+      title: "AI Services",
+      description: "Cutting-edge artificial intelligence solutions for your business needs.",
+      icon: "🤖",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+      gradient: "from-purple-500 to-pink-500",
+      price: "Starting at $5,000/month"
     },
     {
-      title: "Micro SaaS",description: "Scalable micro software-as-a-service solutions.",icon: "⚡",features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Cloud Native"],
-      gradient: "from-blue-500 to-cyan-500",price: "Starting at $2,500/month"
+      title: "Micro SaaS",
+      description: "Scalable micro software-as-a-service solutions.",
+      icon: "⚡",
+      features: ["Rapid Deployment", "Scalable Architecture", "API Integration", "Cloud Native"],
+      gradient: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,500/month"
     },
     {
-      title: "IT Services",description: "Comprehensive IT support and consulting services.",icon: "💻",features: ["Infrastructure Management", "Security Solutions", "Cloud Migration", "24/7 Support"],
-      gradient: "from-green-500 to-emerald-500",price: "Starting at $3,000/month"
+      title: "IT Services",
+      description: "Comprehensive IT support and consulting services.",
+      icon: "💻",
+      features: ["Infrastructure Management", "Security Solutions", "Cloud Migration", "24/7 Support"],
+      gradient: "from-green-500 to-emerald-500",
+      price: "Starting at $3,000/month"
     },
     {
-      title: "Quantum Computing",description: "Next-generation quantum computing solutions.",icon: "⚛️",features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
+      title: "Quantum Computing",
+      description: "Next-generation quantum computing solutions.",
+      icon: "⚛️",
+      features: ["Quantum Algorithms", "Quantum Simulation", "Optimization", "Research & Development"],
       gradient: "from-indigo-500 to-purple-500",price: "Starting at $10,000/month"
     },
     {
-      title: "Blockchain",description: "Decentralized solutions and smart contracts.",icon: "🔗",features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"],
+      title: "Blockchain",
+      description: "Decentralized solutions and smart contracts.",
+      icon: "🔗",
+      features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Web3 Integration"],
       gradient: "from-orange-500 to-red-500",price: "Starting at $4,000/month"
     },
     {
-      title: "Space Technology",description: "Advanced aerospace and satellite solutions.",icon: "🚀",features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
-      gradient: "from-sky-500 to-blue-500",price: "Starting at $15,000/month"
+      title: "Space Technology",
+      description: "Advanced aerospace and satellite solutions.",
+      icon: "🚀",
+      features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
+      gradient: "from-sky-500 to-blue-500",
+      price: "Starting at $15,000/month"
     }
-  ], []),
+  ], []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
@@ -55,9 +77,9 @@ const Home: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-purple-400/30 rounded-full animate-pulse"
               style={{
-                left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`;
-                animationDelay: `${Math.random() * 3}s`;
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             />

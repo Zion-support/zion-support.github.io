@@ -7,7 +7,7 @@ export function EnhancedAccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
   });
-  const [isVisible, setIsVisible] = useState(false),
+  const [isVisible, setIsVisible] = useState(false);
   const [announcements, setAnnouncements] = useState<string[]>([]),
 
   useEffect(() => {
@@ -19,30 +19,29 @@ export function EnhancedAccessibilityEnhancer() {
       reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
     }));
     // Apply accessibility settings to document
-    const root = document.documentElement,
-    
+    const root = document.documentElement;
     if (settings.highContrast) {
-      root.classList.add('high-contrast'),
+      root.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast'),
+      root.classList.remove('high-contrast');
     }
 
     if (settings.largeText) {
-      root.classList.add('large-text'),
+      root.classList.add('large-text');
       root.style.fontSize = '1.2em',
     } else {
-      root.classList.remove('large-text'),
+      root.classList.remove('large-text');
       root.style.fontSize = '',
     }
 
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion'),
-      root.style.setProperty('--animation-duration0.01ms'),
-      root.style.setProperty('--animation-iteration-count1'),
+      root.classList.add('reduced-motion');
+      root.style.setProperty('--animation-duration0.01ms');
+      root.style.setProperty('--animation-iteration-count1');
     } else {
-      root.classList.remove('reduced-motion'),
-      root.style.removeProperty('--animation-duration'),
-      root.style.removeProperty('--animation-iteration-count'),
+      root.classList.remove('reduced-motion');
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--animation-iteration-count');
     }
 
     // Show accessibility panel on Ctrl+Shift+A
@@ -53,23 +52,22 @@ export function EnhancedAccessibilityEnhancer() {
       }
     },
 
-    window.addEventListener('keydown', handleKeyPress),
-    return () => window.removeEventListener('keydown', handleKeyPress),
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
   }, [settings, isVisible]),
 
   const announce = (message: string) => {
     setAnnouncements(prev => [...prev.slice(-2), message]),
     
     // Create live region for screen readers
-    const announcement = document.createElement('div'),
-    announcement.setAttribute('aria-livepolite'),
-    announcement.setAttribute('aria-atomictrue'),
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-livepolite');
+    announcement.setAttribute('aria-atomictrue');
     announcement.className = 'sr-only',
     announcement.textContent = message,
-    document.body.appendChild(announcement),
-    
+    document.body.appendChild(announcement);
     setTimeout(() => {
-      document.body.removeChild(announcement),
+      document.body.removeChild(announcement);
     }, 1000),
   },
 
@@ -80,14 +78,14 @@ export function EnhancedAccessibilityEnhancer() {
     const settingNames = {
       highContrast: 'High contrast mode',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus indicators',screenReader: 'Screen reader mode',keyboardNavigation: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`),
+    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
   },
 
   const resetSettings = () => {
     setSettings({
       highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
     });
-    announce('Accessibility settings reset'),
+    announce('Accessibility settings reset');
   },
 
   if (!isVisible) return null;

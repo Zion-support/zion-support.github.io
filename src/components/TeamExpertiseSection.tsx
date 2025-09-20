@@ -36,7 +36,7 @@ const teamExpertise = [
   }
 ];
 const coreExpertise = [
-  "Artificial Intelligence & Machine Learning",
+  "Artificial Intelligence & Machine Learning";
   "Quantum Computing & Algorithms",
   "Blockchain & Web3 Technologies",
   "Cloud Infrastructure & DevOps",

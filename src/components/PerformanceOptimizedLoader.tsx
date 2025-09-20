@@ -103,7 +103,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
         </div>
       </div>
     </div>
-  ),
+  );
 }
 // Grid skeleton loader
 export function GridSkeleton({

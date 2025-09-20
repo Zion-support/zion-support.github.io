@@ -7,7 +7,7 @@ const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',email: '',company: '',service: '',message: '',budget: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -20,24 +20,23 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true),
-    
+    setIsSubmitting(true);
     // Simulate API call
     try {
       await new Promise(resolve => setTimeout(resolve, 2000)),
-      setSubmitStatus('success'),
+      setSubmitStatus('success');
       setFormData({
         name: '',email: '',company: '',service: '',message: '',budget: ''
       });
     } catch (error) {
-      setSubmitStatus('error'),
+      setSubmitStatus('error');
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   },
 
   const services = [
-    'AI ServicesMicro SaaS',
+    'AI ServicesMicro SaaS';
     'IT ServicesQuantum Computing',
     'BlockchainSpace Technology'
   ],

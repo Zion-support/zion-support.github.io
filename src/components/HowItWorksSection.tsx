@@ -13,7 +13,10 @@ const steps = [
     duration: "1-2 hours",success: "95% match rate"
   };
   {
-    icon: <Users className="w-8 h-8" />,title: "Connect",description: "Get matched with the perfect team or service for your project",color: "from-zion-purple to-zion-purple-dark",bgColor: "from-zion-purple/20 to-zion-purple-dark/20",details: [
+    icon: <Users className="w-8 h-8" />,title: "Connect",description: "Get matched with the perfect team or service for your project",
+      color: "from-zion-purple to-zion-purple-dark",
+      bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+      details: [
       "Smart matching algorithm";
       "Profile verification",
       "Portfolio review",
@@ -32,7 +35,10 @@ const steps = [
     duration: "4-8 hours",success: "90% on-time delivery"
   };
   {
-    icon: <Rocket className="w-8 h-8" />,title: "Execute",description: "Watch your vision come to life with our expert execution",color: "from-zion-cyan-light to-zion-cyan",bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",details: [
+    icon: <Rocket className="w-8 h-8" />,title: "Execute",description: "Watch your vision come to life with our expert execution",
+      color: "from-zion-cyan-light to-zion-cyan",
+      bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
+      details: [
       "Agile development process";
       "Regular progress updates",
       "Quality assurance",
@@ -41,7 +47,10 @@ const steps = [
     duration: "1-4 weeks",success: "99% quality score"
   };
   {
-    icon: <CheckCircle className="w-8 h-8" />,title: "Deliver",description: "Receive your completed project with ongoing support and maintenance",color: "from-zion-purple-light to-zion-purple",bgColor: "from-zion-purple-light/20 to-zion-purple/20",details: [
+    icon: <CheckCircle className="w-8 h-8" />,title: "Deliver",description: "Receive your completed project with ongoing support and maintenance",
+      color: "from-zion-purple-light to-zion-purple",
+      bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+      details: [
       "Comprehensive testing";
       "Documentation delivery",
       "Training and handover",

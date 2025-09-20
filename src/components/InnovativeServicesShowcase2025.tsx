@@ -49,22 +49,21 @@ import {
 } from "lucide-react";
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from "@/data/innovativeServices2025";
 export default function InnovativeServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<'price' | 'rating' | 'aiScore' | 'name'>('name'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
   const [selectedService, setSelectedService] = useState<any>(null),
-  const [showModal, setShowModal] = useState(false),
-
+  const [showModal, setShowModal] = useState(false);
   const categories = ['all', ...Object.keys(INNOVATIVE_SERVICE_CATEGORIES_2025)],
 
   const filteredServices = INNOVATIVE_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    return matchesCategory && matchesSearch,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -92,9 +91,9 @@ export default function InnovativeServicesShowcase2025() {
     }
 
     if (sortOrder === 'asc') {
-      return aValue > bValue ? 1 : -1,
+      return aValue > bValue ? 1 : -1;
     } else {
-      return aValue < bValue ? 1 : -1,
+      return aValue < bValue ? 1 : -1;
     }
   }),
 
@@ -102,22 +101,21 @@ export default function InnovativeServicesShowcase2025() {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
-      <Rocket className="w-6 h-6" />,
+      <Rocket className="w-6 h-6" />;
   },
 
   const getCategoryColor = (category: string) => {
     if (category === 'all') return 'from-cyan-500 to-blue-500';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'
-  },
-
+  };
   const openServiceModal = (service: any) => {
     setSelectedService(service);
     setShowModal(true)
   },
 
   const closeModal = () => {
-    setShowModal(false),
-    setSelectedService(null),
+    setShowModal(false);
+    setSelectedService(null);
   },
 
   return (
@@ -263,9 +261,9 @@ export default function InnovativeServicesShowcase2025() {
               <select
                 value={`${sortBy}-${sortOrder}`}
                 onChange={(e) => {
-                  const [newSortBy, newSortOrder] = e.target.value.split('-'),
-                  setSortBy(newSortBy as any),
-                  setSortOrder(newSortOrder as any),
+                  const [newSortBy, newSortOrder] = e.target.value.split('-');
+                  setSortBy(newSortBy as any);
+                  setSortOrder(newSortOrder as any);
                 }}
                 className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >

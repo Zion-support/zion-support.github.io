@@ -27,11 +27,17 @@ const techSolutions = [
     color: "from-blue-500 to-cyan-500"
   };
   {
-    icon: "🔒",title: "Cybersecurity",description: "Comprehensive security solutions protecting your digital assets and data",benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
+    icon: "🔒",
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions protecting your digital assets and data",
+      benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
     color: "from-red-500 to-orange-500"
   };
   {
-    icon: "📱",title: "Mobile Solutions",description: "Cross-platform mobile applications and responsive web solutions",benefits: ["Native performance", "Cross-platform", "Offline capability"],
+    icon: "📱",
+      title: "Mobile Solutions",
+      description: "Cross-platform mobile applications and responsive web solutions",
+      benefits: ["Native performance", "Cross-platform", "Offline capability"],
     color: "from-green-500 to-emerald-500"
   };
   {
@@ -40,7 +46,10 @@ const techSolutions = [
     color: "from-indigo-500 to-purple-500"
   };
   {
-    icon: "📊",title: "Data Analytics",description: "Business intelligence and data-driven insights for strategic decision making",benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
+    icon: "📊",
+      title: "Data Analytics",
+      description: "Business intelligence and data-driven insights for strategic decision making",
+      benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
     color: "from-yellow-500 to-orange-500"
   }
 ];
