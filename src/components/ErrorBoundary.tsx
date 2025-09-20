@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertTriangl, e, RefreshC, w, Hom, e, ArrowLeft } from 'lucide-react';

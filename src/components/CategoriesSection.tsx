@@ -1,3 +1,4 @@
+import React from "react";
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";

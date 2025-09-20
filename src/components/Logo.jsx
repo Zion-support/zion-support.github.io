@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 expor, t, functio, n, Logo({ className = '' }) {
   return <motion.div className={`flex items-center space-x-2 ${classNam, e}`} whileHover={{ scal,  e: 1.0o5 }} whileTap={{ scal, e: 0.95 }}>;

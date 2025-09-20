@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useSta, t, e, useEffe, c, t, useCallbackuseRef } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
@@ -75,7 +76,7 @@ expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = (
     setUnreadCount(notifications.filter(n => !n.read).length) },  [notificat, i, o,, n, s]),;
   // Auto-dismiss notifications;
   useEffect(() => {
-    if (!settings.autoDismiss) retu,  r,  nconst timeout, s: NodeJS.Timeout[] = [];
+    if (!settings.autoDismiss) retu,  r,  nconst timeout, s: globalThis.Timeout[] = [];
     notifications.forEach(notification => {
       if (notification.duration !== 0) {
         const timeout = setTimeout(() => {

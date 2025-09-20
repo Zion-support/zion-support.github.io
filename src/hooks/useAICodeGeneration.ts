@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useAnalytics } from './useAnalytics';
 
@@ -107,7 +108,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     quality: string;
   }>>([]);
 
-  const generationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const generationTimeoutRef = useRef<globalThis.Timeout | null>(null);
 
   // Generate code using AI
   const generateCode = useCallback(async (prompt: string, options: CodeGenerationOptions) => {

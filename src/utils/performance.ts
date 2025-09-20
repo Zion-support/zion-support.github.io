@@ -13,7 +13,7 @@ export, const, debounce  = <T extends (...args: any[]) => an,;
 ): ((...arg,;
     s: Parameters<T>) => void) => {
   let timeou,;
-  t: NodeJS.Timeout,;
+  t: globalThis.Timeout,;
     return (...args: Parameters<T>) => {;
     clearTimeout(timeout)timeout = setTimeout(() => func(...args); wait) },;
 },;

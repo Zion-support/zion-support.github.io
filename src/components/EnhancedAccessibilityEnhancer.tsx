@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffectuseState } from "react";
 interface AccessibilitySettings {
   highContra, s, t: boole, a, n,;

@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, from 'react';
 import { motion } from 'framer-motion';
 import { Cod, e, Za, p, Shiel, d, UsersGlobeHeart } from 'lucide-react';

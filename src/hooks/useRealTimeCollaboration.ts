@@ -94,10 +94,10 @@ export const useRealTimeCollaboration = (
 
   const wsRef = useRef<WebSocket | null>(null);
   const reconnectAttemptsRef = useRef(0);
-  const heartbeatIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const heartbeatIntervalRef = useRef<globalThis.Timeout | null>(null);
+  const reconnectTimeoutRef = useRef<globalThis.Timeout | null>(null);
   const messageQueueRef = useRef<CollaborationMessage[]>([]);
-  const presenceUpdateRef = useRef<NodeJS.Timeout | null>(null);
+  const presenceUpdateRef = useRef<globalThis.Timeout | null>(null);
 
   // Generate user color
   const generateUserColor = useCallback((userId: string) => {

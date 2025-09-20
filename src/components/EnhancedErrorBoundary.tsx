@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { ComponentErrorInfoReactNode } from "react";
 ;
 interface Props {

@@ -1,3 +1,4 @@
+import React from "react";
 import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield     } from "lucide-react";
 export default function AIFinancialAnalyticsPlatform() {
   const features = [

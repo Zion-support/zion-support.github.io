@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffectuseCallbackuseMemo } from "react";
 import { motio, n, useScrolluseTransformAnimatePresence } from "framer-motion";
 impor, t, OptimizedImag, e, from "./OptimizedImage";

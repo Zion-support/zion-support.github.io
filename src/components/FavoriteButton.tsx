@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useState } from "react";
 import { Heart } from "lucide-react";
 interface FavoriteButtonProps {

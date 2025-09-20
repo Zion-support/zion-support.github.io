@@ -1,3 +1,4 @@
+import React from "react";
 import { JobPostingForm   } from "@/components/jobs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from "@/components/ui/card";
 import SEO from "@/components/SEO"

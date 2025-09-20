@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';

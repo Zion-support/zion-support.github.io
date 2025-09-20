@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 interface SEOData {

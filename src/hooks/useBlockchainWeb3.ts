@@ -144,7 +144,7 @@ export const useBlockchainWeb3 = (initialConfig?: Partial<Web3Config>): Blockcha
   const [isConnecting, setIsConnecting] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const transactionPollingRef = useRef<Map<string, NodeJS.Timeout>>(new Map());
+  const transactionPollingRef = useRef<Map<string, globalThis.Timeout>>(new Map());
 
   // Default contracts
   const defaultContracts: SmartContract[] = [

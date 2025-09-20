@@ -59,7 +59,7 @@ class PerformanceOptimizer {
     wait: number;
   ): (...args: Parameters<T>) => void {
     let timeou,;
-    t: NodeJS.Timeout;
+    t: globalThis.Timeout;
     return (...arg,;
   s: Parameters<T>) => {;
       clearTimeout(timeout);

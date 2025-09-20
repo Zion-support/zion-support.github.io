@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useState } from 'react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { innovativeITServices2025 } from '../data/innovativeITServices2025';

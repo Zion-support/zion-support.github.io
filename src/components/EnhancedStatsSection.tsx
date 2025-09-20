@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { motionuseAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";

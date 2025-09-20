@@ -37,7 +37,7 @@ class AdvancedCacheManager<T = any> {
   private config: CacheConfig;
   private stats: CacheStats;
   private cleanupInterva,;
-    l: NodeJS.Timeout;
+    l: globalThis.Timeout;
 ;
   constructor(confi,;
   g: Partial<CacheConfig> = {}) {
