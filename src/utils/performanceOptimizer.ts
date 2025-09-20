@@ -1,166 +1,249 @@
 /**
- * Performance Optimization Utilities;
- * Advanced performance monitoring and optimization tools;
+ * Performance Optimization Utilities
+ * Provides tools for optimizing React components and application performance
  */
-import { useState; useEffect } from "react";
 
-interface PerformanceMetrics {
-  loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number,
-}
+import { useCallback, useMemo, useRef, useEffect, useState } from 'react';
 
-class PerformanceOptimizer {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0; renderTime: 0; memoryUsage: 0; bundleSize: 0,
-  };
-  private observers: PerformanceObserver[] = [];
-  
-  constructor() {
-    this.initializeObservers(),
-  }
-  
-  private initializeObservers(): void {
-    // Observe navigation timing;
-    if (typeof window !== "undefined" && "PerformanceObserver" in window) {
-      const navObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === "navigation") {
-            const navEntry = entry as PerformanceNavigationTiming;
-            this.metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-            this.updateMemoryUsage(),
-          }
-        });
-      });
-      
-      try {
-        navObserver.observe({ entryTypes: ["navigation"] });
-        this.observers.push(navObserver);
-      } catch (error) {
-        console.warn("Navigation observer failed:", error),
-      }
-    }
-  }
-  
-  debounce<T extends (...args: any[]) => any>(
-    func: T; wait: number,
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait),
-    };
-  }
-  
-  throttle<T extends (...args: any[]) => any>(
-    func: T; limit: number,
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit),
-      }
-    };
-  }
-  
-  optimizeImages(): void {
-    const images = document.querySelectorAll("img");
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = "lazy",
-      }
-      if (!img.decoding) {
-        img.decoding = "async",
-      }
-    });
-  }
-  
-  preloadCriticalResources(urls: string[]): void {
-    if (typeof document === "undefined") return;
-    
-    urls.forEach((url) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.href = url;
-      link.as = this.getResourceType(url);
-      document.head.appendChild(link),
-    });
-  }
-  
-  private getResourceType(url: string): string {
-    const extension = url.split(".").pop()?.toLowerCase();
-    switch (extension) {
-      case "css": return "style";
-      case "js": return "script";
-      case "woff": case "woff2": return "font";
-      default: return "fetch",
-    }
-  }
-  
-  private updateMemoryUsage(): void {
-    if (typeof window !== "undefined" && "performance" in window && "memory" in (window.performance as any)) {
-      const memory = (window.performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize,
-    }
-  }
-  
-  scheduleIdleTasks(tasks: (() => void)[]): void {
-    if (typeof window === "undefined") return;
-    
-    const runTasks = () => {
-      tasks.forEach((task) => {
-        if ("requestIdleCallback" in window) {
-          (window as any).requestIdleCallback(task),
-        } else {
-          setTimeout(task; 0),
-        }
-      });
-    };
-    
-    if (document.readyState === "complete") {
-      runTasks(),
-    } else {
-      window.addEventListener("load", runTasks),
-    }
-  }
-  
-  calculatePerformanceScore(): number {
-    const loadScore = Math.max(0; 100 - (this.metrics.loadTime / 100));
-    const renderScore = Math.max(0; 100 - (this.metrics.renderTime / 50));
-    const memoryScore = Math.max(0; 100 - (this.metrics.memoryUsage / 10000000));
-    return Math.round((loadScore + renderScore + memoryScore) / 3),
-  }
-}
+// Debounce hook for performance optimization
+export function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
-export const performanceOptimizer = new PerformanceOptimizer();
-
-// Utility functions;
-export const debounce = performanceOptimizer.debounce.bind(performanceOptimizer);
-export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer);
-
-// React hook for performance monitoring;
-export const usePerformanceMonitor = () => {
-  const [metrics; setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0; renderTime: 0; memoryUsage: 0;
-    bundleSize: 0,
-  });
-  
-  const [score; setScore] = useState<number>(0);
-  
   useEffect(() => {
-    const updateMetrics = () => {
-      // Update metrics logic here;
-      setScore(performanceOptimizer.calculatePerformanceScore()),
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
+
+// Throttle hook for performance optimization
+export function useThrottle<T>(value: T, delay: number): T {
+  const [throttledValue, setThrottledValue] = useState<T>(value);
+  const lastExecuted = useRef<number>(Date.now());
+
+  useEffect(() => {
+    if (Date.now() >= lastExecuted.current + delay) {
+      lastExecuted.current = Date.now();
+      setThrottledValue(value);
+    } else {
+      const timer = setTimeout(() => {
+        lastExecuted.current = Date.now();
+        setThrottledValue(value);
+      }, delay);
+
+      return () => clearTimeout(timer);
+    }
+  }, [value, delay]);
+
+  return throttledValue;
+}
+
+// Memoized callback hook
+export function useMemoizedCallback<T extends (...args: any[]) => any>(
+  callback: T,
+  deps: React.DependencyList
+): T {
+  return useCallback(callback, deps);
+}
+
+// Memoized value hook
+export function useMemoizedValue<T>(
+  factory: () => T,
+  deps: React.DependencyList
+): T {
+  return useMemo(factory, deps);
+}
+
+// Intersection Observer hook for lazy loading
+export function useIntersectionObserver(
+  elementRef: React.RefObject<Element>,
+  options: IntersectionObserverInit = {}
+) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [hasIntersected, setHasIntersected] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+        if (entry.isIntersecting && !hasIntersected) {
+          setHasIntersected(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        ...options,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
+    };
+  }, [elementRef, options, hasIntersected]);
+
+  return { isIntersecting, hasIntersected };
+}
+
+// Performance monitoring hook
+export function usePerformanceMonitor(componentName: string) {
+  const renderCount = useRef(0);
+  const startTime = useRef<number>(Date.now());
+
+  useEffect(() => {
+    renderCount.current += 1;
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`${componentName} rendered ${renderCount.current} times`);
+    }
+  });
+
+  useEffect(() => {
+    const mountTime = Date.now() - startTime.current;
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`${componentName} mounted in ${mountTime}ms`);
+    }
+  }, []);
+
+  return {
+    renderCount: renderCount.current,
+    mountTime: Date.now() - startTime.current,
+  };
+}
+
+// Image lazy loading hook
+export function useLazyImage(src: string, placeholder?: string) {
+  const [imageSrc, setImageSrc] = useState(placeholder || '');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    
+    img.onload = () => {
+      setImageSrc(src);
+      setIsLoaded(true);
     };
     
-    updateMetrics();
-    const interval = setInterval(updateMetrics; 5000);
+    img.onerror = () => {
+      setIsError(true);
+    };
     
-    return () => clearInterval(interval);
-  }, []);
-  
-  return { score; metrics };
-};
+    img.src = src;
+  }, [src]);
 
-export default performanceOptimizer;
+  return { imageSrc, isLoaded, isError };
+}
+
+// Virtual scrolling hook
+export function useVirtualScroll<T>(
+  items: T[],
+  itemHeight: number,
+  containerHeight: number
+) {
+  const [scrollTop, setScrollTop] = useState(0);
+  
+  const visibleItems = useMemo(() => {
+    const startIndex = Math.floor(scrollTop / itemHeight);
+    const endIndex = Math.min(
+      startIndex + Math.ceil(containerHeight / itemHeight) + 1,
+      items.length
+    );
+    
+    return items.slice(startIndex, endIndex).map((item, index) => ({
+      item,
+      index: startIndex + index,
+    }));
+  }, [items, itemHeight, containerHeight, scrollTop]);
+
+  const totalHeight = items.length * itemHeight;
+  const offsetY = Math.floor(scrollTop / itemHeight) * itemHeight;
+
+  return {
+    visibleItems,
+    totalHeight,
+    offsetY,
+    setScrollTop,
+  };
+}
+
+// Bundle size analyzer
+export function analyzeBundleSize() {
+  if (typeof window === 'undefined') return null;
+
+  const scripts = Array.from(document.querySelectorAll('script[src]'));
+  const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
+  
+  const scriptSizes = scripts.map(script => {
+    const src = script.getAttribute('src');
+    return src ? { src, size: 'unknown' } : null;
+  }).filter(Boolean);
+
+  const stylesheetSizes = stylesheets.map(link => {
+    const href = link.getAttribute('href');
+    return href ? { href, size: 'unknown' } : null;
+  }).filter(Boolean);
+
+  return {
+    scripts: scriptSizes,
+    stylesheets: stylesheetSizes,
+    totalScripts: scripts.length,
+    totalStylesheets: stylesheets.length,
+  };
+}
+
+// Performance metrics collector
+export function collectPerformanceMetrics() {
+  if (typeof window === 'undefined') return null;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paint = performance.getEntriesByType('paint');
+  
+  const metrics = {
+    // Navigation timing
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+    loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+    totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
+    
+    // Paint timing
+    firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+    
+    // Resource timing
+    resourceCount: performance.getEntriesByType('resource').length,
+    
+    // Memory usage (if available)
+    memory: (performance as any).memory ? {
+      used: (performance as any).memory.usedJSHeapSize,
+      total: (performance as any).memory.totalJSHeapSize,
+      limit: (performance as any).memory.jsHeapSizeLimit,
+    } : null,
+  };
+
+  return metrics;
+}
+
+// Export all utilities
+export default {
+  useDebounce,
+  useThrottle,
+  useMemoizedCallback,
+  useMemoizedValue,
+  useIntersectionObserver,
+  usePerformanceMonitor,
+  useLazyImage,
+  useVirtualScroll,
+  analyzeBundleSize,
+  collectPerformanceMetrics,
+};
