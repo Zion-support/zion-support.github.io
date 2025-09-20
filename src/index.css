@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-/* Custom animations for enhanced content */
+  /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -636,6 +636,7 @@
     --input: 215 28% 17%;
     --ring: 263 70% 50%;
   }
+}
 }
 
 @layer base {
