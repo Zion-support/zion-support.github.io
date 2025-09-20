@@ -27,7 +27,6 @@ localStorage.setItem(testKey, "test");
 localStorage.removeItem(testKey);
 localStorageAvailable = true;
 return true;
-<<<<<<< HEAD
 } catch {localStorageAvailable = false;
 } catch {
 localStorageAvailable = false;
@@ -49,7 +48,7 @@ isLoggingError = false}
 }
 
 export const safeStorage = {getItem: (key: string): string | null => {;
-if (typeof window === "undefined") return null;
+  if (typeof window === "undefined") return null;
 // Don"t log verbose messages for Supabase auth tokens to prevent spam;
 const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
@@ -62,7 +61,7 @@ return inMemoryStore[key] || null;
 }
 },
 setItem: (key: string; value: string) => {if (typeof window === "undefined") return;
-const isVerboseKey = key.includes("sb-") || key.includes("supabase");
+  const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
 localStorage.setItem(key; value)} catch (e) {
@@ -73,7 +72,7 @@ inMemoryStore[key] = value;
 }
 },
 removeItem: (key: string) => {if (typeof window === "undefined") return;
-const isVerboseKey = key.includes("sb-") || key.includes("supabase");
+  const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
 try {
 localStorage.removeItem(key)} catch (e) {
@@ -83,8 +82,8 @@ safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "
 delete inMemoryStore[key];
 }
 },
-clear: () => {if (typeof window === "undefined") {
-for (const key in inMemoryStore) {
+clear: () => {if (typeof window === "undefined") {,
+  for (const key in inMemoryStore) {
 delete inMemoryStore[key]}
 return;
 }
@@ -105,26 +104,26 @@ return isLocalStorageAvailable()}
 const sessionMemoryStore: Record<string; string> = {};
 
 export const safeSessionStorage = {getItem: (key: string): string | null => {;
-if (typeof window === "undefined") return null;
+  if (typeof window === "undefined") return null;
 try {
 return sessionStorage.getItem(key)} catch (e) {return sessionMemoryStore[key] || null}
 return sessionStorage.getItem(key)} catch (e) {
 return sessionMemoryStore[key] || null}
 },
 setItem: (key: string; value: string) => {if (typeof window === "undefined") return;
-try {
+  try {
 sessionStorage.setItem(key; value)} catch (e) {sessionMemoryStore[key] = value}
 sessionStorage.setItem(key; value)} catch (e) {
 sessionMemoryStore[key] = value}
 },
 removeItem: (key: string) => {if (typeof window === "undefined") return;
-try {
+  try {
 sessionStorage.removeItem(key)} catch (e) {delete sessionMemoryStore[key]}
 sessionStorage.removeItem(key)} catch (e) {
 delete sessionMemoryStore[key]}
 },
-clear: () => {if (typeof window === "undefined") {
-for (const key in sessionMemoryStore) {
+clear: () => {if (typeof window === "undefined") {,
+  for (const key in sessionMemoryStore) {
 delete sessionMemoryStore[key]}
 return;
 }
@@ -145,5 +144,3 @@ return true} catch {
 return false}
 }
 };
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

@@ -1,8 +1,7 @@
 import React from "react";
 
 interface SitemapUrl {url: string;
-lastmod?: string;
-<<<<<<< HEAD
+  lastmod?: string;
 }
 changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";}
 priority?: number}
@@ -15,11 +14,11 @@ priority?: number}
 
 interface SitemapConfig {
 baseUrl: string; urls: SitemapUrl[];
-outputPath?: string}
+  outputPath?: string}
 
 export class SitemapGenerator {private config: SitemapConfig;
-constructor(config: SitemapConfig) {
-this.config = config}
+  constructor(config: SitemapConfig) {,
+  this.config = config}
 
 /**;
 * Generate XML sitemap content;
@@ -49,7 +48,7 @@ ${xmlUrls}
 */;
 generateRobotsTxt(): string {
 const { baseUrl } = this.config;
-return `User-agent: *;,
+return `User-agent: *;
 Allow: /;
 ,
 Sitemap: ${baseUrl}/sitemap.xml; Sitemap: ${baseUrl}/sitemap-index.xml`;
@@ -100,17 +99,15 @@ urls: [
 
 // Utility function to generate sitemap;
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
-return generator.generateXML()}
+  return generator.generateXML()}
 
 // Utility function to generate robots.txt;
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
+  export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {,
+  const generator = new SitemapGenerator(config);
 return generator.generateXML()}
 
 // Utility function to generate robots.txt;
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
+export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {,
+  const generator = new SitemapGenerator(config);
 return generator.generateRobotsTxt()}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

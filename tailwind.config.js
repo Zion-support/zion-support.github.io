@@ -6,12 +6,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
+  theme: {,
+  extend: {
       colors: {
         // Modern color palette
-        primary: {
-          50: '#eff6ff',
+        primary: {,
+  50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
           300: '#93c5fd',
@@ -24,23 +24,23 @@ module.exports = {
           950: '#172554',
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+        secondary: {,
+  DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))"},
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+        destructive: {,
+  DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))"},
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
+        muted: {,
+  DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))"},
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
+        accent: {,
+  DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))"},
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
+        popover: {,
+  DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))"},
-        card: {
-          DEFAULT: "hsl(var(--card))",
+        card: {,
+  DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"},
         // Zion brand colors
         'zion-blue-dark': '#172d67',
@@ -54,8 +54,8 @@ module.exports = {
         'zion-slate-light': '#94a3b8',
         'zion-slate': '#64748b',
         'zion-slate-dark': '#475569'},
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+      fontFamily: {,
+  sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace']},
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -69,8 +69,8 @@ module.exports = {
         'shimmer': 'shimmer 2.5s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate'},
-      keyframes: {
-        fadeIn: {
+      keyframes: {,
+  fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }},
         slideUp: {

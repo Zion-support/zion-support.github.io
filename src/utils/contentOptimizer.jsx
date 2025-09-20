@@ -88,7 +88,6 @@ export, class, ContentOptimizer {
         // Check, for, missing headings;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
-<<<<<<< HEAD
                 type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';
      });
                 type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';});
@@ -251,5 +250,3 @@ export, class, ContentOptimizer {
     }
 };
 export, const, contentOptimizer = new ContentOptimizer();<//p><///p>
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

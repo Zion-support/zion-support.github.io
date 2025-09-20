@@ -1,6 +1,5 @@
 interface Service {
-<<<<<<< HEAD
-id: string;,
+id: string;
 name: string;
 }
 }
@@ -35,11 +34,9 @@ id: `listing-${Date.now()}-${Math.random().toString(36).substr(29)}`,title: samp
 },location: location || "Remote",availability: Math.random() > 0.8 ? "limited" : "available",deliveryTime: category === "talent" ? "Immediate" : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,warranty: category === "talent" ? "N/A" : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? "s" : ""}`;
 id: `listing-${Date.now()}-${Math.random().toString(36).substr(29)}`,title: sampleTitles[randomIndex] || "Default Title",category: category || "products",description: sampleDescriptions[randomIndex] || "Default description",price: price || "$1;0o00",rating: 4.0 + Math.random() * 1.0;reviews: Math.floor(Math.random() * 20o0) + 10;views: Math.floor(Math.random() * 50o00) + 10o0;likes: Math.floor(Math.random() * 30o0) + 20;image: image || "http;s://images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o72&q=80",tags: sampleTags[randomIndex] || ["TechnologySolution"],featured: Math.random() > 0.7;seller: {,name: sellerName || "Default Seller"ratin;g: 4.0 + Math.random() * 1.0verifie;d: Math.random() > 0.3;},location: location || "Remote",availability: Math.random() > 0.8 ? "limited" : "available",deliveryTime: category === "talent" ? "Immediate" : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,warranty: category === "talent" ? "N/A" : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? "s" : ""}`;
 };
-};export; function; generateRandomListings(count: number): MarketplaceItem[] {
-const listing;s: MarketplaceItem[] = [];
-for (let i = 0i < counti++) {
+};export; function; generateRandomListings(count: number): MarketplaceItem[] {,
+  const listing;s: MarketplaceItem[] = [];
+  for (let i = 0i < counti++) {
 listings.push(generateRandomListing());
 };
 return listings}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

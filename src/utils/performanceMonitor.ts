@@ -1,18 +1,16 @@
 import React from "react";
 
-<<<<<<< HEAD
 interface PerformanceMetric {name: string; startTime: number;
 }
 endTime?: number;}
 interface PerformanceMetric {
 name: string; startTime: number;
-endTime?: number;
+  endTime?: number;
 duration?: number}
 
-class PerformanceMonitor {private metrics: Map<string; PerformanceMetric> = new Map();
-private observers: PerformanceObserver[] = [];
-
-constructor() {
+class PerformanceMonitor {private metrics: Map<string; PerformanceMetric> = new Map();,
+  private observers: PerformanceObserver[] = [];
+  constructor() {
 this.initializeObservers()}
 
 private initializeObservers() {// Monitor Core Web Vitals;
@@ -54,28 +52,25 @@ this.logMetric("CLS", clsValue);
 clsObserver.observe({ entryTypes: ["layout-shift"] });
 this.observers.push(clsObserver);
 } catch (error) {console.warn("CLS observer failed: ", error)}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }
 }
 
-startTiming(name: string): void {const metric: PerformanceMetric = {
-<<<<<<< HEAD
-name;
+startTiming(name: string): void {const metric: PerformanceMetric = {,
+  name;
 } catch (error) {
 console.warn("CLS observer failed:", error)}
 }
 }
 
-startTiming(name: string): void {
-const metric: PerformanceMetric = {
-name;,
+startTiming(name: string): void {,
+  const metric: PerformanceMetric = {,
+  name;,
 startTime: performance.now()};
 this.metrics.set(name; metric);
 }
 
-endTiming(name: string): number {
-const metric = this.metrics.get(name),;
+endTiming(name: string): number {,
+  const metric = this.metrics.get(name),;
 if (!metric) {;
 console.warn(`No timing started for: ${name}`);
 return 0;
@@ -90,9 +85,9 @@ this.logMetric(name; duration);
 return duration;
 }
 
-measureFunction<T extends (...args: any[]) => any>(
-name: string; func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {
-this.startTiming(name);
+measureFunction<T extends (...args: any[]) => any>(,
+  name: string; func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {,
+  this.startTiming(name);
 try {
 const result = func(...args);
 this.endTiming(name);
@@ -104,7 +99,7 @@ throw error}
 }
 
 async measureAsync<T>(
-name: string;,
+name: string;
 asyncFunc: () => Promise<T>;
 ): Promise<T> {this.startTiming(name);
 try {
@@ -119,7 +114,7 @@ throw error}
 private logMetric(name: string; value: number): void {if (typeof window !== "undefined" && "gtag" in window) {
 // Send to Google Analytics,
 (window as any).gtag("event", "timing_complete", {
-name: name;,
+name: name;
 value: Math.round(value),
 custom_map: {,
 metric_category: "performance"}
@@ -143,8 +138,8 @@ this.observers = []}
 
 export const performanceMonitor = new PerformanceMonitor();
 
-export const usePerformanceMonitor: any = () => {
-return {,
+export const usePerformanceMonitor: any = () => {,
+  return {,
 startTiming: performanceMonitor.startTiming.bind(performanceMonitor),
 endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
 measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),
@@ -155,5 +150,3 @@ cleanup: performanceMonitor.cleanup.bind(performanceMonitor),;
 };
 
 export default performanceMonitor;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

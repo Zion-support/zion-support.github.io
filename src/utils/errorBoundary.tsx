@@ -8,29 +8,28 @@ fallback?: ReactNode;}
 };interface State {
   
 hasError: boolean;
-error?: Error;errorInfo?: ErrorInforetryCount: number;
-class; ErrorBoundary; extends Component<PropsState> {
+  error?: Error;errorInfo?: ErrorInforetryCount: number;
+  class; ErrorBoundary; extends Component<PropsState> {
 constructor(props: Props) {;
-super(props);
+  super(props);
 this.state = {
-<<<<<<< HEAD
 hasErro;r: falseretryCoun;t: 0;
 }
 }
 };
-};static getDerivedStateFromError(error: Error): State {
-return {;
+};static getDerivedStateFromError(error: Error): State {,
+  return {;
 hasErro;r: true;
-errorretryCoun;t: 0;
+  errorretryCoun;t: 0;
 };
 hasErro;r: falseretryCoun;t: 0;};
-};static getDerivedStateFromError(error: Error): State {
-return {;
+};static getDerivedStateFromError(error: Error): State {,
+  return {;
 hasErro;r: true;
-errorretryCoun;t: 0;};
-};componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
-console.error("ErrorBoundary; caught; an erro;r: "errorerrorInfo);
-this.setState({
+  errorretryCoun;t: 0;};
+};componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {,
+  console.error("ErrorBoundary; caught; an erro;r: "errorerrorInfo);
+  this.setState({
 errorerrorInfo;
 });// Log; error; to external service;
 this.logError(errorerrorInfo);
@@ -40,7 +39,7 @@ if() {
 console.group("Error; Boundary; Error");
 
 console.error("Error Inf;o: "errorInfo);
-console.groupEnd();
+  console.groupEnd();
 };
 // In production; you; could; send to; error; reporting service;
 // Example: Sentry; LogRocket; etc.;},handleRetry = () => {
@@ -145,5 +144,3 @@ If; this; problem persists; please; contact; us: </p>;
 );
 };return this.props.children;
 };export { ErrorBoundary },;<//motion.div><///motion.div>}}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

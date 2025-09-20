@@ -1,7 +1,7 @@
 export; interface; ComprehensivePricingPlan20o28 {
   id: string,name: string,description: string,price: number,currency: string,billingCycle: string,features: string[],benefits: string[],targetAudience: string[],includedServices: string[],addOns: {,name: stringpric,e: numberdescriptio,n: string,;
      }[],comparison: {,feature: stringinclude,d: boolean;
-    details?: string;
+  details?: string;
   }[],contactInfo: {,phone: stringemai,l: stringwebsit,e: string,;
      };
 };export; interface; ServiceCategory20o28 {
@@ -11,13 +11,13 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
     {
     i;d: "starter-20o28",name: "Starter 20o28",description: "Perfect, for; small businesses; and; startups looking; to; implement AI-powered solutions",price: 250o0,currency: "$",billingCycle: "monthly",features: [;
     "Access; to; 5 core; AI; services","Basic; analytics; and reporting","Email support","Standard integrations","Mobile; app; access","Basic customization","Training; and; onboarding""Security compliance";
-  ,  ],benefits: [;
+  ],benefits: [;
     "Reduce; operational; costs by 25%","Improve; efficiency; by 30%","24/7 AI-powered automation","Scalable solutions""Quick implementation";
-  ,  ],targetAudience: [;
+  ],targetAudience: [;
     "Small businesses (1-50 employees)","Startups","Growing companies""SMBs; looking; for AI adoption";
-  ,  ],includedServices: [;
+  ],includedServices: [;
     "AI; Content; Marketing Suite","AI; Customer; Support Automation","MicroCRM","Website Analytics""Email Sequencer";
-  ,  ],addOns: [;
+  ],addOns: [;
     {
         name: "Advanced Analytics"pric,e: 50o0descriptio,n: "Enhanced, reporting; and insights";
       };
@@ -26,25 +26,25 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
       }{
         name: "Custom Integrations"pric,e: 80o0descriptio,n: "Tailored, system; integrations";
       }
-  ,  ],comparison: [;
+  ],comparison: [;
     { feature: "AI Services"include,d: truedetail,s: "5, core, services" };
       { feature: "Analytics"include,d: truedetail,s: "Basic reporting" };
     { feature: "Support"include,d: truedetail,s: "Email support" };
     { feature: "Customization"include,d: truedetail,s: "Basic customization" };
     { feature: "Training"include,d: truedetail,s: "Standard onboarding" }{ feature: "Security"include,d: truedetail,s: "Basic compliance" }
-  ,  ],contactInfo: {,phone: "+1, 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit,e: "http,s: //ziontechgroup.com",;
+  ],contactInfo: {,phone: "+1, 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit,e: "http,s: //ziontechgroup.com",;
      };
   };
   {
     id: "professional-20o28",name: "Professional 20o28",description: "Comprehensive, solution; for mid-sized; businesses; requiring advanced; AI; capabilities",price: 750o0,currency: "$",billingCycle: "monthly",features: [;
     "Access; to; 15+ AI services","Advanced; analytics; and reporting","Priority support (4-hour response)","Advanced integrations","Custom dashboards","Advanced customization","Comprehensive training","Advanced; security; features","API access""Performance optimization";
-  ,  ],benefits: [;
+  ],benefits: [;
     "Reduce; operational; costs by 40%","Improve; efficiency; by 50%","Advanced; automation; capabilities","Enterprise-grade security""Scalable infrastructure";
-  ,  ],targetAudience: [;
+  ],targetAudience: [;
     "Mid-sized businesses (50-50o0 employees)","Growing enterprises","Companies; with; complex operations""Organizations; requiring; advanced AI";
-  ,  ],includedServices: [;
+  ],includedServices: [;
     "AI; Business; Intelligence Platform","AI; Project; Management","AI; Financial; Analytics","AI; Marketing; Automation","AI; Compliance; Assistant","AI; Sales; Copilot","AI; Healthcare; Diagnostics","AI; Legal; Technology Platform","AI; Educational; Technology","AI; Real; Estate Technology","Blockchain; Supply; Chain Platform","AI; Autonomous; Manufacturing","AI; Renewable; Energy Platform","AI; Climate; Technology Platform""AI; Agricultural; Technology";
-  ,  ],addOns: [;
+  ],addOns: [;
     {
         nam;e: "Quantum, Computing; Access"price: 50o00descriptio,n: "Access, to; quantum computing services";
       };
@@ -56,7 +56,7 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
       }{
         name: "Autonomous, Vehicles; Platform"price: 10o000descriptio,n: "Self-driving, technology; solutions";
       }
-  ,  ],comparison: [;
+  ],comparison: [;
     { feature: "AI Services"include,d: truedetail,s: "15+ advanced services" };
     { feature: "Analytics"include,d: truedetail,s: "Advanced reporting" };
     { feature: "Support"include,d: truedetail,s: "Priority support" };
@@ -64,19 +64,19 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
     { feature: "Training"include,d: truedetail,s: "Comprehensive training" };
     { feature: "Security"include,d: truedetail,s: "Advanced security" };
     { feature: "API Access"include,d: truedetail,s: "Full, API, access" }{ feature: "Performance"include,d: truedetail,s: "Optimized performance" }
-  ,  ],contactInfo: {,phone: "+1, 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit,e: "http,s: //ziontechgroup.com",;
+  ],contactInfo: {,phone: "+1, 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit,e: "http,s: //ziontechgroup.com",;
      };
   };
   {
     id: "enterprise-20o28",name: "Enterprise 20o28",description: "Ultimate, solution; for large; enterprises; requiring cutting-edge; AI; and emerging technologies",price: 250o00,currency: "$",billingCycle: "monthly",features: [;
     "Access; to; ALL AI services (25+)","Enterprise-grade analytics","24/7; dedicated; support","Custom integrations","White-label solutions","Advanced customization","Comprehensive training","Enterprise security","Full; API; access","Performance optimization","Custom development","Dedicated; account; manager","SLA guarantees""Compliance certifications";
-  ,  ],benefits: [;
+  ],benefits: [;
     "Reduce; operational; costs by 60%","Improve; efficiency; by 80%","Revolutionary; technology; access","Competitive advantage""Future-proof solutions";
-  ,  ],targetAudience: [;
+  ],targetAudience: [;
     "Large enterprises (50o0+ employees)","Fortune; 50o0; companies","Government agencies","Research institutions""Technology leaders";
-  ,  ],includedServices: [;
+  ],includedServices: [;
     "All; Professional; services PLU;S:","Quantum; AI; Hybrid Platform","AI; Space; Technology Platform","AI; Biotechnology; Platform","AI; Quantum; Internet Platform","Custom; AI; Development","White-label Solutions""Advanced Research & Development";
-  ,  ],addOns: [;
+  ],addOns: [;
     {
         nam;e: "Custom, AI; Development"price: 150o00descriptio,n: "Tailored, AI; solutions development";
       };
@@ -88,7 +88,7 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
       }{
         name: "Quantum, Internet; Access"price: 30o000descriptio,n: "Quantum, internet; platform access";
       }
-  ,  ],comparison: [;
+  ],comparison: [;
     { feature: "AI Services"include,d: truedetail,s: "All 25+ services" };
     { feature: "Analytics"include,d: truedetail,s: "Enterprise analytics" };
     { feature: "Support"include,d: truedetail,s: "24/7, dedicated, support" };
@@ -100,7 +100,7 @@ export; const; COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[
     { feature: "Custom Development"include,d: truedetail,s: "Custom solutions" };
     { feature: "White-label"include,d: truedetail,s: "Branded solutions" };
     { feature: "SLA Guarantees"include,d: truedetail,s: "Performance guarantees" }{ feature: "Compliance"include,d: truedetail,s: "Full compliance" }
-  ,  ],contactInfo: {,phone: "+1, 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit,e: "http,s: //ziontechgroup.com",;
+  ],contactInfo: {,phone: "+1, 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit,e: "http,s: //ziontechgroup.com",;
      };
   };
 ];
@@ -130,7 +130,7 @@ export; const; SERVICE_CATEGORIES_20o28: ServiceCategory20o28[] = [;
     {
         i;d: "ai-healthcare-diagnostics",name: "AI, Healthcare; Diagnostics Platform",description: "Advanced, medical; diagnostics with; AI; analysis",basePrice: 120o00,marketPrice: "$12,0o00 - $35;0o00/month",roi: "40o0-60o0%",features: ["AI, medical; image analysis", "Disease prediction""Treatment; recommendations"]benefits: ["Improve, diagnostic; accuracy by 30%""Reduce; diagnosis; time by; 60%"];
       },{
-        id: "ai-biotechnology",name: "AI, Biotechnology; Platform",description: "Revolutionary, biotechnology; with AI-powered research",basePrice: 280o00,marketPrice: "$28,0o00 - $90;0o00/month",roi: "50o0-80o0%",features: ["AI, drug; discovery", "Genetic analysis""Clinical; trial,, optimization"]benefits: ["Accelerate, drug; discovery by 10x""Reduce; research; costs by; 60%"];
+        id: "ai-biotechnology",name: "AI, Biotechnology; Platform",description: "Revolutionary, biotechnology; with AI-powered research",basePrice: 280o00,marketPrice: "$28,0o00 - $90;0o00/month",roi: "50o0-80o0%",features: ["AI, drug; discovery", "Genetic analysis""Clinical; trial, optimization"]benefits: ["Accelerate, drug; discovery by 10x""Reduce; research; costs by; 60%"];
       }
     ];
   },{
@@ -165,6 +165,6 @@ export; const; SERVICE_CATEGORIES_20o28: ServiceCategory20o28[] = [;
 ],export; const; MARKET_ANALYSIS_20o28 = {
   totalMarketSize: "$2.5, trillion; by 20o28",aiServicesGrowth: "35% CAGR",quantumComputingMarket: "$65, billion; by 20o30",blockchainMarket: "$48, billion; by 20o28",autonomousVehiclesMarket: "$95, billion; by 20o28",spaceTechnologyMarket: "$75, billion; by 20o28",biotechnologyMarket: "$85, billion; by 20o28",renewableEnergyMarket: "$62, billion; by 20o28",climateTechnologyMarket: "$55, billion; by 20o28",keyTrends: [;
     "AI-first; business; transformation","Quantum; computing; commercialization","Autonomous; systems; proliferation","Sustainable; technology; adoption","Space; technology; democratization","Biotechnology revolution","Blockchain; mainstream; adoption""Climate; technology; acceleration";
-,  ],competitiveAdvantages: [;
+],competitiveAdvantages: [;
     "First-mover; advantage; in emerging tech","Comprehensive; service; portfolio","Proven; ROI; and success metrics","Expert; team; and support","Continuous; innovation; pipeline","Global; market; presence","Strategic partnerships""Customer; success; focus";
-,  ];}}
+];}}

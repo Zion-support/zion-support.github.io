@@ -1,38 +1,38 @@
 export interface InnovativeService2025 {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    price: number;
+  price: number;
     currency: string;
-    pricingModel: string;
+  pricingModel: string;
     features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     tags: string[];
-    estimatedDelivery: string;
+  estimatedDelivery: string;
     supportLevel: string;
-    marketPrice: string;
-    contactInfo: {
-    phone: string;
+  marketPrice: string;
+    contactInfo: {,
+  phone: string;
     email: string;
-    website: string,;
+  website: string,;
      };
 }
 
 export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
   {
     id: "ai-predictive-business-intelligence";
-    title: "AI-Powered Predictive Business Intelligence Platform";
+  title: "AI-Powered Predictive Business Intelligence Platform";
     description: "Advanced business intelligence platform that uses machine learning to predict market trends, customer behavior; and business outcomes with 95% accuracy.";
     category: "AI & Analytics";
-    subcategory: "Business Intelligence";
+  subcategory: "Business Intelligence";
     price: 3500;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Real-time predictive analytics";
       "AI-powered forecasting models";
       "Custom dashboard builder";
@@ -61,24 +61,24 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
     ];
     tags: ["AI", "Business Intelligence", "Predictive Analytics", "Machine Learning", "Data Science"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$3,500 - $12;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   };
   {
     id: "autonomous-ai-development-platform";
-    title: "Autonomous AI Development & Deployment Platform";
+  title: "Autonomous AI Development & Deployment Platform";
     description: "Self-evolving AI platform that automatically designs, trains; and deploys machine learning models without human intervention; continuously improving performance.";
     category: "AI & Development";
-    subcategory: "Autonomous Systems";
+  subcategory: "Autonomous Systems";
     price: 5000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "AutoML model generation";
       "Continuous learning and optimization";
       "Automated hyperparameter tuning";
@@ -107,16 +107,16 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
     ];
     tags: ["AI", "AutoML", "Machine Learning", "DevOps", "Automation"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$5,000 - $15;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   }
 ];
-    export const getServicesByCategory = (category: string) : any => {
+    export const getServicesByCategory = (category: string) : any => {,
   return INNOVATIVE_NEW_SERVICES_2025.filter(service => service.category === category);
   };
 

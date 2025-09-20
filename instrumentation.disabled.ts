@@ -6,14 +6,12 @@ if (
   typeof global !== 'undefined' &&
   typeof (global as any).self === 'undefined'
 ) {
-  (global as any).self = global,
-}
+  (global as any).self = global}
 if (
   typeof globalThis !== 'undefined' &&
   typeof (globalThis as any).self === 'undefined'
 ) {
-  (globalThis as any).self = globalThis,
-}
+  (globalThis as any).self = globalThis}
 
 import './src/utils/server-polyfill',
 
@@ -24,8 +22,7 @@ let onRequestError: any = null,
 async function initializeSentryOrMock() : any {
   if (process.env['NEXT_RUNTIME'] === 'edge') {
     console.log(
-      'instrumentation.ts: Edge runtime detected. Forcing Sentry mock.',
-    ),
+      'instrumentation.ts: Edge runtime detected. Forcing Sentry mock.'),
     const mockSentry = await import('./src/utils/sentry-mock'), // Ensure this path is correct
     Sentry = mockSentry.default,
     onRequestError = mockSentry.onRequestError, // Ensure mock provides this if used
@@ -44,8 +41,7 @@ async function initializeSentryOrMock() : any {
         console.log('instrumentation.ts: Sentry DSN invalid or disabled by env var, using Sentry mock for Node.js.'),
         const mockSentry = await import('./src/utils/sentry-mock'),
         Sentry = mockSentry.default,
-        onRequestError = mockSentry.onRequestError,
-      } else {
+        onRequestError = mockSentry.onRequestError} else {
         console.log('instrumentation.ts: Valid Sentry DSN found, attempting to load actual @sentry/nextjs for Node.js.'),
         const sentryModule = await import('@sentry/nextjs'),
         Sentry = sentryModule,
@@ -58,8 +54,7 @@ async function initializeSentryOrMock() : any {
         error),
       const mockSentry = await import('./src/utils/sentry-mock'),
       Sentry = mockSentry.default,
-      onRequestError = mockSentry.onRequestError,
-    }
+      onRequestError = mockSentry.onRequestError}
   } else {
     // Client-side environment, Sentry is typically handled by _app.tsx or similar client-specific setup.
     // The instrumentation hook (register function) primarily runs server-side (Node or Edge).
@@ -81,10 +76,8 @@ export async function register() : any {
 
   if (!Sentry || typeof Sentry.init !== 'function') {
     console.log(
-      'instrumentation.ts: Sentry SDK not available or not correctly initialized, skipping Sentry.init().',
-    ),
-    return,
-  }
+      'instrumentation.ts: Sentry SDK not available or not correctly initialized, skipping Sentry.init().'),
+    return}
 
   const SENTRY_DSN =
     process.env['SENTRY_DSN'] || process.env['NEXT_PUBLIC_SENTRY_DSN'],
@@ -109,13 +102,10 @@ export async function register() : any {
   if (isInvalidDsn) {
     if (process.env.NODE_ENV === 'development') {
       console.log(
-        'instrumentation.ts: Sentry disabled in development (no valid DSN configured)',
-      ),
-    } else {
+        'instrumentation.ts: Sentry disabled in development (no valid DSN configured)')} else {
       console.warn('instrumentation.ts: Sentry DSN not configured for production environment');
 };
-    return,
-  }
+    return}
 
   console.log(`instrumentation.ts: Initializing Sentry for server-side. Release: ${SENTRY_RELEASE}, Env: ${SENTRY_ENVIRONMENT}`),
 
@@ -133,8 +123,7 @@ export async function register() : any {
           event.exception?.values?.[0]?.value === undefined
         ) {
           console.log('instrumentation.ts: Sentry event dropped due to empty exception value.'),
-          return null,
-        }
+          return null}
 
         // Filter out common development noise
         if (process.env.NODE_ENV === 'development') {
@@ -148,19 +137,17 @@ export async function register() : any {
           }
         }
 
-        return event,
-      },
+        return event},
 
-      initialScope: (scope: any) : any => {
-        if (SENTRY_RELEASE) {
+      initialScope: (scope: any) : any => {,
+  if (SENTRY_RELEASE) {
           scope.setTag('release', SENTRY_RELEASE);
 };
         if (SENTRY_ENVIRONMENT) {
           scope.setTag('environment', SENTRY_ENVIRONMENT);
 };
         scope.setTag('runtimeserver-side'),
-        return scope,
-      },
+        return scope},
 
       // Enable debug logging only in development
       debug: process.env.NODE_ENV === 'development',
@@ -171,8 +158,7 @@ export async function register() : any {
       sendDefaultPii: false, // Don't send personally identifiable information
     }),
 
-    console.log('instrumentation.ts: Server-side Sentry initialized successfully'),
-  } catch (error) {
+    console.log('instrumentation.ts: Server-side Sentry initialized successfully')} catch (error) {
     console.error('instrumentation.ts: Failed to initialize Sentry:', error);
   }
 }

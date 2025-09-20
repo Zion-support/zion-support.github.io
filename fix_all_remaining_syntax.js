@@ -7,7 +7,6 @@ const path = require('path');
 function fixAllSyntaxErrors(content) {
   let fixed = content;
   
-<<<<<<< HEAD
   // Fix interface definitions
   content = content.replace(/interface (\w+) extends ([^{]+) {,/g, 'interface $1 extends $2 {');
   content = content.replace(/(\w+):\s*([^;]+);}/g, '$1: $2;\n}');
@@ -31,11 +30,6 @@ function fixAllSyntaxErrors(content) {
       return match + '\n}';
     }
     return match;
-=======
-  // Fix extra commas in imports
-  fixed = fixed.replace(/import\s+[^;]+,\s*;/g, (match) => {
-    return match.replace(/,\s*;/, ';');
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
   });
   
   // Fix missing semicolons in imports

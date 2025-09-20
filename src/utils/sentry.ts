@@ -1,16 +1,15 @@
 import React from "react";
 
 let nodeSentry: any;
-<<<<<<< HEAD
-try {// Optional dependency for server-side logging;
+  try {// Optional dependency for server-side logging;
 nodeSentry = require("@sentry/node")} catch {nodeSentry = null}
 try {
 // Optional dependency for server-side logging;
 nodeSentry = require("@sentry/node")} catch {
 nodeSentry = null}
 
-export function captureException(error: unknown) {
-if (process.env.NODE_ENV === "development") {
+export function captureException(error: unknown) {,
+  if (process.env.NODE_ENV === "development") {
 if (typeof console !== "undefined") {
 
 }
@@ -22,5 +21,3 @@ if (typeof window !== "undefined" && (window as any).Sentry?.captureException) {
 nodeSentry.captureException(error)}
 }
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

@@ -15,14 +15,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
   // Quantum AI Orchestration Platform;
   {
     id: "quantum-ai-orchestration-platform";
-    title: "Quantum AI Orchestration Platform";
+  title: "Quantum AI Orchestration Platform";
     description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time, enabling unprecedented computational power for enterprise applications.";
     category: "Quantum AI & Computing";
-    subcategory: "Quantum Orchestration";
+  subcategory: "Quantum Orchestration";
     price: 2500;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Quantum-classical hybrid algorithms";
       "Real-time optimization engine";
       "AI-driven quantum circuit design";
@@ -55,31 +55,31 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     ];
     tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$2, 500 - $10;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     technology: ["Qiskit", "TensorFlow", "Python", "Rust", "Quantum Hardware"];
     integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"];
     compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"];
     roi: "500% within 12 months";
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"];
+  competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"];
     launchDate: "Q1 2025";
-    betaAccess: true,;
+  betaAccess: true,;
   };
 
   // Autonomous AI Business Operations Suite;
   {
     id: "autonomous-ai-business-operations-suite";
-    title: "Autonomous AI Business Operations Suite";
+  title: "Autonomous AI Business Operations Suite";
     description: "Complete AI-powered business automation platform that runs entire business operations autonomously, from decision-making to execution; with human oversight capabilities.";
     category: "AI & Business Automation";
-    subcategory: "Autonomous Operations";
+  subcategory: "Autonomous Operations";
     price: 1800, currency: "$";
-    pricingModel: "monthly";
+  pricingModel: "monthly";
     features: [
       "Autonomous decision-making engine";
       "Real-time business intelligence";
@@ -113,31 +113,31 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     ];
     tags: ["AI", "Automation", "Business Operations", "Autonomous", "Enterprise"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$1, 800 - $5;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
     integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"];
     compliance: ["SOC 2", "GDPR", "ISO 27001"];
     roi: "400% within 8 months";
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism"];
+  competitors: ["UiPath", "Automation Anywhere", "Blue Prism"];
     launchDate: "Q2 2025";
-    betaAccess: true,;
+  betaAccess: true,;
   };
 
   // Neural Interface Development Platform;
   {
     id: "neural-interface-development-platform";
-    title: "Neural Interface Development Platform";
+  title: "Neural Interface Development Platform";
     description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications, enabling direct communication between human brain and digital systems.";
     category: "Neural Technology";
-    subcategory: "Brain-Computer Interface";
+  subcategory: "Brain-Computer Interface";
     price: 3500, currency: "$";
-    pricingModel: "monthly";
+  pricingModel: "monthly";
     features: [
       "EEG signal processing";
       "Neural pattern recognition";
@@ -171,31 +171,31 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     ];
     tags: ["Neural Interface", "BCI", "Accessibility", "Medical", "Research"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$3, 500 - $15;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     technology: ["Python", "TensorFlow", "PyTorch", "C++", "CUDA"];
     integrations: ["Medical devices", "Research platforms", "Gaming engines"];
     compliance: ["FDA", "HIPAA", "ISO 13485", "CE Mark"];
     roi: "300% within 18 months";
-    competitors: ["Neuralink", "Kernel", "CTRL-labs"];
+  competitors: ["Neuralink", "Kernel", "CTRL-labs"];
     launchDate: "Q3 2025";
-    betaAccess: false,;
+  betaAccess: false,;
   };
 
   // Holographic Collaboration Workspace;
   {
     id: "holographic-collaboration-workspace";
-    title: "Holographic Collaboration Workspace";
+  title: "Holographic Collaboration Workspace";
     description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments, revolutionizing remote work and creative collaboration.";
     category: "Immersive Technology";
-    subcategory: "Holographic Collaboration";
+  subcategory: "Holographic Collaboration";
     price: 1200, currency: "$";
-    pricingModel: "monthly";
+  pricingModel: "monthly";
     features: [
       "3D holographic displays";
       "Spatial audio communication";
@@ -229,31 +229,31 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     ];
     tags: ["Holographic", "VR/AR", "Collaboration", "Remote Work", "3D"];
     estimatedDelivery: "4-5 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$1, 200 - $3;500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     technology: ["Unity", "Unreal Engine", "WebGL", "WebXR", "Three.js"];
     integrations: ["Slack", "Microsoft Teams", "Zoom", "Figma", "Autodesk"];
     compliance: ["GDPR", "SOC 2", "ISO 27001"];
     roi: "250% within 6 months";
-    competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"];
+  competitors: ["Microsoft Mesh", "Meta Horizon", "Spatial"];
     launchDate: "Q2 2025";
-    betaAccess: true,;
+  betaAccess: true,;
   };
 
   // AI-Powered Cybersecurity Mesh;
   {
     id: "ai-powered-cybersecurity-mesh";
-    title: "AI-Powered Cybersecurity Mesh";
+  title: "AI-Powered Cybersecurity Mesh";
     description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments, from edge to cloud.";
     category: "Cybersecurity";
-    subcategory: "AI Security";
+  subcategory: "AI Security";
     price: 2200, currency: "$";
-    pricingModel: "monthly";
+  pricingModel: "monthly";
     features: [
       "Distributed security architecture";
       "AI threat detection";
@@ -287,31 +287,31 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     ];
     tags: ["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$2, 200 - $8;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     technology: ["Python", "TensorFlow", "Kubernetes", "Docker", "Elasticsearch"];
     integrations: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers"];
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"];
     roi: "350% within 12 months";
-    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"];
+  competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"];
     launchDate: "Q1 2025";
-    betaAccess: true,;
+  betaAccess: true,;
   };
 
   // Sustainable Tech Innovation Hub;
   {
     id: "sustainable-tech-innovation-hub";
-    title: "Sustainable Tech Innovation Hub";
+  title: "Sustainable Tech Innovation Hub";
     description: "Comprehensive platform for developing and deploying sustainable technology solutions, including green computing; renewable energy optimization; and environmental impact tracking.";
     category: "Sustainable Technology";
-    subcategory: "Green Innovation";
+  subcategory: "Green Innovation";
     price: 1500, currency: "$";
-    pricingModel: "monthly";
+  pricingModel: "monthly";
     features: [
       "Green computing optimization";
       "Renewable energy management";
@@ -345,20 +345,20 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     ];
     tags: ["Sustainability", "Green Tech", "Environmental", "Renewable Energy", "Compliance"];
     estimatedDelivery: "4-5 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$1, 500 - $4;500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     technology: ["Python", "IoT platforms", "Blockchain", "Machine Learning", "Cloud Computing"];
     integrations: ["Energy management systems", "IoT sensors", "Sustainability platforms"];
     compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"];
     roi: "200% within 12 months";
-    competitors: ["WattTime", "Carbon Trust", "Sustain.Life"];
+  competitors: ["WattTime", "Carbon Trust", "Sustain.Life"];
     launchDate: "Q2 2025";
-    betaAccess: true;
+  betaAccess: true;
 export interface ServiceContact {
   phone: string, email: string, website: string, address: string;
 }
@@ -375,13 +375,13 @@ export interface NextGenService {
 export const nextGenInnovativeServices2025: NextGenService[] = [
   {
     id: 1;
-    name: "Quantum AI Hybrid Computing Platform";
+  name: "Quantum AI Hybrid Computing Platform";
     category: "Quantum Computing";
-    subcategory: "AI Integration";
+  subcategory: "AI Integration";
     description: "Revolutionary platform combining quantum computing capabilities with advanced AI algorithms to solve complex problems impossible for classical computers";
-    pricing: "Enterprise";
+  pricing: "Enterprise";
     price: 25000;
-    pricingModel: "monthly";
+  pricingModel: "monthly";
     features: [
       "Quantum-classical hybrid algorithms";
       "Real-time quantum simulation";
@@ -402,29 +402,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Research institutions", "Pharmaceutical companies", "Financial institutions", "Government agencies"];
     tags: ["Quantum Computing", "AI", "Machine Learning", "Research", "High Performance Computing"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/quantum-ai-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/quantum-ai-platform";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$25, 000-50; 000/month";
     technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "Quantum Hardware"];
     compliance: ["ISO 27001", "NIST", "Quantum Security Standards"];
     scalability: ["Quantum Cloud Access", "Distributed Computing", "Scalable Algorithms"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.5,;
   };
   {
     id: 2, name: "Metaverse Business Platform & Virtual Commerce";
-    category: "Metaverse & VR";
+  category: "Metaverse & VR";
     subcategory: "Business Solutions";
-    description: "Comprehensive metaverse platform enabling businesses to create, manage; and monetize virtual experiences and digital assets";
+  description: "Comprehensive metaverse platform enabling businesses to create, manage; and monetize virtual experiences and digital assets";
     pricing: "Premium";
-    price: 12000;
+  price: 12000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "3D virtual environment creation";
       "Digital asset marketplace";
       "Virtual commerce integration";
@@ -444,29 +444,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Retail businesses", "Event organizers", "Real estate companies", "Entertainment companies"];
     tags: ["Metaverse", "Virtual Reality", "Digital Commerce", "3D Technology", "Blockchain"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/metaverse-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/metaverse-platform";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$12, 000-25; 000/month";
     technologyStack: ["Unity", "Unreal Engine", "WebGL", "Three.js", "Blockchain", "Cloud Services"];
     compliance: ["GDPR", "COPPA", "Virtual Asset Regulations"];
     scalability: ["Cloud-based Rendering", "CDN Integration", "Multi-platform Support"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     innovationScore: 8.8,;
   };
   {
     id: 3, name: "Autonomous Vehicle AI Platform & Fleet Management";
-    category: "Autonomous Systems";
+  category: "Autonomous Systems";
     subcategory: "Transportation";
-    description: "Advanced AI-powered platform for autonomous vehicle operations, fleet management; and intelligent transportation systems";
+  description: "Advanced AI-powered platform for autonomous vehicle operations, fleet management; and intelligent transportation systems";
     pricing: "Enterprise";
-    price: 18000;
+  price: 18000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "AI-powered route optimization";
       "Real-time traffic analysis";
       "Predictive maintenance alerts";
@@ -486,29 +486,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Transportation companies", "Logistics providers", "Municipalities", "Manufacturing companies"];
     tags: ["Autonomous Vehicles", "AI", "Fleet Management", "Transportation", "IoT"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/autonomous-vehicle-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/autonomous-vehicle-platform";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$18, 000-35; 000/month";
     technologyStack: ["Python", "TensorFlow", "ROS", "Computer Vision", "IoT Sensors", "Cloud Computing"];
     compliance: ["DOT Regulations", "Safety Standards", "Insurance Requirements"];
     scalability: ["Multi-fleet Support", "Geographic Expansion", "Vehicle Type Support"];
     estimatedDelivery: "10-14 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.2,;
   };
   {
     id: 4, name: "AI-Powered Healthcare Diagnostic Platform";
-    category: "Healthcare Technology";
+  category: "Healthcare Technology";
     subcategory: "Medical AI";
-    description: "Advanced AI platform for medical diagnostics, patient monitoring; and healthcare analytics with high accuracy";
+  description: "Advanced AI platform for medical diagnostics, patient monitoring; and healthcare analytics with high accuracy";
     pricing: "Enterprise";
-    price: 15000;
+  price: 15000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "Medical image analysis";
       "Symptom assessment AI";
       "Treatment recommendation engine";
@@ -528,29 +528,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Healthcare providers", "Medical institutions", "Healthcare administrators", "Medical researchers"];
     tags: ["Healthcare AI", "Medical Diagnostics", "Machine Learning", "Telemedicine", "Medical Imaging"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/healthcare-ai-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/healthcare-ai-platform";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$15, 000-30; 000/month";
     technologyStack: ["Python", "TensorFlow", "Medical Imaging Libraries", "HIPAA-compliant Cloud", "IoT Devices"];
     compliance: ["HIPAA", "FDA", "ISO 13485", "SOC2"];
     scalability: ["Multi-site Support", "Patient Volume Scaling", "Geographic Expansion"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.0,;
   };
   {
     id: 5, name: "AI-Powered Financial Trading & Risk Management";
-    category: "Financial Technology";
+  category: "Financial Technology";
     subcategory: "Trading AI";
-    description: "Intelligent trading platform using advanced AI algorithms for market analysis, automated trading; and risk assessment";
+  description: "Intelligent trading platform using advanced AI algorithms for market analysis, automated trading; and risk assessment";
     pricing: "Enterprise";
-    price: 22000;
+  price: 22000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "AI-powered market analysis";
       "Automated trading algorithms";
       "Real-time risk assessment";
@@ -570,29 +570,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Investment firms", "Hedge funds", "Banks and financial institutions", "Trading companies"];
     tags: ["Financial AI", "Trading", "Risk Management", "Machine Learning", "Fintech"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/financial-trading-ai";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/financial-trading-ai";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$22, 000-45; 000/month";
     technologyStack: ["Python", "TensorFlow", "Financial APIs", "Real-time Data", "Cloud Computing"];
     compliance: ["SEC", "FINRA", "Basel III", "SOX"];
     scalability: ["Multi-strategy Support", "Global Market Access", "High-frequency Trading"];
     estimatedDelivery: "10-14 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.3,;
   };
   {
     id: 6, name: "Intelligent Document Processing & Automation";
-    category: "Document AI";
+  category: "Document AI";
     subcategory: "Process Automation";
-    description: "Advanced AI platform that automatically processes, analyzes; and extracts information from any type of document";
+  description: "Advanced AI platform that automatically processes, analyzes; and extracts information from any type of document";
     pricing: "Premium";
-    price: 6500;
+  price: 6500;
     pricingModel: "monthly";
-    features: [
+  features: [
       "Multi-format document support";
       "Intelligent data extraction";
       "Automated workflow routing";
@@ -612,29 +612,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Accounting firms", "Legal practices", "Insurance companies", "HR departments"];
     tags: ["Document Automation", "AI", "OCR", "Workflow Automation", "Compliance"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/document-ai-automation";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/document-ai-automation";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$6, 500-12; 000/month";
     technologyStack: ["Python", "OpenCV", "Tesseract", "NLP Libraries", "Cloud Services", "API Integration"];
     compliance: ["GDPR", "SOX", "Industry-specific Regulations"];
     scalability: ["Multi-tenant Architecture", "Document Volume Scaling", "Geographic Distribution"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     innovationScore: 8.5,;
   };
   {
     id: 7, name: "AI-Powered Supply Chain Optimization Platform";
-    category: "Supply Chain AI";
+  category: "Supply Chain AI";
     subcategory: "Logistics Optimization";
-    description: "Intelligent supply chain platform that uses AI to predict demand, optimize inventory; and improve efficiency";
+  description: "Intelligent supply chain platform that uses AI to predict demand, optimize inventory; and improve efficiency";
     pricing: "Premium";
-    price: 9500;
+  price: 9500;
     pricingModel: "monthly";
-    features: [
+  features: [
       "Demand forecasting AI";
       "Inventory optimization";
       "Supplier performance analytics";
@@ -654,29 +654,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Manufacturing companies", "Retail businesses", "Logistics providers", "Distribution companies"];
     tags: ["Supply Chain", "AI", "Inventory Management", "Logistics", "Optimization"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/supply-chain-ai";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/supply-chain-ai";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$9, 500-18; 000/month";
     technologyStack: ["Python", "Machine Learning", "Optimization Algorithms", "IoT Sensors", "Cloud Computing"];
     compliance: ["ISO 28000", "C-TPAT", "Industry Standards"];
     scalability: ["Multi-location Support", "Supplier Network Scaling", "Geographic Expansion"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     innovationScore: 9.1,;
   };
   {
     id: 8, name: "AI-Powered Cybersecurity Threat Detection & Response";
-    category: "Cybersecurity AI";
+  category: "Cybersecurity AI";
     subcategory: "Threat Intelligence";
-    description: "Advanced cybersecurity platform that uses AI to detect, analyze; and respond to security threats in real-time";
+  description: "Advanced cybersecurity platform that uses AI to detect, analyze; and respond to security threats in real-time";
     pricing: "Enterprise";
-    price: 12000;
+  price: 12000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "AI-powered threat detection";
       "Real-time security monitoring";
       "Automated incident response";
@@ -696,29 +696,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Enterprise security", "Financial institutions", "Healthcare organizations", "Government agencies"];
     tags: ["Cybersecurity", "AI", "Threat Detection", "Incident Response", "Compliance"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/cybersecurity-ai";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/cybersecurity-ai";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$12, 000-25; 000/month";
     technologyStack: ["Python", "Machine Learning", "Security Tools", "SIEM Integration", "Cloud Security"];
     compliance: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA"];
     scalability: ["Multi-environment Support", "Threat Intelligence Sharing", "Global Threat Detection"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.4,;
   };
   {
     id: 9, name: "Brain-Computer Interface Development Platform";
-    category: "Neurotechnology";
+  category: "Neurotechnology";
     subcategory: "BCI Solutions";
-    description: "Revolutionary brain-computer interface platform for medical applications, research; and human-computer interaction";
+  description: "Revolutionary brain-computer interface platform for medical applications, research; and human-computer interaction";
     pricing: "Enterprise";
-    price: 35000;
+  price: 35000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "Neural signal processing";
       "Real-time brain activity monitoring";
       "AI-powered pattern recognition";
@@ -738,29 +738,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Medical research institutions", "Pharmaceutical companies", "Healthcare providers", "Research universities"];
     tags: ["Neurotechnology", "BCI", "Medical Devices", "AI", "Research", "Neuroscience"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/brain-computer-interface";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/brain-computer-interface";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$35, 000-75; 000/month";
     technologyStack: ["Python", "Signal Processing", "Machine Learning", "Medical Device APIs", "Real-time Systems"];
     compliance: ["FDA", "CE Mark", "ISO 13485", "Medical Device Regulations"];
     scalability: ["Multi-device Support", "Research Collaboration", "Global Research Network"];
     estimatedDelivery: "12-16 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.6,;
   };
   {
     id: 10, name: "Space Technology & Satellite AI Platform";
-    category: "Space Technology";
+  category: "Space Technology";
     subcategory: "Satellite AI";
-    description: "Advanced AI platform for satellite operations, space data analysis; and orbital management systems";
+  description: "Advanced AI platform for satellite operations, space data analysis; and orbital management systems";
     pricing: "Enterprise";
-    price: 28000;
+  price: 28000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "Satellite orbit optimization";
       "AI-powered space data analysis";
       "Autonomous satellite operations";
@@ -780,29 +780,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Space agencies", "Satellite companies", "Research institutions", "Government", "Private space companies"];
     tags: ["Space Technology", "Satellite AI", "Orbital Mechanics", "Space Data", "AI", "Aerospace"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/space-technology-ai";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/space-technology-ai";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$28, 000-55; 000/month";
     technologyStack: ["Python", "Orbital Mechanics", "Machine Learning", "Satellite APIs", "Real-time Systems"];
     compliance: ["ITAR", "Space Regulations", "International Space Law", "Safety Standards"];
     scalability: ["Multi-satellite Support", "Global Coverage", "Constellation Management"];
     estimatedDelivery: "14-18 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.1,;
   };
   {
     id: 11, name: "Quantum Internet & Secure Communications";
-    category: "Quantum Technology";
+  category: "Quantum Technology";
     subcategory: "Quantum Communications";
-    description: "Next-generation quantum internet infrastructure for ultra-secure, unhackable communications and data transfer";
+  description: "Next-generation quantum internet infrastructure for ultra-secure, unhackable communications and data transfer";
     pricing: "Enterprise";
-    price: 45000;
+  price: 45000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "Quantum key distribution";
       "Quantum entanglement networks";
       "Quantum internet protocols";
@@ -822,29 +822,29 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Government agencies", "Financial institutions", "Defense contractors", "Research institutions", "Critical infrastructure"];
     tags: ["Quantum Internet", "Quantum Communications", "Quantum Cryptography", "Network Security", "Future Technology"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/quantum-internet";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/quantum-internet";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$45, 000-90; 000/month";
     technologyStack: ["Quantum Protocols", "Quantum Hardware", "Network Infrastructure", "Security Systems", "Quantum Software"];
     compliance: ["NIST", "Quantum Security Standards", "Government Security", "International Standards"];
     scalability: ["Global Network", "Multi-node Support", "Quantum Internet Expansion"];
     estimatedDelivery: "16-20 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.5,;
   };
   {
     id: 12, name: "Synthetic Biology & Bioengineering Platform";
-    category: "Biotechnology";
+  category: "Biotechnology";
     subcategory: "Synthetic Biology";
-    description: "Revolutionary platform for synthetic biology, genetic engineering; and bio-manufacturing applications";
+  description: "Revolutionary platform for synthetic biology, genetic engineering; and bio-manufacturing applications";
     pricing: "Enterprise";
-    price: 32000;
+  price: 32000;
     pricingModel: "monthly";
-    features: [
+  features: [
       "DNA synthesis and editing";
       "Bio-manufacturing automation";
       "Genetic circuit design";
@@ -864,18 +864,18 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     ];
     targetAudience: ["Biotech companies", "Pharmaceutical companies", "Research institutions", "Agricultural companies", "Medical research"];
     tags: ["Synthetic Biology", "Bioengineering", "Genetic Engineering", "Biotechnology", "Bio-manufacturing"];
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com/synthetic-biology";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https: //ziontechgroup.com/synthetic-biology";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     };
     marketPrice: "$32, 000-65; 000/month";
     technologyStack: ["Bioinformatics", "Lab Automation", "Genetic Engineering Tools", "AI", "Cloud Computing"];
     compliance: ["FDA", "EPA", "Biosafety Regulations", "International Standards"];
     scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"];
     estimatedDelivery: "18-24 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     innovationScore: 9.2,;
   }
 ];

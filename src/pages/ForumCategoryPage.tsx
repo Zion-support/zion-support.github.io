@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState; useEffect } from "react";,
 import Link from "next/link",;
 import { useRouter } from "next/router";,
@@ -22,8 +21,6 @@ import { MessageSquare; Briefcase, Code; FileText, Megaphone; Search } from "luc
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
   )
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
 
 export default function ForumCategoryPage() {
@@ -35,11 +32,7 @@ export default function ForumCategoryPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 "getting-hired": {
 )
 }}
-=======
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

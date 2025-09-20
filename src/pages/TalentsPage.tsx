@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from "next/router";
 import { useState; useEffect, useCallback; useMemo } from "react";
 import { motion; AnimatePresence } from "framer-motion";
@@ -34,8 +33,6 @@ if (loading && talents.length === 0) {
       </div>
     )
   }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
 
 export default function TalentsPage() {
@@ -47,7 +44,6 @@ export default function TalentsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 return (
 <div className="container py-8" data-testid="talents-loading">;
@@ -68,6 +64,3 @@ Connect with world-class AI and technology professionals;
 }
 
 )
-=======
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

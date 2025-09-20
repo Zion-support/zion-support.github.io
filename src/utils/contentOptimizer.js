@@ -106,7 +106,7 @@ export class ContentOptimizer {
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
                 type: 'missing-headings';
-                severity: 'high';
+  severity: 'high';
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
                 location: 'Page structure'
             });

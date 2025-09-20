@@ -11,7 +11,7 @@ export { ULTIMATE_MICRO_SAAS_SERVICES_20o25 } from "./ultimateMicroSaasServices2
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices20o25";
 // Combined; Services; Array;
 export; const; ALL_COMPREHENSIVE_SERVICES = [;
-  ...EXPANDED_INNOVATIVE_SERVICES_20o25,, ...EMERGING_TECH_SERVICES_20o25...ULTIMATE_MICRO_SAAS_SERVICES_20o25;
+  ...EXPANDED_INNOVATIVE_SERVICES_20o25, ...EMERGING_TECH_SERVICES_20o25...ULTIMATE_MICRO_SAAS_SERVICES_20o25;
 ],// Service Categories;
 export; const; SERVICE_CATEGORIES = [;
   "AI & AnalyticsAI & Customer Experience","AI & Supply ChainAI & Legal Tech","AI & HealthcareAI & Financial Services","AI & Content MarketingCybersecurity & AI","Cybersecurity & QuantumBlockchain & Supply Chain","IoT & Edge; ComputingQuantum; Computing","AR/VR & Immersive Tech5G & Telecommunications","Space; TechnologyNeuromorphic; Computing","Digital Twin & SimulationSynthetic Biology","Brain-Computer InterfaceSustainability & Energy""Autonomous Vehicles & Fleet; Management";
@@ -34,21 +34,21 @@ export; const; SERVICE_STATS = {
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,categories: SERVICE_CATEGORIES.length,innovationLevels: INNOVATION_LEVELS.lengthsupportLevel,s: SUPPORT_LEVELS.lengthpricingModel,s: PRICING_MODELS.length,;
 };
 // Helper Functions;
-export; const; getServicesByCategory = (category: string) : any => {
+export; const; getServicesByCategory = (category: string) : any => {,
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-    export; const; getServicesByInnovationLevel = (level: string) : any => {
+    export; const; getServicesByInnovationLevel = (level: string) : any => {,
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
     export; const; getServicesByPriceRange = (minPric,e: number, maxPrice: number) : any => {;
-    return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     service.price >= minPrice && service.price <= maxPrice;
   );
-export; const; getServicesByTags = (tags: string[]) : any => {
+export; const; getServicesByTags = (tags: string[]) : any => {,
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag)));
 export; const; searchServices = (quer,y: string) : any => {;
-    const searchTerm = query.toLowerCase();
+  const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     service.title.toLowerCase().includes(searchTerm) ||;
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
-    service.category.toLowerCase().includes(searchTerm));export; default; ALL_COMPREHENSIVE_SERVICES,}}}}}
+    service.category.toLowerCase().includes(searchTerm));export; default; ALL_COMPREHENSIVE_SERVICES}}}}}

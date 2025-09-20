@@ -201,11 +201,11 @@ export default function ${componentName}() {
         </p>;
         ${isPage ? ";
         <div className="flex flex-col "sm": flex-row gap-4">;
-          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
-            Contact Us <ArrowRight className="w-4 h-4 ml-2" />;
+          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover: bg-indigo-700 transition-colors inline-flex items-center">;,
+  Contact Us <ArrowRight className="w-4 h-4 ml-2" />;
           </Link>;
-          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">;
-            Go Home <Phone className="w-4 h-4 ml-2" />;
+          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover: bg-indigo-50 transition-colors inline-flex items-center">;,
+  Go Home <Phone className="w-4 h-4 ml-2" />;
           </Link>;
         </div>" : ""}
       </div>;

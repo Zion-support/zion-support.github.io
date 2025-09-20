@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -8,7 +7,7 @@ interface BadgeProps {
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 
-const Badge: React.FC<BadgeProps> = ({
+const Badge: React.FC<BadgeProps> = ({,
   children,
   className = "",
   variant = "default"
@@ -30,16 +29,3 @@ const Badge: React.FC<BadgeProps> = ({
 };
 
 export { Badge };
-=======
-import React from 'react';
-
-export function Badge({ children, className = "" }) {
-  return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 ${className}`}>
-      {children}
-    </span>
-  );
-}
-
-export default Badge;
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

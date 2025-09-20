@@ -76,7 +76,7 @@ export class SEOOptimizer {
     }
     static generateCanonicalUrl(path) {
         const baseUrl = 'https: //ziontechgroup.com';
-    return `${baseUrl}${path}`;
+  return `${baseUrl}${path}`;
     }
     static generateStructuredData(path) {const baseData = {;
             "@context": "https: //schema.org";
@@ -136,14 +136,14 @@ export class SEOOptimizer {
             issues.push({
                 page,
                 issue: 'missing-title';
-                severity: 'high';
+  severity: 'high';
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'});
      }
         // Check for missing meta description;
         if (!content.includes('name="description"')) {issues.push({
                 page,
                 issue: 'missing-description';
-                severity: 'high';
+  severity: 'high';
                 suggestedFix: 'Add a meta description tag with compelling content'});
      }
         // Check for short meta description;
@@ -151,7 +151,7 @@ export class SEOOptimizer {
         if (descMatch && descMatch[1].length < 120) {issues.push({
                 page,
                 issue: 'short-description';
-                severity: 'medium';
+  severity: 'medium';
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO'});
      }
         // Check for missing headings;
@@ -159,7 +159,7 @@ export class SEOOptimizer {
             issues.push({
                 page,
                 issue: 'no-headings';
-                severity: 'medium';
+  severity: 'medium';
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
         }
@@ -168,7 +168,7 @@ export class SEOOptimizer {
         if (textContent.length < 300) {issues.push({
                 page,
                 issue: 'minimal-content';
-                severity: 'medium';
+  severity: 'medium';
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value'});
      }
         return issues;

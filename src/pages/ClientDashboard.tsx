@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
@@ -112,8 +111,6 @@ Select a job to see AI-matched talent suggestions;
 </>;
 )
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
 
 export default function ClientDashboard() {
@@ -125,7 +122,6 @@ export default function ClientDashboard() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 return (
 <ProtectedRoute>;
@@ -166,6 +162,3 @@ selectedJobId ";
 }</div> </div> </div> </div> </main> </>)
 }export default function ClientDashboard () {
 return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
-=======
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

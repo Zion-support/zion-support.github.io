@@ -10,8 +10,8 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
+    languageOptions: {,
+  ecmaVersion: 2020,
       sourceType: 'module',
     files: ["**/*.{js,jsx}"],
     languageOptions: {,
@@ -34,17 +34,15 @@ ecmaVersion: 2021,
       },
       parserOptions: {,
 ecmaFeatures: {,
-jsx: true,
-}
+jsx: true}
       }
     },
-    plugins: {
-      react,
+    plugins: {,
+  react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
-      "react-hooks": reactHooks,
-},
+      "react-hooks": reactHooks},
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -54,12 +52,12 @@ jsx: true,
   },
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
+    languageOptions: {,
+  ecmaVersion: 2020,
       sourceType: 'module',
       parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
+      parserOptions: {,
+  ecmaFeatures: {
           jsx: true
         }
       },
@@ -79,8 +77,8 @@ jsx: true,
         clearInterval: 'readonly'
       }
     },
-    plugins: {
-      react,
+    plugins: {,
+  react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       '@typescript-eslint': tseslint
@@ -212,8 +210,7 @@ ecmaVersion: 2021,
       parser: tsparser,
       parserOptions: {,
 ecmaFeatures: {,
-jsx: true,
-}
+jsx: true}
       }
     },
     plugins: {
@@ -222,8 +219,7 @@ jsx: true,
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-    },
+      ...jsxA11y.configs.recommended.rules},
     settings: {,
 react: {,
 version: "detect"

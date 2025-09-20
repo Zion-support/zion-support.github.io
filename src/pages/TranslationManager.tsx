@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React { useState useEffect } from "react",;
 import { Header } from "@/components/Header";,
 import { SEO } from "@/components/SEO";,
@@ -16,8 +15,6 @@ import { useTranslationService } from "@/hooks/useTranslationService";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export default function TranslationManager() {
 import React from 'react';
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function TranslationManager() {
   return (

@@ -29,8 +29,7 @@ export class ComprehensiveImprovementsManager {
       ogImage: 'https://zion.app/og-image.svg',
       ogType: 'website',
       twitterCard: 'summary_large_image',
-      author: 'Zion Holdings',
-    });
+      author: 'Zion Holdings'});
   }
 
   public async initializeAllImprovements() {
@@ -71,13 +70,11 @@ export class ComprehensiveImprovementsManager {
           firstContentfulPaint: loadTime,
           largestContentfulPaint: loadTime,
           firstInputDelay: 0,
-          cumulativeLayoutShift: 0,
-        });
+          cumulativeLayoutShift: 0});
         
         this.analytics.trackPerformance({
           pageLoadTime: loadTime,
-          domContentLoaded: performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0,
-        });
+          domContentLoaded: performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0});
       });
     }
   }
@@ -163,8 +160,7 @@ export class ComprehensiveImprovementsManager {
       accessibility: accessibilityReport,
       analytics: analyticsReport,
       seo: seoReport,
-      timestamp: new Date().toISOString(),
-    });
+      timestamp: new Date().toISOString()});
   }
 
   private createSkipLinks() {
@@ -185,8 +181,7 @@ export class ComprehensiveImprovementsManager {
         position: absolute,
         top: -40px,
         left: 6px,
-        z-index: 1000,
-      }
+        z-index: 1000}
       .skip-link {
         position: absolute,
         top: -40px,
@@ -196,11 +191,9 @@ export class ComprehensiveImprovementsManager {
         padding: 8px,
         text-decoration: none,
         z-index: 1000,
-        border-radius: 4px,
-      }
-      .skip-link: focus {
-        top: 6px,
-      }
+        border-radius: 4px}
+      .skip-link: focus {,
+  top: 6px}
     `;
     
     document.head.appendChild(style);
@@ -233,11 +226,10 @@ export class ComprehensiveImprovementsManager {
     style.textContent = `
       *:focus {
         outline: 2px solid #0066cc,
-        outline-offset: 2px,
-      }
+        outline-offset: 2px}
       .btn:focus,
-      button:focus {
-        box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
+      button: focus {,
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
       }
     `;
     document.head.appendChild(style);
@@ -258,8 +250,7 @@ export class ComprehensiveImprovementsManager {
     
     // Track engagement on user interaction
     ['click', 'scroll', 'keydown', 'touchstart'].forEach(event => {
-      document.addEventListener(event, trackEngagement, { once: true }),
-    });
+      document.addEventListener(event, trackEngagement, { once: true })});
     
     // Track engagement end
     document.addEventListener('visibilitychange', () => {
@@ -321,22 +312,18 @@ export class ComprehensiveImprovementsManager {
 
   public getComprehensiveStatus() {
     return {
-      performance: {
-        score: this.performance.getPerformanceScore(),
-        metrics: this.performance.getMetrics(),
-      },
-      accessibility: {
-        config: this.accessibility.getConfig(),
-        score: this.calculateAccessibilityScore(),
-      },
-      analytics: {
-        userMetrics: this.analytics.getUserMetrics(),
-        eventCount: this.analytics.getEvents().length,
-      },
-      seo: {
-        metadata: this.metadata.generateOptimizedMetadata(),
-        hasStructuredData: true,
-      },
+      performance: {,
+  score: this.performance.getPerformanceScore(),
+        metrics: this.performance.getMetrics()},
+      accessibility: {,
+  config: this.accessibility.getConfig(),
+        score: this.calculateAccessibilityScore()},
+      analytics: {,
+  userMetrics: this.analytics.getUserMetrics(),
+        eventCount: this.analytics.getEvents().length},
+      seo: {,
+  metadata: this.metadata.generateOptimizedMetadata(),
+        hasStructuredData: true},
       status: 'All improvements active and functioning',
       timestamp: new Date().toISOString();
   };

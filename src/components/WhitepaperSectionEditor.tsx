@@ -22,7 +22,7 @@ interface WhitepaperSectionEditorProps {
   isLast?: boolean;
 }
 
-export const WhitepaperSectionEditor: React.FC<WhitepaperSectionEditorProps> = ({
+export const WhitepaperSectionEditor: React.FC<WhitepaperSectionEditorProps> = ({,
   section,
   onUpdate,
   onDelete,

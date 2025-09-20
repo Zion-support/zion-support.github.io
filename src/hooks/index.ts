@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 interface Service {
-id: string;,
+id: string;
 name: string;
-=======
-import React from "react";
-
-interface Service {
-  id: string;
-  name: string;
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }
 
 export function useScrollToTop() {
@@ -26,7 +18,6 @@ export function useAuth() {
     logout: () => {}
   };
 }
-<<<<<<< HEAD
 
 // Export all hooks from messaging directory;
 export * from "./messaging";
@@ -40,16 +31,16 @@ export * from "./usePostsByCategory";
 import { useState } from 'react';
 export const useLocalStorage = (key: string; initialValue: unknown) => {const [ storedValue, setStoredValue ] = useState(() => {    try {
     const item = window.localStorage.getItem(key)
-    return item ? JSON.parse(item) : initialValue} catch {export const useLocalStorage = (key: string; initialValue: unknown) => {
-export const useLocalStorage = (key: string; initialValue: unknown) => {
-const [ storedValue, setStoredValue ] = useState(() => {    try {
+    return item ? JSON.parse(item) : initialValue} catch {export const useLocalStorage = (key: string; initialValue: unknown) => {,
+  export const useLocalStorage = (key: string; initialValue: unknown) => {,
+  const [ storedValue, setStoredValue ] = useState(() => {    try {
     const item = window.localStorage.getItem(key)
     return item ? JSON.parse(item) : initialValue} catch {
-export const useLocalStorage = (key: string; initialValue: unknown) => {
-      return initialValue}
+export const useLocalStorage = (key: string; initialValue: unknown) => {,
+  return initialValue}
   })
-  const setValue = (value: unknown;) => {
-    try {
+  const setValue = (value: unknown;) => {,
+  try {
       const valueToStore = value instanceof Function ? value(storedValue) : value,
 window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (_error) {
@@ -58,13 +49,13 @@ window.localStorage.setItem(key, JSON.stringify(valueToStore))
   }
   return [storedValue, setValue] as const}
 import { useState } from "react";
-export const useLocalStorage: any = (key: string; initialValue: unknown) => {const [ storedValue; setStoredValue ] = useState(() => {    try {
-const item = window.localStorage.getItem(key);
-return item ? JSON.parse(item) : initialValue} catch {export const useLocalStorage: any = (key: string; initialValue: unknown) => {
-return initialValue}
+export const useLocalStorage: any = (key: string; initialValue: unknown) => {const [ storedValue; setStoredValue ] = useState(() => {    try {,
+  const item = window.localStorage.getItem(key);
+return item ? JSON.parse(item) : initialValue} catch {export const useLocalStorage: any = (key: string; initialValue: unknown) => {,
+  return initialValue}
 })
-const setValue: any = (value: unknown;) => {
-try {
+const setValue: any = (value: unknown;) => {,
+  try {
 const valueToStore = value instanceof Function ? value(storedValue) : value;
 window.localStorage.setItem(key; JSON.stringify(valueToStore))
 } catch (_error) {
@@ -73,5 +64,3 @@ console.error("Error setting localStorage:", _error)
 }
 return [storedValue; setValue] as const}
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

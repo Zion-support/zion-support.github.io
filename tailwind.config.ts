@@ -3,12 +3,12 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 import animatePlugin from 'tailwindcss-animate'
 import plugin from 'tailwindcss/plugin'
 
-const config: Config = {
+const config: Config = {,
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
+  theme: {,
+  extend: {
       colors: {
         "zion-neon": {
           DEFAULT: "#22ddd2",
@@ -20,12 +20,12 @@ const config: Config = {
           light: "#b971f2",
           dark: "#530c8b",
           neon: "#b971f2"}},
-      borderRadius: {
-        lg: "var(--radius)",
+      borderRadius: {,
+  lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"},
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans]},
+      fontFamily: {,
+  sans: ["var(--font-sans)", ...fontFamily.sans]},
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -67,8 +67,8 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-mesh": "linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9)",
         "gradient-neon": "linear-gradient(45deg, #22ddd2, #8c15e9, #22ddd2)"},
-      backdropBlur: {
-        xs: "2px"},
+      backdropBlur: {,
+  xs: "2px"},
       boxShadow: {
         "neon": "0 0 20px rgba(34, 221, 210, 0.5)",
         "neon-purple": "0 0 20px rgba(140, 21, 233, 0.5)",
@@ -76,8 +76,8 @@ const config: Config = {
         "glow": "0 0 40px rgba(34, 221, 210, 0.3)",
         "glow-purple": "0 0 40px rgba(140, 21, 233, 0.3)",
         "glow-blue": "0 0 40px rgba(46, 115, 234, 0.3)"}}},
-  plugins: [
-    animatePlugin,
+  plugins: [,
+  animatePlugin,
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {

@@ -1,27 +1,27 @@
 export interface InnovativeMicroSaasSolution2025 {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    price: number;
+  price: number;
     currency: string;
-    pricingModel: string;
+  pricingModel: string;
     features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     tags: string[];
-    estimatedDelivery: string;
+  estimatedDelivery: string;
     supportLevel: string;
-    marketPrice: string;
-    contactInfo: {
-    phone: string;
+  marketPrice: string;
+    contactInfo: {,
+  phone: string;
     email: string;
-    website: string,;
+  website: string,;
      };
   websiteUrl: string;
-    demoUrl?: string;
+  demoUrl?: string;
   documentationUrl?: string;
 }
 
@@ -29,14 +29,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
   // AI-Powered Content Generation Suite;
   {
     id: "ai-content-generation-suite";
-    title: "AI-Powered Content Generation Suite";
+  title: "AI-Powered Content Generation Suite";
     description: "Comprehensive AI platform that generates high-quality, SEO-optimized content across multiple formats including articles; videos; social media posts; and marketing materials.";
     category: "AI Content Creation";
-    subcategory: "Content Generation";
+  subcategory: "Content Generation";
     price: 199;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Multi-format content generation";
       "SEO optimization";
       "Brand voice consistency";
@@ -69,11 +69,11 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ];
     tags: ["AI Content", "Content Generation", "SEO", "Marketing", "Automation"];
     estimatedDelivery: "2-3 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$199 - $799/month";
-    contactInfo: {
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-content-generation";
@@ -81,14 +81,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
   // Blockchain DeFi Analytics Platform;
   {
     id: "blockchain-defi-analytics-platform";
-    title: "Blockchain DeFi Analytics Platform";
+  title: "Blockchain DeFi Analytics Platform";
     description: "Advanced analytics platform for DeFi protocols, providing real-time insights; risk assessment; and yield optimization strategies for cryptocurrency investors and traders.";
     category: "Blockchain & DeFi";
-    subcategory: "Analytics & Trading";
+  subcategory: "Analytics & Trading";
     price: 299;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Real-time DeFi analytics";
       "Risk assessment tools";
       "Yield optimization";
@@ -121,26 +121,26 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ];
     tags: ["Blockchain", "DeFi", "Analytics", "Cryptocurrency", "Trading"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$299 - $1,299/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics";
   };
   // IoT Smart Home Management Platform;
   {
     id: "iot-smart-home-management";
-    title: "IoT Smart Home Management Platform";
+  title: "IoT Smart Home Management Platform";
     description: "Comprehensive IoT platform that integrates and manages all smart home devices, providing automation; energy optimization; and security monitoring in one unified interface.";
     category: "IoT & Smart Home";
-    subcategory: "Home Automation";
+  subcategory: "Home Automation";
     price: 149;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Device integration hub";
       "Automation workflows";
       "Energy optimization";
@@ -173,11 +173,11 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ];
     tags: ["IoT", "Smart Home", "Automation", "Energy Management", "Security"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$149 - $599/month";
-    contactInfo: {
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/iot-smart-home";
@@ -185,14 +185,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
   // AI-Powered Customer Service Automation;
   {
     id: "ai-customer-service-automation";
-    title: "AI-Powered Customer Service Automation";
+  title: "AI-Powered Customer Service Automation";
     description: "Intelligent customer service platform that automates responses, handles inquiries; and provides personalized support using advanced AI and natural language processing.";
     category: "AI & Customer Service";
-    subcategory: "Service Automation";
+  subcategory: "Service Automation";
     price: 249;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "AI chatbot integration";
       "Natural language processing";
       "Multi-channel support";
@@ -225,11 +225,11 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ];
     tags: ["AI", "Customer Service", "Automation", "Chatbot", "Support"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$249 - $999/month";
-    contactInfo: {
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-customer-service";
@@ -237,14 +237,14 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
   // Quantum-Ready Cybersecurity Suite;
   {
     id: "quantum-ready-cybersecurity-suite";
-    title: "Quantum-Ready Cybersecurity Suite";
+  title: "Quantum-Ready Cybersecurity Suite";
     description: "Future-proof cybersecurity platform that combines traditional security measures with quantum-resistant encryption, preparing organizations for the quantum computing era.";
     category: "Cybersecurity";
-    subcategory: "Quantum Security";
+  subcategory: "Quantum Security";
     price: 399;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Quantum-resistant encryption";
       "Traditional security tools";
       "Threat detection";
@@ -277,12 +277,12 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     ];
     tags: ["Cybersecurity", "Quantum Security", "Encryption", "Threat Protection", "Compliance"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$399 - $1,999/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity";
   }

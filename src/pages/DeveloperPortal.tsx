@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 interface TabDefinition {
@@ -49,8 +48,6 @@ export function DeveloperPortal() {
         {activeTab === 'api-keys' && <ApiKeysManager />}
         {activeTab === 'webhooks' && <WebhooksManager />}
         {activeTab === 'logs' && <ApiLogs />}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
 
 export default function DeveloperPortal() {
@@ -62,7 +59,6 @@ export default function DeveloperPortal() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 { id: "documentation", label: "Documentation", icon: BookOpen },
 { id: "api-keys", label: "API Keys", icon: Key }
 { id: "webhooks", label: "Webhooks", icon: Webhook },
@@ -118,6 +114,4 @@ return (
 }
 }
 )
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }

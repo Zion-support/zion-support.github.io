@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
 unobserve: jest.fn(),
-disconnect: jest.fn(),}));}));
+disconnect: jest.fn()}));}));
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -30,8 +30,8 @@ disconnect: jest.fn()
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
 beforeAll(() => {
-  console.error = (...args: any[]) => {
-    if (
+  console.error = (...args: any[]) => {,
+  if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
@@ -39,8 +39,8 @@ beforeAll(() => {
     }
     originalConsoleError.call(console, ...args);
   }
-  console.warn = (...args: any[]) => {
-    if (
+  console.warn = (...args: any[]) => {,
+  if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {

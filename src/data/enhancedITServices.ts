@@ -1,6 +1,6 @@
 export interface ITService {
-  id: string, title: string, description: string, category: string, pricing: {
-    hourly: number, project: number, monthly: number, currency: string, pricingModel: string;
+  id: string, title: string, description: string, category: string, pricing: {,
+  hourly: number, project: number, monthly: number, currency: string, pricingModel: string;
   };
   features: string[], benefits: string[];
   deliverables: string[], timeline: string, expertise: string[], technologies: string[];
@@ -12,12 +12,12 @@ export interface ITService {
 export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "ai-development-integration";
-    title: "AI Development & Integration";
+  title: "AI Development & Integration";
     description: "Custom AI solution development, machine learning model training; and seamless integration with existing business systems.";
     category: "AI & Machine Learning";
-    pricing: {
+  pricing: {
       hourly: 150, project: 15000, monthly: 5000;
-      currency: "$";
+  currency: "$";
       pricingModel: "Flexible - Hourly, Project-based; or Retainer";
     };
     features: [
@@ -43,7 +43,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Performance reports"
     ];
     timeline: "8-16 weeks depending on complexity";
-    expertise: [
+  expertise: [
       "Python, TensorFlow; PyTorch";
       "Natural Language Processing";
       "Computer Vision";
@@ -60,18 +60,18 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Microsoft Azure AI Engineer"
     ];
     link: "https://ziontechgroup.com/ai-development-integration";
-    badge: "Premium";
+  badge: "Premium";
     icon: "🤖";
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500";
+  image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "cloud-migration-strategy";
-    title: "Cloud Migration Strategy & Implementation";
+  title: "Cloud Migration Strategy & Implementation";
     description: "Comprehensive cloud migration planning, execution; and optimization for AWS; Azure; and Google Cloud platforms.";
     category: "Cloud Services";
-    pricing: {
+  pricing: {
       hourly: 125, project: 25000, monthly: 8000;
-      currency: "$";
+  currency: "$";
       pricingModel: "Project-based with ongoing support options";
     };
     features: [
@@ -97,7 +97,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Training & documentation"
     ];
     timeline: "12-24 weeks depending on scope";
-    expertise: [
+  expertise: [
       "AWS, Azure; Google Cloud";
       "DevOps & CI/CD";
       "Container orchestration";
@@ -114,17 +114,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Google Cloud Professional Cloud Architect"
     ];
     link: "https://ziontechgroup.com/cloud-migration-strategy";
-    icon: "☁️";
+  icon: "☁️";
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "cybersecurity-audit-protection";
-    title: "Cybersecurity Audit & Protection";
+  title: "Cybersecurity Audit & Protection";
     description: "Comprehensive security assessment, penetration testing; and implementation of robust protection systems.";
     category: "Cybersecurity";
-    pricing: {
+  pricing: {
       hourly: 175, project: 20000, monthly: 6000;
-      currency: "$";
+  currency: "$";
       pricingModel: "Project-based with ongoing monitoring options";
     };
     features: [
@@ -150,7 +150,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Security training materials"
     ];
     timeline: "6-12 weeks depending on scope";
-    expertise: [
+  expertise: [
       "Penetration testing";
       "Security architecture";
       "Compliance frameworks";
@@ -167,18 +167,18 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Offensive Security Certified Professional (OSCP)"
     ];
     link: "https://ziontechgroup.com/cybersecurity-audit-protection";
-    badge: "Popular";
+  badge: "Popular";
     icon: "🔒";
-    image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500";
+  image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "data-analytics-business-intelligence";
-    title: "Data Analytics & Business Intelligence";
+  title: "Data Analytics & Business Intelligence";
     description: "Transform raw data into actionable insights with advanced analytics, visualization; and reporting solutions.";
     category: "Data & Analytics";
-    pricing: {
+  pricing: {
       hourly: 140, project: 18000, monthly: 5500;
-      currency: "$";
+  currency: "$";
       pricingModel: "Project-based with ongoing analytics support";
     };
     features: [
@@ -204,7 +204,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "User training"
     ];
     timeline: "10-18 weeks depending on complexity";
-    expertise: [
+  expertise: [
       "Data engineering";
       "Statistical analysis";
       "Machine learning";
@@ -221,17 +221,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Google Data Analytics Professional"
     ];
     link: "https://ziontechgroup.com/data-analytics-business-intelligence";
-    icon: "📊";
+  icon: "📊";
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "digital-transformation-consulting";
-    title: "Digital Transformation Consulting";
+  title: "Digital Transformation Consulting";
     description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.";
-    category: "Digital Transformation";
-    pricing: {
-      hourly: 200, project: 35000, monthly: 12000;
-      currency: "$";
+  category: "Digital Transformation";
+    pricing: {,
+  hourly: 200, project: 35000, monthly: 12000;
+  currency: "$";
       pricingModel: "Strategic consulting with implementation support";
     };
     features: [
@@ -257,7 +257,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Success metrics & KPIs"
     ];
     timeline: "16-32 weeks depending on scope";
-    expertise: [
+  expertise: [
       "Strategic planning";
       "Change management";
       "Process optimization";
@@ -274,18 +274,18 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Digital Transformation Specialist"
     ];
     link: "https://ziontechgroup.com/digital-transformation-consulting";
-    badge: "Featured";
+  badge: "Featured";
     icon: "🚀";
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
+  image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "devops-automation";
-    title: "DevOps Automation & CI/CD";
+  title: "DevOps Automation & CI/CD";
     description: "Streamline software development with automated CI/CD pipelines, infrastructure as code; and monitoring solutions.";
     category: "DevOps";
-    pricing: {
+  pricing: {
       hourly: 130, project: 15000, monthly: 4500;
-      currency: "$";
+  currency: "$";
       pricingModel: "Project-based with ongoing support";
     };
     features: [
@@ -311,7 +311,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Team training"
     ];
     timeline: "8-16 weeks depending on complexity";
-    expertise: [
+  expertise: [
       "CI/CD tools";
       "Container technologies";
       "Infrastructure as Code";
@@ -328,17 +328,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Terraform Associate"
     ];
     link: "https://ziontechgroup.com/devops-automation";
-    icon: "⚡";
+  icon: "⚡";
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "network-infrastructure-design";
-    title: "Network Infrastructure Design & Implementation";
+  title: "Network Infrastructure Design & Implementation";
     description: "Design and implement robust, scalable network infrastructure with security; redundancy; and performance optimization.";
     category: "Network Infrastructure";
-    pricing: {
+  pricing: {
       hourly: 120, project: 22000, monthly: 7000;
-      currency: "$";
+  currency: "$";
       pricingModel: "Project-based with ongoing maintenance";
     };
     features: [
@@ -364,7 +364,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "User training"
     ];
     timeline: "12-20 weeks depending on scope";
-    expertise: [
+  expertise: [
       "Network design";
       "Security implementation";
       "Performance optimization";
@@ -381,17 +381,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "CompTIA Network+"
     ];
     link: "https://ziontechgroup.com/network-infrastructure-design";
-    icon: "🌐";
+  icon: "🌐";
     image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "mobile-app-development";
-    title: "Mobile App Development";
+  title: "Mobile App Development";
     description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.";
-    category: "Mobile Development";
-    pricing: {
-      hourly: 110, project: 25000, monthly: 6000;
-      currency: "$";
+  category: "Mobile Development";
+    pricing: {,
+  hourly: 110, project: 25000, monthly: 6000;
+  currency: "$";
       pricingModel: "Project-based with maintenance options";
     };
     features: [
@@ -417,7 +417,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Maintenance plan"
     ];
     timeline: "16-24 weeks depending on complexity";
-    expertise: [
+  expertise: [
       "iOS development";
       "Android development";
       "Cross-platform frameworks";
@@ -434,17 +434,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "React Native Certification"
     ];
     link: "https://ziontechgroup.com/mobile-app-development";
-    icon: "📱";
+  icon: "📱";
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "web-application-development";
-    title: "Web Application Development";
+  title: "Web Application Development";
     description: "Modern web application development with responsive design, performance optimization; and security best practices.";
     category: "Web Development";
-    pricing: {
+  pricing: {
       hourly: 100, project: 20000, monthly: 5000;
-      currency: "$";
+  currency: "$";
       pricingModel: "Project-based with ongoing support";
     };
     features: [
@@ -470,7 +470,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "User training"
     ];
     timeline: "12-20 weeks depending on complexity";
-    expertise: [
+  expertise: [
       "Frontend frameworks";
       "Backend development";
       "Database design";
@@ -487,17 +487,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Google Cloud Professional Developer"
     ];
     link: "https://ziontechgroup.com/web-application-development";
-    icon: "💻";
+  icon: "💻";
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500";
   };
   {
     id: "it-consulting-advisory";
-    title: "IT Consulting & Advisory Services";
+  title: "IT Consulting & Advisory Services";
     description: "Strategic IT consulting to align technology with business goals, optimize operations; and drive innovation.";
     category: "IT Consulting";
-    pricing: {
+  pricing: {
       hourly: 180, project: 30000, monthly: 10000;
-      currency: "$";
+  currency: "$";
       pricingModel: "Strategic consulting with implementation support";
     };
     features: [
@@ -523,7 +523,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Success metrics"
     ];
     timeline: "20-40 weeks depending on scope";
-    expertise: [
+  expertise: [
       "IT strategy";
       "Technology assessment";
       "Project management";
@@ -540,17 +540,17 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
       "Certified Information Systems Auditor (CISA)"
     ];
     link: "https://ziontechgroup.com/it-consulting-advisory";
-    badge: "Premium";
+  badge: "Premium";
     icon: "🎯";
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500";
+  image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500";
   }
 ];
 
-export const getITServiceById = (id: string): ITService | undefined : any => {
+export const getITServiceById = (id: string): ITService | undefined : any => {,
   return ENHANCED_IT_SERVICES.find(service => service.id === id);
   };
 
-export const getITServicesByCategory = (category: string): ITService[] : any => {
+export const getITServicesByCategory = (category: string): ITService[] : any => {,
   return ENHANCED_IT_SERVICES.filter(service => service.category === category);
   };
 

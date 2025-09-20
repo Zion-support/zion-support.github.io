@@ -19,13 +19,13 @@ export; const; comprehensiveServicesIndex20o25: ServiceIndex[] = [;
 ];
 // Get; services; by category;
 export; const; getServicesByCategory = (category: string) : any => {;
-    return comprehensiveServicesIndex20o25.filter(service => service.category === category);
+  return comprehensiveServicesIndex20o25.filter(service => service.category === category);
 // Get; services; by source;
 export; const; getServicesBySource = (source: "existing" | "new" | "pricing-guide") : any => {;
-    return comprehensiveServicesIndex20o25.filter(service => service.source === source);
+  return comprehensiveServicesIndex20o25.filter(service => service.source === source);
 // Search services;
 export; const; searchServices = (quer,y: string) : any => {;
-    const lowercaseQuery = query.toLowerCase();
+  const lowercaseQuery = query.toLowerCase();
     return comprehensiveServicesIndex20o25.filter(service =>;
         service.name.toLowerCase().includes(lowercaseQuery) ||;
         service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -45,4 +45,4 @@ export; const; getServiceStats = () => {
         total: totalServices,existing: existingServices,new: newServices,pricingGuide: pricingGuideServices,categories: categories.length,categoryBreakdown: categories.map(category => ({nam,e: categorycoun,t: getServicesByCategory(category).length,;
   }));
     };
-},export; default; comprehensiveServicesIndex20o25,}}}
+},export; default; comprehensiveServicesIndex20o25}}}

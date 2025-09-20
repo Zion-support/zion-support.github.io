@@ -112,8 +112,6 @@ async function main() : any {
 main()
   .catch((e) : any => {
     console.error(e),
-    process.exit(1),
-  })
+    process.exit(1)})
   .finally(async () => {
-    await prisma.$disconnect(),
-  }),
+    await prisma.$disconnect()}),

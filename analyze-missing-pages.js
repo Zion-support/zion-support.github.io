@@ -63,7 +63,7 @@ brokenLink: `/${link}`
   }
 });
 if (brokenLinks.length > 0) {
-  console.log("Found broken internal links:");
+  console.log("Found broken internal links: ");,
   brokenLinks.forEach((link) => {
     console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`);
   });

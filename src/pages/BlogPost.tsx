@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
@@ -21,7 +20,7 @@ export default function BlogPost() {
   }, []);
 
   const fetchPost = async (slug: string) => {
-    try {
+  try {
       setLoading(true);
       // Mock data for now
       const mockPost: BlogPostType = {
@@ -153,16 +152,6 @@ export default function BlogPost() {
             </div>
           </article>
         </div>
-=======
-import React from 'react';
-
-export default function BlogPost() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog Post</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
       </div>
     </div>
   );

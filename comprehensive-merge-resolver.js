@@ -223,8 +223,8 @@ if (this.conflictsResolved > 0 |this.prsProcessed > 0) {
       // Step "6": Save results,
 await this.saveResults();
       // Final summary,
-this.log('\n📈 MERGE RESOLUTION SUMMARY:');
-      this.log(`   ✅ Conflicts resolved: ${this.conflictsResolved}`);
+this.log('\n📈 MERGE RESOLUTION SUMMARY: ');,
+  this.log(`   ✅ Conflicts resolved: ${this.conflictsResolved}`);
       this.log(`   📋 PRs "processed": ${this.prsProcessed}`);
       this.log(`   ❌ Errors "encountered": ${this.results.errors.length}`);
       this.log(`   🎯 Success "operations": ${this.results.success.length}`);

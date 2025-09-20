@@ -1,23 +1,22 @@
-<<<<<<< HEAD
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
 import React from "react";
 import { Link } from "react-router-dom";
-const Home: React.FC = () => {
+const Home: React.FC = () => {,
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
+  Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.
+            <p className="text-xl md: text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">,
+  Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -113,9 +112,6 @@ to="/contact"
             Start Your Journey Today
           </Link>
         </div>
-=======
-import React from 'react';
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function Home() {
   return (
@@ -126,7 +122,6 @@ export default function Home() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
@@ -134,11 +129,11 @@ return (
 <div className="relative overflow-hidden">;
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
 <div className="text-center">;
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
-Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>;
+<h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">;
+  Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>;
 </h1>;
-<p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">;
-Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.;
+<p className="text-xl md: text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">;
+  Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.;
 </p>;
 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 <Link;
@@ -239,6 +234,3 @@ Start Your Journey Today;
 );
 }
 export default Home;
-=======
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

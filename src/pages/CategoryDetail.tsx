@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter } from 'next/router';
 import { SEO } from '@/components/SEO';
@@ -27,9 +26,6 @@ const ListingGridSkeleton = () => (
     ))}
   </div>
 );
-=======
-import React from 'react';
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function CategoryDetail() {
   const router = useRouter();
@@ -44,7 +40,7 @@ export default function CategoryDetail() {
   }, [slug]);
 
   const fetchListings = async (categorySlug: string) => {
-    try {
+  try {
       setLoading(true);
       // Mock data for now
       const mockListings: Listing[] = [
@@ -114,8 +110,8 @@ export default function CategoryDetail() {
                           <span className="text-2xl font-bold text-blue-600">
                             ${listing.price.toLocaleString()}
                           </span>
-                          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-                            View Details
+                          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover: bg-blue-700 transition-colors">,
+  View Details
                           </button>
                         </div>
                       </div>

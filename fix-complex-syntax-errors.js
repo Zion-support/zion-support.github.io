@@ -5,16 +5,16 @@ const path = require('path');
 function fixComplexSyntaxErrors(content) {
   // Fix corrupted import statements
   content = content.replace(/impor;\s*t;\s*Reac;\s*t,\s*{\s*useStat;\s*e;\s*useEffect\s*}\s*from\s*"react";/g, 'import React, { useState, useEffect } from "react";');
-  content = content.replace(/import\s*React\s*from\s*"react";;/g, 'import React from "react";');
+  content = content.replace(/import\s*React\s*from\s*"react";/g, 'import React from "react";');
   
   // Fix semicolon issues in imports
-  content = content.replace(/import\s*{\s*([^}]+);\s*}\s*from\s*"([^"]+)";;/g, 'import { $1 } from "$2";');
+  content = content.replace(/import\s*{\s*([^}]+);\s*}\s*from\s*"([^"]+)";/g, 'import { $1 } from "$2";');
   
   // Fix corrupted import statements with semicolons
   content = content.replace(/import\s*{\s*([^}]+);\s*([^}]+)\s*}\s*from\s*"([^"]+)";/g, 'import { $1, $2 } from "$3";');
   
   // Fix multiple semicolons
-  content = content.replace(/;;+/g, ';');
+  content = content.replace(/;+/g, ';');
   
   // Fix corrupted function declarations
   content = content.replace(/const\s*(\w+);\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, 'const $1: React.FC = () => {');

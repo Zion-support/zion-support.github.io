@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom, ";
 export interface SpecializedIndustrySolution {
   id: string, title: string, description: string, industry: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[];
-    useCases: string[], targetAudience: string[];
-    tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string;
-    contactInfo: {
+  useCases: string[], targetAudience: string[];
+  tags: string[], estimatedDelivery: string, supportLevel: string, marketPrice: string;
+  contactInfo: {
     phone: string, email: string, website: string;
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[];
-    demoUrl?: string;
+  compliance: string[], roi: string, competitors: string[];
+  demoUrl?: string;
   caseStudies?: string[];
   websiteUrl?: string;
   industryChallenges: string[], marketOpportunity: string, competitiveAdvantage: string,;
@@ -18,11 +18,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 1. Healthcare AI Diagnostic Platform;
   {
     id: "healthcare-ai-diagnostics-elite", title: "Healthcare AI Diagnostics Elite - Medical Intelligence Platform";
-    description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data; and clinical records to provide accurate diagnoses and treatment recommendations.";
+  description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data; and clinical records to provide accurate diagnoses and treatment recommendations.";
     industry: "Healthcare", category: "AI & Diagnostics";
-    subcategory: "Medical Imaging", price: 45000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Medical Imaging", price: 45000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "AI-powered medical image analysis";
       "Patient data integration";
       "Clinical decision support";
@@ -57,10 +57,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"];
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$45, 000 - $120; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$45, 000 - $120; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "Python", "React"];
     integrations: ["Epic", "Cerner", "Allscripts", "PACS systems", "EHR platforms"];
     compliance: ["HIPAA", "FDA", "CE Mark", "SOC 2", "ISO 27001"];
@@ -72,11 +72,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 2. Financial Services AI Compliance Platform;
   {
     id: "financial-ai-compliance-elite", title: "Financial AI Compliance Elite - Regulatory Intelligence";
-    description: "Intelligent compliance platform that automates regulatory reporting, monitors transactions for suspicious activity; and ensures adherence to financial regulations.";
+  description: "Intelligent compliance platform that automates regulatory reporting, monitors transactions for suspicious activity; and ensures adherence to financial regulations.";
     industry: "Financial Services", category: "AI & Compliance";
-    subcategory: "Regulatory Technology", price: 32000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Regulatory Technology", price: 32000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Automated regulatory reporting";
       "Real-time transaction monitoring";
       "Suspicious activity detection";
@@ -111,10 +111,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Financial Compliance", "RegTech", "AI Monitoring", "Risk Management", "Regulatory Reporting"];
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$32, 000 - $85; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$32, 000 - $85; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["Python", "TensorFlow", "NLP", "Blockchain", "React", "PostgreSQL"];
     integrations: ["Core banking systems", "Payment processors", "Trading platforms", "CRM systems"];
     compliance: ["AML/KYC", "MiFID II", "Dodd-Frank", "Basel III", "GDPR", "SOC 2"];
@@ -126,11 +126,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 3. Manufacturing IoT Intelligence Platform;
   {
     id: "manufacturing-iot-intelligence-elite", title: "Manufacturing IoT Intelligence Elite - Smart Factory Platform";
-    description: "Comprehensive IoT platform that connects manufacturing equipment, monitors performance; predicts maintenance needs; and optimizes production processes.";
+  description: "Comprehensive IoT platform that connects manufacturing equipment, monitors performance; predicts maintenance needs; and optimizes production processes.";
     industry: "Manufacturing", category: "IoT & Analytics";
-    subcategory: "Smart Manufacturing", price: 25000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Smart Manufacturing", price: 25000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Equipment connectivity & monitoring";
       "Predictive maintenance";
       "Performance optimization";
@@ -165,10 +165,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Manufacturing IoT", "Smart Factory", "Predictive Maintenance", "Quality Control", "Supply Chain"];
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$25, 000 - $65; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$25, 000 - $65; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["IoT sensors", "Edge computing", "Machine learning", "Python", "React", "Kubernetes"];
     integrations: ["ERP systems", "MES platforms", "SCADA systems", "Cloud platforms"];
     compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry 4.0 standards"];
@@ -180,11 +180,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 4. Retail AI Personalization Platform;
   {
     id: "retail-ai-personalization-elite", title: "Retail AI Personalization Elite - Customer Intelligence";
-    description: "Advanced AI platform that personalizes customer experiences, optimizes inventory; and provides real-time insights for retail decision-making.";
+  description: "Advanced AI platform that personalizes customer experiences, optimizes inventory; and provides real-time insights for retail decision-making.";
     industry: "Retail", category: "AI & Customer Experience";
-    subcategory: "Personalization", price: 18000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Personalization", price: 18000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Customer behavior analysis";
       "Personalized recommendations";
       "Inventory optimization";
@@ -219,10 +219,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Retail AI", "Customer Personalization", "Inventory Optimization", "Demand Forecasting", "Marketing Automation"];
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$18, 000 - $45; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$18, 000 - $45; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["Machine learning", "NLP", "Computer vision", "Python", "React", "MongoDB"];
     integrations: ["E-commerce platforms", "POS systems", "CRM systems", "Marketing tools"];
     compliance: ["GDPR", "CCPA", "PCI DSS", "SOC 2"];
@@ -234,11 +234,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 5. Energy Management AI Platform;
   {
     id: "energy-management-ai-elite", title: "Energy Management AI Elite - Smart Grid Intelligence";
-    description: "Intelligent energy management platform that optimizes power distribution, predicts demand; and manages renewable energy integration for utilities and smart cities.";
+  description: "Intelligent energy management platform that optimizes power distribution, predicts demand; and manages renewable energy integration for utilities and smart cities.";
     industry: "Energy & Utilities", category: "AI & Energy Management";
-    subcategory: "Smart Grid", price: 35000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Smart Grid", price: 35000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Smart grid optimization";
       "Demand forecasting";
       "Renewable energy integration";
@@ -273,10 +273,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Energy Management", "Smart Grid", "Renewable Energy", "Predictive Analytics", "Sustainability"];
     estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$35, 000 - $90; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$35, 000 - $90; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["IoT sensors", "Machine learning", "Edge computing", "Python", "React", "Kubernetes"];
     integrations: ["SCADA systems", "Smart meters", "Building management systems", "Weather APIs"];
     compliance: ["NERC", "ISO 27001", "SOC 2", "NIST"];
@@ -288,11 +288,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 6. Transportation & Logistics AI Platform;
   {
     id: "transportation-logistics-ai-elite", title: "Transportation & Logistics AI Elite - Supply Chain Intelligence";
-    description: "Comprehensive AI platform that optimizes transportation routes, manages logistics operations; and provides real-time visibility across the supply chain.";
+  description: "Comprehensive AI platform that optimizes transportation routes, manages logistics operations; and provides real-time visibility across the supply chain.";
     industry: "Transportation & Logistics", category: "AI & Supply Chain";
-    subcategory: "Logistics Optimization", price: 22000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Logistics Optimization", price: 22000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Route optimization";
       "Fleet management";
       "Real-time tracking";
@@ -327,10 +327,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Logistics AI", "Supply Chain", "Route Optimization", "Fleet Management", "Real-time Tracking"];
     estimatedDelivery: "5-7 weeks", supportLevel: "premium";
-    marketPrice: "$22, 000 - $55; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$22, 000 - $55; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["Machine learning", "GPS tracking", "IoT sensors", "Python", "React", "PostgreSQL"];
     integrations: ["TMS systems", "WMS platforms", "ERP systems", "GPS providers"];
     compliance: ["ISO 27001", "SOC 2", "GDPR", "Transportation regulations"];
@@ -342,11 +342,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 7. Education AI Learning Platform;
   {
     id: "education-ai-learning-elite", title: "Education AI Learning Elite - Personalized Learning Intelligence";
-    description: "Advanced AI platform that personalizes learning experiences, tracks student progress; and provides adaptive content for educational institutions.";
+  description: "Advanced AI platform that personalizes learning experiences, tracks student progress; and provides adaptive content for educational institutions.";
     industry: "Education", category: "AI & Learning";
-    subcategory: "Personalized Education", price: 15000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Personalized Education", price: 15000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Personalized learning paths";
       "Adaptive content delivery";
       "Student progress tracking";
@@ -381,10 +381,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Education AI", "Personalized Learning", "Adaptive Content", "Learning Analytics", "Student Engagement"];
     estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$15, 000 - $40; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$15, 000 - $40; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["Machine learning", "NLP", "Computer vision", "Python", "React", "MongoDB"];
     integrations: ["LMS platforms", "SIS systems", "Content management", "Assessment tools"];
     compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"];
@@ -396,11 +396,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
   // 8. Real Estate AI Platform;
   {
     id: "real-estate-ai-elite", title: "Real Estate AI Elite - Property Intelligence Platform";
-    description: "Comprehensive AI platform that analyzes property markets, predicts trends; and provides insights for real estate professionals and investors.";
+  description: "Comprehensive AI platform that analyzes property markets, predicts trends; and provides insights for real estate professionals and investors.";
     industry: "Real Estate", category: "AI & Market Intelligence";
-    subcategory: "Property Analytics", price: 20000;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Property Analytics", price: 20000;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Market trend analysis";
       "Property valuation";
       "Investment analysis";
@@ -435,10 +435,10 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     ];
     tags: ["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"];
     estimatedDelivery: "5-7 weeks", supportLevel: "premium";
-    marketPrice: "$20, 000 - $50; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$20, 000 - $50; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["Machine learning", "Big data analytics", "Predictive modeling", "Python", "React", "PostgreSQL"];
     integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"];
     compliance: ["GDPR", "CCPA", "SOC 2", "Real estate regulations"];

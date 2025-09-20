@@ -3,12 +3,11 @@
  * Provides tools for optimizing search engine optimization
  */
 
-<<<<<<< HEAD
 export interface SEOData {
-title: string;,
-description: string;,
+title: string;
+description: string;
 keywords: string[];
-ogImage?: string;
+  ogImage?: string;
 canonicalUrl?: string;
 }
 structuredData?: object;}
@@ -16,13 +15,13 @@ structuredData?: object;}
 
 export interface ContentQualityIssue {
 page: string;
-issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";,
-severity: "high" | "medium" | "low";,
+  issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
+severity: "high" | "medium" | "low";
 suggestedFix: string;
 }
 }
 }
-severity: "high" | "medium" | "low";,
+severity: "high" | "medium" | "low";
 suggestedFix: string;}
 
 export class SEOOptimizer {
@@ -64,8 +63,8 @@ private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
 "/solutions/healthcare": ["healthcare technology", "health IT", "medical software", "healthcare compliance", "HIPAA solutions", "medical technology"];
 };
 
-static generateSEOData(path: string): SEOData {
-const title = this.generateTitle(path);
+static generateSEOData(path: string): SEOData {,
+  const title = this.generateTitle(path);
 const description = this.generateDescription(path);
 const keywords = this.generateKeywords(path);
 const canonicalUrl = this.generateCanonicalUrl(path);
@@ -80,8 +79,8 @@ structuredData;
 };
 }
 
-static generateTitle(path: string): string {
-const baseTitle = "Zion Tech Group";
+static generateTitle(path: string): string {,
+  const baseTitle = "Zion Tech Group";
 if (path === "/") {
 return `${baseTitle} - Revolutionary Technology Solutions`;
 }
@@ -98,19 +97,19 @@ const formattedSegment = lastSegment;
 return `${formattedSegment} - ${baseTitle}`;
 }
 
-static generateDescription(path: string): string {
-return this.DEFAULT_META_DESCRIPTIONS[path] ||;
+static generateDescription(path: string): string {,
+  return this.DEFAULT_META_DESCRIPTIONS[path] ||;
 "Professional technology solutions and services. Expert IT consulting; AI development; and digital transformation services for modern businesses.";
 }
 
-static generateKeywords(path: string): string[] {
-return this.KEYWORD_MAPPINGS[path] ||;
+static generateKeywords(path: string): string[] {,
+  return this.KEYWORD_MAPPINGS[path] ||;
 ["technology", "IT services", "digital solutions", "business technology", "innovation"];
 }
 
-static generateCanonicalUrl(path: string): string {
-const baseUrl = "https://ziontechgroup.com";
-return `${baseUrl}${path}`;
+static generateCanonicalUrl(path: string): string {,
+  const baseUrl = "https: //ziontechgroup.com";
+  return `${baseUrl}${path}`;
 }
 
 static generateStructuredData(path: string): object {const baseData = {
@@ -213,8 +212,8 @@ suggestedFix: "Add more relevant content to improve user experience and SEO valu
 return issues;
 }
 
-static generateMetaTags(seoData: SEOData): string {
-return `;
+static generateMetaTags(seoData: SEOData): string {,
+  return `;
 <title>${seoData.title}</title>;
 <meta name="description" content="${seoData.description}" />;
 <meta name="keywords" content="${seoData.keywords.join(", ")}" />;
@@ -242,5 +241,3 @@ ${JSON.stringify(seoData.structuredData; null; 2)}
 }
 
 export const seoOptimizer = new SEOOptimizer();
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

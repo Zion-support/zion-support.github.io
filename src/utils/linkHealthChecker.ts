@@ -1,10 +1,9 @@
 import React from "react";
 
 export interface LinkHealthResult {
-<<<<<<< HEAD
-url: string;,
+url: string;
 status: "healthy" | "unhealthy" | "error";
-statusCode?: number;
+  statusCode?: number;
 responseTime?: number;
 error?: string;,
 lastChecked: Date;
@@ -23,19 +22,18 @@ followRedirects?: boolean;}
 
 export class LinkHealthChecker {
 private config: Required<LinkHealthConfig>;
-
-constructor(config: LinkHealthConfig = {}) {
+  constructor(config: LinkHealthConfig = {}) {
 this.config = {
-timeout: config.timeout || 10000;,
-retries: config.retries || 3;,
+timeout: config.timeout || 10000;
+retries: config.retries || 3;
 userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
 followRedirects: config.followRedirects !== false;
 };
 followRedirects: config.followRedirects !== false;};
 }
 
-async checkLink(url: string): Promise<LinkHealthResult> {
-const startTime = Date.now();
+async checkLink(url: string): Promise<LinkHealthResult> {,
+  const startTime = Date.now();
 
 try {
 const response = await fetch(url, {
@@ -52,14 +50,14 @@ if (response.ok || response.status < 400) {return {
 url;
 status: "healthy",
 statusCode: response.status;
-responseTime;,
+  responseTime;,
 lastChecked: new Date()};
 } else {
 return {
 url;
 status: "unhealthy",
 statusCode: response.status;
-responseTime;,
+  responseTime;,
 error: `HTTP ${response.status}: ${response.statusText}`,
 lastChecked: new Date()};
 }
@@ -71,10 +69,9 @@ lastChecked: new Date()};
 }
 }
 
-async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
-const results: LinkHealthResult[] = [];
-
-for (const url of urls) {
+async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {,
+  const results: LinkHealthResult[] = [];
+  for (const url of urls) {
 try {
 const result = await this.checkLink(url);
 results.push(result);
@@ -89,10 +86,9 @@ lastChecked: new Date()});
 return results;
 }
 
-async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
-let lastError: string | undefined;
-
-for (let attempt = 1; attempt <= this.config.retries; attempt++) {
+async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {,
+  let lastError: string | undefined;
+  for (let attempt = 1; attempt <= this.config.retries; attempt++) {
 try {
 const result = await this.checkLink(url);
 if (result.status === "healthy") {
@@ -115,14 +111,14 @@ error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
 lastChecked: new Date()};
 }
 
-getHealthSummary(results: LinkHealthResult[]): {
-total: number;
+getHealthSummary(results: LinkHealthResult[]): {,
+  total: number;
 healthy: number;
-unhealthy: number;,
-errors: number;,
+  unhealthy: number;
+errors: number;
 averageResponseTime: number;
 } {
-errors: number;,
+errors: number;
 averageResponseTime: number;} {
 const total = results.length;
 const healthy = results.filter(r => r.status === "healthy").length;
@@ -146,21 +142,20 @@ averageResponseTime;
 };
 }
 
-generateReport(results: LinkHealthResult[]): string {
-const summary = this.getHealthSummary(results);
+generateReport(results: LinkHealthResult[]): string {,
+  const summary = this.getHealthSummary(results);
 const timestamp = new Date().toISOString();
 
 let report = `Link Health Report - ${timestamp}\n`;
-report += `Summary:\n`;
-report += `- Total Links: ${summary.total}\n`;
+report += `Summary: \n`;
+  report += `- Total Links: ${summary.total}\n`;
 report += `- Healthy: ${summary.healthy}\n`;
 report += `- Unhealthy: ${summary.unhealthy}\n`;
 report += `- Errors: ${summary.errors}\n`;
 report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
 
-report += `Detailed Results:\n`;
-
-results.forEach((result; index) => {
+report += `Detailed Results: \n`;
+  results.forEach((result; index) => {
 report += `${index + 1}. ${result.url}\n`;
 report += `   Status: ${result.status}\n`;
 if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`;
@@ -174,5 +169,3 @@ return report;
 }
 
 export default LinkHealthChecker;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

@@ -1,27 +1,27 @@
 import { Routes, Route } from "react-router-dom, ";
 export interface IndustrySpecificSolution {
   id: string, title: string, description: string, industry: string, category: string, subcategory: string, price: number, currency: string, pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";
-    features: string[], benefits: string[];
-    useCases: string[], targetAudience: string[];
-    tags: string[], estimatedDelivery: string;
-    supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
-    contactInfo: {
+  features: string[], benefits: string[];
+  useCases: string[], targetAudience: string[];
+  tags: string[], estimatedDelivery: string;
+  supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
+  contactInfo: {
     phone: string, email: string, website: string;
      };
   industryExpertise: number, rating: number, reviewCount: number, featured: boolean, location: string, availability: string, demoUrl: string, documentationUrl: string, technology: string[];
-    integrations: string[], compliance: string[];
-    roi: string, competitors: string[], industryPartners: string[];
-    certifications: string[],;
+  integrations: string[], compliance: string[];
+  roi: string, competitors: string[], industryPartners: string[];
+  certifications: string[],;
 }
 
 export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   {
     id: "healthcare-ai-diagnostics", title: "Healthcare AI Diagnostics & Patient Care Platform";
-    description: "Comprehensive AI-powered healthcare platform for medical diagnostics, patient monitoring; treatment planning; and healthcare workflow optimization.";
+  description: "Comprehensive AI-powered healthcare platform for medical diagnostics, patient monitoring; treatment planning; and healthcare workflow optimization.";
     industry: "Healthcare", category: "AI Diagnostics";
-    subcategory: "Patient Care", price: 2800;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Patient Care", price: 2800;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "AI-powered medical image analysis";
       "Patient data integration and analytics";
       "Predictive health risk assessment";
@@ -59,13 +59,13 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     ];
     tags: ["Healthcare", "AI Diagnostics", "Medical Imaging", "Patient Care", "Clinical Decision Support"];
     estimatedDelivery: "8-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 800 - $12; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$2, 800 - $12; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, industryExpertise: 98, rating: 4.9, reviewCount: 234, featured: true, location: "Global";
-    availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";
-    documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai", technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "FHIR", "HL7", "HIPAA-compliant cloud"];
+  availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";
+  documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai", technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "FHIR", "HL7", "HIPAA-compliant cloud"];
     integrations: ["Epic", "Cerner", "Allscripts", "Medical imaging systems", "Lab information systems", "PACS"];
     compliance: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC 2", "GDPR"];
     roi: "400% within 18 months", competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips", "Siemens Healthineers"];
@@ -74,11 +74,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   };
   {
     id: "manufacturing-industry-4-0", title: "Manufacturing Industry 4.0 & Smart Factory Platform";
-    description: "Comprehensive Industry 4.0 platform for smart manufacturing including IoT integration, predictive maintenance; quality control; and supply chain optimization.";
+  description: "Comprehensive Industry 4.0 platform for smart manufacturing including IoT integration, predictive maintenance; quality control; and supply chain optimization.";
     industry: "Manufacturing", category: "Industry 4.0";
-    subcategory: "Smart Factory", price: 2200;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Smart Factory", price: 2200;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "IoT sensor integration and monitoring";
       "Predictive maintenance and analytics";
       "Quality control and defect detection";
@@ -116,13 +116,13 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     ];
     tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Maintenance", "Quality Control", "Smart Factory"];
     estimatedDelivery: "12-24 weeks", supportLevel: "premium";
-    marketPrice: "$2, 200 - $8; 500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$2, 200 - $8; 500/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, industryExpertise: 96, rating: 4.8, reviewCount: 189, featured: true, location: "Global";
-    availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";
-    documentationUrl: "https://ziontechgroup.com/docs/manufacturing-4-0", technology: ["IoT platforms", "Machine learning", "Computer vision", "PLC integration", "SCADA systems", "Cloud computing"];
+  availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";
+  documentationUrl: "https://ziontechgroup.com/docs/manufacturing-4-0", technology: ["IoT platforms", "Machine learning", "Computer vision", "PLC integration", "SCADA systems", "Cloud computing"];
     integrations: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "Mitsubishi", "ABB", "IoT platforms"];
     compliance: ["ISO 9001", "ISO 14001", "OHSAS 18001", "Industry 4.0 standards", "Safety regulations"];
     roi: "350% within 20 months", competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation", "ABB", "Bosch"];
@@ -131,11 +131,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   };
   {
     id: "financial-services-ai", title: "Financial Services AI & Risk Management Platform";
-    description: "Advanced AI platform for financial services including fraud detection, risk assessment; portfolio optimization; and regulatory compliance automation.";
+  description: "Advanced AI platform for financial services including fraud detection, risk assessment; portfolio optimization; and regulatory compliance automation.";
     industry: "Financial Services", category: "AI & Risk Management";
-    subcategory: "Financial Technology", price: 3500;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Financial Technology", price: 3500;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "AI-powered fraud detection and prevention";
       "Real-time risk assessment and monitoring";
       "Portfolio optimization and management";
@@ -173,13 +173,13 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     ];
     tags: ["Financial Services", "AI", "Risk Management", "Fraud Detection", "Compliance", "FinTech"];
     estimatedDelivery: "10-20 weeks", supportLevel: "enterprise";
-    marketPrice: "$3, 500 - $15; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$3, 500 - $15; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, industryExpertise: 97, rating: 4.9, reviewCount: 156, featured: true, location: "Global";
-    availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";
-    documentationUrl: "https://ziontechgroup.com/docs/financial-ai", technology: ["Machine learning", "Deep learning", "Natural language processing", "Big data analytics", "Cloud computing"];
+  availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";
+  documentationUrl: "https://ziontechgroup.com/docs/financial-ai", technology: ["Machine learning", "Deep learning", "Natural language processing", "Big data analytics", "Cloud computing"];
     integrations: ["Bloomberg", "Reuters", "Trading platforms", "Core banking systems", "Risk management tools", "Compliance systems"];
     compliance: ["Basel III", "Solvency II", "Dodd-Frank", "SOX", "GDPR", "PCI DSS", "AML regulations"];
     roi: "450% within 24 months", competitors: ["Palantir", "SAS", "IBM", "Oracle", "SAP", "FICO"];
@@ -188,11 +188,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   };
   {
     id: "retail-ecommerce-ai", title: "Retail & E-commerce AI Optimization Platform";
-    description: "Comprehensive AI platform for retail and e-commerce including customer personalization, inventory optimization; demand forecasting; and marketing automation.";
+  description: "Comprehensive AI platform for retail and e-commerce including customer personalization, inventory optimization; demand forecasting; and marketing automation.";
     industry: "Retail & E-commerce", category: "AI Optimization";
-    subcategory: "Customer Experience", price: 1500;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Customer Experience", price: 1500;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "AI-powered customer personalization";
       "Demand forecasting and inventory optimization";
       "Dynamic pricing and revenue optimization";
@@ -230,13 +230,13 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     ];
     tags: ["Retail", "E-commerce", "AI", "Personalization", "Inventory Optimization", "Marketing Automation"];
     estimatedDelivery: "6-12 weeks", supportLevel: "premium";
-    marketPrice: "$1, 500 - $6; 500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$1, 500 - $6; 500/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, industryExpertise: 94, rating: 4.8, reviewCount: 267, featured: false, location: "Global";
-    availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";
-    documentationUrl: "https://ziontechgroup.com/docs/retail-ai", technology: ["Machine learning", "Recommendation engines", "Natural language processing", "Computer vision", "Big data analytics"];
+  availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";
+  documentationUrl: "https://ziontechgroup.com/docs/retail-ai", technology: ["Machine learning", "Recommendation engines", "Natural language processing", "Computer vision", "Big data analytics"];
     integrations: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics", "Facebook Ads"];
     compliance: ["GDPR", "CCPA", "PCI DSS", "SOC 2", "Industry-specific regulations"];
     roi: "320% within 15 months", competitors: ["Segment", "Amplitude", "Mixpanel", "Optimizely", "Dynamic Yield", "Klevu"];
@@ -245,11 +245,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   };
   {
     id: "energy-utility-optimization", title: "Energy & Utility AI Optimization Platform";
-    description: "Advanced AI platform for energy and utility companies including grid optimization, demand forecasting; renewable energy integration; and predictive maintenance.";
+  description: "Advanced AI platform for energy and utility companies including grid optimization, demand forecasting; renewable energy integration; and predictive maintenance.";
     industry: "Energy & Utilities", category: "AI Optimization";
-    subcategory: "Grid Management", price: 2800;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Grid Management", price: 2800;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Smart grid optimization and management";
       "Energy demand forecasting and load balancing";
       "Renewable energy integration and optimization";
@@ -287,13 +287,13 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     ];
     tags: ["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Predictive Maintenance", "Grid Optimization"];
     estimatedDelivery: "12-24 weeks", supportLevel: "enterprise";
-    marketPrice: "$2, 800 - $12; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$2, 800 - $12; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, industryExpertise: 95, rating: 4.8, reviewCount: 134, featured: false, location: "Global";
-    availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";
-    documentationUrl: "https://ziontechgroup.com/docs/energy-utility", technology: ["IoT platforms", "Machine learning", "Predictive analytics", "SCADA systems", "Cloud computing", "Edge computing"];
+  availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";
+  documentationUrl: "https://ziontechgroup.com/docs/energy-utility", technology: ["IoT platforms", "Machine learning", "Predictive analytics", "SCADA systems", "Cloud computing", "Edge computing"];
     integrations: ["SCADA systems", "Energy management systems", "Metering systems", "Renewable energy platforms", "Grid control systems"];
     compliance: ["NERC CIP", "ISO standards", "Grid codes", "Environmental regulations", "Safety standards"];
     roi: "380% within 24 months", competitors: ["Siemens", "GE Digital", "ABB", "Schneider Electric", "Honeywell", "Itron"];
@@ -302,11 +302,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   };
   {
     id: "transportation-logistics-ai", title: "Transportation & Logistics AI Platform";
-    description: "Comprehensive AI platform for transportation and logistics including route optimization, fleet management; supply chain optimization; and predictive analytics.";
+  description: "Comprehensive AI platform for transportation and logistics including route optimization, fleet management; supply chain optimization; and predictive analytics.";
     industry: "Transportation & Logistics", category: "AI Platform";
-    subcategory: "Logistics Optimization", price: 1800;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  subcategory: "Logistics Optimization", price: 1800;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "AI-powered route optimization and planning";
       "Fleet management and vehicle tracking";
       "Supply chain optimization and forecasting";
@@ -344,13 +344,13 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
     ];
     tags: ["Transportation", "Logistics", "Route Optimization", "Fleet Management", "Supply Chain", "AI"];
     estimatedDelivery: "8-16 weeks", supportLevel: "premium";
-    marketPrice: "$1, 800 - $7; 500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$1, 800 - $7; 500/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, industryExpertise: 93, rating: 4.7, reviewCount: 189, featured: false, location: "Global";
-    availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";
-    documentationUrl: "https://ziontechgroup.com/docs/transportation-logistics", technology: ["Machine learning", "Optimization algorithms", "IoT platforms", "GPS tracking", "Cloud computing", "Mobile apps"];
+  availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";
+  documentationUrl: "https://ziontechgroup.com/docs/transportation-logistics", technology: ["Machine learning", "Optimization algorithms", "IoT platforms", "GPS tracking", "Cloud computing", "Mobile apps"];
     integrations: ["TMS systems", "WMS systems", "ERP systems", "GPS tracking", "Weather services", "Traffic data"];
     compliance: ["DOT regulations", "Safety standards", "Environmental regulations", "Industry-specific standards"];
     roi: "300% within 18 months", competitors: ["Manhattan Associates", "JDA Software", "Oracle Transportation", "SAP Transportation", "Trimble"];

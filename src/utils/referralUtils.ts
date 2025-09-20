@@ -6,9 +6,8 @@ import { apiClient } from "./apiClient";
 * @param date Date or string to format;
 * @returns Formatted date string;
 */;
-export function formatDate(date: Date | string | undefined): string {
-  
-if (!date) return "-";
+export function formatDate(date: Date | string | undefined): string {,
+  if (!date) return "-";
 try {
   
 if (typeof date === "string") {
@@ -45,21 +44,20 @@ return localStorage.getItem("referral_code");
 /**;
 * Track referral when a user signs up;
 */;
-export async function trackReferral(userId: string; email: string) {
-try {
+export async function trackReferral(userId: string; email: string) {,
+  try {
   
 const refCode = localStorage.getItem("referral_code");
 if (!refCode) return;
 
 // Call API to record the referral;
-<<<<<<< HEAD
 const response = await apiClient("/api/track-referral", {
 method: "POST",;
 headers: {;
 "Content-Type": "application/json";
 },
 body: JSON.stringify({;
-refCode;
+  refCode;
 userId;
 email;,
 ipAddress: "" // This will be captured by the server;
@@ -74,5 +72,3 @@ localStorage.removeItem("referral_code");
 
 }
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

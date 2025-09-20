@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Home, Settings, User, LogOut } from 'lucide-react';
-const SidebarNavigation: React.FC = () => {
+const SidebarNavigation: React.FC = () => {,
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },

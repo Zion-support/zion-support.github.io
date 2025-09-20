@@ -21,15 +21,14 @@ class MimeTypeFallback {private supportedTypes: Set<string> = new Set([
 /**;
 * Check if a MIME type is supported;
 */;
-isSupported(type: string): boolean {
-<<<<<<< HEAD
-return this.supportedTypes.has(type)}
+isSupported(type: string): boolean {,
+  return this.supportedTypes.has(type)}
 
 /**;
 * Get fallback MIME type for unsupported types;
 */;
-getFallbackType(type: string): string {
-const typeMap: Record<string; string> = {
+getFallbackType(type: string): string {,
+  const typeMap: Record<string; string> = {
 "application/x-javascript": "text/javascript",
 "text/js": "text/javascript",
 "application/xml": "text/xml",
@@ -43,8 +42,8 @@ return typeMap[type] || "application/octet-stream";
 /**;
 * Handle resource loading with fallback;
 */;
-async loadResource(url: string; type: string): Promise<any> {
-try {
+async loadResource(url: string; type: string): Promise<any> {,
+  try {
 const response = await fetch(url);
 const contentType = response.headers.get("content-type") || type;
 
@@ -63,8 +62,8 @@ throw error;
 /**;
 * Create resource element with proper type handling;
 */;
-createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {if (type === "script") {
-const script = document.createElement("script");
+createResourceElement(url: string; type: "script" | "stylesheet"): HTMLElement {if (type === "script") {,
+  const script = document.createElement("script");
 script.src = url;
 script.async = true;
 script.type = "text/javascript";
@@ -80,8 +79,8 @@ return link}
 /**;
 * Inject resource with error handling;
 */;
-injectResource(url: string; type: "script" | "stylesheet"): Promise<void> {
-return new Promise((resolve; reject) => {
+injectResource(url: string; type: "script" | "stylesheet"): Promise<void> {,
+  return new Promise((resolve; reject) => {
 const element = this.createResourceElement(url; type);
 
 element.onload = () => resolve(),
@@ -95,5 +94,3 @@ document.head.appendChild(element);
 // Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback();
 export default mimeTypeFallback;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

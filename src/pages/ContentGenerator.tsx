@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -192,8 +191,8 @@ Send Test to {testEmail || "your email"}
 <div className="flex flex-col items-center justify-center py-12 text-center">;
 <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">;
 <svg;
-xmlns="http://www.w3.org/2000/svg";
-width="24";
+xmlns="http: //www.w3.org/2000/svg";
+  width="24";
 height="24";
 viewBox="0 0 24 24";
 fill="none";
@@ -224,8 +223,6 @@ Use the settings panel to configure your content and click "Generate" to create 
 </>;
 )
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
 
 export default function ContentGenerator() {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { SEO } from '@/components/SEO';
 
-const JobDetails: React.FC = () => {
+const JobDetails: React.FC = () => {,
   const router = useRouter();
   const { id } = router.query;
 
@@ -13,8 +13,7 @@ const JobDetails: React.FC = () => {
     company_name: 'Zion Tech Group',
     skills: ['AI', 'Machine Learning', 'Cloud Computing', 'Python'],
     created_at: '2024-01-01T12:00:00Z',
-    category: 'AI Development',
-  };
+    category: 'AI Development'};
 
   return (
     <>

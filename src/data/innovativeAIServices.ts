@@ -1,25 +1,25 @@
 import { Routes, Route } from "react-router-dom, ";
 export interface InnovativeAIService {
   id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];
-    benefits: string[], useCases: string[];
-    targetAudience: string[], tags: string[];
-    estimatedDelivery: string, supportLevel: string, marketPrice: string;
-    contactInfo: {
+  benefits: string[], useCases: string[];
+  targetAudience: string[], tags: string[];
+  estimatedDelivery: string, supportLevel: string, marketPrice: string;
+  contactInfo: {
     phone: string, email: string, website: string;
      };
   technology: string[], integrations: string[];
-    compliance: string[], roi: string, competitors: string[], aiCapabilities: string[];
-    trainingData: string, accuracy: string,;
+  compliance: string[], roi: string, competitors: string[], aiCapabilities: string[];
+  trainingData: string, accuracy: string,;
 }
 
 export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
   // AI-Powered Content Generation & Marketing;
   {
     id: "ai-content-marketing-suite", title: "AI Content Marketing Suite";
-    description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials, social media posts; and SEO-optimized content.";
+  description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials, social media posts; and SEO-optimized content.";
     category: "AI & Marketing", subcategory: "Content Generation";
-    price: 399, currency: "$";
-    pricingModel: "monthly", features: [
+  price: 399, currency: "$";
+  pricingModel: "monthly", features: [
       "AI-powered content generation";
       "SEO optimization suggestions";
       "Multi-platform content adaptation";
@@ -52,10 +52,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     ];
     tags: ["AI", "Content Marketing", "SEO", "Social Media", "Automation"];
     estimatedDelivery: "1-2 weeks", supportLevel: "premium";
-    marketPrice: "$399 - $1, 500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$399 - $1, 500/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"];
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite"];
     compliance: ["GDPR", "CCPA", "SOC 2"];
@@ -66,10 +66,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
   // AI-Powered Video Analytics;
   {
     id: "ai-video-analytics-platform", title: "AI Video Analytics Platform";
-    description: "Advanced video analysis platform that uses computer vision to extract insights, detect objects; and analyze customer behavior in retail and security applications.";
+  description: "Advanced video analysis platform that uses computer vision to extract insights, detect objects; and analyze customer behavior in retail and security applications.";
     category: "AI & Computer Vision", subcategory: "Video Analytics";
-    price: 599, currency: "$";
-    pricingModel: "monthly", features: [
+  price: 599, currency: "$";
+  pricingModel: "monthly", features: [
       "Real-time object detection";
       "Customer behavior analysis";
       "Heat mapping and foot traffic";
@@ -102,10 +102,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     ];
     tags: ["AI", "Computer Vision", "Video Analytics", "Security", "Retail Analytics"];
     estimatedDelivery: "3-4 weeks", supportLevel: "enterprise";
-    marketPrice: "$599 - $2, 500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$599 - $2, 500/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["TensorFlow", "OpenCV", "Python", "React", "PostgreSQL"];
     integrations: ["CCTV systems", "IP cameras", "Cloud storage", "Analytics platforms"];
     compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"];
@@ -116,10 +116,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
   // AI-Powered Financial Trading Assistant;
   {
     id: "ai-financial-trading-assistant", title: "AI Financial Trading Assistant";
-    description: "Intelligent trading platform that uses machine learning to analyze market trends, predict price movements; and provide automated trading recommendations.";
+  description: "Intelligent trading platform that uses machine learning to analyze market trends, predict price movements; and provide automated trading recommendations.";
     category: "AI & Finance", subcategory: "Trading & Investment";
-    price: 799, currency: "$";
-    pricingModel: "monthly", features: [
+  price: 799, currency: "$";
+  pricingModel: "monthly", features: [
       "Real-time market analysis";
       "Predictive price modeling";
       "Risk assessment algorithms";
@@ -152,10 +152,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     ];
     tags: ["AI", "Finance", "Trading", "Machine Learning", "Risk Management"];
     estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$799 - $3, 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$799 - $3, 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["TensorFlow", "Python", "React", "PostgreSQL", "Redis"];
     integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs"];
     compliance: ["SEC", "FINRA", "GDPR", "SOC 2"];
@@ -166,10 +166,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
   // AI-Powered Healthcare Diagnostics;
   {
     id: "ai-healthcare-diagnostics", title: "AI Healthcare Diagnostics Platform";
-    description: "Advanced medical imaging analysis platform that uses deep learning to assist healthcare professionals in diagnosing diseases and conditions.", category: "AI & Healthcare";
-    subcategory: "Medical Imaging", price: 1299;
-    currency: "$", pricingModel: "monthly";
-    features: [
+  description: "Advanced medical imaging analysis platform that uses deep learning to assist healthcare professionals in diagnosing diseases and conditions.", category: "AI & Healthcare";
+  subcategory: "Medical Imaging", price: 1299;
+  currency: "$", pricingModel: "monthly";
+  features: [
       "Medical image analysis";
       "Disease detection algorithms";
       "Radiology report generation";
@@ -202,10 +202,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     ];
     tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Deep Learning"];
     estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$1, 299 - $5; 000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$1, 299 - $5; 000/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["TensorFlow", "PyTorch", "Python", "React", "PostgreSQL"];
     integrations: ["PACS systems", "EHR platforms", "DICOM viewers", "Hospital systems"];
     compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"];
@@ -216,10 +216,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
   // AI-Powered Supply Chain Optimization;
   {
     id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform";
-    description: "Intelligent supply chain management system that uses AI to predict demand, optimize inventory; and streamline logistics operations.";
+  description: "Intelligent supply chain management system that uses AI to predict demand, optimize inventory; and streamline logistics operations.";
     category: "AI & Operations", subcategory: "Supply Chain";
-    price: 699, currency: "$";
-    pricingModel: "monthly", features: [
+  price: 699, currency: "$";
+  pricingModel: "monthly", features: [
       "Demand forecasting";
       "Inventory optimization";
       "Route optimization";
@@ -252,10 +252,10 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     ];
     tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"];
     estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$699 - $2, 500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  marketPrice: "$699 - $2, 500/month";
+    contactInfo: {,
+  phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }, technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis"];
     integrations: ["ERP systems", "WMS platforms", "Shipping carriers", "Supplier portals"];
     compliance: ["ISO 9001", "SOC 2", "GDPR"];

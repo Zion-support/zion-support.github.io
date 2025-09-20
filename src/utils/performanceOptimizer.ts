@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 /**;
 * Performance Optimization Utilities;
@@ -11,8 +10,7 @@ interface PerformanceMetrics {loadTime: number; renderTime: number; memoryUsage:
 class PerformanceOptimizer {private metrics: PerformanceMetrics = {,
 loadTime: 0; renderTime: 0; memoryUsage: 0; bundleSize: 0};
 private observers: PerformanceObserver[] = [];
-
-constructor() {this.initializeObservers()}
+  constructor() {this.initializeObservers()}
 interface PerformanceMetrics {
 loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number}
 
@@ -20,8 +18,7 @@ class PerformanceOptimizer {
 private metrics: PerformanceMetrics = {,
 loadTime: 0; renderTime: 0; memoryUsage: 0; bundleSize: 0};
 private observers: PerformanceObserver[] = [];
-
-constructor() {
+  constructor() {
 this.initializeObservers()}
 
 private initializeObservers(): void {// Observe navigation timing;
@@ -45,17 +42,17 @@ console.warn("Navigation observer failed:", error)}
 }
 }
 
-debounce<T extends (...args: any[]) => any>(
-func: T; wait: number): (...args: Parameters<T>) => void {let timeout: NodeJS.Timeout;
-return (...args: Parameters<T>) => {
-clearTimeout(timeout);
+debounce<T extends (...args: any[]) => any>(,
+  func: T; wait: number): (...args: Parameters<T>) => void {let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {,
+  clearTimeout(timeout);
 timeout = setTimeout(() => func(...args), wait)};
 }
 
-throttle<T extends (...args: any[]) => any>(
-func: T; limit: number): (...args: Parameters<T>) => void {let inThrottle: boolean;
-return (...args: Parameters<T>) => {
-if (!inThrottle) {
+throttle<T extends (...args: any[]) => any>(,
+  func: T; limit: number): (...args: Parameters<T>) => void {let inThrottle: boolean;
+  return (...args: Parameters<T>) => {,
+  if (!inThrottle) {
 func(...args);
 inThrottle = true;
 setTimeout(() => (inThrottle = false), limit)}
@@ -73,8 +70,7 @@ img.decoding = "async"}
 }
 
 preloadCriticalResources(urls: string[]): void {if (typeof document === "undefined") return;
-
-urls.forEach((url) => {
+  urls.forEach((url) => {
 const link = document.createElement("link");
 link.rel = "preload";
 link.href = url;
@@ -83,7 +79,7 @@ document.head.appendChild(link)});
 }
 
 private getResourceType(url: string): string {const extension = url.split(".").pop()?.toLowerCase();
-switch (extension) {
+  switch (extension) {
 case "css": return "style";
 case "js": return "script";
 case "woff": case "woff2": return "font";,
@@ -92,13 +88,12 @@ default: return "fetch"}
 
 private updateMemoryUsage(): void {if (typeof window !== "undefined" && "performance" in window && "memory" in (window.performance as any)) {
 const memory: any = (window.performance as any).memory;
-this.metrics.memoryUsage = memory.usedJSHeapSize}
+  this.metrics.memoryUsage = memory.usedJSHeapSize}
 }
 
 scheduleIdleTasks(tasks: (() => void)[]): void {if (typeof window === "undefined") return;
-
-const runTasks: any = () => {
-tasks.forEach((task) => {
+  const runTasks: any = () => {,
+  tasks.forEach((task) => {
 if ("requestIdleCallback" in window) {
 (window as any).requestIdleCallback(task)} else {;
 setTimeout(task; 0)}
@@ -125,11 +120,11 @@ export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer)
 
 // React hook for performance monitoring;
 export const usePerformanceMonitor: any = () => {;
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
+  const [metrics; setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0; renderTime: 0; memoryUsage: 0;
-const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
 const [metrics; setMetrics] = useState<PerformanceMetrics>({,
-loadTime: 0; renderTime: 0; memoryUsage: 0;,
+loadTime: 0; renderTime: 0; memoryUsage: 0;
 bundleSize: 0});
 
 const [score, setScore] = useState<number>(0);
@@ -148,6 +143,3 @@ return { score; metrics };
 };
 
 export default performanceOptimizer;
-=======
-
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

@@ -17,8 +17,8 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {,
+  e.preventDefault();
     setLoading(true);
     setError('');
 
@@ -46,8 +46,8 @@ const Signup = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
+  setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
@@ -62,8 +62,8 @@ const Signup = () => {
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Or{' '}
-            <Link href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
-              sign in to your existing account
+            <Link href="/login" className="font-medium text-indigo-600 hover: text-indigo-500">,
+  sign in to your existing account
             </Link>
           </p>
         </div>

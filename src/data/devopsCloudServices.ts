@@ -1,24 +1,24 @@
 export interface DevOpsCloudService {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    price: number;
+  price: number;
     currency: string;
-    pricingModel: string;
+  pricingModel: string;
     features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     tags: string[];
-    estimatedDelivery: string;
+  estimatedDelivery: string;
     supportLevel: string;
-    marketPrice: string;
-    contactInfo: {
-    phone: string;
+  marketPrice: string;
+    contactInfo: {,
+  phone: string;
     email: string;
-    website: string,;
+  website: string,;
      };
 }
 
@@ -26,14 +26,14 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
   // GitOps Platform;
   {
     id: "gitops-platform";
-    title: "GitOps Platform & Infrastructure Automation";
+  title: "GitOps Platform & Infrastructure Automation";
     description: "Complete GitOps platform that automates infrastructure deployment, configuration management; and application delivery using Git as the single source of truth.";
     category: "DevOps & Cloud";
-    subcategory: "GitOps";
+  subcategory: "GitOps";
     price: 2200;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Infrastructure as Code automation";
       "Git-based deployment pipelines";
       "Configuration drift detection";
@@ -64,25 +64,25 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     ];
     tags: ["DevOps", "GitOps", "Infrastructure as Code", "Automation", "Deployment"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$2,200 - $12;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   };
   // Multi-Cloud Management Platform;
   {
     id: "multi-cloud-management";
-    title: "Multi-Cloud Management & Cost Optimization Platform";
+  title: "Multi-Cloud Management & Cost Optimization Platform";
     description: "Unified multi-cloud management platform that provides centralized monitoring, cost optimization; and governance across AWS; Azure; GCP; and other cloud providers.";
     category: "DevOps & Cloud";
-    subcategory: "Cloud Management";
+  subcategory: "Cloud Management";
     price: 2800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Multi-cloud dashboard";
       "Cost optimization recommendations";
       "Resource utilization monitoring";
@@ -113,25 +113,25 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     ];
     tags: ["DevOps", "Multi-Cloud", "Cost Optimization", "Cloud Management", "FinOps"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$2,800 - $15;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   };
   // Kubernetes Management Platform;
   {
     id: "kubernetes-management";
-    title: "Enterprise Kubernetes Management & Operations Platform";
+  title: "Enterprise Kubernetes Management & Operations Platform";
     description: "Comprehensive Kubernetes management platform that simplifies cluster operations, monitoring; security; and application deployment across multiple clusters.";
     category: "DevOps & Cloud";
-    subcategory: "Kubernetes";
+  subcategory: "Kubernetes";
     price: 2500;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Multi-cluster management";
       "Automated scaling";
       "Security policy enforcement";
@@ -162,25 +162,25 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     ];
     tags: ["DevOps", "Kubernetes", "Container Management", "Microservices", "Platform Engineering"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$2,500 - $12;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   };
   // Observability Platform;
   {
     id: "observability-platform";
-    title: "Full-Stack Observability & Monitoring Platform";
+  title: "Full-Stack Observability & Monitoring Platform";
     description: "Comprehensive observability platform that provides unified monitoring, logging; tracing; and alerting across applications; infrastructure; and business metrics.";
     category: "DevOps & Cloud";
-    subcategory: "Observability";
+  subcategory: "Observability";
     price: 2100;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Application performance monitoring";
       "Infrastructure monitoring";
       "Distributed tracing";
@@ -211,25 +211,25 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     ];
     tags: ["DevOps", "Observability", "Monitoring", "APM", "Logging"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$2,100 - $10;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   };
   // Serverless Development Platform;
   {
     id: "serverless-development";
-    title: "Serverless Development & Deployment Platform";
+  title: "Serverless Development & Deployment Platform";
     description: "End-to-end serverless development platform that simplifies building, testing; deploying; and monitoring serverless applications across multiple cloud providers.";
     category: "DevOps & Cloud";
-    subcategory: "Serverless";
+  subcategory: "Serverless";
     price: 1800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Serverless function development";
       "Multi-cloud deployment";
       "Testing and debugging tools";
@@ -260,12 +260,12 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     ];
     tags: ["DevOps", "Serverless", "Function as a Service", "API Development", "Microservices"];
     estimatedDelivery: "3-4 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$1,800 - $8;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     }
   }
 ];

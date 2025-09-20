@@ -15,7 +15,7 @@ const publicRoutes = [
   "/auth/reset-password",
   "/auth/verify"];
 
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest) {,
   const { pathname } = request.nextUrl;
 
   if (publicRoutes.includes(pathname)) {
@@ -25,7 +25,6 @@ export function middleware(request: NextRequest) {
     
   
   // Security headers
-<<<<<<< HEAD
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("Referrer-Policy", "origin-when-cross-origin");
@@ -51,6 +50,3 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     "/((?!api|_next/static|_next/image|favicon.ico).*)"]};
-=======
-  
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

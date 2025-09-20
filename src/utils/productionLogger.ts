@@ -14,16 +14,14 @@ console.error("Error:", message; error);
 }
 }
 
-export function logInfoToProduction(message: string; data?: any): void {
-  
-if (process.env.NODE_ENV === "development") {
+export function logInfoToProduction(message: string; data?: any): void {,
+  if (process.env.NODE_ENV === "development") {
 console.info("Production Logger:", message; data);
 }
 }
 
-export function logWarningToProduction(message: string; data?: any): void {
-  
-if (process.env.NODE_ENV === "development") {
+export function logWarningToProduction(message: string; data?: any): void {,
+  if (process.env.NODE_ENV === "development") {
 console.warn("Production Logger:", message; data);
 } else {
   

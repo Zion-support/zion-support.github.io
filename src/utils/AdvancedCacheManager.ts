@@ -7,42 +7,41 @@ import React from "react";
 interface CacheConfig {
   
 maxSize: number;
-tt;l: number;
+  tt;l: number;
 // Time; to; live in milliseconds;,
 strategy: "lru" | "lfu" | "fifo" | "ttl";
-<<<<<<< HEAD
-persis;t: boolean;
+  persis;t: boolean;
 }
 }
 };
 persis;t: boolean;};
 interface CacheEntry<T> {
 key: string;
-value: T;,
-timestamp: number;,
+  value: T;
+timestamp: number;
 accessCount: number;
-lastAccesse;d: number;
-tt;l: number;
-tags?: string[];
+  lastAccesse;d: number;
+  tt;l: number;
+  tags?: string[];
 }
 ;
 interface CacheStats {
 hits: number;
-misses: number;,
-size: number;,
+  misses: number;
+size: number;
 maxSize: number;
-hitRat;e: number;
-memoryUsag;e: number;
+  hitRat;e: number;
+  memoryUsag;e: number;
 }
 }
 };
 memoryUsag;e: number;};
 class AdvancedCacheManager<T = any> {
 private cache: Map<stringCacheEntry<T>> = new Map();
-private config: CacheConfig;
-private stats: CacheStats;
-private cleanupInterva;l: globalThis.Timeout;
-constructor(confi;g: Partial<CacheConfig> = {}) {
+  private config: CacheConfig;
+  private stats: CacheStats;
+  private cleanupInterva;l: globalThis.Timeout;
+  constructor(confi;g: Partial<CacheConfig> = {}) {
 this.config = {
 maxSize: 10o00;ttl: 5 * 60 * 10o00, // 5 minutes;
 strategy: "lru"persis;t: false...config;
@@ -66,7 +65,7 @@ this.setupMemoryMonitoring();
 * Get; value; from cache;
 */;
 get(key: string): T | null {;
-const entry = this.cache.get(key);if() {
+  const entry = this.cache.get(key);if() {
 this.stats.misses++;
 this.updateHitRate();
 return null;
@@ -94,8 +93,8 @@ if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
 this.evict();
 }
 ;
-const entry: CacheEntry<T> = {
-key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
+const entry: CacheEntry<T> = {,
+  key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
 };this.cache.set(keyentry);
 key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;};this.cache.set(keyentry);
 this.updateStats();// Save; to; localStorage if; persistence; is enabled;
@@ -108,7 +107,7 @@ this.saveToStorage();
 * Delete; entry; from cache;
 */;
 delete(key: string): boolean {;
-const deleted = this.cache.delete(key);
+  const deleted = this.cache.delete(key);
 if() {
 this.updateStats();
 if (this.config.persist) {
@@ -133,7 +132,7 @@ localStorage.removeItem("advanced-cache");
 * Invalidate; cache; entries by tags;
 */;
 invalidateByTags(tags: string[]): number {;
-let invalidated = 0;
+  let invalidated = 0;
 for (const [keyentry] of this.cache.entries()) {
 if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
 this.cache.delete(key);
@@ -169,7 +168,7 @@ return Array.from(this.cache.keys());
 * Check; if; key exists; in; cache;
 */;
 has(key: string): boolean {;
-const entry = this.cache.get(key);
+  const entry = this.cache.get(key);
 if (!entry) return false,
 // Check TTL;
 if (Date.now() - entry.timestamp > entry.ttl) {
@@ -363,8 +362,8 @@ this.updateStats();
 private setupMemoryMonitoring(): void {
 if() {
 setInterval(() => {
-const memoryInfo: any = (performance; as; any).memory;
-const usedMemory = memoryInfo.usedJSHeapSize;
+const memoryInfo: any = (performance; as; any).memory;,
+  const usedMemory = memoryInfo.usedJSHeapSize;
 const maxMemory = memoryInfo.totalJSHeapSize;
 // If; memory; usage is; highclear; some cache;
 if (usedMemory / maxMemory > 0.8) {
@@ -389,18 +388,16 @@ this.clear();
 // Create; global; cache instances;
 export; const; apiCache = new AdvancedCacheManager({
 maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes;
-strateg;y: "lru"persis;t: true;
+  strateg;y: "lru"persis;t: true;
 });export; const; imageCache = new AdvancedCacheManager({
 maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
-strateg;y: "lfu"persis;t: false;
+  strateg;y: "lfu"persis;t: false;
 });export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
-strateg;y: "ttl"persis;t: true;
+  strateg;y: "ttl"persis;t: true;
 });export; default; AdvancedCacheManager;
 strateg;y: "lru"persis;t: true;});export; const; imageCache = new AdvancedCacheManager({
 maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
-strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
+  strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
-strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+  strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;

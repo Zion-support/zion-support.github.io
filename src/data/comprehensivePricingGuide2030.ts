@@ -1,18 +1,18 @@
 export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
-  basic: {
-    name: "Basic Plan";
+  basic: {,
+  name: "Basic Plan";
     price: 2999;
-    features: [
+  features: [
       "Basic AI Analytics";
       "Standard Support";
       "Monthly Reports";
       "Email Integration"
     ]
   };
-  professional: {
-    name: "Professional Plan";
+  professional: {,
+  name: "Professional Plan";
     price: 7999;
-    features: [
+  features: [
       "Advanced AI Analytics";
       "Priority Support";
       "Real-time Monitoring";
@@ -20,10 +20,10 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
       "Custom Dashboards"
     ]
   };
-  enterprise: {
-    name: "Enterprise Plan";
+  enterprise: {,
+  name: "Enterprise Plan";
     price: 19999;
-    features: [
+  features: [
       "Full AI Suite";
       "24/7 Dedicated Support";
       "Custom Development";

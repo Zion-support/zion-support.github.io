@@ -15,7 +15,7 @@ interface WhitepaperSection {
   order: number;
 }
 
-const WhitepaperGeneratorPage: React.FC = () => {
+const WhitepaperGeneratorPage: React.FC = () => {,
   const [sections, setSections] = useState<WhitepaperSection[]>([]);
   const [isDownloading, setIsDownloading] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
@@ -23,8 +23,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
   const [shareableLink, setShareableLink] = useState<string | null>(null);
 
   const addSection = useCallback(() => {
-    const newSection: WhitepaperSection = {
-      id: crypto.randomUUID(),
+    const newSection: WhitepaperSection = {,
+  id: crypto.randomUUID(),
       title: 'New Section',
       content: '',
       order: sections.length
@@ -32,14 +32,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
     setSections(prev => [...prev, newSection]);
   }, [sections.length]);
 
-  const updateSection = useCallback((id: string, updates: Partial<WhitepaperSection>) => {
-    setSections(prev => prev.map(section => 
+  const updateSection = useCallback((id: string, updates: Partial<WhitepaperSection>) => {,
+  setSections(prev => prev.map(section => 
       section.id === id ? { ...section, ...updates } : section
     ));
   }, []);
 
-  const deleteSection = useCallback((id: string) => {
-    setSections(prev => prev.filter(section => section.id !== id));
+  const deleteSection = useCallback((id: string) => {,
+  setSections(prev => prev.filter(section => section.id !== id));
   }, []);
 
   const downloadWhitepaper = async () => {

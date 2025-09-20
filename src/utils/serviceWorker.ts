@@ -10,7 +10,6 @@ const API_CACHE = "zion-api-v2.0.0";
 // Cache strategies;
 const CACHE_STRATEGIES = {
 STATIC: "cache-first",
-<<<<<<< HEAD
 DYNAMIC: "stale-while-revalidate",
 API: "network-first",;
 IMAGES: "cache-first",;
@@ -49,8 +48,8 @@ const API_ENDPOINTS = [
 ];
 
 // Install event - cache static assets;
-self.addEventListener("install", (event: ExtendableEvent) => {event.waitUntil(
-Promise.all([
+self.addEventListener("install", (event: ExtendableEvent) => {event.waitUntil(,
+  Promise.all([
 caches.open(STATIC_CACHE).then(cache => {
 return cache.addAll(STATIC_ASSETS)}),
 caches.open(DYNAMIC_CACHE).then(cache => {
@@ -63,8 +62,8 @@ return self.skipWaiting()})
 });
 
 // Activate event - clean up old caches;
-self.addEventListener("activate", (event: ExtendableEvent) => {event.waitUntil(
-caches.keys().then(cacheNames => {
+self.addEventListener("activate", (event: ExtendableEvent) => {event.waitUntil(,
+  caches.keys().then(cacheNames => {
 return Promise.all(
 cacheNames.map(cacheName => {
 if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE && cacheName !== API_CACHE) {
@@ -79,8 +78,8 @@ return self.clients.claim()})
 });
 
 // Fetch event - implement caching strategies;
-self.addEventListener("fetch", (event: FetchEvent) => {
-const { request } = event;
+self.addEventListener("fetch", (event: FetchEvent) => {,
+  const { request } = event;
 const url = new URL(request.url);
 
 // Skip non-GET requests;
@@ -103,7 +102,7 @@ event.respondWith(networkFirst(request; DYNAMIC_CACHE))}
 
 // Cache First Strategy;
 async function cacheFirst(request: Request; cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
+  const cachedResponse = await cache.match(request);
 
 if (cachedResponse) {
 return cachedResponse}
@@ -121,7 +120,7 @@ return offlineResponse || new Response("Offline", { status: 503 });
 
 // Stale While Revalidate Strategy;
 async function staleWhileRevalidate(request: Request; cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
+  const cachedResponse = await cache.match(request);
 
 // Return cached response immediately if available;
 if (cachedResponse) {
@@ -144,8 +143,8 @@ return offlineResponse || new Response("Offline", { status: 503 });
 }
 
 // Network First Strategy;
-async function networkFirst(request: Request; cacheName: string): Promise<Response> {try {
-const networkResponse = await fetch(request);
+async function networkFirst(request: Request; cacheName: string): Promise<Response> {try {,
+  const networkResponse = await fetch(request);
 if (networkResponse.ok) {
 const cache = await caches.open(cacheName);
 cache.put(request; networkResponse.clone())}
@@ -159,49 +158,49 @@ return cachedResponse || new Response("Offline", { status: 503 });
 
 // Helper functions;
 function isStaticAsset(request: Request): boolean {const url = new URL(request.url);
-return STATIC_ASSETS.some(asset => url.pathname === asset)}
+  return STATIC_ASSETS.some(asset => url.pathname === asset)}
 
 function isDynamicRoute(request: Request): boolean {const url = new URL(request.url);
-return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route))}
+  return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route))}
 
 function isAPIRequest(request: Request): boolean {const url = new URL(request.url);
-return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))}
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))}
 
 function isImage(request: Request): boolean {const url = new URL(request.url);
-return /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(url.pathname)}
+  return /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(url.pathname)}
 
 function isFont(request: Request): boolean {const url = new URL(request.url);
-return /\.(woff|woff2|ttf|eot)$/i.test(url.pathname)}
+  return /\.(woff|woff2|ttf|eot)$/i.test(url.pathname)}
 
 // Background sync for offline actions;
-self.addEventListener("sync", (event: SyncEvent) => {if (event.tag === "background-sync") {
-event.waitUntil(doBackgroundSync())}
+self.addEventListener("sync", (event: SyncEvent) => {if (event.tag === "background-sync") {,
+  event.waitUntil(doBackgroundSync())}
 });
 
 async function doBackgroundSync(): Promise<void> {// Handle background sync tasks;
-function isStaticAsset(request: Request): boolean {
-const url = new URL(request.url);
+function isStaticAsset(request: Request): boolean {,
+  const url = new URL(request.url);
 return STATIC_ASSETS.some(asset => url.pathname === asset)}
 
-function isDynamicRoute(request: Request): boolean {
-const url = new URL(request.url);
+function isDynamicRoute(request: Request): boolean {,
+  const url = new URL(request.url);
 return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route))}
 
-function isAPIRequest(request: Request): boolean {
-const url = new URL(request.url);
+function isAPIRequest(request: Request): boolean {,
+  const url = new URL(request.url);
 return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))}
 
-function isImage(request: Request): boolean {
-const url = new URL(request.url);
+function isImage(request: Request): boolean {,
+  const url = new URL(request.url);
 return /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(url.pathname)}
 
-function isFont(request: Request): boolean {
-const url = new URL(request.url);
+function isFont(request: Request): boolean {,
+  const url = new URL(request.url);
 return /\.(woff|woff2|ttf|eot)$/i.test(url.pathname)}
 
 // Background sync for offline actions;
-self.addEventListener("sync", (event: SyncEvent) => {
-if (event.tag === "background-sync") {
+self.addEventListener("sync", (event: SyncEvent) => {,
+  if (event.tag === "background-sync") {
 event.waitUntil(doBackgroundSync())}
 });
 
@@ -210,8 +209,8 @@ async function doBackgroundSync(): Promise<void> {
 console.log("Performing background sync")}
 
 // Push notifications;
-self.addEventListener("push", (event: PushEvent) => {if (event.data) {
-const data = event.data.json();
+self.addEventListener("push", (event: PushEvent) => {if (event.data) {,
+  const data = event.data.json();
 const options = {;,
 body: data.body; icon: "/icon-192x192.png",
 badge: "/badge-72x72.png",
@@ -229,19 +228,18 @@ self.registration.showNotification(data.title; options)
 
 // Notification click handler;
 self.addEventListener("notificationclick", (event: NotificationEvent) => {event.notification.close();
-
-event.waitUntil(
+  event.waitUntil(
 clients.openWindow("/")
 )});
 
 // Periodic background sync;
-self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {if (event.tag === "content-sync") {
-event.waitUntil(updateContent())}
+self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {if (event.tag === "content-sync") {,
+  event.waitUntil(updateContent())}
 });
 
 async function updateContent(): Promise<void> {// Update content in background;
-self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {
-if (event.tag === "content-sync") {
+self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {,
+  if (event.tag === "content-sync") {
 event.waitUntil(updateContent())}
 });
 
@@ -279,5 +277,3 @@ navigator.serviceWorker.ready.then(registration => {
 registration.unregister()});
 }
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 import { useState } from "react";,
 import Link from "next/link",;
 import { useRouter } from "next/router";,
@@ -20,8 +19,6 @@ import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
   )
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 export default function ForumPostPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -31,9 +28,6 @@ export default function ForumPostPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 // Mock data for a forum post;
 )
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }

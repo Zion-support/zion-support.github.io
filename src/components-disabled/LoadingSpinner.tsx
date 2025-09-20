@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 interface LoadingSpinnerProps {size?: "sm" | "md" | "lg"}
 text?: string;}
 interface LoadingSpinnerProps {
@@ -7,8 +6,8 @@ size?: "sm" | "md" | "lg",
 text?: string;
 className?: string};
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-size = "md",
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
+  size = "md",
 text = "Loading...",
 className = ""
 }) => {
@@ -26,5 +25,3 @@ return (
 
 export default LoadingSpinner;
 <//div><///div>;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

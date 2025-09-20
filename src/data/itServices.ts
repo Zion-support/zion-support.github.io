@@ -1,49 +1,49 @@
 export interface ITService {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    pricing: {
+  pricing: {
     hourly: number;
-    daily: number;
+  daily: number;
     monthly: number;
-    currency: string;
+  currency: string;
     features: string[],;
      };
   features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     technologies: string[];
-    support: string[];
+  support: string[];
     website: string;
-    contactEmail: string;
+  contactEmail: string;
     phone: string;
-    address: string;
+  address: string;
     rating: number;
-    reviewCount: number;
+  reviewCount: number;
     experience: string;
-    tags: string[];
+  tags: string[];
     image: string;
-    availability: string;
+  availability: string;
     responseTime: string;
-    createdAt: string,;
+  createdAt: string,;
 }
 
 export const IT_SERVICES: ITService[] = [
   {
     id: "ai-development-integration";
-    title: "AI Development & Integration Services";
+  title: "AI Development & Integration Services";
     description: "Full-stack AI development services including custom model training, API integration; and enterprise AI solutions deployment.";
     category: "Development";
-    subcategory: "AI & Machine Learning";
-    pricing: {
-      hourly: 85;
+  subcategory: "AI & Machine Learning";
+    pricing: {,
+  hourly: 85;
       daily: 680;
-      monthly: 13600;
+  monthly: 13600;
       currency: "$";
-      features: ["Custom AI model development", "API integration", "Data pipeline setup", "Model training & optimization", "Deployment & monitoring"]
+  features: ["Custom AI model development", "API integration", "Data pipeline setup", "Model training & optimization", "Deployment & monitoring"]
     };
     features: [
       "Custom AI model development and training";
@@ -73,30 +73,30 @@ export const IT_SERVICES: ITService[] = [
     technologies: ["Python", "TensorFlow", "PyTorch", "AWS SageMaker", "Google Cloud AI", "Azure ML", "Docker", "Kubernetes"];
     support: ["24/7 technical support", "Dedicated project manager", "Training and documentation", "Ongoing maintenance", "Performance optimization"];
     website: "https://ziontechgroup.com/ai-development";
-    contactEmail: "kleber@ziontechgroup.com";
+  contactEmail: "kleber@ziontechgroup.com";
     phone: "+1 302 464 0950";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     rating: 4.9;
-    reviewCount: 156;
+  reviewCount: 156;
     experience: "8+ years";
-    tags: ["AI Development", "Machine Learning", "API Integration", "Custom Solutions", "Enterprise AI"];
+  tags: ["AI Development", "Machine Learning", "API Integration", "Custom Solutions", "Enterprise AI"];
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format";
-    availability: "24/7";
+  availability: "24/7";
     responseTime: "2 hours";
-    createdAt: "2024-01-15T10:00:00.000Z";
+  createdAt: "2024-01-15T10:00:00.000Z";
   };
   {
     id: "cloud-infrastructure-management";
-    title: "Cloud Infrastructure Management";
+  title: "Cloud Infrastructure Management";
     description: "Comprehensive cloud infrastructure management including migration, optimization; monitoring; and 24/7 support across all major cloud platforms.";
     category: "Infrastructure";
-    subcategory: "Cloud Management";
-    pricing: {
-      hourly: 75;
+  subcategory: "Cloud Management";
+    pricing: {,
+  hourly: 75;
       daily: 600;
-      monthly: 12000;
+  monthly: 12000;
       currency: "$";
-      features: ["24/7 monitoring", "Performance optimization", "Cost management", "Security compliance", "Disaster recovery"]
+  features: ["24/7 monitoring", "Performance optimization", "Cost management", "Security compliance", "Disaster recovery"]
     };
     features: [
       "Multi-cloud infrastructure management";
@@ -126,30 +126,30 @@ export const IT_SERVICES: ITService[] = [
     technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Ansible", "Docker", "Kubernetes", "Jenkins"];
     support: ["24/7 infrastructure monitoring", "Emergency response team", "Monthly optimization reports", "Security audits", "Performance tuning"];
     website: "https://ziontechgroup.com/cloud-management";
-    contactEmail: "kleber@ziontechgroup.com";
+  contactEmail: "kleber@ziontechgroup.com";
     phone: "+1 302 464 0950";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     rating: 4.8;
-    reviewCount: 203;
+  reviewCount: 203;
     experience: "10+ years";
-    tags: ["Cloud Management", "Infrastructure", "DevOps", "Cost Optimization", "Security"];
+  tags: ["Cloud Management", "Infrastructure", "DevOps", "Cost Optimization", "Security"];
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format";
-    availability: "24/7";
+  availability: "24/7";
     responseTime: "1 hour";
-    createdAt: "2024-01-20T14:30:00.000Z";
+  createdAt: "2024-01-20T14:30:00.000Z";
   };
   {
     id: "cybersecurity-assessment";
-    title: "Cybersecurity Assessment & Protection";
+  title: "Cybersecurity Assessment & Protection";
     description: "Comprehensive cybersecurity services including penetration testing, vulnerability assessments; compliance audits; and security implementation.";
     category: "Security";
-    subcategory: "Cybersecurity";
-    pricing: {
-      hourly: 95;
+  subcategory: "Cybersecurity";
+    pricing: {,
+  hourly: 95;
       daily: 760;
-      monthly: 15200;
+  monthly: 15200;
       currency: "$";
-      features: ["Penetration testing", "Vulnerability assessment", "Compliance reporting", "Security implementation", "Ongoing monitoring"]
+  features: ["Penetration testing", "Vulnerability assessment", "Compliance reporting", "Security implementation", "Ongoing monitoring"]
     };
     features: [
       "Comprehensive security assessments";
@@ -179,29 +179,29 @@ export const IT_SERVICES: ITService[] = [
     technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap", "OpenVAS", "Qualys", "Rapid7"];
     support: ["Emergency incident response", "Compliance consulting", "Security training", "Ongoing monitoring", "Regular security updates"];
     website: "https://ziontechgroup.com/cybersecurity";
-    contactEmail: "kleber@ziontechgroup.com";
+  contactEmail: "kleber@ziontechgroup.com";
     phone: "+1 302 464 0950";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     rating: 4.9;
-    reviewCount: 189;
+  reviewCount: 189;
     experience: "12+ years";
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance", "Security Audits", "Incident Response"];
+  tags: ["Cybersecurity", "Penetration Testing", "Compliance", "Security Audits", "Incident Response"];
     image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&auto=format";
-    availability: "24/7";
+  availability: "24/7";
     responseTime: "30 minutes";
-    createdAt: "2024-01-10T09:15:00.000Z";
+  createdAt: "2024-01-10T09:15:00.000Z";
   };
   {
     id: "data-analytics-business-intelligence";
-    title: "Data Analytics & Business Intelligence";
+  title: "Data Analytics & Business Intelligence";
     description: "Advanced data analytics and business intelligence solutions to transform raw data into actionable insights for strategic decision-making.";
-    category: "Analytics";
+  category: "Analytics";
     subcategory: "Business Intelligence";
-    pricing: {
+  pricing: {
       hourly: 70;
-      daily: 560;
+  daily: 560;
       monthly: 11200;
-      currency: "$";
+  currency: "$";
       features: ["Data analysis", "Dashboard creation", "Report automation", "Predictive analytics", "Data visualization"]
     };
     features: [
@@ -232,30 +232,30 @@ export const IT_SERVICES: ITService[] = [
     technologies: ["Power BI", "Tableau", "Python", "R", "SQL", "Apache Spark", "Hadoop", "AWS Redshift"];
     support: ["Data analysis consulting", "Dashboard development", "Training and support", "Ongoing maintenance", "Performance optimization"];
     website: "https://ziontechgroup.com/data-analytics";
-    contactEmail: "kleber@ziontechgroup.com";
+  contactEmail: "kleber@ziontechgroup.com";
     phone: "+1 302 464 0950";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     rating: 4.7;
-    reviewCount: 134;
+  reviewCount: 134;
     experience: "9+ years";
-    tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Reporting"];
+  tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Reporting"];
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format";
-    availability: "Business hours";
+  availability: "Business hours";
     responseTime: "4 hours";
-    createdAt: "2024-01-25T11:45:00.000Z";
+  createdAt: "2024-01-25T11:45:00.000Z";
   };
   {
     id: "web-development-ecommerce";
-    title: "Web Development & E-commerce Solutions";
+  title: "Web Development & E-commerce Solutions";
     description: "Full-stack web development services including custom websites, e-commerce platforms; and web applications with modern technologies.";
     category: "Development";
-    subcategory: "Web Development";
-    pricing: {
-      hourly: 65;
+  subcategory: "Web Development";
+    pricing: {,
+  hourly: 65;
       daily: 520;
-      monthly: 10400;
+  monthly: 10400;
       currency: "$";
-      features: ["Custom web development", "E-commerce integration", "Responsive design", "SEO optimization", "Performance optimization"]
+  features: ["Custom web development", "E-commerce integration", "Responsive design", "SEO optimization", "Performance optimization"]
     };
     features: [
       "Custom website development";
@@ -285,30 +285,30 @@ export const IT_SERVICES: ITService[] = [
     technologies: ["React", "Vue.js", "Node.js", "PHP", "WordPress", "Shopify", "WooCommerce", "Laravel"];
     support: ["Development consultation", "Design and development", "Testing and deployment", "Training and support", "Ongoing maintenance"];
     website: "https://ziontechgroup.com/web-development";
-    contactEmail: "kleber@ziontechgroup.com";
+  contactEmail: "kleber@ziontechgroup.com";
     phone: "+1 302 464 0950";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     rating: 4.8;
-    reviewCount: 178;
+  reviewCount: 178;
     experience: "7+ years";
-    tags: ["Web Development", "E-commerce", "Responsive Design", "SEO", "Performance"];
+  tags: ["Web Development", "E-commerce", "Responsive Design", "SEO", "Performance"];
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format";
-    availability: "Business hours";
+  availability: "Business hours";
     responseTime: "8 hours";
-    createdAt: "2024-01-18T16:20:00.000Z";
+  createdAt: "2024-01-18T16:20:00.000Z";
   };
   {
     id: "network-infrastructure-setup";
-    title: "Network Infrastructure Setup & Management";
+  title: "Network Infrastructure Setup & Management";
     description: "Complete network infrastructure services including design, implementation; security; and ongoing management for businesses of all sizes.";
     category: "Infrastructure";
-    subcategory: "Network Management";
-    pricing: {
-      hourly: 80;
+  subcategory: "Network Management";
+    pricing: {,
+  hourly: 80;
       daily: 640;
-      monthly: 12800;
+  monthly: 12800;
       currency: "$";
-      features: ["Network design", "Implementation", "Security setup", "Monitoring", "Ongoing management"]
+  features: ["Network design", "Implementation", "Security setup", "Monitoring", "Ongoing management"]
     };
     features: [
       "Network architecture design";
@@ -338,28 +338,28 @@ export const IT_SERVICES: ITService[] = [
     technologies: ["Cisco", "Juniper", "Fortinet", "Ubiquiti", "Meraki", "VMware", "Hyper-V", "Windows Server"];
     support: ["Network design consultation", "Implementation and setup", "Security configuration", "Ongoing monitoring", "Emergency support"];
     website: "https://ziontechgroup.com/network-infrastructure";
-    contactEmail: "kleber@ziontechgroup.com";
+  contactEmail: "kleber@ziontechgroup.com";
     phone: "+1 302 464 0950";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     rating: 4.7;
-    reviewCount: 145;
+  reviewCount: 145;
     experience: "11+ years";
-    tags: ["Network Infrastructure", "Network Security", "Wireless Networks", "Performance", "Monitoring"];
+  tags: ["Network Infrastructure", "Network Security", "Wireless Networks", "Performance", "Monitoring"];
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format";
-    availability: "24/7";
+  availability: "24/7";
     responseTime: "2 hours";
-    createdAt: "2024-01-22T15:30:00.000Z";
+  createdAt: "2024-01-22T15:30:00.000Z";
   }
 ];
-    export const getITServicesByCategory = (category: string) : any => {
+    export const getITServicesByCategory = (category: string) : any => {,
   return IT_SERVICES.filter(service => service.category === category);
   };
 
-export const getITServicesBySubcategory = (subcategory: string) : any => {
+export const getITServicesBySubcategory = (subcategory: string) : any => {,
   return IT_SERVICES.filter(service => service.subcategory === subcategory);
   };
 
-export const searchITServices = (query: string) : any => {
+export const searchITServices = (query: string) : any => {,
   const lowercaseQuery = query.toLowerCase();
     return IT_SERVICES.filter(service => 
     service.title.toLowerCase().includes(lowercaseQuery) ||

@@ -12,7 +12,7 @@ export, class, SitemapGenerator {
     generateXML() {
         const { baseUrlurls } = this.config,const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
-    const urlsetClose = '</urlset>';
+  const urlsetClose = '</urlset>';
         const urlElements = urls.map(url => {;
             const urlElement = `<url>;
         <loc>${baseUrl}${url.url}</loc>;
@@ -30,7 +30,7 @@ export, class, SitemapGenerator {
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
-    const sitemapindexClose = '</sitemapindex>';
+  const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {;
             return `<sitemap>;
         <loc>${sitemap}</loc>;
@@ -46,13 +46,12 @@ export, class, SitemapGenerator {
 Sitema,p: ${baseUrl}/sitemap.xml;
     # Disallow, admin, and private areas;
 Disallow: /admin/,Disallow: /private/;
-    Disallo,w: /api/,Disallow: /_next/,# Allow, important, pages;
+  Disallo,w: /api/,Disallow: /_next/,# Allow, important, pages;
 Allo,w: /,Allow: /services/;
-    Allo,w: /solutions/,Allow: /about/;
-    Allo,w: /contact/,Allow: /blog/;
-    Allo,w: /careers/;
+  Allo,w: /solutions/,Allow: /about/;
+  Allo,w: /contact/,Allow: /blog/;
+  Allo,w: /careers/;
     # Crawl delay (optional);
-<<<<<<< HEAD
 Crawl-dela,y: 1`;
      }
 Crawl-dela,y: 1`;}
@@ -217,5 +216,3 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         
         throw error };
 },export, default, SitemapGenerator,<//html><///html>
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

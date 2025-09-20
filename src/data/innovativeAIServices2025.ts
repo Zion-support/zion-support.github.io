@@ -1,32 +1,32 @@
 export interface InnovativeAIService2025 {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    price: number;
+  price: number;
     currency: string;
-    pricingModel: string;
+  pricingModel: string;
     features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     tags: string[];
-    estimatedDelivery: string;
+  estimatedDelivery: string;
     supportLevel: string;
-    marketPrice: string;
-    contactInfo: {
-    phone: string;
+  marketPrice: string;
+    contactInfo: {,
+  phone: string;
     email: string;
-    website: string,;
+  website: string,;
      };
   websiteUrl: string;
-    demoUrl?: string;
+  demoUrl?: string;
   documentationUrl?: string;
   technologyStack: string[];
-    complianceStandards: string[];
+  complianceStandards: string[];
     integrationCapabilities: string[];
-    roiMetrics: string[];
+  roiMetrics: string[];
     competitiveAdvantages: string[],;
 }
 
@@ -34,14 +34,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Autonomous Customer Service;
   {
     id: "ai-autonomous-customer-service-2025";
-    title: "AI Autonomous Customer Service Platform";
+  title: "AI Autonomous Customer Service Platform";
     description: "Fully autonomous customer service platform that handles customer inquiries, resolves issues; and provides personalized support without human intervention.";
     category: "AI & Customer Service";
-    subcategory: "Autonomous Support";
+  subcategory: "Autonomous Support";
     price: 6800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Natural language understanding";
       "Context-aware conversations";
       "Multi-language support";
@@ -79,15 +79,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Customer Service", "Chatbot", "Natural Language", "Automation"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$6,800 - $20;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
-    technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"];
+  technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"];
     complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Data Privacy"];
     integrationCapabilities: ["CRM Systems", "Help Desk", "Knowledge Base", "Analytics Tools", "Communication Platforms"];
     roiMetrics: ["70% cost reduction", "90% response time improvement", "24/7 availability"];
@@ -97,14 +97,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Predictive Maintenance;
   {
     id: "ai-predictive-maintenance-2025";
-    title: "AI Predictive Maintenance Platform";
+  title: "AI Predictive Maintenance Platform";
     description: "Intelligent predictive maintenance platform that uses AI to predict equipment failures, optimize maintenance schedules; and reduce downtime.";
     category: "AI & Industrial IoT";
-    subcategory: "Predictive Maintenance";
+  subcategory: "Predictive Maintenance";
     price: 7200;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Equipment failure prediction";
       "Maintenance optimization";
       "Real-time monitoring";
@@ -142,15 +142,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Predictive Maintenance", "IoT", "Industrial", "Analytics"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$7,200 - $22;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";
-    technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"];
+  technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"];
     complianceStandards: ["ISO 27001", "SOC2", "Industry Standards", "Data Security"];
     integrationCapabilities: ["IoT Devices", "SCADA Systems", "ERP Systems", "CMMS", "Analytics Platforms"];
     roiMetrics: ["50% downtime reduction", "30% cost reduction", "Extended equipment life"];
@@ -160,14 +160,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Content Creation Studio;
   {
     id: "ai-content-creation-studio-2025";
-    title: "AI Content Creation Studio";
+  title: "AI Content Creation Studio";
     description: "Comprehensive AI-powered content creation platform that generates high-quality text, images; videos; and multimedia content for marketing and communication.";
     category: "AI & Content Creation";
-    subcategory: "Multimedia Content";
+  subcategory: "Multimedia Content";
     price: 4200;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "AI text generation";
       "Image creation and editing";
       "Video generation";
@@ -205,15 +205,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Content Creation", "Multimedia", "Marketing", "Automation"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$4,200 - $15;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";
-    technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"];
+  technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"];
     complianceStandards: ["Copyright Compliance", "Content Guidelines", "Data Privacy", "Brand Safety"];
     integrationCapabilities: ["CMS Platforms", "Social Media", "Marketing Tools", "Analytics Platforms", "Design Tools"];
     roiMetrics: ["10x faster creation", "60% cost reduction", "Brand consistency"];
@@ -223,14 +223,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Financial Trading Platform;
   {
     id: "ai-financial-trading-platform-2025";
-    title: "AI Financial Trading Platform";
+  title: "AI Financial Trading Platform";
     description: "Advanced AI-powered financial trading platform that provides automated trading, risk management; and market analysis for institutional and retail investors.";
     category: "AI & Financial Services";
-    subcategory: "Trading & Investment";
+  subcategory: "Trading & Investment";
     price: 15000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Algorithmic trading";
       "Risk management";
       "Market analysis";
@@ -268,15 +268,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Financial Trading", "Algorithmic Trading", "Risk Management", "Investment"];
     estimatedDelivery: "12-16 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$15,000 - $50;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";
-    technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"];
+  technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"];
     complianceStandards: ["SEC", "FINRA", "SOX", "GDPR", "Financial Regulations"];
     integrationCapabilities: ["Trading Platforms", "Market Data", "Risk Systems", "Portfolio Management", "Compliance Tools"];
     roiMetrics: ["Performance improvement", "Cost reduction", "Risk mitigation"];
@@ -286,14 +286,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Healthcare Research Platform;
   {
     id: "ai-healthcare-research-platform-2025";
-    title: "AI Healthcare Research Platform";
+  title: "AI Healthcare Research Platform";
     description: "Comprehensive AI platform for healthcare research, drug discovery; clinical trial optimization; and medical literature analysis.";
     category: "AI & Healthcare";
-    subcategory: "Research & Development";
+  subcategory: "Research & Development";
     price: 18000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Drug discovery algorithms";
       "Clinical trial optimization";
       "Medical literature analysis";
@@ -331,15 +331,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Healthcare", "Research", "Drug Discovery", "Clinical Trials"];
     estimatedDelivery: "16-24 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$18,000 - $60;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";
-    technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"];
+  technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"];
     complianceStandards: ["HIPAA", "FDA", "GCP", "ISO 27001", "Research Ethics"];
     integrationCapabilities: ["Research Databases", "Clinical Systems", "Laboratory Equipment", "Collaboration Tools", "Analytics Platforms"];
     roiMetrics: ["Faster drug discovery", "Optimized trials", "Cost reduction"];
@@ -349,14 +349,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Energy Optimization Platform;
   {
     id: "ai-energy-optimization-platform-2025";
-    title: "AI Energy Optimization Platform";
+  title: "AI Energy Optimization Platform";
     description: "Intelligent energy optimization platform that uses AI to optimize energy consumption, reduce costs; and improve sustainability across various industries.";
     category: "AI & Energy";
-    subcategory: "Energy Management";
+  subcategory: "Energy Management";
     price: 8500;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Energy consumption optimization";
       "Demand forecasting";
       "Renewable energy integration";
@@ -394,15 +394,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Energy", "Optimization", "Sustainability", "Smart Grid"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$8,500 - $25;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";
-    technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"];
+  technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"];
     complianceStandards: ["Energy Regulations", "Environmental Standards", "ISO 50001", "Data Security"];
     integrationCapabilities: ["Energy Systems", "IoT Devices", "Building Management", "Grid Systems", "Analytics Platforms"];
     roiMetrics: ["25% cost reduction", "Energy efficiency", "Sustainability improvement"];
@@ -412,14 +412,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Supply Chain Risk Management;
   {
     id: "ai-supply-chain-risk-management-2025";
-    title: "AI Supply Chain Risk Management Platform";
+  title: "AI Supply Chain Risk Management Platform";
     description: "Intelligent supply chain risk management platform that identifies, assesses; and mitigates risks across global supply chains using AI and predictive analytics.";
     category: "AI & Supply Chain";
-    subcategory: "Risk Management";
+  subcategory: "Risk Management";
     price: 7800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Risk identification and assessment";
       "Predictive risk modeling";
       "Supplier risk monitoring";
@@ -457,15 +457,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Supply Chain", "Risk Management", "Predictive Analytics", "Compliance"];
     estimatedDelivery: "10-14 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$7,800 - $22;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";
-    technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"];
+  technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"];
     complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "Industry Standards", "Risk Management"];
     integrationCapabilities: ["ERP Systems", "Supply Chain Platforms", "Risk Databases", "Analytics Tools", "Alert Systems"];
     roiMetrics: ["Risk reduction", "Disruption prevention", "Cost optimization"];
@@ -475,14 +475,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Legal Research & Analysis;
   {
     id: "ai-legal-research-analysis-2025";
-    title: "AI Legal Research & Analysis Platform";
+  title: "AI Legal Research & Analysis Platform";
     description: "Advanced AI platform for legal research, case analysis; contract review; and legal document generation with comprehensive legal knowledge base.";
     category: "AI & Legal Tech";
-    subcategory: "Research & Analysis";
+  subcategory: "Research & Analysis";
     price: 5500;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Legal research automation";
       "Case law analysis";
       "Contract review and analysis";
@@ -520,15 +520,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Legal Tech", "Research", "Contract Review", "Compliance"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$5,500 - $18;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";
-    technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"];
+  technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"];
     complianceStandards: ["Legal Standards", "Data Privacy", "Confidentiality", "Professional Ethics"];
     integrationCapabilities: ["Legal Databases", "Document Management", "Case Management", "Compliance Tools", "Analytics Platforms"];
     roiMetrics: ["80% time reduction", "Cost reduction", "Compliance improvement"];
@@ -538,14 +538,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Creative Design Studio;
   {
     id: "ai-creative-design-studio-2025";
-    title: "AI Creative Design Studio";
+  title: "AI Creative Design Studio";
     description: "Revolutionary AI-powered creative design platform that generates logos, graphics; websites; and creative content with human-like creativity and style.";
     category: "AI & Creative Design";
-    subcategory: "Design Automation";
+  subcategory: "Design Automation";
     price: 3800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Logo generation";
       "Graphic design creation";
       "Website design";
@@ -583,15 +583,15 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     ];
     tags: ["AI", "Creative Design", "Branding", "Automation", "Visual Content"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$3,800 - $12;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";
-    technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"];
+  technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"];
     complianceStandards: ["Copyright Compliance", "Design Standards", "Brand Guidelines", "Quality Assurance"];
     integrationCapabilities: ["Design Tools", "Brand Management", "Marketing Platforms", "E-commerce", "Social Media"];
     roiMetrics: ["70% cost reduction", "Minutes to generate", "Professional quality"];

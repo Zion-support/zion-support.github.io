@@ -14,7 +14,7 @@ export class SitemapGenerator {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
-    const urlsetClose = '</urlset>';
+  const urlsetClose = '</urlset>';
         const urlElements = urls.map(url => {
             const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
@@ -32,7 +32,7 @@ export class SitemapGenerator {
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
-    const sitemapindexClose = '</sitemapindex>';
+  const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>;
         <loc>${sitemap}</loc>;
@@ -46,28 +46,27 @@ export class SitemapGenerator {
      */
     generateRobotsTxt() {
         const { baseUrl } = this.config;
-        return `User-agent: *
-Allow: /
+        return `User-agent: *,
+  Allow: /
 
 # Sitemaps;
 Sitemap: ${baseUrl}/sitemap.xml;
 # Disallow admin and private areas;
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
+Disallow: /admin/,
+  Disallow: /private/
+Disallow: /api/,
+  Disallow: /_next/
 
 # Allow important pages;
-Allow: /
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
+Allow: /,
+  Allow: /services/
+Allow: /solutions/,
+  Allow: /about/
+Allow: /contact/,
+  Allow: /blog/
 Allow: /careers/
 
 # Crawl delay (optional)
-<<<<<<< HEAD
 Crawl-delay: 1`;
      }
 Crawl-delay: 1`;}
@@ -99,42 +98,42 @@ Crawl-delay: 1`;}
     <meta name="description" content="Complete sitemap of Zion Tech Group website">
     <style>
         body { font-family: Arial, sans-serif; margin: 40px;
-    line-height: 1.6;
+  line-height: 1.6;
      }
         .container { max-width: 1200px;
-    margin: 0 auto;
+  margin: 0 auto;
      }
         h1 { color: #00e5ff;
-    border-bottom: 2px solid #00e5ff;
-    padding-bottom: 10px;
+  border-bottom: 2px solid #00e5ff;
+  padding-bottom: 10px;
      }
         .sitemap-section { margin: 30px 0;
      }
         .sitemap-section h2 { color: #333;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
      }
         .sitemap-links { display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
      }
     line-height: 1.6;}
         .container { max-width: 1200px;
-    margin: 0 auto;}
+  margin: 0 auto;}
         h1 { color: #00e5ff;
-    border-bottom: 2px solid #00e5ff;
-    padding-bottom: 10px;}
+  border-bottom: 2px solid #00e5ff;
+  padding-bottom: 10px;}
         .sitemap-section { margin: 30px 0;}
         .sitemap-section h2 { color: #333;
-    margin-bottom: 15px;}
+  margin-bottom: 15px;}
         .sitemap-links { display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}
         .sitemap-link { padding: 10px;
-    border: 1px solid #ddd;
+  border: 1px solid #ddd;
     border-radius: 5px;
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
      }
         .sitemap-link: hover { background-color: #f5f5f5;
-    border-color: #00e5ff;
+  border-color: #00e5ff;
      }
         .priority-high { border-left: 4px solid #00e5ff;
      }
@@ -144,7 +143,7 @@ Crawl-delay: 1`;}
      }
     color: #333;}
         .sitemap-link: hover { background-color: #f5f5f5;
-    border-color: #00e5ff;}
+  border-color: #00e5ff;}
         .priority-high { border-left: 4px solid #00e5ff;}
         .priority-medium { border-left: 4px solid #ff9800;}
         .priority-low { border-left: 4px solid #4caf50;}
@@ -220,7 +219,7 @@ Crawl-delay: 1`;}
 // Default sitemap configuration for Zion Tech Group;
 export const defaultSitemapConfig = {
     baseUrl: 'https://ziontechgroup.com';
-    urls: [
+  urls: [
         // Main pages;
         { url: '/', changefreq: 'daily', priority: 1.0 };
         { url: '/about', changefreq: 'monthly', priority: 0.8 };
@@ -273,9 +272,9 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {con
         const jsonSitemap = generator.generateJSON();
         return {
             xml: xmlSitemap;
-            robots: robotsTxt;
+  robots: robotsTxt;
             html: htmlSitemap;
-            json: jsonSitemap};
+  json: jsonSitemap};
      }
     catch (error) {
         
@@ -283,5 +282,3 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {con
     }
 };
 export default SitemapGenerator;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

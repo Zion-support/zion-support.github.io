@@ -17,9 +17,8 @@ function createPageTemplate(pageName, filePath) {
   if (isApi) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint working' }),
-}`;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {,
+  res.status(200).json({ message: 'API endpoint working' })}`;
   }
   
   return `import type { NextPage } from 'next';

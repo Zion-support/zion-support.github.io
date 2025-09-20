@@ -30,7 +30,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
   }
 ];
 
-const EquipmentPage: React.FC = () => {
+const EquipmentPage: React.FC = () => {,
   const [equipment, setEquipment] = useState<ProductListing[]>(INITIAL_EQUIPMENT);
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({ category: "", brand: "", priceRange: [0, 100000] });

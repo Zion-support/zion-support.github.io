@@ -1,27 +1,27 @@
 export interface IoTEdgeComputingService {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    price: number;
+  price: number;
     currency: string;
-    pricingModel: string;
+  pricingModel: string;
     features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     tags: string[];
-    estimatedDelivery: string;
+  estimatedDelivery: string;
     supportLevel: string;
-    marketPrice: string;
-    contactInfo: {
-    phone: string;
+  marketPrice: string;
+    contactInfo: {,
+  phone: string;
     email: string;
-    website: string,;
+  website: string,;
      };
   websiteUrl: string;
-    demoUrl?: string;
+  demoUrl?: string;
   documentationUrl?: string;
 }
 
@@ -29,14 +29,14 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
   // Industrial IoT Platform;
   {
     id: "industrial-iot-platform";
-    title: "Industrial IoT (IIoT) Platform";
+  title: "Industrial IoT (IIoT) Platform";
     description: "Comprehensive IIoT platform for manufacturing, energy; and industrial operations that provides real-time monitoring; predictive maintenance; and operational optimization.";
     category: "IoT & Edge Computing";
-    subcategory: "Industrial IoT";
+  subcategory: "Industrial IoT";
     price: 4200;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Real-time sensor monitoring";
       "Predictive maintenance";
       "Energy optimization";
@@ -69,26 +69,26 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     ];
     tags: ["IIoT", "Manufacturing", "Predictive Maintenance", "Energy Optimization", "Industrial Automation"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$4,200 - $12;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/industrial-iot";
   };
   // Smart City IoT Solution;
   {
     id: "smart-city-iot-solution";
-    title: "Smart City IoT Infrastructure Platform";
+  title: "Smart City IoT Infrastructure Platform";
     description: "Comprehensive smart city solution integrating traffic management, environmental monitoring; public safety; and utility management through IoT sensors and edge computing.";
     category: "IoT & Edge Computing";
-    subcategory: "Smart Cities";
+  subcategory: "Smart Cities";
     price: 5800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Traffic flow optimization";
       "Environmental monitoring";
       "Public safety systems";
@@ -121,26 +121,26 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     ];
     tags: ["Smart Cities", "IoT", "Traffic Management", "Public Safety", "Urban Planning"];
     estimatedDelivery: "12-16 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$5,800 - $18;000/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/smart-city-iot";
   };
   // Healthcare IoT Monitoring;
   {
     id: "healthcare-iot-monitoring";
-    title: "Healthcare IoT Patient Monitoring System";
+  title: "Healthcare IoT Patient Monitoring System";
     description: "Advanced patient monitoring system using IoT devices and edge computing to provide real-time health monitoring, early warning systems; and remote patient care capabilities.";
     category: "IoT & Edge Computing";
-    subcategory: "Healthcare IoT";
+  subcategory: "Healthcare IoT";
     price: 3800;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Real-time vital signs monitoring";
       "Early warning systems";
       "Remote patient monitoring";
@@ -173,26 +173,26 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     ];
     tags: ["Healthcare IoT", "Patient Monitoring", "Remote Care", "Health Analytics", "Medical Devices"];
     estimatedDelivery: "6-10 weeks";
-    supportLevel: "enterprise";
+  supportLevel: "enterprise";
     marketPrice: "$3,800 - $10;500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/healthcare-iot";
   };
   // Retail IoT Analytics Platform;
   {
     id: "retail-iot-analytics";
-    title: "Retail IoT Analytics and Optimization Platform";
+  title: "Retail IoT Analytics and Optimization Platform";
     description: "Intelligent retail analytics platform using IoT sensors to track customer behavior, optimize store layouts; manage inventory; and enhance customer experience.";
     category: "IoT & Edge Computing";
-    subcategory: "Retail IoT";
+  subcategory: "Retail IoT";
     price: 2200;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Customer behavior tracking";
       "Store layout optimization";
       "Inventory management";
@@ -225,26 +225,26 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     ];
     tags: ["Retail IoT", "Customer Analytics", "Store Optimization", "Inventory Management", "Customer Experience"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$2,200 - $6;500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/retail-iot";
   };
   // Edge AI Computing Platform;
   {
     id: "edge-ai-computing";
-    title: "Edge AI Computing Platform";
+  title: "Edge AI Computing Platform";
     description: "Advanced edge computing platform that brings AI processing capabilities to IoT devices, enabling real-time AI inference; local data processing; and reduced cloud dependency.";
     category: "IoT & Edge Computing";
-    subcategory: "Edge AI";
+  subcategory: "Edge AI";
     price: 3200;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Local AI inference";
       "Real-time processing";
       "Edge model deployment";
@@ -277,12 +277,12 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     ];
     tags: ["Edge AI", "IoT", "Real-time Processing", "Machine Learning", "Edge Computing"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "premium";
+  supportLevel: "premium";
     marketPrice: "$3,200 - $8;500/month";
-    contactInfo: {
-      phone: "+1 302 464 0950";
+    contactInfo: {,
+  phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com";
+  website: "https://ziontechgroup.com";
     };
     websiteUrl: "https://ziontechgroup.com/edge-ai";
   }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -22,11 +21,11 @@ export default function Cart() {
   };
 
   const handleRemoveItem = (id: string) => {
-    dispatch(removeItemAction(id));
+  dispatch(removeItemAction(id));
   };
 
   const handleUpdateQuantity = (id: string, quantity: number) => {
-    if (quantity <= 0) {
+  if (quantity <= 0) {
       handleRemoveItem(id);
     } else {
       dispatch(updateQuantityAction({ id, quantity }));
@@ -115,17 +114,6 @@ export default function Cart() {
           }}
         />
       )}
-=======
-import React from 'react';
-
-export default function Cart() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Shopping Cart</h1>
-        <p className="text-lg text-gray-600">Your cart is empty.</p>
-      </div>
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
     </div>
   );
 }

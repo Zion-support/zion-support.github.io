@@ -1,26 +1,26 @@
 export interface NextGenAIService {
   id: string;
-    title: string;
+  title: string;
     description: string;
-    category: string;
+  category: string;
     subcategory: string;
-    price: number;
+  price: number;
     currency: string;
-    pricingModel: string;
+  pricingModel: string;
     features: string[];
-    benefits: string[];
+  benefits: string[];
     useCases: string[];
-    targetAudience: string[];
+  targetAudience: string[];
     tags: string[];
-    estimatedDelivery: string;
+  estimatedDelivery: string;
     supportLevel: string;
-    marketPrice: string;
+  marketPrice: string;
     demoUrl?: string;
   documentationUrl?: string;
-  contactInfo: {
-    phone: string;
+  contactInfo: {,
+  phone: string;
     email: string;
-    website: string;
+  website: string;
     address: string,;
      };
 }
@@ -29,14 +29,14 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   // Revolutionary AI Services;
   {
     id: "ai-consciousness-simulator";
-    title: "AI Consciousness Simulation Platform";
+  title: "AI Consciousness Simulation Platform";
     description: "Revolutionary AI platform that simulates human-like consciousness for advanced decision-making, emotional intelligence; and creative problem-solving in enterprise environments.";
     category: "Advanced AI";
-    subcategory: "Consciousness Simulation";
+  subcategory: "Consciousness Simulation";
     price: 25000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Consciousness-level reasoning";
       "Emotional intelligence processing";
       "Creative problem solving";
@@ -71,27 +71,27 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ];
     tags: ["AI", "Consciousness", "Innovation", "Enterprise", "Revolutionary"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "24/7 Premium Support";
+  supportLevel: "24/7 Premium Support";
     marketPrice: "Starting from $25,000/month";
     demoUrl: "https://ziontechgroup.com/demo/ai-consciousness";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-consciousness";
-    contactInfo: {
+  documentationUrl: "https: //ziontechgroup.com/docs/ai-consciousness";
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   };
   {
     id: "quantum-ai-optimization";
-    title: "Quantum-Enhanced AI Optimization Suite";
+  title: "Quantum-Enhanced AI Optimization Suite";
     description: "Cutting-edge quantum computing integration with AI for exponentially faster optimization, complex modeling; and breakthrough problem-solving capabilities.";
     category: "Quantum AI";
-    subcategory: "Optimization";
+  subcategory: "Optimization";
     price: 35000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Quantum-classical hybrid computing";
       "Exponential optimization speed";
       "Complex system modeling";
@@ -126,27 +126,27 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ];
     tags: ["Quantum", "AI", "Optimization", "Revolutionary", "Future-tech"];
     estimatedDelivery: "8-12 weeks";
-    supportLevel: "24/7 Quantum Expert Support";
+  supportLevel: "24/7 Quantum Expert Support";
     marketPrice: "Starting from $35,000/month";
     demoUrl: "https://ziontechgroup.com/demo/quantum-ai";
-    documentationUrl: "https://ziontechgroup.com/docs/quantum-ai";
-    contactInfo: {
+  documentationUrl: "https: //ziontechgroup.com/docs/quantum-ai";
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   };
   {
     id: "neural-architecture-search";
-    title: "Autonomous Neural Architecture Search Platform";
+  title: "Autonomous Neural Architecture Search Platform";
     description: "Self-evolving AI system that automatically designs, tests; and optimizes neural network architectures for specific business problems without human intervention.";
     category: "AutoML";
-    subcategory: "Neural Architecture";
+  subcategory: "Neural Architecture";
     price: 18000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Automated architecture design";
       "Self-evolving neural networks";
       "Performance optimization";
@@ -181,27 +181,27 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ];
     tags: ["AutoML", "Neural Networks", "AI Development", "Automation"];
     estimatedDelivery: "4-6 weeks";
-    supportLevel: "24/7 Technical Support";
+  supportLevel: "24/7 Technical Support";
     marketPrice: "Starting from $18,000/month";
     demoUrl: "https://ziontechgroup.com/demo/neural-search";
-    documentationUrl: "https://ziontechgroup.com/docs/neural-search";
-    contactInfo: {
+  documentationUrl: "https: //ziontechgroup.com/docs/neural-search";
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   };
   {
     id: "multimodal-ai-platform";
-    title: "Unified Multimodal AI Intelligence Platform";
+  title: "Unified Multimodal AI Intelligence Platform";
     description: "Advanced AI platform that seamlessly processes text, images; audio; video; and sensor data simultaneously for comprehensive understanding and intelligent responses.";
     category: "Multimodal AI";
-    subcategory: "Unified Intelligence";
+  subcategory: "Unified Intelligence";
     price: 22000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Text-to-everything generation";
       "Cross-modal understanding";
       "Unified content processing";
@@ -236,27 +236,27 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ];
     tags: ["Multimodal", "AI", "Content Generation", "Intelligence"];
     estimatedDelivery: "6-8 weeks";
-    supportLevel: "24/7 Expert Support";
+  supportLevel: "24/7 Expert Support";
     marketPrice: "Starting from $22,000/month";
     demoUrl: "https://ziontechgroup.com/demo/multimodal-ai";
-    documentationUrl: "https://ziontechgroup.com/docs/multimodal-ai";
-    contactInfo: {
+  documentationUrl: "https: //ziontechgroup.com/docs/multimodal-ai";
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   };
   {
     id: "ai-digital-twin-creator";
-    title: "AI-Powered Digital Twin Creation Platform";
+  title: "AI-Powered Digital Twin Creation Platform";
     description: "Revolutionary platform that creates intelligent digital twins of physical systems, processes; and organizations using AI for predictive maintenance; optimization; and simulation.";
     category: "Digital Twins";
-    subcategory: "AI Simulation";
+  subcategory: "AI Simulation";
     price: 28000;
-    currency: "$";
+  currency: "$";
     pricingModel: "monthly";
-    features: [
+  features: [
       "Automated twin creation";
       "Real-time synchronization";
       "Predictive modeling";
@@ -291,15 +291,15 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ];
     tags: ["Digital Twins", "AI", "Simulation", "Predictive", "IoT"];
     estimatedDelivery: "8-10 weeks";
-    supportLevel: "24/7 Premium Support";
+  supportLevel: "24/7 Premium Support";
     marketPrice: "Starting from $28,000/month";
     demoUrl: "https://ziontechgroup.com/demo/digital-twins";
-    documentationUrl: "https://ziontechgroup.com/docs/digital-twins";
-    contactInfo: {
+  documentationUrl: "https: //ziontechgroup.com/docs/digital-twins";
+  contactInfo: {
       phone: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+  email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+  address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
