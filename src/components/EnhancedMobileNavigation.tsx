@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Link, useLocation } from "react-router-dom"
 import {
   Menu,
   X,
@@ -33,89 +33,141 @@ import {
   Mail,
   MapPin,
   Clock
-} from "lucide-react";
+} from "lucide-react"
 interface NavigationItem {
-  label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
+  lab,
+  e: l: string,pa,
+  t: h: string,ic,
+  o: n: React.ComponentType<{ size?: number, className?: string }>,
   children?: NavigationItem[],
   description?: string,
 }
 
-const navigationItems: NavigationItem[] = [
+const,
+  navigationItem: s: NavigationItem[] = [
   {
-    label: 'Home',path: '/',icon: Home,description: 'Welcome to Zion Tech Group'
-  };
-  {
-    label: 'About',path: '/about',icon: Info,description: 'Learn about our company and mission'
-  };
-  {
-    label: 'Services',path: '/services',icon: Briefcase,children: [
+    labe,
+  l: 'Home',pa,
+  t: h: '/',ic,
+  o: n: Home,descripti,
+  o: n: 'Welcome to Zion Tech Group'
+  }, {
+    lab,
+  e: l: 'About',pa,
+  t: h: '/about',ic,
+  o: n: Info,descripti,
+  o: n: 'Learn about our company and mission'
+  }, {
+    lab,
+  e: l: 'Services',pa,
+  t: h: '/services',ic,
+  o: n: Briefcase,childr,
+  e: n: [
       {
-        label: 'AI & Machine Learning',path: '/services/ai',icon: Brain,description: 'Cutting-edge AI solutions'
-      };
-      {
-        label: 'Cybersecurity',path: '/services/cybersecurity',icon: Shield,description: 'Advanced security services'
-      };
-      {
-        label: 'Cloud Services',path: '/services/cloud',icon: Cloud,description: 'Scalable cloud solutions'
-      };
-      {
-        label: 'Digital Transformation',path: '/services/transformation',icon: Zap,description: 'Business transformation services'
-      };
-      {
-        label: 'Infrastructure',path: '/services/infrastructure',icon: Server,description: 'IT infrastructure solutions'
-      };
-      {
-        label: 'Consulting',path: '/services/consulting',icon: Users,description: 'Strategic IT consulting'
+        labe,
+  l: 'AI & Machine Learning',pa,
+  t: h: '/services/ai',ic,
+  o: n: Brain,descripti,
+  o: n: 'Cutting-edge AI solutions'
+      }, {
+        lab,
+  e: l: 'Cybersecurity',pa,
+  t: h: '/services/cybersecurity',ic,
+  o: n: Shield,descripti,
+  o: n: 'Advanced security services'
+      }, {
+        lab,
+  e: l: 'Cloud Services',pa,
+  t: h: '/services/cloud',ic,
+  o: n: Cloud,descripti,
+  o: n: 'Scalable cloud solutions'
+      }, {
+        lab,
+  e: l: 'Digital Transformation',pa,
+  t: h: '/services/transformation',ic,
+  o: n: Zap,descripti,
+  o: n: 'Business transformation services'
+      }, {
+        lab,
+  e: l: 'Infrastructure',pa,
+  t: h: '/services/infrastructure',ic,
+  o: n: Server,descripti,
+  o: n: 'IT infrastructure solutions'
+      }, {
+        lab,
+  e: l: 'Consulting',pa,
+  t: h: '/services/consulting',ic,
+  o: n: Users,descripti,
+  o: n: 'Strategic IT consulting'
       },
   ],
-  };
-  {
-    label: 'Solutions',path: '/solutions',icon: Rocket,description: 'Industry-specific solutions'
-  };
-  {
-    label: 'Contact',path: '/contact',icon: Phone,description: 'Get in touch with us'
+  }, {
+    lab,
+  e: l: 'Solutions',pa,
+  t: h: '/solutions',ic,
+  o: n: Rocket,descripti,
+  o: n: 'Industry-specific solutions'
+  }, {
+    lab,
+  e: l: 'Contact',pa,
+  t: h: '/contact',ic,
+  o: n: Phone,descripti,
+  o: n: 'Get in touch with us'
   },
-  ];
+  ]
 const quickActions = [
   {
-    label: 'Get Quote',path: '/request-quote',icon: MessageCircle,color: 'bg-zion-cyan'
-  };
-  {
-    label: 'Support',path: '/help',icon: HelpCircle,color: 'bg-zion-purple'
-  };
-  {
-    label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
+    lab,
+  e: l: 'Get Quote',pa,
+  t: h: '/request-quote',ic,
+  o: n: MessageCircle,col,
+  o: r: 'bg-zion-cyan'
+  }, {
+    lab,
+  e: l: 'Support',pa,
+  t: h: '/help',ic,
+  o: n: HelpCircle,col,
+  o: r: 'bg-zion-purple'
+  }, {
+    lab,
+  e: l: 'Documentation',pa,
+  t: h: '/docs',ic,
+  o: n: FileText,col,
+  o: r: 'bg-zion-blue'
   },
-  ];
-export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  ]
+export,
+  const: EnhancedMobileNavigation: React.FC = () () => {
+  const [isOpen, setIsOpen] = useState(false)
 const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
-  const [activePath, setActivePath] = useState('/');
-const location = useLocation();
-const menuRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  const [activePath, setActivePath] = useState('/')
+const location = useLocation()
+const menuRef = useRef<HTMLDivElement>(null)
+  useEffect(() () => {
     setActivePath(location.pathname)
-}, [location]);
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+}, [location])
+  useEffect(() () => {
+    const handleClickOutside = (eve,
+  n: t: MouseEvent) () => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       },
-  };
+  }
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside)
       document.body.style.overflow = 'hidden',
     }
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+    return () () => {
+      document.removeEventListener('mousedown', handleClickOutside)
       document.body.style.overflow = 'unset',
     },
   }, [isOpen]),
 
-  const toggleExpanded = (label: string) => {
-    setExpandedItems(prev => {
-      const newSet = new Set(prev);
+  const toggleExpanded = (lab,
+  e: l: string) () => {
+    setExpandedItems(prev () => {
+      const newSet = new Set(prev)
       if (newSet.has(label)) {
         newSet.delete(label)
       } else {
@@ -125,27 +177,32 @@ const menuRef = useRef<HTMLDivElement>(null);
 }),
   },
 
-  const handleNavigation = (path: string) => {
-    setIsOpen(false);
+  const handleNavigation = (pa,
+  t: h: string) () => {
+    setIsOpen(false)
     setExpandedItems(new Set())
   },
 
-  const isActive = (path: string) => {
+  const isActive = (pa,
+  t: h: string) () => {
     if (path === '/') {
       return activePath === '/'
     }
     return activePath.startsWith(path)
 },
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
-    const isExpanded = expandedItems.has(item.label);
-const hasChildren = item.children && item.children.length > 0;
-const isItemActive = isActive(item.path);
+  const renderNavigationItem = (it,
+  e: m: NavigationItem, dep,
+  t: h: number = 0) () => {
+    const isExpanded = expandedItems.has(item.label)
+const hasChildren = item.children && item.children.length > 0
+const isItemActive = isActive(item.path)
     return (
       <div key={item.label} className="w-full">
         <motion.div
           initial={false}
-          animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' },
+          animate={ backgroundCol,
+  o: r: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' },
   }
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
@@ -155,7 +212,8 @@ const isItemActive = isActive(item.path);
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
               isItemActive
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
-                : 'text-white hover:text-zion-cyan'
+                : 'text-white,
+  hove: r:text-zion-cyan'
             }`}
           >
             <div className="flex items-center gap-3">
@@ -183,7 +241,8 @@ const isItemActive = isActive(item.path);
           {hasChildren && (
             <button
               onClick={() => toggleExpanded(item.label)}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light,
+  hove: r:text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
             >
               <ChevronDown
@@ -200,13 +259,21 @@ const isItemActive = isActive(item.path);
           <AnimatePresence>
             {isExpanded && (
               <motion.div
-                initial={{ height: 0, opacity: 0 },
+                initial={ heig,
+  h: t: 0, opaci,
+  t: y: 0 },
   }
-                animate={{ height: 'auto', opacity: 1 },
+                animate={ heig,
+  h: t: 'auto', opaci,
+  t: y: 1 },
   }
-                exit={{ height: 0, opacity: 0 },
+                exit={ heig,
+  h: t: 0, opaci,
+  t: y: 0 },
   }
-                transition={{ duration: 0.3, ease: 'easeInOut' },
+                transition={ durati,
+  o: n: 0.3, ea,
+  s: e: 'easeInOut' },
   }
                 className="overflow-hidden"
               >
@@ -226,7 +293,11 @@ const isItemActive = isActive(item.path);
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
+        className="lg: hidden p-2 text-white,
+  hove: r:text-zion-cyan transition-colors,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
       >
         <Menu size={24} />
@@ -236,25 +307,32 @@ const isItemActive = isActive(item.path);
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 },
+            initial={ opaci,
+  t: y: 0 },
   }
-            animate={{ opacity: 1 },
+            animate={ opaci,
+  t: y: 1 },
   }
-            exit={{ opacity: 0 },
+            exit={ opaci,
+  t: y: 0 },
   }
-            transition={{ duration: 0.2 },
+            transition={ durati,
+  o: n: 0.2 },
   }
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50,
+  l: g:hidden"
           >
             <motion.div
               ref={menuRef}
-              initial={{ x: '100%' },
+              initial={ x: '100%' },
   }
-              animate={{ x: 0 },
+              animate={ x: 0 },
   }
-              exit={{ x: '100%' },
+              exit={ x: '100%' },
   }
-              transition={{ duration: 0.3, ease: 'easeOut' },
+              transition={ durati,
+  o: n: 0.3, ea,
+  s: e: 'easeOut' },
   }
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
             >
@@ -271,7 +349,9 @@ const isItemActive = isActive(item.path);
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
+                  className="p-2 text-zion-slate-light,
+  hove: r: text-white transition-colors rounded-lg hove,
+  r:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
                 >
                   <X size={24} />
@@ -291,7 +371,8 @@ const isItemActive = isActive(item.path);
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
-                        className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
+                        className={`${action.color} p-4 rounded-lg text-white text-center,
+  hove: r:scale-105 transition-transform duration-200`}
                       >
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
@@ -341,10 +422,12 @@ const isItemActive = isActive(item.path);
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>
                   <div className="flex items-center gap-4">
-                    <Link to="/privacy" className="hover: text-white transition-colors">
+                    <Link to="/privacy" className="hov,
+  e: r: text-white transition-colors">
                       Privacy
                     </Link>
-                    <Link to="/terms" className="hover:text-white transition-colors">
+                    <Link to="/terms" className="hove,
+  r:text-white transition-colors">
                       Terms
                     </Link>
                   </div>
@@ -356,4 +439,4 @@ const isItemActive = isActive(item.path);
       </AnimatePresence>
     </>
   )
-};
+}

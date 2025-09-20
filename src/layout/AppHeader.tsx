@@ -1,7 +1,7 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, ShieldCheck, Sparkles, Crown, Flame, Gauge, GitFork, Server, Smartphone, Database, Network, Clock, Truck, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, BarChart3, PenTool, Key, Globe2, Car, Home } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ThemeToggle } from "../components/ThemeToggle";
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, ShieldCheck, Sparkles, Crown, Flame, Gauge, GitFork, Server, Smartphone, Database, Network, Clock, Truck, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, BarChart3, PenTool, Key, Globe2, Car, Home } from "lucide-react"
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import { ThemeToggle } from "../components/ThemeToggle"
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -11,20 +11,20 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(() () => {
+    const handleScroll = () () => {
       setScrolled(window.scrollY > 10)
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) () => {
   e.preventDefault()
     if (searchQuery.trim()) {
   setIsSearching(true)
       try {
-  await new Promise(resolve => setTimeout(resolve, 1000)), // Simulate search;
+  await new Promise(resolve => setTimeout(resolve, 1000)), // Simulate search
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`
 } finally {
   setIsSearching(false)
@@ -33,235 +33,550 @@ export function AppHeader() {
   }
 
   const navigation = [
-  {{ name: 'Home', href: '/', current: true },
+  { na,
+  m: e: 'Home', hr,
+  e: f: '/', curre,
+  n: t: true },
   },
-  {{ name: 'Services', href: '/services', current: false, hasDropdown: true },
+  { na,
+  m: e: 'Services', hr,
+  e: f: '/services', curre,
+  n: t: false, hasDropdo,
+  w: n: true },
   },
-  {{ name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+  { na,
+  m: e: 'Solutions', hr,
+  e: f: '/solutions', curre,
+  n: t: false, hasDropdo,
+  w: n: true },
   },
-  {{ name: 'Pricing', href: '/pricing-guide-2030', current: false },
+  { na,
+  m: e: 'Pricing', hr,
+  e: f: '/pricing-guide-2030', curre,
+  n: t: false },
   },
-  {{ name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+  { na,
+  m: e: 'Resources', hr,
+  e: f: '/resources', curre,
+  n: t: false, hasDropdo,
+  w: n: true },
   },
-  {{ name: 'About', href: '/about', current: false },
+  { na,
+  m: e: 'About', hr,
+  e: f: '/about', curre,
+  n: t: false },
   },
-  {{ name: 'Contact', href: '/contact', current: false },
+  { na,
+  m: e: 'Contact', hr,
+  e: f: '/contact', curre,
+  n: t: false },
   },
   ]
   const services = [
-  // AI & Business Intelligence;
+  // AI & Business Intelligence
     {
-  name: 'Innovative Micro SAAS 2025',href: '/innovative-micro-saas-services-2025',icon: Rocket,description: 'Cutting-edge AI Services',featured: true,color: 'from-purple-500 to-pink-500'
+  na,
+  m: e: 'Innovative Micro SAAS 2025',hr,
+  e: f: '/innovative-micro-saas-services-2025',ic,
+  o: n: Rocket,descripti,
+  o: n: 'Cutting-edge AI Services',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-pink-500'
 },
   {
-  name: 'AI Business Intelligence',href: '/services/ai-business-intelligence',icon: Brain,description: 'Machine Learning & Data Science',featured: true,color: 'from-purple-500 to-cyan-500'
+  na,
+  m: e: 'AI Business Intelligence',hr,
+  e: f: '/services/ai-business-intelligence',ic,
+  o: n: Brain,descripti,
+  o: n: 'Machine Learning & Data Science',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-cyan-500'
 },
   {
-  name: 'AI Autonomous Supply Chain',href: '/services/ai-autonomous-supply-chain-orchestrator',icon: Truck,description: 'Autonomous Supply Chain Management',featured: true,color: 'from-blue-500 to-indigo-500'
+  na,
+  m: e: 'AI Autonomous Supply Chain',hr,
+  e: f: '/services/ai-autonomous-supply-chain-orchestrator',ic,
+  o: n: Truck,descripti,
+  o: n: 'Autonomous Supply Chain Management',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-indigo-500'
 },
   {
-  name: 'AI Autonomous Sales Intelligence',href: '/services/ai-autonomous-sales-intelligence',icon: Target,description: 'Autonomous Sales & Lead Generation',featured: true,color: 'from-green-500 to-emerald-500'
+  na,
+  m: e: 'AI Autonomous Sales Intelligence',hr,
+  e: f: '/services/ai-autonomous-sales-intelligence',ic,
+  o: n: Target,descripti,
+  o: n: 'Autonomous Sales & Lead Generation',featur,
+  e: d: true,col,
+  o: r: 'from-green-500 to-emerald-500'
 }
-    // AI & Healthcare;
+    // AI & Healthcare
     {
-  name: 'AI Healthcare Platform',href: '/services/ai-healthcare-platform',icon: Heart,description: 'Medical AI & Diagnostics',featured: true,color: 'from-red-500 to-pink-500'
+  na,
+  m: e: 'AI Healthcare Platform',hr,
+  e: f: '/services/ai-healthcare-platform',ic,
+  o: n: Heart,descripti,
+  o: n: 'Medical AI & Diagnostics',featur,
+  e: d: true,col,
+  o: r: 'from-red-500 to-pink-500'
 },
   {
-  name: 'Quantum AI Drug Discovery',href: '/services/quantum-ai-drug-discovery-platform',icon: Atom,description: 'Quantum Drug Discovery',featured: true,color: 'from-purple-500 to-pink-500'
+  na,
+  m: e: 'Quantum AI Drug Discovery',hr,
+  e: f: '/services/quantum-ai-drug-discovery-platform',ic,
+  o: n: Atom,descripti,
+  o: n: 'Quantum Drug Discovery',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-pink-500'
 }
-    // AI & Legal Tech;
+    // AI & Legal Tech
     {
-  name: 'AI Legal Contract Analyzer',href: '/services/ai-autonomous-legal-contract-analyzer',icon: Scale,description: 'Autonomous Legal Analysis',featured: true,color: 'from-blue-500 to-indigo-500'
+  na,
+  m: e: 'AI Legal Contract Analyzer',hr,
+  e: f: '/services/ai-autonomous-legal-contract-analyzer',ic,
+  o: n: Scale,descripti,
+  o: n: 'Autonomous Legal Analysis',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-indigo-500'
 }
-    // AI & Content;
+    // AI & Content
     {
-  name: 'AI Creative Studio',href: '/services/ai-autonomous-creative-studio',icon: PenTool,description: 'Autonomous Content Creation',featured: true,color: 'from-orange-500 to-red-500'
+  na,
+  m: e: 'AI Creative Studio',hr,
+  e: f: '/services/ai-autonomous-creative-studio',ic,
+  o: n: PenTool,descripti,
+  o: n: 'Autonomous Content Creation',featur,
+  e: d: true,col,
+  o: r: 'from-orange-500 to-red-500'
 },
   {
-  name: 'AI Content Creation',href: '/services/ai-content-creation',icon: FileText,description: 'Content Generation & Optimization',featured: true,color: 'from-blue-500 to-indigo-500'
+  na,
+  m: e: 'AI Content Creation',hr,
+  e: f: '/services/ai-content-creation',ic,
+  o: n: FileText,descripti,
+  o: n: 'Content Generation & Optimization',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-indigo-500'
 }
-    // AI & Customer Support;
+    // AI & Customer Support
     {
-  name: 'AI Customer Success Platform',href: '/services/ai-autonomous-customer-success-platform',icon: MessageCircle,description: 'Autonomous Customer Success',featured: true,color: 'from-blue-500 to-purple-500'
+  na,
+  m: e: 'AI Customer Success Platform',hr,
+  e: f: '/services/ai-autonomous-customer-success-platform',ic,
+  o: n: MessageCircle,descripti,
+  o: n: 'Autonomous Customer Success',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-purple-500'
 },
   {
-  name: 'AI Customer Support',href: '/services/ai-customer-support',icon: HelpCircle,description: 'AI-Powered Support',featured: true,color: 'from-green-500 to-blue-500'
+  na,
+  m: e: 'AI Customer Support',hr,
+  e: f: '/services/ai-customer-support',ic,
+  o: n: HelpCircle,descripti,
+  o: n: 'AI-Powered Support',featur,
+  e: d: true,col,
+  o: r: 'from-green-500 to-blue-500'
 }
-    // AI & Research;
+    // AI & Research
     {
-  name: 'AI Research Assistant',href: '/services/ai-autonomous-research-assistant',icon: BookOpen,description: 'Autonomous Research Automation',featured: true,color: 'from-purple-500 to-violet-500'
+  na,
+  m: e: 'AI Research Assistant',hr,
+  e: f: '/services/ai-autonomous-research-assistant',ic,
+  o: n: BookOpen,descripti,
+  o: n: 'Autonomous Research Automation',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-violet-500'
 }
-    // AI & Education;
+    // AI & Education
     {
-  name: 'AI Education Platform',href: '/services/ai-autonomous-education-platform',icon: Users,description: 'Autonomous Learning Management',featured: true,color: 'from-blue-500 to-indigo-500'
+  na,
+  m: e: 'AI Education Platform',hr,
+  e: f: '/services/ai-autonomous-education-platform',ic,
+  o: n: Users,descripti,
+  o: n: 'Autonomous Learning Management',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-indigo-500'
 }
-    // AI & HR;
+    // AI & HR
     {
-  name: 'AI HR Platform',href: '/services/ai-autonomous-hr-platform',icon: Users,description: 'Autonomous HR Management',featured: true,color: 'from-indigo-500 to-blue-500'
+  na,
+  m: e: 'AI HR Platform',hr,
+  e: f: '/services/ai-autonomous-hr-platform',ic,
+  o: n: Users,descripti,
+  o: n: 'Autonomous HR Management',featur,
+  e: d: true,col,
+  o: r: 'from-indigo-500 to-blue-500'
 }
-    // AI & Entertainment;
+    // AI & Entertainment
     {
-  name: 'AI Entertainment Platform',href: '/services/ai-autonomous-entertainment-platform',icon: Play,description: 'Autonomous Entertainment Creation',featured: true,color: 'from-purple-500 to-pink-500'
+  na,
+  m: e: 'AI Entertainment Platform',hr,
+  e: f: '/services/ai-autonomous-entertainment-platform',ic,
+  o: n: Play,descripti,
+  o: n: 'Autonomous Entertainment Creation',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-pink-500'
 }
-    // AI & Metaverse;
+    // AI & Metaverse
     {
-  name: 'AI Metaverse Platform',href: '/services/ai-autonomous-metaverse-platform',icon: Globe,description: 'Autonomous Virtual Worlds',featured: true,color: 'from-purple-500 to-indigo-500'
+  na,
+  m: e: 'AI Metaverse Platform',hr,
+  e: f: '/services/ai-autonomous-metaverse-platform',ic,
+  o: n: Globe,descripti,
+  o: n: 'Autonomous Virtual Worlds',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-indigo-500'
 }
-    // AI & Space Tech;
+    // AI & Space Tech
     {
-  name: 'AI Space Technology',href: '/services/ai-autonomous-space-technology-platform',icon: Rocket,description: 'Autonomous Space Operations',featured: true,color: 'from-indigo-500 to-purple-500'
+  na,
+  m: e: 'AI Space Technology',hr,
+  e: f: '/services/ai-autonomous-space-technology-platform',ic,
+  o: n: Rocket,descripti,
+  o: n: 'Autonomous Space Operations',featur,
+  e: d: true,col,
+  o: r: 'from-indigo-500 to-purple-500'
 }
-    // AI & Green Tech;
+    // AI & Green Tech
     {
-  name: 'AI Green Technology',href: '/services/ai-autonomous-green-technology-platform',icon: Leaf,description: 'Autonomous Environmental Management',featured: true,color: 'from-green-500 to-emerald-500'
+  na,
+  m: e: 'AI Green Technology',hr,
+  e: f: '/services/ai-autonomous-green-technology-platform',ic,
+  o: n: Leaf,descripti,
+  o: n: 'Autonomous Environmental Management',featur,
+  e: d: true,col,
+  o: r: 'from-green-500 to-emerald-500'
 }
-    // Cybersecurity;
+    // Cybersecurity
     {
-  name: 'AI Autonomous Cybersecurity',href: '/services/ai-autonomous-cybersecurity-operations',icon: ShieldCheck,description: 'Autonomous Security Operations',featured: true,color: 'from-red-500 to-orange-500'
+  na,
+  m: e: 'AI Autonomous Cybersecurity',hr,
+  e: f: '/services/ai-autonomous-cybersecurity-operations',ic,
+  o: n: ShieldCheck,descripti,
+  o: n: 'Autonomous Security Operations',featur,
+  e: d: true,col,
+  o: r: 'from-red-500 to-orange-500'
 },
   {
-  name: 'AI Cybersecurity',href: '/services/ai-cybersecurity',icon: Shield,description: 'AI-Powered Security',featured: true,color: 'from-green-500 to-blue-500'
+  na,
+  m: e: 'AI Cybersecurity',hr,
+  e: f: '/services/ai-cybersecurity',ic,
+  o: n: Shield,descripti,
+  o: n: 'AI-Powered Security',featur,
+  e: d: true,col,
+  o: r: 'from-green-500 to-blue-500'
 }
-    // Quantum Computing;
+    // Quantum Computing
     {
-  name: 'Quantum AI Trading Platform',href: '/services/quantum-ai-trading-platform',icon: Atom,description: 'Quantum-Powered Trading',featured: true,color: 'from-purple-500 to-pink-500'
+  na,
+  m: e: 'Quantum AI Trading Platform',hr,
+  e: f: '/services/quantum-ai-trading-platform',ic,
+  o: n: Atom,descripti,
+  o: n: 'Quantum-Powered Trading',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-pink-500'
 },
   {
-  name: 'Quantum Computing',href: '/services/quantum-computing',icon: Atom,description: 'Quantum AI & Optimization',featured: true,color: 'from-purple-500 to-pink-500'
+  na,
+  m: e: 'Quantum Computing',hr,
+  e: f: '/services/quantum-computing',ic,
+  o: n: Atom,descripti,
+  o: n: 'Quantum AI & Optimization',featur,
+  e: d: true,col,
+  o: r: 'from-purple-500 to-pink-500'
 }
-    // Blockchain & Web3;
+    // Blockchain & Web3
     {
-  name: 'Blockchain Governance Platform',href: '/services/blockchain-autonomous-governance-platform',icon: GitFork,description: 'Decentralized Autonomous Governance',featured: true,color: 'from-yellow-500 to-orange-500'
+  na,
+  m: e: 'Blockchain Governance Platform',hr,
+  e: f: '/services/blockchain-autonomous-governance-platform',ic,
+  o: n: GitFork,descripti,
+  o: n: 'Decentralized Autonomous Governance',featur,
+  e: d: true,col,
+  o: r: 'from-yellow-500 to-orange-500'
 }
-    // Cloud & DevOps;
+    // Cloud & DevOps
     {
-  name: 'Cloud Infrastructure',href: '/services/cloud-devops',icon: Cloud,description: 'Cloud & DevOps Solutions',featured: true,color: 'from-blue-500 to-cyan-500'
+  na,
+  m: e: 'Cloud Infrastructure',hr,
+  e: f: '/services/cloud-devops',ic,
+  o: n: Cloud,descripti,
+  o: n: 'Cloud & DevOps Solutions',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-cyan-500'
 }
-    // IoT & Edge Computing;
+    // IoT & Edge Computing
     {
-  name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Cpu,description: 'IoT & Real-time Processing',featured: true,color: 'from-blue-500 to-cyan-500'
+  na,
+  m: e: 'IoT Edge Computing',hr,
+  e: f: '/services/iot-edge-computing',ic,
+  o: n: Cpu,descripti,
+  o: n: 'IoT & Real-time Processing',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-cyan-500'
 }
-    // Digital Twin;
+    // Digital Twin
     {
-  name: 'Digital Twin Platform',href: '/services/digital-twin',icon: Globe,description: 'Virtual Replicas & Simulation',featured: true,color: 'from-blue-500 to-indigo-500'
+  na,
+  m: e: 'Digital Twin Platform',hr,
+  e: f: '/services/digital-twin',ic,
+  o: n: Globe,descripti,
+  o: n: 'Virtual Replicas & Simulation',featur,
+  e: d: true,col,
+  o: r: 'from-blue-500 to-indigo-500'
 }
-    // Data Analytics;
+    // Data Analytics
     {
-  name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Advanced Analytics & BI',featured: true,color: 'from-green-500 to-emerald-500'
+  na,
+  m: e: 'Data Analytics',hr,
+  e: f: '/services/data-analytics',ic,
+  o: n: BarChart3,descripti,
+  o: n: 'Advanced Analytics & BI',featur,
+  e: d: true,col,
+  o: r: 'from-green-500 to-emerald-500'
 }
-    // IT Infrastructure;
+    // IT Infrastructure
     {
-  name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Infrastructure & Management',featured: true,color: 'from-gray-500 to-slate-500'
+  na,
+  m: e: 'IT Infrastructure',hr,
+  e: f: '/services/it-infrastructure',ic,
+  o: n: Server,descripti,
+  o: n: 'Infrastructure & Management',featur,
+  e: d: true,col,
+  o: r: 'from-gray-500 to-slate-500'
 },
   ]
   const solutions = [
   {
-  title: 'Enterprise Solutions',items: [
-  {{ name: 'Digital Transformation', href: '/solutions/digital-transformation', description: 'Complete enterprise digital transformation' },
+  tit,
+  l: e: 'Enterprise Solutions',ite,
+  m: s: [
+  { nam,
+  e: 'Digital Transformation', hr,
+  e: f: '/solutions/digital-transformation', descripti,
+  o: n: 'Complete enterprise digital transformation' },
   },
-  {{ name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Seamless cloud migration strategies' },
+  { na,
+  m: e: 'Cloud Migration', hr,
+  e: f: '/solutions/cloud-migration', descripti,
+  o: n: 'Seamless cloud migration strategies' },
   },
-  {{ name: 'Data Strategy', href: '/solutions/data-strategy', description: 'Comprehensive data strategy implementation' },
+  { na,
+  m: e: 'Data Strategy', hr,
+  e: f: '/solutions/data-strategy', descripti,
+  o: n: 'Comprehensive data strategy implementation' },
   },
-  {{ name: 'AI Implementation', href: '/solutions/ai-implementation', description: 'End-to-end AI implementation' },
+  { na,
+  m: e: 'AI Implementation', hr,
+  e: f: '/solutions/ai-implementation', descripti,
+  o: n: 'End-to-end AI implementation' },
   },
   ],
   },
   {
-  title: 'Industry Solutions',items: [
-  {{ name: 'Healthcare AI', href: '/solutions/healthcare-ai', description: 'AI solutions for healthcare industry' },
+  tit,
+  l: e: 'Industry Solutions',ite,
+  m: s: [
+  { nam,
+  e: 'Healthcare AI', hr,
+  e: f: '/solutions/healthcare-ai', descripti,
+  o: n: 'AI solutions for healthcare industry' },
   },
-  {{ name: 'Financial Services', href: '/solutions/financial-services', description: 'FinTech and banking solutions' },
+  { na,
+  m: e: 'Financial Services', hr,
+  e: f: '/solutions/financial-services', descripti,
+  o: n: 'FinTech and banking solutions' },
   },
-  {{ name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing solutions' },
+  { na,
+  m: e: 'Manufacturing', hr,
+  e: f: '/solutions/manufacturing', descripti,
+  o: n: 'Smart manufacturing solutions' },
   },
-  {{ name: 'Retail & E-commerce', href: '/solutions/retail-ecommerce', description: 'Retail transformation solutions' },
+  { na,
+  m: e: 'Retail & E-commerce', hr,
+  e: f: '/solutions/retail-ecommerce', descripti,
+  o: n: 'Retail transformation solutions' },
   },
   ],
   },
   {
-  title: 'Technology Solutions',items: [
-  {{ name: 'Cybersecurity', href: '/solutions/cybersecurity', description: 'Comprehensive security solutions' },
+  tit,
+  l: e: 'Technology Solutions',ite,
+  m: s: [
+  { nam,
+  e: 'Cybersecurity', hr,
+  e: f: '/solutions/cybersecurity', descripti,
+  o: n: 'Comprehensive security solutions' },
   },
-  {{ name: 'Blockchain', href: '/solutions/blockchain', description: 'Blockchain and Web3 solutions' },
+  { na,
+  m: e: 'Blockchain', hr,
+  e: f: '/solutions/blockchain', descripti,
+  o: n: 'Blockchain and Web3 solutions' },
   },
-  {{ name: 'IoT Solutions', href: '/solutions/iot', description: 'Internet of Things solutions' },
+  { na,
+  m: e: 'IoT Solutions', hr,
+  e: f: '/solutions/iot', descripti,
+  o: n: 'Internet of Things solutions' },
   },
-  {{ name: 'Quantum Computing', href: '/solutions/quantum-computing', description: 'Quantum computing applications' },
+  { na,
+  m: e: 'Quantum Computing', hr,
+  e: f: '/solutions/quantum-computing', descripti,
+  o: n: 'Quantum computing applications' },
   },
   ],
   },
   ]
   const resources = [
   {
-  title: 'Learning Resources',items: [
-  {{ name: 'Documentation', href: '/docs', description: 'Technical documentation and guides' },
+  tit,
+  l: e: 'Learning Resources',ite,
+  m: s: [
+  { nam,
+  e: 'Documentation', hr,
+  e: f: '/docs', descripti,
+  o: n: 'Technical documentation and guides' },
   },
-  {{ name: 'API Reference', href: '/docs/api', description: 'Complete API documentation' },
+  { na,
+  m: e: 'API Reference', hr,
+  e: f: '/docs/api', descripti,
+  o: n: 'Complete API documentation' },
   },
-  {{ name: 'SDKs & Libraries', href: '/docs/sdks', description: 'Software development kits' },
+  { na,
+  m: e: 'SDKs & Libraries', hr,
+  e: f: '/docs/sdks', descripti,
+  o: n: 'Software development kits' },
   },
-  {{ name: 'Code Examples', href: '/docs/examples', description: 'Code samples and tutorials' },
+  { na,
+  m: e: 'Code Examples', hr,
+  e: f: '/docs/examples', descripti,
+  o: n: 'Code samples and tutorials' },
   },
   ],
   },
   {
-  title: 'Research & Insights',items: [
-  {{ name: 'Case Studies', href: '/case-studies', description: 'Success stories and implementations' },
+  tit,
+  l: e: 'Research & Insights',ite,
+  m: s: [
+  { nam,
+  e: 'Case Studies', hr,
+  e: f: '/case-studies', descripti,
+  o: n: 'Success stories and implementations' },
   },
-  {{ name: 'White Papers', href: '/white-papers', description: 'In-depth technical research' },
+  { na,
+  m: e: 'White Papers', hr,
+  e: f: '/white-papers', descripti,
+  o: n: 'In-depth technical research' },
   },
-  {{ name: 'Blog', href: '/blog', description: 'Latest news and insights' },
+  { na,
+  m: e: 'Blog', hr,
+  e: f: '/blog', descripti,
+  o: n: 'Latest news and insights' },
   },
-  {{ name: 'Webinars', href: '/webinars', description: 'Educational webinars and events' },
+  { na,
+  m: e: 'Webinars', hr,
+  e: f: '/webinars', descripti,
+  o: n: 'Educational webinars and events' },
   },
   ],
   },
   {
-  name: 'White Papers',href: '/white-papers',icon: FileText,description: 'In-depth research and analysis',featured: true
+  na,
+  m: e: 'White Papers',hr,
+  e: f: '/white-papers',ic,
+  o: n: FileText,descripti,
+  o: n: 'In-depth research and analysis',featur,
+  e: d: true
 },
   {
-  name: 'Webinars',href: '/webinars',icon: Users,description: 'Expert-led learning sessions',featured: true
+  na,
+  m: e: 'Webinars',hr,
+  e: f: '/webinars',ic,
+  o: n: Users,descripti,
+  o: n: 'Expert-led learning sessions',featur,
+  e: d: true
 },
   {
-  name: 'Documentation',href: '/docs',icon: Code,description: 'Technical guides and APIs',featured: true
+  na,
+  m: e: 'Documentation',hr,
+  e: f: '/docs',ic,
+  o: n: Code,descripti,
+  o: n: 'Technical guides and APIs',featur,
+  e: d: true
 },
   {
-  name: 'FAQ & Support',href: '/faq',icon: HelpCircle,description: 'Get help and answers',featured: true
+  na,
+  m: e: 'FAQ & Support',hr,
+  e: f: '/faq',ic,
+  o: n: HelpCircle,descripti,
+  o: n: 'Get help and answers',featur,
+  e: d: true
 },
   {
-  name: 'Pricing Guide 2025',href: '/pricing-guide-2025',icon: DollarSign,description: 'Complete pricing information',featured: true
+  na,
+  m: e: 'Pricing Guide 2025',hr,
+  e: f: '/pricing-guide-2025',ic,
+  o: n: DollarSign,descripti,
+  o: n: 'Complete pricing information',featur,
+  e: d: true
 },
   ]
   const quickLinks = [
-  {{ name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+  { na,
+  m: e: 'Marketplace', hr,
+  e: f: '/marketplace', ic,
+  o: n: ShoppingCart },
   },
-  {{ name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+  { na,
+  m: e: 'Request Quote', hr,
+  e: f: '/request-quote', ic,
+  o: n: MessageCircle },
   },
-  {{ name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { na,
+  m: e: 'Pricing', hr,
+  e: f: '/pricing', ic,
+  o: n: DollarSign },
   },
-  {{ name: 'Careers', href: '/careers', icon: Users },
+  { na,
+  m: e: 'Careers', hr,
+  e: f: '/careers', ic,
+  o: n: Users },
   },
-  {{ name: 'Partners', href: '/partners', icon: HeartHandshake },
+  { na,
+  m: e: 'Partners', hr,
+  e: f: '/partners', ic,
+  o: n: HeartHandshake },
   },
-  {{ name: 'Privacy', href: '/privacy', icon: Shield },
+  { na,
+  m: e: 'Privacy', hr,
+  e: f: '/privacy', ic,
+  o: n: Shield },
   },
-  {{ name: 'Terms', href: '/terms', icon: BookOpen },
+  { na,
+  m: e: 'Terms', hr,
+  e: f: '/terms', ic,
+  o: n: BookOpen },
   },
   ]
   const const contactInfo = {
   = {
-    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
+    pho,
+  n: e: '+1 302 464 0950',ema,
+  i: l: 'kleber@ziontechgroup.com',addre,
+  s: s: '364 E Main St STE 1008 Middletown DE 19709'
 }
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-  scrolled ;
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50 dark: bg-gray-900/95 dark:border-gray-800/50' ;
+  scrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50,
+  dar: k: bg-gray-900/95 dar,
+  k:border-gray-800/50' 
         : 'bg-transparent'
 }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6 l,
+  g:px-8">
         <div className="flex justify-between items-center h-16">
-          {{/* Logo */},
+          {/* Logo */},
   }
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
@@ -269,21 +584,26 @@ export function AppHeader() {
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group;
+                Zion Tech Group
               </span>
             </Link>
           </div>
 
-          {{/* Desktop Navigation */},
+          {/* Desktop Navigation */},
   }
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden,
+  m: d:flex space-x-8">
             {navigation.map((item) => (
   <div key={item.name} className="relative">
-                <Link;
-                  to={{item.href},
+                <Link
+                  to={item.href},
   }
-                  className="className="text-gray-700 hover: text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200";"
-                  onMouseEnter={() => {
+                  className="className="text-gray-700,
+  hove: r: text-blue-600,
+  dar: k:text-gray-300,
+  dar: k:hove,
+  r:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200";"
+                  onMouseEnter={() () => {
                     if (if (item.hasDropdown) {
   ) {
                       if (item.name === 'Services') setServicesDropdownOpen(true)
@@ -293,40 +613,53 @@ export function AppHeader() {
   },
   }
                 >
-                  {{item.name},
+                  {item.name},
   },
-  {{item.hasDropdown && <ChevronDown className="inline-block w-4 h-4 ml-1" />},
+  {item.hasDropdown && <ChevronDown className="inline-block w-4 h-4 ml-1" />},
   }
                 </Link>
 
-                {{/* Services Dropdown */},
+                {/* Services Dropdown */},
   },
   {item.name === 'Services' && servicesDropdownOpen && (
-  <div ;
-                    className="className="absolute top-full left-0 w-screen max-w-6xl bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2";"
-                    onMouseLeave={{() => setServicesDropdownOpen(false)},
+  <div 
+                    className="className="absolute top-full left-0 w-screen max-w-6xl bg-white,
+  dar: k: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dar,
+  k:border-gray-800 mt-2";"
+                    onMouseLeave={() => setServicesDropdownOpen(false)},
   }
                   >
-                    <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="p-6 grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-6">
                       {services.map((service) => (
-  <Link;
-                          key={{service.name},
+  <Link
+                          key={service.name},
   }
-                          to={{service.href},
+                          to={service.href},
   }
-                          className="className="group p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200";"
+                          className="className="group p-4 rounded-lg,
+  hove: r: bg-gray-50,
+  dar: k:hove,
+  r:bg-gray-800 transition-all duration-200";"
                         >
                           <div className="flex items-center space-x-3">
-                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center group-hov,
+  e: r:scale-110 transition-transform duration-200`}>
                               <service.icon className="w-5 h-5 text-white" />
                             </div>
                             <div className="flex-1">
-                              <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
-                                {{service.name},
+                              <h3 className="font-semibold text-gray-900,
+  dar: k: text-white group-hov,
+  e: r:text-blue-600,
+  dar: k:group-hove,
+  r:text-blue-400 transition-colors duration-200">
+                                {service.name},
   }
                               </h3>
-                              <p className="text-sm text-gray-600 dark:text-gray-400">
-                                {{service.description},
+                              <p className="text-sm text-gray-600,
+  dar: k:text-gray-400">
+                                {service.description},
   }
                               </p>
                             </div>
@@ -334,46 +667,62 @@ export function AppHeader() {
                         </Link>
                       ))}
                     </div>
-                    <div className="border-t border-gray-200 dark:border-gray-800 p-4">
-                      <Link;
-                        to="/services";
-                        className="className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium";"
+                    <div className="border-t border-gray-200,
+  dar: k: border-gray-800 p-4">
+                      <Link
+                        to="/services"
+                        className="className="inline-flex items-center text-blue-600,
+  dar: k:text-blue-400,
+  hove: r:text-blue-700,
+  dar: k:hove,
+  r:text-blue-300 font-medium";"
                       >
-                        View All Services;
+                        View All Services
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
                   </div>
                 )},
-  {{/* Solutions Dropdown */},
+  {/* Solutions Dropdown */},
   },
   {item.name === 'Solutions' && solutionsDropdownOpen && (
-  <div ;
-                    className="className="absolute top-full left-0 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2";"
-                    onMouseLeave={{() => setSolutionsDropdownOpen(false)},
+  <div 
+                    className="className="absolute top-full left-0 w-80 bg-white,
+  dar: k: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dar,
+  k:border-gray-800 mt-2";"
+                    onMouseLeave={() => setSolutionsDropdownOpen(false)},
   }
                   >
                     <div className="p-4">
                       {solutions.map((section, sectionIndex) => (
   <div key={section.title} className={sectionIndex > 0 ? 'mt-6' : ''}>
-                          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                            {{section.title},
+                          <h3 className="text-sm font-semibold text-gray-900,
+  dar: k:text-white mb-2">
+                            {section.title},
   }
                           </h3>
                           {section.items.map((solution) => (
-  <Link;
-                              key={{solution.name},
+  <Link
+                              key={solution.name},
   }
-                              to={{solution.href},
+                              to={solution.href},
   }
-                              className="className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200";"
+                              className="className="block p-2,
+  rounded: hover: bg-gray-50,
+  dar: k:hov,
+  e: r:bg-gray-800 transition-colors duration-200";"
                             >
-                              <div className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                                {{solution.name},
+                              <div className="font-medium text-gray-900,
+  dar: k:text-white,
+  hove: r:text-blue-600,
+  dar: k:hove,
+  r:text-blue-400 transition-colors duration-200">
+                                {solution.name},
   }
                               </div>
-                              <div className="text-sm text-gray-600 dark:text-gray-400">
-                                {{solution.description},
+                              <div className="text-sm text-gray-600,
+  dar: k:text-gray-400">
+                                {solution.description},
   }
                               </div>
                             </Link>
@@ -383,35 +732,46 @@ export function AppHeader() {
                     </div>
                   </div>
                 )},
-  {{/* Resources Dropdown */},
+  {/* Resources Dropdown */},
   },
   {item.name === 'Resources' && resourcesDropdownOpen && (
-  <div ;
-                    className="className="absolute top-full left-0 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2";"
-                    onMouseLeave={{() => setResourcesDropdownOpen(false)},
+  <div 
+                    className="className="absolute top-full left-0 w-80 bg-white,
+  dar: k: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dar,
+  k:border-gray-800 mt-2";"
+                    onMouseLeave={() => setResourcesDropdownOpen(false)},
   }
                   >
                     <div className="p-4">
                       {resources.map((section, sectionIndex) => (
   <div key={section.title} className={sectionIndex > 0 ? 'mt-6' : ''}>
-                          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                            {{section.title},
+                          <h3 className="text-sm font-semibold text-gray-900,
+  dar: k:text-white mb-2">
+                            {section.title},
   }
                           </h3>
                           {section.items.map((resource) => (
-  <Link;
-                              key={{resource.name},
+  <Link
+                              key={resource.name},
   }
-                              to={{resource.href},
+                              to={resource.href},
   }
-                              className="className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200";"
+                              className="className="block p-2,
+  rounded: hover: bg-gray-50,
+  dar: k:hov,
+  e: r:bg-gray-800 transition-colors duration-200";"
                             >
-                              <div className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                                {{resource.name},
+                              <div className="font-medium text-gray-900,
+  dar: k:text-white,
+  hove: r:text-blue-600,
+  dar: k:hove,
+  r:text-blue-400 transition-colors duration-200">
+                                {resource.name},
   }
                               </div>
-                              <div className="text-sm text-gray-600 dark:text-gray-400">
-                                {{resource.description},
+                              <div className="text-sm text-gray-600,
+  dar: k:text-gray-400">
+                                {resource.description},
   }
                               </div>
                             </Link>
@@ -425,20 +785,28 @@ export function AppHeader() {
             ))}
           </nav>
 
-          {{/* Right side - Search, Theme, Contact */},
+          {/* Right side - Search, Theme, Contact */},
   }
           <div className="flex items-center space-x-4">
-            {{/* Search */},
+            {/* Search */},
   }
-            <form onSubmit={handleSearch} className="hidden lg:flex relative">
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={{searchQuery},
+            <form onSubmit={handleSearch} className="hidden,
+  l: g:flex relative">
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery},
   }
-                onChange={{(e) => setSearchQuery(e.target.value)},
+                onChange={(e) => setSearchQuery(e.target.value)},
   }
-                className="className="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white";"
+                className="className="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-100,
+  dar: k: bg-gray-800 border border-gray-300,
+  dar: k:border-gray-700 rounded-lg,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-blue-500,
+  focu: s:border-transparent dar,
+  k:text-white";"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
               {isSearching && (
@@ -448,27 +816,42 @@ export function AppHeader() {
               )}
             </form>
 
-            {{/* Theme Toggle */},
+            {/* Theme Toggle */},
   }
             <ThemeToggle />
 
-            {{/* Contact Button */},
+            {/* Contact Button */},
   }
-            <Link;
-              to="/contact";
-              className="className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200";"
+            <Link
+              to="/contact"
+              className="className="hidden,
+  m: d: inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600,
+  hove: r:from-blue-700,
+  hove: r:to-purple-700,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-offset-2 focu,
+  s:ring-blue-500 transition-all duration-200";"
             >
               <Phone className="w-4 h-4 mr-2" />
-              Contact Us;
+              Contact Us
             </Link>
 
-            {{/* Mobile menu button */},
+            {/* Mobile menu button */},
   }
-            <button;
-              onClick={{onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
+            <button
+              onClick={onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
   },
   }
-              className="className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500";"
+              className="className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700,
+  dar: k:text-gray-300,
+  hove: r:text-blue-600,
+  dar: k:hov,
+  e: r:text-blue-400,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-inset focu,
+  s:ring-blue-500";"
             >
               {mobileMenuOpen ? (
   <X className="block h-6 w-6" />
@@ -480,54 +863,76 @@ export function AppHeader() {
         </div>
       </div>
 
-      {{/* Mobile menu */},
+      {/* Mobile menu */},
   },
   {mobileMenuOpen && (
-  <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-            {{/* Mobile Search */},
+  <div className="md: hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white,
+  dar: k:bg-gray-900 border-t border-gray-200 dar,
+  k:border-gray-800">
+            {/* Mobile Search */},
   }
             <form onSubmit={handleSearch} className="relative mb-4">
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={{searchQuery},
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery},
   }
-                onChange={{(e) => setSearchQuery(e.target.value)},
+                onChange={(e) => setSearchQuery(e.target.value)},
   }
-                className="className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white";"
+                className="className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-gray-100,
+  dar: k: bg-gray-800 border border-gray-300,
+  dar: k:border-gray-700 rounded-lg,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-blue-500,
+  focu: s:border-transparent dar,
+  k:text-white";"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
             </form>
 
-            {{/* Mobile Navigation */},
+            {/* Mobile Navigation */},
   },
   {navigation.map((item) => (
-  <Link;
-                key={{item.name},
+  <Link
+                key={item.name},
   }
-                to={{item.href},
+                to={item.href},
   }
-                className="className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200";"
-                onClick={{onClick={() => setMobileMenuOpen(false)},
+                className="className="block px-3 py-2 text-base font-medium text-gray-700,
+  dar: k: text-gray-300,
+  hove: r:text-blue-600,
+  dar: k:hov,
+  e: r:text-blue-400,
+  hove: r:bg-gray-50,
+  dar: k:hove,
+  r:bg-gray-800 rounded-md transition-colors duration-200";"
+                onClick={onClick={() => setMobileMenuOpen(false)},
   },
   }
               >
-                {{item.name},
+                {item.name},
   }
               </Link>
             ))},
-  {{/* Mobile Contact Button */},
+  {/* Mobile Contact Button */},
   }
-            <Link;
-              to="/contact";
-              className="className="mt-4 block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200";"
-              onClick={{onClick={() => setMobileMenuOpen(false)},
+            <Link
+              to="/contact"
+              className="className="mt-4 block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600,
+  hove: r: from-blue-700,
+  hove: r:to-purple-700,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-offset-2 focu,
+  s:ring-blue-500 transition-all duration-200";"
+              onClick={onClick={() => setMobileMenuOpen(false)},
   },
   }
             >
               <Phone className="w-4 h-4 inline mr-2" />
-              Contact Us;
+              Contact Us
             </Link>
           </div>
         </div>

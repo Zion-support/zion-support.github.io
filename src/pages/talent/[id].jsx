@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
+import React, { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import SEO from "@/components/SEO"
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState"
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState"
 export default function TalentProfilePage() {
   const { id } = useParams()
     const [profile, setProfile] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    useEffect(() => {
-        const fetchProfile = async () => {
+    useEffect(() () => {
+        const fetchProfile = async () () => {
             if (if (!id) {
   ) {
                 setError('Profile not found')
@@ -41,11 +41,12 @@ export default function TalentProfilePage() {
       <main className="min-h-screen bg-zion-blue py-8 text-white">
         <div className="container mx-auto px-4 space-y-4">
           <h1 className="text-3xl font-bold" data-testid="profile-name">
-            {{profile.full_name},
+            {profile.full_name},
   }
           </h1>
           {profile.bio && <p>{profile.bio}</p>},
-  {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>},
+  {profile.hourly_rate && <p>Hourly,
+  Rat: e: ${profile.hourly_rate}/hr</p>},
   {profile.skills && (<div>
               <h2 className="font-semibold">Skills</h2>
               <ul className="list-disc ml-5">
@@ -57,7 +58,7 @@ export default function TalentProfilePage() {
               <ul className="list-disc ml-5">
                 {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>
                     <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
-                      {{platform},
+                      {platform},
   }
                     </a>
                   </li>))}

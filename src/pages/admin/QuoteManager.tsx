@@ -1,59 +1,71 @@
 
-import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
+import React, { useState } from "react"
+import { useAdminQuotes } from "@/hooks/useAdminQuotes"
+import { useAuth } from "@/hooks/useAuth"
 import {
-  Card;
+  Card
   CardContent
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
+} from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Navigate } from "react-router-dom"
+import type { QuoteRequest } from "@/types/quotes"
+import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { QuoteDetails } from "@/components/quotes/QuoteDetails"
+import { ExportToCSV } from "@/components/quotes/ExportToCSV"
 import {
-  QuoteStatusCards;
-  QuotesFilter;
+  QuoteStatusCards
+  QuotesFilter
   QuotesTable
-} from "@/components/admin/quotes";
+} from "@/components/admin/quotes"
 export default function QuoteManager() {
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin';
+  const isAdmin = user?.userType === 'admin'
 const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null)
   const [showDetails, setShowDetails] = useState(false)
 
   const {
-  quotes;
-    isLoading;
-    error;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter;
-    searchQuery;
-    setSearchQuery;
-    dateRange;
-    setDateRange;
-    updateStatus;
-    toggleArchive;
+  quotes
+    isLoading
+    error
+    statusFilter
+    setStatusFilter
+    archiveFilter
+    setArchiveFilter
+    searchQuery
+    setSearchQuery
+    dateRange
+    setDateRange
+    updateStatus
+    toggleArchive
     deleteQuote
 } = useAdminQuotes()
-  // Count quotes by status;
+  // Count quotes by status
 const const statusCounts = {
   = {
-    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
+    n,
+  e: w: quotes.filter((,
+  q: QuoteRequest) => q.status === 'new').length,in_revi,
+  e: w: quotes.filter((,
+  q: QuoteRequest) => q.status === 'in_review').length,accept,
+  e: d: quotes.filter((,
+  q: QuoteRequest) => q.status === 'accepted').length,respond,
+  e: d: quotes.filter((,
+  q: QuoteRequest) => q.status === 'responded').length,clos,
+  e: d: quotes.filter((,
+  q: QuoteRequest) => q.status === 'closed').length
 }
-  const handleViewDetails = (quote: QuoteRequest) => {
+  const handleViewDetails = (quo,
+  t: e: QuoteRequest) () => {
   setSelectedQuote(quote)
     setShowDetails(true)
   }
 
-  const handleResetFilters = () => {
+  const handleResetFilters = () () => {
     setStatusFilter('all')
     setArchiveFilter('all')
     setSearchQuery('')
-    setDateRange({ from: undefined, to: undefined })
+    setDateRange({ fr,
+  o: m: undefined, to: undefined })
   }
 
   if (if (!isAdmin) {
@@ -67,7 +79,9 @@ const const statusCounts = {
 
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
-            <div className="flex flex-col md: flex-row justify-between items-start md:items-center mb-8">
+            <div className="flex flex-col,
+  m: d: flex-row justify-between items-start m,
+  d:items-center mb-8">
               <div>
                 <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
                 <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
@@ -75,34 +89,34 @@ const const statusCounts = {
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
 
-            {{/* Status Summary Cards */},
+            {/* Status Summary Cards */},
   }
             <QuoteStatusCards statusCounts={statusCounts} />
 
-            {{/* Filters */},
+            {/* Filters */},
   }
-            <QuotesFilter;
-              searchQuery={{searchQuery},
+            <QuotesFilter
+              searchQuery={searchQuery},
   }
-              setSearchQuery={{setSearchQuery},
+              setSearchQuery={setSearchQuery},
   }
-              statusFilter={{statusFilter},
+              statusFilter={statusFilter},
   }
-              setStatusFilter={{setStatusFilter},
+              setStatusFilter={setStatusFilter},
   }
-              archiveFilter={{archiveFilter},
+              archiveFilter={archiveFilter},
   }
-              setArchiveFilter={{setArchiveFilter},
+              setArchiveFilter={setArchiveFilter},
   }
-              dateRange={{dateRange},
+              dateRange={dateRange},
   }
-              setDateRange={{setDateRange},
+              setDateRange={setDateRange},
   }
-              onReset={{handleResetFilters},
+              onReset={handleResetFilters},
   }
             />
 
-            {{/* Tabs for Active/Archived */},
+            {/* Tabs for Active/Archived */},
   }
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
@@ -111,21 +125,22 @@ const const statusCounts = {
               </TabsList>
 
               <TabsContent value="active">
-                {{/* Quotes Table */},
+                {/* Quotes Table */},
   }
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable;
-                    quotes={{quotes.filter((quote: QuoteRequest) => !quote.is_archived)},
+                  <QuotesTable
+                    quotes={quotes.filter((quo,
+  t: e: QuoteRequest) => !quote.is_archived)},
   }
-                    isLoading={{isLoading},
+                    isLoading={isLoading},
   }
-                    updateStatus={{updateStatus},
+                    updateStatus={updateStatus},
   }
-                    toggleArchive={{toggleArchive},
+                    toggleArchive={toggleArchive},
   }
-                    deleteQuote={{deleteQuote},
+                    deleteQuote={deleteQuote},
   }
-                    onViewDetails={{handleViewDetails},
+                    onViewDetails={handleViewDetails},
   }
                   />
                 </Card>
@@ -133,20 +148,21 @@ const const statusCounts = {
 
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable;
-                    quotes={{quotes.filter((quote: QuoteRequest) => quote.is_archived)},
+                  <QuotesTable
+                    quotes={quotes.filter((quo,
+  t: e: QuoteRequest) => quote.is_archived)},
   }
-                    isArchived={{true},
+                    isArchived={true},
   }
-                    isLoading={{isLoading},
+                    isLoading={isLoading},
   }
-                    updateStatus={{updateStatus},
+                    updateStatus={updateStatus},
   }
-                    toggleArchive={{toggleArchive},
+                    toggleArchive={toggleArchive},
   }
-                    deleteQuote={{deleteQuote},
+                    deleteQuote={deleteQuote},
   }
-                    onViewDetails={{handleViewDetails},
+                    onViewDetails={handleViewDetails},
   }
                   />
                 </Card>
@@ -155,14 +171,14 @@ const const statusCounts = {
           </div>
         </div>
 
-        {{/* Quote Details Modal */},
+        {/* Quote Details Modal */},
   }
-        <QuoteDetails;
-          quote={{selectedQuote},
+        <QuoteDetails
+          quote={selectedQuote},
   }
-          isOpen={{showDetails},
+          isOpen={showDetails},
   }
-          onClose={() => {
+          onClose={() () => {
             setShowDetails(false)
             setSelectedQuote(null)
           },

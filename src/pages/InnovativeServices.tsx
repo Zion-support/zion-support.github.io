@@ -1,166 +1,249 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from "react"
+import { motion } from "framer-motion"
 import {
-  Brain;
-  Atom;
-  Lock;
-  Wifi;
-  Shield;
-  Eye;
-  Globe2;
-  Leaf;
-  Zap;
-  Rocket;
-  Cpu;
-  Database;
-  Network;
-  Code;
-  Users;
-  BarChart3;
-  TrendingUp;
-  Lightbulb;
-  Target;
+  Brain
+  Atom
+  Lock
+  Wifi
+  Shield
+  Eye
+  Globe2
+  Leaf
+  Zap
+  Rocket
+  Cpu
+  Database
+  Network
+  Code
+  Users
+  BarChart3
+  TrendingUp
+  Lightbulb
+  Target
   Award
-} from "lucide-react";
-const InnovativeServices: React.FC = () => {
+} from "lucide-react"
+const,
+  InnovativeService: s: React.FC = () () => {
   const innovations = [
   {
-  id: 'ai-automation',title: 'AI Business Automation',description: 'Revolutionary AI-powered business process automation that transforms your operations',icon: Brain,features: [
-  'Intelligent workflow automationPredictive analytics integration';
+  i,
+  d: 'ai-automation',tit,
+  l: e: 'AI Business Automation',descripti,
+  o: n: 'Revolutionary AI-powered business process automation that transforms your operations',ic,
+  o: n: Brain,featur,
+  e: s: [
+  'Intelligent workflow automationPredictive analytics integration'
         'Real-time decision makingScalable AI infrastructure'
 ]
-      benefits: ['300% efficiency increase24/7 autonomous operation', 'Cost reduction up to 60%']
-      color: 'from-zion-cyan to-zion-purple'
+      benefit,
+  s: ['300% efficiency increase24/7 autonomous operation', 'Cost reduction up to 60%']
+      col,
+  o: r: 'from-zion-cyan to-zion-purple'
 },
   {
-  id: 'quantum-computing',title: 'Quantum Computing Services',description: 'Next-generation quantum computing solutions for complex problem-solving',icon: Atom,features: [
-  'Quantum algorithm optimizationCryptographic security';
+  id: 'quantum-computing',tit,
+  l: e: 'Quantum Computing Services',descripti,
+  o: n: 'Next-generation quantum computing solutions for complex problem-solving',ic,
+  o: n: Atom,featur,
+  e: s: [
+  'Quantum algorithm optimizationCryptographic security'
         'Molecular simulationFinancial modeling'
 ]
-      benefits: ['1000x faster computationUnbreakable encryption', 'Revolutionary breakthroughs']
-      color: 'from-zion-purple to-zion-blue'
+      benefit,
+  s: ['1000x faster computationUnbreakable encryption', 'Revolutionary breakthroughs']
+      col,
+  o: r: 'from-zion-purple to-zion-blue'
 },
   {
-  id: 'blockchain',title: 'Enterprise Blockchain',description: 'Secure, scalable blockchain solutions for enterprise applications';
-      icon: Lock,features: [
-  'Smart contract developmentDeFi platform creation';
+  id: 'blockchain',tit,
+  l: e: 'Enterprise Blockchain',descripti,
+  o: n: 'Secure, scalable blockchain solutions for enterprise applications'
+      ic,
+  o: n: Lock,featur,
+  e: s: [
+  'Smart contract developmentDeFi platform creation'
         'Supply chain transparencyDigital asset management'
 ]
-      benefits: ['Immutable securityTransparent operations', 'Reduced costs']
-      color: 'from-zion-blue to-zion-green'
+      benefit,
+  s: ['Immutable securityTransparent operations', 'Reduced costs']
+      col,
+  o: r: 'from-zion-blue to-zion-green'
 },
   {
-  id: 'iot-edge',title: 'IoT Edge Computing',description: 'Intelligent IoT solutions with edge computing for real-time processing',icon: Wifi,features: [
-  'Edge AI processingReal-time analytics';
+  id: 'iot-edge',tit,
+  l: e: 'IoT Edge Computing',descripti,
+  o: n: 'Intelligent IoT solutions with edge computing for real-time processing',ic,
+  o: n: Wifi,featur,
+  e: s: [
+  'Edge AI processingReal-time analytics'
         'Predictive maintenanceSmart city solutions'
 ]
-      benefits: ['Reduced latencyLower bandwidth costs', 'Enhanced security']
-      color: 'from-zion-green to-zion-emerald'
+      benefit,
+  s: ['Reduced latencyLower bandwidth costs', 'Enhanced security']
+      col,
+  o: r: 'from-zion-green to-zion-emerald'
 },
   {
-  id: 'cybersecurity',title: 'Zero Trust Security',description: 'Advanced cybersecurity platform with zero-trust architecture',icon: Shield,features: [
-  'Multi-factor authenticationBehavioral analytics';
+  id: 'cybersecurity',tit,
+  l: e: 'Zero Trust Security',descripti,
+  o: n: 'Advanced cybersecurity platform with zero-trust architecture',ic,
+  o: n: Shield,featur,
+  e: s: [
+  'Multi-factor authenticationBehavioral analytics'
         'Threat intelligenceIncident response automation'
 ]
-      benefits: ['99.99% threat preventionReal-time monitoring', 'Compliance ready']
-      color: 'from-zion-emerald to-zion-cyan'
+      benefit,
+  s: ['99.99% threat preventionReal-time monitoring', 'Compliance ready']
+      col,
+  o: r: 'from-zion-emerald to-zion-cyan'
 },
   {
-  id: 'digital-twin',title: 'Digital Twin Technology',description: 'Create virtual replicas of physical systems for simulation and optimization',icon: Eye,features: [
-  '3D modeling and simulationReal-time monitoring';
+  id: 'digital-twin',tit,
+  l: e: 'Digital Twin Technology',descripti,
+  o: n: 'Create virtual replicas of physical systems for simulation and optimization',ic,
+  o: n: Eye,featur,
+  e: s: [
+  '3D modeling and simulationReal-time monitoring'
         'Predictive maintenancePerformance optimization'
 ]
-      benefits: ['Reduced downtimeOptimized performance', 'Cost savings']
-      color: 'from-zion-cyan to-zion-purple'
+      benefit,
+  s: ['Reduced downtimeOptimized performance', 'Cost savings']
+      col,
+  o: r: 'from-zion-cyan to-zion-purple'
 },
   {
-  id: 'metaverse',title: 'Metaverse & VR',description: 'Immersive virtual reality and metaverse development platform',icon: Globe2,features: [
-  'VR application developmentMetaverse platform creation';
+  id: 'metaverse',tit,
+  l: e: 'Metaverse & VR',descripti,
+  o: n: 'Immersive virtual reality and metaverse development platform',ic,
+  o: n: Globe2,featur,
+  e: s: [
+  'VR application developmentMetaverse platform creation'
         '3D content creationVirtual event hosting'
 ]
-      benefits: ['Enhanced user engagementNew revenue streams', 'Innovative experiences']
-      color: 'from-zion-purple to-zion-blue'
+      benefit,
+  s: ['Enhanced user engagementNew revenue streams', 'Innovative experiences']
+      col,
+  o: r: 'from-zion-purple to-zion-blue'
 },
   {
-  id: 'green-tech',title: 'Green Tech Solutions',description: 'Sustainable technology solutions for environmental impact reduction',icon: Leaf,features: [
-  'Renewable energy optimizationCarbon footprint tracking';
+  id: 'green-tech',tit,
+  l: e: 'Green Tech Solutions',descripti,
+  o: n: 'Sustainable technology solutions for environmental impact reduction',ic,
+  o: n: Leaf,featur,
+  e: s: [
+  'Renewable energy optimizationCarbon footprint tracking'
         'Sustainable infrastructureGreen data centers'
 ]
-      benefits: ['Environmental impactCost savings', 'Regulatory compliance']
-      color: 'from-zion-blue to-zion-green'
+      benefit,
+  s: ['Environmental impactCost savings', 'Regulatory compliance']
+      col,
+  o: r: 'from-zion-blue to-zion-green'
 },
   ]
   const stats = [
-  {{ label: 'Innovation Projects', value: '500+', icon: Rocket },
+  { lab,
+  e: l: 'Innovation Projects', val,
+  u: e: '500+', ic,
+  o: n: Rocket },
   },
-  {{ label: 'AI Models Deployed', value: '1000+', icon: Brain },
+  { lab,
+  e: l: 'AI Models Deployed', val,
+  u: e: '1000+', ic,
+  o: n: Brain },
   },
-  {{ label: 'Quantum Breakthroughs', value: '50+', icon: Atom },
+  { lab,
+  e: l: 'Quantum Breakthroughs', val,
+  u: e: '50+', ic,
+  o: n: Atom },
   },
-  {{ label: 'Client Success Rate', value: '99.8%', icon: Award },
+  { lab,
+  e: l: 'Client Success Rate', val,
+  u: e: '99.8%', ic,
+  o: n: Award },
   },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */},
+      {/* Hero Section */},
   }
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-20 px-4,
+  s: m: px-6,
+  l: g:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              Cutting-Edge;
+            <h1 className="text-5xl,
+  m: d: text-7xl font-bold text-gradient mb-6">
+              Cutting-Edge
               <span className="block text-zion-cyan">Innovations</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Discover the future of technology with Zion Tech Group's revolutionary innovations.;
-              From AI automation to quantum computing, we're building tomorrow's solutions today.;
+            <p className="text-xl m,
+  d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+              Discover the future of technology with Zion Tech Group's revolutionary innovations.
+              From AI automation to quantum computing, we're building tomorrow's solutions today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button;
-                whileHover={{ scale: 1.05 },
+              <motion.button
+                whileHover={ sca,
+  l: e: 1.05 },
   }
-                whileTap={{ scale: 0.95 },
+                whileTap={ sca,
+  l: e: 0.95 },
   }
-                className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300";"
+                className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg,
+  hove: r: shadow-xl transition-all duration-300";"
               >
-                Explore Innovations;
+                Explore Innovations
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 },
+              <motion.button
+                whileHover={ scal,
+  e: 1.05 },
   }
-                whileTap={{ scale: 0.95 },
+                whileTap={ sca,
+  l: e: 0.95 },
   }
-                className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300";"
+                className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl,
+  hove: r: bg-zion-cyan hove,
+  r:text-white transition-all duration-300";"
               >
-                Schedule Demo;
+                Schedule Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {{/* Stats Section */},
+      {/* Stats Section */},
   }
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 m,
+  d:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-  <motion.div;
-                key={{stat.label},
+  <motion.div
+                key={stat.label},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                animate={{ opacity: 1, y: 0 },
+                animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
                 className="className="text-center";"
               >
@@ -175,63 +258,81 @@ const InnovativeServices: React.FC = () => {
         </div>
       </section>
 
-      {{/* Innovations Grid */},
+      {/* Innovations Grid */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="text-center mb-16";"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Technologies;
+            <h2 className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6">
+              Revolutionary Technologies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Explore our portfolio of cutting-edge innovations that are reshaping industries;
-              and creating new possibilities for the future.;
+              Explore our portfolio of cutting-edge innovations that are reshaping industries
+              and creating new possibilities for the future.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 l,
+  g:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
-  <motion.div;
-                key={{innovation.id},
+  <motion.div
+                key={innovation.id},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                animate={{ opacity: 1, y: 0 },
+                animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
                 className="className="group relative";"
               >
-                <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 h-full hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${innovation.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 h-full,
+  hove: r: border-zion-cyan/40 transition-all duration-300,
+  hove: r:shadow-2xl hove,
+  r:shadow-zion-cyan/20">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${innovation.color} rounded-2xl flex items-center justify-center mb-6 group-hov,
+  e: r:scale-110 transition-transform duration-300`}>
                     <innovation.icon className="w-8 h-8 text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
-                    {{innovation.title},
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hov,
+  e: r:text-zion-cyan transition-colors duration-300">
+                    {innovation.title},
   }
                   </h3>
 
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
-                    {{innovation.description},
+                    {innovation.description},
   }
                   </p>
 
                   <div className="mb-6">
-                    <h4 className="text-zion-cyan font-semibold mb-3">Key Features:</h4>
+                    <h4 className="text-zion-cyan font-semibold mb-3">Key,
+  Feature: s:</h4>
                     <ul className="space-y-2">
                       {innovation.features.map((feature, idx) => (
   <li key={idx} className="flex items-center text-zion-slate-light">
                           <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                          {{feature},
+                          {feature},
   }
                         </li>
                       ))}
@@ -239,26 +340,32 @@ const InnovativeServices: React.FC = () => {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-zion-cyan font-semibold mb-3">Benefits:</h4>
+                    <h4 className="text-zion-cyan font-semibold mb-3">Benefi,
+  t: s:</h4>
                     <ul className="space-y-2">
                       {innovation.benefits.map((benefit, idx) => (
   <li key={idx} className="flex items-center text-zion-slate-light">
                           <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
-                          {{benefit},
+                          {benefit},
   }
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <motion.button;
-                    whileHover={{ scale: 1.02 },
+                  <motion.button
+                    whileHover={ sca,
+  l: e: 1.02 },
   }
-                    whileTap={{ scale: 0.98 },
+                    whileTap={ sca,
+  l: e: 0.98 },
   }
-                    className="className="w-full py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300";"
+                    className="className="w-full py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl,
+  hove: r: bg-gradient-to-r,
+  hove: r:from-zion-cyan/30 hove,
+  r:to-zion-purple/30 transition-all duration-300";"
                   >
-                    Learn More;
+                    Learn More
                   </motion.button>
                 </div>
               </motion.div>
@@ -267,42 +374,56 @@ const InnovativeServices: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */},
+      {/* CTA Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Innovate?;
+            <h2 className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6">
+              Ready to Innovate?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join the future of technology with Zion Tech Group. Let's build something amazing together.;
+              Join the future of technology with Zion Tech Group. Let's build something amazing together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button;
-                whileHover={{ scale: 1.05 },
+            <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={ scal,
+  e: 1.05 },
   }
-                whileTap={{ scale: 0.95 },
+                whileTap={ sca,
+  l: e: 0.95 },
   }
-                className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300";"
+                className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg,
+  hove: r: shadow-xl transition-all duration-300";"
               >
-                Start Your Project;
+                Start Your Project
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 },
+              <motion.button
+                whileHover={ scal,
+  e: 1.05 },
   }
-                whileTap={{ scale: 0.95 },
+                whileTap={ sca,
+  l: e: 0.95 },
   }
-                className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover: bg-zion-cyan hover:text-white transition-all duration-300";"
+                className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl,
+  hove: r: bg-zion-cyan hove,
+  r:text-white transition-all duration-300";"
               >
-                Contact Our Team;
+                Contact Our Team
               </motion.button>
             </div>
           </motion.div>
@@ -311,4 +432,4 @@ const InnovativeServices: React.FC = () => {
     </div>
   )
 }
-export default InnovativeServices;
+export default InnovativeServices

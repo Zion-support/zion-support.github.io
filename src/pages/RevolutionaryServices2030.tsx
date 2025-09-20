@@ -1,8 +1,8 @@
-import React from "react";
-import { SEO } from "../components/SEO";
-import { motion } from "framer-motion";
+import React from "react"
+import { SEO } from "../components/SEO"
+import { motion } from "framer-motion"
 import {
-  Rocket;
+  Rocket
   Brain,
   Shield,
   Cloud,
@@ -16,221 +16,293 @@ import {
   Zap,
   Users,
   Star,
-  ArrowRight;
-  Play;
-  Download;
-  ExternalLink;
-  CheckCircle;
-  Sparkles;
-  Flame;
-  Crown;
-  Infinity;
-  Cpu;
-  Eye;
-  MessageCircle;
-  ShoppingCart;
-  Settings;
-  Code;
-  Truck;
-  Building;
-  BarChart3;
-  PenTool;
-  Server;
-  Smartphone;
-  Network;
-  Clock;
-  ShoppingCart;
-  FileText;
-  Key;
-  Globe2;
-  ShieldCheck;
-  Leaf;
-  Scale;
-  Building2;
-  Car;
-  Home;
-  Factory;
-  City;
-  CheckCircle2;
-  ArrowUpRight;
+  ArrowRight
+  Play
+  Download
+  ExternalLink
+  CheckCircle
+  Sparkles
+  Flame
+  Crown
+  Infinity
+  Cpu
+  Eye
+  MessageCircle
+  ShoppingCart
+  Settings
+  Code
+  Truck
+  Building
+  BarChart3
+  PenTool
+  Server
+  Smartphone
+  Network
+  Clock
+  ShoppingCart
+  FileText
+  Key
+  Globe2
+  ShieldCheck
+  Leaf
+  Scale
+  Building2
+  Car
+  Home
+  Factory
+  City
+  CheckCircle2
+  ArrowUpRight
   MailIcon
-} from "lucide-react";
-const RevolutionaryServices2030: React.FC = () => {
+} from "lucide-react"
+const,
+  RevolutionaryServices203: 0: React.FC = () () => {
   const services = [
   {
-  id: 'ai-autonomous-business-operations',title: 'AI Autonomous Business Operations',description: 'Fully autonomous business operations powered by advanced AI that can run entire companies with minimal human intervention.',icon: Brain,color: 'from-purple-500 to-cyan-500',features: [
-  'Autonomous decision-making systemsSelf-optimizing business processes';
-        'Predictive resource allocationIntelligent risk management';
+  i,
+  d: 'ai-autonomous-business-operations',tit,
+  l: e: 'AI Autonomous Business Operations',descripti,
+  o: n: 'Fully autonomous business operations powered by advanced AI that can run entire companies with minimal human intervention.',ic,
+  o: n: Brain,col,
+  o: r: 'from-purple-500 to-cyan-500',featur,
+  e: s: [
+  'Autonomous decision-making systemsSelf-optimizing business processes'
+        'Predictive resource allocationIntelligent risk management'
         'Automated customer serviceSelf-healing infrastructure'
 ]
-      benefits: [
-  '24/7 operational efficiencyZero human error';
-        'Real-time optimizationScalable operations';
+      benefi,
+  t: s: [
+  '24/7 operational efficiencyZero human error'
+        'Real-time optimizationScalable operations'
         'Cost reduction up to 80%Continuous improvement'
 ]
-      useCases: [
-  'Manufacturing automationSupply chain optimization';
-        'Financial trading systemsHealthcare operations';
+      useCase,
+  s: [
+  'Manufacturing automationSupply chain optimization'
+        'Financial trading systemsHealthcare operations'
         'Retail automationLogistics management'
 ],
   },
   {
-  id: 'quantum-ai-cybersecurity',title: 'Quantum AI Cybersecurity',description: 'Next-generation cybersecurity powered by quantum computing and AI, providing unbreakable protection against all known threats.';
-      icon: Shield,color: 'from-red-500 to-pink-500',features: [
-  'Quantum-resistant encryptionAI-powered threat detection';
-        'Real-time attack preventionZero-trust architecture';
+  id: 'quantum-ai-cybersecurity',tit,
+  l: e: 'Quantum AI Cybersecurity',descripti,
+  o: n: 'Next-generation cybersecurity powered by quantum computing and AI, providing unbreakable protection against all known threats.'
+      ic,
+  o: n: Shield,col,
+  o: r: 'from-red-500 to-pink-500',featur,
+  e: s: [
+  'Quantum-resistant encryptionAI-powered threat detection'
+        'Real-time attack preventionZero-trust architecture'
         'Quantum key distributionAdvanced behavioral analysis'
 ]
-      benefits: [
-  'Unbreakable securityInstant threat response';
-        'Proactive protectionCompliance assurance';
+      benefi,
+  t: s: [
+  'Unbreakable securityInstant threat response'
+        'Proactive protectionCompliance assurance'
         'Reduced security costsFuture-proof security'
 ]
-      useCases: [
-  'Government systemsFinancial institutions';
-        'Healthcare networksCritical infrastructure';
+      useCase,
+  s: [
+  'Government systemsFinancial institutions'
+        'Healthcare networksCritical infrastructure'
         'Military communicationsCorporate networks'
 ],
   },
   {
-  id: 'ai-content-creation-studio',title: 'AI Content Creation Studio',description: 'Revolutionary content creation platform that generates high-quality, engaging content across all media types with human-like creativity.';
-      icon: PenTool,color: 'from-blue-500 to-indigo-500',features: [
-  'Multi-format content generationEmotional intelligence integration';
-        'Brand voice consistencyReal-time collaboration';
+  id: 'ai-content-creation-studio',tit,
+  l: e: 'AI Content Creation Studio',descripti,
+  o: n: 'Revolutionary content creation platform that generates high-quality, engaging content across all media types with human-like creativity.'
+      ic,
+  o: n: PenTool,col,
+  o: r: 'from-blue-500 to-indigo-500',featur,
+  e: s: [
+  'Multi-format content generationEmotional intelligence integration'
+        'Brand voice consistencyReal-time collaboration'
         'Content optimizationCreative ideation tools'
 ]
-      benefits: [
-  '10x faster content creationConsistent brand messaging';
-        'Reduced creative costsScalable content production';
+      benefi,
+  t: s: [
+  '10x faster content creationConsistent brand messaging'
+        'Reduced creative costsScalable content production'
         'Data-driven optimizationMultilingual capabilities'
 ]
-      useCases: [
-  'Marketing campaignsSocial media content';
-        'Video productionArticle writing';
+      useCase,
+  s: [
+  'Marketing campaignsSocial media content'
+        'Video productionArticle writing'
         'Product descriptionsEducational content'
 ],
   },
   {
-  id: 'ai-sales-intelligence',title: 'AI Sales Intelligence',description: 'Advanced sales intelligence system that predicts customer behavior, automates sales processes, and maximizes conversion rates.';
-      icon: TrendingUp,color: 'from-emerald-500 to-green-500',features: [
-  'Predictive customer scoringAutomated lead qualification';
-        'Intelligent pricing optimizationSales forecasting';
+  id: 'ai-sales-intelligence',tit,
+  l: e: 'AI Sales Intelligence',descripti,
+  o: n: 'Advanced sales intelligence system that predicts customer behavior, automates sales processes, and maximizes conversion rates.'
+      ic,
+  o: n: TrendingUp,col,
+  o: r: 'from-emerald-500 to-green-500',featur,
+  e: s: [
+  'Predictive customer scoringAutomated lead qualification'
+        'Intelligent pricing optimizationSales forecasting'
         'Customer journey mappingReal-time market analysis'
 ]
-      benefits: [
-  'Increased conversion ratesReduced sales cycles';
-        'Higher deal valuesImproved customer retention';
+      benefi,
+  t: s: [
+  'Increased conversion ratesReduced sales cycles'
+        'Higher deal valuesImproved customer retention'
         'Data-driven decisionsAutomated follow-ups'
 ]
-      useCases: [
-  'B2B salesE-commerce optimization';
-        'Customer relationship managementMarket expansion';
+      useCase,
+  s: [
+  'B2B salesE-commerce optimization'
+        'Customer relationship managementMarket expansion'
         'Product developmentCompetitive analysis'
 ],
   },
   {
-  id: 'ai-customer-support-automation',title: 'AI Customer Support Automation',description: 'Intelligent customer support system that provides instant, accurate, and empathetic responses to customer inquiries 24/7.';
-      icon: MessageCircle,color: 'from-cyan-500 to-blue-500',features: [
-  'Natural language understandingEmotional intelligence';
-        'Multi-channel supportSelf-learning responses';
+  id: 'ai-customer-support-automation',tit,
+  l: e: 'AI Customer Support Automation',descripti,
+  o: n: 'Intelligent customer support system that provides instant, accurate, and empathetic responses to customer inquiries 24/7.'
+      ic,
+  o: n: MessageCircle,col,
+  o: r: 'from-cyan-500 to-blue-500',featur,
+  e: s: [
+  'Natural language understandingEmotional intelligence'
+        'Multi-channel supportSelf-learning responses'
         'Escalation managementCustomer sentiment analysis'
 ]
-      benefits: [
-  'Instant response times24/7 availability';
-        'Consistent service qualityReduced support costs';
+      benefi,
+  t: s: [
+  'Instant response times24/7 availability'
+        'Consistent service qualityReduced support costs'
         'Improved customer satisfactionScalable support operations'
 ]
-      useCases: [
-  'Customer serviceTechnical support';
-        'Product inquiriesOrder tracking';
+      useCase,
+  s: [
+  'Customer serviceTechnical support'
+        'Product inquiriesOrder tracking'
         'Returns processingAccount management'
 ],
   },
   {
-  id: 'ai-data-analytics-bi',title: 'AI Data Analytics & BI',description: 'Revolutionary business intelligence platform that transforms raw data into actionable insights with predictive and prescriptive analytics.',icon: BarChart3,color: 'from-indigo-500 to-purple-500',features: [
-  'Real-time data processingPredictive analytics';
-        'Natural language queriesAutomated insights';
+  id: 'ai-data-analytics-bi',tit,
+  l: e: 'AI Data Analytics & BI',descripti,
+  o: n: 'Revolutionary business intelligence platform that transforms raw data into actionable insights with predictive and prescriptive analytics.',ic,
+  o: n: BarChart3,col,
+  o: r: 'from-indigo-500 to-purple-500',featur,
+  e: s: [
+  'Real-time data processingPredictive analytics'
+        'Natural language queriesAutomated insights'
         'Interactive dashboardsMachine learning models'
 ]
-      benefits: [
-  'Faster decision makingHidden pattern discovery';
-        'Proactive insightsReduced analysis time';
+      benefi,
+  t: s: [
+  'Faster decision makingHidden pattern discovery'
+        'Proactive insightsReduced analysis time'
         'Improved accuracyScalable analytics'
 ]
-      useCases: [
-  'Business intelligenceMarket analysis';
-        'Risk assessmentPerformance monitoring';
+      useCase,
+  s: [
+  'Business intelligenceMarket analysis'
+        'Risk assessmentPerformance monitoring'
         'Strategic planningOperational optimization'
 ],
   },
   {
-  id: 'cloud-infrastructure-devops',title: 'Cloud Infrastructure & DevOps',description: 'Next-generation cloud infrastructure with autonomous DevOps that self-optimizes, scales, and maintains systems automatically.';
-      icon: Cloud,color: 'from-blue-500 to-cyan-500',features: [
-  'Autonomous scalingSelf-healing infrastructure';
-        'Intelligent resource managementAutomated deployment';
+  id: 'cloud-infrastructure-devops',tit,
+  l: e: 'Cloud Infrastructure & DevOps',descripti,
+  o: n: 'Next-generation cloud infrastructure with autonomous DevOps that self-optimizes, scales, and maintains systems automatically.'
+      ic,
+  o: n: Cloud,col,
+  o: r: 'from-blue-500 to-cyan-500',featur,
+  e: s: [
+  'Autonomous scalingSelf-healing infrastructure'
+        'Intelligent resource managementAutomated deployment'
         'Performance optimizationCost optimization'
 ]
-      benefits: [
-  'Zero downtimeAutomatic scaling';
-        'Reduced operational costsFaster deployment';
+      benefi,
+  t: s: [
+  'Zero downtimeAutomatic scaling'
+        'Reduced operational costsFaster deployment'
         'Improved reliabilityEnhanced security'
 ]
-      useCases: [
-  'Web applicationsMicroservices';
-        'Data processingMachine learning';
+      useCase,
+  s: [
+  'Web applicationsMicroservices'
+        'Data processingMachine learning'
         'IoT platformsEnterprise systems'
 ],
   },
   {
-  id: 'iot-edge-computing',title: 'IoT Edge Computing',description: 'Revolutionary IoT platform with edge computing capabilities that process data locally for instant response and reduced latency.',icon: Zap,color: 'from-yellow-500 to-orange-500',features: [
-  'Local data processingReal-time analytics';
-        'Autonomous decision makingEdge AI capabilities';
+  id: 'iot-edge-computing',tit,
+  l: e: 'IoT Edge Computing',descripti,
+  o: n: 'Revolutionary IoT platform with edge computing capabilities that process data locally for instant response and reduced latency.',ic,
+  o: n: Zap,col,
+  o: r: 'from-yellow-500 to-orange-500',featur,
+  e: s: [
+  'Local data processingReal-time analytics'
+        'Autonomous decision makingEdge AI capabilities'
         'Secure communicationScalable architecture'
 ]
-      benefits: [
-  'Instant response timesReduced bandwidth usage';
-        'Enhanced privacyLower latency';
+      benefi,
+  t: s: [
+  'Instant response timesReduced bandwidth usage'
+        'Enhanced privacyLower latency'
         'Improved reliabilityCost-effective scaling'
 ]
-      useCases: [
-  'Smart citiesIndustrial IoT';
-        'Connected vehiclesHealthcare monitoring';
+      useCase,
+  s: [
+  'Smart citiesIndustrial IoT'
+        'Connected vehiclesHealthcare monitoring'
         'Environmental sensingSmart homes'
 ],
   },
   {
-  id: 'digital-twin-platform',title: 'Digital Twin Platform',description: 'Advanced digital twin technology that creates virtual replicas of physical systems for simulation, optimization, and predictive maintenance.';
-      icon: Globe,color: 'from-green-500 to-emerald-500',features: [
-  'Real-time synchronizationPredictive modeling';
-        'Simulation capabilitiesPerformance optimization';
+  id: 'digital-twin-platform',tit,
+  l: e: 'Digital Twin Platform',descripti,
+  o: n: 'Advanced digital twin technology that creates virtual replicas of physical systems for simulation, optimization, and predictive maintenance.'
+      ic,
+  o: n: Globe,col,
+  o: r: 'from-green-500 to-emerald-500',featur,
+  e: s: [
+  'Real-time synchronizationPredictive modeling'
+        'Simulation capabilitiesPerformance optimization'
         'Maintenance predictionVirtual testing'
 ]
-      benefits: [
-  'Reduced operational costsImproved efficiency';
-        'Predictive maintenanceRisk mitigation';
+      benefi,
+  t: s: [
+  'Reduced operational costsImproved efficiency'
+        'Predictive maintenanceRisk mitigation'
         'Performance optimizationVirtual prototyping'
 ]
-      useCases: [
-  'ManufacturingInfrastructure management';
-        'Healthcare systemsEnergy optimization';
+      useCase,
+  s: [
+  'ManufacturingInfrastructure management'
+        'Healthcare systemsEnergy optimization'
         'TransportationBuilding management'
 ],
   },
   {
-  id: 'blockchain-web3-platform',title: 'Blockchain Web3 Platform',description: 'Revolutionary blockchain platform that enables decentralized applications, smart contracts, and Web3 infrastructure for the future internet.';
-      icon: Lock,color: 'from-orange-500 to-red-500',features: [
-  'Smart contract automationDecentralized identity';
-        'Cross-chain interoperabilityScalable transactions';
+  id: 'blockchain-web3-platform',tit,
+  l: e: 'Blockchain Web3 Platform',descripti,
+  o: n: 'Revolutionary blockchain platform that enables decentralized applications, smart contracts, and Web3 infrastructure for the future internet.'
+      ic,
+  o: n: Lock,col,
+  o: r: 'from-orange-500 to-red-500',featur,
+  e: s: [
+  'Smart contract automationDecentralized identity'
+        'Cross-chain interoperabilityScalable transactions'
         'Privacy protectionToken management'
 ]
-      benefits: [
-  'Enhanced securityReduced intermediaries';
-        'Increased transparencyLower transaction costs';
+      benefi,
+  t: s: [
+  'Enhanced securityReduced intermediaries'
+        'Increased transparencyLower transaction costs'
         'Global accessibilityProgrammable money'
 ]
-      useCases: [
-  'DeFi applicationsNFT marketplaces';
-        'Supply chain trackingVoting systems';
+      useCase,
+  s: [
+  'DeFi applicationsNFT marketplaces'
+        'Supply chain trackingVoting systems'
         'Identity managementAsset tokenization'
 ],
   },
@@ -238,98 +310,154 @@ const RevolutionaryServices2030: React.FC = () => {
 
   const testimonials = [
   {
-  name: 'Dr. Sarah Chen',title: 'CTO, TechCorp Global';
-      company: 'TechCorp Global',content: 'Zion Tech Group\'s Revolutionary Services 2030 have transformed our entire business operations. The AI autonomous systems have increased our efficiency by 300% while reducing costs by 60%.',rating: 5,avatar: '/images/testimonials/sarah-chen.jpg'
+  na,
+  m: e: 'Dr. Sarah Chen',tit,
+  l: e: 'CTO, TechCorp Global'
+      compa,
+  n: y: 'TechCorp Global',conte,
+  n: t: 'Zion Tech Group\'s Revolutionary Services 2030 have transformed our entire business operations. The AI autonomous systems have increased our efficiency by 300% while reducing costs by 60%.',rati,
+  n: g: 5,avat,
+  a: r: '/images/testimonials/sarah-chen.jpg'
 },
   {
-  name: 'Michael Rodriguez',title: 'CEO, InnovateTech Solutions';
-      company: 'InnovateTech Solutions',content: 'The quantum AI cybersecurity platform has given us peace of mind like never before. We\'ve seen zero security breaches since implementation, and our compliance scores have improved dramatically.';
-      rating: 5,avatar: '/images/testimonials/michael-rodriguez.jpg'
+  na,
+  m: e: 'Michael Rodriguez',tit,
+  l: e: 'CEO, InnovateTech Solutions'
+      compa,
+  n: y: 'InnovateTech Solutions',conte,
+  n: t: 'The quantum AI cybersecurity platform has given us peace of mind like never before. We\'ve seen zero security breaches since implementation, and our compliance scores have improved dramatically.'
+      rati,
+  n: g: 5,avat,
+  a: r: '/images/testimonials/michael-rodriguez.jpg'
 },
   {
-  name: 'Dr. Emily Johnson',title: 'Head of AI, FutureSystems';
-      company: 'FutureSystems',content: 'The AI content creation studio has revolutionized our marketing department. We\'re producing 10x more content with higher engagement rates and significantly reduced creative costs.',rating: 5,avatar: '/images/testimonials/emily-johnson.jpg'
+  na,
+  m: e: 'Dr. Emily Johnson',tit,
+  l: e: 'Head of AI, FutureSystems'
+      compa,
+  n: y: 'FutureSystems',conte,
+  n: t: 'The AI content creation studio has revolutionized our marketing department. We\'re producing 10x more content with higher engagement rates and significantly reduced creative costs.',rati,
+  n: g: 5,avat,
+  a: r: '/images/testimonials/emily-johnson.jpg'
 },
   ]
   const stats = [
-  {{ label: 'Companies Transformed', value: '500+', icon: Building2 },
+  { lab,
+  e: l: 'Companies Transformed', val,
+  u: e: '500+', ic,
+  o: n: Building2 },
   },
-  {{ label: 'Efficiency Improvement', value: '300%', icon: TrendingUp },
+  { lab,
+  e: l: 'Efficiency Improvement', val,
+  u: e: '300%', ic,
+  o: n: TrendingUp },
   },
-  {{ label: 'Cost Reduction', value: '60%', icon: DollarSign },
+  { lab,
+  e: l: 'Cost Reduction', val,
+  u: e: '60%', ic,
+  o: n: DollarSign },
   },
-  {{ label: 'Security Breaches Prevented', value: '100%', icon: Shield },
+  { lab,
+  e: l: 'Security Breaches Prevented', val,
+  u: e: '100%', ic,
+  o: n: Shield },
   },
-  {{ label: 'Content Creation Speed', value: '10x', icon: PenTool },
+  { lab,
+  e: l: 'Content Creation Speed', val,
+  u: e: '10x', ic,
+  o: n: PenTool },
   },
-  {{ label: 'Customer Satisfaction', value: '98%', icon: Star },
+  { lab,
+  e: l: 'Customer Satisfaction', val,
+  u: e: '98%', ic,
+  o: n: Star },
   },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO ;
-        title="Revolutionary Services 2030 - Zion Tech Group";
-        description="Experience the future of technology with Zion Tech Group's Revolutionary Services 2030. AI autonomous operations, quantum cybersecurity, and next-generation solutions.";
-        keywords="Revolutionary Services 2030, AI autonomous operations, quantum cybersecurity, future technology, Zion Tech Group";
+      <SEO 
+        title="Revolutionary Services 2030 - Zion Tech Group"
+        description="Experience the future of technology with Zion Tech Group's Revolutionary Services 2030. AI autonomous operations, quantum cybersecurity, and next-generation solutions."
+        keywords="Revolutionary Services 2030, AI autonomous operations, quantum cybersecurity, future technology, Zion Tech Group"
       />
-      ;
-      {{/* Hero Section */},
+      
+      {/* Hero Section */},
   }
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.6 },
+            transition={ durati,
+  o: n: 0.6 },
   }
             className="className="text-center max-w-5xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
-              Revolutionary Services 2030;
+              Revolutionary Services 2030
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
-              The Future of;
+            <h1 className="text-6xl,
+  m: d: text-7xl font-bold text-white mb-6">
+              The Future of
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Technology;
+                Technology
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience revolutionary AI-powered solutions that will transform your business operations;
-              secure your digital assets, and propel you into the future of technology.;
+            <p className="text-xl m,
+  d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Experience revolutionary AI-powered solutions that will transform your business operations
+              secure your digital assets, and propel you into the future of technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 group">
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500,
+  hove: r:from-cyan-600,
+  hove: r:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300,
+  hove: r:shadow-lg,
+  hove: r:shadow-cyan-500/25 flex items-center gap-2 group">
                 <Play className="w-5 h-5" />
-                Watch Demo;
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                Watch Demo
+                <ArrowRight className="w-5 h-5 group-hov,
+  e: r:translate-x-1 transition-transform duration-300" />
               </button>
-              <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-xl hover:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
+              <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-xl hove,
+  r:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
                 <Download className="w-5 h-5" />
-                Download Brochure;
+                Download Brochure
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {{/* Stats Section */},
+      {/* Stats Section */},
   }
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2,
+  m: d: grid-cols-3 l,
+  g:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
-  <motion.div;
-                key={{stat.label},
+  <motion.div
+                key={stat.label},
   }
-                initial={{ opacity: 0, scale: 0.8 },
+                initial={ opaci,
+  t: y: 0, sca,
+  l: e: 0.8 },
   }
-                animate={{ opacity: 1, scale: 1 },
+                animate={ opaci,
+  t: y: 1, sca,
+  l: e: 1 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
                 className="className="text-center";"
               >
@@ -344,71 +472,88 @@ const RevolutionaryServices2030: React.FC = () => {
         </div>
       </section>
 
-      {{/* Services Grid */},
+      {/* Services Grid */},
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.6 },
+            transition={ durati,
+  o: n: 0.6 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Services;
+            <h2 className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6">
+              Revolutionary Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our cutting-edge services that will redefine what's possible in technology and business.;
+              Discover our cutting-edge services that will redefine what's possible in technology and business.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 l,
+  g:grid-cols-2 gap-8">
             {services.map((service, index) => (
-  <motion.div;
-                key={{service.id},
+  <motion.div
+                key={service.id},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
-                className="className="group bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10";"
+                className="className="group bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50,
+  hove: r: border-cyan-500/50 transition-all duration-300,
+  hove: r:shadow-xl hove,
+  r:shadow-cyan-500/10";"
               >
                 <div className="flex items-start gap-6 mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center group-hov,
+  e: r:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                      {{service.title},
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hov,
+  e: r:text-cyan-400 transition-colors duration-300">
+                      {service.title},
   }
                     </h3>
                     <p className="text-gray-400 text-lg">
-                      {{service.description},
+                      {service.description},
   }
                     </p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Sparkles className="w-5 h-5 text-cyan-400" />
-                      Key Features;
+                      Key Features
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
   <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400" />
-                          {{feature},
+                          {feature},
   }
                         </li>
                       ))}
@@ -418,13 +563,13 @@ const RevolutionaryServices2030: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Crown className="w-5 h-5 text-yellow-400" />
-                      Benefits;
+                      Benefits
                     </h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, benefitIndex) => (
   <li key={benefitIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400" />
-                          {{benefit},
+                          {benefit},
   }
                         </li>
                       ))}
@@ -434,13 +579,13 @@ const RevolutionaryServices2030: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <Target className="w-5 h-5 text-blue-400" />
-                      Use Cases;
+                      Use Cases
                     </h4>
                     <ul className="space-y-2">
                       {service.useCases.map((useCase, useCaseIndex) => (
   <li key={useCaseIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400" />
-                          {{useCase},
+                          {useCase},
   }
                         </li>
                       ))}
@@ -449,10 +594,15 @@ const RevolutionaryServices2030: React.FC = () => {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-slate-700/50">
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2 group">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500,
+  hove: r: from-cyan-600,
+  hove: r:to-blue-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300,
+  hove: r:shadow-lg,
+  hove: r:shadow-cyan-500/25 flex items-center justify-center gap-2 group">
                     <Rocket className="w-4 h-4" />
-                    Learn More;
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hove,
+  r:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
               </motion.div>
@@ -461,41 +611,52 @@ const RevolutionaryServices2030: React.FC = () => {
         </div>
       </section>
 
-      {{/* Testimonials */},
+      {/* Testimonials */},
   }
       <section className="py-20 bg-slate-800/20">
         <div className="container mx-auto px-4">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.6 },
+            transition={ durati,
+  o: n: 0.6 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our Clients Say;
+            <h2 className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6">
+              What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Hear from industry leaders who have transformed their businesses with our Revolutionary Services 2030.;
+              Hear from industry leaders who have transformed their businesses with our Revolutionary Services 2030.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 m,
+  d:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-  <motion.div;
-                key={{testimonial.name},
+  <motion.div
+                key={testimonial.name},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
                 className="className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50";"
               >
@@ -504,11 +665,11 @@ const RevolutionaryServices2030: React.FC = () => {
   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                ;
+                
                 <p className="text-gray-300 mb-6 italic">
-                  "{testimonial.content}";
+                  "{testimonial.content}"
                 </p>
-                ;
+                
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
                     <Users className="w-6 h-6 text-white" />
@@ -525,37 +686,49 @@ const RevolutionaryServices2030: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */},
+      {/* CTA Section */},
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-cyan-500/20">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 },
+            <motion.div
+              initial={ opaci,
+  t: y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.6 },
+              transition={ durati,
+  o: n: 0.6 },
   }
-              viewport={{ once: true },
+              viewport={ on,
+  c: e: true },
   }
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Revolutionize Your Business?;
+              <h2 className="text-4xl,
+  m: d:text-5xl font-bold text-white mb-6">
+                Ready to Revolutionize Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join the future of technology with Zion Tech Group's Revolutionary Services 2030. ;
-                Transform your operations, secure your future, and stay ahead of the competition.;
+                Join the future of technology with Zion Tech Group's Revolutionary Services 2030. 
+                Transform your operations, secure your future, and stay ahead of the competition.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 group">
+              <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500,
+  hove: r:from-cyan-600,
+  hove: r:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300,
+  hove: r:shadow-lg,
+  hove: r:shadow-cyan-500/25 flex items-center gap-2 group">
                   <Rocket className="w-5 h-5" />
-                  Get Started Today;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 group-hov,
+  e: r:translate-x-1 transition-transform duration-300" />
                 </button>
-                <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-xl hover:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
+                <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-xl hove,
+  r:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
                   <MailIcon className="w-5 h-5" />
-                  Contact Sales;
+                  Contact Sales
                 </button>
               </div>
             </motion.div>
@@ -565,4 +738,4 @@ const RevolutionaryServices2030: React.FC = () => {
     </div>
   )
 }
-export default RevolutionaryServices2030;
+export default RevolutionaryServices2030

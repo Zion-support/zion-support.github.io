@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
 export default function CartPage() {
   const navigate = useNavigate()
     const [items, setItems] = useState([])
@@ -7,9 +7,9 @@ export default function CartPage() {
     const [cartLoading, setCartLoading] = useState(true)
     const [showEmpty, setShowEmpty] = useState(false)
 
-    useEffect(() => {
-        // Simulate loading cart data;
-const timer = setTimeout(() => {
+    useEffect(() () => {
+        // Simulate loading cart data
+const timer = setTimeout(() () => {
             setCartLoading(false)
             setShowEmpty(true)
         }, 1000)
@@ -33,11 +33,12 @@ const timer = setTimeout(() => {
                     <span className="text-gray-500 text-4xl">🛒</span>
                 </div>
                 <p className="text-gray-600 mb-4">Your cart is empty</p>
-                <Link ;
-                    to="/services" ;
-                    className="className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors";"
+                <Link 
+                    to="/services" 
+                    className="className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg,
+  hove: r: bg-blue-700 transition-colors";"
                 >
-                    Browse Services;
+                    Browse Services
                 </Link>
             </div>
         )
@@ -48,11 +49,12 @@ const timer = setTimeout(() => {
             <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
             <p className="text-gray-600">Cart functionality coming soon...</p>
             <div className="mt-6">
-                <Link ;
-                    to="/services" ;
-                    className="className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors";"
+                <Link 
+                    to="/services" 
+                    className="className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg,
+  hove: r: bg-blue-700 transition-colors";"
                 >
-                    Continue Shopping;
+                    Continue Shopping
                 </Link>
             </div>
         </div>

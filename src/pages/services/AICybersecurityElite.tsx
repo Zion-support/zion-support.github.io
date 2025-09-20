@@ -1,84 +1,119 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from "react"
+import { motion } from "framer-motion"
 import {
-  Shield;
+  Shield
   Lock,
   Eye,
   Zap,
   Users,
   Globe,
-  Database;
-  Cpu;
-  Network;
-  Brain;
-  Target;
-  Award;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  ExternalLink;
-  AlertTriangle;
-  Activity;
+  Database
+  Cpu
+  Network
+  Brain
+  Target
+  Award
+  Star
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink
+  AlertTriangle
+  Activity
   Key
-} from "lucide-react";
-const AICybersecurityElite: React.FC = () => {
+} from "lucide-react"
+const,
+  AICybersecurityElit: e: React.FC = () () => {
   const features = [
   {
-  icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7"
+  ico,
+  n: Brain,tit,
+  l: e: "AI-Powered Threat Detection",descripti,
+  o: n: "Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7"
 },
   {
-  icon: Shield,title: "Zero-Day Vulnerability Protection",description: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
+  ic,
+  o: n: Shield,tit,
+  l: e: "Zero-Day Vulnerability Protection",descripti,
+  o: n: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
 },
   {
-  icon: Lock,title: "End-to-End Encryption",description: "Military-grade encryption for data at rest and in transit with quantum-resistant algorithms"
+  ic,
+  o: n: Lock,tit,
+  l: e: "End-to-End Encryption",descripti,
+  o: n: "Military-grade encryption for data at rest and in transit with quantum-resistant algorithms"
 },
   {
-  icon: Zap,title: "Automated Incident Response",description: "Instant threat containment and automated remediation workflows to minimize damage"
+  ic,
+  o: n: Zap,tit,
+  l: e: "Automated Incident Response",descripti,
+  o: n: "Instant threat containment and automated remediation workflows to minimize damage"
 },
   {
-  icon: Users,title: "Identity & Access Management",description: "Multi-factor authentication, biometric verification, and role-based access control"
+  ic,
+  o: n: Users,tit,
+  l: e: "Identity & Access Management",descripti,
+  o: n: "Multi-factor authentication, biometric verification, and role-based access control"
 },
   {
-  icon: Globe,title: "Global Threat Intelligence",description: "Real-time threat feeds from 200+ global sources and dark web monitoring"
+  ic,
+  o: n: Globe,tit,
+  l: e: "Global Threat Intelligence",descripti,
+  o: n: "Real-time threat feeds from 200+ global sources and dark web monitoring"
 },
   ]
   const pricing = [
   {
-  name: "Essential",price: "$3,500";
-      period: "/month",description: "Perfect for small businesses and startups",features: [
-  "Basic AI threat detection";
-        "Firewall & intrusion prevention";
-        "Email security & spam filtering";
-        "Vulnerability scanning";
-        "24/7 monitoring";
+  na,
+  m: e: "Essential",pri,
+  c: e: "$3,500"
+      peri,
+  o: d: "/month",descripti,
+  o: n: "Perfect for small businesses and startups",featur,
+  e: s: [
+  "Basic AI threat detection"
+        "Firewall & intrusion prevention"
+        "Email security & spam filtering"
+        "Vulnerability scanning"
+        "24/7 monitoring"
         "Basic incident response"
 ],
   },
   {
-  name: "Professional",price: "$7,500";
-      period: "/month",description: "Ideal for growing businesses and teams",features: [
-  "Advanced AI threat detection";
-        "Behavioral analytics";
-        "Advanced endpoint protection";
-        "Threat intelligence feeds";
-        "Automated incident response";
-        "Compliance reporting";
+  na,
+  m: e: "Professional",pri,
+  c: e: "$7,500"
+      peri,
+  o: d: "/month",descripti,
+  o: n: "Ideal for growing businesses and teams",featur,
+  e: s: [
+  "Advanced AI threat detection"
+        "Behavioral analytics"
+        "Advanced endpoint protection"
+        "Threat intelligence feeds"
+        "Automated incident response"
+        "Compliance reporting"
         "API access"
 ]
-      popular: true
+      popula,
+  r: true
 },
   {
-  name: "Enterprise",price: "$18,000";
-      period: "/month",description: "For large organizations with complex needs",features: [
-  "Full AI cybersecurity suite";
-        "Custom threat modeling";
-        "Advanced forensics";
-        "Dedicated security team";
-        "Custom integrations";
-        "White-label options";
+  na,
+  m: e: "Enterprise",pri,
+  c: e: "$18,000"
+      peri,
+  o: d: "/month",descripti,
+  o: n: "For large organizations with complex needs",featur,
+  e: s: [
+  "Full AI cybersecurity suite"
+        "Custom threat modeling"
+        "Advanced forensics"
+        "Dedicated security team"
+        "Custom integrations"
+        "White-label options"
         "On-premise deployment"
 ],
   },
@@ -86,42 +121,55 @@ const AICybersecurityElite: React.FC = () => {
 
   const securityFeatures = [
   {
-  title: "Advanced Threat Hunting",description: "AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage"
+  tit,
+  l: e: "Advanced Threat Hunting",descripti,
+  o: n: "AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage"
 },
   {
-  title: "Behavioral Analytics",description: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
+  tit,
+  l: e: "Behavioral Analytics",descripti,
+  o: n: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
 },
   {
-  title: "Cloud Security",description: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
+  tit,
+  l: e: "Cloud Security",descripti,
+  o: n: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
 },
   {
-  title: "Compliance & Governance",description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks"
+  tit,
+  l: e: "Compliance & Governance",descripti,
+  o: n: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks"
 },
   ]
 
   const complianceStandards = [
-  "SOC 2 Type II";
-    "ISO 27001";
-    "GDPR";
-    "HIPAA";
-    "PCI DSS";
-    "NIST Cybersecurity Framework";
-    "CIS Controls";
+  "SOC 2 Type II"
+    "ISO 27001"
+    "GDPR"
+    "HIPAA"
+    "PCI DSS"
+    "NIST Cybersecurity Framework"
+    "CIS Controls"
     "FedRAMP"
 ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */},
+      {/* Hero Section */},
   }
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
           >
             <div className="flex justify-center mb-6">
@@ -129,71 +177,94 @@ const AICybersecurityElite: React.FC = () => {
                 <Shield className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Cybersecurity Elite;
+            <h1 className="text-5xl,
+  m: d: text-6xl font-bold text-white mb-6">
+              AI Cybersecurity Elite
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Protect your business with the most advanced AI-powered cybersecurity platform. ;
-              Real-time threat detection, automated response, and 24/7 protection against evolving cyber threats.;
+            <p className="text-xl m,
+  d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+              Protect your business with the most advanced AI-powered cybersecurity platform. 
+              Real-time threat detection, automated response, and 24/7 protection against evolving cyber threats.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-                href="https://ziontechgroup.com/contact";
-                className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105";"
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+              <a
+                href="htt,
+  p: s://ziontechgroup.com/contact"
+                className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
+  hove: r:from-red-600,
+  hove: r:to-orange-600 transition-all duration-300,
+  transform: hover:scale-105";"
               >
-                Secure Your Business;
+                Secure Your Business
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a;
-                href="tel:+13024640950";
-                className="className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300";"
+              <a
+                href="t,
+  e: l:+13024640950"
+                className="className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hove,
+  r:bg-zion-slate-light transition-all duration-300";"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Security Team;
+                Call Security Team
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {{/* Features Section */},
+      {/* Features Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Military-Grade Security Features;
+              Military-Grade Security Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI-powered cybersecurity platform combines cutting-edge technology with proven security practices ;
-              to provide comprehensive protection for your digital assets.;
+              Our AI-powered cybersecurity platform combines cutting-edge technology with proven security practices 
+              to provide comprehensive protection for your digital assets.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-  <motion.div;
-                key={{index},
+  <motion.div
+                key={index},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.8, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.8, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
-                className="className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-red-500 transition-all duration-300";"
+                className="className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light,
+  hove: r:border-red-500 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
@@ -206,42 +277,54 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Security Features Section */},
+      {/* Security Features Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Capabilities;
+              Advanced Security Capabilities
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Go beyond basic security with our advanced AI-powered cybersecurity features designed ;
-              to protect against the most sophisticated threats.;
+              Go beyond basic security with our advanced AI-powered cybersecurity features designed 
+              to protect against the most sophisticated threats.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-8">
             {securityFeatures.map((feature, index) => (
-  <motion.div;
-                key={{index},
+  <motion.div
+                key={index},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.8, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.8, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
                 className="className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light";"
               >
@@ -253,42 +336,54 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Compliance Section */},
+      {/* Compliance Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Compliance & Standards;
+              Industry Compliance & Standards
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform meets and exceeds the highest industry standards for cybersecurity;
-              ensuring your business remains compliant with regulatory requirements.;
+              Our platform meets and exceeds the highest industry standards for cybersecurity
+              ensuring your business remains compliant with regulatory requirements.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2,
+  m: d:grid-cols-4 gap-6">
             {complianceStandards.map((standard, index) => (
-  <motion.div;
-                key={{index},
+  <motion.div
+                key={index},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.8, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.8, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
                 className="className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center";"
               >
@@ -302,57 +397,69 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Pricing Section */},
+      {/* Pricing Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Plans;
+              Comprehensive Security Plans
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the security plan that fits your business needs. All plans include our core AI cybersecurity ;
-              engine and 24/7 threat monitoring.;
+              Choose the security plan that fits your business needs. All plans include our core AI cybersecurity 
+              engine and 24/7 threat monitoring.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-  <motion.div;
-                key={{index},
+  <motion.div
+                key={index},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.8, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.8, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
-  plan.popular ;
-                    ? 'border-red-500 shadow-2xl shadow-red-500/25' ;
+  plan.popular 
+                    ? 'border-red-500 shadow-2xl shadow-red-500/25' 
                     : 'border-zion-slate-light'
 }`}
               >
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular
                     </span>
                   </div>
                 )}
-                ;
+                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -371,11 +478,15 @@ const AICybersecurityElite: React.FC = () => {
                   ))}
                 </ul>
 
-                <a;
-                  href="https://ziontechgroup.com/contact";
-                  className="className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105";"
+                <a
+                  href="htt,
+  p: s: //ziontechgroup.com/contact"
+                  className="className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
+  hove: r:from-red-600,
+  hove: r:to-orange-600 transition-all duration-300 transform hove,
+  r:scale-105";"
                 >
-                  Get Protected;
+                  Get Protected
                 </a>
               </motion.div>
             ))}
@@ -383,57 +494,68 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Section */},
+      {/* Contact Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Secure Your Business?;
+              Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our cybersecurity experts to discuss how AI Cybersecurity Elite can protect ;
-              your organization from evolving cyber threats.;
+              Get in touch with our cybersecurity experts to discuss how AI Cybersecurity Elite can protect 
+              your organization from evolving cyber threats.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">
                 <Phone className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Call Security Team</h3>
-              <a ;
-                href="tel:+13024640950" ;
-                className="className="text-zion-slate-light hover:text-white transition-colors duration-300";"
+              <a 
+                href="t,
+  e: l:+13024640950" 
+                className="className="text-zion-slate-light,
+  hove: r:text-white transition-colors duration-300";"
               >
-                +1 (302) 464-0950;
+                +1 (302) 464-0950
               </a>
             </div>
-            ;
+            
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Security Team</h3>
-              <a ;
-                href="mailto:kleber@ziontechgroup.com" ;
-                className="className="text-zion-slate-light hover:text-white transition-colors duration-300";"
+              <a 
+                href="mail,
+  t: o:kleber@ziontechgroup.com" 
+                className="className="text-zion-slate-light hove,
+  r:text-white transition-colors duration-300";"
               >
-                kleber@ziontechgroup.com;
+                kleber@ziontechgroup.com
               </a>
             </div>
-            ;
+            
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-white" />
@@ -441,49 +563,61 @@ const AICybersecurityElite: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">Visit Security Center</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709;
+                Middletown, DE 19709
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a;
-              href="https: //ziontechgroup.com/contact";
-              className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105";"
+            <a
+              href="htt,
+  p: s: //ziontechgroup.com/contact"
+              className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg,
+  hove: r:from-red-600,
+  hove: r:to-orange-600 transition-all duration-300 transform hove,
+  r:scale-105";"
             >
-              Schedule Security Assessment;
+              Schedule Security Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>
         </div>
       </section>
 
-      {{/* Footer */},
+      {/* Footer */},
   }
-      <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
+      <footer className="py-12 px-4,
+  s: m: px-6,
+  l: g:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
-            © 2024 Zion Tech Group. All rights reserved.;
+            © 2024 Zion Tech Group. All rights reserved.
           </p>
           <div className="flex justify-center space-x-6">
-            <a ;
-              href="https://ziontechgroup.com" ;
-              className="className="text-zion-slate-light hover:text-white transition-colors duration-300";"
+            <a 
+              href="htt,
+  p: s://ziontechgroup.com" 
+              className="className="text-zion-slate-light,
+  hove: r:text-white transition-colors duration-300";"
             >
-              Visit Website;
+              Visit Website
               <ExternalLink className="inline ml-1 h-4 w-4" />
             </a>
-            <a ;
-              href="https://ziontechgroup.com/privacy" ;
-              className="className="text-zion-slate-light hover:text-white transition-colors duration-300";"
+            <a 
+              href="htt,
+  p: s://ziontechgroup.com/privacy" 
+              className="className="text-zion-slate-light,
+  hove: r:text-white transition-colors duration-300";"
             >
-              Privacy Policy;
+              Privacy Policy
             </a>
-            <a ;
-              href="https://ziontechgroup.com/terms" ;
-              className="className="text-zion-slate-light hover:text-white transition-colors duration-300";"
+            <a 
+              href="htt,
+  p: s://ziontechgroup.com/terms" 
+              className="className="text-zion-slate-light hove,
+  r:text-white transition-colors duration-300";"
             >
-              Terms of Service;
+              Terms of Service
             </a>
           </div>
         </div>
@@ -491,4 +625,4 @@ const AICybersecurityElite: React.FC = () => {
     </div>
   )
 }
-export default AICybersecurityElite;
+export default AICybersecurityElite

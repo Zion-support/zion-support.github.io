@@ -1,55 +1,80 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/Input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
+import React, { useState } from "react"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/Input"
+import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
+import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react"
 export function ITServiceRequestHero() {
-    const [location, setLocation] = useState("");
-const [isSubmitting, setIsSubmitting] = useState(false);
-const navigate = useNavigate();
-const handleSubmit = async (e) => {
-        e.preventDefault();
+    const [location, setLocation] = useState("")
+const [isSubmitting, setIsSubmitting] = useState(false)
+const navigate = useNavigate()
+const handleSubmit = async (e) () => {
+        e.preventDefault()
         if (location.trim()) {
-            setIsSubmitting(true);
+            setIsSubmitting(true)
             // Simulate API call
-            setTimeout(() => {
-                setIsSubmitting(false);
+            setTimeout(() () => {
+                setIsSubmitting(false)
                 navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)
 }, 1000)
 },
-  };
+  }
 const containerVariants = {
-        hidden: { opacity: 0, y: 20 };
-        visible: {
-            opacity: 1,y: 0,transition: {
-                duration: 0.6,staggerChildren: 0.2
+        hidd,
+  e: n: { opacit,
+  y: 0, y: 20 }
+        visib,
+  l: e: {
+            opacit,
+  y: 1,y: 0,transiti,
+  o: n: {
+                duratio,
+  n: 0.6,staggerChildr,
+  e: n: 0.2
             },
   },
-  };
+  }
 const itemVariants = {
-        hidden: { opacity: 0, y: 20 };
-        visible: {
-            opacity: 1,y: 0,transition: { duration: 0.5 },
+        hidd,
+  e: n: { opacit,
+  y: 0, y: 20 }
+        visib,
+  l: e: {
+            opacit,
+  y: 1,y: 0,transiti,
+  o: n: { duratio,
+  n: 0.5 },
   },
-  };
+  }
 const features = [
-        { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" };
-        { icon: Globe, text: "Global Coverage", color: "text-zion-purple" };
-        { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" };
-        { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" },
-  ];
-    return (<section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
+        { ic,
+  o: n: Clock, te,
+  x: t: "24/7 Availability", col,
+  o: r: "text-zion-cyan" }, { ic,
+  o: n: Globe, te,
+  x: t: "Global Coverage", col,
+  o: r: "text-zion-purple" }, { ic,
+  o: n: Shield, te,
+  x: t: "Certified Technicians", col,
+  o: r: "text-zion-cyan-light" }, { ic,
+  o: n: Zap, te,
+  x: t: "Fast Response", col,
+  o: r: "text-zion-purple-light" },
+  ]
+    return (<section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20,
+  m: d:py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
       </div>
 
-      <motion.div className="container mx-auto px-4 relative z-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
+      <motion.div className="container mx-auto px-4 relative z-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={ on,
+  c: e: true },
   }>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1,
+  l: g:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
             <div className="flex items-center gap-3 mb-6">
@@ -61,11 +86,14 @@ const features = [
               </span>
             </div>
             
-            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <GradientHeading className="mb-6 text-4xl,
+  m: d: text-5xl,
+  l: g:text-6xl leading-tight">
               24x7 Global IT Onsite Services
             </GradientHeading>
             
-            <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
+            <p className="text-lg m,
+  d:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
               Request professional technicians anywhere in the world, anytime you need them. 
               Fast, reliable, and secure IT solutions for your business.
             </p>
@@ -118,14 +146,21 @@ const features = [
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="relative">
-                    <Input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter service location (e.g., New York, NY)" className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm" required/>
+                    <Input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter service location (e.g., New York, NY)" className="w-full bg-white/10 border-white/30,
+  focu: s: border-zion-cyan,
+  focu: s:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm" required/>
                     <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50"/>
                   </div>
 
-                  <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group">
+                  <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue,
+  hove: r:from-zion-cyan-light,
+  hove: r:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg,
+  hove: r:shadow-zion-cyan/25 transition-all duration-300,
+  transform: hover:scale-105 group">
                     <span className="flex items-center gap-2">
                       Request Service Now
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"/>
+                      <ArrowRight className="w-5 h-5 group-hove,
+  r:translate-x-1 transition-transform duration-200"/>
                     </span>
                   </Button>
                 </form>
@@ -151,7 +186,8 @@ const features = [
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" },
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={ animationDel,
+  a: y: "1s" },
   }></div>
             </div>
           </motion.div>

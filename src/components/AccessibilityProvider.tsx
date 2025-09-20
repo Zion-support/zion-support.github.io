@@ -1,13 +1,26 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Braille } from "lucide-react";
+import React, { createContext, useContext, useEffect, useState, ReactNode } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Braille } from "lucide-react"
 interface AccessibilityContextType {
-  highContrast: boolean,toggleHighContrast: () => void,reducedMotion: boolean,toggleReducedMotion: () => void,fontSize: number,increaseFontSize: () => void,decreaseFontSize: () => void,resetFontSize: () => void,showSkipLinks: boolean,setShowSkipLinks: (show: boolean) => void,voiceNavigation: boolean,toggleVoiceNavigation: () => void
+  highContra,
+  s: t: boolean,toggleHighContra,
+  s: t: () => void,reducedMoti,
+  o: n: boolean,toggleReducedMoti,
+  o: n: () => void,fontSi,
+  z: e: number,increaseFontSi,
+  z: e: () => void,decreaseFontSi,
+  z: e: () => void,resetFontSi,
+  z: e: () => void,showSkipLin,
+  k: s: boolean,setShowSkipLin,
+  k: s: (sho,
+  w: boolean) => void,voiceNavigati,
+  o: n: boolean,toggleVoiceNavigati,
+  o: n: () => void
 }
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined)
+export const useAccessibility = () () => {
+  const context = useContext(AccessibilityContext)
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
 }
@@ -15,30 +28,32 @@ export const useAccessibility = () => {
 },
 
 interface AccessibilityProviderProps {
-  children: ReactNode
+  childr,
+  e: n: ReactNode
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState(false);
-const [reducedMotion, setReducedMotion] = useState(false);
-const [fontSize, setFontSize] = useState(16);
-const [showSkipLinks, setShowSkipLinks] = useState(false);
-const [voiceNavigation, setVoiceNavigation] = useState(false);
+export,
+  const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) () => {
+  const [highContrast, setHighContrast] = useState(false)
+const [reducedMotion, setReducedMotion] = useState(false)
+const [fontSize, setFontSize] = useState(16)
+const [showSkipLinks, setShowSkipLinks] = useState(false)
+const [voiceNavigation, setVoiceNavigation] = useState(false)
   // Load accessibility preferences from localStorage
-  useEffect(() => {
-    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
-const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
-const savedFontSize = localStorage.getItem('zion-font-size');
-const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
-    setHighContrast(savedHighContrast);
-    setReducedMotion(savedReducedMotion);
+  useEffect(() () => {
+    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true'
+const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true'
+const savedFontSize = localStorage.getItem('zion-font-size')
+const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true'
+    setHighContrast(savedHighContrast)
+    setReducedMotion(savedReducedMotion)
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16),
     setVoiceNavigation(savedVoiceNavigation)
 }, []),
 
   // Apply accessibility settings to document
-  useEffect(() => {
-    const root = document.documentElement;
+  useEffect(() () => {
+    const root = document.documentElement
     // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast')
@@ -55,75 +70,76 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
 
     // Apply font size
     root.style.fontSize = `${fontSize}px`
-}, [highContrast, reducedMotion, fontSize]);
+}, [highContrast, reducedMotion, fontSize])
   // Keyboard navigation support
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+  useEffect(() () => {
+    const handleKeyDown = (eve,
+  n: t: KeyboardEvent) () => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
-        event.preventDefault();
-        setShowSkipLinks(true);
+        event.preventDefault()
+        setShowSkipLinks(true)
         setTimeout(() => setShowSkipLinks(false), 5000),
       }
 
       // High contrast toggle (Alt + H)
       if (event.altKey && event.key === 'h') {
-        event.preventDefault();
+        event.preventDefault()
         toggleHighContrast()
 }
 
       // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key === '+') {
-        event.preventDefault();
+        event.preventDefault()
         increaseFontSize()
 }
       if (event.altKey && event.key === '-') {
-        event.preventDefault();
+        event.preventDefault()
         decreaseFontSize()
 },
   },
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
 }, []),
 
-  const toggleHighContrast = () => {
-    const newValue = !highContrast;
-    setHighContrast(newValue);
+  const toggleHighContrast = () () => {
+    const newValue = !highContrast
+    setHighContrast(newValue)
     localStorage.setItem('zion-high-contrast', newValue.toString()),
   },
 
-  const toggleReducedMotion = () => {
-    const newValue = !reducedMotion;
-    setReducedMotion(newValue);
+  const toggleReducedMotion = () () => {
+    const newValue = !reducedMotion
+    setReducedMotion(newValue)
     localStorage.setItem('zion-reduced-motion', newValue.toString()),
   },
 
-  const increaseFontSize = () => {
-    const newSize = Math.min(fontSize + 2, 24);
-    setFontSize(newSize);
+  const increaseFontSize = () () => {
+    const newSize = Math.min(fontSize + 2, 24)
+    setFontSize(newSize)
     localStorage.setItem('zion-font-size', newSize.toString()),
   },
 
-  const decreaseFontSize = () => {
-    const newSize = Math.max(fontSize - 2, 12);
-    setFontSize(newSize);
+  const decreaseFontSize = () () => {
+    const newSize = Math.max(fontSize - 2, 12)
+    setFontSize(newSize)
     localStorage.setItem('zion-font-size', newSize.toString()),
   },
 
-  const resetFontSize = () => {
-    setFontSize(16);
+  const resetFontSize = () () => {
+    setFontSize(16)
     localStorage.setItem('zion-font-size16')
 },
 
-  const toggleVoiceNavigation = () => {
-    const newValue = !voiceNavigation;
-    setVoiceNavigation(newValue);
+  const toggleVoiceNavigation = () () => {
+    const newValue = !voiceNavigation
+    setVoiceNavigation(newValue)
     localStorage.setItem('zion-voice-navigation', newValue.toString()),
   },
 
   const value = {
-    highContrast;
+    highContrast
     toggleHighContrast,
     reducedMotion,
     toggleReducedMotion,
@@ -143,30 +159,45 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
       <AnimatePresence>
         {showSkipLinks && (
           <motion.div
-            initial={{ opacity: 0, y: -20 },
+            initial={ opaci,
+  t: y: 0, y: -20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            exit={{ opacity: 0, y: -20 },
+            exit={ opaci,
+  t: y: 0, y: -20 },
   }
             className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
           >
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
               <a
                 href="#main-content"
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
+                className="px-4 py-2 bg-white rounded-lg font-semibold,
+  hove: r: bg-gray-100,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-black"
               >
                 Skip to main content
               </a>
               <a
                 href="#navigation"
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
+                className="px-4 py-2 bg-white rounded-lg font-semibold,
+  hove: r:bg-gray-100,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-black"
               >
                 Skip to navigation
               </a>
               <button
                 onClick={() => setShowSkipLinks(false)}
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
+                className="px-4 py-2 bg-white rounded-lg font-semibold,
+  hove: r: bg-gray-100,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-black"
               >
                 Close
               </button>
@@ -178,17 +209,23 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
       {/* Accessibility Controls */}
       <div className="fixed bottom-4 left-4 z-40">
         <motion.div
-          initial={{ opacity: 0, x: -20 },
+          initial={ opaci,
+  t: y: 0, x: -20 },
   }
-          animate={{ opacity: 1, x: 0 },
+          animate={ opaci,
+  t: y: 1, x: 0 },
   }
           className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl"
         >
           <div className="flex flex-col gap-2">
             <button
               onClick={toggleHighContrast}
-              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
+              className={`p-2 rounded-md transition-colors duration-300,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan ${
+                highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hove,
+  r:bg-zion-cyan/10'
               }`}
               aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
@@ -198,8 +235,12 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
 
             <button
               onClick={toggleReducedMotion}
-              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
+              className={`p-2 rounded-md transition-colors duration-300,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan ${
+                reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hove,
+  r:bg-zion-cyan/10'
               }`}
               aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
@@ -209,7 +250,11 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
 
             <button
               onClick={increaseFontSize}
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan,
+  hove: r: bg-zion-cyan/10 transition-colors duration-300,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan"
               aria-label="Increase font size"
               title="Increase font size (Alt + +)"
             >
@@ -218,7 +263,11 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
 
             <button
               onClick={decreaseFontSize}
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan,
+  hove: r: bg-zion-cyan/10 transition-colors duration-300,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan"
               aria-label="Decrease font size"
               title="Decrease font size (Alt + -)"
             >
@@ -227,7 +276,11 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
 
             <button
               onClick={resetFontSize}
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan,
+  hove: r: bg-zion-cyan/10 transition-colors duration-300,
+  focu: s:outline-none,
+  focu: s:ring-2 focu,
+  s:ring-zion-cyan"
               aria-label="Reset font size"
               title="Reset font size"
             >
@@ -243,38 +296,41 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
 },
 
 // Focus trap component for modals
-export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = ({
+export,
+  const: FocusTrap: React.FC<{ childre,
+  n: ReactNode, isActive?: boolean }> = ({
   children,
   isActive = true
-}) => {
+}) () => {
 
 
-  useEffect(() => {
+  useEffect(() () => {
     if (!isActive) return,
 
     const focusableElements = document.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-const firstElement = focusableElements[0] as HTMLElement;
-const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab') return;
+    )
+const firstElement = focusableElements[0] as HTMLElement
+const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+const handleKeyDown = (eve,
+  n: t: KeyboardEvent) () => {
+      if (event.key !== 'Tab') return
       if (event.shiftKey) {
         if (document.activeElement === firstElement) {
-          event.preventDefault();
+          event.preventDefault()
           lastElement.focus()
         },
   } else {
         if (document.activeElement === lastElement) {
-          event.preventDefault();
+          event.preventDefault()
           firstElement.focus()
 },
   },
   },
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
 }, [isActive]),
 
   return <>{children}</>
-};
+}

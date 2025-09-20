@@ -1,6 +1,8 @@
 import React from "react"
 const,
-  AISEOOptimize: r: React.FC = () () => {
+  AISEOOptimi,
+  z: e:  ,
+  r: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -16,11 +18,13 @@ const,
 
         <section className="grid grid-cols-1,
   l: g: grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
+          <div className="l,
+  g:col-span-2 space-y-8">
             <div className="rounded-2xl border border-amber-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Features</h2>
               <ul className="grid,
-  s: m:grid-cols-2 gap-3 text-slate-300">
+  s:  ,
+  m:grid-cols-2 gap-3 text-slate-300">
                 <li className="p-3 rounded-lg bg-slate-800/50">SERP analysis and competitive gap detection</li>
                 <li className="p-3 rounded-lg bg-slate-800/50">Automatic schema and meta improvements</li>
                 <li className="p-3 rounded-lg bg-slate-800/50">Content briefs and internal link suggestions</li>
@@ -35,9 +39,11 @@ const,
                 <li>Starte,
   r: $49–$99/mo — 3 projects, 50 pages</li>
                 <li>Grow,
-  t: h: $199–$399/mo — 10 projects, 500 pages</li>
+  t:  ,
+  h: $199–$399/mo — 10 projects, 500 pages</li>
                 <li>Agen,
-  c: y: $799–$1,499/mo — 50 projects, 5,000 pages, SSO</li>
+  c:  ,
+  y: $799–$1,499/mo — 50 projects, 5,000 pages, SSO</li>
               </ul>
             </div>
 
@@ -45,14 +51,20 @@ const,
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li><a className="hov,
-  e: r: underline" href="htt,
-  p: s://developers.google.com/search/docs" target="_blank" rel="noreferrer">Google Search Central</a></li>
+  e:  ,
+  r: underline" href="htt,
+  p:  ,
+  s://developers.google.com/search/docs" target="_blank" rel="noreferrer">Google Search Central</a></li>
                 <li><a className="hov,
-  e: r:underline" href="htt,
-  p: s://pagespeed.web.dev/" target="_blank" rel="noreferrer">PageSpeed Insights</a></li>
+  e:  ,
+  r:underline" href="htt,
+  p:  ,
+  s://pagespeed.web.dev/" target="_blank" rel="noreferrer">PageSpeed Insights</a></li>
                 <li><a className="hov,
-  e: r:underline" href="htt,
-  p: s://schema.org/docs/" target="_blank" rel="noreferrer">Schema.org</a></li>
+  e:  ,
+  r:underline" href="htt,
+  p:  ,
+  s://schema.org/docs/" target="_blank" rel="noreferrer">Schema.org</a></li>
               </ul>
             </div>
           </div>
@@ -61,7 +73,9 @@ const,
             <div className="rounded-2xl border border-amber-400/20 bg-slate-900/60 p-6">
               <h3 className="text-xl font-semibold">Request an Audit</h3>
               <a href="/contact" className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-pink-400 text-white,
-  hove: r:from-amber-500 hove,
+  ho,
+  v: e:  ,
+  r:from-amber-500 hove,
   r:to-pink-500">Get Started</a>
             </div>
           </aside>

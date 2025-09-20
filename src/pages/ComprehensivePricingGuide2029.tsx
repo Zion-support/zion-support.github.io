@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles } from "lucide-react";
-import { SEO } from "@/components/SEO";
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services";
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles } from "lucide-react"
+import { SEO } from "@/components/SEO"
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from "../../data/revolutionary-2029-cutting-edge-services"
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from "../../data/revolutionary-2029-emerging-tech-services"
 export default function ComprehensivePricingGuide2029() {
   const [selectedPlan, setSelectedPlan] = useState('enterprise')
   const [billingCycle, setBillingCycle] = useState('monthly')
@@ -11,119 +11,185 @@ export default function ComprehensivePricingGuide2029() {
   ]
   const pricingPlans = [
   {
-  id: 'starter',name: 'Starter',description: 'Perfect for small businesses and startups',price: billingCycle === 'monthly' ? '$99' : '$990',period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
-  'Access to 5 core AI servicesBasic analytics and reporting';
-        'Email supportStandard integrations';
+  id: 'starter',na,
+  m: e: 'Starter',descripti,
+  o: n: 'Perfect for small businesses and startups',pri,
+  c: e: billingCycle === 'monthly' ? '$99' : '$990',peri,
+  o: d: billingCycle === 'monthly' ? '/month' : '/year',savin,
+  g: s: billingCycle === 'yearly' ? 'Save 17%' : '',featur,
+  e: s: [
+  'Access to 5 core AI servicesBasic analytics and reporting'
+        'Email supportStandard integrations'
         'Community forum access'
 ]
-      popular: false,color: 'from-gray-600 to-gray-700',buttonColor: 'from-gray-600 to-gray-700'
+      popula,
+  r: false,col,
+  o: r: 'from-gray-600 to-gray-700',buttonCol,
+  o: r: 'from-gray-600 to-gray-700'
 },
   {
-  id: 'professional',name: 'Professional',description: 'Ideal for growing businesses and teams',price: billingCycle === 'monthly' ? '$299' : '$2,990';
-      period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
-  'Access to 15+ AI servicesAdvanced analytics and insights';
-        'Priority email supportAdvanced integrations';
+  id: 'professional',na,
+  m: e: 'Professional',descripti,
+  o: n: 'Ideal for growing businesses and teams',pri,
+  c: e: billingCycle === 'monthly' ? '$299' : '$2,990'
+      peri,
+  o: d: billingCycle === 'monthly' ? '/month' : '/year',savin,
+  g: s: billingCycle === 'yearly' ? 'Save 17%' : '',featur,
+  e: s: [
+  'Access to 15+ AI servicesAdvanced analytics and insights'
+        'Priority email supportAdvanced integrations'
         'Custom workflowsTeam collaboration tools'
 ]
-      popular: true,color: 'from-blue-600 to-purple-700',buttonColor: 'from-blue-600 to-purple-700'
+      popula,
+  r: true,col,
+  o: r: 'from-blue-600 to-purple-700',buttonCol,
+  o: r: 'from-blue-600 to-purple-700'
 },
   {
-  id: 'enterprise',name: 'Enterprise',description: 'For large organizations and enterprises',price: billingCycle === 'monthly' ? '$799' : '$7,990';
-      period: billingCycle === 'monthly' ? '/month' : '/year',savings: billingCycle === 'yearly' ? 'Save 17%' : '',features: [
-  'Access to ALL AI servicesEnterprise-grade analytics';
-        '24/7 phone and email supportCustom integrations';
-        'Advanced security featuresDedicated account manager';
+  id: 'enterprise',na,
+  m: e: 'Enterprise',descripti,
+  o: n: 'For large organizations and enterprises',pri,
+  c: e: billingCycle === 'monthly' ? '$799' : '$7,990'
+      peri,
+  o: d: billingCycle === 'monthly' ? '/month' : '/year',savin,
+  g: s: billingCycle === 'yearly' ? 'Save 17%' : '',featur,
+  e: s: [
+  'Access to ALL AI servicesEnterprise-grade analytics'
+        '24/7 phone and email supportCustom integrations'
+        'Advanced security featuresDedicated account manager'
         'Custom training and onboarding'
 ]
-      popular: false,color: 'from-purple-600 to-indigo-700',buttonColor: 'from-purple-600 to-indigo-700'
+      popula,
+  r: false,col,
+  o: r: 'from-purple-600 to-indigo-700',buttonCol,
+  o: r: 'from-purple-600 to-indigo-700'
 },
   ]
   const serviceCategories = [
   {
-  name: 'AI & Analytics',icon: <BarChart3 className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Analytics'))
+  na,
+  m: e: 'AI & Analytics',ic,
+  o: n: <BarChart3 className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Analytics'))
     },
   {
-  name: 'AI & Automation',icon: <Zap className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Automation'))
+  na,
+  m: e: 'AI & Automation',ic,
+  o: n: <Zap className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Automation'))
     },
   {
-  name: 'AI & Cybersecurity',icon: <Shield className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security'))
+  na,
+  m: e: 'AI & Cybersecurity',ic,
+  o: n: <Shield className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security'))
     },
   {
-  name: 'AI & Marketing',icon: <Target className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Marketing'))
+  na,
+  m: e: 'AI & Marketing',ic,
+  o: n: <Target className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Marketing'))
     },
   {
-  name: 'AI & Healthcare',icon: <Brain className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Medical'))
+  na,
+  m: e: 'AI & Healthcare',ic,
+  o: n: <Brain className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Medical'))
     },
   {
-  name: 'AI & Development',icon: <Code className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Development'))
+  na,
+  m: e: 'AI & Development',ic,
+  o: n: <Code className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Development'))
     },
   {
-  name: 'AI & Supply Chain',icon: <Truck className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Supply Chain'))
+  na,
+  m: e: 'AI & Supply Chain',ic,
+  o: n: <Truck className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Supply Chain'))
     },
   {
-  name: 'AI & FinTech',icon: <TrendingUp className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('FinTech') || s.category.includes('Financial'))
+  na,
+  m: e: 'AI & FinTech',ic,
+  o: n: <TrendingUp className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('FinTech') || s.category.includes('Financial'))
     },
   {
-  name: 'Space Technology',icon: <Rocket className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Space'))
+  na,
+  m: e: 'Space Technology',ic,
+  o: n: <Rocket className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Space'))
     },
   {
-  name: 'Quantum Technology',icon: <Atom className="w-6 h-6" />,services: allServices.filter(s => s.category.includes('Quantum'))
+  na,
+  m: e: 'Quantum Technology',ic,
+  o: n: <Atom className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => s.category.includes('Quantum'))
     },
   {
-  name: 'Emerging Tech',icon: <Sparkles className="w-6 h-6" />,services: allServices.filter(s => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'))
+  na,
+  m: e: 'Emerging Tech',ic,
+  o: n: <Sparkles className="w-6 h-6" />,servic,
+  e: s: allServices.filter(s => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'))
     },
   ]
-  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
-
+  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO ;
-        title="Comprehensive Pricing Guide 2029 - Zion Tech Group";
-        description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services.";
+      <SEO 
+        title="Comprehensive Pricing Guide 2029 - Zion Tech Group"
+        description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services."
       />
-      ;
-      {{/* Hero Section */},
+      
+      {/* Hero Section */},
   }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+        <div className="relative max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 py-24">
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="text-center";"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Pricing Guide;
+            <h1 className="text-5xl,
+  m: d: text-7xl font-bold text-white mb-6">
+              Pricing Guide
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2029</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transparent pricing for our revolutionary AI, quantum computing, space technology, and emerging tech services. Choose the plan that fits your business needs.;
+            <p className="text-xl m,
+  d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transparent pricing for our revolutionary AI, quantum computing, space technology, and emerging tech services. Choose the plan that fits your business needs.
             </p>
-            ;
-            {{/* Billing Toggle */},
+            
+            {/* Billing Toggle */},
   }
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-              <button;
-                onClick={{onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
+              <button
+                onClick={onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
   },
   }
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
   billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
 }`}
               >
-                <span;
+                <span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
   billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
 }`}
                 />
               </button>
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly;
+                Yearly
                 {billingCycle === 'yearly' && (
   <span className="ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full">Save 17%</span>
                 )}
@@ -133,19 +199,26 @@ export default function ComprehensivePricingGuide2029() {
         </div>
       </div>
 
-      {{/* Pricing Plans */},
+      {/* Pricing Plans */},
   }
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 py-16">
+        <div className="grid grid-cols-1 m,
+  d:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
-  <motion.div;
-              key={{plan.id},
+  <motion.div
+              key={plan.id},
   }
-              initial={{ opacity: 0, y: 20 },
+              initial={ opaci,
+  t: y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.6, delay: index * 0.1 },
+              transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
   }
               className={`relative ${plan.popular ? 'scale-105' : ''}`}
             >
@@ -153,16 +226,17 @@ export default function ComprehensivePricingGuide2029() {
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                     <Crown className="w-4 h-4" />
-                    Most Popular;
+                    Most Popular
                   </span>
                 </div>
               )}
-              ;
+              
               <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${
   plan.popular ? 'border-blue-500' : 'border-white/10'
-} hover:border-white/20 transition-all duration-300`}>
-                ;
-                {{/* Plan Header */},
+} hov,
+  e: r:border-white/20 transition-all duration-300`}>
+                
+                {/* Plan Header */},
   }
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -176,7 +250,7 @@ export default function ComprehensivePricingGuide2029() {
                   )}
                 </div>
 
-                {{/* Features */},
+                {/* Features */},
   }
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
@@ -187,10 +261,11 @@ export default function ComprehensivePricingGuide2029() {
                   ))}
                 </div>
 
-                {{/* CTA Button */},
+                {/* CTA Button */},
   }
-                <button className={`w-full bg-gradient-to-r ${plan.buttonColor} text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-all duration-300`}>
-                  Get Started;
+                <button className={`w-full bg-gradient-to-r ${plan.buttonColor} text-white py-3 px-6 rounded-lg font-semibold,
+  hove: r:opacity-90 transition-all duration-300`}>
+                  Get Started
                 </button>
               </div>
             </motion.div>
@@ -198,36 +273,45 @@ export default function ComprehensivePricingGuide2029() {
         </div>
       </div>
 
-      {{/* Service Categories Pricing */},
+      {/* Service Categories Pricing */},
   }
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div;
-          initial={{ opacity: 0, y: 20 },
+      <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 py-16">
+        <motion.div
+          initial={ opacit,
+  y: 0, y: 20 },
   }
-          whileInView={{ opacity: 1, y: 0 },
+          whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-          transition={{ duration: 0.8 },
+          transition={ durati,
+  o: n: 0.8 },
   }
           className="className="text-center mb-16";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            Service-Specific Pricing;
+            Service-Specific Pricing
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Detailed pricing for each category of our revolutionary services. Mix and match services based on your specific needs.;
+            Detailed pricing for each category of our revolutionary services. Mix and match services based on your specific needs.
           </p>
         </motion.div>
 
         <div className="space-y-12">
           {serviceCategories.map((category, index) => (
-  <motion.div;
-              key={{category.name},
+  <motion.div
+              key={category.name},
   }
-              initial={{ opacity: 0, y: 20 },
+              initial={ opaci,
+  t: y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.6, delay: index * 0.1 },
+              transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
   }
               className="className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10";"
             >
@@ -238,24 +322,26 @@ export default function ComprehensivePricingGuide2029() {
               </div>
 
               {category.services.length > 0 ? (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-6">
                   {category.services.map((service) => (
   <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-start justify-between mb-3">
                         <div className="text-2xl">{service.icon}</div>
                         {service.popular && (
   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                            Popular;
+                            Popular
                           </span>
                         )}
                       </div>
-                      ;
+                      
                       <h4 className="text-white font-semibold mb-2">{service.name}</h4>
                       <p className="text-gray-400 text-sm mb-3 line-clamp-2">{service.tagline}</p>
-                      ;
+                      
                       <div className="flex items-center justify-between mb-3">
                         <div className="text-xl font-bold text-white">
-                          {{service.price},
+                          {service.price},
   }
                           <span className="text-gray-400 text-sm">{service.period}</span>
                         </div>
@@ -269,18 +355,20 @@ export default function ComprehensivePricingGuide2029() {
                         {service.features.slice(0, 2).map((feature, idx) => (
   <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
                             <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
-                            {{feature},
+                            {feature},
   }
                           </div>
                         ))}
                       </div>
 
-                      <a;
-                        href={{service.link},
+                      <a
+                        href={service.link},
   }
-                        className="className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300";"
+                        className="className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold,
+  hove: r: from-blue-700 hove,
+  r:to-purple-700 transition-all duration-300";"
                       >
-                        Learn More;
+                        Learn More
                       </a>
                     </div>
                   ))}
@@ -295,26 +383,32 @@ export default function ComprehensivePricingGuide2029() {
         </div>
       </div>
 
-      {{/* Enterprise Custom Pricing */},
+      {/* Enterprise Custom Pricing */},
   }
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div;
-          initial={{ opacity: 0, y: 20 },
+      <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 py-16">
+        <motion.div
+          initial={ opacit,
+  y: 0, y: 20 },
   }
-          whileInView={{ opacity: 1, y: 0 },
+          whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-          transition={{ duration: 0.8 },
+          transition={ durati,
+  o: n: 0.8 },
   }
           className="className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            Need Custom Enterprise Solutions?;
+            Need Custom Enterprise Solutions?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            For large organizations with specific requirements, we offer custom enterprise solutions with dedicated support, custom integrations, and tailored pricing.;
+            For large organizations with specific requirements, we offer custom enterprise solutions with dedicated support, custom integrations, and tailored pricing.
           </p>
-          ;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <div className="text-3xl text-blue-400 mb-2">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-2">Custom Development</h3>
@@ -332,72 +426,98 @@ export default function ComprehensivePricingGuide2029() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button;
-              whileHover={{ scale: 1.05 },
+          <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={ scal,
+  e: 1.05 },
   }
-              whileTap={{ scale: 0.95 },
+              whileTap={ sca,
+  l: e: 0.95 },
   }
-              className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300";"
+              className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg,
+  hove: r: bg-gray-100 transition-all duration-300";"
             >
-              Request Custom Quote;
+              Request Custom Quote
             </motion.button>
-            <motion.button;
-              whileHover={{ scale: 1.05 },
+            <motion.button
+              whileHover={ scal,
+  e: 1.05 },
   }
-              whileTap={{ scale: 0.95 },
+              whileTap={ sca,
+  l: e: 0.95 },
   }
-              className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300";"
+              className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
+  hove: r:bg-white/10 transition-all duration-300";"
             >
-              Schedule Consultation;
+              Schedule Consultation
             </motion.button>
           </div>
         </motion.div>
       </div>
 
-      {{/* FAQ Section */},
+      {/* FAQ Section */},
   }
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div;
-          initial={{ opacity: 0, y: 20 },
+      <div className="max-w-4xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 py-16">
+        <motion.div
+          initial={ opacit,
+  y: 0, y: 20 },
   }
-          whileInView={{ opacity: 1, y: 0 },
+          whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-          transition={{ duration: 0.8 },
+          transition={ durati,
+  o: n: 0.8 },
   }
           className="className="text-center mb-12";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            Frequently Asked Questions;
+            Frequently Asked Questions
           </h2>
         </motion.div>
 
         <div className="space-y-6">
           {[
   {
-  question: "Can I mix and match services from different categories?",answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
+  questi,
+  o: n: "Can I mix and match services from different categories?",answ,
+  e: r: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
 },
   {
-  question: "Do you offer volume discounts for enterprise customers?",answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."
+  questi,
+  o: n: "Do you offer volume discounts for enterprise customers?",answ,
+  e: r: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."
 },
   {
-  question: "What's included in the support packages?",answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."
+  questi,
+  o: n: "What's included in the support packages?",answ,
+  e: r: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."
 },
   {
-  question: "Can I cancel or change my plan at any time?",answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."
+  questi,
+  o: n: "Can I cancel or change my plan at any time?",answ,
+  e: r: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."
 },
   {
-  question: "Do you offer free trials?",answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
+  questi,
+  o: n: "Do you offer free trials?",answ,
+  e: r: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
 },
   ].map((faq, index) => (
-  <motion.div;
-              key={{index},
+  <motion.div
+              key={index},
   }
-              initial={{ opacity: 0, x: -20 },
+              initial={ opaci,
+  t: y: 0, x: -20 },
   }
-              whileInView={{ opacity: 1, x: 0 },
+              whileInView={ opaci,
+  t: y: 1, x: 0 },
   }
-              transition={{ duration: 0.6, delay: index * 0.1 },
+              transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
   }
               className="className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10";"
             >
@@ -408,39 +528,51 @@ export default function ComprehensivePricingGuide2029() {
         </div>
       </div>
 
-      {{/* Contact Section */},
+      {/* Contact Section */},
   }
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 py-24">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Get Started?;
+            Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Our team is ready to help you choose the right services and pricing plan for your business needs.;
+            Our team is ready to help you choose the right services and pricing plan for your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <motion.button;
-              whileHover={{ scale: 1.05 },
+          <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center mb-8">
+            <motion.button
+              whileHover={ scal,
+  e: 1.05 },
   }
-              whileTap={{ scale: 0.95 },
+              whileTap={ sca,
+  l: e: 0.95 },
   }
-              className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300";"
+              className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg,
+  hove: r: bg-gray-100 transition-all duration-300";"
             >
-              Start Free Trial;
+              Start Free Trial
             </motion.button>
-            <motion.button;
-              whileHover={{ scale: 1.05 },
+            <motion.button
+              whileHover={ scal,
+  e: 1.05 },
   }
-              whileTap={{ scale: 0.95 },
+              whileTap={ sca,
+  l: e: 0.95 },
   }
-              className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300";"
+              className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg,
+  hove: r: bg-white/10 transition-all duration-300";"
             >
-              Contact Sales;
+              Contact Sales
             </motion.button>
           </div>
           <div className="text-gray-300">
-            <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
-            <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+            <p>Mobi,
+  l: e: +1 302 464 0950 | Ema,
+  i: l: kleber@ziontechgroup.com</p>
+            <p>Addres,
+  s: 364 E Main St STE 1008 Middletown DE 19709</p>
           </div>
         </div>
       </div>

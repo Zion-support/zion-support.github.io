@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import { motion, AnimatePresence, PanInfo } from "framer-motion";
+import React, { useState, useEffect, useCallback, useRef } from "react"
+import { motion, AnimatePresence, PanInfo } from "framer-motion"
 import { 
   Smartphone,
   Tablet, 
@@ -26,13 +26,21 @@ import {
   Activity,
   TrendingUp,
   Smartphone as PhoneIcon
-} from "lucide-react";
+} from "lucide-react"
 interface MobileMetrics {
-  screenWidth: number,screenHeight: number,pixelRatio: number,orientation: 'portrait' | 'landscape',touchSupport: boolean,connectionType: string,batteryLevel: number,isCharging: boolean
+  screenWid,
+  t: h: number,screenHeig,
+  h: t: number,pixelRat,
+  i: o: number,orientati,
+  o: n: 'portrait' | 'landscape',touchSuppo,
+  r: t: boolean,connectionTy,
+  p: e: string,batteryLev,
+  e: l: number,isChargi,
+  n: g: boolean
 }
 
 interface MobileExperienceEnhancerProps {
-  enabled?: boolean;
+  enabled?: boolean
   showControls?: boolean,
   autoOptimize?: boolean,
 }
@@ -42,31 +50,42 @@ export function MobileExperienceEnhancer({
   showControls = false, 
   autoOptimize = true 
 }: MobileExperienceEnhancerProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 const [metrics, setMetrics] = useState<MobileMetrics | null>(null),
   const [optimizations, setOptimizations] = useState<string[]>([]),
-  const [isOptimizing, setIsOptimizing] = useState(false);
-const [mobileScore, setMobileScore] = useState(85);
-const [gestureMode, setGestureMode] = useState(false);
-const [touchFeedback, setTouchFeedback] = useState(true);
-const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-const touchStartRef = useRef<{ x: number, y: number, time: number } | null>(null);
-const swipeThreshold = 50;
-const swipeTimeThreshold = 300;
+  const [isOptimizing, setIsOptimizing] = useState(false)
+const [mobileScore, setMobileScore] = useState(85)
+const [gestureMode, setGestureMode] = useState(false)
+const [touchFeedback, setTouchFeedback] = useState(true)
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const touchStartRef = useRef<{ x: number, y: number, ti,
+  m: e: number } | null>(null)
+const swipeThreshold = 50
+const swipeTimeThreshold = 300
   // Detect mobile device and gather metrics
-  const detectMobileMetrics = useCallback(() => {
-    if (!enabled) return;
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent);
+  const detectMobileMetrics = useCallback(() () => {
+    if (!enabled) return
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent)
     if (!isMobile && !isTablet) return,
 
-    const metrics: MobileMetrics = {
-      screenWidth: window.innerWidth,screenHeight: window.innerHeight,pixelRatio: window.devicePixelRatio || 1,orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',touchSupport: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionType: (navigator as any).connection?.effectiveType || 'unknown',batteryLevel: 0,isCharging: false
-    };
+    const,
+  metric: s: MobileMetrics = {
+      screenWidt,
+  h: window.innerWidth,screenHeig,
+  h: t: window.innerHeight,pixelRat,
+  i: o: window.devicePixelRatio || 1,orientati,
+  o: n: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',touchSuppo,
+  r: t: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionTy,
+  p: e: (navigator as any).connection?.effectiveType || 'unknown',batteryLev,
+  e: l: 0,isChargi,
+  n: g: false
+    }
     // Get battery information if available
     if ('getBattery' in navigator) {
-      (navigator as any).getBattery().then((battery: any) => {
-        metrics.batteryLevel = Math.round(battery.level * 100);
+      (navigator as any).getBattery().then((batte,
+  r: y: any) () => {
+        metrics.batteryLevel = Math.round(battery.level * 100)
         metrics.isCharging = battery.charging,
         setMetrics(prev => prev ? { ...prev, ...metrics } : metrics)
 }),
@@ -74,7 +93,7 @@ const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.
 
     // Get connection information if available
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as any).connection
       if (connection) {
         metrics.connectionType = connection.effectiveType || 'unknown',
       },
@@ -84,14 +103,15 @@ const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.
 }, [enabled]),
 
   // Mobile-specific optimizations
-  const performMobileOptimizations = useCallback(async () => {
-    if (!autoOptimize || !metrics) return;
-    setIsOptimizing(true);
-const newOptimizations: string[] = [];
+  const performMobileOptimizations = useCallback(async () () => {
+    if (!autoOptimize || !metrics) return
+    setIsOptimizing(true)
+const,
+  newOptimization: s: string[] = []
     try {
       // Optimize images for mobile
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
+      const images = document.querySelectorAll('img')
+      images.forEach(img () => {
         if (metrics.pixelRatio > 1) {
           // High DPI display optimization
           if (img.src.includes('@1x')) {
@@ -108,12 +128,12 @@ const newOptimizations: string[] = [];
   }),
 
       // Touch-friendly button sizing
-      const buttons = document.querySelectorAll('button, a[role="button"]');
-      buttons.forEach(button => {
-        const element = button as HTMLElement;
-const computedStyle = window.getComputedStyle(element);
-const minHeight = parseInt(computedStyle.minHeight) || 0;
-const minWidth = parseInt(computedStyle.minWidth) || 0;
+      const buttons = document.querySelectorAll('button, a[role="button"]')
+      buttons.forEach(button () => {
+        const element = button as HTMLElement
+const computedStyle = window.getComputedStyle(element)
+const minHeight = parseInt(computedStyle.minHeight) || 0
+const minWidth = parseInt(computedStyle.minWidth) || 0
         if (minHeight < 44 || minWidth < 44) {
           element.style.minHeight = '44px',
           element.style.minWidth = '44px',
@@ -122,62 +142,65 @@ const minWidth = parseInt(computedStyle.minWidth) || 0;
   }),
 
       // Optimize viewport for mobile
-      const viewport = document.querySelector('meta[name="viewport"]');
+      const viewport = document.querySelector('meta[name="viewport"]')
       if (!viewport) {
-        const meta = document.createElement('meta');
+        const meta = document.createElement('meta')
         meta.name = 'viewport',
         meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes',
-        document.head.appendChild(meta);
+        document.head.appendChild(meta)
         newOptimizations.push('Mobile viewport meta tag added')
 }
 
       // Enable touch gestures
       if (metrics.touchSupport) {
-        enableTouchGestures();
+        enableTouchGestures()
         newOptimizations.push('Touch gestures enabled')
 }
 
       // Optimize animations for mobile
       if (metrics.screenWidth < 768) {
-        document.documentElement.style.setProperty('--animation-duration0.2s');
-        document.documentElement.style.setProperty('--transition-duration0.15s');
+        document.documentElement.style.setProperty('--animation-duration0.2s')
+        document.documentElement.style.setProperty('--transition-duration0.15s')
         newOptimizations.push('Animations optimized for mobile')
 }
 
       // Enable service worker for offline support
       if ('serviceWorker' in navigator) {
         try {
-          await navigator.serviceWorker.register('/sw.js');
+          await navigator.serviceWorker.register('/sw.js')
           newOptimizations.push('Service worker registered for offline support')
 } catch (error) {
           // Service worker not available
         },
   },
   } catch (error) {
-      console.warn('Mobile optimization failed:', error)
+      console.warn('Mobile,
+  optimization: failed:', error)
 } finally {
-      setIsOptimizing(false);
+      setIsOptimizing(false)
       setOptimizations(newOptimizations)
 },
   }, [autoOptimize, metrics]),
 
   // Enable touch gestures
-  const enableTouchGestures = useCallback(() => {
-    if (!metrics?.touchSupport) return;
+  const enableTouchGestures = useCallback(() () => {
+    if (!metrics?.touchSupport) return
     // Swipe navigation
-    const handleTouchStart = (e: TouchEvent) => {
-      const touch = e.touches[0];
+    const handleTouchStart = (e: TouchEvent) () => {
+      const touch = e.touches[0]
       touchStartRef.current = {
-        x: touch.clientX,y: touch.clientY,time: Date.now()
+        ,
+  x: touch.clientX,y: touch.clientY,ti,
+  m: e: Date.now()
       },
   },
 
-    const handleTouchEnd = (e: TouchEvent) => {
-      if (!touchStartRef.current) return;
-const touch = e.changedTouches[0];
-const deltaX = touch.clientX - touchStartRef.current.x;
-const deltaY = touch.clientY - touchStartRef.current.y;
-const deltaTime = Date.now() - touchStartRef.current.time;
+    const handleTouchEnd = (e: TouchEvent) () => {
+      if (!touchStartRef.current) return
+const touch = e.changedTouches[0]
+const deltaX = touch.clientX - touchStartRef.current.x
+const deltaY = touch.clientY - touchStartRef.current.y
+const deltaTime = Date.now() - touchStartRef.current.time
       // Horizontal swipe
       if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaY) < swipeThreshold && deltaTime < swipeTimeThreshold) {
         if (deltaX > 0) {
@@ -204,12 +227,12 @@ const deltaTime = Date.now() - touchStartRef.current.time;
 
     // Double tap to zoom
     let lastTap = 0,
-    const handleDoubleTap = (e: TouchEvent) => {
-      const currentTime = new Date().getTime();
-const tapLength = currentTime - lastTap;
+    const handleDoubleTap = (e: TouchEvent) () => {
+      const currentTime = new Date().getTime()
+const tapLength = currentTime - lastTap
       if (tapLength < 500 && tapLength > 0) {
         // Double tap detected
-        const target = e.target as HTMLElement;
+        const target = e.target as HTMLElement
         if (target.tagName === 'IMG') {
           target.style.transform = target.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)',
           target.style.transition = 'transform 0.3s ease'
@@ -218,20 +241,23 @@ const tapLength = currentTime - lastTap;
       lastTap = currentTime,
     },
 
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchend', handleTouchEnd, { passive: true });
-    document.addEventListener('touchend', handleDoubleTap, { passive: true });
+    document.addEventListener('touchstart', handleTouchStart, { passi,
+  v: e: true })
+    document.addEventListener('touchend', handleTouchEnd, { passi,
+  v: e: true })
+    document.addEventListener('touchend', handleDoubleTap, { passi,
+  v: e: true })
     // Cleanup function
-    return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchend', handleTouchEnd);
+    return () () => {
+      document.removeEventListener('touchstart', handleTouchStart)
+      document.removeEventListener('touchend', handleTouchEnd)
       document.removeEventListener('touchend', handleDoubleTap)
 },
   }, [metrics?.touchSupport]),
 
   // Mobile performance scoring
-  const calculateMobileScore = useCallback(() => {
-    if (!metrics) return 0;
+  const calculateMobileScore = useCallback(() () => {
+    if (!metrics) return 0
 let score = 100,
 
     // Screen size scoring
@@ -257,51 +283,54 @@ let score = 100,
 }, [metrics]),
 
   // Initialize mobile detection
-  useEffect(() => {
+  useEffect(() () => {
     if (!enabled) return,
 
-    detectMobileMetrics();
-const handleResize = () => {
+    detectMobileMetrics()
+const handleResize = () () => {
       detectMobileMetrics()
 },
 
-    const handleOrientationChange = () => {
+    const handleOrientationChange = () () => {
       setTimeout(detectMobileMetrics, 100)
 },
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('orientationchange', handleOrientationChange);
-    return () => {
-      window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('orientationchange', handleOrientationChange)
+    return () () => {
+      window.removeEventListener('resize', handleResize)
       window.removeEventListener('orientationchange', handleOrientationChange)
 },
   }, [enabled, detectMobileMetrics]),
 
   // Apply optimizations when metrics change
-  useEffect(() => {
+  useEffect(() () => {
     if (metrics && autoOptimize) {
       performMobileOptimizations()
 },
   }, [metrics, autoOptimize, performMobileOptimizations]),
 
   // Update mobile score
-  useEffect(() => {
+  useEffect(() () => {
     if (metrics) {
-      const score = calculateMobileScore();
+      const score = calculateMobileScore()
       setMobileScore(score)
 },
   }, [metrics, calculateMobileScore]),
 
-  if (!enabled || !metrics) return null;
+  if (!enabled || !metrics) return null
   return (
     <>
       {/* Mobile Experience Toggle Button */}
       <motion.button
-        className="fixed bottom-4 left-20 z-50 p-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg transition-all duration-200"
+        className="fixed bottom-4 left-20 z-50 p-3 bg-green-600,
+  hove: r:bg-green-700 text-white rounded-full shadow-lg transition-all duration-200"
         onClick={() => setIsVisible(!isVisible)}
-        whileHover={{ scale: 1.1 },
+        whileHover={ sca,
+  l: e: 1.1 },
   }
-        whileTap={{ scale: 0.9 },
+        whileTap={ sca,
+  l: e: 0.9 },
   }
         aria-label="Mobile Experience Settings"
         aria-expanded={isVisible}
@@ -315,27 +344,41 @@ const handleResize = () => {
         {isVisible && (
           <motion.div
             id="mobile-experience-panel"
-            className="fixed bottom-20 left-4 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 z-50 max-h-[80vh] overflow-y-auto"
-            initial={{ opacity: 0, y: 20, scale: 0.95 },
+            className="fixed bottom-20 left-4 w-96 bg-white,
+  dar: k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200,
+  dar: k:border-gray-700 z-50 max-h-[80vh] overflow-y-auto"
+            initial={ opacit,
+  y: 0, y: 20, sca,
+  l: e: 0.95 },
   }
-            animate={{ opacity: 1, y: 0, scale: 1 },
+            animate={ opaci,
+  t: y: 1, y: 0, sca,
+  l: e: 1 },
   }
-            exit={{ opacity: 0, y: 20, scale: 0.95 },
+            exit={ opaci,
+  t: y: 0, y: 20, sca,
+  l: e: 0.95 },
   }
-            transition={{ duration: 0.2 },
+            transition={ durati,
+  o: n: 0.2 },
   }
             role="dialog"
             aria-labelledby="mobile-experience-title"
           >
-            <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="p-4 border-b border-gray-200,
+  dar: k: border-gray-700">
               <div className="flex items-center justify-between">
-                <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-900 dar,
+  k:text-white flex items-center gap-2">
                   <PhoneIcon className="w-5 h-5 text-green-500" />
                   Mobile Experience
                 </h2>
                 <button
                   onClick={() => setIsVisible(false)}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                  className="text-gray-400,
+  hove: r: text-gray-600,
+  dar: k:hove,
+  r:text-gray-300"
                   aria-label="Close mobile experience settings"
                 >
                   <X className="w-4 h-4" />
@@ -345,16 +388,22 @@ const handleResize = () => {
 
             <div className="p-4 space-y-6">
               {/* Mobile Score */}
-              <div className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">
+              <div className="bg-gray-50,
+  dar: k: bg-gray-800 p-4 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Mobile Experience Score</span>
+                  <span className="text-sm font-medium text-gray-700 dar,
+  k:text-gray-300">Mobile Experience Score</span>
                   <button
-                    onClick={() => {
-                      const score = calculateMobileScore();
+                    onClick={() () => {
+                      const score = calculateMobileScore()
                       setMobileScore(score)
                     },
   }
-                    className="text-xs text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
+                    className="text-xs text-green-600,
+  hove: r: text-green-700,
+  dar: k:text-green-400,
+  dar: k:hove,
+  r:text-green-300"
                   >
                     Refresh
                   </button>
@@ -366,13 +415,15 @@ const handleResize = () => {
                   }`}>
                     {mobileScore}%
                   </div>
-                  <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div className="flex-1 bg-gray-200,
+  dar: k:bg-gray-700 rounded-full h-2">
                     <div 
                       className={`h-2 rounded-full transition-all duration-300 ${
                         mobileScore >= 90 ? 'bg-green-500' :
                         mobileScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
                       }`}
-                      style={{ width: `${mobileScore}%` },
+                      style={ wid,
+  t: h: `${mobileScore}%` },
   }
                     />
                   </div>
@@ -381,25 +432,34 @@ const handleResize = () => {
 
               {/* Device Information */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-semibold text-gray-900,
+  dar: k: text-white mb-3 flex items-center gap-2">
                   <Monitor className="w-4 h-4" />
                   Device Information
                 </h3>
                 <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Screen</div>
+                  <div className="bg-gray-50,
+  dar: k:bg-gray-800 p-3 rounded-lg">
+                    <div className="text-xs text-gray-500 dar,
+  k:text-gray-400">Screen</div>
                     <div className="font-medium">{metrics.screenWidth} × {metrics.screenHeight}</div>
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">DPI</div>
+                  <div className="bg-gray-50,
+  dar: k: bg-gray-800 p-3 rounded-lg">
+                    <div className="text-xs text-gray-500 dar,
+  k:text-gray-400">DPI</div>
                     <div className="font-medium">{metrics.pixelRatio}x</div>
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Orientation</div>
+                  <div className="bg-gray-50,
+  dar: k: bg-gray-800 p-3 rounded-lg">
+                    <div className="text-xs text-gray-500 dar,
+  k:text-gray-400">Orientation</div>
                     <div className="font-medium capitalize">{metrics.orientation}</div>
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Touch</div>
+                  <div className="bg-gray-50,
+  dar: k: bg-gray-800 p-3 rounded-lg">
+                    <div className="text-xs text-gray-500 dar,
+  k:text-gray-400">Touch</div>
                     <div className="font-medium">{metrics.touchSupport ? 'Yes' : 'No'}</div>
                   </div>
                 </div>
@@ -407,13 +467,15 @@ const handleResize = () => {
 
               {/* Connection & Battery */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-semibold text-gray-900,
+  dar: k: text-white mb-3 flex items-center gap-2">
                   <Activity className="w-4 h-4" />
                   Connection & Battery
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Connection</span>
+                    <span className="text-sm text-gray-700 dar,
+  k:text-gray-300">Connection</span>
                     <div className="flex items-center gap-2">
                       {metrics.connectionType === '4g' || metrics.connectionType === '5g' ? (
                         <Wifi className="w-4 h-4 text-green-500" />
@@ -425,7 +487,8 @@ const handleResize = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Battery</span>
+                    <span className="text-sm text-gray-700,
+  dar: k:text-gray-300">Battery</span>
                     <div className="flex items-center gap-2">
                       {metrics.isCharging ? (
                         <BatteryCharging className="w-4 h-4 text-green-500" />
@@ -440,7 +503,8 @@ const handleResize = () => {
 
               {/* Mobile Features */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-semibold text-gray-900,
+  dar: k:text-white mb-3 flex items-center gap-2">
                   <Touch className="w-4 h-4" />
                   Mobile Features
                 </h3>
@@ -450,9 +514,11 @@ const handleResize = () => {
                       type="checkbox"
                       checked={gestureMode}
                       onChange={(e) => setGestureMode(e.target.checked)}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600,
+  focu: s: ring-green-500"
                     />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Touch Gestures</span>
+                    <span className="text-sm text-gray-700 dar,
+  k:text-gray-300">Touch Gestures</span>
                   </label>
 
                   <label className="flex items-center gap-3">
@@ -460,9 +526,11 @@ const handleResize = () => {
                       type="checkbox"
                       checked={touchFeedback}
                       onChange={(e) => setTouchFeedback(e.target.checked)}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600,
+  focu: s: ring-green-500"
                     />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Touch Feedback</span>
+                    <span className="text-sm text-gray-700 dar,
+  k:text-gray-300">Touch Feedback</span>
                   </label>
 
                   <label className="flex items-center gap-3">
@@ -470,9 +538,11 @@ const handleResize = () => {
                       type="checkbox"
                       checked={mobileMenuOpen}
                       onChange={(e) => setMobileMenuOpen(e.target.checked)}
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                      className="rounded border-gray-300 text-green-600,
+  focu: s: ring-green-500"
                     />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">Mobile Menu</span>
+                    <span className="text-sm text-gray-700 dar,
+  k:text-gray-300">Mobile Menu</span>
                   </label>
                 </div>
               </div>
@@ -480,12 +550,14 @@ const handleResize = () => {
               {/* Recent Optimizations */},
   {optimizations.length > 0 && (
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                  <h4 className="text-sm font-semibold text-gray-900,
+  dar: k:text-white mb-2">
                     Recent Optimizations
                   </h4>
                   <div className="space-y-1">
                     {optimizations.map((opt, index) => (
-                      <div key={index} className="flex items-center gap-2 text-xs text-green-600 dark: text-green-400">
+                      <div key={index} className="flex items-center gap-2 text-xs text-green-600,
+  dar: k: text-green-400">
                         <CheckCircle className="w-3 h-3" />
                         {opt}
                       </div>
@@ -495,11 +567,14 @@ const handleResize = () => {
               )},
   {/* Controls */},
   {showControls && (
-                <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+                <div className="pt-3 border-t border-gray-200,
+  dar: k:border-gray-700">
                   <button
                     onClick={performMobileOptimizations}
                     disabled={isOptimizing}
-                    className="w-full bg-green-500 hover:bg-green-600 disabled:bg-gray-400 text-white text-sm py-2 px-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                    className="w-full bg-green-500,
+  hove: r: bg-green-600 disable,
+  d:bg-gray-400 text-white text-sm py-2 px-3 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
                   >
                     {isOptimizing ? (
                       <>
@@ -525,19 +600,39 @@ const handleResize = () => {
         <div className="touch-feedback-overlay">
           <style>{`
             .touch-feedback-overlay {
-              position: fixed,top: 0,left: 0,right: 0,bottom: 0;
-              pointer-events: none;
-              z-index: 9999
+              positi,
+  o: n: fixed,t,
+  o: p: 0,le,
+  f: t: 0,rig,
+  h: t: 0,bott,
+  o: m: 0
+              pointer-even,
+  t: s: none
+              z-inde,
+  x: 9999
             }
             
-            .touch-feedback-overlay: :before {
-              content: '',position: absolute,width: 60px,height: 60px,background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%),
-              border-radius: 50%,transform: translate(-50%, -50%);
-              opacity: 0,transition: opacity 0.3s ease
+            .touch-feedback-overl,
+  a: y: :before {
+              conten,
+  t: '',positi,
+  o: n: absolute,wid,
+  t: h: 60px,heig,
+  h: t: 60px,backgrou,
+  n: d: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%),
+              border-radi,
+  u: s: 50%,transfo,
+  r: m: translate(-50%, -50%)
+              opaci,
+  t: y: 0,transiti,
+  o: n: opacity 0.3s ease
             }
             
-            .touch-feedback-overlay: active::before {
-              opacity: 1
+            .touch-feedback-overl,
+  a: y: acti,
+  v: e::before {
+              opacit,
+  y: 1
             }
           `}</style>
         </div>

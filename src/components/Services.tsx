@@ -1,12 +1,15 @@
 import React from "react"
 const,
-  Service: s: React.FC = () () => {
+  Servi,
+  c: e:  ,
+  s: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-8">Our Services</h1>
         <div className="grid grid-cols-1,
-  m: d:grid-cols-2 l,
+  m:  ,
+  d:grid-cols-2 l,
   g:grid-cols-3 gap-8">
           <div className="bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">AI Services</h3>

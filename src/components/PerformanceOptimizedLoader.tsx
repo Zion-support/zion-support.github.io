@@ -1,5 +1,5 @@
-import React, { memo } from "react";
-import { motion } from "framer-motion";
+import React, { memo } from "react"
+import { motion } from "framer-motion"
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg',
   color?: 'primary' | 'secondary' | 'white',
@@ -8,17 +8,17 @@ interface LoaderProps {
   showLogo?: boolean,
 }
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
-  size = 'md';
-  color = 'primary';
-  text;
+  size = 'md'
+  color = 'primary'
+  text
   fullScreen = false
-}: LoaderProps) => {
+}: LoaderProps) () => {
   const sizeClasses = {
     sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16'
-  };
+  }
 const textSizes = {
     sm: 'text-xs',md: 'text-sm',lg: 'text-base'
-  };
+  }
 const showLogo = true, // Add this variable
 
   return (
@@ -31,10 +31,14 @@ const showLogo = true, // Add this variable
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size],
   } border-4 border-zion-cyan border-t-transparent rounded-full`}
-          animate={{ rotate: 360 },
+          animate={ rota,
+  t: e: 360 },
   }
-          transition={{
-            duration: 1,repeat: Infinity,ease: "linear"
+          transition={
+            durati,
+  o: n: 1,repe,
+  a: t: Infinity,ea,
+  s: e: "linear"
           },
   }
         />
@@ -49,10 +53,13 @@ const showLogo = true, // Add this variable
           <motion.div
             className={`text-zion-cyan ${textSizes[size],
   } animate-pulse`}
-            animate={{ opacity: [0.5, 1, 0.5],
+            animate={ opaci,
+  t: y: [0.5, 1, 0.5],
   },
   }
-            transition={{ duration: 2, repeat: Infinity },
+            transition={ durati,
+  o: n: 2, repe,
+  a: t: Infinity },
   }
           >
             {text}
@@ -70,24 +77,29 @@ export function SkeletonLoader({
   lines = 3,
   height = "h-4"
 }: {
-  className?: string;
-  lines?: number;
+  className?: string
+  lines?: number
   height?: string
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ leng,
+  t: h: lines }).map((_, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0 },
+          initial={ opaci,
+  t: y: 0 },
   }
-          animate={{ opacity: 1 },
+          animate={ opaci,
+  t: y: 1 },
   }
-          transition={{ delay: index * 0.1 },
+          transition={ del,
+  a: y: index * 0.1 },
   }
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
-          style={{
-            width: `${Math.random() * 40 + 60}%`
+          style={
+            wid,
+  t: h: `${Math.random() * 40 + 60}%`
           },
   }
         />
@@ -124,12 +136,15 @@ export function GridSkeleton({
   className = ""
 }: {
   columns?: number,
-  rows?: number;
+  rows?: number
   className?: string
 }) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: columns * rows }).map((_, index) => (
+    <div className={`grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-${columns} gap-6 ${className}`}>
+      {Array.from({ leng,
+  t: h: columns * rows }).map((_, index) => (
         <CardSkeleton key={index} />
       ))}
     </div>

@@ -1,7 +1,8 @@
 import React from "react"
 interface SelectProps {
   childr,
-  e: n: React.ReactNode
+  e:  ,
+  n: React.ReactNode
   className?: string,
   value?: string,
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
@@ -16,11 +17,17 @@ export function Select({
   disabled = false
 }: SelectProps) {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visib,
-  l: e: outline-none focus-visib,
-  l: e:ring-2 focus-visib,
-  l: e:ring-ring focus-visib,
-  l: e:ring-offset-2,
-  disable: d:cursor-not-allowed disable,
+  l:  ,
+  e: outline-none focus-visib,
+  l:  ,
+  e:ring-2 focus-visib,
+  l:  ,
+  e:ring-ring focus-visib,
+  l:  ,
+  e:ring-offset-2,
+  disab,
+  l: e:  ,
+  d:cursor-not-allowed disable,
   d:opacity-50'
   return (
     <select
@@ -36,8 +43,10 @@ export function Select({
 
 interface SelectItemProps {
   childr,
-  e: n: React.ReactNode,val,
-  u: e: string
+  e:  ,
+  n: React.ReactNode,val,
+  u:  ,
+  e: string
 }
 
 export function SelectItem({ children, value }: SelectItemProps) {
@@ -50,18 +59,25 @@ export function SelectItem({ children, value }: SelectItemProps) {
 
 interface SelectTriggerProps {
   childr,
-  e: n: React.ReactNode
+  e:  ,
+  n: React.ReactNode
   className?: string
 }
 
 export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
   return (
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visib,
-  l: e: outline-none focus-visib,
-  l: e:ring-2 focus-visib,
-  l: e:ring-ring focus-visib,
-  l: e:ring-offset-2,
-  disable: d:cursor-not-allowed disable,
+  l:  ,
+  e: outline-none focus-visib,
+  l:  ,
+  e:ring-2 focus-visib,
+  l:  ,
+  e:ring-ring focus-visib,
+  l:  ,
+  e:ring-offset-2,
+  disab,
+  l: e:  ,
+  d:cursor-not-allowed disable,
   d:opacity-50 ${className}`}>
       {children}
     </div>
@@ -78,7 +94,8 @@ export function SelectValue({ placeholder }: SelectValueProps) {
 
 interface SelectContentProps {
   childr,
-  e: n: React.ReactNode
+  e:  ,
+  n: React.ReactNode
 }
 
 export function SelectContent({ children }: SelectContentProps) {

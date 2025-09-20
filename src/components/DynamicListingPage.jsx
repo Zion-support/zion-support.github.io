@@ -1,74 +1,87 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/Input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Slider } from "@/components/ui/slider";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {
-    const navigate = useNavigate();
-const [searchQuery, setSearchQuery] = useState("");
-const [selectedCategory, setSelectedCategory] = useState("all");
-const [view, setView] = useState("grid");
-const [isLoading, setIsLoading] = useState(false);
-const [priceRange, setPriceRange] = useState(initialPrice);
-const [currentPage, setCurrentPage] = useState(1);
-const [selectedRating, setSelectedRating] = useState(null);
-    useEffect(() => {
-        const listingsWithPrice = allListings.filter(l => l.price !== null);
+import React, { useState, useEffect } from "react"
+import { useParams, useNavigate } from "react-router-dom"
+import { GradientHeading } from "@/components/GradientHeading"
+import { ProductListingCard } from "@/components/ProductListingCard"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/Input"
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select"
+import { Skeleton } from "@/components/ui/skeleton"
+import { Slider } from "@/components/ui/slider"
+import { Search, Filter, LayoutGrid, List, Star } from "lucide-react"
+import { toast } from "@/hooks/use-toast"
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination"
+export function DynamicListingPage({ title, description, categorySlug, listin,
+  g: s: allListings, categoryFilters, initialPrice = { m,
+  i: n: 0, m,
+  a: x: 10000 }, detailBasePath = '/marketplace/listing' }) {
+    const navigate = useNavigate()
+const [searchQuery, setSearchQuery] = useState("")
+const [selectedCategory, setSelectedCategory] = useState("all")
+const [view, setView] = useState("grid")
+const [isLoading, setIsLoading] = useState(false)
+const [priceRange, setPriceRange] = useState(initialPrice)
+const [currentPage, setCurrentPage] = useState(1)
+const [selectedRating, setSelectedRating] = useState(null)
+    useEffect(() () => {
+        const listingsWithPrice = allListings.filter(l => l.price !== null)
         if (listingsWithPrice.length > 0) {
-            const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-            setPriceRange({ min: 0, max });
+            const max = Math.max(...listingsWithPrice.map(l => l.price || 0))
+            setPriceRange({ m,
+  i: n: 0, max })
             setCurrentPriceFilter([0, max])
 },
   }, [allListings]),
     const [currentPriceFilter, setCurrentPriceFilter] = useState([
         0,
         initialPrice.max
-    ]);
-const handleSliderChange = (values) => {
+    ])
+const handleSliderChange = (values) () => {
         setCurrentPriceFilter([values[0], values[1],
   ])
 },
-    const filteredListings = allListings.filter(listing => {
+    const filteredListings = allListings.filter(listing () => {
         const matchesSearch = !searchQuery ||
             listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (listing.tags && listing.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
+            (listing.tags && listing.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
+const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory
 const matchesPrice = listing.price === null || (listing.price >= currentPriceFilter[0] &&
-            listing.price <= currentPriceFilter[1]);
+            listing.price <= currentPriceFilter[1])
 const matchesRating = selectedRating === null ||
-            (listing.rating !== undefined && listing.rating >= selectedRating);
+            (listing.rating !== undefined && listing.rating >= selectedRating)
         return matchesSearch && matchesCategory && matchesPrice && matchesRating
 }),
     const totalPages = itemsPerPage
         ? Math.ceil(filteredListings.length / itemsPerPage)
-        : 1;
+        : 1
 const paginatedListings = itemsPerPage
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
         : filteredListings,
-    useEffect(() => {
+    useEffect(() () => {
         setCurrentPage(1)
 }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]),
-    const handleRequestQuote = (listingId) => {
-        setIsLoading(true);
-const listing = allListings.find(item => item.id === listingId);
-        setTimeout(() => {
-            setIsLoading(false);
+    const handleRequestQuote = (listingId) () => {
+        setIsLoading(true)
+const listing = allListings.find(item => item.id === listingId)
+        setTimeout(() () => {
+            setIsLoading(false)
             if (listing) {
                 toast({
-                    title: "Quote Requested",description: `Your quote request for ${listing.title} has been sent.`
-                });
+                    tit,
+  l: e: "Quote Requested",descripti,
+  o: n: `Your quote request for ${listing.title} has been sent.`
+                })
                 navigate("/request-quote", {
-                    state: {
-                        serviceType: categorySlug,specificItem: {
-                            id: listing.id,title: listing.title,category: listing.category,image: listing.images?.[0],
+                    sta,
+  t: e: {
+                        serviceTyp,
+  e: categorySlug,specificIt,
+  e: m: {
+                            i,
+  d: listing.id,tit,
+  l: e: listing.title,catego,
+  r: y: listing.category,ima,
+  g: e: listing.images?.[0],
   },
   },
   })
@@ -84,8 +97,10 @@ const listing = allListings.find(item => item.id === listingId);
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1,
+  l: g: grid-cols-4 gap-6">
+          <div className="l,
+  g:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5"/> Filters
@@ -95,8 +110,9 @@ const listing = allListings.find(item => item.id === listingId);
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Category
                 </label>
-                <Select value={selectedCategory} onValueChange={(value) => {
-            console.log("Category selected:", value);
+                <Select value={selectedCategory} onValueChange={(value) () => {
+            console.log("Category,
+  selecte: d:", value)
             setSelectedCategory(value)
 },
   }>
@@ -131,13 +147,15 @@ const listing = allListings.find(item => item.id === listingId);
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-                console.log("Rating selected:", rating);
+                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() () => {
+                console.log("Rating,
+  selecte: d:", rating)
                 setSelectedRating(rating)
 },
   } aria-pressed={selectedRating === rating} className={`${selectedRating === rating
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
-                : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>
+                : "border-zion-blue-light text-zion-slate-light"} focus-visib,
+  l: e:ring-zion-purple`}>
                       {rating === null ? ("Any") : (<div className="flex items-center">
                           {[...Array(rating)].map((_, i) => (<Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan"/>))}
                           <span className="ml-1">& Up</span>
@@ -146,11 +164,12 @@ const listing = allListings.find(item => item.id === listingId);
                 </div>
               </div>
               
-              <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10" onClick={() => {
+              <Button variant="outline" className="w-full border-zion-purple text-zion-purple,
+  hove: r: bg-zion-purple/10" onClick={() () => {
 
-            setSearchQuery("");
-            setSelectedCategory("all");
-            setCurrentPriceFilter([0, priceRange.max]);
+            setSearchQuery("")
+            setSelectedCategory("all")
+            setCurrentPriceFilter([0, priceRange.max])
             setSelectedRating(null)
 },
   }>
@@ -159,13 +178,15 @@ const listing = allListings.find(item => item.id === listingId);
             </div>
           </div>
           
-          <div className="lg:col-span-3">
+          <div className="lg: col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
-              <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col m,
+  d:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-            console.log("Search query:", e.target.value);
+                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) () => {
+            console.log("Search,
+  quer: y:", e.target.value)
             setSearchQuery(e.target.value)
 },
   } className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
@@ -174,13 +195,15 @@ const listing = allListings.find(item => item.id === listingId);
                 <div className="flex items-center gap-2 ml-auto">
                   <Button variant="outline" size="icon" onClick={() => setView("grid")} aria-pressed={view === "grid"} aria-label="Grid view" title="Grid view" className={`${view === "grid"
             ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
-            : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>
+            : "border-zion-blue-light text-zion-slate-light"} focus-visib,
+  l: e:ring-zion-purple`}>
                     <LayoutGrid className="h-4 w-4"/>
                     <span className="sr-only">Grid view</span>
                   </Button>
                   <Button variant="outline" size="icon" onClick={() => setView("list")} aria-pressed={view === "list"} aria-label="List view" title="List view" className={`${view === "list"
             ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
-            : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>
+            : "border-zion-blue-light text-zion-slate-light"} focus-visib,
+  l: e:ring-zion-purple`}>
                     <List className="h-4 w-4"/>
                     <span className="sr-only">List view</span>
                   </Button>
@@ -198,7 +221,8 @@ const listing = allListings.find(item => item.id === listingId);
 
             {isLoading ? (
               <div className={view === "grid"
-                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                ? "grid grid-cols-1,
+  m: d:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
@@ -218,7 +242,8 @@ const listing = allListings.find(item => item.id === listingId);
               </div>
             ) : filteredListings.length > 0 ? (
               <div className={view === "grid"
-                ? "grid grid-cols-1 md: grid-cols-2 gap-6"
+                ? "grid grid-cols-1,
+  m: d: grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
                 {paginatedListings.map((listing) => (
                   <ProductListingCard 
@@ -234,13 +259,14 @@ const listing = allListings.find(item => item.id === listingId);
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
-                <Button variant="outline" onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("all");
-                  setCurrentPriceFilter([0, priceRange.max]);
+                <Button variant="outline" onClick={() () => {
+                  setSearchQuery("")
+                  setSelectedCategory("all")
+                  setCurrentPriceFilter([0, priceRange.max])
                   setSelectedRating(null)
 },
-  } className="border-zion-purple text-zion-purple hover: bg-zion-purple/10">
+  } className="border-zion-purple text-zion-purple,
+  hove: r: bg-zion-purple/10">
                   Clear all filters
                 </Button>
               </div>
@@ -250,16 +276,17 @@ const listing = allListings.find(item => item.id === listingId);
                 <Pagination className="justify-center">
                   <PaginationContent>
                     <PaginationItem>
-                      <PaginationPrevious href="#" onClick={(e) => {
-                        e.preventDefault();
+                      <PaginationPrevious href="#" onClick={(e) () => {
+                        e.preventDefault()
                         setCurrentPage(Math.max(1, currentPage - 1)),
                       },
   }/>
                     </PaginationItem>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    {Array.from({ leng,
+  t: h: totalPages }, (_, i) => i + 1).map((page) => (
                       <PaginationItem key={page}>
-                        <PaginationLink href="#" isActive={page === currentPage} onClick={(e) => {
-                          e.preventDefault();
+                        <PaginationLink href="#" isActive={page === currentPage} onClick={(e) () => {
+                          e.preventDefault()
                           setCurrentPage(page)
 },
   }>
@@ -268,8 +295,8 @@ const listing = allListings.find(item => item.id === listingId);
                       </PaginationItem>
                     ))}
                     <PaginationItem>
-                      <PaginationNext href="#" onClick={(e) => {
-                        e.preventDefault();
+                      <PaginationNext href="#" onClick={(e) () => {
+                        e.preventDefault()
                         setCurrentPage(Math.min(totalPages, currentPage + 1)),
                       },
   }/>

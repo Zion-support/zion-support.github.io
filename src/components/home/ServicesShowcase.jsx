@@ -1,94 +1,122 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
-import { ArrowRight, Star } from "lucide-react";
-import { FuturisticCard } from "@/components/ui/futuristic-card";
-import { NeonText } from "@/components/ui/neon-text";
+import React from "react"
+import { Link } from "react-router-dom"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices"
+import { ArrowRight, Star } from "lucide-react"
+import { FuturisticCard } from "@/components/ui/futuristic-card"
+import { NeonText } from "@/components/ui/neon-text"
 export function ServicesShowcase() {
   const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6)
     const emergingServices = [
   {
-  title: "AI Workflow Orchestrator",description: "Intelligent process automation with AI-driven optimization",category: "AI & Automation",price: "$99/month",icon: "🤖",link: "/services/ai-workflow-orchestrator"
+  tit,
+  l: e: "AI Workflow Orchestrator",descripti,
+  o: n: "Intelligent process automation with AI-driven optimization",catego,
+  r: y: "AI & Automation",pri,
+  c: e: "$99/month",ic,
+  o: n: "🤖",li,
+  n: k: "/services/ai-workflow-orchestrator"
 },
   {
-  title: "AI Data Governance Platform",description: "Enterprise data protection and compliance automation",category: "Data & Security",price: "$149/month",icon: "🛡️",link: "/services/ai-data-governance-platform"
+  tit,
+  l: e: "AI Data Governance Platform",descripti,
+  o: n: "Enterprise data protection and compliance automation",catego,
+  r: y: "Data & Security",pri,
+  c: e: "$149/month",ic,
+  o: n: "🛡️",li,
+  n: k: "/services/ai-data-governance-platform"
 },
   {
-  title: "AI Customer Experience Analytics",description: "Intelligent analytics and insights for data-driven decisions",category: "Analytics",price: "$99/month",icon: "📊",link: "/services/ai-customer-experience-analytics"
+  tit,
+  l: e: "AI Customer Experience Analytics",descripti,
+  o: n: "Intelligent analytics and insights for data-driven decisions",catego,
+  r: y: "Analytics",pri,
+  c: e: "$99/month",ic,
+  o: n: "📊",li,
+  n: k: "/services/ai-customer-experience-analytics"
 },
   {
-  title: "Cloud DevOps Platform",description: "Streamlined cloud infrastructure and deployment automation",category: "Cloud & DevOps",price: "$299/month",icon: "☁️",link: "/services/cloud-devops"
+  tit,
+  l: e: "Cloud DevOps Platform",descripti,
+  o: n: "Streamlined cloud infrastructure and deployment automation",catego,
+  r: y: "Cloud & DevOps",pri,
+  c: e: "$299/month",ic,
+  o: n: "☁️",li,
+  n: k: "/services/cloud-devops"
 },
   ]
     return (<section className="py-20 relative">
-      {{/* Background accent */},
+      {/* Background accent */},
   }
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
-      ;
+      
       <div className="container mx-auto px-4 relative z-10">
-        {{/* Header */},
+        {/* Header */},
   }
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight mb-4">
             <NeonText color="#00ffff" glowIntensity="high">
-              Micro SAAS Services;
+              Micro SAAS Services
             </NeonText>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.;
+            Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
 
-        {{/* Featured Services Grid */},
+        {/* Featured Services Grid */},
   }
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">
+        <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-8 mb-20">
+          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full,
+  group: hover:scale-105 transition-transform duration-300">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
-                    {{service.icon},
+                    {service.icon},
   }
                   </div>
                   <Badge variant="secondary" className="bg-primary/20 text-primary">
-                    {{service.badge},
+                    {service.badge},
   }
                   </Badge>
                 </div>
-                <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                  {{service.title},
+                <CardTitle className="text-xl mb-2 group-hov,
+  e: r:text-primary transition-colors">
+                  {service.title},
   }
                 </CardTitle>
                 <CardDescription className="text-base">
-                  {{service.description},
+                  {service.description},
   }
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="pt-0">
-                {{/* Pricing */},
+                {/* Pricing */},
   }
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-zion-purple">
-                    ${{service.price?.toLocaleString()},
+                    ${service.price?.toLocaleString()},
   }
                   </div>
                 </div>
 
-                {{/* Tags */},
+                {/* Tags */},
   }
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
-                        {{tag},
+                        {tag},
   }
                       </Badge>))}
                   </div>
                 </div>
 
-                {{/* Rating */},
+                {/* Rating */},
   }
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
@@ -98,15 +126,16 @@ export function ServicesShowcase() {
                   </div>
                 </div>
 
-                {{/* Actions */},
+                {/* Actions */},
   }
                 <div className="space-y-2">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Get Started;
+                  <Button className="w-full bg-zion-purple,
+  hove: r:bg-zion-purple-dark">
+                    Get Started
                   </Button>
                   <Link to={`/micro-saas-services#${service.id}`}>
                     <Button variant="outline" size="sm" className="w-full">
-                      Learn More;
+                      Learn More
                       <ArrowRight className="w-4 h-4 ml-1"/>
                     </Button>
                   </Link>
@@ -116,78 +145,87 @@ export function ServicesShowcase() {
           ))}
         </div>
 
-        {{/* Emerging Technologies */},
+        {/* Emerging Technologies */},
   }
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
             <NeonText color="#ff00ff" glowIntensity="medium">
-              Emerging Technologies;
+              Emerging Technologies
             </NeonText>
           </h3>
           <p className="text-muted-foreground">
-            Stay ahead of the curve with cutting-edge technology solutions;
+            Stay ahead of the curve with cutting-edge technology solutions
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {emergingServices.map((service, index) => (<Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+        <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4 gap-6">
+          {emergingServices.map((service, index) => (<Card key={index} className="group,
+  hove: r: shadow-lg hove,
+  r:border-primary/50 transition-all duration-300">
               <CardHeader className="pb-3">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20">
-                    {{service.icon},
+                    {service.icon},
   }
                   </div>
                 </div>
-                <CardTitle className="text-lg text-center group-hover:text-primary transition-colors">
-                  {{service.title},
+                <CardTitle className="text-lg text-center group-hov,
+  e: r:text-primary transition-colors">
+                  {service.title},
   }
                 </CardTitle>
               </CardHeader>
-              ;
+              
               <CardContent className="text-center space-y-3">
                 <CardDescription className="text-sm">
-                  {{service.description},
+                  {service.description},
   }
                 </CardDescription>
                 <div className="flex items-center justify-center">
                   <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">
-                    {{service.category},
+                    {service.category},
   }
                   </span>
                 </div>
                 <div className="text-lg font-bold text-primary">
-                  {{service.price},
+                  {service.price},
   }
                 </div>
                 <Button asChild size="sm" className="w-full">
                   <Link to={service.link}>
-                    Learn More;
+                    Learn More
                   </Link>
                 </Button>
               </CardContent>
             </Card>))}
         </div>
 
-        {{/* CTA Section */},
+        {/* CTA Section */},
   }
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 rounded-2xl p-8 border border-zion-purple/20">
             <h3 className="text-2xl font-bold mb-4">
-              Ready to Transform Your Business?;
+              Ready to Transform Your Business?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth;
-              improve efficiency, and stay ahead of the competition.;
+              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth
+              improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark,
+  hove: r:from-zion-purple-light,
+  hove: r:to-zion-purple">
                 <Link to="/services">
-                  Explore All Services;
+                  Explore All Services
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hove,
+  r:bg-zion-cyan/10">
                 <Link to="/request-quote">
-                  Request Custom Quote;
+                  Request Custom Quote
                 </Link>
               </Button>
             </div>

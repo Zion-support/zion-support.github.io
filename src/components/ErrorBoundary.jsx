@@ -1,35 +1,31 @@
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-
+import React, { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button"
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "lucide-react"
+import { Link, useNavigate } from "react-router-dom"
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
-    const navigate = useNavigate();
-    const maxRetries = 3;
-    
+    const navigate = useNavigate()
+    const maxRetries = 3
     const handleRetry = () => {
         if (retryCount < maxRetries) {
-            resetError();
+            resetError()
         } else {
             // After max retries, redirect to home
-            navigate('/');
+            navigate('/')
         }
-    };
-
-    const getErrorType = (error) => {
+    }
+      const getErrorType = (error) => {
         if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
-            return 'network';
+            return 'network'
         }
         if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
-            return 'runtime';
+            return 'runtime'
         }
         if (error?.name === 'ReferenceError') {
-            return 'reference';
+            return 'reference'
         }
-        return 'general';
-    };
-
-    const errorType = getErrorType(error);
+        return 'general'
+    }
+    const errorType = getErrorType(error)
     const errorMessages = {
         network: {
             title: "Connection Issue",
@@ -51,10 +47,8 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
             message: "An unexpected error occurred. Our team has been notified and is working on a fix.",
             icon: <AlertTriangle className="w-8 h-8 text-orange-500" />
         }
-    };
-
-    const currentError = errorMessages[errorType];
-
+    }
+    const currentError = errorMessages[errorType]
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
             <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
@@ -105,7 +99,8 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                 
                 {process.env.NODE_ENV === 'development' && error && (
                     <details className="mt-4 text-left">
-                        <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                        <summary className="cursor-pointer text-sm text-gray-500,
+  hove: r:text-gray-700">
                             Error Details (Development)
                         </summary>
                         <pre className="mt-2 text-xs bg-gray-100 p-2 rounded overflow-auto">
@@ -115,76 +110,67 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
                 )}
             </div>
         </div>
-    );
+    )
 }
 
 function ErrorBoundary({ children, fallback, onError }) {
-    const [hasError, setHasError] = useState(false);
-    const [error, setError] = useState(null);
-    const [retryCount, setRetryCount] = useState(0);
-
-    useEffect(() => {
-        const handleError = (event) => {
-            setHasError(true);
-            setError(event.error);
+    const [hasError, setHasError] = useState(false)
+    const [error, setError] = useState(null)
+    const [retryCount, setRetryCount] = useState(0)
+      useEffect(() => {
+          const handleError = (event) => {
+            setHasError(true)
+            setError(event.error)
             if (onError) {
-                onError(event.error, { componentStack: event.error?.stack });
+                onError(event.error, { componentStack: event.error?.stack })
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error);
+                console.error('ErrorBoundary caught an error:', event.error)
             }
-        };
-
+        }
         const handleUnhandledRejection = (event) => {
-            setHasError(true);
-            setError(new Error(event.reason));
+            setHasError(true)
+            setError(new Error(event.reason))
             if (onError) {
-                onError(new Error(event.reason), { componentStack: event.reason?.stack });
+                onError(new Error(event.reason), { componentStack: event.reason?.stack })
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+                console.error('ErrorBoundary caught an unhandled rejection:', event.reason)
             }
-        };
-
-        window.addEventListener('error', handleError);
-        window.addEventListener('unhandledrejection', handleUnhandledRejection);
-        
+        }
+        window.addEventListener('error', handleError)
+        window.addEventListener('unhandledrejection', handleUnhandledRejection)
         return () => {
-            window.removeEventListener('error', handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-        };
-    }, [onError]);
-
+            window.removeEventListener('error', handleError)
+            window.removeEventListener('unhandledrejection', handleUnhandledRejection)
+        }
+    }, [onError])
     const resetError = () => {
-        setHasError(false);
-        setError(null);
-        setRetryCount(prev => prev + 1);
-    };
-
+        setHasError(false)
+        setError(null)
+        setRetryCount(prev => prev + 1)
+    }
     if (hasError) {
-        const fallbackComponent = fallback || <ErrorFallback error={error} resetError={resetError} retryCount={retryCount} />;
-        return fallbackComponent;
+        const fallbackComponent = fallback || <ErrorFallback error={error} resetError={resetError} retryCount={retryCount} />
+        return fallbackComponent
     }
 
-    return children;
+    return children
 }
 
 // Custom hook for error handling
 export function useErrorHandler() {
-    const [error, setError] = useState(null);
-
-    const handleError = (error) => {
-        setError(error);
-        console.error('Error caught by useErrorHandler:', error);
-    };
-
+    const [error, setError] = useState(null)
+      const handleError = (error) => {
+        setError(error)
+        console.error('Error caught by useErrorHandler:', error)
+    }
     const clearError = () => {
-        setError(null);
-    };
-
-    return { error, handleError, clearError };
+        setError(null)
+    }
+    return { error, handleError, clearError }
 }
 
 // Higher-order component for error handling
@@ -194,8 +180,8 @@ export function withErrorBoundary(Component, fallback = null) {
             <ErrorBoundary fallback={fallback}>
                 <Component {...props} />
             </ErrorBoundary>
-        );
-    };
+        )
+    }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

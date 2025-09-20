@@ -1,5 +1,6 @@
-import React from "react";
-const Talent: React.FC = () => (
+import React from "react"
+const,
+  Talen: t: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Marketplace - Talent</h1>
@@ -7,4 +8,4 @@ const Talent: React.FC = () => (
 		</div>
 	</div>
 )
-export default Talent;
+export default Talent

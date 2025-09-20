@@ -1,142 +1,285 @@
 export interface MicroSaasService {
-  id: string,title: string,description: string,category: string;
-  subcategory?: string;
-  price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],integration: string[],support: string[],link: string;
-  badge?: string;
-  icon: string,marketPrice: string,contactEmail: string,tags: string[],aiScore: number,rating: number,reviewCount: number,featured: boolean,location: string,availability: string,author: {
-  name: string,id: string;
-    avatarUrl?: string;
-    verified: boolean
+  id: string,tit,
+  l: e: string,descripti,
+  o: n: string,catego,
+  r: y: string
+  subcategory?: string
+  pric,
+  e: number,curren,
+  c: y: string,pricingMod,
+  e: l: string,featur,
+  e: s: string[],benefi,
+  t: s: string[],useCas,
+  e: s: string[],targetAudien,
+  c: e: string[],integrati,
+  o: n: string[],suppo,
+  r: t: string[],li,
+  n: k: string
+  badge?: string
+  ico,
+  n: string,marketPri,
+  c: e: string,contactEma,
+  i: l: string,ta,
+  g: s: string[],aiSco,
+  r: e: number,rati,
+  n: g: number,reviewCou,
+  n: t: number,featur,
+  e: d: boolean,locati,
+  o: n: string,availabili,
+  t: y: string,auth,
+  o: r: {
+  nam,
+  e: string,id: string
+    avatarUrl?: string
+    verifie,
+  d: boolean
 }
-  images: string[],createdAt: string
+  imag,
+  e: s: string[],created,
+  A: t: string
 }
 
-export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  // AI & Machine Learning Services;
+export,
+  const: MICRO_SAAS_SERVICES: MicroSaasService[] = [
+  // AI & Machine Learning Services
   {
-  id: "ai-chatbot-builder",title: "AI Chatbot Builder Pro",description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.";
-    category: "AI Services",subcategory: "Chatbots & Conversational AI",price: 99,currency: "$",pricingModel: "monthly",features: [
-  "Drag & drop chatbot builder";
-      "Advanced NLP processing";
-      "Multi-language support (50+ languages)";
-      "CRM integrations (Salesforce, HubSpot)";
-      "Analytics dashboard";
-      "Custom branding";
-      "API access";
+  i,
+  d: "ai-chatbot-builder",tit,
+  l: e: "AI Chatbot Builder Pro",descripti,
+  o: n: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation."
+    catego,
+  r: y: "AI Services",subcatego,
+  r: y: "Chatbots & Conversational AI",pri,
+  c: e: 99,curren,
+  c: y: "$",pricingMod,
+  e: l: "monthly",featur,
+  e: s: [
+  "Drag & drop chatbot builder"
+      "Advanced NLP processing"
+      "Multi-language support (50+ languages)"
+      "CRM integrations (Salesforce, HubSpot)"
+      "Analytics dashboard"
+      "Custom branding"
+      "API access"
       "24/7 support"
 ]
-    benefits: [
-  "Reduce customer service costs by 60%";
-      "24/7 customer support availability";
-      "Instant response times";
-      "Scalable customer interactions";
+    benefi,
+  t: s: [
+  "Reduce customer service costs by 60%"
+      "24/7 customer support availability"
+      "Instant response times"
+      "Scalable customer interactions"
       "Data-driven insights"
 ]
-    useCases: [
-  "Customer service automation";
-      "Sales lead qualification";
-      "Support ticket routing";
-      "FAQ automation";
+    useCas,
+  e: s: [
+  "Customer service automation"
+      "Sales lead qualification"
+      "Support ticket routing"
+      "FAQ automation"
       "Appointment scheduling"
 ]
-    targetAudience: ["E-commerce", "SaaS companies", "Customer service teams", "Marketing agencies"]
-    integration: ["Salesforce", "HubSpot", "Zendesk", "Slack", "WhatsApp"]
-    support: ["24/7 technical support", "Implementation assistance", "Training sessions", "API documentation"]
-    link: "https://ziontechgroup.com/ai-chatbot-builder",badge: "Popular",icon: "🤖",marketPrice: "$99-299/month",contactEmail: "kleber@ziontechgroup.com",tags: ["AI Chatbot", "NLP", "Customer Service", "Automation"]
-    aiScore: 95,rating: 4.8,reviewCount: 156,featured: true,location: "Global",availability: "Immediate",author: {
-  name: "Zion Tech Group",id: "zion-tech-group",avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verified: true
+    targetAudienc,
+  e: ["E-commerce", "SaaS companies", "Customer service teams", "Marketing agencies"]
+    integrati,
+  o: n: ["Salesforce", "HubSpot", "Zendesk", "Slack", "WhatsApp"]
+    suppo,
+  r: t: ["24/7 technical support", "Implementation assistance", "Training sessions", "API documentation"]
+    li,
+  n: k: "http,
+  s://ziontechgroup.com/ai-chatbot-builder",bad,
+  g: e: "Popular",ic,
+  o: n: "🤖",marketPri,
+  c: e: "$99-299/month",contactEma,
+  i: l: "kleber@ziontechgroup.com",ta,
+  g: s: ["AI Chatbot", "NLP", "Customer Service", "Automation"]
+    aiSco,
+  r: e: 95,rati,
+  n: g: 4.8,reviewCou,
+  n: t: 156,featur,
+  e: d: true,locati,
+  o: n: "Global",availabili,
+  t: y: "Immediate",auth,
+  o: r: {
+  nam,
+  e: "Zion Tech Group",id: "zion-tech-group",avatarU,
+  r: l: "http,
+  s://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verifi,
+  e: d: true
 }
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],createdAt: "2024-01-15T10:00:00.000Z"
+    imag,
+  e: s: ["http,
+  s://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],created,
+  A: t: "2024-01-15T,
+  1: 0:0,
+  0:00.000Z"
 },
   {
-  id: "ai-content-generator",title: "AI Content Generator Suite",description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.";
-    category: "AI Services",subcategory: "Content Creation",price: 79,currency: "$",pricingModel: "monthly",features: [
-  "AI-powered content generation";
-      "SEO optimization tools";
-      "Brand voice customization";
-      "Multi-format support";
-      "Plagiarism detection";
-      "Content calendar";
-      "Team collaboration";
+  id: "ai-content-generator",tit,
+  l: e: "AI Content Generator Suite",descripti,
+  o: n: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization."
+    catego,
+  r: y: "AI Services",subcatego,
+  r: y: "Content Creation",pri,
+  c: e: 79,curren,
+  c: y: "$",pricingMod,
+  e: l: "monthly",featur,
+  e: s: [
+  "AI-powered content generation"
+      "SEO optimization tools"
+      "Brand voice customization"
+      "Multi-format support"
+      "Plagiarism detection"
+      "Content calendar"
+      "Team collaboration"
       "Analytics dashboard"
 ]
-    benefits: [
-  "Save 15+ hours per week on content creation";
-      "Improve SEO rankings by 45%";
-      "Increase engagement rates by 55%";
-      "Maintain consistent brand voice";
+    benefi,
+  t: s: [
+  "Save 15+ hours per week on content creation"
+      "Improve SEO rankings by 45%"
+      "Increase engagement rates by 55%"
+      "Maintain consistent brand voice"
       "Scale content production 10x"
 ]
-    targetAudience: ["Content creators", "Marketing teams", "Small businesses", "Digital agencies"]
-    marketPrice: "$79-199/month",contactEmail: "kleber@ziontechgroup.com",tags: ["AI Content", "SEO", "Marketing", "Automation"]
-    aiScore: 92,rating: 4.7,reviewCount: 203,featured: true,location: "Global",availability: "Immediate",author: {
-  name: "Zion Tech Group",id: "zion-tech-group",avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verified: true
+    targetAudienc,
+  e: ["Content creators", "Marketing teams", "Small businesses", "Digital agencies"]
+    marketPri,
+  c: e: "$79-199/month",contactEma,
+  i: l: "kleber@ziontechgroup.com",ta,
+  g: s: ["AI Content", "SEO", "Marketing", "Automation"]
+    aiSco,
+  r: e: 92,rati,
+  n: g: 4.7,reviewCou,
+  n: t: 203,featur,
+  e: d: true,locati,
+  o: n: "Global",availabili,
+  t: y: "Immediate",auth,
+  o: r: {
+  nam,
+  e: "Zion Tech Group",id: "zion-tech-group",avatarU,
+  r: l: "http,
+  s://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verifi,
+  e: d: true
 }
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],createdAt: "2024-01-15T10:00:00.000Z"
+    imag,
+  e: s: ["http,
+  s://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],created,
+  A: t: "2024-01-15T,
+  1: 0:0,
+  0:00.000Z"
 },
   {
-  id: "ai-customer-service",title: "AI Customer Service Platform",description: "Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support.";
-    category: "AI Services",subcategory: "Customer Service",price: 149,currency: "$",pricingModel: "monthly",features: [
-  "AI ticket routing";
-      "Automated responses";
-      "Sentiment analysis";
-      "Customer satisfaction tracking";
-      "Multi-channel support";
+  id: "ai-customer-service",tit,
+  l: e: "AI Customer Service Platform",descripti,
+  o: n: "Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support."
+    catego,
+  r: y: "AI Services",subcatego,
+  r: y: "Customer Service",pri,
+  c: e: 149,curren,
+  c: y: "$",pricingMod,
+  e: l: "monthly",featur,
+  e: s: [
+  "AI ticket routing"
+      "Automated responses"
+      "Sentiment analysis"
+      "Customer satisfaction tracking"
+      "Multi-channel support"
       "Knowledge base"
 ]
-    benefits: [
-  "Reduce response time by 70%";
-      "Improve customer satisfaction by 40%";
-      "Handle 10x more support requests";
+    benefi,
+  t: s: [
+  "Reduce response time by 70%"
+      "Improve customer satisfaction by 40%"
+      "Handle 10x more support requests"
       "24/7 automated support"
 ]
-    useCases: [
-  "Customer service automation";
-      "Ticket management";
-      "Customer feedback analysis";
+    useCas,
+  e: s: [
+  "Customer service automation"
+      "Ticket management"
+      "Customer feedback analysis"
       "Support team optimization"
 ]
-    targetAudience: ["Customer support teams", "E-commerce businesses", "SaaS companies", "Service providers"]
-    integration: ["Zendesk", "Intercom", "Slack", "Email systems", "CRM platforms"]
-    support: ["24/7 technical support", "Implementation assistance", "Training sessions", "API documentation"]
-    link: "https://ziontechgroup.com/ai-customer-service",icon: "🎧",marketPrice: "$149-399/month",contactEmail: "kleber@ziontechgroup.com",tags: ["AI Support", "Customer Service", "Automation", "Analytics"]
-    aiScore: 93,rating: 4.6,reviewCount: 89,featured: true,location: "Global",availability: "Immediate",author: {
-  name: "Zion Tech Group",id: "zion-tech-group",avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verified: true
+    targetAudienc,
+  e: ["Customer support teams", "E-commerce businesses", "SaaS companies", "Service providers"]
+    integrati,
+  o: n: ["Zendesk", "Intercom", "Slack", "Email systems", "CRM platforms"]
+    suppo,
+  r: t: ["24/7 technical support", "Implementation assistance", "Training sessions", "API documentation"]
+    li,
+  n: k: "http,
+  s://ziontechgroup.com/ai-customer-service",ic,
+  o: n: "🎧",marketPri,
+  c: e: "$149-399/month",contactEma,
+  i: l: "kleber@ziontechgroup.com",ta,
+  g: s: ["AI Support", "Customer Service", "Automation", "Analytics"]
+    aiSco,
+  r: e: 93,rati,
+  n: g: 4.6,reviewCou,
+  n: t: 89,featur,
+  e: d: true,locati,
+  o: n: "Global",availabili,
+  t: y: "Immediate",auth,
+  o: r: {
+  nam,
+  e: "Zion Tech Group",id: "zion-tech-group",avatarU,
+  r: l: "http,
+  s://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verifi,
+  e: d: true
 }
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],createdAt: "2024-01-25T09:15:00.000Z"
+    imag,
+  e: s: ["http,
+  s://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],created,
+  A: t: "2024-01-25T,
+  0: 9:1,
+  5:00.000Z"
 },
   ]
-export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined () => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id)
 }
 export const MICRO_SAAS_CATEGORIES = [
-  'AI Business SolutionsIT Infrastructure';
-  'Data AnalyticsAI Development';
-  'FinTechHealthTech';
+  'AI Business SolutionsIT Infrastructure'
+  'Data AnalyticsAI Development'
+  'FinTechHealthTech'
   'E-commerceEdTech'
 ]
 export const PRICING_TIERS = [
   {
-  name: 'Starter',price: 29,features: [['Basic featuresEmail support', '1 user'],
+  na,
+  m: e: 'Starter',pri,
+  c: e: 29,featur,
+  e: s: [['Basic featuresEmail support', '1 user'],
   ],
   },
   {
-  name: 'Professional',price: 99,features: [['Advanced featuresPriority support', 'Up to 10 users'],
+  na,
+  m: e: 'Professional',pri,
+  c: e: 99,featur,
+  e: s: [['Advanced featuresPriority support', 'Up to 10 users'],
   ],
   },
   {
-  name: 'Enterprise',price: 299,features: [['Custom features24/7 support', 'Unlimited users'],
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 299,featur,
+  e: s: [['Custom features24/7 support', 'Unlimited users'],
   ],
   },
   ]
 export const const CONTACT_INFO = {
   = {
-  email: 'kleber@ziontechgroup.com',phone: '+1 302 464 0950',address: '364 E Main St STE 1008 Middletown DE 19709'
+  ema,
+  i: l: 'kleber@ziontechgroup.com',pho,
+  n: e: '+1 302 464 0950',addre,
+  s: s: '364 E Main St STE 1008 Middletown DE 19709'
 }
-export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
+export const getMicroSaasServicesByCategory = (catego,
+  r: y: string): MicroSaasService[] () => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category)
 }
-export const getMicroSaasCategories = (): string[] => {
+export const getMicroSaasCategories = (): string[] () => {
   return [[...new Set(MICRO_SAAS_SERVICES.map(service => service.category))],
   ],
   }

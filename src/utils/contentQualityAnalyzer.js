@@ -1,7 +1,7 @@
 
 
 export class ContentQualityAnalyzer {
-  static instance;
+  static instance
     constructor() {
   this.analyzedPages = new Map()
     }
@@ -13,7 +13,7 @@ export class ContentQualityAnalyzer {
         return ContentQualityAnalyzer.instance
 }
     analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {
-  // Check if we already analyzed this page;
+  // Check if we already analyzed this page
 const existing = this.analyzedPages.get(pageUrl)
         if (if (existing) {
   ) {
@@ -21,45 +21,45 @@ const existing = this.analyzedPages.get(pageUrl)
 }
         const wordCount = this.calculateWordCount(content)
         const headingCount = this.countHeadings(content)
-        const imageCount = images.length;
-const linkCount = links.length;
-const metaDescriptionLength = metaDescription.length;
+        const imageCount = images.length
+const linkCount = links.length
+const metaDescriptionLength = metaDescription.length
 const hasStructuredData = this.checkStructuredData(content)
         const readabilityScore = this.calculateReadabilityScore(content)
         const seoScore = this.calculateSeoScore({
-  title;
-            wordCount;
-            headingCount;
-            imageCount;
-            linkCount;
-            metaDescriptionLength;
+  title
+            wordCount
+            headingCount
+            imageCount
+            linkCount
+            metaDescriptionLength
             hasStructuredData
 })
         const issues = this.identifyIssues({
-  title;
-            wordCount;
-            headingCount;
-            imageCount;
-            linkCount;
-            metaDescriptionLength;
+  title
+            wordCount
+            headingCount
+            imageCount
+            linkCount
+            metaDescriptionLength
             hasStructuredData
 })
         const recommendations = this.generateRecommendations(issues)
         const overallScore = Math.round((readabilityScore + seoScore) / 2)
         const const metrics = {
   = {
-            pageUrl;
-            title;
-            wordCount;
-            headingCount;
-            imageCount;
-            linkCount;
-            metaDescriptionLength;
-            hasStructuredData;
-            readabilityScore;
-            seoScore;
-            overallScore;
-            issues;
+            pageUrl
+            title
+            wordCount
+            headingCount
+            imageCount
+            linkCount
+            metaDescriptionLength
+            hasStructuredData
+            readabilityScore
+            seoScore
+            overallScore
+            issues
             recommendations
 }
         this.analyzedPages.set(pageUrl, metrics)
@@ -67,52 +67,52 @@ const hasStructuredData = this.checkStructuredData(content)
 }
     calculateWordCount(content) {
   if (!content)
-            return 0;
-        // Remove HTML tags and count words;
+            return 0
+        // Remove HTML tags and count words
 const cleanContent = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
         return cleanContent.split(' ').filter(word => word.length > 0).length
 }
     countHeadings(content) {
   if (!content)
-            return 0;
+            return 0
 const headingMatches = content.match(/<h[1-6],
   [^>]*>/gi)
         return headingMatches ? headingMatches.length : 0
 }
     checkStructuredData(content) {
   if (!content)
-            return false;
-        // Check for JSON-LD, microdata, or RDFa;
-        return content.includes('application/ld+json') ||;
-            content.includes('itemtype=') ||;
+            return false
+        // Check for JSON-LD, microdata, or RDFa
+        return content.includes('application/ld+json') ||
+            content.includes('itemtype=') ||
             content.includes('vocab=')
     }
     calculateReadabilityScore(content) {
   if (!content)
-            return 0;
+            return 0
 const wordCount = this.calculateWordCount(content)
-        const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+        const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length
 const syllableCount = this.estimateSyllableCount(content)
         if (wordCount === 0 || sentenceCount === 0)
-            return 0;
-        // Flesch Reading Ease formula;
+            return 0
+        // Flesch Reading Ease formula
 const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount))
-        // Convert to 0-100 scale;
+        // Convert to 0-100 scale
         return Math.max(0, Math.min(100, fleschScore))
     }
     estimateSyllableCount(content) {
   if (!content)
-            return 0;
-        // Simple syllable estimation;
+            return 0
+        // Simple syllable estimation
 const words = content.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/)
-        let syllableCount = 0;
+        let syllableCount = 0
         for (const word of words) {
   if (if (word.length <= 3) {
   ) {
                 syllableCount += 1
 }
             else {
-                // Count vowel groups;
+                // Count vowel groups
 const vowelGroups = word.match(/[aeiouy]+/g)
                 syllableCount += vowelGroups ? vowelGroups.length : 1
 },
@@ -120,10 +120,10 @@ const vowelGroups = word.match(/[aeiouy]+/g)
         return syllableCount
 }
     calculateSeoScore(metrics) {
-  let score = 0;
-let maxScore = 0;
+  let score = 0
+let maxScore = 0
         // Title optimization (0-20 points)
-        maxScore += 20;
+        maxScore += 20
         if (if (metrics.title.length >= 30 && metrics.title.length <= 60) {
   ) {
             score += 20
@@ -133,7 +133,7 @@ let maxScore = 0;
             score += 10
 }
         // Content length (0-25 points)
-        maxScore += 25;
+        maxScore += 25
         if (if (metrics.wordCount >= 300) {
   ) {
             score += 25
@@ -147,7 +147,7 @@ let maxScore = 0;
             score += 5
 }
         // Heading structure (0-15 points)
-        maxScore += 15;
+        maxScore += 15
         if (if (metrics.headingCount >= 3) {
   ) {
             score += 15
@@ -157,7 +157,7 @@ let maxScore = 0;
             score += 10
 }
         // Meta description (0-15 points)
-        maxScore += 15;
+        maxScore += 15
         if (if (metrics.metaDescriptionLength >= 120 && metrics.metaDescriptionLength <= 160) {
   ) {
             score += 15
@@ -167,7 +167,7 @@ let maxScore = 0;
             score += 8
 }
         // Images (0-10 points)
-        maxScore += 10;
+        maxScore += 10
         if (if (metrics.imageCount >= 2) {
   ) {
             score += 10
@@ -177,7 +177,7 @@ let maxScore = 0;
             score += 5
 }
         // Internal links (0-10 points)
-        maxScore += 10;
+        maxScore += 10
         if (if (metrics.linkCount >= 3) {
   ) {
             score += 10
@@ -187,7 +187,7 @@ let maxScore = 0;
             score += 5
 }
         // Structured data (0-5 points)
-        maxScore += 5;
+        maxScore += 5
         if (if (metrics.hasStructuredData) {
   ) {
             score += 5
@@ -266,21 +266,28 @@ let maxScore = 0;
 }
     generateReport() {
   const pageMetrics = Array.from(this.analyzedPages.values())
-        const totalPages = pageMetrics.length;
+        const totalPages = pageMetrics.length
         if (if (totalPages === 0) {
   ) {
             return {
-  totalPages: 0,averageWordCount: 0,averageSeoScore: 0,pagesWithIssues: 0,topIssues: [],pageMetrics: [],summary: 'No pages analyzed yet'
+  totalPag,
+  e: s: 0,averageWordCou,
+  n: t: 0,averageSeoSco,
+  r: e: 0,pagesWithIssu,
+  e: s: 0,topIssu,
+  e: s: [],pageMetri,
+  c: s: [],summa,
+  r: y: 'No pages analyzed yet'
 },
   }
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages)
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages)
-        const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
-        // Collect all issues and count frequency;
-const issueCounts = {{},
+        const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length
+        // Collect all issues and count frequency
+const issueCounts = {},
   }
-        pageMetrics.forEach(page => {
-  page.issues.forEach(issue => {
+        pageMetrics.forEach(page () => {
+  page.issues.forEach(issue () => {
   issueCounts[issue] = (issueCounts[issue] || 0) + 1
 })
         })
@@ -290,21 +297,21 @@ const issueCounts = {{},
             .map(([issue]) => issue)
         const summary = this.generateSummary(pageMetrics, topIssues)
         return {
-  totalPages;
-            averageWordCount;
-            averageSeoScore;
-            pagesWithIssues;
-            topIssues;
-            pageMetrics;
+  totalPages
+            averageWordCount
+            averageSeoScore
+            pagesWithIssues
+            topIssues
+            pageMetrics
             summary
 },
   }
     generateSummary(pageMetrics, topIssues) {
-  const totalPages = pageMetrics.length;
-const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
-const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length;
-const poorPages = pageMetrics.filter(page => page.overallScore < 40).length;
-let summary = `Analyzed ${totalPages} pages. `;
+  const totalPages = pageMetrics.length
+const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length
+const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length
+const poorPages = pageMetrics.filter(page => page.overallScore < 40).length
+let summary = `Analyzed ${totalPages} pages. `
         if (if (excellentPages > 0) {
   ) {
             summary += `${excellentPages} pages have excellent content quality. `
@@ -319,7 +326,8 @@ let summary = `Analyzed ${totalPages} pages. `;
 }
         if (if (topIssues.length > 0) {
   ) {
-            summary += `Top issues to address: ${topIssues.slice(0, 3).join(', ')}.`
+            summary += `Top issues,
+  to: address: ${topIssues.slice(0, 3).join(', ')}.`
 }
         return summary
 }
@@ -333,4 +341,4 @@ let summary = `Analyzed ${totalPages} pages. `;
   this.analyzedPages.clear()
     },
   }
-export default ContentQualityAnalyzer;
+export default ContentQualityAnalyzer

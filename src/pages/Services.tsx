@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Link } from "react-router-dom"
 import { 
   Brain,
   Cloud, 
@@ -52,129 +52,235 @@ import {
   Factory,
   Car,
   Settings
-} from "lucide-react";
-import { SEO } from "../components/SEO";
-import { COMPREHENSIVE_SERVICES_2030 } from "../data/comprehensiveServices2030";
-import { COMPREHENSIVE_PRICING_GUIDE_2030 } from "../data/comprehensivePricingGuide2030";
+} from "lucide-react"
+import { SEO } from "../components/SEO"
+import { COMPREHENSIVE_SERVICES_2030 } from "../data/comprehensiveServices2030"
+import { COMPREHENSIVE_PRICING_GUIDE_2030 } from "../data/comprehensivePricingGuide2030"
 export default function Services() {
-  const [activeCategory, setActiveCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-const [sortBy, setSortBy] = useState('rating');
-const [currentPage, setCurrentPage] = useState(1);
-const [itemsPerPage] = useState(12);
+  const [activeCategory, setActiveCategory] = useState('all')
+const [searchTerm, setSearchTerm] = useState('')
+const [sortBy, setSortBy] = useState('rating')
+const [currentPage, setCurrentPage] = useState(1)
+const [itemsPerPage] = useState(12)
   // Get unique categories from services
   const categories = [
-    { id: 'all', name: 'All Services', count: COMPREHENSIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
-    { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
-    { id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
-    { id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
-    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
-    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
-    { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' },
-    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
-    { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
-    { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
-  ];
-const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    { id: 'all', na,
+  m: e: 'All Services', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.length, ic,
+  o: n: '🚀', col,
+  o: r: 'from-cyan-500 to-blue-500' },
+    { id: 'AI & Business Intelligence', na,
+  m: e: 'AI & Business Intelligence', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, ic,
+  o: n: '🤖', col,
+  o: r: 'from-purple-500 to-pink-500' },
+    { id: 'Cybersecurity', na,
+  m: e: 'Cybersecurity', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, ic,
+  o: n: '🛡️', col,
+  o: r: 'from-red-500 to-orange-500' },
+    { id: 'Cloud & DevOps', na,
+  m: e: 'Cloud & DevOps', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, ic,
+  o: n: '☁️', col,
+  o: r: 'from-blue-500 to-cyan-500' },
+    { id: 'AI & Marketing', na,
+  m: e: 'AI & Marketing', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, ic,
+  o: n: '📈', col,
+  o: r: 'from-green-500 to-emerald-500' },
+    { id: 'Quantum Computing', na,
+  m: e: 'Quantum Computing', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, ic,
+  o: n: '⚛️', col,
+  o: r: 'from-indigo-500 to-purple-500' },
+    { id: 'IoT & Edge Computing', na,
+  m: e: 'IoT & Edge Computing', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, ic,
+  o: n: '🌐', col,
+  o: r: 'from-teal-500 to-cyan-500' },
+    { id: 'Blockchain & Web3', na,
+  m: e: 'Blockchain & Web3', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, ic,
+  o: n: '🔗', col,
+  o: r: 'from-yellow-500 to-orange-500' },
+    { id: 'AI & Healthcare', na,
+  m: e: 'AI & Healthcare', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, ic,
+  o: n: '🏥', col,
+  o: r: 'from-pink-500 to-red-500' },
+    { id: 'FinTech', na,
+  m: e: 'FinTech', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, ic,
+  o: n: '💰', col,
+  o: r: 'from-emerald-500 to-green-500' },
+    { id: 'Digital Twin', na,
+  m: e: 'Digital Twin', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, ic,
+  o: n: '🔄', col,
+  o: r: 'from-blue-500 to-indigo-500' },
+    { id: 'Space Technology', na,
+  m: e: 'Space Technology', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, ic,
+  o: n: '🚀', col,
+  o: r: 'from-purple-500 to-pink-500' },
+    { id: 'Sustainable Technology', na,
+  m: e: 'Sustainable Technology', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, ic,
+  o: n: '🌱', col,
+  o: r: 'from-green-500 to-teal-500' },
+    { id: 'AI & Content', na,
+  m: e: 'AI & Content', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, ic,
+  o: n: '✍️', col,
+  o: r: 'from-orange-500 to-red-500' },
+    { id: 'AI & Customer Support', na,
+  m: e: 'AI & Customer Support', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, ic,
+  o: n: '💬', col,
+  o: r: 'from-blue-500 to-purple-500' },
+    { id: 'AI & HR', na,
+  m: e: 'AI & HR', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, ic,
+  o: n: '👥', col,
+  o: r: 'from-indigo-500 to-blue-500' },
+    { id: 'AI & Legal Tech', na,
+  m: e: 'AI & Legal Tech', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, ic,
+  o: n: '⚖️', col,
+  o: r: 'from-blue-500 to-indigo-500' },
+    { id: 'AI & Research', na,
+  m: e: 'AI & Research', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, ic,
+  o: n: '🔬', col,
+  o: r: 'from-purple-500 to-violet-500' },
+    { id: 'AI & Green Tech', na,
+  m: e: 'AI & Green Tech', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, ic,
+  o: n: '🌿', col,
+  o: r: 'from-green-500 to-emerald-500' },
+    { id: 'AI & Metaverse', na,
+  m: e: 'AI & Metaverse', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, ic,
+  o: n: '🌍', col,
+  o: r: 'from-purple-500 to-indigo-500' },
+    { id: 'AI & Space Tech', na,
+  m: e: 'AI & Space Tech', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, ic,
+  o: n: '🛸', col,
+  o: r: 'from-indigo-500 to-purple-500' },
+    { id: 'AI & Operations', na,
+  m: e: 'AI & Operations', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, ic,
+  o: n: '⚙️', col,
+  o: r: 'from-gray-500 to-slate-500' },
+    { id: 'AI & Development', na,
+  m: e: 'AI & Development', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, ic,
+  o: n: '💻', col,
+  o: r: 'from-cyan-500 to-blue-500' },
+    { id: 'AI & Education', na,
+  m: e: 'AI & Education', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, ic,
+  o: n: '🎓', col,
+  o: r: 'from-blue-500 to-indigo-500' },
+    { id: 'AI & Entertainment', na,
+  m: e: 'AI & Entertainment', cou,
+  n: t: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, ic,
+  o: n: '🎮', col,
+  o: r: 'from-purple-500 to-pink-500' },
+  ]
+const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service () => {
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory
 const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     return matchesCategory && matchesSearch
-});
-const sortedServices = [...filteredServices].sort((a, b) => {
+})
+const sortedServices = [...filteredServices].sort((a, b) () => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price
       case 'reviews':
-        return b.reviewCount - a.reviewCount;
+        return b.reviewCount - a.reviewCount
       case 'name':
-        return a.title.localeCompare(b.title);
-      default: 
+        return a.title.localeCompare(b.title)
+      defau,
+  l: t: 
         return 0
 },
-  });
+  })
   // Pagination logic
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
-const startIndex = (currentPage - 1) * itemsPerPage;
-const endIndex = startIndex + itemsPerPage;
-const currentServices = sortedServices.slice(startIndex, endIndex);
-const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-};
-const getCategoryIcon = (category: string) => {
+  const totalPages = Math.ceil(sortedServices.length / itemsPerPage)
+const startIndex = (currentPage - 1) * itemsPerPage
+const endIndex = startIndex + itemsPerPage
+const currentServices = sortedServices.slice(startIndex, endIndex)
+const handlePageChange = (pa,
+  g: e: number) () => {
+    setCurrentPage(page)
+    window.scrollTo({ to,
+  p: 0, behavi,
+  o: r: 'smooth' })
+}
+const getCategoryIcon = (catego,
+  r: y: string) () => {
     switch (category) {
       case 'AI & Business Intelligence':
-        return <Brain className="w-6 h-6" />;
+        return <Brain className="w-6 h-6" />
       case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />;
+        return <Shield className="w-6 h-6" />
       case 'Cloud & DevOps':
-        return <Cloud className="w-6 h-6" />;
+        return <Cloud className="w-6 h-6" />
       case 'AI & Marketing':
-        return <TrendingUp className="w-6 h-6" />;
+        return <TrendingUp className="w-6 h-6" />
       case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />;
+        return <Atom className="w-6 h-6" />
       case 'IoT & Edge Computing':
-        return <Cpu className="w-6 h-6" />;
+        return <Cpu className="w-6 h-6" />
       case 'Blockchain & Web3':
-        return <GitFork className="w-6 h-6" />;
+        return <GitFork className="w-6 h-6" />
       case 'AI & Healthcare':
-        return <Heart className="w-6 h-6" />;
+        return <Heart className="w-6 h-6" />
       case 'FinTech':
-        return <DollarSign className="w-6 h-6" />;
+        return <DollarSign className="w-6 h-6" />
       case 'Digital Twin':
-        return <Globe className="w-6 h-6" />;
+        return <Globe className="w-6 h-6" />
       case 'Space Technology':
-        return <Rocket className="w-6 h-6" />;
+        return <Rocket className="w-6 h-6" />
       case 'Sustainable Technology':
-        return <Leaf className="w-6 h-6" />;
+        return <Leaf className="w-6 h-6" />
       case 'AI & Content':
-        return <PenTool className="w-6 h-6" />;
+        return <PenTool className="w-6 h-6" />
       case 'AI & Customer Support':
-        return <MessageCircle className="w-6 h-6" />;
+        return <MessageCircle className="w-6 h-6" />
       case 'AI & HR':
-        return <Users className="w-6 h-6" />;
+        return <Users className="w-6 h-6" />
       case 'AI & Legal Tech':
-        return <Scale className="w-6 h-6" />;
+        return <Scale className="w-6 h-6" />
       case 'AI & Research':
-        return <BookOpen className="w-6 h-6" />;
+        return <BookOpen className="w-6 h-6" />
       case 'AI & Green Tech':
-        return <Leaf className="w-6 h-6" />;
+        return <Leaf className="w-6 h-6" />
       case 'AI & Metaverse':
-        return <Globe2 className="w-6 h-6" />;
+        return <Globe2 className="w-6 h-6" />
       case 'AI & Space Tech':
-        return <Rocket className="w-6 h-6" />;
+        return <Rocket className="w-6 h-6" />
       case 'AI & Operations':
-        return <Settings className="w-6 h-6" />;
+        return <Settings className="w-6 h-6" />
       case 'AI & Development':
-        return <Code className="w-6 h-6" />;
+        return <Code className="w-6 h-6" />
       case 'AI & Education':
-        return <Users className="w-6 h-6" />;
+        return <Users className="w-6 h-6" />
       case 'AI & Entertainment':
-        return <Play className="w-6 h-6" />;
-      default:
+        return <Play className="w-6 h-6" />
+      defaul,
+  t:
         return <Zap className="w-6 h-6" />
 },
-  };
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -185,17 +291,23 @@ const getCategoryIcon = (category: string) => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.6 },
+            transition={ durati,
+  o: n: 0.6 },
   }
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl,
+  m: d:text-6xl font-bold text-white mb-6">
               Revolutionary
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> AI Services</span>
             </h1>
@@ -212,13 +324,18 @@ const getCategoryIcon = (category: string) => {
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-500 focu,
+  s:border-transparent"
                 />
               </div>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1,
+  m: d:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+</div>
                 <div className="text-gray-400">Services Available</div>
@@ -242,8 +359,11 @@ const getCategoryIcon = (category: string) => {
 
       {/* Filters Section */}
       <section className="py-8 border-b border-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8">
+          <div className="flex flex-col l,
+  g:flex-row gap-6 items-center justify-between">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -253,7 +373,9 @@ const getCategoryIcon = (category: string) => {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     activeCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-slate-800 text-gray-300,
+  hove: r: bg-slate-700 hove,
+  r:text-white'
                   }`}
                 >
                   <span className="mr-2">{category.icon}</span>
@@ -264,11 +386,15 @@ const getCategoryIcon = (category: string) => {
 
             {/* Sort Options */}
             <div className="flex items-center space-x-4">
-              <label className="text-gray-300 text-sm">Sort by:</label>
+              <label className="text-gray-300 text-sm">Sort,
+  b: y:</label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm,
+  focu: s: outline-none,
+  focu: s:ring-2 focu,
+  s:ring-cyan-500"
               >
                 <option value="rating">Rating</option>
                 <option value="price">Price</option>
@@ -282,7 +408,9 @@ const getCategoryIcon = (category: string) => {
 
       {/* Services Grid */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6 l,
+  g:px-8">
           {currentServices.length === 0 ? (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>
@@ -294,26 +422,39 @@ const getCategoryIcon = (category: string) => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${activeCategory}-${searchTerm}-${sortBy}-${currentPage}`}
-                  initial={{ opacity: 0, y: 20 },
+                  initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                  animate={{ opacity: 1, y: 0 },
+                  animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                  exit={{ opacity: 0, y: -20 },
+                  exit={ opaci,
+  t: y: 0, y: -20 },
   }
-                  transition={{ duration: 0.3 },
+                  transition={ durati,
+  o: n: 0.3 },
   }
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-8"
                 >
                   {currentServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 },
+                      initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                      animate={{ opacity: 1, y: 0 },
+                      animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                      transition={{ duration: 0.3, delay: index * 0.1 },
+                      transition={ durati,
+  o: n: 0.3, del,
+  a: y: index * 0.1 },
   }
-                      className="group relative bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                      className="group relative bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden,
+  hove: r: border-cyan-500/50 transition-all duration-300,
+  hove: r:shadow-xl hove,
+  r:shadow-cyan-500/10"
                     >
                       {/* Featured Badge */},
   {service.featured && (
@@ -345,7 +486,8 @@ const getCategoryIcon = (category: string) => {
                           </div>
                         </div>
 
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hov,
+  e: r:text-cyan-400 transition-colors">
                           {service.title}
                         </h3>
                         
@@ -381,7 +523,10 @@ const getCategoryIcon = (category: string) => {
                           </div>
                           <Link
                             to={`/services/${service.id}`}
-                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600,
+  hove: r: from-cyan-600,
+  hove: r:to-blue-700 text-white font-medium rounded-lg transition-all duration-200 transform hove,
+  r:scale-105"
                           >
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -396,7 +541,8 @@ const getCategoryIcon = (category: string) => {
                               <div className="w-16 h-2 bg-slate-700 rounded-full overflow-hidden">
                                 <div
                                   className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
-                                  style={{ width: `${service.aiScore}%` },
+                                  style={ wid,
+  t: h: `${service.aiScore}%` },
   }
                                 ></div>
                               </div>
@@ -417,19 +563,24 @@ const getCategoryIcon = (category: string) => {
                     <button
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={currentPage === 1}
-                      className="px-4 py-2 bg-slate-800 text-gray-300 rounded-lg hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      className="px-4 py-2 bg-slate-800 text-gray-300 rounded-lg,
+  hove: r: bg-slate-700,
+  disable: d:opacity-50,
+  disable: d:cursor-not-allowed transition-colors"
                     >
                       Previous
                     </button>
                     
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    {Array.from({ lengt,
+  h: totalPages }, (_, i) => i + 1).map((page) => (
                       <button
                         key={page}
                         onClick={() => handlePageChange(page)}
                         className={`px-4 py-2 rounded-lg transition-colors ${
                           currentPage === page
                             ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                            : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                            : 'bg-slate-800 text-gray-300,
+  hove: r:bg-slate-700'
                         }`}
                       >
                         {page}
@@ -439,7 +590,10 @@ const getCategoryIcon = (category: string) => {
                     <button
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={currentPage === totalPages}
-                      className="px-4 py-2 bg-slate-800 text-gray-300 rounded-lg hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      className="px-4 py-2 bg-slate-800 text-gray-300 rounded-lg,
+  hove: r: bg-slate-700,
+  disable: d:opacity-50 disable,
+  d:cursor-not-allowed transition-colors"
                     >
                       Next
                     </button>
@@ -453,24 +607,31 @@ const getCategoryIcon = (category: string) => {
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6,
+  l: g:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss how our AI solutions can revolutionize your operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
             <Link
               to="/request-quote"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600,
+  hove: r:from-cyan-600,
+  hove: r:to-blue-700 text-white font-bold rounded-lg transition-all duration-200,
+  transform: hover:scale-105 shadow-lg"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Request Quote
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg transition-all duration-200 border border-slate-700"
+              className="inline-flex items-center px-8 py-4 bg-slate-800 hove,
+  r:bg-slate-700 text-white font-bold rounded-lg transition-all duration-200 border border-slate-700"
             >
               <Phone className="w-5 h-5 mr-2" />
               Contact Us

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 export function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const toggleVisibility = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() () => {
+    const toggleVisibility = () () => {
       if (window.pageYOffset > 300) {
         setIsVisible(true)
 } else {
@@ -11,12 +11,14 @@ export function ScrollToTop() {
 },
   },
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility)
     return () => window.removeEventListener('scroll', toggleVisibility)
-}, []);
-const scrollToTop = () => {
+}, [])
+const scrollToTop = () () => {
     window.scrollTo({
-      top: 0,behavior: 'smooth'
+      t,
+  o: p: 0,behavi,
+  o: r: 'smooth'
     })
 },
 
@@ -25,22 +27,40 @@ const scrollToTop = () => {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg,
+  hove: r: shadow-xl,
+  transform: hover:-translate-y-1 transition-all duration-300,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-blue-500,
+  focu: s:ring-offset-2"
           aria-label="Scroll to top"
-          initial={{ opacity: 0, scale: 0, y: 20 },
+          initial={ opacit,
+  y: 0, sca,
+  l: e: 0, y: 20 },
   }
-          animate={{ opacity: 1, scale: 1, y: 0 },
+          animate={ opaci,
+  t: y: 1, sca,
+  l: e: 1, y: 0 },
   }
-          exit={{ opacity: 0, scale: 0, y: 20 },
+          exit={ opaci,
+  t: y: 0, sca,
+  l: e: 0, y: 20 },
   }
-          whileHover={{ 
-            scale: 1.1,y: -2,boxShadow: "0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.2)"
+          whileHover={ 
+            sca,
+  l: e: 1.1,y: -2,boxShad,
+  o: w: "0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.2)"
           },
   }
-          whileTap={{ scale: 0.95 },
+          whileTap={ sca,
+  l: e: 0.95 },
   }
-          transition={{
-            type: "spring",stiffness: 400,damping: 17
+          transition={
+            ty,
+  p: e: "spring",stiffne,
+  s: s: 400,dampi,
+  n: g: 17
           },
   }
         >
@@ -53,4 +73,4 @@ const scrollToTop = () => {
   )
 }
 
-export default ScrollToTop;
+export default ScrollToTop

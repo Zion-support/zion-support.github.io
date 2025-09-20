@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-
-interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  service: string;
-  message: string;
-  budget: string;
+import React, { useState } from "react"
+  interface FormData {
+    name: string,
+    email: string,
+    company: string,
+  service: string,
+  message: string,
+  budget: string
 }
 
 const ContactForm: React.FC = () => {
@@ -17,40 +16,37 @@ const ContactForm: React.FC = () => {
     service: '',
     message: '',
     budget: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    }))
+  }
+    const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
         company: '',
         service: '',
         message: '',
         budget: ''
-      });
+      })
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
+  }
   const services = [
     'AI Services',
     'Micro SaaS',
@@ -58,16 +54,14 @@ const ContactForm: React.FC = () => {
     'Quantum Computing',
     'Blockchain',
     'Space Technology'
-  ];
-
+  ]
   const budgetRanges = [
     'Under $5,000',
     '$5,000 - $25,000',
     '$25,000 - $100,000',
     '$100,000 - $500,000',
     'Over $500,000'
-  ];
-
+  ]
   return (
     <div className="max-w-2xl mx-auto">
       <div className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8">
@@ -83,7 +77,10 @@ const ContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white,
+  focu: s: ring-2,
+  focu: s:ring-purple-500 focu,
+  s:outline-none"
               placeholder="Your Name"
               required
             />
@@ -96,7 +93,10 @@ const ContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white,
+  focu: s: ring-2,
+  focu: s:ring-purple-500 focu,
+  s:outline-none"
               placeholder="your@example.com"
               required
             />
@@ -109,7 +109,10 @@ const ContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white,
+  focu: s: ring-2,
+  focu: s:ring-purple-500 focu,
+  s:outline-none"
               placeholder="Your Company"
             />
           </div>
@@ -120,7 +123,10 @@ const ContactForm: React.FC = () => {
               name="service"
               value={formData.service}
               onChange={handleInputChange}
-              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white,
+  focu: s: ring-2,
+  focu: s:ring-purple-500 focu,
+  s:outline-none"
               required
             >
               <option value="">Select a service</option>
@@ -136,7 +142,10 @@ const ContactForm: React.FC = () => {
               name="budget"
               value={formData.budget}
               onChange={handleInputChange}
-              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white,
+  focu: s: ring-2,
+  focu: s:ring-purple-500 focu,
+  s:outline-none"
             >
               <option value="">Select budget range</option>
               {budgetRanges.map((range, index) => (
@@ -152,14 +161,20 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleInputChange}
               rows={5}
-              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-full p-3 bg-gray-700/50 border border-purple-500/30 rounded-lg text-white,
+  focu: s: ring-2,
+  focu: s:ring-purple-500,
+  focu: s:outline-none"
               placeholder="Tell us about your project or question..."
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-purple-600,
+  hove: r:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300,
+  disable: d:opacity-50 disable,
+  d:cursor-not-allowed"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Sending...' : (
@@ -171,7 +186,6 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
-
-export default ContactForm;
+  )
+}
+export default ContactForm

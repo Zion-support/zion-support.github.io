@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Link, useLocation } from "react-router-dom"
 import { 
   Menu,
   X, 
@@ -27,9 +27,11 @@ import {
   Building,
   Rocket,
   Star
-} from "lucide-react";
+} from "lucide-react"
 interface NavigationItem {
-  label: string,href: string;
+  lab,
+  e: l: string,hr,
+  e: f: string
   icon?: React.ReactNode,
   children?: NavigationItem[],
   featured?: boolean
@@ -37,154 +39,272 @@ interface NavigationItem {
 
 interface EnhancedNavigationProps {
   className?: string,
-  onThemeChange?: (theme: 'light' | 'dark' | 'system') => void
+  onThemeChange?: (the,
+  m: e: 'light' | 'dark' | 'system') => void
 }
 
-const navigationItems: NavigationItem[] = [
-  { label: 'Home', href: '/' };
-  { 
-    label: 'AI & Machine Learning',href: '/ai-services',icon: <Brain className="w-4 h-4" />,children: [
-      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' };
-      { label: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' };
-      { label: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' };
-      { label: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management' };
-      { label: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner' };
-      { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' };
-      { label: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain' };
-      { label: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' };
-      { label: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics' };
-      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' };
-      { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' };
-      { label: 'AI-Powered SEO', href: '/services/ai-powered-seo' };
-      { label: 'Interview Assessment AI', href: '/services/interview-assessment-ai' };
-      { label: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite' };
-      { label: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation' };
-      { label: 'AI Project Management', href: '/services/ai-project-management' };
-      { label: 'AI Financial Analytics', href: '/services/ai-financial-analytics' };
-      { label: 'AI Marketing Automation', href: '/services/ai-marketing-automation' };
-      { label: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation' };
-      { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' };
-      { label: 'AI Financial Trading', href: '/services/ai-financial-trading' };
-      { label: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite' },
+const,
+  navigationItem: s: NavigationItem[] = [
+  { labe,
+  l: 'Home', hr,
+  e: f: '/' }, { 
+    lab,
+  e: l: 'AI & Machine Learning',hr,
+  e: f: '/ai-services',ic,
+  o: n: <Brain className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'AI Workflow Orchestrator', hr,
+  e: f: '/services/ai-workflow-orchestrator' }, { lab,
+  e: l: 'AI Data Governance Platform', hr,
+  e: f: '/services/ai-data-governance-platform' }, { lab,
+  e: l: 'AI Customer Experience Analytics', hr,
+  e: f: '/services/ai-customer-experience-analytics' }, { lab,
+  e: l: 'AI Financial Risk Management', hr,
+  e: f: '/services/ai-financial-risk-management' }, { lab,
+  e: l: 'AI Code Review Security Scanner', hr,
+  e: f: '/services/ai-code-review-security-scanner' }, { lab,
+  e: l: 'AI Quantum Hybrid Platform', hr,
+  e: f: '/services/ai-quantum-hybrid-platform' }, { lab,
+  e: l: 'AI Autonomous Supply Chain', hr,
+  e: f: '/services/ai-autonomous-supply-chain' }, { lab,
+  e: l: 'AI Cybersecurity Threat Intelligence', hr,
+  e: f: '/services/ai-cybersecurity-threat-intelligence' }, { lab,
+  e: l: 'AI Business Intelligence Analytics', hr,
+  e: f: '/services/ai-business-intelligence-analytics' }, { lab,
+  e: l: 'AI Compliance Assistant', hr,
+  e: f: '/services/ai-compliance-assistant' }, { lab,
+  e: l: 'AI Sales Copilot', hr,
+  e: f: '/services/ai-sales-copilot' }, { lab,
+  e: l: 'AI-Powered SEO', hr,
+  e: f: '/services/ai-powered-seo' }, { lab,
+  e: l: 'Interview Assessment AI', hr,
+  e: f: '/services/interview-assessment-ai' }, { lab,
+  e: l: 'AI Content Marketing Suite', hr,
+  e: f: '/services/ai-content-marketing-suite' }, { lab,
+  e: l: 'AI Customer Support Automation', hr,
+  e: f: '/services/ai-customer-support-automation' }, { lab,
+  e: l: 'AI Project Management', hr,
+  e: f: '/services/ai-project-management' }, { lab,
+  e: l: 'AI Financial Analytics', hr,
+  e: f: '/services/ai-financial-analytics' }, { lab,
+  e: l: 'AI Marketing Automation', hr,
+  e: f: '/services/ai-marketing-automation' }, { lab,
+  e: l: 'AI Legal Document Automation', hr,
+  e: f: '/services/ai-legal-document-automation' }, { lab,
+  e: l: 'AI Healthcare Analytics', hr,
+  e: f: '/services/ai-healthcare-analytics' }, { lab,
+  e: l: 'AI Financial Trading', hr,
+  e: f: '/services/ai-financial-trading' }, { lab,
+  e: l: 'AI Content Creation Suite', hr,
+  e: f: '/services/ai-content-creation-suite' },
   ],
-  };
-  { 
-    label: 'Cloud & Infrastructure',href: '/it-services',icon: <Cloud className="w-4 h-4" />,children: [
-      { label: 'Cloud DevOps', href: '/services/cloud-devops' };
-      { label: 'IT Infrastructure', href: '/services/it-infrastructure' };
-      { label: 'FinOps Advisor', href: '/services/finops-advisor' };
-      { label: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' };
-      { label: 'IT Consulting', href: '/it-consulting' };
-      { label: 'Enterprise Solutions', href: '/solutions/enterprise' };
-      { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
-      { label: 'Digital Twin', href: '/services/digital-twin' };
-      { label: 'Data Analytics', href: '/services/data-analytics' };
-      { label: 'Digital Transformation', href: '/services/digital-transformation' },
+  }, { 
+    lab,
+  e: l: 'Cloud & Infrastructure',hr,
+  e: f: '/it-services',ic,
+  o: n: <Cloud className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'Cloud DevOps', hr,
+  e: f: '/services/cloud-devops' }, { lab,
+  e: l: 'IT Infrastructure', hr,
+  e: f: '/services/it-infrastructure' }, { lab,
+  e: l: 'FinOps Advisor', hr,
+  e: f: '/services/finops-advisor' }, { lab,
+  e: l: 'Cloud FinOps Optimizer', hr,
+  e: f: '/services/cloud-finops-optimizer' }, { lab,
+  e: l: 'IT Consulting', hr,
+  e: f: '/it-consulting' }, { lab,
+  e: l: 'Enterprise Solutions', hr,
+  e: f: '/solutions/enterprise' }, { lab,
+  e: l: 'Healthcare Solutions', hr,
+  e: f: '/solutions/healthcare' }, { lab,
+  e: l: 'Digital Twin', hr,
+  e: f: '/services/digital-twin' }, { lab,
+  e: l: 'Data Analytics', hr,
+  e: f: '/services/data-analytics' }, { lab,
+  e: l: 'Digital Transformation', hr,
+  e: f: '/services/digital-transformation' },
   ],
-  };
-  { 
-    label: 'Cybersecurity & Privacy',href: '/services/cybersecurity',icon: <Shield className="w-4 h-4" />,children: [
-      { label: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' };
-      { label: 'Security Headers & CSP', href: '/services/security-headers-csp' };
-      { label: 'DSR Privacy Portal', href: '/services/dsr-portal' };
-      { label: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' };
-      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+  }, { 
+    lab,
+  e: l: 'Cybersecurity & Privacy',hr,
+  e: f: '/services/cybersecurity',ic,
+  o: n: <Shield className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'AI Cybersecurity Platform', hr,
+  e: f: '/services/ai-cybersecurity-platform' }, { lab,
+  e: l: 'Security Headers & CSP', hr,
+  e: f: '/services/security-headers-csp' }, { lab,
+  e: l: 'DSR Privacy Portal', hr,
+  e: f: '/services/dsr-portal' }, { lab,
+  e: l: 'Zero Trust Network Access', hr,
+  e: f: '/services/zero-trust-network-access' }, { lab,
+  e: l: 'AI Compliance Assistant', hr,
+  e: f: '/services/ai-compliance-assistant' },
   ],
-  };
-  { 
-    label: 'Emerging Technologies',href: '/emerging-tech',icon: <Atom className="w-4 h-4" />,children: [
-      { label: 'Quantum Computing', href: '/services/quantum-computing' };
-      { label: 'IoT Edge Computing', href: '/services/iot-edge-computing' };
-      { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' };
-      { label: 'Space Technology', href: '/space-tech' };
-      { label: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' };
-      { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' };
-      { label: 'Sustainable Technology', href: '/services/sustainable-technology' },
+  }, { 
+    lab,
+  e: l: 'Emerging Technologies',hr,
+  e: f: '/emerging-tech',ic,
+  o: n: <Atom className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'Quantum Computing', hr,
+  e: f: '/services/quantum-computing' }, { lab,
+  e: l: 'IoT Edge Computing', hr,
+  e: f: '/services/iot-edge-computing' }, { lab,
+  e: l: 'AI Quantum Hybrid Platform', hr,
+  e: f: '/services/ai-quantum-hybrid-platform' }, { lab,
+  e: l: 'Space Technology', hr,
+  e: f: '/space-tech' }, { lab,
+  e: l: 'Quantum Machine Learning', hr,
+  e: f: '/services/quantum-machine-learning' }, { lab,
+  e: l: 'AI Predictive Maintenance', hr,
+  e: f: '/services/ai-predictive-maintenance' }, { lab,
+  e: l: 'Sustainable Technology', hr,
+  e: f: '/services/sustainable-technology' },
   ],
-  };
-  { 
-    label: 'Micro SaaS Solutions',href: '/micro-saas',icon: <ShoppingCart className="w-4 h-4" />,children: [
-      { label: 'Micro CRM', href: '/services/micro-crm' };
-      { label: 'Helpdesk Platform', href: '/services/helpdesk-platform' };
-      { label: 'Website Analytics', href: '/services/website-analytics' };
-      { label: 'IT Helpdesk', href: '/services/it-helpdesk' };
-      { label: 'Affiliate Tracking', href: '/services/affiliate-tracking' };
-      { label: 'Mobile Survey', href: '/services/mobile-survey' };
-      { label: 'Podcast Transcription', href: '/services/podcast-transcription' };
-      { label: 'Email Sequencer', href: '/services/email-sequencer' };
-      { label: 'Returns Management', href: '/services/returns-management' };
-      { label: 'LLM Content Studio', href: '/services/llm-content-studio' },
+  }, { 
+    lab,
+  e: l: 'Micro SaaS Solutions',hr,
+  e: f: '/micro-saas',ic,
+  o: n: <ShoppingCart className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'Micro CRM', hr,
+  e: f: '/services/micro-crm' }, { lab,
+  e: l: 'Helpdesk Platform', hr,
+  e: f: '/services/helpdesk-platform' }, { lab,
+  e: l: 'Website Analytics', hr,
+  e: f: '/services/website-analytics' }, { lab,
+  e: l: 'IT Helpdesk', hr,
+  e: f: '/services/it-helpdesk' }, { lab,
+  e: l: 'Affiliate Tracking', hr,
+  e: f: '/services/affiliate-tracking' }, { lab,
+  e: l: 'Mobile Survey', hr,
+  e: f: '/services/mobile-survey' }, { lab,
+  e: l: 'Podcast Transcription', hr,
+  e: f: '/services/podcast-transcription' }, { lab,
+  e: l: 'Email Sequencer', hr,
+  e: f: '/services/email-sequencer' }, { lab,
+  e: l: 'Returns Management', hr,
+  e: f: '/services/returns-management' }, { lab,
+  e: l: 'LLM Content Studio', hr,
+  e: f: '/services/llm-content-studio' },
   ],
-  };
-  { 
-    label: 'Solutions',href: '/solutions',icon: <Building className="w-4 h-4" />,children: [
-      { label: 'Enterprise Solutions', href: '/solutions/enterprise' };
-      { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
-      { label: 'Manufacturing Solutions', href: '/manufacturing-solutions' };
-      { label: 'Financial Solutions', href: '/financial-solutions' };
-      { label: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' };
-      { label: 'Industry Solutions', href: '/industry-solutions' },
+  }, { 
+    lab,
+  e: l: 'Solutions',hr,
+  e: f: '/solutions',ic,
+  o: n: <Building className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'Enterprise Solutions', hr,
+  e: f: '/solutions/enterprise' }, { lab,
+  e: l: 'Healthcare Solutions', hr,
+  e: f: '/solutions/healthcare' }, { lab,
+  e: l: 'Manufacturing Solutions', hr,
+  e: f: '/manufacturing-solutions' }, { lab,
+  e: l: 'Financial Solutions', hr,
+  e: f: '/financial-solutions' }, { lab,
+  e: l: '5G Enterprise Solutions', hr,
+  e: f: '/5g-enterprise-solutions' }, { lab,
+  e: l: 'Industry Solutions', hr,
+  e: f: '/industry-solutions' },
   ],
-  };
-  { 
-    label: 'Company',href: '/about',icon: <Users className="w-4 h-4" />,children: [
-      { label: 'About Us', href: '/about' };
-      { label: 'Team', href: '/team' };
-      { label: 'Leadership', href: '/leadership' };
-      { label: 'Careers', href: '/careers' };
-      { label: 'Partners', href: '/partners' };
-      { label: 'News', href: '/news' };
-      { label: 'Case Studies', href: '/case-studies' };
-      { label: 'Blog', href: '/blog' },
+  }, { 
+    lab,
+  e: l: 'Company',hr,
+  e: f: '/about',ic,
+  o: n: <Users className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'About Us', hr,
+  e: f: '/about' }, { lab,
+  e: l: 'Team', hr,
+  e: f: '/team' }, { lab,
+  e: l: 'Leadership', hr,
+  e: f: '/leadership' }, { lab,
+  e: l: 'Careers', hr,
+  e: f: '/careers' }, { lab,
+  e: l: 'Partners', hr,
+  e: f: '/partners' }, { lab,
+  e: l: 'News', hr,
+  e: f: '/news' }, { lab,
+  e: l: 'Case Studies', hr,
+  e: f: '/case-studies' }, { lab,
+  e: l: 'Blog', hr,
+  e: f: '/blog' },
   ],
-  };
-  { 
-    label: 'Resources',href: '/resources',icon: <BarChart3 className="w-4 h-4" />,children: [
-      { label: 'Pricing', href: '/pricing' };
-      { label: 'FAQ', href: '/faq' };
-      { label: 'Help Center', href: '/help' };
-      { label: 'Documentation', href: '/documentation' };
-      { label: 'API Documentation', href: '/api-docs' };
-      { label: 'Developer Portal', href: '/developer' };
-      { label: 'Training', href: '/training' };
-      { label: 'Webinars', href: '/webinars' };
-      { label: 'White Papers', href: '/white-papers' };
-      { label: 'Sitemap', href: '/sitemap' },
+  }, { 
+    lab,
+  e: l: 'Resources',hr,
+  e: f: '/resources',ic,
+  o: n: <BarChart3 className="w-4 h-4" />,childr,
+  e: n: [
+      { labe,
+  l: 'Pricing', hr,
+  e: f: '/pricing' }, { lab,
+  e: l: 'FAQ', hr,
+  e: f: '/faq' }, { lab,
+  e: l: 'Help Center', hr,
+  e: f: '/help' }, { lab,
+  e: l: 'Documentation', hr,
+  e: f: '/documentation' }, { lab,
+  e: l: 'API Documentation', hr,
+  e: f: '/api-docs' }, { lab,
+  e: l: 'Developer Portal', hr,
+  e: f: '/developer' }, { lab,
+  e: l: 'Training', hr,
+  e: f: '/training' }, { lab,
+  e: l: 'Webinars', hr,
+  e: f: '/webinars' }, { lab,
+  e: l: 'White Papers', hr,
+  e: f: '/white-papers' }, { lab,
+  e: l: 'Sitemap', hr,
+  e: f: '/sitemap' },
   ],
-  };
-  { label: 'Contact', href: '/contact' },
-  ];
-export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
-  className = '';
+  }, { lab,
+  e: l: 'Contact', hr,
+  e: f: '/contact' },
+  ]
+export,
+  const: EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
+  className = ''
   onThemeChange 
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
+}) () => {
+  const [isOpen, setIsOpen] = useState(false)
 const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system'),
-  const [isScrolled, setIsScrolled] = useState(false);
-const location = useLocation();
-  useEffect(() => {
-    const handleScroll = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+const location = useLocation()
+  useEffect(() () => {
+    const handleScroll = () () => {
       setIsScrolled(window.scrollY > 10)
 },
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
 }, []),
 
-  useEffect(() => {
-    setIsOpen(false);
+  useEffect(() () => {
+    setIsOpen(false)
     setActiveDropdown(null)
 }, [location]),
 
-  const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {
-    setTheme(newTheme);
+  const handleThemeChange = useCallback((newThe,
+  m: e: 'light' | 'dark' | 'system') () => {
+    setTheme(newTheme)
     onThemeChange?.(newTheme),
     
-    const root = document.documentElement;
-    root.classList.remove('lightdark');
+    const root = document.documentElement
+    root.classList.remove('lightdark')
     if (newTheme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const systemTheme = window.matchMedia('(prefers-color-sche,
+  m: e: dark)').matches ? 'dark' : 'light'
       root.classList.add(systemTheme)
     } else {
       root.classList.add(newTheme)
@@ -193,23 +313,32 @@ const location = useLocation();
     localStorage.setItem('zion-theme', newTheme)
 }, [onThemeChange]),
 
-  const toggleDropdown = (label: string) => {
+  const toggleDropdown = (lab,
+  e: l: string) () => {
     setActiveDropdown(activeDropdown === label ? null : label)
-  };
-const closeDropdown = () => {
+  }
+const closeDropdown = () () => {
     setActiveDropdown(null)
 },
 
   const contactInfo = {
-    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
-  };
+    pho,
+  n: e: "+1 302 464 0950",ema,
+  i: l: "kleber@ziontechgroup.com",websi,
+  t: e: "http,
+  s://ziontechgroup.com",addre,
+  s: s: "364 E Main St STE 1008 Middletown DE 19709"
+  }
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg' 
+        ? 'bg-white/95,
+  dar: k:bg-slate-900/95 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4,
+  s: m: px-6 l,
+  g:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -217,20 +346,26 @@ const closeDropdown = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">
+              <span className="text-xl font-bold text-gray-900,
+  dar: k:text-white">
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden,
+  l: g:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.label} className="relative group">
                 {item.children ? (
                   <button
                     onClick={() => toggleDropdown(item.label)}
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700,
+  dar: k: text-gray-300,
+  hove: r:text-blue-600,
+  dar: k:hove,
+  r:text-blue-400 transition-colors"
                   >
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4" />
@@ -238,7 +373,11 @@ const closeDropdown = () => {
                 ) : (
                   <Link
                     to={item.href}
-                    className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="px-3 py-2 text-sm font-medium text-gray-700,
+  dar: k: text-gray-300,
+  hove: r:text-blue-600,
+  dar: k:hove,
+  r:text-blue-400 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -248,13 +387,17 @@ const closeDropdown = () => {
                   <AnimatePresence>
                     {activeDropdown === item.label && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10 },
+                        initial={ opaci,
+  t: y: 0, y: -10 },
   }
-                        animate={{ opacity: 1, y: 0 },
+                        animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                        exit={{ opacity: 0, y: -10 },
+                        exit={ opaci,
+  t: y: 0, y: -10 },
   }
-                        transition={{ duration: 0.2 },
+                        transition={ durati,
+  o: n: 0.2 },
   }
                         className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50"
                       >
@@ -269,9 +412,12 @@ const closeDropdown = () => {
                             <Link
                               key={child.href}
                               to={child.href}
-                              className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200 group"
+                              className="flex items-center space-x-3 px-4 py-3 text-slate-300,
+  hove: r: text-white,
+  hove: r:bg-slate-700/50 transition-colors duration-200 group"
                             >
-                              <div className="w-2 h-2 bg-slate-500 rounded-full group-hover:bg-cyan-400 transition-colors duration-200"></div>
+                              <div className="w-2 h-2 bg-slate-500 rounded-full group-hove,
+  r:bg-cyan-400 transition-colors duration-200"></div>
                               <span className="text-sm font-medium">{child.label}</span>
                             </Link>
                           ))}
@@ -285,15 +431,22 @@ const closeDropdown = () => {
           </div>
 
           {/* Right Side Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden,
+  l: g:flex items-center space-x-4">
             {/* Theme Toggle */}
-            <div className="flex items-center space-x-2 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
+            <div className="flex items-center space-x-2 bg-gray-100,
+  dar: k:bg-slate-800 rounded-lg p-1">
               <button
                 onClick={() => handleThemeChange('light')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'light' 
-                    ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' 
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-white,
+  dar: k: bg-slate-700 text-blue-600 shadow-sm' 
+                    : 'text-gray-500,
+  dar: k:text-gray-400,
+  hove: r:text-gray-700,
+  dar: k:hove,
+  r:text-gray-300'
                 }`}
               >
                 <Sun className="w-4 h-4" />
@@ -302,8 +455,13 @@ const closeDropdown = () => {
                 onClick={() => handleThemeChange('dark')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'dark' 
-                    ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' 
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-white,
+  dar: k: bg-slate-700 text-blue-600 shadow-sm' 
+                    : 'text-gray-500,
+  dar: k:text-gray-400,
+  hove: r:text-gray-700,
+  dar: k:hove,
+  r:text-gray-300'
                 }`}
               >
                 <Moon className="w-4 h-4" />
@@ -312,8 +470,13 @@ const closeDropdown = () => {
                 onClick={() => handleThemeChange('system')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'system' 
-                    ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' 
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    ? 'bg-white,
+  dar: k: bg-slate-700 text-blue-600 shadow-sm' 
+                    : 'text-gray-500,
+  dar: k:text-gray-400,
+  hove: r:text-gray-700,
+  dar: k:hove,
+  r:text-gray-300'
                 }`}
               >
                 <Monitor className="w-4 h-4" />
@@ -323,7 +486,8 @@ const closeDropdown = () => {
             {/* Contact Button */}
             <Link
               to="/contact"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600,
+  hove: r:bg-blue-700 transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
               Get Quote
@@ -334,7 +498,11 @@ const closeDropdown = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400,
+  hove: r: text-gray-500,
+  hove: r:bg-gray-100,
+  dar: k:hove,
+  r:bg-slate-800 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -346,13 +514,20 @@ const closeDropdown = () => {
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 },
+                    initial={ opaci,
+  t: y: 0, heig,
+  h: t: 0 },
   }
-                    animate={{ opacity: 1, height: 'auto' },
+                    animate={ opaci,
+  t: y: 1, heig,
+  h: t: 'auto' },
   }
-                    exit={{ opacity: 0, height: 0 },
+                    exit={ opaci,
+  t: y: 0, heig,
+  h: t: 0 },
   }
-                    transition={{ duration: 0.3 },
+                    transition={ durati,
+  o: n: 0.3 },
   }
                     className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
                   >
@@ -363,7 +538,13 @@ const closeDropdown = () => {
                             <div>
                               <button
                                 onClick={() => toggleDropdown(item.label)}
-                                className="flex items-center justify-between w-full text-left text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                                className="flex items-center justify-between w-full text-left text-slate-300,
+  hove: r: text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-400,
+  focu: s:ring-offset-2 focu,
+  s:ring-offset-slate-900"
                                 aria-expanded={activeDropdown === item.label}
                                 aria-haspopup="true"
                               >
@@ -378,13 +559,17 @@ const closeDropdown = () => {
                               
                               {activeDropdown === item.label && (
                                 <motion.div
-                                  initial={{ opacity: 0, y: -10 },
+                                  initial={ opaci,
+  t: y: 0, y: -10 },
   }
-                                  animate={{ opacity: 1, y: 0 },
+                                  animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                                  exit={{ opacity: 0, y: -10 },
+                                  exit={ opaci,
+  t: y: 0, y: -10 },
   }
-                                  transition={{ duration: 0.2 },
+                                  transition={ durati,
+  o: n: 0.2 },
   }
                                   className="ml-4 mt-2 space-y-2 border-l border-slate-700/50 pl-4"
                                 >
@@ -392,7 +577,8 @@ const closeDropdown = () => {
                                     <Link
                                       key={child.href}
                                       to={child.href}
-                                      className="block text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200 flex items-center space-x-2"
+                                      className="block text-slate-400,
+  hove: r:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200 flex items-center space-x-2"
                                     >
                                       <div className="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
                                       <span>{child.label}</span>
@@ -404,7 +590,13 @@ const closeDropdown = () => {
                           ) : (
                             <Link
                               to={item.href}
-                              className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                              className="block text-slate-300,
+  hove: r: text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200,
+  focu: s:outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-400,
+  focu: s:ring-offset-2 focu,
+  s:ring-offset-slate-900"
                             >
                               {item.label}
                             </Link>
@@ -427,7 +619,8 @@ const closeDropdown = () => {
                 </div>
                 <Link
                   to="/contact"
-                  className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700 transition-colors"
+                  className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600,
+  hove: r: bg-blue-700 transition-colors"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Get Quote
@@ -439,4 +632,4 @@ const closeDropdown = () => {
       </AnimatePresence>
     </nav>
   )
-};
+}

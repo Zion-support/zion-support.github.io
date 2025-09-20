@@ -1,176 +1,372 @@
-import React, { useState } from "react";
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from "lucide-react";
+import React, { useState } from "react"
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from "lucide-react"
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
   const [activeStatus, setActiveStatus] = useState('all')
   const [activeType, setActiveType] = useState('all')
   const categories = [
-  {{ id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
+  { id: 'all', na,
+  m: e: 'All Categories', ic,
+  o: n: <FlaskConical className="w-5 h-5" />, cou,
+  n: t: 0 },
   },
-  {{ id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
+  { id: 'ai-ml', na,
+  m: e: 'AI & Machine Learning', ic,
+  o: n: <Brain className="w-5 h-5" />, cou,
+  n: t: 12 },
   },
-  {{ id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },
+  { id: 'cloud', na,
+  m: e: 'Cloud & Infrastructure', ic,
+  o: n: <Cloud className="w-5 h-5" />, cou,
+  n: t: 8 },
   },
-  {{ id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },
+  { id: 'security', na,
+  m: e: 'Cybersecurity', ic,
+  o: n: <Shield className="w-5 h-5" />, cou,
+  n: t: 6 },
   },
-  {{ id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },
+  { id: 'data', na,
+  m: e: 'Data & Analytics', ic,
+  o: n: <Database className="w-5 h-5" />, cou,
+  n: t: 10 },
   },
-  {{ id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },
+  { id: 'emerging', na,
+  m: e: 'Emerging Technologies', ic,
+  o: n: <Zap className="w-5 h-5" />, cou,
+  n: t: 7 },
   },
-  {{ id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
+  { id: 'quantum', na,
+  m: e: 'Quantum Computing', ic,
+  o: n: <Cpu className="w-5 h-5" />, cou,
+  n: t: 4 },
   },
-  {{ id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 },
+  { id: 'iot', na,
+  m: e: 'IoT & Edge Computing', ic,
+  o: n: <Network className="w-5 h-5" />, cou,
+  n: t: 5 },
   },
   ]
   const statuses = [
-  {{ id: 'all', name: 'All Statuses', count: 0 },
+  { id: 'all', na,
+  m: e: 'All Statuses', cou,
+  n: t: 0 },
   },
-  {{ id: 'active', name: 'Active', count: 0 },
+  { id: 'active', na,
+  m: e: 'Active', cou,
+  n: t: 0 },
   },
-  {{ id: 'completed', name: 'Completed', count: 0 },
+  { id: 'completed', na,
+  m: e: 'Completed', cou,
+  n: t: 0 },
   },
-  {{ id: 'planning', name: 'Planning', count: 0 },
+  { id: 'planning', na,
+  m: e: 'Planning', cou,
+  n: t: 0 },
   },
-  {{ id: 'published', name: 'Published', count: 0 },
+  { id: 'published', na,
+  m: e: 'Published', cou,
+  n: t: 0 },
   },
   ]
   const types = [
-  {{ id: 'all', name: 'All Types', count: 0 },
+  { id: 'all', na,
+  m: e: 'All Types', cou,
+  n: t: 0 },
   },
-  {{ id: 'research', name: 'Research Papers', count: 0 },
+  { id: 'research', na,
+  m: e: 'Research Papers', cou,
+  n: t: 0 },
   },
-  {{ id: 'patents', name: 'Patents', count: 0 },
+  { id: 'patents', na,
+  m: e: 'Patents', cou,
+  n: t: 0 },
   },
-  {{ id: 'prototypes', name: 'Prototypes', count: 0 },
+  { id: 'prototypes', na,
+  m: e: 'Prototypes', cou,
+  n: t: 0 },
   },
-  {{ id: 'collaborations', name: 'Collaborations', count: 0 },
+  { id: 'collaborations', na,
+  m: e: 'Collaborations', cou,
+  n: t: 0 },
   },
   ]
   const researchProjects = [
   {
-  id: 1,title: 'Quantum Machine Learning for Financial Modeling',description: 'Exploring the application of quantum computing algorithms to enhance financial risk assessment and portfolio optimization.',category: 'quantum',status: 'active',type: 'research',startDate: '2024-01-01',endDate: '2025-12-31',leadResearcher: 'Dr. Elena Vasquez',team: ['Dr. Elena VasquezDr. Michael Chen', 'Sarah JohnsonAlex Rodriguez']
-      funding: 2500000,institution: 'MIT',abstract: 'This research investigates the potential of quantum machine learning algorithms to solve complex financial optimization problems that are computationally intractable for classical computers.',methodology: 'Hybrid quantum-classical approach using variational quantum algorithms',expectedOutcomes: ['Quantum advantage demonstrationFinancial model improvements', 'Patent applications']
-      publications: [
+  id: 1,tit,
+  l: e: 'Quantum Machine Learning for Financial Modeling',descripti,
+  o: n: 'Exploring the application of quantum computing algorithms to enhance financial risk assessment and portfolio optimization.',catego,
+  r: y: 'quantum',stat,
+  u: s: 'active',ty,
+  p: e: 'research',startDa,
+  t: e: '2024-01-01',endDa,
+  t: e: '2025-12-31',leadResearch,
+  e: r: 'Dr. Elena Vasquez',te,
+  a: m: ['Dr. Elena VasquezDr. Michael Chen', 'Sarah JohnsonAlex Rodriguez']
+      fundi,
+  n: g: 2500000,instituti,
+  o: n: 'MIT',abstra,
+  c: t: 'This research investigates the potential of quantum machine learning algorithms to solve complex financial optimization problems that are computationally intractable for classical computers.',methodolo,
+  g: y: 'Hybrid quantum-classical approach using variational quantum algorithms',expectedOutcom,
+  e: s: ['Quantum advantage demonstrationFinancial model improvements', 'Patent applications']
+      publicatio,
+  n: s: [
   {
-  title: 'Quantum Algorithms for Portfolio Optimization',journal: 'Nature Quantum Information',year: 2024,doi: '10.1038/s41534-024-00800-5',citations: 23
+  titl,
+  e: 'Quantum Algorithms for Portfolio Optimization',journ,
+  a: l: 'Nature Quantum Information',ye,
+  a: r: 2024,d,
+  o: i: '10.1038/s41534-024-00800-5',citatio,
+  n: s: 23
 },
   ]
-      tags: ['Quantum ComputingMachine Learning', 'FinanceOptimization', 'Risk Assessment']
-      featured: true,progress: 65,impact: 'high'
+      ta,
+  g: s: ['Quantum ComputingMachine Learning', 'FinanceOptimization', 'Risk Assessment']
+      featur,
+  e: d: true,progre,
+  s: s: 65,impa,
+  c: t: 'high'
 },
   {
-  id: 2,title: 'Federated Learning for Privacy-Preserving Healthcare Analytics',description: 'Developing secure federated learning frameworks that enable healthcare institutions to collaborate on AI models without sharing sensitive patient data.',category: 'ai-ml',status: 'completed',type: 'research',startDate: '2023-06-01',endDate: '2024-11-30',leadResearcher: 'Dr. Sarah Chen',team: ['Dr. Sarah ChenDr. James Wilson', 'Lisa AndersonDavid Kim']
-      funding: 1800000,institution: 'Stanford University',abstract: 'This project addresses the critical need for privacy-preserving machine learning in healthcare by developing novel federated learning approaches.',methodology: 'Differential privacy, secure multi-party computation, federated averaging';
-      expectedOutcomes: ['Privacy-preserving frameworkHealthcare AI models', 'Open-source toolkit']
-      publications: [
+  id: 2,tit,
+  l: e: 'Federated Learning for Privacy-Preserving Healthcare Analytics',descripti,
+  o: n: 'Developing secure federated learning frameworks that enable healthcare institutions to collaborate on AI models without sharing sensitive patient data.',catego,
+  r: y: 'ai-ml',stat,
+  u: s: 'completed',ty,
+  p: e: 'research',startDa,
+  t: e: '2023-06-01',endDa,
+  t: e: '2024-11-30',leadResearch,
+  e: r: 'Dr. Sarah Chen',te,
+  a: m: ['Dr. Sarah ChenDr. James Wilson', 'Lisa AndersonDavid Kim']
+      fundi,
+  n: g: 1800000,instituti,
+  o: n: 'Stanford University',abstra,
+  c: t: 'This project addresses the critical need for privacy-preserving machine learning in healthcare by developing novel federated learning approaches.',methodolo,
+  g: y: 'Differential privacy, secure multi-party computation, federated averaging'
+      expectedOutcom,
+  e: s: ['Privacy-preserving frameworkHealthcare AI models', 'Open-source toolkit']
+      publicatio,
+  n: s: [
   {
-  title: 'Privacy-Preserving Federated Learning in Healthcare',journal: 'Nature Machine Intelligence',year: 2024,doi: '10.1038/s42256-024-00789-8',citations: 45
+  titl,
+  e: 'Privacy-Preserving Federated Learning in Healthcare',journ,
+  a: l: 'Nature Machine Intelligence',ye,
+  a: r: 2024,d,
+  o: i: '10.1038/s42256-024-00789-8',citatio,
+  n: s: 45
 },
   {
-  title: 'Secure Multi-Party Computation for Medical Data',journal: 'IEEE Transactions on Medical Imaging',year: 2024,doi: '10.1109/TMI.2024.001234',citations: 18
+  tit,
+  l: e: 'Secure Multi-Party Computation for Medical Data',journ,
+  a: l: 'IEEE Transactions on Medical Imaging',ye,
+  a: r: 2024,d,
+  o: i: '10.1109/TMI.2024.001234',citatio,
+  n: s: 18
 },
   ]
-      tags: ['Federated LearningHealthcare', 'PrivacyAI Ethics', 'Medical Imaging']
-      featured: true,progress: 100,impact: 'very-high'
+      ta,
+  g: s: ['Federated LearningHealthcare', 'PrivacyAI Ethics', 'Medical Imaging']
+      featur,
+  e: d: true,progre,
+  s: s: 100,impa,
+  c: t: 'very-high'
 },
   {
-  id: 3,title: 'Zero-Trust Architecture for Industrial IoT',description: 'Researching and implementing zero-trust security frameworks specifically designed for industrial IoT environments.',category: 'security',status: 'active',type: 'prototypes',startDate: '2024-03-01',endDate: '2025-08-31',leadResearcher: 'Michael Rodriguez',team: ['Michael RodriguezDr. Jennifer Park', 'Robert KimEmily Watson']
-      funding: 1200000,institution: 'Carnegie Mellon University',abstract: 'This project develops and validates zero-trust security architectures for critical infrastructure and industrial IoT systems.',methodology: 'Threat modeling, security architecture design, prototype development, penetration testing';
-      expectedOutcomes: ['Zero-trust frameworkSecurity prototypes', 'Best practices guide']
-      publications: [
+  id: 3,tit,
+  l: e: 'Zero-Trust Architecture for Industrial IoT',descripti,
+  o: n: 'Researching and implementing zero-trust security frameworks specifically designed for industrial IoT environments.',catego,
+  r: y: 'security',stat,
+  u: s: 'active',ty,
+  p: e: 'prototypes',startDa,
+  t: e: '2024-03-01',endDa,
+  t: e: '2025-08-31',leadResearch,
+  e: r: 'Michael Rodriguez',te,
+  a: m: ['Michael RodriguezDr. Jennifer Park', 'Robert KimEmily Watson']
+      fundi,
+  n: g: 1200000,instituti,
+  o: n: 'Carnegie Mellon University',abstra,
+  c: t: 'This project develops and validates zero-trust security architectures for critical infrastructure and industrial IoT systems.',methodolo,
+  g: y: 'Threat modeling, security architecture design, prototype development, penetration testing'
+      expectedOutcom,
+  e: s: ['Zero-trust frameworkSecurity prototypes', 'Best practices guide']
+      publicatio,
+  n: s: [
   {
-  title: 'Zero-Trust Security for Industrial IoT',journal: 'IEEE Security & Privacy',year: 2024,doi: '10.1109/MSEC.2024.001234',citations: 12
+  titl,
+  e: 'Zero-Trust Security for Industrial IoT',journ,
+  a: l: 'IEEE Security & Privacy',ye,
+  a: r: 2024,d,
+  o: i: '10.1109/MSEC.2024.001234',citatio,
+  n: s: 12
 },
   ]
-      tags: ['Zero-TrustIndustrial IoT', 'CybersecurityCritical Infrastructure', 'Security Architecture']
-      featured: false,progress: 40,impact: 'high'
+      ta,
+  g: s: ['Zero-TrustIndustrial IoT', 'CybersecurityCritical Infrastructure', 'Security Architecture']
+      featur,
+  e: d: false,progre,
+  s: s: 40,impa,
+  c: t: 'high'
 },
   {
-  id: 4,title: 'Edge AI for Autonomous Vehicles',description: 'Developing lightweight AI models optimized for edge computing in autonomous vehicle systems.',category: 'emerging',status: 'planning',type: 'research',startDate: '2025-01-01',endDate: '2026-12-31',leadResearcher: 'Dr. David Thompson',team: ['Dr. David ThompsonDr. Lisa Chen', 'Marcus RodriguezJennifer Kim']
-      funding: 3000000,institution: 'UC Berkeley',abstract: 'This research focuses on creating efficient AI models that can run on edge devices in autonomous vehicles while maintaining high accuracy and reliability.',methodology: 'Model compression, knowledge distillation, edge computing optimization, real-time inference';
-      expectedOutcomes: ['Edge AI frameworkAutonomous vehicle models', 'Performance benchmarks']
-      publications: [],tags: ['Edge ComputingAutonomous Vehicles', 'AI OptimizationReal-time Systems', 'Computer Vision']
-      featured: false,progress: 15,impact: 'medium'
+  id: 4,tit,
+  l: e: 'Edge AI for Autonomous Vehicles',descripti,
+  o: n: 'Developing lightweight AI models optimized for edge computing in autonomous vehicle systems.',catego,
+  r: y: 'emerging',stat,
+  u: s: 'planning',ty,
+  p: e: 'research',startDa,
+  t: e: '2025-01-01',endDa,
+  t: e: '2026-12-31',leadResearch,
+  e: r: 'Dr. David Thompson',te,
+  a: m: ['Dr. David ThompsonDr. Lisa Chen', 'Marcus RodriguezJennifer Kim']
+      fundi,
+  n: g: 3000000,instituti,
+  o: n: 'UC Berkeley',abstra,
+  c: t: 'This research focuses on creating efficient AI models that can run on edge devices in autonomous vehicles while maintaining high accuracy and reliability.',methodolo,
+  g: y: 'Model compression, knowledge distillation, edge computing optimization, real-time inference'
+      expectedOutcom,
+  e: s: ['Edge AI frameworkAutonomous vehicle models', 'Performance benchmarks']
+      publicatio,
+  n: s: [],ta,
+  g: s: ['Edge ComputingAutonomous Vehicles', 'AI OptimizationReal-time Systems', 'Computer Vision']
+      featur,
+  e: d: false,progre,
+  s: s: 15,impa,
+  c: t: 'medium'
 },
   {
-  id: 5,title: 'Blockchain for Supply Chain Transparency',description: 'Investigating blockchain technology applications for enhancing supply chain transparency and traceability.',category: 'emerging',status: 'completed',type: 'collaborations',startDate: '2023-01-01',endDate: '2024-06-30',leadResearcher: 'Dr. Robert Kim',team: ['Dr. Robert KimSarah Johnson', 'Alex ThompsonEmily Chen']
-      funding: 900000,institution: 'Columbia University',abstract: 'This project explores how blockchain technology can improve supply chain transparency and enable better tracking of products from source to consumer.',methodology: 'Blockchain design, smart contracts, supply chain modeling, pilot implementation';
-      expectedOutcomes: ['Blockchain frameworkSupply chain pilots', 'Industry partnerships']
-      publications: [
+  id: 5,tit,
+  l: e: 'Blockchain for Supply Chain Transparency',descripti,
+  o: n: 'Investigating blockchain technology applications for enhancing supply chain transparency and traceability.',catego,
+  r: y: 'emerging',stat,
+  u: s: 'completed',ty,
+  p: e: 'collaborations',startDa,
+  t: e: '2023-01-01',endDa,
+  t: e: '2024-06-30',leadResearch,
+  e: r: 'Dr. Robert Kim',te,
+  a: m: ['Dr. Robert KimSarah Johnson', 'Alex ThompsonEmily Chen']
+      fundi,
+  n: g: 900000,instituti,
+  o: n: 'Columbia University',abstra,
+  c: t: 'This project explores how blockchain technology can improve supply chain transparency and enable better tracking of products from source to consumer.',methodolo,
+  g: y: 'Blockchain design, smart contracts, supply chain modeling, pilot implementation'
+      expectedOutcom,
+  e: s: ['Blockchain frameworkSupply chain pilots', 'Industry partnerships']
+      publicatio,
+  n: s: [
   {
-  title: 'Blockchain-Enabled Supply Chain Transparency',journal: 'Journal of Supply Chain Management',year: 2024,doi: '10.1111/jscm.12345',citations: 28
+  titl,
+  e: 'Blockchain-Enabled Supply Chain Transparency',journ,
+  a: l: 'Journal of Supply Chain Management',ye,
+  a: r: 2024,d,
+  o: i: '10.1111/jscm.12345',citatio,
+  n: s: 28
 },
   ]
-      tags: ['BlockchainSupply Chain', 'TransparencySmart Contracts', 'Traceability']
-      featured: false,progress: 100,impact: 'medium'
+      ta,
+  g: s: ['BlockchainSupply Chain', 'TransparencySmart Contracts', 'Traceability']
+      featur,
+  e: d: false,progre,
+  s: s: 100,impa,
+  c: t: 'medium'
 },
   {
-  id: 6,title: 'Neuromorphic Computing for Edge AI',description: 'Researching brain-inspired computing architectures for energy-efficient AI processing at the edge.',category: 'ai-ml',status: 'active',type: 'research',startDate: '2024-09-01',endDate: '2026-08-31',leadResearcher: 'Dr. Jennifer Park',team: ['Dr. Jennifer ParkDr. Michael Chen', 'Robert WilsonLisa Rodriguez']
-      funding: 2200000,institution: 'Georgia Tech',abstract: 'This project investigates neuromorphic computing approaches to create energy-efficient AI systems for edge computing applications.',methodology: 'Neuromorphic architecture design, spiking neural networks, hardware-software co-design';
-      expectedOutcomes: ['Neuromorphic frameworkEnergy-efficient models', 'Hardware prototypes']
-      publications: [
+  id: 6,tit,
+  l: e: 'Neuromorphic Computing for Edge AI',descripti,
+  o: n: 'Researching brain-inspired computing architectures for energy-efficient AI processing at the edge.',catego,
+  r: y: 'ai-ml',stat,
+  u: s: 'active',ty,
+  p: e: 'research',startDa,
+  t: e: '2024-09-01',endDa,
+  t: e: '2026-08-31',leadResearch,
+  e: r: 'Dr. Jennifer Park',te,
+  a: m: ['Dr. Jennifer ParkDr. Michael Chen', 'Robert WilsonLisa Rodriguez']
+      fundi,
+  n: g: 2200000,instituti,
+  o: n: 'Georgia Tech',abstra,
+  c: t: 'This project investigates neuromorphic computing approaches to create energy-efficient AI systems for edge computing applications.',methodolo,
+  g: y: 'Neuromorphic architecture design, spiking neural networks, hardware-software co-design'
+      expectedOutcom,
+  e: s: ['Neuromorphic frameworkEnergy-efficient models', 'Hardware prototypes']
+      publicatio,
+  n: s: [
   {
-  title: 'Neuromorphic Computing for Edge AI Applications',journal: 'Nature Electronics',year: 2024,doi: '10.1038/s41928-024-01123-4',citations: 19
+  titl,
+  e: 'Neuromorphic Computing for Edge AI Applications',journ,
+  a: l: 'Nature Electronics',ye,
+  a: r: 2024,d,
+  o: i: '10.1038/s41928-024-01123-4',citatio,
+  n: s: 19
 },
   ]
-      tags: ['Neuromorphic ComputingEdge AI', 'Energy EfficiencySpiking Neural Networks', 'Hardware Design']
-      featured: true,progress: 55,impact: 'high'
+      ta,
+  g: s: ['Neuromorphic ComputingEdge AI', 'Energy EfficiencySpiking Neural Networks', 'Hardware Design']
+      featur,
+  e: d: true,progre,
+  s: s: 55,impa,
+  c: t: 'high'
 },
   ]
-  // Update counts;
-  categories.forEach(cat => {
+  // Update counts
+  categories.forEach(cat () => {
   cat.count = researchProjects.filter(p => p.category === cat.id).length
 })
 
-  statuses.forEach(status => {
+  statuses.forEach(status () => {
   status.count = researchProjects.filter(p => p.status === status.id).length
 })
 
-  types.forEach(type => {
+  types.forEach(type () => {
   type.count = researchProjects.filter(p => p.type === type.id).length
 })
 
-  const filteredProjects = researchProjects.filter(project => {
-  const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredProjects = researchProjects.filter(project () => {
+  const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
 
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
-const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
-const matchesType = activeType === 'all' || project.type === activeType;
-
+    const matchesCategory = activeCategory === 'all' || project.category === activeCategory
+const matchesStatus = activeStatus === 'all' || project.status === activeStatus
+const matchesType = activeType === 'all' || project.type === activeType
     return matchesSearch && matchesCategory && matchesStatus && matchesType
 })
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (category,
+  I: d: string) () => {
   return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />
   }
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (stat,
+  u: s: string) () => {
   switch (status) {
-  case 'active': return 'text-green-400';
-      case 'completed': return 'text-blue-400';
-      case 'planning': return 'text-yellow-400';
-      case 'published': return 'text-purple-400';
-      default: return 'text-zion-slate-light'
+  case 'active': return 'text-green-400'
+      case 'completed': return 'text-blue-400'
+      case 'planning': return 'text-yellow-400'
+      case 'published': return 'text-purple-400'
+      defaul,
+  t: return 'text-zion-slate-light'
 },
   }
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impa,
+  c: t: string) () => {
   switch (impact) {
-  case 'very-high': return 'text-red-400';
-      case 'high': return 'text-orange-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-green-400';
-      default: return 'text-zion-slate-light'
+  case 'very-high': return 'text-red-400'
+      case 'high': return 'text-orange-400'
+      case 'medium': return 'text-yellow-400'
+      case 'low': return 'text-green-400'
+      defaul,
+  t: return 'text-zion-slate-light'
 },
   }
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateStri,
+  n: g: string) () => {
   return new Date(dateString).toLocaleDateString('en-US', {
-  year: 'numeric',month: 'short'
+  ye,
+  a: r: 'numeric',mon,
+  t: h: 'short'
 })
   }
 
-  const formatFunding = (amount: number) => {
+  const formatFunding = (amou,
+  n: t: number) () => {
   if (if (amount >= 1000000) {
   ) {
       return `$${(amount / 1000000).toFixed(1)}M`
@@ -182,7 +378,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */},
+      {/* Hero Section */},
   }
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -192,80 +388,89 @@ const matchesType = activeType === 'all' || project.type === activeType;
             </div>
           </div>
           <h1 className="text-5xl font-bold text-white mb-6">
-            Research & Innovation;
+            Research & Innovation
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.;
+            Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
           </p>
         </div>
       </div>
 
-      {{/* Search and Filters */},
+      {/* Search and Filters */},
   }
       <div className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {{/* Search Bar */},
+            {/* Search Bar */},
   }
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input;
-                type="text";
-                value={{searchQuery},
+              <input
+                type="text"
+                value={searchQuery},
   }
-                onChange={{(e) => setSearchQuery(e.target.value)},
+                onChange={(e) => setSearchQuery(e.target.value)},
   }
-                placeholder="Search research projects...";
-                className="className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
+                placeholder="Search research projects..."
+                className="className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent";"
               />
             </div>
 
-            {{/* Filters */},
+            {/* Filters */},
   }
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {{/* Categories */},
+            <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-6 mb-8">
+              {/* Categories */},
   }
               <div className="space-y-3">
                 <label className="text-white font-medium">Category</label>
                 <div className="flex flex-wrap gap-2">
                   {categories.slice(0, 4).map((category) => (
-  <button;
-                      key={{category.id},
+  <button
+                      key={category.id},
   }
-                      onClick={{onClick={() => setActiveCategory(category.id)},
+                      onClick={onClick={() => setActiveCategory(category.id)},
   },
   }
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-  activeCategory === category.id;
-                          ? 'bg-zion-cyan text-zion-slate-dark';
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+  activeCategory === category.id
+                          ? 'bg-zion-cyan text-zion-slate-dark'
+                          : 'bg-zion-slate text-zion-slate-light,
+  hove: r: bg-zion-slate-light hove,
+  r:text-white'
 }`}
                     >
-                      {{category.icon},
+                      {category.icon},
   },
-  {{category.name},
+  {category.name},
   }
                     </button>
                   ))}
                 </div>
               </div>
 
-              {{/* Status */},
+              {/* Status */},
   }
               <div className="space-y-3">
                 <label className="text-white font-medium">Status</label>
                 <div className="flex flex-wrap gap-2">
                   {statuses.map((status) => (
-  <button;
-                      key={{status.id},
+  <button
+                      key={status.id},
   }
-                      onClick={{onClick={() => setActiveStatus(status.id)},
+                      onClick={onClick={() => setActiveStatus(status.id)},
   },
   }
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-  activeStatus === status.id;
-                          ? 'bg-zion-purple text-white';
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+  activeStatus === status.id
+                          ? 'bg-zion-purple text-white'
+                          : 'bg-zion-slate text-zion-slate-light,
+  hove: r: bg-zion-slate-light hove,
+  r:text-white'
 }`}
                     >
                       {status.name} ({status.count})
@@ -274,22 +479,24 @@ const matchesType = activeType === 'all' || project.type === activeType;
                 </div>
               </div>
 
-              {{/* Types */},
+              {/* Types */},
   }
               <div className="space-y-3">
                 <label className="text-white font-medium">Type</label>
                 <div className="flex flex-wrap gap-2">
                   {types.map((type) => (
-  <button;
-                      key={{type.id},
+  <button
+                      key={type.id},
   }
-                      onClick={{onClick={() => setActiveType(type.id)},
+                      onClick={onClick={() => setActiveType(type.id)},
   },
   }
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-  activeType === type.id;
-                          ? 'bg-zion-cyan text-zion-slate-dark';
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+  activeType === type.id
+                          ? 'bg-zion-cyan text-zion-slate-dark'
+                          : 'bg-zion-slate text-zion-slate-light,
+  hove: r: bg-zion-slate-light hove,
+  r:text-white'
 }`}
                     >
                       {type.name} ({type.count})
@@ -302,32 +509,34 @@ const matchesType = activeType === 'all' || project.type === activeType;
         </div>
       </div>
 
-      {{/* Featured Research */},
+      {/* Featured Research */},
   },
   {researchProjects.filter(p => p.featured).length > 0 && (
   <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Research Projects;
+              Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1,
+  l: g:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {researchProjects.filter(p => p.featured).map((project) => (
-  <div;
-                  key={{project.id},
+  <div
+                  key={project.id},
   }
-                  className="className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow";"
+                  className="className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden,
+  hove: r:shadow-lg transition-shadow";"
                 >
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured;
+                        Featured
                       </span>
                     </div>
                     <div className="absolute top-4 right-4">
                       <div className="flex items-center gap-1 text-white">
                         <span className={`text-sm font-medium ${getImpactColor(project.impact)}`}>
-                          {{project.impact.replace('- ').toUpperCase()},
+                          {project.impact.replace('- ').toUpperCase()},
   }
                         </span>
                       </div>
@@ -348,14 +557,14 @@ const matchesType = activeType === 'all' || project.type === activeType;
 
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
-                      {{getCategoryIcon(project.category)},
+                      {getCategoryIcon(project.category)},
   }
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {{categories.find(c => c.id === project.category)?.name},
+                        {categories.find(c => c.id === project.category)?.name},
   }
                       </span>
                       <span className={`text-sm font-medium ${getStatusColor(project.status)}`}>
-                        {{statuses.find(s => s.id === project.status)?.name},
+                        {statuses.find(s => s.id === project.status)?.name},
   }
                       </span>
                     </div>
@@ -366,16 +575,17 @@ const matchesType = activeType === 'all' || project.type === activeType;
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {project.team.length} researchers;
+                        {project.team.length} researchers
                       </div>
                       <div className="flex items-center gap-1">
                         <FileText className="w-4 h-4" />
-                        {project.publications.length} publications;
+                        {project.publications.length} publications
                       </div>
                     </div>
 
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                      Learn More;
+                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold,
+  hove: r:bg-zion-cyan-light transition-colors">
+                      Learn More
                     </button>
                   </div>
                 </div>
@@ -384,43 +594,45 @@ const matchesType = activeType === 'all' || project.type === activeType;
           </div>
         </div>
       )},
-  {{/* All Research Projects */},
+  {/* All Research Projects */},
   }
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Research Projects;
+            All Research Projects
           </h2>
 
           {filteredProjects.length > 0 ? (
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1,
+  l: g:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredProjects.map((project) => (
-  <div;
-                  key={{project.id},
+  <div
+                  key={project.id},
   }
-                  className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
+                  className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6,
+  hove: r:shadow-lg transition-shadow";"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      {{getCategoryIcon(project.category)},
+                      {getCategoryIcon(project.category)},
   }
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {{categories.find(c => c.id === project.category)?.name},
+                        {categories.find(c => c.id === project.category)?.name},
   }
                       </span>
                       {project.featured && (
   <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured;
+                          Featured
                         </span>
                       )}
                     </div>
                     <div className="text-right">
                       <div className={`text-sm font-medium ${getStatusColor(project.status)}`}>
-                        {{statuses.find(s => s.id === project.status)?.name},
+                        {statuses.find(s => s.id === project.status)?.name},
   }
                       </div>
                       <div className={`text-xs font-medium ${getImpactColor(project.impact)}`}>
-                        {project.impact.replace('- ').toUpperCase()} Impact;
+                        {project.impact.replace('- ').toUpperCase()} Impact
                       </div>
                     </div>
                   </div>
@@ -430,12 +642,12 @@ const matchesType = activeType === 'all' || project.type === activeType;
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.slice(0, 4).map((tag, index) => (
-  <span;
-                        key={{index},
+  <span
+                        key={index},
   }
                         className="className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full";"
                       >
-                        {{tag},
+                        {tag},
   }
                       </span>
                     ))}
@@ -466,9 +678,10 @@ const matchesType = activeType === 'all' || project.type === activeType;
                       <span>{project.progress}%</span>
                     </div>
                     <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
-                      <div;
+                      <div
                         className="className="bg-zion-cyan h-2 rounded-full transition-all duration-300";"
-                        style={{ width: `${project.progress}%` },
+                        style={ wid,
+  t: h: `${project.progress}%` },
   }
                       ></div>
                     </div>
@@ -478,24 +691,27 @@ const matchesType = activeType === 'all' || project.type === activeType;
                     <div className="text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1 mb-1">
                         <Users className="w-4 h-4" />
-                        Lead: {{project.leadResearcher},
+                        Le,
+  a: d: {project.leadResearcher},
   }
                       </div>
                       <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
-                        {{project.institution},
+                        {project.institution},
   }
                       </div>
                     </div>
 
                     <div className="flex gap-2">
-                      <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
+                      <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold,
+  hove: r: bg-zion-purple-light transition-colors inline-flex items-center gap-2">
                         <FileText className="w-4 h-4" />
-                        Details;
+                        Details
                       </button>
                       {project.publications.length > 0 && (
-  <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                          Papers;
+  <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hove,
+  r:bg-zion-cyan-light transition-colors">
+                          Papers
                         </button>
                       )}
                     </div>
@@ -508,29 +724,33 @@ const matchesType = activeType === 'all' || project.type === activeType;
               <FlaskConical className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
               <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories;
+                Try adjusting your search terms or browse all categories
               </p>
             </div>
           )}
         </div>
       </div>
 
-      {{/* CTA Section */},
+      {/* CTA Section */},
   }
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Join Our Research Community;
+            Join Our Research Community
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.;
+            Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-              Explore Collaborations;
+          <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center max-w-md mx-auto">
+            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold,
+  hove: r:bg-zion-cyan-light transition-colors">
+              Explore Collaborations
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
-              Contact Research Team;
+            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+  hove: r:bg-white hove,
+  r:text-zion-slate-dark transition-colors">
+              Contact Research Team
             </button>
           </div>
         </div>

@@ -1,236 +1,397 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { SEO } from "@/components/SEO"
+import { Link } from "react-router-dom"
 import {
-  Brain;
+  Brain
   Zap,
   Shield,
   Cloud,
   Database,
   Network,
-  Cpu;
-  CheckCircle;
-  Star;
-  TrendingUp;
-  Users;
-  Globe;
-  Rocket;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Atom;
-  Code;
-  BarChart3;
-  Workflow;
-  Target;
-  Lock;
-  Eye;
-  Search;
-  Filter;
-  ExternalLink;
+  Cpu
+  CheckCircle
+  Star
+  TrendingUp
+  Users
+  Globe
+  Rocket
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Atom
+  Code
+  BarChart3
+  Workflow
+  Target
+  Lock
+  Eye
+  Search
+  Filter
+  ExternalLink
   Server
-} from "lucide-react";
-import { innovativeServices2029, serviceCategories, pricingTiers, Service } from "../data/innovativeServices2029";
+} from "lucide-react"
+import { innovativeServices2029, serviceCategories, pricingTiers, Service } from "../data/innovativeServices2029"
 export default function ComprehensiveServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const const categories = {
   = {
-    'all': {{ name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },
+    'all': { na,
+  m: e: 'All Services', ic,
+  o: n: <Rocket className="w-6 h-6" />, col,
+  o: r: 'from-cyan-500 to-blue-500' },
   }
-    'ai-ml': {{ name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },
+    'ai-ml': { na,
+  m: e: 'AI & Machine Learning', ic,
+  o: n: <Brain className="w-6 h-6" />, col,
+  o: r: 'from-purple-500 to-pink-500' },
   }
-    'quantum': {{ name: 'Quantum Computing', icon: <Atom className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },
+    'quantum': { na,
+  m: e: 'Quantum Computing', ic,
+  o: n: <Atom className="w-6 h-6" />, col,
+  o: r: 'from-indigo-500 to-purple-500' },
   }
-    'devops': {{ name: 'DevOps & Automation', icon: <Workflow className="w-6 h-6" />, color: 'from-blue-500 to-cyan-500' },
+    'devops': { na,
+  m: e: 'DevOps & Automation', ic,
+  o: n: <Workflow className="w-6 h-6" />, col,
+  o: r: 'from-blue-500 to-cyan-500' },
   }
-    'cybersecurity': {{ name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, color: 'from-red-500 to-orange-500' },
+    'cybersecurity': { na,
+  m: e: 'Cybersecurity', ic,
+  o: n: <Shield className="w-6 h-6" />, col,
+  o: r: 'from-red-500 to-orange-500' },
   }
-    'analytics': {{ name: 'Analytics & BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },
+    'analytics': { na,
+  m: e: 'Analytics & BI', ic,
+  o: n: <BarChart3 className="w-6 h-6" />, col,
+  o: r: 'from-green-500 to-emerald-500' },
   }
-    'cloud': {{ name: 'Cloud & Infrastructure', icon: <Cloud className="w-6 h-6" />, color: 'from-sky-500 to-blue-500' },
+    'cloud': { na,
+  m: e: 'Cloud & Infrastructure', ic,
+  o: n: <Cloud className="w-6 h-6" />, col,
+  o: r: 'from-sky-500 to-blue-500' },
   }
-    'micro-saas': {{ name: 'Micro SAAS', icon: <Code className="w-6 h-6" />, color: 'from-yellow-500 to-orange-500' },
+    'micro-saas': { na,
+  m: e: 'Micro SAAS', ic,
+  o: n: <Code className="w-6 h-6" />, col,
+  o: r: 'from-yellow-500 to-orange-500' },
   },
   }
   const services = [
-  // AI & Machine Learning;
+  // AI & Machine Learning
     {
-  id: 'ai-quantum-hybrid',title: 'AI Quantum Hybrid Platform',description: 'Revolutionary AI-Quantum hybrid platform combining artificial intelligence with quantum computing for unprecedented computational power.',category: 'quantum',price: '$49,999 - $199,999';
-      features: ['Quantum-AI IntegrationHybrid Processing', 'Advanced MLReal-time Optimization']
-      icon: <Atom className="w-8 h-8" />,color: 'from-purple-500 to-pink-500',link: '/services/ai-quantum-hybrid-platform',featured: true
+  id: 'ai-quantum-hybrid',tit,
+  l: e: 'AI Quantum Hybrid Platform',descripti,
+  o: n: 'Revolutionary AI-Quantum hybrid platform combining artificial intelligence with quantum computing for unprecedented computational power.',catego,
+  r: y: 'quantum',pri,
+  c: e: '$49,999 - $199,999'
+      featur,
+  e: s: ['Quantum-AI IntegrationHybrid Processing', 'Advanced MLReal-time Optimization']
+      ic,
+  o: n: <Atom className="w-8 h-8" />,col,
+  o: r: 'from-purple-500 to-pink-500',li,
+  n: k: '/services/ai-quantum-hybrid-platform',featur,
+  e: d: true
 },
   {
-  id: 'ai-devops-automation',title: 'AI DevOps Automation Platform',description: 'AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.';
-      category: 'devops',price: '$29,999 - $119,999';
-      features: ['AI Code ReviewSmart CI/CD', 'Predictive MonitoringAuto-scaling']
-      icon: <Workflow className="w-8 h-8" />,color: 'from-blue-500 to-cyan-500',link: '/services/ai-devops-automation-platform',featured: true
+  id: 'ai-devops-automation',tit,
+  l: e: 'AI DevOps Automation Platform',descripti,
+  o: n: 'AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.'
+      catego,
+  r: y: 'devops',pri,
+  c: e: '$29,999 - $119,999'
+      featur,
+  e: s: ['AI Code ReviewSmart CI/CD', 'Predictive MonitoringAuto-scaling']
+      ic,
+  o: n: <Workflow className="w-8 h-8" />,col,
+  o: r: 'from-blue-500 to-cyan-500',li,
+  n: k: '/services/ai-devops-automation-platform',featur,
+  e: d: true
 },
   {
-  id: 'ai-business-intelligence',title: 'AI Business Intelligence Analytics',description: 'Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights.',category: 'analytics',price: '$19,999 - $79,999';
-      features: ['Predictive AnalyticsReal-time Insights', 'AI-powered ReportsCustom Dashboards']
-      icon: <BarChart3 className="w-8 h-8" />,color: 'from-green-500 to-emerald-500',link: '/services/ai-business-intelligence-analytics',featured: true
+  id: 'ai-business-intelligence',tit,
+  l: e: 'AI Business Intelligence Analytics',descripti,
+  o: n: 'Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights.',catego,
+  r: y: 'analytics',pri,
+  c: e: '$19,999 - $79,999'
+      featur,
+  e: s: ['Predictive AnalyticsReal-time Insights', 'AI-powered ReportsCustom Dashboards']
+      ic,
+  o: n: <BarChart3 className="w-8 h-8" />,col,
+  o: r: 'from-green-500 to-emerald-500',li,
+  n: k: '/services/ai-business-intelligence-analytics',featur,
+  e: d: true
 },
   {
-  id: 'ai-workflow-orchestrator',title: 'AI Workflow Orchestrator',description: 'Intelligent workflow automation platform that orchestrates complex business processes with AI-driven decision making.',category: 'ai-ml',price: '$24,999 - $99,999';
-      features: ['Process AutomationAI Decision Making', 'Workflow OptimizationReal-time Monitoring']
-      icon: <Brain className="w-8 h-8" />,color: 'from-purple-500 to-indigo-500',link: '/services/ai-workflow-orchestrator',featured: false
+  id: 'ai-workflow-orchestrator',tit,
+  l: e: 'AI Workflow Orchestrator',descripti,
+  o: n: 'Intelligent workflow automation platform that orchestrates complex business processes with AI-driven decision making.',catego,
+  r: y: 'ai-ml',pri,
+  c: e: '$24,999 - $99,999'
+      featur,
+  e: s: ['Process AutomationAI Decision Making', 'Workflow OptimizationReal-time Monitoring']
+      ic,
+  o: n: <Brain className="w-8 h-8" />,col,
+  o: r: 'from-purple-500 to-indigo-500',li,
+  n: k: '/services/ai-workflow-orchestrator',featur,
+  e: d: false
 },
   {
-  id: 'ai-data-governance',title: 'AI Data Governance Platform',description: 'Comprehensive AI-powered data governance platform ensuring data quality, compliance, and security.';
-      category: 'ai-ml',price: '$34,999 - $129,999';
-      features: ['Data QualityCompliance Management', 'AI MonitoringSecurity Controls']
-      icon: <Shield className="w-8 h-8" />,color: 'from-indigo-500 to-purple-500',link: '/services/ai-data-governance-platform',featured: false
+  id: 'ai-data-governance',tit,
+  l: e: 'AI Data Governance Platform',descripti,
+  o: n: 'Comprehensive AI-powered data governance platform ensuring data quality, compliance, and security.'
+      catego,
+  r: y: 'ai-ml',pri,
+  c: e: '$34,999 - $129,999'
+      featur,
+  e: s: ['Data QualityCompliance Management', 'AI MonitoringSecurity Controls']
+      ic,
+  o: n: <Shield className="w-8 h-8" />,col,
+  o: r: 'from-indigo-500 to-purple-500',li,
+  n: k: '/services/ai-data-governance-platform',featur,
+  e: d: false
 },
   {
-  id: 'ai-customer-experience',title: 'AI Customer Experience Analytics',description: 'Advanced AI-powered customer experience analytics platform for deep customer insights and optimization.',category: 'analytics',price: '$22,999 - $89,999';
-      features: ['Customer InsightsBehavior Analysis', 'Predictive ModelingExperience Optimization']
-      icon: <Users className="w-8 h-8" />,color: 'from-pink-500 to-rose-500',link: '/services/ai-customer-experience-analytics',featured: false
+  id: 'ai-customer-experience',tit,
+  l: e: 'AI Customer Experience Analytics',descripti,
+  o: n: 'Advanced AI-powered customer experience analytics platform for deep customer insights and optimization.',catego,
+  r: y: 'analytics',pri,
+  c: e: '$22,999 - $89,999'
+      featur,
+  e: s: ['Customer InsightsBehavior Analysis', 'Predictive ModelingExperience Optimization']
+      ic,
+  o: n: <Users className="w-8 h-8" />,col,
+  o: r: 'from-pink-500 to-rose-500',li,
+  n: k: '/services/ai-customer-experience-analytics',featur,
+  e: d: false
 },
   {
-  id: 'ai-financial-risk',title: 'AI Financial Risk Management',description: 'Intelligent financial risk management platform using AI to predict and mitigate financial risks.',category: 'ai-ml',price: '$39,999 - $149,999';
-      features: ['Risk AssessmentPredictive Modeling', 'Real-time MonitoringCompliance Reporting']
-      icon: <TrendingUp className="w-8 h-8" />,color: 'from-emerald-500 to-teal-500',link: '/services/ai-financial-risk-management',featured: false
+  id: 'ai-financial-risk',tit,
+  l: e: 'AI Financial Risk Management',descripti,
+  o: n: 'Intelligent financial risk management platform using AI to predict and mitigate financial risks.',catego,
+  r: y: 'ai-ml',pri,
+  c: e: '$39,999 - $149,999'
+      featur,
+  e: s: ['Risk AssessmentPredictive Modeling', 'Real-time MonitoringCompliance Reporting']
+      ic,
+  o: n: <TrendingUp className="w-8 h-8" />,col,
+  o: r: 'from-emerald-500 to-teal-500',li,
+  n: k: '/services/ai-financial-risk-management',featur,
+  e: d: false
 },
   {
-  id: 'ai-code-review-security',title: 'AI Code Review Security Scanner',description: 'Advanced AI-powered code review and security scanning platform for automated vulnerability detection.',category: 'cybersecurity',price: '$27,999 - $109,999';
-      features: ['Code AnalysisSecurity Scanning', 'Vulnerability DetectionAutomated Reviews']
-      icon: <Code className="w-8 h-8" />,color: 'from-red-500 to-pink-500',link: '/services/ai-code-review-security-scanner',featured: false
+  id: 'ai-code-review-security',tit,
+  l: e: 'AI Code Review Security Scanner',descripti,
+  o: n: 'Advanced AI-powered code review and security scanning platform for automated vulnerability detection.',catego,
+  r: y: 'cybersecurity',pri,
+  c: e: '$27,999 - $109,999'
+      featur,
+  e: s: ['Code AnalysisSecurity Scanning', 'Vulnerability DetectionAutomated Reviews']
+      ic,
+  o: n: <Code className="w-8 h-8" />,col,
+  o: r: 'from-red-500 to-pink-500',li,
+  n: k: '/services/ai-code-review-security-scanner',featur,
+  e: d: false
 },
   {
-  id: 'zero-trust-network',title: 'Zero Trust Network Access',description: 'Modern zero-trust security architecture providing secure access to network resources.',category: 'cybersecurity',price: '$32,999 - $119,999';
-      features: ['Zero TrustIdentity Management', 'Secure AccessNetwork Security']
-      icon: <Lock className="w-8 h-8" />,color: 'from-orange-500 to-red-500',link: '/services/zero-trust-network-access',featured: false
+  id: 'zero-trust-network',tit,
+  l: e: 'Zero Trust Network Access',descripti,
+  o: n: 'Modern zero-trust security architecture providing secure access to network resources.',catego,
+  r: y: 'cybersecurity',pri,
+  c: e: '$32,999 - $119,999'
+      featur,
+  e: s: ['Zero TrustIdentity Management', 'Secure AccessNetwork Security']
+      ic,
+  o: n: <Lock className="w-8 h-8" />,col,
+  o: r: 'from-orange-500 to-red-500',li,
+  n: k: '/services/zero-trust-network-access',featur,
+  e: d: false
 },
   {
-  id: 'cloud-devops',title: 'Cloud DevOps Solutions',description: 'Comprehensive cloud DevOps solutions for modern application development and deployment.',category: 'cloud',price: '$18,999 - $79,999';
-      features: ['Cloud MigrationCI/CD Pipelines', 'Infrastructure as CodeMonitoring']
-      icon: <Cloud className="w-8 h-8" />,color: 'from-sky-500 to-blue-500',link: '/services/cloud-devops',featured: false
+  id: 'cloud-devops',tit,
+  l: e: 'Cloud DevOps Solutions',descripti,
+  o: n: 'Comprehensive cloud DevOps solutions for modern application development and deployment.',catego,
+  r: y: 'cloud',pri,
+  c: e: '$18,999 - $79,999'
+      featur,
+  e: s: ['Cloud MigrationCI/CD Pipelines', 'Infrastructure as CodeMonitoring']
+      ic,
+  o: n: <Cloud className="w-8 h-8" />,col,
+  o: r: 'from-sky-500 to-blue-500',li,
+  n: k: '/services/cloud-devops',featur,
+  e: d: false
 },
   {
-  id: 'it-infrastructure',title: 'IT Infrastructure Solutions',description: 'Enterprise-grade IT infrastructure solutions for modern business operations.',category: 'cloud',price: '$25,999 - $99,999';
-      features: ['Infrastructure DesignNetwork Solutions', 'Security Implementation24/7 Support']
-      icon: <Server className="w-8 h-8" />,color: 'from-slate-500 to-gray-500',link: '/services/it-infrastructure',featured: false
+  id: 'it-infrastructure',tit,
+  l: e: 'IT Infrastructure Solutions',descripti,
+  o: n: 'Enterprise-grade IT infrastructure solutions for modern business operations.',catego,
+  r: y: 'cloud',pri,
+  c: e: '$25,999 - $99,999'
+      featur,
+  e: s: ['Infrastructure DesignNetwork Solutions', 'Security Implementation24/7 Support']
+      ic,
+  o: n: <Server className="w-8 h-8" />,col,
+  o: r: 'from-slate-500 to-gray-500',li,
+  n: k: '/services/it-infrastructure',featur,
+  e: d: false
 },
   {
-  id: 'micro-crm',title: 'Micro CRM Platform',description: 'Lightweight, scalable CRM solution designed for growing businesses and startups.';
-      category: 'micro-saas',price: '$9,999 - $39,999';
-      features: ['Customer ManagementSales Tracking', 'AutomationAnalytics']
-      icon: <Users className="w-8 h-8" />,color: 'from-blue-500 to-indigo-500',link: '/services/micro-crm',featured: false
+  id: 'micro-crm',tit,
+  l: e: 'Micro CRM Platform',descripti,
+  o: n: 'Lightweight, scalable CRM solution designed for growing businesses and startups.'
+      catego,
+  r: y: 'micro-saas',pri,
+  c: e: '$9,999 - $39,999'
+      featur,
+  e: s: ['Customer ManagementSales Tracking', 'AutomationAnalytics']
+      ic,
+  o: n: <Users className="w-8 h-8" />,col,
+  o: r: 'from-blue-500 to-indigo-500',li,
+  n: k: '/services/micro-crm',featur,
+  e: d: false
 },
   ]
-  const filteredServices = services.filter(service => {
-  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = services.filter(service () => {
+  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()))
     return matchesCategory && matchesSearch
 })
 
   const const contactInfo = {
   = {
-    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008, Middletown DE 19709';
-    website: 'https://ziontechgroup.com'
+    pho,
+  n: e: '+1 302 464 0950',ema,
+  i: l: 'kleber@ziontechgroup.com',addre,
+  s: s: '364 E Main St STE 1008, Middletown DE 19709'
+    websi,
+  t: e: 'http,
+  s://ziontechgroup.com'
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <SEO ;
-        title="Comprehensive Services Showcase 2029 | Zion Tech Group";
-        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.";
-        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services";
+      <SEO 
+        title="Comprehensive Services Showcase 2029 | Zion Tech Group"
+        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
+        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services"
       />
 
-      {{/* Hero Section */},
+      {/* Hero Section */},
   }
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 30 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 30 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl mb-8 border border-cyan-400/30">
               <Rocket className="w-10 h-10 text-cyan-400" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            <h1 className="text-5xl,
+  m: d: text-7xl font-bold mb-8">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Comprehensive Services;
+                Comprehensive Services
               </span>
               <br />
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Showcase 2029;
+                Showcase 2029
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            <p className="text-xl m,
+  d:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
               Experience the future of technology with our revolutionary AI-powered, quantum-secure,
-  and autonomous business solutions designed to transform industries and drive unprecedented growth.;
+  and autonomous business solutions designed to transform industries and drive unprecedented growth.
             </p>
-            ;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-                href="tel:+13024640950";
-                className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";"
+            
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+              <a
+                href="t,
+  e: l:+13024640950"
+                className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-lg,
+  hove: r:from-cyan-700,
+  hove: r:to-purple-700 transition-all duration-300,
+  transform: hover:scale-105";"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Started Today;
+                Get Started Today
               </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300";"
+              <a
+                href="mail,
+  t: o:kleber@ziontechgroup.com"
+                className="className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg,
+  hove: r:bg-cyan-400 hove,
+  r:text-white transition-all duration-300";"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Contact Us;
+                Contact Us
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {{/* Search and Filter Section */},
+      {/* Search and Filter Section */},
   }
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {{/* Search */},
+          <div className="flex flex-col l,
+  g:flex-row gap-6 items-center justify-between">
+            {/* Search */},
   }
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={{searchTerm},
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm},
   }
-                onChange={{(e) => setSearchTerm(e.target.value)},
+                onChange={(e) => setSearchTerm(e.target.value)},
   }
-                className="className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20";"
+                className="className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:border-cyan-400/50,
+  focu: s:ring-2 focu,
+  s:ring-cyan-400/20";"
               />
             </div>
 
-            {{/* Category Filter */},
+            {/* Category Filter */},
   }
             <div className="flex flex-wrap gap-2">
               {Object.entries(categories).map(([key, category]) => (
-  <button;
-                  key={{key},
+  <button
+                  key={key},
   }
-                  onClick={{onClick={() => setSelectedCategory(key)},
+                  onClick={onClick={() => setSelectedCategory(key)},
   },
   }
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-  selectedCategory === key;
-                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
-                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300 hover:bg-white/10 hover:border-cyan-400/40'
+  selectedCategory === key
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300,
+  hove: r: bg-white/10 hove,
+  r:border-cyan-400/40'
 }`}
                 >
                   <div className="flex items-center space-x-2">
-                    {{category.icon},
+                    {category.icon},
   }
                     <span>{category.name}</span>
                   </div>
@@ -241,88 +402,108 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
         </div>
       </section>
 
-      {{/* Services Grid */},
+      {/* Services Grid */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 30 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 30 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Technology Solutions;
+            <h2 className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6">
+              Revolutionary Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our comprehensive portfolio of cutting-edge services;
+              Choose from our comprehensive portfolio of cutting-edge services
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 l,
+  g:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-  <motion.div;
-                key={{service.id},
+  <motion.div
+                key={service.id},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
-                viewport={{ once: true },
+                viewport={ on,
+  c: e: true },
   }
                 className={`group cursor-pointer ${
   service.featured ? 'ring-2 ring-cyan-400/50' : ''
 }`}
               >
                 <Link to={service.link}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 h-full hover-lift">
+                  <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8,
+  hove: r: bg-white/10 hove,
+  r:border-cyan-400/40 transition-all duration-300 h-full hover-lift">
                     {service.featured && (
   <div className="text-center mb-4">
                         <span className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                          Featured;
+                          Featured
                         </span>
                       </div>
                     )}
-                    ;
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      {{service.icon},
+                    
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hov,
+  e: r:scale-110 transition-transform duration-300`}>
+                      {service.icon},
   }
                     </div>
-                    ;
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      {{service.title},
+                    
+                    <h3 className="text-xl font-bold text-white mb-4 group-hov,
+  e: r:text-cyan-400 transition-colors duration-300">
+                      {service.title},
   }
                     </h3>
-                    ;
+                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      {{service.description},
+                      {service.description},
   }
                     </p>
-                    ;
+                    
                     <div className="mb-6">
                       <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                     </div>
-                    ;
+                    
                     <ul className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {{feature},
+                          {feature},
   }
                         </li>
                       ))}
                     </ul>
-                    ;
-                    <div className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300">
+                    
+                    <div className="flex items-center text-cyan-400 group-hov,
+  e: r: text-cyan-300 transition-colors duration-300">
                       <span className="font-semibold">Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="w-4 h-4 ml-2 group-hove,
+  r:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -331,10 +512,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </div>
 
           {filteredServices.length === 0 && (
-  <motion.div;
-              initial={{ opacity: 0 },
+  <motion.div
+              initial={ opaci,
+  t: y: 0 },
   }
-              animate={{ opacity: 1 },
+              animate={ opaci,
+  t: y: 1 },
   }
               className="className="text-center py-20";"
             >
@@ -343,53 +526,68 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
               <p className="text-gray-300 mb-8">Try adjusting your search or filter criteria</p>
-              <button;
-                onClick={() => {
+              <button
+                onClick={() () => {
                   setSearchTerm('')
                   setSelectedCategory('all')
                 },
   }
-                className="className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300";"
+                className="className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg,
+  hove: r: from-cyan-600 hove,
+  r:to-purple-600 transition-all duration-300";"
               >
-                Clear Filters;
+                Clear Filters
               </button>
             </motion.div>
           )}
         </div>
       </section>
 
-      {{/* Contact Section */},
+      {/* Contact Section */},
   }
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 30 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 30 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
-            viewport={{ once: true },
+            viewport={ on,
+  c: e: true },
   }
             className="className="text-center mb-16";"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?;
+            <h2 className="text-4xl,
+  m: d: text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact us today to learn how our innovative solutions can drive growth and efficiency;
+              Contact us today to learn how our innovative solutions can drive growth and efficiency
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 },
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-8">
+            <motion.div
+              initial={ opacit,
+  y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.5, delay: 0.1 },
+              transition={ durati,
+  o: n: 0.5, del,
+  a: y: 0.1 },
   }
-              viewport={{ once: true },
+              viewport={ on,
+  c: e: true },
   }
               className="className="text-center";"
             >
@@ -398,22 +596,29 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
               <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-              <a ;
-                href="tel:+13024640950" ;
-                className="className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300";"
+              <a 
+                href="t,
+  e: l: +13024640950" 
+                className="className="text-cyan-400,
+  hove: r:text-cyan-300 transition-colors duration-300";"
               >
-                Call Now;
+                Call Now
               </a>
             </motion.div>
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 },
+            <motion.div
+              initial={ opacit,
+  y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.5, delay: 0.2 },
+              transition={ durati,
+  o: n: 0.5, del,
+  a: y: 0.2 },
   }
-              viewport={{ once: true },
+              viewport={ on,
+  c: e: true },
   }
               className="className="text-center";"
             >
@@ -422,22 +627,29 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
               <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-              <a ;
-                href="mailto:kleber@ziontechgroup.com" ;
-                className="className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300";"
+              <a 
+                href="mail,
+  t: o: kleber@ziontechgroup.com" 
+                className="className="text-cyan-400,
+  hove: r:text-cyan-300 transition-colors duration-300";"
               >
-                Send Email;
+                Send Email
               </a>
             </motion.div>
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 },
+            <motion.div
+              initial={ opacit,
+  y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.5, delay: 0.3 },
+              transition={ durati,
+  o: n: 0.5, del,
+  a: y: 0.3 },
   }
-              viewport={{ once: true },
+              viewport={ on,
+  c: e: true },
   }
               className="className="text-center";"
             >
@@ -446,13 +658,15 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
               <p className="text-gray-300 mb-4">364 E Main St STE 1008, Middletown DE 19709</p>
-              <a ;
-                href="https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" ;
-                target="_blank" ;
-                rel="noopener noreferrer" ;
-                className="className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300";"
+              <a 
+                href="htt,
+  p: s: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="className="text-cyan-400 hove,
+  r:text-cyan-300 transition-colors duration-300";"
               >
-                View on Map;
+                View on Map
               </a>
             </motion.div>
           </div>
@@ -461,4 +675,4 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
     </div>
   )
 }
-export default ComprehensiveServicesShowcase2029;
+export default ComprehensiveServicesShowcase2029

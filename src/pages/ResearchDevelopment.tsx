@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 export default function ResearchDevelopment() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">

@@ -1,22 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 interface User {
-  id: string,email: string,name: string,role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
+  id: string,ema,
+  i: l: string,na,
+  m: e: string,ro,
+  l: e: 'user' | 'admin' | 'moderator'
+  userType?: string
+  displayName?: string
   avatarUrl?: string
 }
 
 interface AuthState {
-  user: User | null,isAuthenticated: boolean,isLoading: boolean
+  us,
+  e: r: User | null,isAuthenticat,
+  e: d: boolean,isLoadi,
+  n: g: boolean
 }
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
-  user: null,isAuthenticated: false,isLoading: true
+  us,
+  e: r: null,isAuthenticat,
+  e: d: false,isLoadi,
+  n: g: true
 })
-  useEffect(() => {
+  useEffect(() () => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
+    const checkAuth = () () => {
       const storedUser = localStorage.getItem('zion_user')
       const token = localStorage.getItem('authToken')
 
@@ -25,18 +34,26 @@ export function useAuth() {
         try {
   const user = JSON.parse(storedUser)
           setAuthState({
-  user;
-            isAuthenticated: true,isLoading: false
+  user,
+  isAuthenticate: d: true,isLoadi,
+  n: g: false
 })
         } catch (error) {
-  // console.error('Error parsing stored user:', error)
+  // console.error('Error parsing,
+  stored: user:', error)
           setAuthState({
-  user: null,isAuthenticated: false,isLoading: false
+  us,
+  e: r: null,isAuthenticat,
+  e: d: false,isLoadi,
+  n: g: false
 })
         },
   } else {
         setAuthState({
-  user: null,isAuthenticated: false,isLoading: false
+  us,
+  e: r: null,isAuthenticat,
+  e: d: false,isLoadi,
+  n: g: false
 })
       },
   }
@@ -44,16 +61,25 @@ export function useAuth() {
     checkAuth()
   }, [])
 
-  const login = async (email: string, _password: string) => {
-  // In a real app, you would make an API call to your backend;
-const const mockUser: User = {
+  const login = async (ema,
+  i: l: string, _passwo,
+  r: d: string) () => {
+  // In a real app, you would make an API call to your backend
+const,
+  const: mockUser: User = {
   = {
-      id: '1';
-      email;
-      name: 'John Doe',role: 'user',userType: 'creator'
+      id: '1'
+      email
+      nam,
+  e: 'John Doe',ro,
+  l: e: 'user',userTy,
+  p: e: 'creator'
 }
     setAuthState({
-  user: mockUser,isAuthenticated: true,isLoading: false
+  us,
+  e: r: mockUser,isAuthenticat,
+  e: d: true,isLoadi,
+  n: g: false
 })
     localStorage.setItem('authTokendummy-token')
     localStorage.setItem('zion_user', JSON.stringify(mockUser))
@@ -61,25 +87,36 @@ const const mockUser: User = {
     return mockUser
 }
 
-  const logout = () => {
+  const logout = () () => {
     setAuthState({
-  user: null,isAuthenticated: false,isLoading: false
+  us,
+  e: r: null,isAuthenticat,
+  e: d: false,isLoadi,
+  n: g: false
 })
     localStorage.removeItem('zion_user')
     localStorage.removeItem('authToken')
   }
 
-  const register = async (email: string, password: string, name: string) => {
-  // Implement actual registration logic here;
-const const mockUser: User = {
+  const register = async (ema,
+  i: l: string, passwo,
+  r: d: string, na,
+  m: e: string) () => {
+  // Implement actual registration logic here
+const,
+  const: mockUser: User = {
   = {
-      id: '1';
-      email;
-      name;
-      role: 'user'
+      id: '1'
+      email
+      name
+      rol,
+  e: 'user'
 }
     setAuthState({
-  user: mockUser,isAuthenticated: true,isLoading: false
+  us,
+  e: r: mockUser,isAuthenticat,
+  e: d: true,isLoadi,
+  n: g: false
 })
     localStorage.setItem('zion_user', JSON.stringify(mockUser))
     localStorage.setItem('authTokendummy-token')
@@ -88,10 +125,15 @@ const const mockUser: User = {
 }
 
   return {
-  user: authState.user,loading: authState.isLoading;
-    login;
-    logout;
-    register;
-    isAuthenticated: authState.isAuthenticated,isLoading: authState.isLoading,isAdmin: authState.user?.role === 'admin'
+  us,
+  e: r: authState.user,loadi,
+  n: g: authState.isLoading
+    login
+    logout
+    register
+    isAuthenticate,
+  d: authState.isAuthenticated,isLoadi,
+  n: g: authState.isLoading,isAdm,
+  i: n: authState.user?.role === 'admin'
 },
   }

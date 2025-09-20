@@ -1,26 +1,36 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-
+import React, { Component, ErrorInfo, ReactNode } from "react"
 interface Props {
-  children: ReactNode;
+  childr,
+  e: n: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
+  hasErr,
+  o: r: boolean
+  erro,
+  r: Error | null
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false, error: null };
+  constructor(pro,
+  p: s: Props) {
+    super(props)
+    this.state = { hasErro,
+  r: false, err,
+  o: r: null }
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(err,
+  o: r: Error): State {
+    return { hasErro,
+  r: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(err,
+  o: r: Error, errorIn,
+  f: o: ErrorInfo) {
+    console.error('Error caught by boundar,
+  y:', error, errorInfo)
   }
 
   render() {
@@ -37,17 +47,18 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-blue-600,
+  hove: r:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Reload Page
             </button>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

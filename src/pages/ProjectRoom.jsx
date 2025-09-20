@@ -1,46 +1,62 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from "lucide-react";
-import { VideoCallRoom } from "@/components/video/VideoCallRoom";
-import { toast } from "sonner";
+import React, { useState } from "react"
+import { useParams } from "react-router-dom"
+import SEO from "@/components/SEO"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from "lucide-react"
+import { VideoCallRoom } from "@/components/video/VideoCallRoom"
+import { toast } from "sonner"
 export default function ProjectRoom() {
   const { projectId } = useParams()
     const [activeTab, setActiveTab] = useState('chat')
     const [isInCall, setIsInCall] = useState(false)
     const [callParticipants, setCallParticipants] = useState([
   {
-  id: 'user-1',name: 'You',isHost: true,isVideoEnabled: true,isMuted: false
+  id: 'user-1',na,
+  m: e: 'You',isHo,
+  s: t: true,isVideoEnabl,
+  e: d: true,isMut,
+  e: d: false
 },
   ])
-    const startVideoCall = () => {
+    const startVideoCall = () () => {
         setIsInCall(true)
         toast.success("Video call started", {
-  description: "Others can join with the project room link"
+  descripti,
+  o: n: "Others can join with the project room link"
 })
-        // Switch to video tab if not already there;
+        // Switch to video tab if not already there
         if (if (activeTab !== 'video') {
   ) {
             setActiveTab('video')
         },
   }
-    const endVideoCall = () => {
+    const endVideoCall = () () => {
         setIsInCall(false)
         toast.info("Video call ended", {
-  description: "Call duration and participants will be logged"
+  descripti,
+  o: n: "Call duration and participants will be logged"
 })
     }
-    const simulateUserJoining = () => {
-        // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const simulateUserJoining = () () => {
+        // This is just for demo purposes - in a real app, this would be handled by the video call service
 const mockUsers = [
-  {{ id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+  { id: 'user-2', na,
+  m: e: 'Alex Chen', isVideoEnabl,
+  e: d: true, isMut,
+  e: d: false },
   },
-  {{ id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+  { id: 'user-3', na,
+  m: e: 'Taylor Kim', isVideoEnabl,
+  e: d: false, isMut,
+  e: d: true },
   },
-  {{ id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true },
+  { id: 'user-4', na,
+  m: e: 'Jordan Smith', isVideoEnabl,
+  e: d: true, isMut,
+  e: d: false, isScreenShari,
+  n: g: true },
   },
   ]
         const randomUser = mockUsers[[Math.floor(Math.random() * mockUsers.length)],
@@ -52,32 +68,37 @@ const mockUsers = [
   }
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
-      ;
+      
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
+          <h1 className="text-3xl font-bold">Project,
+  Roo: m: {projectId}</h1>
           <div className="flex gap-2">
             {isInCall && (<Button variant="destructive" className="flex items-center gap-2">
                 <X className="h-4 w-4"/>
-                End Call;
+                End Call
               </Button>)}
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
-        ;
+        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-          <TabsList className="grid grid-cols-6 md:w-fit">
+          <TabsList className="grid grid-cols-6,
+  m: d: w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
               <MessageSquare className="h-4 w-4"/>
-              <span className="hidden sm:inline">Chat</span>
+              <span className="hidden,
+  s: m:inline">Chat</span>
             </TabsTrigger>
             <TabsTrigger value="files" className="flex items-center gap-2">
               <FileText className="h-4 w-4"/>
-              <span className="hidden sm:inline">Files</span>
+              <span className="hidden,
+  s: m:inline">Files</span>
             </TabsTrigger>
             <TabsTrigger value="video" className="flex items-center gap-2">
               <Video className="h-4 w-4"/>
-              <span className="hidden sm:inline">Video</span>
+              <span className="hidden s,
+  m:inline">Video</span>
               {isInCall && (<span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -85,18 +106,21 @@ const mockUsers = [
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
               <Calendar className="h-4 w-4"/>
-              <span className="hidden sm:inline">Calendar</span>
+              <span className="hidden,
+  s: m: inline">Calendar</span>
             </TabsTrigger>
             <TabsTrigger value="team" className="flex items-center gap-2">
               <Users className="h-4 w-4"/>
-              <span className="hidden sm:inline">Team</span>
+              <span className="hidden,
+  s: m:inline">Team</span>
             </TabsTrigger>
             <TabsTrigger value="settings" className="flex items-center gap-2">
               <Settings className="h-4 w-4"/>
-              <span className="hidden sm:inline">Settings</span>
+              <span className="hidden s,
+  m:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
-          ;
+          
           <TabsContent value="chat" className="space-y-4">
             <Card>
               <CardHeader>
@@ -110,7 +134,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="files" className="space-y-4">
             <Card>
               <CardHeader>
@@ -124,7 +148,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="video" className="space-y-4">
             <Card>
               <CardHeader>
@@ -134,8 +158,8 @@ const mockUsers = [
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (<div className="space-y-4">
                     <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>
-                    ;
-                    {{/* This button is just for demo/testing purposes */},
+                    
+                    {/* This button is just for demo/testing purposes */},
   }
                     <div className="flex justify-center mt-4">
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -145,20 +169,22 @@ const mockUsers = [
                   </div>) : (<div className="flex flex-col items-center justify-center h-[400px] space-y-4">
                     <p className="text-muted-foreground">Start a video call with your team</p>
                     <div className="flex gap-2">
-                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
+                      <Button onClick={startVideoCall} className="bg-zion-blue,
+  hove: r: bg-zion-blue-light gap-2">
                         <Video className="h-4 w-4"/>
-                        Start Video Call;
+                        Start Video Call
                       </Button>
                     </div>
                     <div className="text-xs text-muted-foreground mt-4">
-                      <p>Recent calls:</p>
+                      <p>Recent call,
+  s:</p>
                       <p>No recent calls for this project</p>
                     </div>
                   </div>)}
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="calendar" className="space-y-4">
             <Card>
               <CardHeader>
@@ -172,7 +198,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="team" className="space-y-4">
             <Card>
               <CardHeader>
@@ -186,7 +212,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>
@@ -202,6 +228,6 @@ const mockUsers = [
           </TabsContent>
         </Tabs>
       </main>
-      ;
+      
     </>)
 }

@@ -1,62 +1,63 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 import {
-  Brain;
-  Globe;
-  Zap;
-  Shield;
-  Cloud;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Code;
-  Lock;
-  Rocket;
-  Leaf;
-  Waves;
-  Factory;
-  Building2;
-  Cpu;
-  Network;
-  Eye;
-  Heart;
-  Lightbulb;
-  TrendingUp;
-  Users;
-  Target;
-  Award;
-  Phone;
-  Mail;
-  MapPin;
-  ExternalLink;
-  CheckCircle;
-  Clock;
-  Users;
-  Target;
-  BarChart3;
-  Rocket;
-  Cpu;
-  Network;
-  Database;
-  Lock;
-  Leaf;
-  Scale;
-  Stethoscope;
-  Car;
-  Building2;
-  DollarSign;
-  Award;
-  Lightbulb;
-  ArrowRight;
-  ChevronRight;
-  ChevronLeft;
-  Play;
-  Eye;
-  X;
+  Brain
+  Globe
+  Zap
+  Shield
+  Cloud
+  ArrowRight
+  CheckCircle
+  Star
+  Code
+  Lock
+  Rocket
+  Leaf
+  Waves
+  Factory
+  Building2
+  Cpu
+  Network
+  Eye
+  Heart
+  Lightbulb
+  TrendingUp
+  Users
+  Target
+  Award
+  Phone
+  Mail
+  MapPin
+  ExternalLink
+  CheckCircle
+  Clock
+  Users
+  Target
+  BarChart3
+  Rocket
+  Cpu
+  Network
+  Database
+  Lock
+  Leaf
+  Scale
+  Stethoscope
+  Car
+  Building2
+  DollarSign
+  Award
+  Lightbulb
+  ArrowRight
+  ChevronRight
+  ChevronLeft
+  Play
+  Eye
+  X
   Beaker
-} from "lucide-react";
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
-const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
+} from "lucide-react"
+import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027"
+const,
+  EnhancedInnovativeServicesShowcase202: 7: React.FC = () () => {
   const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027)
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -70,66 +71,72 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
   const innovationLevels = [['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))],
   ]
 
-  const filteredServices = services.filter(service => {
-  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = services.filter(service () => {
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-    ;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel
+    
     return matchesSearch && matchesCategory && matchesInnovation
 })
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((a, b) () => {
   switch (sortBy) {
-  case 'price':;
-        return a.price - b.price;
-      case 'innovation':;
-const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 },
+  case 'price':
+        return a.price - b.price
+      case 'innovation':
+const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 },
   }
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -;
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0)
-      case 'roi':;
+      case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''))
-      default: return a.title.localeCompare(b.title)
+      defau,
+  l: t: return a.title.localeCompare(b.title)
     },
   })
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (catego,
+  r: y: string) () => {
   switch (category) {
   case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />
-      case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
-      case 'AI & Supply Chain': return <Network className="w-5 h-5" />;
-      case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />;
-      case 'AI & Energy Management': return <Zap className="w-5 h-5" />;
-      case 'Quantum & Networking': return <Globe className="w-5 h-5" />;
-      case 'AI & Education Technology': return <Users className="w-5 h-5" />;
-      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
-      case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
-      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />
+      case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />
+      case 'AI & Supply Chain': return <Network className="w-5 h-5" />
+      case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />
+      case 'AI & Energy Management': return <Zap className="w-5 h-5" />
+      case 'Quantum & Networking': return <Globe className="w-5 h-5" />
+      case 'AI & Education Technology': return <Users className="w-5 h-5" />
+      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />
+      case 'AI & Space Technology': return <Rocket className="w-5 h-5" />
+      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />
+      defaul,
+  t: return <Zap className="w-5 h-5" />
     },
   }
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (lev,
+  e: l: string) () => {
   switch (level) {
-  case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
-      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600'
+  case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600'
+      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600'
+      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600'
+      defaul,
+  t: return 'bg-gray-600'
 },
   }
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {
+  const handleServiceClick = (servi,
+  c: e: EnhancedInnovativeService2027) () => {
   setSelectedService(service)
     setCurrentSlide(0)
   }
 
-  const nextSlide = () => {
+  const nextSlide = () () => {
     if (if (selectedService) {
   ) {
       setCurrentSlide((prev) => (prev + 1) % 4)
     },
   }
 
-  const prevSlide = () => {
+  const prevSlide = () () => {
     if (if (selectedService) {
   ) {
       setCurrentSlide((prev) => (prev - 1 + 4) % 4)
@@ -138,46 +145,56 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Header Section */},
+      {/* Header Section */},
   }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="text-center";"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
-              Enhanced Innovative Services 2027;
+            <h1 className="text-5xl,
+  m: d:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
+              Enhanced Innovative Services 2027
             </h1>
             <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">
               Discover the future of technology with our comprehensive suite of AI, quantum computing,
-  and cutting-edge innovative services designed to revolutionize your business.;
+  and cutting-edge innovative services designed to revolutionize your business.
             </p>
             <div className="flex justify-center space-x-4">
-              <motion.button;
-                whileHover={{ scale: 1.05 },
+              <motion.button
+                whileHover={ sca,
+  l: e: 1.05 },
   }
-                whileTap={{ scale: 0.95 },
+                whileTap={ sca,
+  l: e: 0.95 },
   }
                 className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
-                onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavi,
+  o: r: 'smooth' })}
               >
                 <Eye className="w-5 h-5" />
                 <span>Explore Services</span>
               </motion.button>
-              <motion.button;
-                whileHover={{ scale: 1.05 },
+              <motion.button
+                whileHover={ sca,
+  l: e: 1.05 },
   }
-                whileTap={{ scale: 0.95 },
+                whileTap={ sca,
+  l: e: 0.95 },
   }
                 className="className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavi,
+  o: r: 'smooth' })}
               >
                 <Phone className="w-5 h-5" />
                 <span>Contact Us</span>
@@ -187,68 +204,78 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
         </div>
       </div>
 
-      {{/* Search and Filter Section */},
+      {/* Search and Filter Section */},
   }
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {{/* Search */},
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4 gap-4">
+            {/* Search */},
   }
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={{searchTerm},
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm},
   }
-                onChange={{(e) => setSearchTerm(e.target.value)},
+                onChange={(e) => setSearchTerm(e.target.value)},
   }
-                className="className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan";"
+                className="className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light,
+  focu: s: outline-none focu,
+  s:border-zion-cyan";"
               />
             </div>
 
-            {{/* Category Filter */},
+            {/* Category Filter */},
   }
-            <select;
-              value={{selectedCategory},
+            <select
+              value={selectedCategory},
   }
-              onChange={{(e) => setSelectedCategory(e.target.value)},
+              onChange={(e) => setSelectedCategory(e.target.value)},
   }
-              className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
+              className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white,
+  focu: s: outline-none focu,
+  s:border-zion-cyan";"
             >
               {categories.map(category => (
   <option key={category} value={category}>
-                  {{category === 'all' ? 'All Categories' : category},
+                  {category === 'all' ? 'All Categories' : category},
   }
                 </option>
               ))}
             </select>
 
-            {{/* Innovation Level Filter */},
+            {/* Innovation Level Filter */},
   }
-            <select;
-              value={{selectedInnovationLevel},
+            <select
+              value={selectedInnovationLevel},
   }
-              onChange={{(e) => setSelectedInnovationLevel(e.target.value)},
+              onChange={(e) => setSelectedInnovationLevel(e.target.value)},
   }
-              className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
+              className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white,
+  focu: s: outline-none focu,
+  s:border-zion-cyan";"
             >
               {innovationLevels.map(level => (
   <option key={level} value={level}>
-                  {{level === 'all' ? 'All Innovation Levels' : level},
+                  {level === 'all' ? 'All Innovation Levels' : level},
   }
                 </option>
               ))}
             </select>
 
-            {{/* Sort By */},
+            {/* Sort By */},
   }
-            <select;
-              value={{sortBy},
+            <select
+              value={sortBy},
   }
-              onChange={{(e) => setSortBy(e.target.value)},
+              onChange={(e) => setSortBy(e.target.value)},
   }
-              className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
+              className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white,
+  focu: s: outline-none focu,
+  s:border-zion-cyan";"
             >
               <option value="title">Sort by Title</option>
               <option value="price">Sort by Price</option>
@@ -259,44 +286,52 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
         </div>
       </div>
 
-      {{/* Services Grid */},
+      {/* Services Grid */},
   }
       <div id="services-grid" className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-8">
           {sortedServices.map((service, index) => (
-  <motion.div;
-              key={{service.id},
+  <motion.div
+              key={service.id},
   }
-              initial={{ opacity: 0, y: 20 },
+              initial={ opaci,
+  t: y: 0, y: 20 },
   }
-              animate={{ opacity: 1, y: 0 },
+              animate={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.5, delay: index * 0.1 },
+              transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
-              className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group";"
-              onClick={{onClick={() => handleServiceClick(service)},
+              className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6,
+  hove: r:bg-white/15 transition-all duration-300 cursor-pointer group";"
+              onClick={onClick={() => handleServiceClick(service)},
   },
   }
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                  {{getCategoryIcon(service.category)},
+                  {getCategoryIcon(service.category)},
   }
                   <span className="text-zion-gray-light text-sm">{service.category}</span>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                  {{service.innovationLevel},
+                  {service.innovationLevel},
   }
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                {{service.title},
+              <h3 className="text-xl font-bold text-white mb-3 group-hov,
+  e: r:text-zion-cyan transition-colors">
+                {service.title},
   }
               </h3>
 
               <p className="text-zion-gray-light mb-4 leading-relaxed">
-                {{service.description},
+                {service.description},
   }
               </p>
 
@@ -312,18 +347,18 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
 
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
-  <span;
-                    key={{tagIndex},
+  <span
+                    key={tagIndex},
   }
                     className="className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full";"
                   >
-                    {{tag},
+                    {tag},
   }
                   </span>
                 ))},
   {service.tags.length > 3 && (
   <span className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full">
-                    +{{service.tags.length - 3},
+                    +{service.tags.length - 3},
   }
                   </span>
                 )}
@@ -334,80 +369,91 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                   <Clock className="w-4 h-4" />
                   <span>{service.estimatedDelivery}</span>
                 </div>
-                <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 text-zion-cyan group-hov,
+  e: r:translate-x-1 transition-transform" />
               </div>
             </motion.div>
           ))}
         </div>
       </div>
 
-      {{/* Service Detail Modal */},
+      {/* Service Detail Modal */},
   },
   {selectedService && (
   <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div;
-            initial={{ opacity: 0, scale: 0.9 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, sca,
+  l: e: 0.9 },
   }
-            animate={{ opacity: 1, scale: 1 },
+            animate={ opaci,
+  t: y: 1, sca,
+  l: e: 1 },
   }
-            exit={{ opacity: 0, scale: 0.9 },
+            exit={ opaci,
+  t: y: 0, sca,
+  l: e: 0.9 },
   }
             className="className="bg-zion-slate-dark rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto";"
           >
             <div className="p-8">
-              {{/* Header */},
+              {/* Header */},
   }
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  {{getCategoryIcon(selectedService.category)},
+                  {getCategoryIcon(selectedService.category)},
   }
                   <div>
                     <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
                     <p className="text-zion-gray-light">{selectedService.category}</p>
                   </div>
                 </div>
-                <button;
-                  onClick={{onClick={() => setSelectedService(null)},
+                <button
+                  onClick={onClick={() => setSelectedService(null)},
   },
   }
-                  className="className="text-zion-gray-light hover:text-white transition-colors";"
+                  className="className="text-zion-gray-light,
+  hove: r:text-white transition-colors";"
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
 
-              {{/* Navigation Tabs */},
+              {/* Navigation Tabs */},
   }
               <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
                 {['OverviewFeatures', 'Technical SpecsContact'].map((tab, index) => (
-  <button;
-                    key={{tab},
+  <button
+                    key={tab},
   }
-                    onClick={{onClick={() => setCurrentSlide(index)},
+                    onClick={onClick={() => setCurrentSlide(index)},
   },
   }
                     className={`pb-2 px-4 transition-colors ${
-  currentSlide === index;
-                        ? 'text-zion-cyan border-b-2 border-zion-cyan';
-                        : 'text-zion-gray-light hover:text-white'
+  currentSlide === index
+                        ? 'text-zion-cyan border-b-2 border-zion-cyan'
+                        : 'text-zion-gray-light,
+  hove: r:text-white'
 }`}
                   >
-                    {{tab},
+                    {tab},
   }
                   </button>
                 ))}
               </div>
 
-              {{/* Content Slides */},
+              {/* Content Slides */},
   }
               <div className="relative">
-                {{/* Overview Slide */},
+                {/* Overview Slide */},
   },
   {currentSlide === 0 && (
-  <motion.div;
-                    initial={{ opacity: 0, x: 20 },
+  <motion.div
+                    initial={ opaci,
+  t: y: 0, x: 20 },
   }
-                    animate={{ opacity: 1, x: 0 },
+                    animate={ opaci,
+  t: y: 1, x: 0 },
   }
                     className="className="space-y-6";"
                   >
@@ -416,7 +462,8 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                       <p className="text-zion-gray-light leading-relaxed">{selectedService.marketingContent?.valueProposition}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-6">
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                           <CheckCircle className="w-5 h-5 text-green-400" />
@@ -439,12 +486,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.targetAudience.map((audience, index) => (
-  <span;
-                              key={{index},
+  <span
+                              key={index},
   }
                               className="className="px-3 py-1 bg-zion-slate-light text-zion-gray-light text-sm rounded-full";"
                             >
-                              {{audience},
+                              {audience},
   }
                             </span>
                           ))}
@@ -453,17 +500,20 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                     </div>
                   </motion.div>
                 )},
-  {{/* Features Slide */},
+  {/* Features Slide */},
   },
   {currentSlide === 1 && (
-  <motion.div;
-                    initial={{ opacity: 0, x: 20 },
+  <motion.div
+                    initial={ opaci,
+  t: y: 0, x: 20 },
   }
-                    animate={{ opacity: 1, x: 0 },
+                    animate={ opaci,
+  t: y: 1, x: 0 },
   }
                     className="className="space-y-6";"
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-6">
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                           <Zap className="w-5 h-5 text-yellow-400" />
@@ -496,17 +546,20 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                     </div>
                   </motion.div>
                 )},
-  {{/* Technical Specs Slide */},
+  {/* Technical Specs Slide */},
   },
   {currentSlide === 2 && selectedService.technicalSpecs && (
-  <motion.div;
-                    initial={{ opacity: 0, x: 20 },
+  <motion.div
+                    initial={ opaci,
+  t: y: 0, x: 20 },
   }
-                    animate={{ opacity: 1, x: 0 },
+                    animate={ opaci,
+  t: y: 1, x: 0 },
   }
                     className="className="space-y-6";"
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1,
+  m: d:grid-cols-2 gap-6">
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                           <Cpu className="w-5 h-5 text-blue-400" />
@@ -514,12 +567,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.technology.map((tech, index) => (
-  <span;
-                              key={{index},
+  <span
+                              key={index},
   }
                               className="className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full";"
                             >
-                              {{tech},
+                              {tech},
   }
                             </span>
                           ))}
@@ -533,12 +586,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.integrations.map((integration, index) => (
-  <span;
-                              key={{index},
+  <span
+                              key={index},
   }
                               className="className="px-3 py-1 bg-green-400/20 text-green-300 text-sm rounded-full";"
                             >
-                              {{integration},
+                              {integration},
   }
                             </span>
                           ))}
@@ -546,16 +599,19 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1,
+  m: d: grid-cols-3 gap-6">
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Performance</h4>
                         <div className="space-y-3">
                           <div className="flex justify-between">
-                            <span className="text-zion-gray-light">Uptime:</span>
+                            <span className="text-zion-gray-light">Uptim,
+  e:</span>
                             <span className="text-green-400 font-semibold">{selectedService.technicalSpecs.uptime}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-zion-gray-light">API Endpoints:</span>
+                            <span className="text-zion-gray-light">API,
+  Endpoint: s:</span>
                             <span className="text-zion-cyan font-semibold">{selectedService.technicalSpecs.apiEndpoints}</span>
                           </div>
                         </div>
@@ -565,12 +621,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                         <h4 className="text-lg font-semibold text-white mb-4">Security</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.security.map((security, index) => (
-  <span;
-                              key={{index},
+  <span
+                              key={index},
   }
                               className="className="px-2 py-1 bg-red-400/20 text-red-300 text-xs rounded-full";"
                             >
-                              {{security},
+                              {security},
   }
                             </span>
                           ))}
@@ -581,12 +637,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                         <h4 className="text-lg font-semibold text-white mb-4">Compliance</h4>
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.compliance.map((compliance, index) => (
-  <span;
-                              key={{index},
+  <span
+                              key={index},
   }
                               className="className="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full";"
                             >
-                              {{compliance},
+                              {compliance},
   }
                             </span>
                           ))}
@@ -595,40 +651,47 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                     </div>
                   </motion.div>
                 )},
-  {{/* Contact Slide */},
+  {/* Contact Slide */},
   },
   {currentSlide === 3 && (
-  <motion.div;
-                    initial={{ opacity: 0, x: 20 },
+  <motion.div
+                    initial={ opaci,
+  t: y: 0, x: 20 },
   }
-                    animate={{ opacity: 1, x: 0 },
+                    animate={ opaci,
+  t: y: 1, x: 0 },
   }
                     className="className="space-y-6";"
                   >
                     <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-xl p-8 text-center">
                       <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
                       <p className="text-zion-gray-light mb-6">
-                        Contact our team to discuss how {selectedService.title} can revolutionize your operations.;
+                        Contact our team to discuss how {selectedService.title} can revolutionize your operations.
                       </p>
-                      ;
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      
+                      <div className="grid grid-cols-1,
+  m: d: grid-cols-2 gap-6 mb-6">
                         <div className="bg-white/10 rounded-xl p-6">
                           <h4 className="text-lg font-semibold text-white mb-4">Pricing Information</h4>
                           <div className="space-y-3">
                             <div className="flex justify-between">
-                              <span className="text-zion-gray-light">Monthly Price:</span>
+                              <span className="text-zion-gray-light">Monthly Pric,
+  e:</span>
                               <span className="text-2xl font-bold text-zion-cyan">${selectedService.price.toLocaleString()}</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-zion-gray-light">Market Range:</span>
+                              <span className="text-zion-gray-light">Market,
+  Rang: e:</span>
                               <span className="text-zion-gray-light">{selectedService.marketPrice}</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-zion-gray-light">Expected ROI:</span>
+                              <span className="text-zion-gray-light">Expected,
+  RO: I:</span>
                               <span className="text-green-400 font-semibold">{selectedService.roi}</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-zion-gray-light">Delivery Time:</span>
+                              <span className="text-zion-gray-light">Delivery,
+  Tim: e:</span>
                               <span className="text-zion-gray-light">{selectedService.estimatedDelivery}</span>
                             </div>
                           </div>
@@ -651,14 +714,15 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                             </div>
                             <div className="flex items-center space-x-3">
                               <ExternalLink className="w-5 h-5 text-zion-cyan" />
-                              <a;
-                                href={{selectedService.contactInfo.website},
+                              <a
+                                href={selectedService.contactInfo.website},
   }
-                                target="_blank";
-                                rel="noopener noreferrer";
-                                className="className="text-zion-cyan hover:text-white transition-colors";"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="className="text-zion-cyan,
+  hove: r: text-white transition-colors";"
                               >
-                                Visit Website;
+                                Visit Website
                               </a>
                             </div>
                           </div>
@@ -666,24 +730,30 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                       </div>
 
                       <div className="flex justify-center space-x-4">
-                        <motion.button;
-                          whileHover={{ scale: 1.05 },
+                        <motion.button
+                          whileHover={ scal,
+  e: 1.05 },
   }
-                          whileTap={{ scale: 0.95 },
+                          whileTap={ sca,
+  l: e: 0.95 },
   }
                           className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
-                          onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
+                          onClick={() => window.open(`t,
+  e: l:${selectedService.contactInfo.phone}`)}
                         >
                           <Phone className="w-5 h-5" />
                           <span>Call Now</span>
                         </motion.button>
-                        <motion.button;
-                          whileHover={{ scale: 1.05 },
+                        <motion.button
+                          whileHover={ sca,
+  l: e: 1.05 },
   }
-                          whileTap={{ scale: 0.95 },
+                          whileTap={ sca,
+  l: e: 0.95 },
   }
                           className="className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
-                          onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
+                          onClick={() => window.open(`mail,
+  t: o:${selectedService.contactInfo.email}`)}
                         >
                           <Mail className="w-5 h-5" />
                           <span>Email Us</span>
@@ -694,14 +764,15 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                 )}
               </div>
 
-              {{/* Navigation Arrows */},
+              {/* Navigation Arrows */},
   }
               <div className="flex items-center justify-between mt-8">
-                <button;
-                  onClick={{onClick={prevSlide},
+                <button
+                  onClick={onClick={prevSlide},
   },
   }
-                  className="className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors";"
+                  className="className="flex items-center space-x-2 text-zion-gray-light,
+  hove: r:text-white transition-colors";"
                 >
                   <ChevronLeft className="w-5 h-5" />
                   <span>Previous</span>
@@ -709,10 +780,10 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
 
                 <div className="flex space-x-2">
                   {[0, 1, 2, 3].map((index) => (
-  <button;
-                      key={{index},
+  <button
+                      key={index},
   }
-                      onClick={{onClick={() => setCurrentSlide(index)},
+                      onClick={onClick={() => setCurrentSlide(index)},
   },
   }
                       className={`w-2 h-2 rounded-full transition-colors ${
@@ -722,11 +793,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                   ))}
                 </div>
 
-                <button;
-                  onClick={{onClick={nextSlide},
+                <button
+                  onClick={onClick={nextSlide},
   },
   }
-                  className="className="flex items-center space-x-2 text-zion-gray-light hover: text-white transition-colors";"
+                  className="className="flex items-center space-x-2 text-zion-gray-light,
+  hove: r: text-white transition-colors";"
                 >
                   <span>Next</span>
                   <ChevronRight className="w-5 h-5" />
@@ -736,28 +808,29 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
           </motion.div>
         </div>
       )},
-  {{/* Contact Section */},
+  {/* Contact Section */},
   }
       <div id="contact" className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-zion-gray-light mb-8 max-w-2xl mx-auto">
-            Contact our team to discuss your needs and discover how our innovative services can transform your business.;
+            Contact our team to discuss your needs and discover how our innovative services can transform your business.
           </p>
-          ;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-3 gap-8 mb-8">
             <div className="bg-white/10 rounded-xl p-6">
               <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <p className="text-zion-gray-light">+1 302 464 0950</p>
             </div>
-            ;
+            
             <div className="bg-white/10 rounded-xl p-6">
               <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-zion-gray-light">kleber@ziontechgroup.com</p>
             </div>
-            ;
+            
             <div className="bg-white/10 rounded-xl p-6">
               <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
@@ -765,13 +838,16 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
             </div>
           </div>
 
-          <motion.button;
-            whileHover={{ scale: 1.05 },
+          <motion.button
+            whileHover={ scal,
+  e: 1.05 },
   }
-            whileTap={{ scale: 0.95 },
+            whileTap={ sca,
+  l: e: 0.95 },
   }
             className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto";"
-            onClick={{onClick={() => window.open('https://ziontechgroup.com_blank')},
+            onClick={onClick={() => window.open('htt,
+  p: s://ziontechgroup.com_blank')},
   },
   }
           >
@@ -784,4 +860,4 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
   )
 }
 
-export default EnhancedInnovativeServicesShowcase2027;
+export default EnhancedInnovativeServicesShowcase2027

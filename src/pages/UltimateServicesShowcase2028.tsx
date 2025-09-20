@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Link } from "react-router-dom"
 import {
-  Search;
+  Search
   Filter,
   Star,
   Zap,
@@ -17,126 +17,156 @@ import {
   Lock,
   Target,
   Rocket,
-  Sparkles;
-  ChevronDown;
-  CheckCircle;
-  ArrowRight;
-  Phone;
-  Mail;
-  Globe as GlobeIcon;
-  Award;
-  Clock;
-  DollarSign;
+  Sparkles
+  ChevronDown
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  Globe as GlobeIcon
+  Award
+  Clock
+  DollarSign
   BarChart3
-} from "lucide-react";
-import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028";
-const UltimateServicesShowcase2028: React.FC = () => {
+} from "lucide-react"
+import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028"
+const,
+  UltimateServicesShowcase202: 8: React.FC = () () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [expandedService, setExpandedService] = useState<string | null>(null)
 
-  // Get unique categories;
+  // Get unique categories
 const categories = [['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))],
   ]
 
-  // Filter and sort services;
-const filteredServices = INNOVATIVE_SERVICES_2028;
-    .filter(service => ;
+  // Filter and sort services
+const filteredServices = INNOVATIVE_SERVICES_2028
+    .filter(service => 
       selectedCategory === 'all' || service.category === selectedCategory
 )
-    .filter(service => ;
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+    .filter(service => 
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-    .sort((a, b) => {
+    .sort((a, b) () => {
   switch (sortBy) {
-  case 'price':;
-          return a.price - b.price;
-        case 'category':;
+  case 'price':
+          return a.price - b.price
+        case 'category':
           return a.category.localeCompare(b.category)
-        case 'innovation':;
-          return a.innovationLevel === 'revolutionary' ? 1 : -1;
-        case 'name':;
-        default: return a.title.localeCompare(b.title)
+        case 'innovation':
+          return a.innovationLevel === 'revolutionary' ? 1 : -1
+        case 'name':
+        defau,
+  l: t: return a.title.localeCompare(b.title)
       },
   })
-  const getCategoryIcon = (category: string) => {
-  const const icons: Record<string, React.ReactNode> = {
+  const getCategoryIcon = (catego,
+  r: y: string) () => {
+  const const icon,
+  s: Record<string, React.ReactNode> = {
   = {
-      'AI & Enterprise': <Brain className="w-5 h-5" />;
-      'Quantum Computing': <Zap className="w-5 h-5" />;
-      'Cybersecurity': <Shield className="w-5 h-5" />;
-      'Healthcare Technology': <Heart className="w-5 h-5" />;
-      'Financial Technology': <DollarSign className="w-5 h-5" />;
-      'Supply Chain': <Globe className="w-5 h-5" />;
-      'Content Marketing': <Target className="w-5 h-5" />;
-      'Project Management': <Rocket className="w-5 h-5" />;
-      'Customer Support': <Users className="w-5 h-5" />;
+      'AI & Enterprise': <Brain className="w-5 h-5" />
+      'Quantum Computing': <Zap className="w-5 h-5" />
+      'Cybersecurity': <Shield className="w-5 h-5" />
+      'Healthcare Technology': <Heart className="w-5 h-5" />
+      'Financial Technology': <DollarSign className="w-5 h-5" />
+      'Supply Chain': <Globe className="w-5 h-5" />
+      'Content Marketing': <Target className="w-5 h-5" />
+      'Project Management': <Rocket className="w-5 h-5" />
+      'Customer Support': <Users className="w-5 h-5" />
       'Marketing Automation': <TrendingUp className="w-5 h-5" />
     }
     return icons[category] || <Sparkles className="w-5 h-5" />
 }
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (lev,
+  e: l: string) () => {
   switch (level) {
-  case 'revolutionary':;
-        return 'from-purple-500 to-pink-500';
-      case 'cutting-edge':;
-        return 'from-blue-500 to-cyan-500';
-      default: return 'from-green-500 to-emerald-500'
+  case 'revolutionary':
+        return 'from-purple-500 to-pink-500'
+      case 'cutting-edge':
+        return 'from-blue-500 to-cyan-500'
+      defaul,
+  t: return 'from-green-500 to-emerald-500'
 },
   }
   const const containerVariants = {
   = {
-    hidden: {{ opacity: 0 },
+    hidd,
+  e: n: { opacit,
+  y: 0 },
   }
-    visible: {
-  opacity: 1,transition: {
-  staggerChildren: 0.1
+    visib,
+  l: e: {
+  opacit,
+  y: 1,transiti,
+  o: n: {
+  staggerChildre,
+  n: 0.1
 },
   },
   }
   const const itemVariants = {
   = {
-    hidden: {{ y: 20, opacity: 0 },
+    hidd,
+  e: n: { ,
+  y: 20, opaci,
+  t: y: 0 },
   }
-    visible: {
-  y: 0,opacity: 1,transition: {
-  duration: 0.5,ease: "easeOut"
+    visib,
+  l: e: {
+  ,
+  y: 0,opaci,
+  t: y: 1,transiti,
+  o: n: {
+  duratio,
+  n: 0.5,ea,
+  s: e: "easeOut"
 },
   },
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {{/* Futuristic Animated Background */},
+      {/* Futuristic Animated Background */},
   }
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[si,
+  z: e:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
-  <motion.div;
-              key={{i},
+  <motion.div
+              key={i},
   }
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50";"
-              animate={{
+              animate={
   x: [0, 100, 0]
                 y: [0, -100, 0]
-                opacity: [0.3, 1, 0.3]
-                scale: [[0.5, 1.5, 0.5],
+                opaci,
+  t: y: [0.3, 1, 0.3]
+                sca,
+  l: e: [[0.5, 1.5, 0.5],
   ],
   },
   }
-              transition={{
-  duration: 6 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
+              transition={
+  durati,
+  o: n: 6 + i * 0.2,repe,
+  a: t: Infinity,del,
+  a: y: i * 0.1,ea,
+  s: e: "easeInOut"
 },
   }
-              style={{
-  left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`
+              style={
+  le,
+  f: t: `${Math.random() * 100}%`
+                t,
+  o: p: `${Math.random() * 100}%`
 },
   }
             />
@@ -144,23 +174,30 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
         </div>
       </div>
 
-      {{/* Hero Section */},
+      {/* Hero Section */},
   }
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div;
-            initial={{ opacity: 0, y: 30 },
+          <motion.div
+            initial={ opacit,
+  y: 0, y: 30 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              2028 Services;
+            <h1 className="text-5xl,
+  m: d: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              2028 Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, and Next-Generation Technology Solutions;
+            <p className="text-xl m,
+  d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionary AI, Quantum Computing, and Next-Generation Technology Solutions
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full px-4 py-2">
@@ -180,40 +217,51 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
         </div>
       </section>
 
-      {{/* Search and Filter Section */},
+      {/* Search and Filter Section */},
   }
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="px-4,
+  s: m: px-6,
+  l: g:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6">
-            <div className="flex flex-col lg:flex-row gap-4 items-center">
-              {{/* Search */},
+            <div className="flex flex-col l,
+  g:flex-row gap-4 items-center">
+              {/* Search */},
   }
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
-                  type="text";
-                  placeholder="Search services, features, or categories...";
-                  value={{searchTerm},
+                <input
+                  type="text"
+                  placeholder="Search services, features, or categories..."
+                  value={searchTerm},
   }
-                  onChange={{(e) => setSearchTerm(e.target.value)},
+                  onChange={(e) => setSearchTerm(e.target.value)},
   }
-                  className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
+                  className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-500/50 focu,
+  s:border-cyan-500/50";"
                 />
               </div>
 
-              {{/* Category Filter */},
+              {/* Category Filter */},
   }
               <div className="relative">
-                <select;
-                  value={{selectedCategory},
+                <select
+                  value={selectedCategory},
   }
-                  onChange={{(e) => setSelectedCategory(e.target.value)},
+                  onChange={(e) => setSelectedCategory(e.target.value)},
   }
-                  className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
+                  className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-500/50 focu,
+  s:border-cyan-500/50";"
                 >
                   {categories.map(category => (
   <option key={category} value={category}>
-                      {{category === 'all' ? 'All Categories' : category},
+                      {category === 'all' ? 'All Categories' : category},
   }
                     </option>
                   ))}
@@ -221,15 +269,19 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
               </div>
 
-              {{/* Sort */},
+              {/* Sort */},
   }
               <div className="relative">
-                <select;
-                  value={{sortBy},
+                <select
+                  value={sortBy},
   }
-                  onChange={{(e) => setSortBy(e.target.value)},
+                  onChange={(e) => setSortBy(e.target.value)},
   }
-                  className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
+                  className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-cyan-500/50 focu,
+  s:border-cyan-500/50";"
                 >
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -239,32 +291,34 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
               </div>
 
-              {{/* View Mode Toggle */},
+              {/* View Mode Toggle */},
   }
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
-                <button;
-                  onClick={{onClick={() => setViewMode('grid')},
+                <button
+                  onClick={onClick={() => setViewMode('grid')},
   },
   }
                   className={`px-3 py-2 rounded-lg transition-colors ${
-  viewMode === 'grid' ;
-                      ? 'bg-cyan-500/20 text-cyan-400' ;
-                      : 'text-gray-400 hover:text-white'
+  viewMode === 'grid' 
+                      ? 'bg-cyan-500/20 text-cyan-400' 
+                      : 'text-gray-400,
+  hove: r:text-white'
 }`}
                 >
-                  Grid;
+                  Grid
                 </button>
-                <button;
-                  onClick={{onClick={() => setViewMode('list')},
+                <button
+                  onClick={onClick={() => setViewMode('list')},
   },
   }
                   className={`px-3 py-2 rounded-lg transition-colors ${
-  viewMode === 'list' ;
-                      ? 'bg-cyan-500/20 text-cyan-400' ;
-                      : 'text-gray-400 hover:text-white'
+  viewMode === 'list' 
+                      ? 'bg-cyan-500/20 text-cyan-400' 
+                      : 'text-gray-400,
+  hove: r:text-white'
 }`}
                 >
-                  List;
+                  List
                 </button>
               </div>
             </div>
@@ -272,42 +326,49 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
         </div>
       </section>
 
-      {{/* Services Grid/List */},
+      {/* Services Grid/List */},
   }
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
+      <section className="px-4,
+  s: m: px-6 l,
+  g:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div;
-            variants={{containerVariants},
+          <motion.div
+            variants={containerVariants},
   }
-            initial="hidden";
-            animate="visible";
-            className={viewMode === 'grid' ;
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' ;
+            initial="hidden"
+            animate="visible"
+            className={viewMode === 'grid' 
+              ? 'grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-3 gap-6' 
               : 'space-y-6'
 }
           >
             {filteredServices.map((service) => (
-  <motion.div;
-                key={{service.id},
+  <motion.div
+                key={service.id},
   }
-                variants={{itemVariants},
+                variants={itemVariants},
   }
-                className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden,
+  hove: r: border-cyan-500/50 transition-all duration-300,
+  hove: r:shadow-2xl hove,
+  r:shadow-cyan-500/20 ${
   viewMode === 'list' ? 'flex' : ''
 }`}
               >
                 {viewMode === 'grid' ? (
-  // Grid View;
+  // Grid View
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)}`}>
-                          {{getCategoryIcon(service.category)},
+                          {getCategoryIcon(service.category)},
   }
                         </div>
                         <div>
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)} text-white`}>
-                            {{service.innovationLevel},
+                            {service.innovationLevel},
   }
                           </span>
                         </div>
@@ -315,7 +376,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.currency},
-  {{service.price.toLocaleString()},
+  {service.price.toLocaleString()},
   }
                         </div>
                         <div className="text-sm text-gray-400">per {service.pricingModel}</div>
@@ -328,63 +389,76 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                     <div className="space-y-3 mb-4">
                       <div className="flex items-center gap-2 text-sm text-gray-400">
                         <BarChart3 className="w-4 h-4" />
-                        <span>ROI: {service.roi}</span>
+                        <span>R,
+  O: I: {service.roi}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-400">
                         <Clock className="w-4 h-4" />
-                        <span>Delivery: {service.estimatedDelivery}</span>
+                        <span>Delive,
+  r: y: {service.estimatedDelivery}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-400">
                         <Award className="w-4 h-4" />
-                        <span>Support: {service.supportLevel}</span>
+                        <span>Suppo,
+  r: t: {service.supportLevel}</span>
                       </div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
-  <span;
-                          key={{index},
+  <span
+                          key={index},
   }
                           className="className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg";"
                         >
-                          {{tag},
+                          {tag},
   }
                         </span>
                       ))}
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <button;
-                        onClick={{onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
+                      <button
+                        onClick={onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
   }
-                        className="className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1";"
+                        className="className="text-cyan-400,
+  hove: r:text-cyan-300 text-sm font-medium flex items-center gap-1";"
                       >
-                        {{expandedService === service.id ? 'Show Less' : 'Learn More'},
+                        {expandedService === service.id ? 'Show Less' : 'Learn More'},
   }
                         <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />
                       </button>
-                      <Link;
+                      <Link
                         to={`/services/${service.id}`}
-                        className="className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";"
+                        className="className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
+  hove: r: from-cyan-600 hove,
+  r:to-blue-600 transition-all duration-200 font-medium";"
                       >
-                        Get Started;
+                        Get Started
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    {{/* Expanded Content */},
+                    {/* Expanded Content */},
   }
                     <AnimatePresence>
                       {expandedService === service.id && (
-  <motion.div;
-                          initial={{ opacity: 0, height: 0 },
+  <motion.div
+                          initial={ opaci,
+  t: y: 0, heig,
+  h: t: 0 },
   }
-                          animate={{ opacity: 1, height: 'auto' },
+                          animate={ opaci,
+  t: y: 1, heig,
+  h: t: 'auto' },
   }
-                          exit={{ opacity: 0, height: 0 },
+                          exit={ opaci,
+  t: y: 0, heig,
+  h: t: 0 },
   }
-                          transition={{ duration: 0.3 },
+                          transition={ durati,
+  o: n: 0.3 },
   }
                           className="className="mt-4 pt-4 border-t border-slate-700/50";"
                         >
@@ -395,7 +469,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                                 {service.features.slice(0, 5).map((feature, index) => (
   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                    {{feature},
+                                    {feature},
   }
                                   </li>
                                 ))}
@@ -407,7 +481,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                                 {service.benefits.slice(0, 3).map((benefit, index) => (
   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                    {{benefit},
+                                    {benefit},
   }
                                   </li>
                                 ))}
@@ -419,12 +493,12 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                     </AnimatePresence>
                   </div>
                 ) : (
-  // List View;
+  // List View
                   <div className="flex-1 p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
                         <div className={`p-3 rounded-xl bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)}`}>
-                          {{getCategoryIcon(service.category)},
+                          {getCategoryIcon(service.category)},
   }
                         </div>
                         <div>
@@ -435,7 +509,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.currency},
-  {{service.price.toLocaleString()},
+  {service.price.toLocaleString()},
   }
                         </div>
                         <div className="text-sm text-gray-400">per {service.pricingModel}</div>
@@ -444,7 +518,8 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
 
                     <p className="text-gray-300 mb-4">{service.description}</p>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                    <div className="grid grid-cols-2,
+  m: d:grid-cols-4 gap-4 mb-4">
                       <div className="text-center">
                         <div className="text-lg font-bold text-cyan-400">{service.roi}</div>
                         <div className="text-xs text-gray-400">ROI</div>
@@ -466,21 +541,23 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 4).map((tag, index) => (
-  <span;
-                            key={{index},
+  <span
+                            key={index},
   }
                             className="className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg";"
                           >
-                            {{tag},
+                            {tag},
   }
                           </span>
                         ))}
                       </div>
-                      <Link;
+                      <Link
                         to={`/services/${service.id}`}
-                        className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";"
+                        className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
+  hove: r: from-cyan-600 hove,
+  r:to-blue-600 transition-all duration-200 font-medium";"
                       >
-                        Get Started;
+                        Get Started
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                     </div>
@@ -500,34 +577,45 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
         </div>
       </section>
 
-      {{/* Contact Section */},
+      {/* Contact Section */},
   }
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
+      <section className="px-4,
+  s: m: px-6,
+  l: g:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our cutting-edge 2028 services can revolutionize your operations;
+              Let's discuss how our cutting-edge 2028 services can revolutionize your operations
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-                href="tel:+13024640950";
-                className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";"
+            <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
+              <a
+                href="t,
+  e: l:+13024640950"
+                className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg,
+  hove: r:from-cyan-600,
+  hove: r:to-blue-600 transition-all duration-200 font-medium";"
               >
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950;
+                +1 302 464 0950
               </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium";"
+              <a
+                href="mail,
+  t: o:kleber@ziontechgroup.com"
+                className="className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hove,
+  r:bg-slate-600/50 transition-all duration-200 font-medium";"
               >
                 <Mail className="w-5 h-5" />
-                kleber@ziontechgroup.com;
+                kleber@ziontechgroup.com
               </a>
             </div>
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Visit us at: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">ziontechgroup.com</a></p>
+              <p>Visit,
+  us: at: <a href="htt,
+  p: s://ziontechgroup.com" className="text-cyan-400 hove,
+  r:text-cyan-300">ziontechgroup.com</a></p>
             </div>
           </div>
         </div>
@@ -535,4 +623,4 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
     </div>
   )
 }
-export default UltimateServicesShowcase2028;
+export default UltimateServicesShowcase2028

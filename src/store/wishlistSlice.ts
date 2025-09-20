@@ -1,18 +1,26 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { WishlistItem } from "@/types/listings";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { WishlistItem } from "@/types/listings"
 interface WishlistState {
-  items: WishlistItem[],itemCount: number
+  ite,
+  m: s: WishlistItem[],itemCou,
+  n: t: number
 }
 
-const const initialState: WishlistState = {
+const,
+  const: initialState: WishlistState = {
   = {
-  items: [],itemCount: 0
+  item,
+  s: [],itemCou,
+  n: t: 0
 }
 const wishlistSlice = createSlice({
-  name: 'wishlist';
-  initialState;
-  reducers: {
-  addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
+  na,
+  m: e: 'wishlist'
+  initialState,
+  reducer: s: {
+  addToWishlis,
+  t: (state, acti,
+  o: n: PayloadAction<WishlistItem>) () => {
   const existingItem = state.items.find(item => item.listingId === action.payload.listingId)
       if (if (!existingItem) {
   ) {
@@ -20,11 +28,14 @@ const wishlistSlice = createSlice({
         state.itemCount = state.items.length
 },
   }
-    removeFromWishlist: (state, action: PayloadAction<string>) => {
+    removeFromWishli,
+  s: t: (state, acti,
+  o: n: PayloadAction<string>) () => {
   state.items = state.items.filter(item => item.listingId !== action.payload)
       state.itemCount = state.items.length
 }
-    clearWishlist: (state) => {
+    clearWishli,
+  s: t: (state) () => {
   state.items = [[],
   ]
       state.itemCount = 0
@@ -32,5 +43,5 @@ const wishlistSlice = createSlice({
   },
   })
 
-export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
-export default wishlistSlice.reducer;
+export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions
+export default wishlistSlice.reducer

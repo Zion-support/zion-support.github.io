@@ -1,192 +1,251 @@
 
-import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from "react"
+import { useParams, Link } from "react-router-dom"
+import { motion } from "framer-motion"
 import {
-  Calendar;
+  Calendar
   User,
   Clock,
   Tag,
-  ArrowLeft;
-  ArrowRight;
-  Share2;
-  Bookmark;
-  Heart;
-  MessageCircle;
-  Eye;
-  TrendingUp;
-  Brain;
-  Cloud;
-  Shield;
-  Zap;
-  Cpu;
-  Network;
+  ArrowLeft
+  ArrowRight
+  Share2
+  Bookmark
+  Heart
+  MessageCircle
+  Eye
+  TrendingUp
+  Brain
+  Cloud
+  Shield
+  Zap
+  Cpu
+  Network
   BookOpen
-} from "lucide-react";
-import { SEO } from "../components/SEO";
+} from "lucide-react"
+import { SEO } from "../components/SEO"
 export default function BlogPost() {
   const { slug } = useParams()
-  // Mock blog post data - in a real app, this would come from an API;
+  // Mock blog post data - in a real app, this would come from an API
 const const blogPost = {
   = {
-    id: slug,title: 'The Future of AI-Powered Business Intelligence in 2024',excerpt: 'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes across industries.',content: `;
+    id: slug,tit,
+  l: e: 'The Future of AI-Powered Business Intelligence in 2024',excer,
+  p: t: 'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes across industries.',conte,
+  n: t: `
       <p class="mb-6 text-lg text-gray-300 leading-relaxed">
-        Artificial Intelligence has fundamentally transformed how businesses approach data analysis and decision-making. ;
-        In 2024, we're witnessing an unprecedented acceleration in AI-powered business intelligence capabilities that ;
-        are reshaping entire industries.;
+        Artificial Intelligence has fundamentally transformed how businesses approach data analysis and decision-making. 
+        In 2024, we're witnessing an unprecedented acceleration in AI-powered business intelligence capabilities that 
+        are reshaping entire industries.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">The Evolution of Business Intelligence</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
-        Traditional business intelligence relied heavily on historical data analysis and manual reporting processes. ;
+        Traditional business intelligence relied heavily on historical data analysis and manual reporting processes. 
         Today, AI-powered BI systems can process real-time data streams, identify patterns invisible to human analysts,
-  and provide predictive insights that drive proactive decision-making.;
+  and provide predictive insights that drive proactive decision-making.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Key Trends Shaping AI-Powered BI</h2>
-      ;
+      
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">1. Natural Language Processing (NLP)</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Modern BI platforms now understand natural language queries, allowing business users to ask questions ;
+        Modern BI platforms now understand natural language queries, allowing business users to ask questions 
         in plain English and receive instant insights. This democratizes data access across organizations,
-  reducing dependency on data scientists for routine queries.;
+  reducing dependency on data scientists for routine queries.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">2. Predictive Analytics</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        AI algorithms can now forecast trends, identify potential risks, and suggest optimal courses of action ;
-        based on historical patterns and current market conditions. This predictive capability is revolutionizing ;
-        strategic planning and risk management.;
+        AI algorithms can now forecast trends, identify potential risks, and suggest optimal courses of action 
+        based on historical patterns and current market conditions. This predictive capability is revolutionizing 
+        strategic planning and risk management.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">3. Automated Insights Generation</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
         Instead of manually creating reports, AI systems automatically identify significant changes, anomalies,
-  and opportunities in your data, delivering actionable insights directly to decision-makers.;
+  and opportunities in your data, delivering actionable insights directly to decision-makers.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Real-World Applications</h2>
-      ;
+      
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Retail and E-commerce</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
         AI-powered BI systems help retailers optimize inventory management, personalize customer experiences,
-  and predict demand patterns with remarkable accuracy. Companies like Amazon and Walmart have seen ;
-        significant improvements in operational efficiency and customer satisfaction.;
+  and predict demand patterns with remarkable accuracy. Companies like Amazon and Walmart have seen 
+        significant improvements in operational efficiency and customer satisfaction.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Financial Services</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Banks and financial institutions use AI BI for fraud detection, credit risk assessment, and ;
-        investment portfolio optimization. The real-time processing capabilities enable immediate ;
-        response to market changes and emerging risks.;
+        Banks and financial institutions use AI BI for fraud detection, credit risk assessment, and 
+        investment portfolio optimization. The real-time processing capabilities enable immediate 
+        response to market changes and emerging risks.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Healthcare</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
         Healthcare providers leverage AI BI for patient outcome prediction, resource allocation optimization,
-  and treatment effectiveness analysis. This leads to better patient care and more efficient ;
-        healthcare delivery systems.;
+  and treatment effectiveness analysis. This leads to better patient care and more efficient 
+        healthcare delivery systems.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Implementation Challenges and Solutions</h2>
-      ;
+      
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Data Quality and Integration</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        The success of AI-powered BI depends heavily on data quality. Organizations must invest in ;
-        data governance frameworks and ensure seamless integration across disparate data sources. ;
-        Modern data platforms like Snowflake and Databricks are making this easier than ever.;
+        The success of AI-powered BI depends heavily on data quality. Organizations must invest in 
+        data governance frameworks and ensure seamless integration across disparate data sources. 
+        Modern data platforms like Snowflake and Databricks are making this easier than ever.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Change Management</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        Implementing AI BI requires cultural change within organizations. Teams must be trained to ;
-        trust and effectively use AI-generated insights. Successful implementations often include ;
-        comprehensive training programs and change management strategies.;
+        Implementing AI BI requires cultural change within organizations. Teams must be trained to 
+        trust and effectively use AI-generated insights. Successful implementations often include 
+        comprehensive training programs and change management strategies.
       </p>
 
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Ethical Considerations</h3>
       <p class="mb-4 text-gray-300 leading-relaxed">
-        As AI systems make more decisions, organizations must ensure transparency, fairness, and ;
-        accountability. This includes regular audits of AI models and clear documentation of ;
-        decision-making processes.;
+        As AI systems make more decisions, organizations must ensure transparency, fairness, and 
+        accountability. This includes regular audits of AI models and clear documentation of 
+        decision-making processes.
       </p>
 
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking Ahead: The Future of AI-Powered BI</h2>
+      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking,
+  Ahea: d: The Future of AI-Powered BI</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
-        As we move further into 2024 and beyond, we can expect AI-powered BI to become even more ;
+        As we move further into 2024 and beyond, we can expect AI-powered BI to become even more 
         sophisticated. We'll see increased adoption of edge computing for real-time processing,
-  enhanced natural language capabilities, and more advanced predictive models.;
+  enhanced natural language capabilities, and more advanced predictive models.
       </p>
 
       <p class="mb-6 text-gray-300 leading-relaxed">
-        The organizations that successfully implement and leverage these AI-powered BI capabilities ;
-        will gain significant competitive advantages. They'll be able to make faster, more informed ;
-        decisions, identify opportunities before competitors, and optimize operations with unprecedented precision.;
+        The organizations that successfully implement and leverage these AI-powered BI capabilities 
+        will gain significant competitive advantages. They'll be able to make faster, more informed 
+        decisions, identify opportunities before competitors, and optimize operations with unprecedented precision.
       </p>
 
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Conclusion</h2>
       <p class="mb-6 text-gray-300 leading-relaxed">
-        AI-powered business intelligence represents a fundamental shift in how organizations approach ;
-        data-driven decision-making. While implementation challenges exist, the benefits far outweigh ;
-        the costs for most organizations.;
+        AI-powered business intelligence represents a fundamental shift in how organizations approach 
+        data-driven decision-making. While implementation challenges exist, the benefits far outweigh 
+        the costs for most organizations.
       </p>
 
       <p class="mb-6 text-gray-300 leading-relaxed">
-        The key to success lies in starting with a clear strategy, investing in the right technology ;
-        stack, and ensuring proper change management. Organizations that take these steps will be ;
-        well-positioned to thrive in an increasingly data-driven business landscape.;
+        The key to success lies in starting with a clear strategy, investing in the right technology 
+        stack, and ensuring proper change management. Organizations that take these steps will be 
+        well-positioned to thrive in an increasingly data-driven business landscape.
       </p>
-    `;
-    author: 'Kleber Santos',authorRole: 'CEO & AI Strategist',authorBio: 'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.';
-    date: '2024-01-15',readTime: '8 min read',category: 'ai',tags: ['AIBusiness Intelligence', 'Machine LearningData Analytics', 'Digital Transformation']
-    image: '/api/placeholder/800/400',featured: true,views: 2847,likes: 156,comments: 23,relatedPosts: [
+    `
+    auth,
+  o: r: 'Kleber Santos',authorRo,
+  l: e: 'CEO & AI Strategist',authorB,
+  i: o: 'Kleber Santos is the CEO and founder of Zion Tech Group, with over 15 years of experience in AI strategy and business transformation.'
+    da,
+  t: e: '2024-01-15',readTi,
+  m: e: '8 min read',catego,
+  r: y: 'ai',ta,
+  g: s: ['AIBusiness Intelligence', 'Machine LearningData Analytics', 'Digital Transformation']
+    ima,
+  g: e: '/api/placeholder/800/400',featur,
+  e: d: true,vie,
+  w: s: 2847,lik,
+  e: s: 156,commen,
+  t: s: 23,relatedPos,
+  t: s: [
   {
-  id: 'quantum-computing-business',title: 'Quantum Computing: Breaking Down the Hype vs. Reality',excerpt: 'A comprehensive analysis of quantum computing\'s current state and its practical applications in business.',category: 'quantum',date: '2024-01-12',readTime: '12 min read'
+  i,
+  d: 'quantum-computing-business',tit,
+  l: e: 'Quantum Computin,
+  g: Breaking Down the Hype vs. Reality',excer,
+  p: t: 'A comprehensive analysis of quantum computing\'s current state and its practical applications in business.',catego,
+  r: y: 'quantum',da,
+  t: e: '2024-01-12',readTi,
+  m: e: '12 min read'
 },
   {
-  id: 'zero-trust-security',title: 'Zero Trust Security: The New Standard for Enterprise Protection',excerpt: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',category: 'security',date: '2024-01-10',readTime: '10 min read'
+  id: 'zero-trust-security',tit,
+  l: e: 'Zero Trust Securit,
+  y: The New Standard for Enterprise Protection',excer,
+  p: t: 'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',catego,
+  r: y: 'security',da,
+  t: e: '2024-01-10',readTi,
+  m: e: '10 min read'
 },
   {
-  id: 'micro-saas-future',title: 'Micro SaaS: The Future of Niche Software Solutions',excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',category: 'business',date: '2024-01-08',readTime: '6 min read'
+  id: 'micro-saas-future',tit,
+  l: e: 'Micro Saa,
+  S: The Future of Niche Software Solutions',excer,
+  p: t: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',catego,
+  r: y: 'business',da,
+  t: e: '2024-01-08',readTi,
+  m: e: '6 min read'
 },
   ],
   }
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateStri,
+  n: g: string) () => {
   return new Date(dateString).toLocaleDateString('en-US', {
-  year: 'numeric',month: 'long',day: 'numeric'
+  ye,
+  a: r: 'numeric',mon,
+  t: h: 'long',d,
+  a: y: 'numeric'
 })
   }
 
-  const getCategoryIcon = (category: string) => {
-  const const categoryIcons: { [key: string]: any } = {
+  const getCategoryIcon = (catego,
+  r: y: string) () => {
+  const,
+  const: categoryIcons: { [ke,
+  y: string]: any } = {
   = {
-      ai: Brain,quantum: Cpu,security: Shield,cloud: Cloud,business: TrendingUp,iot: Network,emerging: Zap
+      ai: Brain,quant,
+  u: m: Cpu,securi,
+  t: y: Shield,clo,
+  u: d: Cloud,busine,
+  s: s: TrendingUp,i,
+  o: t: Network,emergi,
+  n: g: Zap
 }
     return categoryIcons[category] || BookOpen
 }
 
-  const getCategoryName = (category: string) => {
-  const const categoryNames: { [key: string]: string } = {
+  const getCategoryName = (catego,
+  r: y: string) () => {
+  const,
+  const: categoryNames: { [ke,
+  y: string]: string } = {
   = {
-      ai: 'Artificial Intelligence',quantum: 'Quantum Computing',security: 'Cybersecurity',cloud: 'Cloud & DevOps',business: 'Business Insights',iot: 'IoT & Edge',emerging: 'Emerging Tech'
+      ai: 'Artificial Intelligence',quant,
+  u: m: 'Quantum Computing',securi,
+  t: y: 'Cybersecurity',clo,
+  u: d: 'Cloud & DevOps',busine,
+  s: s: 'Business Insights',i,
+  o: t: 'IoT & Edge',emergi,
+  n: g: 'Emerging Tech'
 }
     return categoryNames[category] || 'Uncategorized'
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO ;
+      <SEO 
         title={`${blogPost.title} - Zion Tech Group Blog`}
-        description={{blogPost.excerpt},
+        description={blogPost.excerpt},
   }
       />
-      ;
-      {{/* Navigation */},
+      
+      {/* Navigation */},
   }
       <section className="py-6 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <Link;
-            to="/blog";
-            className="className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200";"
+          <Link
+            to="/blog"
+            className="className="inline-flex items-center space-x-2 text-cyan-400,
+  hove: r:text-cyan-300 transition-colors duration-200";"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Blog</span>
@@ -194,48 +253,53 @@ const const blogPost = {
         </div>
       </section>
 
-      {{/* Article Header */},
+      {/* Article Header */},
   }
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="max-w-4xl mx-auto";"
           >
-            {{/* Category and Featured Badge */},
+            {/* Category and Featured Badge */},
   }
             <div className="flex items-center space-x-3 mb-6">
                               <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm rounded-full font-medium flex items-center space-x-2">
-                  {React.createElement(getCategoryIcon(blogPost.category), { className: "w-4 h-4" })}
+                  {React.createElement(getCategoryIcon(blogPost.category), { classNa,
+  m: e: "w-4 h-4" })}
                   <span>{getCategoryName(blogPost.category)}</span>
                 </span>
               {blogPost.featured && (
   <span className="px-4 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded-full font-medium">
-                  Featured Article;
+                  Featured Article
                 </span>
               )}
             </div>
 
-            {{/* Title */},
+            {/* Title */},
   }
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              {{blogPost.title},
+            <h1 className="text-4xl,
+  m: d:text-5xl font-bold text-white mb-6 leading-tight">
+              {blogPost.title},
   }
             </h1>
 
-            {{/* Excerpt */},
+            {/* Excerpt */},
   }
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              {{blogPost.excerpt},
+              {blogPost.excerpt},
   }
             </p>
 
-            {{/* Article Meta */},
+            {/* Article Meta */},
   }
             <div className="flex flex-wrap items-center justify-between gap-4 py-6 border-t border-b border-slate-700/50">
               <div className="flex items-center space-x-6">
@@ -257,14 +321,17 @@ const const blogPost = {
               </div>
 
               <div className="flex items-center space-x-4">
-                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                <button className="flex items-center space-x-2 text-gray-400,
+  hove: r:text-cyan-400 transition-colors duration-200">
                   <Heart className="w-5 h-5" />
                   <span>{blogPost.likes}</span>
                 </button>
-                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                <button className="flex items-center space-x-2 text-gray-400,
+  hove: r: text-cyan-400 transition-colors duration-200">
                   <Bookmark className="w-5 h-5" />
                 </button>
-                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                <button className="flex items-center space-x-2 text-gray-400 hove,
+  r:text-cyan-400 transition-colors duration-200">
                   <Share2 className="w-5 h-5" />
                 </button>
               </div>
@@ -273,21 +340,24 @@ const const blogPost = {
         </div>
       </section>
 
-      {{/* Article Content */},
+      {/* Article Content */},
   }
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 },
+            <motion.div
+              initial={ opaci,
+  t: y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.8 },
+              transition={ durati,
+  o: n: 0.8 },
   }
               className="className="prose prose-invert prose-lg max-w-none";"
             >
-              {{/* Featured Image */},
+              {/* Featured Image */},
   }
               <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 flex items-center justify-center mb-12">
                 <div className="text-center">
@@ -296,11 +366,12 @@ const const blogPost = {
                 </div>
               </div>
 
-              {{/* Article Content */},
+              {/* Article Content */},
   }
-              <div ;
+              <div 
                 className="className="text-gray-300 leading-relaxed";"
-                dangerouslySetInnerHTML={{ __html: blogPost.content },
+                dangerouslySetInnerHTML={ __ht,
+  m: l: blogPost.content },
   }
               />
             </motion.div>
@@ -308,22 +379,24 @@ const const blogPost = {
         </div>
       </section>
 
-      {{/* Tags */},
+      {/* Tags */},
   }
       <section className="py-8 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center space-x-3">
               <Tag className="w-5 h-5 text-cyan-400" />
-              <span className="text-white font-medium">Tags:</span>
+              <span className="text-white font-medium">Ta,
+  g: s:</span>
               <div className="flex flex-wrap gap-2">
                 {blogPost.tags.map((tag) => (
-  <span;
-                    key={{tag},
+  <span
+                    key={tag},
   }
-                    className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200";"
+                    className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50,
+  hove: r:border-cyan-400/50 transition-all duration-200";"
                   >
-                    {{tag},
+                    {tag},
   }
                   </span>
                 ))}
@@ -333,17 +406,20 @@ const const blogPost = {
         </div>
       </section>
 
-      {{/* Author Bio */},
+      {/* Author Bio */},
   }
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 },
+            <motion.div
+              initial={ opaci,
+  t: y: 0, y: 20 },
   }
-              whileInView={{ opacity: 1, y: 0 },
+              whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-              transition={{ duration: 0.8 },
+              transition={ durati,
+  o: n: 0.8 },
   }
               className="className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50";"
             >
@@ -363,60 +439,70 @@ const const blogPost = {
         </div>
       </section>
 
-      {{/* Related Posts */},
+      {/* Related Posts */},
   }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Related Articles</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Continue exploring insights and analysis on related topics;
+              Continue exploring insights and analysis on related topics
             </p>
           </motion.div>
-          ;
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          
+          <div className="grid,
+  m: d:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {blogPost.relatedPosts.map((post, index) => (
-  <motion.article;
-                key={{post.id},
+  <motion.article
+                key={post.id},
   }
-                initial={{ opacity: 0, y: 20 },
+                initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                whileInView={{ opacity: 1, y: 0 },
+                whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                transition={{ duration: 0.5, delay: index * 0.1 },
+                transition={ durati,
+  o: n: 0.5, del,
+  a: y: index * 0.1 },
   }
-                className="className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group";"
+                className="className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden,
+  hove: r:border-cyan-400/50 transition-all duration-300 group";"
               >
                 <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-cyan-400" />
                 </div>
-                ;
+                
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
-                      {{getCategoryName(post.category)},
+                      {getCategoryName(post.category)},
   }
                     </span>
                   </div>
-                  ;
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
-                    {{post.title},
+                  
+                  <h3 className="text-lg font-bold text-white mb-3 group-hov,
+  e: r:text-cyan-400 transition-colors duration-200">
+                    {post.title},
   }
                   </h3>
-                  ;
+                  
                   <p className="text-gray-300 mb-4 line-clamp-3">
-                    {{post.excerpt},
+                    {post.excerpt},
   }
                   </p>
-                  ;
+                  
                   <div className="flex items-center justify-between text-sm text-gray-400">
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4" />
@@ -434,35 +520,42 @@ const const blogPost = {
         </div>
       </section>
 
-      {{/* CTA Section */},
+      {/* CTA Section */},
   }
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 },
+          <motion.div
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            whileInView={{ opacity: 1, y: 0 },
+            whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ duration: 0.8 },
+            transition={ durati,
+  o: n: 0.8 },
   }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI-powered solutions can drive innovation and growth for your organization.;
+              Let's discuss how our AI-powered solutions can drive innovation and growth for your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link;
-                to="/contact";
-                className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300";"
+              <Link
+                to="/contact"
+                className="className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg,
+  hove: r: from-cyan-600,
+  hove: r:to-blue-600 transition-all duration-300";"
               >
-                Get Started Today;
+                Get Started Today
               </Link>
-              <Link;
-                to="/services";
-                className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300";"
+              <Link
+                to="/services"
+                className="className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg,
+  hove: r:bg-cyan-400 hove,
+  r:text-white transition-all duration-300";"
               >
-                Explore Our Services;
+                Explore Our Services
               </Link>
             </div>
           </motion.div>

@@ -1,28 +1,33 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 interface User {
-  id: string,email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
+  id: string,ema,
+  i: l: string
+  displayName?: string
+  avatar?: string
+  role?: string
+  isEmailVerified?: boolean
+  createdAt?: string
   updatedAt?: string
 }
 
 interface AuthTokens {
-  accessToken: string | null,refreshToken: string | null
+  accessTok,
+  e: n: string | null,refreshTok,
+  e: n: string | null
 }
 
-export const useAuthState = () => {
+export const useAuthState = () () => {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [onboardingStep, setOnboardingStep] = useState(0)
   const [tokens, setTokens] = useState<AuthTokens>({
-  accessToken: null,refreshToken: null
+  accessTok,
+  e: n: null,refreshTok,
+  e: n: null
 })
-  useEffect(() => {
-    // Check for existing auth state on mount;
-const checkAuthState = async () => {
+  useEffect(() () => {
+    // Check for existing auth state on mount
+const checkAuthState = async () () => {
       try {
   if (if (typeof window !== 'undefined') {
   ) {
@@ -34,16 +39,19 @@ const checkAuthState = async () => {
   ) {
               setUser(parsed.user)
               setTokens({
-  accessToken: parsed.token,refreshToken: parsed.refreshToken || null
+  accessTok,
+  e: n: parsed.token,refreshTok,
+  e: n: parsed.refreshToken || null
 })
             },
   },
   },
   } catch (error) {
-  <<<<<<< HEAD;
-        // Error checking auth state - handled silently in production;
-=======;
-        console.error('Error checking auth state:', error)
+  <<<<<<< HEAD
+        // Error checking auth state - handled silently in production
+=======
+        console.error('Error checking,
+  auth: state:', error)
 >>>>>>> 79d2856453c9c17c17b3a924ae6847ff11a94dac
 } finally {
   setIsLoading(false)
@@ -54,13 +62,13 @@ const checkAuthState = async () => {
   }, [])
 
   return {
-  user;
-    setUser;
-    isLoading;
-    setIsLoading;
-    onboardingStep;
-    setOnboardingStep;
-    tokens;
+  user
+    setUser
+    isLoading
+    setIsLoading
+    onboardingStep
+    setOnboardingStep
+    tokens
     setTokens
 },
   }

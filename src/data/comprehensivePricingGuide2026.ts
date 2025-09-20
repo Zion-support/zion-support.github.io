@@ -1,541 +1,862 @@
-// Comprehensive Pricing Guide 2026 - Zion Tech Group;
-// Revolutionary Micro SAAS, IT Infrastructure, and AI Services;
+// Comprehensive Pricing Guide 2026 - Zion Tech Group
+// Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 export interface PricingTier {
-  name: string,price: number,currency: string,billing: string,features: string[],benefits: string[],targetAudience: string[],roi: string,setupTime: string,supportLevel: string,innovationLevel: string
+  na,
+  m: e: string,pri,
+  c: e: number,curren,
+  c: y: string,billi,
+  n: g: string,featur,
+  e: s: string[],benefi,
+  t: s: string[],targetAudien,
+  c: e: string[],r,
+  o: i: string,setupTi,
+  m: e: string,supportLev,
+  e: l: string,innovationLev,
+  e: l: string
 }
 
 export interface ServicePricing {
-  id: string,title: string,description: string,category: string,subcategory: string,pricingTiers: PricingTier[],marketPrice: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {
-  phone: string,email: string,website: string,address: string
+  id: string,tit,
+  l: e: string,descripti,
+  o: n: string,catego,
+  r: y: string,subcatego,
+  r: y: string,pricingTie,
+  r: s: PricingTier[],marketPri,
+  c: e: string,competito,
+  r: s: string[],marketSi,
+  z: e: string,growthRa,
+  t: e: string,contactIn,
+  f: o: {
+  phon,
+  e: string,ema,
+  i: l: string,websi,
+  t: e: string,addre,
+  s: s: string
 }
-  technicalSpecs: {
-  technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
+  technicalSpe,
+  c: s: {
+  technolog,
+  y: string[],integratio,
+  n: s: string[],apiEndpoin,
+  t: s: number,upti,
+  m: e: string,securi,
+  t: y: string[[],
   ],
   }
-  aiCapabilities: string[],complianceFeatures: string[],scalabilityFeatures: string[[],
+  aiCapabiliti,
+  e: s: string[],complianceFeatur,
+  e: s: string[],scalabilityFeatur,
+  e: s: string[[],
   ],
   }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
+export,
+  const: COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
-  id: "ai-business-intelligence-platform-2026",title: "AI Business Intelligence Platform 2026",description: "Next-generation business intelligence platform that uses advanced AI to automatically analyze data, generate insights, and create actionable reports for business decision-making with predictive analytics and real-time monitoring.";
-    category: "AI & Analytics",subcategory: "Business Intelligence",pricingTiers: [
+  i,
+  d: "ai-business-intelligence-platform-2026",tit,
+  l: e: "AI Business Intelligence Platform 2026",descripti,
+  o: n: "Next-generation business intelligence platform that uses advanced AI to automatically analyze data, generate insights, and create actionable reports for business decision-making with predictive analytics and real-time monitoring."
+    catego,
+  r: y: "AI & Analytics",subcatego,
+  r: y: "Business Intelligence",pricingTie,
+  r: s: [
   {
-  name: "Business",price: 3999,currency: "$",billing: "monthly",features: [
-  "Advanced AI-powered data analysis with GPT-4 integration";
-          "Automated insight generation with natural language explanations";
-          "Natural language queries in 50+ languages";
-          "Predictive analytics with 95% accuracy";
-          "Custom dashboard creation with drag-and-drop interface";
-          "Real-time data processing with sub-second latency";
-          "Multi-source data integration (100+ connectors)";
-          "Advanced visualization tools with 3D charts";
-          "Automated reporting with AI-generated insights";
+  nam,
+  e: "Business",pri,
+  c: e: 3999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "Advanced AI-powered data analysis with GPT-4 integration"
+          "Automated insight generation with natural language explanations"
+          "Natural language queries in 50+ languages"
+          "Predictive analytics with 95% accuracy"
+          "Custom dashboard creation with drag-and-drop interface"
+          "Real-time data processing with sub-second latency"
+          "Multi-source data integration (100+ connectors)"
+          "Advanced visualization tools with 3D charts"
+          "Automated reporting with AI-generated insights"
           "Mobile app access with offline capabilities"
 ]
-        benefits: [
-  "Reduce analysis time by 90%";
-          "Improve decision accuracy by 75%";
-          "Automated insight discovery with zero manual effort";
-          "Real-time business monitoring with instant alerts";
+        benefi,
+  t: s: [
+  "Reduce analysis time by 90%"
+          "Improve decision accuracy by 75%"
+          "Automated insight discovery with zero manual effort"
+          "Real-time business monitoring with instant alerts"
           "Scalable analytics infrastructure for enterprise growth"
 ]
-        targetAudience: [
-  "Business analysts and data scientists";
-          "Executives and C-suite leaders";
-          "Marketing and sales teams";
+        targetAudien,
+  c: e: [
+  "Business analysts and data scientists"
+          "Executives and C-suite leaders"
+          "Marketing and sales teams"
           "Operations managers"
 ]
-        roi: "300-500%",setupTime: "4-6 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "300-500%",setupTi,
+  m: e: "4-6 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   {
-  name: "Enterprise",price: 8999,currency: "$",billing: "monthly",features: [
-  "All Business features";
-          "Voice-activated queries and commands";
-          "Automated anomaly detection";
-          "Sentiment analysis for customer feedback";
-          "Competitive intelligence tracking";
-          "ROI prediction modeling";
-          "Advanced security and compliance";
-          "Custom integrations and APIs";
-          "Dedicated support team";
+  na,
+  m: e: "Enterprise",pri,
+  c: e: 8999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Business features"
+          "Voice-activated queries and commands"
+          "Automated anomaly detection"
+          "Sentiment analysis for customer feedback"
+          "Competitive intelligence tracking"
+          "ROI prediction modeling"
+          "Advanced security and compliance"
+          "Custom integrations and APIs"
+          "Dedicated support team"
           "Training and certification programs"
 ]
-        benefits: [
-  "All Business benefits";
-          "Enhanced security and compliance";
-          "Custom integrations for enterprise needs";
-          "Dedicated support and training";
+        benefi,
+  t: s: [
+  "All Business benefits"
+          "Enhanced security and compliance"
+          "Custom integrations for enterprise needs"
+          "Dedicated support and training"
           "Advanced competitive intelligence"
 ]
-        targetAudience: [
-  "Large enterprises";
-          "Multi-national corporations";
-          "Government agencies";
+        targetAudien,
+  c: e: [
+  "Large enterprises"
+          "Multi-national corporations"
+          "Government agencies"
           "Financial institutions"
 ]
-        roi: "400-600%",setupTime: "6-8 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "400-600%",setupTi,
+  m: e: "6-8 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   {
-  name: "Ultimate",price: 12999,currency: "$",billing: "monthly",features: [
-  "All Enterprise features";
-          "Quantum computing integration";
-          "Advanced AI model training";
-          "Custom algorithm development";
-          "White-label solutions";
-          "Global deployment support";
-          "24/7 dedicated support";
-          "Custom SLA agreements";
-          "Executive consulting services";
+  na,
+  m: e: "Ultimate",pri,
+  c: e: 12999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Enterprise features"
+          "Quantum computing integration"
+          "Advanced AI model training"
+          "Custom algorithm development"
+          "White-label solutions"
+          "Global deployment support"
+          "24/7 dedicated support"
+          "Custom SLA agreements"
+          "Executive consulting services"
           "Strategic partnership programs"
 ]
-        benefits: [
-  "All Enterprise benefits";
-          "Quantum computing advantage";
-          "Custom AI model development";
-          "White-label solutions for resale";
+        benefi,
+  t: s: [
+  "All Enterprise benefits"
+          "Quantum computing advantage"
+          "Custom AI model development"
+          "White-label solutions for resale"
           "Strategic consulting and partnership"
 ]
-        targetAudience: [
-  "Technology companies";
-          "Consulting firms";
-          "System integrators";
+        targetAudien,
+  c: e: [
+  "Technology companies"
+          "Consulting firms"
+          "System integrators"
           "Strategic partners"
 ]
-        roi: "500-800%",setupTime: "8-10 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "500-800%",setupTi,
+  m: e: "8-10 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   ]
-    marketPrice: "$3,999 - $12,999/month";
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"]
-    marketSize: "$45.2 billion by 2026",growthRate: "45% annually",contactInfo: {
-  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
+    marketPri,
+  c: e: "$3,999 - $12,999/month"
+    competito,
+  r: s: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"]
+    marketSi,
+  z: e: "$45.2 billion by 2026",growthRa,
+  t: e: "45% annually",contactIn,
+  f: o: {
+  phon,
+  e: "+1 302 464 0950",ema,
+  i: l: "kleber@ziontechgroup.com",websi,
+  t: e: "http,
+  s://ziontechgroup.com",addre,
+  s: s: "364 E Main St STE 1008, Middletown DE 19709"
 }
-    technicalSpecs: {
-  technology: ["GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis"]
-      integrations: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI", "Tableau", "Slack", "Microsoft Teams"]
-      apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"],
+    technicalSpe,
+  c: s: {
+  technolog,
+  y: ["GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis"]
+      integratio,
+  n: s: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI", "Tableau", "Slack", "Microsoft Teams"]
+      apiEndpoin,
+  t: s: 150,upti,
+  m: e: "99.9%",securi,
+  t: y: [["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"],
   ],
   }
-    aiCapabilities: ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"]
-    complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"]
-    scalabilityFeatures: [["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"],
+    aiCapabiliti,
+  e: s: ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"]
+    complianceFeatur,
+  e: s: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"]
+    scalabilityFeatur,
+  e: s: [["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"],
   ],
   },
   {
-  id: "quantum-cybersecurity-suite-2026",title: "Quantum Cybersecurity Suite 2026",description: "Revolutionary cybersecurity platform leveraging quantum-resistant algorithms and quantum key distribution for unbreakable encryption and threat detection.",category: "Cybersecurity",subcategory: "Quantum Security",pricingTiers: [
+  id: "quantum-cybersecurity-suite-2026",tit,
+  l: e: "Quantum Cybersecurity Suite 2026",descripti,
+  o: n: "Revolutionary cybersecurity platform leveraging quantum-resistant algorithms and quantum key distribution for unbreakable encryption and threat detection.",catego,
+  r: y: "Cybersecurity",subcatego,
+  r: y: "Quantum Security",pricingTie,
+  r: s: [
   {
-  name: "Professional",price: 8999,currency: "$",billing: "monthly",features: [
-  "Quantum-resistant encryption algorithms";
-          "Quantum key distribution (QKD)";
-          "AI-powered threat detection with 99.99% accuracy";
-          "Zero-trust architecture implementation";
-          "Real-time threat intelligence feeds";
-          "Automated incident response";
-          "Compliance automation (SOC 2, ISO 27001, NIST)";
-          "Quantum-safe certificate management";
-          "Advanced behavioral analytics";
+  nam,
+  e: "Professional",pri,
+  c: e: 8999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "Quantum-resistant encryption algorithms"
+          "Quantum key distribution (QKD)"
+          "AI-powered threat detection with 99.99% accuracy"
+          "Zero-trust architecture implementation"
+          "Real-time threat intelligence feeds"
+          "Automated incident response"
+          "Compliance automation (SOC 2, ISO 27001, NIST)"
+          "Quantum-safe certificate management"
+          "Advanced behavioral analytics"
           "Cloud-native security architecture"
 ]
-        benefits: [
-  "Future-proof security against quantum attacks";
-          "Reduce security incidents by 95%";
-          "Automated compliance with zero manual effort";
-          "Real-time threat visibility across all assets";
+        benefi,
+  t: s: [
+  "Future-proof security against quantum attacks"
+          "Reduce security incidents by 95%"
+          "Automated compliance with zero manual effort"
+          "Real-time threat visibility across all assets"
           "Cost reduction through automation"
 ]
-        targetAudience: [
-  "Chief Information Security Officers (CISOs)";
-          "Security architects and engineers";
-          "Compliance officers";
+        targetAudien,
+  c: e: [
+  "Chief Information Security Officers (CISOs)"
+          "Security architects and engineers"
+          "Compliance officers"
           "IT directors and managers"
 ]
-        roi: "400-800%",setupTime: "8-12 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "400-800%",setupTi,
+  m: e: "8-12 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   {
-  name: "Enterprise",price: 15999,currency: "$",billing: "monthly",features: [
-  "All Professional features";
-          "Multi-cloud security orchestration";
-          "Threat hunting automation";
-          "Security posture scoring";
-          "Vulnerability assessment automation";
-          "Compliance reporting dashboard";
-          "Advanced threat intelligence";
-          "Custom security policies";
-          "Dedicated security team";
+  na,
+  m: e: "Enterprise",pri,
+  c: e: 15999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Professional features"
+          "Multi-cloud security orchestration"
+          "Threat hunting automation"
+          "Security posture scoring"
+          "Vulnerability assessment automation"
+          "Compliance reporting dashboard"
+          "Advanced threat intelligence"
+          "Custom security policies"
+          "Dedicated security team"
           "24/7 security monitoring"
 ]
-        benefits: [
-  "All Professional benefits";
-          "Multi-cloud security management";
-          "Advanced threat hunting capabilities";
-          "Comprehensive compliance reporting";
+        benefi,
+  t: s: [
+  "All Professional benefits"
+          "Multi-cloud security management"
+          "Advanced threat hunting capabilities"
+          "Comprehensive compliance reporting"
           "Custom security policies and procedures"
 ]
-        targetAudience: [
-  "Large enterprises";
-          "Government agencies";
-          "Financial institutions";
+        targetAudien,
+  c: e: [
+  "Large enterprises"
+          "Government agencies"
+          "Financial institutions"
           "Healthcare organizations"
 ]
-        roi: "500-900%",setupTime: "12-16 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "500-900%",setupTi,
+  m: e: "12-16 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   {
-  name: "Government",price: 25000,currency: "$",billing: "monthly",features: [
-  "All Enterprise features";
-          "Top-secret clearance support";
-          "Government-specific compliance";
-          "Custom quantum algorithms";
-          "Advanced threat intelligence";
-          "International security cooperation";
-          "Custom deployment options";
-          "Executive security consulting";
-          "Strategic security planning";
+  na,
+  m: e: "Government",pri,
+  c: e: 25000,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Enterprise features"
+          "Top-secret clearance support"
+          "Government-specific compliance"
+          "Custom quantum algorithms"
+          "Advanced threat intelligence"
+          "International security cooperation"
+          "Custom deployment options"
+          "Executive security consulting"
+          "Strategic security planning"
           "Partnership programs"
 ]
-        benefits: [
-  "All Enterprise benefits";
-          "Government-grade security";
-          "Top-secret clearance support";
-          "Custom quantum algorithms";
+        benefi,
+  t: s: [
+  "All Enterprise benefits"
+          "Government-grade security"
+          "Top-secret clearance support"
+          "Custom quantum algorithms"
           "Strategic security partnerships"
 ]
-        targetAudience: [
-  "Government agencies";
-          "Defense contractors";
-          "Intelligence agencies";
+        targetAudien,
+  c: e: [
+  "Government agencies"
+          "Defense contractors"
+          "Intelligence agencies"
           "Critical infrastructure"
 ]
-        roi: "600-1000%",setupTime: "16-20 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "600-1000%",setupTi,
+  m: e: "16-20 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   ]
-    marketPrice: "$8,999 - $25,000/month";
-    competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"]
-    marketSize: "$376.3 billion by 2026",growthRate: "40% annually",contactInfo: {
-  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
+    marketPri,
+  c: e: "$8,999 - $25,000/month"
+    competito,
+  r: s: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"]
+    marketSi,
+  z: e: "$376.3 billion by 2026",growthRa,
+  t: e: "40% annually",contactIn,
+  f: o: {
+  phon,
+  e: "+1 302 464 0950",ema,
+  i: l: "kleber@ziontechgroup.com",websi,
+  t: e: "http,
+  s://ziontechgroup.com",addre,
+  s: s: "364 E Main St STE 1008, Middletown DE 19709"
 }
-    technicalSpecs: {
-  technology: ["Quantum-resistant algorithms", "AI/ML", "Blockchain", "Zero-trust architecture", "Cloud-native"]
-      integrations: ["AWS Security Hub", "Azure Sentinel", "Google Cloud Security", "Splunk", "CrowdStrike"]
-      apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"],
+    technicalSpe,
+  c: s: {
+  technolog,
+  y: ["Quantum-resistant algorithms", "AI/ML", "Blockchain", "Zero-trust architecture", "Cloud-native"]
+      integratio,
+  n: s: ["AWS Security Hub", "Azure Sentinel", "Google Cloud Security", "Splunk", "CrowdStrike"]
+      apiEndpoin,
+  t: s: 200,upti,
+  m: e: "99.99%",securi,
+  t: y: [["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"],
   ],
   }
-    aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"]
-    complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"]
-    scalabilityFeatures: [["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"],
+    aiCapabiliti,
+  e: s: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"]
+    complianceFeatur,
+  e: s: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"]
+    scalabilityFeatur,
+  e: s: [["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"],
   ],
   },
   {
-  id: "autonomous-supply-chain-platform-2026",title: "Autonomous Supply Chain Platform 2026",description: "AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.";
-    category: "Supply Chain",subcategory: "Autonomous Management",pricingTiers: [
+  id: "autonomous-supply-chain-platform-2026",tit,
+  l: e: "Autonomous Supply Chain Platform 2026",descripti,
+  o: n: "AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency."
+    catego,
+  r: y: "Supply Chain",subcatego,
+  r: y: "Autonomous Management",pricingTie,
+  r: s: [
   {
-  name: "Business",price: 5999,currency: "$",billing: "monthly",features: [
-  "AI-powered demand forecasting with 98% accuracy";
-          "Autonomous inventory optimization";
-          "Real-time supply chain visibility";
-          "Predictive disruption detection";
-          "Automated supplier selection";
-          "Dynamic pricing optimization";
-          "Sustainability tracking and reporting";
-          "Multi-modal transportation optimization";
-          "Risk assessment and mitigation";
+  nam,
+  e: "Business",pri,
+  c: e: 5999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "AI-powered demand forecasting with 98% accuracy"
+          "Autonomous inventory optimization"
+          "Real-time supply chain visibility"
+          "Predictive disruption detection"
+          "Automated supplier selection"
+          "Dynamic pricing optimization"
+          "Sustainability tracking and reporting"
+          "Multi-modal transportation optimization"
+          "Risk assessment and mitigation"
           "Compliance automation"
 ]
-        benefits: [
-  "Reduce supply chain costs by 25-40%";
-          "Improve forecast accuracy by 98%";
-          "Reduce inventory carrying costs by 30%";
-          "Minimize supply chain disruptions by 80%";
+        benefi,
+  t: s: [
+  "Reduce supply chain costs by 25-40%"
+          "Improve forecast accuracy by 98%"
+          "Reduce inventory carrying costs by 30%"
+          "Minimize supply chain disruptions by 80%"
           "Enhance sustainability compliance"
 ]
-        targetAudience: [
-  "Supply chain directors and managers";
-          "Operations managers";
-          "Logistics coordinators";
+        targetAudien,
+  c: e: [
+  "Supply chain directors and managers"
+          "Operations managers"
+          "Logistics coordinators"
           "Procurement specialists"
 ]
-        roi: "300-600%",setupTime: "10-14 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-Edge"
+        ro,
+  i: "300-600%",setupTi,
+  m: e: "10-14 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Cutting-Edge"
 },
   {
-  name: "Enterprise",price: 12999,currency: "$",billing: "monthly",features: [
-  "All Business features";
-          "Blockchain-based traceability";
-          "IoT sensor integration";
-          "Machine learning optimization";
-          "Real-time analytics dashboard";
-          "Mobile app for field operations";
-          "Advanced risk modeling";
-          "Custom integrations";
-          "Dedicated support team";
+  na,
+  m: e: "Enterprise",pri,
+  c: e: 12999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Business features"
+          "Blockchain-based traceability"
+          "IoT sensor integration"
+          "Machine learning optimization"
+          "Real-time analytics dashboard"
+          "Mobile app for field operations"
+          "Advanced risk modeling"
+          "Custom integrations"
+          "Dedicated support team"
           "Training and certification"
 ]
-        benefits: [
-  "All Business benefits";
-          "Blockchain traceability";
-          "IoT integration for real-time monitoring";
-          "Advanced risk modeling";
+        benefi,
+  t: s: [
+  "All Business benefits"
+          "Blockchain traceability"
+          "IoT integration for real-time monitoring"
+          "Advanced risk modeling"
           "Custom integrations and support"
 ]
-        targetAudience: [
-  "Manufacturing executives";
-          "Retail operations teams";
-          "Healthcare administrators";
+        targetAudien,
+  c: e: [
+  "Manufacturing executives"
+          "Retail operations teams"
+          "Healthcare administrators"
           "Large enterprises"
 ]
-        roi: "400-700%",setupTime: "14-18 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-Edge"
+        ro,
+  i: "400-700%",setupTi,
+  m: e: "14-18 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Cutting-Edge"
 },
   {
-  name: "Global",price: 18000,currency: "$",billing: "monthly",features: [
-  "All Enterprise features";
-          "Global supply chain management";
-          "Multi-currency support";
-          "International compliance";
-          "Advanced analytics and AI";
-          "Custom algorithm development";
-          "White-label solutions";
-          "Strategic consulting";
-          "Partnership programs";
+  na,
+  m: e: "Global",pri,
+  c: e: 18000,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Enterprise features"
+          "Global supply chain management"
+          "Multi-currency support"
+          "International compliance"
+          "Advanced analytics and AI"
+          "Custom algorithm development"
+          "White-label solutions"
+          "Strategic consulting"
+          "Partnership programs"
           "24/7 global support"
 ]
-        benefits: [
-  "All Enterprise benefits";
-          "Global supply chain management";
-          "International compliance";
-          "Custom algorithm development";
+        benefi,
+  t: s: [
+  "All Enterprise benefits"
+          "Global supply chain management"
+          "International compliance"
+          "Custom algorithm development"
           "Strategic partnerships"
 ]
-        targetAudience: [
-  "Multi-national corporations";
-          "Global manufacturers";
-          "International retailers";
+        targetAudien,
+  c: e: [
+  "Multi-national corporations"
+          "Global manufacturers"
+          "International retailers"
           "Strategic partners"
 ]
-        roi: "500-800%",setupTime: "18-24 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-Edge"
+        ro,
+  i: "500-800%",setupTi,
+  m: e: "18-24 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Cutting-Edge"
 },
   ]
-    marketPrice: "$5,999 - $18,000/month";
-    competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"]
-    marketSize: "$67.2 billion by 2026",growthRate: "30% annually",contactInfo: {
-  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
+    marketPri,
+  c: e: "$5,999 - $18,000/month"
+    competito,
+  r: s: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"]
+    marketSi,
+  z: e: "$67.2 billion by 2026",growthRa,
+  t: e: "30% annually",contactIn,
+  f: o: {
+  phon,
+  e: "+1 302 464 0950",ema,
+  i: l: "kleber@ziontechgroup.com",websi,
+  t: e: "http,
+  s://ziontechgroup.com",addre,
+  s: s: "364 E Main St STE 1008, Middletown DE 19709"
 }
-    technicalSpecs: {
-  technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"]
-      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"]
-      apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"],
+    technicalSpe,
+  c: s: {
+  technolog,
+  y: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"]
+      integratio,
+  n: s: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"]
+      apiEndpoin,
+  t: s: 300,upti,
+  m: e: "99.9%",securi,
+  t: y: [["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"],
   ],
   }
-    aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"]
-    complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"]
-    scalabilityFeatures: [["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"],
+    aiCapabiliti,
+  e: s: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"]
+    complianceFeatur,
+  e: s: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"]
+    scalabilityFeatur,
+  e: s: [["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"],
   ],
   },
   {
-  id: "quantum-financial-trading-platform-2026",title: "Quantum Financial Trading Platform 2026",description: "Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.";
-    category: "FinTech",subcategory: "Quantum Trading",pricingTiers: [
+  id: "quantum-financial-trading-platform-2026",tit,
+  l: e: "Quantum Financial Trading Platform 2026",descripti,
+  o: n: "Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage."
+    catego,
+  r: y: "FinTech",subcatego,
+  r: y: "Quantum Trading",pricingTie,
+  r: s: [
   {
-  name: "Professional",price: 15999,currency: "$",billing: "monthly",features: [
-  "Quantum-powered market analysis";
-          "Ultra-fast trading execution (<1ms latency)";
-          "AI-driven risk assessment";
-          "Portfolio optimization algorithms";
-          "Real-time market sentiment analysis";
-          "Automated trading strategies";
-          "Regulatory compliance automation";
-          "Multi-asset class support";
-          "Advanced risk management";
+  nam,
+  e: "Professional",pri,
+  c: e: 15999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "Quantum-powered market analysis"
+          "Ultra-fast trading execution (<1ms latency)"
+          "AI-driven risk assessment"
+          "Portfolio optimization algorithms"
+          "Real-time market sentiment analysis"
+          "Automated trading strategies"
+          "Regulatory compliance automation"
+          "Multi-asset class support"
+          "Advanced risk management"
           "Performance analytics dashboard"
 ]
-        benefits: [
-  "Achieve quantum advantage in trading";
-          "Reduce trading latency by 99%";
-          "Improve portfolio returns by 15-25%";
-          "Automated risk management";
+        benefi,
+  t: s: [
+  "Achieve quantum advantage in trading"
+          "Reduce trading latency by 99%"
+          "Improve portfolio returns by 15-25%"
+          "Automated risk management"
           "Real-time market insights"
 ]
-        targetAudience: [
-  "Quantitative traders";
-          "Portfolio managers";
-          "Risk managers";
+        targetAudien,
+  c: e: [
+  "Quantitative traders"
+          "Portfolio managers"
+          "Risk managers"
           "Financial analysts"
 ]
-        roi: "500-1000%",setupTime: "16-20 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "500-1000%",setupTi,
+  m: e: "16-20 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   {
-  name: "Institutional",price: 35000,currency: "$",billing: "monthly",features: [
-  "All Professional features";
-          "Mobile trading app";
-          "API access for institutional clients";
-          "Real-time market data feeds";
-          "Backtesting and simulation tools";
-          "Compliance reporting";
-          "Advanced analytics";
-          "Custom trading algorithms";
-          "Dedicated support team";
+  na,
+  m: e: "Institutional",pri,
+  c: e: 35000,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Professional features"
+          "Mobile trading app"
+          "API access for institutional clients"
+          "Real-time market data feeds"
+          "Backtesting and simulation tools"
+          "Compliance reporting"
+          "Advanced analytics"
+          "Custom trading algorithms"
+          "Dedicated support team"
           "Training and certification"
 ]
-        benefits: [
-  "All Professional benefits";
-          "Mobile trading capabilities";
-          "API access for integration";
-          "Advanced backtesting and simulation";
+        benefi,
+  t: s: [
+  "All Professional benefits"
+          "Mobile trading capabilities"
+          "API access for integration"
+          "Advanced backtesting and simulation"
           "Custom trading algorithms"
 ]
-        targetAudience: [
-  "Hedge funds";
-          "Investment banks";
-          "Asset management firms";
+        targetAudien,
+  c: e: [
+  "Hedge funds"
+          "Investment banks"
+          "Asset management firms"
           "Trading firms"
 ]
-        roi: "600-1200%",setupTime: "20-24 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "600-1200%",setupTi,
+  m: e: "20-24 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   {
-  name: "Ultimate",price: 50000,currency: "$",billing: "monthly",features: [
-  "All Institutional features";
-          "Custom quantum algorithms";
-          "White-label solutions";
-          "Strategic consulting";
-          "Partnership programs";
-          "Custom SLA agreements";
-          "Executive consulting";
-          "Research collaboration";
-          "Exclusive quantum access";
+  na,
+  m: e: "Ultimate",pri,
+  c: e: 50000,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Institutional features"
+          "Custom quantum algorithms"
+          "White-label solutions"
+          "Strategic consulting"
+          "Partnership programs"
+          "Custom SLA agreements"
+          "Executive consulting"
+          "Research collaboration"
+          "Exclusive quantum access"
           "24/7 dedicated support"
 ]
-        benefits: [
-  "All Institutional benefits";
-          "Custom quantum algorithms";
-          "White-label solutions";
-          "Strategic consulting";
+        benefi,
+  t: s: [
+  "All Institutional benefits"
+          "Custom quantum algorithms"
+          "White-label solutions"
+          "Strategic consulting"
           "Exclusive quantum access"
 ]
-        targetAudience: [
-  "Large hedge funds";
-          "Major investment banks";
-          "Strategic partners";
+        targetAudien,
+  c: e: [
+  "Large hedge funds"
+          "Major investment banks"
+          "Strategic partners"
           "Technology companies"
 ]
-        roi: "800-1500%",setupTime: "24-28 weeks",supportLevel: "enterprise",innovationLevel: "Revolutionary"
+        ro,
+  i: "800-1500%",setupTi,
+  m: e: "24-28 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Revolutionary"
 },
   ]
-    marketPrice: "$15,999 - $50,000/month";
-    competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"]
-    marketSize: "$12.3 billion by 2026",growthRate: "50% annually",contactInfo: {
-  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
+    marketPri,
+  c: e: "$15,999 - $50,000/month"
+    competito,
+  r: s: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"]
+    marketSi,
+  z: e: "$12.3 billion by 2026",growthRa,
+  t: e: "50% annually",contactIn,
+  f: o: {
+  phon,
+  e: "+1 302 464 0950",ema,
+  i: l: "kleber@ziontechgroup.com",websi,
+  t: e: "http,
+  s://ziontechgroup.com",addre,
+  s: s: "364 E Main St STE 1008, Middletown DE 19709"
 }
-    technicalSpecs: {
-  technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"]
-      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"]
-      apiEndpoints: 500,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"],
+    technicalSpe,
+  c: s: {
+  technolog,
+  y: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"]
+      integratio,
+  n: s: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"]
+      apiEndpoin,
+  t: s: 500,upti,
+  m: e: "99.99%",securi,
+  t: y: [["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"],
   ],
   }
-    aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"]
-    complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"]
-    scalabilityFeatures: [["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"],
+    aiCapabiliti,
+  e: s: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"]
+    complianceFeatur,
+  e: s: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"]
+    scalabilityFeatur,
+  e: s: [["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"],
   ],
   },
   {
-  id: "autonomous-healthcare-diagnostics-2026",title: "Autonomous Healthcare Diagnostics Platform 2026",description: "AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.";
-    category: "Healthcare",subcategory: "AI Diagnostics",pricingTiers: [
+  id: "autonomous-healthcare-diagnostics-2026",tit,
+  l: e: "Autonomous Healthcare Diagnostics Platform 2026",descripti,
+  o: n: "AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance."
+    catego,
+  r: y: "Healthcare",subcatego,
+  r: y: "AI Diagnostics",pricingTie,
+  r: s: [
   {
-  name: "Clinical",price: 7999,currency: "$",billing: "monthly",features: [
-  "AI-powered medical imaging analysis";
-          "Real-time disease detection and classification";
-          "Predictive health analytics";
-          "Automated radiology reporting";
-          "Treatment recommendation engine";
-          "Patient risk assessment";
-          "Clinical decision support";
-          "HIPAA-compliant data handling";
-          "FDA-approved algorithms";
+  nam,
+  e: "Clinical",pri,
+  c: e: 7999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "AI-powered medical imaging analysis"
+          "Real-time disease detection and classification"
+          "Predictive health analytics"
+          "Automated radiology reporting"
+          "Treatment recommendation engine"
+          "Patient risk assessment"
+          "Clinical decision support"
+          "HIPAA-compliant data handling"
+          "FDA-approved algorithms"
           "Multi-modality imaging support"
 ]
-        benefits: [
-  "Improve diagnostic accuracy by 95%";
-          "Reduce diagnosis time by 80%";
-          "Lower healthcare costs by 30%";
-          "Enhance patient outcomes";
+        benefi,
+  t: s: [
+  "Improve diagnostic accuracy by 95%"
+          "Reduce diagnosis time by 80%"
+          "Lower healthcare costs by 30%"
+          "Enhance patient outcomes"
           "Reduce physician workload"
 ]
-        targetAudience: [
-  "Radiologists and radiologic technologists";
-          "Pathologists";
-          "Cardiologists";
+        targetAudien,
+  c: e: [
+  "Radiologists and radiologic technologists"
+          "Pathologists"
+          "Cardiologists"
           "Oncologists"
 ]
-        roi: "400-800%",setupTime: "12-16 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-Edge"
+        ro,
+  i: "400-800%",setupTi,
+  m: e: "12-16 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Cutting-Edge"
 },
   {
-  name: "Enterprise",price: 15999,currency: "$",billing: "monthly",features: [
-  "All Clinical features";
-          "Telemedicine integration";
-          "Mobile app for healthcare providers";
-          "Real-time collaboration tools";
-          "Performance analytics dashboard";
-          "Continuous learning algorithms";
-          "Advanced security features";
-          "Custom integrations";
-          "Dedicated support team";
+  na,
+  m: e: "Enterprise",pri,
+  c: e: 15999,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Clinical features"
+          "Telemedicine integration"
+          "Mobile app for healthcare providers"
+          "Real-time collaboration tools"
+          "Performance analytics dashboard"
+          "Continuous learning algorithms"
+          "Advanced security features"
+          "Custom integrations"
+          "Dedicated support team"
           "Training and certification"
 ]
-        benefits: [
-  "All Clinical benefits";
-          "Telemedicine integration";
-          "Mobile access for healthcare providers";
-          "Real-time collaboration";
+        benefi,
+  t: s: [
+  "All Clinical benefits"
+          "Telemedicine integration"
+          "Mobile access for healthcare providers"
+          "Real-time collaboration"
           "Advanced analytics and security"
 ]
-        targetAudience: [
-  "Emergency medicine physicians";
-          "Primary care physicians";
-          "Healthcare administrators";
+        targetAudien,
+  c: e: [
+  "Emergency medicine physicians"
+          "Primary care physicians"
+          "Healthcare administrators"
           "Medical researchers"
 ]
-        roi: "500-900%",setupTime: "16-20 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-Edge"
+        ro,
+  i: "500-900%",setupTi,
+  m: e: "16-20 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Cutting-Edge"
 },
   {
-  name: "Research",price: 22000,currency: "$",billing: "monthly",features: [
-  "All Enterprise features";
-          "Advanced research tools";
-          "Custom algorithm development";
-          "Research collaboration platform";
-          "Publication support";
-          "Clinical trial integration";
-          "Advanced analytics";
-          "Custom research workflows";
-          "Strategic consulting";
+  na,
+  m: e: "Research",pri,
+  c: e: 22000,curren,
+  c: y: "$",billi,
+  n: g: "monthly",featur,
+  e: s: [
+  "All Enterprise features"
+          "Advanced research tools"
+          "Custom algorithm development"
+          "Research collaboration platform"
+          "Publication support"
+          "Clinical trial integration"
+          "Advanced analytics"
+          "Custom research workflows"
+          "Strategic consulting"
           "Partnership programs"
 ]
-        benefits: [
-  "All Enterprise benefits";
-          "Advanced research capabilities";
-          "Custom algorithm development";
-          "Research collaboration";
+        benefi,
+  t: s: [
+  "All Enterprise benefits"
+          "Advanced research capabilities"
+          "Custom algorithm development"
+          "Research collaboration"
           "Clinical trial integration"
 ]
-        targetAudience: [
-  "Medical researchers";
-          "Academic institutions";
-          "Research hospitals";
+        targetAudien,
+  c: e: [
+  "Medical researchers"
+          "Academic institutions"
+          "Research hospitals"
           "Pharmaceutical companies"
 ]
-        roi: "600-1000%",setupTime: "20-24 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-Edge"
+        ro,
+  i: "600-1000%",setupTi,
+  m: e: "20-24 weeks",supportLev,
+  e: l: "enterprise",innovationLev,
+  e: l: "Cutting-Edge"
 },
   ]
-    marketPrice: "$7,999 - $22,000/month";
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"]
-    marketSize: "$45.2 billion by 2026",growthRate: "35% annually",contactInfo: {
-  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
+    marketPri,
+  c: e: "$7,999 - $22,000/month"
+    competito,
+  r: s: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"]
+    marketSi,
+  z: e: "$45.2 billion by 2026",growthRa,
+  t: e: "35% annually",contactIn,
+  f: o: {
+  phon,
+  e: "+1 302 464 0950",ema,
+  i: l: "kleber@ziontechgroup.com",websi,
+  t: e: "http,
+  s://ziontechgroup.com",addre,
+  s: s: "364 E Main St STE 1008, Middletown DE 19709"
 }
-    technicalSpecs: {
-  technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"]
-      integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"]
-      apiEndpoints: 400,uptime: "99.9%",security: [["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"],
+    technicalSpe,
+  c: s: {
+  technolog,
+  y: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"]
+      integratio,
+  n: s: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"]
+      apiEndpoin,
+  t: s: 400,upti,
+  m: e: "99.9%",securi,
+  t: y: [["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"],
   ],
   }
-    aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"]
-    complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"]
-    scalabilityFeatures: [["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"],
+    aiCapabiliti,
+  e: s: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"]
+    complianceFeatur,
+  e: s: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"]
+    scalabilityFeatur,
+  e: s: [["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"],
   ],
   },
   ]
 
-export default COMPREHENSIVE_PRICING_GUIDE_2026;
+export default COMPREHENSIVE_PRICING_GUIDE_2026

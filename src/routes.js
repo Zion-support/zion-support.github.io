@@ -1,56 +1,88 @@
-// routes.ts - Route configurations for the application;
-// Auth routes;
+// routes.ts - Route configurations for the application
+// Auth routes
 export const const AuthRoutes = {
   = {
-    login: '/login',signup: '/signup',forgotPassword: '/forgot-password',resetPassword: '/reset-password'
+    log,
+  i: n: '/login',sign,
+  u: p: '/signup',forgotPasswo,
+  r: d: '/forgot-password',resetPasswo,
+  r: d: '/reset-password'
 }
-// Dashboard routes;
+// Dashboard routes
 export const const DashboardRoutes = {
   = {
-    dashboard: '/dashboard',profile: '/profile',settings: '/settings'
+    dashboa,
+  r: d: '/dashboard',profi,
+  l: e: '/profile',settin,
+  g: s: '/settings'
 }
-// Marketplace routes;
+// Marketplace routes
 export const const MarketplaceRoutes = {
   = {
-    marketplace: '/marketplace',services: '/services',products: '/products'
+    marketpla,
+  c: e: '/marketplace',servic,
+  e: s: '/services',produc,
+  t: s: '/products'
 }
-// Talent routes;
+// Talent routes
 export const const TalentRoutes = {
   = {
-    talent: '/talent',talents: '/talents',talentProfile: '/talent/:id'
+    tale,
+  n: t: '/talent',talen,
+  t: s: '/talents',talentProfi,
+  l: e: '/talent/:id'
 }
-// Admin routes;
+// Admin routes
 export const const AdminRoutes = {
   = {
-    admin: '/admin',users: '/admin/users',analytics: '/admin/analytics'
+    adm,
+  i: n: '/admin',use,
+  r: s: '/admin/users',analyti,
+  c: s: '/admin/analytics'
 }
-// Mobile app routes;
+// Mobile app routes
 export const const MobileAppRoutes = {
   = {
-    mobileLaunch: '/mobile-launch',openApp: '/open-app'
+    mobileLaun,
+  c: h: '/mobile-launch',openA,
+  p: p: '/open-app'
 }
-// Content routes;
+// Content routes
 export const const ContentRoutes = {
   = {
-    blog: '/blog',blogPost: '/blog/:slug',resources: '/resources'
+    bl,
+  o: g: '/blog',blogPo,
+  s: t: '/blog/:slug',resourc,
+  e: s: '/resources'
 }
-// Error routes;
+// Error routes
 export const const ErrorRoutes = {
   = {
-    notFound: '/404',error: '/error'
+    notFou,
+  n: d: '/404',err,
+  o: r: '/error'
 }
-// Enterprise routes;
+// Enterprise routes
 export const const EnterpriseRoutes = {
   = {
-    enterprise: '/enterprise',solutions: '/solutions',caseStudies: '/case-studies'
+    enterpri,
+  s: e: '/enterprise',solutio,
+  n: s: '/solutions',caseStudi,
+  e: s: '/case-studies'
 }
-// Community routes;
+// Community routes
 export const const CommunityRoutes = {
   = {
-    community: '/community',partners: '/partners',events: '/events'
+    communi,
+  t: y: '/community',partne,
+  r: s: '/partners',even,
+  t: s: '/events'
 }
-// Developer routes;
+// Developer routes
 export const const DeveloperRoutes = {
   = {
-    api: '/api',docs: '/docs',developer: '/developer'
+    a,
+  p: i: '/api',do,
+  c: s: '/docs',develop,
+  e: r: '/developer'
 }

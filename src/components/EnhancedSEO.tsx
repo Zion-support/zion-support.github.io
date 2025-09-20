@@ -1,7 +1,9 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from "react"
+import { Helmet } from "react-helmet-async"
 interface SEOProps {
-  title: string,description: string;
+  tit,
+  l: e: string,descripti,
+  o: n: string
   keywords?: string,
   ogImage?: string,
   ogUrl?: string,
@@ -9,16 +11,17 @@ interface SEOProps {
   structuredData?: object
 }
 
-export const EnhancedSEO: React.FC<SEOProps> = ({
-  title;
+export,
+  const: EnhancedSEO: React.FC<SEOProps> = ({
+  title
   description,
   keywords,
   ogImage,
   ogUrl,
   canonicalUrl,
   structuredData
-}) => {
-  const defaultOgImage = '/images/zion-tech-group-og.jpg';
+}) () => {
+  const defaultOgImage = '/images/zion-tech-group-og.jpg'
 const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group',
   
   return (
@@ -33,14 +36,19 @@ const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformat
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage || defaultOgImage} />
       <meta property="og:url" content={ogUrl || window.location.href} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: type" content="website" />
+      <meta property="o,
+  g:site_name" content="Zion Tech Group" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage || defaultOgImage} />
+      <meta name="twitt,
+  e: r: card" content="summary_large_image" />
+      <meta name="twitte,
+  r:title" content={title} />
+      <meta name="twitt,
+  e: r:description" content={description} />
+      <meta name="twitt,
+  e: r:image" content={ogImage || defaultOgImage} />
       
       {/* Canonical URL */},
   {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
@@ -56,8 +64,10 @@ const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformat
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="htt,
+  p: s: //fonts.googleapis.com" />
+      <link rel="preconnect" href="http,
+  s://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
   )
-};
+}

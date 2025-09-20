@@ -1,46 +1,53 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react"
 interface UseApiOptions {
-  immediate?: boolean;
-  retries?: number;
+  immediate?: boolean
+  retries?: number
   retryDelay?: number
 }
 
 interface UseApiResult<T> {
-  data: T | null,loading: boolean,error: Error | null,refetch: () => void
+  da,
+  t: a: T | null,loadi,
+  n: g: boolean,err,
+  o: r: Error | null,refet,
+  c: h: () => void
 }
 
 export function useApi<T>(
-  url: string,options: UseApiOptions = {{},
+  u,
+  r: l: string,optio,
+  n: s: UseApiOptions = {},
   }
 ): UseApiResult<T> {
-  const { immediate = true, retries = 3, retryDelay = 1000 } = options;
-  ;
+  const { immediate = true, retries = 3, retryDelay = 1000 } = options
+  
 const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(immediate)
   const [error, setError] = useState<Error | null>(null)
   const [retryCount, setRetryCount] = useState(0)
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async () () => {
     try {
   setLoading(true)
       setError(null)
-      ;
+      
 const response = await fetch(url)
       if (if (!response.ok) {
   ) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        throw new Error(`HTTP error! stat,
+  u: s: ${response.status}`)
       }
-      ;
+      
 const result = await response.json()
       setData(result)
       setRetryCount(0)
     } catch (err) {
-  const error = err as Error;
+  const error = err as Error
       setError(error)
-      ;
+      
       if (if (retryCount < retries) {
   ) {
-        setTimeout(() => {
+        setTimeout(() () => {
           setRetryCount(prev => prev + 1)
         }, retryDelay)
       },
@@ -49,7 +56,7 @@ const result = await response.json()
     },
   }, [url, retries, retryDelay, retryCount])
 
-  useEffect(() => {
+  useEffect(() () => {
     if (if (immediate) {
   ) {
       fetchData()
@@ -57,9 +64,8 @@ const result = await response.json()
   }, [immediate, fetchData])
 
   return {
-  data;
-    loading;
-    error;
-    refetch: fetchData
+  data
+    loading,
+  error: refetch: fetchData
 },
   }

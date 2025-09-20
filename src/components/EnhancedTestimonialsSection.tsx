@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import {
   Star,
   Quote,
@@ -9,61 +9,114 @@ import {
   Building,
   Users,
   Award
-} from "lucide-react";
+} from "lucide-react"
 interface Testimonial {
-  id: string,name: string,position: string,company: string,companyLogo: string,content: string,rating: number,industry: string,results: string[],avatar: string
+  id: string,na,
+  m: e: string,positi,
+  o: n: string,compa,
+  n: y: string,companyLo,
+  g: o: string,conte,
+  n: t: string,rati,
+  n: g: number,indust,
+  r: y: string,resul,
+  t: s: string[],avat,
+  a: r: string
 }
 
-const testimonials: Testimonial[] = [
+const,
+  testimonial: s: Testimonial[] = [
   {
-    id: '1',name: 'Sarah Chen',position: 'CTO',company: 'TechFlow Solutions',companyLogo: '/images/company-logos/techflow.svg',content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',rating: 5,industry: 'Technology',results: ['300% efficiency increase450% ROI in 6 months', 'Real-time insights'],
-    avatar: '/images/avatars/sarah-chen.jpg'
-  };
-  {
-    id: '2',name: 'Marcus Rodriguez',position: 'VP of Operations',company: 'Global Manufacturing Corp',companyLogo: '/images/company-logos/gmc.svg',content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',rating: 5,industry: 'Manufacturing',results: ['$2M annual savingsWeeks to minutes', 'Supply chain optimization'],
-    avatar: '/images/avatars/marcus-rodriguez.jpg'
-  };
-  {
-    id: '3',name: 'Dr. Emily Watson',position: 'Chief Medical Officer',company: 'HealthTech Innovations',companyLogo: '/images/company-logos/healthtech.svg',content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',rating: 5,industry: 'Healthcare',results: ['95% detection improvementReduced false positives', 'Lives saved'],
-    avatar: '/images/avatars/emily-watson.jpg'
-  };
-  {
-    id: '4',name: 'James Thompson',position: 'Head of Security',company: 'FinSecure Bank',companyLogo: '/images/company-logos/finsecure.svg',content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',rating: 5,industry: 'Financial Services',results: ['80% fewer incidentsReal-time threat detection', 'Zero-trust security'],
-    avatar: '/images/avatars/james-thompson.jpg'
-  };
-  {
-    id: '5',name: 'Lisa Park',position: 'Director of IT',company: 'CloudScale Enterprises',companyLogo: '/images/company-logos/cloudscale.svg',content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',rating: 5,industry: 'Cloud Services',results: ['40% cost reduction60% performance boost', 'Unified management'],
-    avatar: '/images/avatars/lisa-park.jpg'
+    i,
+  d: '1',na,
+  m: e: 'Sarah Chen',positi,
+  o: n: 'CTO',compa,
+  n: y: 'TechFlow Solutions',companyLo,
+  g: o: '/images/company-logos/techflow.svg',conte,
+  n: t: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',rati,
+  n: g: 5,indust,
+  r: y: 'Technology',resul,
+  t: s: ['300% efficiency increase450% ROI in 6 months', 'Real-time insights'],
+    avat,
+  a: r: '/images/avatars/sarah-chen.jpg'
+  }, {
+    id: '2',na,
+  m: e: 'Marcus Rodriguez',positi,
+  o: n: 'VP of Operations',compa,
+  n: y: 'Global Manufacturing Corp',companyLo,
+  g: o: '/images/company-logos/gmc.svg',conte,
+  n: t: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',rati,
+  n: g: 5,indust,
+  r: y: 'Manufacturing',resul,
+  t: s: ['$2M annual savingsWeeks to minutes', 'Supply chain optimization'],
+    avat,
+  a: r: '/images/avatars/marcus-rodriguez.jpg'
+  }, {
+    id: '3',na,
+  m: e: 'Dr. Emily Watson',positi,
+  o: n: 'Chief Medical Officer',compa,
+  n: y: 'HealthTech Innovations',companyLo,
+  g: o: '/images/company-logos/healthtech.svg',conte,
+  n: t: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',rati,
+  n: g: 5,indust,
+  r: y: 'Healthcare',resul,
+  t: s: ['95% detection improvementReduced false positives', 'Lives saved'],
+    avat,
+  a: r: '/images/avatars/emily-watson.jpg'
+  }, {
+    id: '4',na,
+  m: e: 'James Thompson',positi,
+  o: n: 'Head of Security',compa,
+  n: y: 'FinSecure Bank',companyLo,
+  g: o: '/images/company-logos/finsecure.svg',conte,
+  n: t: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',rati,
+  n: g: 5,indust,
+  r: y: 'Financial Services',resul,
+  t: s: ['80% fewer incidentsReal-time threat detection', 'Zero-trust security'],
+    avat,
+  a: r: '/images/avatars/james-thompson.jpg'
+  }, {
+    id: '5',na,
+  m: e: 'Lisa Park',positi,
+  o: n: 'Director of IT',compa,
+  n: y: 'CloudScale Enterprises',companyLo,
+  g: o: '/images/company-logos/cloudscale.svg',conte,
+  n: t: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',rati,
+  n: g: 5,indust,
+  r: y: 'Cloud Services',resul,
+  t: s: ['40% cost reduction60% performance boost', 'Unified management'],
+    avat,
+  a: r: '/images/avatars/lisa-park.jpg'
   },
-  ];
+  ]
 export default function EnhancedTestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  useEffect(() => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  useEffect(() () => {
     if (!isAutoPlaying) return,
 
-    const interval = setInterval(() => {
+    const interval = setInterval(() () => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
 }, 8000),
 
     return () => clearInterval(interval)
 }, [isAutoPlaying, testimonials.length]),
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = () () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
     setIsAutoPlaying(false)
 },
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = () () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
     setIsAutoPlaying(false)
-};
-const goToTestimonial = (index: number) => {
-    setCurrentTestimonial(index);
+}
+const goToTestimonial = (ind,
+  e: x: number) () => {
+    setCurrentTestimonial(index)
     setIsAutoPlaying(false)
   },
 
-  const currentTestimonialData = testimonials[currentTestimonial];
+  const currentTestimonialData = testimonials[currentTestimonial]
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Background decoration */}
@@ -73,20 +126,27 @@ const goToTestimonial = (index: number) => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4,
+  s: m: px-6 l,
+  g:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 },
+          initial={ opaci,
+  t: y: 0, y: 30 },
   }
-          whileInView={{ opacity: 1, y: 0 },
+          whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-          viewport={{ once: true },
+          viewport={ on,
+  c: e: true },
   }
-          transition={{ duration: 0.6 },
+          transition={ durati,
+  o: n: 0.6 },
   }
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl,
+  s: m:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
@@ -99,28 +159,36 @@ const goToTestimonial = (index: number) => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-              initial={{ opacity: 0, x: 100 },
+              initial={ opaci,
+  t: y: 0, x: 100 },
   }
-              animate={{ opacity: 1, x: 0 },
+              animate={ opaci,
+  t: y: 1, x: 0 },
   }
-              exit={{ opacity: 0, x: -100 },
+              exit={ opaci,
+  t: y: 0, x: -100 },
   }
-              transition={{ duration: 0.5 },
+              transition={ durati,
+  o: n: 0.5 },
   }
               className="relative"
             >
               {/* Main Testimonial Card */}
-              <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+              <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8,
+  l: g:p-12 relative overflow-hidden">
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
 
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-                  animate={{ rotate: [0, 360],
+                  animate={ rota,
+  t: e: [0, 360],
   },
   }
-                  transition={{ duration: 20, repeat: Infinity },
+                  transition={ durati,
+  o: n: 20, repe,
+  a: t: Infinity },
   }
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
@@ -132,11 +200,14 @@ const goToTestimonial = (index: number) => {
                     {[...Array(currentTestimonialData.rating)].map((_, index) => (
                       <motion.div
                         key={index}
-                        initial={{ scale: 0 },
+                        initial={ sca,
+  l: e: 0 },
   }
-                        animate={{ scale: 1 },
+                        animate={ sca,
+  l: e: 1 },
   }
-                        transition={{ delay: index * 0.1 },
+                        transition={ del,
+  a: y: index * 0.1 },
   }
                       >
                         <Star className="w-6 h-6 text-yellow-400 fill-current" />
@@ -145,20 +216,25 @@ const goToTestimonial = (index: number) => {
                   </div>
 
                   {/* Content */}
-                  <blockquote className="text-2xl lg:text-3xl text-white leading-relaxed mb-8 font-medium">
+                  <blockquote className="text-2xl,
+  l: g:text-3xl text-white leading-relaxed mb-8 font-medium">
                     "{currentTestimonialData.content}"
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-4 mb-8">
                     {currentTestimonialData.results.map((result, index) => (
                       <motion.div
                         key={result}
-                        initial={{ opacity: 0, y: 20 },
+                        initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                        animate={{ opacity: 1, y: 0 },
+                        animate={ opaci,
+  t: y: 1, y: 0 },
   }
-                        transition={{ delay: 0.3 + index * 0.1 },
+                        transition={ del,
+  a: y: 0.3 + index * 0.1 },
   }
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
                       >
@@ -195,10 +271,13 @@ const goToTestimonial = (index: number) => {
           <div className="flex items-center justify-center mt-12 space-x-4">
             <motion.button
               onClick={prevTestimonial}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1 },
+              className="p-3 rounded-full bg-white/10,
+  hove: r: bg-white/20 transition-colors duration-200 border border-white/20"
+              whileHover={ scal,
+  e: 1.1 },
   }
-              whileTap={{ scale: 0.9 },
+              whileTap={ sca,
+  l: e: 0.9 },
   }
             >
               <ChevronLeft className="w-6 h-6 text-white" />
@@ -212,9 +291,11 @@ const goToTestimonial = (index: number) => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentTestimonial
                       ? 'bg-zion-cyan w-8'
-                      : 'bg-white/30 hover:bg-white/50'
+                      : 'bg-white/30,
+  hove: r:bg-white/50'
                   }`}
-                  whileHover={{ scale: 1.2 },
+                  whileHover={ sca,
+  l: e: 1.2 },
   }
                 />
               ))}
@@ -222,10 +303,13 @@ const goToTestimonial = (index: number) => {
 
             <motion.button
               onClick={nextTestimonial}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1 },
+              className="p-3 rounded-full bg-white/10,
+  hove: r: bg-white/20 transition-colors duration-200 border border-white/20"
+              whileHover={ scal,
+  e: 1.1 },
   }
-              whileTap={{ scale: 0.9 },
+              whileTap={ sca,
+  l: e: 0.9 },
   }
             >
               <ChevronRight className="w-6 h-6 text-white" />
@@ -235,13 +319,18 @@ const goToTestimonial = (index: number) => {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 },
+          initial={ opaci,
+  t: y: 0, y: 30 },
   }
-          whileInView={{ opacity: 1, y: 0 },
+          whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-          viewport={{ once: true },
+          viewport={ on,
+  c: e: true },
   }
-          transition={{ duration: 0.6, delay: 0.3 },
+          transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.3 },
   }
           className="mt-20"
         >
@@ -249,22 +338,37 @@ const goToTestimonial = (index: number) => {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1,
+  m: d: grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
-                { icon: Users, label: '500+ Clients', value: 'Global Reach' };
-                { icon: Award, label: '15+ Awards', value: 'Industry Recognition' };
-                { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' };
-                { icon: Building, label: '99.9% Uptime', value: 'Reliability' },
+                { ico,
+  n: Users, lab,
+  e: l: '500+ Clients', val,
+  u: e: 'Global Reach' }, { ic,
+  o: n: Award, lab,
+  e: l: '15+ Awards', val,
+  u: e: 'Industry Recognition' }, { ic,
+  o: n: Globe, lab,
+  e: l: '50+ Countries', val,
+  u: e: 'Worldwide Service' }, { ic,
+  o: n: Building, lab,
+  e: l: '99.9% Uptime', val,
+  u: e: 'Reliability' },
   ].map((indicator, index) => (
                 <motion.div
                   key={indicator.label}
-                  initial={{ opacity: 0, y: 20 },
+                  initial={ opaci,
+  t: y: 0, y: 20 },
   }
-                  whileInView={{ opacity: 1, y: 0 },
+                  whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-                  viewport={{ once: true },
+                  viewport={ on,
+  c: e: true },
   }
-                  transition={{ duration: 0.6, delay: index * 0.1 },
+                  transition={ durati,
+  o: n: 0.6, del,
+  a: y: index * 0.1 },
   }
                   className="text-center"
                 >
@@ -281,13 +385,18 @@ const goToTestimonial = (index: number) => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 },
+          initial={ opaci,
+  t: y: 0, y: 30 },
   }
-          whileInView={{ opacity: 1, y: 0 },
+          whileInView={ opaci,
+  t: y: 1, y: 0 },
   }
-          viewport={{ once: true },
+          viewport={ on,
+  c: e: true },
   }
-          transition={{ duration: 0.6, delay: 0.5 },
+          transition={ durati,
+  o: n: 0.6, del,
+  a: y: 0.5 },
   }
           className="text-center mt-16"
         >
@@ -298,16 +407,21 @@ const goToTestimonial = (index: number) => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl,
+  hove: r:shadow-2xl,
+  hove: r:shadow-zion-cyan/25 transition-all duration-300,
+  transform: hover:-translate-y-1"
               >
                 Start Your Transformation
               </a>
               <a
                 href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hove,
+  r:bg-zion-cyan/10 transition-all duration-300"
               >
                 View Case Studies
               </a>

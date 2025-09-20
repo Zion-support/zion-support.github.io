@@ -1,115 +1,192 @@
-import React, { useState } from "react";
-import { SEO } from "../components/SEO";
+import React, { useState } from "react"
+import { SEO } from "../components/SEO"
 import {
-  HelpCircle;
+  HelpCircle
   MessageCircle,
   Phone,
   Mail,
   Clock,
-  Search;
-  BookOpen;
-  FileText;
-  Video;
-  Users;
-  Zap;
-  CheckCircle;
-  ArrowRight;
-  ExternalLink;
-  Ticket;
-  MessageCircle;
-  Headphones;
-  Globe;
-  Smartphone;
-  Monitor;
-  Shield;
-  Rocket;
-  Brain;
+  Search
+  BookOpen
+  FileText
+  Video
+  Users
+  Zap
+  CheckCircle
+  ArrowRight
+  ExternalLink
+  Ticket
+  MessageCircle
+  Headphones
+  Globe
+  Smartphone
+  Monitor
+  Shield
+  Rocket
+  Brain
   Cloud
-} from "lucide-react";
-const Support: React.FC = () => {
+} from "lucide-react"
+const,
+  Suppor: t: React.FC = () () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const categories = [
-  {{ id: 'all', name: 'All Categories', icon: HelpCircle },
+  { id: 'all', na,
+  m: e: 'All Categories', ic,
+  o: n: HelpCircle },
   },
-  {{ id: 'technical', name: 'Technical Issues', icon: Monitor },
+  { id: 'technical', na,
+  m: e: 'Technical Issues', ic,
+  o: n: Monitor },
   },
-  {{ id: 'billing', name: 'Billing & Account', icon: FileText },
+  { id: 'billing', na,
+  m: e: 'Billing & Account', ic,
+  o: n: FileText },
   },
-  {{ id: 'product', name: 'Product Support', icon: Rocket },
+  { id: 'product', na,
+  m: e: 'Product Support', ic,
+  o: n: Rocket },
   },
-  {{ id: 'integration', name: 'Integration Help', icon: Zap },
+  { id: 'integration', na,
+  m: e: 'Integration Help', ic,
+  o: n: Zap },
   },
-  {{ id: 'general', name: 'General Questions', icon: Users },
+  { id: 'general', na,
+  m: e: 'General Questions', ic,
+  o: n: Users },
   },
   ]
   const supportChannels = [
   {
-  icon: MessageCircle,title: 'Live Chat',description: 'Get instant help from our support team',availability: '24/7',responseTime: '< 2 minutes',priority: 'high',href: '/support/chat'
+  ic,
+  o: n: MessageCircle,tit,
+  l: e: 'Live Chat',descripti,
+  o: n: 'Get instant help from our support team',availabili,
+  t: y: '24/7',responseTi,
+  m: e: '< 2 minutes',priori,
+  t: y: 'high',hr,
+  e: f: '/support/chat'
 },
   {
-  icon: Ticket,title: 'Support Tickets',description: 'Submit detailed support requests',availability: '24/7',responseTime: '< 4 hours',priority: 'medium',href: '/support/tickets'
+  ic,
+  o: n: Ticket,tit,
+  l: e: 'Support Tickets',descripti,
+  o: n: 'Submit detailed support requests',availabili,
+  t: y: '24/7',responseTi,
+  m: e: '< 4 hours',priori,
+  t: y: 'medium',hr,
+  e: f: '/support/tickets'
 },
   {
-  icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST';
-      responseTime: 'Immediate',priority: 'high',href: '/support/phone'
+  ic,
+  o: n: Phone,tit,
+  l: e: 'Phone Support',descripti,
+  o: n: 'Speak directly with our experts',availabili,
+  t: y: 'Mon-Fri, 9AM-6PM EST'
+      responseTi,
+  m: e: 'Immediate',priori,
+  t: y: 'high',hr,
+  e: f: '/support/phone'
 },
   {
-  icon: Mail,title: 'Email Support',description: 'Send us detailed questions',availability: '24/7',responseTime: '< 24 hours',priority: 'medium',href: '/support/email'
+  ic,
+  o: n: Mail,tit,
+  l: e: 'Email Support',descripti,
+  o: n: 'Send us detailed questions',availabili,
+  t: y: '24/7',responseTi,
+  m: e: '< 24 hours',priori,
+  t: y: 'medium',hr,
+  e: f: '/support/email'
 },
   ]
   const quickSolutions = [
   {
-  icon: BookOpen,title: 'Knowledge Base',description: 'Browse our comprehensive documentation',articles: '500+ articles',href: '/docs'
+  ic,
+  o: n: BookOpen,tit,
+  l: e: 'Knowledge Base',descripti,
+  o: n: 'Browse our comprehensive documentation',articl,
+  e: s: '500+ articles',hr,
+  e: f: '/docs'
 },
   {
-  icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides',videos: '100+ tutorials',href: '/tutorials'
+  ic,
+  o: n: Video,tit,
+  l: e: 'Video Tutorials',descripti,
+  o: n: 'Step-by-step video guides',vide,
+  o: s: '100+ tutorials',hr,
+  e: f: '/tutorials'
 },
   {
-  icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members';
-      href: '/community'
+  ic,
+  o: n: Users,tit,
+  l: e: 'Community Forum',descripti,
+  o: n: 'Connect with other users',membe,
+  r: s: '10,000+ members'
+      hr,
+  e: f: '/community'
 },
   {
-  icon: FileText,title: 'FAQ',description: 'Frequently asked questions',questions: '200+ FAQs',href: '/faq'
+  ic,
+  o: n: FileText,tit,
+  l: e: 'FAQ',descripti,
+  o: n: 'Frequently asked questions',questio,
+  n: s: '200+ FAQs',hr,
+  e: f: '/faq'
 },
   ]
   const commonIssues = [
   {
-  category: 'Technical',title: 'How to reset my password?',solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',tags: [['passwordlogin', 'account'],
+  catego,
+  r: y: 'Technical',tit,
+  l: e: 'How to reset my password?',soluti,
+  o: n: 'Go to the login page and click "Forgot Password" to reset your password via email.',ta,
+  g: s: [['passwordlogin', 'account'],
   ],
   },
   {
-  category: 'Product',title: 'How to integrate with my existing systems?',solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',tags: [['integrationapi', 'documentation'],
+  catego,
+  r: y: 'Product',tit,
+  l: e: 'How to integrate with my existing systems?',soluti,
+  o: n: 'We provide comprehensive API documentation and integration guides for all major platforms.',ta,
+  g: s: [['integrationapi', 'documentation'],
   ],
   },
   {
-  category: 'Billing',title: 'How to update my billing information?',solution: 'Navigate to your account settings and update your billing information in the billing section.',tags: [['billingaccount', 'payment'],
+  catego,
+  r: y: 'Billing',tit,
+  l: e: 'How to update my billing information?',soluti,
+  o: n: 'Navigate to your account settings and update your billing information in the billing section.',ta,
+  g: s: [['billingaccount', 'payment'],
   ],
   },
   {
-  category: 'Technical',title: 'Service is running slow, what should I do?';
-      solution: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.';
-      tags: [['performancetroubleshooting', 'speed'],
+  catego,
+  r: y: 'Technical',tit,
+  l: e: 'Service is running slow, what should I do?'
+      soluti,
+  o: n: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.'
+      ta,
+  g: s: [['performancetroubleshooting', 'speed'],
   ],
   },
   ]
 
-  const filteredIssues = commonIssues.filter(issue => ;
-    (selectedCategory === 'all' || issue.category.toLowerCase() === selectedCategory) &&;
-    (issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-     issue.solution.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredIssues = commonIssues.filter(issue => 
+    (selectedCategory === 'all' || issue.category.toLowerCase() === selectedCategory) &&
+    (issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+     issue.solution.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
   )
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO ;
-        title="Support - Zion Tech Group";
-        description="Get help and support for all Zion Tech Group products and services. 24/7 support available through multiple channels including live chat, phone, and email.";
+      <SEO 
+        title="Support - Zion Tech Group"
+        description="Get help and support for all Zion Tech Group products and services. 24/7 support available through multiple channels including live chat, phone, and email."
       />
-      ;
-      {{/* Hero Section */},
+      
+      {/* Hero Section */},
   }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
@@ -117,86 +194,106 @@ const Support: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-400/10 border border-cyan-400/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <HelpCircle className="w-4 h-4 mr-2" />
-              Customer Support;
+              Customer Support
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              How Can We Help?;
+            <h1 className="text-5xl,
+  m: d: text-6xl font-bold text-white mb-6">
+              How Can We Help?
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our support team is here to help you succeed with our products and services. ;
-              Get assistance through multiple channels with fast response times.;
+              Our support team is here to help you succeed with our products and services. 
+              Get assistance through multiple channels with fast response times.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">
-                Start Live Chat;
+            <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
+  hove: r:from-cyan-500,
+  hove: r:to-blue-600 transition-all duration-200,
+  hove: r:scale-105 shadow-lg">
+                Start Live Chat
               </button>
-              <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700/50 transition-all duration-200">
-                Submit Ticket;
+              <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
+  r:bg-slate-700/50 transition-all duration-200">
+                Submit Ticket
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {{/* Search Section */},
+      {/* Search Section */},
   }
       <section className="py-12 bg-slate-800/20">
         <div className="container-responsive">
           <div className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input;
-                type="text";
-                placeholder="Search for help articles, tutorials, or common issues...";
-                value={{searchQuery},
+              <input
+                type="text"
+                placeholder="Search for help articles, tutorials, or common issues..."
+                value={searchQuery},
   }
-                onChange={{(e) => setSearchQuery(e.target.value)},
+                onChange={(e) => setSearchQuery(e.target.value)},
   }
-                className="className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg";"
+                className="className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400,
+  focu: s: outline-none,
+  focu: s:border-cyan-400,
+  focu: s:ring-2 focu,
+  s:ring-cyan-400/20 transition-all duration-200 text-lg";"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {{/* Support Channels Section */},
+      {/* Support Channels Section */},
   }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Multiple Ways to Get Support;
+              Multiple Ways to Get Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the support channel that works best for you. We're available 24/7 ;
-              to ensure you get the help you need when you need it.;
+              Choose the support channel that works best for you. We're available 24/7 
+              to ensure you get the help you need when you need it.
             </p>
           </div>
-          ;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4 gap-6">
             {supportChannels.map((channel, index) => (
-  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl,
+  hove: r: bg-slate-700/50,
+  hove: r:border-cyan-400/30 transition-all duration-200,
+  hove: r:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hov,
+  e: r:from-cyan-400/40 group-hove,
+  r:to-blue-500/40 transition-all duration-200">
                   <channel.icon className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{channel.description}</p>
-                ;
+                
                 <div className="space-y-2 mb-4 text-sm">
                   <div className="flex items-center text-gray-400">
                     <Clock className="w-4 h-4 mr-2" />
-                    {{channel.availability},
+                    {channel.availability},
   }
                   </div>
                   <div className="flex items-center text-gray-400">
                     <Zap className="w-4 h-4 mr-2" />
-                    {{channel.responseTime},
+                    {channel.responseTime},
   }
                   </div>
                 </div>
-                ;
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
-                  Get Help;
+                
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg,
+  hove: r: from-cyan-500,
+  hove: r:to-blue-600 transition-all duration-200 hove,
+  r:scale-105">
+                  Get Help
                 </button>
               </div>
             ))}
@@ -204,36 +301,45 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Quick Solutions Section */},
+      {/* Quick Solutions Section */},
   }
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Solutions;
+              Quick Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions and learn how to use our products ;
-              effectively with our self-service resources.;
+              Find answers to common questions and learn how to use our products 
+              effectively with our self-service resources.
             </p>
           </div>
-          ;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4 gap-6">
             {quickSolutions.map((solution, index) => (
-  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200">
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl,
+  hove: r: bg-slate-700/50,
+  hove: r:border-cyan-400/30 transition-all duration-200,
+  hove: r:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hov,
+  e: r:from-purple-400/40 group-hove,
+  r:to-pink-500/40 transition-all duration-200">
                   <solution.icon className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{solution.description}</p>
-                ;
+                
                 <div className="text-sm text-cyan-400 mb-4 font-medium">
-                  {{solution.articles || solution.videos || solution.questions || solution.members},
+                  {solution.articles || solution.videos || solution.questions || solution.members},
   }
                 </div>
-                ;
-                <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-200 hover:scale-105">
-                  Explore;
+                
+                <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg,
+  hove: r: bg-slate-600/50 transition-all duration-200 hove,
+  r:scale-105">
+                  Explore
                 </button>
               </div>
             ))}
@@ -241,60 +347,65 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Common Issues Section */},
+      {/* Common Issues Section */},
   }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Common Issues & Solutions;
+              Common Issues & Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find quick answers to frequently asked questions and common problems.;
+              Find quick answers to frequently asked questions and common problems.
             </p>
           </div>
-          ;
-          {{/* Category Filter */},
+          
+          {/* Category Filter */},
   }
           <div className="flex flex-wrap gap-2 justify-center mb-8">
             {categories.map((category) => (
-  <button;
-                key={{category.id},
+  <button
+                key={category.id},
   }
-                onClick={{onClick={() => setSelectedCategory(category.id)},
+                onClick={onClick={() => setSelectedCategory(category.id)},
   },
   }
                 className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
-  selectedCategory === category.id;
-                    ? 'bg-cyan-400/20 border-cyan-400/40 text-cyan-400';
-                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-cyan-400/30'
+  selectedCategory === category.id
+                    ? 'bg-cyan-400/20 border-cyan-400/40 text-cyan-400'
+                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300,
+  hove: r: bg-slate-600/50 hove,
+  r:border-cyan-400/30'
 }`}
               >
                 <category.icon className="w-4 h-4 mr-2" />
-                {{category.name},
+                {category.name},
   }
               </button>
             ))}
           </div>
-          ;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <div className="grid grid-cols-1,
+  l: g:grid-cols-2 gap-6">
             {filteredIssues.map((issue, index) => (
-  <div key={index} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200">
+  <div key={index} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl,
+  hove: r: bg-slate-700/50 hove,
+  r:border-cyan-400/30 transition-all duration-200">
                 <div className="flex items-start justify-between mb-3">
                   <span className="inline-flex items-center px-2 py-1 bg-cyan-400/10 border border-cyan-400/20 rounded text-xs text-cyan-400">
-                    {{issue.category},
+                    {issue.category},
   }
                   </span>
                   <CheckCircle className="w-5 h-5 text-green-400" />
                 </div>
-                ;
+                
                 <h3 className="text-lg font-semibold text-white mb-3">{issue.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{issue.solution}</p>
-                ;
+                
                 <div className="flex flex-wrap gap-2">
                   {issue.tags.map((tag, tagIndex) => (
   <span key={tagIndex} className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
-                      {{tag},
+                      {tag},
   }
                     </span>
                   ))}
@@ -302,7 +413,7 @@ const Support: React.FC = () => {
               </div>
             ))}
           </div>
-          ;
+          
           {filteredIssues.length === 0 && (
   <div className="text-center py-12">
               <HelpCircle className="w-24 h-24 text-gray-400 mx-auto mb-6" />
@@ -312,23 +423,28 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Support Section */},
+      {/* Contact Support Section */},
   }
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20">
         <div className="container-responsive text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Still Need Help?;
+            Still Need Help?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our support team is ready to assist you with any questions or issues. ;
-            Don't hesitate to reach out - we're here to help you succeed.;
+            Our support team is ready to assist you with any questions or issues. 
+            Don't hesitate to reach out - we're here to help you succeed.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">
-              Contact Support;
+          <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg,
+  hove: r:from-cyan-500,
+  hove: r:to-blue-600 transition-all duration-200,
+  hove: r:scale-105 shadow-lg">
+              Contact Support
             </button>
-            <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700/50 transition-all duration-200">
-              Schedule a Call;
+            <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-semibold rounded-lg hove,
+  r:bg-slate-700/50 transition-all duration-200">
+              Schedule a Call
             </button>
           </div>
         </div>
@@ -336,4 +452,4 @@ const Support: React.FC = () => {
     </div>
   )
 }
-export default Support;
+export default Support

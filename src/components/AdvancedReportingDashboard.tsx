@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import {
   BarChart3,
   PieChart,
@@ -21,14 +21,40 @@ import {
   Shield,
   Server,
   X
-} from "lucide-react";
+} from "lucide-react"
 interface ReportData {
-  id: string,title: string,type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical',category: string,data: any,lastUpdated: string,status: 'active' | 'archived' | 'draft',priority: 'low' | 'medium' | 'high' | 'critical',tags: string[],description: string,author: string,views: number,downloads: number,rating: number
+  id: string,tit,
+  l: e: string,ty,
+  p: e: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical',catego,
+  r: y: string,da,
+  t: a: any,lastUpdat,
+  e: d: string,stat,
+  u: s: 'active' | 'archived' | 'draft',priori,
+  t: y: 'low' | 'medium' | 'high' | 'critical',ta,
+  g: s: string[],descripti,
+  o: n: string,auth,
+  o: r: string,vie,
+  w: s: number,downloa,
+  d: s: number,rati,
+  n: g: number
 }
 
 interface ReportMetrics {
-  totalReports: number,activeReports: number,totalViews: number,totalDownloads: number,averageRating: number,topCategories: Array<{ name: string, count: number, percentage: number }>;
-  recentActivity: Array<{ action: string, timestamp: string, user: string }>
+  totalRepor,
+  t: s: number,activeRepor,
+  t: s: number,totalVie,
+  w: s: number,totalDownloa,
+  d: s: number,averageRati,
+  n: g: number,topCategori,
+  e: s: Array<{ nam,
+  e: string, cou,
+  n: t: number, percenta,
+  g: e: number }>
+  recentActivi,
+  t: y: Array<{ actio,
+  n: string, timesta,
+  m: p: string, us,
+  e: r: string }>
 }
 
 interface AdvancedReportingDashboardProps {
@@ -37,73 +63,162 @@ interface AdvancedReportingDashboardProps {
   maxReports?: number,
 }
 
-export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
-  showMetrics = true;
+export,
+  const: AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
+  showMetrics = true
   showFilters = true,
   showCharts = true,
   maxReports = 15
-}) => {
+}) () => {
   const [reports, setReports] = useState<ReportData[]>([]),
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]),
   const [selectedType, setSelectedType] = useState<string>('all'),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')
 const [viewMode, setViewMode] = useState<'grid' | 'list' | 'detailed'>('grid'),
-  const [showReportForm, setShowReportForm] = useState(false);
+  const [showReportForm, setShowReportForm] = useState(false)
 const [selectedReport, setSelectedReport] = useState<ReportData | null>(null),
-  const [showReportDetails, setShowReportDetails] = useState(false);
+  const [showReportDetails, setShowReportDetails] = useState(false)
 const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 'title'>('date'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
 
   // Sample report data
-  useEffect(() => {
-    const sampleReports: ReportData[] = [
+  useEffect(() () => {
+    const,
+  sampleReport: s: ReportData[] = [
       {
-        id: '1',title: 'Q4 Financial Performance Analysis',type: 'financial',category: 'Financial Reports',data: {
-          revenue: 2500000,expenses: 1800000,profit: 700000,growth: 15.5,keyMetrics: ['Revenue GrowthProfit Margin', 'Cost Efficiency'],
+        i,
+  d: '1',tit,
+  l: e: 'Q4 Financial Performance Analysis',ty,
+  p: e: 'financial',catego,
+  r: y: 'Financial Reports',da,
+  t: a: {
+          revenu,
+  e: 2500000,expens,
+  e: s: 1800000,prof,
+  i: t: 700000,grow,
+  t: h: 15.5,keyMetri,
+  c: s: ['Revenue GrowthProfit Margin', 'Cost Efficiency'],
   },
-        lastUpdated: '2024-01-15',status: 'active',priority: 'high',tags: ['FinanceQ4', 'PerformanceAnalysis'],
-        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
-        author: 'Sarah Johnson',views: 245,downloads: 89,rating: 4.8
-      };
-      {
-        id: '2',title: 'AI Services Performance Metrics',type: 'performance',category: 'Performance Reports',data: {
-          accuracy: 94.2,responseTime: 1.8,uptime: 99.9,userSatisfaction: 4.6,keyMetrics: ['AccuracyResponse Time', 'UptimeUser Satisfaction'],
+        lastUpdat,
+  e: d: '2024-01-15',stat,
+  u: s: 'active',priori,
+  t: y: 'high',ta,
+  g: s: ['FinanceQ4', 'PerformanceAnalysis'],
+        descripti,
+  o: n: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
+        auth,
+  o: r: 'Sarah Johnson',vie,
+  w: s: 245,downloa,
+  d: s: 89,rati,
+  n: g: 4.8
+      }, {
+        id: '2',tit,
+  l: e: 'AI Services Performance Metrics',ty,
+  p: e: 'performance',catego,
+  r: y: 'Performance Reports',da,
+  t: a: {
+          accurac,
+  y: 94.2,responseTi,
+  m: e: 1.8,upti,
+  m: e: 99.9,userSatisfacti,
+  o: n: 4.6,keyMetri,
+  c: s: ['AccuracyResponse Time', 'UptimeUser Satisfaction'],
   },
-        lastUpdated: '2024-01-14',status: 'active',priority: 'critical',tags: ['AIPerformance', 'MetricsMachine Learning'],
-        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
-        author: 'Michael Chen',views: 189,downloads: 67,rating: 4.9
-      };
-      {
-        id: '3',title: 'Cybersecurity Threat Assessment',type: 'security',category: 'Security Reports',data: {
-          threatsDetected: 156,incidentsResolved: 154,responseTime: 2.3,riskLevel: 'Medium',keyMetrics: ['Threats DetectedIncidents Resolved', 'Response TimeRisk Level'],
+        lastUpdat,
+  e: d: '2024-01-14',stat,
+  u: s: 'active',priori,
+  t: y: 'critical',ta,
+  g: s: ['AIPerformance', 'MetricsMachine Learning'],
+        descripti,
+  o: n: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
+        auth,
+  o: r: 'Michael Chen',vie,
+  w: s: 189,downloa,
+  d: s: 67,rati,
+  n: g: 4.9
+      }, {
+        id: '3',tit,
+  l: e: 'Cybersecurity Threat Assessment',ty,
+  p: e: 'security',catego,
+  r: y: 'Security Reports',da,
+  t: a: {
+          threatsDetecte,
+  d: 156,incidentsResolv,
+  e: d: 154,responseTi,
+  m: e: 2.3,riskLev,
+  e: l: 'Medium',keyMetri,
+  c: s: ['Threats DetectedIncidents Resolved', 'Response TimeRisk Level'],
   },
-        lastUpdated: '2024-01-13',status: 'active',priority: 'high',tags: ['SecurityThreats', 'AssessmentRisk Management'],
-        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',author: 'David Kim',views: 312,downloads: 134,rating: 4.7
-      };
-      {
-        id: '4',title: 'Cloud Infrastructure Utilization',type: 'operational',category: 'Operational Reports',data: {
-          cpuUtilization: 78.5,memoryUsage: 82.3,storageUsage: 65.8,networkTraffic: 45.2,keyMetrics: ['CPU UtilizationMemory Usage', 'Storage UsageNetwork Traffic'],
+        lastUpdat,
+  e: d: '2024-01-13',stat,
+  u: s: 'active',priori,
+  t: y: 'high',ta,
+  g: s: ['SecurityThreats', 'AssessmentRisk Management'],
+        descripti,
+  o: n: 'Comprehensive assessment of cybersecurity threats and incident response metrics',auth,
+  o: r: 'David Kim',vie,
+  w: s: 312,downloa,
+  d: s: 134,rati,
+  n: g: 4.7
+      }, {
+        id: '4',tit,
+  l: e: 'Cloud Infrastructure Utilization',ty,
+  p: e: 'operational',catego,
+  r: y: 'Operational Reports',da,
+  t: a: {
+          cpuUtilizatio,
+  n: 78.5,memoryUsa,
+  g: e: 82.3,storageUsa,
+  g: e: 65.8,networkTraff,
+  i: c: 45.2,keyMetri,
+  c: s: ['CPU UtilizationMemory Usage', 'Storage UsageNetwork Traffic'],
   },
-        lastUpdated: '2024-01-12',status: 'active',priority: 'medium',tags: ['CloudInfrastructure', 'UtilizationMonitoring'],
-        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',author: 'Lisa Thompson',views: 167,downloads: 56,rating: 4.5
-      };
-      {
-        id: '5',title: 'Customer Satisfaction Survey Results',type: 'customer',category: 'Customer Reports',data: {
-          overallSatisfaction: 4.6,netPromoterScore: 72,responseRate: 89.5,topConcerns: ['Response TimeDocumentation', 'Support Quality'],
-          keyMetrics: ['Overall SatisfactionNPS', 'Response RateTop Concerns'],
+        lastUpdat,
+  e: d: '2024-01-12',stat,
+  u: s: 'active',priori,
+  t: y: 'medium',ta,
+  g: s: ['CloudInfrastructure', 'UtilizationMonitoring'],
+        descripti,
+  o: n: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',auth,
+  o: r: 'Lisa Thompson',vie,
+  w: s: 167,downloa,
+  d: s: 56,rati,
+  n: g: 4.5
+      }, {
+        id: '5',tit,
+  l: e: 'Customer Satisfaction Survey Results',ty,
+  p: e: 'customer',catego,
+  r: y: 'Customer Reports',da,
+  t: a: {
+          overallSatisfactio,
+  n: 4.6,netPromoterSco,
+  r: e: 72,responseRa,
+  t: e: 89.5,topConcer,
+  n: s: ['Response TimeDocumentation', 'Support Quality'],
+          keyMetri,
+  c: s: ['Overall SatisfactionNPS', 'Response RateTop Concerns'],
   },
-        lastUpdated: '2024-01-11',status: 'active',priority: 'medium',tags: ['CustomerSatisfaction', 'SurveyNPS'],
-        description: 'Analysis of customer satisfaction survey results and net promoter score metrics',author: 'Alex Wong',views: 203,downloads: 78,rating: 4.6
+        lastUpdat,
+  e: d: '2024-01-11',stat,
+  u: s: 'active',priori,
+  t: y: 'medium',ta,
+  g: s: ['CustomerSatisfaction', 'SurveyNPS'],
+        descripti,
+  o: n: 'Analysis of customer satisfaction survey results and net promoter score metrics',auth,
+  o: r: 'Alex Wong',vie,
+  w: s: 203,downloa,
+  d: s: 78,rati,
+  n: g: 4.6
       },
-  ];
-    setReports(sampleReports);
+  ]
+    setReports(sampleReports)
     setFilteredReports(sampleReports)
 }, []),
 
   // Filter and sort reports
-  useEffect(() => {
+  useEffect(() () => {
     let filtered = reports,
 
     if (selectedType !== 'all') {
@@ -127,12 +242,14 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
     }
 
     // Sort reports
-    filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+    filtered.sort((a, b) () => {
+      let,
+  aValu: e: any, bVal,
+  u: e: any
       switch (sortBy) {
         case 'date':
-          aValue = new Date(a.lastUpdated).getTime();
-          bValue = new Date(b.lastUpdated).getTime();
+          aValue = new Date(a.lastUpdated).getTime()
+          bValue = new Date(b.lastUpdated).getTime()
           break,
         case 'views':
           aValue = a.views,
@@ -143,15 +260,20 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           bValue = b.rating,
           break,
         case 'priority':
-          const priorityOrder = { low: 1, medium: 2, high: 3, critical: 4 };
+          const priorityOrder = { l,
+  o: w: 1, medi,
+  u: m: 2, hi,
+  g: h: 3, critic,
+  a: l: 4 }
           aValue = priorityOrder[a.priority as keyof typeof priorityOrder],
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder],
           break,
         case 'title':
-          aValue = a.title.toLowerCase();
-          bValue = b.title.toLowerCase();
+          aValue = a.title.toLowerCase()
+          bValue = b.title.toLowerCase()
           break,
-        default: aValue = 0;
+        defau,
+  l: t: aValue = 0
           bValue = 0
       }
 
@@ -167,11 +289,17 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
   // Calculate report metrics
   const reportMetrics = {
-    totalReports: reports.length,activeReports: reports.filter(r => r.status === 'active').length,totalViews: reports.reduce((sum, r) => sum + r.views, 0),
-    totalDownloads: reports.reduce((sum, r) => sum + r.downloads, 0),
-    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,
-    topCategories: (() => {
-      const catCounts = reports.reduce((acc, r) => {
+    totalRepor,
+  t: s: reports.length,activeRepor,
+  t: s: reports.filter(r => r.status === 'active').length,totalVie,
+  w: s: reports.reduce((sum, r) => sum + r.views, 0),
+    totalDownloa,
+  d: s: reports.reduce((sum, r) => sum + r.downloads, 0),
+    averageRati,
+  n: g: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,
+    topCategori,
+  e: s: (() () => {
+      const catCounts = reports.reduce((acc, r) () => {
         acc[r.category] = (acc[r.category] || 0) + 1,
         return acc
 }, {} as Record<string, number>),
@@ -180,77 +308,117 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
         .map(([name, count]) => ({
           name,
           count,
-          percentage: (count / reports.length) * 100
+          percenta,
+  g: e: (count / reports.length) * 100
         }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 5)
 })(),
-    recentActivity: [
-      { action: 'Report viewed', timestamp: '2 minutes ago', user: 'John Doe' };
-      { action: 'Report downloaded', timestamp: '5 minutes ago', user: 'Jane Smith' };
-      { action: 'New report created', timestamp: '1 hour ago', user: 'Mike Johnson' };
-      { action: 'Report updated', timestamp: '2 hours ago', user: 'Sarah Wilson' },
+    recentActivi,
+  t: y: [
+      { actio,
+  n: 'Report viewed', timesta,
+  m: p: '2 minutes ago', us,
+  e: r: 'John Doe' }, { acti,
+  o: n: 'Report downloaded', timesta,
+  m: p: '5 minutes ago', us,
+  e: r: 'Jane Smith' }, { acti,
+  o: n: 'New report created', timesta,
+  m: p: '1 hour ago', us,
+  e: r: 'Mike Johnson' }, { acti,
+  o: n: 'Report updated', timesta,
+  m: p: '2 hours ago', us,
+  e: r: 'Sarah Wilson' },
   ],
-  };
+  }
   // Get type icon and color
-  const getTypeDisplay = (type: string) => {
+  const getTypeDisplay = (ty,
+  p: e: string) () => {
     const types = {
-      financial: { icon: <DollarSign className="w-4 h-4" />, color: 'text-green-400 bg-green-400/20' };
-      operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' };
-      performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' };
-      security: { icon: <Shield className="w-4 h-4" />, color: 'text-red-400 bg-red-400/20' };
-      customer: { icon: <Users className="w-4 h-4" />, color: 'text-yellow-400 bg-yellow-400/20' };
-      technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' },
-  };
-    return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' },
+      financi,
+  a: l: { ico,
+  n: <DollarSign className="w-4 h-4" />, col,
+  o: r: 'text-green-400 bg-green-400/20' }
+      operation,
+  a: l: { ico,
+  n: <Activity className="w-4 h-4" />, col,
+  o: r: 'text-blue-400 bg-blue-400/20' }
+      performan,
+  c: e: { ico,
+  n: <TrendingUp className="w-4 h-4" />, col,
+  o: r: 'text-purple-400 bg-purple-400/20' }
+      securi,
+  t: y: { ico,
+  n: <Shield className="w-4 h-4" />, col,
+  o: r: 'text-red-400 bg-red-400/20' }
+      custom,
+  e: r: { ico,
+  n: <Users className="w-4 h-4" />, col,
+  o: r: 'text-yellow-400 bg-yellow-400/20' }
+      technic,
+  a: l: { ico,
+  n: <Server className="w-4 h-4" />, col,
+  o: r: 'text-zion-cyan bg-zion-cyan/20' },
+  }
+    return types[type as keyof typeof types] || { ic,
+  o: n: <FileText className="w-4 h-4" />, col,
+  o: r: 'text-zinc-400 bg-zinc-400/20' },
   },
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priori,
+  t: y: string) () => {
     switch (priority) {
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20'
+      case 'low': return 'text-green-400 bg-green-400/20'
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20'
+      case 'high': return 'text-orange-400 bg-orange-400/20'
+      case 'critical': return 'text-red-400 bg-red-400/20'
+      defaul,
+  t: return 'text-zinc-400 bg-zinc-400/20'
     },
-  };
+  }
   // Get status color
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (stat,
+  u: s: string) () => {
     switch (status) {
-      case 'active': return 'text-green-400 bg-green-400/20';
-      case 'archived': return 'text-zinc-400 bg-zinc-400/20';
-      case 'draft': return 'text-yellow-400 bg-yellow-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20'
+      case 'active': return 'text-green-400 bg-green-400/20'
+      case 'archived': return 'text-zinc-400 bg-zinc-400/20'
+      case 'draft': return 'text-yellow-400 bg-yellow-400/20'
+      defaul,
+  t: return 'text-zinc-400 bg-zinc-400/20'
     },
-  };
+  }
   // Handle report actions
-  const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print') => {
-    const report = reports.find(r => r.id === reportId);
+  const handleReportAction = (report,
+  I: d: string, acti,
+  o: n: 'view' | 'download' | 'share' | 'print') () => {
+    const report = reports.find(r => r.id === reportId)
     if (report) {
       switch (action) {
         case 'view':
-          setSelectedReport(report);
-          setShowReportDetails(true);
+          setSelectedReport(report)
+          setShowReportDetails(true)
           break,
         case 'download':
           // Simulate download
-          console.log(`Downloading ${report.title}`);
+          console.log(`Downloading ${report.title}`)
           break,
         case 'share':
           // Simulate share
-          console.log(`Sharing ${report.title}`);
+          console.log(`Sharing ${report.title}`)
           break,
         case 'print':
           // Simulate print
-          console.log(`Printing ${report.title}`);
+          console.log(`Printing ${report.title}`)
           break,
       },
   },
   },
 
   // Export report data
-  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
+  const exportReport = (repo,
+  r: t: ReportData, form,
+  a: t: 'pdf' | 'excel' | 'csv') () => {
 
     // In a real implementation, this would generate and download the file
   },
@@ -258,19 +426,27 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+      <div className="flex flex-col,
+  l: g: flex-row,
+  l: g:items-center,
+  l: g:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Advanced Reporting Dashboard</h1>
           <p className="text-zinc-400 text-lg">Comprehensive reporting and analytics for data-driven decision making</p>
         </div>
 
-        <div className="flex items-center gap-3 mt-4 lg:mt-0">
+        <div className="flex items-center gap-3 mt-4 l,
+  g:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
             {[
-              { id: 'grid', label: 'Grid', icon: <BarChart3 className="w-4 h-4" /> };
-              { id: 'list', label: 'List', icon: <FileText className="w-4 h-4" /> };
-              { id: 'detailed', label: 'Detailed', icon: <Eye className="w-4 h-4" /> },
+              { id: 'grid', lab,
+  e: l: 'Grid', ic,
+  o: n: <BarChart3 className="w-4 h-4" /> }, { id: 'list', lab,
+  e: l: 'List', ic,
+  o: n: <FileText className="w-4 h-4" /> }, { id: 'detailed', lab,
+  e: l: 'Detailed', ic,
+  o: n: <Eye className="w-4 h-4" /> },
   ].map((mode) => (
               <button
                 key={mode.id}
@@ -278,7 +454,9 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                    : 'text-zinc-400,
+  hove: r: text-white hove,
+  r:bg-zinc-800/50'
                 }`}
               >
                 {mode.icon},
@@ -290,7 +468,8 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           {/* Create Report Button */}
           <button
             onClick={() => setShowReportDetails(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
+  hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <FileText className="w-4 h-4" />
             Create Report
@@ -300,11 +479,15 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
       {/* Metrics Section */},
   {showMetrics && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1,
+  m: d: grid-cols-2,
+  l: g:grid-cols-4 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
@@ -313,11 +496,14 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: 0.1 },
+            transition={ del,
+  a: y: 0.1 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
@@ -326,11 +512,14 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: 0.2 },
+            transition={ del,
+  a: y: 0.2 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
@@ -339,11 +528,14 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: 0.3 },
+            transition={ del,
+  a: y: 0.3 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
@@ -354,13 +546,17 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
       )},
   {/* Additional Metrics */},
   {showMetrics && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1,
+  l: g: grid-cols-3 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opacit,
+  y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: 0.4 },
+            transition={ del,
+  a: y: 0.4 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
@@ -372,11 +568,15 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                   <div className="flex items-center gap-2">
                     <div className="w-20 bg-zinc-700 rounded-full h-2">
                       <motion.div
-                        initial={{ width: 0 },
+                        initial={ wid,
+  t: h: 0 },
   }
-                        animate={{ width: `${category.percentage}%` },
+                        animate={ wid,
+  t: h: `${category.percentage}%` },
   }
-                        transition={{ delay: index * 0.1, duration: 0.8 },
+                        transition={ del,
+  a: y: index * 0.1, durati,
+  o: n: 0.8 },
   }
                         className="h-2 bg-zion-cyan rounded-full"
                       />
@@ -389,11 +589,14 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: 0.5 },
+            transition={ del,
+  a: y: 0.5 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
@@ -412,23 +615,29 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 },
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: 0.6 },
+            transition={ del,
+  a: y: 0.6 },
   }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
             <div className="space-y-2">
-              <button className="w-full px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-colors text-sm">
+              <button className="w-full px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg,
+  hove: r: bg-zion-cyan/30 transition-colors text-sm">
                 Generate Monthly Summary
               </button>
-              <button className="w-full px-4 py-2 bg-zinc-800/50 text-zinc-300 rounded-lg hover:bg-zinc-700/50 transition-colors text-sm">
+              <button className="w-full px-4 py-2 bg-zinc-800/50 text-zinc-300 rounded-lg,
+  hove: r:bg-zinc-700/50 transition-colors text-sm">
                 Export All Reports
               </button>
-              <button className="w-full px-4 py-2 bg-zinc-800/50 text-zinc-300 rounded-lg hover:bg-zinc-700/50 transition-colors text-sm">
+              <button className="w-full px-4 py-2 bg-zinc-800/50 text-zinc-300 rounded-lg hove,
+  r:bg-zinc-700/50 transition-colors text-sm">
                 Schedule Reports
               </button>
             </div>
@@ -442,7 +651,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent"
           >
             <option value="all">All Types</option>
             <option value="financial">Financial</option>
@@ -457,7 +670,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent"
           >
             <option value="all">All Categories</option>
             <option value="Financial Reports">Financial Reports</option>
@@ -471,7 +688,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent"
           >
             <option value="all">All Statuses</option>
             <option value="active">Active</option>
@@ -483,7 +704,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as any)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent"
           >
             <option value="date">Sort by Date</option>
             <option value="views">Sort by Views</option>
@@ -495,7 +720,8 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           {/* Sort Order */}
           <button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="p-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-zinc-400 hover:text-white transition-colors"
+            className="p-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-zinc-400,
+  hove: r:text-white transition-colors"
           >
             {sortOrder === 'asc' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
@@ -508,7 +734,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search reports..."
-              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400,
+  focu: s: outline-none,
+  focu: s:ring-2,
+  focu: s:ring-zion-cyan focu,
+  s:border-transparent"
             />
           </div>
         </div>
@@ -518,13 +748,17 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
         {filteredReports.map((report, index) => (
           <motion.div
             key={report.id}
-            initial={{ opacity: 0, y: 20 },
+            initial={ opaci,
+  t: y: 0, y: 20 },
   }
-            animate={{ opacity: 1, y: 0 },
+            animate={ opaci,
+  t: y: 1, y: 0 },
   }
-            transition={{ delay: index * 0.1 },
+            transition={ del,
+  a: y: index * 0.1 },
   }
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl,
+  hove: r:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Report Header */}
             <div className="flex items-start justify-between mb-4">
@@ -558,19 +792,25 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
               <div className="flex items-center gap-2 ml-4">
                 <button
                   onClick={() => handleReportAction(report.id, 'view')}
-                  className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
+                  className="p-2 text-zinc-400,
+  hove: r: text-white hove,
+  r:bg-zinc-800/50 rounded-lg transition-colors"
                 >
                   <Eye className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => handleReportAction(report.id, 'download')}
-                  className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
+                  className="p-2 text-zinc-400,
+  hove: r: text-zion-cyan hove,
+  r:bg-zion-cyan/20 rounded-lg transition-colors"
                 >
                   <Download className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => handleReportAction(report.id, 'share')}
-                  className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
+                  className="p-2 text-zinc-400,
+  hove: r: text-zion-cyan hove,
+  r:bg-zion-cyan/20 rounded-lg transition-colors"
                 >
                   <Share2 className="w-4 h-4" />
                 </button>
@@ -578,7 +818,9 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             </div>
 
             {/* Report Details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <div className="grid grid-cols-1,
+  m: d: grid-cols-2 l,
+  g:grid-cols-4 gap-4 mb-4">
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Author</div>
                 <div className="text-white font-medium">{report.author}</div>
@@ -603,8 +845,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
             {/* Key Metrics Preview */}
             <div className="mb-4">
               <h4 className="text-sm font-medium text-zinc-300 mb-3">Key Metrics</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {report.data.keyMetrics?.slice(0, 4).map((metric: string, idx: number) => (
+              <div className="grid grid-cols-2,
+  m: d:grid-cols-4 gap-3">
+                {report.data.keyMetrics?.slice(0, 4).map((metr,
+  i: c: string, i,
+  d: x: number) => (
                   <div key={idx} className="p-2 bg-zinc-800/30 rounded-lg text-center">
                     <div className="text-xs text-zinc-400">{metric}</div>
                   </div>
@@ -640,19 +885,22 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => exportReport(report, 'pdf')}
-                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
+                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg,
+  hove: r:bg-zinc-700/50 transition-colors"
                 >
                   PDF
                 </button>
                 <button
                   onClick={() => exportReport(report, 'excel')}
-                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
+                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg,
+  hove: r:bg-zinc-700/50 transition-colors"
                 >
                   Excel
                 </button>
                 <button
                   onClick={() => exportReport(report, 'csv')}
-                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
+                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg,
+  hove: r:bg-zinc-700/50 transition-colors"
                 >
                   CSV
                 </button>
@@ -665,9 +913,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
       {/* No Results */},
   {filteredReports.length === 0 && (
         <motion.div
-          initial={{ opacity: 0 },
+          initial={ opaci,
+  t: y: 0 },
   }
-          animate={{ opacity: 1 },
+          animate={ opaci,
+  t: y: 1 },
   }
           className="text-center py-12"
         >
@@ -678,7 +928,8 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           </p>
           <button
             onClick={() => setShowReportDetails(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
+  hove: r:bg-zion-cyan/80 transition-colors"
           >
             Create Report
           </button>
@@ -688,21 +939,30 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
       <AnimatePresence>
         {showReportDetails && selectedReport && (
           <motion.div
-            initial={{ opacity: 0 },
+            initial={ opaci,
+  t: y: 0 },
   }
-            animate={{ opacity: 1 },
+            animate={ opaci,
+  t: y: 1 },
   }
-            exit={{ opacity: 0 },
+            exit={ opaci,
+  t: y: 0 },
   }
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setShowReportDetails(false)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 },
+              initial={ sca,
+  l: e: 0.9, opaci,
+  t: y: 0 },
   }
-              animate={{ scale: 1, opacity: 1 },
+              animate={ sca,
+  l: e: 1, opaci,
+  t: y: 1 },
   }
-              exit={{ scale: 0.9, opacity: 0 },
+              exit={ sca,
+  l: e: 0.9, opaci,
+  t: y: 0 },
   }
               className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
@@ -711,7 +971,9 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                 <h2 className="text-2xl font-bold text-white">{selectedReport.title}</h2>
                 <button
                   onClick={() => setShowReportDetails(false)}
-                  className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
+                  className="p-2 text-zinc-400,
+  hove: r: text-white hove,
+  r:bg-zinc-800/50 rounded-lg transition-colors"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -725,8 +987,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Key Metrics</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {selectedReport.data.keyMetrics?.map((metric: string, idx: number) => (
+                  <div className="grid grid-cols-2,
+  m: d: grid-cols-4 gap-4">
+                    {selectedReport.data.keyMetrics?.map((metri,
+  c: string, i,
+  d: x: number) => (
                       <div key={idx} className="p-4 bg-zinc-800/30 rounded-lg text-center">
                         <div className="text-lg font-semibold text-white">{metric}</div>
                       </div>
@@ -735,10 +1000,12 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
+                  <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg,
+  hove: r: bg-zion-cyan/80 transition-colors">
                     Download Report
                   </button>
-                  <button className="px-4 py-2 bg-zinc-700 text-white rounded-lg hover:bg-zinc-600 transition-colors">
+                  <button className="px-4 py-2 bg-zinc-700 text-white rounded-lg hove,
+  r:bg-zinc-600 transition-colors">
                     Share Report
                   </button>
                 </div>
@@ -749,4 +1016,4 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
       </AnimatePresence>
     </div>
   )
-};
+}

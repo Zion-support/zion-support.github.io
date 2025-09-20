@@ -1,41 +1,61 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 interface User {
-  id: string,email: string,name: string;
+  id: string,ema,
+  i: l: string,na,
+  m: e: string
   avatar?: string
 }
 
 interface AuthState {
-  user: User | null,isAuthenticated: boolean,isLoading: boolean,error: string | null
+  us,
+  e: r: User | null,isAuthenticat,
+  e: d: boolean,isLoadi,
+  n: g: boolean,err,
+  o: r: string | null
 }
 
-const const initialState: AuthState = {
+const,
+  const: initialState: AuthState = {
   = {
-  user: null,isAuthenticated: false,isLoading: false,error: null
+  use,
+  r: null,isAuthenticat,
+  e: d: false,isLoadi,
+  n: g: false,err,
+  o: r: null
 }
 const authSlice = createSlice({
-  name: 'auth';
-  initialState;
-  reducers: {
-  setUser: (state, action: PayloadAction<User>) => {
-  state.user = action.payload;
-      state.isAuthenticated = true;
+  na,
+  m: e: 'auth'
+  initialState,
+  reducer: s: {
+  setUse,
+  r: (state, acti,
+  o: n: PayloadAction<User>) () => {
+  state.user = action.payload
+      state.isAuthenticated = true
       state.error = null
 }
-    clearUser: (state) => {
-  state.user = null;
-      state.isAuthenticated = false;
+    clearUs,
+  e: r: (state) () => {
+  state.user = null
+      state.isAuthenticated = false
       state.error = null
 }
-    setLoading: (state, action: PayloadAction<boolean>) => {
+    setLoadi,
+  n: g: (state, acti,
+  o: n: PayloadAction<boolean>) () => {
   state.isLoading = action.payload
 }
-    setError: (state, action: PayloadAction<string>) => {
+    setErr,
+  o: r: (state, acti,
+  o: n: PayloadAction<string>) () => {
   state.error = action.payload
 }
-    clearError: (state) => {
+    clearErr,
+  o: r: (state) () => {
   state.error = null
 },
   },
   })
-export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
-export default authSlice.reducer;
+export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions
+export default authSlice.reducer

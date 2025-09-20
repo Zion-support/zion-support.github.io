@@ -1,6 +1,8 @@
 import React from "react"
 const,
-  AIPoweredEmailResponde: r: React.FC = () () => {
+  AIPoweredEmailRespon,
+  d: e:  ,
+  r: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -17,7 +19,8 @@ const,
 
         <section className="grid grid-cols-1,
   l: g: grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
+          <div className="l,
+  g:col-span-2 space-y-8">
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Key Capabilities</h2>
               <ul className="grid s,
@@ -26,10 +29,12 @@ const,
                 <li className="p-3 rounded-lg bg-slate-800/50">Auto-tagging, prioritization, and SLA-aware routing</li>
                 <li className="p-3 rounded-lg bg-slate-800/50">Tone and policy controls, redaction, PII safeguards</li>
                 <li className="p-3 rounded-lg bg-slate-800/50">Integratio,
-  n: s: Gmail, Outlook 365, Zendesk, HubSpot</li>
+  n:  ,
+  s: Gmail, Outlook 365, Zendesk, HubSpot</li>
                 <li className="p-3 rounded-lg bg-slate-800/50">Approval workflows with human-in-the-loop (HITL)</li>
                 <li className="p-3 rounded-lg bg-slate-800/50">Analyti,
-  c: s: response time, CSAT proxy, deflection rate</li>
+  c:  ,
+  s: response time, CSAT proxy, deflection rate</li>
               </ul>
             </div>
 
@@ -37,13 +42,17 @@ const,
               <h2 className="text-2xl font-semibold mb-3">Pricing (avg market ranges)</h2>
               <ul className="space-y-2 text-slate-300">
                 <li>Start,
-  e: r: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
+  e:  ,
+  r: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
                 <li>Grow,
-  t: h: $799–$1,499/mo — 10 inboxes, 50k emails/mo, basic HITL</li>
+  t:  ,
+  h: $799–$1,499/mo — 10 inboxes, 50k emails/mo, basic HITL</li>
                 <li>Sca,
-  l: e: $2,500–$5,000/mo — unlimited inboxes, advanced HITL, SSO, SOC2</li>
+  l:  ,
+  e: $2,500–$5,000/mo — unlimited inboxes, advanced HITL, SSO, SOC2</li>
                 <li>Enterpri,
-  s: e: Custom — on-prem/VPC, DLP, custom compliance</li>
+  s:  ,
+  e: Custom — on-prem/VPC, DLP, custom compliance</li>
               </ul>
               <p className="mt-3 text-sm text-slate-400">
                 Benchmarks informed by public pricing from common CX platforms and AI add-ons.
@@ -54,17 +63,25 @@ const,
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li><a className="hov,
-  e: r: underline" href="htt,
-  p: s://workspace.google.com/marketplace" target="_blank" rel="noreferrer">Google Workspace Marketplace</a></li>
+  e:  ,
+  r: underline" href="htt,
+  p:  ,
+  s://workspace.google.com/marketplace" target="_blank" rel="noreferrer">Google Workspace Marketplace</a></li>
                 <li><a className="hov,
-  e: r:underline" href="htt,
-  p: s://learn.microsoft.com/exchange/" target="_blank" rel="noreferrer">Microsoft Exchange/Outlook documentation</a></li>
+  e:  ,
+  r:underline" href="htt,
+  p:  ,
+  s://learn.microsoft.com/exchange/" target="_blank" rel="noreferrer">Microsoft Exchange/Outlook documentation</a></li>
                 <li><a className="hov,
-  e: r:underline" href="htt,
-  p: s://platform.openai.com/docs" target="_blank" rel="noreferrer">OpenAI Platform docs</a></li>
+  e:  ,
+  r:underline" href="htt,
+  p:  ,
+  s://platform.openai.com/docs" target="_blank" rel="noreferrer">OpenAI Platform docs</a></li>
                 <li><a className="hov,
-  e: r:underline" href="htt,
-  p: s://developers.google.com/gmail/api" target="_blank" rel="noreferrer">Gmail API</a></li>
+  e:  ,
+  r:underline" href="htt,
+  p:  ,
+  s://developers.google.com/gmail/api" target="_blank" rel="noreferrer">Gmail API</a></li>
               </ul>
             </div>
           </div>
@@ -74,7 +91,9 @@ const,
               <h3 className="text-xl font-semibold">Get a Quote</h3>
               <p className="mt-2 text-slate-300">Call +1 302 464 0950 or email kleber@ziontechgroup.com</p>
               <a href="/contact" className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white,
-  hove: r:from-cyan-500 hove,
+  ho,
+  v: e:  ,
+  r:from-cyan-500 hove,
   r:to-blue-600">Contact Us</a>
             </div>
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">

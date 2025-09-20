@@ -1,26 +1,27 @@
-import React from "react";
+import React from "react"
 const ThemeContext = React.createContext(undefined)
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) () => {
   const [theme, setTheme] = React.useState('system')
-    React.useEffect(() => {
-        const root = window.document.documentElement;
+    React.useEffect(() () => {
+        const root = window.document.documentElement
         root.classList.remove('lightdark')
         if (if (theme === 'system') {
   ) {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const systemTheme = window.matchMedia('(prefers-color-sche,
+  m: e: dark)').matches ? 'dark' : 'light'
             root.classList.add(systemTheme)
         }
         else {
             root.classList.add(theme)
         },
   }, [theme])
-    return (<ThemeContext.Provider value={{ theme, setTheme },
+    return (<ThemeContext.Provider value={ theme, setTheme },
   }>
-      {{children},
+      {children},
   }
     </ThemeContext.Provider>)
 }
-export const useTheme = () => {
+export const useTheme = () () => {
     const context = React.useContext(ThemeContext)
     if (if (context === undefined) {
   ) {

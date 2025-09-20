@@ -1,327 +1,562 @@
 export interface PricingTier {
-  name: string,price: string,billing: 'monthly' | 'yearly' | 'one-time',features: string[[],
+  na,
+  m: e: string,pri,
+  c: e: string,billi,
+  n: g: 'monthly' | 'yearly' | 'one-time',featur,
+  e: s: string[[],
   ]
-    popular?: boolean;
+    popular?: boolean
     savings?: string
 }
 
 export interface ServicePricing {
-  id: string,name: string,category: string,description: string,pricing: PricingTier[],features: string[],benefits: string[],roi: string,trialDays: number,setupTime: string,marketPosition: string,competitors: string[],contactInfo: {
-  mobile: string,email: string,address: string,website: string
+  id: string,na,
+  m: e: string,catego,
+  r: y: string,descripti,
+  o: n: string,prici,
+  n: g: PricingTier[],featur,
+  e: s: string[],benefi,
+  t: s: string[],r,
+  o: i: string,trialDa,
+  y: s: number,setupTi,
+  m: e: string,marketPositi,
+  o: n: string,competito,
+  r: s: string[],contactIn,
+  f: o: {
+  mobil,
+  e: string,ema,
+  i: l: string,addre,
+  s: s: string,websi,
+  t: e: string
 },
   }
 
 const const CONTACT = {
   = {
-    mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
+    mobi,
+  l: e: '+1 302 464 0950',ema,
+  i: l: 'kleber@ziontechgroup.com',addre,
+  s: s: '364 E Main St STE 1008 Middletown DE 19709',websi,
+  t: e: 'http,
+  s://ziontechgroup.com'
 }
-export const comprehensivePricingGuide2025: ServicePricing[] = [
-  // FINANCIAL TECHNOLOGY SERVICES;
+export,
+  const: comprehensivePricingGuide2025: ServicePricing[] = [
+  // FINANCIAL TECHNOLOGY SERVICES
     {
-  id: 'ai-powered-invoice-factoring-platform',name: 'AI-Powered Invoice Factoring Platform',category: 'Fintech',description: 'Automated invoice factoring platform with AI credit risk assessment and instant funding approval.',pricing: [
+  i,
+  d: 'ai-powered-invoice-factoring-platform',na,
+  m: e: 'AI-Powered Invoice Factoring Platform',catego,
+  r: y: 'Fintech',descripti,
+  o: n: 'Automated invoice factoring platform with AI credit risk assessment and instant funding approval.',prici,
+  n: g: [
   {
-  name: 'Starter',price: '$299',billing: 'monthly',features: [
-  'Up to $100K monthly factoringAI credit risk assessment';
-                    'Basic reporting dashboardEmail support';
+  nam,
+  e: 'Starter',pri,
+  c: e: '$299',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to $100K monthly factoringAI credit risk assessment'
+                    'Basic reporting dashboardEmail support'
                     'Integration with QuickBooks'
 ],
   },
   {
-  name: 'Professional',price: '$599',billing: 'monthly',features: [
-  'Up to $500K monthly factoringAdvanced risk analytics';
-                    'Real-time reportingPriority support';
+  na,
+  m: e: 'Professional',pri,
+  c: e: '$599',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to $500K monthly factoringAdvanced risk analytics'
+                    'Real-time reportingPriority support'
                     'Multi-currency supportAPI access'
 ]
-                popular: true,savings: 'Save 20% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 20% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited factoring volumeCustom risk models';
-                    'Dedicated account managerWhite-label solutions';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited factoring volumeCustom risk models'
+                    'Dedicated account managerWhite-label solutions'
                     'Advanced compliance tools24/7 phone support'
 ],
   },
   ]
-        features: [
-  'AI credit risk assessmentInstant funding approval';
-            'Automated collectionsReal-time reporting dashboard';
+        featur,
+  e: s: [
+  'AI credit risk assessmentInstant funding approval'
+            'Automated collectionsReal-time reporting dashboard'
             'Multi-currency supportIntegration with major accounting software'
 ]
-        benefits: [
-  'Improve cash flow by 60%Reduce payment delays by 80%';
+        benefi,
+  t: s: [
+  'Improve cash flow by 60%Reduce payment delays by 80%'
             'Lower financing costs by 30%Automated risk management'
 ]
-        roi: 'Average 3-5x ROI through improved cash flow and reduced financing costs',trialDays: 14,setupTime: '24 hours',marketPosition: 'AI-first invoice factoring solution for small to medium businesses',competitors: ['BlueVineFundbox', 'Kabbage']
-        contactInfo: CONTACT
+        ro,
+  i: 'Average 3-5x ROI through improved cash flow and reduced financing costs',trialDa,
+  y: s: 14,setupTi,
+  m: e: '24 hours',marketPositi,
+  o: n: 'AI-first invoice factoring solution for small to medium businesses',competito,
+  r: s: ['BlueVineFundbox', 'Kabbage']
+        contactIn,
+  f: o: CONTACT
 },
   {
-  id: 'crypto-payment-gateway-saas',name: 'Crypto Payment Gateway SaaS',category: 'Fintech',description: 'Enterprise-grade crypto payment gateway with automatic fiat conversion and fraud protection.',pricing: [
+  id: 'crypto-payment-gateway-saas',na,
+  m: e: 'Crypto Payment Gateway SaaS',catego,
+  r: y: 'Fintech',descripti,
+  o: n: 'Enterprise-grade crypto payment gateway with automatic fiat conversion and fraud protection.',prici,
+  n: g: [
   {
-  name: 'Basic',price: '$199',billing: 'monthly',features: [
-  'Up to 50 cryptocurrenciesBasic fraud detection';
-                    'Standard settlement (24h)Email support';
+  nam,
+  e: 'Basic',pri,
+  c: e: '$199',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 50 cryptocurrenciesBasic fraud detection'
+                    'Standard settlement (24h)Email support'
                     'Shopify integration'
 ],
   },
   {
-  name: 'Professional',price: '$399',billing: 'monthly',features: [
-  '100+ cryptocurrenciesAdvanced fraud detection';
-                    'Real-time settlementPriority support';
+  na,
+  m: e: 'Professional',pri,
+  c: e: '$399',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  '100+ cryptocurrenciesAdvanced fraud detection'
+                    'Real-time settlementPriority support'
                     'Multiple platform integrationsAnalytics dashboard'
 ]
-                popular: true,savings: 'Save 25% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 25% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Custom cryptocurrency supportCustom fraud models';
-                    'Instant settlementDedicated support team';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Custom cryptocurrency supportCustom fraud models'
+                    'Instant settlementDedicated support team'
                     'White-label solutionsCustom compliance tools'
 ],
   },
   ]
-        features: [
-  '100+ cryptocurrency supportInstant fiat conversion';
-            'Regulatory compliance toolsFraud detection system';
+        featur,
+  e: s: [
+  '100+ cryptocurrency supportInstant fiat conversion'
+            'Regulatory compliance toolsFraud detection system'
             'Multi-wallet integrationReal-time settlement'
 ]
-        benefits: [
-  'Expand to global markets instantlyReduce payment processing fees by 40%';
+        benefi,
+  t: s: [
+  'Expand to global markets instantlyReduce payment processing fees by 40%'
             'Eliminate chargeback risksAccess to crypto-savvy customers'
 ]
-        roi: 'Increase revenue by 15-25% through new market access and lower fees',trialDays: 7,setupTime: '48 hours',marketPosition: 'Enterprise crypto payment solution for e-commerce and SaaS companies',competitors: ['Coinbase CommerceBitPay', 'CoinPayments']
-        contactInfo: CONTACT
+        ro,
+  i: 'Increase revenue by 15-25% through new market access and lower fees',trialDa,
+  y: s: 7,setupTi,
+  m: e: '48 hours',marketPositi,
+  o: n: 'Enterprise crypto payment solution for e-commerce and SaaS companies',competito,
+  r: s: ['Coinbase CommerceBitPay', 'CoinPayments']
+        contactIn,
+  f: o: CONTACT
 }
-    // HEALTHCARE TECHNOLOGY SERVICES;
+    // HEALTHCARE TECHNOLOGY SERVICES
     {
-  id: 'ai-telemedicine-platform',name: 'AI Telemedicine Platform',category: 'Healthtech',description: 'Advanced telemedicine platform with AI symptom analysis and intelligent patient routing.',pricing: [
+  id: 'ai-telemedicine-platform',na,
+  m: e: 'AI Telemedicine Platform',catego,
+  r: y: 'Healthtech',descripti,
+  o: n: 'Advanced telemedicine platform with AI symptom analysis and intelligent patient routing.',prici,
+  n: g: [
   {
-  name: 'Clinic',price: '$399',billing: 'monthly',features: [
-  'Up to 100 patients/monthAI symptom checker';
-                    'Video consultationsBasic EHR integration';
+  nam,
+  e: 'Clinic',pri,
+  c: e: '$399',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 100 patients/monthAI symptom checker'
+                    'Video consultationsBasic EHR integration'
                     'Email support'
 ],
   },
   {
-  name: 'Hospital',price: '$999',billing: 'monthly',features: [
-  'Up to 1000 patients/monthAdvanced AI diagnostics';
-                    'Full EHR integrationPriority support';
+  na,
+  m: e: 'Hospital',pri,
+  c: e: '$999',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 1000 patients/monthAdvanced AI diagnostics'
+                    'Full EHR integrationPriority support'
                     'Custom brandingAnalytics dashboard'
 ]
-                popular: true,savings: 'Save 30% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 30% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited patientsCustom AI models';
-                    'Multi-system integrationDedicated support team';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited patientsCustom AI models'
+                    'Multi-system integrationDedicated support team'
                     'White-label solutionsCustom compliance features'
 ],
   },
   ]
-        features: [
-  'AI symptom checkerVideo consultation platform';
-            'Electronic health records integrationPrescription management';
+        featur,
+  e: s: [
+  'AI symptom checkerVideo consultation platform'
+            'Electronic health records integrationPrescription management'
             'Insurance verificationMulti-language support'
 ]
-        benefits: [
-  'Reduce wait times by 70%Improve patient satisfaction by 40%';
+        benefi,
+  t: s: [
+  'Reduce wait times by 70%Improve patient satisfaction by 40%'
             'Lower healthcare costs by 25%24/7 availability'
 ]
-        roi: 'Increase patient capacity by 3-4x while reducing operational costs',trialDays: 14,setupTime: '2 weeks',marketPosition: 'AI-enhanced telemedicine solution for healthcare providers',competitors: ['TeladocAmwell', 'MDLive']
-        contactInfo: CONTACT
+        ro,
+  i: 'Increase patient capacity by 3-4x while reducing operational costs',trialDa,
+  y: s: 14,setupTi,
+  m: e: '2 weeks',marketPositi,
+  o: n: 'AI-enhanced telemedicine solution for healthcare providers',competito,
+  r: s: ['TeladocAmwell', 'MDLive']
+        contactIn,
+  f: o: CONTACT
 }
-    // EDUCATION TECHNOLOGY SERVICES;
+    // EDUCATION TECHNOLOGY SERVICES
     {
-  id: 'ai-personalized-learning-platform',name: 'AI Personalized Learning Platform',category: 'Edutech',description: 'Intelligent learning platform with adaptive algorithms and personalized educational experiences.',pricing: [
+  id: 'ai-personalized-learning-platform',na,
+  m: e: 'AI Personalized Learning Platform',catego,
+  r: y: 'Edutech',descripti,
+  o: n: 'Intelligent learning platform with adaptive algorithms and personalized educational experiences.',prici,
+  n: g: [
   {
-  name: 'School',price: '$149',billing: 'monthly',features: [
-  'Up to 500 studentsBasic adaptive learning';
-                    'Progress trackingParent dashboard';
+  nam,
+  e: 'School',pri,
+  c: e: '$149',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 500 studentsBasic adaptive learning'
+                    'Progress trackingParent dashboard'
                     'Email support'
 ],
   },
   {
-  name: 'District',price: '$399',billing: 'monthly',features: [
-  'Up to 5000 studentsAdvanced AI algorithms';
-                    'Comprehensive analyticsPriority support';
+  na,
+  m: e: 'District',pri,
+  c: e: '$399',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 5000 studentsAdvanced AI algorithms'
+                    'Comprehensive analyticsPriority support'
                     'Custom content creationIntegration with LMS'
 ]
-                popular: true,savings: 'Save 25% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 25% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited studentsCustom AI models';
-                    'Advanced analyticsDedicated support team';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited studentsCustom AI models'
+                    'Advanced analyticsDedicated support team'
                     'White-label solutionsCustom integrations'
 ],
   },
   ]
-        features: [
-  'Adaptive learning algorithmsPersonalized content delivery';
-            'Progress tracking analyticsMulti-modal learning support';
+        featur,
+  e: s: [
+  'Adaptive learning algorithmsPersonalized content delivery'
+            'Progress tracking analyticsMulti-modal learning support'
             'Parent/teacher dashboardsGamification elements'
 ]
-        benefits: [
-  'Improve learning outcomes by 40%Reduce learning time by 30%';
+        benefi,
+  t: s: [
+  'Improve learning outcomes by 40%Reduce learning time by 30%'
             'Increase student engagement by 60%Personalized attention for every student'
 ]
-        roi: 'Improve student performance and retention rates significantly',trialDays: 30,setupTime: '1 week',marketPosition: 'AI-powered personalized learning pioneer for educational institutions',competitors: ['DreamBoxKnewton', 'Smart Sparrow']
-        contactInfo: CONTACT
+        ro,
+  i: 'Improve student performance and retention rates significantly',trialDa,
+  y: s: 30,setupTi,
+  m: e: '1 week',marketPositi,
+  o: n: 'AI-powered personalized learning pioneer for educational institutions',competito,
+  r: s: ['DreamBoxKnewton', 'Smart Sparrow']
+        contactIn,
+  f: o: CONTACT
 }
-    // MARKETING TECHNOLOGY SERVICES;
+    // MARKETING TECHNOLOGY SERVICES
     {
-  id: 'ai-content-optimization-engine',name: 'AI Content Optimization Engine',category: 'Martech',description: 'Intelligent content optimization platform with AI-powered suggestions and A/B testing.',pricing: [
+  id: 'ai-content-optimization-engine',na,
+  m: e: 'AI Content Optimization Engine',catego,
+  r: y: 'Martech',descripti,
+  o: n: 'Intelligent content optimization platform with AI-powered suggestions and A/B testing.',prici,
+  n: g: [
   {
-  name: 'Creator',price: '$179',billing: 'monthly',features: [
-  'Up to 100 content pieces/monthBasic AI optimization';
-                    'A/B testing (2 variants)Basic analytics';
+  nam,
+  e: 'Creator',pri,
+  c: e: '$179',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 100 content pieces/monthBasic AI optimization'
+                    'A/B testing (2 variants)Basic analytics'
                     'Email support'
 ],
   },
   {
-  name: 'Agency',price: '$399',billing: 'monthly',features: [
-  'Up to 1000 content pieces/monthAdvanced AI optimization';
-                    'A/B testing (5 variants)Comprehensive analytics';
-                    'Priority supportTeam collaboration tools';
+  na,
+  m: e: 'Agency',pri,
+  c: e: '$399',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 1000 content pieces/monthAdvanced AI optimization'
+                    'A/B testing (5 variants)Comprehensive analytics'
+                    'Priority supportTeam collaboration tools'
                     'API access'
 ]
-                popular: true,savings: 'Save 20% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 20% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited content piecesCustom AI models';
-                    'Advanced A/B testingCustom analytics';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited content piecesCustom AI models'
+                    'Advanced A/B testingCustom analytics'
                     'Dedicated support teamWhite-label solutions'
 ],
   },
   ]
-        features: [
-  'Content performance analyticsAI-powered optimization suggestions';
-            'Automated A/B testingSEO optimization tools';
+        featur,
+  e: s: [
+  'Content performance analyticsAI-powered optimization suggestions'
+            'Automated A/B testingSEO optimization tools'
             'Social media integrationConversion tracking'
 ]
-        benefits: [
-  'Increase content engagement by 45%Improve conversion rates by 30%';
+        benefi,
+  t: s: [
+  'Increase content engagement by 45%Improve conversion rates by 30%'
             'Reduce content creation time by 40%Data-driven content decisions'
 ]
-        roi: 'Improve marketing ROI by 2-3x through better content performance',trialDays: 21,setupTime: '1 week',marketPosition: 'AI-powered content optimization leader for marketing teams',competitors: ['OptimizelyVWO', 'Google Optimize']
-        contactInfo: CONTACT
+        ro,
+  i: 'Improve marketing ROI by 2-3x through better content performance',trialDa,
+  y: s: 21,setupTi,
+  m: e: '1 week',marketPositi,
+  o: n: 'AI-powered content optimization leader for marketing teams',competito,
+  r: s: ['OptimizelyVWO', 'Google Optimize']
+        contactIn,
+  f: o: CONTACT
 }
-    // AI SERVICES;
+    // AI SERVICES
     {
-  id: 'ai-threat-intelligence-platform',name: 'AI Threat Intelligence Platform',category: 'AI Services',description: 'Advanced threat intelligence platform with AI-powered detection and automated response.',pricing: [
+  id: 'ai-threat-intelligence-platform',na,
+  m: e: 'AI Threat Intelligence Platform',catego,
+  r: y: 'AI Services',descripti,
+  o: n: 'Advanced threat intelligence platform with AI-powered detection and automated response.',prici,
+  n: g: [
   {
-  name: 'Security Team',price: '$399',billing: 'monthly',features: [
-  'Up to 1000 endpointsBasic threat detection';
-                    'Email alertsBasic reporting';
+  nam,
+  e: 'Security Team',pri,
+  c: e: '$399',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 1000 endpointsBasic threat detection'
+                    'Email alertsBasic reporting'
                     'Email support'
 ],
   },
   {
-  name: 'SOC',price: '$999',billing: 'monthly',features: [
-  'Up to 10000 endpointsAdvanced threat detection';
-                    'Real-time alertsComprehensive reporting';
-                    'Priority supportAPI integration';
+  na,
+  m: e: 'SOC',pri,
+  c: e: '$999',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 10000 endpointsAdvanced threat detection'
+                    'Real-time alertsComprehensive reporting'
+                    'Priority supportAPI integration'
                     'Custom threat feeds'
 ]
-                popular: true,savings: 'Save 30% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 30% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited endpointsCustom AI models';
-                    'Advanced automationDedicated support team';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited endpointsCustom AI models'
+                    'Advanced automationDedicated support team'
                     'White-label solutionsCustom integrations'
 ],
   },
   ]
-        features: [
-  'Real-time threat detectionAI-powered threat analysis';
-            'Automated response actionsThreat intelligence sharing';
+        featur,
+  e: s: [
+  'Real-time threat detectionAI-powered threat analysis'
+            'Automated response actionsThreat intelligence sharing'
             'Compliance reporting24/7 monitoring'
 ]
-        benefits: [
-  'Detect threats 90% fasterReduce false positives by 70%';
+        benefi,
+  t: s: [
+  'Detect threats 90% fasterReduce false positives by 70%'
             'Improve incident response time by 80%Proactive threat prevention'
 ]
-        roi: 'Prevent costly security breaches and reduce incident response costs',trialDays: 14,setupTime: '2 weeks',marketPosition: 'AI-powered threat intelligence leader for enterprise security',competitors: ['Recorded FutureThreatConnect', 'Anomali']
-        contactInfo: CONTACT
+        ro,
+  i: 'Prevent costly security breaches and reduce incident response costs',trialDa,
+  y: s: 14,setupTi,
+  m: e: '2 weeks',marketPositi,
+  o: n: 'AI-powered threat intelligence leader for enterprise security',competito,
+  r: s: ['Recorded FutureThreatConnect', 'Anomali']
+        contactIn,
+  f: o: CONTACT
 }
-    // IT SERVICES;
+    // IT SERVICES
     {
-  id: 'automated-compliance-monitoring',name: 'Automated Compliance Monitoring',category: 'IT Services',description: 'Intelligent compliance monitoring platform with automated reporting and violation alerts.',pricing: [
+  id: 'automated-compliance-monitoring',na,
+  m: e: 'Automated Compliance Monitoring',catego,
+  r: y: 'IT Services',descripti,
+  o: n: 'Intelligent compliance monitoring platform with automated reporting and violation alerts.',prici,
+  n: g: [
   {
-  name: 'Compliance Team',price: '$299',billing: 'monthly',features: [
-  'Up to 5 regulationsBasic monitoring';
-                    'Monthly reportsEmail alerts';
+  nam,
+  e: 'Compliance Team',pri,
+  c: e: '$299',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 5 regulationsBasic monitoring'
+                    'Monthly reportsEmail alerts'
                     'Email support'
 ],
   },
   {
-  name: 'Legal Department',price: '$699',billing: 'monthly',features: [
-  'Up to 20 regulationsAdvanced monitoring';
-                    'Real-time alertsComprehensive reporting';
-                    'Priority supportCustom dashboards';
+  na,
+  m: e: 'Legal Department',pri,
+  c: e: '$699',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 20 regulationsAdvanced monitoring'
+                    'Real-time alertsComprehensive reporting'
+                    'Priority supportCustom dashboards'
                     'API access'
 ]
-                popular: true,savings: 'Save 25% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 25% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited regulationsCustom monitoring rules';
-                    'Advanced automationDedicated support team';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited regulationsCustom monitoring rules'
+                    'Advanced automationDedicated support team'
                     'White-label solutionsCustom integrations'
 ],
   },
   ]
-        features: [
-  'Multi-regulation supportAutomated compliance checking';
-            'Real-time violation alertsAutomated report generation';
+        featur,
+  e: s: [
+  'Multi-regulation supportAutomated compliance checking'
+            'Real-time violation alertsAutomated report generation'
             'Audit trail managementIntegration with security tools'
 ]
-        benefits: [
-  'Reduce compliance costs by 40%Improve audit readiness by 90%';
+        benefi,
+  t: s: [
+  'Reduce compliance costs by 40%Improve audit readiness by 90%'
             'Eliminate manual reporting by 80%Continuous compliance monitoring'
 ]
-        roi: 'Reduce compliance overhead and avoid costly regulatory fines',trialDays: 21,setupTime: '3 weeks',marketPosition: 'Automated compliance monitoring solution for regulated industries',competitors: ['LogicGateMetricStream', 'ServiceNow GRC']
-        contactInfo: CONTACT
+        ro,
+  i: 'Reduce compliance overhead and avoid costly regulatory fines',trialDa,
+  y: s: 21,setupTi,
+  m: e: '3 weeks',marketPositi,
+  o: n: 'Automated compliance monitoring solution for regulated industries',competito,
+  r: s: ['LogicGateMetricStream', 'ServiceNow GRC']
+        contactIn,
+  f: o: CONTACT
 }
-    // MICRO SAAS SERVICES;
+    // MICRO SAAS SERVICES
     {
-  id: 'ai-project-resource-optimizer',name: 'AI Project Resource Optimizer',category: 'Micro SaaS',description: 'AI-powered project management platform with intelligent resource allocation and optimization.',pricing: [
+  id: 'ai-project-resource-optimizer',na,
+  m: e: 'AI Project Resource Optimizer',catego,
+  r: y: 'Micro SaaS',descripti,
+  o: n: 'AI-powered project management platform with intelligent resource allocation and optimization.',prici,
+  n: g: [
   {
-  name: 'Team Lead',price: '$199',billing: 'monthly',features: [
-  'Up to 10 team membersBasic resource optimization';
-                    'Project templatesEmail support';
+  nam,
+  e: 'Team Lead',pri,
+  c: e: '$199',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 10 team membersBasic resource optimization'
+                    'Project templatesEmail support'
                     'Basic analytics'
 ],
   },
   {
-  name: 'Project Manager',price: '$399',billing: 'monthly',features: [
-  'Up to 50 team membersAdvanced AI optimization';
-                    'Custom project templatesPriority support';
-                    'Advanced analyticsAPI integration';
+  na,
+  m: e: 'Project Manager',pri,
+  c: e: '$399',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Up to 50 team membersAdvanced AI optimization'
+                    'Custom project templatesPriority support'
+                    'Advanced analyticsAPI integration'
                     'Custom workflows'
 ]
-                popular: true,savings: 'Save 20% with annual billing'
+                popula,
+  r: true,savin,
+  g: s: 'Save 20% with annual billing'
 },
   {
-  name: 'Enterprise',price: 'Custom',billing: 'monthly',features: [
-  'Unlimited team membersCustom AI models';
-                    'Advanced automationDedicated support team';
+  na,
+  m: e: 'Enterprise',pri,
+  c: e: 'Custom',billi,
+  n: g: 'monthly',featur,
+  e: s: [
+  'Unlimited team membersCustom AI models'
+                    'Advanced automationDedicated support team'
                     'White-label solutionsCustom integrations'
 ],
   },
   ]
-        features: [
-  'Resource allocation optimizationProject timeline prediction';
-            'Risk assessment and mitigationTeam performance analytics';
+        featur,
+  e: s: [
+  'Resource allocation optimizationProject timeline prediction'
+            'Risk assessment and mitigationTeam performance analytics'
             'Automated schedulingIntegration with project tools'
 ]
-        benefits: [
-  'Reduce project delays by 40%Optimize resource utilization by 35%';
+        benefi,
+  t: s: [
+  'Reduce project delays by 40%Optimize resource utilization by 35%'
             'Improve project success rates by 50%Predict and prevent bottlenecks'
 ]
-        roi: 'Complete projects 20-30% faster with better resource utilization',trialDays: 21,setupTime: '2 weeks',marketPosition: 'AI-powered project optimization solution for project managers',competitors: ['Monday.comAsana', 'ClickUp']
-        contactInfo: CONTACT
+        ro,
+  i: 'Complete projects 20-30% faster with better resource utilization',trialDa,
+  y: s: 21,setupTi,
+  m: e: '2 weeks',marketPositi,
+  o: n: 'AI-powered project optimization solution for project managers',competito,
+  r: s: ['Monday.comAsana', 'ClickUp']
+        contactIn,
+  f: o: CONTACT
 },
   ]
-export default comprehensivePricingGuide2025;
+export default comprehensivePricingGuide2025

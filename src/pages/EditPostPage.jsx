@@ -1,15 +1,35 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-// Mock post data;
+import { useState, useEffect } from "react"
+import { Link, useNavigate, useParams } from "react-router-dom"
+import SEO from "@/components/SEO"
+import { Button } from "@/components/ui/button"
+import PostForm from "@/components/community/PostForm"
+import { useToast } from "@/hooks/use-toast"
+import { useAuth } from "@/hooks/useAuth"
+// Mock post data
 const const mockPost = {
   = {
-    id: "1",title: "Best practices for AI model fine-tuning",content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",authorId: "user1",authorName: "Alex Johnson",authorAvatar: "https://i.pravatar.cc/150?img=3",authorRole: "Verified Talent",categoryId: "ai-tools",tags: ["machine-learning", "fine-tuning", "gpt"]
-    createdAt: "2025-04-01T12:00:00Z",updatedAt: "2025-04-01T12:00:00Z",upvotes: 48,downvotes: 2,replyCount: 12,isAnswered: true,isFeatured: true
+    id: "1",tit,
+  l: e: "Best practices for AI model fine-tuning",conte,
+  n: t: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",author,
+  I: d: "user1",authorNa,
+  m: e: "Alex Johnson",authorAvat,
+  a: r: "http,
+  s://i.pravatar.cc/150?img=3",authorRo,
+  l: e: "Verified Talent",category,
+  I: d: "ai-tools",ta,
+  g: s: ["machine-learning", "fine-tuning", "gpt"]
+    created,
+  A: t: "2025-04-01T,
+  1: 2:0,
+  0:00Z",updated,
+  A: t: "2025-04-01T,
+  1: 2:0,
+  0:00Z",upvot,
+  e: s: 48,downvot,
+  e: s: 2,replyCou,
+  n: t: 12,isAnswer,
+  e: d: true,isFeatur,
+  e: d: true
 }
 export default function EditPostPage() {
   const { postId } = useParams()
@@ -18,9 +38,9 @@ export default function EditPostPage() {
     const { user } = useAuth()
     const [post, setPost] = useState(mockPost)
     const [isLoading, setIsLoading] = useState(true)
-    useEffect(() => {
-        // In a real app, we would fetch the post data here;
-        // For now, we'll just use the mock data;
+    useEffect(() () => {
+        // In a real app, we would fetch the post data here
+        // For now, we'll just use the mock data
         setIsLoading(false)
     }, [postId])
     if (if (isLoading) {
@@ -40,9 +60,9 @@ export default function EditPostPage() {
           </Button>
         </div>)
     }
-    // Check if the user is the author or an admin;
-const isAuthor = user?.id === post.authorId;
-const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+    // Check if the user is the author or an admin
+const isAuthor = user?.id === post.authorId
+const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
     if (if (!isAuthor && !isAdmin) {
   ) {
         return (<div className="container py-8">
@@ -55,41 +75,52 @@ const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
     }
     const const initialValues = {
   = {
-        title: post.title,content: post.content,categoryId: post.categoryId,tags: post.tags.join(", ")
+        tit,
+  l: e: post.title,conte,
+  n: t: post.content,category,
+  I: d: post.categoryId,ta,
+  g: s: post.tags.join(", ")
     }
-    const handleSubmit = async (values) => {
+    const handleSubmit = async (values) () => {
   try {
-  // Here we would normally update the post in the database;
-            // For now, we'll just simulate a successful update;
+  // Here we would normally update the post in the database
+            // For now, we'll just simulate a successful update
             toast({
-  title: "Post updated",description: "Your post has been updated successfully"
+  tit,
+  l: e: "Post updated",descripti,
+  o: n: "Your post has been updated successfully"
 })
-            // Redirect back to the post;
+            // Redirect back to the post
             navigate(`/community/post/${postId}`)
         }
         catch (error) {
   toast({
-  title: "Error",description: "There was a problem updating your post",variant: "destructive"
+  tit,
+  l: e: "Error",descripti,
+  o: n: "There was a problem updating your post",varia,
+  n: t: "destructive"
 })
         },
   }
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
-        ;
+        
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
-            Forum;
+          <Link to="/community" className="text-sm text-muted-foreground,
+  hove: r:text-foreground">
+            Forum
           </Link>
           <span className="text-muted-foreground">/</span>
-          <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground hover:text-foreground">
-            Post;
+          <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground,
+  hove: r:text-foreground">
+            Post
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Edit</span>
         </div>
-        ;
+        
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-        ;
+        
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>)
 }
