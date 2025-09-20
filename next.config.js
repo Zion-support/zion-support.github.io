@@ -1,6 +1,4 @@
-
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
@@ -13,27 +11,23 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
-
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-    formats: ['image/webp', 'image/avif'],
   },
-
 
   // Ignore build errors to allow deployment with syntax issues
   typescript: {
     ignoreBuildErrors: true,
-    // tsconfigPath: './tsconfig.json',
+    tsconfigPath: './tsconfig.json',
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  
+  // Force static export
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
   },
   
   // Force disable TypeScript checking
@@ -69,7 +63,6 @@ const nextConfig = {
 
     return config;
   },
-  
 };
 
 module.exports = nextConfig;
