@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from "react"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 import { ;
   Globe,;
   Brain,;
@@ -48,10 +48,10 @@ import { ;
   Clock,;
   Award,;
   ChevronRight;
-} from "lucide-react";
-import { SEO } from "@/components/SEO";
+} from "lucide-react"
+import { SEO } from "@/components/SEO"
 interface SitemapSection {;
-  title: string,icon: React.ComponentType<any>,description: string,links: SitemapLink[];
+  title: string,icon: React.ComponentType<any>,description: string,links: SitemapLink[]
 };
 
 interface SitemapLink {;
@@ -60,7 +60,7 @@ interface SitemapLink {;
   featured?: boolean;
 };
 
-const Sitemap: React.FC = () => {;
+const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [;
     {;
       title: 'Main Pages',icon: Globe,description: 'Core website pages and information',links: [;
@@ -203,41 +203,41 @@ const Sitemap: React.FC = () => {;
     { name: 'Partner Program', path: '/partners', icon: Users };
     { name: 'Developer Hub', path: '/developer', icon: Code };
   ];
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       <SEO ;
-        title="Sitemap - Zion Tech Group";
-        description="Complete sitemap of Zion Tech Group's website. Find all our services, solutions, and resources organized by category.";
-        keywords="sitemap, Zion Tech Group, website structure, services, solutions, navigation";
+        title="Sitemap - Zion Tech Group"
+        description="Complete sitemap of Zion Tech Group's website. Find all our services, solutions, and resources organized by category."
+        keywords="sitemap, Zion Tech Group, website structure, services, solutions, navigation"
       />;
       ;
       {/* Hero Section */};
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center";
+            className="[^"]*"
           >;
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
               Complete Website;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
                 Sitemap;
-              </span>;
-            </h1>;
+              </[^>]*>
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Explore our comprehensive website structure and discover all the services;
               solutions, and resources Zion Tech Group has to offer.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Quick Links */};
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6, delay: 0.2 }};
-            className="max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">;
               {quickLinks.map((link, index) => (;
@@ -245,144 +245,144 @@ const Sitemap: React.FC = () => {;
                   key={index};
                   to={link.path};
                   className={`p-4 rounded-xl transition-all duration-300 text-center group ${;
-                    link.featured;
-                      ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 hover:border-cyan-400/60';
-                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40';
+                    link.featured
+                      ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 hover:border-cyan-400/60'
+                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40'
                   }`};
                 >;
                   <div className={`w-8 h-8 mx-auto mb-2 ${;
-                    link.featured ? 'text-cyan-400' : 'text-gray-400 group-hover:text-cyan-400';
+                    link.featured ? 'text-cyan-400' : 'text-gray-400 group-hover:text-cyan-400'
                   } transition-colors duration-300`}>;
-                    <link.icon className="w-full h-full" />;
-                  </div>;
+                    <[^>]*/>
+                  </[^>]*>
                   <p className={`text-sm font-medium ${;
-                    link.featured ? 'text-white' : 'text-gray-300 group-hover:text-white';
+                    link.featured ? 'text-white' : 'text-gray-300 group-hover:text-white'
                   } transition-colors duration-300`}>;
                     {link.name};
-                  </p>;
-                </Link>;
+                  </[^>]*>
+                </[^>]*>
               ))};
-            </div>;
-          </motion.div>;
-        </div>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Background Elements */};
         <div className="absolute inset-0 -z-10">;
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />;
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />;
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />;
-        </div>;
-      </section>;
+          <[^>]*/>
+          <[^>]*/>
+          <[^>]*/>
+        </[^>]*>
+      </[^>]*>
 
       {/* Sitemap Sections */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
             {sitemapSections.map((section, sectionIndex) => (;
-              <motion.div;
+              <motion.div
                 key={section.title};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: sectionIndex * 0.1 }};
                 viewport={{ once: true }};
-                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300";
+                className="[^"]*"
               >;
                 <div className="flex items-center space-x-4 mb-6">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">;
-                    <section.icon className="w-6 h-6 text-cyan-400" />;
-                  </div>;
+                    <[^>]*/>
+                  </[^>]*>
                   <div>;
-                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>;
-                    <p className="text-gray-400 text-sm">{section.description}</p>;
-                  </div>;
-                </div>;
+                    <h2 className="text-2xl font-bold text-white">{section.title}</[^>]*>
+                    <p className="text-gray-400 text-sm">{section.description}</[^>]*>
+                  </[^>]*>
+                </[^>]*>
 
                 <div className="space-y-3">;
                   {section.links.map((link, linkIndex) => (;
                     <Link;
                       key={linkIndex};
                       to={link.path};
-                      className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 transition-all duration-200 group";
+                      className="[^"]*"
                     >;
                       <div className="flex items-center space-x-3">;
-                        {link.featured && (;
-                          <Star className="w-4 h-4 text-yellow-400" />;
+                        {link.featured && (;&& (; (
+                          <[^>]*/>
                         )};
                         <div>;
                           <p className={`font-medium transition-colors duration-200 ${;
                             link.featured ;
                               ? 'text-cyan-400' ;
-                              : 'text-white group-hover:text-cyan-400';
+                              : 'text-white group-hover:text-cyan-400'
                           }`}>;
                             {link.name};
-                          </p>;
-                          {link.description && (;
-                            <p className="text-gray-400 text-sm">{link.description}</p>;
+                          </[^>]*>
+                          {link.description && (;&& (; (
+                            <p className="text-gray-400 text-sm">{link.description}</[^>]*>
                           )};
-                        </div>;
-                      </div>;
-                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
-                    </Link>;
+                        </[^>]*>
+                      </[^>]*>
+                      <[^>]*/>
+                    </[^>]*>
                   ))};
-                </div>;
-              </motion.div>;
+                </[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Contact Information */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
-            className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12 text-center";
+            className="[^"]*"
           >;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Need Help Finding Something?;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Can't find what you're looking for? Our team is here to help you navigate ;
               our services and find the right solution for your needs.;
-            </p>;
+            </[^>]*>
             ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
               <div className="flex items-center space-x-3 text-gray-300">;
-                <Phone className="w-5 h-5 text-cyan-400" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
+                <[^>]*/>
+                <span>+1 302 464 0950</[^>]*>
+              </[^>]*>
               <div className="flex items-center space-x-3 text-gray-300">;
-                <Mail className="w-5 h-5 text-cyan-400" />;
-                <span>kleber@ziontechgroup.com</span>;
-              </div>;
+                <[^>]*/>
+                <span>kleber@ziontechgroup.com</[^>]*>
+              </[^>]*>
               <div className="flex items-center space-x-3 text-gray-300">;
-                <MapPin className="w-5 h-5 text-cyan-400" />;
-                <span>Middletown, DE</span>;
-              </div>;
-            </div>;
+                <[^>]*/>
+                <span>Middletown, DE</[^>]*>
+              </[^>]*>
+            </[^>]*>
 
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <Link;
-                to="/contact";
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200";
+                to="/contact"
+                className="[^"]*"
               >;
                 Contact Us;
-                <ArrowRight className="ml-2 h-5 w-5" />;
-              </Link>;
+                <[^>]*/>
+              </[^>]*>
               <Link;
-                to="/search";
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200";
+                to="/search"
+                className="[^"]*"
               >;
                 Search Our Site;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 export default Sitemap;

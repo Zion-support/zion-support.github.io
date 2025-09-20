@@ -1,45 +1,45 @@
-import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react";
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react"
 export default function AIContentCreationSuite() {;
   const features = [;
     'AI-powered text generation and editingAutomated image creation and editing',;
     'Video content generation and optimizationMulti-language content localization',;
     'SEO-optimized content creationBrand voice consistency management',;
     'Content performance analyticsAutomated content scheduling',;
-    'Plagiarism detection and preventionContent collaboration and workflow management';
+    'Plagiarism detection and preventionContent collaboration and workflow management'
   ],;
 
   const benefits = [;
     'Increase content production by 10xReduce content creation costs by 60%',;
     'Improve content engagement by 45%Maintain consistent brand voice',;
-    'Scale content across multiple channelsOptimize content for better SEO performance';
+    'Scale content across multiple channelsOptimize content for better SEO performance'
   ],;
 
   const useCases = [;
-    'Marketing and advertising agenciesE-commerce and retail brands';
-    'Publishing and media companiesEducational institutions';
-    'Corporate communicationsSocial media management';
+    'Marketing and advertising agenciesE-commerce and retail brands'
+    'Publishing and media companiesEducational institutions'
+    'Corporate communicationsSocial media management'
   ];
   const tiers = [;
     {;
       name: 'Creator',price: '$199/mo',details: [;
-        'Up to 100 content pieces/monthBasic AI text generation';
+        'Up to 100 content pieces/monthBasic AI text generation'
         'Standard image creationEmail support',;
-        'Basic analytics';
+        'Basic analytics'
       ];
     },;
     {;
       name: 'Professional',price: '$499/mo',details: [;
-        'Up to 500 content pieces/monthAdvanced AI content creation';
+        'Up to 500 content pieces/monthAdvanced AI content creation'
         'Video generationPriority support',;
-        'Multi-language supportAdvanced analytics';
+        'Multi-language supportAdvanced analytics'
       ];
     },;
     {;
       name: 'Enterprise',price: '$1,299/mo',;
       details: [;
-        'Unlimited content creationFull AI content suite';
+        'Unlimited content creationFull AI content suite'
         'Custom AI modelsDedicated support',;
-        'API accessWhite-label solutions';
+        'API accessWhite-label solutions'
       ];
     };
   ],;
@@ -48,181 +48,181 @@ export default function AIContentCreationSuite() {;
     technology: ['GPT-4DALL-E', 'Stable DiffusionPython', 'ReactNode.js', 'PostgreSQLRedis'],;
     integrations: ['WordPressShopify', 'HubSpotMailchimp', 'HootsuiteBuffer', 'CanvaAdobe Creative Suite'],;
     security: ['SOC 2 Type IIISO 27001', 'GDPREnd-to-end encryption', 'Multi-factor authentication'],;
-    uptime: '99.9%',compliance: ['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA'];
+    uptime: '99.9%',compliance: ['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA']
   },;
 
   const contentTypes = [;
     {;
-      type: 'Text Content',solutions: ['Blog postsSocial media posts', 'Email campaignsProduct descriptions', 'Press releases'];
+      type: 'Text Content',solutions: ['Blog postsSocial media posts', 'Email campaignsProduct descriptions', 'Press releases']
     },;
     {;
-      type: 'Visual Content',solutions: ['Images and graphicsInfographics', 'Social media visualsProduct photos', 'Brand assets'];
+      type: 'Visual Content',solutions: ['Images and graphicsInfographics', 'Social media visualsProduct photos', 'Brand assets']
     },;
     {;
-      type: 'Video Content',solutions: ['Product videosSocial media clips', 'Educational contentMarketing videos', 'Live streams'];
+      type: 'Video Content',solutions: ['Product videosSocial media clips', 'Educational contentMarketing videos', 'Live streams']
     };
   ];
-  return (;
+  return (
     <div className="min-h-screen bg-white">;
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">;
         <div className="max-w-5xl mx-auto px-6">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">;
             <PenTool className="w-4 h-4 mr-2" /> AI-Powered Content Creation;
-          </div>;
+          </[^>]*>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">;
             AI Content Creation Suite;
-          </h1>;
+          </[^>]*>
           <p className="text-zion-slate-light text-xl">;
             Transform your content strategy with AI-powered text, image, and video generation across all channels.;
-          </p>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       <section className="py-16 max-w-6xl mx-auto px-6">;
         <div className="grid md:grid-cols-2 gap-10">;
           <div>;
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Key Features</h2>;
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Key Features</[^>]*>
             <ul className="space-y-3">;
               {features.map((feature) => (;
                 <li key={feature} className="flex items-start">;
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />;
-                  <span className="text-zion-slate-dark">{feature}</span>;
-                </li>;
+                  <[^>]*/>
+                  <span className="text-zion-slate-dark">{feature}</[^>]*>
+                </[^>]*>
               ))};
-            </ul>;
-          </div>;
+            </[^>]*>
+          </[^>]*>
           <div>;
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Content Benefits</h2>;
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Content Benefits</[^>]*>
             <ul className="space-y-3">;
               {benefits.map((benefit) => (;
                 <li key={benefit} className="flex items-start">;
-                  <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />;
-                  <span className="text-zion-slate-dark">{benefit}</span>;
-                </li>;
+                  <[^>]*/>
+                  <span className="text-zion-slate-dark">{benefit}</[^>]*>
+                </[^>]*>
               ))};
-            </ul>;
-          </div>;
-        </div>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         <div className="mt-12">;
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>;
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</[^>]*>
           <div className="grid md:grid-cols-3 gap-6">;
             {useCases.map((useCase) => (;
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">;
-                <FileText className="w-6 h-6 text-zion-cyan mb-3" />;
-                <div className="text-zion-slate-dark font-semibold">{useCase}</div>;
-              </div>;
+                <[^>]*/>
+                <div className="text-zion-slate-dark font-semibold">{useCase}</[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
+          </[^>]*>
+        </[^>]*>
 
         <div className="mt-16">;
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Content Types</h2>;
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Content Types</[^>]*>
           <div className="grid md:grid-cols-3 gap-6">;
             {contentTypes.map((content) => (;
               <div key={content.type} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">;
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{content.type}</h3>;
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{content.type}</[^>]*>
                 <ul className="space-y-2">;
                   {content.solutions.map((sol) => (;
                     <li key={sol} className="flex items-start text-sm text-zion-slate-dark">;
-                      <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />;
+                      <[^>]*/>
                       {sol};
-                    </li>;
+                    </[^>]*>
                   ))};
-                </ul>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
+          </[^>]*>
+        </[^>]*>
 
         <div className="mt-16">;
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>;
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</[^>]*>
           <div className="grid md:grid-cols-3 gap-6">;
             {tiers.map((tier) => (;
               <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">;
-                <div className="text-lg font-semibold mb-1">{tier.name}</div>;
-                <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>;
+                <div className="text-lg font-semibold mb-1">{tier.name}</[^>]*>
+                <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</[^>]*>
                 <ul className="text-sm text-zion-slate-dark space-y-1">;
                   {tier.details.map((detail) => (<li key={detail}>{detail}</li>))};
-                </ul>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
+          </[^>]*>
+        </[^>]*>
 
         <div className="mt-16">;
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Technical Specifications</h2>;
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Technical Specifications</[^>]*>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm">;
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</h3>;
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</[^>]*>
                 <div className="flex flex-wrap gap-2">;
                   {technicalSpecs.technology.map((tech) => (;
                     <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">;
                       {tech};
-                    </span>;
+                    </[^>]*>
                   ))};
-                </div>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               <div>;
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Platform Integrations</h3>;
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Platform Integrations</[^>]*>
                 <div className="flex flex-wrap gap-2">;
                   {technicalSpecs.integrations.map((integration) => (;
                     <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">;
                       {integration};
-                    </span>;
+                    </[^>]*>
                   ))};
-                </div>;
-              </div>;
-            </div>;
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
             <div className="mt-6 grid md:grid-cols-3 gap-6">;
               <div>;
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</h4>;
+                <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</[^>]*>
                 <div className="space-y-1">;
                   {technicalSpecs.security.map((sec) => (;
                     <div key={sec} className="flex items-center text-sm text-zion-slate-dark">;
-                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />;
+                      <[^>]*/>
                       {sec};
-                    </div>;
+                    </[^>]*>
                   ))};
-                </div>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               <div>;
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Uptime</h4>;
-                <div className="text-2xl font-bold text-zion-cyan">{technicalSpecs.uptime}</div>;
-              </div>;
+                <h4 className="font-semibold text-zion-slate-dark mb-2">Uptime</[^>]*>
+                <div className="text-2xl font-bold text-zion-cyan">{technicalSpecs.uptime}</[^>]*>
+              </[^>]*>
               <div>;
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Compliance Standards</h4>;
+                <h4 className="font-semibold text-zion-slate-dark mb-2">Compliance Standards</[^>]*>
                 <div className="space-y-1">;
                   {technicalSpecs.compliance.map((comp) => (;
                     <div key={comp} className="flex items-center text-sm text-zion-slate-dark">;
-                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />;
+                      <[^>]*/>
                       {comp};
-                    </div>;
+                    </[^>]*>
                   ))};
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         <div className="mt-14 text-center">;
-          <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your content creation?</div>;
+          <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your content creation?</[^>]*>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">;
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">;
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950;
-            </a>;
+            </[^>]*>
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">;
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com;
-            </a>;
-          </div>;
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+            </[^>]*>
+          </[^>]*>
           <div className="mt-4">;
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">;
-              Learn More <ExternalLink className="w-4 h-4 ml-2" />;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            <a href="https://[^;]*
+              Learn More <[^>]*/>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

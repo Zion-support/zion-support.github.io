@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { SEO } from "../components/SEO";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { SEO } from "../components/SEO"
+import { Link } from "react-router-dom"
 import { ;
   Search,;
   Calendar, ;
@@ -15,8 +15,8 @@ import { ;
   Shield,;
   Cloud,;
   Brain;
-} from "lucide-react";
-import { SEO } from "../components/SEO";
+} from "lucide-react"
+import { SEO } from "../components/SEO"
 interface BlogPost {;
   id: string,title: string,excerpt: string,content: string,author: string,authorAvatar: string,publishDate: string,readTime: string,category: string,tags: string[],image: string,featured: boolean,views: number,likes: number;
 };
@@ -86,7 +86,7 @@ const blogPosts: BlogPost[] = [;
 ];
 export default function Blog() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const categories = [;
     { id: 'all', name: 'All Posts', icon: TrendingUp };
@@ -104,73 +104,73 @@ export default function Blog() {;
     {;
       id: 2,title: 'Building Scalable Cloud Infrastructure: Best Practices',excerpt: 'Learn the essential strategies for creating robust, scalable cloud infrastructure that grows with your business.',;
       category: 'cloud',author: 'DevOps Team',date: '2024-01-12',readTime: '7 min read',tags: ['CloudDevOps', 'InfrastructureScalability'],;
-      image: '/blog/cloud-infrastructure-best-practices.jpg';
+      image: '/blog/cloud-infrastructure-best-practices.jpg'
     };
     {;
       id: 3,title: 'Cybersecurity in the Age of AI: New Threats and Solutions',excerpt: 'Explore how AI is both creating new security challenges and providing innovative solutions to protect your business.',category: 'security',author: 'Security Team',date: '2024-01-10',readTime: '6 min read',tags: ['CybersecurityAI', 'ThreatsSolutions'],;
-      image: '/blog/ai-cybersecurity-threats.jpg';
+      image: '/blog/ai-cybersecurity-threats.jpg'
     };
     {;
       id: 4,title: 'Micro SaaS: The Future of Business Software',excerpt: 'How small, focused software solutions are revolutionizing the way businesses operate and scale.',;
       category: 'innovation',author: 'Product Team',date: '2024-01-08',readTime: '4 min read',tags: ['Micro SaaSBusiness Software', 'Innovation'],;
-      image: '/blog/micro-saas-future.jpg';
+      image: '/blog/micro-saas-future.jpg'
     };
     {;
       id: 5,title: 'Quantum Computing: What Businesses Need to Know',excerpt: 'A practical guide to understanding quantum computing and its potential impact on business operations.',category: 'innovation',author: 'Research Team',date: '2024-01-05',readTime: '8 min read',tags: ['Quantum ComputingTechnology', 'Business Impact'],;
-      image: '/blog/quantum-computing-business.jpg';
+      image: '/blog/quantum-computing-business.jpg'
     };
     {;
       id: 6,title: 'DevOps Automation: Streamlining Your Development Pipeline',excerpt: 'Practical tips and tools for automating your development and deployment processes.',category: 'development',author: 'DevOps Team',date: '2024-01-03',readTime: '6 min read',tags: ['DevOpsAutomation', 'CI/CDDevelopment'],;
-      image: '/blog/devops-automation-pipeline.jpg';
+      image: '/blog/devops-automation-pipeline.jpg'
     };
   ];
   const filteredPosts = blogPosts.filter(post => {;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory,;
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
+    return matchesSearch && matchesCategory,;&& matchesCategory,; matchesCategory,
   }),;
 
-  const featuredPost = blogPosts.find(post => post.featured);
+  const featuredPost = blogPosts.find(post => post.featured)
 
   const getCategoryIcon = (categoryId: string) => {;
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : BookOpen;
+    const category = categories.find(cat => cat.id === categoryId)
+    return category ? category.icon : BookOpen
   },;
 
   const getCategoryName = (categoryId: string) => {;
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'Uncategorized';
+    const category = categories.find(cat => cat.id === categoryId)
+    return category ? category.name : 'Uncategorized'
   },;
 
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
-        title="Blog - Zion Tech Group";
-        description="Stay updated with the latest insights on AI, technology, and business innovation from Zion Tech Group.";
+        title="Blog - Zion Tech Group"
+        description="Stay updated with the latest insights on AI, technology, and business innovation from Zion Tech Group."
       />;
       ;
       {/* Hero Section */};
       <section className="relative py-20 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>;
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></[^>]*>
         <div className="container mx-auto px-6 relative z-10">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
-            className="text-center";
+            className="[^"]*"
           >;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
-              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Blog</span>;
-            </h1>;
+              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Blog</[^>]*>
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
               Insights, trends, and expert perspectives on AI, technology, and business innovation. ;
               Stay ahead of the curve with our latest articles.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Search and Filters */};
       <section className="py-12">;
@@ -178,15 +178,15 @@ export default function Blog() {;
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">;
             {/* Search */};
             <div className="relative flex-1 max-w-md">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+              <[^>]*/>
               <input;
-                type="text";
-                placeholder="Search articles...";
+                type="text"
+                placeholder="Search articles..."
                 value={searchQuery};
                 onChange={(e) => setSearchQuery(e.target.value)};
-                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200";
+                className="[^"]*"
               />;
-            </div>;
+            </[^>]*>
 
             {/* Category Filters */};
             <div className="flex flex-wrap gap-2">;
@@ -195,244 +195,244 @@ export default function Blog() {;
                   key={category.id};
                   onClick={() => setSelectedCategory(category.id)};
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${;
-                    selectedCategory === category.id;
-                      ? 'bg-cyan-400 text-white border-cyan-400';
-                      : 'bg-slate-800/50 text-gray-300 border-slate-600/50 hover:border-cyan-400/50 hover:text-cyan-400';
+                    selectedCategory === category.id
+                      ? 'bg-cyan-400 text-white border-cyan-400'
+                      : 'bg-slate-800/50 text-gray-300 border-slate-600/50 hover:border-cyan-400/50 hover:text-cyan-400'
                   }`};
                 >;
-                  <category.icon className="w-4 h-4 mr-2" />;
+                  <[^>]*/>
                   {category.name};
-                </button>;
+                </[^>]*>
               ))};
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Featured Post */};
-      {featuredPost && (;
+      {featuredPost && (;&& (; (
         <section className="py-12">;
           <div className="container mx-auto px-6">;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
-              className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-cyan-400/20";
+              className="[^"]*"
             >;
               <div className="flex items-center gap-2 mb-4">;
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm font-medium rounded-full">;
                   Featured;
-                </span>;
-                <span className="text-gray-400 text-sm">{featuredPost.category.toUpperCase()}</span>;
-              </div>;
+                </[^>]*>
+                <span className="text-gray-400 text-sm">{featuredPost.category.toUpperCase()}</[^>]*>
+              </[^>]*>
               ;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">;
                 <div>;
-                  <h2 className="text-3xl font-bold text-white mb-4">{featuredPost.title}</h2>;
-                  <p className="text-gray-300 text-lg leading-relaxed mb-6">{featuredPost.excerpt}</p>;
+                  <h2 className="text-3xl font-bold text-white mb-4">{featuredPost.title}</[^>]*>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">{featuredPost.excerpt}</[^>]*>
                   ;
                   <div className="flex items-center gap-6 text-sm text-gray-400 mb-6">;
                     <div className="flex items-center gap-2">;
-                      <User className="w-4 h-4" />;
+                      <[^>]*/>
                       {featuredPost.author};
-                    </div>;
+                    </[^>]*>
                     <div className="flex items-center gap-2">;
-                      <Calendar className="w-4 h-4" />;
+                      <[^>]*/>
                       {new Date(featuredPost.date).toLocaleDateString()};
-                    </div>;
+                    </[^>]*>
                     <div className="flex items-center gap-2">;
-                      <Clock className="w-4 h-4" />;
+                      <[^>]*/>
                       {featuredPost.readTime};
-                    </div>;
+                    </[^>]*>
                     ;
                     <Link;
                       to={`/blog/${post.id}`};
-                      className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium";
+                      className="[^"]*"
                     >;
-                      <span>Read More</span>;
-                      <ArrowRight className="w-4 h-4" />;
-                    </Link>;
-                  </div>;
+                      <span>Read More</[^>]*>
+                      <[^>]*/>
+                    </[^>]*>
+                  </[^>]*>
 
                   <div className="flex flex-wrap gap-2 mb-6">;
                     {featuredPost.tags.map((tag) => (;
                       <span;
                         key={tag};
-                        className="px-3 py-1 bg-slate-700/50 text-gray-300 text-sm rounded-full";
+                        className="[^"]*"
                       >;
                         {tag};
-                      </span>;
+                      </[^>]*>
                     ))};
-                  </div>;
+                  </[^>]*>
 
                   <Link;
                     to={`/blog/${featuredPost.id}`};
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";
+                    className="[^"]*"
                   >;
                     Read Full Article;
-                    <ArrowRight className="w-5 h-5 ml-2" />;
-                  </Link>;
-                </div>;
+                    <[^>]*/>
+                  </[^>]*>
+                </[^>]*>
 
                 <div className="relative">;
                   <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl border border-cyan-400/20 flex items-center justify-center">;
                     <div className="text-center text-gray-400">;
-                      <div className="text-4xl mb-2">📖</div>;
-                      <div className="text-sm">Blog Post Image</div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
+                      <div className="text-4xl mb-2">📖</[^>]*>
+                      <div className="text-sm">Blog Post Image</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
       )};
 
       {/* Blog Posts Grid */};
       <section className="py-20">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
-            className="mb-12";
+            className="[^"]*"
           >;
             <h2 className="text-3xl font-bold text-white mb-4">;
-              {selectedCategory === 'all' ? 'All Articles' : `${categories.find(c => c.id === selectedCategory)?.name}`};
-            </h2>;
+              {selectedCategory === 'all' ? 'All Articles' : `${categories.find(c => c.id === selectedCategory)?.name}`}
+            </[^>]*>
             <p className="text-gray-300">;
-              {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found;
-            </p>;
-          </motion.div>;
+              {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found
+            </[^>]*>
+          </[^>]*>
 
           {filteredPosts.length > 0 ? (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {filteredPosts.map((post, index) => (;
-                <motion.article;
+                <motion.article
                   key={post.id};
                   initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.8, delay: index * 0.1 }};
-                  className="group";
+                  className="[^"]*"
                 >;
                   <Link to={`/blog/${post.id}`}>;
                     <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 h-full">;
                       {/* Post Image */};
                       <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-t-xl border-b border-slate-600/50 flex items-center justify-center">;
                         <div className="text-center text-gray-400">;
-                          <div className="text-3xl mb-2">📄</div>;
-                          <div className="text-sm">Post Image</div>;
-                        </div>;
-                      </div>;
+                          <div className="text-3xl mb-2">📄</[^>]*>
+                          <div className="text-sm">Post Image</[^>]*>
+                        </[^>]*>
+                      </[^>]*>
 
                       {/* Post Content */};
                       <div className="p-6">;
                         <div className="flex items-center gap-2 mb-3">;
                           <span className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded">;
                             {post.category.toUpperCase()};
-                          </span>;
-                          {post.featured && (;
+                          </[^>]*>
+                          {post.featured && (;&& (; (
                             <span className="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs font-medium rounded">;
                               Featured;
-                            </span>;
+                            </[^>]*>
                           )};
-                        </div>;
+                        </[^>]*>
 
                         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200 line-clamp-2">;
                           {post.title};
-                        </h3>;
+                        </[^>]*>
 
                         <p className="text-gray-300 mb-4 line-clamp-3">;
                           {post.excerpt};
-                        </p>;
+                        </[^>]*>
 
                         <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">;
                           <div className="flex items-center gap-1">;
-                            <User className="w-4 h-4" />;
+                            <[^>]*/>
                             {post.author};
-                          </div>;
+                          </[^>]*>
                           <div className="flex items-center gap-1">;
-                            <Clock className="w-4 h-4" />;
+                            <[^>]*/>
                             {post.readTime};
-                          </div>;
-                        </div>;
+                          </[^>]*>
+                        </[^>]*>
 
                         <div className="flex flex-wrap gap-2 mb-4">;
                           {post.tags.slice(0, 3).map((tag) => (;
                             <span;
                               key={tag};
-                              className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded";
+                              className="[^"]*"
                             >;
                               {tag};
-                            </span>;
+                            </[^>]*>
                           ))};
-                        </div>;
+                        </[^>]*>
 
                         <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">;
-                          <span className="text-sm font-medium">Read More</span>;
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </Link>;
-                </motion.article>;
+                          <span className="text-sm font-medium">Read More</[^>]*>
+                          <[^>]*/>
+                        </[^>]*>
+                      </[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
               ))};
-            </div>;
+            </[^>]*>
           ) : (;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
-              className="text-center py-20";
+              className="[^"]*"
             >;
-              <div className="text-6xl mb-4">🔍</div>;
-              <h3 className="text-2xl font-bold text-white mb-2">No articles found</h3>;
+              <div className="text-6xl mb-4">🔍</[^>]*>
+              <h3 className="text-2xl font-bold text-white mb-2">No articles found</[^>]*>
               <p className="text-gray-300 mb-6">;
                 Try adjusting your search terms or category filter.;
-              </p>;
+              </[^>]*>
               <button;
                 onClick={() => {;
-                  setSearchQuery('');
-                  setSelectedCategory('all');
+                  setSearchQuery('')
+                  setSelectedCategory('all')
                 }};
-                className="px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg hover:bg-cyan-500 transition-colors duration-200";
+                className="[^"]*"
               >;
                 Clear Filters;
-              </button>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
           )};
-        </div>;
-      </section>;
+        </[^>]*>
+      </[^>]*>
 
       {/* Newsletter Signup */};
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
         <div className="container mx-auto px-6 text-center">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
-            className="text-center max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-4">;
               Stay Updated;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Get the latest insights on AI, technology, and business innovation ;
               delivered directly to your inbox.;
-            </p>;
+            </[^>]*>
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">;
               <input;
-                type="email";
-                placeholder="Enter your email";
-                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
+                type="email"
+                placeholder="Enter your email"
+                className="[^"]*"
               />;
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">;
                 Subscribe;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

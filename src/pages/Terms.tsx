@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from "react"
+import { motion } from "framer-motion"
 import {;
   FileText,;
   Shield,;
@@ -22,743 +22,743 @@ import {;
   Rocket,;
   Brain,;
   Cpu;
-} from "lucide-react";
-import { SEO } from "../components/SEO";
-const Terms: React.FC = () => {;
-  const currentYear = new Date().getFullYear();
-  return (;
+} from "lucide-react"
+import { SEO } from "../components/SEO"
+const Terms: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO;
-        title="Terms of Service - Zion Tech Group";
-        description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions.";
+        title="Terms of Service - Zion Tech Group"
+        description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
       />;
 
       {/* Hero Section */};
       <section className="relative pt-32 pb-20 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>;
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></[^>]*>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
           >;
             <div className="flex items-center justify-center space-x-3 mb-6">;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">;
-                <FileText className="w-8 h-8 text-white" />;
-              </div>;
-            </div>;
+                <[^>]*/>
+              </[^>]*>
+            </[^>]*>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">;
               Terms of Service;
-            </h1>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
               These terms govern your use of our services. Please read them carefully;
               before using our technology solutions.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Key Terms Overview */};
       <section className="py-20">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center mb-16";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Key Terms Overview;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Understanding these fundamental terms helps ensure a smooth;
               relationship between you and Zion Tech Group.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {termsSections.map((section, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";
+                className="[^"]*"
               >;
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">;
-                  <section.icon className="w-8 h-8 text-blue-400" />;
-                </div>;
-                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>;
-                <p className="text-gray-300">{section.description}</p>;
-              </motion.div>;
+                  <[^>]*/>
+                </[^>]*>
+                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</[^>]*>
+                <p className="text-gray-300">{section.description}</[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* User Obligations */};
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center mb-16";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Your Obligations;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               As a user of our services, you have certain responsibilities;
               that help ensure a secure and productive environment.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {userObligations.map((obligation, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";
+                className="[^"]*"
               >;
-                <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>;
-                <p className="text-gray-300">{obligation.description}</p>;
-              </motion.div>;
+                <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</[^>]*>
+                <p className="text-gray-300">{obligation.description}</[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Prohibited Activities */};
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Calendar className="w-6 h-6 text-cyan-400" />;
-                <span>Last Updated</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Last Updated</[^>]*>
+              </[^>]*>
               <p className="text-lg text-gray-300 mb-6">;
                 To maintain a secure and professional environment, certain activities;
                 are strictly prohibited when using our services.;
-              </p>;
+              </[^>]*>
               <div className="space-y-4">;
                 {prohibitedActivities.map((activity, index) => (;
                   <div key={index} className="flex items-start space-x-3">;
-                    <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300 text-sm">{activity}</span>;
-                  </div>;
+                    <[^>]*/>
+                    <span className="text-gray-300 text-sm">{activity}</[^>]*>
+                  </[^>]*>
                 ))};
-              </div>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.1 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">;
                 <div className="text-center mb-6">;
-                  <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />;
-                  <h3 className="text-xl font-semibold text-white">Violation Consequences</h3>;
-                </div>;
+                  <[^>]*/>
+                  <h3 className="text-xl font-semibold text-white">Violation Consequences</[^>]*>
+                </[^>]*>
                 <div className="space-y-4">;
                   <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">;
-                    <span className="text-gray-300">First Offense</span>;
-                    <span className="text-yellow-400">Warning</span>;
-                  </div>;
+                    <span className="text-gray-300">First Offense</[^>]*>
+                    <span className="text-yellow-400">Warning</[^>]*>
+                  </[^>]*>
                   <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">;
-                    <span className="text-gray-300">Second Offense</span>;
-                    <span className="text-orange-400">Suspension</span>;
-                  </div>;
+                    <span className="text-gray-300">Second Offense</[^>]*>
+                    <span className="text-orange-400">Suspension</[^>]*>
+                  </[^>]*>
                   <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">;
-                    <span className="text-gray-300">Third Offense</span>;
-                    <span className="text-red-400">Termination</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
+                    <span className="text-gray-300">Third Offense</[^>]*>
+                    <span className="text-red-400">Termination</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Service Levels */};
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center mb-16";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Service Levels & Support;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               We provide different levels of support to meet your business needs;
               and ensure optimal service delivery.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="max-w-4xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {serviceLevels.map((level, index) => (;
-                <motion.div;
+                <motion.div
                   key={index};
                   initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.6, delay: index * 0.1 }};
                   className={`bg-slate-800/50 p-6 rounded-xl border ${;
-                    level.included ? 'border-blue-400/50' : 'border-slate-700/50';
+                    level.included ? 'border-blue-400/50' : 'border-slate-700/50'
                   } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`};
                 >;
                   <div className="text-center mb-4">;
-                    <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>;
-                    {level.included && (;
+                    <h3 className="text-xl font-semibold text-white mb-2">{level.level}</[^>]*>
+                    {level.included && (;&& (; (
                       <span className="inline-block px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">;
                         Included;
-                      </span>;
+                      </[^>]*>
                     )};
-                  </div>;
-                  <p className="text-gray-300 text-center mb-4">{level.description}</p>;
+                  </[^>]*>
+                  <p className="text-gray-300 text-center mb-4">{level.description}</[^>]*>
                   <div className="text-center">;
-                    <span className="text-sm text-gray-400">Response Time:</span>;
-                    <div className="text-lg font-semibold text-white">{level.response}</div>;
-                  </div>;
-                </motion.div>;
+                    <span className="text-sm text-gray-400">Response Time:</[^>]*>
+                    <div className="text-lg font-semibold text-white">{level.response}</[^>]*>
+                  </[^>]*>
+                </[^>]*>
               ))};
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Intellectual Property */};
       <section className="py-20">;
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, x: -20 }};
               whileInView={{ opacity: 1, x: 0 }};
               transition={{ duration: 0.6 }};
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;
                 Intellectual Property Rights;
-              </h2>;
+              </[^>]*>
               <p className="text-lg text-gray-300 mb-6">;
                 Understanding intellectual property rights is crucial for both;
                 protecting our innovations and respecting your contributions.;
-              </p>;
+              </[^>]*>
               <div className="space-y-4">;
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Service Usage</h3>;
-                    <p>You must be at least 18 years old to use our services, or have parental consent if under 18.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">Service Usage</[^>]*>
+                    <p>You must be at least 18 years old to use our services, or have parental consent if under 18.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.2 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Zap className="w-6 h-6 text-cyan-400" />;
-                <span>Description of Service</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Description of Service</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
-                <p>Zion Tech Group provides technology consulting, AI solutions, quantum computing services, cybersecurity, and digital transformation services.</p>;
+                <p>Zion Tech Group provides technology consulting, AI solutions, quantum computing services, cybersecurity, and digital transformation services.</[^>]*>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                   <div className="flex items-start space-x-3">;
-                    <Brain className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                    <[^>]*/>
                     <div>;
-                      <h3 className="font-semibold text-white">AI Solutions</h3>;
-                      <p>Machine learning, automation, and intelligent systems</p>;
-                    </div>;
-                  </div>;
+                      <h3 className="font-semibold text-white">AI Solutions</[^>]*>
+                      <p>Machine learning, automation, and intelligent systems</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
                   <div className="flex items-start space-x-3">;
-                    <Cpu className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                    <[^>]*/>
                     <div>;
-                      <h3 className="font-semibold text-white">Technology Consulting</h3>;
-                      <p>Strategic planning and implementation</p>;
-                    </div>;
-                  </div>;
+                      <h3 className="font-semibold text-white">Technology Consulting</[^>]*>
+                      <p>Strategic planning and implementation</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
                   <div className="flex items-start space-x-3">;
-                    <Shield className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                    <[^>]*/>
                     <div>;
-                      <h3 className="font-semibold text-white">Cybersecurity</h3>;
-                      <p>Security assessments and protection</p>;
-                    </div>;
-                  </div>;
+                      <h3 className="font-semibold text-white">Cybersecurity</[^>]*>
+                      <p>Security assessments and protection</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
                   <div className="flex items-start space-x-3">;
-                    <Rocket className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                    <[^>]*/>
                     <div>;
-                      <h3 className="font-semibold text-white">Digital Transformation</h3>;
-                      <p>Modernization and optimization</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                      <h3 className="font-semibold text-white">Digital Transformation</[^>]*>
+                      <p>Modernization and optimization</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.3 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Users className="w-6 h-6 text-cyan-400" />;
-                <span>User Responsibilities</span>;
-              </h2>;
+                <[^>]*/>
+                <span>User Responsibilities</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Account Security</h3>;
-                    <p>You are responsible for maintaining the confidentiality of your account credentials.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Account Security</[^>]*>
+                    <p>You are responsible for maintaining the confidentiality of your account credentials.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Acceptable Use</h3>;
-                    <p>You agree to use our services only for lawful purposes and in accordance with these terms.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Acceptable Use</[^>]*>
+                    <p>You agree to use our services only for lawful purposes and in accordance with these terms.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Prohibited Activities</h3>;
-                    <p>You may not use our services to transmit harmful code, violate intellectual property rights, or engage in illegal activities.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Prohibited Activities</[^>]*>
+                    <p>You may not use our services to transmit harmful code, violate intellectual property rights, or engage in illegal activities.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Compliance</h3>;
-                    <p>You must comply with all applicable laws and regulations when using our services.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">Compliance</[^>]*>
+                    <p>You must comply with all applicable laws and regulations when using our services.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.4 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Lock className="w-6 h-6 text-cyan-400" />;
-                <span>Intellectual Property</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Intellectual Property</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Our Rights</h3>;
-                    <p>All content, features, and functionality on our platforms are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Our Rights</[^>]*>
+                    <p>All content, features, and functionality on our platforms are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Your Content</h3>;
-                    <p>You retain ownership of content you submit, but grant us a license to use it for service provision and improvement.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Your Content</[^>]*>
+                    <p>You retain ownership of content you submit, but grant us a license to use it for service provision and improvement.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">License</h3>;
-                    <p>We grant you a limited, non-exclusive, non-transferable license to access and use our services for your business needs.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">License</[^>]*>
+                    <p>We grant you a limited, non-exclusive, non-transferable license to access and use our services for your business needs.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.5 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Shield className="w-6 h-6 text-cyan-400" />;
-                <span>Privacy and Data</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Privacy and Data</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
-                <p>Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy.</p>;
+                <p>Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy.</[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Data Protection</h3>;
-                    <p>We implement appropriate security measures to protect your personal information.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Data Protection</[^>]*>
+                    <p>We implement appropriate security measures to protect your personal information.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Data Usage</h3>;
-                    <p>We use your data only for the purposes outlined in our Privacy Policy and with your consent.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Data Usage</[^>]*>
+                    <p>We use your data only for the purposes outlined in our Privacy Policy and with your consent.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Third Parties</h3>;
-                    <p>We do not sell your personal information to third parties.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">Third Parties</[^>]*>
+                    <p>We do not sell your personal information to third parties.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.6 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <AlertTriangle className="w-6 h-6 text-yellow-400" />;
-                <span>Limitation of Liability</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Limitation of Liability</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Service Availability</h3>;
-                    <p>We strive to provide reliable services but cannot guarantee uninterrupted access or error-free operation.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Service Availability</[^>]*>
+                    <p>We strive to provide reliable services but cannot guarantee uninterrupted access or error-free operation.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Damages</h3>;
-                    <p>Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Damages</[^>]*>
+                    <p>Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Maximum Liability</h3>;
-                    <p>Our total liability shall not exceed the amount paid by you for the specific service in question.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">Maximum Liability</[^>]*>
+                    <p>Our total liability shall not exceed the amount paid by you for the specific service in question.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.7 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Eye className="w-6 h-6 text-cyan-400" />;
-                <span>Termination</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Termination</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Your Rights</h3>;
-                    <p>You may terminate your use of our services at any time by discontinuing use or contacting us.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Your Rights</[^>]*>
+                    <p>You may terminate your use of our services at any time by discontinuing use or contacting us.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Our Rights</h3>;
-                    <p>We may terminate or suspend access to our services for violations of these terms or for any other reason.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Our Rights</[^>]*>
+                    <p>We may terminate or suspend access to our services for violations of these terms or for any other reason.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Effect of Termination</h3>;
-                    <p>Upon termination, your right to use the services will cease immediately.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">Effect of Termination</[^>]*>
+                    <p>Upon termination, your right to use the services will cease immediately.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.8 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Database className="w-6 h-6 text-cyan-400" />;
-                <span>Changes to Terms</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Changes to Terms</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
-                <p>We reserve the right to modify these terms at any time. We will notify users of any material changes.</p>;
+                <p>We reserve the right to modify these terms at any time. We will notify users of any material changes.</[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Notification</h3>;
-                    <p>Material changes will be communicated through our website, email, or other appropriate channels.</p>;
-                  </div>;
-                </div>;
+                    <h3 className="font-semibold text-white">Notification</[^>]*>
+                    <p>Material changes will be communicated through our website, email, or other appropriate channels.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-start space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />;
+                  <[^>]*/>
                   <div>;
-                    <h3 className="font-semibold text-white">Continued Use</h3>;
-                    <p>Your continued use of our services after changes constitutes acceptance of the new terms.</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <h3 className="font-semibold text-white">Continued Use</[^>]*>
+                    <p>Your continued use of our services after changes constitutes acceptance of the new terms.</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: 0.9 }};
               viewport={{ once: true }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";
+              className="[^"]*"
             >;
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">;
-                <Mail className="w-6 h-6 text-cyan-400" />;
-                <span>Contact Information</span>;
-              </h2>;
+                <[^>]*/>
+                <span>Contact Information</[^>]*>
+              </[^>]*>
               <div className="space-y-4 text-gray-300">;
-                <p>If you have any questions about these Terms of Service, please contact us:</p>;
+                <p>If you have any questions about these Terms of Service, please contact us:</[^>]*>
                 <div className="space-y-2">;
                   <div className="flex items-center space-x-3">;
-                    <Mail className="w-5 h-5 text-cyan-400" />;
-                    <span>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></span>;
-                  </div>;
+                    <[^>]*/>
+                    <span>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></[^>]*>
+                  </[^>]*>
                   <div className="flex items-center space-x-3">;
-                    <Phone className="w-5 h-5 text-cyan-400" />;
-                    <span>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></span>;
-                  </div>;
+                    <[^>]*/>
+                    <span>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></[^>]*>
+                  </[^>]*>
                   <div className="flex items-center space-x-3">;
-                    <MapPin className="w-5 h-5 text-cyan-400" />;
-                    <span>Address: 364 E Main St STE 1008, Middletown DE 19709</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
+                    <[^>]*/>
+                    <span>Address: 364 E Main St STE 1008, Middletown DE 19709</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Limitation of Liability */};
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center mb-16";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Limitation of Liability;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               We strive to provide reliable services, but it's important to understand;
               the scope of our liability and your responsibilities.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="max-w-4xl mx-auto">;
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <div>;
-                  <h3 className="text-2xl font-semibold text-white mb-4">What We Cover</h3>;
+                  <h3 className="text-2xl font-semibold text-white mb-4">What We Cover</[^>]*>
                   <ul className="space-y-3">;
                     <li className="flex items-start space-x-3">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">Direct damages up to the amount paid for services</span>;
-                    </li>;
+                      <[^>]*/>
+                      <span className="text-gray-300">Direct damages up to the amount paid for services</[^>]*>
+                    </[^>]*>
                     <li className="flex items-start space-x-3">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">Service availability and performance issues</span>;
-                    </li>;
+                      <[^>]*/>
+                      <span className="text-gray-300">Service availability and performance issues</[^>]*>
+                    </[^>]*>
                     <li className="flex items-start space-x-3">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">Data security and privacy protection</span>;
-                    </li>;
-                  </ul>;
-                </div>;
+                      <[^>]*/>
+                      <span className="text-gray-300">Data security and privacy protection</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div>;
-                  <h3 className="text-2xl font-semibold text-white mb-4">What We Don't Cover</h3>;
+                  <h3 className="text-2xl font-semibold text-white mb-4">What We Don't Cover</[^>]*>
                   <ul className="space-y-3">;
                     <li className="flex items-start space-x-3">;
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">Indirect or consequential damages</span>;
-                    </li>;
+                      <[^>]*/>
+                      <span className="text-gray-300">Indirect or consequential damages</[^>]*>
+                    </[^>]*>
                     <li className="flex items-start space-x-3">;
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">Loss of profits or business opportunities</span>;
-                    </li>;
+                      <[^>]*/>
+                      <span className="text-gray-300">Loss of profits or business opportunities</[^>]*>
+                    </[^>]*>
                     <li className="flex items-start space-x-3">;
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-300">Third-party service failures</span>;
-                    </li>;
-                  </ul>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                      <[^>]*/>
+                      <span className="text-gray-300">Third-party service failures</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Termination */};
       <section className="py-20">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center mb-16";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Termination & Cancellation;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Understanding the terms for ending our service relationship;
               helps ensure a smooth transition for all parties.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="max-w-4xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">;
-                <h3 className="text-2xl font-semibold text-white mb-4">You May Terminate</h3>;
+                <h3 className="text-2xl font-semibold text-white mb-4">You May Terminate</[^>]*>
                 <ul className="space-y-3">;
                   <li className="flex items-start space-x-3">;
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">With 30 days written notice</span>;
-                    </li>;
+                    <[^>]*/>
+                    <span className="text-gray-300">With 30 days written notice</[^>]*>
+                    </[^>]*>
                   <li className="flex items-start space-x-3">;
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">For material breach by us</span>;
-                    </li>;
+                    <[^>]*/>
+                    <span className="text-gray-300">For material breach by us</[^>]*>
+                    </[^>]*>
                   <li className="flex items-start space-x-3">;
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">If we become insolvent</span>;
-                    </li>;
-                </ul>;
-              </div>;
+                    <[^>]*/>
+                    <span className="text-gray-300">If we become insolvent</[^>]*>
+                    </[^>]*>
+                </[^>]*>
+              </[^>]*>
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">;
-                <h3 className="text-2xl font-semibold text-white mb-4">We May Terminate</h3>;
+                <h3 className="text-2xl font-semibold text-white mb-4">We May Terminate</[^>]*>
                 <ul className="space-y-3">;
                   <li className="flex items-start space-x-3">;
-                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">For violation of terms</span>;
-                    </li>;
+                    <[^>]*/>
+                    <span className="text-gray-300">For violation of terms</[^>]*>
+                    </[^>]*>
                   <li className="flex items-start space-x-3">;
-                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">Non-payment of fees</span>;
-                    </li>;
+                    <[^>]*/>
+                    <span className="text-gray-300">Non-payment of fees</[^>]*>
+                    </[^>]*>
                   <li className="flex items-start space-x-3">;
-                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />;
-                    <span className="text-gray-300">Illegal or harmful use</span>;
-                    </li>;
-                </ul>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                    <[^>]*/>
+                    <span className="text-gray-300">Illegal or harmful use</[^>]*>
+                    </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Contact Information */};
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center mb-16";
+            className="[^"]*"
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Questions About Terms?;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               If you have questions about these terms or need clarification;
               please contact our legal team.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="max-w-4xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               <div className="text-center">;
-                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />;
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
-                <p className="text-gray-300">legal@ziontechgroup.com</p>;
-              </div>;
+                <[^>]*/>
+                <h3 className="text-xl font-semibold text-white mb-2">Email</[^>]*>
+                <p className="text-gray-300">legal@ziontechgroup.com</[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />;
-                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
-                <p className="text-gray-300">+1 302 464 0950</p>;
-              </div>;
+                <[^>]*/>
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</[^>]*>
+                <p className="text-gray-300">+1 302 464 0950</[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />;
-                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                <[^>]*/>
+                <h3 className="text-xl font-semibold text-white mb-2">Address</[^>]*>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* CTA Section */};
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">;
         <div className="container mx-auto px-6 text-center">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Get Started?;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
               By using our services, you agree to these terms.;
               Contact us if you need any clarification or have questions.;
-            </p>;
+            </[^>]*>
             <div className="flex flex-wrap justify-center gap-4">;
               <a;
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover: from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105";
+                href="/contact"
+                className="[^"]*"
               >;
                 Contact Us;
-              </a>;
+              </[^>]*>
               <a;
-                href="/privacy";
-                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300";
+                href="/privacy"
+                className="[^"]*"
               >;
                 Privacy Policy;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 export default Terms;

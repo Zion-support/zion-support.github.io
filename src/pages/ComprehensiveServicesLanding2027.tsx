@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Link } from "react-router-dom"
 import { ;
   Brain,;
   Cloud, ;
@@ -125,23 +125,23 @@ import { ;
   Phone as PhoneIcon2,;
   MapPin as MapPinIcon2,;
   Infinity as InfinityIcon2;
-} from "lucide-react";
-import { SEO } from "../components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027";
-import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027";
+} from "lucide-react"
+import { SEO } from "../components/SEO"
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027"
+import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027"
+import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027"
 export default function ComprehensiveServicesLanding2027() {;
   const [activeCategory, setActiveCategory] = useState('all'),;
   const [expandedService, setExpandedService] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(''),;
 
-  // Combine all services;
+  //[^;]*
   const allServices = [;
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
-    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
-    ...EMERGING_TECHNOLOGY_SERVICES_2027;
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027
+    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027
+    ...EMERGING_TECHNOLOGY_SERVICES_2027
   ];
-  // Get unique categories with counts;
+  //[^;]*
   const categories = [;
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' };
     { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: allServices.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' };
@@ -166,22 +166,22 @@ export default function ComprehensiveServicesLanding2027() {;
     { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' };
     { id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' };
   ];
-  // Filter services based on category and search;
+  //[^;]*
   const filteredServices = allServices.filter(service => {;
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = searchQuery === '' || ;
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+    const matchesSearch = searchQuery === '' || 
       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
-    return matchesCategory && matchesSearch,;
+    return matchesCategory && matchesSearch,;&& matchesSearch,; matchesSearch,
   }),;
 
   const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService(expandedService === serviceId ? null : serviceId)
   };
   const getCategoryIcon = (category: string) => {;
     const iconMap: { [key: string]: React.ReactNode } = {;
-      'AI & Business Intelligence': <Brain className="w-6 h-6" />;
+      'AI & Business Intelligence': <[^>]*/>
       'Cybersecurity': <Shield className="w-6 h-6" />,;
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,;
       'AI & Healthcare': <Heart className="w-6 h-6" />,;
@@ -201,102 +201,102 @@ export default function ComprehensiveServicesLanding2027() {;
       'Neurotechnology': <Brain className="w-6 h-6" />,;
       'Quantum Technology': <Atom className="w-6 h-6" />,;
       'Autonomous Systems': <Car className="w-6 h-6" />,;
-      'Robotics & Automation': <Bot className="w-6 h-6" />;
+      'Robotics & Automation': <[^>]*/>
     },;
-    return iconMap[category] || <Star className="w-6 h-6" />,;
+    return iconMap[category] || <Star className="w-6 h-6" />,
   },;
 
   const formatPrice = (price: number) => {;
     if (price >= 1000) {;
-      return `$${(price / 1000).toFixed(1)}K`;
+      return `$${(price / 1000).toFixed(1)}K`
     };
     return `$${price}`,;
   },;
 
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <SEO ;
-        title="Comprehensive Services Landing 2027 | Zion Tech Group";
-        description="Explore our complete portfolio of innovative AI, quantum computing, space technology, and emerging tech services. Transform your business with cutting-edge solutions.";
-        keywords="AI services, quantum computing, space technology, emerging tech, Zion Tech Group, innovative solutions";
+        title="Comprehensive Services Landing 2027 | Zion Tech Group"
+        description="Explore our complete portfolio of innovative AI, quantum computing, space technology, and emerging tech services. Transform your business with cutting-edge solutions."
+        keywords="AI services, quantum computing, space technology, emerging tech, Zion Tech Group, innovative solutions"
       />;
 
       {/* Hero Section */};
       <section className="relative py-20 px-4 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>;
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></[^>]*>
         <div className="relative max-w-7xl mx-auto text-center">;
           <motion.h1 ;
             initial={{ opacity: 0, y: 30 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
-            className="text-5xl md:text-7xl font-bold text-white mb-6";
+            className="[^"]*"
           >;
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
               Comprehensive Services;
-            </span>;
-            <br />;
-            <span className="text-white">Landing 2027</span>;
-          </motion.h1>;
+            </[^>]*>
+            <[^>]*/>
+            <span className="text-white">Landing 2027</[^>]*>
+          </[^>]*>
           ;
           <motion.p ;
             initial={{ opacity: 0, y: 30 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8, delay: 0.2 }};
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             Discover our complete portfolio of cutting-edge technology services designed to ;
             transform your business and drive innovation across every industry.;
-          </motion.p>;
+          </[^>]*>
 
           {/* Search Bar */};
           <motion.div ;
             initial={{ opacity: 0, y: 30 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8, delay: 0.4 }};
-            className="max-w-2xl mx-auto mb-8";
+            className="[^"]*"
           >;
             <div className="relative">;
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+              <[^>]*/>
               <input;
-                type="text";
-                placeholder="Search for services, technologies, or solutions...";
+                type="text"
+                placeholder="Search for services, technologies, or solutions..."
                 value={searchQuery};
                 onChange={(e) => setSearchQuery(e.target.value)};
-                className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg";
+                className="[^"]*"
               />;
-            </div>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Quick Stats */};
           <motion.div ;
             initial={{ opacity: 0, y: 30 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8, delay: 0.6 }};
-            className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
-              <Rocket className="w-8 h-8 text-cyan-400 mx-auto mb-3" />;
-              <div className="text-2xl font-bold text-white">{allServices.length}</div>;
-              <div className="text-cyan-400 text-sm">Total Services</div>;
-            </div>;
+              <[^>]*/>
+              <div className="text-2xl font-bold text-white">{allServices.length}</[^>]*>
+              <div className="text-cyan-400 text-sm">Total Services</[^>]*>
+            </[^>]*>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
-              <Target className="w-8 h-8 text-green-400 mx-auto mb-3" />;
-              <div className="text-2xl font-bold text-white">{categories.length - 1}</div>;
-              <div className="text-green-400 text-sm">Categories</div>;
-            </div>;
+              <[^>]*/>
+              <div className="text-2xl font-bold text-white">{categories.length - 1}</[^>]*>
+              <div className="text-green-400 text-sm">Categories</[^>]*>
+            </[^>]*>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
-              <TrendingUp className="w-8 h-8 text-yellow-400 mx-auto mb-3" />;
-              <div className="text-2xl font-bold text-white">800%+</div>;
-              <div className="text-yellow-400 text-sm">Average ROI</div>;
-            </div>;
+              <[^>]*/>
+              <div className="text-2xl font-bold text-white">800%+</[^>]*>
+              <div className="text-yellow-400 text-sm">Average ROI</[^>]*>
+            </[^>]*>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
-              <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />;
-              <div className="text-2xl font-bold text-white">24/7</div>;
-              <div className="text-purple-400 text-sm">Support</div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              <[^>]*/>
+              <div className="text-2xl font-bold text-white">24/7</[^>]*>
+              <div className="text-purple-400 text-sm">Support</[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Category Navigation */};
       <section className="py-12 px-4">;
@@ -306,21 +306,21 @@ export default function ComprehensiveServicesLanding2027() {;
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
             viewport={{ once: true }};
-            className="text-center mb-12";
+            className="[^"]*"
           >;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Explore Our Service Categories;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Navigate through our comprehensive service categories to find the perfect ;
               solution for your business needs.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Category Grid */};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
             {categories.map((category, index) => (;
-              <motion.button;
+              <motion.button
                 key={category.id};
                 initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }};
@@ -328,19 +328,19 @@ export default function ComprehensiveServicesLanding2027() {;
                 viewport={{ once: true }};
                 onClick={() => setActiveCategory(category.id)};
                 className={`p-6 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${;
-                  activeCategory === category.id;
-                    ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50';
-                    : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30';
+                  activeCategory === category.id
+                    ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50'
+                    : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30'
                 }`};
               >;
-                <div className="text-4xl mb-4">{category.icon}</div>;
-                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>;
-                <div className="text-cyan-400 font-medium">{category.count} Services</div>;
-              </motion.button>;
+                <div className="text-4xl mb-4">{category.icon}</[^>]*>
+                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</[^>]*>
+                <div className="text-cyan-400 font-medium">{category.count} Services</[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Services Showcase */};
       <section className="py-12 px-4">;
@@ -350,191 +350,191 @@ export default function ComprehensiveServicesLanding2027() {;
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
             viewport={{ once: true }};
-            className="text-center mb-12";
+            className="[^"]*"
           >;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
-              {activeCategory === 'all' ? 'All Services' : `${activeCategory} Services`};
-            </h2>;
+              {activeCategory === 'all' ? 'All Services' : `${activeCategory} Services`}
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               {activeCategory === 'all' ;
-                ? 'Explore our complete portfolio of innovative services and solutions.';
-                : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`;
+                ? 'Explore our complete portfolio of innovative services and solutions.'
+                : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               };
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Services Grid */};
           <div className="space-y-6">;
             {filteredServices.map((service, index) => (;
-              <motion.div;
+              <motion.div
                 key={service.id};
                 initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
                 viewport={{ once: true }};
-                className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden";
+                className="[^"]*"
               >;
                 <div className="p-6">;
                   <div className="flex items-start justify-between mb-4">;
                     <div className="flex items-center space-x-4">;
                       {getCategoryIcon(service.category)};
                       <div>;
-                        <h3 className="text-xl font-bold text-white">{service.title}</h3>;
+                        <h3 className="text-xl font-bold text-white">{service.title}</[^>]*>
                         <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">;
                           {service.category};
-                        </span>;
-                      </div>;
-                    </div>;
+                        </[^>]*>
+                      </[^>]*>
+                    </[^>]*>
                     <div className="text-right">;
-                      <div className="text-3xl font-bold text-white">{formatPrice(service.price)}</div>;
-                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>;
-                    </div>;
-                  </div>;
+                      <div className="text-3xl font-bold text-white">{formatPrice(service.price)}</[^>]*>
+                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
 
-                  <p className="text-gray-300 mb-4">{service.description}</p>;
+                  <p className="text-gray-300 mb-4">{service.description}</[^>]*>
 
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">;
                     <div className="text-center p-3 bg-white/5 rounded-lg">;
-                      <div className="text-2xl font-bold text-cyan-400">{service.rating}</div>;
-                      <div className="text-xs text-gray-400">Rating</div>;
-                    </div>;
+                      <div className="text-2xl font-bold text-cyan-400">{service.rating}</[^>]*>
+                      <div className="text-xs text-gray-400">Rating</[^>]*>
+                    </[^>]*>
                     <div className="text-center p-3 bg-white/5 rounded-lg">;
-                      <div className="text-2xl font-bold text-green-400">{service.roi}</div>;
-                      <div className="text-xs text-gray-400">ROI</div>;
-                    </div>;
+                      <div className="text-2xl font-bold text-green-400">{service.roi}</[^>]*>
+                      <div className="text-xs text-gray-400">ROI</[^>]*>
+                    </[^>]*>
                     <div className="text-center p-3 bg-white/5 rounded-lg">;
-                      <div className="text-2xl font-bold text-orange-400">{service.setupTime}</div>;
-                      <div className="text-xs text-gray-400">Setup Time</div>;
-                    </div>;
+                      <div className="text-2xl font-bold text-orange-400">{service.setupTime}</[^>]*>
+                      <div className="text-xs text-gray-400">Setup Time</[^>]*>
+                    </[^>]*>
                     <div className="text-center p-3 bg-white/5 rounded-lg">;
-                      <div className="text-2xl font-bold text-purple-400">{service.aiScore}%</div>;
-                      <div className="text-xs text-gray-400">AI Score</div>;
-                    </div>;
-                  </div>;
+                      <div className="text-2xl font-bold text-purple-400">{service.aiScore}%</[^>]*>
+                      <div className="text-xs text-gray-400">AI Score</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
 
                   <div className="flex items-center justify-between">;
                     <button;
                       onClick={() => toggleServiceExpansion(service.id)};
-                      className="inline-flex items-center px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
+                      className="[^"]*"
                     >;
                       {expandedService === service.id ? (;
                         <>;
-                          <ChevronUp className="w-4 h-4 mr-2" />;
+                          <[^>]*/>
                           Hide Details;
-                        </>;
+                        </[^>]*>
                       ) : (;
                         <>;
-                          <ChevronDown className="w-4 h-4 mr-2" />;
+                          <[^>]*/>
                           View Details;
-                        </>;
+                        </[^>]*>
                       )};
-                    </button>;
+                    </[^>]*>
                     <div className="flex items-center gap-3">;
                       <Link;
                         to={`/services/${service.id}`};
-                        className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/30 text-white font-medium rounded-lg hover:bg-white/20 transition-all duration-300";
+                        className="[^"]*"
                       >;
-                        <BookOpen className="w-4 h-4 mr-2" />;
+                        <[^>]*/>
                         Learn More;
-                      </Link>;
+                      </[^>]*>
                       <a;
                         href={`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`};
-                        className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
+                        className="[^"]*"
                       >;
                         Get Quote;
-                        <ArrowRight className="w-4 h-4 ml-2" />;
-                      </a>;
-                    </div>;
-                  </div>;
-                </div>;
+                        <[^>]*/>
+                      </[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
 
                 {/* Expanded Details */};
                 <AnimatePresence>;
-                  {expandedService === service.id && (;
-                    <motion.div;
+                  {expandedService === service.id && (;&& (; (
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }};
                       animate={{ height: "auto", opacity: 1 }};
                       exit={{ height: 0, opacity: 0 }};
                       transition={{ duration: 0.3 }};
-                      className="border-t border-white/20 bg-white/5";
+                      className="[^"]*"
                     >;
                       <div className="p-6">;
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
-                            <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>;
+                            <h4 className="text-lg font-semibold text-white mb-3">Key Features</[^>]*>
                             <div className="space-y-2">;
                               {service.tags.slice(0, 8).map((tag, tagIndex) => (;
                                 <div key={tagIndex} className="flex items-center">;
-                                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
-                                  <span className="text-gray-300">{tag}</span>;
-                                </div>;
+                                  <[^>]*/>
+                                  <span className="text-gray-300">{tag}</[^>]*>
+                                </[^>]*>
                               ))};
-                            </div>;
-                          </div>;
+                            </[^>]*>
+                          </[^>]*>
                           <div>;
-                            <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>;
+                            <h4 className="text-lg font-semibold text-white mb-3">Integrations</[^>]*>
                             <div className="space-y-2">;
                               {service.integrations?.slice(0, 6).map((integration, integrationIndex) => (;
                                 <div key={integrationIndex} className="flex items-center">;
-                                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>;
-                                  <span className="text-gray-300">{integration}</span>;
-                                </div>;
+                                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></[^>]*>
+                                  <span className="text-gray-300">{integration}</[^>]*>
+                                </[^>]*>
                               ))};
-                              {service.integrations && service.integrations.length > 6 && (;
+                              {service.integrations && service.integrations.length > 6 && (;&& service.integrations.length > 6 && (; service.integrations.length > 6 && (
                                 <div className="text-gray-400 text-sm">;
                                   +{service.integrations.length - 6} more integrations;
-                                </div>;
+                                </[^>]*>
                               )};
-                            </div>;
-                          </div>;
-                        </div>;
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
                         ;
                         <div className="mt-6 p-4 bg-white/5 rounded-lg">;
-                          <h4 className="text-lg font-semibold text-white mb-3">Competitive Analysis</h4>;
+                          <h4 className="text-lg font-semibold text-white mb-3">Competitive Analysis</[^>]*>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                             <div>;
-                              <h5 className="text-sm font-medium text-gray-400 mb-2">Competitors</h5>;
+                              <h5 className="text-sm font-medium text-gray-400 mb-2">Competitors</[^>]*>
                               <div className="space-y-1">;
                                 {service.competitors?.slice(0, 3).map((competitor, competitorIndex) => (;
                                   <div key={competitorIndex} className="text-gray-300 text-sm">;
                                     • {competitor};
-                                  </div>;
+                                  </[^>]*>
                                 ))};
-                              </div>;
-                            </div>;
+                              </[^>]*>
+                            </[^>]*>
                             <div>;
-                              <h5 className="text-sm font-medium text-gray-400 mb-2">Our Advantage</h5>;
+                              <h5 className="text-sm font-medium text-gray-400 mb-2">Our Advantage</[^>]*>
                               <div className="text-gray-300 text-sm">;
-                                • {service.aiScore}% AI-powered accuracy<br />;
-                                • {service.roi} ROI guarantee<br />;
-                                • {service.setupTime} rapid deployment<br />;
+                                • {service.aiScore}% AI-powered accuracy<[^>]*/>
+                                • {service.roi} ROI guarantee<[^>]*/>
+                                • {service.setupTime} rapid deployment<[^>]*/>
                                 • 24/7 expert support;
-                              </div>;
-                            </div>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </motion.div>;
+                              </[^>]*>
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
+                    </[^>]*>
                   )};
-                </AnimatePresence>;
-              </motion.div>;
+                </[^>]*>
+              </[^>]*>
             ))};
 
             {/* No Results Message */};
-            {filteredServices.length === 0 && (;
+            {filteredServices.length === 0 && (;&& (; (
               <motion.div ;
                 initial={{ opacity: 0 }};
                 animate={{ opacity: 1 }};
-                className="text-center py-20";
+                className="[^"]*"
               >;
-                <div className="text-6xl mb-4">🔍</div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
-                <p className="text-gray-400">Try adjusting your search or category selection</p>;
-              </motion.div>;
+                <div className="text-6xl mb-4">🔍</[^>]*>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</[^>]*>
+                <p className="text-gray-400">Try adjusting your search or category selection</[^>]*>
+              </[^>]*>
             )};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Call to Action */};
       <section className="py-20 px-4">;
@@ -544,68 +544,68 @@ export default function ComprehensiveServicesLanding2027() {;
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
             viewport={{ once: true }};
-            className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20";
+            className="[^"]*"
           >;
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
-            </h3>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Contact our team for a personalized consultation and discover how our ;
               innovative services can drive your business forward.;
-            </p>;
+            </[^>]*>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
-                to="/contact";
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
+                to="/contact"
+                className="[^"]*"
               >;
                 Get Started Today;
-              </Link>;
+              </[^>]*>
               <a;
-                href="tel:+13024640950";
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2 justify-center";
+                href="tel:+13024640950"
+                className="[^"]*"
               >;
-                <Phone className="w-5 h-5" />;
+                <[^>]*/>
                 Call Now;
-              </a>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
 
             {/* Contact Information */};
             <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-6">;
               <div className="text-center">;
-                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />;
-                <div className="text-white font-semibold mb-1">Phone</div>;
+                <[^>]*/>
+                <div className="text-white font-semibold mb-1">Phone</[^>]*>
                 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
                   +1 302 464 0950;
-                </a>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <Mail className="w-8 h-8 text-purple-400 mx-auto mb-3" />;
-                <div className="text-white font-semibold mb-1">Email</div>;
+                <[^>]*/>
+                <div className="text-white font-semibold mb-1">Email</[^>]*>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">;
-                  kleber@ziontechgroup.com;
-                </a>;
-              </div>;
+                  kleber@ziontechgroup.com
+                </[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <MapPin className="w-8 h-8 text-green-400 mx-auto mb-3" />;
-                <div className="text-white font-semibold mb-1">Address</div>;
+                <[^>]*/>
+                <div className="text-white font-semibold mb-1">Address</[^>]*>
                 <div className="text-green-400 text-sm">;
-                  364 E Main St STE 1008<br />;
+                  364 E Main St STE 1008<[^>]*/>
                   Middletown DE 19709;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 
-// Helper component for DNA icon;
+//[^;]*
 function Dna({ className }: { className?: string }) {;
-  return (;
+  return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">;
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>;
-    </svg>;
+      <[^>]*/>
+    </[^>]*>
   );
 };

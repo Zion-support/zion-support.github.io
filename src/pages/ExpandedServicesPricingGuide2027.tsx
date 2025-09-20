@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import {;
   Search,;
   Filter,;
@@ -60,19 +60,19 @@ import {;
   Info,;
   AlertTriangle,;
   Zap;
-} from "lucide-react";
-import { SEO } from "@/components/SEO";
+} from "lucide-react"
+import { SEO } from "@/components/SEO"
 import {;
   ALL_EXPANDED_SERVICES_PRICING,;
   type ExpandedServicePricing;
-} from "@/data/expandedServicesPricing2027";
-const ExpandedServicesPricingGuide2027: React.FC = () => {;
+} from "@/data/expandedServicesPricing2027"
+const ExpandedServicesPricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All'),;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [expandedService, setExpandedService] = useState<string | null>(null),;
   const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING),;
 
-  const categories = ['AllCybersecurity', 'Data AnalyticsCloud & DevOps', 'IoT & Edge ComputingFinancial Technology', 'Healthcare Technology'];
+  const categories = ['AllCybersecurity', 'Data AnalyticsCloud & DevOps', 'IoT & Edge ComputingFinancial Technology', 'Healthcare Technology']
 
   useEffect(() => {;
     let pricing = ALL_EXPANDED_SERVICES_PRICING;
@@ -109,7 +109,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   const getCategoryColor = (category: string) => {;
     switch (category) {;
       case 'Cybersecurity':;
-        return 'from-red-500 to-pink-600';
+        return 'from-red-500 to-pink-600'
       case 'Data Analytics':;
         return 'from-blue-500 to-cyan-600',;
       case 'Cloud & DevOps':;
@@ -120,384 +120,384 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
         return 'from-yellow-500 to-orange-600',;
       case 'Healthcare Technology':;
         return 'from-teal-500 to-blue-600',;
-      default: return 'from-gray-500 to-slate-600';
+      default: return 'from-gray-500 to-slate-600'
     };
   };
   const getMarketPositionColor = (position: string) => {;
     switch (position) {;
       case 'leader':;
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800'
       case 'challenger':;
         return 'bg-blue-100 text-blue-800',;
       case 'niche':;
         return 'bg-purple-100 text-purple-800',;
       case 'emerging':;
         return 'bg-yellow-100 text-yellow-800',;
-      default: return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800'
     };
   };
   const renderPricingCard = (pricing: ExpandedServicePricing) => {;
-    const CategoryIcon = getCategoryIcon(pricing.category);
-    const categoryColor = getCategoryColor(pricing.category);
+    const CategoryIcon = getCategoryIcon(pricing.category)
+    const categoryColor = getCategoryColor(pricing.category)
 
-    return (;
-      <motion.div;
+    return (
+      <motion.div
         key={pricing.serviceId};
         initial={{ opacity: 0, y: 20 }};
         animate={{ opacity: 1, y: 0 }};
         transition={{ duration: 0.5 }};
-        className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden";
+        className="[^"]*"
       >;
         {/* Header */};
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>;
           <div className="flex items-center justify-between mb-4">;
             <div className="flex items-center space-x-3">;
-              <CategoryIcon className="w-8 h-8" />;
+              <[^>]*/>
               <div>;
-                <h3 className="text-xl font-bold">{pricing.serviceName}</h3>;
-                <p className="text-sm opacity-90">{pricing.category}</p>;
-              </div>;
-            </div>;
+                <h3 className="text-xl font-bold">{pricing.serviceName}</[^>]*>
+                <p className="text-sm opacity-90">{pricing.category}</[^>]*>
+              </[^>]*>
+            </[^>]*>
             <span className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm font-semibold">;
               {pricing.subcategory};
-            </span>;
-          </div>;
-        </div>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Content */};
         <div className="p-6">;
           {/* Pricing Tiers */};
           <div className="mb-6">;
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Pricing Tiers</h4>;
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Pricing Tiers</[^>]*>
             <div className="space-y-4">;
               {/* Starter */};
               <div className="border border-gray-200 dark:border-slate-600 rounded-lg p-4">;
                 <div className="flex items-center justify-between mb-2">;
-                  <h5 className="font-semibold text-gray-900 dark:text-white">Starter</h5>;
+                  <h5 className="font-semibold text-gray-900 dark:text-white">Starter</[^>]*>
                   <span className="text-2xl font-bold text-blue-600">;
                     ${pricing.pricingTiers.starter.price.toLocaleString()};
-                    <span className="text-sm text-gray-500">/month</span>;
-                  </span>;
-                </div>;
+                    <span className="text-sm text-gray-500">/month</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">;
                   Setup fee: ${pricing.pricingTiers.starter.setupFee.toLocaleString()};
-                </p>;
+                </[^>]*>
                 <div className="space-y-2">;
                   {pricing.pricingTiers.starter.features.slice(0, 3).map((feature, index) => (;
                     <div key={index} className="flex items-center space-x-2">;
-                      <CheckCircle className="w-4 h-4 text-green-500" />;
-                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>;
-                    </div>;
+                      <[^>]*/>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</[^>]*>
+                    </[^>]*>
                   ))};
-                  {pricing.pricingTiers.starter.features.length > 3 && (;
+                  {pricing.pricingTiers.starter.features.length > 3 && (;&& (; (
                     <button;
-                      onClick={() => setExpandedService(expandedService === pricing.serviceId + '-starter' ? null : pricing.serviceId + '-starter')};
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline";
+                      onClick={() => setExpandedService(expandedService === pricing.serviceId + '-starter' ? null : pricing.serviceId + '-starter')}
+                      className="[^"]*"
                     >;
-                      {expandedService === pricing.serviceId + '-starter' ? 'Show less' : `+${pricing.pricingTiers.starter.features.length - 3} more features`};
-                    </button>;
+                      {expandedService === pricing.serviceId + '-starter' ? 'Show less' : `+${pricing.pricingTiers.starter.features.length - 3} more features`}
+                    </[^>]*>
                   )};
-                </div>;
+                </[^>]*>
 
                 <AnimatePresence>;
-                  {expandedService === pricing.serviceId + '-starter' && (;
-                    <motion.div;
+                  {expandedService === pricing.serviceId + '-starter' && (;&& (; (
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }};
                       animate={{ opacity: 1, height: 'auto' }};
                       exit={{ opacity: 0, height: 0 }};
-                      className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600";
+                      className="[^"]*"
                     >;
                       <div className="space-y-2">;
                         {pricing.pricingTiers.starter.features.slice(3).map((feature, index) => (;
                           <div key={index} className="flex items-center space-x-2">;
-                            <CheckCircle className="w-4 h-4 text-green-500" />;
-                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>;
-                          </div>;
+                            <[^>]*/>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</[^>]*>
+                          </[^>]*>
                         ))};
-                      </div>;
-                    </motion.div>;
+                      </[^>]*>
+                    </[^>]*>
                   )};
-                </AnimatePresence>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
 
               {/* Professional */};
               <div className="border-2 border-blue-500 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">;
                 <div className="flex items-center justify-between mb-2">;
                   <div className="flex items-center space-x-2">;
-                    <h5 className="font-semibold text-gray-900 dark:text-white">Professional</h5>;
-                    <span className="px-2 py-1 bg-blue-500 text-white text-xs rounded-full">Popular</span>;
-                  </div>;
+                    <h5 className="font-semibold text-gray-900 dark:text-white">Professional</[^>]*>
+                    <span className="px-2 py-1 bg-blue-500 text-white text-xs rounded-full">Popular</[^>]*>
+                  </[^>]*>
                   <span className="text-2xl font-bold text-blue-600">;
                     ${pricing.pricingTiers.professional.price.toLocaleString()};
-                    <span className="text-sm text-gray-500">/month</span>;
-                  </span>;
-                </div>;
+                    <span className="text-sm text-gray-500">/month</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">;
                   Setup fee: ${pricing.pricingTiers.professional.setupFee.toLocaleString()};
-                </p>;
+                </[^>]*>
                 <div className="space-y-2">;
                   {pricing.pricingTiers.professional.features.slice(0, 3).map((feature, index) => (;
                     <div key={index} className="flex items-center space-x-2">;
-                      <CheckCircle className="w-4 h-4 text-green-500" />;
-                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>;
-                    </div>;
+                      <[^>]*/>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</[^>]*>
+                    </[^>]*>
                   ))};
-                  {pricing.pricingTiers.professional.features.length > 3 && (;
+                  {pricing.pricingTiers.professional.features.length > 3 && (;&& (; (
                     <button;
-                      onClick={() => setExpandedService(expandedService === pricing.serviceId + '-professional' ? null : pricing.serviceId + '-professional')};
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline";
+                      onClick={() => setExpandedService(expandedService === pricing.serviceId + '-professional' ? null : pricing.serviceId + '-professional')}
+                      className="[^"]*"
                     >;
-                      {expandedService === pricing.serviceId + '-professional' ? 'Show less' : `+${pricing.pricingTiers.professional.features.length - 3} more features`};
-                    </button>;
+                      {expandedService === pricing.serviceId + '-professional' ? 'Show less' : `+${pricing.pricingTiers.professional.features.length - 3} more features`}
+                    </[^>]*>
                   )};
-                </div>;
+                </[^>]*>
 
                 <AnimatePresence>;
-                  {expandedService === pricing.serviceId + '-professional' && (;
-                    <motion.div;
+                  {expandedService === pricing.serviceId + '-professional' && (;&& (; (
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }};
                       animate={{ opacity: 1, height: 'auto' }};
                       exit={{ opacity: 0, height: 0 }};
-                      className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-700";
+                      className="[^"]*"
                     >;
                       <div className="space-y-2">;
                         {pricing.pricingTiers.professional.features.slice(3).map((feature, index) => (;
                           <div key={index} className="flex items-center space-x-2">;
-                            <CheckCircle className="w-4 h-4 text-green-500" />;
-                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>;
-                          </div>;
+                            <[^>]*/>
+                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</[^>]*>
+                          </[^>]*>
                         ))};
-                      </div>;
-                    </motion.div>;
+                      </[^>]*>
+                    </[^>]*>
                   )};
-                </AnimatePresence>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
 
               {/* Enterprise */};
               <div className="border border-gray-200 dark:border-slate-600 rounded-lg p-4">;
                 <div className="flex items-center justify-between mb-2">;
-                  <h5 className="font-semibold text-gray-900 dark:text-white">Enterprise</h5>;
+                  <h5 className="font-semibold text-gray-900 dark:text-white">Enterprise</[^>]*>
                   <span className="text-2xl font-bold text-blue-600">;
                     ${pricing.pricingTiers.enterprise.price.toLocaleString()};
-                    <span className="text-sm text-gray-500">/month</span>;
-                  </span>;
-                </div>;
+                    <span className="text-sm text-gray-500">/month</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">;
                   Setup fee: ${pricing.pricingTiers.enterprise.setupFee.toLocaleString()};
-                </p>;
+                </[^>]*>
                 <div className="space-y-2">;
                   {pricing.pricingTiers.enterprise.features.slice(0, 3).map((feature, index) => (;
                     <div key={index} className="flex items-center space-x-2">;
-                      <CheckCircle className="w-4 h-4 text-green-500" />;
-                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>;
-                    </div>;
+                      <[^>]*/>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</[^>]*>
+                    </[^>]*>
                   ))};
-                  {pricing.pricingTiers.enterprise.features.length > 3 && (;
+                  {pricing.pricingTiers.enterprise.features.length > 3 && (;&& (; (
                     <button;
-                      onClick={() => setExpandedService(expandedService === pricing.serviceId + '-enterprise' ? null : pricing.serviceId + '-enterprise')};
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline";
+                      onClick={() => setExpandedService(expandedService === pricing.serviceId + '-enterprise' ? null : pricing.serviceId + '-enterprise')}
+                      className="[^"]*"
                     >;
-                      {expandedService === pricing.serviceId + '-enterprise' ? 'Show less' : `+${pricing.pricingTiers.enterprise.features.length - 3} more features`};
-                    </button>;
+                      {expandedService === pricing.serviceId + '-enterprise' ? 'Show less' : `+${pricing.pricingTiers.enterprise.features.length - 3} more features`}
+                    </[^>]*>
                   )};
-                </div>;
+                </[^>]*>
 
                 <AnimatePresence>;
-                  {expandedService === pricing.serviceId + '-enterprise' && (;
-                    <motion.div;
+                  {expandedService === pricing.serviceId + '-enterprise' && (;&& (; (
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }};
                       animate={{ opacity: 1, height: 'auto' }};
                       exit={{ opacity: 0, height: 0 }};
-                      className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600";
+                      className="[^"]*"
                     >;
                       <div className="space-y-2">;
                         {pricing.pricingTiers.enterprise.features.slice(3).map((feature, index) => (;
                           <div key={index} className="flex items-center space-x-2">;
-                            <CheckCircle className="w-4 h-4 text-green-500" />;
-                            <span className="text-sm text-gray-600 dark: text-gray-300">{feature}</span>;
-                          </div>;
+                            <[^>]*/>
+                            <span className="text-sm text-gray-600 dark: text-gray-300">{feature}</[^>]*>
+                          </[^>]*>
                         ))};
-                      </div>;
-                    </motion.div>;
+                      </[^>]*>
+                    </[^>]*>
                   )};
-                </AnimatePresence>;
-              </div>;
-            </div>;
-          </div>;
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
 
           {/* Market Comparison */};
           <div className="mb-6">;
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Market Position</h4>;
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Market Position</[^>]*>
             <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-4">;
               <div className="flex items-center justify-between mb-2">;
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getMarketPositionColor(pricing.marketComparison.marketPosition)}`}>;
                   {pricing.marketComparison.marketPosition.toUpperCase()};
-                </span>;
+                </[^>]*>
                 <span className="text-sm text-gray-600 dark:text-gray-300">;
                   vs {pricing.marketComparison.competitors.join()};
-                </span>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">;
                 <strong>Price Advantage:</strong> {pricing.marketComparison.priceAdvantage};
-              </p>;
+              </[^>]*>
               <p className="text-sm text-gray-600 dark:text-gray-300">;
                 <strong>Value Proposition:</strong> {pricing.marketComparison.valueProposition};
-              </p>;
-            </div>;
-          </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
 
           {/* ROI Analysis */};
           <div className="mb-6">;
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">ROI Analysis</h4>;
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">ROI Analysis</[^>]*>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
               <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">;
-                <h6 className="font-semibold text-green-800 dark:text-green-200 mb-2">Payback Period</h6>;
-                <p className="text-lg font-bold text-green-600">{pricing.roiAnalysis.paybackPeriod}</p>;
-              </div>;
+                <h6 className="font-semibold text-green-800 dark:text-green-200 mb-2">Payback Period</[^>]*>
+                <p className="text-lg font-bold text-green-600">{pricing.roiAnalysis.paybackPeriod}</[^>]*>
+              </[^>]*>
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">;
-                <h6 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">Annual ROI</h6>;
-                <p className="text-lg font-bold text-blue-600">{pricing.roiAnalysis.annualROI}</p>;
-              </div>;
+                <h6 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">Annual ROI</[^>]*>
+                <p className="text-lg font-bold text-blue-600">{pricing.roiAnalysis.annualROI}</[^>]*>
+              </[^>]*>
               <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">;
-                <h6 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">ROI Category</h6>;
+                <h6 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">ROI Category</[^>]*>
                 <p className="text-sm text-purple-600 dark:text-purple-300">;
                   {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' :;
                    parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' :;
-                   parseInt(pricing.roiAnalysis.annualROI) >= 200 ? 'Good' : 'Standard'};
-                </p>;
-              </div>;
-            </div>;
-          </div>;
+                   parseInt(pricing.roiAnalysis.annualROI) >= 200 ? 'Good' : 'Standard'}
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
 
           {/* Implementation Details */};
           <div className="mb-6">;
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Implementation</h4>;
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Implementation</[^>]*>
             <div className="grid grid-cols-2 gap-4 text-sm">;
               <div>;
-                <p className="text-gray-500 dark:text-gray-400">Setup Time</p>;
-                <p className="font-semibold text-gray-900 dark:text-white">{pricing.implementation.setupTime}</p>;
-              </div>;
+                <p className="text-gray-500 dark:text-gray-400">Setup Time</[^>]*>
+                <p className="font-semibold text-gray-900 dark:text-white">{pricing.implementation.setupTime}</[^>]*>
+              </[^>]*>
               <div>;
-                <p className="text-gray-500 dark:text-gray-400">Training Required</p>;
-                <p className="font-semibold text-gray-900 dark:text-white">{pricing.implementation.trainingRequired}</p>;
-              </div>;
+                <p className="text-gray-500 dark:text-gray-400">Training Required</[^>]*>
+                <p className="font-semibold text-gray-900 dark:text-white">{pricing.implementation.trainingRequired}</[^>]*>
+              </[^>]*>
               <div>;
-                <p className="text-gray-500 dark:text-gray-400">Complexity</p>;
+                <p className="text-gray-500 dark:text-gray-400">Complexity</[^>]*>
                 <span className={`px-2 py-1 rounded-full text-xs font-semibold ${;
                   pricing.implementation.integrationComplexity === 'low' ? 'bg-green-100 text-green-800' :;
                   pricing.implementation.integrationComplexity === 'medium' ? 'bg-yellow-100 text-yellow-800' :;
-                  'bg-red-100 text-red-800';
+                  'bg-red-100 text-red-800'
                 }`}>;
                   {pricing.implementation.integrationComplexity.toUpperCase()};
-                </span>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               <div>;
-                <p className="text-gray-500 dark:text-gray-400">Support</p>;
-                <p className="font-semibold text-gray-900 dark:text-white">{pricing.implementation.supportIncluded}</p>;
-              </div>;
-            </div>;
-          </div>;
+                <p className="text-gray-500 dark:text-gray-400">Support</[^>]*>
+                <p className="font-semibold text-gray-900 dark:text-white">{pricing.implementation.supportIncluded}</[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
 
           {/* Contact and Actions */};
           <div className="border-t border-gray-200 dark:border-slate-700 pt-4">;
             <div className="flex items-center justify-between mb-3">;
               <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">;
-                <Phone className="w-4 h-4" />;
-                <span>{pricing.contactInfo.phone}</span>;
-              </div>;
-            </div>;
+                <[^>]*/>
+                <span>{pricing.contactInfo.phone}</[^>]*>
+              </[^>]*>
+            </[^>]*>
 
             <div className="flex space-x-2">;
               <a;
                 href={`mailto:${pricing.contactInfo.email}`};
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2";
+                className="[^"]*"
               >;
-                <Mail className="w-4 h-4" />;
-                <span>Get Pricing</span>;
-              </a>;
+                <[^>]*/>
+                <span>Get Pricing</[^>]*>
+              </[^>]*>
               <a;
                 href={pricing.contactInfo.website};
-                target="_blank";
-                rel="noopener noreferrer";
-                className="flex-1 bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2";
+                target="_blank"
+                rel="noopener noreferrer"
+                className="[^"]*"
               >;
-                <ExternalLink className="w-4 h-4" />;
-                <span>Learn More</span>;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </motion.div>;
+                <[^>]*/>
+                <span>Learn More</[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
     );
   };
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">;
       <SEO;
-        title="Expanded Services Pricing Guide 2027 - Zion Tech Group";
-        description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories.";
-        keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing";
+        title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
+        description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
+        keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
       />;
 
       {/* Hero Section */};
       <div className="relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
           <div className="text-center">;
-            <motion.h1;
+            <motion.h1
               initial={{ opacity: 0, y: 20 }};
               animate={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6";
+              className="[^"]*"
             >;
               Expanded Services;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">;
                 Pricing Guide 2027;
-              </span>;
-            </motion.h1>;
-            <motion.p;
+              </[^>]*>
+            </[^>]*>
+            <motion.p
               initial={{ opacity: 0, y: 20 }};
               animate={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8, delay: 0.2 }};
-              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto";
+              className="[^"]*"
             >;
               Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services.;
               Find the perfect pricing tier for your business needs.;
-            </motion.p>;
+            </[^>]*>
 
             {/* Contact Info */};
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               animate={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8, delay: 0.4 }};
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block";
+              className="[^"]*"
             >;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
                 <div className="flex items-center space-x-3">;
-                  <Phone className="w-5 h-5 text-blue-600" />;
+                  <[^>]*/>
                   <div>;
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>;
-                    <p className="font-semibold text-gray-900 dark:text-white">+1 302 464 0950</p>;
-                  </div>;
-                </div>;
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone</[^>]*>
+                    <p className="font-semibold text-gray-900 dark:text-white">+1 302 464 0950</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-center space-x-3">;
-                  <Mail className="w-5 h-5 text-blue-600" />;
+                  <[^>]*/>
                   <div>;
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>;
-                    <p className="font-semibold text-gray-900 dark:text-white">kleber@ziontechgroup.com</p>;
-                  </div>;
-                </div>;
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</[^>]*>
+                    <p className="font-semibold text-gray-900 dark:text-white">kleber@ziontechgroup.com</[^>]*>
+                  </[^>]*>
+                </[^>]*>
                 <div className="flex items-center space-x-3">;
-                  <MapPin className="w-5 h-5 text-blue-600" />;
+                  <[^>]*/>
                   <div>;
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Address</p>;
-                    <p className="font-semibold text-gray-900 dark:text-white">364 E Main St STE 1008</p>;
-                    <p className="font-semibold text-gray-900 dark:text-white">Middletown DE 19709</p>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </div>;
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Address</[^>]*>
+                    <p className="font-semibold text-gray-900 dark:text-white">364 E Main St STE 1008</[^>]*>
+                    <p className="font-semibold text-gray-900 dark:text-white">Middletown DE 19709</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Pricing Section */};
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -507,88 +507,88 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
             {/* Search */};
             <div className="flex-1 max-w-md">;
               <div className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+                <[^>]*/>
                 <input;
-                  type="text";
-                  placeholder="Search pricing...";
+                  type="text"
+                  placeholder="Search pricing..."
                   value={searchQuery};
                   onChange={(e) => setSearchQuery(e.target.value)};
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white";
+                  className="[^"]*"
                 />;
-              </div>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
 
             {/* Category Filter */};
             <div className="flex items-center space-x-4">;
               <select;
                 value={selectedCategory};
                 onChange={(e) => setSelectedCategory(e.target.value)};
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white";
+                className="[^"]*"
               >;
                 {categories.map((category) => (;
                   <option key={category} value={category}>;
                     {category};
-                  </option>;
+                  </[^>]*>
                 ))};
-              </select>;
-            </div>;
-          </div>;
-        </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Pricing Count */};
         <div className="mb-8">;
           <p className="text-gray-600 dark:text-gray-300">;
             Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans;
-          </p>;
-        </div>;
+          </[^>]*>
+        </[^>]*>
 
         {/* Pricing Grid */};
         {filteredPricing.length > 0 ? (;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredPricing.map((pricing) => renderPricingCard(pricing))};
-          </div>;
+          </[^>]*>
         ) : (;
           <div className="text-center py-16">;
             <div className="text-gray-400 dark:text-gray-500 mb-4">;
-              <Search className="w-16 h-16 mx-auto" />;
-            </div>;
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">No pricing plans found</h3>;
+              <[^>]*/>
+            </[^>]*>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">No pricing plans found</[^>]*>
             <p className="text-gray-600 dark:text-gray-300">;
               Try adjusting your search criteria or category filter;
-            </p>;
-          </div>;
+            </[^>]*>
+          </[^>]*>
         )};
-      </div>;
+      </[^>]*>
 
       {/* CTA Section */};
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
             Ready to Get Started?;
-          </h2>;
+          </[^>]*>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
             Our pricing is designed to provide maximum value at competitive rates.;
             Contact us today to discuss your specific needs and get a customized quote.;
-          </p>;
+          </[^>]*>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
             <a;
-              href="mailto:kleber@ziontechgroup.com";
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2";
+              href="mailto:kleber@ziontechgroup.com"
+              className="[^"]*"
             >;
-              <Mail className="w-5 h-5" />;
-              <span>Get Custom Quote</span>;
-            </a>;
+              <[^>]*/>
+              <span>Get Custom Quote</[^>]*>
+            </[^>]*>
             <a;
-              href="tel:+13024640950";
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2";
+              href="tel:+13024640950"
+              className="[^"]*"
             >;
-              <Phone className="w-5 h-5" />;
-              <span>Call Sales Team</span>;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+              <[^>]*/>
+              <span>Call Sales Team</[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 export default ExpandedServicesPricingGuide2027;

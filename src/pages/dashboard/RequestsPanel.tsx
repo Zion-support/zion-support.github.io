@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
+import React, { useState } from "react"
+import { useState } from "react"
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
+import { useTalentQuotes } from "@/hooks/useTalentQuotes"
+import { useAuth } from "@/hooks/useAuth"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { QuoteDetails } from "@/components/quotes/QuoteDetails"
 import {;
   RequestsHeader,;
   QuoteRequestsList;
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+} from "@/components/quotes"
+import type { QuoteRequest } from "@/types/quotes"
+import { ProtectedRoute } from "@/components/ProtectedRoute"
 export default function RequestsPanel() {;
   const { user } = useAuth(),;
 
@@ -29,21 +29,21 @@ export default function RequestsPanel() {;
     markAsViewed;
     markAsResponded;
     toggleArchive;
-  } = useTalentQuotes();
+  } = useTalentQuotes()
   const handleViewDetails = (quote: QuoteRequest) => {;
-    setSelectedQuote(quote);
+    setSelectedQuote(quote)
     setShowDetails(true),;
 
-    // If status is new, mark as viewed;
+    //[^;]*
     if (quote.status === 'new') {;
       markAsViewed(quote.id),;
     };
   },;
 
-  // Filter quotes by archive status;
+  //[^;]*
   const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived);
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
-  return (;
+  return (
     <ProtectedRoute>;
       <div>;
 
@@ -60,9 +60,9 @@ export default function RequestsPanel() {;
             {/* Main Content */};
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
-                <TabsTrigger value="active">Active Requests</TabsTrigger>;
-                <TabsTrigger value="archived">Archived</TabsTrigger>;
-              </TabsList>;
+                <TabsTrigger value="active">Active Requests</[^>]*>
+                <TabsTrigger value="archived">Archived</[^>]*>
+              </[^>]*>
 
               <TabsContent value="active">;
                 <QuoteRequestsList;
@@ -73,7 +73,7 @@ export default function RequestsPanel() {;
                   onMarkAsResponded={markAsResponded};
                   onToggleArchive={toggleArchive};
                 />;
-              </TabsContent>;
+              </[^>]*>
 
               <TabsContent value="archived">;
                 <QuoteRequestsList;
@@ -84,10 +84,10 @@ export default function RequestsPanel() {;
                   onMarkAsResponded={markAsResponded};
                   onToggleArchive={toggleArchive};
                 />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-        </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Quote Details Modal */};
         <QuoteDetails;
@@ -100,7 +100,7 @@ export default function RequestsPanel() {;
         />;
 
 
-      </div>;
-    </ProtectedRoute>;
+      </[^>]*>
+    </[^>]*>
   );
 };

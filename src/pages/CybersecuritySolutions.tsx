@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
 import {;
   Shield,;
   Lock,;
@@ -25,34 +25,34 @@ import {;
   Clock,;
   BarChart3,;
   CreditCard;
-} from "lucide-react";
+} from "lucide-react"
 export default function CybersecuritySolutions() {;
-  const [selectedThreat, setSelectedThreat] = useState('all');
-  const [activeService, setActiveService] = useState('overview');
+  const [selectedThreat, setSelectedThreat] = useState('all')
+  const [activeService, setActiveService] = useState('overview')
   const securityServices = [;
     {;
       icon: Shield,title: "Threat Detection & Response",description: "Advanced security monitoring and incident response to protect against cyber threats",features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],;
-      color: "from-zion-red to-zion-orange";
+      color: "from-zion-red to-zion-orange"
     };
     {;
       icon: Lock,title: "Identity & Access Management",description: "Secure authentication and authorization systems for your organization",features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],;
-      color: "from-zion-blue to-zion-cyan";
+      color: "from-zion-blue to-zion-cyan"
     };
     {;
       icon: Eye,title: "Security Auditing & Compliance",description: "Comprehensive security assessments and compliance management",features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],;
-      color: "from-zion-purple to-zion-pink";
+      color: "from-zion-purple to-zion-pink"
     };
     {;
       icon: Network,title: "Network Security",description: "Protect your network infrastructure with advanced security measures",features: ["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],;
-      color: "from-zion-green to-zion-emerald";
+      color: "from-zion-green to-zion-emerald"
     };
     {;
       icon: Database,title: "Data Protection",description: "Safeguard sensitive data with encryption and backup solutions",features: ["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],;
-      color: "from-zion-yellow to-zion-orange";
+      color: "from-zion-yellow to-zion-orange"
     };
     {;
       icon: Cloud,title: "Cloud Security",description: "Secure your cloud infrastructure and applications",features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
-      color: "from-zion-indigo to-zion-purple";
+      color: "from-zion-indigo to-zion-purple"
     };
   ];
   const threatTypes = [;
@@ -136,63 +136,63 @@ export default function CybersecuritySolutions() {;
       opacity: 1,y: 0,transition: { duration: 0.6 };
     };
   };
-  const filteredThreats = selectedThreat === 'all';
+  const filteredThreats = selectedThreat === 'all'
     ? securityThreats;
     : securityThreats.filter(threat => threat.type === selectedThreat),;
 
-  return (;
+  return (
     <div className="min-h-screen bg-futuristic">;
       {/* Hero Section */};
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">;
         <div className="absolute inset-0 opacity-10">;
-          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-red rounded-full animate-pulse"></div>;
-          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-orange rounded-full animate-pulse delay-1000"></div>;
-        </div>;
+          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-red rounded-full animate-pulse"></[^>]*>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-orange rounded-full animate-pulse delay-1000"></[^>]*>
+        </[^>]*>
 
         <div className="container mx-auto px-4 text-center relative z-10">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 30 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
           >;
             <div className="flex justify-center mb-8">;
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">;
-                <Shield className="w-12 h-12 text-white" />;
-              </div>;
-            </div>;
+                <[^>]*/>
+              </[^>]*>
+            </[^>]*>
 
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">;
               Cybersecurity{' '};
               <span className="bg-gradient-to-r from-zion-red to-zion-orange bg-clip-text text-transparent">;
                 Solutions;
-              </span>;
-            </h1>;
+              </[^>]*>
+            </[^>]*>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">;
               Protect your business with enterprise-grade cybersecurity solutions.;
               From threat detection to compliance management, we keep you secure in an evolving digital landscape.;
-            </p>;
+            </[^>]*>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.button;
-                className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25";
+              <motion.button
+                className="[^"]*"
                 whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }};
               >;
                 Security Assessment;
-              </motion.button>;
+              </[^>]*>
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">;
                 View Security Report;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Security Services Overview */};
       <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            className="text-center mb-16";
+          <motion.div
+            className="[^"]*"
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -200,53 +200,53 @@ export default function CybersecuritySolutions() {;
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Comprehensive Security Services;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Our cybersecurity solutions provide end-to-end protection for your digital assets;
               ensuring business continuity and regulatory compliance.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
-          <motion.div;
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          <motion.div
+            className="[^"]*"
             variants={containerVariants};
-            initial="hidden";
-            whileInView="visible";
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }};
           >;
             {securityServices.map((service, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group";
+                className="[^"]*"
                 variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }};
               >;
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <service.icon className="w-8 h-8 text-white" />;
-                </div>;
+                  <[^>]*/>
+                </[^>]*>
 
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
-                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>;
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</[^>]*>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</[^>]*>
 
                 <ul className="space-y-2">;
                   {service.features.map((feature, idx) => (;
                     <li key={idx} className="flex items-center text-zion-slate-light">;
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />;
+                      <[^>]*/>
                       {feature};
-                    </li>;
+                    </[^>]*>
                   ))};
-                </ul>;
-              </motion.div>;
+                </[^>]*>
+              </[^>]*>
             ))};
-          </motion.div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Threat Landscape */};
       <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            className="text-center mb-16";
+          <motion.div
+            className="[^"]*"
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -254,95 +254,95 @@ export default function CybersecuritySolutions() {;
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Understanding Cyber Threats;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Stay informed about the latest cybersecurity threats and learn how our solutions;
               protect against evolving attack vectors.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Threat Filter */};
-          <motion.div;
-            className="flex flex-wrap justify-center gap-4 mb-12";
+          <motion.div
+            className="[^"]*"
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {threatTypes.map((threat) => {;
-              const Icon = threat.icon;
-              return (;
+              const Icon = threat.icon
+              return (
                 <button;
                   key={threat.id};
                   onClick={() => setSelectedThreat(threat.id)};
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
-                    selectedThreat === threat.id;
-                      ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25';
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark hover:text-white border border-zion-red/20';
+                    selectedThreat === threat.id
+                      ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark hover:text-white border border-zion-red/20'
                   }`};
                 >;
-                  <Icon className="w-5 h-5" />;
+                  <[^>]*/>
                   {threat.name};
-                </button>;
+                </[^>]*>
               );
             })};
-          </motion.div>;
+          </[^>]*>
 
           {/* Threats Grid */};
-          <motion.div;
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          <motion.div
+            className="[^"]*"
             variants={containerVariants};
-            initial="hidden";
-            whileInView="visible";
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }};
           >;
             {filteredThreats.map((threat, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";
+                className="[^"]*"
                 variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }};
               >;
                 <div className="flex items-center justify-between mb-4">;
                   <div className="flex items-center gap-4">;
                     <div className="w-12 h-12 bg-gradient-to-r from-zion-red to-zion-orange rounded-xl flex items-center justify-center">;
-                      <threat.icon className="w-6 h-6 text-white" />;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white">{threat.title}</h3>;
-                  </div>;
+                      <[^>]*/>
+                    </[^>]*>
+                    <h3 className="text-xl font-bold text-white">{threat.title}</[^>]*>
+                  </[^>]*>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${;
                     threat.impact === 'Critical' ? 'bg-red-500/20 text-red-400' :;
                     threat.impact === 'High' ? 'bg-orange-500/20 text-orange-400' :;
-                    'bg-yellow-500/20 text-yellow-400';
+                    'bg-yellow-500/20 text-yellow-400'
                   }`}>;
                     {threat.impact};
-                  </span>;
-                </div>;
+                  </[^>]*>
+                </[^>]*>
 
-                <p className="text-zion-slate-light mb-4 leading-relaxed">{threat.description}</p>;
+                <p className="text-zion-slate-light mb-4 leading-relaxed">{threat.description}</[^>]*>
 
                 <div className="space-y-2">;
-                  <h4 className="font-semibold text-zion-cyan text-sm">Protection Solutions:</h4>;
+                  <h4 className="font-semibold text-zion-cyan text-sm">Protection Solutions:</[^>]*>
                   <ul className="space-y-1">;
                     {threat.solutions.map((solution, idx) => (;
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">;
-                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>;
+                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></[^>]*>
                         {solution};
-                      </li>;
+                      </[^>]*>
                     ))};
-                  </ul>;
-                </div>;
-              </motion.div>;
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
             ))};
-          </motion.div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Compliance & Standards */};
       <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            className="text-center mb-16";
+          <motion.div
+            className="[^"]*"
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -350,56 +350,56 @@ export default function CybersecuritySolutions() {;
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Compliance & Standards;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Meet industry standards and regulatory requirements with our comprehensive;
               compliance management solutions.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
-          <motion.div;
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          <motion.div
+            className="[^"]*"
             variants={containerVariants};
-            initial="hidden";
-            whileInView="visible";
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }};
           >;
             {complianceFrameworks.map((framework, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group";
+                className="[^"]*"
                 variants={itemVariants};
                 whileHover={{ y: -5, scale: 1.02 }};
               >;
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">;
-                  <framework.icon className="w-8 h-8 text-white" />;
-                </div>;
+                  <[^>]*/>
+                </[^>]*>
 
-                <h3 className="text-xl font-bold text-white mb-4 text-center">{framework.name}</h3>;
-                <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{framework.description}</p>;
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{framework.name}</[^>]*>
+                <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{framework.description}</[^>]*>
 
                 <div className="space-y-2">;
-                  <h4 className="font-semibold text-zion-cyan text-sm">Key Requirements:</h4>;
+                  <h4 className="font-semibold text-zion-cyan text-sm">Key Requirements:</[^>]*>
                   <ul className="space-y-1">;
                     {framework.requirements.map((req, idx) => (;
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">;
-                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>;
+                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></[^>]*>
                         {req};
-                      </li>;
+                      </[^>]*>
                     ))};
-                  </ul>;
-                </div>;
-              </motion.div>;
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
             ))};
-          </motion.div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Security Metrics */};
       <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            className="text-center mb-16";
+          <motion.div
+            className="[^"]*"
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -407,42 +407,42 @@ export default function CybersecuritySolutions() {;
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Security Performance Metrics;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Our cybersecurity solutions deliver measurable results and provide;
               peace of mind through proven protection capabilities.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
-          <motion.div;
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
+          <motion.div
+            className="[^"]*"
             variants={containerVariants};
-            initial="hidden";
-            whileInView="visible";
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }};
           >;
             {securityMetrics.map((metric, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
-                className="text-center";
+                className="[^"]*"
                 variants={itemVariants};
               >;
                 <div className="w-24 h-24 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">;
-                  <div className="text-3xl font-bold text-white">{metric.metric}</div>;
-                </div>;
-                <h3 className="text-xl font-bold text-white mb-2">{metric.label}</h3>;
-                <p className="text-zion-slate-light">{metric.description}</p>;
-              </motion.div>;
+                  <div className="text-3xl font-bold text-white">{metric.metric}</[^>]*>
+                </[^>]*>
+                <h3 className="text-xl font-bold text-white mb-2">{metric.label}</[^>]*>
+                <p className="text-zion-slate-light">{metric.description}</[^>]*>
+              </[^>]*>
             ))};
-          </motion.div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Security Process */};
       <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            className="text-center mb-16";
+          <motion.div
+            className="[^"]*"
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -450,18 +450,18 @@ export default function CybersecuritySolutions() {;
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Our Security Implementation Process;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               A systematic approach to implementing comprehensive cybersecurity solutions;
               that protect your business from evolving threats.;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
-          <motion.div;
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
+          <motion.div
+            className="[^"]*"
             variants={containerVariants};
-            initial="hidden";
-            whileInView="visible";
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }};
           >;
             {[;
@@ -478,35 +478,35 @@ export default function CybersecuritySolutions() {;
                 step: "04",title: "Monitoring & Maintenance",description: "Continuous security monitoring and regular updates",icon: Monitor;
               };
             ].map((phase, index) => (;
-              <motion.div;
+              <motion.div
                 key={index};
-                className="relative";
+                className="[^"]*"
                 variants={itemVariants};
               >;
                 <div className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center">;
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center mx-auto mb-4">;
-                    <phase.icon className="w-8 h-8 text-white" />;
-                  </div>;
-                  <div className="text-2xl font-bold text-zion-red mb-2">{phase.step}</div>;
-                  <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>;
-                  <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>;
-                </div>;
+                    <[^>]*/>
+                  </[^>]*>
+                  <div className="text-2xl font-bold text-zion-red mb-2">{phase.step}</[^>]*>
+                  <h3 className="text-xl font-bold text-white mb-3">{phase.title}</[^>]*>
+                  <p className="text-zion-slate-light leading-relaxed">{phase.description}</[^>]*>
+                </[^>]*>
 
-                {index < 3 && (;
+                {index < 3 && (;&& (; (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">;
-                    <ArrowRight className="w-8 h-8 text-zion-red" />;
-                  </div>;
+                    <[^>]*/>
+                  </[^>]*>
                 )};
-              </motion.div>;
+              </[^>]*>
             ))};
-          </motion.div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* CTA Section */};
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">;
         <div className="container mx-auto px-4 text-center">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
@@ -514,27 +514,27 @@ export default function CybersecuritySolutions() {;
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Secure Your Business?;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">;
               Don't wait for a security breach. Let's discuss how our cybersecurity solutions;
               can protect your organization from evolving threats.;
-            </p>;
+            </[^>]*>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.button;
-                className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25";
+              <motion.button
+                className="[^"]*"
                 whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }};
               >;
                 Security Assessment;
-              </motion.button>;
+              </[^>]*>
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover: bg-zion-red hover:text-white transition-all duration-300">;
                 Download Security Guide;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

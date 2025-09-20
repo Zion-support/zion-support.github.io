@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Routes, Route } from "react-router-dom";
+import * as React from "react"
+import { Routes, Route } from "react-router-dom"
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
 const LazyServices = React.lazy(() => import('./components/Services'));

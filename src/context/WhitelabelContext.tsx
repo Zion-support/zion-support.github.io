@@ -1,11 +1,11 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react"
 interface WhitelabelContextType {;
   isWhitelabeled: boolean,brandName: string,brandLogo: string,primaryColor: string,secondaryColor: string,setBrandName: (name: string) => void,setBrandLogo: (logo: string) => void,setPrimaryColor: (color: string) => void,setSecondaryColor: (color: string) => void;
 };
 
 const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 export const useWhitelabel = () => {;
-  const context = useContext(WhitelabelContext);
+  const context = useContext(WhitelabelContext)
   if (context === undefined) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider'),;
   };
@@ -18,9 +18,9 @@ interface WhitelabelProviderProps {;
 
 export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {;
   const [brandName, setBrandName] = useState('Zion Tech Group'),;
-  const [brandLogo, setBrandLogo] = useState('/logo.svg');
-  const [primaryColor, setPrimaryColor] = useState('#3B82F6');
-  const [secondaryColor, setSecondaryColor] = useState('#8B5CF6');
+  const [brandLogo, setBrandLogo] = useState('/logo.svg')
+  const [primaryColor, setPrimaryColor] = useState('#3B82F6')
+  const [secondaryColor, setSecondaryColor] = useState('#8B5CF6')
   const value: WhitelabelContextType = {;
     isWhitelabeled: false;
     brandName,;
@@ -33,9 +33,9 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children
     setSecondaryColor;
   },;
 
-  return (;
+  return (
     <WhitelabelContext.Provider value={value}>;
       {children};
-    </WhitelabelContext.Provider>;
+    </[^>]*>
   ),;
 };

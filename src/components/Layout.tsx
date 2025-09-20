@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { ReactNode } from "react";
+import React, { useState } from "react"
+import { ReactNode } from "react"
 interface LayoutProps {;
   children: ReactNode;
 };
@@ -24,14 +24,14 @@ const navigation: NavItem[] = [;
   { label: 'Contact', href: '/contact' };
 ];
 export default function Layout({ children }: { children: React.ReactNode }) {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const location = useLocation();
+  const location = useLocation()
   const isActive = (href: string) => location.pathname === href;
   const toggleSidebarDropdown = (label: string) => {;
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)
   };
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">;
       {/* Header */};
       <header className="bg-white/10 backdrop-blur-sm border-b border-white/20">;
@@ -40,41 +40,41 @@ export default function Layout({ children }: { children: React.ReactNode }) {;
             <div className="flex items-center space-x-4">;
               <h1 className="text-2xl font-bold text-white">;
                 Zion Tech Group;
-              </h1>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
             <nav className="hidden md:flex space-x-6">;
               <a href="/" className="text-white hover:text-blue-300 transition-colors">;
                 Home;
-              </a>;
+              </[^>]*>
               <a href="/services" className="text-white hover:text-blue-300 transition-colors">;
                 Services;
-              </a>;
+              </[^>]*>
               <a href="/products" className="text-white hover:text-blue-300 transition-colors">;
                 Products;
-              </a>;
+              </[^>]*>
               <a href="/about" className="text-white hover:text-blue-300 transition-colors">;
                 About;
-              </a>;
+              </[^>]*>
               <a href="/contact" className="text-white hover:text-blue-300 transition-colors">;
                 Contact;
-              </a>;
-            </nav>;
+              </[^>]*>
+            </[^>]*>
             <div className="flex items-center space-x-4">;
               <a;
-                href="tel:+13024640950";
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors";
+                href="tel:+13024640950"
+                className="[^"]*"
               >;
                 📞 Call Us;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </header>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
       {/* Main Content */};
       <div className="flex">;
         {/* Sidebar */};
         <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${;
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full';
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0`}>;
           <div className="p-4">;
             <nav className="space-y-2">;
@@ -84,49 +84,49 @@ export default function Layout({ children }: { children: React.ReactNode }) {;
                     <div>;
                       <button;
                         onClick={() => toggleSidebarDropdown(item.label)};
-                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors";
+                        className="[^"]*"
                       >;
                         <span className="flex items-center space-x-2">;
-                          {item.icon && <item.icon className="w-4 h-4" />};
-                          <span>{item.label}</span>;
-                        </span>;
+                          {item.icon && <item.icon className="w-4 h-4" />};&& <item.icon className="w-4 h-4" />}; <item.icon className="w-4 h-4" />}
+                          <span>{item.label}</[^>]*>
+                        </[^>]*>
                         <ChevronRight className={`w-4 h-4 transition-transform ${;
-                          sidebarDropdownOpen === item.label ? 'rotate-90' : '';
+                          sidebarDropdownOpen === item.label ? 'rotate-90' : ''
                         }`} />;
-                      </button>;
-                      {sidebarDropdownOpen === item.label && (;
+                      </[^>]*>
+                      {sidebarDropdownOpen === item.label && (;&& (; (
                         <div className="ml-4 mt-2 space-y-1">;
                           {item.children.map((child) => (;
                             <a;
                               key={child.label};
                               href={child.href};
-                              className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors";
+                              className="[^"]*"
                             >;
                               {child.label};
-                            </a>;
+                            </[^>]*>
                           ))};
-                        </div>;
+                        </[^>]*>
                       )};
-                    </div>;
+                    </[^>]*>
                   ) : (;
                     <a;
                       href={item.href};
-                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors";
+                      className="[^"]*"
                     >;
-                      {item.icon && <item.icon className="w-4 h-4" />};
-                      <span>{item.label}</span>;
-                    </a>;
+                      {item.icon && <item.icon className="w-4 h-4" />};&& <item.icon className="w-4 h-4" />}; <item.icon className="w-4 h-4" />}
+                      <span>{item.label}</[^>]*>
+                    </[^>]*>
                   )};
-                </div>;
+                </[^>]*>
               ))};
-            </nav>;
-          </div>;
-        </aside>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
         {/* Main Content Area */};
         <main className="flex-1 md:ml-64">;
           {children};
-        </main>;
-      </div>;
-    </div>;
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

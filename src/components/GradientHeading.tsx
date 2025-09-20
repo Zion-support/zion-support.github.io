@@ -1,14 +1,14 @@
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from "react"
+import { cn } from "@/lib/utils"
 interface GradientHeadingProps {;
-  children: React.ReactNode;
+  children: React.ReactNode
   className?: string,;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 };
 
 const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProps>(;
   ({ children, className, as: Component = 'h2', ...props }, ref) => {;
-    return (;
+    return (
       <Component;
         ref={ref};
         className={cn(;
@@ -18,7 +18,7 @@ const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProp
         {...props};
       >;
         {children};
-      </Component>;
+      </[^>]*>
     ),;
   };
 ),;

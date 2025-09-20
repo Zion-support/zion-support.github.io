@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import {;
   Menu,;
   X,;
@@ -218,13 +218,13 @@ import {;
   Chi,;
   Psi,;
   Omega;
-} from "lucide-react";
-export const EnhancedFuturisticNavigation: React.FC = () => {;
+} from "lucide-react"
+export const EnhancedFuturisticNavigation: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),;
   const [scrolled, setScrolled] = useState(false),;
-  const location = useLocation();
+  const location = useLocation()
 
   useEffect(() => {;
     const handleScroll = () => {;
@@ -235,18 +235,18 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
   }, []),;
 
   useEffect(() => {;
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
+    setMobileMenuOpen(false)
+    setActiveDropdown(null)
   }, [location.pathname]);
   const handleSearch = (e: React.FormEvent) => {;
-    e.preventDefault();
+    e.preventDefault()
     if (searchQuery.trim()) {;
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`,;
     };
   },;
 
   const toggleDropdown = (dropdown: string) => {;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   };
   const navigationItems = [;
     {;
@@ -319,13 +319,13 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
       name: 'Contact',href: '/contact',icon: Phone,color: 'from-zion-cyan to-zion-purple',isMain: true;
     };
   ];
-  return (;
+  return (
     <>;
       {/* Desktop Navigation */};
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${;
         scrolled;
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10';
-          : 'bg-transparent';
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
+          : 'bg-transparent'
       }`}>;
         <div className="max-w-7xl mx-auto px-6">;
           <div className="flex items-center justify-between h-20">;
@@ -333,17 +333,17 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
             <Link to="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                  <span className="text-white font-bold text-xl">Z</span>;
-                </div>;
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
-              </div>;
+                  <span className="text-white font-bold text-xl">Z</[^>]*>
+                </[^>]*>
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></[^>]*>
+              </[^>]*>
               <div>;
                 <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
                   ZION;
-                </div>;
-                <div className="text-xs text-zion-cyan font-medium">TECH GROUP</div>;
-              </div>;
-            </Link>;
+                </[^>]*>
+                <div className="text-xs text-zion-cyan font-medium">TECH GROUP</[^>]*>
+              </[^>]*>
+            </[^>]*>
 
             {/* Main Navigation */};
             <div className="flex items-center space-x-1">;
@@ -353,41 +353,41 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
                     <button;
                       onClick={() => toggleDropdown(item.name)};
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${;
-                        location.pathname === item.href;
-                          ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25';
-                          : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30';
+                        location.pathname === item.href
+                          ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
+                          : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                       }`};
                     >;
-                      {item.icon && <item.icon className="w-4 h-4" />};
-                      <span>{item.name}</span>;
+                      {item.icon && <item.icon className="w-4 h-4" />};&& <item.icon className="w-4 h-4" />}; <item.icon className="w-4 h-4" />}
+                      <span>{item.name}</[^>]*>
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${;
-                        activeDropdown === item.name ? 'rotate-180' : '';
+                        activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />;
-                    </button>;
+                    </[^>]*>
                   ) : (;
                     <Link;
                       to={item.href};
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${;
-                        location.pathname === item.href;
-                          ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25';
-                          : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30';
+                        location.pathname === item.href
+                          ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
+                          : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                       }`};
                     >;
-                      {item.icon && <item.icon className="w-4 h-4" />};
-                      <span>{item.name}</span>;
-                    </Link>;
+                      {item.icon && <item.icon className="w-4 h-4" />};&& <item.icon className="w-4 h-4" />}; <item.icon className="w-4 h-4" />}
+                      <span>{item.name}</[^>]*>
+                    </[^>]*>
                   )};
 
                   {/* Dropdown Menu */};
-                  {item.dropdown && (;
+                  {item.dropdown && (;&& (; (
                     <AnimatePresence>;
-                      {activeDropdown === item.name && (;
-                        <motion.div;
+                      {activeDropdown === item.name && (;&& (; (
+                        <motion.div
                           initial={{ opacity: 0, y: 10, scale: 0.95 }};
                           animate={{ opacity: 1, y: 0, scale: 1 }};
                           exit={{ opacity: 0, y: 10, scale: 0.95 }};
                           transition={{ duration: 0.2 }};
-                          className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
+                          className="[^"]*"
                         >;
                           <div className="p-4">;
                             <div className="grid grid-cols-1 gap-2">;
@@ -395,114 +395,114 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
                                 <Link;
                                   key={dropdownItem.name};
                                   to={dropdownItem.href};
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-slate-light/30 transition-all duration-200 group";
+                                  className="[^"]*"
                                 >;
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">;
-                                    {dropdownItem.icon && <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />};
-                                  </div>;
+                                    {dropdownItem.icon && <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />};&& <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />}; <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />}
+                                  </[^>]*>
                                   <div className="flex-1">;
                                     <div className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">;
                                       {dropdownItem.name};
-                                    </div>;
+                                    </[^>]*>
                                     <div className="text-sm text-gray-400 mt-1">;
                                       {dropdownItem.description};
-                                    </div>;
-                                  </div>;
-                                </Link>;
+                                    </[^>]*>
+                                  </[^>]*>
+                                </[^>]*>
                               ))};
-                            </div>;
-                          </div>;
-                        </motion.div>;
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
                       )};
-                    </AnimatePresence>;
+                    </[^>]*>
                   )};
-                </div>;
+                </[^>]*>
               ))};
-            </div>;
+            </[^>]*>
 
             {/* Right Side Actions */};
             <div className="flex items-center space-x-4">;
               {/* Search */};
               <form onSubmit={handleSearch} className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
+                <[^>]*/>
                 <input;
-                  type="text";
-                  placeholder="Search services...";
+                  type="text"
+                  placeholder="Search services..."
                   value={searchQuery};
                   onChange={(e) => setSearchQuery(e.target.value)};
-                  className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20";
+                  className="[^"]*"
                 />;
-              </form>;
+              </[^>]*>
 
               {/* User Menu */};
               <div className="flex items-center space-x-3">;
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">;
-                  <Bell className="w-5 h-5" />;
-                </button>;
+                  <[^>]*/>
+                </[^>]*>
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">;
-                  <User className="w-5 h-5" />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </nav>;
+                  <[^>]*/>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Mobile Navigation */};
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">;
         <div className={`transition-all duration-500 ${;
           scrolled;
-            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10';
-            : 'bg-transparent';
+            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
+            : 'bg-transparent'
         }`}>;
           <div className="max-w-7xl mx-auto px-6">;
             <div className="flex items-center justify-between h-20">;
               {/* Logo */};
               <Link to="/" className="flex items-center space-x-3">;
                 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">;
-                  <span className="text-white font-bold text-lg">Z</span>;
-                </div>;
+                  <span className="text-white font-bold text-lg">Z</[^>]*>
+                </[^>]*>
                 <div>;
                   <div className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
                     ZION;
-                  </div>;
-                  <div className="text-xs text-zion-cyan font-medium">TECH GROUP</div>;
-                </div>;
-              </Link>;
+                  </[^>]*>
+                  <div className="text-xs text-zion-cyan font-medium">TECH GROUP</[^>]*>
+                </[^>]*>
+              </[^>]*>
 
               {/* Mobile Menu Button */};
               <button;
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)};
-                className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200";
+                className="[^"]*"
               >;
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
-              </button>;
-            </div>;
-          </div>;
-        </div>;
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Mobile Menu */};
         <AnimatePresence>;
-          {mobileMenuOpen && (;
-            <motion.div;
+          {mobileMenuOpen && (;&& (; (
+            <motion.div
               initial={{ opacity: 0, height: 0 }};
               animate={{ opacity: 1, height: 'auto' }};
               exit={{ opacity: 0, height: 0 }};
               transition={{ duration: 0.3 }};
-              className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden";
+              className="[^"]*"
             >;
               <div className="max-w-7xl mx-auto px-6 py-6">;
                 {/* Search */};
                 <form onSubmit={handleSearch} className="relative mb-6">;
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
+                  <[^>]*/>
                   <input;
-                    type="text";
-                    placeholder="Search services...";
+                    type="text"
+                    placeholder="Search services..."
                     value={searchQuery};
                     onChange={(e) => setSearchQuery(e.target.value)};
-                    className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20";
+                    className="[^"]*"
                   />;
-                </form>;
+                </[^>]*>
 
                 {/* Navigation Items */};
                 <div className="space-y-2">;
@@ -513,82 +513,82 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
                           <button;
                             onClick={() => toggleDropdown(item.name)};
                             className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-between ${;
-                              location.pathname === item.href;
-                                ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white';
-                                : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30';
+                              location.pathname === item.href
+                                ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
+                                : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                             }`};
                           >;
                             <div className="flex items-center space-x-3">;
-                              {item.icon && <item.icon className="w-4 h-4" />};
-                              <span>{item.name}</span>;
-                            </div>;
+                              {item.icon && <item.icon className="w-4 h-4" />};&& <item.icon className="w-4 h-4" />}; <item.icon className="w-4 h-4" />}
+                              <span>{item.name}</[^>]*>
+                            </[^>]*>
                             <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${;
-                              activeDropdown === item.name ? 'rotate-180' : '';
+                              activeDropdown === item.name ? 'rotate-180' : ''
                             }`} />;
-                          </button>;
+                          </[^>]*>
 
                           {/* Mobile Dropdown */};
                           <AnimatePresence>;
-                            {activeDropdown === item.name && (;
-                              <motion.div;
+                            {activeDropdown === item.name && (;&& (; (
+                              <motion.div
                                 initial={{ opacity: 0, height: 0 }};
                                 animate={{ opacity: 1, height: 'auto' }};
                                 exit={{ opacity: 0, height: 0 }};
                                 transition={{ duration: 0.3 }};
-                                className="ml-6 mt-2 space-y-1 overflow-hidden";
+                                className="[^"]*"
                               >;
                                 {item.dropdown.map((dropdownItem) => (;
                                   <Link;
                                     key={dropdownItem.name};
                                     to={dropdownItem.href};
-                                    className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200";
+                                    className="[^"]*"
                                   >;
                                     {dropdownItem.name};
-                                  </Link>;
+                                  </[^>]*>
                                 ))};
-                              </motion.div>;
+                              </[^>]*>
                             )};
-                          </AnimatePresence>;
-                        </div>;
+                          </[^>]*>
+                        </[^>]*>
                       ) : (;
                         <Link;
                           to={item.href};
                           className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${;
-                            location.pathname === item.href;
-                              ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white';
-                              : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30';
+                            location.pathname === item.href
+                              ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
+                              : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
                           }`};
                         >;
                           <div className="flex items-center space-x-3">;
-                            {item.icon && <item.icon className="w-4 h-4" />};
-                            <span>{item.name}</span>;
-                          </div>;
-                        </Link>;
+                            {item.icon && <item.icon className="w-4 h-4" />};&& <item.icon className="w-4 h-4" />}; <item.icon className="w-4 h-4" />}
+                            <span>{item.name}</[^>]*>
+                          </[^>]*>
+                        </[^>]*>
                       )};
-                    </div>;
+                    </[^>]*>
                   ))};
-                </div>;
+                </[^>]*>
 
                 {/* Contact Info */};
                 <div className="mt-8 pt-6 border-t border-zion-cyan/20">;
                   <div className="text-center">;
-                    <div className="text-zion-cyan font-semibold mb-2">Contact Us</div>;
+                    <div className="text-zion-cyan font-semibold mb-2">Contact Us</[^>]*>
                     <div className="text-sm text-gray-400 space-y-1">;
-                      <div>+1 302 464 0950</div>;
-                      <div>kleber@ziontechgroup.com</div>;
-                      <div>364 E Main St STE 1008</div>;
-                      <div>Middletown DE 19709</div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+                      <div>+1 302 464 0950</[^>]*>
+                      <div>kleber@ziontechgroup.com</[^>]*>
+                      <div>364 E Main St STE 1008</[^>]*>
+                      <div>Middletown DE 19709</[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
           )};
-        </AnimatePresence>;
-      </nav>;
+        </[^>]*>
+      </[^>]*>
 
       {/* Spacer for fixed navigation */};
-      <div className="h-20"></div>;
-    </>;
+      <div className="h-20"></[^>]*>
+    </[^>]*>
   );
 };

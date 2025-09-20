@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { SEO } from "../components/SEO";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { SEO } from "../components/SEO"
 import { ;
   Users,;
   MessageCircle, ;
@@ -34,13 +34,13 @@ import { ;
   Calendar,;
   User,;
   Plus;
-} from "lucide-react";
+} from "lucide-react"
 export default function Community() {;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [selectedCategory, setSelectedCategory] = useState('All'),;
-  const [selectedSort, setSelectedSort] = useState('Latest');
-  const categories = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing', 'BlockchainIoT & Edge', 'Help & SupportShowcase'];
-  const sortOptions = ['LatestMost Popular', 'Most ActiveTrending'];
+  const [selectedSort, setSelectedSort] = useState('Latest')
+  const categories = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing', 'BlockchainIoT & Edge', 'Help & SupportShowcase']
+  const sortOptions = ['LatestMost Popular', 'Most ActiveTrending']
   const forumCategories = [;
     {;
       id: 'general',name: 'General Discussion',description: 'General topics, announcements, and community discussions',;
@@ -98,186 +98,186 @@ export default function Community() {;
   const filteredDiscussions = recentDiscussions.filter(discussion => {;
     const matchesSearch = discussion.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
-    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory;
-    return matchesSearch && matchesCategory,;
+    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory
+    return matchesSearch && matchesCategory,;&& matchesCategory,; matchesCategory,
   }),;
 
   const handleStartDiscussion = () => {;
-    // Navigate to create discussion page;
+    //[^;]*
     console.log('Start new discussion'),;
   },;
 
   const handleJoinCommunity = () => {;
-    // Handle community join logic;
+    //[^;]*
     console.log('Join community'),;
   },;
 
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
-        title="Community - Zion Tech Group";
-        description="Join our vibrant community of technology professionals. Connect, learn, and collaborate with experts in AI, cybersecurity, quantum computing, and more.";
+        title="Community - Zion Tech Group"
+        description="Join our vibrant community of technology professionals. Connect, learn, and collaborate with experts in AI, cybersecurity, quantum computing, and more."
       />;
       ;
       {/* Hero Section */};
       <section className="relative py-20 overflow-hidden">;
         <div className="container-responsive">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Join Our Community;
-            </h1>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
               Connect with thousands of technology professionals, share knowledge, ;
               and stay updated with the latest trends in AI, cybersecurity, quantum computing, and more.;
-            </p>;
+            </[^>]*>
             ;
             {/* Search and Filters */};
             <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">;
               <div className="relative flex-1">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+                <[^>]*/>
                 <input;
-                  type="text";
-                  placeholder="Search discussions, topics, or members...";
+                  type="text"
+                  placeholder="Search discussions, topics, or members..."
                   value={searchQuery};
                   onChange={(e) => setSearchQuery(e.target.value)};
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                  className="[^"]*"
                 />;
-              </div>;
+              </[^>]*>
               <select;
                 value={selectedCategory};
                 onChange={(e) => setSelectedCategory(e.target.value)};
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                className="[^"]*"
               >;
                 {categories.map(category => (;
-                  <option key={category} value={category}>{category}</option>;
+                  <option key={category} value={category}>{category}</[^>]*>
                 ))};
-              </select>;
+              </[^>]*>
               <select;
                 value={selectedSort};
                 onChange={(e) => setSelectedSort(e.target.value)};
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                className="[^"]*"
               >;
                 {sortOptions.map(option => (;
-                  <option key={option} value={option}>{option}</option>;
+                  <option key={option} value={option}>{option}</[^>]*>
                 ))};
-              </select>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
 
             {/* Community Stats */};
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">;
               {communityStats.map((stat, index) => (;
-                <motion.div;
+                <motion.div
                   key={stat.label};
                   initial={{ opacity: 0, y: 20 }};
                   animate={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.6, delay: index * 0.1 }};
-                  className="text-center";
+                  className="[^"]*"
                 >;
-                  <div className={`text-2xl font-bold ${stat.color} mb-2`}>{stat.value}</div>;
-                  <div className="text-sm text-gray-400">{stat.label}</div>;
-                </motion.div>;
+                  <div className={`text-2xl font-bold ${stat.color} mb-2`}>{stat.value}</[^>]*>
+                  <div className="text-sm text-gray-400">{stat.label}</[^>]*>
+                </[^>]*>
               ))};
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Forum Categories */};
       <section className="py-16">;
         <div className="container-responsive">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
-            className="mb-12";
+            className="[^"]*"
           >;
-            <h2 className="text-3xl font-bold text-white text-center mb-4">Forum Categories</h2>;
+            <h2 className="text-3xl font-bold text-white text-center mb-4">Forum Categories</[^>]*>
             <p className="text-gray-300 text-center max-w-2xl mx-auto">;
               Explore our organized discussion areas covering all aspects of technology and innovation;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {forumCategories.map((category, index) => (;
-              <motion.div;
+              <motion.div
                 key={category.id};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
                 viewport={{ once: true }};
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105";
+                className="[^"]*"
               >;
                 <div className="p-6">;
                   <div className="flex items-start justify-between mb-4">;
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color}`}>;
-                      <category.icon className="w-6 h-6 text-white" />;
-                    </div>;
-                    {category.featured && (;
+                      <[^>]*/>
+                    </[^>]*>
+                    {category.featured && (;&& (; (
                       <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">;
                         Featured;
-                      </span>;
+                      </[^>]*>
                     )};
-                  </div>;
+                  </[^>]*>
 
-                  <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>;
-                  <p className="text-gray-300 text-sm mb-4">{category.description}</p>;
+                  <h3 className="text-xl font-semibold text-white mb-2">{category.name}</[^>]*>
+                  <p className="text-gray-300 text-sm mb-4">{category.description}</[^>]*>
 
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">;
-                    <span>{category.topics} topics</span>;
-                    <span>{category.posts} posts</span>;
-                  </div>;
+                    <span>{category.topics} topics</[^>]*>
+                    <span>{category.posts} posts</[^>]*>
+                  </[^>]*>
 
                   <div className="text-xs text-gray-500 mb-4">;
                     Last activity: {category.lastActivity};
-                  </div>;
+                  </[^>]*>
 
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
                     Browse Category;
-                  </button>;
-                </div>;
-              </motion.div>;
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Recent Discussions */};
       <section className="py-16">;
         <div className="container-responsive">;
           <div className="flex items-center justify-between mb-8">;
             <div>;
-              <h2 className="text-3xl font-bold text-white mb-2">Recent Discussions</h2>;
-              <p className="text-gray-300">Join the conversation in our most active discussions</p>;
-            </div>;
+              <h2 className="text-3xl font-bold text-white mb-2">Recent Discussions</[^>]*>
+              <p className="text-gray-300">Join the conversation in our most active discussions</[^>]*>
+            </[^>]*>
             <button;
               onClick={handleStartDiscussion};
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2";
+              className="[^"]*"
             >;
-              <Plus className="w-4 h-4" />;
+              <[^>]*/>
               Start Discussion;
-            </button>;
-          </div>;
+            </[^>]*>
+          </[^>]*>
 
           <div className="space-y-4">;
             {filteredDiscussions.map((discussion, index) => (;
-              <motion.div;
+              <motion.div
                 key={discussion.id};
                 initial={{ opacity: 0, y: 20 }};
                 animate={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: index * 0.05 }};
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6 hover:border-cyan-400/30 transition-all duration-300";
+                className="[^"]*"
               >;
                 <div className="flex items-start gap-4">;
                   {/* Author Avatar */};
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">;
-                    <User className="w-6 h-6 text-white" />;
-                  </div>;
+                    <[^>]*/>
+                  </[^>]*>
 
                   {/* Discussion Content */};
                   <div className="flex-1 min-w-0">;
@@ -285,118 +285,118 @@ export default function Community() {;
                       <div className="flex items-center gap-2">;
                         <h3 className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors cursor-pointer">;
                           {discussion.title};
-                        </h3>;
-                        {discussion.pinned && (;
+                        </[^>]*>
+                        {discussion.pinned && (;&& (; (
                           <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">;
                             Pinned;
-                          </span>;
+                          </[^>]*>
                         )};
-                        {discussion.featured && (;
+                        {discussion.featured && (;&& (; (
                           <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs rounded-full">;
                             Featured;
-                          </span>;
+                          </[^>]*>
                         )};
-                      </div>;
-                    </div>;
+                      </[^>]*>
+                    </[^>]*>
 
                     <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">;
-                      <span>by {discussion.author}</span>;
-                      <span>in {discussion.category}</span>;
-                      <span>{discussion.lastReply}</span>;
-                    </div>;
+                      <span>by {discussion.author}</[^>]*>
+                      <span>in {discussion.category}</[^>]*>
+                      <span>{discussion.lastReply}</[^>]*>
+                    </[^>]*>
 
                     <div className="flex flex-wrap gap-2 mb-3">;
                       {discussion.tags.map((tag, idx) => (;
                         <span key={idx} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">;
                           {tag};
-                        </span>;
+                        </[^>]*>
                       ))};
-                    </div>;
+                    </[^>]*>
 
                     <div className="flex items-center justify-between">;
                       <div className="flex items-center gap-4 text-sm text-gray-400">;
                         <span className="flex items-center gap-1">;
-                          <MessageCircle className="w-4 h-4" />;
+                          <[^>]*/>
                           {discussion.replies} replies;
-                        </span>;
+                        </[^>]*>
                         <span className="flex items-center gap-1">;
-                          <Eye className="w-4 h-4" />;
+                          <[^>]*/>
                           {discussion.views} views;
-                        </span>;
-                      </div>;
+                        </[^>]*>
+                      </[^>]*>
 
                       <div className="flex items-center gap-2">;
                         <button className="p-2 text-gray-400 hover: text-cyan-400 transition-colors" title="Bookmark">;
-                          <Bookmark className="w-4 h-4" />;
-                        </button>;
+                          <[^>]*/>
+                        </[^>]*>
                         <button className="p-2 text-gray-400 hover:text-cyan-400 transition-colors" title="Share">;
-                          <Share2 className="w-4 h-4" />;
-                        </button>;
+                          <[^>]*/>
+                        </[^>]*>
                         <button className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium">;
                           View Discussion →;
-                        </button>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                        </[^>]*>
+                      </[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
             ))};
-          </div>;
+          </[^>]*>
 
-          {filteredDiscussions.length === 0 && (;
-            <motion.div;
+          {filteredDiscussions.length === 0 && (;&& (; (
+            <motion.div
               initial={{ opacity: 0 }};
               animate={{ opacity: 1 }};
-              className="text-center py-16";
+              className="[^"]*"
             >;
               <div className="text-gray-400 text-lg mb-4">;
                 No discussions found matching your criteria.;
-              </div>;
+              </[^>]*>
               <button;
                 onClick={() => {;
-                  setSearchQuery('');
+                  setSearchQuery('')
                   setSelectedCategory('All'),;
                 }};
-                className="text-cyan-400 hover:text-cyan-300 transition-colors";
+                className="[^"]*"
               >;
                 Clear filters;
-              </button>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
           )};
-        </div>;
-      </section>;
+        </[^>]*>
+      </[^>]*>
 
       {/* CTA Section */};
       <section className="py-16">;
         <div className="container-responsive">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center";
+            className="[^"]*"
           >;
             <h2 className="text-3xl font-bold text-white mb-4">;
               Ready to Join the Community?;
-            </h2>;
+            </[^>]*>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Connect with thousands of technology professionals, share your expertise;
               and learn from industry leaders. Join our community today!;
-            </p>;
+            </[^>]*>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button;
                 onClick={handleJoinCommunity};
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";
+                className="[^"]*"
               >;
                 Join Community;
-              </button>;
+              </[^>]*>
               <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">;
                 View Guidelines;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

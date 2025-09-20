@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { X, CheckCircle, AlertCircle, Info, XCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+import React, { useState, useEffect } from "react"
+import { X, CheckCircle, AlertCircle, Info, XCircle } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+export type ToastType = 'success' | 'error' | 'warning' | 'info'
 export interface Toast {;
   id: string,type: ToastType,title: string;
   message?: string,;
@@ -19,7 +19,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {;
     const timer = setTimeout(() => {;
       setIsVisible(false),;
       setTimeout(() => onRemove(toast.id), 300),;
-    }, toast.duration || 5000),;
+    }, toast.duration || 5000),
 
     return () => clearTimeout(timer),;
   }, [toast.id, toast.duration, onRemove]),;
@@ -34,23 +34,23 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {;
         return <AlertCircle className="w-5 h-5 text-yellow-500" />,;
       case 'info':;
         return <Info className="w-5 h-5 text-blue-500" />,;
-      default: return <Info className="w-5 h-5 text-blue-500" />;
+      default: return <[^>]*/>
     };
   };
   const getBgColor = () => {;
     switch (toast.type) {;
       case 'success':;
-        return 'bg-green-50 border-green-200 dark: bg-green-900/20 dark:border-green-800';
+        return 'bg-green-50 border-green-200 dark: bg-green-900/20 dark:border-green-800'
       case 'error':;
-        return 'bg-red-50 border-red-200 dark: bg-red-900/20 dark:border-red-800';
+        return 'bg-red-50 border-red-200 dark: bg-red-900/20 dark:border-red-800'
       case 'warning':;
-        return 'bg-yellow-50 border-yellow-200 dark: bg-yellow-900/20 dark:border-yellow-800';
+        return 'bg-yellow-50 border-yellow-200 dark: bg-yellow-900/20 dark:border-yellow-800'
       case 'info':;
-        return 'bg-blue-50 border-blue-200 dark: bg-blue-900/20 dark:border-blue-800',default: return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
+        return 'bg-blue-50 border-blue-200 dark: bg-blue-900/20 dark:border-blue-800',default: return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800'
     };
   };
-  return (;
-    <motion.div;
+  return (
+    <motion.div
       initial={{ opacity: 0, y: -50, scale: 0.9 }};
       animate={{ opacity: 1, y: 0, scale: 1 }};
       exit={{ opacity: 0, y: -50, scale: 0.9 }};
@@ -60,42 +60,42 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {;
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0.5">;
           {getIcon()};
-        </div>;
+        </[^>]*>
         <div className="flex-1 min-w-0">;
           <h4 className="text-sm font-medium text-gray-900 dark:text-white">;
             {toast.title};
-          </h4>;
-          {toast.message && (;
+          </[^>]*>
+          {toast.message && (;&& (; (
             <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">;
               {toast.message};
-            </p>;
+            </[^>]*>
           )};
-        </div>;
+        </[^>]*>
         <button;
           onClick={() => {;
-            setIsVisible(false);
+            setIsVisible(false)
             setTimeout(() => onRemove(toast.id), 300),;
           }};
-          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover: text-gray-600 dark:hover:text-gray-200 transition-colors";
+          className="[^"]*"
         >;
-          <X className="w-4 h-4" />;
-        </button>;
-      </div>;
-    </motion.div>;
+          <[^>]*/>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
-export const ToastContainer: React.FC = () => {;
+export const ToastContainer: React.FC = () => {
   const [toasts, setToasts] = useState<Toast[]>([]),;
 
   const addToast = (toast: Omit<Toast, 'id'>) => {;
-    const id = Math.random().toString(36).substr(2, 9);
+    const id = Math.random().toString(36).substr(2, 9)
     const newToast = { ...toast, id };
-    setToasts(prev => [...prev, newToast]);
+    setToasts(prev => [...prev, newToast])
   };
   const removeToast = (id: string) => {;
     setToasts(prev => prev.filter(toast => toast.id !== id));
   };
-  // Expose addToast globally for easy access;
+  //[^;]*
   useEffect(() => {;
     (window as any).showToast = addToast,;
     return () => {;
@@ -103,7 +103,7 @@ export const ToastContainer: React.FC = () => {;
     },;
   }, []),;
 
-  return (;
+  return (
     <div className="fixed top-4 right-4 z-50 space-y-2">;
       <AnimatePresence>;
         {toasts.map(toast => (;
@@ -113,14 +113,14 @@ export const ToastContainer: React.FC = () => {;
             onRemove={removeToast};
           />;
         ))};
-      </AnimatePresence>;
-    </div>;
+      </[^>]*>
+    </[^>]*>
   ),;
 },;
 
-// Utility function to show toasts;
+//[^;]*
 export const showToast = (type: ToastType, title: string, message?: string, duration?: number) => {;
-  if (typeof window !== 'undefined' && (window as any).showToast) {;
-    (window as any).showToast({ type, title, message, duration });
+  if (typeof window !== 'undefined' && (window as any).showToast) {;&& (window as any).showToast) {; (window as any).showToast) {
+    (window as any).showToast({ type, title, message, duration })
   };
 };

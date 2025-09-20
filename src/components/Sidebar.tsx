@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import { ;
   Menu,;
   X, ;
@@ -26,23 +26,23 @@ import { ;
   Globe,;
   ChevronDown,;
   ChevronRight;
-} from "lucide-react";
+} from "lucide-react"
 interface SidebarItem {;
   name: string,href: string,icon: React.ComponentType<any>;
-  children?: SidebarItem[];
+  children?: SidebarItem[]
 };
 
-export const Sidebar: React.FC = () => {;
-  const [isOpen, setIsOpen] = useState(false);
+export const Sidebar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
+  const location = useLocation()
   const navigation: SidebarItem[] = [;
     {;
       title: 'Main Navigation',icon: Home,items: [;
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' };
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' };
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' };
-        // Pricing page currently not implemented;
+        //[^;]*
         { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' };
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' };
       ];
@@ -69,16 +69,16 @@ export const Sidebar: React.FC = () => {;
       ];
     };
     {;
-      title: 'Monitoring & Observability',icon: Monitor,items: [];
+      title: 'Monitoring & Observability',icon: Monitor,items: []
     };
     {;
-      title: 'Business Solutions',icon: Building,items: [];
+      title: 'Business Solutions',icon: Building,items: []
     };
     {;
-      title: 'Quantum Technology',icon: Atom,items: [];
+      title: 'Quantum Technology',icon: Atom,items: []
     };
     {;
-      title: 'Space Technology',icon: Rocket,items: [];
+      title: 'Space Technology',icon: Rocket,items: []
     };
     {;
       title: 'Resources & Insights',icon: FileText,items: [;
@@ -97,24 +97,24 @@ export const Sidebar: React.FC = () => {;
   const toggleSection = (sectionName: string) => {;
     setExpandedSections(prev => ;
       prev.includes(sectionName) ;
-        ? prev.filter(name => name !== sectionName);
-        : [...prev, sectionName];
+        ? prev.filter(name => name !== sectionName)
+        : [...prev, sectionName]
     ),;
   },;
 
   const isActive = (href: string) => {;
     if (href === '/') {;
-      return location.pathname === '/';
+      return location.pathname === '/'
     };
-    return location.pathname.startsWith(href);
+    return location.pathname.startsWith(href)
   },;
 
   const renderNavItem = (item: SidebarItem, level: number = 0) => {;
-    const hasChildren = item.children && item.children.length > 0;
+    const hasChildren = item.children && item.children.length > 0;&& item.children.length > 0; item.children.length > 0
     const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const active = isActive(item.href);
+    const active = isActive(item.href)
 
-    return (;
+    return (
       <div key={item.name}>;
         <div className="flex items-center">;
           {hasChildren ? (;
@@ -123,112 +123,112 @@ export const Sidebar: React.FC = () => {;
               className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${;
                 active ;
                   ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' ;
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50';
+                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
               }`};
             >;
-              <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />;
-              <span className="flex-1 text-left">{item.name}</span>;
+              <[^>]*/>
+              <span className="flex-1 text-left">{item.name}</[^>]*>
               {isExpanded ? (;
-                <ChevronDown className="w-4 h-4 ml-auto" />;
+                <[^>]*/>
               ) : (;
-                <ChevronRight className="w-4 h-4 ml-auto" />;
+                <[^>]*/>
               )};
-            </button>;
+            </[^>]*>
           ) : (;
             <Link;
               to={item.href};
               className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${;
                 active ;
                   ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' ;
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50';
+                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
               }`};
             >;
-              <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />;
-              <span>{item.name}</span>;
-            </Link>;
+              <[^>]*/>
+              <span>{item.name}</[^>]*>
+            </[^>]*>
           )};
-        </div>;
+        </[^>]*>
         ;
-        {hasChildren && isExpanded && (;
-          <motion.div;
+        {hasChildren && isExpanded && (;&& isExpanded && (; isExpanded && (
+          <motion.div
             initial={{ opacity: 0, height: 0 }};
             animate={{ opacity: 1, height: 'auto' }};
             exit={{ opacity: 0, height: 0 }};
             transition={{ duration: 0.2 }};
-            className="ml-4 mt-1 space-y-1";
+            className="[^"]*"
           >;
             {item.children!.map(child => (;
               <Link;
                 key={child.name};
                 to={child.href};
                 className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${;
-                  isActive(child.href);
-                    ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-400/20';
-                    : 'text-slate-400 hover:text-white hover:bg-slate-700/30';
+                  isActive(child.href)
+                    ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-400/20'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-700/30'
                 }`};
               >;
-                <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />;
-                <span>{child.name}</span>;
-              </Link>;
+                <[^>]*/>
+                <span>{child.name}</[^>]*>
+              </[^>]*>
             ))};
-          </motion.div>;
+          </[^>]*>
         )};
-      </div>;
+      </[^>]*>
     );
   },;
 
-  return (;
+  return (
     <>;
       {/* Mobile menu button */};
       <button;
         onClick={() => setIsOpen(true)};
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors";
+        className="[^"]*"
       >;
-        <Menu className="w-6 h-6" />;
-      </button>;
+        <[^>]*/>
+      </[^>]*>
 
       {/* Sidebar */};
       <AnimatePresence>;
-        {isOpen && (;
-          <motion.div;
+        {isOpen && (;&& (; (
+          <motion.div
             initial={{ opacity: 0 }};
             animate={{ opacity: 1 }};
             exit={{ opacity: 0 }};
-            className="fixed inset-0 z-50 lg:hidden";
+            className="[^"]*"
           >;
             {/* Backdrop */};
             <div ;
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm";
+              className="[^"]*"
               onClick={() => setIsOpen(false)};
             />;
             ;
             {/* Sidebar */};
-            <motion.div;
+            <motion.div
               initial={{ x: '-100%' }};
               animate={{ x: 0 }};
               exit={{ x: '-100%' }};
               transition={{ type: 'spring', damping: 25, stiffness: 200 }};
-              className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl";
+              className="[^"]*"
             >;
               {/* Header */};
               <div className="flex items-center justify-between p-4 border-b border-slate-700/50">;
-                <h2 className="text-lg font-semibold text-white">Navigation</h2>;
+                <h2 className="text-lg font-semibold text-white">Navigation</[^>]*>
                 <button;
                   onClick={() => setIsOpen(false)};
-                  className="p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors";
+                  className="[^"]*"
                 >;
-                  <X className="w-5 h-5" />;
-                </button>;
-              </div>;
+                  <[^>]*/>
+                </[^>]*>
+              </[^>]*>
 
               {/* Navigation */};
               <nav className="flex-1 p-4 space-y-2 overflow-y-auto">;
                 {navigation.map(item => renderNavItem(item))};
-              </nav>;
-            </motion.div>;
-          </motion.div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
         )};
-      </AnimatePresence>;
+      </[^>]*>
 
       {/* Desktop sidebar */};
       <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">;
@@ -237,33 +237,33 @@ export const Sidebar: React.FC = () => {;
           <Link to="/" className="flex items-center space-x-3 group">;
             <div className="relative">;
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                <Zap className="w-6 h-6 text-white" />;
-              </div>;
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
-            </div>;
+                <[^>]*/>
+              </[^>]*>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></[^>]*>
+            </[^>]*>
             <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
               Zion Tech Group;
-            </h1>;
-          </Link>;
-        </div>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Navigation */};
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">;
           {navigation.map(item => renderNavItem(item))};
-        </nav>;
+        </[^>]*>
 
         {/* Footer */};
         <div className="p-4 border-t border-slate-700/50">;
           <div className="text-center">;
             <Link;
-              to="/contact";
-              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover: from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20";
+              to="/contact"
+              className="[^"]*"
             >;
               Get Started;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

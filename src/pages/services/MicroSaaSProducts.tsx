@@ -1,12 +1,12 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
-import { CheckCircle2, ArrowRight, DollarSign, Globe, Shield, Rocket, Zap, Bot, Mail, BarChart3 } from "lucide-react";
+import React from "react"
+import { SEO } from "@/components/SEO"
+import { Link } from "react-router-dom"
+import { CheckCircle2, ArrowRight, DollarSign, Globe, Shield, Rocket, Zap, Bot, Mail, BarChart3 } from "lucide-react"
 type Plan = {;
-  name: string,price: string,features: string[];
+  name: string,price: string,features: string[]
 };
 type Product = {;
-  id: string,title: string,tagline: string,icon: React.ElementType,category: string,description: string,startingFrom: string,pricing: Plan[],links: { label: string, href: string }[];
+  id: string,title: string,tagline: string,icon: React.ElementType,category: string,description: string,startingFrom: string,pricing: Plan[],links: { label: string, href: string }[]
 },;
 
 const products: Product[] = [;
@@ -18,8 +18,8 @@ const products: Product[] = [;
       { name: 'Enterprise', price: 'Custom', features: ['SSO/SAMLSOC2 report', 'SLAs'] };
     ],;
     links: [;
-      { label: 'Docs', href: 'https://developers.google.com/gmail/api' };
-      { label: 'Compare market pricing', href: 'https://www.g2.com/categories/email-management' };
+      { label: 'Docs', href: 'https://[^;]*
+      { label: 'Compare market pricing', href: 'https://[^;]*
     ];
   };
   {;
@@ -30,7 +30,7 @@ const products: Product[] = [;
       { name: 'Enterprise', price: 'Custom', features: ['HIPAA/BAASOC2', 'DPA'] };
     ],;
     links: [;
-      { label: 'Benchmark pricing', href: 'https://www.g2.com/categories/survey' };
+      { label: 'Benchmark pricing', href: 'https://[^;]*
     ];
   };
   {;
@@ -42,7 +42,7 @@ const products: Product[] = [;
       { name: 'Plus', price: 'Custom', features: ['Custom SLAsPriority support', 'Data export'] };
     ],;
     links: [;
-      { label: 'Shopify returns apps pricing', href: 'https://apps.shopify.com/search?q=returns' };
+      { label: 'Shopify returns apps pricing', href: 'https://[^;]*
     ];
   };
   {;
@@ -53,68 +53,68 @@ const products: Product[] = [;
       { name: 'Enterprise', price: 'Custom', features: ['Fine-tuned modelsSSO', 'Data residency'] };
     ],;
     links: [;
-      { label: 'Market pricing', href: 'https://www.g2.com/categories/ai-writing-assistants' };
+      { label: 'Market pricing', href: 'https://[^;]*
     ];
   };
 ];
 export default function MicroSaaSProducts() {;
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
-      <SEO title="Micro SaaS Products" description="AI and automation micro SaaS products with clear pricing and links." />;
+      <[^>]*/>
       <section className="container mx-auto px-4 py-16">;
         <div className="mb-10 text-center">;
-          <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent">Micro SaaS Products</h1>;
-          <p className="mt-3 text-slate-300">Ready-to-deploy, secure and scalable mini‑apps for quick ROI.</p>;
-        </div>;
+          <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent">Micro SaaS Products</[^>]*>
+          <p className="mt-3 text-slate-300">Ready-to-deploy, secure and scalable mini‑apps for quick ROI.</[^>]*>
+        </[^>]*>
         <div className="grid gap-6 md:grid-cols-2">;
           {products.map((p) => (;
             <div key={p.id} className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 backdrop-blur-xl p-6 shadow-2xl">;
               <div className="flex items-start justify-between">;
                 <div className="flex items-center gap-3">;
-                  <p.icon className="w-6 h-6 text-cyan-400" />;
+                  <[^>]*/>
                   <div>;
-                    <h2 className="text-xl font-semibold">{p.title}</h2>;
-                    <p className="text-slate-400 text-sm">{p.tagline}</p>;
-                  </div>;
-                </div>;
-                <span className="text-cyan-300 text-sm">Starting {p.startingFrom}</span>;
-              </div>;
-              <p className="mt-4 text-slate-300">{p.description}</p>;
+                    <h2 className="text-xl font-semibold">{p.title}</[^>]*>
+                    <p className="text-slate-400 text-sm">{p.tagline}</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+                <span className="text-cyan-300 text-sm">Starting {p.startingFrom}</[^>]*>
+              </[^>]*>
+              <p className="mt-4 text-slate-300">{p.description}</[^>]*>
               <div className="mt-5 grid gap-4 sm:grid-cols-3">;
                 {p.pricing.map((plan) => (;
                   <div key={plan.name} className="rounded-xl border border-cyan-400/10 bg-slate-800/40 p-4">;
-                    <div className="font-semibold">{plan.name}</div>;
-                    <div className="text-cyan-300 text-sm">{plan.price}</div>;
+                    <div className="font-semibold">{plan.name}</[^>]*>
+                    <div className="text-cyan-300 text-sm">{plan.price}</[^>]*>
                     <ul className="mt-3 space-y-2 text-sm text-slate-300">;
                       {plan.features.map((f) => (;
                         <li key={f} className="flex items-center gap-2">;
-                          <CheckCircle2 className="w-4 h-4 text-cyan-400" />;
-                          <span>{f}</span>;
-                        </li>;
+                          <[^>]*/>
+                          <span>{f}</[^>]*>
+                        </[^>]*>
                       ))};
-                    </ul>;
-                  </div>;
+                    </[^>]*>
+                  </[^>]*>
                 ))};
-              </div>;
+              </[^>]*>
               <div className="mt-5 flex flex-wrap gap-3">;
                 {p.links.map((l) => (;
                   <a key={l.href} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 underline underline-offset-4" href={l.href} target="_blank" rel="noreferrer">;
                     {l.label};
-                    <ArrowRight className="w-4 h-4" />;
-                  </a>;
+                    <[^>]*/>
+                  </[^>]*>
                 ))};
-              </div>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
           ))};
-        </div>;
+        </[^>]*>
         <div className="mt-10 text-center">;
           <Link to="/request-quote" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-white hover: from-cyan-400 hover:to-blue-500">;
             Request a Quote;
-            <ArrowRight className="w-4 h-4" />;
-          </Link>;
-        </div>;
-      </section>;
-    </div>;
+            <[^>]*/>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 

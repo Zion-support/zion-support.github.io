@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { SEO } from "../components/SEO";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { SEO } from "../components/SEO"
 import { ;
   Code,;
   Search, ;
@@ -37,14 +37,14 @@ import { ;
   ChevronRight,;
   AlertCircle,;
   Info;
-} from "lucide-react";
+} from "lucide-react"
 export default function APIDocumentation() {;
   const [searchQuery, setSearchQuery] = useState(''),;
   const [selectedCategory, setSelectedCategory] = useState('All'),;
   const [selectedMethod, setSelectedMethod] = useState('All'),;
   const [expandedEndpoints, setExpandedEndpoints] = useState<Set<string>>(new Set());
-  const categories = ['AllAuthentication', 'AI ServicesData Analytics', 'Cloud ServicesIoT & Edge', 'BlockchainQuantum Computing'];
-  const methods = ['AllGET', 'POSTPUT', 'DELETEPATCH'];
+  const categories = ['AllAuthentication', 'AI ServicesData Analytics', 'Cloud ServicesIoT & Edge', 'BlockchainQuantum Computing']
+  const methods = ['AllGET', 'POSTPUT', 'DELETEPATCH']
   const apiEndpoints = [;
     {;
       category: 'Authentication',endpoints: [;
@@ -60,7 +60,7 @@ export default function APIDocumentation() {;
           examples: {;
             curl: 'curl -X POST /auth/login -H "Content-Type: application/json" -d \'{"email":"user@example.com","password":"password"}\'',;
             python: 'requests.post("/auth/login", json={"email": "user@example.com", "password": "password"})',;
-            javascript: 'fetch("/auth/login", { method: "POST", body: JSON.stringify({email: "user@example.com", password: "password"}) })';
+            javascript: 'fetch("/auth/login", { method: "POST", body: JSON.stringify({email: "user@example.com", password: "password"}) })'
           };
         };
         {;
@@ -76,7 +76,7 @@ export default function APIDocumentation() {;
           examples: {;
             curl: 'curl -X POST /auth/register -H "Content-Type: application/json" -d \'{"email":"new@example.com","password":"password123","name":"John Doe"}\'',;
             python: 'requests.post("/auth/register", json={"email": "new@example.com", "password": "password123", "name": "John Doe"})',;
-            javascript: 'fetch("/auth/register", { method: "POST", body: JSON.stringify({email: "new@example.com", password: "password123", name: "John Doe"}) })';
+            javascript: 'fetch("/auth/register", { method: "POST", body: JSON.stringify({email: "new@example.com", password: "password123", name: "John Doe"}) })'
           };
         };
       ];
@@ -97,7 +97,7 @@ export default function APIDocumentation() {;
           examples: {;
             curl: 'curl -X POST /ai/analyze -H "Content-Type: application/json" -d \'{"text":"This is amazing!","analysis_type":"sentiment"}\'',;
             python: 'requests.post("/ai/analyze", json={"text": "This is amazing!", "analysis_type": "sentiment"})',;
-            javascript: 'fetch("/ai/analyze", { method: "POST", body: JSON.stringify({text: "This is amazing!", analysis_type: "sentiment"}) })';
+            javascript: 'fetch("/ai/analyze", { method: "POST", body: JSON.stringify({text: "This is amazing!", analysis_type: "sentiment"}) })'
           };
         };
         {;
@@ -111,9 +111,9 @@ export default function APIDocumentation() {;
             { code: 400, description: 'Invalid prompt', example: '{ "error": "Prompt is required" }' };
           ];
           examples: {;
-            curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'';
+            curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\''
             python: 'requests.post("/ai/generate", json={"prompt": "Write a blog post about AI"})',;
-            javascript: 'fetch("/ai/generate", { method: "POST", body: JSON.stringify({prompt: "Write a blog post about AI"}) })';
+            javascript: 'fetch("/ai/generate", { method: "POST", body: JSON.stringify({prompt: "Write a blog post about AI"}) })'
           };
         };
       ];
@@ -132,7 +132,7 @@ export default function APIDocumentation() {;
           examples: {;
             curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":{"filters":{"event_type":"page_view"},"aggregations":{"count":"total"}}}\'',;
             python: 'requests.post("/analytics/query", json={"query": {"filters": {"event_type": "page_view"}, "aggregations": {"count": "total"}}})',;
-            javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: {filters: {event_type: "page_view"}, aggregations: {count: "total"}}}) })';
+            javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: {filters: {event_type: "page_view"}, aggregations: {count: "total"}}}) })'
           };
         };
       ];
@@ -150,9 +150,9 @@ export default function APIDocumentation() {;
             { code: 400, description: 'Invalid configuration', example: '{ "error": "Invalid app configuration" }' };
           ];
           examples: {;
-            curl: 'curl -X POST /cloud/deploy -H "Content-Type: application/json" -d \'{"app_name":"my-app","config":{"image":"nginx: latest"}}\'';
-            python: 'requests.post("/cloud/deploy", json={"app_name": "my-app", "config": {"image": "nginx: latest"}})';
-            javascript: 'fetch("/cloud/deploy", { method: "POST", body: JSON.stringify({app_name: "my-app", config: {image: "nginx:latest"}}) })';
+            curl: 'curl -X POST /cloud/deploy -H "Content-Type: application/json" -d \'{"app_name":"my-app","config":{"image":"nginx: latest"}}\''
+            python: 'requests.post("/cloud/deploy", json={"app_name": "my-app", "config": {"image": "nginx: latest"}})'
+            javascript: 'fetch("/cloud/deploy", { method: "POST", body: JSON.stringify({app_name: "my-app", config: {image: "nginx:latest"}}) })'
           };
         };
       ];
@@ -164,16 +164,16 @@ export default function APIDocumentation() {;
       const matchesSearch = endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
-      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
-      return matchesSearch && matchesCategory && matchesMethod;
+      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory
+      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod
+      return matchesSearch && matchesCategory && matchesMethod;&& matchesCategory && matchesMethod; matchesCategory && matchesMethod
     });
   })).filter(category => category.endpoints.length > 0),;
 
   const toggleEndpoint = (endpointPath: string) => {;
-    const newExpanded = new Set(expandedEndpoints);
+    const newExpanded = new Set(expandedEndpoints)
     if (newExpanded.has(endpointPath)) {;
-      newExpanded.delete(endpointPath);
+      newExpanded.delete(endpointPath)
     } else {;
       newExpanded.add(endpointPath),;
     };
@@ -181,130 +181,130 @@ export default function APIDocumentation() {;
   },;
 
   const copyToClipboard = (text: string) => {;
-    navigator.clipboard.writeText(text);
-    // Show success message;
+    navigator.clipboard.writeText(text)
+    //[^;]*
   },;
 
   const getMethodColor = (method: string) => {;
     switch (method) {;
-      case 'GET': return 'bg-green-500';
+      case 'GET': return 'bg-green-500'
       case 'POST': return 'bg-blue-500',;
       case 'PUT': return 'bg-yellow-500',;
       case 'DELETE': return 'bg-red-500',;
       case 'PATCH': return 'bg-purple-500',;
-      default: return 'bg-gray-500';
+      default: return 'bg-gray-500'
     };
   };
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
-        title="API Documentation - Zion Tech Group";
-        description="Complete API reference, endpoints, authentication, and code examples for Zion Tech Group services. Build powerful integrations with our comprehensive API documentation.";
+        title="API Documentation - Zion Tech Group"
+        description="Complete API reference, endpoints, authentication, and code examples for Zion Tech Group services. Build powerful integrations with our comprehensive API documentation."
       />;
       ;
       {/* Hero Section */};
       <section className="relative py-20 overflow-hidden">;
         <div className="container-responsive">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               API Documentation;
-            </h1>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
               Comprehensive API reference with endpoints, authentication, and code examples. ;
               Build powerful integrations with Zion Tech Group services.;
-            </p>;
+            </[^>]*>
             ;
             {/* Search and Filters */};
             <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">;
               <div className="relative flex-1">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+                <[^>]*/>
                 <input;
-                  type="text";
-                  placeholder="Search APIs, endpoints, or methods...";
+                  type="text"
+                  placeholder="Search APIs, endpoints, or methods..."
                   value={searchQuery};
                   onChange={(e) => setSearchQuery(e.target.value)};
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                  className="[^"]*"
                 />;
-              </div>;
+              </[^>]*>
               <select;
                 value={selectedCategory};
                 onChange={(e) => setSelectedCategory(e.target.value)};
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                className="[^"]*"
               >;
                 {categories.map(category => (;
-                  <option key={category} value={category}>{category}</option>;
+                  <option key={category} value={category}>{category}</[^>]*>
                 ))};
-              </select>;
+              </[^>]*>
               <select;
                 value={selectedMethod};
                 onChange={(e) => setSelectedMethod(e.target.value)};
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                className="[^"]*"
               >;
                 {methods.map(method => (;
-                  <option key={method} value={method}>{method}</option>;
+                  <option key={method} value={method}>{method}</[^>]*>
                 ))};
-              </select>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
 
             {/* Quick Stats */};
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">;
               <div className="text-center">;
-                <div className="text-2xl font-bold text-cyan-400">50+</div>;
-                <div className="text-sm text-gray-400">Endpoints</div>;
-              </div>;
+                <div className="text-2xl font-bold text-cyan-400">50+</[^>]*>
+                <div className="text-sm text-gray-400">Endpoints</[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <div className="text-2xl font-bold text-blue-400">10+</div>;
-                <div className="text-sm text-gray-400">Categories</div>;
-              </div>;
+                <div className="text-2xl font-bold text-blue-400">10+</[^>]*>
+                <div className="text-sm text-gray-400">Categories</[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <div className="text-2xl font-bold text-purple-400">100+</div>;
-                <div className="text-sm text-gray-400">Code Examples</div>;
-              </div>;
+                <div className="text-2xl font-bold text-purple-400">100+</[^>]*>
+                <div className="text-sm text-gray-400">Code Examples</[^>]*>
+              </[^>]*>
               <div className="text-center">;
-                <div className="text-2xl font-bold text-green-400">24/7</div>;
-                <div className="text-sm text-gray-400">Support</div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+                <div className="text-2xl font-bold text-green-400">24/7</[^>]*>
+                <div className="text-sm text-gray-400">Support</[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* API Endpoints */};
       <section className="py-16">;
         <div className="container-responsive">;
           {filteredEndpoints.map((category, categoryIndex) => (;
-            <motion.div;
+            <motion.div
               key={category.category};
               initial={{ opacity: 0, y: 20 }};
               animate={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }};
-              className="mb-16";
+              className="[^"]*"
             >;
               {/* Category Header */};
               <div className="flex items-center gap-4 mb-8">;
                 <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500">;
-                  <Code className="w-6 h-6 text-white" />;
-                </div>;
+                  <[^>]*/>
+                </[^>]*>
                 <div>;
-                  <h2 className="text-3xl font-bold text-white">{category.category}</h2>;
-                  <p className="text-gray-300 mt-2">API endpoints for {category.category.toLowerCase()} services</p>;
-                </div>;
-              </div>;
+                  <h2 className="text-3xl font-bold text-white">{category.category}</[^>]*>
+                  <p className="text-gray-300 mt-2">API endpoints for {category.category.toLowerCase()} services</[^>]*>
+                </[^>]*>
+              </[^>]*>
 
               {/* Endpoints */};
               <div className="space-y-6">;
                 {category.endpoints.map((endpoint, endpointIndex) => (;
-                  <motion.div;
+                  <motion.div
                     key={endpoint.path};
                     initial={{ opacity: 0, y: 20 }};
                     animate={{ opacity: 1, y: 0 }};
                     transition={{ duration: 0.6, delay: (categoryIndex * 0.1) + (endpointIndex * 0.05) }};
-                    className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden";
+                    className="[^"]*"
                   >;
                     {/* Endpoint Header */};
                     <div className="p-6">;
@@ -312,188 +312,188 @@ export default function APIDocumentation() {;
                         <div className="flex items-center gap-4">;
                           <span className={`px-3 py-1 rounded-lg text-sm font-medium text-white ${getMethodColor(endpoint.method)}`}>;
                             {endpoint.method};
-                          </span>;
+                          </[^>]*>
                           <code className="text-lg font-mono text-cyan-400 bg-slate-700/50 px-3 py-1 rounded">;
                             {endpoint.path};
-                          </code>;
-                        </div>;
+                          </[^>]*>
+                        </[^>]*>
                         <button;
                           onClick={() => toggleEndpoint(endpoint.path)};
-                          className="p-2 text-gray-400 hover:text-cyan-400 transition-colors";
+                          className="[^"]*"
                         >;
                           {expandedEndpoints.has(endpoint.path) ? (;
-                            <ChevronDown className="w-5 h-5" />;
+                            <[^>]*/>
                           ) : (;
-                            <ChevronRight className="w-5 h-5" />;
+                            <[^>]*/>
                           )};
-                        </button>;
-                      </div>;
+                        </[^>]*>
+                      </[^>]*>
 
-                      <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</h3>;
-                      <p className="text-gray-300">{endpoint.description}</p>;
-                    </div>;
+                      <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</[^>]*>
+                      <p className="text-gray-300">{endpoint.description}</[^>]*>
+                    </[^>]*>
 
                     {/* Expanded Content */};
-                    {expandedEndpoints.has(endpoint.path) && (;
+                    {expandedEndpoints.has(endpoint.path) && (;&& (; (
                       <div className="border-t border-slate-700/50">;
                         <div className="p-6 space-y-6">;
                           {/* Parameters */};
                           <div>;
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">;
-                              <Key className="w-5 h-5 text-cyan-400" />;
+                              <[^>]*/>
                               Parameters;
-                            </h4>;
+                            </[^>]*>
                             <div className="bg-slate-700/30 rounded-lg overflow-hidden">;
                               <table className="w-full">;
                                 <thead className="bg-slate-700/50">;
                                   <tr>;
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Name</th>;
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Type</th>;
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Required</th>;
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Description</th>;
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Default</th>;
-                                  </tr>;
-                                </thead>;
+                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Name</[^>]*>
+                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Type</[^>]*>
+                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Required</[^>]*>
+                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Description</[^>]*>
+                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Default</[^>]*>
+                                  </[^>]*>
+                                </[^>]*>
                                 <tbody>;
                                   {endpoint.parameters.map((param, idx) => (;
                                     <tr key={idx} className="border-t border-slate-600/30">;
-                                      <td className="p-3 text-sm text-white font-mono">{param.name}</td>;
-                                      <td className="p-3 text-sm text-cyan-400">{param.type}</td>;
+                                      <td className="p-3 text-sm text-white font-mono">{param.name}</[^>]*>
+                                      <td className="p-3 text-sm text-cyan-400">{param.type}</[^>]*>
                                       <td className="p-3 text-sm">;
                                         {param.required ? (;
-                                          <span className="text-red-400">Yes</span>;
+                                          <span className="text-red-400">Yes</[^>]*>
                                         ) : (;
-                                          <span className="text-green-400">No</span>;
+                                          <span className="text-green-400">No</[^>]*>
                                         )};
-                                      </td>;
-                                      <td className="p-3 text-sm text-gray-300">{param.description}</td>;
+                                      </[^>]*>
+                                      <td className="p-3 text-sm text-gray-300">{param.description}</[^>]*>
                                       <td className="p-3 text-sm text-gray-400">;
-                                        {param.default || '-'};
-                                      </td>;
-                                    </tr>;
+                                        {param.default || '-'}
+                                      </[^>]*>
+                                    </[^>]*>
                                   ))};
-                                </tbody>;
-                              </table>;
-                            </div>;
-                          </div>;
+                                </[^>]*>
+                              </[^>]*>
+                            </[^>]*>
+                          </[^>]*>
 
                           {/* Responses */};
                           <div>;
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">;
-                              <CheckCircle className="w-5 h-5 text-green-400" />;
+                              <[^>]*/>
                               Responses;
-                            </h4>;
+                            </[^>]*>
                             <div className="space-y-3">;
                               {endpoint.responses.map((response, idx) => (;
                                 <div key={idx} className="bg-slate-700/30 rounded-lg p-4">;
                                   <div className="flex items-center gap-3 mb-2">;
                                     <span className={`px-2 py-1 rounded text-xs font-medium ${;
-                                      response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-300' :;
-                                      response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-300' :;
-                                      'bg-yellow-500/20 text-yellow-300';
+                                      response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-300' :;&& response.code < 300 ? 'bg-green-500/20 text-green-300' :; response.code < 300 ? 'bg-green-500/20 text-green-300' :
+                                      response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-300' :;&& response.code < 500 ? 'bg-red-500/20 text-red-300' :; response.code < 500 ? 'bg-red-500/20 text-red-300' :
+                                      'bg-yellow-500/20 text-yellow-300'
                                     }`}>;
                                       {response.code};
-                                    </span>;
-                                    <span className="text-sm text-gray-300">{response.description}</span>;
-                                  </div>;
+                                    </[^>]*>
+                                    <span className="text-sm text-gray-300">{response.description}</[^>]*>
+                                  </[^>]*>
                                   <pre className="text-sm text-gray-400 bg-slate-800/50 p-3 rounded overflow-x-auto">;
-                                    <code>{response.example}</code>;
-                                  </pre>;
-                                </div>;
+                                    <code>{response.example}</[^>]*>
+                                  </[^>]*>
+                                </[^>]*>
                               ))};
-                            </div>;
-                          </div>;
+                            </[^>]*>
+                          </[^>]*>
 
                           {/* Code Examples */};
                           <div>;
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">;
-                              <Terminal className="w-5 h-5 text-purple-400" />;
+                              <[^>]*/>
                               Code Examples;
-                            </h4>;
+                            </[^>]*>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
                               {Object.entries(endpoint.examples).map(([language, code]) => (;
                                 <div key={language} className="bg-slate-700/30 rounded-lg p-4">;
                                   <div className="flex items-center justify-between mb-3">;
-                                    <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>;
+                                    <span className="text-sm font-medium text-gray-300 capitalize">{language}</[^>]*>
                                     <button;
                                       onClick={() => copyToClipboard(code)};
-                                      className="p-1 text-gray-400 hover: text-cyan-400 transition-colors";
-                                      title="Copy code";
+                                      className="[^"]*"
+                                      title="Copy code"
                                     >;
-                                      <Copy className="w-4 h-4" />;
-                                    </button>;
-                                  </div>;
+                                      <[^>]*/>
+                                    </[^>]*>
+                                  </[^>]*>
                                   <pre className="text-xs text-gray-400 bg-slate-800/50 p-3 rounded overflow-x-auto">;
-                                    <code>{code}</code>;
-                                  </pre>;
-                                </div>;
+                                    <code>{code}</[^>]*>
+                                  </[^>]*>
+                                </[^>]*>
                               ))};
-                            </div>;
-                          </div>;
-                        </div>;
-                      </div>;
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                     )};
-                  </motion.div>;
+                  </[^>]*>
                 ))};
-              </div>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
           ))};
 
-          {filteredEndpoints.length === 0 && (;
-            <motion.div;
+          {filteredEndpoints.length === 0 && (;&& (; (
+            <motion.div
               initial={{ opacity: 0 }};
               animate={{ opacity: 1 }};
-              className="text-center py-16";
+              className="[^"]*"
             >;
               <div className="text-gray-400 text-lg mb-4">;
                 No API endpoints found matching your criteria.;
-              </div>;
+              </[^>]*>
               <button;
                 onClick={() => {;
-                  setSearchQuery('');
+                  setSearchQuery('')
                   setSelectedCategory('All'),;
-                  setSelectedMethod('All');
+                  setSelectedMethod('All')
                 }};
-                className="text-cyan-400 hover:text-cyan-300 transition-colors";
+                className="[^"]*"
               >;
                 Clear all filters;
-              </button>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
           )};
-        </div>;
-      </section>;
+        </[^>]*>
+      </[^>]*>
 
       {/* CTA Section */};
       <section className="py-16">;
         <div className="container-responsive">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center";
+            className="[^"]*"
           >;
             <h2 className="text-3xl font-bold text-white mb-4">;
               Ready to Get Started?;
-            </h2>;
+            </[^>]*>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Get your API keys, explore our interactive API playground, and start building ;
               powerful integrations with Zion Tech Group services.;
-            </p>;
+            </[^>]*>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
                 Get API Keys;
-              </button>;
+              </[^>]*>
               <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">;
                 API Playground;
-              </button>;
+              </[^>]*>
               <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">;
                 Contact Support;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

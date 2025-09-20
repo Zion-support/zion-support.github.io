@@ -1,6 +1,6 @@
-import React from "react";
-import { SEO } from "../components/SEO";
-import { motion } from "framer-motion";
+import React from "react"
+import { SEO } from "../components/SEO"
+import { motion } from "framer-motion"
 import { ;
   BookOpen,;
   Code, ;
@@ -42,10 +42,10 @@ import { ;
   Smartphone,;
   Tablet,;
   Laptop;
-} from "lucide-react";
-export const Documentation: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('all');
+} from "lucide-react"
+export const Documentation: React.FC = () => {
+  const [searchQuery, setSearchQuery] = React.useState('')
+  const [selectedCategory, setSelectedCategory] = React.useState('all')
   const [expandedSections, setExpandedSections] = React.useState<string[]>(['getting-started']);
   const categories = [;
     { id: 'all', name: 'All', count: 0, active: true };
@@ -61,81 +61,81 @@ export const Documentation: React.FC = () => {;
     {;
       id: 'getting-started',title: 'Getting Started',icon: Play,color: 'from-green-500 to-emerald-500',articles: [;
         {;
-          title: 'Quick Start Guide',description: 'Get up and running with Zion Tech Group services in under 10 minutes',difficulty: 'Beginner',readTime: '5 min',featured: true,path: '/docs/getting-started/quick-start';
+          title: 'Quick Start Guide',description: 'Get up and running with Zion Tech Group services in under 10 minutes',difficulty: 'Beginner',readTime: '5 min',featured: true,path: '/docs/getting-started/quick-start'
         };
         {;
-          title: 'Installation & Setup',description: 'Complete installation guide for all platforms and environments',difficulty: 'Beginner',readTime: '15 min',featured: false,path: '/docs/getting-started/installation';
+          title: 'Installation & Setup',description: 'Complete installation guide for all platforms and environments',difficulty: 'Beginner',readTime: '15 min',featured: false,path: '/docs/getting-started/installation'
         };
         {;
-          title: 'First Project',description: 'Create your first AI-powered application step by step',difficulty: 'Beginner',readTime: '20 min',featured: true,path: '/docs/getting-started/first-project';
+          title: 'First Project',description: 'Create your first AI-powered application step by step',difficulty: 'Beginner',readTime: '20 min',featured: true,path: '/docs/getting-started/first-project'
         };
         {;
-          title: 'Authentication',description: 'Set up secure authentication for your applications',difficulty: 'Intermediate',readTime: '12 min',featured: false,path: '/docs/getting-started/authentication';
+          title: 'Authentication',description: 'Set up secure authentication for your applications',difficulty: 'Intermediate',readTime: '12 min',featured: false,path: '/docs/getting-started/authentication'
         };
       ];
     };
     {;
               id: 'api',title: 'API Reference',icon: Code2,color: 'from-blue-500 to-cyan-500',articles: [;
         {;
-          title: 'REST API Overview',description: 'Complete REST API documentation with examples',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/api/rest-overview';
+          title: 'REST API Overview',description: 'Complete REST API documentation with examples',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/api/rest-overview'
         };
         {;
-          title: 'GraphQL API',description: 'GraphQL endpoint documentation and schema reference',difficulty: 'Advanced',readTime: '30 min',featured: false,path: '/docs/api/graphql';
+          title: 'GraphQL API',description: 'GraphQL endpoint documentation and schema reference',difficulty: 'Advanced',readTime: '30 min',featured: false,path: '/docs/api/graphql'
         };
         {;
-          title: 'WebSocket API',description: 'Real-time communication API documentation',difficulty: 'Advanced',readTime: '20 min',featured: false,path: '/docs/api/websocket';
+          title: 'WebSocket API',description: 'Real-time communication API documentation',difficulty: 'Advanced',readTime: '20 min',featured: false,path: '/docs/api/websocket'
         };
         {;
-          title: 'Rate Limiting',description: 'Understanding API rate limits and best practices',difficulty: 'Intermediate',readTime: '10 min',featured: false,path: '/docs/api/rate-limiting';
+          title: 'Rate Limiting',description: 'Understanding API rate limits and best practices',difficulty: 'Intermediate',readTime: '10 min',featured: false,path: '/docs/api/rate-limiting'
         };
       ];
     };
     {;
       id: 'sdks',title: 'SDKs & Libraries',icon: Package,color: 'from-purple-500 to-pink-500',articles: [;
         {;
-          title: 'JavaScript/TypeScript SDK',description: 'Official SDK for Node.js and browser environments',difficulty: 'Intermediate',readTime: '18 min',featured: true,path: '/docs/sdks/javascript';
+          title: 'JavaScript/TypeScript SDK',description: 'Official SDK for Node.js and browser environments',difficulty: 'Intermediate',readTime: '18 min',featured: true,path: '/docs/sdks/javascript'
         };
         {;
-          title: 'Python SDK',description: 'Python client library with examples and best practices',difficulty: 'Intermediate',readTime: '20 min',featured: true,path: '/docs/sdks/python';
+          title: 'Python SDK',description: 'Python client library with examples and best practices',difficulty: 'Intermediate',readTime: '20 min',featured: true,path: '/docs/sdks/python'
         };
         {;
-          title: 'Java SDK',description: 'Java client library for enterprise applications',difficulty: 'Intermediate',readTime: '22 min',featured: false,path: '/docs/sdks/java';
+          title: 'Java SDK',description: 'Java client library for enterprise applications',difficulty: 'Intermediate',readTime: '22 min',featured: false,path: '/docs/sdks/java'
         };
         {;
-          title: 'Mobile SDKs',description: 'iOS and Android SDKs for mobile applications',difficulty: 'Advanced',readTime: '25 min',featured: false,path: '/docs/sdks/mobile';
+          title: 'Mobile SDKs',description: 'iOS and Android SDKs for mobile applications',difficulty: 'Advanced',readTime: '25 min',featured: false,path: '/docs/sdks/mobile'
         };
       ];
     };
     {;
       id: 'tutorials',title: 'Tutorials',icon: BookOpen,color: 'from-orange-500 to-red-500',articles: [;
         {;
-          title: 'Building an AI Chatbot',description: 'Create a conversational AI chatbot from scratch',difficulty: 'Intermediate',readTime: '45 min',featured: true,path: '/docs/tutorials/ai-chatbot';
+          title: 'Building an AI Chatbot',description: 'Create a conversational AI chatbot from scratch',difficulty: 'Intermediate',readTime: '45 min',featured: true,path: '/docs/tutorials/ai-chatbot'
         };
         {;
-          title: 'Image Recognition API',description: 'Implement computer vision in your applications',difficulty: 'Intermediate',readTime: '35 min',featured: true,path: '/docs/tutorials/image-recognition';
+          title: 'Image Recognition API',description: 'Implement computer vision in your applications',difficulty: 'Intermediate',readTime: '35 min',featured: true,path: '/docs/tutorials/image-recognition'
         };
         {;
-          title: 'Natural Language Processing',description: 'Build text analysis and language understanding features',difficulty: 'Advanced',readTime: '50 min',featured: false,path: '/docs/tutorials/nlp';
+          title: 'Natural Language Processing',description: 'Build text analysis and language understanding features',difficulty: 'Advanced',readTime: '50 min',featured: false,path: '/docs/tutorials/nlp'
         };
         {;
-          title: 'Real-time Analytics Dashboard',description: 'Create live data visualization dashboards',difficulty: 'Advanced',readTime: '60 min',featured: false,path: '/docs/tutorials/analytics-dashboard';
+          title: 'Real-time Analytics Dashboard',description: 'Create live data visualization dashboards',difficulty: 'Advanced',readTime: '60 min',featured: false,path: '/docs/tutorials/analytics-dashboard'
         };
       ];
     };
     {;
       id: 'deployment',title: 'Deployment',icon: Server,color: 'from-indigo-500 to-purple-500',articles: [;
         {;
-          title: 'Docker Deployment',description: 'Containerize and deploy your applications',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/deployment/docker';
+          title: 'Docker Deployment',description: 'Containerize and deploy your applications',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/deployment/docker'
         };
         {;
-          title: 'Kubernetes Orchestration',description: 'Scale your applications with Kubernetes',difficulty: 'Advanced',readTime: '40 min',featured: false,path: '/docs/deployment/kubernetes';
+          title: 'Kubernetes Orchestration',description: 'Scale your applications with Kubernetes',difficulty: 'Advanced',readTime: '40 min',featured: false,path: '/docs/deployment/kubernetes'
         };
         {;
           title: 'Cloud Deployment',description: 'Deploy to AWS, Azure, and Google Cloud',;
-          difficulty: 'Intermediate',readTime: '30 min',featured: false,path: '/docs/deployment/cloud';
+          difficulty: 'Intermediate',readTime: '30 min',featured: false,path: '/docs/deployment/cloud'
         };
         {;
-          title: 'CI/CD Pipeline',description: 'Set up automated deployment pipelines',difficulty: 'Advanced',readTime: '35 min',featured: false,path: '/docs/deployment/cicd';
+          title: 'CI/CD Pipeline',description: 'Set up automated deployment pipelines',difficulty: 'Advanced',readTime: '35 min',featured: false,path: '/docs/deployment/cicd'
         };
       ];
     };
@@ -143,13 +143,13 @@ export const Documentation: React.FC = () => {;
   const toggleSection = (sectionId: string) => {;
     setExpandedSections(prev => ;
       prev.includes(sectionId) ;
-        ? prev.filter(id => id !== sectionId);
-        : [...prev, sectionId];
+        ? prev.filter(id => id !== sectionId)
+        : [...prev, sectionId]
     ),;
   },;
 
   const filteredSections = documentationSections.filter(section => ;
-    selectedCategory === 'all' || section.id === selectedCategory;
+    selectedCategory === 'all' || section.id === selectedCategory
   ),;
 
   const allArticles = documentationSections.flatMap(section => ;
@@ -161,73 +161,73 @@ export const Documentation: React.FC = () => {;
     article.section.toLowerCase().includes(searchQuery.toLowerCase());
   ),;
 
-  // Update category counts;
+  //[^;]*
   React.useEffect(() => {;
     categories.forEach(cat => {;
       if (cat.id !== 'all') {;
-        const section = documentationSections.find(s => s.id === cat.id);
-        cat.count = section ? section.articles.length : 0,;
+        const section = documentationSections.find(s => s.id === cat.id)
+        cat.count = section ? section.articles.length : 0,
       };
     }),;
     categories[0].count = allArticles.length,;
   }, []),;
 
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
-        title="Documentation - Zion Tech Group";
-        description="Comprehensive documentation, API references, tutorials, and guides for Zion Tech Group services and APIs.";
+        title="Documentation - Zion Tech Group"
+        description="Comprehensive documentation, API references, tutorials, and guides for Zion Tech Group services and APIs."
       />;
       ;
       {/* Hero Section */};
       <section className="relative py-20 overflow-hidden">;
         <div className="container-responsive">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 30 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
-            className="text-center max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-400 text-sm font-medium mb-6">;
-              <Code className="w-4 h-4" />;
+              <[^>]*/>
               Developer Resources;
-            </div>;
+            </[^>]*>
             ;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Documentation &;
               <span className="block bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">;
                 Developer Guides;
-              </span>;
-            </h1>;
+              </[^>]*>
+            </[^>]*>
             ;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Everything you need to build, integrate, and deploy with Zion Tech Group services. ;
               From quick start guides to advanced API references.;
-            </p>;
+            </[^>]*>
             ;
             <div className="flex flex-wrap justify-center gap-4">;
               <div className="flex items-center gap-2 text-gray-400">;
-                <BookOpen className="w-5 h-5" />;
-                <span>{allArticles.length} Articles</span>;
-              </div>;
+                <[^>]*/>
+                <span>{allArticles.length} Articles</[^>]*>
+              </[^>]*>
               <div className="flex items-center gap-2 text-gray-400">;
-                <Code className="w-5 h-5" />;
-                <span>Multiple Languages</span>;
-              </div>;
+                <[^>]*/>
+                <span>Multiple Languages</[^>]*>
+              </[^>]*>
               <div className="flex items-center gap-2 text-gray-400">;
-                <Clock className="w-5 h-5" />;
-                <span>Always Updated</span>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
+                <[^>]*/>
+                <span>Always Updated</[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
         ;
         {/* Background Elements */};
         <div className="absolute inset-0 overflow-hidden pointer-events-none">;
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>;
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>;
-        </div>;
-      </section>;
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></[^>]*>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Search and Filter Section */};
       <section className="py-12 border-b border-slate-700/50">;
@@ -235,15 +235,15 @@ export const Documentation: React.FC = () => {;
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">;
             {/* Search */};
             <div className="relative flex-1 max-w-md">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+              <[^>]*/>
               <input;
-                type="text";
-                placeholder="Search documentation...";
+                type="text"
+                placeholder="Search documentation..."
                 value={searchQuery};
                 onChange={(e) => setSearchQuery(e.target.value)};
-                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200";
+                className="[^"]*"
               />;
-            </div>;
+            </[^>]*>
 
             {/* Category Filter */};
             <div className="flex flex-wrap gap-2">;
@@ -252,205 +252,205 @@ export const Documentation: React.FC = () => {;
                   key={category.id};
                   onClick={() => setSelectedCategory(category.id)};
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${;
-                    selectedCategory === category.id;
-                      ? 'bg-blue-400/20 border-blue-400/40 text-blue-400';
-                      : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-blue-400/30';
+                    selectedCategory === category.id
+                      ? 'bg-blue-400/20 border-blue-400/40 text-blue-400'
+                      : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-blue-400/30'
                   }`};
                 >;
                   {category.name};
-                  <span className="ml-2 text-xs opacity-75">({category.count})</span>;
-                </button>;
+                  <span className="ml-2 text-xs opacity-75">({category.count})</[^>]*>
+                </[^>]*>
               ))};
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Documentation Content */};
       <section className="py-16">;
         <div className="container-responsive">;
           {searchQuery ? (;
-            // Search Results;
+            //[^;]*
             <div>;
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-white mb-2">;
-                  Search Results for "{searchQuery}";
-                </h2>;
+                  Search Results for "{searchQuery}"
+                </[^>]*>
                 <p className="text-gray-400">;
                   Found {filteredArticles.length} articles;
-                </p>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               ;
               <div className="space-y-4">;
                 {filteredArticles.map((article, index) => (;
-                  <motion.div;
+                  <motion.div
                     key={`${article.section}-${index}`};
                     initial={{ opacity: 0, y: 20 }};
                     animate={{ opacity: 1, y: 0 }};
                     transition={{ duration: 0.3, delay: index * 0.1 }};
-                    className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50";
+                    className="[^"]*"
                   >;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
                         <div className="flex items-center gap-3 mb-2">;
                           <span className="inline-block px-3 py-1 bg-slate-700/50 text-blue-400 text-xs font-medium rounded-full">;
                             {article.section};
-                          </span>;
-                          {article.featured && (;
+                          </[^>]*>
+                          {article.featured && (;&& (; (
                             <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">;
-                              <Star className="w-3 h-3" />;
+                              <[^>]*/>
                               Featured;
-                            </span>;
+                            </[^>]*>
                           )};
-                        </div>;
+                        </[^>]*>
                         ;
                         <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">;
                           {article.title};
-                        </h3>;
+                        </[^>]*>
                         ;
                         <p className="text-gray-400 text-sm mb-3">;
                           {article.description};
-                        </p>;
+                        </[^>]*>
                         ;
                         <div className="flex items-center gap-4 text-sm text-gray-500">;
                           <span className="flex items-center gap-1">;
-                            <Clock className="w-4 h-4" />;
+                            <[^>]*/>
                             {article.readTime};
-                          </span>;
+                          </[^>]*>
                           <span className="flex items-center gap-1">;
-                            <User className="w-4 h-4" />;
+                            <[^>]*/>
                             {article.difficulty};
-                          </span>;
-                        </div>;
-                      </div>;
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                       ;
                       <div className="flex-shrink-0 ml-4">;
                         <button className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-500/30 transition-all duration-300">;
                           View;
-                          <ArrowRight className="w-4 h-4" />;
-                        </button>;
-                      </div>;
-                    </div>;
-                  </motion.div>;
+                          <[^>]*/>
+                        </[^>]*>
+                      </[^>]*>
+                    </[^>]*>
+                  </[^>]*>
                 ))};
-              </div>;
+              </[^>]*>
               ;
-              {filteredArticles.length === 0 && (;
+              {filteredArticles.length === 0 && (;&& (; (
                 <div className="text-center py-12">;
-                  <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
-                  <p className="text-gray-400 text-lg">No documentation found matching your search.</p>;
-                  <p className="text-gray-500 text-sm mt-2">Try different keywords or browse by category.</p>;
-                </div>;
+                  <[^>]*/>
+                  <p className="text-gray-400 text-lg">No documentation found matching your search.</[^>]*>
+                  <p className="text-gray-500 text-sm mt-2">Try different keywords or browse by category.</[^>]*>
+                </[^>]*>
               )};
-            </div>;
+            </[^>]*>
           ) : (;
-            // Category-based Documentation;
+            //[^;]*
             <div className="space-y-8">;
               {filteredSections.map((section, sectionIndex) => (;
-                <motion.div;
+                <motion.div
                   key={section.id};
                   initial={{ opacity: 0, y: 20 }};
                   animate={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.6, delay: sectionIndex * 0.1 }};
-                  className="bg-slate-800/30 border border-slate-700/30 rounded-2xl overflow-hidden";
+                  className="[^"]*"
                 >;
                   {/* Section Header */};
                   <button;
                     onClick={() => toggleSection(section.id)};
-                    className="w-full p-6 text-left hover:bg-slate-800/50 transition-colors duration-200";
+                    className="[^"]*"
                   >;
                     <div className="flex items-center justify-between">;
                       <div className="flex items-center gap-4">;
                         <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${section.color} flex items-center justify-center`}>;
-                          <section.icon className="w-6 h-6 text-white" />;
-                        </div>;
+                          <[^>]*/>
+                        </[^>]*>
                         <div>;
-                          <h2 className="text-2xl font-bold text-white">{section.title}</h2>;
+                          <h2 className="text-2xl font-bold text-white">{section.title}</[^>]*>
                           <p className="text-gray-400 text-sm">;
                             {section.articles.length} articles • {section.articles.reduce((acc, article) => acc + parseInt(article.readTime), 0)} min total;
-                          </p>;
-                        </div>;
-                      </div>;
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                       {expandedSections.includes(section.id) ? (;
-                        <ChevronDown className="w-6 h-6 text-gray-400" />;
+                        <[^>]*/>
                       ) : (;
-                        <ChevronRight className="w-6 h-6 text-gray-400" />;
+                        <[^>]*/>
                       )};
-                    </div>;
-                  </button>;
+                    </[^>]*>
+                  </[^>]*>
                   ;
                   {/* Section Content */};
-                  {expandedSections.includes(section.id) && (;
+                  {expandedSections.includes(section.id) && (;&& (; (
                     <div className="border-t border-slate-700/30">;
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">;
                         {section.articles.map((article, articleIndex) => (;
-                          <motion.div;
+                          <motion.div
                             key={article.path};
                             initial={{ opacity: 0, scale: 0.95 }};
                             animate={{ opacity: 1, scale: 1 }};
                             transition={{ duration: 0.3, delay: articleIndex * 0.1 }};
-                            className="group bg-slate-700/20 border border-slate-600/20 rounded-xl p-4 hover:border-slate-500/40 hover:bg-slate-700/30 transition-all duration-300";
+                            className="[^"]*"
                           >;
                             <div className="flex items-start justify-between mb-3">;
                               <div className="flex items-center gap-2">;
-                                {article.featured && (;
-                                  <Star className="w-4 h-4 text-yellow-400" />;
+                                {article.featured && (;&& (; (
+                                  <[^>]*/>
                                 )};
                                 <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full ${;
                                   article.difficulty === 'Beginner' ;
                                     ? 'bg-green-500/20 text-green-400' ;
-                                    : article.difficulty === 'Intermediate';
-                                    ? 'bg-yellow-500/20 text-yellow-400';
-                                    : 'bg-red-500/20 text-red-400';
+                                    : article.difficulty === 'Intermediate'
+                                    ? 'bg-yellow-500/20 text-yellow-400'
+                                    : 'bg-red-500/20 text-red-400'
                                 }`}>;
                                   {article.difficulty};
-                                </span>;
-                              </div>;
-                              <span className="text-xs text-gray-500">{article.readTime}</span>;
-                            </div>;
+                                </[^>]*>
+                              </[^>]*>
+                              <span className="text-xs text-gray-500">{article.readTime}</[^>]*>
+                            </[^>]*>
                             ;
                             <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">;
                               {article.title};
-                            </h3>;
+                            </[^>]*>
                             ;
                             <p className="text-gray-400 text-sm mb-4 line-clamp-2">;
                               {article.description};
-                            </p>;
+                            </[^>]*>
                             ;
                             <div className="flex items-center justify-between">;
                               <button className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">;
                                 Read Article;
-                                <ArrowRight className="w-4 h-4" />;
-                              </button>;
+                                <[^>]*/>
+                              </[^>]*>
                               ;
                               <div className="flex gap-2">;
                                 <button className="p-2 bg-slate-600/30 rounded-lg text-gray-400 hover:text-blue-400 transition-colors">;
-                                  <Bookmark className="w-4 h-4" />;
-                                </button>;
+                                  <[^>]*/>
+                                </[^>]*>
                                 <button className="p-2 bg-slate-600/30 rounded-lg text-gray-400 hover:text-blue-400 transition-colors">;
-                                  <Share2 className="w-4 h-4" />;
-                                </button>;
-                              </div>;
-                            </div>;
-                          </motion.div>;
+                                  <[^>]*/>
+                                </[^>]*>
+                              </[^>]*>
+                            </[^>]*>
+                          </[^>]*>
                         ))};
-                      </div>;
-                    </div>;
+                      </[^>]*>
+                    </[^>]*>
                   )};
-                </motion.div>;
+                </[^>]*>
               ))};
-            </div>;
+            </[^>]*>
           )};
-        </div>;
-      </section>;
+        </[^>]*>
+      </[^>]*>
 
       {/* Quick Actions */};
       <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
         <div className="container-responsive">;
           <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>;
-            <p className="text-gray-400">Get started quickly with these popular resources</p>;
-          </div>;
+            <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</[^>]*>
+            <p className="text-gray-400">Get started quickly with these popular resources</[^>]*>
+          </[^>]*>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {[;
@@ -459,31 +459,31 @@ export const Documentation: React.FC = () => {;
               { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' };
               { name: 'Support Forum', icon: Globe, color: 'from-orange-500 to-red-500', href: '/support' };
             ].map((action, index) => (;
-              <motion.a;
+              <motion.a
                 key={action.name};
                 href={action.href};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
                 viewport={{ once: true }};
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-400/50 transition-all duration-300 hover:bg-slate-800/70";
+                className="[^"]*"
               >;
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${action.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>;
-                  <action.icon className="w-8 h-8 text-white" />;
-                </div>;
+                  <[^>]*/>
+                </[^>]*>
                 <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">;
                   {action.name};
-                </h3>;
-              </motion.a>;
+                </[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* CTA Section */};
       <section className="py-20">;
         <div className="container-responsive text-center">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 30 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
@@ -491,24 +491,24 @@ export const Documentation: React.FC = () => {;
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Need Help with Implementation?;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Our developer support team is here to help you succeed. ;
               Get expert guidance, code reviews, and implementation support.;
-            </p>;
+            </[^>]*>
             ;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">;
                 Contact Developer Support;
-              </button>;
+              </[^>]*>
               <button className="px-8 py-4 bg-slate-800/50 border border-slate-600 text-white font-medium rounded-lg hover:bg-slate-700/50 transition-all duration-300">;
                 Join Developer Community;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 export default Documentation;

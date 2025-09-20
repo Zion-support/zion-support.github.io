@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 interface ButtonProps {;
-  children: React.ReactNode;
+  children: React.ReactNode
   variant?: 'default' | 'outline' | 'ghost' | 'link',;
   size?: 'sm' | 'md' | 'lg' | 'icon',;
   asChild?: boolean,;
@@ -14,23 +14,23 @@ export function Button({;
   variant = 'default',;
   size = 'md',;
   asChild = false,;
-  className = '';
+  className = ''
   onClick;
-  type = 'button';
+  type = 'button'
   disabled = false;
 }: ButtonProps) {;
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2'
   const variantClasses = {;
-    default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
+    default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
   };
   const sizeClasses = {;
-    sm: 'px-3 py-1.5 text-sm',md: 'px-4 py-2 text-sm',lg: 'px-6 py-3 text-base',icon: 'w-10 h-10 p-0';
+    sm: 'px-3 py-1.5 text-sm',md: 'px-4 py-2 text-sm',lg: 'px-6 py-3 text-base',icon: 'w-10 h-10 p-0'
   };
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   if (asChild) {;
     return <span className={classes}>{children}</span>,;
   };
-  return (;
+  return (
     <button;
       type={type};
       className={classes};
@@ -38,11 +38,11 @@ export function Button({;
       disabled={disabled};
     >;
       {children};
-    </button>;
+    </[^>]*>
   ),;
 };
-// Export button variants for use in other components;
+//[^;]*
 export const buttonVariants = {;
-  default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
+  default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
 };
 export type { ButtonProps };

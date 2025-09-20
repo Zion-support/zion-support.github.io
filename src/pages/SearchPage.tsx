@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react"
+import { Link, useSearchParams } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
 import { ;
   Search,;
   Filter, ;
@@ -41,10 +41,10 @@ import { ;
   Gamepad2,;
   Coins,;
   Satellite;
-} from "lucide-react";
-import { SEO } from "@/components/SEO";
+} from "lucide-react"
+import { SEO } from "@/components/SEO"
 interface SearchResult {;
-  id: string,title: string,excerpt: string,content: string,type: 'service' | 'page' | 'news' | 'document' | 'case-study',url: string,category: string,tags: string[];
+  id: string,title: string,excerpt: string,content: string,type: 'service' | 'page' | 'news' | 'document' | 'case-study',url: string,category: string,tags: string[]
   author?: string,;
   date?: string,;
   readTime?: number,;
@@ -52,9 +52,9 @@ interface SearchResult {;
   featured?: boolean;
 };
 
-const SearchPage: React.FC = () => {;
+const SearchPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams(),;
-  const [query, setQuery] = useState(searchParams.get('q') || ''),;
+  const [query, setQuery] = useState(searchParams.get('q') || ''),
   const [isSearching, setIsSearching] = useState(false),;
   const [results, setResults] = useState<SearchResult[]>([]),;
   const [selectedType, setSelectedType] = useState<string>('all'),;
@@ -83,7 +83,7 @@ const SearchPage: React.FC = () => {;
     { id: 'blockchain', name: 'Blockchain', icon: Lock, count: 0 };
     { id: 'sustainability', name: 'Sustainability', icon: Leaf, count: 0 };
   ];
-  // Mock search results - in a real app, this would come from an API;
+  //[^;]*
   const mockSearchResults: SearchResult[] = [;
     {;
       id: '1',title: 'AI-Powered Quantum Computing Platform',excerpt: 'Revolutionary platform combining artificial intelligence with quantum computing for unprecedented computational power.',content: 'Full content would go here...',type: 'service',url: '/services/ai-quantum-platform',category: 'ai',tags: ['AIQuantum Computing', 'PlatformInnovation'],;
@@ -133,26 +133,26 @@ const SearchPage: React.FC = () => {;
 
     setIsSearching(true),;
     ;
-    // Simulate API call delay;
+    //[^;]*
     await new Promise(resolve => setTimeout(resolve, 500)),;
 
-    // Filter results based on search criteria;
+    //[^;]*
     let filteredResults = mockSearchResults.filter(result => {;
       const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||;
                           result.excerpt.toLowerCase().includes(query.toLowerCase()) ||;
                           result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())),;
-      const matchesType = selectedType === 'all' || result.type === selectedType;
-      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory;
+      const matchesType = selectedType === 'all' || result.type === selectedType
+      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory
       ;
-      return matchesQuery && matchesType && matchesCategory,;
+      return matchesQuery && matchesType && matchesCategory,;&& matchesType && matchesCategory,; matchesType && matchesCategory,
     }),;
 
-    // Sort results;
+    //[^;]*
     filteredResults.sort((a, b) => {;
       if (sortBy === 'relevance') {;
         return b.relevance - a.relevance,;
       } else if (sortBy === 'date') {;
-        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime(),;
+        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime(),
       } else if (sortBy === 'title') {;
         return a.title.localeCompare(b.title),;
       };
@@ -164,7 +164,7 @@ const SearchPage: React.FC = () => {;
   },;
 
   const handleSearch = (e: React.FormEvent) => {;
-    e.preventDefault();
+    e.preventDefault()
     if (query.trim()) {;
       setSearchParams({ q: query.trim() });
     };
@@ -178,17 +178,17 @@ const SearchPage: React.FC = () => {;
 
   const getTypeIcon = (type: string) => {;
     switch (type) {;
-      case 'service': return <Zap className="w-4 h-4" />;
+      case 'service': return <[^>]*/>
       case 'page': return <FileText className="w-4 h-4" />,;
       case 'news': return <BookOpen className="w-4 h-4" />,;
       case 'document': return <FileText className="w-4 h-4" />,;
       case 'case-study': return <Target className="w-4 h-4" />,;
-      default: return <Globe className="w-4 h-4" />;
+      default: return <[^>]*/>
     };
   };
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
-      case 'ai': return <Brain className="w-4 h-4" />;
+      case 'ai': return <[^>]*/>
       case 'quantum': return <Atom className="w-4 h-4" />,;
       case 'cloud': return <Cloud className="w-4 h-4" />,;
       case 'security': return <Shield className="w-4 h-4" />,;
@@ -199,10 +199,10 @@ const SearchPage: React.FC = () => {;
       case 'iot': return <Network className="w-4 h-4" />,;
       case 'blockchain': return <Lock className="w-4 h-4" />,;
       case 'sustainability': return <Leaf className="w-4 h-4" />,;
-      default: return <Globe className="w-4 h-4" />;
+      default: return <[^>]*/>
     };
   };
-  // Update counts;
+  //[^;]*
   useEffect(() => {;
     searchTypes.forEach(type => {;
       if (type.id === 'all') {;
@@ -221,322 +221,322 @@ const SearchPage: React.FC = () => {;
     }),;
   }, [results]),;
 
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       <SEO ;
-        title="Search - Zion Tech Group";
-        description="Search through Zion Tech Group's comprehensive collection of services, news, and resources. Find exactly what you're looking for.";
-        keywords="search, Zion Tech Group, AI services, quantum computing, technology solutions";
+        title="Search - Zion Tech Group"
+        description="Search through Zion Tech Group's comprehensive collection of services, news, and resources. Find exactly what you're looking for."
+        keywords="search, Zion Tech Group, AI services, quantum computing, technology solutions"
       />;
       ;
       {/* Hero Section */};
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
-            className="text-center";
+            className="[^"]*"
           >;
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
               Search Zion Tech;
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
                 Group;
-              </span>;
-            </h1>;
+              </[^>]*>
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Find services, news, case studies, and resources across our comprehensive technology portfolio;
-            </p>;
-          </motion.div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Search Bar */};
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6, delay: 0.2 }};
-            className="max-w-4xl mx-auto";
+            className="[^"]*"
           >;
             <form onSubmit={handleSearch} className="relative">;
-              <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />;
+              <[^>]*/>
               <input;
-                type="text";
-                placeholder="Search for services, news, case studies, or any topic...";
+                type="text"
+                placeholder="Search for services, news, case studies, or any topic..."
                 value={query};
                 onChange={(e) => setQuery(e.target.value)};
-                className="w-full pl-16 pr-6 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300 text-lg";
+                className="[^"]*"
               />;
               <button;
-                type="submit";
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200";
+                type="submit"
+                className="[^"]*"
               >;
                 Search;
-              </button>;
-            </form>;
-          </motion.div>;
-        </div>;
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Background Elements */};
         <div className="absolute inset-0 -z-10">;
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />;
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />;
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />;
-        </div>;
-      </section>;
+          <[^>]*/>
+          <[^>]*/>
+          <[^>]*/>
+        </[^>]*>
+      </[^>]*>
 
       {/* Filters and Results */};
-      {query.trim() && (;
+      {query.trim() && (;&& (; (
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             {/* Filters */};
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               animate={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6 }};
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 mb-8";
+              className="[^"]*"
             >;
               <div className="flex flex-col lg:flex-row gap-6">;
                 {/* Type Filter */};
                 <div className="flex-1">;
-                  <label className="block text-sm font-medium text-cyan-400 mb-3">Content Type</label>;
+                  <label className="block text-sm font-medium text-cyan-400 mb-3">Content Type</[^>]*>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
                     {searchTypes.map((type) => (;
                       <button;
                         key={type.id};
                         onClick={() => setSelectedType(type.id)};
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
-                          selectedType === type.id;
-                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40';
-                            : 'text-gray-300 hover:text-white hover:bg-white/5';
+                          selectedType === type.id
+                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
+                            : 'text-gray-300 hover:text-white hover:bg-white/5'
                         }`};
                       >;
-                        <type.icon className="w-4 h-4" />;
-                        <span>{type.name}</span>;
-                        <span className="text-xs text-gray-400">({type.count})</span>;
-                      </button>;
+                        <[^>]*/>
+                        <span>{type.name}</[^>]*>
+                        <span className="text-xs text-gray-400">({type.count})</[^>]*>
+                      </[^>]*>
                     ))};
-                  </div>;
-                </div>;
+                  </[^>]*>
+                </[^>]*>
 
                 {/* Category Filter */};
                 <div className="flex-1">;
-                  <label className="block text-sm font-medium text-cyan-400 mb-3">Category</label>;
+                  <label className="block text-sm font-medium text-cyan-400 mb-3">Category</[^>]*>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
                     {categories.map((category) => (;
                       <button;
                         key={category.id};
                         onClick={() => setSelectedCategory(category.id)};
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
-                          selectedCategory === category.id;
-                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40';
-                            : 'text-gray-300 hover:text-white hover:bg-white/5';
+                          selectedCategory === category.id
+                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
+                            : 'text-gray-300 hover:text-white hover:bg-white/5'
                         }`};
                       >;
-                        <category.icon className="w-4 h-4" />;
-                        <span>{category.name}</span>;
-                        <span className="text-xs text-gray-400">({category.count})</span>;
-                      </button>;
+                        <[^>]*/>
+                        <span>{category.name}</[^>]*>
+                        <span className="text-xs text-gray-400">({category.count})</[^>]*>
+                      </[^>]*>
                     ))};
-                  </div>;
-                </div>;
+                  </[^>]*>
+                </[^>]*>
 
                 {/* Sort Options */};
                 <div className="lg:w-48">;
-                  <label className="block text-sm font-medium text-cyan-400 mb-3">Sort By</label>;
+                  <label className="block text-sm font-medium text-cyan-400 mb-3">Sort By</[^>]*>
                   <select;
                     value={sortBy};
                     onChange={(e) => setSortBy(e.target.value as 'relevance' | 'date' | 'title')};
-                    className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300";
+                    className="[^"]*"
                   >;
-                    <option value="relevance" className="bg-zion-slate-dark text-white">Relevance</option>;
-                    <option value="date" className="bg-zion-slate-dark text-white">Date</option>;
-                    <option value="title" className="bg-zion-slate-dark text-white">Title</option>;
-                  </select>;
-                </div>;
+                    <option value="relevance" className="bg-zion-slate-dark text-white">Relevance</[^>]*>
+                    <option value="date" className="bg-zion-slate-dark text-white">Date</[^>]*>
+                    <option value="title" className="bg-zion-slate-dark text-white">Title</[^>]*>
+                  </[^>]*>
+                </[^>]*>
 
                 {/* Clear Filters */};
                 <div className="lg:w-auto">;
                   <button;
                     onClick={clearFilters};
-                    className="flex items-center space-x-2 px-4 py-2 text-gray-400 hover:text-white transition-colors duration-200";
+                    className="[^"]*"
                   >;
-                    <X className="w-4 h-4" />;
-                    <span>Clear</span>;
-                  </button>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <[^>]*/>
+                    <span>Clear</[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
 
             {/* Search Results */};
             <div className="space-y-6">;
               {isSearching ? (;
-                <motion.div;
+                <motion.div
                   initial={{ opacity: 0 }};
                   animate={{ opacity: 1 }};
-                  className="text-center py-20";
+                  className="[^"]*"
                 >;
-                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mb-4"></div>;
-                  <p className="text-gray-400">Searching...</p>;
-                </motion.div>;
+                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mb-4"></[^>]*>
+                  <p className="text-gray-400">Searching...</[^>]*>
+                </[^>]*>
               ) : results.length === 0 ? (;
-                <motion.div;
+                <motion.div
                   initial={{ opacity: 0 }};
                   animate={{ opacity: 1 }};
-                  className="text-center py-20";
+                  className="[^"]*"
                 >;
-                  <div className="text-6xl text-gray-400 mb-4">🔍</div>;
-                  <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>;
-                  <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>;
+                  <div className="text-6xl text-gray-400 mb-4">🔍</[^>]*>
+                  <h3 className="text-2xl font-bold text-white mb-2">No results found</[^>]*>
+                  <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</[^>]*>
                   <div className="flex flex-wrap justify-center gap-2">;
-                    <span className="text-sm text-gray-500">Suggestions:</span>;
+                    <span className="text-sm text-gray-500">Suggestions:</[^>]*>
                     <button;
                       onClick={() => setQuery('AI')};
-                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200";
+                      className="[^"]*"
                     >;
                       AI;
-                    </button>;
+                    </[^>]*>
                     <button;
                       onClick={() => setQuery('quantum')};
-                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200";
+                      className="[^"]*"
                     >;
                       Quantum;
-                    </button>;
+                    </[^>]*>
                     <button;
                       onClick={() => setQuery('cloud')};
-                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200";
+                      className="[^"]*"
                     >;
                       Cloud;
-                    </button>;
-                  </div>;
-                </motion.div>;
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
               ) : (;
                 <>;
-                  <motion.div;
+                  <motion.div
                     initial={{ opacity: 0 }};
                     animate={{ opacity: 1 }};
-                    className="text-center mb-8";
+                    className="[^"]*"
                   >;
                     <p className="text-gray-400">;
-                      Found <span className="text-cyan-400 font-semibold">{results.length}</span> results for "{query}";
-                    </p>;
-                  </motion.div>;
+                      Found <span className="text-cyan-400 font-semibold">{results.length}</span> results for "{query}"
+                    </[^>]*>
+                  </[^>]*>
 
                   <div className="space-y-6">;
                     {results.map((result, index) => (;
-                      <motion.div;
+                      <motion.div
                         key={result.id};
                         initial={{ opacity: 0, y: 20 }};
                         animate={{ opacity: 1, y: 0 }};
                         transition={{ duration: 0.6, delay: index * 0.1 }};
-                        className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group";
+                        className="[^"]*"
                       >;
                         <div className="flex items-start space-x-4">;
                           {/* Icon */};
                           <div className="flex-shrink-0 p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30">;
                             {getTypeIcon(result.type)};
-                          </div>;
+                          </[^>]*>
 
                           {/* Content */};
                           <div className="flex-1 min-w-0">;
                             <div className="flex items-center space-x-3 mb-2">;
                               <span className="inline-flex items-center px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20">;
                                 {getTypeIcon(result.type)};
-                                <span className="ml-1 capitalize">{result.type.replace('- ')}</span>;
-                              </span>;
+                                <span className="ml-1 capitalize">{result.type.replace('- ')}</[^>]*>
+                              </[^>]*>
                               <span className="inline-flex items-center px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-400/20">;
                                 {getCategoryIcon(result.category)};
-                                <span className="ml-1 capitalize">{result.category}</span>;
-                              </span>;
-                              {result.featured && (;
+                                <span className="ml-1 capitalize">{result.category}</[^>]*>
+                              </[^>]*>
+                              {result.featured && (;&& (; (
                                 <span className="inline-flex items-center px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full border border-yellow-400/20">;
-                                  <Star className="w-3 h-3 mr-1" />;
+                                  <[^>]*/>
                                   Featured;
-                                </span>;
+                                </[^>]*>
                               )};
-                            </div>;
+                            </[^>]*>
 
                             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">;
                               <Link to={result.url} className="hover:text-cyan-400 transition-colors duration-300">;
                                 {result.title};
-                              </Link>;
-                            </h3>;
+                              </[^>]*>
+                            </[^>]*>
 
                             <p className="text-gray-300 mb-4 leading-relaxed">;
                               {result.excerpt};
-                            </p>;
+                            </[^>]*>
 
                             <div className="flex items-center justify-between">;
                               <div className="flex items-center space-x-4 text-sm text-gray-400">;
-                                {result.author && (;
+                                {result.author && (;&& (; (
                                   <span className="flex items-center">;
-                                    <User className="w-4 h-4 mr-1" />;
+                                    <[^>]*/>
                                     {result.author};
-                                  </span>;
+                                  </[^>]*>
                                 )};
-                                {result.date && (;
+                                {result.date && (;&& (; (
                                   <span className="flex items-center">;
-                                    <Calendar className="w-4 h-4 mr-1" />;
+                                    <[^>]*/>
                                     {new Date(result.date).toLocaleDateString()};
-                                  </span>;
+                                  </[^>]*>
                                 )};
-                                {result.readTime && (;
+                                {result.readTime && (;&& (; (
                                   <span className="flex items-center">;
-                                    <Clock className="w-4 h-4 mr-1" />;
+                                    <[^>]*/>
                                     {result.readTime} min read;
-                                  </span>;
+                                  </[^>]*>
                                 )};
-                              </div>;
+                              </[^>]*>
 
                               <div className="flex items-center space-x-3">;
                                 <div className="flex flex-wrap gap-1">;
                                   {result.tags.slice(0, 3).map((tag, tagIndex) => (;
                                     <span;
                                       key={tagIndex};
-                                      className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";
+                                      className="[^"]*"
                                     >;
                                       {tag};
-                                    </span>;
+                                    </[^>]*>
                                   ))};
-                                </div>;
+                                </[^>]*>
                                 ;
                                 <Link;
                                   to={result.url};
-                                  className="flex items-center text-cyan-400 hover:text-white transition-colors duration-300 group";
+                                  className="[^"]*"
                                 >;
                                   View;
-                                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />;
-                                </Link>;
-                              </div>;
-                            </div>;
-                          </div>;
-                        </div>;
-                      </motion.div>;
+                                  <[^>]*/>
+                                </[^>]*>
+                              </[^>]*>
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                     ))};
-                  </div>;
-                </>;
+                  </[^>]*>
+                </[^>]*>
               )};
-            </div>;
-          </div>;
-        </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
       )};
 
       {/* Popular Searches */};
-      {!query.trim() && (;
+      {!query.trim() && (;&& (; (
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.6 }};
               viewport={{ once: true }};
-              className="text-center mb-16";
+              className="[^"]*"
             >;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Popular Searches;
-              </h2>;
+              </[^>]*>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
                 Discover our most sought-after services and solutions;
-              </p>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
               {[;
@@ -547,33 +547,33 @@ const SearchPage: React.FC = () => {;
                 { title: 'Micro SaaS', icon: Zap, description: 'Affordable software solutions for businesses', query: 'micro SaaS' };
                 { title: 'Digital Transformation', icon: Rocket, description: 'Strategic technology consulting', query: 'digital transformation' };
               ].map((item, index) => (;
-                <motion.button;
+                <motion.button
                   key={index};
                   initial={{ opacity: 0, y: 20 }};
                   whileInView={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.6, delay: index * 0.1 }};
                   viewport={{ once: true }};
                   onClick={() => setQuery(item.query)};
-                  className="p-6 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl hover:border-cyan-400/40 transition-all duration-300 group text-left";
+                  className="[^"]*"
                 >;
                   <div className="flex items-center space-x-4 mb-4">;
                     <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30">;
-                      <item.icon className="w-6 h-6 text-cyan-400" />;
-                    </div>;
+                      <[^>]*/>
+                    </[^>]*>
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">;
                       {item.title};
-                    </h3>;
-                  </div>;
+                    </[^>]*>
+                  </[^>]*>
                   <p className="text-gray-300 text-sm leading-relaxed">;
                     {item.description};
-                  </p>;
-                </motion.button>;
+                  </[^>]*>
+                </[^>]*>
               ))};
-            </div>;
-          </div>;
-        </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
       )};
-    </div>;
+    </[^>]*>
   );
 },;
 

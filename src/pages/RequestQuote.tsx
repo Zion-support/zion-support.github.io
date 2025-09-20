@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { SEO } from "../components/SEO";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { SEO } from "../components/SEO"
 import { ;
   Calculator,;
   FileText, ;
@@ -37,10 +37,10 @@ import { ;
   Package,;
   Truck,;
   Headphones;
-} from "lucide-react";
+} from "lucide-react"
 export default function RequestQuote() {;
   const [formData, setFormData] = useState({;
-    companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [] as string[],urgency: 'medium',preferredContact: 'email';
+    companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [] as string[],urgency: 'medium',preferredContact: 'email'
   });
   const [formStep, setFormStep] = useState(1),;
   const [expandedService, setExpandedService] = useState<string | null>(null),;
@@ -50,7 +50,7 @@ export default function RequestQuote() {;
   const companySizes = [;
     '1-10 employees11-50 employees',;
     '51-200 employees201-500 employees',;
-    '500+ employees';
+    '500+ employees'
   ],;
 
   const industries = [;
@@ -58,26 +58,26 @@ export default function RequestQuote() {;
     'FinanceManufacturing',;
     'RetailEducation',;
     'Real EstateConsulting',;
-    'Non-profitOther';
+    'Non-profitOther'
   ],;
 
   const projectTypes = [;
     'New DevelopmentSystem Upgrade',;
     'IntegrationConsulting',;
     'Support & MaintenanceTraining',;
-    'Other';
+    'Other'
   ],;
 
   const budgets = [;
     'Under $10,000$10,000 - $25,000',;
     '$25,000 - $50,000$50,000 - $100,000',;
-    '$100,000 - $250,000$250,000+';
+    '$100,000 - $250,000$250,000+'
   ],;
 
   const timelines = [;
     'ASAP1-2 weeks',;
     '1-2 months3-6 months',;
-    '6+ monthsFlexible';
+    '6+ monthsFlexible'
   ],;
 
   const urgencyLevels = [;
@@ -95,114 +95,114 @@ export default function RequestQuote() {;
     {;
       id: 'ai-ml',name: 'AI & Machine Learning',icon: Bot,description: 'Custom AI solutions, ML models, and intelligent automation',;
       features: [;
-        'Custom AI model developmentMachine learning pipelines';
+        'Custom AI model developmentMachine learning pipelines'
         'Natural language processingComputer vision solutions',;
-        'Predictive analyticsAI-powered automation';
+        'Predictive analyticsAI-powered automation'
       ],;
       pricing: 'Starting from $25,000',;
-      timeline: '4-12 weeks',category: 'AI Services';
+      timeline: '4-12 weeks',category: 'AI Services'
     };
     {;
       id: 'cloud-devops',name: 'Cloud & DevOps',icon: Cloud,description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',;
       features: [;
-        'AWS/Azure/GCP setupKubernetes orchestration';
+        'AWS/Azure/GCP setupKubernetes orchestration'
         'CI/CD pipeline developmentInfrastructure as Code',;
-        'Monitoring & loggingSecurity & compliance';
+        'Monitoring & loggingSecurity & compliance'
       ],;
       pricing: 'Starting from $15,000',;
-      timeline: '2-8 weeks',category: 'IT Services';
+      timeline: '2-8 weeks',category: 'IT Services'
     };
     {;
       id: 'web-development',name: 'Web Development',icon: Monitor,description: 'Modern web applications, e-commerce, and custom web solutions',;
       features: [;
-        'React/Next.js applicationsE-commerce platforms';
+        'React/Next.js applicationsE-commerce platforms'
         'Custom web portalsAPI development',;
-        'Performance optimizationSEO & accessibility';
+        'Performance optimizationSEO & accessibility'
       ],;
       pricing: 'Starting from $10,000',;
-      timeline: '3-10 weeks',category: 'IT Services';
+      timeline: '3-10 weeks',category: 'IT Services'
     };
     {;
       id: 'mobile-apps',name: 'Mobile Applications',icon: Smartphone,description: 'iOS and Android apps with cross-platform solutions',features: [;
-        'Native iOS developmentNative Android development';
+        'Native iOS developmentNative Android development'
         'React Native appsFlutter applications',;
-        'App store optimizationPush notifications';
+        'App store optimizationPush notifications'
       ],;
       pricing: 'Starting from $20,000',;
-      timeline: '6-16 weeks',category: 'IT Services';
+      timeline: '6-16 weeks',category: 'IT Services'
     };
     {;
       id: 'data-analytics',name: 'Data & Analytics',icon: BarChart3,description: 'Data warehousing, business intelligence, and advanced analytics',;
       features: [;
-        'Data warehouse designETL pipeline development';
+        'Data warehouse designETL pipeline development'
         'Business intelligence dashboardsAdvanced analytics',;
-        'Data visualizationPredictive modeling';
+        'Data visualizationPredictive modeling'
       ],;
       pricing: 'Starting from $18,000',;
-      timeline: '4-12 weeks',category: 'AI Services';
+      timeline: '4-12 weeks',category: 'AI Services'
     };
     {;
       id: 'cybersecurity',name: 'Cybersecurity',icon: Shield,description: 'Security audits, compliance, and threat protection',;
       features: [;
-        'Security assessmentsPenetration testing';
+        'Security assessmentsPenetration testing'
         'Compliance frameworksThreat detection',;
-        'Incident responseSecurity training';
+        'Incident responseSecurity training'
       ],;
       pricing: 'Starting from $12,000',;
-      timeline: '2-6 weeks',category: 'Security';
+      timeline: '2-6 weeks',category: 'Security'
     };
     {;
       id: 'micro-saas',name: 'Micro SaaS Solutions',icon: Package,description: 'Custom SaaS applications and business automation tools',features: [;
-        'Custom SaaS platformsBusiness process automation';
+        'Custom SaaS platformsBusiness process automation'
         'Workflow managementUser management systems',;
-        'Subscription billingAnalytics & reporting';
+        'Subscription billingAnalytics & reporting'
       ],;
       pricing: 'Starting from $30,000',;
-      timeline: '8-20 weeks',category: 'Micro SaaS';
+      timeline: '8-20 weeks',category: 'Micro SaaS'
     };
     {;
       id: 'integration',name: 'System Integration',icon: Settings,description: 'API development, third-party integrations, and data synchronization',;
       features: [;
-        'API developmentThird-party integrations';
+        'API developmentThird-party integrations'
         'Data synchronizationWebhook implementation',;
-        'Custom connectorsIntegration testing';
+        'Custom connectorsIntegration testing'
       ],;
       pricing: 'Starting from $15,000',;
-      timeline: '3-8 weeks',category: 'IT Services';
+      timeline: '3-8 weeks',category: 'IT Services'
     };
   ];
   const benefits = [;
     {;
-      icon: Calculator,title: 'Transparent Pricing',description: 'Clear, upfront pricing with no hidden fees';
+      icon: Calculator,title: 'Transparent Pricing',description: 'Clear, upfront pricing with no hidden fees'
     },;
     {;
-      icon: Clock,title: 'Fast Response',description: 'Get a detailed quote within 24-48 hours';
+      icon: Clock,title: 'Fast Response',description: 'Get a detailed quote within 24-48 hours'
     };
     {;
-      icon: FileText,title: 'Detailed Proposals',description: 'Comprehensive project breakdowns and timelines';
+      icon: FileText,title: 'Detailed Proposals',description: 'Comprehensive project breakdowns and timelines'
     };
     {;
-      icon: CheckCircle,title: 'Quality Guarantee',description: 'We stand behind our work with satisfaction guarantees';
+      icon: CheckCircle,title: 'Quality Guarantee',description: 'We stand behind our work with satisfaction guarantees'
     };
   ];
   const handleInputChange = (field: string, value: string | string[]) => {;
     setFormData(prev => ({;
-      ...prev;
+      ...prev
       [field]: value;
     })),;
   },;
 
   const toggleService = (serviceId: string) => {;
     setFormData(prev => ({;
-      ...prev;
-      services: prev.services.includes(serviceId);
-        ? prev.services.filter(id => id !== serviceId);
-        : [...prev.services, serviceId];
+      ...prev
+      services: prev.services.includes(serviceId)
+        ? prev.services.filter(id => id !== serviceId)
+        : [...prev.services, serviceId]
     })),;
   },;
 
   const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService(expandedService === serviceId ? null : serviceId)
   };
   const nextStep = () => {;
     if (formStep < 3) {;
@@ -217,10 +217,10 @@ export default function RequestQuote() {;
   },;
 
   const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
+    e.preventDefault()
     setSubmitting(true),;
     ;
-    // Simulate API call;
+    //[^;]*
     await new Promise(resolve => setTimeout(resolve, 2000)),;
     ;
     setSubmitting(false),;
@@ -229,139 +229,139 @@ export default function RequestQuote() {;
 
   const resetForm = () => {;
     setFormData({;
-      companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [],urgency: 'medium',preferredContact: 'email';
+      companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [],urgency: 'medium',preferredContact: 'email'
     });
     setFormStep(1),;
     setSubmitted(false),;
   },;
 
   if (submitted) {;
-    return (;
+    return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
         <SEO ;
-          title="Quote Requested - Zion Tech Group";
-          description="Thank you for your quote request. We'll get back to you soon with a detailed proposal.";
+          title="Quote Requested - Zion Tech Group"
+          description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
         />;
         ;
-        <motion.div;
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }};
           animate={{ opacity: 1, scale: 1 }};
           transition={{ duration: 0.5 }};
-          className="text-center max-w-2xl mx-auto px-6";
+          className="[^"]*"
         >;
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full mb-8">;
-            <CheckCircle className="w-10 h-10 text-green-400" />;
-          </div>;
+            <[^>]*/>
+          </[^>]*>
           ;
           <h1 className="text-4xl font-bold text-white mb-6">;
             Quote Request Submitted!;
-          </h1>;
+          </[^>]*>
           ;
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
             Thank you for your interest in Zion Tech Group. Our team has received your ;
             request and will review it carefully. You can expect a detailed proposal ;
             within 24-48 hours.;
-          </p>;
+          </[^>]*>
           ;
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 mb-8">;
-            <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>;
+            <h3 className="text-lg font-semibold text-white mb-4">What happens next?</[^>]*>
             <div className="space-y-3 text-left">;
               <div className="flex items-start">;
-                <div className="w-6 h-6 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</div>;
+                <div className="w-6 h-6 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</[^>]*>
                 <div>;
-                  <div className="text-white font-medium">Initial Review</div>;
-                  <div className="text-gray-300 text-sm">Our team reviews your requirements and project scope</div>;
-                </div>;
-              </div>;
+                  <div className="text-white font-medium">Initial Review</[^>]*>
+                  <div className="text-gray-300 text-sm">Our team reviews your requirements and project scope</[^>]*>
+                </[^>]*>
+              </[^>]*>
               <div className="flex items-start">;
-                <div className="w-6 h-6 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</div>;
+                <div className="w-6 h-6 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</[^>]*>
                 <div>;
-                  <div className="text-white font-medium">Detailed Proposal</div>;
-                  <div className="text-gray-300 text-sm">We'll send you a comprehensive proposal with pricing and timeline</div>;
-                </div>;
-              </div>;
+                  <div className="text-white font-medium">Detailed Proposal</[^>]*>
+                  <div className="text-gray-300 text-sm">We'll send you a comprehensive proposal with pricing and timeline</[^>]*>
+                </[^>]*>
+              </[^>]*>
               <div className="flex items-start">;
-                <div className="w-6 h-6 bg-purple-500/20 text-purple-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</div>;
+                <div className="w-6 h-6 bg-purple-500/20 text-purple-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</[^>]*>
                 <div>;
-                  <div className="text-white font-medium">Follow-up Call</div>;
-                  <div className="text-gray-300 text-sm">Schedule a call to discuss the proposal and answer questions</div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
+                  <div className="text-white font-medium">Follow-up Call</[^>]*>
+                  <div className="text-gray-300 text-sm">Schedule a call to discuss the proposal and answer questions</[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
           ;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
             <button;
               onClick={resetForm};
-              className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";
+              className="[^"]*"
             >;
               Request Another Quote;
-            </button>;
+            </[^>]*>
             <a;
-              href="mailto:info@ziontechgroup.com";
-              className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200";
+              href="mailto:info@ziontechgroup.com"
+              className="[^"]*"
             >;
               Contact Us;
-            </a>;
-          </div>;
-        </motion.div>;
-      </div>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
     );
   };
 
-  return (;
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
-        title="Request Quote - Zion Tech Group";
-        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs.";
+        title="Request Quote - Zion Tech Group"
+        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
       />;
       ;
       {/* Hero Section */};
       <section className="relative py-20 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>;
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></[^>]*>
         <div className="container mx-auto px-6 relative z-10">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
-            className="text-center";
+            className="[^"]*"
           >;
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">;
-              <Calculator className="w-10 h-10 text-green-400" />;
-            </div>;
+              <[^>]*/>
+            </[^>]*>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
-              Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>;
-            </h1>;
+              Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</[^>]*>
+            </[^>]*>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
               Tell us about your project and we'll provide a detailed quote with pricing;
               timeline, and implementation plan tailored to your specific needs.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Benefits */};
       <section className="py-16">;
         <div className="container mx-auto px-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
-              <motion.div;
+              <motion.div
                 key={benefit.title};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }};
-                className="text-center";
+                className="[^"]*"
               >;
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">;
-                  <benefit.icon className="w-8 h-8 text-blue-400" />;
-                </div>;
-                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>;
-                <p className="text-gray-300 text-sm">{benefit.description}</p>;
-              </motion.div>;
+                  <[^>]*/>
+                </[^>]*>
+                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</[^>]*>
+                <p className="text-gray-300 text-sm">{benefit.description}</[^>]*>
+              </[^>]*>
             ))};
-          </div>;
-        </div>;
-      </section>;
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Main Form Section */};
       <section className="py-20">;
@@ -370,11 +370,11 @@ export default function RequestQuote() {;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">;
               {/* Form */};
               <div className="lg:col-span-2">;
-                <motion.div;
+                <motion.div
                   initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }};
                   transition={{ duration: 0.8 }};
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-8";
+                  className="[^"]*"
                 >;
                   {/* Progress Steps */};
                   <div className="flex items-center justify-between mb-8">;
@@ -383,475 +383,475 @@ export default function RequestQuote() {;
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${;
                           formStep >= step ;
                             ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white' ;
-                            : 'bg-slate-700 text-gray-400';
+                            : 'bg-slate-700 text-gray-400'
                         }`}>;
                           {step};
-                        </div>;
-                        {step < 3 && (;
+                        </[^>]*>
+                        {step < 3 && (;&& (; (
                           <div className={`w-16 h-1 mx-2 ${;
-                            formStep > step ? 'bg-gradient-to-r from-green-400 to-blue-500' : 'bg-slate-700';
-                          }`}></div>;
+                            formStep > step ? 'bg-gradient-to-r from-green-400 to-blue-500' : 'bg-slate-700'
+                          }`}></[^>]*>
                         )};
-                      </div>;
+                      </[^>]*>
                     ))};
-                  </div>;
+                  </[^>]*>
 
                   <form onSubmit={handleSubmit}>;
                     {/* Step 1: Basic Information */};
-                    {formStep === 1 && (;
-                      <motion.div;
+                    {formStep === 1 && (;&& (; (
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }};
                         animate={{ opacity: 1, y: 0 }};
                         transition={{ duration: 0.5 }};
-                        className="space-y-6";
+                        className="[^"]*"
                       >;
-                        <h3 className="text-2xl font-bold text-white mb-6">Basic Information</h3>;
+                        <h3 className="text-2xl font-bold text-white mb-6">Basic Information</[^>]*>
                         ;
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Company Name *</label>;
+                            <label className="block text-white font-medium mb-2">Company Name *</[^>]*>
                             <input;
-                              type="text";
+                              type="text"
                               required;
                               value={formData.companyName};
                               onChange={(e) => handleInputChange('companyName', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
-                              placeholder="Your company name";
+                              className="[^"]*"
+                              placeholder="Your company name"
                             />;
-                          </div>;
+                          </[^>]*>
                           ;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Contact Name *</label>;
+                            <label className="block text-white font-medium mb-2">Contact Name *</[^>]*>
                             <input;
-                              type="text";
+                              type="text"
                               required;
                               value={formData.contactName};
                               onChange={(e) => handleInputChange('contactName', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
-                              placeholder="Your full name";
+                              className="[^"]*"
+                              placeholder="Your full name"
                             />;
-                          </div>;
-                        </div>;
+                          </[^>]*>
+                        </[^>]*>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Email *</label>;
+                            <label className="block text-white font-medium mb-2">Email *</[^>]*>
                             <input;
-                              type="email";
+                              type="email"
                               required;
                               value={formData.email};
                               onChange={(e) => handleInputChange('email', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
-                              placeholder="your.email@company.com";
+                              className="[^"]*"
+                              placeholder="your.email@company.com"
                             />;
-                          </div>;
+                          </[^>]*>
                           ;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Phone</label>;
+                            <label className="block text-white font-medium mb-2">Phone</[^>]*>
                             <input;
-                              type="tel";
+                              type="tel"
                               value={formData.phone};
                               onChange={(e) => handleInputChange('phone', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
-                              placeholder="+1 (555) 123-4567";
+                              className="[^"]*"
+                              placeholder="+1 (555) 123-4567"
                             />;
-                          </div>;
-                        </div>;
+                          </[^>]*>
+                        </[^>]*>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Company Size</label>;
+                            <label className="block text-white font-medium mb-2">Company Size</[^>]*>
                             <select;
                               value={formData.companySize};
                               onChange={(e) => handleInputChange('companySize', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
+                              className="[^"]*"
                             >;
-                              <option value="">Select company size</option>;
+                              <option value="">Select company size</[^>]*>
                               {companySizes.map((size) => (;
-                                <option key={size} value={size}>{size}</option>;
+                                <option key={size} value={size}>{size}</[^>]*>
                               ))};
-                            </select>;
-                          </div>;
+                            </[^>]*>
+                          </[^>]*>
                           ;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Industry</label>;
+                            <label className="block text-white font-medium mb-2">Industry</[^>]*>
                             <select;
                               value={formData.industry};
                               onChange={(e) => handleInputChange('industry', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
+                              className="[^"]*"
                             >;
-                              <option value="">Select industry</option>;
+                              <option value="">Select industry</[^>]*>
                               {industries.map((industry) => (;
-                                <option key={industry} value={industry}>{industry}</option>;
+                                <option key={industry} value={industry}>{industry}</[^>]*>
                               ))};
-                            </select>;
-                          </div>;
-                        </div>;
-                      </motion.div>;
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                     )};
 
                     {/* Step 2: Project Details */};
-                    {formStep === 2 && (;
-                      <motion.div;
+                    {formStep === 2 && (;&& (; (
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }};
                         animate={{ opacity: 1, y: 0 }};
                         transition={{ duration: 0.5 }};
-                        className="space-y-6";
+                        className="[^"]*"
                       >;
-                        <h3 className="text-2xl font-bold text-white mb-6">Project Details</h3>;
+                        <h3 className="text-2xl font-bold text-white mb-6">Project Details</[^>]*>
                         ;
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Project Type</label>;
+                            <label className="block text-white font-medium mb-2">Project Type</[^>]*>
                             <select;
                               value={formData.projectType};
                               onChange={(e) => handleInputChange('projectType', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
+                              className="[^"]*"
                             >;
-                              <option value="">Select project type</option>;
+                              <option value="">Select project type</[^>]*>
                               {projectTypes.map((type) => (;
-                                <option key={type} value={type}>{type}</option>;
+                                <option key={type} value={type}>{type}</[^>]*>
                               ))};
-                            </select>;
-                          </div>;
+                            </[^>]*>
+                          </[^>]*>
                           ;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Budget Range</label>;
+                            <label className="block text-white font-medium mb-2">Budget Range</[^>]*>
                             <select;
                               value={formData.budget};
                               onChange={(e) => handleInputChange('budget', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
+                              className="[^"]*"
                             >;
-                              <option value="">Select budget range</option>;
+                              <option value="">Select budget range</[^>]*>
                               {budgets.map((budget) => (;
-                                <option key={budget} value={budget}>{budget}</option>;
+                                <option key={budget} value={budget}>{budget}</[^>]*>
                               ))};
-                            </select>;
-                          </div>;
-                        </div>;
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Timeline</label>;
+                            <label className="block text-white font-medium mb-2">Timeline</[^>]*>
                             <select;
                               value={formData.timeline};
                               onChange={(e) => handleInputChange('timeline', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
+                              className="[^"]*"
                             >;
-                              <option value="">Select timeline</option>;
+                              <option value="">Select timeline</[^>]*>
                               {timelines.map((timeline) => (;
-                                <option key={timeline} value={timeline}>{timeline}</option>;
+                                <option key={timeline} value={timeline}>{timeline}</[^>]*>
                               ))};
-                            </select>;
-                          </div>;
+                            </[^>]*>
+                          </[^>]*>
                           ;
                           <div>;
-                            <label className="block text-white font-medium mb-2">Urgency Level</label>;
+                            <label className="block text-white font-medium mb-2">Urgency Level</[^>]*>
                             <select;
                               value={formData.urgency};
                               onChange={(e) => handleInputChange('urgency', e.target.value)};
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
+                              className="[^"]*"
                             >;
                               {urgencyLevels.map((level) => (;
                                 <option key={level.value} value={level.value}>;
                                   {level.label} - {level.description};
-                                </option>;
+                                </[^>]*>
                               ))};
-                            </select>;
-                          </div>;
-                        </div>;
+                            </[^>]*>
+                          </[^>]*>
+                        </[^>]*>
 
                         <div>;
-                          <label className="block text-white font-medium mb-2">Project Description *</label>;
+                          <label className="block text-white font-medium mb-2">Project Description *</[^>]*>
                           <textarea;
                             required;
                             rows={4};
                             value={formData.description};
                             onChange={(e) => handleInputChange('description', e.target.value)};
-                            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";
-                            placeholder="Describe your project requirements, goals, and any specific features you need...";
+                            className="[^"]*"
+                            placeholder="Describe your project requirements, goals, and any specific features you need..."
                           />;
-                        </div>;
-                      </motion.div>;
+                        </[^>]*>
+                      </[^>]*>
                     )};
 
                     {/* Step 3: Services & Preferences */};
-                    {formStep === 3 && (;
-                      <motion.div;
+                    {formStep === 3 && (;&& (; (
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }};
                         animate={{ opacity: 1, y: 0 }};
                         transition={{ duration: 0.5 }};
-                        className="space-y-6";
+                        className="[^"]*"
                       >;
-                        <h3 className="text-2xl font-bold text-white mb-6">Services & Preferences</h3>;
+                        <h3 className="text-2xl font-bold text-white mb-6">Services & Preferences</[^>]*>
                         ;
                         <div>;
-                          <label className="block text-white font-medium mb-4">Select Services (Optional)</label>;
+                          <label className="block text-white font-medium mb-4">Select Services (Optional)</[^>]*>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                             {services.map((service) => (;
                               <div key={service.id} className="relative">;
                                 <input;
-                                  type="checkbox";
+                                  type="checkbox"
                                   id={service.id};
                                   checked={formData.services.includes(service.id)};
                                   onChange={() => toggleService(service.id)};
-                                  className="sr-only";
+                                  className="[^"]*"
                                 />;
                                 <label;
                                   htmlFor={service.id};
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${;
-                                    formData.services.includes(service.id);
-                                      ? 'border-green-400 bg-green-400/10';
-                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30';
+                                    formData.services.includes(service.id)
+                                      ? 'border-green-400 bg-green-400/10'
+                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30'
                                   }`};
                                 >;
                                   <div className="flex items-start">;
                                     <div className="flex-shrink-0">;
-                                      <service.icon className="w-6 h-6 text-blue-400" />;
-                                    </div>;
+                                      <[^>]*/>
+                                    </[^>]*>
                                     <div className="ml-3 flex-1">;
-                                      <div className="text-white font-medium">{service.name}</div>;
-                                      <div className="text-gray-300 text-sm mt-1">{service.description}</div>;
-                                      <div className="text-green-400 text-sm mt-2">{service.pricing}</div>;
-                                    </div>;
-                                  </div>;
-                                </label>;
-                              </div>;
+                                      <div className="text-white font-medium">{service.name}</[^>]*>
+                                      <div className="text-gray-300 text-sm mt-1">{service.description}</[^>]*>
+                                      <div className="text-green-400 text-sm mt-2">{service.pricing}</[^>]*>
+                                    </[^>]*>
+                                  </[^>]*>
+                                </[^>]*>
+                              </[^>]*>
                             ))};
-                          </div>;
-                        </div>;
+                          </[^>]*>
+                        </[^>]*>
 
                         <div>;
-                          <label className="block text-white font-medium mb-4">Preferred Contact Method</label>;
+                          <label className="block text-white font-medium mb-4">Preferred Contact Method</[^>]*>
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
                             {contactMethods.map((method) => (;
                               <div key={method.value} className="relative">;
                                 <input;
-                                  type="radio";
+                                  type="radio"
                                   id={method.value};
-                                  name="preferredContact";
+                                  name="preferredContact"
                                   value={method.value};
                                   checked={formData.preferredContact === method.value};
                                   onChange={(e) => handleInputChange('preferredContact', e.target.value)};
-                                  className="sr-only";
+                                  className="[^"]*"
                                 />;
                                 <label;
                                   htmlFor={method.value};
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${;
-                                    formData.preferredContact === method.value;
-                                      ? 'border-green-400 bg-green-400/10';
-                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30';
+                                    formData.preferredContact === method.value
+                                      ? 'border-green-400 bg-green-400/10'
+                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30'
                                   }`};
                                 >;
                                   <div className="text-center">;
-                                    <method.icon className="w-8 h-8 text-blue-400 mx-auto mb-2" />;
-                                    <div className="text-white font-medium">{method.label}</div>;
-                                    <div className="text-gray-300 text-sm mt-1">{method.description}</div>;
-                                  </div>;
-                                </label>;
-                              </div>;
+                                    <[^>]*/>
+                                    <div className="text-white font-medium">{method.label}</[^>]*>
+                                    <div className="text-gray-300 text-sm mt-1">{method.description}</[^>]*>
+                                  </[^>]*>
+                                </[^>]*>
+                              </[^>]*>
                             ))};
-                          </div>;
-                        </div>;
-                      </motion.div>;
+                          </[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                     )};
 
                     {/* Navigation Buttons */};
                     <div className="flex justify-between mt-8">;
-                      {formStep > 1 && (;
+                      {formStep > 1 && (;&& (; (
                         <button;
-                          type="button";
+                          type="button"
                           onClick={prevStep};
-                          className="px-6 py-3 border border-slate-600 text-gray-300 font-semibold rounded-lg hover:border-slate-500 hover:text-white transition-all duration-200";
+                          className="[^"]*"
                         >;
                           Previous;
-                        </button>;
+                        </[^>]*>
                       )};
                       ;
                       <div className="ml-auto">;
                         {formStep < 3 ? (;
                           <button;
-                            type="button";
+                            type="button"
                             onClick={nextStep};
-                            className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";
+                            className="[^"]*"
                           >;
                             Next Step;
-                          </button>;
+                          </[^>]*>
                         ) : (;
                           <button;
-                            type="submit";
+                            type="submit"
                             disabled={isSubmitting};
-                            className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed";
+                            className="[^"]*"
                           >;
-                            {isSubmitting ? 'Submitting...' : 'Submit Quote Request'};
-                          </button>;
+                            {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
+                          </[^>]*>
                         )};
-                      </div>;
-                    </div>;
-                  </form>;
-                </motion.div>;
-              </div>;
+                      </[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
 
               {/* Services Sidebar */};
               <div className="lg:col-span-1">;
-                <motion.div;
+                <motion.div
                   initial={{ opacity: 0, x: 20 }};
                   whileInView={{ opacity: 1, x: 0 }};
                   transition={{ duration: 0.8 }};
-                  className="space-y-6";
+                  className="[^"]*"
                 >;
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-6">;
-                    <h3 className="text-xl font-bold text-white mb-4">Our Services</h3>;
+                    <h3 className="text-xl font-bold text-white mb-4">Our Services</[^>]*>
                     <p className="text-gray-300 text-sm mb-4">;
                       Explore our comprehensive range of technology services and solutions.;
-                    </p>;
+                    </[^>]*>
                     ;
                     <div className="space-y-3">;
                       {services.map((service) => (;
                         <div key={service.id} className="border border-slate-600/50 rounded-lg overflow-hidden">;
                           <button;
                             onClick={() => toggleServiceExpansion(service.id)};
-                            className="w-full p-3 text-left hover:bg-slate-700/50 transition-colors duration-200";
+                            className="[^"]*"
                           >;
                             <div className="flex items-center justify-between">;
                               <div className="flex items-center">;
-                                <service.icon className="w-5 h-5 text-blue-400 mr-3" />;
-                                <span className="text-white font-medium text-sm">{service.name}</span>;
-                              </div>;
+                                <[^>]*/>
+                                <span className="text-white font-medium text-sm">{service.name}</[^>]*>
+                              </[^>]*>
                               {expandedService === service.id ? (;
-                                <ChevronUp className="w-4 h-4 text-gray-400" />;
+                                <[^>]*/>
                               ) : (;
-                                <ChevronDown className="w-4 h-4 text-gray-400" />;
+                                <[^>]*/>
                               )};
-                            </div>;
-                          </button>;
+                            </[^>]*>
+                          </[^>]*>
                           ;
-                          {expandedService === service.id && (;
-                            <motion.div;
+                          {expandedService === service.id && (;&& (; (
+                            <motion.div
                               initial={{ opacity: 0, height: 0 }};
                               animate={{ opacity: 1, height: 'auto' }};
                               exit={{ opacity: 0, height: 0 }};
                               transition={{ duration: 0.3 }};
-                              className="px-3 pb-3 border-t border-slate-600/50";
+                              className="[^"]*"
                             >;
-                              <p className="text-gray-300 text-sm mt-3 mb-3">{service.description}</p>;
+                              <p className="text-gray-300 text-sm mt-3 mb-3">{service.description}</[^>]*>
                               <div className="space-y-2">;
                                 {service.features.map((feature, index) => (;
                                   <div key={index} className="flex items-center text-gray-300 text-sm">;
-                                    <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
+                                    <[^>]*/>
                                     {feature};
-                                  </div>;
+                                  </[^>]*>
                                 ))};
-                              </div>;
+                              </[^>]*>
                               <div className="mt-3 pt-3 border-t border-slate-600/50">;
                                 <div className="flex items-center justify-between text-sm">;
-                                  <span className="text-gray-400">Starting from:</span>;
-                                  <span className="text-green-400 font-medium">{service.pricing}</span>;
-                                </div>;
+                                  <span className="text-gray-400">Starting from:</[^>]*>
+                                  <span className="text-green-400 font-medium">{service.pricing}</[^>]*>
+                                </[^>]*>
                                 <div className="flex items-center justify-between text-sm mt-1">;
-                                  <span className="text-gray-400">Timeline:</span>;
-                                  <span className="text-blue-400 font-medium">{service.timeline}</span>;
-                                </div>;
-                              </div>;
-                            </motion.div>;
+                                  <span className="text-gray-400">Timeline:</[^>]*>
+                                  <span className="text-blue-400 font-medium">{service.timeline}</[^>]*>
+                                </[^>]*>
+                              </[^>]*>
+                            </[^>]*>
                           )};
-                        </div>;
+                        </[^>]*>
                       ))};
-                    </div>;
-                  </div>;
+                    </[^>]*>
+                  </[^>]*>
 
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-6">;
-                    <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>;
+                    <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</[^>]*>
                     <div className="space-y-3">;
                       <div className="flex items-start">;
-                        <Award className="w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" />;
+                        <[^>]*/>
                         <div>;
-                          <div className="text-white font-medium text-sm">Expert Team</div>;
-                          <div className="text-gray-300 text-xs">Certified professionals with years of experience</div>;
-                        </div>;
-                      </div>;
+                          <div className="text-white font-medium text-sm">Expert Team</[^>]*>
+                          <div className="text-gray-300 text-xs">Certified professionals with years of experience</[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                       <div className="flex items-start">;
-                        <Star className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />;
+                        <[^>]*/>
                         <div>;
-                          <div className="text-white font-medium text-sm">Quality Guarantee</div>;
-                          <div className="text-gray-300 text-xs">We stand behind our work 100%</div>;
-                        </div>;
-                      </div>;
+                          <div className="text-white font-medium text-sm">Quality Guarantee</[^>]*>
+                          <div className="text-gray-300 text-xs">We stand behind our work 100%</[^>]*>
+                        </[^>]*>
+                      </[^>]*>
                       <div className="flex items-start">;
-                        <TrendingUp className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />;
+                        <[^>]*/>
                         <div>;
-                          <div className="text-white font-medium text-sm">Proven Results</div>;
-                          <div className="text-gray-300 text-xs">Track record of successful projects</div>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </motion.div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                          <div className="text-white font-medium text-sm">Proven Results</[^>]*>
+                          <div className="text-gray-300 text-xs">Track record of successful projects</[^>]*>
+                        </[^>]*>
+                      </[^>]*>
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Contact Information */};
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
         <div className="container mx-auto px-6 text-center">;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.8 }};
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Need Immediate Assistance?;
-            </h2>;
+            </[^>]*>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Our team is here to help. Contact us directly for urgent inquiries ;
               or to discuss your project in detail.;
-            </p>;
+            </[^>]*>
             ;
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">;
               <div className="text-center">;
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">;
-                  <Mail className="w-8 h-8 text-blue-400" />;
-                </div>;
-                <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>;
-                <p className="text-gray-300 text-sm mb-3">Get a quick response</p>;
+                  <[^>]*/>
+                </[^>]*>
+                <h3 className="text-lg font-bold text-white mb-2">Email Us</[^>]*>
+                <p className="text-gray-300 text-sm mb-3">Get a quick response</[^>]*>
                 <a;
-                  href="mailto:info@ziontechgroup.com";
-                  className="text-green-400 hover:text-green-300 transition-colors duration-200";
+                  href="mailto:info@ziontechgroup.com"
+                  className="[^"]*"
                 >;
-                  info@ziontechgroup.com;
-                </a>;
-              </div>;
+                  info@ziontechgroup.com
+                </[^>]*>
+              </[^>]*>
               ;
               <div className="text-center">;
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl mb-4">;
-                  <Phone className="w-8 h-8 text-green-400" />;
-                </div>;
-                <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>;
-                <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>;
+                  <[^>]*/>
+                </[^>]*>
+                <h3 className="text-lg font-bold text-white mb-2">Call Us</[^>]*>
+                <p className="text-gray-300 text-sm mb-3">Speak with an expert</[^>]*>
                 <a;
-                  href="tel:+13024640950";
-                  className="text-green-400 hover:text-green-300 transition-colors duration-200";
+                  href="tel:+13024640950"
+                  className="[^"]*"
                 >;
                   +1 (302) 464-0950;
-                </a>;
-              </div>;
+                </[^>]*>
+              </[^>]*>
               ;
               <div className="text-center">;
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl mb-4">;
-                  <Headphones className="w-8 h-8 text-purple-400" />;
-                </div>;
-                <h3 className="text-lg font-bold text-white mb-2">Live Chat</h3>;
-                <p className="text-gray-300 text-sm mb-3">Instant support</p>;
+                  <[^>]*/>
+                </[^>]*>
+                <h3 className="text-lg font-bold text-white mb-2">Live Chat</[^>]*>
+                <p className="text-gray-300 text-sm mb-3">Instant support</[^>]*>
                 <button className="text-green-400 hover:text-green-300 transition-colors duration-200">;
                   Start Chat;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

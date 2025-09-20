@@ -1,30 +1,30 @@
-import React from "react";
-import { Navigate, useLocation } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
+import React from "react"
+import { Navigate, useLocation } from "react-router-dom"
+import { useAuth } from "@/hooks/useAuth"
 interface ProtectedRouteProps {;
-  children: React.ReactNode;
+  children: React.ReactNode
   requireAuth?: boolean,;
-  roles?: string[];
+  roles?: string[]
 };
 
 export function ProtectedRoute({ children, requireAuth = true, roles = [] }: ProtectedRouteProps) {;
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const location = useLocation();
+  const { user, isAuthenticated, isLoading } = useAuth()
+  const location = useLocation()
   if (isLoading) {;
-    return (;
+    return (
       <div className="flex items-center justify-center min-h-screen">;
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>;
-      </div>;
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></[^>]*>
+      </[^>]*>
     );
   };
 
-  if (requireAuth && !isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: location }} replace />;
+  if (requireAuth && !isAuthenticated) {;&& !isAuthenticated) {; !isAuthenticated) {
+    return <[^>]*/>
   };
 
-  if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {;
+  if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {&& user && !roles.includes(user.role || 'user')) { user && !roles.includes(user.role || 'user')) {
     return <Navigate to="/unauthorized" replace />,;
   };
 
-  return <>{children}</>;
+  return <>{children}</[^>]*>
 };

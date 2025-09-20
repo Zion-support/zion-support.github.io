@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from "react"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 import { ;
   Phone,;
   Mail, ;
@@ -68,9 +68,9 @@ import { ;
   ArrowUpRight,;
   Play,;
   MailIcon;
-} from "lucide-react";
-export const EnhancedFuturisticFooter: React.FC = () => {;
-  const currentYear = new Date().getFullYear();
+} from "lucide-react"
+export const EnhancedFuturisticFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear()
   const footerSections = [;
     {;
       title: '🚀 Revolutionary 2030 Services',featured: true,links: [;
@@ -209,7 +209,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
     { name: 'Cookie Policy', href: '/cookies', icon: Settings };
   ];
   const contactInfo = {;
-    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';
+    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
   const socialLinks = [;
     { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' };
@@ -219,98 +219,98 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
     { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-600' };
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-700 dark:hover:text-gray-300' };
   ];
-  return (;
+  return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       {/* Main Footer Content */};
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         {/* Top Section - Services Grid */};
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">;
           {footerSections.map((section, sectionIndex) => (;
-            <motion.div;
+            <motion.div
               key={section.title};
               initial={{ opacity: 0, y: 20 }};
               animate={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.5, delay: sectionIndex * 0.1 }};
-              className="space-y-4";
+              className="[^"]*"
             >;
-              <h3 className={`text-lg font-semibold ${section.featured ? 'text-cyan-400' : 'text-gray-300'}`}>;
+              <h3 className={`text-lg font-semibold ${section.featured ? 'text-cyan-400' : 'text-gray-300'}`}>
                 {section.title};
-              </h3>;
+              </[^>]*>
               <ul className="space-y-2">;
                 {section.links.map((link, linkIndex) => (;
                   <li key={link.name}>;
                     <Link;
                       to={link.href};
                       className={`text-sm transition-colors duration-200 hover:text-cyan-400 ${;
-                        link.featured ? 'text-gray-200' : 'text-gray-400';
+                        link.featured ? 'text-gray-200' : 'text-gray-400'
                       }`};
                     >;
                       {link.name};
-                      {link.featured && <Star className="inline-block w-3 h-3 ml-1 text-cyan-400" />};
-                    </Link>;
-                  </li>;
+                      {link.featured && <Star className="inline-block w-3 h-3 ml-1 text-cyan-400" />};&& <Star className="inline-block w-3 h-3 ml-1 text-cyan-400" />}; <Star className="inline-block w-3 h-3 ml-1 text-cyan-400" />}
+                    </[^>]*>
+                  </[^>]*>
                 ))};
-              </ul>;
-            </motion.div>;
+              </[^>]*>
+            </[^>]*>
           ))};
-        </div>;
+        </[^>]*>
 
         {/* Middle Section - Contact & Quick Links */};
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8 border-t border-slate-700">;
           {/* Contact Information */};
           <div className="space-y-4">;
-            <h3 className="text-lg font-semibold text-cyan-400">Contact Information</h3>;
+            <h3 className="text-lg font-semibold text-cyan-400">Contact Information</[^>]*>
             <div className="space-y-3">;
               <a;
                 href={`tel:${contactInfo.phone}`};
-                className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200";
+                className="[^"]*"
               >;
-                <Phone className="w-5 h-5 text-cyan-400" />;
-                <span>{contactInfo.phone}</span>;
-              </a>;
+                <[^>]*/>
+                <span>{contactInfo.phone}</[^>]*>
+              </[^>]*>
               <a;
                 href={`mailto:${contactInfo.email}`};
-                className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200";
+                className="[^"]*"
               >;
-                <Mail className="w-5 h-5 text-cyan-400" />;
-                <span>{contactInfo.email}</span>;
-              </a>;
+                <[^>]*/>
+                <span>{contactInfo.email}</[^>]*>
+              </[^>]*>
               <a;
                 href={contactInfo.website};
-                target="_blank";
-                rel="noopener noreferrer";
-                className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200";
+                target="_blank"
+                rel="noopener noreferrer"
+                className="[^"]*"
               >;
-                <Globe className="w-5 h-5 text-cyan-400" />;
-                <span>{contactInfo.website}</span>;
-              </a>;
+                <[^>]*/>
+                <span>{contactInfo.website}</[^>]*>
+              </[^>]*>
               <div className="flex items-start space-x-3 text-gray-300">;
-                <MapPin className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />;
-                <span className="text-sm">{contactInfo.address}</span>;
-              </div>;
-            </div>;
-          </div>;
+                <[^>]*/>
+                <span className="text-sm">{contactInfo.address}</[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
 
           {/* Quick Links */};
           <div className="space-y-4">;
-            <h3 className="text-lg font-semibold text-cyan-400">Quick Links</h3>;
+            <h3 className="text-lg font-semibold text-cyan-400">Quick Links</[^>]*>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
               {quickLinks.map((link) => (;
                 <Link;
                   key={link.name};
                   to={link.href};
-                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm";
+                  className="[^"]*"
                 >;
-                  <link.icon className="w-4 h-4" />;
-                  <span>{link.name}</span>;
-                </Link>;
+                  <[^>]*/>
+                  <span>{link.name}</[^>]*>
+                </[^>]*>
               ))};
-            </div>;
-          </div>;
+            </[^>]*>
+          </[^>]*>
 
           {/* Newsletter & Social */};
           <div className="space-y-4">;
-            <h3 className="text-lg font-semibold text-cyan-400">Stay Connected</h3>;
+            <h3 className="text-lg font-semibold text-cyan-400">Stay Connected</[^>]*>
             <div className="space-y-4">;
               {/* Social Links */};
               <div className="flex space-x-4">;
@@ -321,52 +321,52 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
                     className={`p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors duration-200 ${social.color}`};
                     aria-label={social.name};
                   >;
-                    <social.icon className="w-5 h-5" />;
-                  </a>;
+                    <[^>]*/>
+                  </[^>]*>
                 ))};
-              </div>;
+              </[^>]*>
               ;
               {/* Newsletter */};
               <div className="space-y-2">;
-                <p className="text-sm text-gray-400">Subscribe to our newsletter for updates</p>;
+                <p className="text-sm text-gray-400">Subscribe to our newsletter for updates</[^>]*>
                 <form className="flex space-x-2">;
                   <input;
-                    type="email";
-                    placeholder="Enter your email";
-                    className="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-sm";
+                    type="email"
+                    placeholder="Enter your email"
+                    className="[^"]*"
                   />;
                   <button;
-                    type="submit";
-                    className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-all duration-200 text-sm font-medium";
+                    type="submit"
+                    className="[^"]*"
                   >;
                     Subscribe;
-                  </button>;
-                </form>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
 
         {/* Bottom Section - Stats & Awards */};
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-8 border-t border-slate-700">;
           <div className="text-center">;
-            <div className="text-2xl font-bold text-cyan-400">500+</div>;
-            <div className="text-sm text-gray-400">Happy Clients</div>;
-          </div>;
+            <div className="text-2xl font-bold text-cyan-400">500+</[^>]*>
+            <div className="text-sm text-gray-400">Happy Clients</[^>]*>
+          </[^>]*>
           <div className="text-center">;
-            <div className="text-2xl font-bold text-cyan-400">100+</div>;
-            <div className="text-sm text-gray-400">AI Services</div>;
-          </div>;
+            <div className="text-2xl font-bold text-cyan-400">100+</[^>]*>
+            <div className="text-sm text-gray-400">AI Services</[^>]*>
+          </[^>]*>
           <div className="text-center">;
-            <div className="text-2xl font-bold text-cyan-400">99.9%</div>;
-            <div className="text-sm text-gray-400">Uptime</div>;
-          </div>;
+            <div className="text-2xl font-bold text-cyan-400">99.9%</[^>]*>
+            <div className="text-sm text-gray-400">Uptime</[^>]*>
+          </[^>]*>
           <div className="text-center">;
-            <div className="text-2xl font-bold text-cyan-400">24/7</div>;
-            <div className="text-sm text-gray-400">Support</div>;
-          </div>;
-        </div>;
-      </div>;
+            <div className="text-2xl font-bold text-cyan-400">24/7</[^>]*>
+            <div className="text-sm text-gray-400">Support</[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Bottom Bar */};
       <div className="border-t border-slate-700">;
@@ -375,56 +375,56 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
             {/* Copyright */};
             <div className="flex items-center space-x-2">;
               <div className="w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-md flex items-center justify-center">;
-                <Zap className="w-4 h-4 text-white" />;
-              </div>;
+                <[^>]*/>
+              </[^>]*>
               <span className="text-sm text-gray-400">;
                 © {currentYear} Zion Tech Group. All rights reserved.;
-              </span>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
 
             {/* Additional Links */};
             <div className="flex items-center space-x-6 text-sm text-gray-400">;
               <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">;
                 Privacy Policy;
-              </a>;
+              </[^>]*>
               <a href="/terms" className="hover:text-cyan-400 transition-colors duration-200">;
                 Terms of Service;
-              </a>;
+              </[^>]*>
               <a href="/cookies" className="hover:text-cyan-400 transition-colors duration-200">;
                 Cookie Policy;
-              </a>;
+              </[^>]*>
               <a href="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">;
                 Sitemap;
-              </a>;
-            </div>;
+              </[^>]*>
+            </[^>]*>
 
             {/* Back to Top */};
             <button;
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })};
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200";
+              className="[^"]*"
             >;
-              <ArrowUpRight className="w-4 h-4" />;
-              <span className="text-sm">Back to Top</span>;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
+              <[^>]*/>
+              <span className="text-sm">Back to Top</[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
 
       {/* Floating Contact Button */};
-      <motion.div;
+      <motion.div
         initial={{ opacity: 0, scale: 0.8 }};
         animate={{ opacity: 1, scale: 1 }};
         transition={{ duration: 0.5, delay: 1 }};
-        className="fixed bottom-6 right-6 z-50";
+        className="[^"]*"
       >;
         <a;
-          href="/contact";
-          className="flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105";
+          href="/contact"
+          className="[^"]*"
         >;
-          <MessageCircle className="w-5 h-5" />;
-          <span className="font-medium">Contact Us</span>;
-        </a>;
-      </motion.div>;
-    </footer>;
+          <[^>]*/>
+          <span className="font-medium">Contact Us</[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };

@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useCallback, useMemo } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Link } from "react-router-dom"
 import {;
   ArrowRight,;
   Play,;
@@ -22,9 +22,9 @@ import {;
   Users,;
   BarChart3,;
   Lightbulb;
-} from "lucide-react";
+} from "lucide-react"
 interface HeroSlide {;
-  id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[];
+  id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[]
 };
 
 const heroSlides: HeroSlide[] = [;
@@ -65,13 +65,13 @@ const heroSlides: HeroSlide[] = [;
 ];
 const slideVariants = {;
   enter: (direction: number) => ({;
-    x: direction > 0 ? 1000 : -1000,opacity: 0;
+    x: direction > 0 ? 1000 : -1000,opacity: 0
   });
   center: {;
     zIndex: 1,x: 0,opacity: 1;
   };
   exit: (direction: number) => ({;
-    zIndex: 0,x: direction < 0 ? 1000 : -1000,opacity: 0;
+    zIndex: 0,x: direction < 0 ? 1000 : -1000,opacity: 0
   });
 };
 const swipeConfidenceThreshold = 10000;
@@ -84,10 +84,10 @@ export default function HeroSection() {;
   const [direction, setDirection] = useState(0),;
   const [isLoading, setIsLoading] = useState(true),;
 
-  // Memoize slides to prevent unnecessary re-renders;
+  //[^;]*
   const memoizedSlides = useMemo(() => heroSlides, []);
 
-  // Optimized slide navigation with useCallback;
+  //[^;]*
   const nextSlide = useCallback(() => {;
     setDirection(1),;
     setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),;
@@ -97,15 +97,15 @@ export default function HeroSection() {;
   const prevSlide = useCallback(() => {;
     setDirection(-1),;
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
-    setIsAutoPlaying(false);
+    setIsAutoPlaying(false)
   }, [memoizedSlides.length]);
   const goToSlide = useCallback((index: number) => {;
-    setDirection(index > currentSlide ? 1 : -1);
+    setDirection(index > currentSlide ? 1 : -1)
     setCurrentSlide(index),;
-    setIsAutoPlaying(false);
+    setIsAutoPlaying(false)
   }, [currentSlide]),;
 
-  // Auto-play functionality with pause on hover;
+  //[^;]*
   useEffect(() => {;
     if (!isAutoPlaying) return,;
 
@@ -117,14 +117,14 @@ export default function HeroSection() {;
     return () => clearInterval(interval),;
   }, [isAutoPlaying, memoizedSlides.length]),;
 
-  // Handle keyboard navigation;
+  //[^;]*
   useEffect(() => {;
     const handleKeyDown = (e: KeyboardEvent) => {;
-      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowLeft') prevSlide()
       if (e.key === 'ArrowRight') nextSlide(),;
       if (e.key === ' ') {;
         e.preventDefault(),;
-        setIsAutoPlaying(!isAutoPlaying);
+        setIsAutoPlaying(!isAutoPlaying)
       };
     },;
 
@@ -132,12 +132,12 @@ export default function HeroSection() {;
     return () => window.removeEventListener('keydown', handleKeyDown),;
   }, [prevSlide, nextSlide, isAutoPlaying]),;
 
-  // Handle image loading;
+  //[^;]*
   useEffect(() => {;
     const preloadImages = async () => {;
       const imagePromises = memoizedSlides.map(slide => {;
         return new Promise((resolve) => {;
-          const img = new Image();
+          const img = new Image()
           img.onload = resolve,;
           img.onerror = resolve,;
           img.src = slide.image,;
@@ -151,65 +151,65 @@ export default function HeroSection() {;
     preloadImages(),;
   }, [memoizedSlides]),;
 
-  const currentSlideData = memoizedSlides[currentSlide];
+  const currentSlideData = memoizedSlides[currentSlide]
 
   if (isLoading) {;
-    return (;
+    return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
         <div className="text-center">;
-          <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>;
-          <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>;
-        </div>;
-      </div>;
+          <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></[^>]*>
+          <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</[^>]*>
+        </[^>]*>
+      </[^>]*>
     ),;
   };
 
-  return (;
+  return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Background Pattern */};
       <div className="absolute inset-0 opacity-10">;
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>;
-      </div>;
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></[^>]*>
+      </[^>]*>
 
       {/* Navigation Controls */};
       <div className="absolute top-1/2 left-4 z-20 transform -translate-y-1/2">;
-        <motion.button;
+        <motion.button
           whileHover={{ scale: 1.1 }};
           whileTap={{ scale: 0.9 }};
           onClick={prevSlide};
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300";
+          className="[^"]*"
         >;
-          <ChevronLeft className="w-6 h-6" />;
-        </motion.button>;
-      </div>;
+          <[^>]*/>
+        </[^>]*>
+      </[^>]*>
 
       <div className="absolute top-1/2 right-4 z-20 transform -translate-y-1/2">;
-        <motion.button;
+        <motion.button
           whileHover={{ scale: 1.1 }};
           whileTap={{ scale: 0.9 }};
           onClick={nextSlide};
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300";
+          className="[^"]*"
         >;
-          <ChevronRight className="w-6 h-6" />;
-        </motion.button>;
-      </div>;
+          <[^>]*/>
+        </[^>]*>
+      </[^>]*>
 
       {/* Auto-play Toggle */};
       <div className="absolute top-4 right-4 z-20">;
-        <motion.button;
+        <motion.button
           whileHover={{ scale: 1.1 }};
           whileTap={{ scale: 0.9 }};
           onClick={() => setIsAutoPlaying(!isAutoPlaying)};
-          className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300";
+          className="[^"]*"
         >;
-          {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />};
-        </motion.button>;
-      </div>;
+          {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+        </[^>]*>
+      </[^>]*>
 
       {/* Slide Indicators */};
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">;
         {memoizedSlides.map((_, index) => (;
-          <motion.button;
+          <motion.button
             key={index};
             whileHover={{ scale: 1.2 }};
             whileTap={{ scale: 0.8 }};
@@ -217,31 +217,31 @@ export default function HeroSection() {;
             className={`w-3 h-3 rounded-full transition-all duration-300 ${;
               index === currentSlide ;
                 ? 'bg-cyan-400 scale-125' ;
-                : 'bg-white/30 hover:bg-white/50';
+                : 'bg-white/30 hover:bg-white/50'
             }`};
           />;
         ))};
-      </div>;
+      </[^>]*>
 
       {/* Hero Content */};
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">;
         <AnimatePresence mode="wait" custom={direction}>;
-          <motion.div;
+          <motion.div
             key={currentSlide};
             custom={direction};
             variants={slideVariants};
-            initial="enter";
-            animate="center";
-            exit="exit";
+            initial="enter"
+            animate="center"
+            exit="exit"
             transition={{;
               x: { type: "spring", stiffness: 300, damping: 30 };
               opacity: { duration: 0.2 };
             }};
-            drag="x";
+            drag="x"
             dragConstraints={{ left: 0, right: 0 }};
             dragElastic={1};
             onDragEnd={(e, { offset, velocity }) => {;
-              const swipe = swipePower(offset.x, velocity.x);
+              const swipe = swipePower(offset.x, velocity.x)
 
               if (swipe < -swipeConfidenceThreshold) {;
                 nextSlide(),;
@@ -249,7 +249,7 @@ export default function HeroSection() {;
                 prevSlide(),;
               };
             }};
-            className="w-full max-w-6xl mx-auto text-center";
+            className="[^"]*"
           >;
             <div className="grid lg:grid-cols-2 gap-12 items-center">;
               {/* Content */};
@@ -257,106 +257,106 @@ export default function HeroSection() {;
                 initial={{ opacity: 0, y: 50 }};
                 animate={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.8, delay: 0.2 }};
-                className="space-y-8";
+                className="[^"]*"
               >;
                 <div className="space-y-4">;
-                  <motion.div;
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.8 }};
                     animate={{ opacity: 1, scale: 1 }};
                     transition={{ duration: 0.6, delay: 0.3 }};
-                    className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium";
+                    className="[^"]*"
                   >;
-                    <currentSlideData.icon className="w-4 h-4 mr-2" />;
+                    <[^>]*/>
                     {currentSlideData.subtitle};
-                  </motion.div>;
+                  </[^>]*>
 
-                  <motion.h1;
+                  <motion.h1
                     initial={{ opacity: 0, y: 30 }};
                     animate={{ opacity: 1, y: 0 }};
                     transition={{ duration: 0.8, delay: 0.4 }};
-                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight";
+                    className="[^"]*"
                   >;
                     {currentSlideData.title};
-                  </motion.h1>;
+                  </[^>]*>
 
-                  <motion.p;
+                  <motion.p
                     initial={{ opacity: 0, y: 30 }};
                     animate={{ opacity: 1, y: 0 }};
                     transition={{ duration: 0.8, delay: 0.6 }};
-                    className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto";
+                    className="[^"]*"
                   >;
                     {currentSlideData.description};
-                  </motion.p>;
-                </div>;
+                  </[^>]*>
+                </[^>]*>
 
                 {/* Features */};
-                <motion.div;
+                <motion.div
                   initial={{ opacity: 0, y: 30 }};
                   animate={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.8, delay: 0.8 }};
-                  className="grid grid-cols-2 gap-4";
+                  className="[^"]*"
                 >;
                   {currentSlideData.features.map((feature, index) => (;
                     <div key={index} className="flex items-center space-x-3">;
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />;
-                      <span className="text-gray-300 text-sm font-medium">{feature}</span>;
-                    </div>;
+                      <[^>]*/>
+                      <span className="text-gray-300 text-sm font-medium">{feature}</[^>]*>
+                    </[^>]*>
                   ))};
-                </motion.div>;
+                </[^>]*>
 
                 {/* CTA Button */};
-                <motion.div;
+                <motion.div
                   initial={{ opacity: 0, y: 30 }};
                   animate={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.8, delay: 1 }};
                 >;
                   <Link;
                     to={currentSlideData.path};
-                    className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl";
+                    className="[^"]*"
                   >;
                     {currentSlideData.cta};
-                    <ArrowRight className="w-5 h-5 ml-2" />;
-                  </Link>;
-                </motion.div>;
-              </motion.div>;
+                    <[^>]*/>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
 
               {/* Visual Content */};
-              <motion.div;
+              <motion.div
                 initial={{ opacity: 0, x: 50 }};
                 animate={{ opacity: 1, x: 0 }};
                 transition={{ duration: 0.8, delay: 0.4 }};
-                className="relative";
+                className="[^"]*"
               >;
                 <div className={`relative p-8 rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} shadow-2xl`}>;
-                  <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>;
+                  <div className="absolute inset-0 bg-black/20 rounded-3xl"></[^>]*>
                   <div className="relative z-10">;
                     <div className="w-64 h-64 mx-auto bg-white/10 rounded-full flex items-center justify-center">;
-                      <currentSlideData.icon className="w-24 h-24 text-white" />;
-                    </div>;
+                      <[^>]*/>
+                    </[^>]*>
                     ;
                     {/* Stats */};
                     <div className="grid grid-cols-3 gap-4 mt-8">;
                       {currentSlideData.stats.map((stat, index) => (;
-                        <motion.div;
+                        <motion.div
                           key={index};
                           initial={{ opacity: 0, scale: 0.8 }};
                           animate={{ opacity: 1, scale: 1 }};
                           transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }};
-                          className="text-center";
+                          className="[^"]*"
                         >;
-                          <div className="text-2xl font-bold text-white">{stat.value}</div>;
-                          <div className="text-sm text-white/80">{stat.label}</div>;
-                        </motion.div>;
+                          <div className="text-2xl font-bold text-white">{stat.value}</[^>]*>
+                          <div className="text-sm text-white/80">{stat.label}</[^>]*>
+                        </[^>]*>
                       ))};
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </div>;
-          </motion.div>;
-        </AnimatePresence>;
-      </div>;
-    </section>;
+                    </[^>]*>
+                  </[^>]*>
+                </[^>]*>
+              </[^>]*>
+            </[^>]*>
+          </[^>]*>
+        </[^>]*>
+      </[^>]*>
+    </[^>]*>
   );
 };
 
