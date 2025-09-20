@@ -117,7 +117,7 @@ export const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ ch
 
       // Skip to navigation
       if (event.key === 'Tab' && !event.shiftKey && event.target === document.body) {
-        const navigation = document.querySelector('nav, [role="navigation"]');
+        const navigation = document.querySelector('nav[role="navigation"]');
         if (navigation) {
           (navigation as HTMLElement).focus();
           event.preventDefault();
@@ -138,12 +138,10 @@ export const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ ch
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
-        
         if (currentIndex !== -1) {
           const nextIndex = event.key === 'ArrowDown' 
             ? Math.min(currentIndex + 1, focusableElements.length - 1)
             : Math.max(currentIndex - 1, 0);
-          
           (focusableElements[nextIndex] as HTMLElement).focus();
           event.preventDefault();
         }

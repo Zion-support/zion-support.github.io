@@ -4,12 +4,12 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-};
+}
 
 interface State {
-  hasError: boolean,
-  error: Error | null,
-  errorInfo: ErrorInfo | null,
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
 
@@ -22,7 +22,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: null
     };
-  };
+  }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
@@ -30,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-  };
+  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -53,7 +53,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Example: Send to error reporting service
       // errorReportingService.captureException(error, { extra: errorInfo })
     }
-  };
+  }
 
   handleRetry = () => {
     this.setState({
@@ -73,7 +73,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-;
+
       return (
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -89,16 +89,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <h2 className="text-xl font-semibold mb-4">Error Details</h2>
               <div className="space-y-2 text-sm">
                 <div>
-                  <span className="text-gray-400">Error ID:</span>
+                  <span className="text-gray-400">Error ID: </span>
                   <span className="ml-2 font-mono">{this.state.errorId}</span>
                 </div>
                 <div>
-                  <span className="text-gray-400">Time:</span>
+                  <span className="text-gray-400">Time: </span>
                   <span className="ml-2">{new Date().toLocaleString()}</span>
                 </div>
                 {this.state.error && (
                   <div>
-                    <span className="text-gray-400">Message:</span>
+                    <span className="text-gray-400">Message: </span>
                     <span className="ml-2 text-red-400">{this.state.error.message}</span>
                   </div>
                 )}
@@ -149,7 +149,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-;
+
     return this.props.children;
   }
 }
