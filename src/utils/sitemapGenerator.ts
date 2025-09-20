@@ -10,6 +10,14 @@ interface SitemapConfig {
   urls: SitemapUrl[];
   outputPath?: string;
 }
+
+class SitemapGenerator {
+  private config: SitemapConfig;
+
+  constructor(config: SitemapConfig) {
+    this.config = config;
+  }
+
   /**
    * Generate XML sitemap content
    */
@@ -65,44 +73,40 @@ const defaultSitemapConfig: SitemapConfig = {
     { url: "/", priority: 1.0, changefreq: "daily" },
     { url: "/about", priority: 0.8, changefreq: "monthly" },
     { url: "/services", priority: 0.9, changefreq: "weekly" },
-    { url: "/contact", priority: 0.7, changefreq: "monthly" },
-    { url: "/pricing", priority: 0.8, changefreq: "weekly" },
-
-    // Service pages
-    { url: "/services/ai-automation", priority: 0.8, changefreq: "weekly" },
-    { url: "/services/cloud-solutions", priority: 0.8, changefreq: "weekly" },
-    { url: "/services/cybersecurity", priority: 0.8, changefreq: "weekly" },
-    { url: "/services/data-analytics", priority: 0.8, changefreq: "weekly" },
-    { url: "/services/devops", priority: 0.8, changefreq: "weekly" },
-
-    // Solution pages
-    { url: "/solutions/enterprise", priority: 0.7, changefreq: "monthly" },
-    { url: "/solutions/healthcare", priority: 0.7, changefreq: "monthly" },
-
-    // Content pages
-    { url: "/blog", priority: 0.6, changefreq: "weekly" },
-    { url: "/careers", priority: 0.6, changefreq: "weekly" },
-    { url: "/partners", priority: 0.5, changefreq: "monthly" },
-    { url: "/news", priority: 0.5, changefreq: "weekly" },
-    { url: "/case-studies", priority: 0.6, changefreq: "monthly" },
-    { url: "/help-center", priority: 0.5, changefreq: "monthly" },
-    { url: "/faq", priority: 0.5, changefreq: "monthly" },
-    { url: "/pricing", priority: 0.6, changefreq: "monthly" },
-    { url: "/marketplace", priority: 0.7, changefreq: "weekly" }
+    { url: "/ai-services", priority: 0.9, changefreq: "weekly" },
+    { url: "/it-services", priority: 0.9, changefreq: "weekly" },
+    { url: "/micro-saas", priority: 0.9, changefreq: "weekly" },
+    { url: "/blog", priority: 0.7, changefreq: "weekly" },
+    { url: "/careers", priority: 0.6, changefreq: "monthly" },
+    { url: "/contact", priority: 0.8, changefreq: "monthly" },
+    { url: "/privacy", priority: 0.3, changefreq: "yearly" },
+    { url: "/terms", priority: 0.3, changefreq: "yearly" }
   ]
 };
 
-// Utility function to generate sitemap;
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
-return generator.generateXML()}
-
-// Utility function to generate robots.txt;
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
+/**
+ * Generate sitemap XML
+ */
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
-return generator.generateXML()}
+  const generator = new SitemapGenerator(config);
+  return generator.generateXML();
+}
 
-// Utility function to generate robots.txt;
+/**
+ * Generate robots.txt
+ */
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
-return generator.generateRobotsTxt()}
+  const generator = new SitemapGenerator(config);
+  return generator.generateRobotsTxt();
+}
+
+/**
+ * Save sitemap files
+ */
+export async function saveSitemapFiles(config: SitemapConfig = defaultSitemapConfig): Promise<void> {
+  const generator = new SitemapGenerator(config);
+  return generator.saveToFile();
+}
+
+export { SitemapGenerator };
+export type { SitemapUrl, SitemapConfig };

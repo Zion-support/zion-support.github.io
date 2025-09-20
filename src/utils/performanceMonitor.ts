@@ -42,6 +42,25 @@ class PerformanceMonitor {
       } catch (error) {
         console.warn("FID observer failed:", error);
       }
+      // Cumulative Layout Shift
+      try {
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          });
+          if (clsValue > 0) {
+            this.logMetric("CLS", clsValue);
+          }
+        });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
+        this.observers.push(clsObserver);
+      } catch (error) {
+        console.warn("CLS observer failed:", error);
+      }
     }
   }
 
@@ -95,6 +114,8 @@ class PerformanceMonitor {
         event_category: "Performance"
       });
     }
+    
+    console.log(`Performance Metric - ${name}: ${value.toFixed(2)}ms`);
   }
 
   getMetrics(): Record<string, PerformanceMetric> {
@@ -108,10 +129,11 @@ class PerformanceMonitor {
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
+    this.metrics.clear();
   }
 }
 
-// Performance thresholds
+// Performance thresholds for monitoring
 interface PerformanceThresholds {
   LCP: number; // Largest Contentful Paint (ms)
   FID: number; // First Input Delay (ms)
@@ -129,6 +151,7 @@ interface PerformanceMetrics {
 }
 
 class PerformanceAnalyzer {
+  private metrics: PerformanceMetrics = {};
   private thresholds: PerformanceThresholds = {
     LCP: 2500, // Good: < 2.5s, Needs Improvement: 2.5-4s, Poor: > 4s
     FID: 100,  // Good: < 100ms, Needs Improvement: 100-300ms, Poor: > 300ms
@@ -136,6 +159,20 @@ class PerformanceAnalyzer {
     FCP: 1800, // Good: < 1.8s, Needs Improvement: 1.8-3s, Poor: > 3s
     TTFB: 800  // Good: < 800ms, Needs Improvement: 800-1800ms, Poor: > 1800ms
   };
+
+  constructor() {
+    this.initializeMetrics();
+  }
+
+  private initializeMetrics(): void {
+    if (typeof window !== "undefined" && window.performance) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics.TTFB = navigation.responseStart - navigation.requestStart;
+        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.navigationStart;
+      }
+    }
+  }
 
   public getMetrics(): PerformanceMetrics | null {
     if (typeof window === "undefined" || !window.performance) {
@@ -171,7 +208,7 @@ class PerformanceAnalyzer {
     const totalChecks = Object.keys(thresholds).length;
     const passedChecks = Object.values(thresholds).filter(Boolean).length;
     
-    return Math.round((passedChecks / totalChecks) * 100);
+    return totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 100) : 0;
   }
 
   public setThresholds(thresholds: Partial<PerformanceThresholds>): void {
