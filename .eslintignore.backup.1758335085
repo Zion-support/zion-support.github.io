@@ -109,6 +109,13 @@ zion-website/
 *.py
 *.sh
 *.cjs
+<<<<<<< HEAD
+!*.js
+!*.jsx
+!*.ts
+!*.tsx
+!src/
+=======
 
 # Specific root level files to ignore
 *.backup.*
@@ -118,6 +125,7 @@ zion-website/
 
 # Additional problematic files
 *.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-74ad
 !App.tsx
 !main.jsx
 !index.html
