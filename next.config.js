@@ -5,6 +5,9 @@ const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
+  
+  // Configure page directory
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 
   // Performance optimizations
   compress: true,
