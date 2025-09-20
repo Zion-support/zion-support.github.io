@@ -16,7 +16,7 @@ import {
 import Head from 'next/head'
 import React from 'react'
 
-export default function Partners() : any {
+export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
@@ -360,4 +360,4 @@ export default function Partners() : any {
       </main>
     </>
   )
-}'
+}

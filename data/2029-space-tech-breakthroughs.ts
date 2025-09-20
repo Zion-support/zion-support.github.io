@@ -275,4 +275,4 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Space-time messaging"
     ]
   }
-],'
+],

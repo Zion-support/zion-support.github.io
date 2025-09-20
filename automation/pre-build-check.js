@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -41,8 +41,8 @@ class PreBuildChecker {,
       process.exit(1),
     } else {,
       logger.info('✅ All pre-build checks passed!'),
-      process.exit(0);
-};
+      process.exit(0),
+    }
   }
 ,
   // Check for syntax errors,
@@ -82,8 +82,8 @@ class PreBuildChecker {,
       }
     }
 ,
-    logger.info(`Found ${errorCount} syntax errors`);
-};
+    logger.info(`Found ${errorCount} syntax errors`),
+  }
 ,
   // Check TypeScript errors,
   async checkTypeScriptErrors() {,
@@ -113,8 +113,8 @@ class PreBuildChecker {,
       logger.info(`Found ${errorCount} TypeScript errors`),
     } catch (error) {,
       // TypeScript compilation failed, which is expected,
-      logger.info('TypeScript check completed');
-};
+      logger.info('TypeScript check completed'),
+    }
   }
 ,
   // Check dependencies,
@@ -137,8 +137,8 @@ class PreBuildChecker {,
           this.issues.push({,
             type: 'dependency',
             description: `Missing required dependency: ${dep}`
-          });
-};
+          }),
+        }
       }
 ,
       // Check if node_modules exists,
@@ -146,16 +146,16 @@ class PreBuildChecker {,
         this.issues.push({,
           type: 'dependency',
           description: node_modules not found, run npm install
-        });
-};
+        }),
+      }
 ,
       logger.info('Dependencies check completed'),
     } catch (error) {,
       this.issues.push({,
         type: 'dependency',
         description: `Error checking dependencies: ${error.message}`
-      });
-};
+      }),
+    }
   }
 ,
   // Check environment variables,
@@ -170,12 +170,12 @@ class PreBuildChecker {,
         this.issues.push({,
           type: 'environment',
           description: `Missing environment variable: ${envVar}`
-        });
-};
+        }),
+      }
     }
 ,
-    logger.info('Environment variables check completed');
-};
+    logger.info('Environment variables check completed'),
+  }
 ,
   // Check build configuration,
   async checkBuildConfiguration() {,
@@ -184,18 +184,18 @@ class PreBuildChecker {,
     if (!fs.existsSync('netlify.toml')) {,
       this.issues.push({,
         type: 'configuration',
-        description: netlify.toml not found});
-};
+        description: netlify.toml not found}),
+    }
 ,
     // Check if next.config.js exists,
     if (!fs.existsSync('next.config.js') && !fs.existsSync('next.config.ts')) {,
       this.issues.push({,
         type: 'configuration',
-        description: next.config.js or next.config.ts not found});
-};
+        description: next.config.js or next.config.ts not found}),
+    }
 ,
-    logger.info('Build configuration check completed');
-};
+    logger.info('Build configuration check completed'),
+  }
 ,
   // Find TypeScript files,
   findTsFiles(dir, files = []) {,
@@ -207,12 +207,12 @@ class PreBuildChecker {,
         if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules' && item !== .next') {,
           this.findTsFiles(fullPath, files),
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {,
-          files.push(fullPath);
-};
+          files.push(fullPath),
+        }
       }
     } catch (error) {,
-      logger.error(`Error reading directory ${dir}:`, error.message);
-};
+      logger.error(`Error reading directory ${dir}:`, error.message),
+    }
 ,
     return files,
   }
@@ -259,8 +259,8 @@ class PreBuildChecker {,
 // Run the checker if this file is executed directly,
 if (require.main === module) {,
   const checker = new PreBuildChecker(),
-  checker.runChecks();
-};
+  checker.runChecks(),
+}
 ,
 module.exports = PreBuildChecker,
 // Graceful shutdown handling,
@@ -272,5 +272,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-  }),
+  process.exit(0),
+}),

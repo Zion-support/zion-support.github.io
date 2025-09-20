@@ -1,5 +1,5 @@
 import React from 'react',
-export default function BlogPost() : any {,
+export default function BlogPost() {,
   return (,
     <article className="prose prose-invert max-w-3xl mx-auto px-4 py-16">,
       <h1>Governed Real‑Time Observability for Agentic Systems (2026)</h1>,
@@ -33,6 +33,6 @@ export default function BlogPost() : any {,
         auditable.,
       </p>,
     </article>,
-  );
-  }
+  ),
+}
 ,

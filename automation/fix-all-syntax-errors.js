@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const fs = require('fs').promises,
 const path = require('path'),
@@ -61,19 +61,19 @@ const path = require('path'),
         .replace(/scheduler',/g, "'scheduler'"),
         .replace(/anomalyDetector',/g, "'anomalyDetector'"),
       if (content !== fixedContent) {} else {,
-        logger.info(`✅ No changes needed: ${file}`);
-};
+        logger.info(`✅ No changes needed: ${file}`),
+      }
     } catch (error) {,
-      logger.info(`⚠️  Skipped ${file}: ${error.message}`);
-};
+      logger.info(`⚠️  Skipped ${file}: ${error.message}`),
+    }
   }
 ,
-  logger.info('🎉 Syntax error fixing completed!');
-};
+  logger.info('🎉 Syntax error fixing completed!'),
+}
 ,
 if (require.main === module) {,
-  fixSyntaxErrors().catch(console.error);
-};
+  fixSyntaxErrors().catch(console.error),
+}
 ,
 module.exports = fixSyntaxErrors,
     } catch (error) {,
@@ -84,8 +84,8 @@ module.exports = fixSyntaxErrors,
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping ...');
-};
+    console.log('Stopping ...'),
+  }
 }
 ,
 // Start the script,
@@ -94,8 +94,8 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start :', error),
     process.exit(1),
-  });
-};
+  }),
+}
 ,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {,

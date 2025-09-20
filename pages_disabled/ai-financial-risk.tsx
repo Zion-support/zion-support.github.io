@@ -3,7 +3,7 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 
-export default function AIFinancialRiskPage() : any {
+export default function AIFinancialRiskPage() {
   return (
     <UltraFuturisticBackground  intensity="high">
       <Head>
@@ -58,5 +58,5 @@ export default function AIFinancialRiskPage() : any {
       </div>
     </UltraFuturisticBackground>
   );
-  }
+}
 

@@ -33,8 +33,8 @@ class PM2Dashboard {,
       console.log('Press "q" to quit, "r" to refresh, "h" for help'),
     } catch (error) {,
       console.error('❌ Failed to start dashboard:', error),
-      process.exit(1);
-};
+      process.exit(1),
+    }
   }
 ,
   async connectToPM2() {,
@@ -43,14 +43,14 @@ class PM2Dashboard {,
         if (err) reject(err),
         else resolve(),
       }),
-    });
-};
+    }),
+  }
 ,
   startRealTimeUpdates() {,
     this.updateInterval = setInterval(async () => {,
       if (this.isRunning) {,
-        await this.updateDashboard();
-};
+        await this.updateDashboard(),
+      }
     }, 5000), // Update every 5 seconds
   }
 ,
@@ -59,8 +59,8 @@ class PM2Dashboard {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
     console.log('║                           PM2 AUTOMATION DASHBOARD                           ║'),
     console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
-    await this.updateDashboard();
-};
+    await this.updateDashboard(),
+  }
 ,
   async updateDashboard() {,
     try {,
@@ -77,8 +77,8 @@ class PM2Dashboard {,
       // Display footer,
       this.displayFooter(),
     } catch (error) {,
-      console.error('Failed to update dashboard:', error);
-};
+      console.error('Failed to update dashboard:', error),
+    }
   }
 ,
   displayHeader() {,
@@ -86,8 +86,8 @@ class PM2Dashboard {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
     console.log(`║                           PM2 AUTOMATION DASHBOARD                           ║`),
     console.log(`║                                ${now.padEnd(50)} ║`),
-    console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
-};
+    console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
+  }
 ,
   displaySystemInfo(systemInfo) {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
@@ -95,8 +95,8 @@ class PM2Dashboard {,
     console.log('╠══════════════════════════════════════════════════════════════════════════════╣'),
     console.log(`║ CPU Usage: ${systemInfo.cpuUsage.padEnd(10)} │ Memory: ${systemInfo.memoryUsage.padEnd(10)} │ Uptime: ${systemInfo.uptime.padEnd(15)} ║`),
     console.log(`║ Platform: ${systemInfo.platform.padEnd(10)} │ Arch: ${systemInfo.arch.padEnd(10)} │ Load: ${systemInfo.loadAvg.padEnd(15)} ║`),
-    console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
-};
+    console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
+  }
 ,
   displayProcessStatus(status) {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
@@ -122,8 +122,8 @@ class PM2Dashboard {,
     }),
     console.log('╠══════════════════════════════════════════════════════════════════════════════╣'),
     console.log(`║ Total: ${status.length.toString().padEnd(3)} │ Online: ${online.length.toString().padEnd(3)} │ Error: ${errored.length.toString().padEnd(3)} │ Stopped: ${stopped.length.toString().padEnd(3)} │         ║`),
-    console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
-};
+    console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
+  }
 ,
   displayProcessRow(process) {,
     const name = (process.name || 'unknown').padEnd(24),
@@ -132,14 +132,14 @@ class PM2Dashboard {,
     const memory = this.formatBytes(process.monit?.memory || 0).padEnd(8),
     const uptime = this.formatUptime(process.pm2_env.pm_uptime).padEnd(9),
     const restarts = (process.pm2_env.restart_time || 0).toString().padEnd(9),
-    console.log(`║ ${name} │ ${status} │ ${cpu} │ ${memory} │ ${uptime} │ ${restarts} ║`);
+    console.log(`║ ${name} │ ${status} │ ${cpu} │ ${memory} │ ${uptime} │ ${restarts} ║`),
   }
 ,
   getStatusIcon(status) {,
     switch (status) {,
-      case 'online': return '🟢';
-      case 'errored': return '🔴';
-      case 'stopped': return '⚫';
+      case 'online': return '🟢',
+      case 'errored': return '🔴',
+      case 'stopped': return '⚫',
       default: return '❓'}
   }
 ,
@@ -200,8 +200,8 @@ class PM2Dashboard {,
         if (err) reject(err),
         else resolve(list || []),
       }),
-    });
-};
+    }),
+  }
 ,
   handleUserInput() {,
     this.rl.on('line', async (input) => {,
@@ -233,10 +233,10 @@ class PM2Dashboard {,
           await this.restartAllProcesses(),
           break,
         default:  ,
-          console.log(`Unknown command: ${command}. Type 'h' for help.`);
-};
-    });
-};
+          console.log(`Unknown command: ${command}. Type 'h' for help.`),
+      }
+    }),
+  }
 ,
   showHelp() {,
     console.log('\n📖 Dashboard Commands: '),
@@ -246,8 +246,8 @@ class PM2Dashboard {,
     console.log('  s, start       - Start all stopped processes'),
     console.log('  x, stop        - Stop all running processes'),
     console.log('  R, restart     - Restart all processes'),
-    console.log('\nPress Enter to continue...');
-};
+    console.log('\nPress Enter to continue...'),
+  }
 ,
   async startAllProcesses() {,
     try {,
@@ -257,8 +257,8 @@ class PM2Dashboard {,
       await this.sleep(1000),
       await this.updateDashboard(),
     } catch (error) {,
-      console.error('❌ Failed to start processes:', error.message);
-};
+      console.error('❌ Failed to start processes:', error.message),
+    }
   }
 ,
   async stopAllProcesses() {,
@@ -269,8 +269,8 @@ class PM2Dashboard {,
       await this.sleep(1000),
       await this.updateDashboard(),
     } catch (error) {,
-      console.error('❌ Failed to stop processes:', error.message);
-};
+      console.error('❌ Failed to stop processes:', error.message),
+    }
   }
 ,
   async restartAllProcesses() {,
@@ -281,34 +281,34 @@ class PM2Dashboard {,
       await this.sleep(1000),
       await this.updateDashboard(),
     } catch (error) {,
-      console.error('❌ Failed to restart processes:', error.message);
-};
+      console.error('❌ Failed to restart processes:', error.message),
+    }
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+    return new Promise(resolve => setTimeout(resolve, ms)),
+  }
 ,
   async shutdown() {,
     console.log('🛑 Shutting down dashboard...'),
     this.isRunning = false,
     if (this.updateInterval) {,
-      clearInterval(this.updateInterval);
-};
+      clearInterval(this.updateInterval),
+    }
 ,
     this.rl.close(),
     pm2.disconnect(),
     console.log('✅ Dashboard shutdown complete'),
-    process.exit(0);
-};
+    process.exit(0),
+  }
 }
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', async () => {,
   const dashboard = global.currentDashboard,
   if (dashboard) {,
-    await dashboard.shutdown();
-};
+    await dashboard.shutdown(),
+  }
   process.exit(0),
 }),
 // Run the dashboard,
@@ -319,7 +319,7 @@ if (require.main === module) {,
     console.error('Fatal error:', error),
     await dashboard.shutdown(),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = PM2Dashboard,]]

@@ -17,8 +17,8 @@ export function buildMerkleTree(leavesHex: string[]): { root: string, levels: st
     for (let i = 0, i < level.length, i += 2) {
       const left = level[i],
       const right = level[i + 1] || left,
-      next.push(sha256Hex(Buffer.from(left + right, "hex")));
-};
+      next.push(sha256Hex(Buffer.from(left + right, "hex"))),
+    }
     levels.push(next),
     level = next,
   }
@@ -48,11 +48,12 @@ export function generateProofs(leavesHex: string[], levels: string[][]): Record<
 export function signRootWithHmac(rootHex: string): string | undefined {
   const secret = process.env.ZION_SYNC_SECRET,
   if (!secret) return undefined,
-  return crypto.createHmac("sha256", Buffer.from(secret, "utf8")).update(Buffer.from(rootHex, "hex")).digest("hex");
-};
+  return crypto.createHmac("sha256", Buffer.from(secret, "utf8")).update(Buffer.from(rootHex, "hex")).digest("hex"),
+}
+
 export function verifyHmacSignature(rootHex: string, signatureHex?: string): boolean {
   if (!signatureHex) return !process.env.ZION_SYNC_REQUIRE_SIG, // allow if not required
   const expected = signRootWithHmac(rootHex),
   if (!expected) return !process.env.ZION_SYNC_REQUIRE_SIG, // allow if no secret configured
-  return crypto.timingSafeEqual(Buffer.from(expected, "hex"), Buffer.from(signatureHex, "hex"));
-  }
+  return crypto.timingSafeEqual(Buffer.from(expected, "hex"), Buffer.from(signatureHex, "hex")),
+}

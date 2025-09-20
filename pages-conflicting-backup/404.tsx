@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Custom404() : any {
+export default function Custom404() {
   return (
     <div>
       <Head>
@@ -13,6 +13,5 @@ export default function Custom404() : any {
       </main>
     </div>
   );
-  }
+}
 
-'

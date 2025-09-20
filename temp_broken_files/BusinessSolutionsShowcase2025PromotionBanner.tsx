@@ -39,8 +39,8 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {,
       const interval = setInterval(() => {,
         setCurrentMetric((prev) => (prev + 1) % metrics.length),
       }2500),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isVisiblemetrics.length]),
   const handleDismiss = () => {,
     setIsDismissed(true),
@@ -241,7 +241,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default BusinessSolutionsShowcase2025PromotionBanner,
 </div></div>,

@@ -30,13 +30,13 @@ type TestMockAppKitInstance = Partial<MockableAppKit> & {
     _associatedMockEip1193Provider?: any
 },
 
-const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitInstance : any => {
+const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitInstance => {
   const subscriptionCallbacksStorage: (((provider?: any) => void) | ((provider?: any) => Promise<void>))[] = [],
   const onProviderChangedCallbacksStorage: ((() => void) | (() => Promise<void>))[] = [],
   let selfReferentialMock: TestMockAppKitInstance,
 
   const associatedMockEip1193Provider = {
-    request: vi.fn(async (args: { method: string, params?: any[] }) : any => {
+    request: vi.fn(async (args: { method: string, params?: any[] }) => {
       switch (args.method) {
         case 'eth_chainId': {
           const chainId = selfReferentialMock.getChainId?.() as (number | string | null | undefined),
@@ -48,11 +48,11 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
         }
         case 'eth_requestAccounts': case 'eth_accounts': {
           const addr = selfReferentialMock.getAddress?.(),
-          return addr ? [addr] : [];
-  }
-        case 'eth_blockNumber': return Promise.resolve('0x1');
-        case 'eth_estimateGas': return Promise.resolve('0x5208');
-        case 'eth_gasPrice': return Promise.resolve('0x4a817c800');
+          return addr ? [addr] : [],
+        }
+        case 'eth_blockNumber': return Promise.resolve('0x1'),
+        case 'eth_estimateGas': return Promise.resolve('0x5208'),
+        case 'eth_gasPrice': return Promise.resolve('0x4a817c800'),
         default: return Promise.resolve(undefined)
       }
     }),
@@ -67,23 +67,23 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
     getState: vi.fn().mockReturnValue({ isConnected: false }),
     getAddress: vi.fn().mockReturnValue(null),
     getChainId: vi.fn().mockReturnValue(null),
-    subscribeProvider: vi.fn((callback) : any => {
+    subscribeProvider: vi.fn((callback) => {
       subscriptionCallbacksStorage.push(callback),
       return vi.fn(() => {
         const index = subscriptionCallbacksStorage.indexOf(callback),
         if (index > -1) subscriptionCallbacksStorage.splice(index, 1),
       }),
     }),
-    on: vi.fn((event, callback) : any => {
+    on: vi.fn((event, callback) => {
       if (event === 'providerChanged') {
-        onProviderChangedCallbacksStorage.push(callback);
-};
+        onProviderChangedCallbacksStorage.push(callback),
+      }
     }),
-    off: vi.fn((event, callback) : any => {
+    off: vi.fn((event, callback) => {
       if (event === 'providerChanged') {
         const index = onProviderChangedCallbacksStorage.indexOf(callback as () => void),
-        if (index > -1) onProviderChangedCallbacksStorage.splice(index, 1);
-};
+        if (index > -1) onProviderChangedCallbacksStorage.splice(index, 1),
+      }
     })
   },
 
@@ -91,7 +91,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
     ...baseMockPart,
     getWalletProvider: vi.fn().mockReturnValue(associatedMockEip1193Provider),
     ...config,
-    _triggerSubscriptionCallback: async (providerVal?: any) : any => {
+    _triggerSubscriptionCallback: async (providerVal?: any) => {
       for (const cb of subscriptionCallbacksStorage) { await cb(providerVal) }
     },
     _triggerOnProviderChangedCallback: async () => {
@@ -124,7 +124,7 @@ vi.mock('@/config/env', () => ({
 
 import { WalletProvider, useWallet, WalletContextType } from '../../src/context/WalletContext',
 
-const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }> = ({ onUpdate }) : any => {
+const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }> = ({ onUpdate }) => {
   const wallet = useWallet(),
   React.useEffect(() => {
     onUpdate(wallet),
@@ -145,7 +145,7 @@ const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }
 
 describe('WalletProvider', () => {
   let currentWalletState: WalletContextType,
-  const onUpdateMock = vi.fn((wallet) : any => {
+  const onUpdateMock = vi.fn((wallet) => {
     currentWalletState = wallet
   }),
 
@@ -326,19 +326,19 @@ describe('WalletProvider', () => {
 
     if (currentWalletState.provider) {
       const network = await currentWalletState.provider.getNetwork(),
-      expect(network.chainId).toBe(BigInt(1));
-};
+      expect(network.chainId).toBe(BigInt(1)),
+    }
     if (currentWalletState.signer) {
         const signerAddress = await currentWalletState.signer.getAddress(),
-        expect(signerAddress).toBe(MOCK_ADDRESS_1);
-};
+        expect(signerAddress).toBe(MOCK_ADDRESS_1),
+    }
   }),
 
   test('uses on/off for event handling if subscribeProvider is not available', async () => {
     const localActiveUseAppKitMock = makeMockAppKit({
         subscribeProvider: undefined as any
     }),
-     (localActiveUseAppKitMock.on as MockInstance<any,any>).mockImplementation((event:any, callback: any) : any => {
+     (localActiveUseAppKitMock.on as MockInstance<any,any>).mockImplementation((event:any, callback: any) => {
         if (event === 'providerChanged') {
             (localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific = callback
         }
@@ -365,8 +365,8 @@ describe('WalletProvider', () => {
       if ((localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific) {
         await (localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific(),
       } else {
-        await localActiveUseAppKitMock._triggerOnProviderChangedCallback();
-};
+        await localActiveUseAppKitMock._triggerOnProviderChangedCallback(),
+      }
     }),
 
     expect(screen.getByTestId('isConnected').textContent).toBe('true'),
@@ -393,5 +393,5 @@ describe('WalletProvider', () => {
         </WalletProvider>
       ),
     }).not.toThrow(),
-  });
   }),
+}),

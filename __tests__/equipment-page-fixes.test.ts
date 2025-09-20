@@ -10,7 +10,7 @@ describe('Equipment Page Fixes', () => {'  test('generateDatacenterEquipment pro
     expect(equipment1.length).toBe(count),
     expect(equipment2.length).toBe(count),
     // Verify each item has required properties,
-    equipment1.forEach((item, index) : any => {,
+    equipment1.forEach((item, index) => {,
       expect(item.id).toBe(`datacenter-eq-${startId + index}`),
       expect(item.title).toBeTruthy(),
       expect(item.category).toBeTruthy(),
@@ -52,4 +52,4 @@ describe('Equipment Page Fixes', () => {'  test('generateDatacenterEquipment pro
       }
     }),
   }),
-}),'"
+}),

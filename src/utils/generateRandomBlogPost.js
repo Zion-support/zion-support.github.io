@@ -4,9 +4,9 @@ const titles = [
     'Best Practices for React Performance Optimization',
     'DevOps Trends to Watch in 2024',
     'Cybersecurity Essentials for Modern Applications',
-    'Cloud-Native Development Strategies',;
-    'Machine Learning in Production Systems',;
-    'Modern Frontend Development Patterns';
+    'Cloud-Native Development Strategies',
+    'Machine Learning in Production Systems',
+    'Modern Frontend Development Patterns'
 ];
 const authors = [
     'Sarah Johnson',
@@ -14,9 +14,9 @@ const authors = [
     'Emily Rodriguez',
     'David Kim',
     'Lisa Thompson',
-    'Alex Wong',;
-    'Maria Garcia',;
-    'James Wilson';
+    'Alex Wong',
+    'Maria Garcia',
+    'James Wilson'
 ];
 const categories = [
     'AI & Machine Learning',
@@ -24,16 +24,15 @@ const categories = [
     'Frontend Development',
     'DevOps & Cloud',
     'Cybersecurity',
-    'Backend Development',;
-    'Mobile Development',;
-    'Data Science';
+    'Backend Development',
+    'Mobile Development',
+    'Data Science'
 ];
 export function generateRandomBlogPost() {
     const randomTitle = titles[Math.floor(Math.random() * titles.length)];
     const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
     const randomCategory = categories[Math.floor(Math.random() * categories.length)];
     return {
-  
         id: Math.random().toString(36).substr(2, 9),
         title: randomTitle;
   excerpt: `This is a sample excerpt for the blog post "${randomTitle}". It provides a brief overview of what readers can expect to learn from this article.`;
@@ -48,11 +47,11 @@ export function generateRandomBlogPost() {
     const titles = [
         'The Future of AI in Technology',
         'Building Scalable Web Applications',
-        'Machine Learning Best Practices',;
-        'Cloud Computing Trends',;
-        'Cybersecurity in 2024';
+        'Machine Learning Best Practices',
+        'Cloud Computing Trends',
+        'Cybersecurity in 2024'
     ];
-    const authors = [;
+    const authors = [
         { name: 'Sarah Johnson', avatar: '/avatars/sarah.jpg', avatarUrl: '/avatars/sarah.jpg', bio: 'AI Research Lead' };
         { name: 'Michael Chen', avatar: '/avatars/michael.jpg', avatarUrl: '/avatars/michael.jpg', bio: 'Senior Software Engineer' };
         { name: 'Emily Rodriguez', avatar: '/avatars/emily.jpg', avatarUrl: '/avatars/emily.jpg', bio: 'Data Scientist' };
@@ -62,7 +61,6 @@ export function generateRandomBlogPost() {
     const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
     const randomId = Math.random().toString(36).substr(2, 9);
     return {
-  
         id: randomId;
   title: randomTitle;
         slug: randomTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),

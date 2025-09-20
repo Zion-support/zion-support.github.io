@@ -15,7 +15,7 @@ import { emergingTech2028Services as emergingTech2026ServicesV2 } from '../data/
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 
-export default function PricingEnhanced2026Page() : any {
+export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
@@ -24,7 +24,7 @@ export default function PricingEnhanced2026Page() : any {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const popularServices = getPopularServices();
   
@@ -96,7 +96,7 @@ export default function PricingEnhanced2026Page() : any {
       icon: DollarSign,
       color: 'from-green-500 to-emerald-600'
     }
-  ],
+  ];
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
@@ -178,7 +178,7 @@ export default function PricingEnhanced2026Page() : any {
       cta: 'Contact Sales',
       color: 'from-yellow-500 to-orange-600'
     }
-  ],
+  ];
 
   // Featured services showcase
   const featuredServices = [
@@ -218,7 +218,7 @@ export default function PricingEnhanced2026Page() : any {
       icon: '🔐',
       color: 'from-blue-500 to-cyan-600'
     }
-  ],
+  ];
 
   return (
     <UltraFuturisticBackground  intensity="high">
@@ -535,4 +535,4 @@ export default function PricingEnhanced2026Page() : any {
       </div>
     </UltraFuturisticBackground>
   );
-};
+}

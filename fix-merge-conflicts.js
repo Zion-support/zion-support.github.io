@@ -21,18 +21,18 @@ console.log('Merge conflict resolution complete!')
         }
       }
 }
-);
+,);
 console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
-);    }
+,);    }
   }
   }
 }
 console.log('\nMerge conflict fixing complete!')
 console.log('\nMerge conflict fixing complete!')
 console.log(`Fixed merge conflicts in ${fixedCount} files`)
-)
+,)
 }
   traverse(dir);
   return files}

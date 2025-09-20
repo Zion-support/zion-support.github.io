@@ -96,7 +96,8 @@ const success = mergePR(branch);
 try {
           execSync('git merge --abort', { stdio: 'pipe' });
         } catch (abortError) {
-          // Ignore abort errors}
+          // Ignore abort errors,
+}
       }
     } catch (error) {
       console.error(`❌ Error processing ${branch}:`, error.message);

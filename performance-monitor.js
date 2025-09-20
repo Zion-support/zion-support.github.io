@@ -23,7 +23,8 @@ timestamp: new Date().toISOString()
   }
   async measureMemoryUsage() {
     const usage = process.memoryUsage();
-    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB}
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB,
+}
   generateReport() {
     const report = {
 if (this.metrics.bundleSize > 1000000) {

@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 console.log('🔗 Starting continuous link checker automation...');
 
 // Get automation interval from environment variable (default: 30 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000, // 30 minutes
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
 
 async function checkLinks() {
   try {
@@ -20,7 +20,7 @@ async function checkLinks() {
     // Build the project first
     console.log('📦 Building project...');
     try {
-      execSync('npm run build', { stdio: 'inherit' }),
+      execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed');
     } catch (error) {
       console.log('❌ Build failed, skipping link check');
@@ -51,17 +51,17 @@ async function checkLinks() {
           brokenLinks++;
           brokenLinksList.push({ file, link });
           console.log(`❌ Broken link: ${link} in ${file}`);
-};
+        }
       }
     }
 
-    console.log(`📊 Link check completed: `),
-    console.log(`   Total links: ${totalLinks}`),
-    console.log(`   Broken links: ${brokenLinks}`),
-    console.log(`   Success rate: ${((totalLinks - brokenLinks) / totalLinks * 100).toFixed(2)}%`),
+    console.log(`📊 Link check completed:`);
+    console.log(`   Total links: ${totalLinks}`);
+    console.log(`   Broken links: ${brokenLinks}`);
+    console.log(`   Success rate: ${((totalLinks - brokenLinks) / totalLinks * 100).toFixed(2)}%`);
 
     if (brokenLinks > 0) {
-      console.log('🔧 Broken links found: '),
+      console.log('🔧 Broken links found:');
       brokenLinksList.forEach(({ file, link }) => {
         console.log(`   ${file}: ${link}`);
       });
@@ -111,12 +111,12 @@ function extractLinks(htmlContent) {
 
 async function isLinkValid(link, baseFile) {
   // Skip external links for now
-  if (link.startsWith('http: //') || link.startsWith('https://')) {
-    return true,
+  if (link.startsWith('http://') || link.startsWith('https://')) {
+    return true;
   }
   
   // Skip mailto and tel links
-  if (link.startsWith('mailto: ') || link.startsWith('tel:')) {
+  if (link.startsWith('mailto:') || link.startsWith('tel:')) {
     return true;
   }
   
@@ -149,4 +149,4 @@ checkLinks();
 // Set up interval for continuous automation
 setInterval(checkLinks, AUTOMATION_INTERVAL);
 
-console.log(`⏰ Link checker scheduled to run every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);'
+console.log(`⏰ Link checker scheduled to run every ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);

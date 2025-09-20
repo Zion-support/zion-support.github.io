@@ -337,7 +337,7 @@ const InteractiveTechShowcase: React.FC = () => {,
         setIsAnimating(false),
       }, 300),
     }, 5000),
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }, [technologies.length]),
   const currentTech = technologies[activeTech],
 >>>>>>> cursor/create-and-deploy-new-content-36f9,

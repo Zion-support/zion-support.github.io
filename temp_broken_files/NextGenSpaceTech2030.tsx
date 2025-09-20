@@ -306,4 +306,4 @@ const NextGenSpaceTech2030: React.FC = () => {,
         </div>,
       </div>,
     </div>)},
-export default NextGenSpaceTech2030,'
+export default NextGenSpaceTech2030,

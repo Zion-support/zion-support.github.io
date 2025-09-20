@@ -2,11 +2,11 @@ export const augmentedServicesBatch3 = [
 =======
 =======
 export interface RealAugmentedService2025Batch3 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  features: string[],
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
 }
 
 export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [

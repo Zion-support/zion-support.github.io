@@ -200,6 +200,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {,
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>,
     </div>,
-  );
-  },
+  ),
+},
 export default EnterpriseAutomationSolutions2025PromotionBanner,

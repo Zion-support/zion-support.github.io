@@ -1,6 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
-export default function AI2026GuardrailScorecardsExecutiveBrief() : any {,
+export default function AI2026GuardrailScorecardsExecutiveBrief() {,
   return (,
     <>,
       <Head>,

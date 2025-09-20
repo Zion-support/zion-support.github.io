@@ -233,8 +233,8 @@ if ( {) {,
 }
           return response,
         }
-        return fetch (event.request);
-};
-    ));
-  }),
-,'
+        return fetch (event.request),
+      }
+    )),
+}),
+,

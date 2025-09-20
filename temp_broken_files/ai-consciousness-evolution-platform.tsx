@@ -920,5 +920,5 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
       </main>,
       <UltraFuturisticFooter2029 />,
   ),
-export default AIConsciousnessEvolutionPlatform;
-  }
+export default AIConsciousnessEvolutionPlatform,
+}

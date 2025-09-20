@@ -1,12 +1,12 @@
 export interface InnovativeITService2024 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  variant: string,
-  features: string[],
-  rating: number,
-  customers: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  variant: string;
+  features: string[];
+  rating: number;
+  customers: string;
 }
 
 export const innovativeITServices2024: InnovativeITService2024[] = [
@@ -434,4 +434,4 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     reviews: 410
 =======
   }
-],
+];

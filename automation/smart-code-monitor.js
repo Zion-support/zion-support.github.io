@@ -26,22 +26,22 @@ class SmartCodeMonitor {,
       testCoverage: 80,
       documentation: 70},
     // // // // // // console.log('🧠 Smart Code Monitor Starting...'),
-    this.startMonitoring();
-};
+    this.startMonitoring(),
+  }
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true });
-};
+      fs.mkdirSync(logsDir, { recursive: true }),
+    }
   }
 ,
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
     // // // // // // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logEntry);
-};
+    fs.appendFileSync(this.logFile, logEntry),
+  }
 ,
   loadPatternDatabase() {,
     try {,
@@ -106,8 +106,8 @@ class SmartCodeMonitor {,
       }, 60 * 60 * 1000), // Every hour
     }
 ,
-    this.log('Smart Code Monitor started successfully');
-};
+    this.log('Smart Code Monitor started successfully'),
+  }
 ,
   async performCodeQualityScan() {,
     this.log('Performing comprehensive code quality scan...'),
@@ -138,8 +138,8 @@ class SmartCodeMonitor {,
           typescript: typeCheckResults,
           complexity: complexityResults,
           coverage: coverageResults,
-          documentation: documentationResults});
-};
+          documentation: documentationResults}),
+      }
 ,
       // Update quality metrics,
       this.updateQualityMetrics(qualityScore, {,
@@ -149,8 +149,8 @@ class SmartCodeMonitor {,
         coverage: coverageResults,
         documentation: documentationResults}),
     } catch (error) {,
-      this.log(`Code quality scan failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Code quality scan failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async runESLintAnalysis() {,
@@ -191,8 +191,8 @@ class SmartCodeMonitor {,
             file: filePath,
             line: lineNumber,
             message: message,
-            severity: message.includes('error') ? 'error' : 'warn'});
-};
+            severity: message.includes('error') ? 'error' : 'warn'}),
+        }
       }
     }
 ,
@@ -231,8 +231,8 @@ class SmartCodeMonitor {,
             file: match[1].trim(),
             line: parseInt(match[2]),
             column: parseInt(match[3]),
-            message: match[4].trim()});
-};
+            message: match[4].trim()}),
+        }
       }
     }
 ,
@@ -285,8 +285,8 @@ class SmartCodeMonitor {,
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {,
           scanDirectory(fullPath),
         } else if (stat.isFile() && extensions.includes(path.extname(item))) {,
-          sourceFiles.push(fullPath);
-};
+          sourceFiles.push(fullPath),
+        }
       }
     },
     scanDirectory(this.projectRoot),
@@ -320,8 +320,8 @@ class SmartCodeMonitor {,
       if (line.includes('All files')) {,
         const match = line.match(/(\d+(?:\.\d+)?)%/),
         if (match) {,
-          percentage = parseFloat(match[1]);
-};
+          percentage = parseFloat(match[1]),
+        }
         break,
       }
     }
@@ -401,28 +401,28 @@ class SmartCodeMonitor {,
     try {,
       // Fix ESLint issues,
       if (!results.lint.success && results.lint.issues > 0) {,
-        await this.fixESLintIssues(results.lint.details);
-};
+        await this.fixESLintIssues(results.lint.details),
+      }
 ,
       // Fix TypeScript issues,
       if (!results.typescript.success && results.typescript.issues > 0) {,
-        await this.fixTypeScriptIssues(results.typescript.details);
-};
+        await this.fixTypeScriptIssues(results.typescript.details),
+      }
 ,
       // Fix complexity issues,
       if (results.complexity.level === 'HIGH') {,
-        await this.fixComplexityIssues();
-};
+        await this.fixComplexityIssues(),
+      }
 ,
       // Fix documentation issues,
       if (results.documentation.level === 'LOW') {,
-        await this.fixDocumentationIssues();
-};
+        await this.fixDocumentationIssues(),
+      }
 ,
       this.log('Intelligent fixes applied successfully'),
     } catch (error) {,
-      this.log(`Intelligent fixes failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Intelligent fixes failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async fixESLintIssues(issues) {,
@@ -433,24 +433,24 @@ class SmartCodeMonitor {,
       // For remaining issues, apply pattern-based fixes,
       for (const issue of issues) {,
         if (issue.severity === 'error') {,
-          await this.applyPatternBasedFix(issue);
-};
+          await this.applyPatternBasedFix(issue),
+        }
       }
 
     } catch (error) {,
-      this.log(`ESLint auto-fix failed: ${error.message}`, 'WARN');
-};
+      this.log(`ESLint auto-fix failed: ${error.message}`, 'WARN'),
+    }
   }
 ,
   async fixTypeScriptIssues(issues) {,
     this.log('Fixing TypeScript issues...'),
     try {,
       for (const issue of issues) {,
-        await this.applyTypeScriptFix(issue);
-};
+        await this.applyTypeScriptFix(issue),
+      }
     } catch (error) {,
-      this.log(`TypeScript fixes failed: ${error.message}`, 'ERROR');
-};
+      this.log(`TypeScript fixes failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async applyPatternBasedFix(issue) {,
@@ -461,8 +461,8 @@ class SmartCodeMonitor {,
         await this.executeFixStrategy(fixStrategy, issue),
         this.log(`Applied pattern-based fix for: ${issue.message}`),
       } catch (error) {,
-        this.log(`Pattern-based fix failed: ${error.message}`, 'WARN');
-};
+        this.log(`Pattern-based fix failed: ${error.message}`, 'WARN'),
+      }
     }
   }
 ,
@@ -471,8 +471,8 @@ class SmartCodeMonitor {,
     if (issue.message.includes('Cannot find module')) {,
       await this.fixModuleImport(issue),
     } else if (issue.message.includes('Type')) {,
-      await this.fixTypeAnnotation(issue);
-};
+      await this.fixTypeAnnotation(issue),
+    }
   }
 ,
   async fixModuleImport(issue) {,
@@ -484,12 +484,12 @@ class SmartCodeMonitor {,
         // Check if module exists in node_modules,
         const modulePath = path.join(this.projectRoot, 'node_modules', moduleName),
         if (fs.existsSync(modulePath)) {,
-          this.log(`Module ${moduleName} exists, checking import path...`);
-};
+          this.log(`Module ${moduleName} exists, checking import path...`),
+        }
       }
     } catch (error) {,
-      this.log(`Module import fix failed: ${error.message}`, 'WARN');
-};
+      this.log(`Module import fix failed: ${error.message}`, 'WARN'),
+    }
   }
 ,
   extractModuleName(message) {,
@@ -505,11 +505,11 @@ class SmartCodeMonitor {,
       if (issue.line > 0 && issue.line <= lines.length) {,
         const line = lines[issue.line - 1],
         // Apply type annotation fixes based on context,
-        this.log(`Attempting to fix type annotation in ${issue.file}:${issue.line}`);
-};
+        this.log(`Attempting to fix type annotation in ${issue.file}:${issue.line}`),
+      }
     } catch (error) {,
-      this.log(`Type annotation fix failed: ${error.message}`, 'WARN');
-};
+      this.log(`Type annotation fix failed: ${error.message}`, 'WARN'),
+    }
   }
 ,
   async fixComplexityIssues() {,
@@ -518,11 +518,11 @@ class SmartCodeMonitor {,
       // Identify complex functions and suggest refactoring,
       const complexFiles = this.identifyComplexFiles(),
       for (const file of complexFiles) {,
-        await this.suggestRefactoring(file);
-};
+        await this.suggestRefactoring(file),
+      }
     } catch (error) {,
-      this.log(`Complexity fixes failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Complexity fixes failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async fixDocumentationIssues() {,
@@ -531,12 +531,12 @@ class SmartCodeMonitor {,
       const sourceFiles = this.findSourceFiles(),
       for (const file of sourceFiles) {,
         if (!this.hasGoodDocumentation(fs.readFileSync(file, 'utf8'), file)) {,
-          await this.addDocumentation(file);
-};
+          await this.addDocumentation(file),
+        }
       }
     } catch (error) {,
-      this.log(`Documentation fixes failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Documentation fixes failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   identifyComplexFiles() {,
@@ -547,12 +547,12 @@ class SmartCodeMonitor {,
       const content = fs.readFileSync(file, 'utf8'),
       const complexity = this.calculateFileComplexity(content),
       if (complexity > 10) {,
-        complexFiles.push({ file, complexity });
-};
+        complexFiles.push({ file, complexity }),
+      }
     }
 ,
-    return complexFiles.sort((a, b) => b.complexity - a.complexity);
-};
+    return complexFiles.sort((a, b) => b.complexity - a.complexity),
+  }
 ,
   calculateFileComplexity(content) {,
     // Simple cyclomatic complexity calculation,
@@ -584,20 +584,20 @@ class SmartCodeMonitor {,
     const suggestions = this.generateRefactoringSuggestions(fileInfo),
     // Log suggestions for developer review,
     for (const suggestion of suggestions) {,
-      this.log(`Refactoring suggestion: ${suggestion}`, 'INFO');
-};
+      this.log(`Refactoring suggestion: ${suggestion}`, 'INFO'),
+    }
   }
 ,
   generateRefactoringSuggestions(fileInfo) {,
     const suggestions = [],
     if (fileInfo.complexity > 15) {,
-      suggestions.push('Consider breaking down large functions into smaller, focused functions');
-};
+      suggestions.push('Consider breaking down large functions into smaller, focused functions'),
+    }
 ,
     if (fileInfo.complexity > 10) {,
       suggestions.push('Extract complex conditional logic into separate functions'),
-      suggestions.push('Consider using strategy pattern for complex decision trees');
-};
+      suggestions.push('Consider using strategy pattern for complex decision trees'),
+    }
 ,
     return suggestions,
   }
@@ -609,11 +609,11 @@ class SmartCodeMonitor {,
       if (extension === '.ts' || extension === '.tsx') {,
         await this.addTypeScriptDocumentation(file, content),
       } else if (extension === '.js' || extension === '.jsx') {,
-        await this.addJavaScriptDocumentation(file, content);
-};
+        await this.addJavaScriptDocumentation(file, content),
+      }
     } catch (error) {,
-      this.log(`Failed to add documentation to ${file}: ${error.message}`, 'WARN');
-};
+      this.log(`Failed to add documentation to ${file}: ${error.message}`, 'WARN'),
+    }
   }
 ,
   async addTypeScriptDocumentation(file, content) {,
@@ -626,17 +626,17 @@ class SmartCodeMonitor {,
       if (line.includes('export') && (line.includes('function') || line.includes('class'))) {,
         const docComment = this.generateJSDocComment(line),
         if (docComment) {,
-          updatedLines.push(docComment);
-};
+          updatedLines.push(docComment),
+        }
       }
 ,
-      updatedLines.push(line);
-};
+      updatedLines.push(line),
+    }
 ,
     if (updatedLines.length !== lines.length) {,
       fs.writeFileSync(file, updatedLines.join('\n')),
-      this.log(`Added documentation to ${file}`);
-};
+      this.log(`Added documentation to ${file}`),
+    }
   }
 ,
   async addJavaScriptDocumentation(file, content) {,
@@ -658,8 +658,8 @@ class SmartCodeMonitor {,
     // Find the best fix strategy for a given error message,
     return this.patternDatabase.fixStrategies.find(strategy =>,
       strategy.pattern.test(message) && strategy.confidence > this.minConfidenceScore,
-    );
-};
+    ),
+  }
 ,
   async executeFixStrategy(strategy, issue) {,
     // Execute a fix strategy,
@@ -676,11 +676,11 @@ class SmartCodeMonitor {,
           await this.applyFileCreation(strategy, issue),
           break,
         default:  ,
-          this.log(`Unknown fix strategy type: ${strategy.type}`, 'WARN');
-};
+          this.log(`Unknown fix strategy type: ${strategy.type}`, 'WARN'),
+      }
     } catch (error) {,
-      throw new Error(`Failed to execute fix strategy: ${error.message}`);
-};
+      throw new Error(`Failed to execute fix strategy: ${error.message}`),
+    }
   }
 ,
   async applyRegexFix(strategy, issue) {,
@@ -688,8 +688,8 @@ class SmartCodeMonitor {,
     const content = fs.readFileSync(issue.file, 'utf8'),
     const updatedContent = content.replace(strategy.pattern, strategy.replacement),
     if (updatedContent !== content) {,
-      fs.writeFileSync(issue.file, updatedContent);
-};
+      fs.writeFileSync(issue.file, updatedContent),
+    }
   }
 ,
   async applyCodeInsertion(strategy, issue) {,
@@ -698,8 +698,8 @@ class SmartCodeMonitor {,
     const lines = content.split('\n'),
     if (issue.line > 0 && issue.line <= lines.length) {,
       lines.splice(issue.line - 1, 0, strategy.code),
-      fs.writeFileSync(issue.file, lines.join('\n'));
-};
+      fs.writeFileSync(issue.file, lines.join('\n')),
+    }
   }
 ,
   async applyFileCreation(strategy, issue) {,
@@ -708,11 +708,11 @@ class SmartCodeMonitor {,
       const fullPath = path.join(this.projectRoot, strategy.filePath),
       const dir = path.dirname(fullPath),
       if (!fs.existsSync(dir)) {,
-        fs.mkdirSync(dir, { recursive: true });
-};
+        fs.mkdirSync(dir, { recursive: true }),
+      }
 ,
-      fs.writeFileSync(fullPath, strategy.fileContent);
-};
+      fs.writeFileSync(fullPath, strategy.fileContent),
+    }
   }
 ,
   async learnNewPatterns() {,
@@ -728,8 +728,8 @@ class SmartCodeMonitor {,
       fs.writeFileSync(this.patternDatabaseFile, JSON.stringify(this.patternDatabase, null, 2)),
       this.log(`Learned ${newPatterns.length} new patterns`),
     } catch (error) {,
-      this.log(`Pattern learning failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Pattern learning failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async extractNewPatterns() {,
@@ -749,8 +749,8 @@ class SmartCodeMonitor {,
     try {,
       fs.writeFileSync(this.qualityMetricsFile, JSON.stringify(this.qualityMetrics, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save quality metrics: ${error.message}`, 'ERROR');
-};
+      this.log(`Failed to save quality metrics: ${error.message}`, 'ERROR'),
+    }
   }
 }
 ,
@@ -763,5 +763,5 @@ process.on('SIGINT', () => {,
 }),
 process.on('SIGTERM', () => {,
   monitor.log('Shutting down Smart Code Monitor...INFO'),
-  process.exit(0);
-  }),))))))"
+  process.exit(0),
+}),))))))

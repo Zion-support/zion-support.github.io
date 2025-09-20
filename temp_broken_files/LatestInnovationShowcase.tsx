@@ -87,6 +87,6 @@ const LatestInnovationShowcase: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default LatestInnovationShowcase,

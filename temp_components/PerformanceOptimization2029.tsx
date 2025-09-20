@@ -184,8 +184,8 @@ const PerformanceOptimization2029 = () => {
           return prev + 2,
         }),
       }100),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isOptimizing]),
 
   useEffect(() => {
@@ -209,5 +209,4 @@ const PerformanceOptimization2029: React.FC = () => {
   )
 },
 
-export default PerformanceOptimization2029;
-  }
+export default PerformanceOptimization2029,

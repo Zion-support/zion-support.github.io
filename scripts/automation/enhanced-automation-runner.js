@@ -45,8 +45,8 @@ class EnhancedAutomationRunner {,
     for (const dir of dirs) {,
       const dirPath = path.join(__dirname, '../../', dir),
       if (!fs.existsSync(dirPath)) {,
-        fs.mkdirSync(dirPath, { recursive: true });
-};
+        fs.mkdirSync(dirPath, { recursive: true }),
+      }
     }
 ,
     // Initialize performance tracking,
@@ -62,8 +62,8 @@ class EnhancedAutomationRunner {,
   startHealthMonitoring() {,
     setInterval(async () => {,
       await this.performHealthCheck(),
-    }, this.config.healthCheckInterval);
-};
+    }, this.config.healthCheckInterval),
+  }
 ,
   async performHealthCheck() {,
     try {,
@@ -79,8 +79,8 @@ class EnhancedAutomationRunner {,
       // Log health status,
       await this.logHealthStatus(healthStatus),
     } catch (error) {,
-      console.error('Health check failed:', error);
-};
+      console.error('Health check failed:', error),
+    }
   }
 ,
   async checkSystemHealth() {,
@@ -129,8 +129,8 @@ class EnhancedAutomationRunner {,
       await this.restartCriticalProcesses(),
       console.log('✅ Emergency procedures completed'),
     } catch (error) {,
-      console.error('Emergency procedures failed:', error);
-};
+      console.error('Emergency procedures failed:', error),
+    }
   }
 ,
   async stopNonCriticalProcesses() {,
@@ -140,8 +140,8 @@ class EnhancedAutomationRunner {,
         await execAsync(`pm2 stop ${processName}`),
         console.log(`⏹️  Stopped non-critical process: ${processName}`),
       } catch (error) {,
-        console.log(`⚠️  Failed to stop ${processName}:`, error.message);
-};
+        console.log(`⚠️  Failed to stop ${processName}:`, error.message),
+      }
     }
   }
 ,
@@ -151,13 +151,13 @@ class EnhancedAutomationRunner {,
       if (fs.existsSync(cacheDir)) {,
         const files = fs.readdirSync(cacheDir),
         for (const file of files) {,
-          fs.unlinkSync(path.join(cacheDir, file));
-};
-        console.log('🗑️  Cleared cache directory');
-};
+          fs.unlinkSync(path.join(cacheDir, file)),
+        }
+        console.log('🗑️  Cleared cache directory'),
+      }
     } catch (error) {,
-      console.error('Failed to clear cache:', error);
-};
+      console.error('Failed to clear cache:', error),
+    }
   }
 ,
   async restartCriticalProcesses() {,
@@ -167,8 +167,8 @@ class EnhancedAutomationRunner {,
         await execAsync(`pm2 restart ${processName}`),
         console.log(`🔄 Restarted critical process: ${processName}`),
       } catch (error) {,
-        console.error(`Failed to restart ${processName}:`, error);
-};
+        console.error(`Failed to restart ${processName}:`, error),
+      }
     }
   }
 ,
@@ -181,8 +181,8 @@ class EnhancedAutomationRunner {,
       await this.optimizeMemoryUsage(),
       console.log('✅ Performance optimization completed'),
     } catch (error) {,
-      console.error('Performance optimization failed:', error);
-};
+      console.error('Performance optimization failed:', error),
+    }
   }
 ,
   async adjustProcessLimits() {,
@@ -190,13 +190,13 @@ class EnhancedAutomationRunner {,
       // Set memory limits for processes,
       const processes = ['console-error-fixerlink-checkercontinuous-improvement'],
       for (const processName of processes) {,
-        await execAsync(`pm2 restart ${processName} --max-memory-restart 100M`);
-};
+        await execAsync(`pm2 restart ${processName} --max-memory-restart 100M`),
+      }
 ,
       console.log('📊 Adjusted process memory limits'),
     } catch (error) {,
-      console.error('Failed to adjust process limits:', error);
-};
+      console.error('Failed to adjust process limits:', error),
+    }
   }
 ,
   async optimizeMemoryUsage() {,
@@ -204,8 +204,8 @@ class EnhancedAutomationRunner {,
       // Force garbage collection if available,
       if (global.gc) {,
         global.gc(),
-        console.log('🧹 Forced garbage collection');
-};
+        console.log('🧹 Forced garbage collection'),
+      }
 ,
       // Clear module cache for non-essential modules,
       const nonEssentialModules = ['fspathutil'],
@@ -217,8 +217,8 @@ class EnhancedAutomationRunner {,
 ,
       console.log('🗂️  Cleared module cache'),
     } catch (error) {,
-      console.error('Failed to optimize memory:', error);
-};
+      console.error('Failed to optimize memory:', error),
+    }
   }
 ,
   async processQueue() {,
@@ -230,14 +230,14 @@ class EnhancedAutomationRunner {,
       // Start new processes if under limit,
       while (this.runningProcesses.size < this.config.maxConcurrentProcesses && this.processQueue.length > 0) {,
         const task = this.processQueue.shift(),
-        await this.startProcess(task);
-};
+        await this.startProcess(task),
+      }
 ,
       // Wait for processes to complete,
       await this.waitForProcesses(),
       // Small delay to prevent busy waiting,
-      await this.sleep(1000);
-};
+      await this.sleep(1000),
+    }
   }
 ,
   addAutomationTasks() {,
@@ -256,8 +256,8 @@ class EnhancedAutomationRunner {,
       const priorityOrder = { high: 3, medium: 2, low: 1 },
       return priorityOrder[b.priority] - priorityOrder[a.priority],
     }),
-    this.processQueue.push(...tasks);
-};
+    this.processQueue.push(...tasks),
+  }
 ,
   async startProcess(task) {,
     const processId = Date.now() + Math.random(),
@@ -283,8 +283,8 @@ class EnhancedAutomationRunner {,
       }),
     } catch (error) {,
       console.error(`Failed to start ${task.name}:`, error),
-      this.handleProcessError(processId, error);
-};
+      this.handleProcessError(processId, error),
+    }
   }
 ,
   handleProcessCompletion(processId, code, startTime) {,
@@ -302,8 +302,8 @@ class EnhancedAutomationRunner {,
       console.log(`✅ ${process.task.name} completed successfully in ${executionTime}ms`),
     } else {,
       this.performanceMetrics.failedProcesses++,
-      console.log(`❌ ${process.task.name} failed with code ${code} in ${executionTime}ms`);
-};
+      console.log(`❌ ${process.task.name} failed with code ${code} in ${executionTime}ms`),
+    }
 ,
     // Record in history,
     this.processHistory.push({,
@@ -313,8 +313,8 @@ class EnhancedAutomationRunner {,
       success,
       exitCode: code}),
     // Clean up,
-    this.runningProcesses.delete(processId);
-};
+    this.runningProcesses.delete(processId),
+  }
 ,
   handleProcessError(processId, error) {,
     const process = this.runningProcesses.get(processId),
@@ -331,14 +331,14 @@ class EnhancedAutomationRunner {,
       success: false,
       error: error.message}),
     // Clean up,
-    this.runningProcesses.delete(processId);
-};
+    this.runningProcesses.delete(processId),
+  }
 ,
   async waitForProcesses() {,
     // Wait for any process to complete,
     if (this.runningProcesses.size > 0) {,
-      await this.sleep(100);
-};
+      await this.sleep(100),
+    }
   }
 ,
   async logHealthStatus(healthStatus) {,
@@ -350,8 +350,8 @@ class EnhancedAutomationRunner {,
       },
       fs.appendFileSync(logPath, JSON.stringify(logEntry) + '\n'),
     } catch (error) {,
-      console.error('Failed to log health status:', error);
-};
+      console.error('Failed to log health status:', error),
+    }
   }
 ,
   async generatePerformanceReport() {,
@@ -371,25 +371,25 @@ class EnhancedAutomationRunner {,
     // Success rate recommendations,
     const successRate = this.performanceMetrics.successfulProcesses / this.performanceMetrics.totalProcesses,
     if (successRate < 0.9) {,
-      recommendations.push('Investigate process failures - success rate below 90%');
-};
+      recommendations.push('Investigate process failures - success rate below 90%'),
+    }
 ,
     // Performance recommendations,
     if (this.performanceMetrics.averageExecutionTime > 60000) { // 1 minute,
-      recommendations.push('Processes taking too long - consider optimization or parallelization');
-};
+      recommendations.push('Processes taking too long - consider optimization or parallelization'),
+    }
 ,
     // Memory recommendations,
     if (this.performanceMetrics.totalProcesses > 100) {,
-      recommendations.push('High process count - consider batching or reducing frequency');
-};
+      recommendations.push('High process count - consider batching or reducing frequency'),
+    }
 ,
     return recommendations,
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+    return new Promise(resolve => setTimeout(resolve, ms)),
+  }
 ,
   async shutdown() {,
     console.log('🛑 Shutting down Enhanced Automation Runner...'),
@@ -397,15 +397,15 @@ class EnhancedAutomationRunner {,
       // Stop all running processes,
       for (const [id, process] of this.runningProcesses) {,
         process.child.kill(),
-        this.runningProcesses.delete(id);
-};
+        this.runningProcesses.delete(id),
+      }
 ,
       // Generate final report,
       await this.generatePerformanceReport(),
       console.log('✅ Enhanced Automation Runner shutdown complete'),
     } catch (error) {,
-      console.error('❌ Shutdown failed:', error);
-};
+      console.error('❌ Shutdown failed:', error),
+    }
   }
 }
 ,
@@ -413,8 +413,8 @@ class EnhancedAutomationRunner {,
 process.on('SIGINT', async () => {,
   const runner = global.currentRunner,
   if (runner) {,
-    await runner.shutdown();
-};
+    await runner.shutdown(),
+  }
   process.exit(0),
 }),
 // Run the enhanced automation runner,
@@ -425,7 +425,7 @@ if (require.main === module) {,
     console.error('Fatal error:', error),
     await runner.shutdown(),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = EnhancedAutomationRunner,

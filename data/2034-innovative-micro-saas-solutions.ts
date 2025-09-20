@@ -1,8 +1,8 @@
 export type InnovativeMicroSaas = {
-	id: string,
-	name: string,
-	description: string,
-	tagline?: string,
+	id: string;
+	name: string;
+	description: string;
+	tagline?: string;
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -12,12 +12,12 @@ export type InnovativeMicroSaas = {
 		| 'Financial Technology'
 		| 'Human Resources'
 		| 'Supply Chain Management'
-		| 'Customer Support',
-	pricing: { starter: string, professional?: string, enterprise?: string };
-	features: string[],
+		| 'Customer Support';
+	pricing: { starter: string; professional?: string; enterprise?: string };
+	features: string[];
 	integrations?: string[];
 	useCases?: string[];
-	link: string,
+	link: string;
 	realService?: boolean;
 	rating?: number;
 	launchDate?: string;
@@ -75,4 +75,4 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
 		realService: true
 	}
-],
+];

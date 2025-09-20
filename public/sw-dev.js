@@ -45,8 +45,8 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
               console.log('Dev SW: Deleting old cache:', cacheName),
-              return caches.delete(cacheName);
-};
+              return caches.delete(cacheName),
+            }
           })
         ),
       })
@@ -88,8 +88,8 @@ self.addEventListener('fetch', (event) => {
           const responseClone = response.clone(),
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(request, responseClone),
-          });
-};
+          }),
+        }
         return response,
       })
       .catch((error) => {
@@ -101,10 +101,10 @@ self.addEventListener('fetch', (event) => {
           }
           // Return offline page for navigation requests
           if (request.destination === 'document') {
-            return caches.match('/offline.html');
-};
+            return caches.match('/offline.html'),
+          }
           return new Response('Not available offline', { status: 503 }),
         }),
       })
-  );
-  }),
+  ),
+}),

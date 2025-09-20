@@ -31,14 +31,14 @@ it('shows results when searching services', async () => {
   fireEvent.click(screen.getByText('Services'));
 
   const input = screen.getByPlaceholderText(/search service/i);
-  fireEvent.change(input, { target: { value: 'IT' } }),
+  fireEvent.change(input, { target: { value: 'IT' } });
 
   await waitFor(() => {
-    expect(screen.getAllByRole('button', { name: /request quote/i }).length).toBeGreaterThan(0),
+    expect(screen.getAllByRole('button', { name: /request quote/i }).length).toBeGreaterThan(0);
   });
 });
 
-    it('renders results from api', async () => {
+it('renders results from api', async () => {
   const data = { ...baseData };
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
 
@@ -56,7 +56,7 @@ it('shows results when searching services', async () => {
   fireEvent.click(screen.getByText('Services'));
 
   await waitFor(() => {
-    expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3),
+    expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);
   });
 });
 

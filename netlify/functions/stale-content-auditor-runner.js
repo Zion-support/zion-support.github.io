@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'stale-content-auditor-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

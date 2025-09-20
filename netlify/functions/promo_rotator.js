@@ -3,8 +3,8 @@ function pickRandom(arr, n) {,
   const sel = [],
   while (sel.length < n && copy.length) {,
     const idx = Math.floor(Math.random() * copy.length),
-    sel.push(copy.splice(idx, 1)[0]);
-};
+    sel.push(copy.splice(idx, 1)[0]),
+  }
   return sel,
 }
 ,
@@ -60,6 +60,6 @@ exports.handler = async function(event, context) {,
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, promos, commit: json.commit && json.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

@@ -89,5 +89,4 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner: React.FC = () => {
   )
 },
 
-export default AIAdvancedAnalyticsDashboard2030PromotionBanner;
-  }
+export default AIAdvancedAnalyticsDashboard2030PromotionBanner,

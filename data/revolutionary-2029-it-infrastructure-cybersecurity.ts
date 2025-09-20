@@ -530,7 +530,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
   }
 ],
 
-export const getITInfrastructureServicesByCategory = (category: string) : any => {
+export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.category === category)
 },
 
@@ -542,9 +542,9 @@ export const getNewITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.isNew),
 },
 
-export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
+export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryITInfrastructureServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice,
-  });
-  },
+  }),
+},

@@ -27,8 +27,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 class AutomationHealthChecker {,
   constructor() {,
@@ -45,8 +45,8 @@ class AutomationHealthChecker {,
       errors: [],
       fixes: [],
       alerts: []},
-    this.loadStatus();
-};
+    this.loadStatus(),
+  }
 ,
   async run() {,
     logger.info('🏥 Starting Automation Health Check'),
@@ -183,15 +183,15 @@ class AutomationHealthChecker {,
         try {,
           const logEntry = JSON.parse(line),
           if (logEntry.level === 'error') {,
-            this.analyzeError(logEntry);
-};
+            this.analyzeError(logEntry),
+          }
         } catch (parseError) {,
           // Skip malformed log entries
         }
       }
     } catch (error) {,
-      logger.error('Error analyzing error logs:', error);
-};
+      logger.error('Error analyzing error logs:', error),
+    }
   }
 ,
   analyzeError(logEntry) {,
@@ -203,16 +203,16 @@ class AutomationHealthChecker {,
     this.status.errors.push(error),
     // Keep only last 50 errors,
     if (this.status.errors.length > 50) {,
-      this.status.errors = this.status.errors.slice(-50);
-};
+      this.status.errors = this.status.errors.slice(-50),
+    }
 ,
     // Check for critical error patterns,
     if (this.isCriticalError(error)) {,
       this.status.alerts.push({,
         type: 'critical',
         error: error,
-        timestamp: new Date().toISOString()});
-};
+        timestamp: new Date().toISOString()}),
+    }
   }
 ,
   categorizeError(message) {,
@@ -251,8 +251,8 @@ class AutomationHealthChecker {,
     ],
     return criticalPatterns.some(pattern =>,
       error.message.includes(pattern),
-    );
-};
+    ),
+  }
 ,
   async triggerFixes() {,
     logger.info('🔧 Checking if fixes are needed...'),
@@ -273,14 +273,14 @@ class AutomationHealthChecker {,
             description: 'Triggered by health check'}),
           logger.info('✅ Fixes applied successfully'),
         } else {,
-          logger.error('❌ Fix script not found');
-};
+          logger.error('❌ Fix script not found'),
+        }
       } catch (error) {,
-        logger.error('❌ Failed to apply fixes:', error);
-};
+        logger.error('❌ Failed to apply fixes:', error),
+      }
     } else {,
-      logger.info('✅ No fixes needed');
-};
+      logger.info('✅ No fixes needed'),
+    }
   }
 ,
   checkIfFixesNeeded() {,
@@ -326,8 +326,8 @@ class AutomationHealthChecker {,
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
       logger.info(`📄 Health report generated: ${reportPath}`),
     } catch (error) {,
-      logger.error('Error generating health report:', error);
-};
+      logger.error('Error generating health report:', error),
+    }
   }
 ,
   getOverallStatus() {,
@@ -353,20 +353,20 @@ class AutomationHealthChecker {,
     // Check for missing systems,
     Object.entries(this.status.systems).forEach(([name, system]) => {,
       if (system.status === 'missing') {,
-        recommendations.push(`Create missing system: ${name}`);
-};
+        recommendations.push(`Create missing system: ${name}`),
+      }
     }),
     // Check for syntax errors,
     Object.entries(this.status.systems).forEach(([name, system]) => {,
       if (system.status === 'syntax_error') {,
-        recommendations.push(`Fix syntax errors in: ${name}`);
-};
+        recommendations.push(`Fix syntax errors in: ${name}`),
+      }
     }),
     // Check for high error rates,
     Object.entries(this.status.systems).forEach(([name, system]) => {,
       if (system.runtimeErrors > this.config.errorThreshold) {,
-        recommendations.push(`Investigate high error rate in: ${name}`);
-};
+        recommendations.push(`Investigate high error rate in: ${name}`),
+      }
     }),
     return recommendations,
   }
@@ -380,21 +380,21 @@ class AutomationHealthChecker {,
         },
       }
     } catch (error) {,
-      logger.warn('Could not load status file:', error.message);
-};
+      logger.warn('Could not load status file:', error.message),
+    }
   }
 ,
   saveStatus() {,
     try {,
       this.status.lastCheck = new Date().toISOString(),
       if (!fs.existsSync(this.config.logsDir)) {,
-        fs.mkdirSync(this.config.logsDir, { recursive: true });
-};
+        fs.mkdirSync(this.config.logsDir, { recursive: true }),
+      }
 ,
       fs.writeFileSync(this.config.statusFile, JSON.stringify(this.status, null, 2)),
     } catch (error) {,
-      logger.error('Error saving status:', error);
-};
+      logger.error('Error saving status:', error),
+    }
   }
 }
 ,
@@ -406,7 +406,7 @@ if (require.main === module) {,
   }).catch(error => {,
     logger.error('Unhandled error:', error),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = AutomationHealthChecker,

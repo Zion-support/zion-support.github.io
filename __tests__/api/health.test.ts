@@ -9,4 +9,4 @@ describe('/api/health API Endpoint', () => {'  it('returns status ok with uptime
     await handler(req, res),
     expect(res._getStatusCode()).toBe(405),
   }),
-}),'
+}),

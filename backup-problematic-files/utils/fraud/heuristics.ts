@@ -12,8 +12,8 @@ function containsVagueJobClaims(text: string): string[] {,
   const reasons: string[] = [],
   vagueScammyJobPhrases.forEach(phrase => {,
     if (lower.includes(phrase)) {,
-      reasons.push(`vague_job_claim: "${phrase}"`);
-};
+      reasons.push(`vague_job_claim: "${phrase}"`),
+    }
   }),
   return reasons,
 }
@@ -25,8 +25,8 @@ function containsVagueJobClaims(text: string): string[] {,
     if () {) {,
   $2
 }
-      reasons.push (`Contains suspicious job phrase: "${phrase}"`);
-};
+      reasons.push (`Contains suspicious job phrase: "${phrase}"`),
+    }
   }),
   return reasons,
 }
@@ -119,8 +119,8 @@ if (&&) {,
   $2
 }
       reasons.push ('outside_payment_link_detected'),
-      severity = 'high';
-  }
+      severity = 'high',
+    }
     const phrases = containsSuspiciousPhrase (event.content),
     // Check condition,
 if ( {) {,

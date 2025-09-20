@@ -11,6 +11,6 @@ export default function ProfileMapper({ }: ProfileMapperProps) {,
     <div>,
       <h1>ProfileMapper</h1>,
       <p>This component is currently under development.</p>,
-    </div>);
-  }
+    </div>),
+}
 ,

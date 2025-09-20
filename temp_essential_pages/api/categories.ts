@@ -28,14 +28,15 @@ export default async function handler(
 ) {
   if (req.method !== 'GET') {
     res.setHeader('AllowGET'),
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-};
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` }),
+  }
+
   try {
     // Return sorted categories alphabetically by name
     const sortedCategories = mockCategories.sort((a, b) => a.name.localeCompare(b.name)),
     return res.status(200).json(sortedCategories),
   } catch (error) {
     console.error('Failed to fetch categories:', error),
-    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch categories' });
+    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch categories' }),
   }
 }

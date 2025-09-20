@@ -137,12 +137,12 @@
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div>,
                 <span className="text-white text-lg">Loading innovation details...</span>,
 import React from "react",
-const function AIInnovationShowcase2025() : any { = () => {,
+const function AIInnovationShowcase2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center">,
-          <h1 className="text-5xl font-bold mb-6">function AIInnovationShowcase2025() : any {</h1>,
+          <h1 className="text-5xl font-bold mb-6">function AIInnovationShowcase2025() {</h1>,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
               </div>,
@@ -153,5 +153,5 @@ const function AIInnovationShowcase2025() : any { = () => {,
     </div>,
   ),
 },
-export default function AIInnovationShowcase2025() : any {;
-  }}}'
+export default function AIInnovationShowcase2025() {,
+}}}

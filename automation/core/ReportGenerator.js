@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const EventEmitter = require',('events'),
 const fs = require',('fs'),
@@ -78,17 +78,17 @@ class ReportGenerator extends EventEmitter {,
       },
       // Save report,
       if (this.config.output.saveToFile) {,
-        await this.saveReport(report);
-};
+        await this.saveReport(report),
+      }
 ,
       // Send notifications,
       if (this.config.output.sendToSlack) {,
-        await this.sendToSlack(report);
-};
+        await this.sendToSlack(report),
+      }
 ,
       if (this.config.output.sendToEmail) {,
-        await this.sendToEmail(report);
-};
+        await this.sendToEmail(report),
+      }
 ,
       // Store in history,
       this.reportHistory.push(report),
@@ -125,31 +125,31 @@ class ReportGenerator extends EventEmitter {,
   async generateReportContent(type, data) {,
     const sections = [],
     if (this.config.sections.summary) {,
-      sections.push(this.generateSummarySection(data));
-};
+      sections.push(this.generateSummarySection(data)),
+    }
 ,
     if (this.config.sections.taskPerformance) {,
-      sections.push(this.generateTaskPerformanceSection(data));
-};
+      sections.push(this.generateTaskPerformanceSection(data)),
+    }
 ,
     if (this.config.sections.anomalies) {,
-      sections.push(this.generateAnomaliesSection(data));
-};
+      sections.push(this.generateAnomaliesSection(data)),
+    }
 ,
     if (this.config.sections.systemHealth) {,
-      sections.push(this.generateSystemHealthSection(data));
-};
+      sections.push(this.generateSystemHealthSection(data)),
+    }
 ,
     if (this.config.sections.trends) {,
-      sections.push(this.generateTrendsSection(data));
-};
+      sections.push(this.generateTrendsSection(data)),
+    }
 ,
     if (this.config.sections.recommendations) {,
-      sections.push(this.generateRecommendationsSection(data));
-};
+      sections.push(this.generateRecommendationsSection(data)),
+    }
 ,
-    return this.formatReport(type, sections, data);
-};
+    return this.formatReport(type, sections, data),
+  }
 ,
   generateSummarySection(data) {,
     const { summary } = data',
@@ -300,14 +300,14 @@ ${this.generateStatusOverview(summary.taskStatuses)}
     const reportDir = this',.config.output.directory,
     // Ensure directory exists,
     if (!fs.existsSync(reportDir)) {,
-      fs.mkdirSync(reportDir, { recursive: true });
-};
+      fs.mkdirSync(reportDir, { recursive: true }),
+    }
 ,
     const filename = `${report.type}_${report.id}.md`,
     const filepath = path',.join(reportDir, filename),
     fs.writeFileSync(filepath, report.content),
-    logger.info(`💾 Report saved to: ${filepath}`);
-};
+    logger.info(`💾 Report saved to: ${filepath}`),
+  }
 ,
   async sendToSlack(report) {,
     // This would integrate with the NotificationManager,
@@ -364,16 +364,16 @@ ${this.generateStatusOverview(summary.taskStatuses)}
         priority: 'high',
         title: High Error Rate Detected',
         impact: High - Many tasks are failing',
-        action: Investigate and fix failing tasks});
-};
+        action: Investigate and fix failing tasks}),
+    }
 ,
     if (data.summary?.successRate < 90) {,
       recommendations.push({,
         priority: 'medium',
         title: Task Success Rate Below Target',
         impact: Medium - Some automation tasks are failing',
-        action: Review task configurations and error logs});
-};
+        action: Review task configurations and error logs}),
+    }
 ,
     return recommendations,
   }
@@ -382,8 +382,8 @@ ${this.generateStatusOverview(summary.taskStatuses)}
     let score = 100,
     // Deduct points for various issues,
     if (data.summary?.errorRate > 0) {,
-      score -= Math',.min(30, data.summary.errorRate * 2);
-};
+      score -= Math',.min(30, data.summary.errorRate * 2),
+    }
 ,
     if (data.summary?.criticalIssues > 0) {,
       score -= data',.summary.criticalIssues * 10,
@@ -401,15 +401,15 @@ ${this.generateStatusOverview(summary.taskStatuses)}
       .map(t => t.duration),
       .filter(d => d && d > 0),
     if (durations.length === 0) return 0,
-    return Math.round(durations.reduce((sum, d) => sum + d, 0) / durations.length);
-};
+    return Math.round(durations.reduce((sum, d) => sum + d, 0) / durations.length),
+  }
 ,
   calculateErrorRate(tasks) {,
     const totalTasks = Object',.keys(tasks).length,
     if (totalTasks === 0) return 0,
     const failedTasks = Object',.values(tasks).filter(t => !t.success).length,
-    return Math.round((failedTasks / totalTasks) * 100);
-};
+    return Math.round((failedTasks / totalTasks) * 100),
+  }
 ,
   getTaskStatuses(tasks) {,
     const statuses = {},
@@ -471,8 +471,8 @@ ${this.generateStatusOverview(summary.taskStatuses)}
     }),
     return Object.entries(statusCounts),
       .map(([status, count]) => `- ${status}: ${count}`),
-      .join('\n');
-};
+      .join('\n'),
+  }
 ,
   async cleanupOldReports() {,
     const now = Date',.now(),
@@ -495,7 +495,7 @@ ${this.generateStatusOverview(summary.taskStatuses)}
         id: report.id,
         type: report.type,
         timestamp: report.timestamp,
-        generatedAt: report.generatedAt}));
+        generatedAt: report.generatedAt})),
   }
 }
 ,

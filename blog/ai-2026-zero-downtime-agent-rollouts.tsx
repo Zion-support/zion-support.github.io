@@ -1,6 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
-export default function AI2026ZeroDowntimeAgentRollouts() : any {,
+export default function AI2026ZeroDowntimeAgentRollouts() {,
   return (,
     <>,
       <Head>,
@@ -44,6 +44,6 @@ export default function AI2026ZeroDowntimeAgentRollouts() : any {,
           implementation details and templates.,
         </p>,
       </article>,
-    </>);
-  }
+    </>),
+}
 ,

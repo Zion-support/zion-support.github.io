@@ -3,7 +3,7 @@ import Head from 'next/head',
 
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react',
 import Link from 'next/link',
-export default function ServicesAdvertisingPage() : any {
+export default function ServicesAdvertisingPage() {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -139,7 +139,7 @@ export default function ServicesAdvertisingPage() : any {
   function ext(url: string) {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
-    );
+    ),
   }
   return (
     <div className="min-h-screen bg-black">

@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const { EventEmitter } = require('events'),
 const fs = require('fs').promises,
@@ -56,8 +56,8 @@ class AutonomousAutomationSystem extends EventEmitter {,
       deploymentManager: null,
       aiAssistant: null,
       webSearcher: null},
-    this.setupModules();
-};
+    this.setupModules(),
+  }
 ,
   async setupModules() {,
     logger.info('🔧 Setting up autonomous automation modules...'),
@@ -71,8 +71,8 @@ class AutonomousAutomationSystem extends EventEmitter {,
     this.modules.aiAssistant = new AIAssistantModule(this),
     this.modules.webSearcher = new WebSearchModule(this),
     // Setup event listeners for inter-module communication,
-    this.setupEventListeners();
-};
+    this.setupEventListeners(),
+  }
 ,
   setupEventListeners() {,
     // Code analysis events,
@@ -90,8 +90,8 @@ class AutonomousAutomationSystem extends EventEmitter {,
     // Test events,
     this.modules.testRunner.on('test-failure', (failure) => {,
       this.queueTask('fix-test', { failure, priority: 'medium' }),
-    });
-};
+    }),
+  }
 ,
   async start() {,
     logger.info('🚀 Starting Autonomous Automation System...'),
@@ -108,8 +108,8 @@ class AutonomousAutomationSystem extends EventEmitter {,
     // Start health monitoring,
     this.startHealthMonitoring(),
     logger.info('✅ Autonomous Automation System started successfully'),
-    this.log('System started');
-};
+    this.log('System started'),
+  }
 ,
   async startAllModules() {,
     const modulePromises = Object.entries(this.modules).map(async ([name, module]) => {,
@@ -117,17 +117,17 @@ class AutonomousAutomationSystem extends EventEmitter {,
         await module.start(),
         logger.info(`✅ ${name} module started`),
       } catch (error) {,
-        logger.error(`❌ Failed to start ${name} module:`, error.message);
-};
+        logger.error(`❌ Failed to start ${name} module:`, error.message),
+      }
     }),
-    await Promise.all(modulePromises);
-};
+    await Promise.all(modulePromises),
+  }
 ,
   startTaskProcessor() {,
     setInterval(() => {,
       this.processTaskQueue(),
-    }, this.config.checkInterval);
-};
+    }, this.config.checkInterval),
+  }
 ,
   startScheduledTasks() {,
     // Code analysis every 5 minutes,
@@ -149,8 +149,8 @@ class AutonomousAutomationSystem extends EventEmitter {,
     // Full system health check every 6 hours,
     cron.schedule('0 */6 * * *', () => {,
       this.queueTask('health-check', { priority: 'low' }),
-    });
-};
+    }),
+  }
 ,
   startHealthMonitoring() {,
     setInterval(() => {,
@@ -176,8 +176,8 @@ class AutonomousAutomationSystem extends EventEmitter {,
     this.taskQueue.sort((a, b) => {,
       const priorityOrder = { critical: 0, high: 1, medium: 2, low: 3 },
       return priorityOrder[a.priority] - priorityOrder[b.priority],
-    });
-};
+    }),
+  }
 ,
   async processTaskQueue() {,
     if (this.activeTasks >= this.config.maxConcurrentTasks || this.taskQueue.length === 0) {,
@@ -342,15 +342,15 @@ const timeoutId = setTimeout(() => {,
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
- * 1000);
-};
+ * 1000),
+      }
 ,
       this.log(`Task failed: ${task.type} (${task.id}) - ${error.message}`),
     } finally {,
       this.activeTasks--,
       task.completedAt = Date.now(),
-      this.tasks.set(task.id, task);
-};
+      this.tasks.set(task.id, task),
+    }
   }
 ,
   async executeTask(task) {,
@@ -378,8 +378,8 @@ const timeoutId = setTimeout(() => {,
       case web-search':,
         return await this.modules.webSearcher.search(task.data.query),
       default:  ,
-        throw new Error(`Unknown task type: ${task.type}`);
-};
+        throw new Error(`Unknown task type: ${task.type}`),
+    }
   }
 ,
   async performHealthCheck() {,
@@ -408,8 +408,8 @@ const timeoutId = setTimeout(() => {,
   async updateStats() {,
     this.stats.uptime = Date.now() - this.stats.startTime,
     this.stats.lastActivity = Date.now(),
-    await this.saveStats();
-};
+    await this.saveStats(),
+  }
 ,
   async checkSystemHealth() {,
     const health = await this.performHealthCheck(),
@@ -421,8 +421,8 @@ const timeoutId = setTimeout(() => {,
       this.emit('health-alert', {,
         type: 'critical',
         modules: criticalIssues,
-        timestamp: Date.now()});
-};
+        timestamp: Date.now()}),
+    }
   }
 ,
   generateTaskId() {,
@@ -430,8 +430,8 @@ const timeoutId = setTimeout(() => {,
   }
 ,
   async ensureLogDirectory() {,
-    await fs.mkdir(this.config.logDir, { recursive: true });
-};
+    await fs.mkdir(this.config.logDir, { recursive: true }),
+  }
 ,
   async log(message) {,
     const timestamp = new Date().toISOString(),
@@ -439,8 +439,8 @@ const timeoutId = setTimeout(() => {,
     try {,
       await fs.appendFile(path.join(this.config.logDir, 'system.log'), logEntry),
     } catch (error) {,
-      logger.error('Failed to write to log file:', error.message);
-};
+      logger.error('Failed to write to log file:', error.message),
+    }
   }
 ,
   async saveStats() {,
@@ -450,8 +450,8 @@ const timeoutId = setTimeout(() => {,
         JSON.stringify(this.stats, null, 2),
       ),
     } catch (error) {,
-      logger.error('Failed to save stats:', error.message);
-};
+      logger.error('Failed to save stats:', error.message),
+    }
   }
 ,
   async saveHealthReport(health) {,
@@ -461,8 +461,8 @@ const timeoutId = setTimeout(() => {,
         JSON.stringify(health, null, 2),
       ),
     } catch (error) {,
-      logger.error('Failed to save health report:', error.message);
-};
+      logger.error('Failed to save health report:', error.message),
+    }
   }
 ,
   async stop() {,
@@ -474,13 +474,13 @@ const timeoutId = setTimeout(() => {,
         await module.stop(),
         logger.info(`✅ ${name} module stopped`),
       } catch (error) {,
-        logger.error(`❌ Failed to stop ${name} module:`, error.message);
-};
+        logger.error(`❌ Failed to stop ${name} module:`, error.message),
+      }
     }
 ,
     this.log('System stopped'),
-    logger.info('✅ Autonomous Automation System stopped');
-};
+    logger.info('✅ Autonomous Automation System stopped'),
+  }
 ,
   getStatus() {,
     return {,
@@ -706,5 +706,5 @@ if (require.main === module) {,
   system.start().catch(error => {,
     logger.error('Failed to start autonomous automation system:', error),
     process.exit(1),
-  });
-  } ,
+  }),
+} ,

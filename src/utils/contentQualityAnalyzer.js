@@ -1,5 +1,4 @@
 export class ContentQualityAnalyzer {
-  
     static instance;
     analyzedPages = new Map();
     static getInstance() {
@@ -25,18 +24,18 @@ export class ContentQualityAnalyzer {
             title,
             wordCount,
             headingCount,
-            imageCount,;
-            linkCount,;
-            metaDescriptionLength,;
+            imageCount,
+            linkCount,
+            metaDescriptionLength,
             hasStructuredData;
         });
         const issues = this.identifyIssues({
             title,
             wordCount,
             headingCount,
-            imageCount,;
-            linkCount,;
-            metaDescriptionLength,;
+            imageCount,
+            linkCount,
+            metaDescriptionLength,
             hasStructuredData;
         });
         const recommendations = this.generateRecommendations(issues);
@@ -51,9 +50,9 @@ export class ContentQualityAnalyzer {
             metaDescriptionLength,
             hasStructuredData,
             readabilityScore,
-            seoScore,;
-            overallScore,;
-            issues,;
+            seoScore,
+            overallScore,
+            issues,
             recommendations;
         };
         this.analyzedPages.set(pageUrl, metrics);
@@ -104,7 +103,6 @@ export class ContentQualityAnalyzer {
                 syllableCount += 1;
             }
             else {
-  
                 // Count vowel groups;
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
@@ -236,7 +234,6 @@ export class ContentQualityAnalyzer {
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
-  
                 totalPages: 0;
   averageWordCount: 0;
                 averageSeoScore: 0;
@@ -255,13 +252,12 @@ export class ContentQualityAnalyzer {
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;
             });
         });
-        const topIssues = Object.entries(issueCounts);
-            .sort(([, a], [, b]) => b - a);
-            .slice(0, 5);
+        const topIssues = Object.entries(issueCounts)
+            .sort(([, a], [, b]) => b - a)
+            .slice(0, 5)
             .map(([issue]) => issue);
         const summary = this.generateSummary(pageMetrics, topIssues);
         return {
-  
             totalPages,
             averageWordCount,
             averageSeoScore,

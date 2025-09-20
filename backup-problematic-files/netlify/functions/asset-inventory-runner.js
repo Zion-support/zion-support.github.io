@@ -43,5 +43,5 @@ exports.handler = async () => {,
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs')),
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, body: logs.join('\n') }
-};
-  }
+},
+}

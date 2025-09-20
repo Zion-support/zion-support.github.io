@@ -67,7 +67,7 @@ describe('/api/products API Endpoint', () => {
       (prisma.$queryRawUnsafe as MockInstance<any, any>).mockResolvedValue(filteredMockRawResults),
 
       const expectedProductIds = filteredMockRawResults.map(p => p.id),
-      (prisma.product.findMany as MockInstance<any, any>).mockImplementation(async ({ where }: any) : any => {
+      (prisma.product.findMany as MockInstance<any, any>).mockImplementation(async ({ where }: any) => {
         return mockProductsData.filter(p => where.id.in.includes(p.id)),
       }),
 
@@ -110,6 +110,5 @@ describe('/api/products API Endpoint', () => {
         }
       }),
     }),
-  });
   }),
-'
+}),

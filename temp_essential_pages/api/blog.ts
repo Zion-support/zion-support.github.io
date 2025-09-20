@@ -8,8 +8,9 @@ export default function handler(
 ) {
   if (req.method !== 'GET') {
     res.setHeader('AllowGET'),
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-};
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` }),
+  }
+
   try {
     const queryParam = req.query.query,
     const query = typeof queryParam === 'string' ? queryParam.toLowerCase() : '',
@@ -25,6 +26,6 @@ export default function handler(
     return res.status(200).json(results),
   } catch (err) {
     console.error('Blog API error:', err),
-    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch blog posts' });
+    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch blog posts' }),
   }
 }

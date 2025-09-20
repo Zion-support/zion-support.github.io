@@ -133,8 +133,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {,
       const interval = setInterval(() => {,
         setActiveStudy((prev) => (prev + 1) % filteredStudies.length),
       }5000),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isPlayingfilteredStudies.length]),
   const containerVariants = {,
     hidden: { opacity: 0 },
@@ -186,8 +186,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {,
               key={industry.id}
               onClick={() => {,
                 setFilter(industry.id),
-                setActiveStudy(0);
-  }}
+                setActiveStudy(0),
+              }}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${,
                 filter === industry.id,
                   ? 'bg-green-600 text-white shadow-lg',

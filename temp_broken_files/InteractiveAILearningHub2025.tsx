@@ -161,16 +161,16 @@ const InteractiveAILearningHub2025 = () => {,
                          course.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     return matchesCategory && matchesLevel && matchesSearch,
   }),
-  const toggleBookmark = (courseId) : any => {,
+  const toggleBookmark = (courseId) => {,
     setBookmarkedCourses(prev => {,
       const newSet = new Set(prev),
       if (newSet.has(courseId)) {,
         newSet.delete(courseId),
       } else {,
-        newSet.add(courseId);
-};
+        newSet.add(courseId),
+      }
       return newSet,
-    });
+    }),
   },
   const containerVariants = {,
     hidden: { opacity: 0 },

@@ -29,8 +29,8 @@ const QuantumComputingShowcase2025: React.FC = () => {,
                 onClick={() => {,
                   setActiveTab(index),
                   setIsAnimating(true),
-                  setTimeout(() => setIsAnimating(false)500);
-  }}
+                  setTimeout(() => setIsAnimating(false)500),
+                }}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${,
                   activeTab === index,
                     ? `bg-gradient-to-r ${solution.gradient} text-white shadow-lg`,

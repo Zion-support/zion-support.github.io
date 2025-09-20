@@ -30,8 +30,8 @@ class CursorInterfaceAutomation {,
       "lastError": null},
     this.platform = process.platform,
     this.setupPlatformSpecific(),
-    this.log('Cursor Interface Automation initialized');
-};
+    this.log('Cursor Interface Automation initialized'),
+  }
   /**,
    * Load configuration from file,
    */,
@@ -85,8 +85,8 @@ class CursorInterfaceAutomation {,
           "sendEnter": 'xdotool key Return'},
         break,
       "default": this.log(`Unsupported platform: ${this.platform}`, 'ERROR'),
-        throw new Error(`Unsupported "platform": ${this.platform}`);
-};
+        throw new Error(`Unsupported "platform": ${this.platform}`),
+    }
   }
   /**,
    * Log messages with timestamp,
@@ -99,8 +99,8 @@ class CursorInterfaceAutomation {,
     try {,
       fs.appendFileSync('cursor-interface-automation.log', logEntry + '\n'),
     } catch (error) {,
-      console.error('Failed to write to log "file": ', error.message);
-};
+      console.error('Failed to write to log "file": ', error.message),
+    }
   }
   /**,
    * Execute platform-specific automation command,
@@ -109,8 +109,8 @@ class CursorInterfaceAutomation {,
     try {,
       let script = this.automationScripts[scriptType],
       if (!script) {,
-        throw new Error(`Unknown script "type": ${scriptType}`);
-};
+        throw new Error(`Unknown script "type": ${scriptType}`),
+      }
       // Replace placeholders with actual values,
       Object.entries(params).forEach(([key, value]) => {,
         script = script.replace(`{${key}}`, value),
@@ -133,8 +133,8 @@ class CursorInterfaceAutomation {,
       }
       const { stdout, stderr } = await execAsync(command, { args }),
       if (stderr) {,
-        this.log(`Automation "warning": ${stderr}`, 'WARN');
-};
+        this.log(`Automation "warning": ${stderr}`, 'WARN'),
+      }
       return stdout.trim(),
     } catch (error) {,
       this.log(`Automation execution "failed": ${error.message}`, 'ERROR'),
@@ -208,8 +208,8 @@ class CursorInterfaceAutomation {,
       this.stats.sessionsCreated++,
       this.log(`Session ${sessionId} "created": ${sessionConfig.name}`),
       if (sessionConfig.autoProceed) {,
-        this.startSessionAutomation(sessionId);
-};
+        this.startSessionAutomation(sessionId),
+      }
       return session,
     } catch (error) {,
       this.log(,
@@ -237,21 +237,21 @@ class CursorInterfaceAutomation {,
           'ERROR'),
         session.errors++,
         // Continue despite errors,
-        setTimeout(() => runSession(), session.config.interval);
-};
+        setTimeout(() => runSession(), session.config.interval),
+      }
     },
     // Start the automation loop,
     runSession(),
-    this.log(`Automation started for session ${sessionId}`);
-};
+    this.log(`Automation started for session ${sessionId}`),
+  }
   /**,
    * Execute a command for a specific session,
    */,
   async executeSessionCommand(sessionId) {,
     const session = this.sessions.get(sessionId),
     if (!session) {,
-      throw new Error(`Session ${sessionId} not found`);
-};
+      throw new Error(`Session ${sessionId} not found`),
+    }
     try {,
       // Get the next command to send,
       const command =,
@@ -294,18 +294,18 @@ class CursorInterfaceAutomation {,
     this.log('Cursor Interface Automation system started'),
     // Create sessions from config,
     for (const sessionConfig of this.config.sessions) {,
-      await this.createSession(sessionConfig.id, sessionConfig);
-};
+      await this.createSession(sessionConfig.id, sessionConfig),
+    }
     // Start health monitoring,
-    this.startHealthMonitoring();
-};
+    this.startHealthMonitoring(),
+  }
   /**,
    * Stop the automation system,
    */,
   stop() {,
     this.isRunning = false,
-    this.log('Cursor Interface Automation system stopped');
-};
+    this.log('Cursor Interface Automation system stopped'),
+  }
   /**,
    * Start health monitoring,
    */,
@@ -323,8 +323,8 @@ class CursorInterfaceAutomation {,
             this.log(,
               `Session ${sessionId} appears stuck, restarting automation`,
               'WARN'),
-            this.startSessionAutomation(sessionId);
-};
+            this.startSessionAutomation(sessionId),
+          }
         }
       }
       // Schedule next health check,
@@ -332,8 +332,8 @@ class CursorInterfaceAutomation {,
         healthCheck,
         this.config.automation.healthCheckInterval || 60000),
     },
-    healthCheck();
-};
+    healthCheck(),
+  }
   /**,
    * Get system statistics,
    */,
@@ -375,8 +375,8 @@ class CursorInterfaceAutomation {,
       "errors": session.errors,
       "createdAt": session.createdAt,
       "lastCommand": session.lastCommand,
-      "priority": session.config.priority}));
-};
+      "priority": session.config.priority})),
+  }
   /**,
    * Test automation without starting full system,
    */,
@@ -424,8 +424,8 @@ if (require.main === module) {,
     } else {,
       console.log(,
         'Automation test failed. Please check your system configuration.'),
-      process.exit(1);
-};
-  });
-  }
-module.exports = CursorInterfaceAutomation,'
+      process.exit(1),
+    }
+  }),
+}
+module.exports = CursorInterfaceAutomation,

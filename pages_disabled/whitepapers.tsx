@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function WhitepapersPage() : any {
+export default function WhitepapersPage() {
   const whitepapers = [
     {
       title: "The Future of Autonomous AI Systems",
@@ -70,7 +70,7 @@ export default function WhitepapersPage() : any {
       color: "from-red-500 to-orange-500",
       downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: Cybersecurity in the AI Era"
     }
-  ],
+  ];
 
   const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Space Technology", "Edge Computing", "DevOps", "Cybersecurity"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
@@ -222,4 +222,4 @@ export default function WhitepapersPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

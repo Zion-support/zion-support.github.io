@@ -140,7 +140,7 @@ const AI2025UltimateTechnologyShowcase = () => {,
           className="mb-12",
         >,
           <div className="flex flex-wrap justify-center gap-4 mb-8">,
-            {technologies.map((tech) : any => {,
+            {technologies.map((tech) => {,
               const Icon = tech.icon,
               return (,
                 <button,
@@ -250,5 +250,5 @@ const AI2025UltimateTechnologyShowcase = () => {,
       </div>,
     </div>,
   ),
-export default AI2025UltimateTechnologyShowcase;
-  }
+export default AI2025UltimateTechnologyShowcase,
+}

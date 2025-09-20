@@ -117,7 +117,7 @@
     }, 6000),
     return () => clearInterval(interval),
   }, [isAutoPlaying, slides.length]),
-  const goToSlide = (index: number) : any => {,
+  const goToSlide = (index: number) => {,
     setCurrentSlide(index),
     setIsAutoPlaying(false),
     setTimeout(() => setIsAutoPlaying(true), 10000),
@@ -181,7 +181,7 @@
   const prevSlide = () => {,
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length),
   },
-  const goToSlide = (index: number) : any => {,
+  const goToSlide = (index: number) => {,
     setCurrentSlide(index)},
   return (,
     <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">,
@@ -270,6 +270,6 @@
         </div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default RevolutionaryContentCarousel2027,]

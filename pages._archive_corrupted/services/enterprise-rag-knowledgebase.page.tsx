@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function EnterpriseRAGKnowledgebase() : any {,
+export default function EnterpriseRAGKnowledgebase() {,
   return (,
     <>,
       <Head>,

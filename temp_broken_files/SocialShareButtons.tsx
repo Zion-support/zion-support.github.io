@@ -11,5 +11,5 @@ const function SocialShareButtons({ urltitledescription }: SocialShareButtonsPro
     </div>,
   ),
 },
-export default function SocialShareButtons({ urltitledescription }: SocialShareButtonsProps) {;
-  }}}
+export default function SocialShareButtons({ urltitledescription }: SocialShareButtonsProps) {,
+}}}

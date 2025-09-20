@@ -28,6 +28,6 @@ exports.handler = async function(event, context) {
         function: 'front-enhancer',
         status: 'error'
       })
-    };
+    },
   }
 },

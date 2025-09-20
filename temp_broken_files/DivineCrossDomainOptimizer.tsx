@@ -10,5 +10,5 @@ const function DivineCrossDomainOptimizer({  = () => {,
       </div>,
     </div>),
 },
-export default function DivineCrossDomainOptimizer({ ;
-  }}})))
+export default function DivineCrossDomainOptimizer({ ,
+}}})))

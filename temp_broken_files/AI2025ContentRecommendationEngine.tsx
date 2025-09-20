@@ -179,22 +179,22 @@ const AI2025ContentRecommendationEngine = () => {,
     { id: ''cloudname: 'Cloud 'Computingicon: Cloudcount: recommendations.filter(r => r.category === 'cloud').length },
     { id: ''tutorialsname: ''Tutorialsicon: BookOpencount: recommendations.filter(r => r.category === 'tutorials').length }
   ],
-  const getTypeIcon = (type) : any => {,
+  const getTypeIcon = (type) => {,
     switch (type) {,
-      case 'video': return Video;
-      case 'article': return FileText;
-      case 'webinar': return Video;
-      case 'tutorial': return BookOpen;
-      case 'course': return BookOpen;
-      case 'guide': return FileText;
-      case 'case-study': return FileText;
+      case 'video': return Video,
+      case 'article': return FileText,
+      case 'webinar': return Video,
+      case 'tutorial': return BookOpen,
+      case 'course': return BookOpen,
+      case 'guide': return FileText,
+      case 'case-study': return FileText,
       default: return FileText}
   },
-  const getDifficultyColor = (difficulty) : any => {,
+  const getDifficultyColor = (difficulty) => {,
     switch (difficulty) {,
-      case 'beginner': return 'bg-green-100 text-green-800';
-      case 'intermediate': return 'bg-yellow-100 text-yellow-800';
-      case 'advanced': return 'bg-red-100 text-red-800';
+      case 'beginner': return 'bg-green-100 text-green-800',
+      case 'intermediate': return 'bg-yellow-100 text-yellow-800',
+      case 'advanced': return 'bg-red-100 text-red-800',
       default: return 'bg-gray-100 text-gray-800'}
   },
   if (!isVisible) return null,
@@ -399,6 +399,6 @@ const AI2025ContentRecommendationEngine = () => {,
         )}
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default AI2025ContentRecommendationEngine,

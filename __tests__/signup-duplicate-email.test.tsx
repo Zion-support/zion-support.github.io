@@ -34,7 +34,7 @@ describe('Signup - Duplicate Email Error Handling', () => {'  beforeEach(() => {
     const toastMock = toastHook.toast as jest.MockedFunction<typeof toastHook.toast>,
     toastMock.mockImplementation(mockToast),
   }),
-  const fillSignupForm = (email = test@example.com') : any => {'    fireEvent.input(screen.getByLabelText(/full name/i), { target: { value: John Doe' } }),    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: email } }),
+  const fillSignupForm = (email = test@example.com') => {'    fireEvent.input(screen.getByLabelText(/full name/i), { target: { value: John Doe' } }),    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: email } }),
     fireEvent.input(screen.getByLabelText(/^password$/i), { target: { value: Password123' } }),    fireEvent.input(screen.getByLabelText(/confirm password/i), { target: { value: Password123' } }),    fireEvent.click(screen.getByLabelText(/i agree/i)),
   },
   it('should show error toast when email already exists', async () => {'    // Mock 409 duplicate email error,

@@ -145,40 +145,40 @@ const UltimateContentDiscoveryWidget2026 = () => {,
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     return matchesSearch && matchesCategory,
   }),
-  const handleSearch = async (query: string) : any => {,
+  const handleSearch = async (query: string) => {,
     setSearchQuery(query),
     setIsSearching(true),
     // Simulate search delay,
     setTimeout(() => setIsSearching(false)1000)
   },
-  const toggleFavorite = (id) : any => {,
+  const toggleFavorite = (id) => {,
     setFavorites(prev => {,
       const newFavorites = new Set(prev),
       if (newFavorites.has(id)) {,
         newFavorites.delete(id),
       } else {,
-        newFavorites.add(id);
-};
+        newFavorites.add(id),
+      }
       return newFavorites,
     }),
-  const handleSearch = (query: string) : any => {,
+  const handleSearch = (query: string) => {,
     setSearchQuery(query)},
-  const toggleFavorite = (id: number) : any => {,
+  const toggleFavorite = (id: number) => {,
     const newFavorites = new Set(favorites),
     if (newFavorites.has(id)) {,
       newFavorites.delete(id)
     } else {,
-      newFavorites.add(id);
-};
+      newFavorites.add(id),
+    }
     setFavorites(newFavorites),
   },
-  const toggleBookmark = (id: number) : any => {,
+  const toggleBookmark = (id: number) => {,
     const newBookmarks = new Set(bookmarks),
     if (newBookmarks.has(id)) {,
       newBookmarks.delete(id)
     } else {,
-      newBookmarks.add(id);
-};
+      newBookmarks.add(id),
+    }
     setBookmarks(newBookmarks),
   },
   return (,
@@ -210,7 +210,7 @@ const UltimateContentDiscoveryWidget2026 = () => {,
             Ultimate Content Discovery,
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
               Powered by AI 2026,
-  const sortedContent = [...filteredContent].sort((ab) : any => {,
+  const sortedContent = [...filteredContent].sort((ab) => {,
     switch (sortBy) {,
       case 'trending':,
         return b.trending - a.trending || b.views.localeCompare(a.views),
@@ -417,8 +417,8 @@ const UltimateContentDiscoveryWidget2026 = () => {,
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>,
           </div>)}
       </div>,
-  );
-  },
+  ),
+},
 export default UltimateContentDiscoveryWidget2026,
 </div></div></div></div></div></div>
 })]

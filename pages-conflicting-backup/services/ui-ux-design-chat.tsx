@@ -17,6 +17,6 @@ const UiUxDesignChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default UiUxDesignChat;

@@ -1,32 +1,32 @@
 export interface ComprehensiveService {
-  id: string,
-  name: string,
-  tagline: string,
-  description: string,
-  price: string,
-  period: string,
-  features: string[],
-  category: string,
-  marketSize: string,
-  targetAudience: string,
-  competitiveAdvantage: string,
-  useCases: string[],
-  integrations: string[],
-  compliance: string[],
-  website: string,
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  price: string;
+  period: string;
+  features: string[];
+  category: string;
+  marketSize: string;
+  targetAudience: string;
+  competitiveAdvantage: string;
+  useCases: string[];
+  integrations: string[];
+  compliance: string[];
+  website: string;
   contact: {
-    phone: string,
-    email: string,
-    address: string,
+    phone: string;
+    email: string;
+    address: string;
   };
-  trialDays: number,
-  setupTime: string,
-  competitors: string[],
-  roi: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
+  trialDays: number;
+  setupTime: string;
+  competitors: string[];
+  roi: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
 
 export const comprehensiveRealServices: ComprehensiveService[] = [
@@ -519,4 +519,4 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 520
   }
-],
+];

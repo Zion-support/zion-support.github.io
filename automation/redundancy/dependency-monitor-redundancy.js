@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-DEPENDENCY-MONITOR] ${message}`,
-  console.log(message);
-};
+  console.log(message),
+}
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr);
-};
+    if (stderr) console.error(stderr),
+  }
   return { status, stdout, stderr },
 }
 ,
@@ -143,12 +143,12 @@ function generateDependencyReport(outdated, vulnerabilities, packageHealth) {,
   },
   // Analyze overall health,
   if (outdated.outdated?.count > 0) {,
-    report.dependencyMonitor.summary.issues.push(`${outdated.outdated.count} outdated dependencies`);
-};
+    report.dependencyMonitor.summary.issues.push(`${outdated.outdated.count} outdated dependencies`),
+  }
 ,
   if (vulnerabilities.vulnerabilities?.count > 0) {,
-    report.dependencyMonitor.summary.issues.push(`${vulnerabilities.vulnerabilities.count} security vulnerabilities`);
-};
+    report.dependencyMonitor.summary.issues.push(`${vulnerabilities.vulnerabilities.count} security vulnerabilities`),
+  }
 ,
   if (report.dependencyMonitor.summary.issues.length > 0) {,
     report.dependencyMonitor.summary.overallHealth = "needs_attention",
@@ -205,11 +205,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`);
-};
+      log(`Push failed: ${pushResult.stderr}`),
+    }
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`);
-};
+    log(`Commit/push error: ${String(err)}`),
+  }
 }
 ,
 async function main() {,
@@ -224,12 +224,12 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Dependency monitor redundancy failed: ${String(err)}`),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 if (require.main === module) {,
-  main();
-  }
+  main(),
+}
 ,
 module.exports = { main, checkOutdatedDependencies, checkVulnerabilities, checkPackageHealth, generateDependencyReport },

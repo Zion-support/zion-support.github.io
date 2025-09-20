@@ -11,11 +11,11 @@ process.on('uncaughtException', (error) => {,
     console.log(`[BACKUP-PM2-AUTO-SYNC] Attempting recovery...`),
     try {,
       if (typeof originalScript === 'function') {,
-        originalScript();
-};
+        originalScript(),
+      }
     } catch (recoveryError) {,
-      console.error(`[BACKUP-PM2-AUTO-SYNC] Recovery failed: ${recoveryError.message}`);
-};
+      console.error(`[BACKUP-PM2-AUTO-SYNC] Recovery failed: ${recoveryError.message}`),
+    }
   }, 5000),
 }),
 process.on('unhandledRejection', (reason, promise) => {,
@@ -27,9 +27,9 @@ try {,
   if (typeof originalScript === 'function') {,
     originalScript(),
   } else {,
-    console.log(`[BACKUP-PM2-AUTO-SYNC] Original script is not a function, executing directly`);
-};
+    console.log(`[BACKUP-PM2-AUTO-SYNC] Original script is not a function, executing directly`),
+  }
 } catch (error) {,
   console.error(`[BACKUP-PM2-AUTO-SYNC] Execution failed: ${error.message}`),
-  process.exit(1);
-};
+  process.exit(1),
+}

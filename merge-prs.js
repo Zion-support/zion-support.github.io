@@ -73,7 +73,8 @@ execSync('git checkout main');
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {
             console.log(`⚠️  Error merging ${branch}: ${error.message}`);
-            // Continue with other branches}
+            // Continue with other branches,
+}
     }
     // Push all changes,
 console.log('📤 Pushing all changes to main...');

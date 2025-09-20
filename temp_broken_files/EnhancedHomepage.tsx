@@ -299,6 +299,6 @@ const EnhancedHomepage: React.FC = () => {,
           <PerformanceMonitor />)}
       </div>,
     </>,
-  );
-  },
+  ),
+},
 export default EnhancedHomepage,

@@ -5,12 +5,12 @@ const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {reactStrictMode: true;,
 eslint: { ignoreDuringBuilds: true },
 typescript: { ignoreBuildErrors: true },
-pageExtensions: ['tsxtsjsxjs'];,
-images: {domains: ["localhost", "ziontechgroup.com"];
+pageExtensions: ['tsxtsjsxjs'];
+  images: {domains: ["localhost", "ziontechgroup.com"];
   }
   output: 'standalone';,
-trailingSlash: false;,
-distDir: '.next';
+trailingSlash: false;
+  distDir: '.next';
 }
 module.exports = nextConfig,`;
 fs.writeFileSync('next.config.js', nextConfig);

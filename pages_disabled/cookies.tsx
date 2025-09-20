@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function CookiesPage() : any {
+export default function CookiesPage() {
   const lastUpdated = 'January 15, 2025';
 
   const cookieTypes = [
@@ -60,7 +60,7 @@ export default function CookiesPage() : any {
       icon: <Settings className="w-6 h-6" />,
       color: 'from-orange-500 to-red-600'
     }
-  ],
+  ];
 
   const thirdPartyCookies = [
     {
@@ -87,7 +87,7 @@ export default function CookiesPage() : any {
       duration: '2 years',
       privacy: 'https://twitter.com/en/privacy'
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -299,12 +299,12 @@ export default function CookiesPage() : any {
                   If you disable them, some features may not work correctly.
                 </p>
                 <p>
-                  <strong>Performance Impact: </strong> Disabling certain cookies may affect website performance and 
+                  <strong>Performance Impact:</strong> Disabling certain cookies may affect website performance and 
                   your user experience.
                 </p>
                 <p>
                   <strong>Third-Party Services:</strong> Some third-party services may continue to set cookies 
-                  even if you&apos,ve disabled them in your browser.
+                  even if you&apos;ve disabled them in your browser.
                 </p>
               </div>
             </div>
@@ -323,7 +323,7 @@ export default function CookiesPage() : any {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Cookies?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos,re here to help clarify any questions you may have about our cookie policy.
+              We&apos;re here to help clarify any questions you may have about our cookie policy.
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -354,4 +354,4 @@ export default function CookiesPage() : any {
       <EnhancedFooter />
     </div>
   );
-}'
+}

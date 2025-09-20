@@ -15,16 +15,16 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const fs = require('fs'),
 const path = require('path'),
 class ImprovementSystemMonitor {,
   constructor() {,
     this.projectRoot = process.cwd(),
-    this.reportPath = path.join(this.projectRoot, 'efficient-improvement-report.json');
-};
+    this.reportPath = path.join(this.projectRoot, 'efficient-improvement-report.json'),
+  }
 ,
   async monitor() {,
     logger.info('📊 Monitoring Improvement System...'),
@@ -45,11 +45,12 @@ class ImprovementSystemMonitor {,
         // Check git status,
         await this.checkGitStatus(),
       } else {,
-        logger.info(`🔴 System is not running - ${new Date().toISOString()}`);
-};
+        logger.info(`🔴 System is not running - ${new Date().toISOString()}`),
+      }
+
     } catch (error) {,
-      logger.info(`❌ Error checking status: ${error.message}`);
-};
+      logger.info(`❌ Error checking status: ${error.message}`),
+    }
   }
 ,
   async checkReports() {,
@@ -59,12 +60,12 @@ class ImprovementSystemMonitor {,
         const files = fs.readdirSync(reportsDir),
         const recentFiles = files.filter(f => f.endsWith('.json')).slice(-5),
         if (recentFiles.length > 0) {,
-          logger.info(`📄 Recent reports: ${recentFiles.join(')}`);
-};
+          logger.info(`📄 Recent reports: ${recentFiles.join(')}`),
+        }
       }
     } catch (error) {,
-      logger.info(`❌ Error checking reports: ${error.message}`);
-};
+      logger.info(`❌ Error checking reports: ${error.message}`),
+    }
   }
 ,
   async checkGitStatus() {,
@@ -74,11 +75,11 @@ class ImprovementSystemMonitor {,
       if (status) {,
         logger.info(`📝 Git changes detected: ${status.split('\n').length} files modified`),
       } else {,
-        logger.info('✅ Git working directory clean');
-};
+        logger.info('✅ Git working directory clean'),
+      }
     } catch (error) {,
-      logger.info(`❌ Error checking git status: ${error.message}`);
-};
+      logger.info(`❌ Error checking git status: ${error.message}`),
+    }
   }
 ,
   async showSummary() {,
@@ -94,21 +95,21 @@ class ImprovementSystemMonitor {,
           logger.info('\nRecent Improvements: '),
           report.improvements.slice(-5).forEach(imp => {,
             logger.info(`  - ${imp.type} (${imp.priority}): ${imp.description}`),
-          });
-};
+          }),
+        }
 ,
         if (report.errors.length > 0) {,
           logger.info('\nRecent Errors: '),
           report.errors.slice(-3).forEach(err => {,
             logger.info(`  - Cycle ${err.cycle}: ${err.error}`),
-          });
-};
+          }),
+        }
       } else {,
-        logger.info('No report found yet. System may still be running.');
-};
+        logger.info('No report found yet. System may still be running.'),
+      }
     } catch (error) {,
-      logger.info(`❌ Error reading report: ${error.message}`);
-};
+      logger.info(`❌ Error reading report: ${error.message}`),
+    }
   }
 }
 ,
@@ -129,4 +130,4 @@ if (require.main === module) {,
   }
 }
 ,
-module.exports = ImprovementSystemMonitor,'
+module.exports = ImprovementSystemMonitor,

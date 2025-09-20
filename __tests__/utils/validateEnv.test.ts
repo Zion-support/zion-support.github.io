@@ -8,7 +8,7 @@ import { vi, describe, it, expect, beforeEach, afterEach, type SpyInstance } fro
 const ORIGINAL_ENV = { ...process.env },
 
 // Helper to set and reset process.env for Vitest tests
-const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>) : any => {
+const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>) => {
   process.env = { ...ORIGINAL_ENV }, // Start with a fresh copy of original env
 
   // Clear existing process.env keys that might interfere (those being tested)
@@ -19,8 +19,9 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
 
   const newMetaEnv: Record<string, any> = {},
   if (globalThis.import?.meta?.env) {
-    Object.assign(newMetaEnv, globalThis.import.meta.env);
-};
+    Object.assign(newMetaEnv, globalThis.import.meta.env),
+  }
+
   let devToSet = true,
   if (typeof envValues.DEV === 'boolean') {
     devToSet = envValues.DEV,

@@ -187,6 +187,6 @@ const InteractiveAIDemo2025PromotionBanner = () => {,
         ></div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default InteractiveAIDemo2025PromotionBanner,

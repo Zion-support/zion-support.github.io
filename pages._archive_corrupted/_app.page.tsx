@@ -58,6 +58,6 @@ function ZionApp({ Component, pageProps }: AppProps) {,
         </footer>,
       </div>,
     </>,
-  );
-  }
+  ),
+}
 export default ZionApp,

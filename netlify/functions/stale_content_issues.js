@@ -25,8 +25,8 @@ exports.handler = async function(event, context) {,
       const lastCommit = Array.isArray(commits) && commits[0],
       const date = lastCommit?.commit?.author?.date ? new Date(lastCommit.commit.author.date).getTime() : 0,
       if (date && date < cutoff) {,
-        stale.push({ path: f.path, lastUpdated: lastCommit.commit.author.date });
-};
+        stale.push({ path: f.path, lastUpdated: lastCommit.commit.author.date }),
+      }
     }
 ,
     if (!stale.length) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No stale posts' }) },
@@ -58,6 +58,6 @@ exports.handler = async function(event, context) {,
       return { statusCode: 200, body: JSON.stringify({ ok: true, created: jn.number, stale: stale.length }) },
     }
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

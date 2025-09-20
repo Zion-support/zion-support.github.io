@@ -37,8 +37,8 @@ async function main() {,
     'pages/**/*.tsxpages/**/*.ts'
   ],
   let totalFixed = 0,
-  );
-  }
+  ),
+    }
   }
   console.log(`\nFixed type names in ${totalFixed} files`)}
 ,

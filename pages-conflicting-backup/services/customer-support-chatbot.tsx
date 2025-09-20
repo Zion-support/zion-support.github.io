@@ -1,7 +1,7 @@
 import Head from 'next/head',
 import Link from 'next/link',
 
-export default function CustomerSupportChatbot() : any {
+export default function CustomerSupportChatbot() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

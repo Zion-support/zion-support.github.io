@@ -2,5 +2,5 @@ export function affiliate(url: stringcode: string = process.env.NEXT_PUBLIC_AFFI
   if (!code) return url,
   const u = new URL(url),
   u.searchParams.set('ref', code),
-  return u.toString();
-  }
+  return u.toString(),
+}

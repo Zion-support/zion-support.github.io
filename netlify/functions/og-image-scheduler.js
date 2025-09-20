@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('og-images:generate', () => runNode('automation/og-image-generator.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
-  },
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') },
+},

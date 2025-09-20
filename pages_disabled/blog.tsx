@@ -118,7 +118,7 @@ const Blog: NextPage = () => {
       post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     
     return matchesCategory && matchesSearch
-  });
+  })
 
   const featuredPosts = blogPosts.filter(post => post.featured)
   const recentPosts = blogPosts.slice(0, 4)

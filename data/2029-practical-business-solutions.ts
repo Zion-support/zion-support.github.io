@@ -1,9 +1,9 @@
 export interface PracticalBusinessSolution2029 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  features: string[],
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
 }
 
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [

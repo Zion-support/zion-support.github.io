@@ -119,7 +119,7 @@ const UltimateAIToolsShowcase2025 = () => {,
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory,
     const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          tool.description.toLowerCase().includes(searchQuery.toLowerCase()),
-    return matchesCategory && matchesSearch;
+    return matchesCategory && matchesSearch,
   }),
   const containerVariants = {,
     hidden: { opacity: 0 },

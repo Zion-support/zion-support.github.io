@@ -190,4 +190,4 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {,
         </div>,
       </div>,
     </div>)},
-export default AIRevolutionaryBreakthrough2026,'
+export default AIRevolutionaryBreakthrough2026,

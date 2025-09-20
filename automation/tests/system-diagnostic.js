@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 /* eslint-disable @typescript-eslint/no-require-imports */,
 require('dotenv').config(),
@@ -156,8 +156,8 @@ const optionalFiles = [,
     const payload = {,
       text: 🔧 System diagnostic test - please ignore',      username: System Diagnostic',      icon_emoji: :gear:'    },
     await axios.post(process.env.SLACK_WEBHOOK_URL, payload, {,
-      timeout: 5000});
-};
+      timeout: 5000}),
+  }
 ,
   async testCursorAPI() {,
     // This would test the actual Cursor API endpoint,
@@ -215,48 +215,48 @@ const optionalFiles = [,
     logger.warn(''),
     // Environment Variables,
     logger.warn('🌍 Environment Variables: '),    for (const [key, config] of Object.entries(this.results.environment)) {,
-      const status = config.status === configured' ? ✅' :                     config.status === missing' ? ❌' : ⚠️',      const required = config.required ? (required) : (optional),      logger.warn(`  ${status} ${key} ${required}: ${config.status}`);
-};
+      const status = config.status === configured' ? ✅' :                     config.status === missing' ? ❌' : ⚠️',      const required = config.required ? (required) : (optional),      logger.warn(`  ${status} ${key} ${required}: ${config.status}`),
+    }
     logger.warn(''),
     // Dependencies,
     logger.warn('📦 Dependencies: '),    for (const [key, config] of Object.entries(this.results.dependencies)) {,
-      const status = config.status === installed' ? ✅' : ❌',      logger.warn(`  ${status} ${key}: ${config.status}`);
-};
+      const status = config.status === installed' ? ✅' : ❌',      logger.warn(`  ${status} ${key}: ${config.status}`),
+    }
     logger.warn(''),
     // Files,
     logger.warn('📁 Required Files: '),    for (const [key, config] of Object.entries(this.results.files)) {,
       if (config.required) {,
-        const status = config.status === exists' ? ✅' : ❌',        logger.warn(`  ${status} ${key}: ${config.status}`);
-};
+        const status = config.status === exists' ? ✅' : ❌',        logger.warn(`  ${status} ${key}: ${config.status}`),
+      }
     }
     logger.warn(''),
     // Connections,
     logger.warn('🔗 Connections: '),    for (const [key, config] of Object.entries(this.results.connections)) {,
-      const status = config.status === connected' ? ✅' :                     config.status === not_configured' ? ⚠️' : ❌',      logger.warn(`  ${status} ${key}: ${config.status}`);
-};
+      const status = config.status === connected' ? ✅' :                     config.status === not_configured' ? ⚠️' : ❌',      logger.warn(`  ${status} ${key}: ${config.status}`),
+    }
     logger.warn(''),
     // Recommendations,
-    this.printRecommendations();
-};
+    this.printRecommendations(),
+  }
 ,
   printRecommendations() {,
     const issues = [],
     // Check for missing required environment variables,
     for (const [key, config] of Object.entries(this.results.environment)) {,
-      if (config.required && config.status === 'missing') {        issues.push(`Configure ${key} in your .env file`);
-};
+      if (config.required && config.status === 'missing') {        issues.push(`Configure ${key} in your .env file`),
+      }
     }
 ,
     // Check for missing dependencies,
     for (const [key, config] of Object.entries(this.results.dependencies)) {,
-      if (config.status === 'missing') {        issues.push(`Install missing dependency: npm install ${key}`);
-};
+      if (config.status === 'missing') {        issues.push(`Install missing dependency: npm install ${key}`),
+      }
     }
 ,
     // Check for missing files,
     for (const [key, config] of Object.entries(this.results.files)) {,
-      if (config.required && config.status === 'missing') {        issues.push(`Create missing file: ${key}`);
-};
+      if (config.required && config.status === 'missing') {        issues.push(`Create missing file: ${key}`),
+      }
     }
 ,
     if (issues.length > 0) {,
@@ -272,8 +272,8 @@ const optionalFiles = [,
 ,
   async saveResults() {,
     const reportPath = path.join(process.cwd(), logs', diagnostic-report.json'),    await fs.writeFile(reportPath, JSON.stringify(this.results, null, 2)),
-    logger.warn(`📄 Diagnostic report saved: ${reportPath}`);
-};
+    logger.warn(`📄 Diagnostic report saved: ${reportPath}`),
+  }
 }
 ,
 // Run diagnostic if called directly,
@@ -285,8 +285,8 @@ if (require.main === module) {,
       process.exit(results.overall === failed' ? 1 : 0)    }),
     .catch(error => {,
       logger.error('❌ Diagnostic failed:', error),      process.exit(1),
-    });
-};
+    }),
+}
 ,
 module.exports = SystemDiagnostic,
 // Graceful shutdown handling,
@@ -298,5 +298,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   logger.info('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0);
-  }),
+  process.exit(0),
+}),

@@ -4,7 +4,7 @@ import handler from '@/pages/api/users/me',
 function mockReq(method: string, body?: any) {
   return { method, body } as any,
 }
-function mockRes() : any {
+function mockRes() {
   const res: any = {},
   res.status = vi.fn().mockReturnValue(res),
   res.json = vi.fn().mockReturnValue(res),
@@ -32,5 +32,5 @@ test('DELETE soft deletes account', () => {
   const req = mockReq('DELETE'),
   const res = mockRes(),
   handler(req, res),
-  expect(res.json).toHaveBeenCalledWith({ success: true });
-  }),
+  expect(res.json).toHaveBeenCalledWith({ success: true }),
+}),

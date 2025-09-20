@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('a11y:audit', () => runNode('automation/a11y-audit.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
-  },
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') },
+},

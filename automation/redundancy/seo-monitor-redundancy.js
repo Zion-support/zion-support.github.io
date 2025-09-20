@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-SEO-MONITOR] ${message}`,
-  console.log(line);
-};
+  console.log(line),
+}
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr);
-};
+    if (stderr) console.error(stderr),
+  }
   return { status, stdout, stderr },
 }
 ,
@@ -43,23 +43,23 @@ function checkSEOMetadata() {,
         const content = fs.readFileSync(path.join(pagesDir, file), 'utf8'),
         // Check for title,
         if (!content.includes('# ')) {,
-          seoIssues.push({ file, issue: 'Missing H1 title', severity: 'high' });
-};
+          seoIssues.push({ file, issue: 'Missing H1 title', severity: 'high' }),
+        }
 ,
         // Check for meta description,
         if (!content.includes('description: ') && !content.includes('meta:')) {,
-          seoIssues.push({ file, issue: 'Missing meta description', severity: 'medium' });
-};
+          seoIssues.push({ file, issue: 'Missing meta description', severity: 'medium' }),
+        }
 ,
         // Check for keywords,
         if (!content.includes('keywords: ') && !content.includes('tags:')) {,
-          seoIssues.push({ file, issue: 'Missing keywords/tags', severity: 'low' });
-};
+          seoIssues.push({ file, issue: 'Missing keywords/tags', severity: 'low' }),
+        }
 ,
         // Check for canonical URL,
         if (!content.includes('canonical: ') && !content.includes('url:')) {,
-          seoIssues.push({ file, issue: 'Missing canonical URL', severity: 'medium' });
-};
+          seoIssues.push({ file, issue: 'Missing canonical URL', severity: 'medium' }),
+        }
       }
     }
 ,
@@ -89,21 +89,21 @@ function checkContentStructure() {,
         const headings = content.match(/^#{1,6}\s+.+$/gm) || [],
         const headingLevels = headings.map(h => h.match(/^(#{1,6})/)[1].length),
         if (headingLevels.length > 0 && headingLevels[0] !== 1) {,
-          structureIssues.push({ file, issue: 'Missing H1 heading', severity: 'high' });
-};
+          structureIssues.push({ file, issue: 'Missing H1 heading', severity: 'high' }),
+        }
 ,
         // Check for content length,
         const textContent = content.replace(/^#+\s+.+$/gm, '').replace(/```[\s\S]*?```/g, '').trim(),
         if (textContent.length < 300) {,
-          structureIssues.push({ file, issue: 'Content too short (<300 chars)', severity: 'medium' });
-};
+          structureIssues.push({ file, issue: 'Content too short (<300 chars)', severity: 'medium' }),
+        }
 ,
         // Check for internal links,
         const internalLinks = content.match(/[([^]]+)](([^)]+))/g) || [],
         const hasInternalLinks = internalLinks.some(link => link.includes('ziontechgroup.com') || link.includes('./')),
         if (internalLinks.length > 0 && !hasInternalLinks) {,
-          structureIssues.push({ file, issue: 'No internal links found', severity: 'low' });
-};
+          structureIssues.push({ file, issue: 'No internal links found', severity: 'low' }),
+        }
       }
     }
 ,
@@ -136,8 +136,8 @@ function checkImageOptimization() {,
             file,
             issue: `Image too large (${sizeKB}KB)`,
             severity: 'medium',
-            size: sizeKB});
-};
+            size: sizeKB}),
+        }
 ,
         // Check for alt text in markdown files that reference this image,
         const pagesDir = path.join(process.cwd(), "pages"),
@@ -160,8 +160,8 @@ function checkImageOptimization() {,
             imageIssues.push({,
               file,
               issue: 'Missing alt text',
-              severity: 'high'});
-};
+              severity: 'high'}),
+          }
         }
       }
     }
@@ -195,16 +195,16 @@ function generateSEOReport(seoMetadata, contentStructure, imageOptimization) {,
   },
   // Analyze overall SEO,
   if (seoMetadata.seoMetadata?.count > 0) {,
-    report.seoMonitor.summary.issues.push(`${seoMetadata.seoMetadata.count} SEO metadata issues`);
-};
+    report.seoMonitor.summary.issues.push(`${seoMetadata.seoMetadata.count} SEO metadata issues`),
+  }
 ,
   if (contentStructure.contentStructure?.count > 0) {,
-    report.seoMonitor.summary.issues.push(`${contentStructure.contentStructure.count} content structure issues`);
-};
+    report.seoMonitor.summary.issues.push(`${contentStructure.contentStructure.count} content structure issues`),
+  }
 ,
   if (imageOptimization.imageOptimization?.count > 0) {,
-    report.seoMonitor.summary.issues.push(`${imageOptimization.imageOptimization.count} image optimization issues`);
-};
+    report.seoMonitor.summary.issues.push(`${imageOptimization.imageOptimization.count} image optimization issues`),
+  }
 ,
   if (report.seoMonitor.summary.issues.length > 0) {,
     report.seoMonitor.summary.overallSEO = "needs_attention",
@@ -265,11 +265,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`);
-};
+      log(`Push failed: ${pushResult.stderr}`),
+    }
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`);
-};
+    log(`Commit/push error: ${String(err)}`),
+  }
 }
 ,
 async function main() {,
@@ -284,12 +284,12 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`SEO monitor redundancy failed: ${String(err)}`),
-    process.exit(1);
-};
+    process.exit(1),
+  }
 }
 ,
 if (require.main === module) {,
-  main();
-  }
+  main(),
+}
 ,
 module.exports = { main, checkSEOMetadata, checkContentStructure, checkImageOptimization, generateSEOReport },

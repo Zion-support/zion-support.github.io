@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  );
-};
+  ),
+}
 ,
 /**,
  * Todo and Queue Manager,
@@ -50,8 +50,8 @@ class TodoQueueManager extends EventEmitter {,
     this.queue = [],
     this.projects = new Map(),
     this.assignees = new Set(),
-    this.categories = new Set();
-};
+    this.categories = new Set(),
+  }
 ,
   async initialize() {,
     logger.info('📋 Initializing Todo and Queue Manager...'),
@@ -74,8 +74,8 @@ class TodoQueueManager extends EventEmitter {,
     try {,
       await fs.mkdir(this.config.dataDir, { recursive: true }),
     } catch (error) {,
-      logger.error('Error creating data directory:', error);
-};
+      logger.error('Error creating data directory:', error),
+    }
   }
 ,
   async loadData() {,
@@ -87,8 +87,8 @@ class TodoQueueManager extends EventEmitter {,
         this.todos = new Map(Object.entries(todos)),
         logger.info(`📝 Loaded ${this.todos.size} todos`),
       } catch (error) {,
-        logger.info('No existing todos found, starting fresh');
-};
+        logger.info('No existing todos found, starting fresh'),
+      }
 ,
       // Load queue,
       try {,
@@ -96,8 +96,8 @@ class TodoQueueManager extends EventEmitter {,
         this.queue = JSON.parse(queueData),
         logger.info(`📋 Loaded ${this.queue.length} queue items`),
       } catch (error) {,
-        logger.info('No existing queue found, starting fresh');
-};
+        logger.info('No existing queue found, starting fresh'),
+      }
 ,
       // Load projects,
       try {,
@@ -107,32 +107,32 @@ class TodoQueueManager extends EventEmitter {,
         this.projects = new Map(Object.entries(projects)),
         logger.info(`📁 Loaded ${this.projects.size} projects`),
       } catch (error) {,
-        logger.info('No existing projects found, starting fresh');
-};
+        logger.info('No existing projects found, starting fresh'),
+      }
 ,
       // Extract assignees and categories,
       this.extractMetadata(),
     } catch (error) {,
-      logger.error('Error loading data:', error);
-};
+      logger.error('Error loading data:', error),
+    }
   }
 ,
   extractMetadata() {,
     // Extract assignees from todos,
     for (const [id, todo] of this.todos) {,
       if (todo.assignee) {,
-        this.assignees.add(todo.assignee);
-};
+        this.assignees.add(todo.assignee),
+      }
       if (todo.category) {,
-        this.categories.add(todo.category);
-};
+        this.categories.add(todo.category),
+      }
     }
 ,
     // Extract categories from queue,
     for (const item of this.queue) {,
       if (item.category) {,
-        this.categories.add(item.category);
-};
+        this.categories.add(item.category),
+      }
     }
   }
 ,
@@ -141,26 +141,26 @@ class TodoQueueManager extends EventEmitter {,
     // Process queue items,
     setInterval(async () => {,
       if (this.isRunning) {,
-        await this.processQueue();
-};
+        await this.processQueue(),
+      }
     }, 30000), // Every 30 seconds,
     // Update priorities,
     setInterval(async () => {,
       if (this.isRunning) {,
-        await this.updatePriorities();
-};
+        await this.updatePriorities(),
+      }
     }, 300000), // Every 5 minutes,
     // Generate reports,
     setInterval(async () => {,
       if (this.isRunning) {,
-        await this.generateReport();
-};
+        await this.generateReport(),
+      }
     }, 1800000), // Every 30 minutes,
     // Cleanup completed items,
     setInterval(async () => {,
       if (this.isRunning) {,
-        await this.cleanupCompleted();
-};
+        await this.cleanupCompleted(),
+      }
     }, 3600000), // Every hour
   }
 ,
@@ -184,13 +184,13 @@ class TodoQueueManager extends EventEmitter {,
     },
     // Auto-assign if enabled,
     if (this.config.autoAssign && !todo.assignee) {,
-      todo.assignee = this.getOptimalAssignee(todo);
-};
+      todo.assignee = this.getOptimalAssignee(todo),
+    }
 ,
     // Auto-prioritize if enabled,
     if (this.config.autoPrioritize) {,
-      todo.priority = this.calculatePriority(todo);
-};
+      todo.priority = this.calculatePriority(todo),
+    }
 ,
     this.todos.set(todo.id, todo),
     await this.saveTodos(),
@@ -220,8 +220,8 @@ class TodoQueueManager extends EventEmitter {,
     // Check queue size limit,
     if (this.queue.length >= this.config.maxQueueSize) {,
       logger.warn('⚠️ Queue is full, removing lowest priority item'),
-      this.removeLowestPriorityItem();
-};
+      this.removeLowestPriorityItem(),
+    }
 ,
     this.queue.push(item),
     await this.saveQueue(),
@@ -247,11 +247,11 @@ class TodoQueueManager extends EventEmitter {,
     // Process top items (max 10 at a time),
     const itemsToProcess = this.queue.splice(0, 10),
     for (const item of itemsToProcess) {,
-      await this.processQueueItem(item);
-};
+      await this.processQueueItem(item),
+    }
 ,
-    await this.saveQueue();
-};
+    await this.saveQueue(),
+  }
 ,
   async processQueueItem(item) {,
     logger.info(`⚡ Processing queue item: ${item.title}`),
@@ -302,8 +302,8 @@ class TodoQueueManager extends EventEmitter {,
       'taskbugfeatureimprovement',
       'refactor'
     ],
-    return actionableTypes.includes(item.type);
-};
+    return actionableTypes.includes(item.type),
+  }
 ,
   getOptimalAssignee(todo) {,
     // Simple assignment logic - could be enhanced with workload balancing,
@@ -323,8 +323,8 @@ class TodoQueueManager extends EventEmitter {,
 ,
     return Object.keys(assigneeWorkload).reduce((a, b) =>,
       assigneeWorkload[a] < assigneeWorkload[b] ? a : b,
-    );
-};
+    ),
+  }
 ,
   calculatePriority(todo) {,
     let priority = 'medium',
@@ -366,20 +366,20 @@ class TodoQueueManager extends EventEmitter {,
       if (newPriority !== todo.priority) {,
         todo.priority = newPriority,
         todo.updatedAt = new Date().toISOString(),
-        logger.info(`📊 Updated priority for ${todo.title}: ${todo.priority}`);
-};
+        logger.info(`📊 Updated priority for ${todo.title}: ${todo.priority}`),
+      }
     }
 ,
-    await this.saveTodos();
-};
+    await this.saveTodos(),
+  }
 ,
   async cleanupCompleted() {,
     logger.info('🧹 Cleaning up completed items...'),
     const completedTodos = [],
     for (const [id, todo] of this.todos) {,
       if (todo.status === 'completed') {,
-        completedTodos.push(id);
-};
+        completedTodos.push(id),
+      }
     }
 ,
     // Keep only recent completed todos (last 30 days),
@@ -389,12 +389,12 @@ class TodoQueueManager extends EventEmitter {,
       const todo = this.todos.get(id),
       if (todo.updatedAt && new Date(todo.updatedAt) < thirtyDaysAgo) {,
         this.todos.delete(id),
-        logger.info(`🗑️ Removed old completed todo: ${todo.title}`);
-};
+        logger.info(`🗑️ Removed old completed todo: ${todo.title}`),
+      }
     }
 ,
-    await this.saveTodos();
-};
+    await this.saveTodos(),
+  }
 ,
   removeLowestPriorityItem() {,
     if (this.queue.length === 0) return,
@@ -410,8 +410,8 @@ class TodoQueueManager extends EventEmitter {,
     }
 ,
     const removed = this.queue.splice(lowestIndex, 1)[0],
-    logger.info(`🗑️ Removed lowest priority item: ${removed.title}`);
-};
+    logger.info(`🗑️ Removed lowest priority item: ${removed.title}`),
+  }
 ,
   async generateReport() {,
     const report = {,
@@ -444,8 +444,8 @@ class TodoQueueManager extends EventEmitter {,
     ),
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2)),
     logger.info(`📊 Generated todo/queue report: ${reportFile}`),
-    this.emit('reportGenerated', report);
-};
+    this.emit('reportGenerated', report),
+  }
 ,
   getTodosByPriority() {,
     const byPriority = {},
@@ -514,23 +514,23 @@ class TodoQueueManager extends EventEmitter {,
 ,
   async saveTodos() {,
     const todosObj = Object.fromEntries(this.todos),
-    await fs.writeFile(this.config.todoFile, JSON.stringify(todosObj, null, 2));
-};
+    await fs.writeFile(this.config.todoFile, JSON.stringify(todosObj, null, 2)),
+  }
 ,
   async saveQueue() {,
     await fs.writeFile(,
       this.config.queueFile,
       JSON.stringify(this.queue, null, 2),
-    );
-};
+    ),
+  }
 ,
   async saveProjects() {,
     const projectsObj = Object.fromEntries(this.projects),
     await fs.writeFile(,
       this.config.projectsFile,
       JSON.stringify(projectsObj, null, 2),
-    );
-};
+    ),
+  }
 ,
   generateId() {,
     return `todo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -566,6 +566,6 @@ if (require.main === module) {,
     logger.info('\n🛑 Shutting down Todo and Queue Manager...'),
     manager.stop(),
     process.exit(0),
-  });
-  }
+  }),
+}
 ,

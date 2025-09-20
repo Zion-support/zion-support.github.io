@@ -53,8 +53,9 @@ exports.handler = async function(event, context) {
         schedule: ['hourlydaily', 'weeklymonthly'][Math.floor(Math.random() * 4)],
         nextRun: new Date(Date.now() + Math.random() * 24 * 60 * 60 * 1000).toISOString(), // 0-24 hours from now
         priority: ['lowmedium', 'high'][Math.floor(Math.random() * 3)]
-      });
-};
+      }),
+    }
+    
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -96,6 +97,6 @@ exports.handler = async function(event, context) {
         function: 'link-and-health-scheduler',
         status: 'error'
       })
-    };
+    },
   }
 },

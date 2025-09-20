@@ -17,7 +17,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const allServices = [...innovativeNewServices2025, ...emergingTechBreakthroughs2025];
 
@@ -34,7 +34,7 @@ const categories = [
   'Autonomous Systems'
 ];
 
-export default function InnovativeNewServicesShowcase2025() : any {
+export default function InnovativeNewServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -50,7 +50,7 @@ export default function InnovativeNewServicesShowcase2025() : any {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) : any => {
+  const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
@@ -60,8 +60,9 @@ export default function InnovativeNewServicesShowcase2025() : any {
         return b.rating - a.rating;
       case 'popularity':
         return b.customers - a.customers;
-      default: return 0;
-  }
+      default:
+        return 0;
+    }
   });
 
   const containerVariants = {
@@ -72,7 +73,7 @@ export default function InnovativeNewServicesShowcase2025() : any {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -83,7 +84,7 @@ export default function InnovativeNewServicesShowcase2025() : any {
         duration: 0.5
       }
     }
-  },
+  };
 
   return (
     <Layout>
@@ -284,7 +285,7 @@ export default function InnovativeNewServicesShowcase2025() : any {
                   </div>
                   <Link
                     href={service.link}
-                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-lg hover: from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -305,7 +306,7 @@ export default function InnovativeNewServicesShowcase2025() : any {
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
               <button
                 onClick={() => {
-                  setSearchTerm(''),
+                  setSearchTerm('');
                   setSelectedCategory('All Services');
                 }}
                 className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
@@ -411,4 +412,4 @@ export default function InnovativeNewServicesShowcase2025() : any {
       </section>
     </Layout>
   );
-};
+}

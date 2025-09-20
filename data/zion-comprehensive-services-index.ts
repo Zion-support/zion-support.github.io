@@ -31,7 +31,7 @@ export const serviceCategories = [
 ] as const,
 
 // Utility functions
-export const getServicesByCategory = (category: string) : any => {
+export const getServicesByCategory = (category: string) => {
   return allZionServices.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   )
@@ -45,18 +45,18 @@ export const getNewServices = () => {
   return allZionServices.filter(service => service.isNew),
 },
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return allZionServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice,
   }),
 },
 
-export const getServicesByRating = (minRating: number) : any => {
+export const getServicesByRating = (minRating: number) => {
   return allZionServices.filter(service => service.rating >= minRating)
 },
 
-export const searchServices = (query: string) : any => {
+export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase(),
   return allZionServices.filter(service =>
     service.name.toLowerCase().includes(searchTerm) ||
@@ -105,7 +105,7 @@ export const getMarketInsights = () => {
 // Technology stack overview
 export const getTechnologyStack = () => {
   const allTechnologies = allZionServices.flatMap(service => service.technology),
-  const technologyCount = allTechnologies.reduce((acc, tech) : any => {
+  const technologyCount = allTechnologies.reduce((acc, tech) => {
     acc[tech] = (acc[tech] || 0) + 1,
     return acc,
   }, {} as Record<string, number>),
@@ -118,7 +118,7 @@ export const getTechnologyStack = () => {
 // Integration overview
 export const getIntegrationOverview = () => {
   const allIntegrations = allZionServices.flatMap(service => service.integrations),
-  const integrationCount = allIntegrations.reduce((acc, integration) : any => {
+  const integrationCount = allIntegrations.reduce((acc, integration) => {
     acc[integration] = (acc[integration] || 0) + 1,
     return acc,
   }, {} as Record<string, number>),
@@ -136,8 +136,8 @@ export const getROIInsights = () => {
     roi: service.roi,
     price: service.price,
     rating: service.rating
-  }));
-  },
+  })),
+},
 
 // Export default for easy importing
 export default {

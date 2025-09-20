@@ -13,14 +13,11 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={canonical || url} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      {url && <meta property="og:url" content={url} />}
+      {title && <meta property="og:title" content={title} />}
+      {description && <meta property="og:description" content={description} />}
       {image && <meta property="og:image" content={image} />}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
     </>
   );
 };

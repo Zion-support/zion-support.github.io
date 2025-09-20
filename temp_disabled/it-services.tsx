@@ -400,7 +400,7 @@ const categories = [,
   'Asset ManagementData ProtectionPerformance MonitoringCloud Security',
   'ITSM'
 ],
-export default function ITServicesPage() : any {,
+export default function ITServicesPage() {,
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
   const [searchTermsetSearchTerm] = React.useState(''),
   const filteredServices = itServices.filter(service => {,
@@ -475,8 +475,8 @@ export default function ITServicesPage() : any {,
                 <button,
                   onClick={() => {,
                     setSearchTerm(''),
-                    setSelectedCategory('All');
-  }}
+                    setSelectedCategory('All'),
+                  }}
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-semibold",
                 >,
                   Clear Filters,

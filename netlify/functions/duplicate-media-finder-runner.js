@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'duplicate-media-finder-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

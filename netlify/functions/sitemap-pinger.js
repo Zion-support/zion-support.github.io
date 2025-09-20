@@ -35,13 +35,14 @@ exports.handler = async () => {
     ],
     for (const pingUrl of pingUrls) {
       await fetch(pingUrl),
-      logs.push(`Pinged: ${pingUrl}`);
-};
+      logs.push(`Pinged: ${pingUrl}`),
+    }
   } catch (e) {
-    logs.push(`Ping error: ${String(e)}`);
-};
+    logs.push(`Ping error: ${String(e)}`),
+  }
+
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') };
-  },
+  return { statusCode: 200, body: logs.join('\n') },
+},

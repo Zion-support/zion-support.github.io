@@ -122,7 +122,7 @@ const BusinessTransformationShowcase2025 = () => {,
           </p>,
         </div>,
         {/* Metrics Grid */}
-          {metrics.map((metricindex) : any => {,
+          {metrics.map((metricindex) => {,
             const Icon = metric.icon,
             return (,
               <div,
@@ -253,5 +253,5 @@ const BusinessTransformationShowcase2025 = () => {,
       </div>,
     </div>,
   ),
-export default BusinessTransformationShowcase2025;
-  }
+export default BusinessTransformationShowcase2025,
+}

@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 /**,
  * Zion App - Specialized AI Improvement Agents,
@@ -37,8 +37,8 @@ const http = require('http'),
 class AIImprovementAgents {,
   constructor() {,
     this.agents = new Map(),
-    this.initializeAgents();
-};
+    this.initializeAgents(),
+  }
 ,
   /**,
    * Initialize all AI agents,
@@ -49,15 +49,15 @@ class AIImprovementAgents {,
     this.agents.set('codeQuality', new CodeQualityAgent()),
     this.agents.set('accessibility', new AccessibilityAgent()),
     this.agents.set('seo', new SEOAgent()),
-    this.agents.set('testCoverage', new TestCoverageAgent());
-};
+    this.agents.set('testCoverage', new TestCoverageAgent()),
+  }
 ,
   /**,
    * Get a specific agent,
    */,
   getAgent(type) {,
-    return this.agents.get(type);
-};
+    return this.agents.get(type),
+  }
 ,
   /**,
    * Run all agents,
@@ -83,11 +83,11 @@ class AIImprovementAgents {,
   async runAgent(type, codebaseData) {,
     const agent = this.getAgent(type),
     if (!agent) {,
-      throw new Error(`Unknown agent type: ${type}`);
-};
+      throw new Error(`Unknown agent type: ${type}`),
+    }
 ,
-    return await agent.analyze(codebaseData);
-};
+    return await agent.analyze(codebaseData),
+  }
 }
 ,
 /**,
@@ -170,16 +170,16 @@ class PerformanceAgent {,
         type: 'bundle-optimization',
         priority: 'high',
         description: Bundle size is too large',
-        action: Implement tree shaking and code splitting});
-};
+        action: Implement tree shaking and code splitting}),
+    }
 ,
     if (analysis.loadTimes.firstContentfulPaint > 1500) {,
       suggestions.push({,
         type: 'load-time-optimization',
         priority: 'high',
         description: First contentful paint is slow',
-        action: Optimize critical rendering path});
-};
+        action: Optimize critical rendering path}),
+    }
 ,
     return suggestions,
   }
@@ -265,8 +265,8 @@ class SecurityAgent {,
       score -= analysis.codeScan.xss * 10,
     }
 ,
-    return Math.max(0, score);
-};
+    return Math.max(0, score),
+  }
 ,
   async generateSuggestions(analysis) {,
     const suggestions = [],
@@ -283,8 +283,8 @@ class SecurityAgent {,
         type: 'xss-prevention',
         priority: 'high',
         description: XSS vulnerabilities detected',
-        action: Implement proper input sanitization});
-};
+        action: Implement proper input sanitization}),
+    }
 ,
     return suggestions,
   }
@@ -379,8 +379,8 @@ class CodeQualityAgent {,
       score -= 5,
     }
 ,
-    return Math.max(0, score);
-};
+    return Math.max(0, score),
+  }
 ,
   async generateSuggestions(analysis) {,
     const suggestions = [],
@@ -397,8 +397,8 @@ class CodeQualityAgent {,
         type: 'linting-fixes',
         priority: 'high',
         description: Linting errors detected',
-        action: Fix all linting errors});
-};
+        action: Fix all linting errors}),
+    }
 ,
     return suggestions,
   }
@@ -490,8 +490,8 @@ class AccessibilityAgent {,
       score -= 15,
     }
 ,
-    return Math.max(0, score);
-};
+    return Math.max(0, score),
+  }
 ,
   async generateSuggestions(analysis) {,
     const suggestions = [],
@@ -508,8 +508,8 @@ class AccessibilityAgent {,
         type: 'axe-violations',
         priority: 'high',
         description: Accessibility violations detected',
-        action: Fix all axe violations});
-};
+        action: Fix all axe violations}),
+    }
 ,
     return suggestions,
   }
@@ -608,8 +608,8 @@ class SEOAgent {,
       score -= 5,
     }
 ,
-    return Math.max(0, score);
-};
+    return Math.max(0, score),
+  }
 ,
   async generateSuggestions(analysis) {,
     const suggestions = [],
@@ -618,16 +618,16 @@ class SEOAgent {,
         type: 'seo-optimization',
         priority: 'low',
         description: SEO score is below threshold',
-        action: Implement SEO best practices});
-};
+        action: Implement SEO best practices}),
+    }
 ,
     if (analysis.metaTags.ogTags === 'partial') {,
       suggestions.push({,
         type: 'og-tags',
         priority: 'medium',
         description: Incomplete Open Graph tags',
-        action: Complete all Open Graph meta tags});
-};
+        action: Complete all Open Graph meta tags}),
+    }
 ,
     return suggestions,
   }
@@ -705,8 +705,8 @@ class TestCoverageAgent {,
     score += analysis.coverage.lineCoverage * 0.4,
     score += analysis.coverage.branchCoverage * 0.3,
     score += analysis.coverage.functionCoverage * 0.3,
-    return Math.round(score);
-};
+    return Math.round(score),
+  }
 ,
   async generateSuggestions(analysis) {,
     const suggestions = [],
@@ -715,18 +715,18 @@ class TestCoverageAgent {,
         type: 'test-coverage',
         priority: 'medium',
         description: Test coverage is below threshold',
-        action: Add more comprehensive tests});
-};
+        action: Add more comprehensive tests}),
+    }
 ,
     if (analysis.coverage.lineCoverage < 80) {,
       suggestions.push({,
         type: 'line-coverage',
         priority: 'high',
         description: Line coverage is insufficient',
-        action: Add unit tests for uncovered lines});
-};
+        action: Add unit tests for uncovered lines}),
+    }
 ,
-    return suggestions;
+    return suggestions,
   }
 }
 ,

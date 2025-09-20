@@ -519,7 +519,7 @@ export const advancedInnovativeServices2025V3 = [
         rating: 4.8,
         reviews: 203
     }
-],
+];
 export const advancedITServices2025 = [
     // Quantum Computing Infrastructure Setup
     {
@@ -662,7 +662,7 @@ export const advancedITServices2025 = [
         marketSize: '$3.5B cybersecurity consulting market',
         growthRate: '35% annual growth'
     }
-],
+];
 export const advancedAIServices2025 = [
     // AI-Powered Business Intelligence
     {
@@ -766,7 +766,7 @@ export const advancedAIServices2025 = [
         marketSize: '$2.8B customer service automation market',
         growthRate: '40% annual growth'
     }
-],
+];
 export default {
     advancedInnovativeServices2025V3,
     advancedITServices2025,

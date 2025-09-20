@@ -311,10 +311,10 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     }
   }
 ],
-export const getPricingAnalysisByService = (serviceId: string) : any => {
+export const getPricingAnalysisByService = (serviceId: string) => {
   return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)
 },
-export const getPricingAnalysisByCategory = (category: string) : any => {
+export const getPricingAnalysisByCategory = (category: string) => {
   if (!category || category === 'All') return comprehensivePricingAnalysis2025,
   return comprehensivePricingAnalysis2025.filter(s => s.category === category)
 },
@@ -337,5 +337,5 @@ export const getCompetitiveLandscape = () => {
     cybersecurity: ['CrowdStrikeSentinelOne', 'DarktracePalo Alto Networks'],
     manufacturing: ['SiemensRockwell Automation', 'ABBGE Digital'],
     blockchain: ['ChainalysisConsenSys', 'AlchemyInfura']
-  };
   },
+},

@@ -26,8 +26,8 @@ const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin('apiQueue',
     queueDidReplay: async () => {
       const clients = await self.clients.matchAll(),
       for (const client of clients) {
-        client.postMessage({ type: 'QUEUE_SYNCED' });
-};
+        client.postMessage({ type: 'QUEUE_SYNCED' }),
+      }
     }
   }
 }),
@@ -39,8 +39,8 @@ workbox.routing.registerRoute(
 
 workbox.routing.setCatchHandler(async ({ event }) => {
   if (event.request.destination === 'document') {
-    return caches.match('/offline.html');
-};
+    return caches.match('/offline.html'),
+  }
   return Response.error(),
 }),
 
@@ -51,5 +51,5 @@ self.addEventListener('push', event => {
     body: data.body,
     icon: '/vite.svg'
   },
-  event.waitUntil(self.registration.showNotification(title, options));
-  }),
+  event.waitUntil(self.registration.showNotification(title, options)),
+}),

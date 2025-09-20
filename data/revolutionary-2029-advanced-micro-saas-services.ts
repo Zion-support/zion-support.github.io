@@ -493,7 +493,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
   }
 ],
 
-export const getServicesByCategory = (category: string) : any => {
+export const getServicesByCategory = (category: string) => {
   return revolutionaryServices2029.filter(service => service.category === category)
 },
 
@@ -505,9 +505,9 @@ export const getNewServices = () => {
   return revolutionaryServices2029.filter(service => service.isNew),
 },
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice,
-  });
-  },
+  }),
+},

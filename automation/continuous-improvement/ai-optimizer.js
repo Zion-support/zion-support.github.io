@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 /**,
  * AI Optimizer for Continuous Improvement,
@@ -71,8 +71,8 @@ class AIOptimizer {,
     this.improvementHistory = [],
     this.currentAnalysis = null,
     this.aiProviders = new Map(),
-    this.initializeAIProviders();
-};
+    this.initializeAIProviders(),
+  }
 ,
   /**,
    * Initialize AI providers,
@@ -84,8 +84,8 @@ class AIOptimizer {,
         name: Cursor AI',
         analyze: (data) => this.analyzeWithCursor(data),
         suggest: (problem) => this.suggestWithCursor(problem),
-        implement: (suggestion) => this.implementWithCursor(suggestion)});
-};
+        implement: (suggestion) => this.implementWithCursor(suggestion)}),
+    }
 ,
     // OpenAI,
     if (AI_CONFIG.OPENAI.API_KEY) {,
@@ -93,8 +93,8 @@ class AIOptimizer {,
         name: OpenAI GPT',
         analyze: (data) => this.analyzeWithOpenAI(data),
         suggest: (problem) => this.suggestWithOpenAI(problem),
-        implement: (suggestion) => this.implementWithOpenAI(suggestion)});
-};
+        implement: (suggestion) => this.implementWithOpenAI(suggestion)}),
+    }
 ,
     // Claude,
     if (AI_CONFIG.CLAUDE.API_KEY) {,
@@ -102,8 +102,8 @@ class AIOptimizer {,
         name: 'Claude',
         analyze: (data) => this.analyzeWithClaude(data),
         suggest: (problem) => this.suggestWithClaude(problem),
-        implement: (suggestion) => this.implementWithClaude(suggestion)});
-};
+        implement: (suggestion) => this.implementWithClaude(suggestion)}),
+    }
 ,
     // Local AI,
     if (AI_CONFIG.LOCAL_AI.ENABLED) {,
@@ -111,8 +111,8 @@ class AIOptimizer {,
         name: Local AI',
         analyze: (data) => this.analyzeWithLocalAI(data),
         suggest: (problem) => this.suggestWithLocalAI(problem),
-        implement: (suggestion) => this.implementWithLocalAI(suggestion)});
-};
+        implement: (suggestion) => this.implementWithLocalAI(suggestion)}),
+    }
   }
 ,
   /**,
@@ -126,8 +126,8 @@ class AIOptimizer {,
     // Start improvement processing,
     this.startImprovementProcessing(),
     logger.info('✅ AI Optimization System started successfully'),
-    logger.info(`📊 Available AI providers: ${Array.from(this.aiProviders.keys()).join(')}`);
-};
+    logger.info(`📊 Available AI providers: ${Array.from(this.aiProviders.keys()).join(')}`),
+  }
 ,
   /**,
    * Start continuous analysis loop,
@@ -425,8 +425,8 @@ const timeoutId = setTimeout(analysisLoop,                                      
 ,
       }
     },
-    analysisLoop();
-};
+    analysisLoop(),
+  }
 ,
   /**,
    * Start improvement processing,
@@ -723,8 +723,8 @@ const timeoutId = setTimeout(processLoop,                                       
 ,
       }
     },
-    processLoop();
-};
+    processLoop(),
+  }
 ,
   /**,
    * Perform quick scan,
@@ -742,8 +742,8 @@ const timeoutId = setTimeout(processLoop,                                       
     const combinedResults = results,
       .filter(result => result.status === 'fulfilled'),
       .map(result => result.value),
-    await this.generateComprehensiveSuggestions(combinedResults);
-};
+    await this.generateComprehensiveSuggestions(combinedResults),
+  }
 ,
   /**,
    * Collect quick scan data,
@@ -773,8 +773,8 @@ const timeoutId = setTimeout(processLoop,                                       
         confidence: 0.9,
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Cursor AI analysis failed: ${error.message}`);
-};
+      throw new Error(`Cursor AI analysis failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -790,8 +790,8 @@ const timeoutId = setTimeout(processLoop,                                       
         confidence: 0.85,
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`OpenAI analysis failed: ${error.message}`);
-};
+      throw new Error(`OpenAI analysis failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -807,8 +807,8 @@ const timeoutId = setTimeout(processLoop,                                       
         confidence: 0.88,
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Claude analysis failed: ${error.message}`);
-};
+      throw new Error(`Claude analysis failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -824,8 +824,8 @@ const timeoutId = setTimeout(processLoop,                                       
         confidence: 0.75,
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Local AI analysis failed: ${error.message}`);
-};
+      throw new Error(`Local AI analysis failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -917,15 +917,15 @@ Focus on practical, implementable improvements that will have the most impact.`,
           try {,
             resolve(JSON.parse(data)),
           } catch (error) {,
-            reject(new Error('Invalid JSON response'));
-};
+            reject(new Error('Invalid JSON response')),
+          }
         }),
       }),
       req.on('error', reject),
       req.write(postData),
       req.end(),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Call OpenAI API,
@@ -951,15 +951,15 @@ Focus on practical, implementable improvements that will have the most impact.`,
           try {,
             resolve(JSON.parse(data)),
           } catch (error) {,
-            reject(new Error('Invalid JSON response'));
-};
+            reject(new Error('Invalid JSON response')),
+          }
         }),
       }),
       req.on('error', reject),
       req.write(postData),
       req.end(),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Call Claude API,
@@ -986,15 +986,15 @@ Focus on practical, implementable improvements that will have the most impact.`,
           try {,
             resolve(JSON.parse(data)),
           } catch (error) {,
-            reject(new Error('Invalid JSON response'));
-};
+            reject(new Error('Invalid JSON response')),
+          }
         }),
       }),
       req.on('error', reject),
       req.write(postData),
       req.end(),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Call Local AI API,
@@ -1019,15 +1019,15 @@ Focus on practical, implementable improvements that will have the most impact.`,
           try {,
             resolve(JSON.parse(data)),
           } catch (error) {,
-            reject(new Error('Invalid JSON response'));
-};
+            reject(new Error('Invalid JSON response')),
+          }
         }),
       }),
       req.on('error', reject),
       req.write(postData),
       req.end(),
-    });
-};
+    }),
+  }
 ,
   /**,
    * Parse Cursor response,
@@ -1100,8 +1100,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
     const lines = content.split('\n'),
     for (const line of lines) {,
       if (line.includes('suggest') || line.includes('recommend') || line.includes('consider')) {,
-        suggestions.push(line.trim());
-};
+        suggestions.push(line.trim()),
+      }
     }
 ,
     return suggestions,
@@ -1115,8 +1115,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
     const lines = content.split('\n'),
     for (const line of lines) {,
       if (line.includes('issue') || line.includes('problem') || line.includes('error')) {,
-        issues.push(line.trim());
-};
+        issues.push(line.trim()),
+      }
     }
 ,
     return issues,
@@ -1130,8 +1130,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
     const lines = content.split('\n'),
     for (const line of lines) {,
       if (line.includes('improve') || line.includes('optimize') || line.includes('enhance')) {,
-        improvements.push(line.trim());
-};
+        improvements.push(line.trim()),
+      }
     }
 ,
     return improvements,
@@ -1163,8 +1163,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
       if (result.analysis) {,
         allSuggestions.push(...(result.analysis.suggestions || [])),
         allIssues.push(...(result.analysis.issues || [])),
-        allImprovements.push(...(result.analysis.improvements || []));
-};
+        allImprovements.push(...(result.analysis.improvements || [])),
+      }
     }
 ,
     // Remove duplicates,
@@ -1177,8 +1177,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
       timestamp: new Date().toISOString(),
       suggestions: uniqueSuggestions,
       issues: uniqueIssues,
-      improvements: uniqueImprovements});
-};
+      improvements: uniqueImprovements}),
+  }
 ,
   /**,
    * Process improvement queue,
@@ -1190,8 +1190,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
     try {,
       await this.executeImprovementTask(task),
     } catch (error) {,
-      logger.error(`❌ Error processing improvement task: ${error.message}`);
-};
+      logger.error(`❌ Error processing improvement task: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -1199,8 +1199,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
    */,
   async executeImprovementTask(task) {,
     // Implementation would depend on the specific task type,
-    logger.info(`✅ Executed improvement task: ${task.type}`);
-};
+    logger.info(`✅ Executed improvement task: ${task.type}`),
+  }
 ,
   /**,
    * Check build status,
@@ -1323,8 +1323,8 @@ Focus on practical, implementable improvements that will have the most impact.`,
   async stop() {,
     logger.info('🛑 Stopping AI Optimization System...'),
     this.isRunning = false,
-    logger.info('✅ AI Optimization System stopped');
-};
+    logger.info('✅ AI Optimization System stopped'),
+  }
 ,
   /**,
    * Get system status,
@@ -1334,7 +1334,7 @@ Focus on practical, implementable improvements that will have the most impact.`,
       isRunning: this.isRunning,
       aiProviders: Array.from(this.aiProviders.keys()),
       analysisQueue: this.analysisQueue.length,
-      improvementHistory: this.improvementHistory.length};
+      improvementHistory: this.improvementHistory.length},
   }
 }
 ,

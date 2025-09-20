@@ -8,8 +8,9 @@ backupContent = parts[1].split('>>>>>>>')[0]
 if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
-    // Create a backup of the current corrupted file,
-corruptedBackup: corruptedBackupPath}
+    // Create a backup of the current corrupted file
+corruptedBackup: corruptedBackupPath,
+}
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
@@ -20,15 +21,17 @@ function fixSpecificPages() {
 results.details.push({
         file: pagePath,
 restored: false,
-reason: 'Page not found',
-  console.log(`   Reason: ${result.reason}`)
+reason: 'Page not found'
+console.log(`   Reason: ${result.reason}`)
     }
     results.details.push({
       file: pagePath
-      ...result})
+      ...result,
+})
   }
-  // Generate summary,
-return results}
+  // Generate summary
+return results,
+}
 // Run the restoration if this script is executed directly,
 if ({
   fixSpecificPages()

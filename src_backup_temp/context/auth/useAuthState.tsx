@@ -66,7 +66,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
     onboardingStep,
     setOnboardingStep,
     tokens,
-    setTokens;
+    setTokens,
   }},
 ,
 </any>,
@@ -74,4 +74,4 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
 </typeof>,
 </any>,
 </any>,
-</React>,'"
+</React>,

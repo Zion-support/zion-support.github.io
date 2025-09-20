@@ -14,10 +14,11 @@ interface ModerationRequest {
   sellerId: string
 }
 
-serve(async (req) : any => {
+serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-};
+    return new Response(null, { headers: corsHeaders }),
+  }
+
   try {
     const body: ModerationRequest = await req.json(),
     const { listingId, listingType, description, images = [], sellerId } = body,
@@ -26,8 +27,9 @@ serve(async (req) : any => {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-};
+      ),
+    }
+
     const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "",
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     const openaiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -84,8 +86,9 @@ serve(async (req) : any => {
         _message: "Your listing has been flagged by our moderation system and is pending review.",
         _type: "moderation",
         _related_id: listingId
-      });
-};
+      }),
+    }
+
     return new Response(
       JSON.stringify({ success: true, flagged }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -95,6 +98,6 @@ serve(async (req) : any => {
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
+    ),
   }
 }),

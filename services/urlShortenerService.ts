@@ -110,17 +110,17 @@ class UrlShortenerService {
       analytics.lastClicked = new Date(),
       
       if (!analytics.referrers.includes(clickData.referrer)) {
-        analytics.referrers.push(clickData.referrer);
-};
+        analytics.referrers.push(clickData.referrer),
+      }
       if (!analytics.countries.includes(clickData.country)) {
-        analytics.countries.push(clickData.country);
-};
+        analytics.countries.push(clickData.country),
+      }
       if (!analytics.devices.includes(clickData.device)) {
-        analytics.devices.push(clickData.device);
-};
+        analytics.devices.push(clickData.device),
+      }
       if (!analytics.browsers.includes(clickData.browser)) {
-        analytics.browsers.push(clickData.browser);
-};
+        analytics.browsers.push(clickData.browser),
+      }
     }
   }
 
@@ -152,21 +152,22 @@ class UrlShortenerService {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
     let result = '',
     for (let i = 0, i < 6, i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
-};
+      result += chars.charAt(Math.floor(Math.random() * chars.length)),
+    }
     return result,
   }
 
   private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
-};
+    return Math.random().toString(36).substr(2, 9),
+  }
+
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
       urls: Array.from(this.urls.entries()),
       analytics: Array.from(this.analytics.entries()),
       clicks: Array.from(this.clicks.entries())
-    };
+    },
   }
 
   async importData(data: any): Promise<void> {

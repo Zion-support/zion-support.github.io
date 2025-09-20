@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 /**,
  * Cursor Automated Extension Background Script,
@@ -52,8 +52,8 @@ class CursorExtensionBackground {,
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {,
       this.handleMessage(message, sender, sendResponse),
       return true, // Keep message channel open for async response
-    });
-};
+    }),
+  }
 ,
   async handleMessage(message, sender, sendResponse) {,
     try {,
@@ -74,11 +74,11 @@ class CursorExtensionBackground {,
           sendResponse({ success: true, status: this.getStatus() }),
           break,
         default:,
-          sendResponse({ success: false, error: Unknown message type' });
-};
+          sendResponse({ success: false, error: Unknown message type' }),
+      }
     } catch (error) {,
-      sendResponse({ success: false, error: error.message });
-};
+      sendResponse({ success: false, error: error.message }),
+    }
   }
 ,
   async analyzeCode(codeData) {,
@@ -90,8 +90,8 @@ class CursorExtensionBackground {,
     // Analyze code for common issues,
     if (codeData.content) {,
       analysis.issues = this.findCodeIssues(codeData.content),
-      analysis.suggestions = this.generateSuggestions(analysis.issues);
-};
+      analysis.suggestions = this.generateSuggestions(analysis.issues),
+    }
 ,
     return analysis,
   }
@@ -105,8 +105,8 @@ class CursorExtensionBackground {,
         message: Console.log statement found',
         severity: 'low',
         line: this.findLineNumber(content, logger.info(')
-      });
-};
+      }),
+    }
 ,
     // Check for TODO/FIXME comments,
     if (content.includes('TODO') || content.includes('FIXME')) {,
@@ -115,8 +115,8 @@ class CursorExtensionBackground {,
         message: TODO/FIXME comment found',
         severity: 'medium',
         line: this.findLineNumber(content, TODO')
-      });
-};
+      }),
+    }
 ,
     // Check for var usage,
     if (content.includes('var ) && !content.includes('var _')) {,
@@ -125,8 +125,8 @@ class CursorExtensionBackground {,
         message: var keyword used instead of const/let',
         severity: 'medium',
         line: this.findLineNumber(content, var )
-      });
-};
+      }),
+    }
 ,
     // Check for unused imports,
     const importIssues = this.findUnusedImports(content),
@@ -154,8 +154,8 @@ class CursorExtensionBackground {,
       const modulePath = match[2],
       importNames.forEach(name => {,
         imports.push({ name, modulePath }),
-      });
-};
+      }),
+    }
 ,
     // Check if imports are used (simplified check),
     imports.forEach(importItem => {,
@@ -167,8 +167,8 @@ class CursorExtensionBackground {,
           message: `Unused import: ${importItem.name}`,
           severity: 'low',
           importName: importItem.name,
-          modulePath: importItem.modulePath});
-};
+          modulePath: importItem.modulePath}),
+      }
     }),
     return issues,
   }
@@ -239,8 +239,8 @@ class CursorExtensionBackground {,
       logger.info(`✅ Applied improvement to ${data.file}`),
     } catch (error) {,
       result.error = error.message,
-      logger.error(`❌ Failed to apply improvement: ${error.message}`);
-};
+      logger.error(`❌ Failed to apply improvement: ${error.message}`),
+    }
 ,
     return result,
   }
@@ -249,8 +249,8 @@ class CursorExtensionBackground {,
     // Start periodic background tasks,
     setInterval(() => {,
       if (this.isActive) {,
-        this.processAnalysisQueue();
-};
+        this.processAnalysisQueue(),
+      }
     }, 30000), // Every 30 seconds
   }
 ,
@@ -267,14 +267,14 @@ class CursorExtensionBackground {,
           analysis
         }),
       } catch (error) {,
-        logger.error('Error processing analysis item:', error);
-};
+        logger.error('Error processing analysis item:', error),
+      }
     }
   }
 ,
   addToAnalysisQueue(item) {,
-    this.analysisQueue.push(item);
-};
+    this.analysisQueue.push(item),
+  }
 ,
   getStatus() {,
     return {,
@@ -306,5 +306,5 @@ chrome.runtime.onStartup.addListener(() => {,
 }),
 // Export for testing,
 if (typeof module !== undefined' && module.exports) {,
-  module.exports = CursorExtensionBackground;
-  } ,))'"
+  module.exports = CursorExtensionBackground,
+} ,))

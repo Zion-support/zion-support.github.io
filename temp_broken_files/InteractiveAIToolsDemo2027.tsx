@@ -46,7 +46,7 @@ interface UserProfileCardProps {,
     avatar: string},
 }
 ,
-export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) : any => {,
+export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {,
   return (,
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
       <h3 className="text-xl font-bold mb-4">InteractiveAIToolsDemo2027</h3>,
@@ -333,5 +333,5 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       </div>,
     </section>,
   ),
-export default InteractiveAIToolsDemo2027;
-  }'
+export default InteractiveAIToolsDemo2027,
+}

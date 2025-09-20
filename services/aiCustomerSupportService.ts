@@ -305,15 +305,16 @@ class AICustomerSupportService {
         }
       }
       
-      this.updateAnalytics();
-};
+      this.updateAnalytics(),
+    }
   }
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this.tickets.find(t => t.id === ticketId),
     if (!ticket) {
-      throw new Error(`Ticket ${ticketId} not found`);
-};
+      throw new Error(`Ticket ${ticketId} not found`),
+    }
+
     const message: TicketMessage = {
       id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       ...messageData,
@@ -353,8 +354,9 @@ class AICustomerSupportService {
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
     const session = this.chatbotSessions.find(s => s.id === sessionId),
     if (!session) {
-      throw new Error(`Session ${sessionId} not found`);
-};
+      throw new Error(`Session ${sessionId} not found`),
+    }
+
     const message: ChatbotMessage = {
       id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       ...messageData,
@@ -421,8 +423,9 @@ class AICustomerSupportService {
       article.title.toLowerCase().includes(lowerQuery) ||
       article.content.toLowerCase().includes(lowerQuery) ||
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-    ).sort((a, b) => b.views - a.views);
-};
+    ).sort((a, b) => b.views - a.views),
+  }
+
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [],
 
@@ -442,8 +445,9 @@ class AICustomerSupportService {
           'Reallocate agents to handle high priority ticketsImplement automated prioritization system',
           'Review ticket classification criteria'
         ]
-      });
-};
+      }),
+    }
+
     // Agent assignment recommendation
     const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTickets < a.maxTickets),
     const unassignedTickets = this.tickets.filter(t => !t.assignedAgentId && t.status === 'open').length,
@@ -459,8 +463,9 @@ class AICustomerSupportService {
           'Automatically assign tickets to available agentsImplement load balancing for ticket distribution',
           'Review agent availability and workload'
         ]
-      });
-};
+      }),
+    }
+
     // Knowledge base recommendation
     const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10),
     if (lowViewedArticles.length > 5) {
@@ -474,8 +479,9 @@ class AICustomerSupportService {
           'Review and update low-performing articlesImprove article discoverability',
           'Consider consolidating similar articles'
         ]
-      });
-};
+      }),
+    }
+
     return recommendations,
   }
 
@@ -507,7 +513,7 @@ class AICustomerSupportService {
     const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length,
     const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 : 0,
 
-    const categoryCounts = this.tickets.reduce((acc, ticket) : any => {
+    const categoryCounts = this.tickets.reduce((acc, ticket) => {
       acc[ticket.category] = (acc[ticket.category] || 0) + 1,
       return acc,
     }, {} as Record<string, number>),
@@ -542,8 +548,8 @@ class AICustomerSupportService {
 
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
     if (status) {
-      return this.tickets.filter(t => t.status === status);
-};
+      return this.tickets.filter(t => t.status === status),
+    }
     return this.tickets,
   }
 
@@ -568,7 +574,7 @@ class AICustomerSupportService {
   }
 
   async getAnalytics(): Promise<SupportAnalytics> {
-    return this.analytics;
+    return this.analytics,
   }
 }
 

@@ -27,31 +27,35 @@ const getDevUsers = () => {
       email: devUser1Email, 
       password: devUser1Password,
       name: 'Development User 1'
-    });
-};
+    }),
+  }
+
   if (devUser2Email && devUser2Password) {
     devUsers.push({ 
       id: 'dev-user-2', 
       email: devUser2Email, 
       password: devUser2Password,
       name: 'Development User 2'
-    });
-};
+    }),
+  }
+
   if (devUser3Email && devUser3Password) {
     devUsers.push({ 
       id: 'dev-user-3', 
       email: devUser3Email, 
       password: devUser3Password,
       name: 'Development User 3'
-    });
-};
+    }),
+  }
+
   // Fallback to basic test users if no env vars are set
   if (devUsers.length === 0) {
     devUsers.push(
       { id: 'dev-user-1', email: 'dev@example.com', password: 'dev123', name: 'Dev User' },
       { id: 'dev-user-2', email: 'test@example.com', password: 'test123', name: 'Test User' }
-    );
-};
+    ),
+  }
+
   return devUsers,
 },
 
@@ -105,16 +109,19 @@ async function handler(
       supabaseConfigured: ENV_CONFIG.supabase.isConfigured,
       sentryConfigured: ENV_CONFIG.sentry.isConfigured,
       environment: ENV_CONFIG.app.environment
-    });
-};
+    }),
+  }
+
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-};
+    return res.status(405).json({ error: 'Method not allowed' }),
+  }
+
   const { email, password } = req.body as LoginRequestBody,
 
   if (typeof email !== 'string' || typeof password !== 'string' || !email || !password) {
-    return res.status(400).json({ error: 'Email and password are required and must be strings' });
-};
+    return res.status(400).json({ error: 'Email and password are required and must be strings' }),
+  }
+
   // Check if Supabase is configured
   if (!ENV_CONFIG.supabase.isConfigured) {
     if (isDevelopment) {
@@ -143,10 +150,10 @@ async function handler(
     } else {
       if (isDevelopment) {
         console.log('🔧 LOGIN TRACE: Development authentication failed'),
-        console.log('🔧 LOGIN TRACE: Available dev users:', devUsers.map(u => u.email));
-};
-      return res.status(401).json({ error: 'Invalid credentials' });
-};
+        console.log('🔧 LOGIN TRACE: Available dev users:', devUsers.map(u => u.email)),
+      }
+      return res.status(401).json({ error: 'Invalid credentials' }),
+    }
   }
 
   try {
@@ -167,22 +174,26 @@ async function handler(
 
     if (error) {
       if (isDevelopment) {
-        console.error('🔧 LOGIN TRACE: Supabase authentication error:', error);
-};
+        console.error('🔧 LOGIN TRACE: Supabase authentication error:', error),
+      }
+      
       if (ENV_CONFIG.sentry.isConfigured) {
         Sentry.captureException(error, {
           tags: { context: 'login_api' },
           extra: { email }
-        });
-};
-      return res.status(401).json({ error: error.message });
-};
+        }),
+      }
+      
+      return res.status(401).json({ error: error.message }),
+    }
+
     if (!data.user) {
       if (isDevelopment) {
         console.error('🔧 LOGIN TRACE: No user data returned from Supabase')
       }
-      return res.status(401).json({ error: 'Authentication failed' });
-};
+      return res.status(401).json({ error: 'Authentication failed' }),
+    }
+
     if (isDevelopment) {
       console.log('🔧 LOGIN TRACE: Supabase authentication successful')
     }
@@ -206,18 +217,20 @@ async function handler(
   } catch (error: unknown) { // Changed from any to unknown
     const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred',
     if (isDevelopment) {
-      console.error('🔧 LOGIN TRACE: Unexpected error during authentication:', error);
-};
+      console.error('🔧 LOGIN TRACE: Unexpected error during authentication:', error),
+    }
+    
     if (ENV_CONFIG.sentry.isConfigured) {
       Sentry.captureException(error, { // Sentry can often handle 'unknown'
         tags: { context: 'login_api_unexpected' },
         extra: { email }
-      });
-};
+      }),
+    }
+    
     return res.status(500).json({ 
       error: 'Internal server error',
       details: ENV_CONFIG.app.isDevelopment ? errorMessage : undefined
-    });
+    }),
   }
 }
 

@@ -10,8 +10,8 @@ const selfHealLog = path.join(process.cwd(), 'logs/self-heal.log'),
 function ensureFile(file) {
   fs.mkdirSync(path.dirname(file), { recursive: true }),
   if (!fs.existsSync(file)) {
-    fs.writeFileSync(file, '');
-};
+    fs.writeFileSync(file, ''),
+  }
 }
 
 [perfLog, securityLog, selfHealLog].forEach(ensureFile),
@@ -21,8 +21,9 @@ let securityCount = 0,
 
 function logSelfHeal(message) {
   const entry = `${new Date().toISOString()} - ${message}\n`,
-  fs.appendFile(selfHealLog, entry, () => {});
-};
+  fs.appendFile(selfHealLog, entry, () => {}),
+}
+
 function runSelfHeal() {
   exec('git pull && npm install && npm audit fix --force && pm2 restart all', (err) => {
     logSelfHeal(err ? `Self-heal failed: ${err.message}` : 'Self-heal executed'),
@@ -65,8 +66,9 @@ function tail(file, type) {
       }),
       position = stats.size,
     }),
-  });
-};
+  }),
+}
+
 tail(perfLog, 'perf'),
 tail(securityLog, 'security'),
 

@@ -3,13 +3,13 @@
 const fs = require("fs"),
 const path = require("path"),
 function nowIso() {,
-  return new Date().toISOString();
-};
+  return new Date().toISOString(),
+}
 ,
 function log(message) {,
   const line = `[${nowIso()}] ${message}`,
-  console.log(line);
-};
+  console.log(line),
+}
 ,
 async function postLinkedInUpdate() {,
   const accessToken = process.env.LINKEDIN_ACCESS_TOKEN,
@@ -118,15 +118,15 @@ function updateReport(results) {,
   lines.push(""),
   lines.push("## Actions"),
   for (const r of results) {,
-    lines.push(`- ${r.platform}: ${r.skipped ? "skipped" : r.ok ? "success" : "failed"}`);
-};
+    lines.push(`- ${r.platform}: ${r.skipped ? "skipped" : r.ok ? "success" : "failed"}`),
+  }
   lines.push(""),
   lines.push("## Notes"),
   lines.push("- Uses environment variables only, no plaintext credentials."),
   lines.push("- Canonical URL: https://ziontechgroup.com"),
   lines.push(""),
-  fs.writeFileSync(reportPath, lines.join("\n"), "utf8");
-};
+  fs.writeFileSync(reportPath, lines.join("\n"), "utf8"),
+}
 ,
 (async function main() {,
   try {,
@@ -140,6 +140,6 @@ function updateReport(results) {,
     process.exit(0),
   } catch (err) {,
     log(`FATAL: ${String(err && err.stack ? err.stack : err)}`),
-    process.exit(1);
+    process.exit(1),
   }
 })(),

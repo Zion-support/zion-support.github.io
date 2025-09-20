@@ -13,7 +13,7 @@ const NewsletterSignup2025: React.FC = () => {,
   const [email, setEmail] = useState(''),
   const [isSubscribed, setIsSubscribed] = useState(false),
   const [isLoading, setIsLoading] = useState(false),
-  const handleSubmit = async (e: React.FormEvent) : any => {,
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     setIsLoading(true),
     // Simulate API call,
@@ -72,8 +72,8 @@ const NewsletterSignup2025: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-      </div>);
-};
+      </div>),
+  }
   return (,
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">,
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>,
@@ -189,5 +189,5 @@ const NewsletterSignup2025: React.FC = () => {,
       </div>,
     </div>,
   ),
-export default NewsletterSignup2025;
-  }
+export default NewsletterSignup2025,
+}

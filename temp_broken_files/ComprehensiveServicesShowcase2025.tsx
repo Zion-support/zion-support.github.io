@@ -151,7 +151,7 @@ const ComprehensiveServicesShowcase2025 = () => {,
     const interval = setInterval(() => {,
       setActiveService((prev) => (prev + 1) % services.length),
     }6000),
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }[]),
   const currentService = services[activeService],
   return (,

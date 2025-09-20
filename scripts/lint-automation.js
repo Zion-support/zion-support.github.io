@@ -19,8 +19,8 @@ class LintAutomation {,
     try {,
       fs.appendFileSync(this.logFile, logMessage),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message);
-};
+      console.error('Failed to write to log file:', error.message),
+    }
   }
 ,
   async runLintFix() {,
@@ -35,8 +35,8 @@ class LintAutomation {,
       this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`),
     } catch (error) {,
       this.errorCount++,
-      this.log(`Lint fix failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Lint fix failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async run() {,
@@ -44,8 +44,8 @@ class LintAutomation {,
     // Create logs directory if it doesn't exist,
     const logsDir = path.join(process.cwd(), 'logs'),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true });
-};
+      fs.mkdirSync(logsDir, { recursive: true }),
+    }
 ,
     // Run initial lint fix,
     await this.runLintFix(),
@@ -58,4 +58,4 @@ class LintAutomation {,
 ,
 // Run the automation,
 const automation = new LintAutomation(),
-automation.run().catch(console.error),'
+automation.run().catch(console.error),

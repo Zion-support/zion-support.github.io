@@ -9,7 +9,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function PricingPage() : any {
+export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
 
   const plans = [
@@ -84,7 +84,7 @@ export default function PricingPage() : any {
       color: 'from-orange-500 to-red-600',
       popular: false
     }
-  ],
+  ];
 
   const addOns = [
     {
@@ -111,12 +111,12 @@ export default function PricingPage() : any {
       price: { monthly: 399, annual: 3990 },
       icon: <Shield className="w-6 h-6" />
     }
-  ],
+  ];
 
   const savings = {
     monthly: 0,
     annual: 20
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -332,7 +332,7 @@ export default function PricingPage() : any {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Plan Comparison</h2>
-            <p className="text-xl text-gray-300">See what&apos,s included in each plan</p>
+            <p className="text-xl text-gray-300">See what&apos;s included in each plan</p>
           </motion.div>
 
           <div className="overflow-x-auto">
@@ -420,7 +420,7 @@ export default function PricingPage() : any {
                 answer: "Absolutely! Our Custom plan is designed for enterprise clients with unique requirements. Contact our sales team for a personalized quote."
               },
               {
-                question: "What&apos,s included in the annual discount?",
+                question: "What&apos;s included in the annual discount?",
                 answer: "Annual plans include a 20% discount compared to monthly pricing, plus additional benefits like priority support and custom integrations."
               },
               {
@@ -483,5 +483,4 @@ export default function PricingPage() : any {
       <EnhancedFooter />
     </div>
   );
-};
-'
+}

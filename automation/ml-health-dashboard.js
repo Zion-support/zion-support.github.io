@@ -27,22 +27,22 @@ class MLHealthDashboard {,
     this.port = process.env.DASHBOARD_PORT || 3001,
     this.updateInterval = 5 * 60 * 1000, // 5 minutes,
     // // // // // // console.log('🤖 ML Health Dashboard Starting...'),
-    this.startDashboard();
-};
+    this.startDashboard(),
+  }
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true });
-};
+      fs.mkdirSync(logsDir, { recursive: true }),
+    }
   }
 ,
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
     // // // // // // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logEntry);
-};
+    fs.appendFileSync(this.logFile, logEntry),
+  }
 ,
   loadMLModel() {,
     try {,
@@ -100,8 +100,8 @@ class MLHealthDashboard {,
     setInterval(() => {,
       this.updateHealthMetrics(),
     }, this.updateInterval),
-    this.log('ML Health Dashboard started successfully');
-};
+    this.log('ML Health Dashboard started successfully'),
+  }
 ,
   async startHealthMonitoring() {,
     this.log('Starting health monitoring...'),
@@ -141,8 +141,8 @@ class MLHealthDashboard {,
       this.healthData.metrics.push(assessment),
       // Keep only last 100 assessments,
       if (this.healthData.metrics.length > 100) {,
-        this.healthData.metrics = this.healthData.metrics.slice(-100);
-};
+        this.healthData.metrics = this.healthData.metrics.slice(-100),
+      }
 ,
       // Update trends,
       this.updateHealthTrends(),
@@ -152,8 +152,8 @@ class MLHealthDashboard {,
       // Save health data,
       this.saveHealthData(),
     } catch (error) {,
-      this.log(`Health assessment failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Health assessment failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async assessBuildHealth() {,
@@ -326,8 +326,8 @@ class MLHealthDashboard {,
     const categories = ['buildHealthcodeQualitydependencyHealthtestHealth', 'performanceHealthsecurityHealth'],
     for (const category of categories) {,
       const scores = recentMetrics.map(m => m[category]?.score || 0),
-      trends[category] = this.calculateTrend(scores);
-};
+      trends[category] = this.calculateTrend(scores),
+    }
 ,
     this.healthData.trends = trends,
   }
@@ -353,8 +353,8 @@ class MLHealthDashboard {,
         level: 'CRITICAL',
         message: 'Project health is critically low. Immediate attention required.',
         category: 'overall',
-        timestamp: new Date().toISOString()});
-};
+        timestamp: new Date().toISOString()}),
+    }
 ,
     // Check individual categories,
     const categories = ['buildHealthcodeQualitydependencyHealthtestHealth', 'performanceHealthsecurityHealth'],
@@ -366,16 +366,16 @@ class MLHealthDashboard {,
           message: `${category.replace(/([A-Z])/g, ' $1').trim()} health is ${health.level.toLowerCase()}`,
           category: category,
           score: health.score,
-          timestamp: new Date().toISOString()});
-};
+          timestamp: new Date().toISOString()}),
+      }
     }
 ,
     // Add new alerts,
     this.healthData.alerts.push(...alerts),
     // Keep only recent alerts (last 50),
     if (this.healthData.alerts.length > 50) {,
-      this.healthData.alerts = this.healthData.alerts.slice(-50);
-};
+      this.healthData.alerts = this.healthData.alerts.slice(-50),
+    }
   }
 ,
   async performPredictiveAnalysis() {,
@@ -387,8 +387,8 @@ class MLHealthDashboard {,
       fs.writeFileSync(this.predictionsFile, JSON.stringify(predictions, null, 2)),
       this.log('Predictive analysis completed'),
     } catch (error) {,
-      this.log(`Predictive analysis failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Predictive analysis failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async generatePredictions() {,
@@ -408,12 +408,12 @@ class MLHealthDashboard {,
         if (trend === 'IMPROVING') {,
           predictedScore = Math.min(100, currentScore + 5),
         } else if (trend === 'DECLINING') {,
-          predictedScore = Math.max(0, currentScore - 5);
-};
+          predictedScore = Math.max(0, currentScore - 5),
+        }
 ,
         predictions.nextWeek[category] = Math.round(predictedScore),
-        predictions.nextMonth[category] = Math.round(predictedScore + (trend === 'IMPROVING' ? 10 : trend === 'DECLINING' ? -10 : 0));
-};
+        predictions.nextMonth[category] = Math.round(predictedScore + (trend === 'IMPROVING' ? 10 : trend === 'DECLINING' ? -10 : 0)),
+      }
     }
 ,
     // Identify risk factors,
@@ -433,8 +433,8 @@ class MLHealthDashboard {,
           type: 'LOW_HEALTH_SCORE',
           severity: 'HIGH',
           description: 'Overall health score is consistently low',
-          timestamp: metric.timestamp});
-};
+          timestamp: metric.timestamp}),
+      }
 ,
       // Check for declining trends,
       if (this.healthData.trends.overallScore === 'DECLINING') {,
@@ -442,8 +442,8 @@ class MLHealthDashboard {,
           type: 'DECLINING_HEALTH',
           severity: 'MEDIUM',
           description: 'Project health is declining',
-          timestamp: new Date().toISOString()});
-};
+          timestamp: new Date().toISOString()}),
+      }
     }
 ,
     return riskFactors,
@@ -459,32 +459,32 @@ class MLHealthDashboard {,
           priority: 'HIGH',
           category: 'build',
           action: 'Review and fix build configuration issues',
-          impact: 'Improves build reliability and development velocity'});
-};
+          impact: 'Improves build reliability and development velocity'}),
+      }
 ,
       if (latestMetric.codeQuality.level === 'POOR') {,
         recommendations.push({,
           priority: 'HIGH',
           category: 'code',
           action: 'Implement code quality improvements and refactoring',
-          impact: 'Reduces technical debt and improves maintainability'});
-};
+          impact: 'Reduces technical debt and improves maintainability'}),
+      }
 ,
       if (latestMetric.dependencyHealth.level === 'POOR') {,
         recommendations.push({,
           priority: 'MEDIUM',
           category: 'dependencies',
           action: 'Update outdated dependencies and fix security vulnerabilities',
-          impact: 'Improves security and reduces compatibility issues'});
-};
+          impact: 'Improves security and reduces compatibility issues'}),
+      }
 ,
       if (latestMetric.testHealth.level === 'POOR') {,
         recommendations.push({,
           priority: 'MEDIUM',
           category: 'testing',
           action: 'Improve test coverage and fix failing tests',
-          impact: 'Increases code reliability and reduces regression risk'});
-};
+          impact: 'Increases code reliability and reduces regression risk'}),
+      }
     }
 ,
     return recommendations,
@@ -502,8 +502,8 @@ class MLHealthDashboard {,
       fs.writeFileSync(this.mlModelFile, JSON.stringify(this.mlModel, null, 2)),
       this.log('ML model updated successfully'),
     } catch (error) {,
-      this.log(`ML model update failed: ${error.message}`, 'ERROR');
-};
+      this.log(`ML model update failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   async retrainModel() {,
@@ -513,8 +513,8 @@ class MLHealthDashboard {,
       // Update model based on recent performance,
       const accuracy = this.calculateModelAccuracy(recentMetrics),
       this.mlModel.accuracy = accuracy,
-      this.mlModel.lastTrained = new Date().toISOString();
-};
+      this.mlModel.lastTrained = new Date().toISOString(),
+    }
   }
 ,
   calculateModelAccuracy(metrics) {,
@@ -575,8 +575,8 @@ class MLHealthDashboard {,
           res.end(JSON.stringify(predictions)),
         } catch (error) {,
           res.writeHead(404),
-          res.end(JSON.stringify({ error: 'Predictions not available' }));
-};
+          res.end(JSON.stringify({ error: 'Predictions not available' })),
+        }
       } else if (parsedUrl.pathname === '/ml-model') {,
         // Return ML model info,
         res.writeHead(200),
@@ -593,16 +593,16 @@ class MLHealthDashboard {,
           version: '1.0.0',
           endpoints: {,
             '/health': 'Current health status/metrics': 'Health metrics and trends/predictions': 'Predictive analytics/ml-model': 'ML model information'},
-          timestamp: new Date().toISOString()}));
-};
+          timestamp: new Date().toISOString()})),
+      }
     }),
     server.listen(this.port, () => {,
       this.log(`ML Health Dashboard running on port ${this.port}`),
     }),
     server.on('error', (error) => {,
       this.log(`Dashboard server error: ${error.message}`, 'ERROR'),
-    });
-};
+    }),
+  }
 ,
   async updateHealthMetrics() {,
     this.log('Updating health metrics...'),
@@ -611,21 +611,21 @@ class MLHealthDashboard {,
       await this.performHealthAssessment(),
       // Update ML model if needed,
       if (this.mlInsightsEnabled) {,
-        await this.updateMLModel();
-};
+        await this.updateMLModel(),
+      }
 ,
       this.log('Health metrics updated successfully'),
     } catch (error) {,
-      this.log(`Health metrics update failed: ${error.message}`, 'ERROR');
-};
+      this.log(`Health metrics update failed: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   saveHealthData() {,
     try {,
       fs.writeFileSync(this.healthDataFile, JSON.stringify(this.healthData, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save health data: ${error.message}`, 'ERROR');
-};
+      this.log(`Failed to save health data: ${error.message}`, 'ERROR'),
+    }
   }
 ,
   // Helper methods for health assessments,
@@ -722,8 +722,8 @@ class MLHealthDashboard {,
       if (line.includes('All files')) {,
         const match = line.match(/(\d+(?:\.\d+)?)%/),
         if (match) {,
-          percentage = parseFloat(match[1]);
-};
+          percentage = parseFloat(match[1]),
+        }
         break,
       }
     }
@@ -785,5 +785,5 @@ process.on('SIGINT', () => {,
 }),
 process.on('SIGTERM', () => {,
   dashboard.log('Shutting down ML Health Dashboard...INFO'),
-  process.exit(0);
-  }),
+  process.exit(0),
+}),

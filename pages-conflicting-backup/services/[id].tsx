@@ -55,7 +55,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	const paths = services.map((s) => ({ params: { id: s.id } }))
 	return { paths, fallback: false }
 }
-export const getStaticProps: GetStaticProps = async (context) : any => {
+export const getStaticProps: GetStaticProps = async (context) => {
 	const id = context.params?.id as string
 	const services = collectAllServices()
 	const service = services.find((s) => s.id === id) || null

@@ -125,5 +125,4 @@ const AI2026_2030UltimatePredictionsShowcase: React.FC = () => {
   )
 },
 
-export default AI2026_2030UltimatePredictionsShowcase;
-  }
+export default AI2026_2030UltimatePredictionsShowcase,

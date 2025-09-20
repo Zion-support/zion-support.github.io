@@ -3,7 +3,7 @@ import React from 'react',
 // This is a conceptual test file. Actual implementation would depend on the specific testing framework used (e.g., Playwright, Cypress, or Jest with React Testing Library).,
 // For this example, we'll use a structure that resembles Jest/RTL for page component checks,// and a more descriptive style for E2E checks.,
 // Helper function to simulate page navigation and content checking (conceptual),
-const checkPageContent = async (_path: string, _expectedText: string | RegExp, _unexpectedTestId?: string) : any => {,
+const checkPageContent = async (_path: string, _expectedText: string | RegExp, _unexpectedTestId?: string) => {,
   // In a real E2E test (Cypress/Playwright):,
   // await page.goto(path),
   // await expect(page.locator(`text=${expectedText}`)).toBeVisible(),
@@ -30,5 +30,5 @@ describe('Top-Level Navigation Routes', () => {'  it('should render the Home pag
   // to ensure the COMMUNITY_FORUM_TEST_ID is valid.,
   it('should render the Community Forum for the /community path', async () => {'    // Conceptual check: ,
     // Navigate to /community,
-    // Expect element with data-testid="community-forum-page" TO BE VISIBLE"    // Expect some text unique to non-forum pages NOT TO BE VISIBLE"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""});
-  }),'
+    // Expect element with data-testid="community-forum-page" TO BE VISIBLE"    // Expect some text unique to non-forum pages NOT TO BE VISIBLE"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}),
+}),

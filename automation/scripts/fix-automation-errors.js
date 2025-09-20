@@ -29,8 +29,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 class AutomationErrorFixer {,
   constructor() {,
@@ -78,8 +78,8 @@ class AutomationErrorFixer {,
       const timestamp = Date.now(),
       const backupPath = path.join(this.config.backupDir, `automation-backup-${timestamp}`),
       if (!fs.existsSync(this.config.backupDir)) {,
-        fs.mkdirSync(this.config.backupDir, { recursive: true });
-};
+        fs.mkdirSync(this.config.backupDir, { recursive: true }),
+      }
 ,
       // Backup critical automation files,
       const filesToBackup = [,
@@ -89,14 +89,14 @@ class AutomationErrorFixer {,
       for (const file of filesToBackup) {,
         if (fs.existsSync(file)) {,
           const backupFile = path.join(backupPath, path.basename(file)),
-          fs.copyFileSync(file, backupFile);
-};
+          fs.copyFileSync(file, backupFile),
+        }
       }
 ,
       logger.info(`✅ Backup created at: ${backupPath}`),
     } catch (error) {,
-      logger.warn(`⚠️ Backup creation failed: ${error.message}`);
-};
+      logger.warn(`⚠️ Backup creation failed: ${error.message}`),
+    }
   }
 ,
   async fixDependencyUpdater() {,
@@ -154,8 +154,8 @@ class AutomationErrorFixer {,
         logger.info('✅ DependencyUpdater fixed')
       }
     } catch (error) {,
-      logger.error('❌ Failed to fix DependencyUpdater:', error);
-};
+      logger.error('❌ Failed to fix DependencyUpdater:', error),
+    }
   }
 ,
   async fixNetlifyMonitor() {,
@@ -188,16 +188,16 @@ class AutomationErrorFixer {,
           if (error) {,
             const fixed = await this.fixBuildError(error),
             if (fixed) {,
-              await this.commitAndPushFixes();
-};
+              await this.commitAndPushFixes(),
+            }
           }
         }
       }
 ,
       this.saveStatus(),
     } catch (error) {,
-      this.log(\`Error checking builds: \${error.message}\`, 'error');
-};
+      this.log(\`Error checking builds: \${error.message}\`, 'error'),
+    }
   }`,
       // Also fix the getSiteBuilds method to ensure it returns an array,
       const getSiteBuildsFix = `,
@@ -220,20 +220,20 @@ class AutomationErrorFixer {,
       const checkBuildsRegex = /async checkBuilds() {[\s\S]*?\n  }/,
       const getSiteBuildsRegex = /async getSiteBuilds() {[\s\S]*?\n  }/,
       if (checkBuildsRegex.test(content)) {,
-        content = content.replace(checkBuildsRegex, checkBuildsFix);
-};
+        content = content.replace(checkBuildsRegex, checkBuildsFix),
+      }
 ,
       if (getSiteBuildsRegex.test(content)) {,
-        content = content.replace(getSiteBuildsRegex, getSiteBuildsFix);
-};
+        content = content.replace(getSiteBuildsRegex, getSiteBuildsFix),
+      }
 ,
       fs.writeFileSync(netlifyMonitorPath, content),
       this.fixesApplied.push('NetlifyMonitor: Fixed builds.slice error and array validation'),
       this.errorsFixed++,
       logger.info('✅ NetlifyMonitor fixed')
     } catch (error) {,
-      logger.error('❌ Failed to fix NetlifyMonitor:', error);
-};
+      logger.error('❌ Failed to fix NetlifyMonitor:', error),
+    }
   }
 ,
   async fixCoreOrchestrator() {,
@@ -269,8 +269,8 @@ class AutomationErrorFixer {,
           }
         } catch (error) {,
           health.systems[name] = { status: 'error', error: error.message },
-          health.errors.push({ system: name, error: error.message });
-};
+          health.errors.push({ system: name, error: error.message }),
+        }
       }
 ,
       // Update overall status,
@@ -290,8 +290,8 @@ class AutomationErrorFixer {,
         // Insert health check method before the last closing brace,
         const lastBraceIndex = content.lastIndexOf('}'),
         if (lastBraceIndex !== -1) {,
-          content = content.slice(0, lastBraceIndex) + healthCheckMethod + '\n' + content.slice(lastBraceIndex);
-};
+          content = content.slice(0, lastBraceIndex) + healthCheckMethod + '\n' + content.slice(lastBraceIndex),
+        }
       }
 ,
       fs.writeFileSync(orchestratorPath, content),
@@ -299,8 +299,8 @@ class AutomationErrorFixer {,
       this.errorsFixed++,
       logger.info('✅ Core Orchestrator fixed')
     } catch (error) {,
-      logger.error('❌ Failed to fix Core Orchestrator:', error);
-};
+      logger.error('❌ Failed to fix Core Orchestrator:', error),
+    }
   }
 ,
   async createBasicOrchestrator() {,
@@ -320,8 +320,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 class IntelligentAutomationOrchestrator {,
   constructor(config = {}) {,
@@ -362,13 +362,13 @@ class IntelligentAutomationOrchestrator {,
       await this.initializeSystems(),
       // Start monitoring,
       if (this.config.monitoring.enabled) {,
-        this.startMonitoring();
-};
+        this.startMonitoring(),
+      }
 ,
       // Start dashboard if enabled,
       if (this.config.dashboard.enabled) {,
-        await this.startDashboard();
-};
+        await this.startDashboard(),
+      }
 ,
       logger.info('✅ Intelligent Automation Orchestrator started successfully'),
       return true,
@@ -414,22 +414,22 @@ class IntelligentAutomationOrchestrator {,
 ,
   startMonitoring() {,
     if (this.monitoringInterval) {,
-      clearInterval(this.monitoringInterval);
-};
+      clearInterval(this.monitoringInterval),
+    }
 ,
     this.monitoringInterval = setInterval(async () => {,
       try {,
         const health = await this.healthCheck(),
         if (health.status === 'error') {,
           logger.warn('⚠️ System health check failed, attempting recovery...'),
-          await this.performRecovery();
-};
+          await this.performRecovery(),
+        }
       } catch (error) {,
-        logger.error('Error in monitoring loop:', error);
-};
+        logger.error('Error in monitoring loop:', error),
+      }
     }, this.config.monitoring.interval),
-    logger.info('📊 Monitoring started');
-};
+    logger.info('📊 Monitoring started'),
+  }
 ,
   async performRecovery() {,
     try {,
@@ -441,8 +441,8 @@ class IntelligentAutomationOrchestrator {,
         action: 'System recovery performed'}),
       logger.info('✅ Recovery completed'),
     } catch (error) {,
-      logger.error('❌ Recovery failed:', error);
-};
+      logger.error('❌ Recovery failed:', error),
+    }
   }
 ,
   async startDashboard() {,
@@ -450,16 +450,16 @@ class IntelligentAutomationOrchestrator {,
       // Basic dashboard implementation,
       logger.info('📊 Dashboard would start on port ' + this.config.dashboard.port),
     } catch (error) {,
-      logger.error('❌ Failed to start dashboard:', error);
-};
+      logger.error('❌ Failed to start dashboard:', error),
+    }
   }
 ,
   stop() {,
     logger.info('🛑 Stopping Intelligent Automation Orchestrator'),
     this.isRunning = false,
     if (this.monitoringInterval) {,
-      clearInterval(this.monitoringInterval);
-};
+      clearInterval(this.monitoringInterval),
+    }
   }
 }
 ,
@@ -515,8 +515,8 @@ module.exports = IntelligentAutomationOrchestrator,`,
         // Add the method if it doesn't exist,
         const lastBraceIndex = content.lastIndexOf('}'),
         if (lastBraceIndex !== -1) {,
-          content = content.slice(0, lastBraceIndex) + bundleMetricsFix + '\n' + content.slice(lastBraceIndex);
-};
+          content = content.slice(0, lastBraceIndex) + bundleMetricsFix + '\n' + content.slice(lastBraceIndex),
+        }
       }
 ,
       fs.writeFileSync(performanceMonitorPath, content),
@@ -524,8 +524,8 @@ module.exports = IntelligentAutomationOrchestrator,`,
       this.errorsFixed++,
       logger.info('✅ Performance Monitor fixed')
     } catch (error) {,
-      logger.error('❌ Failed to fix Performance Monitor:', error);
-};
+      logger.error('❌ Failed to fix Performance Monitor:', error),
+    }
   }
 ,
   async createBasicPerformanceMonitor() {,
@@ -547,8 +547,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 class PerformanceMonitor {,
   constructor(config = {}) {,
@@ -598,15 +598,15 @@ class PerformanceMonitor {,
       this.metrics.push(metrics),
       // Keep only last 100 metrics,
       if (this.metrics.length > 100) {,
-        this.metrics = this.metrics.slice(-100);
-};
+        this.metrics = this.metrics.slice(-100),
+      }
 ,
       // Save metrics,
       this.saveMetrics(),
       logger.info('📊 Metrics collected successfully'),
     } catch (error) {,
-      logger.error('Error collecting metrics:', error);
-};
+      logger.error('Error collecting metrics:', error),
+    }
   }
 ,
   async getMemoryUsage() {,
@@ -698,8 +698,8 @@ class PerformanceMonitor {,
     try {,
       fs.writeFileSync(this.config.metricsFile, JSON.stringify(this.metrics, null, 2)),
     } catch (error) {,
-      logger.error('Error saving metrics:', error);
-};
+      logger.error('Error saving metrics:', error),
+    }
   }
 ,
   async healthCheck() {,
@@ -710,8 +710,8 @@ class PerformanceMonitor {,
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+    return new Promise(resolve => setTimeout(resolve, ms)),
+  }
 ,
   stop() {,
     logger.info('🛑 Stopping Performance Monitor'),
@@ -739,8 +739,8 @@ module.exports = PerformanceMonitor,`,
       this.errorsFixed++,
       logger.info('✅ Automation systems restarted')
     } catch (error) {,
-      logger.error('❌ Failed to restart automation systems:', error);
-};
+      logger.error('❌ Failed to restart automation systems:', error),
+    }
   }
 ,
   async stopRunningProcesses() {,
@@ -763,8 +763,8 @@ module.exports = PerformanceMonitor,`,
                   execSync(`kill ${pid}`),
                   logger.info(`Stopped process ${pid}`),
                 } catch (killError) {,
-                  logger.warn(`Could not stop process ${pid}: ${killError.message}`);
-};
+                  logger.warn(`Could not stop process ${pid}: ${killError.message}`),
+                }
               }
             }
           }
@@ -773,8 +773,8 @@ module.exports = PerformanceMonitor,`,
         }
       }
     } catch (error) {,
-      logger.warn('⚠️ Could not stop running processes:', error.message);
-};
+      logger.warn('⚠️ Could not stop running processes:', error.message),
+    }
   }
 ,
   async startAutomationSystems() {,
@@ -789,11 +789,11 @@ module.exports = PerformanceMonitor,`,
         child.unref(),
         logger.info('✅ Automation systems started in background'),
       } else {,
-        logger.warn('⚠️ Automation script not found');
-};
+        logger.warn('⚠️ Automation script not found'),
+      }
     } catch (error) {,
-      logger.error('❌ Failed to start automation systems:', error);
-};
+      logger.error('❌ Failed to start automation systems:', error),
+    }
   }
 ,
   async generateFixReport() {,
@@ -806,19 +806,19 @@ module.exports = PerformanceMonitor,`,
     try {,
       const reportPath = path.join(this.config.logsDir, 'automation-fix-report.json'),
       if (!fs.existsSync(this.config.logsDir)) {,
-        fs.mkdirSync(this.config.logsDir, { recursive: true });
-};
+        fs.mkdirSync(this.config.logsDir, { recursive: true }),
+      }
 ,
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
       logger.info(`📄 Fix report generated: ${reportPath}`),
     } catch (error) {,
-      logger.error('Error generating fix report:', error);
-};
+      logger.error('Error generating fix report:', error),
+    }
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+    return new Promise(resolve => setTimeout(resolve, ms)),
+  }
 }
 ,
 // Run the fixer if this script is executed directly,
@@ -829,7 +829,7 @@ if (require.main === module) {,
   }).catch(error => {,
     logger.error('Unhandled error:', error),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
-module.exports = AutomationErrorFixer,'
+module.exports = AutomationErrorFixer,

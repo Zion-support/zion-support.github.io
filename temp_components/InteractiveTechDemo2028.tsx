@@ -123,15 +123,15 @@ const InteractiveTechDemo2028 = () => {
     let interval: NodeJS.Timeout,
     if (isPlaying) {
       interval = setInterval(() => {
-        setProgress((prev) : any => {
+        setProgress((prev) => {
           if (prev >= 100) {
             setIsPlaying(false),
             return 0
           }
           return prev + 1,
         }),
-      }100);
-};
+      }100),
+    }
     return () => clearInterval(interval),
   }[isPlaying]),
 
@@ -147,5 +147,4 @@ const InteractiveTechDemo2028: React.FC = () => {
   )
 },
 
-export default InteractiveTechDemo2028;
-  }
+export default InteractiveTechDemo2028,

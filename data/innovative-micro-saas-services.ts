@@ -1,46 +1,46 @@
 export interface InnovativeMicroSaasService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string,
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
   };
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
-  aiCapabilities: string[],
-  marketDisruption: string,
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
+  aiCapabilities: string[];
+  marketDisruption: string;
 }
 
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
@@ -670,7 +670,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     aiCapabilities: ['Quantum Energy Optimization', 'AI Grid Management', 'Predictive Analytics', 'Cost Optimization'],
     marketDisruption: 'Advances energy technology by introducing quantum computing optimization and AI-powered grid management.'
   }
-],
+];
 
 // New Innovative Micro-SaaS Services
 export const newInnovativeServices = [
@@ -929,4 +929,4 @@ export const newInnovativeServices = [
     rating: 4.9,
     reviews: 6
   }
-],
+];

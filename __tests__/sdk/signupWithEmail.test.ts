@@ -8,4 +8,4 @@ describe('signupWithEmail', () => {'  afterEach(() => {,
       json: vi.fn().mockResolvedValue({ error: Email already registered' })    }),
     await expect(,
       signupWithEmail('exists@example.com', Password123', { name: Test User' })    ).rejects.toThrow('Email already registered')  }),
-}),'
+}),

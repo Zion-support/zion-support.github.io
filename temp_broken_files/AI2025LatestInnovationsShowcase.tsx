@@ -10,7 +10,7 @@ const AI2025LatestInnovationsShowcase = () => {,
     const interval = setInterval(() => {,
       setCurrentSlide((prev) => (prev + 1) % innovations.length),
     }5000),
-    return () => clearInterval(interval);
+    return () => clearInterval(interval),
   }[]),
   const innovations = [,
     {,
