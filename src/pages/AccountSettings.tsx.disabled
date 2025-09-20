@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuthContext } from '@/context/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
@@ -12,11 +12,22 @@ import { Separator } from '@/components/ui/separator';
 import { Wallet, Database, Save } from 'lucide-react';
 
 export default function AccountSettings() {
-  const { user } = useAuth();
+  const [user, setUser] = useState(null);
   const [didHandle, setDidHandle] = useLocalStorage('didHandle', '');
   const [displayWeb3, setDisplayWeb3] = useLocalStorage('displayWeb3', false);
   const [enableBackup, setEnableBackup] = useLocalStorage('enableBackup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Try to get user from context, fallback to null if not available
+  try {
+    const authContext = useAuthContext();
+    if (authContext?.user) {
+      setUser(authContext.user);
+    }
+  } catch (error) {
+    // Context not available, use fallback
+    setUser(null);
+  }
 
   const handleConnectWallet = async () => {
     // Wallet connection logic
