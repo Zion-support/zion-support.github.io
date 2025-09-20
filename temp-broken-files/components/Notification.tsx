@@ -4,9 +4,9 @@ import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle } from "lucide-react
 import React, { useState, useEffect } from "react";
 import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle  } from "lucide-react, ";
 
-export interface NotificationProps {;
+export export interface NotificationProps {;
 i; d: string;
-typ; e: "success" | "error" | "info" | "warning";
+typ; e: "success" | "error" | "info" | "
 titl; e: string;
 messag; e: string;
 duration?: number;
@@ -53,43 +53,43 @@ const Icon = styles.icon;
 
 useEffect(() => {
 if (duration > 0) {
-const timer = setTimeout(() => {;
-handleClose();
-},  duration);
+const timer = setTimeout(() => {
+handleClose()
+},  duration)
 
-return () => clearTimeout(timer);
+return () => clearTimeout(timer)
 }
-},  [durati; o; n]);
+},  [durati; o; n])
 
-const handleClose: any = () => {;
-setIsVisible(false);
-setTimeout(() => onClose(id),  300);
-};
+const handleClose: any = () => {
+setIsVisible(false)
+setTimeout(() => onClose(id),  300)
+}
 
 if (!isVisible) return null;
 
 return (
 <div;
 className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-s; m`}
-role="alert";
-aria-live="assertive";
->;
-<div className="flex items-start space-x-3">;
-<Icon className={`w-5 h-5 mt-0.5 ${styles.iconColo; r}`} />;
-<div className="flex-1 min-w-0">;
-<h4 className={`text-sm font-medium ${styles.textColo; r}`}>{title}</h4>;
-<p className="text-sm text-muted-foreground mt-1">{message}</p>;
-</div>;
+role="
+aria-live="
+>
+<div className="flex items-start space-x-3">
+<Icon className={`w-5 h-5 mt-0.5 ${styles.iconColo; r}`} />
+<div className="flex-1 min-w-0">
+<h4 className={`text-sm font-medium ${styles.textColo; r}`}>{title}</h4>
+<p className="text-sm text-muted-foreground mt-1">{message}</p>
+</div>
 <button;
 onClick={handleClose}
 className="text-muted-foreground hove;  r: text-foreground transition-colors"
-aria-label="Close notification";
->;
-<X className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
-);
+aria-label="
+>
+<X className="w-4 h-4" />
+</button>
+</div>
+</div>
+)
 }
 
 export function NotificationContainer({ notification;  s; onClose }: {notification; s: NotificationProps[];
@@ -97,14 +97,14 @@ export function NotificationContainer({ notification;  s; onClose }: {
 notification; s: NotificationProps[];
 onClos; e: (i; d: string) => void; }) {
 return (
-<div className="fixed top-20 right-4 z-50 space-y-2">;
+<div className="fixed top-20 right-4 z-50 space-y-2">
 {notifications.map((notification) => (
 <Notification;
 key={notification.id}
 {...notification}
 onClose={onClose}
-/>;
+/>
 ))}
-</div>;
-);
-}<//div><///div>;
+</div>
+)
+}<//div><///div>

@@ -7,7 +7,7 @@ export default function EquipmentRecommendations() {
   return (
 useEffect(() => {
     if (isAuthenticated && user?.id) {
-      setLoading(true);
+      setLoading(true)
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface ServiceContact {
 phone: string;
@@ -18,24 +18,24 @@ category: string;
 description: string;
 hourlyRate: number;
 projectRate: number;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: ServiceContact;
 marketPrice: string;
-competitors: string[];
+competitors: string[[];]
 responseTime: string;
 sla: string;
-certifications: string[];
+certifications: string[[];]
 deliveryTime: string;
 support: string;
-expertise: string[];
-technologies: string[];
-compliance: string[];
+expertise: string[[];]
+technologies: string[[];]
+compliance: string[[];]
 scalability: string;
-securityFeatures: string[];
-integrationCapabilities: string[];
+securityFeatures: string[[];]
+integrationCapabilities: string[[];]
 maintenanceIncluded: boolean;
 trainingIncluded: boolean;
 documentationProvided: boolean;
@@ -50,7 +50,7 @@ reportingCapabilities: boolean;
 monitoringTools: boolean;,
 reportingCapabilities: boolean;}
 
-// Enhanced IT Services for 2025;
+/
 export const enhancedITServices2025: ITService[] = [
 {id: 1;
 name: "Cloud Migration & Strategy";,
@@ -59,22 +59,22 @@ description: "Comprehensive cloud migration services with strategy planning; imp
 hourlyRate: 150;,
 projectRate: 25000;,
 features: [
-"Cloud strategy assessment";
+"
 "Migration planning",
 "Data migration",
 "Application modernization",
 "Cost optimization",
 "Security implementation",
 "Performance monitoring",
-"Training & support";
+"
 ],
 benefits: [
-"40% cost reduction";
+"
 "Improved scalability",
 "Enhanced security",
 "Better performance",
 "Disaster recovery",
-"Operational efficiency";
+"
 ],
 targetAudience: ["Enterprises", "SMBs", "Startups", "Government", "Healthcare"],
 tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Strategy", "Implementation"],
@@ -93,13 +93,13 @@ support: "24/7 support included";,
 expertise: ["Cloud Architecture", "DevOps", "Security", "Performance Optimization"],
 technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Zero-trust architecture", "Encryption", "IAM", "Compliance monitoring"],
 integrationCapabilities: ["API integration", "Legacy system migration", "Third-party tools"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "1 year";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -112,22 +112,22 @@ description: "Comprehensive cybersecurity services including assessment; impleme
 hourlyRate: 175;,
 projectRate: 35000;,
 features: [
-"Security assessment";
+"
 "Vulnerability scanning",
 "Penetration testing",
 "Security implementation",
 "Compliance monitoring",
 "Incident response",
 "Security training",
-"24/7 monitoring";
+"
 ],
 benefits: [
-"99.9% threat detection";
+"
 "Compliance assurance",
 "Risk reduction",
 "Cost savings",
 "Peace of mind",
-"Competitive advantage";
+"
 ],
 targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Government", "Manufacturing"],
 tags: ["Cybersecurity", "Security Assessment", "Compliance", "Threat Detection", "Incident Response"],
@@ -146,13 +146,13 @@ support: "24/7 security operations center";,
 expertise: ["Threat Intelligence", "Incident Response", "Compliance", "Security Architecture"],
 technologies: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Zero-trust", "Multi-factor auth", "Encryption", "Audit logging"],
 integrationCapabilities: ["Security tools", "SIEM systems", "Compliance platforms"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "1 year";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -165,22 +165,22 @@ description: "End-to-end DevOps implementation with CI/CD pipelines; automation;
 hourlyRate: 140;,
 projectRate: 20000;,
 features: [
-"CI/CD pipeline setup";
+"
 "Infrastructure as Code",
 "Automation implementation",
 "Monitoring setup",
 "Performance optimization",
 "Security integration",
 "Team training",
-"Ongoing support";
+"
 ],
 benefits: [
-"90% faster deployments";
+"
 "Reduced errors",
 "Better collaboration",
 "Cost optimization",
 "Improved reliability",
-"Scalable operations";
+"
 ],
 targetAudience: ["Development Teams", "Startups", "Enterprises", "Tech Companies", "Financial Services"],
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
@@ -199,13 +199,13 @@ support: "Business hours + emergency support";,
 expertise: ["CI/CD", "Infrastructure", "Automation", "Monitoring", "Security"],
 technologies: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
 compliance: ["SOC 2", "ISO 27001", "GDPR"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Secure pipelines", "Access controls", "Audit logging", "Compliance"],
 integrationCapabilities: ["Version control", "Cloud platforms", "Monitoring tools", "Security tools"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "6 months";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -218,22 +218,22 @@ description: "Comprehensive data center services including design; implementatio
 hourlyRate: 160;,
 projectRate: 50000;,
 features: [
-"Data center design";
+"
 "Infrastructure implementation",
 "Network architecture",
 "Storage solutions",
 "Power & cooling",
 "Security implementation",
 "Monitoring setup",
-"Documentation";
+"
 ],
 benefits: [
-"Optimized performance";
+"
 "Reduced costs",
 "Enhanced security",
 "Better reliability",
 "Scalable infrastructure",
-"Compliance assurance";
+"
 ],
 targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
 tags: ["Data Center", "Infrastructure", "Network", "Storage", "Security"],
@@ -252,13 +252,13 @@ support: "24/7 support included";,
 expertise: ["Data Center Design", "Network Architecture", "Storage", "Security", "Power Management"],
 technologies: ["Cisco", "VMware", "Microsoft", "HPE", "Dell", "NetApp"],
 compliance: ["SOC 2", "ISO 27001", "TIA-942", "Uptime Institute"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Physical security", "Network security", "Access controls", "Monitoring"],
 integrationCapabilities: ["Legacy systems", "Cloud platforms", "Monitoring tools", "Security systems"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "3 years";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -275,22 +275,22 @@ description: "Advanced network security services with next-generation firewall i
 hourlyRate: 145;,
 projectRate: 18000;,
 features: [
-"Security assessment";
+"
 "Firewall implementation",
 "Network segmentation",
 "Intrusion detection",
 "VPN setup",
 "Security monitoring",
 "Compliance reporting",
-"Ongoing maintenance";
+"
 ],
 benefits: [
-"99.9% threat protection";
+"
 "Network segmentation",
 "Compliance assurance",
 "Cost optimization",
 "Better performance",
-"Scalable security";
+"
 ],
 targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Education", "Government"],
 tags: ["Network Security", "Firewall", "VPN", "Intrusion Detection", "Compliance"],
@@ -309,13 +309,13 @@ support: "Business hours + emergency support";,
 expertise: ["Network Security", "Firewall Management", "VPN", "Intrusion Detection"],
 technologies: ["Cisco ASA", "Palo Alto Networks", "Fortinet", "Check Point", "OpenVPN"],
 compliance: ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Next-gen firewall", "Intrusion detection", "VPN", "Network segmentation"],
 integrationCapabilities: ["Security tools", "Monitoring systems", "Compliance platforms"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "1 year";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -328,22 +328,22 @@ description: "Comprehensive BI and analytics implementation with data warehousin
 hourlyRate: 155;,
 projectRate: 30000;,
 features: [
-"Data assessment";
+"
 "Data warehouse design",
 "ETL implementation",
 "Reporting setup",
 "Dashboard creation",
 "Advanced analytics",
 "Data governance",
-"User training";
+"
 ],
 benefits: [
-"Data-driven decisions";
+"
 "360-degree business view",
 "Operational efficiency",
 "Competitive advantage",
 "Cost optimization",
-"Better insights";
+"
 ],
 targetAudience: ["Enterprises", "Financial Services", "Healthcare", "Retail", "Manufacturing"],
 tags: ["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "ETL"],
@@ -362,13 +362,13 @@ support: "Business hours + emergency support";,
 expertise: ["Data Architecture", "ETL", "Reporting", "Analytics", "Data Governance"],
 technologies: ["Power BI", "Tableau", "Snowflake", "AWS", "Azure", "SQL Server"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Data encryption", "Access controls", "Audit logging", "Compliance"],
 integrationCapabilities: ["ERP systems", "CRM systems", "Cloud platforms", "Legacy systems"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "1 year";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -385,22 +385,22 @@ description: "End-to-end mobile application development with native and cross-pl
 hourlyRate: 120;,
 projectRate: 15000;,
 features: [
-"App design & development";
+"
 "Cross-platform development",
 "API integration",
 "Testing & QA",
 "App store submission",
 "Performance optimization",
 "Security implementation",
-"Maintenance & updates";
+"
 ],
 benefits: [
-"Native performance";
+"
 "Cross-platform compatibility",
 "Cost-effective development",
 "Faster time to market",
 "Better user experience",
-"Scalable solutions";
+"
 ],
 targetAudience: ["Startups", "SMBs", "Enterprises", "Healthcare", "Financial Services"],
 tags: ["Mobile Development", "iOS", "Android", "Cross-platform", "API Integration"],
@@ -419,13 +419,13 @@ support: "Business hours + emergency support";,
 expertise: ["iOS Development", "Android Development", "Cross-platform", "UI/UX", "API Integration"],
 technologies: ["Swift", "Kotlin", "React Native", "Flutter", "Node.js", "Firebase"],
 compliance: ["GDPR", "CCPA", "App Store guidelines", "Google Play policies"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["App security", "Data encryption", "Secure API", "Compliance"],
 integrationCapabilities: ["Backend systems", "Third-party APIs", "Payment gateways", "Analytics"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "6 months";
+warrantyPeriod: "
 disasterRecovery: false;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -438,22 +438,22 @@ description: "Strategic IT consulting services for digital transformation; techn
 hourlyRate: 200;,
 projectRate: 40000;,
 features: [
-"Technology assessment";
+"
 "Digital strategy",
 "Technology roadmap",
 "Vendor selection",
 "Project management",
 "Change management",
 "ROI analysis",
-"Ongoing advisory";
+"
 ],
 benefits: [
-"Strategic direction";
+"
 "Cost optimization",
 "Risk mitigation",
 "Competitive advantage",
 "Operational efficiency",
-"Future readiness";
+"
 ],
 targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
 tags: ["IT Consulting", "Digital Transformation", "Strategy", "Technology Assessment", "Change Management"],
@@ -472,13 +472,13 @@ support: "Business hours + scheduled meetings";,
 expertise: ["Digital Strategy", "Technology Assessment", "Change Management", "Project Management"],
 technologies: ["Enterprise Architecture", "Cloud Platforms", "Digital Tools", "Analytics"],
 compliance: ["Industry standards", "Best practices", "Regulatory requirements"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Security assessment", "Compliance review", "Risk management"],
 integrationCapabilities: ["Legacy systems", "New technologies", "Business processes"],
 maintenanceIncluded: false;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "N/A";
+warrantyPeriod: "
 disasterRecovery: false;
 backupSolutions: false;,
 monitoringTools: false;,
@@ -491,22 +491,22 @@ description: "Comprehensive managed IT services including 24/7 monitoring; suppo
 hourlyRate: 85;,
 projectRate: 12000;,
 features: [
-"24/7 monitoring";
+"
 "Proactive maintenance",
 "Help desk support",
 "Security management",
 "Backup management",
 "Performance optimization",
 "Compliance monitoring",
-"Monthly reporting";
+"
 ],
 benefits: [
-"Reduced IT costs";
+"
 "Proactive maintenance",
 "24/7 support",
 "Better performance",
 "Compliance assurance",
-"Peace of mind";
+"
 ],
 targetAudience: ["SMBs", "Enterprises", "Healthcare", "Financial Services", "Manufacturing"],
 tags: ["Managed Services", "24/7 Support", "Monitoring", "Maintenance", "Help Desk"],
@@ -525,13 +525,13 @@ support: "24/7 support included";,
 expertise: ["IT Infrastructure", "Network Management", "Security", "Support"],
 technologies: ["RMM tools", "PSA platforms", "Monitoring tools", "Security tools"],
 compliance: ["SOC 2", "ISO 27001", "Industry specific"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["Security monitoring", "Threat detection", "Compliance management"],
 integrationCapabilities: ["Existing tools", "Cloud platforms", "Security systems"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "Ongoing";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -548,22 +548,22 @@ description: "Full-stack web application development with modern technologies an
 hourlyRate: 110;,
 projectRate: 18000;,
 features: [
-"Full-stack development";
+"
 "Responsive design",
 "Database design",
 "API development",
 "Security implementation",
 "Performance optimization",
 "Hosting setup",
-"Maintenance & updates";
+"
 ],
 benefits: [
-"Modern technology stack";
+"
 "Responsive design",
 "Scalable architecture",
 "Security best practices",
 "Performance optimized",
-"Cost-effective hosting";
+"
 ],
 targetAudience: ["Startups", "SMBs", "Enterprises", "E-commerce", "Healthcare"],
 tags: ["Web Development", "Full-stack", "Responsive Design", "API", "Hosting"],
@@ -582,13 +582,13 @@ support: "Business hours + emergency support";,
 expertise: ["Frontend Development", "Backend Development", "Database Design", "DevOps"],
 technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
 compliance: ["GDPR", "CCPA", "WCAG", "Security standards"],
-scalability: "Enterprise-grade";,
+scalability: ",
 securityFeatures: ["HTTPS", "Security headers", "Input validation", "Authentication"],
 integrationCapabilities: ["Third-party APIs", "Payment gateways", "Analytics", "CRM systems"],
 maintenanceIncluded: true;
 trainingIncluded: true;
 documentationProvided: true;
-warrantyPeriod: "6 months";
+warrantyPeriod: "
 disasterRecovery: true;
 backupSolutions: true;,
 monitoringTools: true;,
@@ -597,4 +597,4 @@ reportingCapabilities: true;
 monitoringTools: true;,
 reportingCapabilities: true;}
 ];
-export default enhancedITServices2025;
+export export default enhancedITServices2025;

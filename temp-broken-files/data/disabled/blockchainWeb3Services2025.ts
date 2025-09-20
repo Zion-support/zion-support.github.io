@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface ServiceContact {
 phone: string;
@@ -19,16 +19,16 @@ description: string;
 pricing: string;
 price: number;
 pricingModel: string;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: ServiceContact;
 marketPrice: string;
-competitors: string[];
+competitors: string[[];]
 blockchainScore: number;
-useCases: string[];
-compliance: string[];
+useCases: string[[];]
+compliance: string[[];]
 apiAccess: boolean;
 whiteLabel: boolean;
 customBranding: boolean;
@@ -36,7 +36,7 @@ prioritySupport: boolean;
 trainingIncluded: boolean;
 dataRetention: string;
 uptime: string;
-securityFeatures: string[];
+securityFeatures: string[[];]
 integrationTime: string;
 scalability: string;
 realTimeProcessing: boolean;
@@ -51,7 +51,7 @@ crossChainCompatibility: boolean;
 smartContractSupport: boolean;,
 crossChainCompatibility: boolean;}
 
-// Blockchain & Web3 Services for 2025;
+/
 export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
 {id: 1;
 name: "DeFi Pro Suite";,
@@ -61,22 +61,22 @@ pricing: "Professional";
 price: 1200;,
 pricingModel: "monthly";,
 features: [
-"Yield farming automation";
+"
 "Liquidity pool management",
 "Flash loan protection",
 "Portfolio rebalancing",
 "Risk assessment tools",
 "Multi-chain support",
 "Smart contract auditing",
-"Real-time analytics";
+"
 ],
 benefits: [
-"Higher yield returns";
+"
 "Automated strategies",
 "Risk mitigation",
 "Cross-chain opportunities",
 "Professional tools",
-"Regulatory compliance";
+"
 ],
 targetAudience: ["Crypto investors", "DeFi protocols", "Financial institutions", "Trading firms", "Individual traders"],
 tags: ["DeFi", "Yield Farming", "Liquidity", "Smart Contracts", "Crypto", "Trading"],
@@ -98,8 +98,8 @@ trainingIncluded: true;
 dataRetention: "7 years";,
 uptime: "99.9%";,
 securityFeatures: ["Smart contract audits", "Multi-sig wallets", "Insurance coverage", "Real-time monitoring"],
-integrationTime: "2-4 weeks";
-scalability: "Multi-chain networks";
+integrationTime: "
+scalability: "
 realTimeProcessing: true;
 multilingualSupport: true;
 industrySpecific: true;
@@ -115,22 +115,22 @@ pricing: "Professional";
 price: 800;,
 pricingModel: "monthly";,
 features: [
-"AI NFT generation";
+"
 "Multi-blockchain support",
 "Marketplace integration",
 "Royalty management",
 "Metadata optimization",
 "Gas fee optimization",
 "Batch minting",
-"Analytics dashboard";
+"
 ],
 benefits: [
-"Faster NFT creation";
+"
 "Lower gas costs",
 "Multi-chain reach",
 "Automated royalties",
 "Market insights",
-"Brand protection";
+"
 ],
 targetAudience: ["Artists", "Brands", "Gaming companies", "Content creators", "Collectors", "Agencies"],
 tags: ["NFT", "Digital Assets", "Blockchain", "AI Generation", "Marketplace", "Creators"],
@@ -152,8 +152,8 @@ trainingIncluded: true;
 dataRetention: "10 years";,
 uptime: "99.9%";,
 securityFeatures: ["IPFS storage", "Blockchain verification", "Copyright protection", "Fraud detection"],
-integrationTime: "1-3 weeks";
-scalability: "Millions of NFTs";
+integrationTime: "
+scalability: "
 realTimeProcessing: true;
 multilingualSupport: true;
 industrySpecific: true;
@@ -169,22 +169,22 @@ pricing: "Enterprise";
 price: 1500;,
 pricingModel: "monthly";,
 features: [
-"Visual contract builder";
+"
 "Automated testing",
 "Security auditing",
 "Multi-chain deployment",
 "Gas optimization",
 "Upgradeable contracts",
 "Monitoring tools",
-"Documentation generator";
+"
 ],
 benefits: [
-"Faster development";
+"
 "Reduced errors",
 "Lower costs",
 "Better security",
 "Easy deployment",
-"Comprehensive testing";
+"
 ],
 targetAudience: ["Developers", "Startups", "Enterprises", "DeFi protocols", "DAO organizations", "Consulting firms"],
 tags: ["Smart Contracts", "Blockchain", "Development", "Security", "Testing", "Deployment"],
@@ -206,8 +206,8 @@ trainingIncluded: true;
 dataRetention: "10 years";,
 uptime: "99.9%";,
 securityFeatures: ["Automated auditing", "Vulnerability detection", "Formal verification", "Security monitoring"],
-integrationTime: "3-6 weeks";
-scalability: "Enterprise deployment";
+integrationTime: "
+scalability: "
 realTimeProcessing: true;
 multilingualSupport: true;
 industrySpecific: true;
@@ -223,22 +223,22 @@ pricing: "Professional";
 price: 1000;,
 pricingModel: "monthly";,
 features: [
-"Multi-voting systems";
+"
 "Proposal creation",
 "Treasury management",
 "Member management",
 "Governance analytics",
 "Integration APIs",
 "Mobile voting",
-"Real-time updates";
+"
 ],
 benefits: [
-"Transparent governance";
+"
 "Efficient decision-making",
 "Member engagement",
 "Treasury security",
 "Compliance tracking",
-"Community building";
+"
 ],
 targetAudience: ["DAO organizations", "Crypto projects", "Community groups", "Decentralized companies", "Governance consultants"],
 tags: ["DAO", "Governance", "Voting", "Treasury", "Blockchain", "Community"],
@@ -260,8 +260,8 @@ trainingIncluded: true;
 dataRetention: "10 years";,
 uptime: "99.9%";,
 securityFeatures: ["Multi-sig wallets", "Vote verification", "Treasury protection", "Access controls"],
-integrationTime: "2-4 weeks";
-scalability: "Large communities";
+integrationTime: "
+scalability: "
 realTimeProcessing: true;
 multilingualSupport: true;
 industrySpecific: true;
@@ -281,22 +281,22 @@ pricing: "Enterprise";
 price: 2000;,
 pricingModel: "monthly";,
 features: [
-"Multi-chain support";
+"
 "Asset bridging",
 "Data oracles",
 "Liquidity pools",
 "Security monitoring",
 "Gas optimization",
 "Real-time tracking",
-"Analytics dashboard";
+"
 ],
 benefits: [
-"Seamless transfers";
+"
 "Lower costs",
 "Better liquidity",
 "Enhanced security",
 "Real-time monitoring",
-"Multi-chain access";
+"
 ],
 targetAudience: ["DeFi protocols", "Exchanges", "Wallets", "Developers", "Enterprises", "Traders"],
 tags: ["Cross-Chain", "Bridge", "Interoperability", "Liquidity", "Security", "Blockchain"],
@@ -318,8 +318,8 @@ trainingIncluded: true;
 dataRetention: "7 years";,
 uptime: "99.9%";,
 securityFeatures: ["Multi-sig validation", "Real-time monitoring", "Fraud detection", "Insurance coverage"],
-integrationTime: "4-8 weeks";
-scalability: "High-volume transfers";
+integrationTime: "
+scalability: "
 realTimeProcessing: true;
 multilingualSupport: true;
 industrySpecific: true;
@@ -335,22 +335,22 @@ pricing: "Professional";
 price: 600;,
 pricingModel: "monthly";,
 features: [
-"Self-sovereign identity";
+"
 "Zero-knowledge proofs",
 "Verifiable credentials",
 "Privacy protection",
 "Multi-factor authentication",
 "Biometric integration",
 "Cross-platform sync",
-"Compliance tools";
+"
 ],
 benefits: [
-"Privacy protection";
+"
 "Identity ownership",
 "Reduced fraud",
 "Better compliance",
 "User control",
-"Cross-platform access";
+"
 ],
 targetAudience: ["Enterprises", "Healthcare providers", "Financial institutions", "Government agencies", "Educational institutions"],
 tags: ["Decentralized Identity", "Privacy", "Authentication", "Verification", "Compliance", "Security"],
@@ -372,8 +372,8 @@ trainingIncluded: true;
 dataRetention: "User-controlled";,
 uptime: "99.9%";,
 securityFeatures: ["Zero-knowledge proofs", "End-to-end encryption", "Biometric security", "Privacy by design"],
-integrationTime: "2-4 weeks";
-scalability: "Enterprise deployment";
+integrationTime: "
+scalability: "
 realTimeProcessing: true;
 multilingualSupport: true;
 industrySpecific: true;
@@ -384,4 +384,4 @@ crossChainCompatibility: true;
 smartContractSupport: true;,
 crossChainCompatibility: true;}
 ];
-export default blockchainWeb3Services2025;
+export export default blockchainWeb3Services2025;

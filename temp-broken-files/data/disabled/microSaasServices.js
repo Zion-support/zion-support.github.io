@@ -3,13 +3,13 @@ export const MICRO_SAAS_SERVICES = [
     {id: "ai-chatbot-builder";
         title: "AI Chatbot Builder Pro";
         description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.",
-        category: "AI Services";
-        subcategory: "Chatbots & Conversational AI";
+        category: "
+        subcategory: "
         price: 99;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Drag & drop chatbot builder";
+            "
             "Advanced NLP processing",
             "Multi-language support (50+ languages)",
             "CRM integrations (Salesforce, HubSpot)",
@@ -19,23 +19,23 @@ export const MICRO_SAAS_SERVICES = [
             "24/7 support"
         ],
         benefits: [
-            "Reduce customer service costs by 60%";
+            "
             "24/7 customer support availability",
             "Instant response times",
             "Scalable customer interactions",
             "Data-driven insights"
         ],
         targetAudience: ["E-commerce", "SaaS companies", "Customer service teams", "Marketing agencies"],
-        marketPrice: "$99-299/month";
-        website: "https://ziontechgroup.com/ai-chatbot-builder";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["AI Chatbot", "NLP", "Customer Service", "Automation"],
         aiScore: 95;
         rating: 4.8;
         reviewCount: 156;
         featured: true;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -47,16 +47,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "ai-content-generator";
         createdAt: "2024-01-15T10:00:00.000Z"};
     {
-        id: "ai-content-generator";
-        title: "AI Content Generator Suite";
+        id: "
+        title: "
         description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.",
-        category: "AI Services";
-        subcategory: "Content Creation";
+        category: "
+        subcategory: "
         price: 79;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "AI-powered content generation";
+            "
             "SEO optimization tools",
             "Brand voice customization",
             "Multi-format output (blog, social, email)",
@@ -66,23 +66,23 @@ export const MICRO_SAAS_SERVICES = [
             "Analytics & performance tracking"
         ],
         benefits: [
-            "10x faster content creation";
+            "
             "SEO-optimized content",
             "Consistent brand voice",
             "Reduced content costs",
             "Improved engagement rates"
         ],
         targetAudience: ["Content creators", "Marketing teams", "Agencies", "E-commerce"],
-        marketPrice: "$79-199/month";
-        website: "https://ziontechgroup.com/ai-content-generator";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Content Generation", "AI Writing", "SEO", "Marketing"],
         aiScore: 92;
         rating: 4.7;
         reviewCount: 234;
         featured: true;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -93,16 +93,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "ai-data-analytics";
         createdAt: "2024-01-20T14:30:00.000Z"};
     {
-        id: "ai-data-analytics";
-        title: "AI-Powered Business Intelligence";
+        id: "
+        title: "
         description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics, automated reporting, and real-time dashboards.",
-        category: "AI Services";
-        subcategory: "Data Analytics";
+        category: "
+        subcategory: "
         price: 149;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Real-time data processing";
+            "
             "Predictive analytics",
             "Automated reporting",
             "Custom dashboards",
@@ -112,23 +112,23 @@ export const MICRO_SAAS_SERVICES = [
             "White-label options"
         ],
         benefits: [
-            "Data-driven decision making";
+            "
             "Automated insights discovery",
             "Real-time business monitoring",
             "Predictive trend analysis",
             "Reduced manual reporting"
         ],
         targetAudience: ["Business analysts", "Data scientists", "Executives", "Marketing teams"],
-        marketPrice: "$149-399/month";
-        website: "https://ziontechgroup.com/ai-analytics";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Business Intelligence", "Data Analytics", "Predictive Analytics", "Reporting"],
         aiScore: 94;
         rating: 4.9;
         reviewCount: 89;
         featured: true;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -139,16 +139,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "ai-code-assistant";
         createdAt: "2024-02-01T09:15:00.000Z"};
     {
-        id: "ai-code-assistant";
-        title: "AI Code Assistant Pro";
+        id: "
+        title: "
         description: "Intelligent coding companion that helps developers write, debug, and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
-        category: "AI Services";
-        subcategory: "Developer Tools";
+        category: "
+        subcategory: "
         price: 29;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "AI code completion";
+            "
             "Bug detection & fixing",
             "Code optimization",
             "50+ language support",
@@ -158,23 +158,23 @@ export const MICRO_SAAS_SERVICES = [
             "Team collaboration"
         ],
         benefits: [
-            "50% faster development";
+            "
             "Reduced bug count",
             "Improved code quality",
             "Faster learning curve",
             "Team productivity boost"
         ],
         targetAudience: ["Software developers", "DevOps engineers", "Data scientists", "Students"],
-        marketPrice: "$29-99/month";
-        website: "https://ziontechgroup.com/ai-code-assistant";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Code Generation", "Developer Tools", "AI Programming", "Productivity"],
         aiScore: 96;
         rating: 4.8;
         reviewCount: 567;
         featured: true;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -185,16 +185,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "ai-image-generator";
         createdAt: "2024-01-10T11:45:00.000Z"};
     {
-        id: "ai-image-generator";
-        title: "AI Image Generator Studio";
+        id: "
+        title: "
         description: "Professional AI image creation platform for marketing, design, and content creation. Generate high-quality images from text descriptions with advanced customization options.",
-        category: "AI Services";
-        subcategory: "Image Generation";
+        category: "
+        subcategory: "
         price: 49;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Text-to-image generation";
+            "
             "High-resolution output",
             "Style customization",
             "Batch processing",
@@ -204,23 +204,23 @@ export const MICRO_SAAS_SERVICES = [
             "Stock photo replacement"
         ],
         benefits: [
-            "Unlimited image creation";
+            "
             "Cost-effective design",
             "Consistent brand imagery",
             "Fast turnaround time",
             "No design skills required"
         ],
         targetAudience: ["Designers", "Marketing teams", "E-commerce", "Content creators"],
-        marketPrice: "$49-149/month";
-        website: "https://ziontechgroup.com/ai-image-generator";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Image Generation", "AI Art", "Design", "Marketing"],
         aiScore: 93;
         rating: 4.6;
         reviewCount: 312;
         featured: false;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -231,13 +231,13 @@ export const MICRO_SAAS_SERVICES = [
     {id: "cloud-migration-suite";
         title: "Cloud Migration Suite";
         description: "Comprehensive cloud migration solution with automated assessment, planning, and execution tools. Supports AWS, Azure, and Google Cloud with zero-downtime migration.",
-        category: "IT Services";
-        subcategory: "Cloud Solutions";
+        category: "
+        subcategory: "
         price: 299;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Automated migration assessment";
+            "
             "Multi-cloud support",
             "Zero-downtime migration",
             "Cost optimization",
@@ -247,23 +247,23 @@ export const MICRO_SAAS_SERVICES = [
             "Migration automation"
         ],
         benefits: [
-            "Reduced migration time by 70%";
+            "
             "Cost savings up to 40%",
             "Zero business disruption",
             "Enhanced security",
             "Scalable infrastructure"
         ],
         targetAudience: ["Enterprise IT", "DevOps teams", "System administrators", "Cloud architects"],
-        marketPrice: "$299-799/month";
-        website: "https://ziontechgroup.com/cloud-migration";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Cloud Migration", "AWS", "Azure", "DevOps"],
         aiScore: 91;
         rating: 4.7;
         reviewCount: 78;
         featured: true;
-        location: "Global";
-        availability: "2-4 weeks";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -274,16 +274,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "cybersecurity-monitoring";
         createdAt: "2024-01-25T13:10:00.000Z"};
     {
-        id: "cybersecurity-monitoring";
-        title: "AI Cybersecurity Monitoring";
+        id: "
+        title: "
         description: "Advanced cybersecurity monitoring platform with AI-powered threat detection, automated response, and 24/7 security operations center (SOC) services.",
-        category: "IT Services";
-        subcategory: "Cybersecurity";
+        category: "
+        subcategory: "
         price: 199;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "AI threat detection";
+            "
             "24/7 SOC monitoring",
             "Automated incident response",
             "Vulnerability assessment",
@@ -293,23 +293,23 @@ export const MICRO_SAAS_SERVICES = [
             "Mobile security"
         ],
         benefits: [
-            "99.9% threat detection rate";
+            "
             "Reduced response time by 80%",
             "Compliance automation",
             "Cost-effective security",
             "Expert security team"
         ],
         targetAudience: ["Enterprise security", "IT managers", "Compliance officers", "Small businesses"],
-        marketPrice: "$199-599/month";
-        website: "https://ziontechgroup.com/cybersecurity";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Cybersecurity", "Threat Detection", "SOC", "Compliance"],
         aiScore: 95;
         rating: 4.9;
         reviewCount: 134;
         featured: true;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -320,16 +320,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "devops-automation";
         createdAt: "2024-02-10T08:30:00.000Z"};
     {
-        id: "devops-automation";
-        title: "DevOps Automation Platform";
+        id: "
+        title: "
         description: "Complete DevOps automation solution with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation. Accelerate development cycles and improve reliability.",
-        category: "IT Services";
-        subcategory: "DevOps";
+        category: "
+        subcategory: "
         price: 179;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "CI/CD pipeline automation";
+            "
             "Infrastructure as Code",
             "Container orchestration",
             "Monitoring & alerting",
@@ -339,23 +339,23 @@ export const MICRO_SAAS_SERVICES = [
             "Performance optimization"
         ],
         benefits: [
-            "10x faster deployments";
+            "
             "Reduced manual errors",
             "Improved reliability",
             "Cost optimization",
             "Team productivity boost"
         ],
         targetAudience: ["DevOps engineers", "Software teams", "System administrators", "IT managers"],
-        marketPrice: "$179-499/month";
-        website: "https://ziontechgroup.com/devops-automation";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["DevOps", "CI/CD", "Automation", "Infrastructure"],
         aiScore: 93;
         rating: 4.8;
         reviewCount: 95;
         featured: false;
-        location: "Global";
-        availability: "1-2 weeks";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -366,16 +366,16 @@ export const MICRO_SAAS_SERVICES = [
     {id: "data-backup-recovery";
         createdAt: "2024-01-30T15:45:00.000Z"};
     {
-        id: "data-backup-recovery";
-        title: "Enterprise Data Backup & Recovery";
+        id: "
+        title: "
         description: "Comprehensive data protection solution with automated backup, disaster recovery, and business continuity planning. Supports hybrid cloud environments with zero data loss guarantee.",
-        category: "IT Services";
-        subcategory: "Data Protection";
+        category: "
+        subcategory: "
         price: 129;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Automated backup scheduling";
+            "
             "Hybrid cloud storage",
             "Disaster recovery",
             "Zero data loss guarantee",
@@ -385,23 +385,23 @@ export const MICRO_SAAS_SERVICES = [
             "24/7 support"
         ],
         benefits: [
-            "99.99% data availability";
+            "
             "Instant disaster recovery",
             "Compliance automation",
             "Cost-effective storage",
             "Peace of mind"
         ],
         targetAudience: ["Enterprise IT", "Data centers", "Healthcare", "Financial services"],
-        marketPrice: "$129-399/month";
-        website: "https://ziontechgroup.com/data-backup";
-        contactEmail: "kleber@ziontechgroup.com";
+        marketPrice: "
+        website: "
+        contactEmail: "
         tags: ["Data Backup", "Disaster Recovery", "Business Continuity", "Cloud Storage"],
         aiScore: 90;
         rating: 4.7;
         reviewCount: 67;
         featured: false;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
@@ -412,13 +412,13 @@ export const MICRO_SAAS_SERVICES = [
     {id: "ai-customer-support";
         title: "AI Customer Support Suite";
         description: "Intelligent customer support platform with AI-powered ticket routing, automated responses, sentiment analysis, and customer satisfaction tracking.",
-        category: "Business Solutions";
-        subcategory: "Customer Support";
+        category: "
+        subcategory: "
         price: 89;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "AI ticket routing";
+            "
             "Automated responses",
             "Sentiment analysis",
             "Customer satisfaction tracking",
@@ -430,30 +430,30 @@ export const MICRO_SAAS_SERVICES = [
                 currency: string;
                 features: string[]}
         ];
-        features: string[];
-        benefits: string[];
-        useCases: string[];
-        targetAudience: string[];
-        integration: string[];
-        support: string[];
+        features: string[[];]
+        benefits: string[[];]
+        useCases: string[[];]
+        targetAudience: string[[];]
+        integration: string[[];]
+        support: string[[];]
         link: string;
         badge: string;
         icon: string}
 ];
     export const MICRO_SAAS_SERVICES = [
     {
-        id: "ai-content-generator";
-        title: "AI Content Generator Pro";
+        id: "
+        title: "
         description: "Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns using advanced AI.",
-        category: "Content & Marketing";
+        category: "
         pricing: {
             monthly: 29;
             yearly: 290;
-            currency: "$";
+            currency: "
             features: ["Unlimited content generation", "SEO optimization", "Multi-language support", "Brand voice customization"]
         },
         features: [
-            "GPT-4 powered content creation";
+            "
             "SEO keyword optimization",
             "Plagiarism detection",
             "Content scheduling",
@@ -461,13 +461,13 @@ export const MICRO_SAAS_SERVICES = [
             "Team collaboration tools"
         ],
         benefits: [
-            "Save 10+ hours per week on content creation";
+            "
             "Improve SEO rankings by 40%",
             "Increase engagement rates by 60%",
             "Reduce content costs by 70%"
         ],
         useCases: [
-            "Blog content creation";
+            "
             "Social media posts",
             "Email marketing campaigns",
             "Product descriptions",
@@ -480,18 +480,18 @@ export const MICRO_SAAS_SERVICES = [
         badge: "Popular";
         icon: "🤖"};
     {
-        id: "smart-invoice-manager";
-        title: "Smart Invoice Manager";
+        id: "
+        title: "
         description: "Automated invoice processing, expense tracking, and financial reporting for small to medium businesses.",
-        category: "Finance & Accounting";
+        category: "
         pricing: {
             monthly: 19;
             yearly: 190;
-            currency: "$";
+            currency: "
             features: ["Unlimited invoices", "Expense tracking", "Financial reports", "Multi-currency support"]
         },
         features: [
-            "AI-powered invoice scanning";
+            "
             "Automated expense categorization",
             "Real-time financial dashboards",
             "Tax preparation tools",
@@ -499,13 +499,13 @@ export const MICRO_SAAS_SERVICES = [
             "Cloud backup & sync"
         ],
         benefits: [
-            "Reduce invoice processing time by 80%";
+            "
             "Eliminate manual data entry errors",
             "Save 15+ hours monthly on bookkeeping",
             "Improve cash flow visibility"
         ],
         useCases: [
-            "Small business accounting";
+            "
             "Freelancer invoicing",
             "Expense management",
             "Financial reporting",
@@ -517,18 +517,18 @@ export const MICRO_SAAS_SERVICES = [
         link: "https://ziontechgroup.com/smart-invoice-manager";
         icon: "📊"};
     {
-        id: "project-collaboration-hub";
-        title: "Project Collaboration Hub";
+        id: "
+        title: "
         description: "Streamlined project management with real-time collaboration, task tracking, and team communication tools.",
-        category: "Project Management";
+        category: "
         pricing: {
             monthly: 25;
             yearly: 250;
-            currency: "$";
+            currency: "
             features: ["Unlimited projects", "Team collaboration", "File sharing", "Time tracking"]
         },
         features: [
-            "Kanban & Gantt charts";
+            "
             "Real-time chat & video calls",
             "File version control",
             "Time tracking & reporting",
@@ -536,13 +536,13 @@ export const MICRO_SAAS_SERVICES = [
             "API integrations"
         ],
         benefits: [
-            "Increase team productivity by 35%";
+            "
             "Reduce project delays by 50%",
             "Improve communication efficiency",
             "Centralize project information"
         ],
         useCases: [
-            "Software development";
+            "
             "Marketing campaigns",
             "Event planning",
             "Product launches",
@@ -555,18 +555,18 @@ export const MICRO_SAAS_SERVICES = [
         badge: "Featured";
         icon: "🚀"};
     {
-        id: "ai-customer-support";
-        title: "AI Customer Support Suite";
+        id: "
+        title: "
         description: "Intelligent customer support automation with chatbots, ticket management, and analytics.",
-        category: "Customer Support";
+        category: "
         pricing: {
             monthly: 39;
             yearly: 390;
-            currency: "$";
+            currency: "
             features: ["Unlimited conversations", "AI chatbot", "Ticket management", "Analytics dashboard"]
         },
         features: [
-            "AI-powered chatbot";
+            "
             "Multi-language support",
             "Ticket routing & escalation",
             "Customer satisfaction surveys",
@@ -574,13 +574,13 @@ export const MICRO_SAAS_SERVICES = [
             "Integration APIs"
         ],
         benefits: [
-            "Reduce response time by 90%";
+            "
             "Handle 70% of queries automatically",
             "Improve customer satisfaction by 45%",
             "Reduce support costs by 60%"
         ],
         useCases: [
-            "E-commerce support";
+            "
             "SaaS customer service",
             "Help desk management",
             "FAQ automation",
@@ -592,18 +592,18 @@ export const MICRO_SAAS_SERVICES = [
         link: "https://ziontechgroup.com/ai-customer-support";
         icon: "💬"};
     {
-        id: "data-analytics-platform";
-        title: "Data Analytics Platform";
-        description: "Comprehensive data analytics and visualization platform for business intelligence and decision making.";
-        category: "Analytics & BI";
+        id: "
+        title: "
+        description: "
+        category: "
         pricing: {
             monthly: 49;
             yearly: 490;
-            currency: "$";
+            currency: "
             features: ["Unlimited data sources", "Custom dashboards", "Real-time analytics", "Advanced reporting"]
         },
         features: [
-            "Data visualization tools";
+            "
             "Custom dashboard builder",
             "Real-time data streaming",
             "Predictive analytics",
@@ -611,13 +611,13 @@ export const MICRO_SAAS_SERVICES = [
             "Mobile app access"
         ],
         benefits: [
-            "Make data-driven decisions faster";
+            "
             "Identify business opportunities",
             "Optimize operations efficiency",
             "Improve customer insights"
         ],
         useCases: [
-            "Business performance tracking";
+            "
             "Customer behavior analysis",
             "Sales forecasting",
             "Operational optimization",
@@ -629,18 +629,18 @@ export const MICRO_SAAS_SERVICES = [
         link: "https://ziontechgroup.com/data-analytics-platform";
         icon: "📈"};
     {
-        id: "ai-recruitment-assistant";
-        title: "AI Recruitment Assistant";
+        id: "
+        title: "
         description: "Intelligent hiring platform that automates candidate screening, matching, and interview scheduling.",
-        category: "HR & Recruitment";
+        category: "
         pricing: {
             monthly: 35;
             yearly: 350;
-            currency: "$";
+            currency: "
             features: ["Unlimited job postings", "AI candidate matching", "Interview scheduling", "Analytics dashboard"]
         },
         features: [
-            "AI-powered candidate screening";
+            "
             "Skills assessment tools",
             "Interview scheduling automation",
             "Candidate scoring & ranking",
@@ -648,13 +648,13 @@ export const MICRO_SAAS_SERVICES = [
             "Integration with job boards"
         ],
         benefits: [
-            "Reduce time-to-hire by 60%";
+            "
             "Improve candidate quality by 40%",
             "Save 20+ hours weekly on screening",
             "Enhance diversity hiring"
         ],
         useCases: [
-            "Technical recruitment";
+            "
             "Sales hiring",
             "Executive search",
             "Mass recruitment",
@@ -667,18 +667,18 @@ export const MICRO_SAAS_SERVICES = [
         badge: "New";
         icon: "👥"};
     {
-        id: "cybersecurity-monitor";
-        title: "Cybersecurity Monitor";
+        id: "
+        title: "
         description: "Real-time threat detection, vulnerability assessment, and security compliance monitoring.",
-        category: "Cybersecurity";
+        category: "
         pricing: {
             monthly: 45;
             yearly: 450;
-            currency: "$";
+            currency: "
             features: ["Threat monitoring", "Vulnerability scanning", "Compliance reporting", "Security alerts"]
         },
         features: [
-            "Real-time threat detection";
+            "
             "Vulnerability assessment",
             "Compliance monitoring",
             "Security incident response",
@@ -686,13 +686,13 @@ export const MICRO_SAAS_SERVICES = [
             "Integration with security tools"
         ],
         benefits: [
-            "Detect threats 90% faster";
+            "
             "Reduce security incidents by 70%",
             "Ensure compliance requirements",
             "Protect sensitive data"
         ],
         useCases: [
-            "Small business security";
+            "
             "Compliance monitoring",
             "Threat intelligence",
             "Incident response",
@@ -704,18 +704,18 @@ export const MICRO_SAAS_SERVICES = [
         link: "https://ziontechgroup.com/cybersecurity-monitor";
         icon: "🔒"};
     {
-        id: "cloud-cost-optimizer";
-        title: "Cloud Cost Optimizer";
+        id: "
+        title: "
         description: "Intelligent cloud cost management and optimization for AWS, Azure, and Google Cloud platforms.",
-        category: "Cloud Management";
+        category: "
         pricing: {
             monthly: 30;
             yearly: 300;
-            currency: "$";
+            currency: "
             features: ["Multi-cloud monitoring", "Cost optimization", "Resource management", "Budget alerts"]
         },
         features: [
-            "Multi-cloud cost monitoring";
+            "
             "Automated cost optimization",
             "Resource utilization tracking",
             "Budget management & alerts",
@@ -723,13 +723,13 @@ export const MICRO_SAAS_SERVICES = [
             "ROI analysis"
         ],
         benefits: [
-            "Reduce cloud costs by 25-40%";
+            "
             "Optimize resource utilization",
             "Prevent budget overruns",
             "Improve cloud ROI"
         ],
         useCases: [
-            "AWS cost optimization";
+            "
             "Azure resource management",
             "Google Cloud optimization",
             "Multi-cloud strategies",
@@ -741,18 +741,18 @@ export const MICRO_SAAS_SERVICES = [
         link: "https://ziontechgroup.com/cloud-cost-optimizer";
         icon: "☁️"};
     {
-        id: "ai-marketing-automation";
-        title: "AI Marketing Automation";
+        id: "
+        title: "
         description: "Intelligent marketing automation with AI-powered personalization, campaign optimization, and analytics.",
-        category: "Marketing Automation";
+        category: "
         pricing: {
             monthly: 55;
             yearly: 550;
-            currency: "$";
+            currency: "
             features: ["Unlimited campaigns", "AI personalization", "Advanced analytics", "Multi-channel marketing"]
         },
         features: [
-            "AI-powered personalization";
+            "
             "Multi-channel campaign management",
             "Behavioral targeting",
             "A/B testing automation",
@@ -760,13 +760,13 @@ export const MICRO_SAAS_SERVICES = [
             "Customer journey mapping"
         ],
         benefits: [
-            "Increase conversion rates by 50%";
+            "
             "Reduce marketing costs by 30%",
             "Improve customer engagement",
             "Personalize customer experiences"
         ],
         useCases: [
-            "Email marketing campaigns";
+            "
             "Social media advertising",
             "Retargeting campaigns",
             "Lead nurturing",
@@ -779,18 +779,18 @@ export const MICRO_SAAS_SERVICES = [
         badge: "Premium";
         icon: "🎯"};
     {
-        id: "api-management-platform";
-        title: "API Management Platform";
+        id: "
+        title: "
         description: "Comprehensive API development, testing, monitoring, and documentation platform for developers.",
-        category: "Developer Tools";
+        category: "
         pricing: {
             monthly: 40;
             yearly: 400;
-            currency: "$";
+            currency: "
             features: ["Unlimited APIs", "Testing tools", "Performance monitoring", "Developer portal"]
         },
         features: [
-            "API design & development";
+            "
             "Automated testing suite",
             "Performance monitoring",
             "Developer documentation",
@@ -798,13 +798,13 @@ export const MICRO_SAAS_SERVICES = [
             "Analytics & insights"
         ],
         benefits: [
-            "Accelerate API development by 60%";
+            "
             "Improve API reliability by 80%",
             "Reduce development costs",
             "Enhance developer experience"
         ],
         useCases: [
-            "REST API development";
+            "
             "GraphQL APIs",
             "Microservices architecture",
             "Third-party integrations",
@@ -817,11 +817,11 @@ export const MICRO_SAAS_SERVICES = [
         icon: "⚡"}
 ];
     export const getMicroSaasServiceById = (id) => {
-    return MICRO_SAAS_SERVICES.find(service => service.id === id);
-};
+    return MICRO_SAAS_SERVICES.find(service => service.id === id)
+}
 export const getMicroSaasServicesByCategory = (category) => {
-    return MICRO_SAAS_SERVICES.filter(service => service.category === category);
-};
+    return MICRO_SAAS_SERVICES.filter(service => service.category === category)
+}
 export const getMicroSaasCategories = () => {
-    return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-};
+    return [[...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];]
+}

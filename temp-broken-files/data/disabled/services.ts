@@ -1,4 +1,4 @@
-import { UnifiedService } from "@/types/unifiedServiceTypes, ";
+import { UnifiedService } from "
 
 export const ZION_SERVICES: UnifiedService[] = [
 {
@@ -8,15 +8,15 @@ description: "Real-time lead scoring API that ranks prospects by conversion like
 category: "Micro SaaS";,
 price: { monthly: 99; yearly: 999; currency: "USD", pricingModel: "subscription" };
 features: [
-"Plug-and-play REST API with SDKs";
+"
 "Adaptive models trained on your CRM outcomes",
 "Webhook automations for hot leads",
-"GDPR/CCPA data handling modes";
+"
 ],
 benefits: [
-"Focus sales on high-intent leads";
+"
 "Increase close rates 10–25%",
-"Shorter sales cycles with predictive routing";
+"
 ],
 useCases: ["B2B SaaS", "Agencies", "E-commerce"],
 tags: ["API", "Sales Ops", "Predictive Analytics"],
@@ -35,10 +35,10 @@ description: "High-accuracy invoice parsing and approval workflow automation wit
 category: "Micro SaaS";,
 price: { monthly: 49; yearly: 490; currency: "USD", pricingModel: "usage + subscription" };
 features: [
-"95%+ field extraction accuracy";
+"
 "Line-item table parsing",
 "Duplicate detection and fraud checks",
-"Exports to QuickBooks; Netsuite; Xero";
+"
 ],
 benefits: ["Reduce AP processing time by 70%", "Lower manual errors", "Automated approvals"],
 useCases: ["Finance teams", "Bookkeepers", "Marketplaces"],
@@ -52,11 +52,11 @@ website: "https://ziontechgroup.com/services/invoice-ocr-api";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
-id: "uptime-ssl-monitor";,
+id: ",
 title: "Uptime; SSL & Lighthouse Monitor",
 description: "Global uptime checks; SSL expiry alerts; and scheduled Lighthouse performance audits with webhooks.",
-category: "Micro SaaS";,
-price: { monthly: 29; yearly: 290; currency: "USD", pricingModel: "subscription" };
+category: ",
+price: { monthly: 29; yearly: 290; currency: "USD", pricingModel: "subscription" }
 features: ["Multi-region pings", "SMS/Email/Slack alerts", "Core Web Vitals tracking", "Public status pages"],
 benefits: ["Prevent outages", "Improve SEO & UX", "Proactive SSL renewals"],
 useCases: ["SaaS apps", "E-commerce", "Agencies"],
@@ -73,8 +73,8 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "ai-doc-qa-widget";,
 title: "AI Document Q&A Widget";,
 description: "Embed a secure; brandable chat widget that answers questions from your docs; PDFs; and knowledge base.",
-category: "Micro SaaS";,
-price: { monthly: 79; yearly: 790; currency: "USD", pricingModel: "subscription" };
+category: ",
+price: { monthly: 79; yearly: 790; currency: "USD", pricingModel: "subscription" }
 features: ["RAG over PDFs/Notion/Confluence", "Citations and sources", "Access control", "Analytics dashboard"],
 benefits: ["Deflect support tickets", "Faster onboarding", "24/7 self-serve answers"],
 useCases: ["Customer support", "HR/IT helpdesk", "Internal wikis"],
@@ -91,8 +91,8 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "seo-content-studio";,
 title: "AI SEO Content Studio";,
 description: "Research; plan; and generate SEO briefs and drafts with SERP analysis and internal linking suggestions.",
-category: "Micro SaaS";,
-price: { monthly: 59; yearly: 590; currency: "USD", pricingModel: "subscription" };
+category: ",
+price: { monthly: 59; yearly: 590; currency: "USD", pricingModel: "subscription" }
 features: ["Keyword clustering", "SERP gap analysis", "Outline + draft generation", "Programmatic SEO tools"],
 benefits: ["Rank faster", "Scale content ops", "Consistent quality"],
 useCases: ["Publishers", "E-commerce", "Agencies"],
@@ -109,8 +109,8 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "cloud-migration-accelerator";,
 title: "Cloud Migration Accelerator";,
 description: "Blueprint; migrate; and optimize workloads on AWS/Azure/GCP with security and FinOps baked in.",
-category: "IT Services";,
-price: { oneTime: 10000; currency: "USD", pricingModel: "fixed + T&M" };
+category: ",
+price: { oneTime: 10000; currency: "USD", pricingModel: "fixed + T&M" }
 features: ["Landing zones & IaC", "Zero-downtime cutovers", "Guardrails & compliance", "FinOps right-sizing"],
 benefits: ["Reduced cloud spend", "Faster delivery", "Lower risk migrations"],
 useCases: ["Data center exits", "App modernization", "M&A integration"],
@@ -127,13 +127,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "managed-kubernetes";,
 title: "Managed Kubernetes & Platform Engineering";,
 description: "SRE-grade Kubernetes clusters; GitOps pipelines; and golden paths for developer productivity.",
-category: "IT Services";,
-price: { monthly: 3000; yearly: 30000; currency: "USD", pricingModel: "retainer" };
+category: ",
+price: { monthly: 3000; yearly: 30000; currency: "USD", pricingModel: "retainer" }
 features: ["EKS/AKS/GKE", "GitOps with ArgoCD/Flux", "SLOs & autoscaling", "Security baselines"],
 benefits: ["Higher reliability", "Faster deploys", "Reduced toil"],
 useCases: ["SaaS scale-ups", "Enterprises", "Gov/Regulated"],
 tags: ["Kubernetes", "DevOps", "SRE"],
-marketPrice: "$2k–$15k/mo";,
+marketPrice: ",
 roi: "Fewer incidents; faster MTTR",
 innovationLevel: "Productized platform ops";
 contactInfo: {phone: "+1 302 464 0950";
@@ -145,8 +145,8 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "soc2-readiness";,
 title: "SOC 2 Readiness & Continuous Compliance";,
 description: "Gap assessment; remediation plan; and automation to pass SOC 2 Type I/II with ongoing evidence collection.",
-category: "IT Services";,
-price: { oneTime: 8000; currency: "USD", pricingModel: "fixed + retainer" };
+category: ",
+price: { oneTime: 8000; currency: "USD", pricingModel: "fixed + retainer" }
 features: ["Control mapping", "Policy pack", "Ticketed remediation", "Evidence automation"],
 benefits: ["Accelerate audits", "Win enterprise deals", "Lower compliance overhead"],
 useCases: ["B2B SaaS", "Fintech", "Healthcare"],
@@ -163,8 +163,8 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "mlops-foundation";,
 title: "MLOps Foundation Package";,
 description: "End-to-end ML lifecycle setup: data versioning; experiment tracking; CI/CD for models; and monitoring.",
-category: "AI Solutions";,
-price: { oneTime: 12000; currency: "USD", pricingModel: "fixed" };
+category: ",
+price: { oneTime: 12000; currency: "USD", pricingModel: "fixed" }
 features: ["Feature store", "Model registry", "Canary deploys", "Drift monitoring"],
 benefits: ["Ship ML reliably", "Reproducibility", "Faster iteration"],
 useCases: ["Data science teams", "AI product launches"],
@@ -181,13 +181,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "custom-llm-fine-tuning";,
 title: "Custom LLM Fine-Tuning & RAG";,
 description: "Domain-adapted LLMs with secure retrieval over your private data; evaluation harness; and safety guardrails.",
-category: "AI Solutions";,
-price: { oneTime: 15000; currency: "USD", pricingModel: "fixed + usage" };
+category: ",
+price: { oneTime: 15000; currency: "USD", pricingModel: "fixed + usage" }
 features: ["Data pipelines", "RAG indexing", "Eval harness", "Guardrails & PII redaction"],
 benefits: ["Higher answer accuracy", "Brand-safe outputs", "Lower hallucinations"],
 useCases: ["Support bots", "Agent copilots", "Doc Q&A"],
 tags: ["LLM", "RAG", "NLP"],
-marketPrice: "$15k–$150k+";,
+marketPrice: ",
 roi: "Deflect tickets; faster workflows",
 innovationLevel: "Enterprise-grade LLMops";
 contactInfo: {phone: "+1 302 464 0950";
@@ -199,8 +199,8 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}
 id: "ai-support-chatbot";,
 title: "AI Support Chatbot Implementation";,
 description: "Deploy an omni-channel AI assistant integrated with your ticketing; CRM; and knowledge base.",
-category: "AI Solutions";,
-price: { oneTime: 5000; currency: "USD", pricingModel: "fixed + subscription" };
+category: ",
+price: { oneTime: 5000; currency: "USD", pricingModel: "fixed + subscription" }
 features: ["Omni-channel inbox", "Escalation to human", "CSAT tracking", "Analytics & reporting"],
 benefits: ["24/7 support", "Lower response times", "Higher NPS"],
 useCases: ["Customer support", "IT helpdesk"],
@@ -232,4 +232,4 @@ website: "https://ziontechgroup.com/services/computer-vision-inspection";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }
 ];
-export default ZION_SERVICES;
+export export default ZION_SERVICES;

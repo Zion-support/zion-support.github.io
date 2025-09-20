@@ -1,8 +1,8 @@
-import React from 'react;';
-import ReactMarkdown from 'react-markdown;';
-import { Header } from '@/components/Header, ';
-import { Footer } from '@/components/Footer, ';
-import { SEO } from '@/components/SEO, ';
+import import React from 'react;';
+import import ReactMarkdown from 'react-markdown;';
+import import { Header } from '@/components/Header, ';
+import import { Footer } from '@/components/Footer, ';
+import import { SEO } from '@/components/SEO, ';
 
 const markdown = `
 # Privacy Policy

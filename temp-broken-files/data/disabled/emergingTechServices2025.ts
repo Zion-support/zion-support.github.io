@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface EmergingTechService {
 id: number;
@@ -9,10 +9,10 @@ description: string;
 pricing: string;
 price: number;
 pricingModel: string;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: {
 phone: string;
 email: string;,
@@ -24,10 +24,10 @@ address: string;
 website: string;,
 address: string;};
 marketPrice: string;
-competitors: string[];
+competitors: string[[];]
 roi: string;
 setupTime: string;
-integrations: string[];
+integrations: string[[];]
 freeTier: boolean;
 trialPeriod: string;
 innovationScore: number;
@@ -50,30 +50,30 @@ pricing: "Enterprise";
 price: 50000;,
 pricingModel: "monthly";,
 features: [
-"Satellite constellation management";
+"
 "Earth observation data processing",
 "Space weather monitoring",
 "Satellite communication networks",
 "Space debris tracking",
 "Orbital mechanics optimization",
 "Space data analytics",
-"Launch vehicle integration";
+"
 ],
 benefits: [
-"Global connectivity coverage";
+"
 "Real-time Earth monitoring",
 "Space situational awareness",
 "Advanced communication networks",
 "Environmental data insights",
-"Space exploration capabilities";
+"
 ],
 targetAudience: [
-"Telecommunications companies";
+"
 "Government agencies",
 "Environmental organizations",
 "Agricultural companies",
 "Logistics companies",
-"Research institutions";
+"
 ],
 tags: ["Space Tech", "Satellites", "Communication", "Earth Observation", "Space Data", "Global Coverage"],
 contactInfo: {
@@ -90,12 +90,12 @@ freeTier: false;
 trialPeriod: "60 days";,
 innovationScore: 99;,
 useCases: [
-"Global internet connectivity";
+"
 "Earth observation and monitoring",
 "Climate change research",
 "Agricultural monitoring",
 "Disaster response",
-"Navigation and positioning";
+"
 ],
 compliance: ["ITAR", "FCC", "NOAA", "Space Force", "International Space Law"],
 scalability: "Global satellite network";,
@@ -115,30 +115,30 @@ pricing: "Enterprise";
 price: 35000;,
 pricingModel: "monthly";,
 features: [
-"AI-powered drug discovery";
+"
 "Genetic sequence analysis",
 "Protein structure prediction",
 "CRISPR gene editing",
 "Synthetic biology design",
 "Biomolecular simulation",
 "Drug toxicity prediction",
-"Personalized medicine algorithms";
+"
 ],
 benefits: [
-"10x faster drug discovery";
+"
 "Precision medicine capabilities",
 "Reduced research costs",
 "Enhanced genetic understanding",
 "Custom biological solutions",
-"Disease prevention strategies";
+"
 ],
 targetAudience: [
-"Pharmaceutical companies";
+"
 "Biotech startups",
 "Research institutions",
 "Healthcare providers",
 "Agricultural companies",
-"Environmental organizations";
+"
 ],
 tags: ["Biotechnology", "AI", "Drug Discovery", "Genetic Engineering", "Synthetic Biology", "Precision Medicine"],
 contactInfo: {
@@ -155,12 +155,12 @@ freeTier: false;
 trialPeriod: "45 days";,
 innovationScore: 97;,
 useCases: [
-"Drug discovery and development";
+"
 "Genetic disease treatment",
 "Agricultural biotechnology",
 "Environmental bioremediation",
 "Personalized medicine",
-"Vaccine development";
+"
 ],
 compliance: ["FDA", "EMA", "GMP", "ISO 13485", "HIPAA", "CLIA"],
 scalability: "Unlimited biological data";,
@@ -180,30 +180,30 @@ pricing: "Enterprise";
 price: 40000;,
 pricingModel: "monthly";,
 features: [
-"Atomic-scale manufacturing";
+"
 "Quantum materials synthesis",
 "Nanostructure design",
 "Molecular assembly",
 "Nanoscale imaging",
 "Quantum dot fabrication",
 "Carbon nanotube production",
-"Graphene manufacturing";
+"
 ],
 benefits: [
-"Atomic precision manufacturing";
+"
 "Revolutionary material properties",
 "Quantum computing materials",
 "Enhanced product performance",
 "Sustainable manufacturing",
-"Breakthrough innovations";
+"
 ],
 targetAudience: [
-"Semiconductor companies";
+"
 "Materials science firms",
 "Electronics manufacturers",
 "Aerospace companies",
 "Medical device companies",
-"Research institutions";
+"
 ],
 tags: ["Nanotechnology", "Manufacturing", "Quantum Materials", "Atomic Precision", "Materials Science", "Innovation"],
 contactInfo: {
@@ -220,12 +220,12 @@ freeTier: false;
 trialPeriod: "60 days";,
 innovationScore: 98;,
 useCases: [
-"Quantum computer components";
+"
 "Advanced electronics",
 "Medical devices",
 "Aerospace materials",
 "Energy storage",
-"Environmental sensors";
+"
 ],
 compliance: ["ISO 9001", "AS9100", "FDA", "CE", "RoHS", "REACH"],
 scalability: "Atomic-scale precision";,
@@ -245,30 +245,30 @@ pricing: "Enterprise";
 price: 30000;,
 pricingModel: "monthly";,
 features: [
-"Quantum key distribution";
+"
 "Quantum entanglement networks",
 "Quantum repeaters",
 "Quantum memory systems",
 "Quantum routing protocols",
 "Quantum network security",
 "Quantum internet protocols",
-"Quantum cloud services";
+"
 ],
 benefits: [
-"Unbreakable encryption";
+"
 "Quantum advantage in networking",
 "Future-proof security",
 "Quantum computing integration",
 "Global quantum infrastructure",
-"Revolutionary communication";
+"
 ],
 targetAudience: [
-"Government agencies";
+"
 "Financial institutions",
 "Defense contractors",
 "Telecommunications",
 "Healthcare organizations",
-"Research institutions";
+"
 ],
 tags: ["Quantum Internet", "Quantum Communication", "Quantum Security", "Quantum Networks", "Encryption", "Future Tech"],
 contactInfo: {
@@ -285,12 +285,12 @@ freeTier: false;
 trialPeriod: "45 days";,
 innovationScore: 99;,
 useCases: [
-"Government communications";
+"
 "Financial transactions",
 "Military communications",
 "Healthcare data",
 "Critical infrastructure",
-"Quantum computing networks";
+"
 ],
 compliance: ["NIST", "FIPS", "FedRAMP", "SOC 2", "ISO 27001"],
 scalability: "Global quantum network";,
@@ -310,30 +310,30 @@ pricing: "Premium";
 price: 25000;,
 pricingModel: "monthly";,
 features: [
-"Neural signal processing";
+"
 "Brain activity decoding",
 "Thought-to-text conversion",
 "Neural control interfaces",
 "Brain state monitoring",
 "Cognitive enhancement",
 "Neural rehabilitation",
-"AI-brain integration";
+"
 ],
 benefits: [
-"Direct brain control";
+"
 "Enhanced human capabilities",
 "Medical rehabilitation",
 "Cognitive enhancement",
 "Accessibility solutions",
-"Human-AI symbiosis";
+"
 ],
 targetAudience: [
-"Healthcare providers";
+"
 "Research institutions",
 "Gaming companies",
 "Accessibility companies",
 "Defense contractors",
-"Neuroscience labs";
+"
 ],
 tags: ["Brain-Computer Interface", "Neural Technology", "Cognitive Enhancement", "Medical Technology", "Human-AI", "Accessibility"],
 contactInfo: {
@@ -350,12 +350,12 @@ freeTier: true;
 trialPeriod: "30 days";,
 innovationScore: 96;,
 useCases: [
-"Medical rehabilitation";
+"
 "Prosthetic control",
 "Communication assistance",
 "Gaming and entertainment",
 "Research and development",
-"Cognitive enhancement";
+"
 ],
 compliance: ["FDA", "CE", "ISO 13485", "HIPAA", "GDPR"],
 scalability: "Unlimited neural interfaces";,
@@ -375,30 +375,30 @@ pricing: "Enterprise";
 price: 100000;,
 pricingModel: "monthly";,
 features: [
-"Plasma confinement systems";
+"
 "Fusion reactor design",
 "Energy extraction systems",
 "Magnetic field control",
 "Plasma diagnostics",
 "Fusion fuel management",
 "Energy grid integration",
-"Safety monitoring systems";
+"
 ],
 benefits: [
-"Unlimited clean energy";
+"
 "Zero carbon emissions",
 "Energy independence",
 "Sustainable power generation",
 "Revolutionary energy economics",
-"Climate change solution";
+"
 ],
 targetAudience: [
-"Energy utilities";
+"
 "Government agencies",
 "Industrial companies",
 "Research institutions",
 "Space agencies",
-"Climate organizations";
+"
 ],
 tags: ["Fusion Energy", "Clean Energy", "Nuclear Physics", "Plasma Physics", "Sustainability", "Climate Solution"],
 contactInfo: {
@@ -415,12 +415,12 @@ freeTier: false;
 trialPeriod: "90 days";,
 innovationScore: 100;,
 useCases: [
-"Electricity generation";
+"
 "Industrial power",
 "Space propulsion",
 "Research and development",
 "Climate mitigation",
-"Energy security";
+"
 ],
 compliance: ["Nuclear regulations", "Environmental standards", "Safety protocols", "International treaties"],
 scalability: "Global energy grid";,
@@ -440,30 +440,30 @@ pricing: "Professional";
 price: 15000;,
 pricingModel: "monthly";,
 features: [
-"3D digital modeling";
+"
 "Real-time data integration",
 "Predictive analytics",
 "Simulation capabilities",
 "IoT sensor integration",
 "Virtual reality visualization",
 "Performance optimization",
-"Predictive maintenance";
+"
 ],
 benefits: [
-"Virtual system testing";
+"
 "Predictive maintenance",
 "Performance optimization",
 "Risk reduction",
 "Cost savings",
-"Innovation acceleration";
+"
 ],
 targetAudience: [
-"Manufacturing companies";
+"
 "Infrastructure operators",
 "Healthcare providers",
 "Smart city developers",
 "Aerospace companies",
-"Energy companies";
+"
 ],
 tags: ["Digital Twin", "IoT", "Simulation", "Predictive Analytics", "Virtual Reality", "Smart Cities"],
 contactInfo: {
@@ -480,12 +480,12 @@ freeTier: true;
 trialPeriod: "30 days";,
 innovationScore: 94;,
 useCases: [
-"Manufacturing optimization";
+"
 "Infrastructure monitoring",
 "Healthcare simulation",
 "Smart city planning",
 "Product development",
-"Predictive maintenance";
+"
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
 scalability: "Unlimited digital twins";,
@@ -505,30 +505,30 @@ pricing: "Professional";
 price: 20000;,
 pricingModel: "monthly";,
 features: [
-"True 3D holographic projection";
+"
 "Interactive holographic interfaces",
 "Telepresence capabilities",
 "Augmented reality integration",
 "Multi-user collaboration",
 "Real-time rendering",
 "Gesture recognition",
-"Spatial audio";
+"
 ],
 benefits: [
-"Immersive 3D experiences";
+"
 "Remote collaboration",
 "Enhanced visualization",
 "Interactive interfaces",
 "Future-ready technology",
-"Competitive advantage";
+"
 ],
 targetAudience: [
-"Entertainment companies";
+"
 "Education institutions",
 "Healthcare providers",
 "Architecture firms",
 "Engineering companies",
-"Research institutions";
+"
 ],
 tags: ["Holographic Display", "3D Technology", "Telepresence", "Augmented Reality", "Immersive Tech", "Visualization"],
 contactInfo: {
@@ -545,12 +545,12 @@ freeTier: true;
 trialPeriod: "30 days";,
 innovationScore: 95;,
 useCases: [
-"3D visualization";
+"
 "Remote collaboration",
 "Medical imaging",
 "Architectural design",
 "Entertainment",
-"Education and training";
+"
 ],
 compliance: ["Display standards", "Safety regulations", "Accessibility guidelines"],
 scalability: "Unlimited holographic displays";,
@@ -570,30 +570,30 @@ pricing: "Professional";
 price: 18000;,
 pricingModel: "monthly";,
 features: [
-"Quantum magnetometers";
+"
 "Quantum gravimeters",
 "Quantum imaging systems",
 "Quantum radar",
 "Quantum navigation",
 "Quantum thermometers",
 "Quantum clocks",
-"Quantum microscopes";
+"
 ],
 benefits: [
-"Ultra-precise measurements";
+"
 "Quantum advantage in sensing",
 "Revolutionary detection capabilities",
 "Enhanced accuracy",
 "New measurement possibilities",
-"Scientific breakthroughs";
+"
 ],
 targetAudience: [
-"Research institutions";
+"
 "Defense contractors",
 "Medical device companies",
 "Navigation companies",
 "Mining companies",
-"Environmental organizations";
+"
 ],
 tags: ["Quantum Sensing", "Quantum Technology", "Precision Measurement", "Detection", "Scientific Instruments", "Innovation"],
 contactInfo: {
@@ -610,12 +610,12 @@ freeTier: true;
 trialPeriod: "45 days";,
 innovationScore: 97;,
 useCases: [
-"Scientific research";
+"
 "Medical imaging",
 "Defense applications",
 "Environmental monitoring",
 "Navigation systems",
-"Material characterization";
+"
 ],
 compliance: ["Research standards", "Safety protocols", "International standards"],
 scalability: "Unlimited quantum sensors";,
@@ -635,30 +635,30 @@ pricing: "Enterprise";
 price: 25000;,
 pricingModel: "monthly";,
 features: [
-"Autonomous navigation";
+"
 "Computer vision systems",
 "Machine learning algorithms",
 "Sensor fusion",
 "Path planning",
 "Obstacle avoidance",
 "Multi-agent coordination",
-"Human-robot interaction";
+"
 ],
 benefits: [
-"Fully autonomous operation";
+"
 "Enhanced safety",
 "Increased efficiency",
 "24/7 operation",
 "Cost reduction",
-"Innovation leadership";
+"
 ],
 targetAudience: [
-"Manufacturing companies";
+"
 "Logistics companies",
 "Agricultural companies",
 "Healthcare providers",
 "Construction companies",
-"Service industries";
+"
 ],
 tags: ["Autonomous Systems", "Robotics", "AI", "Computer Vision", "Automation", "Innovation"],
 contactInfo: {
@@ -675,12 +675,12 @@ freeTier: true;
 trialPeriod: "30 days";,
 innovationScore: 96;,
 useCases: [
-"Manufacturing automation";
+"
 "Warehouse operations",
 "Agricultural automation",
 "Healthcare assistance",
 "Construction automation",
-"Service robotics";
+"
 ],
 compliance: ["Safety standards", "Industry regulations", "Quality standards"],
 scalability: "Unlimited autonomous systems";,
@@ -691,4 +691,4 @@ support: "Robotics expert support";,
 futurePotential: "General purpose robots; humanoid robots; swarm intelligence"}
 ];
 
-export default emergingTechServices2025;
+export export default emergingTechServices2025;

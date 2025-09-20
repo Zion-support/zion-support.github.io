@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export; interface; ComprehensivePricingPlan20o28 {
 id: string;name: string;description: string;price: number;currency: string;billingCycle: string;features: string[],benefits: string[],targetAudience: string[],includedServices: string[],addOns: {,name: stringpric;e: numberdescriptio;n: string;
@@ -32,10 +32,10 @@ name: "Advanced Analytics"pric;e: 50o0descriptio;n: "Enhanced; reporting; and in
 name: "Priority Support"pric;e: 30o0descriptio;n: "24/7; dedicated; support";}{
 name: "Custom Integrations"pric;e: 80o0descriptio;n: "Tailored; system; integrations";}
 ,  ],comparison: [;
-{ feature: "AI Services"include;d: truedetail;s: "5; core; services" };
-{ feature: "Analytics"include;d: truedetail;s: "Basic reporting" };
-{ feature: "Support"include;d: truedetail;s: "Email support" };
-{ feature: "Customization"include;d: truedetail;s: "Basic customization" };
+{ feature: "AI Services"include;d: truedetail;s: "5; core; services" }
+{ feature: "Analytics"include;d: truedetail;s: "Basic reporting" }
+{ feature: "Support"include;d: truedetail;s: "Email support" }
+{ feature: "Customization"include;d: truedetail;s: "Basic customization" }
 { feature: "Training"include;d: truedetail;s: "Standard onboarding" }{ feature: "Security"include;d: truedetail;s: "Basic compliance" }
 ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
@@ -61,12 +61,12 @@ name: "Space; Technology; Platform"price: 80o00descriptio;n: "Advanced; space; t
 name: "Biotechnology Platform"pric;e: 60o00descriptio;n: "AI-powered; biotechnology; solutions";}{
 name: "Autonomous; Vehicles; Platform"price: 10o000descriptio;n: "Self-driving; technology; solutions";}
 ,  ],comparison: [;
-{ feature: "AI Services"include;d: truedetail;s: "15+ advanced services" };
-{ feature: "Analytics"include;d: truedetail;s: "Advanced reporting" };
-{ feature: "Support"include;d: truedetail;s: "Priority support" };
-{ feature: "Customization"include;d: truedetail;s: "Advanced customization" };
-{ feature: "Training"include;d: truedetail;s: "Comprehensive training" };
-{ feature: "Security"include;d: truedetail;s: "Advanced security" };
+{ feature: "AI Services"include;d: truedetail;s: "15+ advanced services" }
+{ feature: "Analytics"include;d: truedetail;s: "Advanced reporting" }
+{ feature: "Support"include;d: truedetail;s: "Priority support" }
+{ feature: "Customization"include;d: truedetail;s: "Advanced customization" }
+{ feature: "Training"include;d: truedetail;s: "Comprehensive training" }
+{ feature: "Security"include;d: truedetail;s: "Advanced security" }
 { feature: "API Access"include;d: truedetail;s: "Full; API; access" }{ feature: "Performance"include;d: truedetail;s: "Optimized performance" }
 ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
@@ -92,16 +92,16 @@ name: "White-label Solutions"pric;e: 20o000descriptio;n: "Branded; solutions; fo
 name: "Advanced R&D"pric;e: 250o00descriptio;n: "Custom; research; and development";}{
 name: "Quantum; Internet; Access"price: 30o000descriptio;n: "Quantum; internet; platform access";}
 ,  ],comparison: [;
-{ feature: "AI Services"include;d: truedetail;s: "All 25+ services" };
-{ feature: "Analytics"include;d: truedetail;s: "Enterprise analytics" };
-{ feature: "Support"include;d: truedetail;s: "24/7; dedicated; support" };
-{ feature: "Customization"include;d: truedetail;s: "Full customization" };
-{ feature: "Training"include;d: truedetail;s: "Comprehensive training" };
-{ feature: "Security"include;d: truedetail;s: "Enterprise security" };
-{ feature: "API Access"include;d: truedetail;s: "Full; API; access" };
-{ feature: "Performance"include;d: truedetail;s: "Optimized performance" };
-{ feature: "Custom Development"include;d: truedetail;s: "Custom solutions" };
-{ feature: "White-label"include;d: truedetail;s: "Branded solutions" };
+{ feature: "AI Services"include;d: truedetail;s: "All 25+ services" }
+{ feature: "Analytics"include;d: truedetail;s: "Enterprise analytics" }
+{ feature: "Support"include;d: truedetail;s: "24/7; dedicated; support" }
+{ feature: "Customization"include;d: truedetail;s: "Full customization" }
+{ feature: "Training"include;d: truedetail;s: "Comprehensive training" }
+{ feature: "Security"include;d: truedetail;s: "Enterprise security" }
+{ feature: "API Access"include;d: truedetail;s: "Full; API; access" }
+{ feature: "Performance"include;d: truedetail;s: "Optimized performance" }
+{ feature: "Custom Development"include;d: truedetail;s: "Custom solutions" }
+{ feature: "White-label"include;d: truedetail;s: "Branded solutions" }
 { feature: "SLA Guarantees"include;d: truedetail;s: "Performance guarantees" }{ feature: "Compliance"include;d: truedetail;s: "Full compliance" }
 ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
@@ -151,7 +151,7 @@ i;d: "ai-renewable-energy",name: "AI; Renewable; Energy Platform",description: "
 id: "ai-climate-technology",name: "AI; Climate; Technology Platform",description: "Advanced; climate; monitoring and; mitigation; with AI",basePrice: 160o00;marketPrice: "$16;0o00 - $55;0o00/month",roi: "450-70o0%",features: ["AI; climate; modeling", "Carbon tracking""Risk; assessment"]benefits: ["Improve; climate; predictions by 50%""Reduce; carbon; emissions by; 40%"];},{
 id: "ai-agricultural-technology",name: "AI; Agricultural; Technology Platform",description: "Revolutionary; agriculture; with AI optimization",basePrice: 650o0;marketPrice: "$6;50o0 - $20;0o00/month",roi: "250-40o0%",features: ["AI; crop; monitoring", "Soil analysis""Automated; irrigation"]benefits: ["Increase; crop; yields by 35%""Reduce; water; usage by; 40%"];}
 ];
-};
+}
 ],export; const; MARKET_ANALYSIS_20o28 = {
 totalMarketSize: "$2.5; trillion; by 20o28",aiServicesGrowth: "35% CAGR",quantumComputingMarket: "$65; billion; by 20o30",blockchainMarket: "$48; billion; by 20o28",autonomousVehiclesMarket: "$95; billion; by 20o28",spaceTechnologyMarket: "$75; billion; by 20o28",biotechnologyMarket: "$85; billion; by 20o28",renewableEnergyMarket: "$62; billion; by 20o28",climateTechnologyMarket: "$55; billion; by 20o28",keyTrends: [;
 "AI-first; business; transformation","Quantum; computing; commercialization","Autonomous; systems; proliferation","Sustainable; technology; adoption","Space; technology; democratization","Biotechnology revolution","Blockchain; mainstream; adoption""Climate; technology; acceleration";

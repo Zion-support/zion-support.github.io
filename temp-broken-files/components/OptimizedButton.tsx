@@ -1,4 +1,4 @@
-import React from "react;";
+import React from "
 
 interface ButtonProps {children: React.ReactNode;
 onClick?: () => void;
@@ -19,11 +19,11 @@ className={`btn btn-${variant}`}
 onClick={onClick}
 disabled={disabled}
 aria-disabled={disabled}
->;
+>
 {children}
-</button>;
-);
-});
+</button>
+)
+})
 
-OptimizedButton.displayName = "OptimizedButton";
-<//button><///button>;
+OptimizedButton.displayName = "
+<//button><///button>

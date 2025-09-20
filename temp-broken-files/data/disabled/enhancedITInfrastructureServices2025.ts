@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface ITInfrastructureService {
 id: number;
@@ -9,10 +9,10 @@ description: string;
 pricing: string;
 price: number;
 pricingModel: string;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: {
 phone: string;
 email: string;,
@@ -24,7 +24,7 @@ address: string;
 website: string;,
 address: string;};
 marketPrice: string;
-competitors: string[];
+competitors: string[[];]
 roi: string;
 setupTime: string;
 integrations: string[];
@@ -45,22 +45,22 @@ pricing: "Enterprise";
 price: 4500;,
 pricingModel: "monthly";,
 features: [
-"Continuous identity verification";
+"
 "Micro-segmentation",
 "Least privilege access",
 "Real-time threat detection",
 "Behavioral analytics",
 "Automated response",
 "Compliance reporting",
-"Multi-factor authentication";
+"
 ],
 benefits: [
-"Eliminate network perimeter attacks";
+"
 "Reduce breach impact by 90%",
 "Compliance with NIST framework",
 "Improved security posture",
 "Reduced attack surface",
-"Enhanced visibility";
+"
 ],
 targetAudience: ["Financial services", "Healthcare", "Government", "Defense contractors", "Critical infrastructure"],
 tags: ["Zero-Trust", "Network Security", "Identity Management", "Compliance", "Threat Detection"],
@@ -87,22 +87,22 @@ pricing: "Professional";
 price: 3200;,
 pricingModel: "monthly";,
 features: [
-"AI-powered resource optimization";
+"
 "Automated scaling",
 "Integrated backup and DR",
 "Real-time monitoring",
 "Predictive maintenance",
 "Multi-cloud integration",
 "Disaster recovery automation",
-"Performance analytics";
+"
 ],
 benefits: [
-"50% reduction in infrastructure costs";
+"
 "90% faster deployment",
 "Simplified management",
 "Improved performance",
 "Reduced complexity",
-"Better resource utilization";
+"
 ],
 targetAudience: ["Enterprise companies", "Data centers", "Cloud providers", "Managed service providers", "Large organizations"],
 tags: ["Hyperconverged", "Infrastructure", "AI", "Automation", "Cloud"],
@@ -129,22 +129,22 @@ pricing: "Professional";
 price: 2800;,
 pricingModel: "monthly";,
 features: [
-"Private 5G core network";
+"
 "Ultra-low latency",
 "Massive IoT support",
 "Network slicing",
 "Edge computing integration",
 "Real-time analytics",
 "Security management",
-"Performance monitoring";
+"
 ],
 benefits: [
-"10x faster data transfer";
+"
 "Ultra-low latency (1ms)",
 "Massive IoT device support",
 "Enhanced security",
 "Network slicing capabilities",
-"Future-proof infrastructure";
+"
 ],
 targetAudience: ["Manufacturing", "Automotive", "Healthcare", "Smart cities", "Logistics", "Mining"],
 tags: ["5G", "Private Networks", "IoT", "Edge Computing", "Industrial"],
@@ -171,22 +171,22 @@ pricing: "Enterprise";
 price: 5500;,
 pricingModel: "monthly";,
 features: [
-"Quantum-ready infrastructure";
+"
 "Hybrid quantum-classical processing",
 "Quantum-safe encryption",
 "Advanced cooling systems",
 "Energy optimization",
 "Quantum network connectivity",
 "Research lab integration",
-"Quantum software stack";
+"
 ],
 benefits: [
-"Future-proof infrastructure";
+"
 "Quantum advantage preparation",
 "Research collaboration",
 "Innovation leadership",
 "Competitive edge",
-"Long-term investment";
+"
 ],
 targetAudience: ["Research institutions", "Government agencies", "Tech companies", "Pharmaceutical companies", "Financial services"],
 tags: ["Quantum Computing", "Data Center", "Research", "Innovation", "Future Tech"],
@@ -213,22 +213,22 @@ pricing: "Professional";
 price: 2400;,
 pricingModel: "monthly";,
 features: [
-"Distributed edge orchestration";
+"
 "Intelligent workload placement",
 "Real-time data processing",
 "Edge-to-cloud synchronization",
 "Performance optimization",
 "Resource management",
 "Security enforcement",
-"Monitoring and analytics";
+"
 ],
 benefits: [
-"80% reduction in latency";
+"
 "Lower bandwidth costs",
 "Real-time processing",
 "Scalable edge deployment",
 "Cost optimization",
-"Performance improvement";
+"
 ],
 targetAudience: ["IoT companies", "Manufacturing", "Retail chains", "Smart cities", "Telecommunications"],
 tags: ["Edge Computing", "Distributed Systems", "IoT", "Performance", "Orchestration"],
@@ -255,22 +255,22 @@ pricing: "Professional";
 price: 3800;,
 pricingModel: "monthly";,
 features: [
-"Renewable energy integration";
+"
 "Advanced cooling systems",
 "Energy efficiency optimization",
 "Carbon footprint tracking",
 "Waste heat recycling",
 "Sustainable materials",
 "Green certifications",
-"Environmental reporting";
+"
 ],
 benefits: [
-"Reduced carbon footprint";
+"
 "Lower energy costs",
 "Regulatory compliance",
 "Sustainability leadership",
 "Brand enhancement",
-"Stakeholder engagement";
+"
 ],
 targetAudience: ["Environmentally conscious companies", "Government agencies", "Educational institutions", "Healthcare", "Financial services"],
 tags: ["Green Technology", "Sustainability", "Data Center", "Energy Efficiency", "Environmental"],
@@ -297,22 +297,22 @@ pricing: "Professional";
 price: 2600;,
 pricingModel: "monthly";,
 features: [
-"Predictive maintenance";
+"
 "Automated problem resolution",
 "Intelligent alerting",
 "Performance optimization",
 "Capacity planning",
 "Root cause analysis",
 "Automated remediation",
-"Performance analytics";
+"
 ],
 benefits: [
-"90% reduction in downtime";
+"
 "70% faster problem resolution",
 "Proactive issue prevention",
 "Improved performance",
 "Cost reduction",
-"Better user experience";
+"
 ],
 targetAudience: ["Enterprise companies", "Managed service providers", "Data centers", "Cloud providers", "Large organizations"],
 tags: ["AI Operations", "IT Operations", "Predictive Maintenance", "Automation", "Performance"],
@@ -339,22 +339,22 @@ pricing: "Enterprise";
 price: 3200;,
 pricingModel: "monthly";,
 features: [
-"Multi-blockchain support";
+"
 "Smart contract deployment",
 "Consensus mechanisms",
 "Scalability solutions",
 "Security frameworks",
 "Interoperability",
 "Governance tools",
-"Analytics and monitoring";
+"
 ],
 benefits: [
-"Trust and transparency";
+"
 "Reduced intermediaries",
 "Enhanced security",
 "Cost reduction",
 "Process automation",
-"Innovation leadership";
+"
 ],
 targetAudience: ["Financial services", "Supply chain companies", "Healthcare", "Government", "Real estate", "Legal services"],
 tags: ["Blockchain", "Smart Contracts", "Distributed Ledger", "Cryptocurrency", "Web3"],
@@ -381,22 +381,22 @@ pricing: "Professional";
 price: 1800;,
 pricingModel: "monthly";,
 features: [
-"Device provisioning";
+"
 "Real-time monitoring",
 "Data processing",
 "Edge computing",
 "Security management",
 "Scalability solutions",
 "Analytics platform",
-"Integration APIs";
+"
 ],
 benefits: [
-"Rapid IoT deployment";
+"
 "Real-time insights",
 "Scalable infrastructure",
 "Enhanced security",
 "Cost optimization",
-"Performance improvement";
+"
 ],
 targetAudience: ["Manufacturing", "Smart cities", "Healthcare", "Retail", "Agriculture", "Transportation"],
 tags: ["IoT", "Device Management", "Edge Computing", "Data Processing", "Analytics"],
@@ -423,22 +423,22 @@ pricing: "Professional";
 price: 2900;,
 pricingModel: "monthly";,
 features: [
-"Multi-cloud management";
+"
 "Workload orchestration",
 "Cost optimization",
 "Performance monitoring",
 "Security management",
 "Compliance reporting",
 "Automated scaling",
-"Disaster recovery";
+"
 ],
 benefits: [
-"Optimized cloud costs";
+"
 "Improved performance",
 "Enhanced security",
 "Better compliance",
 "Reduced complexity",
-"Flexibility and choice";
+"
 ],
 targetAudience: ["Enterprise companies", "Multi-cloud users", "Hybrid cloud adopters", "Cloud-first organizations"],
 tags: ["Hybrid Cloud", "Multi-cloud", "Orchestration", "Cost Optimization", "Performance"],
@@ -458,4 +458,4 @@ certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "VMware"];
 }
 ];
 
-export default enhancedITInfrastructureServices2025;
+export export default enhancedITInfrastructureServices2025;

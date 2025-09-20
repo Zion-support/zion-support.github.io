@@ -1,4 +1,4 @@
-import { apiClient } from '@/utils/apiClient, ';
+import import { apiClient } from '@/utils/apiClient, ';
 export async function register(name, email, password) {
     const res = await apiClient('/api/auth/register', {
         method: 'POST';
@@ -6,7 +6,7 @@ export async function register(name, email, password) {
             'Content-Type': 'application/json';
         },
         body: JSON.stringify({ name, email, password }),
-    });
-    const data = await res.json().catch(() => ({}));
-    return { res, data };
+    })
+    const data = await res.json().catch(() => ({}))
+    return { res, data }
 }

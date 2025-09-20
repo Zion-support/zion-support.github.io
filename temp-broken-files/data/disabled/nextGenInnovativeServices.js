@@ -5,8 +5,8 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         category: "AI & Financial Services";
         subcategory: "Credit Assessment";
         price: 2500;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
             "Alternative data analysis (social media, utility bills, mobile usage)",
             "Real-time credit scoring",
@@ -18,29 +18,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Automated decision engine"
         ],
         benefits: [
-            "Increase approval rates by 40% while reducing defaults";
+            "
             "Reduce manual review time by 80%",
             "Access to underserved markets",
             "Real-time risk assessment",
             "Regulatory compliance automation"
         ],
         useCases: [
-            "Digital lending platforms";
+            "
             "Microfinance institutions",
             "Credit unions",
             "Fintech startups",
             "Traditional banks"
         ],
         targetAudience: [
-            "Lending institutions";
+            "
             "Credit analysts",
             "Risk managers",
             "Fintech companies",
             "Financial advisors"
         ],
         tags: ["AI", "Credit Scoring", "Risk Assessment", "Fintech", "Machine Learning", "Alternative Data"],
-        estimatedDelivery: "3-4 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$2,500 - $8,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -57,14 +57,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-medical-imaging";
         implementationTime: "3-4 weeks"};
     {
-        id: "ai-medical-imaging";
-        title: "AI Medical Imaging Diagnosis Assistant";
+        id: "
+        title: "
         description: "Advanced medical imaging analysis platform using deep learning to assist radiologists in detecting and diagnosing diseases from X-rays, CT scans, and MRIs.",
-        category: "AI & Healthcare";
-        subcategory: "Medical Imaging";
+        category: "
+        subcategory: "
         price: 3500;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
             "Multi-modality image analysis (X-ray, CT, MRI, ultrasound)",
             "Disease detection algorithms",
@@ -76,29 +76,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Clinical workflow integration"
         ],
         benefits: [
-            "Improve diagnostic accuracy by 25%";
+            "
             "Reduce radiologist workload by 30%",
             "Faster diagnosis and treatment",
             "Reduced healthcare costs",
             "Enhanced patient outcomes"
         ],
         useCases: [
-            "Hospitals and medical centers";
+            "
             "Radiology practices",
             "Telemedicine platforms",
             "Medical research institutions",
             "Healthcare startups"
         ],
         targetAudience: [
-            "Radiologists";
+            "
             "Hospitals",
             "Medical imaging centers",
             "Healthcare IT professionals",
             "Medical device companies"
         ],
         tags: ["AI", "Medical Imaging", "Healthcare", "Deep Learning", "Radiology", "Diagnosis"],
-        estimatedDelivery: "6-8 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$3,500 - $12,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -115,16 +115,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-supply-chain-optimization";
         implementationTime: "6-8 weeks"};
     {
-        id: "ai-supply-chain-optimization";
-        title: "AI Supply Chain Optimization Platform";
+        id: "
+        title: "
         description: "Intelligent supply chain management system that uses AI to optimize inventory, predict demand, and streamline logistics operations across global networks.",
-        category: "AI & Supply Chain";
-        subcategory: "Logistics Optimization";
+        category: "
+        subcategory: "
         price: 1800;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Demand forecasting and planning";
+            "
             "Inventory optimization algorithms",
             "Route optimization and scheduling",
             "Supplier performance analytics",
@@ -134,29 +134,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Sustainability metrics"
         ],
         benefits: [
-            "Reduce inventory costs by 20-30%";
+            "
             "Improve delivery times by 25%",
             "Increase supply chain visibility",
             "Reduce waste and carbon footprint",
             "Enhance customer satisfaction"
         ],
         useCases: [
-            "Manufacturing companies";
+            "
             "Retail chains",
             "E-commerce platforms",
             "Logistics providers",
             "Distribution centers"
         ],
         targetAudience: [
-            "Supply chain managers";
+            "
             "Operations directors",
             "Logistics coordinators",
             "Procurement specialists",
             "Business analysts"
         ],
         tags: ["AI", "Supply Chain", "Logistics", "Optimization", "Inventory Management", "Demand Forecasting"],
-        estimatedDelivery: "4-6 weeks";
-        supportLevel: "premium";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$1,800 - $6,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -173,16 +173,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-energy-optimization";
         implementationTime: "4-6 weeks"};
     {
-        id: "ai-energy-optimization";
-        title: "AI Energy Optimization Platform";
+        id: "
+        title: "
         description: "Smart energy management system that uses AI to optimize power consumption, integrate renewable energy sources, and reduce operational costs for commercial buildings.",
-        category: "AI & Energy Management";
-        subcategory: "Smart Grid";
+        category: "
+        subcategory: "
         price: 2200;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Real-time energy consumption monitoring";
+            "
             "Predictive maintenance scheduling",
             "Renewable energy integration",
             "Demand response optimization",
@@ -192,29 +192,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Mobile app control"
         ],
         benefits: [
-            "Reduce energy costs by 15-25%";
+            "
             "Improve operational efficiency",
             "Meet sustainability goals",
             "Enhance building value",
             "Comply with energy regulations"
         ],
         useCases: [
-            "Commercial buildings";
+            "
             "Industrial facilities",
             "Data centers",
             "Shopping centers",
             "Office complexes"
         ],
         targetAudience: [
-            "Facility managers";
+            "
             "Energy consultants",
             "Building owners",
             "Sustainability officers",
             "Property managers"
         ],
         tags: ["AI", "Energy Management", "Smart Grid", "Sustainability", "IoT", "Building Automation"],
-        estimatedDelivery: "5-7 weeks";
-        supportLevel: "premium";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$2,200 - $7,500/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -231,16 +231,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-legal-document-analysis";
         implementationTime: "5-7 weeks"};
     {
-        id: "ai-legal-document-analysis";
-        title: "AI Legal Document Analysis Platform";
+        id: "
+        title: "
         description: "Intelligent legal document review system that uses natural language processing to analyze contracts, identify risks, and ensure compliance with legal requirements.",
-        category: "AI & Legal Tech";
-        subcategory: "Document Review";
+        category: "
+        subcategory: "
         price: 2800;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Contract analysis and risk assessment";
+            "
             "Legal compliance checking",
             "Document comparison and version control",
             "Automated clause extraction",
@@ -250,29 +250,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Audit trail and reporting"
         ],
         benefits: [
-            "Reduce document review time by 70%";
+            "
             "Improve risk detection accuracy",
             "Ensure regulatory compliance",
             "Reduce legal costs",
             "Enhance contract quality"
         ],
         useCases: [
-            "Law firms";
+            "
             "Corporate legal departments",
             "Compliance teams",
             "Contract managers",
             "Legal consultants"
         ],
         targetAudience: [
-            "Attorneys and paralegals";
+            "
             "Legal operations managers",
             "Compliance officers",
             "Contract administrators",
             "Risk managers"
         ],
         tags: ["AI", "Legal Tech", "Document Analysis", "Compliance", "Risk Assessment", "NLP"],
-        estimatedDelivery: "4-5 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$2,800 - $9,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -289,16 +289,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-real-estate-analytics";
         implementationTime: "4-5 weeks"};
     {
-        id: "ai-real-estate-analytics";
-        title: "AI Real Estate Analytics Platform";
+        id: "
+        title: "
         description: "Comprehensive real estate intelligence platform that uses AI to analyze market trends, property valuations, and investment opportunities across multiple markets.",
-        category: "AI & Real Estate";
-        subcategory: "Market Intelligence";
+        category: "
+        subcategory: "
         price: 1500;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Market trend analysis and forecasting";
+            "
             "Property valuation algorithms",
             "Investment opportunity scoring",
             "Comparative market analysis",
@@ -308,29 +308,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Mobile app access"
         ],
         benefits: [
-            "Improve investment decisions by 35%";
+            "
             "Reduce market research time by 60%",
             "Identify undervalued properties",
             "Optimize portfolio performance",
             "Stay ahead of market trends"
         ],
         useCases: [
-            "Real estate investors";
+            "
             "Property managers",
             "Real estate agents",
             "Investment firms",
             "Property developers"
         ],
         targetAudience: [
-            "Real estate investors";
+            "
             "Property managers",
             "Real estate agents",
             "Investment analysts",
             "Portfolio managers"
         ],
         tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Intelligence", "Valuation"],
-        estimatedDelivery: "3-4 weeks";
-        supportLevel: "standard";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$1,500 - $5,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -347,16 +347,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-personalized-learning";
         implementationTime: "3-4 weeks"};
     {
-        id: "ai-personalized-learning";
-        title: "AI Personalized Learning Platform";
+        id: "
+        title: "
         description: "Adaptive learning system that personalizes educational content and learning paths based on individual student performance, preferences, and learning styles.",
-        category: "AI & Education";
-        subcategory: "Adaptive Learning";
+        category: "
+        subcategory: "
         price: 1200;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Personalized learning paths";
+            "
             "Adaptive content delivery",
             "Progress tracking and analytics",
             "Performance assessment tools",
@@ -366,29 +366,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Parent and teacher dashboards"
         ],
         benefits: [
-            "Improve learning outcomes by 40%";
+            "
             "Increase student engagement",
             "Reduce learning time",
             "Personalize education at scale",
             "Track progress effectively"
         ],
         useCases: [
-            "K-12 schools";
+            "
             "Higher education institutions",
             "Corporate training programs",
             "Online learning platforms",
             "Tutoring services"
         ],
         targetAudience: [
-            "Educational institutions";
+            "
             "Teachers and instructors",
             "Training managers",
             "EdTech companies",
             "Learning consultants"
         ],
         tags: ["AI", "Education", "Adaptive Learning", "Personalization", "EdTech", "Learning Analytics"],
-        estimatedDelivery: "4-6 weeks";
-        supportLevel: "standard";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$1,200 - $4,500/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -405,16 +405,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-predictive-maintenance";
         implementationTime: "4-6 weeks"};
     {
-        id: "ai-predictive-maintenance";
-        title: "AI Predictive Maintenance Platform";
+        id: "
+        title: "
         description: "Industrial IoT platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.",
-        category: "AI & Industrial IoT";
-        subcategory: "Predictive Maintenance";
+        category: "
+        subcategory: "
         price: 3200;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Real-time equipment monitoring";
+            "
             "Failure prediction algorithms",
             "Maintenance scheduling optimization",
             "Performance analytics dashboard",
@@ -424,29 +424,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Mobile app for technicians"
         ],
         benefits: [
-            "Reduce unplanned downtime by 50%";
+            "
             "Lower maintenance costs by 25%",
             "Extend equipment lifespan",
             "Improve operational efficiency",
             "Enhance safety compliance"
         ],
         useCases: [
-            "Manufacturing plants";
+            "
             "Oil and gas facilities",
             "Power plants",
             "Mining operations",
             "Transportation fleets"
         ],
         targetAudience: [
-            "Maintenance managers";
+            "
             "Operations directors",
             "Plant managers",
             "Reliability engineers",
             "Facility managers"
         ],
         tags: ["AI", "IoT", "Predictive Maintenance", "Industrial", "Equipment Monitoring", "Analytics"],
-        estimatedDelivery: "6-8 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$3,200 - $12,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -463,16 +463,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-retail-optimization";
         implementationTime: "6-8 weeks"};
     {
-        id: "ai-retail-optimization";
-        title: "AI Retail Optimization Platform";
+        id: "
+        title: "
         description: "Intelligent retail management system that optimizes pricing, inventory, and customer experience using AI-powered analytics and machine learning.",
-        category: "AI & Retail";
-        subcategory: "Retail Analytics";
+        category: "
+        subcategory: "
         price: 1900;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Dynamic pricing optimization";
+            "
             "Demand forecasting",
             "Customer behavior analysis",
             "Inventory optimization",
@@ -482,29 +482,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Omnichannel integration"
         ],
         benefits: [
-            "Increase sales by 15-25%";
+            "
             "Reduce inventory costs by 20%",
             "Improve customer satisfaction",
             "Optimize pricing strategies",
             "Enhance marketing ROI"
         ],
         useCases: [
-            "Retail chains";
+            "
             "E-commerce platforms",
             "Department stores",
             "Specialty retailers",
             "Franchise operations"
         ],
         targetAudience: [
-            "Retail managers";
+            "
             "E-commerce directors",
             "Marketing managers",
             "Operations directors",
             "Business analysts"
         ],
         tags: ["AI", "Retail", "Analytics", "Pricing", "Inventory", "Customer Experience"],
-        estimatedDelivery: "4-5 weeks";
-        supportLevel: "premium";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$1,900 - $6,500/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -521,16 +521,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-logistics-optimization";
         implementationTime: "4-5 weeks"};
     {
-        id: "ai-logistics-optimization";
-        title: "AI Logistics Optimization Platform";
+        id: "
+        title: "
         description: "Advanced logistics management system that uses AI to optimize routes, reduce fuel costs, and improve delivery efficiency for transportation and logistics companies.",
-        category: "AI & Transportation";
-        subcategory: "Logistics";
+        category: "
+        subcategory: "
         price: 2100;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Route optimization algorithms";
+            "
             "Fleet management dashboard",
             "Fuel consumption optimization",
             "Real-time tracking and monitoring",
@@ -540,29 +540,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Mobile app for drivers"
         ],
         benefits: [
-            "Reduce fuel costs by 15-20%";
+            "
             "Improve delivery times by 25%",
             "Optimize fleet utilization",
             "Reduce carbon footprint",
             "Enhance customer satisfaction"
         ],
         useCases: [
-            "Transportation companies";
+            "
             "Delivery services",
             "Logistics providers",
             "E-commerce fulfillment",
             "Supply chain operations"
         ],
         targetAudience: [
-            "Logistics managers";
+            "
             "Fleet operators",
             "Transportation directors",
             "Operations managers",
             "Supply chain coordinators"
         ],
         tags: ["AI", "Logistics", "Transportation", "Route Optimization", "Fleet Management", "Analytics"],
-        estimatedDelivery: "5-6 weeks";
-        supportLevel: "premium";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$2,100 - $7,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -579,16 +579,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-hr-talent-management";
         implementationTime: "5-6 weeks"};
     {
-        id: "ai-hr-talent-management";
-        title: "AI HR Talent Management Platform";
+        id: "
+        title: "
         description: "Intelligent human resources platform that uses AI to streamline recruitment, improve employee engagement, and optimize workforce planning and development.",
-        category: "AI & Human Resources";
-        subcategory: "Talent Management";
+        category: "
+        subcategory: "
         price: 1600;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "AI-powered candidate screening";
+            "
             "Employee performance analytics",
             "Skills gap analysis",
             "Learning path recommendations",
@@ -598,29 +598,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Mobile app for employees"
         ],
         benefits: [
-            "Reduce hiring time by 40%";
+            "
             "Improve employee retention by 30%",
             "Enhance workforce productivity",
             "Optimize training programs",
             "Make data-driven HR decisions"
         ],
         useCases: [
-            "Large enterprises";
+            "
             "HR departments",
             "Recruitment agencies",
             "Training organizations",
             "Consulting firms"
         ],
         targetAudience: [
-            "HR managers";
+            "
             "Recruitment specialists",
             "Training coordinators",
             "Business leaders",
             "HR consultants"
         ],
         tags: ["AI", "HR", "Talent Management", "Recruitment", "Employee Engagement", "Analytics"],
-        estimatedDelivery: "4-6 weeks";
-        supportLevel: "premium";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$1,600 - $5,500/month",
         contactInfo: {
             phone: "+1 302 464 0950";
@@ -637,16 +637,16 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
     {id: "ai-marketing-automation";
         implementationTime: "4-6 weeks"};
     {
-        id: "ai-marketing-automation";
-        title: "AI Marketing Automation Pro";
+        id: "
+        title: "
         description: "Advanced marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI across all channels.",
-        category: "AI & Marketing";
-        subcategory: "Marketing Automation";
+        category: "
+        subcategory: "
         price: 1400;
-        currency: "$";
-        pricingModel: "monthly";
+        currency: "
+        pricingModel: "
         features: [
-            "Customer journey mapping";
+            "
             "Personalized content delivery",
             "Campaign optimization",
             "Lead scoring and nurturing",
@@ -656,29 +656,29 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
             "Integration with CRM systems"
         ],
         benefits: [
-            "Increase conversion rates by 35%";
+            "
             "Reduce marketing costs by 25%",
             "Improve customer engagement",
             "Personalize at scale",
             "Maximize marketing ROI"
         ],
         useCases: [
-            "Marketing agencies";
+            "
             "E-commerce businesses",
             "B2B companies",
             "SaaS platforms",
             "Retail brands"
         ],
         targetAudience: [
-            "Marketing managers";
+            "
             "Digital marketers",
             "Growth hackers",
             "Marketing directors",
             "Business owners"
         ],
         tags: ["AI", "Marketing", "Automation", "Personalization", "Analytics", "Customer Journey"],
-        estimatedDelivery: "3-5 weeks";
-        supportLevel: "standard";
+        estimatedDelivery: "
+        supportLevel: "
         marketPrice: "$1,400 - $5,000/month",
         contactInfo: {
             phone: "+1 302 464 0950";

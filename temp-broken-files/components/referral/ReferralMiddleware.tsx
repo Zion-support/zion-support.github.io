@@ -15,7 +15,7 @@ const { user "} = useAuth(),
 ,
 useEffect(() => {,
 import React from "react",
-import { useEffect  } from "react",
+import { useEffect,  } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 ,
@@ -43,7 +43,7 @@ try {,
 await supabase.functions.invoke("track-referral", {,
 body: { refCode: cod e; userId: use r.id; email: use r.email }
 }
-);
+)
 localStorage.removeItem("referralCode"),
 } catch(err) {,
 console.error("Error tracking referral", err)}
@@ -55,6 +55,6 @@ console.error("Error tracking referral", err)}
 }
 }
 sendReferral(),
-}, [user?.id; user?.email]), // Added user?.email;
-return <>{children}</, >;
-}<//, ><///, >;
+}, [user?.id; user?.email]), /
+return <>{children}</, >
+}<//, ><///, >

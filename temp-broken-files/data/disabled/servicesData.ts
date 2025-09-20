@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings, ";
+import { ProductListing } from "
 
 export const SERVICES: ProductListing[] = [
 {
@@ -17,7 +17,7 @@ avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=fo
 id: "tech-solutions";,
 avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100";},
 images: [
-"https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2023-12-10T14:48:00.000Z";
 aiScore: 95;,
@@ -42,7 +42,7 @@ id: "cloud-pro";
 name: "CloudPro Experts";,
 id: "cloud-pro";},
 images: [
-"https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2023-11-20T09:30:00.000Z";
 aiScore: 88;,
@@ -67,7 +67,7 @@ avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=fo
 id: "datamind";,
 avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100";},
 images: [
-"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-01-05T11:15:00.000Z";
 aiScore: 92;,
@@ -91,7 +91,7 @@ id: "secure-net";
 name: "SecureNet Team";,
 id: "secure-net";},
 images: [
-"https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2023-12-28T16:22:00.000Z";
 aiScore: 89;,
@@ -116,7 +116,7 @@ id: "modernize-it";
 name: "ModernizeIT Consulting";,
 id: "modernize-it";},
 images: [
-"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2023-11-10T08:45:00.000Z";
 aiScore: 86;,
@@ -141,7 +141,7 @@ avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=forma
 id: "ai-future";,
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";},
 images: [
-"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-02-02T10:30:00.000Z";
 aiScore: 94;,
@@ -165,7 +165,7 @@ id: "pipeline-pros";
 name: "Pipeline Pros";,
 id: "pipeline-pros";},
 images: [
-"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-02-20T09:00:00.000Z";
 aiScore: 90;,
@@ -189,7 +189,7 @@ id: "saasify";
 name: "SaaSify Corp";,
 id: "saasify";},
 images: [
-"https://images.unsplash.com/photo-1556485687-b8553ddfbc05?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-03-01T12:00:00.000Z";
 aiScore: 91;,
@@ -213,7 +213,7 @@ id: "modeltune";
 name: "ModelTune Labs";,
 id: "modeltune";},
 images: [
-"https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-02-10T08:00:00.000Z";
 aiScore: 93;,
@@ -237,7 +237,7 @@ id: "block-advisors";
 name: "BlockAdvisors";,
 id: "block-advisors";},
 images: [
-"https://images.unsplash.com/photo-1518544881698-88d0d5b4b04b?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-01-25T15:30:00.000Z";
 aiScore: 89;,

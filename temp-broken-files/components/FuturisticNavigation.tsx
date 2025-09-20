@@ -15,4 +15,4 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
-export default FuturisticNavigation,;<//div><///div>
+export export default FuturisticNavigation,;<//div><///div>

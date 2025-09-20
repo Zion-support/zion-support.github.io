@@ -2,7 +2,7 @@ export const ENHANCED_AI_SERVICES = [
     {id: "ai-chatbot-platform";
         title: "AI Chatbot Platform";
         description: "Intelligent conversational AI platform for customer service, lead generation, and business automation.",
-        category: "Conversational AI";
+        category: "
         pricing: {
             monthly: 299;
             yearly: 2990;
@@ -10,7 +10,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with usage-based pricing"};
         features: [
-            "Natural language processing";
+            "
             "Multi-language support",
             "Integration with CRM systems",
             "Analytics and reporting",
@@ -18,13 +18,13 @@ export const ENHANCED_AI_SERVICES = [
             "Voice and text support"
         ],
         benefits: [
-            "Reduce customer service costs by 60%";
+            "
             "Improve response time by 90%",
             "Handle 70% of queries automatically",
             "Increase customer satisfaction by 45%"
         ],
         useCases: [
-            "Customer support automation";
+            "
             "Lead qualification",
             "FAQ handling",
             "Appointment scheduling",
@@ -40,23 +40,23 @@ export const ENHANCED_AI_SERVICES = [
             "Zendesk", "Intercom", "Slack", "Microsoft Teams"
         ],
         support: [
-            "24/7 technical support";
+            "
             "Custom training",
             "API documentation",
             "Implementation assistance"
         ],
-        link: "https://ziontechgroup.com/ai-chatbot-platform";
-        badge: "Popular";
-        icon: "💬";
+        link: "
+        badge: "
+        icon: "
         image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-content-generation-suite";
         image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-content-generation-suite";
-        title: "AI Content Generation Suite";
+        id: "
+        title: "
         description: "Comprehensive AI-powered content creation platform for marketing, SEO, and creative writing.",
-        category: "Content Generation";
+        category: "
         pricing: {
             monthly: 199;
             yearly: 1990;
@@ -64,7 +64,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with content volume tiers"};
         features: [
-            "Blog post generation";
+            "
             "Social media content",
             "Email marketing copy",
             "Product descriptions",
@@ -72,13 +72,13 @@ export const ENHANCED_AI_SERVICES = [
             "Multi-language support"
         ],
         benefits: [
-            "Save 20+ hours weekly on content creation";
+            "
             "Improve SEO rankings by 40%",
             "Increase engagement rates by 60%",
             "Reduce content costs by 70%"
         ],
         useCases: [
-            "Blog content creation";
+            "
             "Social media marketing",
             "Email campaigns",
             "E-commerce content",
@@ -94,22 +94,22 @@ export const ENHANCED_AI_SERVICES = [
             "Hootsuite", "HubSpot", "Salesforce"
         ],
         support: [
-            "Content strategy consultation";
+            "
             "SEO optimization guidance",
             "Training and workshops",
             "Priority support"
         ],
-        link: "https://ziontechgroup.com/ai-content-generation-suite";
-        icon: "✍️";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-image-generation-platform";
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-image-generation-platform";
-        title: "AI Image Generation Platform";
+        id: "
+        title: "
         description: "Advanced AI-powered image creation platform for marketing, design, and creative projects.",
-        category: "Computer Vision";
+        category: "
         pricing: {
             monthly: 149;
             yearly: 1490;
@@ -117,7 +117,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with image generation credits"};
         features: [
-            "Text-to-image generation";
+            "
             "Image editing and manipulation",
             "Style transfer capabilities",
             "Batch processing",
@@ -125,13 +125,13 @@ export const ENHANCED_AI_SERVICES = [
             "Commercial licensing"
         ],
         benefits: [
-            "Reduce design costs by 80%";
+            "
             "Accelerate creative workflows",
             "Generate unlimited variations",
             "Maintain brand consistency"
         ],
         useCases: [
-            "Marketing materials";
+            "
             "Product photography",
             "Social media graphics",
             "Website design",
@@ -147,22 +147,22 @@ export const ENHANCED_AI_SERVICES = [
             "WordPress", "Social media platforms"
         ],
         support: [
-            "Design consultation";
+            "
             "Technical support",
             "Training resources",
             "Custom model training"
         ],
-        link: "https://ziontechgroup.com/ai-image-generation-platform";
-        icon: "🎨";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-predictive-analytics";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-predictive-analytics";
-        title: "AI Predictive Analytics Platform";
-        description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.";
-        category: "Predictive Analytics";
+        id: "
+        title: "
+        description: "
+        category: "
         pricing: {
             monthly: 399;
             yearly: 3990;
@@ -170,7 +170,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with data volume tiers"};
         features: [
-            "Time series forecasting";
+            "
             "Predictive modeling",
             "Anomaly detection",
             "Risk assessment",
@@ -178,13 +178,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom algorithm training"
         ],
         benefits: [
-            "Improve decision-making accuracy by 65%";
+            "
             "Reduce operational risks by 40%",
             "Optimize resource allocation",
             "Identify new business opportunities"
         ],
         useCases: [
-            "Sales forecasting";
+            "
             "Demand planning",
             "Risk management",
             "Customer behavior prediction",
@@ -200,23 +200,23 @@ export const ENHANCED_AI_SERVICES = [
             "SQL databases", "Cloud platforms"
         ],
         support: [
-            "Data science consultation";
+            "
             "Model optimization",
             "Implementation support",
             "Training and certification"
         ],
-        link: "https://ziontechgroup.com/ai-predictive-analytics";
-        badge: "Featured";
-        icon: "🔮";
+        link: "
+        badge: "
+        icon: "
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-process-automation";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-process-automation";
-        title: "AI Process Automation Platform";
-        description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.";
-        category: "Process Automation";
+        id: "
+        title: "
+        description: "
+        category: "
         pricing: {
             monthly: 249;
             yearly: 2490;
@@ -224,7 +224,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with process complexity tiers"};
         features: [
-            "Intelligent document processing";
+            "
             "Workflow automation",
             "Decision automation",
             "Process optimization",
@@ -232,13 +232,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom workflow builder"
         ],
         benefits: [
-            "Reduce manual processing by 85%";
+            "
             "Improve process efficiency by 60%",
             "Reduce errors by 90%",
             "Accelerate process completion by 70%"
         ],
         useCases: [
-            "Invoice processing";
+            "
             "Customer onboarding",
             "Claims processing",
             "HR automation",
@@ -254,22 +254,22 @@ export const ENHANCED_AI_SERVICES = [
             "Microsoft Office", "Google Workspace"
         ],
         support: [
-            "Process analysis";
+            "
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
-        link: "https://ziontechgroup.com/ai-process-automation";
-        icon: "⚙️";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-customer-insights-platform";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-customer-insights-platform";
-        title: "AI Customer Insights Platform";
-        description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.";
-        category: "Customer Analytics";
+        id: "
+        title: "
+        description: "
+        category: "
         pricing: {
             monthly: 299;
             yearly: 2990;
@@ -277,7 +277,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with customer data volume tiers"};
         features: [
-            "Customer segmentation";
+            "
             "Behavioral analysis",
             "Churn prediction",
             "Lifetime value calculation",
@@ -285,13 +285,13 @@ export const ENHANCED_AI_SERVICES = [
             "Real-time insights"
         ],
         benefits: [
-            "Increase customer retention by 35%";
+            "
             "Improve customer lifetime value by 45%",
             "Reduce churn by 50%",
             "Enhance personalization effectiveness"
         ],
         useCases: [
-            "Customer retention";
+            "
             "Marketing personalization",
             "Product recommendations",
             "Customer service optimization",
@@ -307,22 +307,22 @@ export const ENHANCED_AI_SERVICES = [
             "Google Analytics", "Facebook Pixel"
         ],
         support: [
-            "Customer analytics consultation";
+            "
             "Implementation support",
             "Training and workshops",
             "Ongoing optimization"
         ],
-        link: "https://ziontechgroup.com/ai-customer-insights-platform";
-        icon: "👥";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-voice-assistant-platform";
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-voice-assistant-platform";
-        title: "AI Voice Assistant Platform";
+        id: "
+        title: "
         description: "Enterprise-grade voice assistant platform for customer service, internal operations, and accessibility.",
-        category: "Voice AI";
+        category: "
         pricing: {
             monthly: 199;
             yearly: 1990;
@@ -330,7 +330,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with usage-based pricing"};
         features: [
-            "Natural language understanding";
+            "
             "Multi-language support",
             "Voice biometrics",
             "Custom voice training",
@@ -338,13 +338,13 @@ export const ENHANCED_AI_SERVICES = [
             "Analytics dashboard"
         ],
         benefits: [
-            "Improve accessibility for all users";
+            "
             "Reduce call center costs by 40%",
             "Enhance customer experience",
             "Increase operational efficiency"
         ],
         useCases: [
-            "Customer service calls";
+            "
             "Internal operations",
             "Accessibility solutions",
             "Smart home integration",
@@ -360,22 +360,22 @@ export const ENHANCED_AI_SERVICES = [
             "Mobile apps", "Web applications"
         ],
         support: [
-            "Voice design consultation";
+            "
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
-        link: "https://ziontechgroup.com/ai-voice-assistant-platform";
-        icon: "🎤";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-data-quality-platform";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-data-quality-platform";
-        title: "AI Data Quality Platform";
+        id: "
+        title: "
         description: "Intelligent data quality management platform that automatically detects, cleans, and validates data.",
-        category: "Data Quality";
+        category: "
         pricing: {
             monthly: 179;
             yearly: 1790;
@@ -383,7 +383,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with data volume tiers"};
         features: [
-            "Automated data cleaning";
+            "
             "Quality scoring",
             "Duplicate detection",
             "Data validation rules",
@@ -391,13 +391,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom quality metrics"
         ],
         benefits: [
-            "Improve data accuracy by 90%";
+            "
             "Reduce data processing time by 70%",
             "Eliminate duplicate records",
             "Ensure compliance requirements"
         ],
         useCases: [
-            "Data migration";
+            "
             "CRM data cleaning",
             "Financial data validation",
             "Healthcare data quality",
@@ -413,22 +413,22 @@ export const ENHANCED_AI_SERVICES = [
             "ETL tools", "Data warehouses"
         ],
         support: [
-            "Data quality assessment";
+            "
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
-        link: "https://ziontechgroup.com/ai-data-quality-platform";
-        icon: "🧹";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-translation-platform";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-translation-platform";
-        title: "AI Translation Platform";
-        description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.";
-        category: "Language AI";
+        id: "
+        title: "
+        description: "
+        category: "
         pricing: {
             monthly: 129;
             yearly: 1290;
@@ -436,7 +436,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with translation volume tiers"};
         features: [
-            "100+ language support";
+            "
             "Industry-specific terminology",
             "Real-time translation",
             "Document translation",
@@ -444,13 +444,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom training"
         ],
         benefits: [
-            "Reduce translation costs by 60%";
+            "
             "Accelerate global expansion",
             "Improve communication accuracy",
             "Maintain brand consistency"
         ],
         useCases: [
-            "Website localization";
+            "
             "Document translation",
             "Customer support",
             "Marketing campaigns",
@@ -466,22 +466,22 @@ export const ENHANCED_AI_SERVICES = [
             "Microsoft Office", "Google Workspace"
         ],
         support: [
-            "Localization consultation";
+            "
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
-        link: "https://ziontechgroup.com/ai-translation-platform";
-        icon: "🌍";
+        link: "
+        icon: "
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
     {id: "ai-recommendation-engine";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
     {
-        id: "ai-recommendation-engine";
-        title: "AI Recommendation Engine";
-        description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.";
-        category: "Recommendation Systems";
+        id: "
+        title: "
+        description: "
+        category: "
         pricing: {
             monthly: 349;
             yearly: 3490;
@@ -489,7 +489,7 @@ export const ENHANCED_AI_SERVICES = [
             currency: "$";
             pricingModel: "Monthly subscription with recommendation volume tiers"};
         features: [
-            "Collaborative filtering";
+            "
             "Content-based filtering",
             "Real-time recommendations",
             "A/B testing",
@@ -497,13 +497,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom algorithms"
         ],
         benefits: [
-            "Increase conversion rates by 35%";
+            "
             "Improve user engagement by 50%",
             "Reduce bounce rates by 40%",
             "Enhance customer satisfaction"
         ],
         useCases: [
-            "E-commerce recommendations";
+            "
             "Content personalization",
             "Product suggestions",
             "Service recommendations",
@@ -519,7 +519,7 @@ export const ENHANCED_AI_SERVICES = [
             "Custom platforms", "Mobile apps"
         ],
         support: [
-            "Recommendation strategy";
+            "
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
@@ -530,11 +530,11 @@ export const ENHANCED_AI_SERVICES = [
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"}
 ];
     export const getAIServiceById = (id) => {
-    return ENHANCED_AI_SERVICES.find(service => service.id === id);
-};
+    return ENHANCED_AI_SERVICES.find(service => service.id === id)
+}
 export const getAIServicesByCategory = (category) => {
-    return ENHANCED_AI_SERVICES.filter(service => service.category === category);
-};
+    return ENHANCED_AI_SERVICES.filter(service => service.category === category)
+}
 export const getAIServiceCategories = () => {
-    return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
-};
+    return [[...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];]
+}

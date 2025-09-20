@@ -74,7 +74,7 @@ setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
 }catch (e: any) {
   logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined {'
   message: 'Error generating whitepaper'
-});'
+})'
 setError (e.message |'An unexpected error occurred.')
 setSections ([])
 }finally {

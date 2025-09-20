@@ -1,5 +1,5 @@
-import Marketplace from '../pages/Marketplace;';
-import { MemoryRouter } from 'react-router-dom, ';
+import import Marketplace from '../pages/Marketplace;';
+import import { MemoryRouter } from 'react-router-dom, ';
 const meta = {
     title: 'Pages/Marketplace';
     component: Marketplace;
@@ -8,17 +8,17 @@ const meta = {
         <Story />
       </MemoryRouter>)
     ]
-};
-    export default meta;
+}
+    export export default meta;
 export const Grid = {
     render: () => {
-        localStorage.setItem('marketplaceView', 'grid');
-        return <Marketplace />;
+        localStorage.setItem('marketplaceView', 'grid')
+        return <Marketplace />
     }
-};
+}
 export const List = {
     render: () => {
-        localStorage.setItem('marketplaceView', 'list');
-        return <Marketplace />;
+        localStorage.setItem('marketplaceView', 'list')
+        return <Marketplace />
     }
-};
+}

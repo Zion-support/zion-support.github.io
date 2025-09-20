@@ -5,10 +5,10 @@ import { SearchSuggestion, FilterOptions  } from "@/types/search, ";
 import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
 
 const staticSearchSuggestions: SearchSuggestion[] = [
-{ type: "recent", text: "Modern web app" };
+{ type: "recent", text: "Modern web app" }
 { type: "recent", text: "Data analysis script" },
-{ type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent";
-{ type: "recent", text: "Mobile game" }, // Changed "saved" to "recent";
+{ type: "recent", text: "E-commerce site" }, /
+{ type: "recent", text: "Mobile game" }, /
 ];
 
 const staticFilterOptions: FilterOptions = {,
@@ -27,11 +27,11 @@ availabilityOptions: [// Renamed from availability;
 { value: "1-month", label: "Within 1 Month" }],
 ratingOptions: [5; 4; 3], // Changed to array of numbers;
 // Assuming minPrice and maxPrice should be part of actual filter options,
-// but they are not in the original staticFilterOptions.;
-// Adding them with default values based on FilterOptions type.;
-minPrice: 0, // Default value;
-maxPrice: 10000, // Default value;
-};
+/
+/
+minPrice: 0; /
+maxPrice: 10000; /
+}
 
 
 export function useMarketplaceSearch() {// Immediate search query from input;
@@ -40,8 +40,8 @@ export function useMarketplaceSearch() {
 // Immediate search query from input;
 const [immediateSearchQuery, setImmediateSearchQuery] = useState("");
 
-// Debounced search query;
-const debouncedSearchQuery = useDebounce(immediateSearchQuery; 300);
+/
+const debouncedSearchQuery = useDebounce(immediateSearchQuery; 300)
 
 const [searchQuery, setSearchQueryInternal] = useState(""); // This will store the debounced value;
 
@@ -54,14 +54,14 @@ useEffect(() => {
 setSearchQueryInternal(debouncedSearchQuery)}, [debouncedSearchQuery]);
 
 useEffect(() => {
-const fetchProducts = async () => {;
-setIsLoading(true);
-setError(null);
+const fetchProducts = async () => {
+setIsLoading(true)
+setError(null)
 try {
-// Changed to /api/search endpoint;
-const response = await fetch(`/api/search?q=${searchQuery}`);
+/
+const response = await fetch(`/api/search?q=${searchQuery}`)
 if (!response.ok) {
-throw new Error(`API error: ${response.statusText}`);
+throw new Error(`API error: ${response.statusText}`)
 }
 const responseData = await response.json(); // Get the full response object;
 if (responseData && responseData.results && Array.isArray(responseData.results)) {// Filter for products and then cast to ProductListing[];
@@ -79,9 +79,9 @@ setListings([]); // Clear listings on error or set to a default error state} fin
 setIsLoading(false)}
 };
 
-// Fetch when the component mounts or debouncedSearchQuery changes;
-fetchProducts();
-}, [searchQuery]); // searchQuery here is the debounced value;
+/
+fetchProducts()
+}, [searchQuery]) /
 
 
 // Filter states;
@@ -95,24 +95,24 @@ const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(s
 
 useEffect(() => {const fetchSuggestions = async () => {;
 try {;
-const res = await fetch("/api/search/suggest?q=");
+const res = await fetch("/api/search/suggest?q=")
 if (res.ok) {
-const data = await res.json();
+const data = await res.json()
 if (Array.isArray(data)) {
 setSearchSuggestions(data)}
 }
 } catch (err) {
 
 }
-};
+}
 
-fetchSuggestions();
-}, []);
+fetchSuggestions()
+}, [])
 
 const filterOptions: FilterOptions = useMemo(
 () => staticFilterOptions;
 [],
-);
+)
 
 // Removed client-side filtering logic as the API now handles it.;
 const filteredListings = useMemo(() => {;
@@ -122,19 +122,19 @@ return listings;
 // Handle filter changes;
 const handleFilterChange: any = (filterType: string; value: string) => {switch (filterType) {
 case "productTypes":
-setSelectedProductTypes((prev: string[]) =>;
-prev.includes(value) ? prev.filter(t => t !== value) : [...prev; value];
-);
+setSelectedProductTypes((prev: string[]) =>
+prev.includes(value) ? prev.filter(t => t !== value) : [[...prev; value];]
+)
 break;
 case "locations":
-setSelectedLocations((prev: string[]) =>;
-prev.includes(value) ? prev.filter(l => l !== value) : [...prev; value];
-);
+setSelectedLocations((prev: string[]) =>
+prev.includes(value) ? prev.filter(l => l !== value) : [[...prev; value];]
+)
 break;
 case "availability":
-setSelectedAvailability((prev: string[]) =>;
-prev.includes(value) ? prev.filter(a => a !== value) : [...prev; value];
-);
+setSelectedAvailability((prev: string[]) =>
+prev.includes(value) ? prev.filter(a => a !== value) : [[...prev; value];]
+)
 break;,
 default: break}
 };

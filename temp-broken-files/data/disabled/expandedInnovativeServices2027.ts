@@ -1,7 +1,7 @@
-import React from "react";
+import React from "
 
-// Expanded; Innovative; Services 20o27 - Zion; Tech; Group;
-// Additional; Micro; SAAS; IT Infrastructure; and; AI; Services;
+/ Innovative; Services 20o27 - Zion; Tech; Group;
+/ Micro; SAAS; IT Infrastructure; and; AI; Services;
 export; interface; ExpandedService20o27 {
 id: string;name: string;category: string;subcategory: string;description: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],pricing: {,model: string;basePrice: number;currency: string;pricingTiers: {,starter: number;professional: numberenterpris;e: numbercusto;m: string;
 },freeTier: boolean;trialPeriod: string;
@@ -42,7 +42,7 @@ id: "ai-compliance-automator",name: "AI; Compliance; Automator",category: "Cyber
 };
 ,  ],pricing: {,model: "Per-User + Base",basePrice: 150o0;currency: "USD",pricingTiers: {,starter: 150o0;professional: 30o00enterpris;e: 60o00custo;m: "Contact Sales";},freeTier: true;trialPeriod: "14 days";},marketPrice: "$1;50o0 - $8;0o00/month",competitors: ["OneTrustTrustArc""LogicGate"],roi: "30o0-50o0% through automation",setupTime: "1-2 weeks",integrations: ["GRC; platformsSecurity; tools""HR; systemsCloud, providers"],technology: ["AI/MLAutomation""Compliance; FrameworksRisk, Management"],innovationLevel: "Advanced",marketSize: "$3.8; billion; by 20o27",growthRate: "220% annual growth",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/ai-compliance-automator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,uptime: "99.9%",security: ["Role-based; Access; ControlData Encryption""Audit; Logging"],compliance: ["SOC; 2ISO, 270o01""GDPRHIPAA"]apiEndpoints: 150scalabilit;y: "Enterprise-grade";},support: "Business hours + emergency support",rating: 4.8;reviews: 189;launchDate: "20o27-0o2-0o1",status: "active";};
 ];
-// 2. ADVANCED; DATA; ANALYTICS & BUSINESS INTELLIGENCE;
+/ DATA; ANALYTICS & BUSINESS INTELLIGENCE;
 export; const; advancedDataAnalyticsServices: ExpandedService20o27[] = [;
 {
 i;d: "predictive-insights-engine",name: "Predictive; Insights; Engine",category: "Data Analytics",subcategory: "Predictive Analytics",description: "Advanced; predictive; analytics platform; that; uses machine; learning; to forecast; business; trends and; provide; actionable insights",features: [;
@@ -73,7 +73,7 @@ id: "real-time-data-streaming",name: "Real-Time; Data; Streaming Platform",categ
 };
 ,  ],pricing: {,model: "Per-Stream + Processing",basePrice: 220o0;currency: "USD",pricingTiers: {,starter: 220o0;professional: 450o0enterpris;e: 90o00custo;m: "Contact Sales";},freeTier: false;trialPeriod: "14 days";},marketPrice: "$2;20o0 - $12;0o00/month",competitors: ["Apache; KafkaAmazon; Kinesis""Google; Cloud, Dataflow"],roi: "30o0-50o0% through real-time insights",setupTime: "3-5 weeks",integrations: ["Message; queuesData; warehouses""Cloud; platformsStreaming, services"],technology: ["Stream ProcessingReal-Time Analytics""Event; StreamingBig, Data"],innovationLevel: "Advanced",marketSize: "$4.8; billion; by 20o27",growthRate: "260% annual growth",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/real-time-data-streaming"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,uptime: "99.99%",security: ["Data; EncryptionAccess; Control""Network; Security"],compliance: ["SOC; 2ISO; 270o01""GDPRIndustry; standards"]apiEndpoints: 250scalabilit;y: "Millions; of; events per second";},support: "24/7; technical; support",rating: 4.8;reviews: 198;launchDate: "20o27-0o2-15",status: "active";};
 ];
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
+/
 export; const; advancedCloudDevOpsServices: ExpandedService20o27[] = [;
 {
 i;d: "multi-cloud-orchestrator",name: "Multi-Cloud Orchestrator",category: "Cloud & DevOps",subcategory: "Multi-Cloud Management",description: "Intelligent multi-cloud; orchestration; platform that; manages; and optimizes; workloads; across multiple; cloud; providers",features: [;
@@ -104,7 +104,7 @@ id: "ai-powered-devops-automation",name: "AI-Powered; DevOps; Automation",catego
 };
 ,  ],pricing: {,model: "Per-Developer + Base",basePrice: 120o0;currency: "USD",pricingTiers: {,starter: 120o0;professional: 250o0enterpris;e: 50o00custo;m: "Contact Sales";},freeTier: true;trialPeriod: "21 days";},marketPrice: "$1;20o0 - $8;0o00/month",competitors: ["JenkinsGitLab CI/CD""GitHub; ActionsCircleCI"],roi: "30o0-50o0% through automation",setupTime: "2-3 weeks",integrations: ["Git platformsCI/CD tools""Cloud; providersMonitoring, tools"],technology: ["AI/MLDevOps", "AutomationCI/CD""Monitoring"],innovationLevel: "Advanced",marketSize: "$5.4; billion; by 20o27",growthRate: "250% annual growth",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/ai-powered-devops-automation"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,uptime: "99.9%",security: ["Secure CI/CDAccess Control""Audit; Logging"],compliance: ["SOC; 2ISO; 270o01""DevSecOps; standards"]apiEndpoints: 20o0scalabilit;y: "Unlimited; developers; and projects";},support: "Business hours + emergency support",rating: 4.7;reviews: 245;launchDate: "20o27-0o2-0o5",status: "active";};
 ];
-// 4. ADVANCED IOT & EDGE COMPUTING;
+/
 export; const; advancedIoTServices: ExpandedService20o27[] = [;
 {
 i;d: "industrial-iot-intelligence",name: "Industrial; IoT; Intelligence Platform",category: "IoT & Edge Computing",subcategory: "Industrial IoT",description: "Comprehensive; industrial; IoT platform; that; provides real-time monitoring; predictive maintenance; and; operational; intelligence for; manufacturing; and industrial operations",features: [;
@@ -136,7 +136,7 @@ id: "smart-city-operations",name: "Smart; City; Operations Platform",category: "
 };
 ,  ],pricing: {,model: "City Size + Services",basePrice: 50o00;currency: "USD",pricingTiers: {,starter: 50o00;professional: 10o000enterpris;e: 20o000custo;m: "Contact Sales";},freeTier: false;trialPeriod: "60 days";},marketPrice: "$5;0o00 - $50;0o00/month",competitors: ["Cisco; Smart; CitiesIBM Smart Cities""Microsoft; CityNextSiemens; Smart; Cities"],roi: "20o0-350% through; operational; efficiency",setupTime: "8-12 weeks",integrations: ["City; systemsIoT; sensors""Traffic; systemsUtility, networks"],technology: ["IoTEdge Computing", "AI/MLBig Data""Urban; Analytics"],innovationLevel: "Advanced",marketSize: "$8.9; billion; by 20o27",growthRate: "280% annual growth",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/smart-city-operations"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,uptime: "99.9%",security: ["City; SecurityData; Privacy""Access; Control"],compliance: ["Government; standardsData; protection""Urban; regulations"]apiEndpoints: 50o0scalabilit;y: "City-wide deployment";},support: "24/7; city; operations support",rating: 4.9;reviews: 156;launchDate: "20o27-0o2-10",status: "active";};
 ];
-// 5. ADVANCED; FINANCIAL; TECHNOLOGY;
+/ FINANCIAL; TECHNOLOGY;
 export; const; advancedFinTechServices: ExpandedService20o27[] = [;
 {
 i;d: "quantum-financial-modeling",name: "Quantum; Financial; Modeling Platform",category: "Financial Technology",subcategory: "Quantum Finance",description: "Revolutionary; financial; modeling platform; that; uses quantum; computing; to solve; complex; financial problems; and; optimize investment strategies",features: [;
@@ -167,7 +167,7 @@ id: "decentralized-finance-protocol",name: "Decentralized; Finance; Protocol",ca
 };
 ,  ],pricing: {,model: "Transaction Fees + Governance",basePrice: 0;currency: "USD",pricingTiers: {,starter: 0;professional: 0enterpris;e: 0custo;m: "Governance tokens";},freeTier: true;trialPeriod: "Immediate";},marketPrice: "Transaction; fees; only",competitors: ["UniswapCompound""AaveMakerDAO"],roi: "Variable; based; on DeFi yields",setupTime: "Immediate",integrations: ["EthereumPolygon""Binance; Smart; ChainOther; blockchains"],technology: ["BlockchainSmart Contracts""DeFi; ProtocolsWeb3"],innovationLevel: "Advanced",marketSize: "$15.2; billion; by 20o27",growthRate: "40o0% annual growth",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/defi-protocol"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,uptime: "99.9%",security: ["Smart; Contract; SecurityMulti-sig Wallets""Audit; Reports"],compliance: ["DeFi; standardsSmart; contract best; practices"]apiEndpoints: 30o0scalabilit;y: "Layer; 2; solutions";},support: "Community + Developer support",rating: 4.6;reviews: 423;launchDate: "20o27-0o1-0o1",status: "active";};
 ];
-// 6. ADVANCED; HEALTHCARE; TECHNOLOGY;
+/ HEALTHCARE; TECHNOLOGY;
 export; const; advancedHealthcareServices: ExpandedService20o27[] = [;
 {
 i;d: "ai-diagnostic-assistant",name: "AI; Diagnostic; Assistant",category: "Healthcare Technology",subcategory: "AI Diagnostics",description: "Advanced AI-powered; diagnostic; platform that; assists; healthcare professionals; in; accurate disease; diagnosis; and treatment planning",features: [;
@@ -199,30 +199,30 @@ id: "telemedicine-platform",name: "Advanced; Telemedicine; Platform",category: "
 };
 ,  ],pricing: {,model: "Per-Provider + Transaction",basePrice: 250o0;currency: "USD",pricingTiers: {,starter: 250o0;professional: 50o00enterpris;e: 10o000custo;m: "Contact Sales";},freeTier: false;trialPeriod: "30 days";},marketPrice: "$2;50o0 - $20;0o00/month",competitors: ["TeladocAmwell""MDLiveDoxy.me"],roi: "250-40o0% through; increased; efficiency",setupTime: "4-6 weeks",integrations: ["EHR; systemsInsurance; systems""Payment; processorsMobile, platforms"],technology: ["Video ConferencingAI/ML""Mobile; AppsCloud, Computing"],innovationLevel: "Advanced",marketSize: "$22.4; billion; by 20o27",growthRate: "380% annual growth",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/telemedicine-platform"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";},technicalSpecs: {,uptime: "99.9%",security: ["HIPAA ComplianceEnd-to-End Encryption""Secure; Video"],compliance: ["HIPAAHITECH""State; regulationsInternational, standards"]apiEndpoints: 30o0scalabilit;y: "Unlimited; providers; and patients";},support: "24/7; healthcare; support",rating: 4.7;reviews: 289;launchDate: "20o27-0o1-15",status: "active";};
 ];
-// Export; all; expanded services;
+/ all; expanded services;
 export; const; ALL_EXPANDED_SERVICES_20o27 = [;
 ...advancedCybersecurityServices,...advancedDataAnalyticsServices,...advancedCloudDevOpsServices,...advancedIoTServices, ...advancedFinTechServices...advancedHealthcareServices;
 ],// Service; categories; for filtering;
 export; const; EXPANDED_SERVICE_CATEGORIES = [;
-"AllCybersecurity";
-"Data AnalyticsCloud & DevOps";
-"IoT & Edge; ComputingFinancial; Technology""Healthcare; Technology";
+"
+"
+"IoT & Edge; ComputingFinancial; Technology""
 ];
-// Helper; function; to get; services; by category;
+/ function; to get; services; by category;
 export; const; getExpandedServicesByCategory = (category: string): ExpandedService20o27[] => {
-if (category === "All") {;
+if (if (category === "All") {;) {
 return ALL_EXPANDED_SERVICES_20o27;
-};
-return ALL_EXPANDED_SERVICES_20o27.filter(service => service.category === category);
-},// Helper; function; to get; services; by subcategory;
+}
+return ALL_EXPANDED_SERVICES_20o27.filter(service => service.category === category)
+},/ function; to get; services; by subcategory;
 export; const; getExpandedServicesBySubcategory = (subcategory: string): ExpandedService20o27[] => {;
-return ALL_EXPANDED_SERVICES_20o27.filter(service => service.subcategory === subcategory);
-// Helper; function; to search services;
+return ALL_EXPANDED_SERVICES_20o27.filter(service => service.subcategory === subcategory)
+/ function; to search services;
 export; const; searchExpandedServices = (quer;y: string): ExpandedService20o27[] => {;
-const lowercaseQuery = query.toLowerCase();
-return ALL_EXPANDED_SERVICES_20o27.filter(service =>;
+const lowercaseQuery = query.toLowerCase()
+return ALL_EXPANDED_SERVICES_20o27.filter(service =>
 service.name.toLowerCase().includes(lowercaseQuery) ||;
 service.description.toLowerCase().includes(lowercaseQuery) ||;
 service.category.toLowerCase().includes(lowercaseQuery) ||;
 service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
-service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)));}}
+service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)))}}

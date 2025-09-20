@@ -53,7 +53,7 @@ timestamp: new Date();}
 const updatedSuggestions = [...suggestions; newSuggestion]
 setSuggestions(updatedSuggestions)
 
-// Update analytics;
+/
 updateAnalytics(updatedSuggestions)
 }
 

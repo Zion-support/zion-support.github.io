@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface ServiceContact {
 phone: string;
@@ -19,19 +19,19 @@ description: string;
 pricing: string;
 price: number;
 pricingModel: string;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: ServiceContact;
 marketPrice: string;
-competitors: string[];
-aiModels: string[];
+competitors: string[[];]
+aiModels: string[[];]
 accuracy: string;
 trainingData: string;
-compliance: string[];
+compliance: string[[];]
 aiScore: number;
-useCases: string[];
+useCases: string[[];]
 apiAccess: boolean;
 customTraining: boolean;
 whiteLabel: boolean;
@@ -39,7 +39,7 @@ prioritySupport: boolean;
 trainingIncluded: boolean;
 dataRetention: string;
 uptime: string;
-securityFeatures: string[];
+securityFeatures: string[[];]
 integrationTime: string;
 scalability: string;
 realTimeProcessing: boolean;,
@@ -51,7 +51,7 @@ industrySpecific: boolean;
 multilingualSupport: boolean;,
 industrySpecific: boolean;}
 
-// Enhanced AI Services for 2025;
+/
 export const enhancedAIServices2025: AIService[] = [
 {id: 1;
 name: "AI Vision Pro";
@@ -61,22 +61,22 @@ description: "Advanced computer vision platform with real-time object detection;
 price: 0.05;,
 pricingModel: "per API call";,
 features: [
-"Real-time object detection";
+"
 "Facial recognition",
 "Image classification",
 "OCR text extraction",
 "Video analysis",
 "Custom model training",
 "API integration",
-"Batch processing";
+"
 ],
 benefits: [
-"99.5% accuracy";
+"
 "Real-time processing",
 "Cost-effective",
 "Scalable solution",
 "Easy integration",
-"Custom models";
+"
 ],
 targetAudience: ["Manufacturing", "Retail", "Security", "Healthcare", "Automotive"],
 tags: ["Computer Vision", "AI", "Machine Learning", "Image Processing", "Real-time"],
@@ -119,22 +119,22 @@ description: "Comprehensive NLP platform with text analysis; sentiment analysis;
 price: 199;,
 pricingModel: "monthly";,
 features: [
-"Text analysis";
+"
 "Sentiment analysis",
 "Language translation",
 "Chatbot development",
 "Document processing",
 "Custom training",
 "API access",
-"Multi-language support";
+"
 ],
 benefits: [
-"95% accuracy";
+"
 "Multi-language support",
 "Custom models",
 "Easy integration",
 "Cost-effective",
-"Scalable";
+"
 ],
 targetAudience: ["Customer Service", "Marketing", "Content Creation", "Research", "Education"],
 tags: ["NLP", "AI", "Text Analysis", "Translation", "Chatbots"],
@@ -177,22 +177,22 @@ description: "AI-powered predictive analytics platform with machine learning mod
 price: 999;,
 pricingModel: "monthly";,
 features: [
-"Predictive modeling";
+"
 "Time series analysis",
 "Risk assessment",
 "Demand forecasting",
 "Customer segmentation",
 "Custom algorithms",
 "Real-time insights",
-"Dashboard analytics";
+"
 ],
 benefits: [
-"90% prediction accuracy";
+"
 "Data-driven decisions",
 "Risk mitigation",
 "Cost optimization",
 "Competitive advantage",
-"ROI improvement";
+"
 ],
 targetAudience: ["Finance", "Retail", "Manufacturing", "Healthcare", "Logistics"],
 tags: ["Predictive Analytics", "Machine Learning", "AI", "Forecasting", "Business Intelligence"],
@@ -235,22 +235,22 @@ description: "No-code AI chatbot platform with natural language understanding an
 price: 49;,
 pricingModel: "monthly";,
 features: [
-"No-code builder";
+"
 "Natural language understanding",
 "Multi-channel deployment",
 "Custom integrations",
 "Analytics dashboard",
 "A/B testing",
 "Voice support",
-"Multi-language";
+"
 ],
 benefits: [
-"90% customer satisfaction";
+"
 "24/7 availability",
 "Cost reduction",
 "Scalable support",
 "Quick deployment",
-"Easy customization";
+"
 ],
 targetAudience: ["Customer Service", "E-commerce", "Healthcare", "Education", "Finance"],
 tags: ["Chatbots", "Conversational AI", "Customer Service", "Automation", "AI"],
@@ -293,22 +293,22 @@ description: "AI-powered content creation platform for generating articles; mark
 price: 0.10;,
 pricingModel: "per word";,
 features: [
-"Article generation";
+"
 "Marketing copy",
 "Creative writing",
 "SEO optimization",
 "Plagiarism checking",
 "Custom tone",
 "Multi-language",
-"Content templates";
+"
 ],
 benefits: [
-"10x content output";
+"
 "SEO optimized",
 "Unique content",
 "Cost-effective",
 "Time savings",
-"Consistent quality";
+"
 ],
 targetAudience: ["Marketing", "Content Creators", "Agencies", "E-commerce", "Publishers"],
 tags: ["Content Generation", "AI", "Marketing", "SEO", "Creative Writing"],
@@ -351,22 +351,22 @@ description: "Automated data science platform with AI model development; deploym
 price: 1499;,
 pricingModel: "monthly";,
 features: [
-"AutoML";
+"
 "Model development",
 "Feature engineering",
 "Model deployment",
 "Performance monitoring",
 "A/B testing",
 "Custom algorithms",
-"Team collaboration";
+"
 ],
 benefits: [
-"90% faster model development";
+"
 "Automated optimization",
 "Better accuracy",
 "Cost reduction",
 "Scalable deployment",
-"Team productivity";
+"
 ],
 targetAudience: ["Data Scientists", "ML Engineers", "Enterprises", "Research", "Startups"],
 tags: ["Data Science", "Machine Learning", "AutoML", "AI", "Model Development"],
@@ -409,22 +409,22 @@ description: "Advanced voice AI platform with speech recognition; text-to-speech
 price: 299;,
 pricingModel: "monthly";,
 features: [
-"Speech recognition";
+"
 "Text-to-speech",
 "Voice commands",
 "Multi-language",
 "Custom voices",
 "API integration",
 "Real-time processing",
-"Voice analytics";
+"
 ],
 benefits: [
-"99% accuracy";
+"
 "Multi-language support",
 "Custom voices",
 "Easy integration",
 "Scalable solution",
-"Cost-effective";
+"
 ],
 targetAudience: ["Call Centers", "Healthcare", "Education", "Accessibility", "IoT"],
 tags: ["Voice AI", "Speech Recognition", "Text-to-Speech", "AI", "Voice Commands"],
@@ -467,22 +467,22 @@ description: "Intelligent recommendation engine with personalized suggestions fo
 price: 0.001;,
 pricingModel: "per recommendation";,
 features: [
-"Personalized recommendations";
+"
 "Real-time learning",
 "Multi-criteria filtering",
 "A/B testing",
 "Analytics dashboard",
 "API integration",
 "Custom algorithms",
-"Scalable architecture";
+"
 ],
 benefits: [
-"30% conversion increase";
+"
 "Personalized experience",
 "Better engagement",
 "Revenue growth",
 "Customer satisfaction",
-"Data insights";
+"
 ],
 targetAudience: ["E-commerce", "Streaming", "Social Media", "News", "Finance"],
 tags: ["Recommendations", "Personalization", "AI", "Machine Learning", "Analytics"],
@@ -525,22 +525,22 @@ description: "Advanced AI-powered fraud detection system with real-time monitori
 price: 799;,
 pricingModel: "monthly";,
 features: [
-"Real-time monitoring";
+"
 "Fraud detection",
 "Risk scoring",
 "Behavioral analysis",
 "Custom rules",
 "API integration",
 "Dashboard analytics",
-"Alert system";
+"
 ],
 benefits: [
-"99.9% detection rate";
+"
 "Real-time protection",
 "False positive reduction",
 "Cost savings",
 "Compliance assurance",
-"Risk mitigation";
+"
 ],
 targetAudience: ["Banks", "E-commerce", "Insurance", "Gaming", "Healthcare"],
 tags: ["Fraud Detection", "Security", "AI", "Risk Management", "Compliance"],
@@ -583,22 +583,22 @@ description: "Intelligent process automation platform with AI-powered workflow o
 price: 399;,
 pricingModel: "monthly";,
 features: [
-"Workflow automation";
+"
 "AI decision making",
 "Process optimization",
 "Custom workflows",
 "API integration",
 "Analytics dashboard",
 "Compliance monitoring",
-"Scalable architecture";
+"
 ],
 benefits: [
-"80% process efficiency";
+"
 "Cost reduction",
 "Error elimination",
 "Compliance assurance",
 "Scalable operations",
-"Data insights";
+"
 ],
 targetAudience: ["Manufacturing", "Finance", "Healthcare", "Logistics", "Retail"],
 tags: ["Process Automation", "Workflow", "AI", "Optimization", "Efficiency"],
@@ -632,4 +632,4 @@ industrySpecific: true;
 multilingualSupport: false;,
 industrySpecific: true;}
 ];
-export default enhancedAIServices2025;
+export export default enhancedAIServices2025;

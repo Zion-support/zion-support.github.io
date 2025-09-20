@@ -17,7 +17,7 @@ lng: number;
 governance: 'admin' | 'hybrid' | 'vote';
   votesPassed: number;
 votesPending: number;
-  region: string,
+  region: string;
 const INSTANCES: Instance[] = [
   {
 interface FeedItem {

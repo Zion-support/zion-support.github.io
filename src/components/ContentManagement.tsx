@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import import React, { useState } from 'react';
+import import { motion } from 'framer-motion';
 
 interface ContentItem {
   id: string;

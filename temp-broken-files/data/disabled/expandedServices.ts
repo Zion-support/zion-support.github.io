@@ -1,8 +1,8 @@
-import { ProductListing } from "@/types/listings, ";
+import { ProductListing } from "
 
-// Real; market-competitive micro SAAS services and IT solutions;
+/ market-competitive micro SAAS services and IT solutions;
 export const EXPANDED_SERVICES: ProductListing[] = [
-// AI & Machine Learning Services;
+/
 {
 id: "ai-chatbot-enterprise";,
 title: "Enterprise AI Chatbot Development";,
@@ -565,22 +565,22 @@ aiScore: 94;
 availability: "12-16 Weeks";,
 aiScore: 94;}
 ];
-// Service categories for filtering;
-export const EXPANDED_SERVICE_CATEGORIES = [;
-{ label: "AI Development", value: "ai-development" };
-{ label: "Cloud Services", value: "cloud-services" };
-{ label: "DevOps", value: "devops" };
-{ label: "Cybersecurity", value: "cybersecurity" };
-{ label: "Data Analytics", value: "data-analytics" };
-{ label: "Web Development", value: "web-development" };
-{ label: "Mobile Development", value: "mobile-development" };
-{ label: "Blockchain", value: "blockchain" };
-{ label: "IoT", value: "iot" };
-{ label: "Hardware", value: "hardware" };
-{ label: "Business Automation", value: "business-automation" };
+/
+export export const EXPANDED_SERVICE_CATEGORIES = [;
+{ label: "AI Development", value: "ai-development" }
+{ label: "Cloud Services", value: "cloud-services" }
+{ label: "DevOps", value: "devops" }
+{ label: "Cybersecurity", value: "cybersecurity" }
+{ label: "Data Analytics", value: "data-analytics" }
+{ label: "Web Development", value: "web-development" }
+{ label: "Mobile Development", value: "mobile-development" }
+{ label: "Blockchain", value: "blockchain" }
+{ label: "IoT", value: "iot" }
+{ label: "Hardware", value: "hardware" }
+{ label: "Business Automation", value: "business-automation" }
 { label: "Business Solutions", value: "business-solutions" }
 ];
-// Service subcategories for detailed filtering;
+/
 export const EXPANDED_SERVICE_SUBCATEGORIES = {
 "ai-development": ["Chatbots", "Analytics", "Document Processing", "Computer Vision", "NLP"],
 "cloud-services": ["Migration", "Optimization", "Security", "Monitoring", "Cost Management"],

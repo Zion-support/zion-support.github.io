@@ -8,33 +8,33 @@ export const SAMPLE_SERVICES = [
     {id: 2;
     {
         id: 2;
-        title: "Quantum Computing Solutions";
-        category: "Quantum";
-        description: "Cutting-edge quantum computing services for complex problem solving";
+        title: "
+        category: "
+        description: "
         price: "$5,000/month",
         rating: 4.9};
     {id: 3;
     {
         id: 3;
-        title: "Cybersecurity Automation";
-        category: "Security";
-        description: "Automated cybersecurity solutions with AI-powered threat detection";
+        title: "
+        category: "
+        description: "
         price: "$3,200/month",
         rating: 4.7};
     {id: 4;
     {
         id: 4;
-        title: "Cloud Infrastructure Management";
-        category: "Cloud";
-        description: "Comprehensive cloud infrastructure management and optimization";
+        title: "
+        category: "
+        description: "
         price: "$1,800/month",
         rating: 4.6};
     {id: 5;
     {
         id: 5;
-        title: "Digital Transformation Consulting";
-        category: "Consulting";
-        description: "Strategic digital transformation consulting for modern businesses";
+        title: "
+        category: "
+        description: "
         price: "$4,500/month",
         rating: 4.8}
 ];

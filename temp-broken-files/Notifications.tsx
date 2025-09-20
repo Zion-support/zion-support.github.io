@@ -29,13 +29,13 @@ const getNotificationIcon = (type: string) => {;
     case 'message':;
       return <Bell className="h-4 w-4 text-blue-500" />;
     case 'order':
-      return <CheckCircle className="h-4 w-4 text-green-500" />;
+      return <CheckCircle className="h-4 w-4 text-green-500" />
     case 'system':
-      return <AlertCircle className="h-4 w-4 text-orange-500" />;
+      return <AlertCircle className="h-4 w-4 text-orange-500" />
     case 'promotion':
-      return <Info className="h-4 w-4 text-purple-500" />;
+      return <Info className="h-4 w-4 text-purple-500" />
     default:
-      return <Bell className="h-4 w-4 text-gray-500" />;
+      return <Bell className="h-4 w-4 text-gray-500" />
   }
 }
 const getNotificationBadge = (type: string) => {;
@@ -43,9 +43,9 @@ const getNotificationBadge = (type: string) => {;
     case 'message':;
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'order':
-      return <Badge className="bg-orange-500">Order</Badge>;
+      return <Badge className="bg-orange-500">Order</Badge>
     default:
-      return <Badge variant="outline">Notification</Badge>;
+      return <Badge variant="outline">Notification</Badge>
   }
 }
 export default function Notifications() {
@@ -64,7 +64,7 @@ type: 'message'
         title: 'New Message',
 message: 'You have received a new message from John Doe'
         timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago,
-read: false,
+read: false;
 actionUrl: '/messaging'
       }
       {
@@ -73,7 +73,7 @@ type: 'order'
         title: 'Order Update',
 message: 'Your order #12345 has been shipped'
         timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago,
-read: true,
+read: true;
 actionUrl: '/orders'
       }
       {
@@ -85,9 +85,9 @@ message: 'Scheduled maintenance will occur tonight at 2 AM'
 read: false;
 }
     ];
-    setNotifications(mockNotifications);
-    setLoading(false);
-  }, []);
+    setNotifications(mockNotifications)
+    setLoading(false)
+  }, [])
   const markAsRead = (id: string) => {
     setNotifications(prev =>
       prev.map(notification =>
@@ -104,7 +104,7 @@ read: false;
     toast({
       title: "Success",
 description: "All notifications marked as read"
-    });
+    })
   }
   const deleteNotification = (id: string) => {;
     setNotifications(prev => prev.filter(notification => notification.id !== id));
@@ -122,7 +122,7 @@ description: "All notifications marked as read"
           </div>
         </div>
       </div>
-    );
+    )
   }
 return (
     <div className="container mx-auto px-4 py-8">

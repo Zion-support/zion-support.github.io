@@ -33,20 +33,20 @@ classNam;  e;
 showDetails = fals; e;
 onClose;
 }: PerformanceDashboardProps) {
-const { metric; s; observer; s; performanceScor; e; logMetrics } = usePerformance();
-const [isExpand;  e; d; setIsExpand; e; d] = useState(showDetails);
+const { metric; s; observer; s; performanceScor; e; logMetrics } = usePerformance()
+const [isExpand;  e; d; setIsExpand; e; d] = useState(showDetails)
 
 const getScoreColor: any = (scor;  e: number) => {
-if (score >= 90) return "text-green-500";
-if (score >= 70) return "text-yellow-500";
-return "text-red-500";
-};
+if (score >= 90) return "
+if (score >= 70) return "
+return "
+}
 
 const getScoreEmoji: any = (scor;  e: number) => {
-if (score >= 90) return "🚀";
-if (score >= 70) return "⚠️";
-return "🐌";
-};
+if (score >= 90) return "
+if (score >= 70) return "
+return "
+}
 
 const getMetricIcon: any = (metricNam;  e: string) => {
 const icon; s: Record<strin; g; React.ReactNode> = {
@@ -76,10 +76,10 @@ return descriptions[metricNa; m; e] || "Performance metric";
 
 const formatMetricValue: any = (metricNam;  e: strin; g;
 valu; e: number) => {
-if (metricName === "CLS") return value.toFixed(3);
-if (metricName === "FID") return `${value.toFixed(0)}m; s`;
-return `${value.toFixed(0)}m; s`;
-};
+if (metricName === "CLS") return value.toFixed(3)
+if (metricName === "FID") return `
+return `
+}
 
 return (
 <motion.div;
@@ -92,147 +92,147 @@ y: 20 }}
 animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.3 }}
->;
-<Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">;
-<CardHeader className="pb-3">;
-<div className="flex items-center justify-between">;
-<CardTitle className="text-lg flex items-center gap-2">;
-<Activity className="w-5 h-5 text-zion-cyan" />;
+>
+<Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
+<CardHeader className="pb-3">
+<div className="flex items-center justify-between">
+<CardTitle className="text-lg flex items-center gap-2">
+<Activity className="w-5 h-5 text-zion-cyan" />
 Performance;
-</CardTitle>;
-<div className="flex items-center gap-2">;
+</CardTitle>
+<div className="flex items-center gap-2">
 <Button;
 variant="ghost"
-size="sm";
+size="
 onClick={() => setIsExpanded(!isExpanded)}
 className="p-1 h-8 w-8 text-zion-slate-light hove;  r:text-zion-cyan"
->;
-<TrendingUp className="w-4 h-4" />;
-</Button>;
+>
+<TrendingUp className="w-4 h-4" />
+</Button>
 {onClose && (
 <Button;
 variant="ghost"
-size="sm";
+size="
 onClick={onClose}
 className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
->;
-<X className="w-4 h-4" />;
-</Button>;
+>
+<X className="w-4 h-4" />
+</Button>
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Performance Score */}
-<div className="flex items-center justify-between">;
-<div className="flex items-center gap-2">;
-<span className="text-sm text-zion-slate-light">Scor; e:</span>;
-<span className={cn("text-2xl font-bold",  getScoreColor(performanceScore))}>;
+<div className="flex items-center justify-between">
+<div className="flex items-center gap-2">
+<span className="text-sm text-zion-slate-light">Scor; e:</span>
+<span className={cn("text-2xl font-bold",  getScoreColor(performanceScore))}>
 {performanceScore}
-</span>;
-<span className="text-lg">{getScoreEmoji(performanceScore)}</span>;
-</div>;
+</span>
+<span className="text-lg">{getScoreEmoji(performanceScore)}</span>
+</div>
 <Button;
 variant="ghost"
-size="sm";
+size="
 onClick={logMetrics}
 className="text-zion-cyan hove;  r:text-zion-cyan-light"
->;
-<RefreshCw className="w-4 h-4" />;
-</Button>;
-</div>;
-</CardHeader>;
+>
+<RefreshCw className="w-4 h-4" />
+</Button>
+</div>
+</CardHeader>
 
-<AnimatePresence>;
+<AnimatePresence>
 {isExpanded && (
 <motion.div;
 initial={{ heigh; t: 0;
 opacit; y: 0 }}
-animate={{ heigh; t: "auto";
+animate={{ heigh; t: "
 opacit; y: 1 }}
 exit={{ heigh; t: 0;
 opacit; y: 0 }}
 transition={{ duratio; n: 0.3 }}
->;
-<CardContent className="pt-0 space-y-3">;
+>
+<CardContent className="pt-0 space-y-3">
 {/* Metrics Grid */}
-<div className="grid grid-cols-1 gap-2">;
+<div className="grid grid-cols-1 gap-2">
 {observers.map(({ nam; e; valu; e; rating }) => (<div;
 key={name}
 className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg"
->;
-<div className="flex items-center gap-2">;
+>
+<div className="flex items-center gap-2">
 {getMetricIcon(name)}
-<div>;
-<div className="text-sm font-medium">{name}</div>;
-<div className="text-xs text-zion-slate-light">;
+<div>
+<div className="text-sm font-medium">{name}</div>
+<div className="text-xs text-zion-slate-light">
 {getMetricDescription(name)}
-</div>;
-</div>;
-</div>;
-<div className="flex items-center gap-2">;
-<span className="text-sm font-mono">;
+</div>
+</div>
+</div>
+<div className="flex items-center gap-2">
+<span className="text-sm font-mono">
 {formatMetricValue(nam;  e; value)}
-</span>;
+</span>
 <Badge;
 variant={rating === "good" ? "default" : rating === "needs-improvement" ? "secondary" : "destructive"}
 className={cn("text-xs",
 rating === "good" ? "bg-green-500/20 text-green-400 border-green-500/30" :
 rating === "needs-improvement" ? "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" :
-"bg-red-500/20 text-red-400 border-red-500/30";
+"
 )}
->;
+>
 {rating}
-</Badge>;
-</div>;
-</div>;
+</Badge>
+</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Performance Tips */}
-<div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">;
-<div className="flex items-center gap-2 mb-2">;
-<Info className="w-4 h-4 text-zion-purple" />;
-<span className="text-sm font-medium text-zion-purple">Tips</span>;
-</div>;
-<div className="text-xs text-zion-slate-light space-y-1">;
-{performanceScore < 90 && (<>;
+<div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
+<div className="flex items-center gap-2 mb-2">
+<Info className="w-4 h-4 text-zion-purple" />
+<span className="text-sm font-medium text-zion-purple">Tips</span>
+</div>
+<div className="text-xs text-zion-slate-light space-y-1">
+{performanceScore < 90 && (<>
 {performanceScore < 70 && (
-<p>• Optimize images and use lazy loading</p>;
+<p>• Optimize images and use lazy loading</p>
 )}
-<p>• Minimize JavaScript bundle size</p>;
-<p>• Use CDN for static assets</p>;
-</>;
+<p>• Minimize JavaScript bundle size</p>
+<p>• Use CDN for static assets</p>
+</>
 )}
 {performanceScore >= 90 && (
-<p>Great performance! Keep up the good work! 🎉</p>;
+<p>Great performance! Keep up the good work! 🎉</p>
 )}
-</div>;
-</div>;
-</CardContent>;
-</motion.div>;
+</div>
+</div>
+</CardContent>
+</motion.div>
 )}
-</AnimatePresence>;
-</Card>;
-</motion.div>;
-);
+</AnimatePresence>
+</Card>
+</motion.div>
+)
 }
 
-// Compact performance indicator;
-export function PerformanceIndicator({ className }: { className?: string }) {;
-const { performanceScore } = usePerformance();
+/
+export export function PerformanceIndicator({ className }: { className?: string }) {;
+const { performanceScore } = usePerformance()
 
 return (
-<div className={cn("flex items-center gap-2",  className)}>;
+<div className={cn("flex items-center gap-2",  className)}>
 <div className={cn("w-2 h-2 rounded-full",
 performanceScore >= 90 ? "bg-green-500" :
-performanceScore >= 70 ? "bg-yellow-500" : "bg-red-500";
-)} />;
-<span className="text-xs text-zion-slate-light">;
+performanceScore >= 70 ? "bg-yellow-500" : "
+)} />
+<span className="text-xs text-zion-slate-light">
 {performanceScore}/100;
-</span>;
-</div>;
-);
-}<//div><///div>;
+</span>
+</div>
+)
+}<//div><///div>
 interface PerformanceMetrics {
 buildSize: string;
 pageCount: number;

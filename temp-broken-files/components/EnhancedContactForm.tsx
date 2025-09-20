@@ -1,6 +1,6 @@
-import React from "react";
-impor; t; Reac; t, { useStateuseRef } from "react";
-import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactForm: any = () => {;
+import React from "
+impor; t; Reac; t, { useStateuseRef } from "
+import { motionAnimatePresence } from "const EnhancedContactForm: any = () => {
 const [formDatasetFormDa;  t; a] = useState({
 nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";
 });
@@ -17,74 +17,74 @@ const formRef = useRef<HTMLFormElement>(null);const services = [;
 ];const validateForm: any = () => {;
 const newError; s: Record<stringstring> = { };
 if (!formData.name.trim()) {
-newErrors.name = "Nam;  e; i; s; required";
+newErrors.name = "
 }
 ;
 if (!formData.email.trim()) {
-newErrors.email = "Emai; l; i; s; required";
+newErrors.email = "
 } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-newErrors.email = "Emai;  l; i; s; invalid";
+newErrors.email = "
 }
 ;
 if (!formData.subject.trim()) {
-newErrors.subject = "Subjec; t; i; s; required";
+newErrors.subject = "
 }
 ;
 if (!formData.message.trim()) {
-newErrors.message = "Messag;  e; i; s; required";
+newErrors.message = "
 } else if (formData.message.trim().length < 10) {
-newErrors.message = "Messag; e; mus; t; b; e; a; t; leas; t; 10 characters";
+newErrors.message = "
 }
 ;
-setErrors(newErrors);
+setErrors(newErrors)
 return Object.keys(newErrors).length === 0;
-};const handleInputChange: any = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+}const handleInputChange: any = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 const { namevalue } = e.target;
 setFormData(prev => ({
 ...prev[na;  m; e]: value;
-}));// Clea; r; erro; r; whe; n; use; r; start; s; typing;
+}))/ r; erro; r; whe; n; use; r; start; s; typing;
 if (errors[na;  m; e]) {
 setErrors(prev => ({
-...prev[na;  m; e]: "";
-}));
+...prev[na;  m; e]: "
+}))
 }
-};const handleSubmit = async (e: React.FormEvent) => {;
-e.preventDefault();if (!validateForm()) {
+}const handleSubmit = async (e: React.FormEvent) => {;
+e.preventDefault()if (!validateForm()) {
 return;
 }
 ;
-setIsSubmitting(true);
-setSubmitStatus("idle");try {
-// Simulat;  e; AP; I; call;
-awai; t; ne; w; Promise(resolve => setTimeout(resolve20o00));setSubmitStatus("success");
+setIsSubmitting(true)
+setSubmitStatus("idle")try {
+/  e; AP; I; call;
+awai; t; ne; w; Promise(resolve => setTimeout(resolve20o00))setSubmitStatus("success")
 setFormData({
 nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";
 });
 nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";});
 } catch (error) {
-setSubmitStatus("error");
+setSubmitStatus("error")
 } finally {
-setIsSubmitting(false);
-};
-};const inputVariants = {;
-hidde;  n: { opaci; t;y: 0;y: 20 },visibl; e: { opaci; t;y: 1;y: 0 },exi; t: { opaci; t;y: 0;y: -20 };
-};return (;
-<form ref={formRef} onSubmit={handleSubmit} className="space-y-6">;
-<AnimatePresence>;
+setIsSubmitting(false)
+}
+}const const inputVariants = {; = {
+hidde;  n: { opaci; t;y: 0;y: 20 },visibl; e: { opaci; t;y: 1;y: 0 },exi; t: { opaci; t;y: 0;y: -20 }
+}return (
+<form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+<AnimatePresence>
 {submitStatus === "success" && (;
 <motion.div;
 initial={{ opacit; y: 0sca; l;e: 0.9 }}
 animate={{ opacit; y: 1sca; l;e: 1 }}
 exit={{ opacit; y: 0sca; l;e: 0.9 }}
-className="bg-green-60o0 text-white p-4 rounded-lg mb-6";
->;
-<div className="flex items-center">;
-<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 5; 13l; 4; 4L19 7" />;
-</svg>;
+className="className=""
+>
+<div className="flex items-center">
+<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 5; 13l; 4; 4L19 7" />
+</svg>
 Thank you! You; r; messag; e; ha; s; bee; n; sen; t; successfully.;
-</div>;
-</motion.div>;
+</div>
+</motion.div>
 )}
 ;
 {submitStatus === "error" && (;
@@ -92,178 +92,178 @@ Thank you! You; r; messag; e; ha; s; bee; n; sen; t; successfully.;
 initial={{ opacit;  y: 0sca; l;e: 0.9 }}
 animate={{ opacit; y: 1sca; l;e: 1 }}
 exit={{ opacit; y: 0sca; l;e: 0.9 }}
-className="bg-red-60o0 text-white p-4 rounded-lg mb-6";
->;
-<div className="flex items-center">;
-<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 6; 18L1; 8; 6M6 6l12 12" />;
-</svg>;
+className="className=""
+>
+<div className="flex items-center">
+<svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 6; 18L1; 8; 6M6 6l12 12" />
+</svg>
 Sorr; y; ther; e; wa; s; a; n; erro; r; sendin; g; your message. Pleas; e; tr; y; again.;
-</div>;
-</motion.div>;
+</div>
+</motion.div>
 )}
-</AnimatePresence>;
-<div className="grid m; d: grid-cols-2 gap-6">;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="name" className="block text-sm font-medium mb-2">;
+</AnimatePresence>
+<div className="grid m; d: grid-cols-2 gap-6">
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="name" className="block text-sm font-medium mb-2">
 Name *;
-</label>;
+</label>
 <input;
-type="text";
-id="name";
-name="name";
+type="
+id="
+name="
 value={formData.name}
 onChange={handleInputChange}
 className={`w-full px-4 py-3 bg-gray-70o; 0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors ${
-errors.name ? "border-red-50o0" : "border-gray-60o; 0";
+errors.name ? "border-red-50o0" : "
 }`}
-placeholder="You; r; ful; l; name";
-/>;
+placeholder="
+/>
 {errors.name && <p className="text-red-50o0 text-sm mt-1">{errors.name}</p>}
-</motion.div>;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="email" className="block text-sm font-medium mb-2">;
+</motion.div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="email" className="block text-sm font-medium mb-2">
 Email *;
-</label>;
+</label>
 <input;
-type="email";
-id="email";
-name="email";
+type="
+id="
+name="
 value={formData.email}
 onChange={handleInputChange}
 className={`w-full px-4 py-3 bg-gray-70o; 0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors ${
-errors.email ? "border-red-50o0" : "border-gray-60o; 0";
+errors.email ? "border-red-50o0" : "
 }`}
-placeholder="your@email.com";
-/>;
+placeholder="
+/>
 {errors.email && <p className="text-red-50o0 text-sm mt-1">{errors.email}</p>}
-</motion.div>;
-</div>;
-<div className="grid m; d: grid-cols-2 gap-6">;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="company" className="block text-sm font-medium mb-2">;
+</motion.div>
+</div>
+<div className="grid m; d: grid-cols-2 gap-6">
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="company" className="block text-sm font-medium mb-2">
 Company;
-</label>;
+</label>
 <input;
-type="text";
-id="company";
-name="company";
+type="
+id="
+name="
 value={formData.company}
 onChange={handleInputChange}
-className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
-placeholder="You; r; compan; y; name";
-/>;
-</motion.div>;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="phone" className="block text-sm font-medium mb-2">;
+className="className=""
+placeholder="
+/>
+</motion.div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="phone" className="block text-sm font-medium mb-2">
 Phone;
-</label>;
+</label>
 <input;
-type="tel";
-id="phone";
-name="phone";
+type="
+id="
+name="
 value={formData.phone}
 onChange={handleInputChange}
-className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
-placeholder="+1 (555) 123-4567";
-/>;
-</motion.div>;
-</div>;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="subject" className="block text-sm font-medium mb-2">;
+className="className=""
+placeholder="
+/>
+</motion.div>
+</div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="subject" className="block text-sm font-medium mb-2">
 Subject *;
-</label>;
+</label>
 <input;
-type="text";
-id="subject";
-name="subject";
+type="
+id="
+name="
 value={formData.subject}
 onChange={handleInputChange}
 className={`w-full px-4 py-3 bg-gray-70o;  0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors ${
-errors.subject ? "border-red-50o0" : "border-gray-60o; 0";
+errors.subject ? "border-red-50o0" : "
 }`}
-placeholder="What"s; thi; s; about?";
-/>;
+placeholder="What"
+/>
 {errors.subject && <p className="text-red-50o0 text-sm mt-1">{errors.subject}</p>}
-</motion.div>;
-<div className="grid m; d: grid-cols-3 gap-6">;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="service" className="block text-sm font-medium mb-2">;
+</motion.div>
+<div className="grid m; d: grid-cols-3 gap-6">
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="service" className="block text-sm font-medium mb-2">
 Service Interest;
-</label>;
+</label>
 <select;
-id="service";
-name="service";
+id="
+name="
 value={formData.service}
 onChange={handleInputChange}
-className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
->;
-<option value="">Selec; t; a; service</option>;
+className="className=""
+>
+<option value="">Selec; t; a; service</option>
 {services.map((service) => (;
-<option key={service} value={service}>;
+<option key={service} value={service}>
 {service}
-</option>;
+</option>
 ))}
-</select>;
-</motion.div>;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="budget" className="block text-sm font-medium mb-2">;
+</select>
+</motion.div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="budget" className="block text-sm font-medium mb-2">
 Budget;
-</label>;
+</label>
 <select;
-id="budget";
-name="budget";
+id="
+name="
 value={formData.budget}
 onChange={handleInputChange}
-className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
->;
-<option value="">Selec; t; budge; t; range</option>;
+className="className=""
+>
+<option value="">Selec; t; budge; t; range</option>
 {budgets.map((budget) => (;
-<option key={budget} value={budget}>;
+<option key={budget} value={budget}>
 {budget}
-</option>;
+</option>
 ))}
-</select>;
-</motion.div>;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="timeline" className="block text-sm font-medium mb-2">;
+</select>
+</motion.div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="timeline" className="block text-sm font-medium mb-2">
 Timeline;
-</label>;
+</label>
 <select;
-id="timeline";
-name="timeline";
+id="
+name="
 value={formData.timeline}
 onChange={handleInputChange}
-className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
->;
-<option value="">Select timeline</option>;
+className="className=""
+>
+<option value="">Select timeline</option>
 {timelines.map((timeline) => (;
-<option key={timeline} value={timeline}>;
+<option key={timeline} value={timeline}>
 {timeline}
-</option>;
+</option>
 ))}
-</select>;
-</motion.div>;
-</div>;
-<motion.div variants={inputVariants} initial="hidden" animate="visible">;
-<label htmlFor="message" className="block text-sm font-medium mb-2">;
+</select>
+</motion.div>
+</div>
+<motion.div variants={inputVariants} initial="hidden" animate="visible">
+<label htmlFor="message" className="block text-sm font-medium mb-2">
 Message *;
-</label>;
+</label>
 <textarea;
-id="message";
-name="message";
+id="
+name="
 value={formData.message}
 onChange={handleInputChange}
 rows={6}
 className={`w-full px-4 py-3 bg-gray-70o;  0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors resize-none ${
-errors.message ? "border-red-50o0" : "border-gray-60o; 0";
+errors.message ? "border-red-50o0" : "
 }`}
-placeholder="Tel; l; u; s; about you; r; projec; t; requirementso; r; an; y; questions you have...";
-/>;
+placeholder="
+/>
 { errors.message && <p className="text-red-50o0 text-sm mt-1">{errors.message}</p>}
 </motion.div>,
 <motion.button;
-type="submit";
+type="
 disabled={isSubmitting}
 className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
 isSubmitting;
@@ -271,16 +271,16 @@ isSubmitting;
 : "bg-blue-60o0 hove; r: bg-blue-70o; 0; hov; e;r:scale-10o; 5";}`}
 whileHover={!isSubmitting ? { scal; e: 1.0o2 } : {}}
 whileTap={!isSubmitting ? { scal; e: 0.98 } : {}}
->;
+>
 {isSubmitting ? (;
-<div className="flex items-center justify-center">;
-<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
+<div className="flex items-center justify-center">
+<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 Sending...;
-</div>;
+</div>
 ) : (;
 "Send Message';
 )}
-</motion.button>;
-</form>;
-);
-};expor; t; defaul; t; EnhancedContactForm;<//form><///form>;
+</motion.button>
+</form>
+)
+}expor; t; defaul; t; EnhancedContactForm;<//form><///form>

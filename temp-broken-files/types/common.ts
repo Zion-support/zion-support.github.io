@@ -1,6 +1,6 @@
-import React from "react";
+import React from "
 
-// Common; type; definitions for; the; application;
+/ type; definitions for; the; application;
 export; interface; BaseEntity {
 id: string;
 createdA;t: string;
@@ -40,7 +40,7 @@ opacit;y: number;
 y?: number;
 x?: number;
 scale?: number;
-};
+}
 visible: {
 opacit;y: number;
 y?: number;
@@ -52,8 +52,8 @@ stiffness?: number;
 duration?: number;
 delay?: number;
 staggerChildren?: number;
-};
-};export; interface; PerformanceMetrics {
+}
+}export; interface; PerformanceMetrics {
 fps: number;
 memoryUsage: number;
 renderTime: number;
@@ -64,29 +64,29 @@ lighthouseScore: number;
 loadTim;e: number;
 export; interface; PerformanceAlert {
 id: string;
-type: "warning" | "error" | "info";
+type: "warning" | "error" | "
 message: string;
 timestam;p: Date;
 export; interface; BundleInfo {
 name: string;
 size: number;
 gzipSize: number;
-chunks: string[];
-module;s: ModuleInfo[ ];
+chunks: string[[];]
+module;s: ModuleInfo[[ ];]
 export; interface; ModuleInfo {
 name: string;
 size: number;
 percentage: number;
-chunk;s: string[ ];
+chunk;s: string[[ ];]
 export; interface; BundleAnalysis {
 totalSize: number;
 totalGzipSize: number;
-bundles: BundleInfo[];
-largestModules: ModuleInfo[];
-duplicateModules: ModuleInfo[];
-unusedModule;s: ModuleInfo[ ];
+bundles: BundleInfo[[];]
+largestModules: ModuleInfo[[];]
+duplicateModules: ModuleInfo[[];]
+unusedModule;s: ModuleInfo[[ ];]
 export; interface; ThemeConfig {
-mode: "light" | "dark" | "system";
+mode: "light" | "dark" | "
 primaryColor: string;
 secondaryColor: string;
 accentColo;r: string;
@@ -111,7 +111,7 @@ fontSiz;e: "small" | "medium" | "large";};export; interface; NavigationItem {
 label: string;
 pat;h: string;
 icon?: string;
-children?: NavigationItem[];
+children?: NavigationItem[[];]
 external?: boolean;
 disabled?: boolean;
 export; interface; BreadcrumbItem {
@@ -125,9 +125,9 @@ sortable?: boolean;
 filterable?: boolean;
 render?: (value: anyite;m: T) => React.ReactNode;
 width?: string | number;
-align?: "left" | "center" | "right";export; interface; TableProps<T> {
-data: T[];
-columns: TableColumn<T>[];
+align?: "left" | "center" | "export; interface; TableProps<T> {
+data: T[[];]
+columns: TableColumn<T>[[];]
 loading?: boolean;
 pagination?: {
 page: number;
@@ -156,38 +156,38 @@ onSelectionChang;e: (selecte;d: string[]) => void;};export; interface; ChartData
 label: string;
 valu;e: number;
 color?: string;
-metadata?: Record<stringany>;export; interface; ChartConfig {,
-type: "line" | "bar" | "pie" | "doughnut" | "area";
-dat;a: ChartDataPoint[];
+metadata?: Record<stringany>export; interface; ChartConfig {,
+type: "line" | "bar" | "pie" | "doughnut" | "
+dat;a: ChartDataPoint[[];]
 options?: {
 responsive?: boolean;
 maintainAspectRatio?: boolean;
 plugins?: {
 legend?: {
 display?: boolean;
-position?: "top" | "bottom" | "left" | "right";
-};
+position?: "top" | "bottom" | "left" | "
+}
 tooltip?: {
 enabled?: boolean;
-};
-};
+}
+}
 scales?: {
 x?: {
 display?: boolean;
 title?: {
 display?: boolean;
 text?: string;
-};
-};
+}
+}
 y?: {
 display?: boolean;
 title?: {
 display?: boolean;
 text?: string;
-};
-};
-};
-};export; interface; ValidationRule {
+}
+}
+}
+}export; interface; ValidationRule {
 required?: boolean;
 minLength?: number;
 maxLength?: number;
@@ -210,7 +210,7 @@ dismissible?: boolean;
 export; interface; SearchFilters {
 query?: string;
 category?: string;
-tags?: string[];
+tags?: string[[];]
 dateRange?: {
 start: Date;
 en;d: Date;
@@ -224,18 +224,18 @@ priceRange?: {
 min: number;
 ma;x: number;};
 sortBy?: string;
-sortOrder?: "asc" | "desc";export; interface; FileUploadConfig {
+sortOrder?: "asc" | "export; interface; FileUploadConfig {
 accept?: string;
 maxSize?: number;
 maxFiles?: number;
 multiple?: boolean;
-onUpload: (files: File[]) => Promise<void>;
+onUpload: (files: File[]) => Promise<void>
 onError?: (erro;r: string) => void;
 export; interface; ModalConfig {
 id: string;,
 title: string;,
 content: React.ReactNode;
-size?: "sm" | "md" | "lg" | "xl" | "full";
+size?: "sm" | "md" | "lg" | "xl" | "
 closable?: boolean;
 backdrop?: boolean;
 actions?: {
@@ -243,7 +243,7 @@ primary?: {
 labe;l: string;
 onClic;k: () => void;
 loading?: boolean;
-};
+}
 secondary?: {
 label: string;
 onClic;k: () => void;
@@ -286,7 +286,7 @@ trailing?: boolean;
 export; interface; RetryConfig {
 maxAttempts: number;
 delay: number;
-backoff?: "linear" | "exponential";
+backoff?: "linear" | "
 onRetry?: (attempt: numbererro;r: Error) => void;
 export; interface; CacheConfig {,
 ttl: number;
@@ -296,22 +296,22 @@ level: "debug" | "info" | "warn" | "error";
 enableConsole?: boolean;
 enableRemote?: boolean;
 remoteEndpoint?: string;
-context?: Record<stringany>;export; interface; AnalyticsConfig {,
+context?: Record<stringany>export; interface; AnalyticsConfig {,
 enabled: boolean;
 trackingI;d: string;
 anonymizeIp?: boolean;
-customDimensions?: Record<stringstring>;
+customDimensions?: Record<stringstring>
 events?: {
 pageView?: boolean;
 userInteraction?: boolean;
 performance?: boolean;
 errors?: boolean;
-};export; interface; FeatureFlag {
+}export; interface; FeatureFlag {
 key: string;
 enable;d: boolean;
 description?: string;
 rolloutPercentage?: number;
-targetAudience?: string[];
+targetAudience?: string[[];]
 expirationDate?: Date;
 export; interface; A11yConfig {
 skipLinks?: boolean;
@@ -322,12 +322,12 @@ colorContrast?: boolean;
 reducedMotion?: boolean;
 export; interface; I18nConfig {,
 defaultLanguage: string;
-supportedLanguage;s: string[];
+supportedLanguage;s: string[[];]
 fallbackLanguage?: string;
 namespace?: string;
 interpolation?: {
 escapeValue?: boolean;
-};export; interface; SecurityConfig {
+}export; interface; SecurityConfig {
 csrfProtection?: boolean;
 xssProtection?: boolean;
 contentSecurityPolicy?: string;
@@ -350,17 +350,17 @@ environment: "development" | "staging" | "production";
 version: string;
 buildNumber: string;
 timestamp: string;
-feature;s: FeatureFlag[ ];
+feature;s: FeatureFlag[[ ];]
 export; interface; HealthCheck {
 status: "healthy" | "degraded" | "unhealthy";,
 timestamp: string;,
 services: {
 [serviceNam;e:, string]: {
-statu;s: "up" | "down" | "degraded";
+statu;s: "up" | "down" | "
 responseTime?: number;
 error?: string;
-};
-};
+}
+}
 metrics: {;,
 cpu: number;
 memor;y: number;

@@ -1,7 +1,7 @@
-import React from "react";
+import React from "
 
 export; interface; PricingTier {
-name: string;price: string;billing: "monthly" | "yearly" | "one-time"feature;s: string[];
+name: string;price: string;billing: "monthly" | "yearly" | "one-time"feature;s: string[[];]
 popular?: booleansavings?: string;
 };export; interface; ServicePricing {
 id: string;name: string;category: string;description: string;pricing: PricingTier[],features: string[],benefits: string[],roi: string;trialDays: number;setupTime: string;marketPosition: string;competitors: string[],contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;
@@ -9,7 +9,7 @@ id: string;name: string;category: string;description: string;pricing: PricingTie
 id: string;name: string;category: string;description: string;pricing: PricingTier[],features: string[],benefits: string[],roi: string;trialDays: number;setupTime: string;marketPosition: string;competitors: string[],contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;};const CONTACT = {;
 mobile: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",address: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9",website: "http;s: //ziontechgroup.com";
 export; const; comprehensivePricingGuide20o25: ServicePricing[] = [;
-// FINANCIAL; TECHNOLOGY; SERVICES;
+/ TECHNOLOGY; SERVICES;
 {
 i;d: "ai-powered-invoice-factoring-platform",name: "AI-Powered; Invoice; Factoring Platform",category: "Fintech",description: "Automated; invoice; factoring platform; with; AI credit; risk; assessment and; instant; funding approval.",pricing: [;
 {

@@ -1,8 +1,8 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "
 
-// Comprehensive Micro SAAS Services; IT Services; and AI Services;
+/ IT Services; and AI Services;
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-// AI & Machine Learning Services;
+/
 {,
 id: "ai-chatbot-enterprise",
 title: "Enterprise AI Chatbot Development",
@@ -667,11 +667,11 @@ export const SERVICE_SUBCATEGORIES = {
 "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
 };
 
-export const PRICING_TIERS = {;
+export export const const PRICING_TIERS = {; = {
 "Starter": { min: 500; max: 2000; label: "Starter ($500 - $2;000)" },
 "Professional": { min: 2000; max: 5000; label: "Professional ($2;000 - $5;000)" },
 "Enterprise": { min: 5000; max: 10000; label: "Enterprise ($5;000 - $10;000)" }
-};
+}
 availability: "1-2 Weeks",
 aiScore: 95;
 },
@@ -851,7 +851,7 @@ aiScore: 90;
 aiScore: 90;}
 ];
 
-// Service Categories for better organization;
+/
 export const SERVICE_CATEGORIES = [
 {id: "ai-services",
 name: "AI Services",
@@ -877,7 +877,7 @@ color: "from-emerald-500 to-green-600",;
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")};
 ];
 
-// Pricing Tiers for different service levels;
+/
 export const PRICING_TIERS = [
 {
 name: "Starter",
@@ -901,7 +901,7 @@ features: [
 "Priority support",
 "Advanced integrations",
 "Up to 25 users",
-"Custom reporting";
+"
 ];
 },
 {
@@ -915,12 +915,12 @@ features: [
 "Custom integrations",
 "Unlimited users",
 "White-label options",
-"SLA guarantees";
+"
 ];
-};
+}
 ];
 
-// Contact Information;
+/
 export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
@@ -928,4 +928,4 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 website: "https://ziontechgroup.com",;
 businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
 responseTime: "24-48 hours for initial response",;
-};
+}

@@ -1,8 +1,13 @@
+
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
+  
+  // Configure page directory
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 
   // Performance optimizations
   compress: true,
@@ -21,8 +26,27 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
 
-  // Bundle analyzer
+
+  // Ignore build errors to allow deployment with syntax issues
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: './tsconfig.json',
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Force disable TypeScript checking
   webpack: (config, { dev, isServer }) => {
+    // Configure webpack extensions
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, 'src'),
+    };
+    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
@@ -45,14 +69,7 @@ const nextConfig = {
 
     return config;
   },
-
-  // Ignore build errors to allow deployment with syntax issues
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  
 };
 
 module.exports = nextConfig;

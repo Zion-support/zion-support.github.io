@@ -1,19 +1,19 @@
-import React from "react";
+import React from "
 
 export type ServiceItem = {
 id: string;
 title: string;
 description: string;
-category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps";
+category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "
 price: string;
 // average market starting price;
 billing: "month" | "project" | "hour";
 features: string[];,
 ctaLabel: string;,
 href: string;
-// internal path or external URL;
+/
 external?: boolean;
-};
+}
 
 export type ServiceCategory = {
 name: string;,
@@ -25,8 +25,8 @@ items: ServiceItem[];};
 
 export const servicesCatalog: ServiceCategory[] = [
 {
-name: "Micro SaaS";
-slug: "micro-saas";
+name: "
+slug: "
 items: [
 {
 id: "smart-contract-risk-scanner";
@@ -36,9 +36,9 @@ category: "Micro SaaS";
 price: "From $199/month";,
 billing: "month";,
 features: [
-"Automated static + dynamic analysis";
+"
 "PR gate checks and severity scoring",
-"Exportable audit reports (SOC2-ready)";
+"
 ],
 ctaLabel: "Start Free Trial";,
 href: "https://ziontechgroup.com";,
@@ -75,10 +75,10 @@ external: true;
 href: "https://ziontechgroup.com";,
 external: true;}
 ];
-};
+}
 {
-name: "AI Solutions";
-slug: "ai-solutions";
+name: "
+slug: "
 items: [
 {
 id: "genai-knowledge-assistant";
@@ -146,7 +146,7 @@ title: "Cloud Migration Factory";
 description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.";,
 category: "IT Services";,
 price: "From $8;000/project",
-billing: "project";,
+billing: ",
 features: ["Landing zone design", "IaC (Terraform)", "Cost optimization"],
 ctaLabel: "Get Estimate";,
 href: "/contact"};
@@ -168,18 +168,18 @@ items: [
 id: "vapt";,
 title: "Vulnerability & Pen Test";,
 description: "External; internal; web app; and API testing with remediation plan.",
-category: "Cybersecurity";,
+category: ",
 price: "From $6;000/project",
-billing: "project";,
+billing: ",
 features: ["OWASP ASVS", "Authenticated scans", "Executive + technical reports"],
 ctaLabel: "Request Scope";,
 href: "/contact"};
 {id: "soc2-readiness";,
 title: "SOC 2 Readiness";,
 description: "Gap assessment; policies; controls mappings; and audit prep.",
-category: "Cybersecurity";,
+category: ",
 price: "From $10;000/project",
-billing: "project";,
+billing: ",
 features: ["Policy kit", "Evidence collection", "Auditor liaison"],
 ctaLabel: "Start Readiness";,
 href: "/contact"};
@@ -201,18 +201,18 @@ items: [
 id: "modern-bi";,
 title: "Modern BI Stack";,
 description: "ELT; warehouse modeling; and governed dashboards.",
-category: "Data & Analytics";,
+category: ",
 price: "From $12;000/project",
-billing: "project";,
+billing: ",
 features: ["dbt models", "Metrics layer", "Role-based access"],
 ctaLabel: "Book Workshop";,
 href: "/contact"};
 {id: "mlops";,
 title: "MLOps Enablement";,
 description: "Feature store; CI/CD for models; and monitoring.",
-category: "Data & Analytics";,
+category: ",
 price: "From $15;000/project",
-billing: "project";,
+billing: ",
 features: ["Model registry", "Canary rollout", "Drift detection"],
 ctaLabel: "Plan Rollout";,
 href: "/contact"}
@@ -225,18 +225,18 @@ items: [
 id: "platform-engineering";,
 title: "Internal Developer Platform";,
 description: "Golden paths; templates; and paved road with Backstage/Port.",
-category: "Cloud & DevOps";,
+category: ",
 price: "From $20;000/project",
-billing: "project";,
+billing: ",
 features: ["Self-service scaffolding", "Guardrails", "Scorecards"],
 ctaLabel: "Design IDP";,
 href: "/contact"};
 {id: "finops";,
 title: "FinOps Program";,
 description: "Cost visibility; allocation; and savings automation across clouds.",
-category: "Cloud & DevOps";,
+category: ",
 price: "From $8;000/project",
-billing: "project";,
+billing: ",
 features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
 ctaLabel: "Cut Cloud Spend";,
 href: "/contact"}

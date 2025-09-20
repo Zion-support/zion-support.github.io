@@ -36,7 +36,7 @@ initial = {,
 "}}
 animate = {,
 { "opacity": "1",
-"height": "auto";
+"height": "
 }}
 exit = {,
 { "opacity": "0",

@@ -429,4 +429,4 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         integrations: ['Cloud providers', 'Application platforms', 'Monitoring tools', 'Load balancers'],
         sla: '99.9% uptime guarantee'}
 ];
-    export default ENTERPRISE_IT_INFRASTRUCTURE_2025;
+    export export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

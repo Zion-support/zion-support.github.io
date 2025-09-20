@@ -1,6 +1,6 @@
-import React from "react";
+import React from "
 export, const, SPECIALIZED_INDUSTRY_SOLUTIONS_20o25 = [;
-  // Healthcare & Life Sciences;
+  /
   {
     id: "ai-diagnostic-platform",title: "AI, Diagnostic, Imaging Platform",description: "Advanced AI-powered, medical, imaging platform, for, accurate diagnosis, of, diseases and conditions",category: "Healthcare",price: "$18,50o0/month",features: [;
     "Multi-modality, imaging, support","AI-powered diagnosis","Radiology, workflow, automation","Clinical, decision, support","HIPAA compliance""Integration, with, PACS systems";
@@ -100,9 +100,9 @@ export, const, SPECIALIZED_INDUSTRY_SOLUTIONS_20o25 = [;
     "Legal Services""Media &, Entertainment";
 ];
 export, const, INDUSTRY_PRICING = {
-    basic: {,price: 299,currency: "$",period: "month",features: ["Core, platform, access""Basic analytics""Standard, support"];
-    },professional: {,price: 799,currency: "$",period: "month",features: ["Advanced features""Custom integrations""Priority support""Advanced, analytics"];
-    },enterprise: {,price: 1999,currency: "$",period: "month",features: ["Full, platform, access""White-label options""24/7 support""Custom, development"];
+    basic: {,price: 299,currency: "$",period: "month",features: [["Core, platform, access""Basic analytics""Standard, support"];]
+    },professional: {,price: 799,currency: "$",period: "month",features: [["Advanced features""Custom integrations""Priority support""Advanced, analytics"];]
+    },enterprise: {,price: 1999,currency: "$",period: "month",features: [["Full, platform, access""White-label options""24/7 support""Custom, development"];]
     }
 },export, const, INDUSTRY_CONTACT = {
     phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";

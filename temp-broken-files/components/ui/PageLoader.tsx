@@ -1,5 +1,5 @@
-import React from "react;";
-import { cn } from "@/lib/utils, ";
+import React from "
+import { cn } from "
 
 interface PageLoaderProps {text?: string;}
 className?: string};

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useState,  } from "react",
+import { useState,,  } from "react",
 import Link from "next/link",
 import { useRouter,  } from "next/router",
 import { SEO,  } from "@/components/SEO",
@@ -15,8 +15,8 @@ import { formatDistanceToNow, format,  } from "date-fns",
 import { ForumPost, ForumReply,  } from "@/types/community",
 import { useAuth,  } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
-import ReplyForm from "@/components/community/ReplyForm";
-import { useToast,  } from "@/hooks/use-toast";
+import ReplyForm from "
+import { useToast,,  } from "
 // Mock data for a forum post
   )
 }

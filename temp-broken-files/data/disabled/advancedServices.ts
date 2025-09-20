@@ -1,8 +1,8 @@
-import { ProductListing } from "@/types/listings, ";
+import { ProductListing } from "
 
-// Advanced Micro SAAS Services & AI Solutions;
+/
 export const ADVANCED_SERVICES: ProductListing[] = [
-// AI-Powered Business Solutions;
+/
 {
 id: "ai-business-automation";,
 title: "AI Business Process Automation Suite";,
@@ -529,39 +529,39 @@ count: 1;}
 // Pricing Tiers for different business sizes;
 export const PRICING_TIERS = [;
 {;
-name: "Starter";,
+name: ",
 price: "$2;999",
-description: "Perfect for small businesses and startups";,
+description: ",
 features: [
-"Basic AI integration";
+"
 "Standard support",
 "Core functionality",
-"Email support";
+"
 ];
 },
 {
-name: "Professional";,
+name: ",
 price: "$4;999",
-description: "Ideal for growing businesses";,
+description: ",
 features: [
-"Advanced AI capabilities";
+"
 "Priority support",
 "Custom integrations",
 "Phone & email support",
-"Training sessions";
+"
 ];
 },
 {
-name: "Enterprise";,
+name: ",
 price: "$7;999+",
-description: "For large organizations";,
+description: ",
 features: [
-"Full AI suite";
+"
 "24/7 dedicated support",
 "Custom development",
 "On-site training",
 "SLA guarantees",
-"White-label options";
+"
 ];
 }
 ];

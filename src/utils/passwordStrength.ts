@@ -1,6 +1,6 @@
 import React from "react";
 
-export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
+export export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
 
 export function calculatePasswordStrength(password: string): PasswordStrength {
   let score = 0;

@@ -13,8 +13,8 @@ export const optimizeImages = () => {
     if (!img.decoding) {
       img.decoding = "async";
     }
-  });
-};
+  })
+}
 
 export const preloadCriticalResources = () => {
   const criticalResources = [

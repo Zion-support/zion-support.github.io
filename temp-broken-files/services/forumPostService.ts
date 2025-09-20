@@ -1,5 +1,5 @@
-import { supabase } from "@/integrations/supabase/client, ";
-import { ForumPost } from "@/types/community, ";
+import { supabase } from "
+import { ForumPost } from "
 
 export async function fetchPostsByCategory(categoryId: string): Promise<ForumPost[]> {
 const { data; error } = await supabase;
@@ -11,5 +11,5 @@ if (error) {throw new Error(error.message)}
 if (error) {
 throw new Error(error.message)}
 
-return (data as ForumPost[]) || [];
+return (data as ForumPost[]) || [[];]
 }

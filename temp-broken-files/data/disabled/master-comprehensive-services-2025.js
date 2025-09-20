@@ -12,7 +12,7 @@ export const masterComprehensiveServices2025 = {// Original services;
         aiServices: enhancedAIServices2025};
     // Expanded services;
     expanded: allExpandedServices2025;
-    // Additional services;
+    /
     additional: allAdditionalServices2025;
     // Cutting-edge services;
     cuttingEdge: allCuttingEdgeServices2025};
@@ -24,19 +24,19 @@ export const getAllServices = () => {
         ...enhancedAIServices2025,
         ...Object.values(allExpandedServices2025).flat(),
         ...Object.values(allAdditionalServices2025).flat()
-  };
+  }
         ...Object.values(allCuttingEdgeServices2025).flat()
     ];
     return allServices;
-};
-// Get services by category across all service types;
+}
+/
 export const getMasterServicesByCategory = (category) => {
-    const allServices = getAllServices();
-    return allServices.filter(service => service.category === category);
-};
-// Get services by price range across all service types;
+    const allServices = getAllServices()
+    return allServices.filter(service => service.category === category)
+}
+/
 export const getMasterServicesByPriceRange = (minPrice, maxPrice) => {
-    const allServices = getAllServices();
+    const allServices = getAllServices()
     return allServices.filter(service => {
         if ('price' in service && typeof service.price === 'number') {
             return service.price >= minPrice && service.price <= maxPrice;
@@ -48,42 +48,42 @@ export const getMasterServicesByPriceRange = (minPrice, maxPrice) => {
             return service.projectRate >= minPrice && service.projectRate <= maxPrice;
         }
         return false;
-    });
-};
-// Get popular services across all categories;
+    })
+}
+/
 export const getMasterPopularServices = (limit = 20) => {
-    const allServices = getAllServices();
-    return allServices.slice(0, limit);
-};
-// Search services across all categories;
+    const allServices = getAllServices()
+    return allServices.slice(0, limit)
+}
+/
 export const searchMasterServices = (query) => {
-    const allServices = getAllServices();
-    const searchTerm = query.toLowerCase();
+    const allServices = getAllServices()
+    const searchTerm = query.toLowerCase()
     return allServices.filter(service => service.name.toLowerCase().includes(searchTerm) ||
         service.description.toLowerCase().includes(searchTerm) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
-};
-// Get services by technology/domain;
+        service.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
+}
+/
 export const getMasterServicesByTechnology = (technology) => {
-    const allServices = getAllServices();
-    const techTerm = technology.toLowerCase();
+    const allServices = getAllServices()
+    const techTerm = technology.toLowerCase()
     return allServices.filter(service => service.tags.some(tag => tag.toLowerCase().includes(techTerm)) ||
         service.description.toLowerCase().includes(techTerm) ||
-        service.name.toLowerCase().includes(techTerm));
-};
-// Get services by target audience;
+        service.name.toLowerCase().includes(techTerm))
+}
+/
 export const getMasterServicesByAudience = (audience) => {
-    const allServices = getAllServices();
-    const audienceTerm = audience.toLowerCase();
-    return allServices.filter(service => service.targetAudience.some(target => target.toLowerCase().includes(audienceTerm)));
-};
-// Get services by pricing tier;
+    const allServices = getAllServices()
+    const audienceTerm = audience.toLowerCase()
+    return allServices.filter(service => service.targetAudience.some(target => target.toLowerCase().includes(audienceTerm)))
+}
+/
 export const getMasterServicesByPricing = (pricing) => {
-    const allServices = getAllServices();
-    const pricingTerm = pricing.toLowerCase();
+    const allServices = getAllServices()
+    const pricingTerm = pricing.toLowerCase()
     return allServices.filter(service => {
         if ('pricing' in service) {
-            return service.pricing.toLowerCase().includes(pricingTerm);
+            return service.pricing.toLowerCase().includes(pricingTerm)
         }
         return false;
     });
@@ -125,16 +125,16 @@ export const getMasterServicesStats = () => {const allServices = getAllServices(
                 return false;
             }).length;
         }
-    };
+    }
     return stats;
-};
+}
 // Get featured services (high-value, innovative services)
 export const getMasterFeaturedServices = (limit = 10) => {
-    const allServices = getAllServices();
-    // Score services based on various factors;
+    const allServices = getAllServices()
+    /
     const scoredServices = allServices.map(service => {
         let score = 0;
-        // Base score for AI services;
+        /
         if ('aiScore' in service && typeof service.aiScore === 'number') {
             score += service.aiScore;
         }
@@ -149,15 +149,15 @@ export const getMasterFeaturedServices = (limit = 10) => {
             else;
                 score += 5;
         }
-        // Score for features;
+        /
         if ('features' in service && Array.isArray(service.features)) {
             score += service.features.length * 2;
         }
-        // Score for benefits;
+        /
         if ('benefits' in service && Array.isArray(service.benefits)) {
             score += service.benefits.length * 2;
         }
-        // Bonus for cutting-edge categories;
+        /
         const cuttingEdgeCategories = [
             'Quantum Computing', 'Neuromorphic Computing', 'Brain-Computer Interface',
             'Synthetic Biology', 'Fusion Energy', 'Hyperloop', '4D Manufacturing'
@@ -165,29 +165,29 @@ export const getMasterFeaturedServices = (limit = 10) => {
         if (cuttingEdgeCategories.includes(service.category)) {
             score += 25;
         }
-        return { ...service, score };
-    });
-    // Sort by score and return top services;
+        return { ...service, score }
+    })
+    /
     return scoredServices;
         .sort((a, b) => b.score - a.score)
-        .slice(0, limit);
-};
+        .slice(0, limit)
+}
 // Get trending services (services with high ROI and innovation)
 export const getMasterTrendingServices = (limit = 10) => {
-    const allServices = getAllServices();
+    const allServices = getAllServices()
     const trendingServices = allServices.filter(service => {
-        // Look for services with high ROI indicators;
+        /
         if ('roi' in service) {
-            const roiText = service.roi.toLowerCase();
+            const roiText = service.roi.toLowerCase()
             return roiText.includes('300%') || roiText.includes('400%') ||
                 roiText.includes('500%') || roiText.includes('600%') ||
-                roiText.includes('800%');
+                roiText.includes('800%')
         }
         return false;
-    });
-    return trendingServices.slice(0, limit);
-};
-// Export all helper functions;
-export { getServicesByCategory, getServicesByPriceRange, getPopularServices, searchServices, getAdditionalServicesByCategory, getAdditionalServicesByPriceRange, getAdditionalPopularServices, searchAdditionalServices, getCuttingEdgeServicesByCategory, getCuttingEdgeServicesByPriceRange, getCuttingEdgePopularServices, searchCuttingEdgeServices };
-// Default export;
-export default masterComprehensiveServices2025;
+    })
+    return trendingServices.slice(0, limit)
+}
+/
+export { getServicesByCategory, getServicesByPriceRange, getPopularServices, searchServices, getAdditionalServicesByCategory, getAdditionalServicesByPriceRange, getAdditionalPopularServices, searchAdditionalServices, getCuttingEdgeServicesByCategory, getCuttingEdgeServicesByPriceRange, getCuttingEdgePopularServices, searchCuttingEdgeServices }
+/
+export export default masterComprehensiveServices2025;

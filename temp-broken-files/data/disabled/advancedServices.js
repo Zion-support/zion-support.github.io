@@ -1,14 +1,14 @@
-// Advanced Micro SAAS Services & AI Solutions;
+/
 export const ADVANCED_SERVICES = [
-    // AI-Powered Business Solutions;
+    /
     {
-        id: "ai-business-automation";
-        title: "AI Business Process Automation Suite";
+        id: "
+        title: "
         description: "Complete automation solution for repetitive business tasks using AI. Includes document processing, email automation, customer service bots, and workflow optimization. Reduces manual work by 80% and increases productivity.",
-        category: "AI Automation";
-        subcategory: "Business Process";
+        category: "
+        subcategory: "
         price: 2999;
-        currency: "$";
+        currency: "
         tags: ["Business Automation", "AI Workflow", "Productivity", "Document Processing"],
         author: {
             name: "Zion Tech Group";
@@ -26,13 +26,13 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks"};
     {
-        id: "ai-customer-intelligence";
-        title: "AI Customer Intelligence Platform";
+        id: "
+        title: "
         description: "Advanced customer analytics platform that predicts customer behavior, identifies churn risks, and provides personalized recommendations. Includes sentiment analysis, purchase prediction, and customer lifetime value optimization.",
-        category: "AI Analytics";
-        subcategory: "Customer Intelligence";
+        category: "
+        subcategory: "
         price: 4499;
-        currency: "$";
+        currency: "
         tags: ["Customer Analytics", "Predictive Analytics", "Churn Prevention", "Personalization"],
         author: {
             name: "Zion Tech Group";
@@ -50,13 +50,13 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "3-4 Weeks"};
     {
-        id: "ai-supply-chain-optimization";
-        title: "AI Supply Chain Optimization Engine";
+        id: "
+        title: "
         description: "Intelligent supply chain management system that optimizes inventory levels, predicts demand fluctuations, and automates procurement decisions. Reduces costs by 25% and improves delivery times.",
-        category: "AI Analytics";
-        subcategory: "Supply Chain";
+        category: "
+        subcategory: "
         price: 5999;
-        currency: "$";
+        currency: "
         tags: ["Supply Chain", "Inventory Optimization", "Demand Forecasting", "Procurement"],
         author: {
             name: "Zion Tech Group";
@@ -74,13 +74,13 @@ export const ADVANCED_SERVICES = [
         availability: "4-5 Weeks"};
     // Cybersecurity & Compliance Solutions;
     {
-        id: "ai-threat-detection";
-        title: "AI-Powered Threat Detection System";
+        id: "
+        title: "
         description: "Advanced cybersecurity solution that uses machine learning to detect and prevent sophisticated cyber threats in real-time. Includes behavioral analysis, anomaly detection, and automated incident response.",
-        category: "Cybersecurity";
-        subcategory: "Threat Detection";
+        category: "
+        subcategory: "
         price: 7999;
-        currency: "$";
+        currency: "
         tags: ["Cybersecurity", "Threat Detection", "Machine Learning", "Incident Response"],
         author: {
             name: "Zion Tech Group";
@@ -98,13 +98,13 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks"};
     {
-        id: "compliance-automation";
-        title: "Automated Compliance Management Platform";
+        id: "
+        title: "
         description: "Comprehensive compliance automation tool for GDPR, HIPAA, SOX, and other regulatory frameworks. Automates compliance monitoring, reporting, and audit preparation.",
-        category: "Compliance";
-        subcategory: "Automation";
+        category: "
+        subcategory: "
         price: 3499;
-        currency: "$";
+        currency: "
         tags: ["Compliance", "GDPR", "HIPAA", "SOX", "Automation"],
         author: {
             name: "Zion Tech Group";
@@ -122,13 +122,13 @@ export const ADVANCED_SERVICES = [
         availability: "3-4 Weeks"};
     // Cloud & DevOps Solutions;
     {
-        id: "ai-cloud-cost-optimization";
-        title: "AI Cloud Cost Optimization Engine";
-        description: "Intelligent cloud cost management platform that analyzes usage patterns and automatically optimizes cloud resources. Reduces cloud costs by 30-40% while maintaining performance.";
-        category: "Cloud Management";
-        subcategory: "Cost Optimization";
+        id: "
+        title: "
+        description: "
+        category: "
+        subcategory: "
         price: 2499;
-        currency: "$";
+        currency: "
         tags: ["Cloud Optimization", "Cost Management", "Resource Management", "AWS/Azure"],
         author: {
             name: "Zion Tech Group";
@@ -146,13 +146,13 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks"};
     {
-        id: "devops-automation-platform";
-        title: "DevOps Automation & CI/CD Platform";
+        id: "
+        title: "
         description: "Complete DevOps automation solution with intelligent CI/CD pipelines, automated testing, deployment automation, and monitoring. Accelerates development cycles by 5x.",
-        category: "DevOps";
-        subcategory: "Automation";
+        category: "
+        subcategory: "
         price: 3999;
-        currency: "$";
+        currency: "
         tags: ["DevOps", "CI/CD", "Automation", "Testing", "Deployment"],
         author: {
             name: "Zion Tech Group";
@@ -170,13 +170,13 @@ export const ADVANCED_SERVICES = [
         availability: "3-4 Weeks"};
     // Data & Analytics Solutions;
     {
-        id: "ai-data-quality-platform";
-        title: "AI Data Quality & Governance Platform";
+        id: "
+        title: "
         description: "Intelligent data quality management system that automatically detects, cleans, and validates data. Ensures data accuracy, consistency, and compliance across all systems.",
-        category: "Data Management";
-        subcategory: "Quality & Governance";
+        category: "
+        subcategory: "
         price: 5499;
-        currency: "$";
+        currency: "
         tags: ["Data Quality", "Data Governance", "Data Cleaning", "Validation"],
         author: {
             name: "Zion Tech Group";
@@ -193,13 +193,13 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "4-5 Weeks"};
     {
-        id: "real-time-analytics-dashboard";
-        title: "Real-Time Business Analytics Dashboard";
+        id: "
+        title: "
         description: "Live business intelligence dashboard with real-time data visualization, predictive analytics, and automated reporting. Provides instant insights for data-driven decision making.",
-        category: "Analytics";
-        subcategory: "Real-Time";
+        category: "
+        subcategory: "
         price: 2999;
-        currency: "$";
+        currency: "
         tags: ["Real-Time Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
         author: {
             name: "Zion Tech Group";
@@ -217,13 +217,13 @@ export const ADVANCED_SERVICES = [
         availability: "2-3 Weeks"};
     // Marketing & Sales Automation;
     {
-        id: "ai-marketing-automation";
-        title: "AI Marketing Automation Suite";
+        id: "
+        title: "
         description: "Intelligent marketing automation platform with personalized content generation, audience segmentation, campaign optimization, and ROI tracking. Increases conversion rates by 35%.",
-        category: "Marketing";
-        subcategory: "Automation";
+        category: "
+        subcategory: "
         price: 3999;
-        currency: "$";
+        currency: "
         tags: ["Marketing Automation", "Personalization", "Campaign Optimization", "ROI Tracking"],
         author: {
             name: "Zion Tech Group";
@@ -241,13 +241,13 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "3-4 Weeks"};
     {
-        id: "ai-sales-intelligence";
-        title: "AI Sales Intelligence & Lead Scoring";
+        id: "
+        title: "
         description: "Advanced sales intelligence platform that predicts customer buying behavior, scores leads automatically, and provides personalized sales recommendations. Increases sales conversion by 40%.",
-        category: "Sales";
-        subcategory: "Intelligence";
+        category: "
+        subcategory: "
         price: 4499;
-        currency: "$";
+        currency: "
         tags: ["Sales Intelligence", "Lead Scoring", "Predictive Analytics", "Sales Automation"],
         author: {
             name: "Zion Tech Group";
@@ -265,13 +265,13 @@ export const ADVANCED_SERVICES = [
         availability: "2-3 Weeks"};
     // HR & Talent Management;
     {
-        id: "ai-hr-automation";
-        title: "AI HR Automation & Talent Management";
+        id: "
+        title: "
         description: "Comprehensive HR automation platform with AI-powered recruitment, employee performance tracking, training recommendations, and workforce analytics. Streamlines HR operations by 60%.",
-        category: "HR Technology";
-        subcategory: "Automation";
+        category: "
+        subcategory: "
         price: 3499;
-        currency: "$";
+        currency: "
         tags: ["HR Automation", "Recruitment", "Performance Tracking", "Workforce Analytics"],
         author: {
             name: "Zion Tech Group";
@@ -289,13 +289,13 @@ export const ADVANCED_SERVICES = [
         availability: "3-4 Weeks"};
     // Financial Technology Solutions;
     {
-        id: "ai-financial-analytics";
-        title: "AI Financial Analytics & Risk Management";
+        id: "
+        title: "
         description: "Intelligent financial analytics platform with automated risk assessment, fraud detection, investment recommendations, and financial forecasting. Provides real-time financial insights and risk alerts.",
-        category: "FinTech";
-        subcategory: "Analytics";
+        category: "
+        subcategory: "
         price: 6999;
-        currency: "$";
+        currency: "
         tags: ["Financial Analytics", "Risk Management", "Fraud Detection", "Investment Analysis"],
         author: {
             name: "Zion Tech Group";
@@ -314,13 +314,13 @@ export const ADVANCED_SERVICES = [
         availability: "4-5 Weeks"};
     // Healthcare Technology;
     {
-        id: "ai-healthcare-analytics";
-        title: "AI Healthcare Analytics & Patient Care";
+        id: "
+        title: "
         description: "Advanced healthcare analytics platform with patient outcome prediction, treatment optimization, and automated medical record analysis. Improves patient care quality and reduces medical errors.",
-        category: "Healthcare Tech";
-        subcategory: "Analytics";
+        category: "
+        subcategory: "
         price: 8999;
-        currency: "$";
+        currency: "
         tags: ["Healthcare Analytics", "Patient Care", "Treatment Optimization", "Medical Records"],
         author: {
             name: "Zion Tech Group";
@@ -338,13 +338,13 @@ export const ADVANCED_SERVICES = [
         availability: "5-6 Weeks"};
     // Manufacturing & IoT;
     {
-        id: "ai-manufacturing-optimization";
-        title: "AI Manufacturing Optimization & Predictive Maintenance";
+        id: "
+        title: "
         description: "Smart manufacturing solution with predictive maintenance, quality control automation, and production optimization. Reduces downtime by 45% and increases production efficiency by 30%.",
-        category: "Manufacturing";
-        subcategory: "Optimization";
+        category: "
+        subcategory: "
         price: 7499;
-        currency: "$";
+        currency: "
         tags: ["Manufacturing", "Predictive Maintenance", "Quality Control", "Production Optimization"],
         author: {
             name: "Zion Tech Group";
@@ -362,13 +362,13 @@ export const ADVANCED_SERVICES = [
         availability: "4-5 Weeks"};
     // Retail & E-commerce;
     {
-        id: "ai-retail-optimization";
-        title: "AI Retail Optimization & Customer Experience";
+        id: "
+        title: "
         description: "Intelligent retail solution with inventory optimization, personalized recommendations, demand forecasting, and customer behavior analysis. Increases sales by 25% and customer satisfaction.",
-        category: "Retail Tech";
-        subcategory: "Optimization";
+        category: "
+        subcategory: "
         price: 3999;
-        currency: "$";
+        currency: "
         tags: ["Retail Optimization", "Inventory Management", "Personalization", "Customer Experience"],
         author: {
             name: "Zion Tech Group";
@@ -385,7 +385,7 @@ export const ADVANCED_SERVICES = [
         location: "Global";
         availability: "3-4 Weeks"}
 ];
-    // Service Categories for better organization;
+    /
 export const SERVICE_CATEGORIES = [
     {id: "ai-automation";
         name: "AI Automation";
@@ -442,25 +442,25 @@ export const SERVICE_CATEGORIES = [
         icon: "🛍️";
         count: 1}
 ];
-    // Pricing Tiers for different business sizes;
+    /
 export const PRICING_TIERS = [
     {
-        name: "Starter";
+        name: "
         price: "$2,999",
-        description: "Perfect for small businesses and startups";
+        description: "
         features: [
-            "Basic AI integration";
+            "
             "Standard support",
             "Core functionality",
             "Email support"
         ]
     },
     {
-        name: "Professional";
+        name: "
         price: "$4,999",
-        description: "Ideal for growing businesses";
+        description: "
         features: [
-            "Advanced AI capabilities";
+            "
             "Priority support",
             "Custom integrations",
             "Phone & email support",
@@ -468,11 +468,11 @@ export const PRICING_TIERS = [
         ]
     },
     {
-        name: "Enterprise";
+        name: "
         price: "$7,999+",
-        description: "For large organizations";
+        description: "
         features: [
-            "Full AI suite";
+            "
             "24/7 dedicated support",
             "Custom development",
             "On-site training",

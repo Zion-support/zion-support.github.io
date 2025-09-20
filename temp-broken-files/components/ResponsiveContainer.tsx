@@ -12,7 +12,7 @@ export function ResponsiveContainer({,;
 children;
 className = ",
 maxWidth = "xl",
-padding = "md";
+padding = "
 }: ResponsiveContainerProps) {,
 const maxWidthClasses = {,
 "sm": "max-w-sm",

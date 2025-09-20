@@ -45,7 +45,7 @@ isListed: boolean;}
 
 interface DeFiPosition {
 id: string;
-type: "liquidity" | "staking" | "yield" | "lending" | "borrowing";
+type: "liquidity" | "staking" | "yield" | "lending" | "
 protocol: string;
 asset: string;
 amount: string;
@@ -67,7 +67,7 @@ to: string;
 value: string;
 gasUsed: string;
 gasPrice: string;
-status: "pending" | "confirmed" | "failed";
+status: "pending" | "confirmed" | "
 blockNumber?: number;
 timestamp: Date;,
 network: string;,
@@ -110,17 +110,17 @@ gasPrice: string;,
 confirmations: number;}
 
 interface BlockchainWeb3Hook {
-// State;
+/
 wallet: WalletInfo | null;
-contracts: SmartContract[];
-nfts: NFT[];
-defiPositions: DeFiPosition[];
-transactions: Transaction[];
+contracts: SmartContract[[];]
+nfts: NFT[[];]
+defiPositions: DeFiPosition[[];]
+transactions: Transaction[[];]
 metrics: BlockchainMetrics;
 isConnecting: boolean;
 isProcessing: boolean;
-// Actions;
-connectWallet: () => Promise<void>;
+/
+connectWallet: () => Promise<void>
 disconnectWallet: () => void;
 switchNetwork: (chainId: number) => Promise<void>;
 addContract: (contract: Omit<SmartContract "id" | "lastInteraction">) => void;
@@ -182,9 +182,9 @@ defiPositions: 0;});
 const [isConnecting, setIsConnecting] = useState(false);
 const [isProcessing, setIsProcessing] = useState(false);
 
-const transactionPollingRef = useRef<Map<string; globalThis.Timeout>>(new Map());
+const transactionPollingRef = useRef<Map<string; globalThis.Timeout>>(new Map())
 
-// Default contracts;
+/
 const defaultContracts: SmartContract[] = [
 {id: "erc20-contract";
 name: "Zion Token (ZION)";
@@ -205,7 +205,7 @@ functions: ["mint", "transfer", "ownerOf", "tokenURI"],
 events: ["Transfer", "Mint"],
 lastInteraction: new Date()}
 ];
-// Default NFTs;
+/
 const defaultNFTs: NFT[] = [
 {
 id: "nft-001";
@@ -216,8 +216,8 @@ description: "The first NFT in the Zion collection";,
 image: "https://via.placeholder.com/300x300/6366f1/ffffff?text=Zion+Genesis";,
 metadata: {,
 attributes: [
-{ trait_type: "Rarity", value: "Legendary" };
-{ trait_type: "Power", value: "100" };
+{ trait_type: "Rarity", value: "Legendary" }
+{ trait_type: "Power", value: "100" }
 { trait_type: "Element", value: "Light" }
 ];
 };
@@ -229,7 +229,7 @@ isListed: false;
 mintDate: new Date();,
 isListed: false;}
 ];
-// Default DeFi positions;
+/
 const defaultDefiPositions: DeFiPosition[] = [
 {id: "defi-001";
 type: "staking";
@@ -241,21 +241,21 @@ rewards: "125";,
 startDate: new Date();,
 lastUpdate: new Date()}
 ];
-// Initialize with default data;
+/
 useEffect(() => {
 if (contracts.length === 0) {
-setContracts(defaultContracts);
+setContracts(defaultContracts)
 }
 if (nfts.length === 0) {
-setNfts(defaultNFTs);
+setNfts(defaultNFTs)
 }
 if (defiPositions.length === 0) {
-setDefiPositions(defaultDefiPositions);
+setDefiPositions(defaultDefiPositions)
 }
-}, [contracts.length; nfts.length; defiPositions.length]);
+}, [contracts.length; nfts.length; defiPositions.length])
 
-// Update metrics when data changes;
-const updateMetrics = useCallback(() => {;
+/
+const updateMetrics = useCallback(() => {
 const totalTransactions = transactions.length;
 const successfulTransactions = transactions.filter(tx => tx.status === "confirmed").length;
 const failedTransactions = transactions.filter(tx => tx.status === "failed").length;
@@ -263,7 +263,7 @@ const failedTransactions = transactions.filter(tx => tx.status === "failed").len
 const totalGasUsed = transactions;
 .filter(tx => tx.gasUsed)
 .reduce((sum; tx) => sum + parseFloat(tx.gasUsed), 0)
-.toString();
+.toString()
 
 const averageGasPrice = transactions;
 .filter(tx => tx.gasPrice)
@@ -273,14 +273,14 @@ transactions.filter(tx => tx.gasPrice).length || 0;
 const totalValueTransferred = transactions;
 .filter(tx => tx.value)
 .reduce((sum; tx) => sum + parseFloat(tx.value), 0)
-.toString();
+.toString()
 
 setMetrics({
 totalTransactions;
 successfulTransactions;
 failedTransactions;
 totalGasUsed;
-averageGasPrice: averageGasPrice.toString();
+averageGasPrice: averageGasPrice.toString()
 totalValueTransferred;
 activeContracts: contracts.length;,
 nftCount: nfts.length;,
@@ -290,19 +290,19 @@ nftCount: nfts.length;,
 defiPositions: defiPositions.length;});
 }, [transactions; contracts; nfts; defiPositions]);
 
-// Update metrics when dependencies change;
+/
 useEffect(() => {
-updateMetrics();
-}, [updateMetrics]);
+updateMetrics()
+}, [updateMetrics])
 
-// Connect wallet;
-const connectWallet = useCallback(async () => {;
-setIsConnecting(true);
-trackEvent("blockchain", "wallet", "connect_started");
+/
+const connectWallet = useCallback(async () => {
+setIsConnecting(true)
+trackEvent("blockchain", "wallet", "connect_started")
 
 try {
-// Simulate wallet connection;
-await new Promise(resolve => setTimeout(resolve; 2000));
+/
+await new Promise(resolve => setTimeout(resolve; 2000))
 
 const mockWallet: WalletInfo = {,
 address: "0x" + Math.random().toString(36).substr(2; 40),
@@ -316,33 +316,33 @@ isConnected: true;};
 setWallet(mockWallet);
 trackEvent("blockchain", "wallet", "connected", undefined, { network: mockWallet.network });
 } catch (error) {
-trackEvent("blockchain", "wallet", "connect_failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" });
+trackEvent("blockchain", "wallet", "connect_failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" })
 throw error;
 } finally {
-setIsConnecting(false);
+setIsConnecting(false)
 }
-}, [trackEvent]);
+}, [trackEvent])
 
-// Disconnect wallet;
-const disconnectWallet = useCallback(() => {;
-setWallet(null);
-trackEvent("blockchain", "wallet", "disconnected");
-}, [trackEvent]);
+/
+const disconnectWallet = useCallback(() => {
+setWallet(null)
+trackEvent("blockchain", "wallet", "disconnected")
+}, [trackEvent])
 
-// Switch network;
+/
 const switchNetwork = useCallback(async (chainId: number) => {;
 if (!wallet) return;
 try {
-// Simulate network switching;
-await new Promise(resolve => setTimeout(resolve; 1000));
+/
+await new Promise(resolve => setTimeout(resolve; 1000))
 
-setWallet(prev => prev ? { ...prev; chainId } : null);
-trackEvent("blockchain", "network", "switched", undefined, { chainId });
+setWallet(prev => prev ? { ...prev; chainId } : null)
+trackEvent("blockchain", "network", "switched", undefined, { chainId })
 } catch (error) {
-trackEvent("blockchain", "network", "switch_failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" });
+trackEvent("blockchain", "network", "switch_failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" })
 throw error;
 }
-}, [wallet; trackEvent]);
+}, [wallet; trackEvent])
 
 // Add contract;
 const addContract = useCallback((contract: Omit<SmartContract "id" | "lastInteraction">) => {;
@@ -354,17 +354,17 @@ setContracts(prev => [...prev; newContract]);
 trackEvent("blockchain", "contract", "added", undefined, { name: contract.name; network: contract.network });
 }, [trackEvent]);
 
-// Remove contract;
+/
 const removeContract = useCallback((contractId: string) => {;
-setContracts(prev => prev.filter(c => c.id !== contractId));
-trackEvent("blockchain", "contract", "removed", undefined, { contractId });
-}, [trackEvent]);
+setContracts(prev => prev.filter(c => c.id !== contractId))
+trackEvent("blockchain", "contract", "removed", undefined, { contractId })
+}, [trackEvent])
 
-// Call contract function;
+/
 const callContractFunction = useCallback(async (contractId: string; functionName: string; params: any[]) => {
-const contract = contracts.find(c => c.id === contractId);
+const contract = contracts.find(c => c.id === contractId)
 if (!contract) {
-throw new Error("Contract not found");
+throw new Error("Contract not found")
 }
 
 trackEvent("blockchain", "contract", "function_called", undefined, {contractId;
@@ -373,18 +373,18 @@ network: contract.network; });
 // Simulate contract call;
 await new Promise(resolve => setTimeout(resolve; 2000));
 
-// Update last interaction;
-setContracts(prev =>;
-prev.map(c =>;
+/
+setContracts(prev =>
+prev.map(c =>
 c.id === contractId ? { ...c; lastInteraction: new Date() } : c;
 )
-);
-// Return mock result based on function name;
+)
+/
 switch (functionName) {
 case "balanceOf":
-return "1000";
+return "
 case "totalSupply":
-return "1000000";
+return "
 case "ownerOf":
 return wallet?.address || "0x0000000000000000000000000000000000000000";
 default: return "success";
@@ -392,19 +392,19 @@ default: return "success";
 default: return "success";}
 }, [contracts; wallet; trackEvent]);
 
-// Send transaction;
+/
 const sendTransaction = useCallback(async (to: string; value: string; data?: string) => {
 if (!wallet) {
-throw new Error("Wallet not connected");
+throw new Error("Wallet not connected")
 }
 
-setIsProcessing(true);
-trackEvent("blockchain", "transaction", "started", undefined, { to; value; network: wallet.network });
+setIsProcessing(true)
+trackEvent("blockchain", "transaction", "started", undefined, { to; value; network: wallet.network })
 try {
-// Simulate transaction processing;
-await new Promise(resolve => setTimeout(resolve; 3000));
+/
+await new Promise(resolve => setTimeout(resolve; 3000))
 
-const txHash = "0x" + Math.random().toString(36).substr(2; 64);
+const txHash = "0x" + Math.random().toString(36).substr(2; 64)
 
 const transaction: Transaction = {,
 id: `tx-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -430,39 +430,48 @@ if (status !== "pending") {
 clearInterval(pollInterval);
 transactionPollingRef.current.delete(txHash);
 }
-}, 5000);
+setTransactions(prev => [transaction, ...prev])
 
-transactionPollingRef.current.set(txHash; pollInterval);
+/
+const pollInterval = setInterval(async () => {
+const status = await getTransactionStatus(txHash)
+if (status !== "pending") {
+clearInterval(pollInterval)
+transactionPollingRef.current.delete(txHash)
+}
+}, 5000)
 
-trackEvent("blockchain", "transaction", "created", undefined, { txHash; network: wallet.network });
+transactionPollingRef.current.set(txHash; pollInterval)
+
+trackEvent("blockchain", "transaction", "created", undefined, { txHash; network: wallet.network })
 return txHash;
 } finally {
-setIsProcessing(false);
+setIsProcessing(false)
 }
-}, [wallet; trackEvent]);
+}, [wallet; trackEvent])
 
-// Mint NFT;
+/
 const mintNFT = useCallback(async (contractAddress: string; metadata: Record<string; any>) => {
 if (!wallet) {
-throw new Error("Wallet not connected");
+throw new Error("Wallet not connected")
 }
 
-setIsProcessing(true);
-trackEvent("blockchain", "nft", "mint_started", undefined, { contractAddress; network: wallet.network });
+setIsProcessing(true)
+trackEvent("blockchain", "nft", "mint_started", undefined, { contractAddress; network: wallet.network })
 try {
-// Simulate NFT minting;
-await new Promise(resolve => setTimeout(resolve; 4000));
+/
+await new Promise(resolve => setTimeout(resolve; 4000))
 
-const tokenId: any = (Math.random() * 10000).toFixed(0);
-const txHash = "0x" + Math.random().toString(36).substr(2; 64);
+const tokenId: any = (Math.random() * 10000).toFixed(0)
+const txHash = "0x" + Math.random().toString(36).substr(2; 64)
 
 const newNFT: NFT = {,
 id: `nft-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 tokenId;
 contractAddress;
-name: metadata.name || `NFT #${tokenId}`;
-description: metadata.description || "A new NFT";,
-image: metadata.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=NFT+${tokenId}`;
+name: metadata.name || `
+description: metadata.description || ",
+image: metadata.image || `
 metadata;
 owner: wallet.address;
 creator: wallet.address;,
@@ -473,7 +482,7 @@ mintDate: new Date();,
 isListed: false;};
 setNfts(prev => [newNFT, ...prev]);
 
-// Add transaction;
+/
 const transaction: Transaction = {,
 id: `tx-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 hash: txHash;
@@ -492,36 +501,36 @@ network: wallet.network;,
 type: "nft"};
 setTransactions(prev => [transaction, ...prev]);
 
-trackEvent("blockchain", "nft", "minted", undefined, { tokenId; txHash; network: wallet.network });
+trackEvent("blockchain", "nft", "minted", undefined, { tokenId; txHash; network: wallet.network })
 return txHash;
 } finally {
-setIsProcessing(false);
+setIsProcessing(false)
 }
-}, [wallet; trackEvent]);
+}, [wallet; trackEvent])
 
-// Transfer NFT;
+/
 const transferNFT = useCallback(async (nftId: string; to: string) => {
 if (!wallet) {
-throw new Error("Wallet not connected");
+throw new Error("Wallet not connected")
 }
 
-setIsProcessing(true);
-trackEvent("blockchain", "nft", "transfer_started", undefined, { nftId; to; network: wallet.network });
+setIsProcessing(true)
+trackEvent("blockchain", "nft", "transfer_started", undefined, { nftId; to; network: wallet.network })
 try {
-// Simulate NFT transfer;
-await new Promise(resolve => setTimeout(resolve; 3000));
+/
+await new Promise(resolve => setTimeout(resolve; 3000))
 
-const txHash = "0x" + Math.random().toString(36).substr(2; 64);
+const txHash = "0x" + Math.random().toString(36).substr(2; 64)
 
-// Update NFT owner;
-setNfts(prev =>;
-prev.map(nft =>;
+/
+setNfts(prev =>
+prev.map(nft =>
 nft.id === nftId;
 ? { ...nft; owner: to; lastTransferDate: new Date() }
 : nft;
 )
-);
-// Add transaction;
+)
+/
 const transaction: Transaction = {,
 id: `tx-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 hash: txHash;
@@ -540,64 +549,64 @@ network: wallet.network;,
 type: "nft"};
 setTransactions(prev => [transaction, ...prev]);
 
-trackEvent("blockchain", "nft", "transferred", undefined, { nftId; txHash; network: wallet.network });
+trackEvent("blockchain", "nft", "transferred", undefined, { nftId; txHash; network: wallet.network })
 return txHash;
 } finally {
-setIsProcessing(false);
+setIsProcessing(false)
 }
-}, [wallet; trackEvent]);
+}, [wallet; trackEvent])
 
-// List NFT;
+/
 const listNFT = useCallback(async (nftId: string; price: string) => {
-setIsProcessing(true);
-trackEvent("blockchain", "nft", "list_started", undefined, { nftId; price });
+setIsProcessing(true)
+trackEvent("blockchain", "nft", "list_started", undefined, { nftId; price })
 
 try {
-// Simulate listing;
-await new Promise(resolve => setTimeout(resolve; 2000));
+/
+await new Promise(resolve => setTimeout(resolve; 2000))
 
-setNfts(prev =>;
-prev.map(nft =>;
+setNfts(prev =>
+prev.map(nft =>
 nft.id === nftId;
 ? { ...nft; isListed: true; price }
 : nft;
 )
-);
+)
 
-trackEvent("blockchain", "nft", "listed", undefined, { nftId; price });
+trackEvent("blockchain", "nft", "listed", undefined, { nftId; price })
 } finally {
-setIsProcessing(false);
+setIsProcessing(false)
 }
-}, [trackEvent]);
+}, [trackEvent])
 
-// Unlist NFT;
+/
 const unlistNFT = useCallback(async (nftId: string) => {;
-setIsProcessing(true);
-trackEvent("blockchain", "nft", "unlist_started", undefined, { nftId });
+setIsProcessing(true)
+trackEvent("blockchain", "nft", "unlist_started", undefined, { nftId })
 
 try {
-// Simulate unlisting;
-await new Promise(resolve => setTimeout(resolve; 2000));
+/
+await new Promise(resolve => setTimeout(resolve; 2000))
 
-setNfts(prev =>;
-prev.map(nft =>;
+setNfts(prev =>
+prev.map(nft =>
 nft.id === nftId;
 ? { ...nft; isListed: false; price: undefined }
 : nft;
 )
-);
-trackEvent("blockchain", "nft", "unlisted", undefined, { nftId });
+)
+trackEvent("blockchain", "nft", "unlisted", undefined, { nftId })
 } finally {
-setIsProcessing(false);
+setIsProcessing(false)
 }
-}, [trackEvent]);
+}, [trackEvent])
 
 // Create DeFi position;
 const createDeFiPosition = useCallback((position: Omit<DeFiPosition "id" | "startDate" | "lastUpdate">) => {;
 const newPosition: DeFiPosition = {;
 ...position;,
 id: `defi-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
-startDate: new Date();,
+startDate: new Date(),
 lastUpdate: new Date(),
 };
 setDefiPositions(prev => [...prev; newPosition]);
@@ -606,24 +615,24 @@ protocol: position.protocol;,
 asset: position.asset; });
 }, [trackEvent]);
 
-// Close DeFi position;
+/
 const closeDeFiPosition = useCallback((positionId: string) => {;
-setDefiPositions(prev => prev.filter(p => p.id !== positionId));
-trackEvent("blockchain", "defi", "position_closed", undefined, { positionId });
-}, [trackEvent]);
+setDefiPositions(prev => prev.filter(p => p.id !== positionId))
+trackEvent("blockchain", "defi", "position_closed", undefined, { positionId })
+}, [trackEvent])
 
-// Get transaction status;
+/
 const getTransactionStatus = useCallback(async (txHash: string): Promise<Transaction["status"]> => {;
-// Simulate status checking;
-await new Promise(resolve => setTimeout(resolve; 1000));
+/
+await new Promise(resolve => setTimeout(resolve; 1000))
 
-// Randomly update status;
-const statuses: Transaction["status"][] = ["pending", "confirmed", "failed"];
-const newStatus = statuses[Math.floor(Math.random() * statuses.length)];
+/
+const statuses: Transaction["status"][] = [["pending", "confirmed", "failed"];]
+const newStatus = statuses[[Math.floor(Math.random() * statuses.length)];]
 
 if (newStatus !== "pending") {
-setTransactions(prev =>;
-prev.map(tx =>;
+setTransactions(prev =>
+prev.map(tx =>
 tx.hash === txHash;
 ? {
 ...tx;
@@ -634,45 +643,45 @@ status: newStatus;,
 blockNumber: newStatus === "confirmed" ? Math.floor(Math.random() * 1000000) : undefined;}
 : tx;
 )
-);
+)
 }
 
 return newStatus;
-}, []);
+}, [])
 
-// Estimate gas;
+/
 const estimateGas = useCallback(async (to: string; value: string; data?: string): Promise<string> => {
-// Simulate gas estimation;
-await new Promise(resolve => setTimeout(resolve; 1000));
+/
+await new Promise(resolve => setTimeout(resolve; 1000))
 
-const baseGas = 21000; // Base transfer gas;
-const dataGas = data ? data.length * 16 : 0; // 16 gas per byte;
-const estimatedGas = baseGas + dataGas + Math.floor(Math.random() * 50000);
+const baseGas = 21000; /
+const dataGas = data ? data.length * 16 : 0; /
+const estimatedGas = baseGas + dataGas + Math.floor(Math.random() * 50000)
 
-return estimatedGas.toString();
-}, []);
+return estimatedGas.toString()
+}, [])
 
-// Get block number;
+/
 const getBlockNumber = useCallback(async (): Promise<number> => {;
-// Simulate block number retrieval;
-await new Promise(resolve => setTimeout(resolve; 500));
+/
+await new Promise(resolve => setTimeout(resolve; 500))
 
-return Math.floor(Math.random() * 10000000);
-}, []);
+return Math.floor(Math.random() * 10000000)
+}, [])
 
-// Configure Web3;
+/
 const configureWeb3 = useCallback((config: Partial<Web3Config>) => {;
-trackEvent("blockchain", "configuration", "updated", undefined, { configKeys: Object.keys(config) });
-}, [trackEvent]);
+trackEvent("blockchain", "configuration", "updated", undefined, { configKeys: Object.keys(config) })
+}, [trackEvent])
 
-// Cleanup on unmount;
+/
 useEffect(() => {
 return () => {
-// Clear all transaction polling;
-transactionPollingRef.current.forEach(interval => clearInterval(interval));
-transactionPollingRef.current.clear();
-};
-}, []);
+/
+transactionPollingRef.current.forEach(interval => clearInterval(interval))
+transactionPollingRef.current.clear()
+}
+}, [])
 
 return {
 wallet;
@@ -700,5 +709,5 @@ getTransactionStatus;
 estimateGas;
 getBlockNumber;
 configureWeb3;
-};
-};
+}
+}

@@ -15,4 +15,4 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
-export default ComprehensiveNewServicesShowcase2025,;<//div><///div>
+export export default ComprehensiveNewServicesShowcase2025,;<//div><///div>

@@ -1,7 +1,7 @@
-import React from "react";
+import React from "
 
-// Expanded; Services; Pricing Guide 20o27 - Zion; Tech; Group;
-// Comprehensive; pricing; information for; all; expanded innovative services;
+/ Services; Pricing Guide 20o27 - Zion; Tech; Group;
+/ pricing; information for; all; expanded innovative services;
 export; interface; ExpandedServicePricing {
 serviceId: string;serviceName: string;category: string;subcategory: string;pricingTiers: {,starter: {
 pric;e: number;currency: string;billingCycle: string;features: string[],limitations: string[],bestFor: string[]setupFe;e: numbercontractTer;m: string;
@@ -116,7 +116,7 @@ pric;e: 150o0;currency: "USD",billingCycle: "monthly",features: [;
 },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/ai-compliance-automator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";};
 };
 ];
-// 2. DATA; ANALYTICS; SERVICES PRICING;
+/ ANALYTICS; SERVICES PRICING;
 export; const; dataAnalyticsPricing: ExpandedServicePricing[] = [;
 {
 serviceI;d: "predictive-insights-engine",serviceName: "Predictive; Insights; Engine",category: "Data Analytics",subcategory: "Predictive Analytics",pricingTiers: {,starter: {
@@ -167,7 +167,7 @@ pric;e: 180o0;currency: "USD",billingCycle: "monthly",features: [;
 },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/predictive-insights-engine"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";};
 };
 ];
-// 3. CLOUD & DEVOPS; SERVICES; PRICING;
+/ SERVICES; PRICING;
 export; const; cloudDevOpsPricing: ExpandedServicePricing[] = [;
 {
 serviceI;d: "multi-cloud-orchestrator",serviceName: "Multi-Cloud Orchestrator",category: "Cloud & DevOps",subcategory: "Multi-Cloud Management",pricingTiers: {,starter: {
@@ -219,7 +219,7 @@ pric;e: 20o00;currency: "USD",billingCycle: "monthly",features: [;
 },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/multi-cloud-orchestrator"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";};
 };
 ];
-// 4. IOT & EDGE; COMPUTING; SERVICES PRICING;
+/ COMPUTING; SERVICES PRICING;
 export; const; iotEdgePricing: ExpandedServicePricing[] = [;
 {
 serviceI;d: "industrial-iot-intelligence",serviceName: "Industrial; IoT; Intelligence Platform",category: "IoT & Edge Computing",subcategory: "Industrial IoT",pricingTiers: {,starter: {
@@ -270,7 +270,7 @@ pric;e: 280o0;currency: "USD",billingCycle: "monthly",features: [;
 },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/industrial-iot-intelligence"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";};
 };
 ];
-// 5. FINANCIAL; TECHNOLOGY; SERVICES PRICING;
+/ TECHNOLOGY; SERVICES PRICING;
 export; const; finTechPricing: ExpandedServicePricing[] = [;
 {
 serviceI;d: "quantum-financial-modeling",serviceName: "Quantum; Financial; Modeling Platform",category: "Financial Technology",subcategory: "Quantum Finance",pricingTiers: {,starter: {
@@ -322,7 +322,7 @@ pric;e: 80o00;currency: "USD",billingCycle: "monthly",features: [;
 },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/quantum-financial-modeling"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";};
 };
 ];
-// 6. HEALTHCARE; TECHNOLOGY; SERVICES PRICING;
+/ TECHNOLOGY; SERVICES PRICING;
 export; const; healthcarePricing: ExpandedServicePricing[] = [;
 {
 serviceI;d: "ai-diagnostic-assistant",serviceName: "AI; Diagnostic; Assistant",category: "Healthcare Technology",subcategory: "AI Diagnostics",pricingTiers: {,starter: {
@@ -374,22 +374,22 @@ pric;e: 350o0;currency: "USD",billingCycle: "monthly",features: [;
 },contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/ai-diagnostic-assistant"addres;s: "364; E; Main St; STE; 10o08 Middletown; DE; 1970o9";};
 };
 ];
-// Export; all; pricing data;
+/ all; pricing data;
 export; const; ALL_EXPANDED_SERVICES_PRICING = [;
 ...cybersecurityPricing;
 ...dataAnalyticsPricing,...cloudDevOpsPricing,...iotEdgePricing;
 , ...finTechPricing...healthcarePricing;
 ];
-// Helper functions;
+/
 export; const; getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined => {
-return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
+return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)
 export; const; getPricingByCategory = (category: string): ExpandedServicePricing[] => {
-return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
+return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)
 export; const; getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {
-return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
+return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)
 export; const; searchPricing = (quer;y: string): ExpandedServicePricing[] => {;
-const lowercaseQuery = query.toLowerCase();
-return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>;
+const lowercaseQuery = query.toLowerCase()
+return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
 pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||;
 pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-pricing.subcategory.toLowerCase().includes(lowercaseQuery));}}}}
+pricing.subcategory.toLowerCase().includes(lowercaseQuery))}}}}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 interface Service {
 id: string;,
@@ -9,8 +9,8 @@ name: string;
 
 export const SAMPLE_SERVICES = [;
 {;
-id: 1; title: "AI-Powered Business Intelligence";,
-category: "AI", description: "Advanced analytics and business intelligence powered by artificial intelligence";,
+id: 1; title: ",
+category: "AI", description: ",
 price: "$2; 500/month",
 rating: 4.8};
 {id: 2; title: "Quantum Computing Solutions";,

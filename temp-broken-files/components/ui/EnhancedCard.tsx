@@ -1,10 +1,10 @@
-import React from "react;";
-import { cn } from "@/lib/utils, ";
+import React from "
+import { cn } from "
 
 interface EnhancedCardProps {
 children: React.ReactNode;
 className?: string;
-variant?: "default" | "elevated" | "outlined" | "gradient";
+variant?: "default" | "elevated" | "outlined" | "
 hover?: boolean;
 onClick?: () => void;
 as?: React.ElementType;
@@ -17,7 +17,7 @@ className;
 variant = "default",
 hover = true;
 onClick;
-as: Component = "div";
+as: Component = "
 href;
 }: EnhancedCardProps) {const baseClasses = "rounded-xl transition-all duration-300";
 
@@ -35,25 +35,25 @@ variantClasses[variant],
 hoverClasses;
 interactiveClasses;
 className;
-);
+)
 
 if (href) {
 return (
-<a href={href} className={classes} onClick={onClick}>;
+<a href={href} className={classes} onClick={onClick}>
 {children}
-</a>;
-);
+</a>
+)
 }
 
 return (
-<Component className={classes} onClick={onClick}>;
+<Component className={classes} onClick={onClick}>
 {children}
-</Component>;
-);
+</Component>
+)
 }
 
-// Enhanced Card Header component;
-export function EnhancedCardHeader({ ;
+/
+export export function EnhancedCardHeader({ ;
 children;
 className;
 }: {
@@ -61,14 +61,14 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6 pb-0", className)}>;
+<div className={cn("p-6 pb-0", className)}>
 {children}
-</div>;
-);
+</div>
+)
 }
 
-// Enhanced Card Content component;
-export function EnhancedCardContent({ ;
+/
+export export function EnhancedCardContent({ ;
 children;
 className;
 }: {
@@ -76,14 +76,14 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6", className)}>;
+<div className={cn("p-6", className)}>
 {children}
-</div>;
-);
+</div>
+)
 }
 
-// Enhanced Card Footer component;
-export function EnhancedCardFooter({ ;
+/
+export export function EnhancedCardFooter({ ;
 children;
 className;
 }: {
@@ -91,8 +91,8 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6 pt-0", className)}>;
+<div className={cn("p-6 pt-0", className)}>
 {children}
-</div>;
-);
-}<//div><///div>;
+</div>
+)
+}<//div><///div>

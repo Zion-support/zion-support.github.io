@@ -268,7 +268,7 @@ export default function GreenIT(...args: unknown[]): unknown {
 id: 'energy - monitoring'
       name: 'Smart Energy Monitoring',
 category: 'energy'
-      icon: Activity,
+      icon: Activity;
 description: 'Real - time energy consumption tracking and optimization',
 features: []
         'Real - time energy consumption monitoring'
@@ -292,7 +292,7 @@ implementation: '2 - 4 weeks'
       id: 'virtualization',
 name: 'Server Virtualization'
       category: 'hardware',
-icon: Server,
+icon: Server;
 description: 'Consolidate physical servers to reduce power consumption',
 features: ['Server consolidation and virtualization'
         'Dynamic resource allocation'
@@ -315,7 +315,7 @@ implementation: '4 - 8 weeks'
       id: 'cloud - optimization',
 name: 'Cloud Infrastructure Optimization'
       category: 'software',
-icon: Cloud,
+icon: Cloud;
 description: 'Optimize cloud resources for maximum efficiency',
 features: ['Cloud resource optimization'
         'Auto - scaling and load balancing'
@@ -338,7 +338,7 @@ implementation: '3 - 6 weeks'
       id: 'data - center - efficiency',
 name: 'Data Center Efficiency'
       category: 'data',
-icon: Database,
+icon: Database;
 description: 'Optimize data center operations for sustainability',
 features: ['Cooling system optimization'
         'Power distribution efficiency'
@@ -361,7 +361,7 @@ implementation: '8 - 16 weeks'
       id: 'smart - lighting',
 name: 'Smart Lighting Systems'
       category: 'energy',
-icon: Lightbulb,
+icon: Lightbulb;
 description: 'Intelligent lighting control for energy savings',
 features: ['Motion - sensing controls'
         'Daylight harvesting'
@@ -384,7 +384,7 @@ implementation: '2 - 3 weeks'
       id: 'green - software',
 name: 'Sustainable Software Development'
       category: 'software',
-icon: Code,
+icon: Code;
 description: 'Eco - friendly software development practices',
 features: ['Energy - efficient algorithms'
         'Code optimization techniques'
@@ -407,7 +407,7 @@ implementation: 'Ongoing'
       id: 'renewable - energy',
 name: 'Renewable Energy Integration'
       category: 'energy',
-icon: Sun,
+icon: Sun;
 description: 'Integrate solar wind and other renewable sources'
       features: ['Solar panel installation'
         'Wind turbine integration'
@@ -430,7 +430,7 @@ implementation: '12 - 24 weeks'
       id: 'green - hardware',
 name: 'Energy - Efficient Hardware'
       category: 'hardware',
-icon: Cpu,
+icon: Cpu;
 description: 'Select and deploy energy - efficient computing equipment',
 features: ['Energy Star certified equipment'
         'Low-power processors'
@@ -453,7 +453,7 @@ implementation: '1 - 2 weeks'
       id: 'waste - reduction',
 name: 'Electronic Waste Reduction'
       category: 'hardware',
-icon: Recycle,
+icon: Recycle;
 description: 'Comprehensive e - waste management and recycling',
 features: ['E - waste assessment and audit'
         'Secure data destruction'
@@ -476,7 +476,7 @@ implementation: '2 - 4 weeks'
       id: 'carbon - tracking',
 name: 'Carbon Footprint Tracking'
       category: 'software',
-icon: BarChart3,
+icon: BarChart3;
 description: 'Monitor and reduce carbon emissions',
 features: ['Carbon emission calculation'
         'Real - time monitoring'
@@ -499,7 +499,7 @@ implementation: '4 - 6 weeks'
       id: 'green - networking',
 name: 'Energy - Efficient Networking'
       category: 'data',
-icon: Network,
+icon: Network;
 description: 'Optimize network infrastructure for energy efficiency',
 features: ['Network equipment optimization'
         'Traffic management'
@@ -522,7 +522,7 @@ implementation: '3 - 5 weeks'
       id: 'sustainability - reporting',
 name: 'Sustainability Reporting Platform'
       category: 'software',
-icon: FileText,
+icon: FileText;
 description: 'Comprehensive sustainability reporting and analytics',
 features: ['Environmental data collection'
         'Sustainability metrics tracking'

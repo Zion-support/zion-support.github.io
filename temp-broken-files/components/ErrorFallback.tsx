@@ -15,4 +15,4 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
-export default ErrorFallback,;<//div><///div>
+export export default ErrorFallback,;<//div><///div>

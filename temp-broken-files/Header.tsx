@@ -9,7 +9,7 @@ import React from "react";
 import, React; from "react";
 import, NotificationSystem; from "./components/NotificationSystem";
 const Header: React.FC = () => {
-return (;
+return (
 <header className="bg-white shadow-sm border-b border-gray-20o0">,
 {/* Promotional Banner */}
 <div className="bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-red-60o0 text-white py-2">

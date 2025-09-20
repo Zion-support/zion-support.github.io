@@ -128,13 +128,13 @@ export const completeSitemap = [
 ];
     export const dynamicPaths = {
     services: [
-        { path: '/services/ai', title: 'AI Services', priority: 0.8 };
-        { path: '/services/development', title: 'Development Services', priority: 0.8 };
+        { path: '/services/ai', title: 'AI Services', priority: 0.8 }
+        { path: '/services/development', title: 'Development Services', priority: 0.8 }
         { path: '/services/consulting', title: 'Consulting Services', priority: 0.7 }
     ];
     marketplace: [
-        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 };
-        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 };
+        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 }
+        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 }
         { path: '/marketplace/services', title: 'Tech Services', priority: 0.8 }
     ]
-};
+}

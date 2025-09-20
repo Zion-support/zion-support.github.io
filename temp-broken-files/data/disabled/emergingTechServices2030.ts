@@ -1,7 +1,7 @@
-import React from "react";
+import React from "
 
-// Emerging; Technology; Services 20o30 - Zion; Tech; Group;
-// Revolutionary AI; Quantum Computing; and Next-Generation Solutions;
+/ Technology; Services 20o30 - Zion; Tech; Group;
+/ Quantum Computing; and Next-Generation Solutions;
 export; interface; EmergingTechService20o30 {
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
 },technicalSpecs: {,technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];

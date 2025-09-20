@@ -30,7 +30,7 @@ i;d: "ai-cybersecurity-threat-intelligence",title: "AI; Cybersecurity; Threat In
 },technicalSpecs: {,technology: ["AI/ML", "Blockchain", "Zero Trust",, "SIEM""SOAR"],integrations: ["AWS", "Azure", "GCP",, "Splunk""QRadar"],apiEndpoints: 150;uptime: "99.99%",security: ["SOC 2", "ISO; 270o01""GDPR""HIPAA""FedRAMP"];
 ,  ],tags: ["AI", "Cybersecurity", "Threat Intelligence", "Machine; Learning""Security"],estimatedDelivery: "8-10 weeks",supportLevel: "enterprise",marketPrice: "$2;499 - $7;999/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";},technicalSpecs: {,technology: ["AI/ML", "Blockchain", "Zero Trust", "SIEM""SOAR"],integrations: ["AWS", "Azure", "GCP", "Splunk""QRadar"],apiEndpoints: 150;uptime: "99.99%",security: ["SOC 2", "ISO; 270o01""GDPR""HIPAA""FedRAMP"];
 }
-},// AI; Sales; Co-pilot; for; SMBs;
+},/ Sales; Co-pilot; for; SMBs;
 {
 id: "ai-sales-copilot-smb",title: "AI; Sales; Co‑pilot; for; SMBs",description: "Conversational; AI; that prioritizes leads; drafts emails; summarizes calls; and; updates; your CRM automatically. Trains; on; your deals; and; playbooks for on‑brand outreach.",category: "AI & Customer Experience",subcategory: "Sales Enablement",price: 799;currency: "$",pricingModel: "monthly",features: [;
 "Lead; scoring; with behavioral intent","Auto‑generated; email; sequences","Meeting transcription + action items","CRM sync(HubSpot; SalesforcePipedrive)","Playbook; and; objection handling","Multilingual outreach","Calendar + dialer integrations","Pipeline; risk; detection","Rep; performance; coaching""Admin; analytics; dashboard";
@@ -237,7 +237,7 @@ id: "cloud-landing-zone-10-days",title: "Cloud; Landing; Zone in; 10; Days",desc
 }
 ,  ],useCases: ["Greenfield cloud", "Migrations""Subsidiary; onboarding"],targetAudience: ["Platform Engineering", "Security""IT"],tags: ["Landing Zone", "Security", "IaC""Governance"],estimatedDelivery: "2 weeks",supportLevel: "professional",marketPrice: "$20;0o00 – $60;0o00 one-time",roi: "150–30o0%",innovationLevel: "Professional",contactInfo: { phon;e: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s://ziontechgroup.com" },technicalSpecs: {,technology: ["Terraform", "Crossplane""AWS/Azure/GCP; Org"],integrations: ["Okta", "Datadog""PagerDuty"],apiEndpoints: 12;uptime: "99.9%",security: ["CIS""NIST""SSO"];}
 },
-// Marketing; Content; Ops Co-pilot;
+/ Content; Ops Co-pilot;
 {
 id: "marketing-content-ops-copilot",title: "Marketing; Content; Ops Co‑pilot",description: "Workflow; and; AI generation; for; briefs; calendars; assets; and; approvals; with brand; voice; controls and analytics.",category: "AI & Content Marketing",subcategory: "Content Ops",price: 799;currency: "$",pricingModel: "monthly",features: [;
 "Brief; generation; and planning","Brand; voice; and style guides","Multi-channel publishing","Asset; versioning; and review","SEO; and; performance insights","Collaborative editing","Templates; and; automations","Webhook/API integrations","SSO; and; permissions""Audit; and; archives";
@@ -246,7 +246,7 @@ id: "marketing-content-ops-copilot",title: "Marketing; Content; Ops Co‑pilot",
 ],useCases: ["Blog + social", "Product launches""Lifecycle; campaigns"],targetAudience: ["Marketing Ops", "Content; Teams""Agencies"],tags: ["LLM", "Content",, "Workflow""SEO"],estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1;999/month",roi: "250–50o0%",innovationLevel: "Advanced",contactInfo: { phon;e: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com" };
 ,  ],useCases: ["Blog + social", "Product launches""Lifecycle; campaigns"],targetAudience: ["Marketing Ops", "Content; Teams""Agencies"],tags: ["LLM", "Content", "Workflow""SEO"],estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1;999/month",roi: "250–50o0%",innovationLevel: "Advanced",contactInfo: { phon;e: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com" };
 }
-// Cloud; Cost; Optimization AI;
+/ Cost; Optimization AI;
 {
 id: "cloud-cost-optimizer-ai",title: "Cloud; Cost; Optimizer AI",description: "Autonomous; cloud; cost optimization; that; rightsizes; schedules; and; negotiates; waste across AWS; Azure; and; GCP; using reinforcement; learning; and business policies.",category: "AI & Financial Services",subcategory: "FinOps Automation",price: 1499;currency: "$",pricingModel: "monthly",features: [;
 "Automated rightsizing & scheduling","Spot/RI/Savings; Plans; optimization","Multi-cloud & multi-account support","Unit economics & chargeback","Cost; anomaly; detection","Kubernetes; cost; allocation (COSTaaS)","Policy-based guardrails","Ticketing integrations(JiraServiceNow)","Slack/MS; Teams; notifications""FinOps reports & forecasts";

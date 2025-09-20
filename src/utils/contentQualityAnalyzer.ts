@@ -397,4 +397,4 @@ export class ContentQualityAnalyzer {
   }
 }
 
-export default ContentQualityAnalyzer;
+export export default ContentQualityAnalyzer;

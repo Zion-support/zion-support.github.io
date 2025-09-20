@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface CuttingEdgeService {
 id: number;
@@ -10,10 +10,10 @@ pricing: string;
 price: number;
 pricingModel: string;
 userLimit: string;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: {
 phone: string;
 email: string;,
@@ -25,10 +25,10 @@ address: string;
 website: string;,
 address: string;};
 marketPrice: string;
-competitors: string[];
+competitors: string[[];]
 roi: string;
 setupTime: string;
-integrations: string[];
+integrations: string[[];]
 freeTier: boolean;
 trialPeriod: string;
 technology: string[];,
@@ -50,22 +50,22 @@ price: 299;
 pricingModel: "monthly";,
 userLimit: "Up to 50 developers";,
 features: [
-"Quantum algorithm library";
+"
 "Hybrid classical-quantum workflows",
 "Real-time quantum simulation",
 "AI model optimization",
 "Quantum error correction",
 "Performance benchmarking",
 "Collaborative development",
-"API access to quantum computers";
+"
 ],
 benefits: [
-"10x faster AI training";
+"
 "Quantum advantage in optimization",
 "Future-proof technology",
 "Competitive edge",
 "Research collaboration",
-"Patent opportunities";
+"
 ],
 targetAudience: ["AI researchers", "Data scientists", "Quantum computing companies", "Research institutions"],
 tags: ["Quantum AI", "Machine Learning", "Optimization", "Research", "Enterprise"],
@@ -83,34 +83,34 @@ freeTier: false;,
 trialPeriod: "30 days";,
 technology: ["Quantum Computing", "AI/ML", "Python", "Cloud Computing"],
 compliance: ["ISO 27001", "SOC 2", "GDPR"],
-useCases: ["Drug discovery", "Financial modeling", "Logistics optimization", "Climate modeling"];
+useCases: [["Drug discovery", "Financial modeling", "Logistics optimization", "Climate modeling"];]
 },
 {id: 2;
 name: "NeuroSync Platform";
 category: "AI Services";,
 subcategory: "Neural Networks";,
 description: "Advanced neural network architecture platform with automated model design; training; and deployment for enterprise AI applications",
-pricing: "Tiered";
+pricing: "
 price: 199;
 pricingModel: "monthly";,
 userLimit: "Up to 100 users";,
 features: [
-"AutoML neural architecture search";
+"
 "Distributed training orchestration",
 "Model versioning and management",
 "Real-time inference optimization",
 "Neural network visualization",
 "Performance monitoring",
 "Automated hyperparameter tuning",
-"Multi-cloud deployment";
+"
 ],
 benefits: [
-"90% reduction in model development time";
+"
 "Automated optimization",
 "Scalable deployment",
 "Cost-effective training",
 "Performance insights",
-"Team collaboration";
+"
 ],
 targetAudience: ["AI engineers", "ML teams", "Data science departments", "Tech companies"],
 tags: ["Neural Networks", "AutoML", "Deep Learning", "Model Management", "Deployment"],
@@ -128,34 +128,34 @@ freeTier: true;,
 trialPeriod: "14 days";,
 technology: ["Deep Learning", "AutoML", "Kubernetes", "Cloud Computing"],
 compliance: ["SOC 2", "ISO 27001"],
-useCases: ["Computer vision", "Natural language processing", "Recommendation systems", "Predictive analytics"];
+useCases: [["Computer vision", "Natural language processing", "Recommendation systems", "Predictive analytics"];]
 },
 {id: 3;
 name: "EdgeAI Orchestrator";
 category: "AI Services";,
 subcategory: "Edge Computing";,
 description: "Intelligent edge AI deployment and management platform for IoT devices; enabling real-time AI inference at the network edge",
-pricing: "Usage-based";
+pricing: "
 price: 0.05;
 pricingModel: "per inference";,
 userLimit: "Unlimited devices";,
 features: [
-"Edge model optimization";
+"
 "Real-time inference engine",
 "Device fleet management",
 "Over-the-air updates",
 "Performance monitoring",
 "Energy optimization",
 "Security hardening",
-"Multi-device synchronization";
+"
 ],
 benefits: [
-"99.9% uptime";
+"
 "Real-time processing",
 "Reduced latency",
 "Bandwidth savings",
 "Cost optimization",
-"Scalable deployment";
+"
 ],
 targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Healthcare IoT"],
 tags: ["Edge AI", "IoT", "Real-time", "Optimization", "Device Management"],
@@ -173,7 +173,7 @@ freeTier: true;,
 trialPeriod: "1000 free inferences";,
 technology: ["Edge Computing", "IoT", "AI/ML", "Real-time Systems"],
 compliance: ["ISO 27001", "SOC 2", "GDPR"],
-useCases: ["Predictive maintenance", "Quality control", "Traffic management", "Health monitoring"];
+useCases: [["Predictive maintenance", "Quality control", "Traffic management", "Health monitoring"];]
 },
 
 // Advanced IT Infrastructure Services;
@@ -182,27 +182,27 @@ name: "ZeroTrust Network Fabric";
 category: "IT Infrastructure";,
 subcategory: "Cybersecurity";,
 description: "Next-generation zero-trust network architecture with AI-powered threat detection; micro-segmentation; and automated security response",
-pricing: "Enterprise";
+pricing: "
 price: 599;
 pricingModel: "monthly";,
 userLimit: "Up to 1000 users";,
 features: [
-"AI threat intelligence";
+"
 "Micro-segmentation",
 "Identity verification",
 "Continuous monitoring",
 "Automated incident response",
 "Compliance reporting",
 "Network visualization",
-"Security analytics dashboard";
+"
 ],
 benefits: [
-"99.99% threat prevention";
+"
 "Zero trust compliance",
 "Automated security",
 "Reduced attack surface",
 "Regulatory compliance",
-"Cost savings";
+"
 ],
 targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
 tags: ["Zero Trust", "Cybersecurity", "Network Security", "AI", "Compliance"],
@@ -220,7 +220,7 @@ freeTier: false;,
 trialPeriod: "30 days";,
 technology: ["Zero Trust Architecture", "AI/ML", "Network Security", "Automation"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-useCases: ["Enterprise security", "Financial compliance", "Healthcare data protection", "Government networks"];
+useCases: [["Enterprise security", "Financial compliance", "Healthcare data protection", "Government networks"];]
 },
 {id: 5;
 name: "QuantumCloud Platform";
@@ -232,22 +232,22 @@ price: 399;
 pricingModel: "monthly";,
 userLimit: "Up to 500 users";,
 features: [
-"Quantum computing access";
+"
 "Hybrid classical-quantum workflows",
 "Quantum algorithm marketplace",
 "Performance optimization",
 "Cost management",
 "Security compliance",
 "API management",
-"Developer tools";
+"
 ],
 benefits: [
-"Quantum advantage access";
+"
 "Cost optimization",
 "Performance improvement",
 "Future-proof technology",
 "Competitive edge",
-"Research capabilities";
+"
 ],
 targetAudience: ["Research institutions", "Financial services", "Pharmaceutical companies", "Tech companies"],
 tags: ["Quantum Computing", "Cloud Infrastructure", "Optimization", "Research", "Enterprise"],
@@ -265,7 +265,7 @@ freeTier: true;,
 trialPeriod: "100 quantum hours";,
 technology: ["Quantum Computing", "Cloud Computing", "Python", "Quantum Algorithms"],
 compliance: ["SOC 2", "ISO 27001", "GDPR"],
-useCases: ["Financial modeling", "Drug discovery", "Logistics optimization", "Climate research"];
+useCases: [["Financial modeling", "Drug discovery", "Logistics optimization", "Climate research"];]
 },
 
 // Emerging Technology Services;
@@ -274,27 +274,27 @@ name: "Metaverse Development Studio";
 category: "Emerging Tech";,
 subcategory: "Metaverse";,
 description: "Complete metaverse development platform with 3D world creation; avatar customization; and virtual reality integration for businesses and creators",
-pricing: "Freemium";
+pricing: "
 price: 89;
 pricingModel: "monthly";,
 userLimit: "Up to 1000 users";,
 features: [
-"3D world builder";
+"
 "Avatar customization",
 "VR/AR integration",
 "Multi-user collaboration",
 "Asset marketplace",
 "Analytics dashboard",
 "Monetization tools",
-"Cross-platform deployment";
+"
 ],
 benefits: [
-"Virtual presence creation";
+"
 "Customer engagement",
 "Brand differentiation",
 "Revenue generation",
 "Global reach",
-"Innovation leadership";
+"
 ],
 targetAudience: ["Brands", "Retailers", "Event organizers", "Content creators", "Educational institutions"],
 tags: ["Metaverse", "VR/AR", "3D Development", "Virtual Worlds", "Digital Twins"],
@@ -312,34 +312,34 @@ freeTier: true;,
 trialPeriod: "30 days";,
 technology: ["3D Graphics", "VR/AR", "Web3D", "Real-time Rendering"],
 compliance: ["GDPR", "COPPA", "Accessibility"],
-useCases: ["Virtual retail", "Virtual events", "Training simulations", "Virtual tourism"];
+useCases: [["Virtual retail", "Virtual events", "Training simulations", "Virtual tourism"];]
 },
 {id: 7;
 name: "Blockchain Enterprise Suite";
 category: "Emerging Tech";,
 subcategory: "Blockchain";,
 description: "Enterprise-grade blockchain platform with smart contract automation; DeFi integration; and regulatory compliance for financial services and supply chain",
-pricing: "Enterprise";
+pricing: "
 price: 799;
 pricingModel: "monthly";,
 userLimit: "Up to 500 users";,
 features: [
-"Smart contract development";
+"
 "DeFi protocol integration",
 "Regulatory compliance",
 "Multi-chain support",
 "Security auditing",
 "Performance monitoring",
 "API management",
-"Developer tools";
+"
 ],
 benefits: [
-"Transparent operations";
+"
 "Cost reduction",
 "Security improvement",
 "Regulatory compliance",
 "Innovation leadership",
-"Competitive advantage";
+"
 ],
 targetAudience: ["Financial services", "Supply chain companies", "Healthcare", "Government", "Real estate"],
 tags: ["Blockchain", "Smart Contracts", "DeFi", "Enterprise", "Compliance"],
@@ -357,7 +357,7 @@ freeTier: false;,
 trialPeriod: "30 days";,
 technology: ["Blockchain", "Smart Contracts", "DeFi", "Web3", "Cryptography"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "Financial regulations"],
-useCases: ["Supply chain tracking", "Digital identity", "Cross-border payments", "Asset tokenization"];
+useCases: [["Supply chain tracking", "Digital identity", "Cross-border payments", "Asset tokenization"];]
 },
 
 // Advanced AI Automation Services;
@@ -366,27 +366,27 @@ name: "HyperAutomation Hub";
 category: "AI Services";,
 subcategory: "Automation";,
 description: "Comprehensive hyperautomation platform combining RPA; AI; and process mining to automate complex business processes end-to-end",
-pricing: "Tiered";
+pricing: "
 price: 299;
 pricingModel: "monthly";,
 userLimit: "Up to 200 users";,
 features: [
-"RPA bot development";
+"
 "AI process mining",
 "Workflow automation",
 "Document processing",
 "Decision automation",
 "Performance analytics",
 "Integration hub",
-"Low-code development";
+"
 ],
 benefits: [
-"80% process automation";
+"
 "Cost reduction",
 "Error elimination",
 "Scalability",
 "Compliance improvement",
-"Employee productivity";
+"
 ],
 targetAudience: ["Enterprises", "Manufacturing", "Healthcare", "Financial services", "Retail"],
 tags: ["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow"],
@@ -404,34 +404,34 @@ freeTier: true;,
 trialPeriod: "30 days";,
 technology: ["RPA", "AI/ML", "Process Mining", "Workflow Automation"],
 compliance: ["SOC 2", "ISO 27001", "GDPR"],
-useCases: ["Invoice processing", "Customer service", "HR automation", "Supply chain management"];
+useCases: [["Invoice processing", "Customer service", "HR automation", "Supply chain management"];]
 },
 {id: 9;
 name: "AI Ethics & Governance Platform";
 category: "AI Services";,
 subcategory: "Ethics & Compliance";,
 description: "Comprehensive AI ethics and governance platform ensuring responsible AI development; deployment; and monitoring with bias detection and fairness metrics",
-pricing: "Enterprise";
+pricing: "
 price: 449;
 pricingModel: "monthly";,
 userLimit: "Up to 100 users";,
 features: [
-"Bias detection algorithms";
+"
 "Fairness metrics",
 "Explainability tools",
 "Ethics guidelines",
 "Compliance monitoring",
 "Audit trails",
 "Risk assessment",
-"Training modules";
+"
 ],
 benefits: [
-"Regulatory compliance";
+"
 "Risk mitigation",
 "Brand protection",
 "Customer trust",
 "Ethical AI",
-"Legal protection";
+"
 ],
 targetAudience: ["AI companies", "Financial services", "Healthcare", "Government", "Research institutions"],
 tags: ["AI Ethics", "Governance", "Bias Detection", "Compliance", "Responsible AI"],
@@ -449,7 +449,7 @@ freeTier: false;,
 trialPeriod: "30 days";,
 technology: ["AI/ML", "Explainable AI", "Bias Detection", "Compliance Monitoring"],
 compliance: ["GDPR", "AI Act", "Algorithmic Accountability", "Fair Credit Reporting"],
-useCases: ["Credit scoring", "Hiring decisions", "Medical diagnosis", "Criminal justice"];
+useCases: [["Credit scoring", "Hiring decisions", "Medical diagnosis", "Criminal justice"];]
 },
 
 // Specialized Industry Solutions;
@@ -458,27 +458,27 @@ name: "SmartCity IoT Platform";
 category: "Industry Solutions";,
 subcategory: "Smart Cities";,
 description: "Comprehensive IoT platform for smart city management with real-time monitoring; predictive analytics; and automated infrastructure control",
-pricing: "Municipal";
+pricing: "
 price: 1299;
 pricingModel: "monthly";,
 userLimit: "Up to 1000 devices";,
 features: [
-"IoT device management";
+"
 "Real-time monitoring",
 "Predictive analytics",
 "Traffic optimization",
 "Energy management",
 "Waste management",
 "Public safety",
-"Citizen engagement";
+"
 ],
 benefits: [
-"Operational efficiency";
+"
 "Cost reduction",
 "Sustainability improvement",
 "Public safety",
 "Quality of life",
-"Economic development";
+"
 ],
 targetAudience: ["City governments", "Municipalities", "Urban planners", "Infrastructure companies"],
 tags: ["Smart Cities", "IoT", "Predictive Analytics", "Infrastructure", "Sustainability"],
@@ -496,35 +496,35 @@ freeTier: false;,
 trialPeriod: "90 days";,
 technology: ["IoT", "Edge Computing", "AI/ML", "Predictive Analytics", "Real-time Systems"],
 compliance: ["ISO 27001", "NIST", "Municipal regulations"],
-useCases: ["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"];
+useCases: [["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"];]
 }
 ];
 
-// Utility functions for service management;
-export const getServicesByCategory: any = (category: string): CuttingEdgeService[] => {;
-return cuttingEdgeInnovations2025.filter(service => service.category === category);
-};
+/
+export export const getServicesByCategory: any = (category: string): CuttingEdgeService[] => {;
+return cuttingEdgeInnovations2025.filter(service => service.category === category)
+}
 
-export const getServicesBySubcategory: any = (subcategory: string): CuttingEdgeService[] => {;
-return cuttingEdgeInnovations2025.filter(service => service.subcategory === subcategory);
-};
+export export const getServicesBySubcategory: any = (subcategory: string): CuttingEdgeService[] => {;
+return cuttingEdgeInnovations2025.filter(service => service.subcategory === subcategory)
+}
 
-export const getServicesByPriceRange: any = (minPrice: number; maxPrice: number): CuttingEdgeService[] => {
-return cuttingEdgeInnovations2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
-};
+export export const getServicesByPriceRange: any = (minPrice: number; maxPrice: number): CuttingEdgeService[] => {
+return cuttingEdgeInnovations2025.filter(service => service.price >= minPrice && service.price <= maxPrice)
+}
 
-export const getPopularServices: any = (limit: number = 6): CuttingEdgeService[] => {;
-return cuttingEdgeInnovations2025.slice(0; limit);
-};
+export export const getPopularServices: any = (limit: number = 6): CuttingEdgeService[] => {;
+return cuttingEdgeInnovations2025.slice(0; limit)
+}
 
 export const getServicesByTechnology: any = (technology: string): CuttingEdgeService[] => {
-return cuttingEdgeInnovations2025.filter(service =>;
-service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()));
-);
-};
+return cuttingEdgeInnovations2025.filter(service =>
+service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
+)
+}
 
 export const getServicesByCompliance: any = (compliance: string): CuttingEdgeService[] => {
-return cuttingEdgeInnovations2025.filter(service =>;
-service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase()));
-);
-};
+return cuttingEdgeInnovations2025.filter(service =>
+service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase()))
+)
+}
