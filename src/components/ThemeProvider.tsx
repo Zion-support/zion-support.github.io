@@ -2,7 +2,9 @@ import * as React from "react";
   type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
-  theme: Theme,setTheme: (theme: Theme) => void,toggleTheme: () => void
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+  toggleTheme: () => void;
 }
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
@@ -11,10 +13,10 @@ interface ThemeProviderProps {
   defaultTheme?: Theme;
 }
 
-  export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
-    children;
-    defaultTheme = 'dark' 
-  }) => {
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
+  children,
+  defaultTheme = 'dark' 
+}) => {
   const [theme, setTheme] = React.useState<Theme>(defaultTheme);
 
   React.useEffect(() => {
