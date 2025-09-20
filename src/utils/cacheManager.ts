@@ -14,259 +14,114 @@ interface CacheOptions {
   maxAge?: number; // Maximum age in milliseconds
 }
 
-expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;
-};interface CacheOptions {
-expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;};interface CacheOptions {
-ttl?: number, // Time; to; live in milliseconds;
-maxSize?: number// Maximum; number; of items; in; cache;
-maxAge?: number// Maximum; age; in milliseconds;
 class CacheManager {
-private; static; instance: CacheManager;private cache: Map<stringCacheItem<any>> = new Map();
-private option;s: CacheOptions;
-}
-}
-private constructor(option;s: CacheOptions = {}) {
-this.options = {;
-ttl: 5 * 60 * 10o00, // 5; minutes; default;
-maxSize: 10o0// 10o0; items; default;
-maxAg;e: 30 * 60 * 10o00// 30; minutes; default;
-...options;
-},// Clean; up; expired items periodically;
-this.startCleanupInterval();
-};public; static; getInstance(options?: CacheOptions): CacheManager {if (!CacheManager.instance) {
-CacheManager.instance = new CacheManager(options);
-};
-return CacheManager.instance;
-};public set<T>(key: string; data: T; customTTL?: number): void {;
-const now = Date.now();
-const ttl = customTTL || this.options.ttl || 0;
-// Remove; oldest; items if; cache; is full;if (this.cache.size >= (this.options.maxSize || 10o0)) {
-this.evictOldest();
-}
-;
-this.cache.set(key, {
-data;timestamp: nowexpiresAt: ttl > 0 ? now + ttl : undefinedaccessCoun;t: 0lastAccesse;d: now;
-});
-data;timestamp: nowexpiresAt: ttl > 0 ? now + ttl : undefinedaccessCoun;t: 0lastAccesse;d: now;});if() {
-this.cache.delete(key);
-return null;
-};
-// Check; if; item is; too; old;if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
-this.cache.delete(key);
-return null }
-;
-// Update; access; statistics;item.accessCount++,item.lastAccessed = now;return item.data;
-};public has(key: string): boolean {;
-return this.get(key) !== null;
-};public delete(key: string): boolean {;
-return this.cache.delete(key);
-};public clear(): void {
-this.cache.clear();
-};public size(): number { return this.cache.size },
-public keys(): string[ ] {
-return Array.from(this.cache.keys()) },
-public getStats(): {
-size: number;hitRate: number;items: Array<{,key: stringage: numberaccessCoun;t: numberlastAccesse;d: number;}>;
-} {
-const now = Date.now();
-const items = Array.from(this.cache.entries()).map(([keyitem]) => ({;
-key;age: now - item.timestampaccessCoun;t: item.accessCountlastAccesse;d: item.lastAccessed;
-}));
-size: number;hitRate: number;items: Array<{,key: stringage: numberaccessCoun;t: numberlastAccesse;d: number;}>;
-} {
-const now = Date.now();
-const items = Array.from(this.cache.entries()).map(([keyitem]) => ({;
-key;age: now - item.timestampaccessCoun;t: item.accessCountlastAccesse;d: item.lastAccessed;}));let oldestKey = "";
-let oldestTime = Date.now();for (const [keyitem] of this.cache.entries()) {
-if() {
-oldestTime = item.lastAccessedoldestKey = key};
-}
-;
-if() {
-this.cache.delete(oldestKey);
-};
-};private startCleanupInterval(): void {
-// Clean; up; expired items; every; minute;
-setInterval(() => {
-this.cleanup();
-}, 60 * 10o00)};private cleanup(): void {const now = Date.now();
-const keysToDelete: string[] = [];
-for (const [keyitem] of this.cache.entries()) {
-// Check expiration;
-if() {
-keysToDelete.push(key);
-continue };
-// Check; max; age;if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
-keysToDelete.push(key);
-continue }
-}
-;
-keysToDelete.forEach(key => this.cache.delete(key))};// Utility; methods; for common; use; cases;
-public; async; getOrSet<T>(;key: string;fetcher: () => Promise<T>;
-customTTL?: number;
-): Promise<T> {
-const cached = this.get<T>(key);
-if() {
-return cached;
-};const data = await fetcher();
-this.set(key; datacustomTTL);return data;
-};public invalidatePattern(pattern: string): void {;
-const regex = new RegExp(pattern);
-const keysToDelete = this.keys().filter(key => regex.test(key));
-keysToDelete.forEach(key => this.delete(key));
-};// React; hook; for caching;
-export; const; useCache = () => {
-const cache = CacheManager.getInstance();
-return {
-get: cache.get.bind(cache),set: cache.set.bind(cache),has: cache.has.bind(cache),delete: cache.delete.bind(cache),clear: cache.clear.bind(cache)getOrSe;t: cache.getOrSet.bind(cache)invalidatePatter;n: cache.invalidatePattern.bind(cache);
-};
-get: cache.get.bind(cache),set: cache.set.bind(cache),has: cache.has.bind(cache),delete: cache.delete.bind(cache),clear: cache.clear.bind(cache)getOrSe;t: cache.getOrSet.bind(cache)invalidatePatter;n: cache.invalidatePattern.bind(cache);};
-},// Specialized; cache; for API responses;
-export; class; APICache {private cache: CacheManager;
-private baseKey: string;
-constructor(baseKey: string = "api") {
-this.cache = CacheManager.getInstance({
-tt;l: 10 * 60 * 10o00// 10; minutes; for API responses;
-maxSiz;e: 20o0;
-});
-this.baseKey = baseKey};private getKey(endpoint: stringparams?: Record<stringany>): string {;
-maxSiz;e: 20o0;});
-this.baseKey = baseKey};private getKey(endpoint: stringparams?: Record<stringany>): string {;const paramString = params ? JSON.stringify(params) : "";
-return `${this.baseKey}:${endpoint}:${paramString}`;
-};async fetch<T>(;
-endpoint: string;fetcher: () => Promise<T>;
-params?: Record<stringany>,ttl?: number;
-): Promise<T> {
-const key = this.getKey(endpointparams);
-return this.cache.getOrSet(keyfetcherttl);
-}
-invalidateEndpoint(endpoint: string): void {;
-const pattern = `${this.baseKey}:${endpoint}:.*`;
-this.cache.invalidatePattern(pattern);
-}
-invalidateAll(): void {
-this.cache.invalidatePattern(`${this.baseKey}:.*`);
-};// React; hook; for API caching;
-export; const; useAPICache = (baseKey?: string) => {const apiCache = React.useMemo(() => new APICache(baseKey), [baseKey]);
-return {
-fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);
-};
-},export; default; CacheManager}}}
-fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);};
-},export; default; CacheManager}}}
+  private static instance: CacheManager;
+  private cache: Map<string, CacheItem<any>> = new Map();
+  private options: CacheOptions;
+
   private constructor(options: CacheOptions = {}) {
     this.options = {
       ttl: 5 * 60 * 1000, // 5 minutes default
-      maxSize: 100, // 100 items default
+      maxSize: 1000, // 1000 items default
       maxAge: 30 * 60 * 1000, // 30 minutes default
       ...options
     };
-
-    // Clean up expired items periodically
-    this.startCleanupInterval();
   }
 
-  public static getInstance(options?: CacheOptions): CacheManager {
+  static getInstance(options?: CacheOptions): CacheManager {
     if (!CacheManager.instance) {
       CacheManager.instance = new CacheManager(options);
     }
     return CacheManager.instance;
   }
 
-  public set<T>(key: string, data: T, customTTL?: number): void {
+  set<T>(key: string, data: T, ttl?: number): void {
     const now = Date.now();
-    const ttl = customTTL || this.options.ttl || 0;
-
-    // Remove oldest items if cache is full
-    if (this.cache.size >= (this.options.maxSize || 100)) {
+    const itemTTL = ttl || this.options.ttl || 5 * 60 * 1000;
+    
+    // Check if we need to evict items
+    if (this.cache.size >= (this.options.maxSize || 1000)) {
       this.evictOldest();
     }
 
-    this.cache.set(key, {
+    const cacheItem: CacheItem<T> = {
       data,
       timestamp: now,
-      expiresAt: ttl > 0 ? now + ttl : undefined,
+      expiresAt: now + itemTTL,
       accessCount: 0,
       lastAccessed: now
-    });
+    };
+
+    this.cache.set(key, cacheItem);
   }
 
-  public get<T>(key: string): T | null {
+  get<T>(key: string): T | null {
     const item = this.cache.get(key);
+    
     if (!item) {
       return null;
     }
 
     const now = Date.now();
-
-    // Check if item has expired
+    
+    // Check if expired
     if (item.expiresAt && now > item.expiresAt) {
       this.cache.delete(key);
       return null;
     }
 
-    // Check if item is too old
+    // Check max age
     if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
       this.cache.delete(key);
       return null;
     }
 
-    // Update access statistics
+    // Update access info
     item.accessCount++;
     item.lastAccessed = now;
-    return item.data;
+
+    return item.data as T;
   }
 
-  public has(key: string): boolean {
-    return this.get(key) !== null;
+  has(key: string): boolean {
+    const item = this.cache.get(key);
+    if (!item) return false;
+
+    const now = Date.now();
+    
+    // Check if expired
+    if (item.expiresAt && now > item.expiresAt) {
+      this.cache.delete(key);
+      return false;
+    }
+
+    // Check max age
+    if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
+      this.cache.delete(key);
+      return false;
+    }
+
+    return true;
   }
 
-  public delete(key: string): boolean {
+  delete(key: string): boolean {
     return this.cache.delete(key);
   }
 
-  public clear(): void {
+  clear(): void {
     this.cache.clear();
   }
 
-  public size(): number {
+  size(): number {
     return this.cache.size;
   }
 
-  public keys(): string[] {
+  keys(): string[] {
     return Array.from(this.cache.keys());
   }
 
-  public getStats(): {
-    size: number;
-    hitRate: number;
-    items: Array<{
-      key: string;
-      age: number;
-      accessCount: number;
-      lastAccessed: number;
-    }>;
-  } {
-    const now = Date.now();
-    const items = Array.from(this.cache.entries()).map(([key, item]) => ({
-      key,
-      age: now - item.timestamp,
-      accessCount: item.accessCount,
-      lastAccessed: item.lastAccessed
-    }));
-
-    const totalAccesses = items.reduce((sum, item) => sum + item.accessCount, 0);
-    const hitRate = items.length > 0 ? totalAccesses / items.length : 0;
-
-    return {
-      size: this.cache.size,
-      hitRate,
-      items
-    };
-  }
-
   private evictOldest(): void {
-    let oldestKey = "";
+    let oldestKey: string | null = null;
     let oldestTime = Date.now();
 
     for (const [key, item] of this.cache.entries()) {
@@ -281,117 +136,91 @@ fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndp
     }
   }
 
-  private startCleanupInterval(): void {
-    // Clean up expired items every minute
-    setInterval(() => {
-      this.cleanup();
-    }, 60 * 1000);
-  }
-
-  private cleanup(): void {
+  // Clean up expired items
+  cleanup(): void {
     const now = Date.now();
     const keysToDelete: string[] = [];
 
     for (const [key, item] of this.cache.entries()) {
-      // Check expiration
       if (item.expiresAt && now > item.expiresAt) {
         keysToDelete.push(key);
-        continue;
-      }
-
-      // Check max age
-      if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
+      } else if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
         keysToDelete.push(key);
-        continue;
       }
     }
 
     keysToDelete.forEach(key => this.cache.delete(key));
   }
 
-  // Utility methods for common use cases
-  public async getOrSet<T>(
-    key: string,
-    fetcher: () => Promise<T>,
-    customTTL?: number
-  ): Promise<T> {
-    const cached = this.get<T>(key);
-    if (cached !== null) {
-      return cached;
+  // Get cache statistics
+  getStats() {
+    const now = Date.now();
+    let expiredCount = 0;
+    let totalAccessCount = 0;
+
+    for (const item of this.cache.values()) {
+      if (item.expiresAt && now > item.expiresAt) {
+        expiredCount++;
+      }
+      totalAccessCount += item.accessCount;
     }
 
-    const data = await fetcher();
-    this.set(key, data, customTTL);
-    return data;
-  }
-
-  public invalidatePattern(pattern: string): void {
-    const regex = new RegExp(pattern);
-    const keysToDelete = this.keys().filter(key => regex.test(key));
-    keysToDelete.forEach(key => this.delete(key));
+    return {
+      size: this.cache.size,
+      maxSize: this.options.maxSize || 1000,
+      expiredCount,
+      totalAccessCount,
+      averageAccessCount: this.cache.size > 0 ? totalAccessCount / this.cache.size : 0
+    };
   }
 }
 
-// React hook for caching
-export const useCache = () => {
+// React hook for cache
+export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { ttl?: number }): {
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+  refetch: () => void;
+} {
+  const [data, setData] = React.useState<T | null>(null);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState<Error | null>(null);
+
   const cache = CacheManager.getInstance();
-  return {
-    get: cache.get.bind(cache),
-    set: cache.set.bind(cache),
-    has: cache.has.bind(cache),
-    delete: cache.delete.bind(cache),
-    clear: cache.clear.bind(cache),
-    getOrSet: cache.getOrSet.bind(cache),
-    invalidatePattern: cache.invalidatePattern.bind(cache)
-  };
-};
 
-// Specialized cache for API responses
-export class APICache {
-  private cache: CacheManager;
-  private baseKey: string;
+  const fetchData = React.useCallback(async () => {
+    // Check cache first
+    const cached = cache.get<T>(key);
+    if (cached) {
+      setData(cached);
+      return;
+    }
 
-  constructor(baseKey: string = "api") {
-    this.cache = CacheManager.getInstance({
-      ttl: 10 * 60 * 1000, // 10 minutes for API responses
-      maxSize: 200
-    });
-    this.baseKey = baseKey;
-  }
+    setLoading(true);
+    setError(null);
 
-  private getKey(endpoint: string, params?: Record<string, any>): string {
-    const paramString = params ? JSON.stringify(params) : "";
-    return `${this.baseKey}:${endpoint}:${paramString}`;
-  }
+    try {
+      const result = await fetcher();
+      setData(result);
+      cache.set(key, result, options?.ttl);
+    } catch (err) {
+      setError(err as Error);
+    } finally {
+      setLoading(false);
+    }
+  }, [key, fetcher, cache, options?.ttl]);
 
-  async fetch<T>(
-    endpoint: string,
-    fetcher: () => Promise<T>,
-    params?: Record<string, any>,
-    ttl?: number
-  ): Promise<T> {
-    const key = this.getKey(endpoint, params);
-    return this.cache.getOrSet(key, fetcher, ttl);
-  }
+  React.useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
-  invalidateEndpoint(endpoint: string): void {
-    const pattern = `${this.baseKey}:${endpoint}:.*`;
-    this.cache.invalidatePattern(pattern);
-  }
+  const refetch = React.useCallback(() => {
+    cache.delete(key);
+    fetchData();
+  }, [key, cache, fetchData]);
 
-  invalidateAll(): void {
-    this.cache.invalidatePattern(`${this.baseKey}:.*`);
-  }
+  return { data, loading, error, refetch };
 }
-
-// React hook for API caching
-export const useAPICache = (baseKey?: string) => {
-  const apiCache = React.useMemo(() => new APICache(baseKey), [baseKey]);
-  return {
-    fetch: apiCache.fetch.bind(apiCache),
-    invalidateEndpoint: apiCache.invalidateEndpoint.bind(apiCache),
-    invalidateAll: apiCache.invalidateAll.bind(apiCache)
-  };
-};
 
 export default CacheManager;
+export type { CacheItem, CacheOptions };

@@ -23,6 +23,9 @@ function safeConsoleError(message: string, error?: any): void {
   isLoggingError = true;
   try {
     if (env === "development") {
+      console.error(message, error);
+    } else {
+      // In production, you might want to send to a logging service
       logErrorToProduction(message, error);
     }
   } catch {
@@ -38,63 +41,66 @@ function logErrorToProduction(message: string, error?: any): void {
 
 export const safeStorage = {
   getItem: (key: string): string | null => {
-    if (typeof window === "undefined") return null;
-    // Don't log verbose messages for Supabase auth tokens to prevent spam
-    const isVerboseKey = key.includes("sb-") || key.includes("supabase");
-
     try {
-      return localStorage.getItem(key);
-    } catch (e) {
-      if (!isVerboseKey) {
-        safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+      if (isLocalStorageAvailable()) {
+        return localStorage.getItem(key);
       }
+      return inMemoryStore[key] || null;
+    } catch (error) {
+      safeConsoleError("Failed to get item from storage", error);
       return inMemoryStore[key] || null;
     }
   },
-  setItem: (key: string, value: string) => {
-    if (typeof window === "undefined") return;
-    const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
+  setItem: (key: string, value: string): void => {
     try {
-      localStorage.setItem(key, value);
-    } catch (e) {
-      if (!isVerboseKey) {
-        safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+      if (isLocalStorageAvailable()) {
+        localStorage.setItem(key, value);
+      } else {
+        inMemoryStore[key] = value;
       }
+    } catch (error) {
+      safeConsoleError("Failed to set item in storage", error);
       inMemoryStore[key] = value;
     }
   },
-  removeItem: (key: string) => {
-    if (typeof window === "undefined") return;
-    const isVerboseKey = key.includes("sb-") || key.includes("supabase");
 
+  removeItem: (key: string): void => {
     try {
-      localStorage.removeItem(key);
-    } catch (e) {
-      if (!isVerboseKey) {
-        safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
+      if (isLocalStorageAvailable()) {
+        localStorage.removeItem(key);
+      } else {
+        delete inMemoryStore[key];
       }
+    } catch (error) {
+      safeConsoleError("Failed to remove item from storage", error);
       delete inMemoryStore[key];
     }
   },
-  clear: () => {
-    if (typeof window === "undefined") {
-      for (const key in inMemoryStore) {
-        delete inMemoryStore[key];
-      }
-      return;
-    }
+
+  clear: (): void => {
     try {
-      localStorage.clear();
-    } catch (e) {
-      safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory.", e);
-      for (const key in inMemoryStore) {
-        delete inMemoryStore[key];
+      if (isLocalStorageAvailable()) {
+        localStorage.clear();
+      } else {
+        Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
       }
+    } catch (error) {
+      safeConsoleError("Failed to clear storage", error);
+      Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
     }
   },
+
   get isAvailable(): boolean {
-    return isLocalStorageAvailable();
+    try {
+      if (typeof window === "undefined") return false;
+      const testKey = "__test__";
+      sessionStorage.setItem(testKey, "test");
+      sessionStorage.removeItem(testKey);
+      return true;
+    } catch {
+      return false;
+    }
   }
 };
 
@@ -153,3 +159,5 @@ export const safeSessionStorage = {
     }
   }
 };
+
+export default safeStorage;

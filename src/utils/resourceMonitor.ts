@@ -33,6 +33,13 @@ class ResourceMonitor {
         }
       }
     }, true);
+
+    // Monitor resource load failures
+    window.addEventListener('unhandledrejection', (event) => {
+      if (event.reason && typeof event.reason === 'string') {
+        this.recordError('unknown', event.reason);
+      }
+    });
   }
 
   private getResourceUrl(element: HTMLElement): string | null {
@@ -44,6 +51,16 @@ class ResourceMonitor {
       return element.src;
     }
     return null;
+  }
+
+  private recordError(url: string, errorMessage: string): void {
+    const resourceError: ResourceError = {
+      url,
+      type: this.getResourceTypeFromUrl(url),
+      error: errorMessage,
+      timestamp: Date.now()
+    };
+    this.errors.push(resourceError);
   }
 
   private getResourceTypeFromUrl(url: string): ResourceError["type"] {
@@ -104,6 +121,10 @@ class ResourceMonitor {
     return !recentErrors.some(error => error.url === url);
   }
 }
+
+// Export instances for backward compatibility
+export const resourceMonitor = new ResourceMonitor();
+export default resourceMonitor;
 
 export { ResourceMonitor };
 export type { ResourceError };
