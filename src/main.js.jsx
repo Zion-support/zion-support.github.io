@@ -30,6 +30,10 @@ const queryClient = new QueryClient({
         },
     },
 });
+<<<<<<< HEAD
+=======
+            refetchOnWindowFocus: false;}}});
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 const rootElement = document.getElementById('root');
 function renderApp() {
     const app = (<React.StrictMode>

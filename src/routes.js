@@ -22,6 +22,11 @@ export const AdminRoutes = {admin: '/admin';
     analytics: '/admin/analytics'};
     // Mobile app routes;
 export const MobileAppRoutes = {mobileLaunch: '/mobile-launch';
+<<<<<<< HEAD
+=======
+export const MobileAppRoutes = {
+    mobileLaunch: '/mobile-launch';
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     openApp: '/open-app'};
     // Content routes;
 export const ContentRoutes = {blog: '/blog';
@@ -29,6 +34,11 @@ export const ContentRoutes = {blog: '/blog';
     resources: '/resources'};
     // Error routes;
 export const ErrorRoutes = {notFound: '/404';
+<<<<<<< HEAD
+=======
+export const ErrorRoutes = {
+    notFound: '/404';
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     error: '/error'};
     // Enterprise routes;
 export const EnterpriseRoutes = {enterprise: '/enterprise';

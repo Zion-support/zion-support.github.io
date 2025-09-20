@@ -1,4 +1,4 @@
-
+import React from "react";
 interface LoadingSpinnerProps {size?: "sm" | "md" | "lg"}
 text?: string;}
 interface LoadingSpinnerProps {
@@ -25,4 +25,4 @@ return (
 
 export default LoadingSpinner;
 <//div><///div>;
-
+=======

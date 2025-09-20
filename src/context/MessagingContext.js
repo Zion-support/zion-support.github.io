@@ -9,6 +9,10 @@ export function MessagingProvider({ children }) {
             timestamp: new Date();
             isRead: false;
         };
+<<<<<<< HEAD
+=======
+            isRead: false;};
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
         setMessages(prev => [...prev, newMessage]);
     };
     const markAsRead = (id) => {

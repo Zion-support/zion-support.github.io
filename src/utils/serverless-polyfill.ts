@@ -13,6 +13,10 @@
 *;
 * This runs as the VERY FIRST script before any other code loads.;
 */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 // Type declarations for global augmentation;
 declare global {
 var webpackChunk_N_E: any[];
@@ -29,4 +33,10 @@ var __awaiter: any;
 if (process.env.NODE_ENV === "development") {
 setTimeout(() => verifyPolyfills(), 100)
 }
+<<<<<<< HEAD
 export default {}, // Ensure this can be imported as a module}
+=======
+export default {}, // Ensure this can be imported as a module}
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840

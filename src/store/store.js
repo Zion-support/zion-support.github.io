@@ -5,3 +5,7 @@ export const store = configureStore({
         wishlist: wishlistReducer;
     },
 });
+<<<<<<< HEAD
+=======
+        wishlist: wishlistReducer;}});
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840

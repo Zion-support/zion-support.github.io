@@ -2,6 +2,7 @@
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";,
 import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 interface Language {
@@ -32,6 +33,82 @@ key={language.code}    <div className="space-y-8 px-4">
 <h2 className="text-xl font-medium">Select your language</h2>
 <p className="text-muted-foreground">Choose your preferred language</p>
 <div className="grid grid-cols-2 gap-3 mt-4">
+=======
+<<<<<<< HEAD
+import { Moon, Sun, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",;
+import { useTheme } from "@/hooks/useTheme";
+import { Moon, SunCheck } from 'lucide-react';
+import { CardCardContent } from "@/components/ui/card";
+=======
+import { Moon; Sun, Check } from "lucide-react";
+import { Card; CardContent } from "@/components/ui/card";
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+interface Language {
+code: string;,
+name: string;,
+flag: string,
+}
+const languages: Language[] = [}
+{ code: "en", name: "English", flag: "🇺🇸" },
+{ code: "es", name: "Español", flag: "🇪🇸" }
+{ code: "fr", name: "Français", flag: "🇫🇷" },
+{ code: "de", name: "Deutsch", flag: "🇩🇪" }
+{ code: "zh", name: "中文", flag: "🇨🇳" }
+];
+export function LanguageThemeSelector() {
+const { theme; setTheme } = useTheme();
+const [selectedLanguage; setSelectedLanguage] = useState<string>("en"),
+
+<<<<<<< HEAD
+  return (<div className='space-y-8 px-4'>
+      <div className='space-y-2'>
+        <h2 className='text-xl font-medium'>Select your language</h2>
+        <p className='text-muted-foreground'>Choose your preferred language</p>
+        <div className='grid grid-cols-2 gap-3 mt-4'>
+          {languages.map(language => (
+            <Card
+key={language.code}    <div className="space-y-8 px-4">
+      <div className="space-y-2">
+        <h2 className="text-xl font-medium">Select your language</h2>
+        <p className="text-muted-foreground">Choose your preferred language</p>
+        <div className="grid grid-cols-2 gap-3 mt-4">
+          {languages.map((language) => (<Card
+          {languages.map((language,) => (
+            <Card,
+key = {language.code}
+              className={`cursor-pointer transition-all ${
+                selectedLanguage === language.code
+                  ? 'border-primary bg-primary/5'
+                  : 'border-border hover:border-primary/40'
+              }`}
+              onClick = {() => setSelectedLanguage(language.code)}
+              onClick = {(,) => setSelectedLanguage(language.code)}
+            >
+              <CardContent className='p-3 flex items-center justify-between'>
+                <div className='flex items-center'>
+                  <span className='text-xl mr-2'>{language.flag}</span>
+                  <span>{language.name}</span>
+                </div>
+                {selectedLanguage === language.code && (
+                  <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
+            <Card
+=======
+return (<div className="space-y-8 px-4">;
+<div className="space-y-2">;
+<h2 className="text-xl font-medium">Select your language</h2>;
+<p className="text-muted-foreground">Choose your preferred language</p>;
+<div className="grid grid-cols-2 gap-3 mt-4">;
+{languages.map(language => (
+<Card;
+key={language.code}    <div className="space-y-8 px-4">;
+<div className="space-y-2">;
+<h2 className="text-xl font-medium">Select your language</h2>;
+<p className="text-muted-foreground">Choose your preferred language</p>;
+<div className="grid grid-cols-2 gap-3 mt-4">;
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 {languages.map((language) => (<Card;
 key = {language.code}
 className={`cursor-pointer transition-all ${
@@ -41,6 +118,7 @@ selectedLanguage === language.code;
 }`}
 onClick = {() => setSelectedLanguage(language.code)}
 >;
+<<<<<<< HEAD
 <CardContent className="p-3 flex items-center justify-between">
 <div className="flex items-center">
 <span className="text-xl mr-2">{language.flag}</span>
@@ -49,6 +127,17 @@ onClick = {() => setSelectedLanguage(language.code)}
 {selectedLanguage === language.code && (
 <Check className="h-4 w-4 text-primary" />                )}          {languages.map((language) => (
 <Card;
+=======
+<CardContent className="p-3 flex items-center justify-between">;
+<div className="flex items-center">;
+<span className="text-xl mr-2">{language.flag}</span>;
+<span>{language.name}</span>;
+</div>;
+{selectedLanguage === language.code && (
+<Check className="h-4 w-4 text-primary" />                )}          {languages.map((language) => (
+<Card;
+>>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 key={language.code}
 className={`cursor-pointer transition-all ${
 selectedLanguage === language.code;
@@ -57,6 +146,7 @@ selectedLanguage === language.code;
 }`}
 onClick={() => setSelectedLanguage(language.code)}
 >;
+<<<<<<< HEAD
 <CardContent className="p-3 flex items-center justify-between">
 <div className="flex items-center">
 <span className="text-xl mr-2">{language.flag}</span>
@@ -76,6 +166,27 @@ onClick={() => setSelectedLanguage(language.code)}
 Select your preferred appearance;
 </p>
 <div className="flex gap-3 mt-4">
+=======
+<CardContent className="p-3 flex items-center justify-between">;
+<div className="flex items-center">;
+<span className="text-xl mr-2">{language.flag}</span>;
+<span>{language.name}</span>;
+</div>;
+{selectedLanguage === language.code && (
+<Check className="h-4 w-4 text-primary" />;
+)}
+</CardContent>;
+</Card>;
+))}
+</div>;
+</div>;
+<div className="space-y-2">;
+<h2 className="text-xl font-medium">Choose theme</h2>;
+<p className="text-muted-foreground">;
+Select your preferred appearance;
+</p>;
+<div className="flex gap-3 mt-4">;
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 <Card;
 theme === "light";
 ? "border-primary bg-primary/5";
@@ -83,6 +194,7 @@ theme === "light";
 }`}
 onClick = {() => setTheme("light")}
 >;
+<<<<<<< HEAD
 <CardContent className="p-3 flex flex-col items-center justify-center">
 <Sun className="h-8 w-8 mb-2" />
 <span>Light</span>
@@ -91,6 +203,16 @@ onClick = {() => setTheme("light")}
 )}
 </CardContent>
 </Card>
+=======
+<CardContent className="p-3 flex flex-col items-center justify-center">;
+<Sun className="h-8 w-8 mb-2" />;
+<span>Light</span>;
+{theme === "light" && (
+<Check className="h-4 w-4 text-primary mt-2" />;
+)}
+</CardContent>;
+</Card>;
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 <Card;
 className={`flex-1 cursor-pointer transition-all ${
 theme === "dark";
@@ -99,6 +221,7 @@ theme === "dark";
 }`}
 onClick = {() => setTheme("dark")}
 >;
+<<<<<<< HEAD
 <CardContent className="p-3 flex flex-col items-center justify-center">
 <Moon className="h-8 w-8 mb-2" />
 <span>Dark</span>
@@ -110,6 +233,19 @@ onClick = {() => setTheme("dark")}
 )}
 </CardContent>
 </Card>
+=======
+<CardContent className="p-3 flex flex-col items-center justify-center">;
+<Moon className="h-8 w-8 mb-2" />;
+<span>Dark</span>;
+{theme === "dark" && (
+<Check className="h-4 w-4 text-primary mt-2" />              )}              )}
+</CardContent>;
+</Card>;
+<Check className="h-4 w-4 text-primary mt-2" />;
+)}
+</CardContent>;
+</Card>;
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 <Card;
 className={`flex-1 cursor-pointer transition-all ${
 theme === "dark";
@@ -118,6 +254,7 @@ theme === "dark";
 }`}
 onClick={() => setTheme("dark")}
 >;
+<<<<<<< HEAD
 <CardContent className="p-3 flex flex-col items-center justify-center">
 <Moon className="h-8 w-8 mb-2" />
 <span>Dark</span>
@@ -129,5 +266,18 @@ onClick={() => setTheme("dark")}
 </div>
 </div>
 </div>
+=======
+<CardContent className="p-3 flex flex-col items-center justify-center">;
+<Moon className="h-8 w-8 mb-2" />;
+<span>Dark</span>;
+{theme === "dark" && (
+<Check className="h-4 w-4 text-primary mt-2" />;
+)}
+</CardContent>;
+</Card>;
+</div>;
+</div>;
+</div>;
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 )
 }))

@@ -3,6 +3,10 @@ id: string;
 name: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 // Performance optimization utilities;
 export const optimizeImages: any = () => {;
 const images = document.querySelectorAll("img");
@@ -36,4 +40,10 @@ const loadComponent = componentName => {    return import(`./components/${compon
 return { loadComponent }
 };
 link.rel = "preload";
+<<<<<<< HEAD
 link.href = resource, link.as = resource.endsWith(".css") ? "style" : "font";
+=======
+link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font";
+=======
+>>>>>>> 8c478e615056772e765dbc204462fa984d447432
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840

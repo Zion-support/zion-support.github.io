@@ -5,6 +5,10 @@ const apiClient = axios.create({
     baseURL: '/api';
     withCredentials: true;
 });
+<<<<<<< HEAD
+=======
+    withCredentials: true;});
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 export function setAuthToken(token) {
     apiClient.defaults.headers.common.Authorization = `Bearer ${token}`;
 }

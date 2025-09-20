@@ -12,6 +12,10 @@ export function LanguageProvider({ children }) {;
       learn_more: 'Learn More';
       contact_us: 'Contact Us';
     },
+<<<<<<< HEAD
+=======
+      contact_us: 'Contact Us';},
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     es: {
       welcome: 'Bienvenido';
       get_started: 'Comenzar';
@@ -19,6 +23,10 @@ export function LanguageProvider({ children }) {;
       contact_us: 'Contáctanos';
     },
   };
+<<<<<<< HEAD
+=======
+      contact_us: 'Contáctanos';}};
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 
   const t = (key) => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';

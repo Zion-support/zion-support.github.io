@@ -14,6 +14,10 @@ const loadState = () => {
 const initialState = {
     items: loadState();
 };
+<<<<<<< HEAD
+=======
+    items: loadState();};
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 const cartSlice = createSlice({
     name: 'cart';
     initialState,
@@ -31,6 +35,10 @@ const cartSlice = createSlice({
                     quantity: 1;
                     image: action.payload.image;
                 });
+<<<<<<< HEAD
+=======
+                    image: action.payload.image;});
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
             }
         },
         removeItem: (state, action) => {
@@ -47,8 +55,12 @@ const cartSlice = createSlice({
         },
         clear: state => {
             state.items = [];
+<<<<<<< HEAD
      },
     },
 });
+=======
+     }}});
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 export const { addItem, removeItem, updateQuantity, setItems, clear } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -21,12 +21,20 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Reduce, churn, by 30%","Automated retention","Improved, customer, satisfaction""Data-driven insights";
   ],link: "/services/ai-customer-success",image: "/images/ai-customer-success.jpg",technology: "AI + ML + Analytics",marketSize: "$2.8B, by, 20o25",targetIndustry: "SaaSE-commerceServices";
      },{
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/ai-customer-success",image: "/images/ai-customer-success.jpg",technology: "AI + ML + Analytics",marketSize: "$2.8B, by, 20o25",targetIndustry: "SaaSE-commerceServices";},{
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     id: "ai-sales-optimization",title: "AI, Sales, Optimization Platform",description: "Comprehensive, platform, for optimizing, sales, processes, lead scoring, and, revenue, forecasting",category: "Sales",price: "$7,50o0/month",features: [;
     "Lead, scoring, AI","Revenue forecasting","Sales, process, optimization","Pipeline analytics","Performance tracking""CRM integration";
   ],benefits: [;
     "Increase, conversion, rates","Accurate forecasting","Process optimization""Revenue growth";
   ],link: "/services/ai-sales-optimization",image: "/images/ai-sales-optimization.jpg",technology: "AI + Analytics + CRM",marketSize: "$3.5B, by, 20o25",targetIndustry: "B2BEnterpriseSales Teams";
      },
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/ai-sales-optimization",image: "/images/ai-sales-optimization.jpg",technology: "AI + Analytics + CRM",marketSize: "$3.5B, by, 20o25",targetIndustry: "B2BEnterpriseSales Teams";},
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
   // Data & Analytics Solutions;
   {
     id: "real-time-analytics",title: "Real-Time, Business, Analytics Platform",description: "Live, analytics, platform for, instant, business insights, and, decision-making",category: "Analytics",price: "$5,50o0/month",features: [;
@@ -35,12 +43,20 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Instant insights","Real-time decisions","Proactive alerts""Competitive advantage";
   ],link: "/services/real-time-analytics",image: "/images/real-time-analytics.jpg",technology: "Real-time + Analytics + AI",marketSize: "$2.4B, by, 20o25",targetIndustry: "E-commerceFinanceManufacturing";
      },{
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/real-time-analytics",image: "/images/real-time-analytics.jpg",technology: "Real-time + Analytics + AI",marketSize: "$2.4B, by, 20o25",targetIndustry: "E-commerceFinanceManufacturing";},{
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     id: "data-governance-platform",title: "AI, Data, Governance Platform",description: "Intelligent, platform, for automated, data, governance, compliance, and, quality, management",category: "Data Governance",price: "$9,50o0/month",features: [;
     "Automated compliance","Data, quality, monitoring","Privacy protection","Audit trails","Policy enforcement""Regulatory reporting";
   ],benefits: [;
     "Automated compliance","Data, quality, improvement","Risk reduction""Regulatory adherence";
   ],link: "/services/data-governance",image: "/images/data-governance.jpg",technology: "AI + Compliance + Data",marketSize: "$3.1B, by, 20o25",targetIndustry: "EnterpriseHealthcareFinance";
      },
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/data-governance",image: "/images/data-governance.jpg",technology: "AI + Compliance + Data",marketSize: "$3.1B, by, 20o25",targetIndustry: "EnterpriseHealthcareFinance";},
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
   // Security & Compliance;
   {
     id: "zero-trust-security",title: "Zero, Trust, Security Platform",description: "Comprehensive, zero, trust security, platform, for modern, enterprise, environments",category: "Security",price: "$11,50o0/month",features: [;
@@ -49,12 +65,20 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Enhanced security","Reduced, attack, surface","Compliance adherence""Modern, security, model";
   ],link: "/services/zero-trust-security",image: "/images/zero-trust-security.jpg",technology: "Zero Trust + AI + Security",marketSize: "$4.8B, by, 20o25",targetIndustry: "EnterpriseGovernmentHealthcare";
      },{
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/zero-trust-security",image: "/images/zero-trust-security.jpg",technology: "Zero Trust + AI + Security",marketSize: "$4.8B, by, 20o25",targetIndustry: "EnterpriseGovernmentHealthcare";},{
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     id: "ai-compliance-automation",title: "AI, Compliance, Automation Platform",description: "Intelligent, platform, that automates, regulatory, compliance across, multiple, industries",category: "Compliance",price: "$8,50o0/month",features: [;
     "Regulatory monitoring","Automated reporting","Compliance scoring","Risk assessment","Audit preparation""Multi-regulation support";
   ],benefits: [;
     "Automated compliance","Reduced, manual, work","Risk mitigation""Cost savings";
   ],link: "/services/ai-compliance",image: "/images/ai-compliance.jpg",technology: "AI + Compliance + Automation",marketSize: "$2.9B, by, 20o25",targetIndustry: "FinanceHealthcareLegal";
      },
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/ai-compliance",image: "/images/ai-compliance.jpg",technology: "AI + Compliance + Automation",marketSize: "$2.9B, by, 20o25",targetIndustry: "FinanceHealthcareLegal";},
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
   // Collaboration & Productivity;
   {
     id: "ai-collaboration-platform",title: "AI, Collaboration, Platform",description: "Intelligent, platform, that enhances, team, collaboration with AI-powered, insights, and automation",category: "Collaboration",price: "$4,50o0/month",features: [;
@@ -63,12 +87,20 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Improved productivity","Better collaboration","Automated workflows""Team insights";
   ],link: "/services/ai-collaboration",image: "/images/ai-collaboration.jpg",technology: "AI + Collaboration + Automation",marketSize: "$3.2B, by, 20o25",targetIndustry: "EnterpriseRemote TeamsStartups";
      },{
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/ai-collaboration",image: "/images/ai-collaboration.jpg",technology: "AI + Collaboration + Automation",marketSize: "$3.2B, by, 20o25",targetIndustry: "EnterpriseRemote TeamsStartups";},{
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     id: "virtual-reality-meetings",title: "VR, Meeting, Platform",description: "Immersive, virtual, reality platform, for, remote meetings, and, collaboration",category: "VR Collaboration",price: "$6,50o0/month",features: [;
     "VR, meeting, rooms","3D presentations","Virtual whiteboards","Avatar customization","Spatial audio""Cross-platform support";
   ],benefits: [;
     "Immersive meetings","Better engagement","3D collaboration""Remote, team, building";
   ],link: "/services/vr-meetings",image: "/images/vr-meetings.jpg",technology: "VR + Collaboration + 3D",marketSize: "$2.1B, by, 20o25",targetIndustry: "EnterpriseEducationDesign";
      },
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/vr-meetings",image: "/images/vr-meetings.jpg",technology: "VR + Collaboration + 3D",marketSize: "$2.1B, by, 20o25",targetIndustry: "EnterpriseEducationDesign";},
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
   // Marketing & Growth;
   {
     id: "ai-marketing-automation",title: "AI, Marketing, Automation Platform",description: "Intelligent, marketing, platform that, automates, campaigns and, personalizes, customer experiences",category: "Marketing",price: "$7,50o0/month",features: [;
@@ -77,12 +109,20 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Automated campaigns","Personalized experiences","Improved ROI""Scalable marketing";
   ],link: "/services/ai-marketing",image: "/images/ai-marketing.jpg",technology: "AI + Marketing + Automation",marketSize: "$4.5B, by, 20o25",targetIndustry: "E-commerceB2BSaaS";
      },{
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/ai-marketing",image: "/images/ai-marketing.jpg",technology: "AI + Marketing + Automation",marketSize: "$4.5B, by, 20o25",targetIndustry: "E-commerceB2BSaaS";},{
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     id: "voice-search-optimization",title: "Voice, Search, Optimization Platform",description: "Platform, for, optimizing content, and, SEO for, voice, search and, virtual, assistants",category: "Voice SEO",price: "$4,50o0/month",features: [;
     "Voice, keyword, research","Content optimization","Schema markup","Voice analytics","Performance tracking""Multi-language support";
   ],benefits: [;
     "Voice, search, visibility","Improved rankings","Mobile optimization""Future-ready SEO";
   ],link: "/services/voice-seo",image: "/images/voice-seo.jpg",technology: "Voice + SEO + AI",marketSize: "$1.8B, by, 20o25",targetIndustry: "E-commerceContentLocal Business";
      },
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/voice-seo",image: "/images/voice-seo.jpg",technology: "Voice + SEO + AI",marketSize: "$1.8B, by, 20o25",targetIndustry: "E-commerceContentLocal Business";},
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
   // Financial Technology;
   {
     id: "ai-accounting-platform",title: "AI, Accounting, Platform",description: "Intelligent, accounting, platform with, automated, bookkeeping and, financial, insights",category: "FinTech",price: "$5,50o0/month",features: [;
@@ -91,12 +131,20 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Automated accounting","Real-time insights","Cost savings""Compliance assurance";
   ],link: "/services/ai-accounting",image: "/images/ai-accounting.jpg",technology: "AI + Accounting + Automation",marketSize: "$2.6B, by, 20o25",targetIndustry: "Small BusinessFreelancersStartups";
      },{
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/ai-accounting",image: "/images/ai-accounting.jpg",technology: "AI + Accounting + Automation",marketSize: "$2.6B, by, 20o25",targetIndustry: "Small BusinessFreelancersStartups";},{
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     id: "crypto-payment-platform",title: "Crypto, Payment, Platform",description: "Complete, platform, for accepting, and, processing cryptocurrency payments",category: "Crypto",price: "$8,50o0/month",features: [;
     "Multi-crypto support","Instant settlements","Fiat conversion","Security protocols","Compliance tools""Analytics dashboard";
   ],benefits: [;
     "Crypto acceptance","Global payments","Lower fees""Instant settlements";
   ],link: "/services/crypto-payments",image: "/images/crypto-payments.jpg",technology: "Blockchain + Crypto + Payments",marketSize: "$3.4B, by, 20o25",targetIndustry: "E-commerceOnline ServicesGaming";
      }],export, const, INNOVATIVE_CATEGORIES = ["Business Intelligence";
+<<<<<<< HEAD
+=======
+  ,  ],link: "/services/crypto-payments",image: "/images/crypto-payments.jpg",technology: "Blockchain + Crypto + Payments",marketSize: "$3.4B, by, 20o25",targetIndustry: "E-commerceOnline ServicesGaming";}],export, const, INNOVATIVE_CATEGORIES = ["Business Intelligence";
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     "Customer Experience","Project Management","Marketing","Human Resources","Sales","Financial Services","Data Privacy";
     "Supply Chain""Business, Automation";
 ];
@@ -107,4 +155,9 @@ export, const, INNOVATIVE_PRICING = {
     }
 },export, const, INNOVATIVE_CONTACT = {
     phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";
+<<<<<<< HEAD
 };
+=======
+};
+    phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";};
+>>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
