@@ -9,6 +9,7 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
+<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Posts', count: 45 },
     { id: 'ai', name: 'AI & Machine Learning', count: 18 },
@@ -16,6 +17,14 @@ export default function Blog() {
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 8 },
     { id: 'cybersecurity', name: 'Cybersecurity', count: 7 }
   ];
+=======
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosts((prev: any) => [...prev, generateRandomBlogPost()]);
+    }, 120000); // every 2 minutes
+    return () => clearInterval(interval);
+  }, []);
+>>>>>>> origin/zion-enhancements-v6
 
   const blogPosts = [
     {

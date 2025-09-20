@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 
@@ -5,6 +6,13 @@ interface ThemeContextType {
   isDarkMode: boolean;
   toggleTheme: () => void;
   theme: 'light' | 'dark';
+=======
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+interface ThemeContextType {
+  mode: 'light' | 'dark';
+  toggleTheme: () => void;
+>>>>>>> origin/zion-enhancements-v6
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -14,6 +22,7 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+<<<<<<< HEAD
   const [isDarkMode, setIsDarkMode] = useLocalStorage('darkMode', false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
@@ -42,6 +51,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={value}>
+=======
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
+
+  const toggleTheme = () => {
+    setMode(prev => prev === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <ThemeContext.Provider value={{ mode, toggleTheme }}>
+>>>>>>> origin/zion-enhancements-v6
       {children}
     </ThemeContext.Provider>
   );

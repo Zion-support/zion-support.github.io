@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from "react";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { useTheme } from "@/context/ThemeContext";
+>>>>>>> origin/zion-enhancements-v6
 
 interface ThemeToggleProps {
   darkMode: boolean;

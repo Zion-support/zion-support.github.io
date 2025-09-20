@@ -1,6 +1,12 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+>>>>>>> origin/zion-enhancements-v6
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, 

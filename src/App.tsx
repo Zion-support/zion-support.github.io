@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from 'react';
 import './App.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LazyImage from './components/LazyImage';
@@ -8,6 +9,46 @@ import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { useTheme } from './context/ThemeContext';
 import SEOOptimizer from './utils/seoOptimizer';
+=======
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { ScrollToTop } from "./components/ui/ScrollToTop";
+import { PerformanceMonitor } from "./components/PerformanceMonitor";
+
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const CareersPage = React.lazy(() => import('./pages/Careers'));
+const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
+const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
+const TermsPage = React.lazy(() => import('./pages/Terms'));
+const PricingPage = React.lazy(() => import('./pages/Pricing'));
+>>>>>>> origin/zion-enhancements-v6
 
 // Lazy load heavy components for better performance
 const VirtualList = lazy(() => import('./components/VirtualList'));
@@ -241,6 +282,7 @@ function App() {
             {[...Array(testimonial.rating)].map((_, i) => (
               <span key={i} className="star filled">★</span>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
         <div className="testimonial-author">
@@ -594,6 +636,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             {/* Add more routes as components are fixed */}
+=======
+
+>>>>>>> origin/zion-enhancements-v6
           </Routes>
         </Suspense>
         
@@ -602,9 +647,14 @@ function App() {
         
         <Toaster />
         <SonnerToaster />
+<<<<<<< HEAD
       </div>
     </ThemeProvider>
 >>>>>>> origin/ziontechgroup-improvements
+=======
+      </ThemeProvider>
+    </WhitelabelProvider>
+>>>>>>> origin/zion-enhancements-v6
   );
 }
 
