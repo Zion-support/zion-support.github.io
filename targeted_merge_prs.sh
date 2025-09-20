@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Merge Existing Branches Script
-# This script will merge branches that actually exist and can be fetched
+# Targeted Merge Script for Open PRs
+# This script will merge a manageable number of recent PRs
 
 set -e
 
-echo "🚀 Starting Merge Process for Existing Branches..."
+echo "🚀 Starting Targeted Merge Process for Recent PRs..."
 echo "⏰ Started at: $(date)"
 
 # Colors for output
@@ -61,25 +61,11 @@ TOTAL_BRANCHES=0
 print_status "Fetching all remote branches..."
 git fetch --all
 
-# Get list of branches that actually exist (first 30 for manageable processing)
-EXISTING_BRANCHES=""
+# Get list of branches to merge (limiting to first 50 for manageable processing)
 ALL_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | head -50 | sed 's/origin\///' | tr -d ' ')
+TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -l)
 
-print_status "Checking which branches actually exist..."
-
-for branch in $ALL_BRANCHES; do
-    if git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        EXISTING_BRANCHES="$EXISTING_BRANCHES $branch"
-        TOTAL_BRANCHES=$((TOTAL_BRANCHES + 1))
-        
-        # Limit to 30 branches for manageable processing
-        if [ $TOTAL_BRANCHES -ge 30 ]; then
-            break
-        fi
-    fi
-done
-
-print_status "Found $TOTAL_BRANCHES existing branches to process"
+print_status "Found $TOTAL_BRANCHES branches to process (limited to 50 for efficiency)"
 
 # Function to resolve conflicts intelligently
 resolve_conflicts() {
@@ -206,7 +192,7 @@ print_status "Starting branch processing..."
 echo "---"
 
 CURRENT=0
-for branch in $EXISTING_BRANCHES; do
+for branch in $ALL_BRANCHES; do
     CURRENT=$((CURRENT + 1))
     print_status "[$CURRENT/$TOTAL_BRANCHES] Processing branch: $branch"
     
@@ -229,7 +215,7 @@ for branch in $EXISTING_BRANCHES; do
     echo "---"
     
     # Push changes periodically to avoid losing work
-    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+    if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         print_status "Pushing progress to remote..."
         git push origin main 2>/dev/null || print_warning "Could not push main"
     fi
@@ -241,7 +227,7 @@ git push origin main 2>/dev/null || print_warning "Could not push main"
 
 # Summary
 echo ""
-print_success "Merge process completed!"
+print_success "Targeted merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
@@ -260,4 +246,4 @@ git log --oneline -10 2>/dev/null || true
 print_status "Final repository status:"
 git status --porcelain 2>/dev/null || true
 
-print_success "🎉 Merge process completed!"
+print_success "🎉 Targeted PR merge process completed!"
