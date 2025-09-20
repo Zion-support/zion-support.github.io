@@ -48,7 +48,7 @@ import {
   Gem,
   Star as StarIcon
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
 
 export default function ComprehensivePricingGuide2030() {

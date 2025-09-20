@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { enhancedServices2025 } from '../../data/enhanced-2025-services';
 import { specializedIndustryServices } from '../../data/specialized-industry-services';
 import { allServices } from '../../data/services';

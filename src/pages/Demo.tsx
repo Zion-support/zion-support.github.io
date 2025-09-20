@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function Demo() {
   const [isPlaying, setIsPlaying] = useState(false);

@@ -47,7 +47,7 @@ import {
   ExternalLink,
   X
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSAASServices2025';
 
 export default function InnovativeMicroSAASServices2025() {

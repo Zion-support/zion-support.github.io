@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu } from 'lucide-react';
 

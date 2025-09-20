@@ -30,7 +30,7 @@ import {
   Calendar,
   UserCheck
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 const AICustomerSupportAutomation = () => {
   const features = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { DollarSign, CheckCircle2, ExternalLink, Phone, Mail } from 'lucide-react';
 
 const AISEOAuditor: React.FC = () => {

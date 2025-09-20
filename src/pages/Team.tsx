@@ -49,7 +49,7 @@ import {
   Cpu,
   Truck
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 interface TeamMember {
   id: string;

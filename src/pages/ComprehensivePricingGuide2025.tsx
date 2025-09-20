@@ -27,7 +27,7 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 export default function ComprehensivePricingGuide2025() {

@@ -23,7 +23,7 @@ import {
   Code,
   Database
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 interface NewsArticle {
   id: string;

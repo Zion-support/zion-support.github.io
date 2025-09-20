@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, DollarSign, Globe, Shield, Rocket, Zap, Bot, Mail, BarChart3 } from 'lucide-react';
 

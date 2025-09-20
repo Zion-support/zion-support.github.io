@@ -42,7 +42,7 @@ import {
   Coins,
   Satellite
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 interface SearchResult {
   id: string;

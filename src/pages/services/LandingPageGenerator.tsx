@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { CheckCircle2, Globe, DollarSign, ExternalLink, Phone, Mail } from 'lucide-react';
 
 const LandingPageGenerator: React.FC = () => {

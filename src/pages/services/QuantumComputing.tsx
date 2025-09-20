@@ -23,7 +23,7 @@ import {
   CircuitBoard,
   Microchip
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 const QuantumComputing = () => {
   const features = [

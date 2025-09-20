@@ -20,7 +20,7 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { 
   COMPREHENSIVE_PRICING_PLANS_2028, 
   SERVICE_CATEGORIES_2028, 

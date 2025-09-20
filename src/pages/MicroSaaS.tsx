@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare } from 'lucide-react';
 
