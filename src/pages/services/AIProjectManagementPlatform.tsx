@@ -1,3 +1,4 @@
+import React from "react";
 import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen     } from "lucide-react";
 export default function AIProjectManagementPlatform() {
   const features = [

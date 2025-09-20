@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
 import { CheckCircl, e, XCircl, e, Inf, o, X, AlertTriangle } from 'lucide-react';
 

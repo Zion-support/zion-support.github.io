@@ -44,7 +44,7 @@ errorerrorInfo;
     // Log, to, console for development;
     if() {
       console.group('Error, Boundary, Error');
-      console.error('Error:'error);
+      
       console.error('Error Inf,;
   o: 'errorInfo);
       console.groupEnd();

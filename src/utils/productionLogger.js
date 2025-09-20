@@ -1,5 +1,5 @@
 // Simple, production, logger utility;
-export, const, logErrorToProduction  = () => {
+export, const, console.errorToProduction  = () => {
   // In productio;n;
     you, might, want to, send, this to, a, logging service;
   // For now;

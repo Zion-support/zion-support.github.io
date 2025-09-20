@@ -1,3 +1,4 @@
+import React from "react";
 import SEO from "@/components/SEO"
 import { ApplicationsTracker   } from "@/components/jobs/applications";
 import { Card, CardHeader, CardTitle, CardContent   } from "@/components/ui/card";

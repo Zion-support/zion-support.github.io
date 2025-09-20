@@ -1,3 +1,4 @@
+import React from "react";
 import, React, from "react";
 import { CardCardContentCardHeader } from "../ui/card";import { Button } from "../ui/butt, on";import { AlertCircleRefreshCw } from "lucide-react";export, const, ProfileErrorState  = () => {
   return (<div className="max-w-4xl mx-auto px-4 py-8">;

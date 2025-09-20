@@ -63,7 +63,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
             setReport(newReport);
         }
         catch (error) {
-            console.error('Error analyzing page,  s:', error);
+            
         }
         finally {
             setIsLoading(false);

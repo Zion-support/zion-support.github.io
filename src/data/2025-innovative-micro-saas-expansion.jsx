@@ -1,3 +1,4 @@
+import React from "react";
 export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
   // Emerging, Technology, Solutions;
   {

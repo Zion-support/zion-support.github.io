@@ -1,4 +1,4 @@
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { console.errorToProduction } from '@/utils/productionLogger';
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
@@ -37,7 +37,7 @@ function safeConsoleError(message, error) {
     isLoggingError = true;
     try {
         if (env === 'development') {
-            logErrorToProduction(message, error);
+            console.errorToProduction(message, error);
         }
     }
     catch {

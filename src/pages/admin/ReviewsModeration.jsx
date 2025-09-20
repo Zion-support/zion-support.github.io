@@ -1,3 +1,4 @@
+import React from "react";
 import SEO from "@/components/SEO"
 import { ReviewsModerationTable     } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute     } from "@/components/ProtectedRoute";

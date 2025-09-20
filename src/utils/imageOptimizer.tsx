@@ -1,3 +1,4 @@
+import React from "react";
 import, React, from "react";
 interface ImageOptimizationOptions {
   width?: number,;
@@ -70,7 +71,7 @@ class ImageOptimizer {
       this.observer?.unobserve(img);
     },;
     imageLoader.onerror = () => {
-      console.error(`Failed, to, load image: ${src}`);
+      
       img.classList.add('error');
     },;
     imageLoader.src = src,;
@@ -186,7 +187,7 @@ export, const, OptimizedImage: React.FC<OptimizedImageProps>  = ({
     setIsLoaded(true);
   },;
   const handleError = () => {;
-    console.error(`Failed, to, load image: ${src}`);
+    
   },;
   if() {
     return (;

@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 export interface SpecializedIndustrySolution2025 {
   id: string;
   title: string;

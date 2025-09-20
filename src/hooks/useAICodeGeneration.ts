@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useAnalytics } from './useAnalytics';
 
@@ -107,7 +108,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
     quality: string;
   }>>([]);
 
-  const generationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const generationTimeoutRef = useRef<globalThis.Timeout | null>(null);
 
   // Generate code using AI
   const generateCode = useCallback(async (prompt: string, options: CodeGenerationOptions) => {
@@ -155,7 +156,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       });
 
     } catch (error) {
-      console.error('Failed to generate code:', error);
+      
       trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
         error: error instanceof Error ? error.message : 'Unknown error'
       });
@@ -194,7 +195,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       });
 
     } catch (error) {
-      console.error('Failed to analyze code:', error);
+      
       trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
         error: error instanceof Error ? error.message : 'Unknown error'
       });
@@ -248,7 +249,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       return optimizedCode;
 
     } catch (error) {
-      console.error('Failed to optimize code:', error);
+      
       trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
         error: error instanceof Error ? error.message : 'Unknown error'
       });
@@ -277,7 +278,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       return testCode;
 
     } catch (error) {
-      console.error('Failed to generate tests:', error);
+      
       trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
         error: error instanceof Error ? error.message : 'Unknown error'
       });
@@ -306,7 +307,7 @@ export const useAICodeGeneration = (): AICodeGenerationHook => {
       return docs;
 
     } catch (error) {
-      console.error('Failed to generate documentation:', error);
+      
       trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
         error: error instanceof Error ? error.message : 'Unknown error'
       });
@@ -426,7 +427,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`);
+  
 });`;
   };
 
@@ -471,9 +472,9 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-console.log("Generated code placeholder");
-console.log("Prompt:", "${prompt}");
-console.log("Language:", "${options.language}");`;
+
+
+`;
   };
 
   // Helper functions for code analysis

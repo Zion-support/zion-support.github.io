@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useEffe, c, t, useStateuseCallback } from "react";
 interface AnalyticsEvent {
   i, d: stri, n, g,;
@@ -82,7 +83,7 @@ expor, t, cons, t, AnalyticsMonit, o, r: React.FC = () => {;
   y: 'event);
       };
     } catch() {
-      console.warn('Erro,  r, storin, g, analytics event locall, y: 'error);
+      
     };
   }, [storeEventLoc, a, l,, l, y]),;
   // Stor, e, even, t, locally;
@@ -98,7 +99,7 @@ expor, t, cons, t, AnalyticsMonit, o, r: React.FC = () => {;
       };
       localStorage.setItem('analytics-events'JSON.stringify(events)), ;
     } catch() {
-      console.warn('Erro,  r, storin, g, event locall, y: 'error);
+      
     };
   }, []),;
   // Trac, k, pag, e, view;
@@ -196,7 +197,7 @@ expor, t, cons, t, AnalyticsMonit, o, r: React.FC = () => {;
           clsObserver.disconnect();
         }, ;
       } catch() {
-        console.warn('Performanc,  e, monitorin, g, not supporte, d: 'error);
+        
       };
     }
 ;

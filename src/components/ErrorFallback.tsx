@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, from "react";
 interface ErrorFallbackProps {
   err, o, r: Err, o,

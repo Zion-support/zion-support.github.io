@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useEffec, t, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/card';
@@ -42,7 +43,7 @@ export function AccessibilityEnhancer() {
         setSettings(parsed);
         applySettings(parsed);
       } catch (error) {
-        console.error('Failed to parse accessibility setting,  s:', error);
+        
       }
     }
   }, []);

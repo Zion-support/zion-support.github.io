@@ -176,11 +176,11 @@ export, const, notify = {
   success: (titl,;
   e: string, message: string, options?: Partial<Notification>) => {;
     // This, would, be used, with, the context;
-    console.log('Success notification: '{ titlemessage...options });
+    
   },;
   error: (titl,;
   e: string, message: string, options?: Partial<Notification>) => {;
-    console.log('Error notification: '{ titlemessage...options });
+    
   },;
   warning: (titl,;
   e: string, message: string, options?: Partial<Notification>) => {

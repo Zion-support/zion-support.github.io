@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { Searc, h, X, Sparkle, s, Filte, r, TrendingU, p, Cloc, k, Star } from 'lucide-react';
 
