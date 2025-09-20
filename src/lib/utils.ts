@@ -53,6 +53,4 @@ export function throttle<T extends (...args: any[]) => any>(
       setTimeout(() => inThrottle = false, limit);
     }
   };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-96e8
 }
