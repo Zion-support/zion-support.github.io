@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "lib": [
-      "ES2020",
+      "ES2022",
       "DOM",
       "DOM.Iterable"
     ],
@@ -12,17 +12,137 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@layout/*": [
+        "src/layout/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ]
+    },
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/types/offline-shims.d.ts",
+    "App.tsx",
+    "vite.config.ts",
+    "vite.config.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    ".eslintrc.js",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "automation",
+    "server",
+    "zion-website",
+    "zion-os",
+    "zion-ai-assistant",
+    "apps.backup",
+    "src-clean",
+    "dao",
+    "netlify/functions",
+    "recovered-branches",
+    "token",
+    "zion.app",
+    "src/pages-disabled",
+    "src/utils-disabled",
+    "src.disabled",
+    "src/backup",
+    "src/components-disabled",
+    "data_backup/**",
+    "src.corrupted/**",
+    "src/data/**",
+    "utils/next-link-shim.tsx",
+    "playwright.config.ts",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    "automation/**",
+    "scripts/**",
+    "deployments/**",
+    "deployment/**",
+    "backup/**",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.backup",
+    "**/*.disabled",
+    "temp_backup",
+    "temp_backup/**",
+    "temp_broken_components",
+    "temp_broken_components/**",
+    "coverage"
   ]
 }
