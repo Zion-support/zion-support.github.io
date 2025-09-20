@@ -1,10 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -764,9 +761,6 @@
     background: theme('colors.slate.500');
   }
 
-<<<<<<< HEAD
-  /* Responsive design */
-=======
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
@@ -896,7 +890,6 @@
   }
 
   /* Responsive Design Enhancements */
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
   @media (max-width: 768px) {
     .container {
       padding-left: 1rem;
@@ -910,8 +903,6 @@
     padding: 2rem;
     text-align: center;
   }
-<<<<<<< HEAD
-=======
 
   /* LiveKit UI overrides */
   [data-lk-theme='default'] {
@@ -928,5 +919,4 @@
   padding: 2rem;
   text-align: center;
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 }
