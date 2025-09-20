@@ -15,13 +15,12 @@ if [ -f "tsconfig.json" ]; then
     mv tsconfig.json tsconfig.json.netlify-backup
 fi
 
-# Run the build with OpenSSL legacy provider
-echo "Running Next.js build..."
+# Run the build with OpenSSL legacy provider (includes static export)
+echo "Running Next.js build with static export..."
 NODE_OPTIONS="--openssl-legacy-provider" npm run build
 
 # Export is now handled by the build process with output: 'export'
 echo "Static export completed during build process"
-
 # Restore tsconfig.json
 if [ -f "tsconfig.json.netlify-backup" ]; then
     echo "Restoring tsconfig.json..."
