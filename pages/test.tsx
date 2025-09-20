@@ -12,5 +12,4 @@ export default function TestPage() {
       </div>
     </>
   );
-
-export default Test;
+}

@@ -25,18 +25,6 @@ import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 
-// Define a common service interface
-interface Service {
-  id?: string;
-  name: string;
-  description?: string;
-  price?: string;
-  category?: string;
-  popular?: boolean;
-  launchDate?: string;
-  [key: string]: unknown; // Allow additional properties
-}
-
 // Define a unified service interface
 interface Service {
   id: string;
@@ -130,6 +118,13 @@ export default function ServicesIndexPage() {
       realServicesQ32025 as unknown[],
       realServicesQ42025 as unknown[]
     );
+
+  const servicesByCategory = all.reduce((acc, service) => {
+    const category = (service as Service).category || 'Other';
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(service as Service);
     return acc;
   }, {} as Record<string, Service[]>);
 
