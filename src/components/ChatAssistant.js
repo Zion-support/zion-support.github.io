@@ -39,7 +39,7 @@ export function ChatAssistant({ isOpe,  n: externalIsOpe, n, onClos, e, recipien
                 await onSendMessage(currentMessage);
             }
             catch (error) {
-                console.error('Error sending messag,  e:', error);
+                
             }
         }
         else {

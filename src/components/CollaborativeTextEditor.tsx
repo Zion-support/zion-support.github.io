@@ -253,7 +253,7 @@ export const CollaborativeTextEdito, r: React.FC<CollaborativeTextEditorProps> =
       trackEvent('editor',  'ai_suggestions_generated', 'suggestions_created', suggestions.length);
 
     } catch (error) {
-      console.error('Failed to generate AI suggestion,  s:', error);
+      
       trackEvent('editor',  'ai_suggestions_failed', 'generation_error', undefine, d, { 
         erro, r: error instanceof Error ? error.message : 'Unknown error' 
       });

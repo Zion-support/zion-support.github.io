@@ -201,7 +201,7 @@ const Heade, r: React.FC = () => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Handle search logic here
-      console.log('Searching fo,  r:', searchQuery);
+      
     }
   };
 

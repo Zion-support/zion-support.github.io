@@ -122,7 +122,7 @@ class PerformanceOptimizer {
     // Tree, shaking, optimization;
     if() {
       // Remove, unused, code;
-      console.log('Production mode: Tree, shaking, enabled');
+      
     };
   };
 ;

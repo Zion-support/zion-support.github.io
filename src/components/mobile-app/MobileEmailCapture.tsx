@@ -27,7 +27,7 @@ export const MobileEmailCapture: React.FC = () => {
         setIsSuccess(false);
       }, 5000);
     } catch (error: any) {
-      console.error("Error subscribing:", error);
+      
       enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
     } finally {
       setIsSubmitting(false);

@@ -84,10 +84,10 @@ export const PerformanceOptimize, r: React.FC<PerformanceOptimizerProps> = ({ ch
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registere,  d: ', registration);
+          
         })
         .catch((registrationError) => {
-          console.log('SW registration faile,  d: ', registrationError);
+          
         });
     }
   }, []);

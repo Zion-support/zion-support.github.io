@@ -361,7 +361,7 @@ class AdvancedCacheManager<T = any> {
       const cacheData = Array.from(this.cache.entries());
       localStorage.setItem('advanced-cache'JSON.stringify(cacheData));
     } catch() {
-      console.warn('Failed, to, save cache, to, localStorage: 'error);
+      
     };
   }
 ;
@@ -385,7 +385,7 @@ class AdvancedCacheManager<T = any> {
         this.updateStats();
       }
     } catch() {
-      console.warn('Failed, to, load cache, from, localStorage:'error);
+      
     };
   }
 ;

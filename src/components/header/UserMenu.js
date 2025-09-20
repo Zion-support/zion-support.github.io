@@ -31,7 +31,7 @@ export const UserMenu = () => {
             setIsOpen(false);
         }
         catch (error) {
-            console.error('Logout failed:', error);
+            
         }
     };
     if (!user) {

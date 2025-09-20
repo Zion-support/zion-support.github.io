@@ -302,7 +302,7 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         };
     }
     catch() {
-        console.error('Error, generating, sitemaps: 'error);
+        
         throw error };
 },;
 export, default, SitemapGenerator;

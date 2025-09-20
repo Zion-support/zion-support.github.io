@@ -1,4 +1,4 @@
-console.log("main.tsx: Start");
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -114,6 +114,6 @@ function displayFatalError(message: string) {
 try {
   renderApp();
 } catch (error) {
-  console.error('Global error caught in main.tsx:', error);
+  
   displayFatalError((error as Error).message);
 }

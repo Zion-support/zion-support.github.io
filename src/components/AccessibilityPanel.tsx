@@ -44,7 +44,7 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...pre,  v, ...parsed }));
       } catch (error) {
-        console.error('Failed to parse accessibility setting,  s:', error);
+        
       }
     }
   }, []);

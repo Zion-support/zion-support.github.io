@@ -28,7 +28,7 @@ export function TalentGrid({
     if (handleBook) {
       handleBook(talent);
     } else {
-      console.log("Book talent:", talent.id);
+      
     }
   };
 

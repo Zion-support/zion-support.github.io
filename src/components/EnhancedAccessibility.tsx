@@ -254,7 +254,7 @@ const EnhancedAccessibilit, y: React.FC<{ position?: 'top-left' | 'top-right' | 
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...pre,  v, ...parsed }));
       } catch (error) {
-        console.warn('Failed to parse accessibility setting,  s:', error);
+        
       }
     }
 
@@ -419,7 +419,7 @@ const EnhancedAccessibilit, y: React.FC<{ position?: 'top-left' | 'top-right' | 
         setSettings(savedSettings);
         applySettings(savedSettings);
       } catch (error) {
-        console.warn('Failed to load accessibility setting,  s:', error);
+        
       }
     }
   }, [applySettin, g, s]);
@@ -860,7 +860,7 @@ const EnhancedAccessibilit, y: React.FC = () => {
       };
       
       recognition.onerror = (even,  t: any) => {
-        console.error('Speech recognition erro,  r:', event.error);
+        
         setIsListening(false);
       };
       
@@ -1316,7 +1316,7 @@ const EnhancedAccessibilit, y: React.FC = () => {
         const parsed = JSON.parse(savedSettings);
         setSettings(parsed);
       } catch (error) {
-        console.error('Failed to parse accessibility setting,  s:', error);
+        
       }
     }
   }, []);
@@ -2473,7 +2473,7 @@ const EnhancedAccessibilit, y: React.FC = () => {
         recognition.start();
         setIsListening(true);
       } catch (error) {
-        console.error('Error starting voice recognitio,  n:', error);
+        
       }
     }
   }, [recogniti, o, n, setting, s.voiceComman, d, s]);

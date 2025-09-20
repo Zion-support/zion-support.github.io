@@ -18,7 +18,7 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
         if (fcpEntry) {
             metricsRef.current.fcp = fcpEntry.startTime;
             if (logToConsole) {
-                console.log('FC,  P:', fcpEntry.startTim, e, 'ms');
+                
             }
         }
     };
@@ -32,14 +32,14 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
                     if (lastEntry) {
                         metricsRef.current.lcp = lastEntry.startTime;
                         if (logToConsole) {
-                            console.log('LC,  P:', lastEntry.startTim, e, 'ms');
+                            
                         }
                     }
                 });
                 observerRef.current.observe({ entryType,  s: ['larges, t-contentfu, l-pain, t'] });
             }
             catch (error) {
-                console.warn('LCP measurement faile,  d:', error);
+                
             }
         }
     };
@@ -55,7 +55,7 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
                             const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
                             metricsRef.current.fid = fid;
                             if (logToConsole) {
-                                console.log('FI,  D:', fi, d, 'ms');
+                                
                             }
                         }
                     });
@@ -63,7 +63,7 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
                 observer.observe({ entryType,  s: ['firs, t-inpu, t'] });
             }
             catch (error) {
-                console.warn('FID measurement faile,  d:', error);
+                
             }
         }
     };
@@ -81,13 +81,13 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
                     });
                     metricsRef.current.cls = clsValue;
                     if (logToConsole) {
-                        console.log('CL,  S:', clsValue);
+                        
                     }
                 });
                 observer.observe({ entryType,  s: ['layou, t-shif, t'] });
             }
             catch (error) {
-                console.warn('CLS measurement faile,  d:', error);
+                
             }
         }
     };
@@ -97,7 +97,7 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
         if (navigationEntry) {
             metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
             if (logToConsole) {
-                console.log('TTF,  B:', metricsRef.current.ttf, b, 'ms');
+                
             }
         }
     };
@@ -111,7 +111,7 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
             if (lastPaintEntry) {
                 metricsRef.current.fmp = lastPaintEntry.startTime;
                 if (logToConsole) {
-                    console.log('FMP (approximate):',  lastPaintEntry.startTim, e, 'ms');
+                    
                 }
             }
         }, 1000);
@@ -135,7 +135,7 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
             });
         }
         catch (error) {
-            console.warn('Failed to send performance metric,  s:', error);
+            
         }
     };
     // Get performance grade based on metrics
@@ -224,8 +224,8 @@ export function PerformanceMonitor({ onMetric,  s, logToConsole = fals, e, sendT
             const metrics = metricsRef.current;
             const grade = getPerformanceGrade(metrics);
             if (logToConsole) {
-                console.log('Performance Grad,  e:', grade);
-                console.log('All Metric,  s:', metrics);
+                
+                
             }
             // Call callback with metrics
             if (onMetrics) {

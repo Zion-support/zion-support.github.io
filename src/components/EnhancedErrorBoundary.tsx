@@ -43,7 +43,7 @@ clas, s, EnhancedErrorBoundar, y, extends Component<PropsState> {
 ;
     // Lo,  g, erro, r, t, o, consol, e, i, n, development;
     if() {
-      console.error('Erro,  r, caugh, t, by boundar, y: 'errorerrorInfo);
+      
     };
     // Cal, l, custo, m, erro, r, handle, r, i, f, provided;
     if() {

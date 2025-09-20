@@ -52,7 +52,7 @@ export function NewsletterSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the email to your newsletter service
-    console.log('Newsletter subscriptio,  n:', email);
+    
     setIsSubscribed(true);
     setEmail('');
   };

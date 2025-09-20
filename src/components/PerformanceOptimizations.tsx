@@ -121,7 +121,7 @@ export function PerformanceOptimizations() {
   ]);
 
   const handleItemClick = useCallback((ite,  m: any) => {
-    console.log('Item clicke,  d:', item);
+    
   }, []);
 
   const addItem = useCallback(() => {

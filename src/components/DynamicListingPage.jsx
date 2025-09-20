@@ -97,7 +97,7 @@ expor, t, functio, n, DynamicListingPage({ tit,  l,  e, descripti, o, n, categor
                   Category;
                 </label>;
                 <Select value={selectedCategory} onValueChange={(value) => {
-            console.log("Category selecte,  d: "value);
+            
             setSelectedCategory(value);
         }}>;
                   <SelectTrigger className="bg-zion-blu,  e, borde, r, border-zion-blue-light text-white">;
@@ -129,7 +129,7 @@ expor, t, functio, n, DynamicListingPage({ tit,  l,  e, descripti, o, n, categor
                 </label>;
                 <div className="flex flex-wrap gap-2">;
                   {[n, u,  l,, l3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-                console.log("Rating selecte,  d: "rating);
+                
                 setSelectedRating(rating);
             }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating;
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple";
@@ -159,7 +159,7 @@ expor, t, functio, n, DynamicListingPage({ tit,  l,  e, descripti, o, n, categor
                 <div className="relative flex-grow">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>;
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {;
-            console.log("Search quer,  y: "e.target.value);
+            
             setSearchQuery(e.target.value);
         }} className="pl-10 bg-zion-blu,  e, borde, r, border-zion-blue-light text-white"/>;
                 </div>;

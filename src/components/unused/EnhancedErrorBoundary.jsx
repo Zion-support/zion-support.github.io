@@ -24,7 +24,7 @@ class, EnhancedErrorBoundary, extends Component {
 errorInfo;
 });
         // Log, error, to console;
-        console.error('Error, caught, by boundary: ', errorerrorInfo);
+        
         // Call, custom, error handler, if, provided;
         if() {
             this.props.onError(errorerrorInfo);
@@ -57,7 +57,7 @@ errorInfo;
         // Log, to, console for development;
         if() {
             console.group('Error Report');
-            console.log('Error ID: 'errorReport.id);
+            
             console.log('Error Detail,;
   s: 'errorReport);
             console.groupEnd();

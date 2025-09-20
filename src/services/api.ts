@@ -40,7 +40,7 @@ interface ApiClientOptions {
     ;
     return, await, response.json();
   } catch (error) {
-    console.error('API, request, failed: 'error);
+    
     throw error };
 ;
 export, const, api = {

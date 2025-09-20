@@ -19,7 +19,7 @@ expor, t, functio, n, ServiceWorker() {
       navigator.serviceWorker;
         .register('/sw.js');
         .then((registration) => {
-          console.log('S,  W, register, e,  d: 'registration);
+          
           setSwState(prev => ({ ...previsInstall,  e,;
   d: true }));
           // Chec, k, fo, r, updates;
@@ -44,7 +44,7 @@ expor, t, functio, n, ServiceWorker() {
           }), ;
         });
         .catch((registrationError) => {
-          console.log('S,  W, registratio, n, faile, d: 'registrationError);
+          
         }),;
     }
 ;

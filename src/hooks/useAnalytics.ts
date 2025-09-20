@@ -214,7 +214,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
       setPerformanceMetrics(metrics);
       trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics });
     } catch (error) {
-      console.error('Failed to track performance metrics:', error);
+      
     }
   }, [enablePerformanceTracking]);
 
@@ -336,7 +336,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
   const sendEventsToServer = useCallback(async (eventsToSend: AnalyticsEvent[]) => {
     try {
       // In a real implementation, this would send to your analytics server
-      console.log('Sending analytics events:', eventsToSend);
+      
       
       // Simulate API call
       await fetch('/api/analytics/events', {
@@ -345,7 +345,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
         body: JSON.stringify(eventsToSend)
       });
     } catch (error) {
-      console.error('Failed to send analytics events:', error);
+      
     }
   }, []);
 

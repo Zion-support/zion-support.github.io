@@ -50,7 +50,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
                 // Process data and setAnalytics({...})
             }
             catch (error) {
-                console.error("Error fetching pricing suggestion analytics:", error);
+                
                 setAnalytics(Object.assign(Object.assign({}, analytics), { isLoading: false, error: "Failed to load pricing analytics data." }));
             }
         };

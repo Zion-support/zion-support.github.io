@@ -938,7 +938,7 @@ const PerformanceMonito, r: React.FC = () => {
         setHistory(prev => [...pre,  v.slic, e(-9), newMetri, c, s]);
         setIssues(analyzePerformance(newMetrics));
       } catch (error) {
-        console.error('Error collecting performance metric,  s:', error);
+        
       }
     };
     
@@ -1095,7 +1095,7 @@ const PerformanceMonito, r: React.FC = () => {
       metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
 
       if (logToConsole) {
-        console.log('TTF,  B:', metricsRef.current.ttf, b, 'ms');
+        
       }
     }
 
@@ -1909,7 +1909,7 @@ const PerformanceMonito, r: React.FC = () => {
       setRecommendations(generateRecommendations(newMetrics));
       setLastUpdate(new Date());
     } catch (error) {
-      console.warn('Performance measurement faile,  d:', error);
+      
     }
   }, [generateRecommendatio, n, s]);
 

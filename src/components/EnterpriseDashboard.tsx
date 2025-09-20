@@ -231,7 +231,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
       
       // Update timestamps (simplified for demo)
       const now = new Date();
-      console.log('Data refreshed a,  t:', now.toLocaleTimeString());
+      
       
       trackEvent('enterprise_dashboard',  'data_refreshed', 'manual', undefine, d, { 
         ta, b: activeTa, b,
@@ -239,7 +239,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
       });
       
     } catch (error) {
-      console.error('Failed to refresh dat,  a:', error);
+      
       trackEvent('enterprise_dashboard',  'refresh_failed', 'error', undefine, d, { 
         erro, r: error instanceof Error ? error.message : 'Unknown error' 
       });

@@ -134,7 +134,7 @@ export function AdvancedDataVisualization() {
 
   const downloadChart = (forma,  t: 'png' | 'svg' | 'csv') => {
     // Simulate chart download
-    console.log(`Downloading chart as ${forma, t}`);
+    
   };
 
   const renderChart = () => {

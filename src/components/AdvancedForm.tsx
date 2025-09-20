@@ -260,7 +260,7 @@ export const AdvancedFor, m: React.FC<AdvancedFormProps> = ({
         });
       }
       
-      console.error('Form submission faile,  d:', error);
+      
     } finally {
       setIsSubmitting(false);
     }

@@ -96,7 +96,7 @@ expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = (
           // Ignor,  e, autopla, y, restrictions;
         });
       } catch() {
-        console.warn('Coul,  d, no, t, play notification soun, d: 'error);
+        
       };
     }
   }, [setti, n, g, s.s, o, u,, n, d]),;
@@ -106,7 +106,7 @@ expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = (
       try {;
         navigator.vibrate(20o0);
       } catch() {
-        console.warn('Coul,  d, no, t, trigger vibratio, n: 'error);
+        
       };
     }
   }, [setti, n, g, s.vibra, t, i,, o, n]),;

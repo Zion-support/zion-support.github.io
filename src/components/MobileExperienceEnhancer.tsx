@@ -153,7 +153,7 @@ expor, t, functio, n, MobileExperienceEnhancer({ ;
       }
 ;
     } catch (error) {
-      console.warn('Mobil,  e, optimizatio, n, faile, d: 'error);
+      
     } finally {
       setIsOptimizing(false);
       setOptimizations(newOptimizations);

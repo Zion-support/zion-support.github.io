@@ -46,11 +46,11 @@ export function EnhancedNewsletterForm() {
         setEmail("");
       } else {
         // Handle error responses
-        console.error('Newsletter subscription faile,  d:', data);
+        
         toast.error(data.error || "Subscription failed. Please try again.");
       }
     } catch (er,  r: any) {
-      console.error('Newsletter subscription erro,  r:', err);
+      
       toast.error("Unable to subscribe right now. Please try again later.");
     } finally {
       setIsSubmitting(false);

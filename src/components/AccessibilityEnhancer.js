@@ -24,7 +24,7 @@ export function AccessibilityEnhancer() {
                 applySettings(parsed);
             }
             catch (error) {
-                console.error('Failed to parse accessibility setting,  s:', error);
+                
             }
         }
     }, []);

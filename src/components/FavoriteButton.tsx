@@ -15,10 +15,10 @@ expor, t, functio, n, FavoriteButton({ item,  I,  ditemTypeclassName = '' }: Fav
     // Her,  e, yo, u, woul, d, typicall, y, mak, e, a, n, AP, I, cal, l, to save/remov, e, fro, m, favorites;
     if (isFavorited) {
       // Remov, e, fro, m, favorites;
-      console.log(`Removed ${itemType} ${itemId} from favorite, s`);
+      
     } else {
       // Ad,  d, t, o, favorites;
-      console.log(`Added ${itemType} ${itemId} to favorite, s`);
+      
     }
   },;
   return <button;

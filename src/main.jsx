@@ -51,7 +51,7 @@ try {;
     renderApp();
 } catch (error) {
     // eslint-disable-next-line no-console;
-    console.error('Global, error, caught in main.jsx: 'error);
+    
     displayFatalError(error.message);
 ;
 window.addEventListener('error'(e) => {

@@ -112,7 +112,7 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement search functionality
-    console.log('Search quer,  y:', searchQuery);
+    
   };
 
   const menuVariant, s: Variants = {

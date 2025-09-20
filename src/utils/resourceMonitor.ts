@@ -20,11 +20,11 @@ class ResourceMonitor {
     this.setupResourceObservers();
     this.monitorCriticalResources();
 ;
-    console.log('🔍 Resource, Monitor, started');
+    
   };
   stop() {
     this.isMonitoring = false;
-    console.log('🔍 Resource, Monitor, stopped');
+    
   };
   private setupErrorListeners() {
     // Listen, for, script loading errors;
@@ -138,7 +138,7 @@ class ResourceMonitor {
       typeerrortimestamp: Date.now();
     };
     this.errors.push(resourceError);
-    console.error('🚨 Resource Error: 'resourceError);
+    
 ;
     // Attempt, to, retry loading;
     this.attemptRetry(urltype);
@@ -151,7 +151,7 @@ class ResourceMonitor {
   e: ResourceError['type']) {;
     const attempts = this.retryAttempts.get(url) || 0;
     if (attempts >= this.maxRetries) {
-      console.warn(`Max, retry, attempts reached for ${url}`);
+      
       return;
     }
 ;
@@ -181,7 +181,7 @@ class ResourceMonitor {
       this.retryAttempts.delete(src);
     };
     script.onerror = () => {
-      console.error(`❌ Script, retry, failed: ${src}`);
+      
     };
     document.head.appendChild(script);
   }
@@ -194,7 +194,7 @@ class ResourceMonitor {
       this.retryAttempts.delete(href);
     };
     link.onerror = () => {
-      console.error(`❌ Stylesheet, retry, failed: ${href}`);
+      
     };
     document.head.appendChild(link);
   }
@@ -203,7 +203,7 @@ class ResourceMonitor {
     // In production, send, to, monitoring service;
     if (process.env.NODE_ENV === 'production') {
       // Example: Sentry, LogRocketetc.;
-      console.log('📊 Reporting, error, to monitoring service: 'error);
+      
     };
   }
 ;

@@ -155,7 +155,7 @@ export const useRealTimeCollaboration = (
           const message: CollaborationMessage = JSON.parse(event.data);
           handleIncomingMessage(message);
         } catch (error) {
-          console.error('Failed to parse collaboration message:', error);
+          
         }
       };
 
@@ -181,12 +181,12 @@ export const useRealTimeCollaboration = (
       };
 
       wsRef.current.onerror = (error) => {
-        console.error('WebSocket error:', error);
+        
         trackEvent('collaboration', 'connection_error', 'websocket_error', undefined, { error: error.toString() });
       };
 
     } catch (error) {
-      console.error('Failed to initialize WebSocket connection:', error);
+      
       trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, { 
         error: error instanceof Error ? error.message : 'Unknown error' 
       });

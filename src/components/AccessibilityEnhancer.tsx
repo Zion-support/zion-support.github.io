@@ -42,7 +42,7 @@ export function AccessibilityEnhancer() {
         setSettings(parsed);
         applySettings(parsed);
       } catch (error) {
-        console.error('Failed to parse accessibility setting,  s:', error);
+        
       }
     }
   }, []);

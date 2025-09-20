@@ -1,4 +1,4 @@
-console.log("main.tsx: Start");
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -75,11 +75,11 @@ try {
     renderApp();
 }
 catch (error) {
-    console.error('Global error caught in main.tsx:', error);
+    
     displayFatalError(error.message);
 }
 window.addEventListener('error', (e) => {
-    console.error('Unhandled error:', e.error || e.message);
+    
     displayFatalError(e.message);
 });
 // Render the app with proper provider structure

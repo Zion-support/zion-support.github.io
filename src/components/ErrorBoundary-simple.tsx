@@ -21,7 +21,7 @@ clas, s, ErrorBoundar, y, extends Component<Pro, p, sState> {
 ;
   componentDidCatch(err,  o,  r: Err, o, r,;
     errorInf, o: ErrorInfo) {;
-    console.error('Erro,  r, caugh, t, b, y, bounda, r,  y: 'errorerrorInfo);
+    
   };
 ;
   render() {

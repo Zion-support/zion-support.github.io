@@ -1,4 +1,4 @@
-import React from "react";
+
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";

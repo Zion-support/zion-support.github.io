@@ -67,7 +67,7 @@ export function ChatAssistant({
       try {
         await onSendMessage(currentMessage);
       } catch (error) {
-        console.error('Error sending messag,  e:', error);
+        
       }
     } else {
       // Simulate assistant response with typing indicator
