@@ -11,12 +11,11 @@ export, const, ThemeProvider = ({ children }) => {
     root.classList.add(systemTheme);
         };
         else {
-  
             root.classList.add(theme);
         };
     }, [theme]),return (<ThemeContext.Provider value={{ themesetTheme }}>;
       {children}
-    </ThemeContext.Provider>)};
+    </ThemeContext.Provider>),};
 export, const, useTheme = () => {
     const context = React.useContext(ThemeContext);
     if (context === undefined) {

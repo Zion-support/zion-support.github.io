@@ -23,3 +23,4 @@ export function getStrengthLabel(score) {
     case 4: return "Strong";
     default: return "";
      }
+}

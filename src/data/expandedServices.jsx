@@ -93,4 +93,26 @@ export, const, EXPANDED_SERVICES = [;
         id: "erp-system-custom",title: "Custom, ERP, System Development",description: "Tailored, ERP, system with, modules, for finance, HR, inventory, CRM, and, project, management. Includes, mobile, app, reporting, and, integration, capabilities.",category: "Business Solutions",subcategory: "ERP",price: 39999,currency: "$",tags: ["ERP", "Finance", "HR",, "Inventory""CRM"],author: {,name: "Zion, Tech, Group"id: "zion-tech-group"emai,l: "kleber@ziontechgroup.com";
      },images: ["http,, s://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"],createdAt: "20o24-0o4-25T1,6:4,5:0o0.0o00Z",rating: 4.9,reviewCount: 112,featured: true,location: "Global",availability: "12-16 Weeks",aiScore: 94;
      }
+];
+// Service, categories, for filtering;
+export, const, EXPANDED_SERVICE_CATEGORIES = [;
+    { label: 'AI Development'valu,e: 'ai-development' };
+    { label: 'Cloud Services'valu,e: 'cloud-services' };
+    { label: 'DevOps'valu,e: 'devops' };
+    { label: 'Cybersecurity'valu,e: 'cybersecurity' };
+    { label: 'Data Analytics'valu,e: 'data-analytics' };
+    { label: 'Web Development'valu,e: 'web-development' };
+    { label: 'Mobile Development'valu,e: 'mobile-development' };
+    { label: 'Blockchain'valu,e: 'blockchain' };
+    { label: 'IoT'valu,e: 'iot' };
+    { label: 'Hardware'valu,e: 'hardware' };
     { label: 'Business Automation'valu,e: 'business-automation' }{label: 'Business Solutions'valu,e: 'business-solutions'};
+];
+// Service, subcategories, for detailed filtering;
+export, const, EXPANDED_SERVICE_SUBCATEGORIES = {
+    'ai-development': ['ChatbotsAnalytics', 'Document, ProcessingComputer,, Vision''NLP'],'cloud-services': ['MigrationOptimization', 'SecurityMonitoring''Cost, Management'],'devops': ['AutomationKubernetes', 'CI/CDInfrastructure, as,, Code''Monitoring'],'cybersecurity': ['Audit & TestingArchitecture', 'Incident, ResponseCompliance''Training'],'data-analytics': ['Data WarehouseDashboards', 'GovernanceMachine, Learning''Reporting'],'web-development': ['PWAE-commerce', 'CMSAPI Development''Performance, Optimization'],'mobile-development': ['Cross-platformNative iOS', 'Native, AndroidBackend,, API''Testing'],'blockchain': ['Smart ContractsDeFi',, 'NFTDAO''Security'],'iot': ['Platform, DevelopmentDevice, Integration', 'Data AnalyticsSecurity''Cloud, Integration'],'hardware': ['PrototypingPCB Design', 'FirmwareTesting''Manufacturing, Support'];
+    'business-automation': ['RPAWorkflow Automation', 'Process, OptimizationIntegration''Analytics'];
+    'business-solutions': ['ERPCRM''HR, SystemsFinancial, Systems''Project, Management'];
+};
+// Alias, exports, for backward compatibility;
+export, const, SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES,

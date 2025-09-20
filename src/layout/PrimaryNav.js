@@ -29,16 +29,14 @@ export function PrimaryNav() {
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
     try {
-  
         const messaging = useMessaging();
         unreadCount = messaging.unreadCount;
     }
     catch {
-  
         // context not available;
     }
     const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
-    const handleSubmit = (e) => {;
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
             
@@ -76,7 +74,6 @@ export function PrimaryNav() {
                 router.push(`/blog/${sugg.slug}`);
             }
             else {
-  
                 // Default: search results page with slug;
                 router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
      }

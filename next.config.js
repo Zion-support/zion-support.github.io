@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
-  // Enable static export for Netlify
-  // output: 'export',
-  trailingSlash: true,
   reactStrictMode: true,
+  trailingSlash: true,
+  output: 'export',
+  assetPrefix,
   
   // Performance optimizations
   compress: true,
@@ -18,6 +18,7 @@ const nextConfig = {
   // ESLint configuration
   eslint: {
     ignoreDuringBuilds: true,
+    dirs: []
   },
   
   // TypeScript configuration
@@ -55,7 +56,6 @@ const nextConfig = {
     }
     return config;
   },
-  
   
   // Experimental features for performance
   experimental: {

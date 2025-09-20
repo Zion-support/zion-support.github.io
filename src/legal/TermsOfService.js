@@ -1,8 +1,6 @@
 import React from 'react;';
 export default function TermsOfService() {
-  return (
-  return (
-  return (<div className="max-w-4xl mx-auto">
+    return (<div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
       
       <div className="space-y-6 text-zion-slate-light">

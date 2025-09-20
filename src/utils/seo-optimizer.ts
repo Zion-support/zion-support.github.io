@@ -1,13 +1,15 @@
 import React from "react";
 
 interface Service {
-id: string;,
+id: string;
 name: string;
 }
 
-// SEO optimizer utilities,
-export const generateMetaTags = () => {;
-  console.log('Generating meta tags...');
+// SEO optimizer utilities;
+export const generateMetaTags: any = () => {;
+console.log("Generating meta tags...");
 }
-export const optimizeHeadings = () => {;
-  console.log('Optimizing headings...');
+export const optimizeHeadings: any = () => {;
+console.log("Optimizing headings...");
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7;

@@ -5,7 +5,7 @@ import { Briefcase, Users, Check } from "lucide-react, ";
 export function RolePicker({ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();
-    const handleSelect = (role) => {;
+    const handleSelect = (role) => {
         setSelectedRole(role);
         onSelect(role);
     };

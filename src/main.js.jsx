@@ -22,11 +22,90 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { AnalyticsProvider } from './context/AnalyticsContext, ';
 import { ViewModeProvider } from './context/ViewModeContext, ';
 // Initialize a React Query client with global error handling
-const queryClient = new QueryClient({;
-    defaultOptions: {;
-        queries: {;
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
             retry: 1;
             refetchOnWindowFocus: false;
-        }
-    }
+        },
+    },
 });
+const rootElement = document.getElementById('root');
+function renderApp() {
+    const app = (<React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <AppLayout>
+                          <App />
+                        </AppLayout>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>);
+    if (rootElement?.hasChildNodes()) {
+        hydrateRoot(rootElement, app);
+    }
+    else if (rootElement) {
+        createRoot(rootElement).render(app);
+    }
+}
+function displayFatalError(message) {
+    if (rootElement) {
+        rootElement.innerHTML = `
+      <div style="padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    ">
+        <h1>Application Error</h1>
+        <p>${message}</p>
+      </div>`;
+    }
+}
+try {
+    renderApp();
+}
+catch (error) {
+    
+    displayFatalError(error.message);
+}
+window.addEventListener('error', (e) => {
+    
+    displayFatalError(e.message);
+});
+// Render the app with proper provider structure
+ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                    <LanguageDetectionPopup />
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>);<//React.StrictMode><///React.StrictMode>
