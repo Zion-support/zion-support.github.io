@@ -21,315 +21,282 @@ export interface SearchFilters {
   minRating: number;
   sort: string;
 }
-minRating: number;,
-sort: string;}
-/**;
-* Highlight search terms in text with HTML mark tags;
-*/;
-export const highlightSearchTerms: any = (text: string, searchTerm: string): string => {
-if (!searchTerm.trim()) return text;
-const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const regex = new RegExp(`(${escaped})`, "gi");
+
+export interface SearchSuggestion {
+  text: string;
+  type: "recent" | "category" | "tag" | "product";
+  id: string;
+}
+
 /**
  * Highlight search terms in text with HTML mark tags
  */
 export const highlightSearchTerms = (text: string, searchTerm: string): string => {
   if (!searchTerm.trim()) return text;
+  
   const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const regex = new RegExp(`(${escaped})`, "gi");
-
-  return text.replace(regex, "<mark class=\"bg-yellow-200 text-black px-1 rounded\">$1</mark>");
+  
+  return text.replace(regex, "<mark>$1</mark>");
 };
 
 /**
- * Check if a text contains the search term (case-insensitive)
+ * Calculate search relevance score based on multiple factors
  */
-export const matchesSearchTerm = (text: string | undefined, searchTerm: string): boolean => {
-  if (!text || !searchTerm.trim()) return false;
-  return text.toLowerCase().includes(searchTerm.toLowerCase());
-};
-
-/**
- * Calculate relevance score for search results
- */
-export const calculateRelevanceScore = (result: SearchResult, searchTerm: string): number => {
+export const calculateRelevanceScore = (
+  result: SearchResult,
+  query: string,
+  filters: SearchFilters
+): number => {
+  const queryLower = query.toLowerCase();
+  const titleLower = result.title.toLowerCase();
+  const descriptionLower = result.description.toLowerCase();
+  const tagsLower = result.tags?.join(" ").toLowerCase() || "";
+  
   let score = 0;
-  const term = searchTerm.toLowerCase();
-  const title = result.title.toLowerCase();
-  const description = result.description.toLowerCase();
-
+  
   // Exact title match gets highest score
-  if (title === term) score += 100;
-  // Title starts with search term
-  else if (title.startsWith(term)) score += 80;
-  // Title contains search term
-  else if (title.includes(term)) score += 60;
-
-  // Description contains search term
-  if (description.includes(term)) score += 30;
-
-  // Tag matches
-  if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
+  if (titleLower === queryLower) {
+    score += 100;
+  } else if (titleLower.includes(queryLower)) {
+    score += 80;
+  }
+  
+  // Description match
+  if (descriptionLower.includes(queryLower)) {
+    score += 40;
+  }
+  
+  // Tag match
+  if (tagsLower.includes(queryLower)) {
+    score += 30;
+  }
+  
+  // Type filter match
+  if (filters.types.includes(result.type)) {
     score += 20;
   }
-
-  // Category match
-  if (result.category?.toLowerCase().includes(term)) {
+  
+  // Category filter match
+  if (filters.category && result.category === filters.category) {
     score += 15;
   }
-
-  // Boost score based on rating
-  if (result.rating) {
-    score += result.rating * 2;
+  
+  // Price range match
+  if (result.price) {
+    if (result.price >= filters.minPrice && result.price <= filters.maxPrice) {
+      score += 10;
+    }
   }
-
-  // Recent content gets slight boost
-  if (result.date) {
-    const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
-    score += dateScore;
+  
+  // Rating match
+  if (result.rating && result.rating >= filters.minRating) {
+    score += 5;
   }
-
+  
   return score;
 };
 
 /**
- * Sort search results based on sort option
+ * Sort search results based on filters
  */
-export const sortSearchResults = (results: SearchResult[], sortBy: string, searchTerm: string): SearchResult[] => {
-  const sortedResults = [...results];
+export const sortSearchResults = (
+  results: SearchResult[],
+  sortBy: string
+): SearchResult[] => {
   switch (sortBy) {
-    case "price_asc":
-      return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
-    case "price_desc":
-      return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+    case "price-low":
+      return [...results].sort((a, b) => (a.price || 0) - (b.price || 0));
+    case "price-high":
+      return [...results].sort((a, b) => (b.price || 0) - (a.price || 0));
     case "rating":
-      return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
-    case "date":
-      return sortedResults.sort((a, b) => {
-        const dateA = a.date ? new Date(a.date).getTime() : 0;
-        const dateB = b.date ? new Date(b.date).getTime() : 0;
-        return dateB - dateA;
-      });
-    case "alphabetical":
-      return sortedResults.sort((a, b) => a.title.localeCompare(b.title));
-    case "relevance":
+      return [...results].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    case "newest":
+      return [...results].sort((a, b) => 
+        new Date(b.date || "").getTime() - new Date(a.date || "").getTime()
+      );
+    case "oldest":
+      return [...results].sort((a, b) => 
+        new Date(a.date || "").getTime() - new Date(b.date || "").getTime()
+      );
     default:
-      return sortedResults.sort((a, b) => {
-        const scoreA = calculateRelevanceScore(a, searchTerm);
-        const scoreB = calculateRelevanceScore(b, searchTerm);
-        return scoreB - scoreA;
-      });
+      return results; // Keep original relevance order
   }
 };
 
 /**
- * Filter search results based on active filters
+ * Generate dynamic search suggestions based on query and available data
  */
-export const filterSearchResults = (results: SearchResult[], filters: SearchFilters): SearchResult[] => {
-  let filteredResults = [...results];
-
-  // Filter by type
-  if (filters.types.length > 0) {
-    filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
-  }
-
-  // Filter by category
-  if (filters.category) {
-    filteredResults = filteredResults.filter(result => 
-      result.category?.toLowerCase() === filters.category.toLowerCase()
-    );
-  }
-
-  // Filter by price range
-  if (filters.minPrice > 0 || filters.maxPrice < 10000) {
-    filteredResults = filteredResults.filter(result => {
-      const price = result.price ?? 0;
-      return price >= filters.minPrice && price <= filters.maxPrice;
-    });
-  }
-
-  // Filter by minimum rating
-  if (filters.minRating > 0) {
-    filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
-  }
-
-  return filteredResults;
-};
-
-/**;
-* Generate search suggestions based on query;
-*/;
-export const generateDynamicSuggestions: any = (;,
-query: string;,
-recentSearches: string[] = [],
-availableCategories: string[] = [],availableTags: string[] = [];): SearchSuggestion[] => {
+export const generateDynamicSuggestions = (
+  query: string,
+  recentSearches: string[] = [],
+  availableCategories: string[] = [],
+  availableTags: string[] = []
+): SearchSuggestion[] => {
   const suggestions: SearchSuggestion[] = [];
   const lowerQuery = query.toLowerCase();
 
-// Add exact query as first suggestion;
-if (query.trim()) {
-suggestions.push({,
-text: query;,
-type: "recent",id: `query-${query}`;
-});
-}
+  // Add exact query as first suggestion
+  if (query.trim()) {
+    suggestions.push({
+      text: query,
+      type: "recent",
+      id: `query-${query}`
+    });
+  }
 
-// Add matching categories;
-availableCategories;
-.filter(category => category.toLowerCase().includes(lowerQuery))
-.slice(0; 3)
-.forEach(category => {
-suggestions.push({
-text: category;,
-type: "category",id: `category-${category}`;
-});
-});
+  // Add matching categories
+  availableCategories
+    .filter(category => category.toLowerCase().includes(lowerQuery))
+    .slice(0, 3)
+    .forEach(category => {
+      suggestions.push({
+        text: category,
+        type: "category",
+        id: `category-${category}`
+      });
+    });
 
-// Add matching tags;
-availableTags;
-.filter(tag => tag.toLowerCase().includes(lowerQuery))
-.slice(0; 3)
-.forEach(tag => {
-suggestions.push({
-text: tag;,
-type: "tag",id: `tag-${tag}`;
-});
-});
+  // Add matching tags
+  availableTags
+    .filter(tag => tag.toLowerCase().includes(lowerQuery))
+    .slice(0, 3)
+    .forEach(tag => {
+      suggestions.push({
+        text: tag,
+        type: "tag",
+        id: `tag-${tag}`
+      });
+    });
 
-// Add recent searches that match;
-recentSearches;
-.filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
-.slice(0; 3)
-.forEach(search => {
-suggestions.push({
-text: search;,
-type: "recent",id: `recent-${search}`;
-});
-});
+  // Add matching recent searches
+  recentSearches
+    .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
+    .slice(0, 3)
+    .forEach(search => {
+      suggestions.push({
+        text: search,
+        type: "recent",
+        id: `recent-${search}`
+      });
+    });
+
   return suggestions.slice(0, 8); // Limit to 8 suggestions
 };
 
 /**
- * Calculate search metrics for analytics
+ * Filter search results based on applied filters
  */
-export const calculateSearchMetrics = (results: SearchResult[], searchTime: number): SearchMetrics => {
-  const totalResults = results.length;
-
-  // Calculate top categories
-  const categoryCount = new Map<string, number>();
-  results.forEach(result => {
-    if (result.category) {
-      categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
+export const filterSearchResults = (
+  results: SearchResult[],
+  filters: SearchFilters
+): SearchResult[] => {
+  return results.filter(result => {
+    // Type filter
+    if (filters.types.length > 0 && !filters.types.includes(result.type)) {
+      return false;
     }
+    
+    // Category filter
+    if (filters.category && result.category !== filters.category) {
+      return false;
+    }
+    
+    // Price range filter
+    if (result.price) {
+      if (result.price < filters.minPrice || result.price > filters.maxPrice) {
+        return false;
+      }
+    }
+    
+    // Rating filter
+    if (result.rating && result.rating < filters.minRating) {
+      return false;
+    }
+    
+    return true;
   });
+};
 
-  const topCategories = Array.from(categoryCount.entries())
-    .map(([category, count]) => ({ category, count }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 5);
+/**
+ * Perform full text search with ranking and filtering
+ */
+export const performSearch = (
+  query: string,
+  results: SearchResult[],
+  filters: SearchFilters = {
+    types: [],
+    category: "",
+    minPrice: 0,
+    maxPrice: 10000,
+    minRating: 0,
+    sort: "relevance"
+  }
+): SearchResult[] => {
+  // Filter results first
+  let filteredResults = filterSearchResults(results, filters);
+  
+  // Calculate relevance scores
+  const scoredResults = filteredResults.map(result => ({
+    ...result,
+    relevanceScore: calculateRelevanceScore(result, query, filters)
+  }));
+  
+  // Sort by relevance score (highest first)
+  scoredResults.sort((a, b) => b.relevanceScore - a.relevanceScore);
+  
+  // Apply additional sorting if specified
+  if (filters.sort !== "relevance") {
+    return sortSearchResults(scoredResults, filters.sort);
+  }
+  
+  return scoredResults;
+};
 
-  // Calculate average price
-  const pricesResults = results.filter(r => r.price && r.price > 0);
-  const averagePrice = pricesResults.length > 0
-    ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length
-    : 0;
-
-  // Calculate average rating
-  const ratedResults = results.filter(r => r.rating && r.rating > 0);
-  const averageRating = ratedResults.length > 0
-    ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length
-    : 0;
-
+/**
+ * Extract search query parameters from URL
+ */
+export const parseSearchParams = (searchParams: URLSearchParams): SearchFilters => {
   return {
-    totalResults,
-    searchTime,
-    topCategories,
-    averagePrice,
-    averageRating
+    types: searchParams.get("types")?.split(",") || [],
+    category: searchParams.get("category") || "",
+    minPrice: parseInt(searchParams.get("minPrice") || "0"),
+    maxPrice: parseInt(searchParams.get("maxPrice") || "10000"),
+    minRating: parseInt(searchParams.get("minRating") || "0"),
+    sort: searchParams.get("sort") || "relevance"
   };
 };
 
 /**
- * Debounce function for search input
+ * Build search URL with current filters
  */
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
+export const buildSearchUrl = (
+  query: string,
+  filters: SearchFilters,
+  basePath: string = "/search"
+): string => {
+  const params = new URLSearchParams();
+  
+  if (query) params.set("q", query);
+  if (filters.types.length > 0) params.set("types", filters.types.join(","));
+  if (filters.category) params.set("category", filters.category);
+  if (filters.minPrice > 0) params.set("minPrice", filters.minPrice.toString());
+  if (filters.maxPrice < 10000) params.set("maxPrice", filters.maxPrice.toString());
+  if (filters.minRating > 0) params.set("minRating", filters.minRating.toString());
+  if (filters.sort !== "relevance") params.set("sort", filters.sort);
+  
+  const queryString = params.toString();
+  return queryString ? `${basePath}?${queryString}` : basePath;
 };
 
-/**
- * Extract keywords from search query for better matching
- */
-export const extractKeywords = (query: string): string[] => {
-  return query
-    .toLowerCase()
-    .split(/[\s,.-]+/)
-    .filter(word => word.length > 2)
-    .filter(word => !["and", "or", "the", "for", "with", "from"].includes(word));
-};
-
-/**
- * Format search query for display
- */
-export const formatSearchQuery = (query: string): string => {
-  return query.trim().replace(/\s+/g, " ");
-};
-
-/**
- * Check if filters are active (not default values)
- */
-export const hasActiveFilters = (filters: SearchFilters): boolean => {
-  return (
-    filters.types.length > 0 ||
-    filters.category !== "" ||
-    filters.minPrice > 0 ||
-    filters.maxPrice < 10000 ||
-    filters.minRating > 0 ||
-    filters.sort !== "relevance"
-  );
-};
-
-/**
- * Get filter count for display
- */
-export const getActiveFilterCount = (filters: SearchFilters): number => {
-  let count = 0;
-  if (filters.types.length > 0) count += filters.types.length;
-  if (filters.category) count += 1;
-  if (filters.minPrice > 0 || filters.maxPrice < 10000) count += 1;
-  if (filters.minRating > 0) count += 1;
-  if (filters.sort !== "relevance") count += 1;
-
-  return count;
-};
-
-/**;
-* Reset filters to default values;
-*/;
-export const getDefaultFilters: any = (): SearchFilters => ({types: [],
-category: "",;
-minPrice: 0;
-maxPrice: 10000;
-minRating: 0;maxPrice: 10000;,
-minRating: 0;,
-sort: "relevance"});export default {
+// Default export for backward compatibility
+export default {
   highlightSearchTerms,
-  matchesSearchTerm,
   calculateRelevanceScore,
   sortSearchResults,
-  filterSearchResults,
   generateDynamicSuggestions,
-  calculateSearchMetrics,
-  debounce,
-  extractKeywords,
-  formatSearchQuery,
-  hasActiveFilters,
-  getActiveFilterCount,
-  getDefaultFilters
+  filterSearchResults,
+  performSearch,
+  parseSearchParams,
+  buildSearchUrl
 };
