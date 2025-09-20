@@ -7,7 +7,7 @@ interface RatingStarsProps {
   count?: number;
 }
 
-export function RatingStars({ value, total = 5, count }: RatingStarsProps) {
+export function RatingStars({ value, total = 5, count }: RatingStarsProps): JSX.Element {
   const filled = Math.floor(value);
   const half = value % 1 >= 0.5;
 

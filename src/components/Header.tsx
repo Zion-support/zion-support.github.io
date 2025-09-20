@@ -1,8 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+interface Service {
+  id: string;
+  name: string;
+}
 export default function Header() {
   return (
     <header className="bg-white shadow-sm border-b">

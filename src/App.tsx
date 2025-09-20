@@ -35,7 +35,10 @@ const HomePage = () => (
   <div className="p-8">
     <h1 className="text-4xl font-bold mb-4">Welcome to Zion Tech Group</h1>
     <p className="text-xl text-gray-600">Advanced AI, Quantum Computing & Technology Solutions</p>
-  </div>
+  
+      <RealTimePerformanceMonitor />
+
+      </div>
 )
 
 const AboutPage = () => (
