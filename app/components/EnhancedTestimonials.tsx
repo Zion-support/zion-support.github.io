@@ -1,189 +1,234 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar: string;
-  industry: string;
-  results: string[];
+  id: string
+  name: string
+  company: string
+  role: string
+  content: string
+  rating: number
+  avatar: string
+  industry: string
+  results: string[]
 }
 
 const EnhancedTestimonials: React.FC = () => {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
   const testimonials: Testimonial[] = [
     {
       id: '1',
-      name: 'Sarah Chen',
+      name: 'Sarah Johnson',
+      company: 'TechCorp Solutions',
       role: 'CTO',
-      company: 'TechFlow Solutions',
-      content: 'Zion Tech Group transformed our operations with their AI automation platform. We reduced manual processing time by 85% and increased our team productivity by 300%. The ROI was evident within the first quarter.',
+      content: 'Zion Tech Group transformed our entire operation with their AI automation solutions. We saw a 400% increase in efficiency within the first quarter.',
       rating: 5,
-      avatar: '👩‍💼',
+      avatar: '/api/placeholder/80/80',
       industry: 'Technology',
-      results: ['85% reduction in manual work', '300% productivity increase', 'ROI in first quarter']
+      results: ['400% efficiency increase', '60% cost reduction', '24/7 automation']
     },
     {
       id: '2',
-      name: 'Michael Rodriguez',
-      role: 'Operations Director',
-      company: 'Global Manufacturing Co.',
-      content: 'Their micro SaaS solution streamlined our inventory management across 15 facilities. The real-time analytics and predictive insights have saved us millions in operational costs.',
+      name: 'Michael Chen',
+      company: 'Global Finance Inc',
+      role: 'VP of Operations',
+      content: 'The micro SaaS platform they built for us has revolutionized how we handle client data. It\'s scalable, secure, and incredibly user-friendly.',
       rating: 5,
-      avatar: '👨‍💼',
-      industry: 'Manufacturing',
-      results: ['15 facilities connected', 'Millions saved in costs', 'Real-time analytics']
+      avatar: '/api/placeholder/80/80',
+      industry: 'Finance',
+      results: ['99.9% uptime', '50% faster processing', 'Zero data breaches']
     },
     {
       id: '3',
-      name: 'Dr. Emily Watson',
-      role: 'VP of Innovation',
+      name: 'Emily Rodriguez',
       company: 'HealthTech Innovations',
-      content: 'The enterprise AI platform revolutionized our patient data analysis. We can now process complex medical datasets 10x faster while maintaining 99.9% accuracy.',
+      role: 'CEO',
+      content: 'Their AI-powered analytics gave us insights we never knew existed. Our patient care improved dramatically while reducing operational costs.',
       rating: 5,
-      avatar: '👩‍⚕️',
+      avatar: '/api/placeholder/80/80',
       industry: 'Healthcare',
-      results: ['10x faster processing', '99.9% accuracy', 'Complex data analysis']
+      results: ['30% better patient outcomes', '25% cost savings', 'Real-time insights']
     },
     {
       id: '4',
-      name: 'James Thompson',
-      role: 'CEO',
-      company: 'FinTech Dynamics',
-      content: 'Zion\'s AI assessment tools helped us identify $2M in potential savings. Their ROI calculator was spot-on, and the implementation exceeded our expectations.',
+      name: 'David Kim',
+      company: 'E-Commerce Plus',
+      role: 'Head of Technology',
+      content: 'The enterprise solution they delivered exceeded all expectations. Our customer satisfaction scores increased by 150% and our team productivity doubled.',
       rating: 5,
-      avatar: '👨‍💻',
-      industry: 'Finance',
-      results: ['$2M potential savings', 'Exceeded expectations', 'Spot-on ROI predictions']
+      avatar: '/api/placeholder/80/80',
+      industry: 'E-Commerce',
+      results: ['150% customer satisfaction', '2x productivity', 'Seamless integration']
+    },
+    {
+      id: '5',
+      name: 'Lisa Thompson',
+      company: 'Manufacturing Pro',
+      role: 'Operations Director',
+      content: 'Zion\'s quantum computing solutions helped us optimize our supply chain like never before. We reduced waste by 40% and increased output by 60%.',
+      rating: 5,
+      avatar: '/api/placeholder/80/80',
+      industry: 'Manufacturing',
+      results: ['40% waste reduction', '60% output increase', 'Predictive analytics']
     }
-  ];
+  ]
 
   useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+    if (!isAutoPlaying) return
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ⭐
-      </span>
-    ));
-  };
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, testimonials.length])
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+    setIsAutoPlaying(false)
+  }
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+    setIsAutoPlaying(false)
+  }
+
+  const goToTestimonial = (index: number) => {
+    setCurrentIndex(index)
+    setIsAutoPlaying(false)
+  }
+
+  const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className={`py-20 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about their transformation with Zion Tech Group.
+            Don't just take our word for it. Here's what industry leaders have to say about their transformation with Zion Tech Group.
           </p>
         </div>
 
         <div className="relative">
-          {/* Main Testimonial */}
+          {/* Main Testimonial Card */}
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
             {/* Background Pattern */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-32 translate-x-32 opacity-50"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-100 to-blue-100 rounded-full translate-y-24 -translate-x-24 opacity-50"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full -translate-y-16 translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-100 rounded-full translate-y-12 -translate-x-12"></div>
             
             <div className="relative z-10">
-              <div className="flex items-center justify-center mb-8">
-                {renderStars(testimonials[activeTestimonial].rating)}
+              <div className="flex items-start mb-6">
+                <Quote className="h-8 w-8 text-blue-500 flex-shrink-0 mr-4" />
+                <div className="flex-1">
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                    "{currentTestimonial.content}"
+                  </p>
+                  
+                  {/* Rating */}
+                  <div className="flex items-center mb-6">
+                    {[...Array(currentTestimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                </div>
               </div>
-              
-              <blockquote className="text-2xl md:text-3xl text-gray-800 text-center mb-8 leading-relaxed">
-                "{testimonials[activeTestimonial].content}"
-              </blockquote>
-              
-              <div className="flex items-center justify-center space-x-6">
-                <div className="text-6xl">
-                  {testimonials[activeTestimonial].avatar}
+
+              {/* Client Info */}
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                  {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
-                <div className="text-center">
-                  <div className="text-xl font-bold text-gray-900">
-                    {testimonials[activeTestimonial].name}
-                  </div>
-                  <div className="text-lg text-gray-600">
-                    {testimonials[activeTestimonial].role}
-                  </div>
-                  <div className="text-blue-600 font-semibold">
-                    {testimonials[activeTestimonial].company}
-                  </div>
-                  <div className="text-sm text-gray-500 mt-1">
-                    {testimonials[activeTestimonial].industry} Industry
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-lg">
+                    {currentTestimonial.name}
+                  </h4>
+                  <p className="text-gray-600">
+                    {currentTestimonial.role}, {currentTestimonial.company}
+                  </p>
+                  <p className="text-sm text-blue-600 font-medium">
+                    {currentTestimonial.industry} Industry
+                  </p>
                 </div>
+              </div>
+
+              {/* Results */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {currentTestimonial.results.map((result, index) => (
+                  <div key={index} className="bg-blue-50 rounded-lg p-4 text-center">
+                    <div className="text-sm font-medium text-blue-900">
+                      {result}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Results Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            {testimonials[activeTestimonial].results.map((result, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-700 font-medium">{result}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Navigation */}
+          <div className="flex items-center justify-center mt-8 space-x-4">
+            <button
+              onClick={prevTestimonial}
+              className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="h-5 w-5 text-gray-600" />
+            </button>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-3 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeTestimonial === index
-                    ? 'bg-blue-600 w-8'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                onClick={() => setActiveTestimonial(index)}
-              />
-            ))}
+            {/* Dots */}
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentIndex
+                      ? 'bg-blue-500 scale-125'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextTestimonial}
+              className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="h-5 w-5 text-gray-600" />
+            </button>
           </div>
         </div>
 
-        {/* Industry Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
             <div className="text-gray-600">Happy Clients</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">98%</div>
-            <div className="text-gray-600">Satisfaction Rate</div>
+          <div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">4.9/5</div>
+            <div className="text-gray-600">Average Rating</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">$50M+</div>
-            <div className="text-gray-600">Cost Savings</div>
+          <div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">99%</div>
+            <div className="text-gray-600">Success Rate</div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">24h</div>
-            <div className="text-gray-600">Response Time</div>
+          <div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+            <div className="text-gray-600">Support</div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default EnhancedTestimonials;
+export default EnhancedTestimonials

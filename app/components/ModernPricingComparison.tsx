@@ -1,246 +1,304 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { Check, X, Zap, Crown, Rocket } from 'lucide-react'
+import Link from 'next/link'
 
-interface PricingPlan {
-  id: string;
-  name: string;
-  price: number;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  color: string;
-  cta: string;
-  savings?: string;
+interface PricingTier {
+  id: string
+  name: string
+  description: string
+  price: {
+    monthly: number
+    yearly: number
+  }
+  features: string[]
+  limitations: string[]
+  icon: React.ReactNode
+  color: string
+  popular?: boolean
+  cta: string
+  ctaLink: string
 }
 
 const ModernPricingComparison: React.FC = () => {
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
+  const [isYearly, setIsYearly] = useState(true)
 
-  const pricingPlans: PricingPlan[] = [
+  const pricingTiers: PricingTier[] = [
     {
       id: 'starter',
       name: 'Starter',
-      price: billingPeriod === 'monthly' ? 99 : 999,
-      period: billingPeriod === 'monthly' ? 'month' : 'year',
-      description: 'Perfect for small businesses getting started with AI',
+      description: 'Perfect for small teams getting started with AI automation',
+      price: {
+        monthly: 99,
+        yearly: 990
+      },
       features: [
-        'Basic AI automation tools',
-        'Up to 5 automated workflows',
-        'Email support',
+        'AI-powered workflow automation',
         'Basic analytics dashboard',
-        '5 team members',
-        'Standard integrations'
+        'Email support',
+        'Up to 5 team members',
+        'Standard integrations',
+        'Monthly reports'
       ],
-      color: 'from-blue-500 to-blue-600',
+      limitations: [
+        'Limited AI model access',
+        'Basic customization',
+        'Standard SLA'
+      ],
+      icon: <Zap className="h-8 w-8" />,
+      color: 'blue',
       cta: 'Start Free Trial',
-      savings: billingPeriod === 'yearly' ? 'Save 16%' : undefined
+      ctaLink: '/contact?plan=starter'
     },
     {
       id: 'professional',
       name: 'Professional',
-      price: billingPeriod === 'monthly' ? 299 : 2999,
-      period: billingPeriod === 'monthly' ? 'month' : 'year',
-      description: 'Ideal for growing businesses with advanced AI needs',
+      description: 'Ideal for growing businesses ready to scale with AI',
+      price: {
+        monthly: 299,
+        yearly: 2990
+      },
       features: [
         'Advanced AI automation suite',
-        'Unlimited automated workflows',
-        'Priority email & chat support',
-        'Advanced analytics & reporting',
-        '25 team members',
-        'Premium integrations',
-        'Custom AI model training',
-        'API access'
+        'Real-time analytics & insights',
+        'Priority support',
+        'Up to 25 team members',
+        'Advanced integrations',
+        'Custom workflows',
+        'API access',
+        'Weekly reports'
       ],
+      limitations: [
+        'Limited custom AI training',
+        'Standard performance SLA'
+      ],
+      icon: <Crown className="h-8 w-8" />,
+      color: 'purple',
       popular: true,
-      color: 'from-purple-500 to-purple-600',
       cta: 'Start Free Trial',
-      savings: billingPeriod === 'yearly' ? 'Save 16%' : undefined
+      ctaLink: '/contact?plan=professional'
     },
     {
       id: 'enterprise',
       name: 'Enterprise',
-      price: billingPeriod === 'monthly' ? 999 : 9999,
-      period: billingPeriod === 'monthly' ? 'month' : 'year',
-      description: 'Complete AI solution for large enterprises',
+      description: 'Complete solution for large organizations with complex needs',
+      price: {
+        monthly: 999,
+        yearly: 9990
+      },
       features: [
-        'Full AI platform access',
-        'Custom workflow development',
-        '24/7 dedicated support',
-        'Enterprise analytics suite',
+        'Full AI automation platform',
+        'Advanced analytics & BI',
+        'Dedicated support team',
         'Unlimited team members',
-        'All integrations included',
-        'Custom AI model development',
+        'All integrations',
+        'Custom AI model training',
         'Full API access',
-        'Dedicated account manager',
-        'SLA guarantee',
-        'Custom deployment options',
-        'Advanced security features'
+        'Real-time monitoring',
+        'Custom SLA',
+        'On-premise deployment',
+        'Advanced security features',
+        'White-label options'
       ],
-      color: 'from-green-500 to-green-600',
+      limitations: [],
+      icon: <Rocket className="h-8 w-8" />,
+      color: 'indigo',
       cta: 'Contact Sales',
-      savings: billingPeriod === 'yearly' ? 'Save 16%' : undefined
+      ctaLink: '/contact?plan=enterprise'
     }
-  ];
+  ]
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0
-    }).format(price);
-  };
+  const getColorClasses = (color: string, isPopular: boolean = false) => {
+    const colors = {
+      blue: isPopular 
+        ? 'bg-blue-600 border-blue-600 text-white' 
+        : 'bg-blue-50 border-blue-200 text-blue-900',
+      purple: isPopular 
+        ? 'bg-purple-600 border-purple-600 text-white' 
+        : 'bg-purple-50 border-purple-200 text-purple-900',
+      indigo: isPopular 
+        ? 'bg-indigo-600 border-indigo-600 text-white' 
+        : 'bg-indigo-50 border-indigo-200 text-indigo-900'
+    }
+    return colors[color as keyof typeof colors] || colors.blue
+  }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Choose Your AI Transformation Plan
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Scale your business with our AI-powered solutions. Start with our free trial and upgrade as you grow.
+            Scale your business with our flexible AI automation solutions. All plans include a 30-day free trial.
           </p>
 
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <span className={`text-sm font-medium ${billingPeriod === 'monthly' ? 'text-gray-900' : 'text-gray-500'}`}>
+          <div className="flex items-center justify-center space-x-4 mb-12">
+            <span className={`text-lg ${!isYearly ? 'text-gray-900 font-semibold' : 'text-gray-500'}`}>
               Monthly
             </span>
             <button
-              onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                billingPeriod === 'yearly' ? 'bg-blue-600' : 'bg-gray-300'
-              }`}
+              onClick={() => setIsYearly(!isYearly)}
+              className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              style={{
+                backgroundColor: isYearly ? '#3B82F6' : '#D1D5DB'
+              }}
             >
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                  billingPeriod === 'yearly' ? 'translate-x-6' : 'translate-x-1'
+                  isYearly ? 'translate-x-6' : 'translate-x-1'
                 }`}
               />
             </button>
-            <span className={`text-sm font-medium ${billingPeriod === 'yearly' ? 'text-gray-900' : 'text-gray-500'}`}>
+            <span className={`text-lg ${isYearly ? 'text-gray-900 font-semibold' : 'text-gray-500'}`}>
               Yearly
             </span>
-            {billingPeriod === 'yearly' && (
-              <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
-                Save 16%
+            {isYearly && (
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                Save 17%
               </span>
             )}
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan) => (
-            <div
-              key={plan.id}
-              className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-                plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''
-              }`}
-            >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
-                </div>
-              )}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {pricingTiers.map((tier) => {
+            const isPopular = tier.popular
+            const currentPrice = isYearly ? tier.price.yearly : tier.price.monthly
+            const monthlyEquivalent = isYearly ? tier.price.yearly / 12 : tier.price.monthly
 
-              {/* Savings Badge */}
-              {plan.savings && (
-                <div className="absolute -top-2 -right-2">
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                    {plan.savings}
-                  </span>
-                </div>
-              )}
-
-              <div className="p-8">
-                {/* Plan Header */}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-6">{plan.description}</p>
-                  
-                  <div className="mb-6">
-                    <span className="text-5xl font-bold text-gray-900">
-                      {formatPrice(plan.price)}
+            return (
+              <div
+                key={tier.id}
+                className={`relative rounded-2xl border-2 p-8 transition-all hover:shadow-xl ${
+                  isPopular 
+                    ? 'shadow-2xl scale-105 border-purple-600' 
+                    : 'shadow-lg hover:scale-102 border-gray-200'
+                }`}
+              >
+                {isPopular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-600 text-white">
+                      Most Popular
                     </span>
-                    <span className="text-gray-500 ml-2">/{plan.period}</span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
+                    isPopular ? 'bg-white text-purple-600' : getColorClasses(tier.color)
+                  }`}>
+                    {tier.icon}
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {tier.name}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {tier.description}
+                  </p>
+
+                  <div className="mb-6">
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-gray-900">
+                        ${currentPrice}
+                      </span>
+                      <span className="text-xl text-gray-500 ml-2">
+                        /{isYearly ? 'year' : 'month'}
+                      </span>
+                    </div>
+                    {isYearly && (
+                      <div className="text-sm text-gray-500 mt-1">
+                        ${Math.round(monthlyEquivalent)}/month billed annually
+                      </div>
+                    )}
                   </div>
 
-                  <button
-                    className={`w-full bg-gradient-to-r ${plan.color} text-white py-4 px-6 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 hover:shadow-lg`}
+                  <Link
+                    href={tier.ctaLink}
+                    className={`block w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
+                      isPopular
+                        ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                        : 'bg-gray-900 hover:bg-gray-800 text-white'
+                    }`}
                   >
-                    {plan.cta}
-                  </button>
+                    {tier.cta}
+                  </Link>
                 </div>
 
-                {/* Features List */}
-                <div className="space-y-4">
+                {/* Features */}
+                <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
-                  {plan.features.map((feature, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                        <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
+                  {tier.features.map((feature, index) => (
+                    <div key={index} className="flex items-start">
+                      <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5 mr-3" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
+
+                {/* Limitations */}
+                {tier.limitations.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-2">Limitations:</h4>
+                    {tier.limitations.map((limitation, index) => (
+                      <div key={index} className="flex items-start">
+                        <X className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5 mr-3" />
+                        <span className="text-gray-600 text-sm">{limitation}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
+        {/* Additional Info */}
+        <div className="mt-16 text-center">
+          <div className="bg-gray-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Need a custom solution?
+              Need a Custom Solution?
             </h3>
-            <p className="text-gray-600 mb-6">
-              We offer tailored AI solutions for unique business requirements. 
-              Contact our team for a personalized quote and implementation plan.
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              We offer custom AI solutions tailored to your specific business needs. 
+              Contact our team to discuss your requirements and get a personalized quote.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors">
-                Schedule Consultation
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all">
-                View Case Studies
-              </button>
-            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              Get Custom Quote
+            </Link>
           </div>
         </div>
 
         {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-            <div className="text-gray-600">Happy Customers</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-green-600 mb-2">99.9%</div>
-            <div className="text-gray-600">Uptime SLA</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-            <div className="text-gray-600">Support</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-orange-600 mb-2">30-day</div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">30-Day</div>
             <div className="text-gray-600">Free Trial</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">No Setup</div>
+            <div className="text-gray-600">Fees</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">Cancel</div>
+            <div className="text-gray-600">Anytime</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">24/7</div>
+            <div className="text-gray-600">Support</div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ModernPricingComparison;
+export default ModernPricingComparison
