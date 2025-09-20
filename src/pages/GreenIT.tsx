@@ -1,438 +1,416 @@
-import React, { useState  from "react", import { motion } from "framer-moti, on";import { SEO } from "../components/S, EO";import { Leaf, Zap;
-  Sun;
-  Wind;
-  Droplets;
-  Recycle;
-  TreePine;
-  Globe;
-  TrendingUp;
-  Target;
-  CheckCircle;
-  Award;
-  Users;
-  Building2;
-  Server;
-  Monitor;
-  Smartphone;
-  Cloud;
-  Database;
-  Shield;
-  BarChart3;
-  Settings;
-  ChevronDown;
-  ChevronUp;
-  Lightbulb;
-  Cpu;
-  HardDrive;
-  Network;
-  Smartphone as Mobile;
-  Laptop;
-  Tablet;
-  Printer;
-  Router;
-  Camera;
-  Speaker;
-  Headphones;
-  Keyboard;
-  Mouse;
-  ExternalHardDrive;
-  Usb;
-  Wifi;
-  Bluetooth;
-  Battery;
-  Power;
-  Save;
-  Eco;
-  Plant;
-  Mountain;
-  Ocean;
-  Forest;
-  MountainSnow;
-  Thermometer;
-  Gauge;
-  Activity;
-  LineChart;
-  PieChart;
-  Calculator;
-  FileText;
-  Calendar;
-  Clock;
-  Star;
-  Heart;
-  Eye;
-  Search;
-  Filter;
-  ArrowRight;
-  Mail;
-  Phone;
-  MapPin;
-  Clock as Time;
-  DollarSign;
-  Percent;
-  Plus;
-  Minus;
-  X;
-  Check;
-  AlertTriangle;
-  Info;
-  HelpCircle;
-  ExternalLink;
-  Download;
-  BookOpen;
-  Video;
-  Play;
-  Pause;
-  SkipBack;
-  SkipForward;
-  Volume2;
-  VolumeX;
-  Maximize2;
-  Minimize2;
-  RotateCcw;
-  RefreshCw;
-  PowerOff;
-  PowerOn;
-  BatteryCharging;
-  BatteryFull;
-  BatteryLow;
-  BatteryMedium;
-  BatteryEmpty;
-  WifiOff;
-  WifiLow;
-  WifiMedium;
-  WifiHigh;
-  Signal;
-  SignalLow;
-  SignalMedium;
-  SignalHigh;
-  SignalOff;
-  WifiHigh as WifiStrong;
-  WifiMedium as WifiMedium2;
-  WifiLow as WifiWeak;
-  WifiOff as WifiNone;
-  SignalHigh as SignalStrong;
-  SignalMedium as SignalMedium2;
-  SignalLow as SignalWeak;
-  SignalOff as SignalNone;
-  SignalHigh as SignalFull;
-  SignalMedium as SignalHalf;
-  SignalLow as SignalQuarter;
-  SignalOff as SignalEmpty;
-  WifiHigh as WifiFull;
-  WifiMedium as WifiHalf;
-  WifiLow as WifiQuarter;
-  WifiOff as WifiEmpty;
-  BatteryCharging as BatteryCharging2;
-  BatteryFull as BatteryFull2;
-  BatteryLow as BatteryLow2;
-  BatteryMedium as BatteryMedium2;
-  BatteryEmpty as BatteryEmpty2;
-  BatteryCharging as BatteryCharging3;
-  BatteryFull as BatteryFull3;
-  BatteryLow as BatteryLow3;
-  BatteryMedium as BatteryMedium3;
-  BatteryEmpty as BatteryEmpty3;
-  BatteryCharging as BatteryCharging4;
-  BatteryFull as BatteryFull4;
-  BatteryLow as BatteryLow4;
-  BatteryMedium as BatteryMedium4;
-  BatteryEmpty as BatteryEmpty4;
-  BatteryCharging as BatteryCharging5;
-  BatteryFull as BatteryFull5;
-  BatteryLow as BatteryLow5;
-  BatteryMedium as BatteryMedium5;
-  BatteryEmpty as BatteryEmpty5;
-  BatteryCharging as BatteryCharging6;
-  BatteryFull as BatteryFull6;
-  BatteryLow as BatteryLow6;
-  BatteryMedium as BatteryMedium6;
-  BatteryEmpty as BatteryEmpty6;
-  BatteryCharging as BatteryCharging7;
-  BatteryFull as BatteryFull7;
-  BatteryLow as BatteryLow7;
-  BatteryMedium as BatteryMedium7;
-  BatteryEmpty as BatteryEmpty7;
-  BatteryCharging as BatteryCharging8;
-  BatteryFull as BatteryFull8;
-  BatteryLow as BatteryLow8;
-  BatteryMedium as BatteryMedium8;
-  BatteryEmpty as BatteryEmpty8;
-  BatteryCharging as BatteryCharging9;
-  BatteryFull as BatteryFull9;
-  BatteryLow as BatteryLow9;
-  BatteryMedium as BatteryMedium9;
-  BatteryEmpty as BatteryEmpty9;
-  BatteryCharging as BatteryCharging10;
-  BatteryFull as BatteryFull10;
-  BatteryLow as BatteryLow10;
-  BatteryMedium as BatteryMedium10;
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { 
+  Leaf,
+  Zap, 
+  Sun, 
+  Wind, 
+  Droplets, 
+  Recycle, 
+  TreePine, 
+  Globe, 
+  TrendingUp, 
+  Target, 
+  CheckCircle, 
+  Award, 
+  Users, 
+  Building2, 
+  Server, 
+  Monitor, 
+  Smartphone, 
+  Cloud, 
+  Database, 
+  Shield, 
+  BarChart3, 
+  Settings, 
+  ChevronDown, 
+  ChevronUp,
+  Lightbulb,
+  Cpu,
+  HardDrive,
+  Network,
+  Smartphone as Mobile,
+  Laptop,
+  Tablet,
+  Printer,
+  Router,
+  Camera,
+  Speaker,
+  Headphones,
+  Keyboard,
+  Mouse,
+  ExternalHardDrive,
+  Usb,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Power,
+  Save,
+  Eco,
+  Plant,
+  Mountain,
+  Ocean,
+  Forest,
+  MountainSnow,
+  Thermometer,
+  Gauge,
+  Activity,
+  LineChart,
+  PieChart,
+  Calculator,
+  FileText,
+  Calendar,
+  Clock,
+  Star,
+  Heart,
+  Eye,
+  Search,
+  Filter,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Clock as Time,
+  DollarSign,
+  Percent,
+  Plus,
+  Minus,
+  X,
+  Check,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  Download,
+  BookOpen,
+  Video,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  VolumeX,
+  Maximize2,
+  Minimize2,
+  RotateCcw,
+  RefreshCw,
+  PowerOff,
+  PowerOn,
+  BatteryCharging,
+  BatteryFull,
+  BatteryLow,
+  BatteryMedium,
+  BatteryEmpty,
+  WifiOff,
+  WifiLow,
+  WifiMedium,
+  WifiHigh,
+  Signal,
+  SignalLow,
+  SignalMedium,
+  SignalHigh,
+  SignalOff,
+  WifiHigh as WifiStrong,
+  WifiMedium as WifiMedium2,
+  WifiLow as WifiWeak,
+  WifiOff as WifiNone,
+  SignalHigh as SignalStrong,
+  SignalMedium as SignalMedium2,
+  SignalLow as SignalWeak,
+  SignalOff as SignalNone,
+  SignalHigh as SignalFull,
+  SignalMedium as SignalHalf,
+  SignalLow as SignalQuarter,
+  SignalOff as SignalEmpty,
+  WifiHigh as WifiFull,
+  WifiMedium as WifiHalf,
+  WifiLow as WifiQuarter,
+  WifiOff as WifiEmpty,
+  BatteryCharging as BatteryCharging2,
+  BatteryFull as BatteryFull2,
+  BatteryLow as BatteryLow2,
+  BatteryMedium as BatteryMedium2,
+  BatteryEmpty as BatteryEmpty2,
+  BatteryCharging as BatteryCharging3,
+  BatteryFull as BatteryFull3,
+  BatteryLow as BatteryLow3,
+  BatteryMedium as BatteryMedium3,
+  BatteryEmpty as BatteryEmpty3,
+  BatteryCharging as BatteryCharging4,
+  BatteryFull as BatteryFull4,
+  BatteryLow as BatteryLow4,
+  BatteryMedium as BatteryMedium4,
+  BatteryEmpty as BatteryEmpty4,
+  BatteryCharging as BatteryCharging5,
+  BatteryFull as BatteryFull5,
+  BatteryLow as BatteryLow5,
+  BatteryMedium as BatteryMedium5,
+  BatteryEmpty as BatteryEmpty5,
+  BatteryCharging as BatteryCharging6,
+  BatteryFull as BatteryFull6,
+  BatteryLow as BatteryLow6,
+  BatteryMedium as BatteryMedium6,
+  BatteryEmpty as BatteryEmpty6,
+  BatteryCharging as BatteryCharging7,
+  BatteryFull as BatteryFull7,
+  BatteryLow as BatteryLow7,
+  BatteryMedium as BatteryMedium7,
+  BatteryEmpty as BatteryEmpty7,
+  BatteryCharging as BatteryCharging8,
+  BatteryFull as BatteryFull8,
+  BatteryLow as BatteryLow8,
+  BatteryMedium as BatteryMedium8,
+  BatteryEmpty as BatteryEmpty8,
+  BatteryCharging as BatteryCharging9,
+  BatteryFull as BatteryFull9,
+  BatteryLow as BatteryLow9,
+  BatteryMedium as BatteryMedium9,
+  BatteryEmpty as BatteryEmpty9,
+  BatteryCharging as BatteryCharging10,
+  BatteryFull as BatteryFull10,
+  BatteryLow as BatteryLow10,
+  BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10
-} from "lucide-react";export default function GreenIT() {
-
-  const [expandedSectio;n;
-    setExpandedSection] = useState<string | null>(null);
-  const [selectedCategory;
-    setSelectedCategory] = useState('all')const categories  = [
-    { id: 'all, ', name: 'All Solutions,'; count: 12,
-     };
-    { id: 'energy, ', name: 'Energy Efficiency, ', count: 4,  }{ id: 'hardware, ', name: 'Green Hardware, ', count: 3,  }{ id: 'software, ', name: 'Sustainable Software, ', count: 3,  },
-    { id: 'data, ', name: 'Data Centers, ', count: 2,  }
-  ]const greenSolutions  = [
+} from "lucide-react";
+export default function GreenIT() {
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const categories = [
+    { id: 'all', name: 'All Solutions', count: 12 };
+    { id: 'energy', name: 'Energy Efficiency', count: 4 };
+    { id: 'hardware', name: 'Green Hardware', count: 3 };
+    { id: 'software', name: 'Sustainable Software', count: 3 },
+    { id: 'data', name: 'Data Centers', count: 2 }
+  ];
+  const greenSolutions = [
     {
-      id: 'energy-monitoring, ',name: 'Smart Energy Monitoring, ',category: 'energy',
-    icon: Activity,
-    description: 'Real-time energy consumption tracking and optimization, ',features: [
-        'Real-time energy consumption monitoringAI-powered optimization recommendations, ',
+      id: 'energy-monitoring',name: 'Smart Energy Monitoring',category: 'energy',icon: Activity,description: 'Real-time energy consumption tracking and optimization',features: [
+        'Real-time energy consumption monitoringAI-powered optimization recommendations',
         'Automated power managementEnergy usage analytics and reporting',
         'Integration with smart building systemsMobile app for remote monitoring'
       ],
       benefits: [
-        'Reduce energy costs by 15-25%Identify energy waste patterns, ',
+        'Reduce energy costs by 15-25%Identify energy waste patterns',
         'Optimize equipment performanceMeet sustainability goals',
         'Comply with energy regulations'
       ],
-      savings: '15-25% energy reduction, ',implementation: '2-4 weeks, ',pricing: 'Starting from $5,
-    000'
-   ,  },
+      savings: '15-25% energy reduction',implementation: '2-4 weeks',pricing: 'Starting from $5,000'
+    },
     {
-      id: 'virtualization, ',name: 'Server Virtualization, ',category: 'hardware, ',icon: Server,
-    description: 'Consolidate physical servers to reduce power consumption, ',features: [
-        'Server consolidation and virtualizationDynamic resource allocation, ',
+      id: 'virtualization',name: 'Server Virtualization',category: 'hardware',icon: Server,description: 'Consolidate physical servers to reduce power consumption',features: [
+        'Server consolidation and virtualizationDynamic resource allocation',
         'Automated power managementHigh availability and disaster recovery',
         'Performance monitoring and optimizationGreen computing best practices'
       ],
       benefits: [
-        'Reduce server power consumption by 60-80%Lower cooling requirements, ',
+        'Reduce server power consumption by 60-80%Lower cooling requirements',
         'Decrease hardware maintenance costsImprove resource utilization',
         'Reduce carbon footprint'
       ],
-      savings: '60-80% power reduction, ',implementation: '4-8 weeks, ',pricing: 'Starting from $15,
-    000'
-   ,  },
+      savings: '60-80% power reduction',implementation: '4-8 weeks',pricing: 'Starting from $15,000'
+    },
     {
-      id: 'cloud-optimization, ',name: 'Cloud Infrastructure Optimization, ',category: 'software, ',icon: Cloud,
-    description: 'Optimize cloud resources for maximum efficiency, ',features: [
-        'Cloud resource optimizationAuto-scaling and load balancing, ',
+      id: 'cloud-optimization',name: 'Cloud Infrastructure Optimization',category: 'software',icon: Cloud,description: 'Optimize cloud resources for maximum efficiency',features: [
+        'Cloud resource optimizationAuto-scaling and load balancing',
         'Cost optimization algorithmsGreen cloud provider selection',
         'Carbon footprint trackingSustainable cloud practices'
       ],
       benefits: [
-        'Reduce cloud costs by 20-40%Lower carbon emissions, ',
+        'Reduce cloud costs by 20-40%Lower carbon emissions',
         'Improve application performanceBetter resource utilization',
         'Scalable and flexible infrastructure'
       ],
-      savings: '20-40% cost reduction, ',implementation: '3-6 weeks, ',pricing: 'Starting from $8,
-    000'
-   ,  },
+      savings: '20-40% cost reduction',implementation: '3-6 weeks',pricing: 'Starting from $8,000'
+    },
     {
-      id: 'data-center-efficiency, ',name: 'Data Center Efficiency, ',category: 'data, ',icon: Database,
-    description: 'Optimize data center operations for sustainability, ',features: [
-        'Cooling system optimizationPower distribution efficiency, ',
+      id: 'data-center-efficiency',name: 'Data Center Efficiency',category: 'data',icon: Database,description: 'Optimize data center operations for sustainability',features: [
+        'Cooling system optimizationPower distribution efficiency',
         'Heat recovery systemsRenewable energy integration',
         'Energy-efficient equipmentEnvironmental monitoring'
       ],
       benefits: [
-        'Reduce data center energy by 30-50%Lower operational costs, ',
+        'Reduce data center energy by 30-50%Lower operational costs',
         'Improve equipment lifespanMeet sustainability certifications',
         'Reduce carbon footprint'
       ],
-      savings: '30-50% energy reduction, ',implementation: '8-16 weeks, ',pricing: 'Starting from $25,
-    000'
-   ,  },
+      savings: '30-50% energy reduction',implementation: '8-16 weeks',pricing: 'Starting from $25,000'
+    },
     {
-      id: 'smart-lighting, ',name: 'Smart Lighting Systems, ',category: 'energy, ',icon: Lightbulb,
-    description: 'Intelligent lighting control for energy savings, ',features: [
-        'Motion-sensing controlsDaylight harvesting, ',
+      id: 'smart-lighting',name: 'Smart Lighting Systems',category: 'energy',icon: Lightbulb,description: 'Intelligent lighting control for energy savings',features: [
+        'Motion-sensing controlsDaylight harvesting',
         'Scheduling and automationEnergy usage analytics',
         'Mobile app controlIntegration with building systems'
       ],
       benefits: [
-        'Reduce lighting energy by 40-60%Improve occupant comfort, ',
+        'Reduce lighting energy by 40-60%Improve occupant comfort',
         'Extend bulb lifespanReduce maintenance costs',
         'Smart building integration'
       ],
-      savings: '40-60% energy reduction, ',implementation: '2-3 weeks, ',pricing: 'Starting from $3,
-    000'
-   ,  },
+      savings: '40-60% energy reduction',implementation: '2-3 weeks',pricing: 'Starting from $3,000'
+    },
     {
-      id: 'green-software, ',name: 'Sustainable Software Development, ',category: 'software, ',icon: Code,
-    description: 'Eco-friendly software development practices, ',features: [
-        'Energy-efficient algorithmsCode optimization techniques, ',
+      id: 'green-software',name: 'Sustainable Software Development',category: 'software',icon: Code,description: 'Eco-friendly software development practices',features: [
+        'Energy-efficient algorithmsCode optimization techniques',
         'Green coding standardsPerformance monitoring',
         'Resource usage optimizationSustainable development practices'
       ],
       benefits: [
-        'Reduce software energy consumptionImprove application performance, ',
+        'Reduce software energy consumptionImprove application performance',
         'Lower operational costsBetter user experience',
         'Environmental responsibility'
       ],
-      savings: '20-35% energy reduction, ',implementation: 'Ongoing, ',pricing: 'Starting from $10,
-    000'
-   ,  },
+      savings: '20-35% energy reduction',implementation: 'Ongoing',pricing: 'Starting from $10,000'
+    },
     {
-      id: 'renewable-energy, ',name: 'Renewable Energy Integration, ',category: 'energy, ',icon: Sun,
-    description: 'Integrate sola, r, wind, and other renewable sources',
+      id: 'renewable-energy',name: 'Renewable Energy Integration',category: 'energy',icon: Sun,description: 'Integrate solar, wind, and other renewable sources',
       features: [
-        'Solar panel installationWind turbine integration, ',
+        'Solar panel installationWind turbine integration',
         'Energy storage systemsGrid connection management',
         'Energy production monitoringMaintenance and optimization'
       ],
       benefits: [
-        'Generate clean,
-    renewable energyReduce electricity costs, ',
+        'Generate clean, renewable energyReduce electricity costs',
         'Lower carbon footprintEnergy independence',
         'Government incentives and tax credits'
       ],
-      savings: '40-80% energy costs, ',implementation: '12-24 weeks, ',pricing: 'Starting from $50,
-    000'
-   ,  },
+      savings: '40-80% energy costs',implementation: '12-24 weeks',pricing: 'Starting from $50,000'
+    },
     {
-      id: 'green-hardware, ',name: 'Energy-Efficient Hardware, ',category: 'hardware, ',icon: Cpu,
-    description: 'Select and deploy energy-efficient computing equipment, ',features: [
-        'Energy Star certified equipmentLow-power processors, ',
+      id: 'green-hardware',name: 'Energy-Efficient Hardware',category: 'hardware',icon: Cpu,description: 'Select and deploy energy-efficient computing equipment',features: [
+        'Energy Star certified equipmentLow-power processors',
         'Efficient cooling systemsPower management features',
         'Energy monitoring capabilitiesSustainable disposal programs'
       ],
       benefits: [
-        'Reduce hardware energy consumptionLower operational costs, ',
+        'Reduce hardware energy consumptionLower operational costs',
         'Extend equipment lifespanMeet environmental standards',
         'Improve corporate sustainability'
       ],
-      savings: '25-40% power reduction, ',implementation: '1-2 weeks, ',pricing: 'Starting from $2,
-    000'
-   ,  },
+      savings: '25-40% power reduction',implementation: '1-2 weeks',pricing: 'Starting from $2,000'
+    },
     {
-      id: 'waste-reduction, ',name: 'Electronic Waste Reduction, ',category: 'hardware, ',icon: Recycle,
-    description: 'Comprehensive e-waste management and recycling, ',features: [
-        'E-waste assessment and auditSecure data destruction, ',
+      id: 'waste-reduction',name: 'Electronic Waste Reduction',category: 'hardware',icon: Recycle,description: 'Comprehensive e-waste management and recycling',features: [
+        'E-waste assessment and auditSecure data destruction',
         'Equipment refurbishmentRecycling partnerships',
         'Donation programsSustainability reporting'
       ],
       benefits: [
-        'Reduce environmental impactComply with regulations, ',
+        'Reduce environmental impactComply with regulations',
         'Improve corporate imagePotential tax benefits',
         'Support circular economy'
       ],
-      savings: 'Varies by program, ',implementation: '2-4 weeks, ',pricing: 'Starting from $1,
-    000'
-   ,  },
+      savings: 'Varies by program',implementation: '2-4 weeks',pricing: 'Starting from $1,000'
+    },
     {
-      id: 'carbon-tracking, ',name: 'Carbon Footprint Tracking, ',category: 'software, ',icon: BarChart3,
-    description: 'Monitor and reduce carbon emissions, ',features: [
-        'Carbon emission calculationReal-time monitoring, ',
+      id: 'carbon-tracking',name: 'Carbon Footprint Tracking',category: 'software',icon: BarChart3,description: 'Monitor and reduce carbon emissions',features: [
+        'Carbon emission calculationReal-time monitoring',
         'Reduction trackingSustainability reporting',
         'Goal setting and trackingStakeholder communication'
       ],
       benefits: [
-        'Track environmental impactSet and achieve sustainability goals, ',
+        'Track environmental impactSet and achieve sustainability goals',
         'Improve corporate reportingMeet compliance requirements',
         'Enhance brand reputation'
       ],
-      savings: 'Measurable impact, ',implementation: '4-6 weeks, ',pricing: 'Starting from $6,
-    000'
-   ,  },
+      savings: 'Measurable impact',implementation: '4-6 weeks',pricing: 'Starting from $6,000'
+    },
     {
-      id: 'green-networking, ',name: 'Energy-Efficient Networking, ',category: 'data, ',icon: Network,
-    description: 'Optimize network infrastructure for energy efficiency, ',features: [
-        'Network equipment optimizationTraffic management, ',
+      id: 'green-networking',name: 'Energy-Efficient Networking',category: 'data',icon: Network,description: 'Optimize network infrastructure for energy efficiency',features: [
+        'Network equipment optimizationTraffic management',
         'Power over EthernetEnergy-efficient protocols',
         'Network monitoringPerformance optimization'
       ],
       benefits: [
-        'Reduce network energy consumptionImprove network performance, ',
+        'Reduce network energy consumptionImprove network performance',
         'Lower operational costsBetter reliability',
         'Environmental responsibility'
       ],
-      savings: '20-35% energy reduction, ',implementation: '3-5 weeks, ',pricing: 'Starting from $12,
-    000'
-   ,  },
+      savings: '20-35% energy reduction',implementation: '3-5 weeks',pricing: 'Starting from $12,000'
+    },
     {
-      id: 'sustainability-reporting, ',name: 'Sustainability Reporting Platform, ',category: 'software, ',icon: FileText,
-    description: 'Comprehensive sustainability reporting and analytics, ',features: [
-        'Environmental data collectionSustainability metrics tracking, ',
+      id: 'sustainability-reporting',name: 'Sustainability Reporting Platform',category: 'software',icon: FileText,description: 'Comprehensive sustainability reporting and analytics',features: [
+        'Environmental data collectionSustainability metrics tracking',
         'Automated reportingStakeholder dashboards',
         'Compliance monitoringGoal tracking and alerts'
       ],
       benefits: [
-        'Streamline sustainability reportingImprove data accuracy, ',
+        'Streamline sustainability reportingImprove data accuracy',
         'Meet compliance requirementsEnhance stakeholder communication',
         'Track progress toward goals'
       ],
-      savings: 'Time and resource savings, ',implementation: '6-8 weeks, ',pricing: 'Starting from $8,
-    000'
-   ,  }
+      savings: 'Time and resource savings',implementation: '6-8 weeks',pricing: 'Starting from $8,000'
+    }
   ],
 
-  const environmentalImpact  = [
+  const environmentalImpact = [
     {
-      icon: TreePin,
-    emetric: ', 2,500+',
-      label: 'Trees Planted, ',description: 'Equivalent carbon offset through our green initiatives'
-   ,  }{
-      icon: Zap,
-    metric: '45%, ',label: 'Energy Reduction, ',description: 'Average energy savings for our clients'
-   ,  }{
-      icon: Recycle,
-    metric: '1, 5,000+',
-      label: 'Devices Recycled, ',description: 'Electronic waste diverted from landfills'
-   ,  },
+      icon: TreePine,metric: '2,500+',
+      label: 'Trees Planted',description: 'Equivalent carbon offset through our green initiatives'
+    };
     {
-      icon: Globe,
-    metric: ', 2,800',
-      label: 'Tons CO2 Saved, ',description: 'Carbon emissions reduced through our solutions'
-   ,  }
-  ]const certifications  = [
+      icon: Zap,metric: '45%',label: 'Energy Reduction',description: 'Average energy savings for our clients'
+    };
     {
-      name: 'ISO 14001, ',description: 'Environmental Management Systems',
-    icon: Award,
-    color: 'from-green-500 to-emerald-500'
-   ,  }{
-      name: 'Energy Star, ',description: 'Energy Efficiency Certification, ',icon: Star,
-    color: 'from-yellow-500 to-orange-500'
-   ,  }{
-      name: 'LEED, ',description: 'Leadership in Energy and Environmental Design, ',icon: Leaf,
-    color: 'from-blue-500 to-cyan-500'
-   ,  },
+      icon: Recycle,metric: '15,000+',
+      label: 'Devices Recycled',description: 'Electronic waste diverted from landfills'
+    },
     {
-      name: 'Green Seal, ',description: 'Environmental Standard Certification, ',icon: CheckCircle,
-    color: 'from-purple-500 to-pink-500'
-   ,  }
-  ]const caseStudies  = [
+      icon: Globe,metric: '2,800',
+      label: 'Tons CO2 Saved',description: 'Carbon emissions reduced through our solutions'
+    }
+  ];
+  const certifications = [
     {
-      title: 'Fortune 500 Manufacturing Company, ',industry: 'Manufacturing, ',challenge: 'High energy costs and carbon footprint from outdated IT infrastructure',
-    solution: 'Implemented server virtualization,
-    cloud optimizatio, n, and smart energy monitoring',
+      name: 'ISO 14001',description: 'Environmental Management Systems',icon: Award,color: 'from-green-500 to-emerald-500'
+    };
+    {
+      name: 'Energy Star',description: 'Energy Efficiency Certification',icon: Star,color: 'from-yellow-500 to-orange-500'
+    };
+    {
+      name: 'LEED',description: 'Leadership in Energy and Environmental Design',icon: Leaf,color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'Green Seal',description: 'Environmental Standard Certification',icon: CheckCircle,color: 'from-purple-500 to-pink-500'
+    }
+  ];
+  const caseStudies = [
+    {
+      title: 'Fortune 500 Manufacturing Company',industry: 'Manufacturing',challenge: 'High energy costs and carbon footprint from outdated IT infrastructure',solution: 'Implemented server virtualization, cloud optimization, and smart energy monitoring',
       results: [
-        'Reduced energy consumption by 65%Lowered IT costs by $2.3M annually, ',
+        'Reduced energy consumption by 65%Lowered IT costs by $2.3M annually',
         'Achieved carbon neutrality goals 2 years earlyImproved system performance by 40%'
       ],
-      savings: '$2.3M annually, ',timeline: '6 months'
-   ,  }{
-      title: 'Healthcare Network, ',industry: 'Healthcare, ',challenge: 'Inefficient data centers consuming excessive energy, ',solution: 'Data center consolidation,
-    renewable energy integratio, n, and cooling optimization',
+      savings: '$2.3M annually',timeline: '6 months'
+    };
+    {
+      title: 'Healthcare Network',industry: 'Healthcare',challenge: 'Inefficient data centers consuming excessive energy',solution: 'Data center consolidation, renewable energy integration, and cooling optimization',
       results: [
-        'Reduced energy consumption by 55%Lowered operational costs by $1.8M annually, ',
+        'Reduced energy consumption by 55%Lowered operational costs by $1.8M annually',
         'Improved system reliability by 99.9%Enhanced patient data security'
       ],
-      savings: '$1.8M annually, ',timeline: '8 months'
-   ,  }{
-      title: 'Educational Institution, ',industry: 'Education, ',challenge: 'High electricity bills from inefficient campus technology, ',solution: 'Smart lighting systems,
-    energy monitorin, g, and green hardware deployment',
+      savings: '$1.8M annually',timeline: '8 months'
+    };
+    {
+      title: 'Educational Institution',industry: 'Education',challenge: 'High electricity bills from inefficient campus technology',solution: 'Smart lighting systems, energy monitoring, and green hardware deployment',
       results: [
-        'Reduced energy consumption by 45%Lowered utility costs by $850K annually, ',
+        'Reduced energy consumption by 45%Lowered utility costs by $850K annually',
         'Improved learning environmentEnhanced sustainability curriculum'
       ],
-      savings: '$850K annually, ',timeline: '4 months'
-   ,  }
-  ]const toggleSection  = () => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId)};
-  const filteredSolutions  = selectedCategory === 'all' 
-    ? greenSolutions: greenSolutions.filter(solution => solution.category === selectedCategory),
-    return (
+      savings: '$850K annually',timeline: '4 months'
+    }
+  ];
+  const toggleSection = (sectionId: string) => {
+    setExpandedSection(expandedSection === sectionId ? null : sectionId)
+  };
+  const filteredSolutions = selectedCategory === 'all' 
+    ? greenSolutions 
+    : greenSolutions.filter(solution => solution.category === selectedCategory);
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Green IT Solutions - Zion Tech Group"
-        description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumptionlower cost, s, and minimize environmental impact."
+        description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
       />
       
       {/* Hero Section */}
@@ -440,26 +418,22 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
               <Leaf className="w-10 h-10 text-green-400" />
             </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Green IT</span> Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Transform your technology infrastructure with sustainable solutions that reduce 
-              energy consumption,
-    lower cost, s, and minimize environmental impact.
+              energy consumption, lower costs, and minimize environmental impact.
             </p>
-            <div className="mt-8 flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
                 Get Green IT Assessment
               </button>
@@ -471,16 +445,13 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </div>
       </section>
 
-      {/* Environmental Impact *,
-    /}
+      {/* Environmental Impact */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Environmental Impact</h2>
@@ -489,16 +460,13 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {environmentalImpact.map((impact,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {environmentalImpact.map((impact, index) => (
               <motion.div
                 key={impact.label}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -517,10 +485,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Green IT Solutions</h2>
@@ -538,28 +505,24 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50'
-               ,
-     }`}
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                }`}
               >
                 {category.name} ({category.count})
               </button>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover: border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -567,7 +530,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                         solution.category === 'hardware' ? 'bg-blue-500/20 text-blue-400' :
                         solution.category === 'software' ? 'bg-purple-500/20 text-purple-400' :
                         'bg-orange-500/20 text-orange-400'
-                     ,  }`}>
+                      }`}>
                         {categories.find(c => c.id === solution.category)?.name}
                       </span>
                     </div>
@@ -576,8 +539,8 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">
                         <solution.icon className="w-6 h-6 text-green-400" />
                       </div>
-                      <h3 className="text-xl font-bold text-white group-hover: text-green-400 transition-colors duration-200">
-                        {solution.nam, e}
+                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
+                        {solution.name}
                       </h3>
                     </div>
                     
@@ -602,28 +565,23 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                     
                     <button
                       onClick={() => toggleSection(solution.id)}
-                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                     >
                       {expandedSection === solution.id ? 'Show Less' : 'Learn More'}
                     </button>
                     
                     {expandedSection === solution.id && (
                       <motion.div
-                        initial={{ opacity: 0,
-    height: 0,  }}
-                        animate={{ opacity: 1,
-    height: 'auto',  }}
-                        exit={{ opacity: 0,
-    height: 0,  }}
-                        transition={{ duration: 0.3,
-     }}
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
                         className="mt-4 pt-4 border-t border-slate-600/50"
                       >
                         <div className="mb-4">
-                          <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>
+                          <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                           <ul className="space-y-1">
-                            {solution.features.map((feature,
-    featureIndex) => (
+                            {solution.features.map((feature, featureIndex) => (
                               <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
@@ -633,10 +591,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                         </div>
                         
                         <div className="mb-4">
-                          <h4 className="text-sm font-semibold text-white mb-2">Benefits: </h4>
+                          <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                           <ul className="space-y-1">
-                            {solution.benefits.map((benefit,
-    benefitIndex) => (
+                            {solution.benefits.map((benefit, benefitIndex) => (
                               <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                                 <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {benefit}
@@ -658,11 +615,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Certifications</h2>
@@ -671,16 +626,13 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {certifications.map((cert, index) => (
               <motion.div
                 key={cert.name}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}>
@@ -698,11 +650,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
@@ -711,45 +661,40 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {caseStudies.map((study,
-    index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
               <motion.div
                 key={study.title}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover: border-green-400/50 transition-all duration-300 hover:scale-105 p-6">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
-                      {study.industr, y}
+                      {study.industry}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover: text-green-400 transition-colors duration-200">
-                    {study.titl, e}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
+                    {study.title}
                   </h3>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Challenge: </h4>
-                    <p className="text-gray-300 text-sm">{study.challeng, e}</p>
+                    <h4 className="text-sm font-semibold text-white mb-2">Challenge:</h4>
+                    <p className="text-gray-300 text-sm">{study.challenge}</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Solution: </h4>
-                    <p className="text-gray-300 text-sm">{study.solutio,
-    n}</p>
+                    <h4 className="text-sm font-semibold text-white mb-2">Solution:</h4>
+                    <p className="text-gray-300 text-sm">{study.solution}</p>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Results: </h4>
+                    <h4 className="text-sm font-semibold text-white mb-2">Results:</h4>
                     <ul className="space-y-1">
-                      {study.results.map((result,
-    resultIndex) => (
+                      {study.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {result}
@@ -779,10 +724,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green?
@@ -813,5 +757,5 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

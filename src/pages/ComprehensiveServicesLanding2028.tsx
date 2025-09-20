@@ -1,75 +1,79 @@
-import { motion } from "framer-moti, on";import { Award, Brain;
-  CheckCircle;
-  Clock;
-  Cloud;
-  ExternalLink;
-  Mail;
-  MapPin;
-  Phone;
-  Rocket;
-  Search;
-  Server;
-  Shield;
-  Sparkles;
+import { motion } from "framer-motion";
+import {
+  Award,
+  Brain,
+  CheckCircle,
+  Clock,
+  Cloud,
+  ExternalLink,
+  Mail,
+  MapPin,
+  Phone,
+  Rocket,
+  Search,
+  Server,
+  Shield,
+  Sparkles,
   TrendingUp
-} from "lucide-react";import React, { useState  from "react", import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices20, 28";import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInfrastructure20, 28";import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide20, 28";import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices20, 28";const ComprehensiveServicesLanding2028: React.FC  = () => {
-  const [activeT,
-    a;b;
-    setActiveTab] = useState('ai')const [searchTermsetSearchTerm] = useState('')const serviceCategories  = [
+} from "lucide-react";
+import React, { useState } from "react";
+import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices2028";
+import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInfrastructure2028";
+import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide2028";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
+const ComprehensiveServicesLanding2028: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ai');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const serviceCategories = [
     {
-      id: 'ai, ',name: 'AI & Machine Learning, ',description: 'Revolutionary AI solutions that transform business operations',
-    icon: Brain,
-    services: ADVANCED_AI_SERVICES_202, 8,color: 'from-blue-600 to-purple-600, ',bgColor: 'bg-blue-500/10, ',borderColor: 'border-blue-500/30'
-   ,  }{
-      id: 'infrastructure, ',name: 'IT Infrastructure, ',description: 'Next-generation infrastructure solutions for modern businesses, ',icon: Server,
-    services: COMPREHENSIVE_IT_INFRASTRUCTURE_202, 8,color: 'from-green-600 to-emerald-600, ',bgColor: 'bg-green-500/10, ',borderColor: 'border-green-500/30'
-   ,  },
+      id: 'ai',name: 'AI & Machine Learning',description: 'Revolutionary AI solutions that transform business operations',icon: Brain,services: ADVANCED_AI_SERVICES_2028,color: 'from-blue-600 to-purple-600',bgColor: 'bg-blue-500/10',borderColor: 'border-blue-500/30'
+    };
     {
-      id: 'saas, ',name: 'Micro SAAS, ',description: 'Innovative micro SAAS solutions for every business need, ',icon: Cloud,
-    services: INNOVATIVE_MICRO_SAAS_SERVICES_202, 8,color: 'from-purple-600 to-pink-600, ',bgColor: 'bg-purple-500/10, ',borderColor: 'border-purple-500/30'
-   ,  }
-  ]const activeServices  = serviceCategories.find(cat => cat.id === activeTab)?.services || []const filteredServices  = activeServices.filter(service =>
+      id: 'infrastructure',name: 'IT Infrastructure',description: 'Next-generation infrastructure solutions for modern businesses',icon: Server,services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,color: 'from-green-600 to-emerald-600',bgColor: 'bg-green-500/10',borderColor: 'border-green-500/30'
+    },
+    {
+      id: 'saas',name: 'Micro SAAS',description: 'Innovative micro SAAS solutions for every business need',icon: Cloud,services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,color: 'from-purple-600 to-pink-600',bgColor: 'bg-purple-500/10',borderColor: 'border-purple-500/30'
+    }
+  ];
+  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [];
+  const filteredServices = activeServices.filter(service =>
     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const containerVariants  = {
-    hidden: { opacity: 0,  },
-    visible;:  ; {;
-      opacity: 1,
-    transition: , {,
-        staggerChildren: 0.1,  }
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
+        staggerChildren: 0.1
+      }
     }
   };
-  const itemVariants  = {
-    hidden: { y: 2,
-    0;
-    opacity: 0,  },
-    visible:  , {,
-      y: 0,
-    opacity: , 1,transition:  , {,
-        duration: 0.5,  }
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
+        duration: 0.5
+      }
     }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: ,
-    0y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
               Comprehensive Services 2028
             </div>
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Transform Your Business
               </span>
@@ -77,11 +81,10 @@ import { motion } from "framer-moti, on";import { Award, Brain;
               <span className="text-white">With Cutting-Edge Technology</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive suite of AI,
-    IT infrastructur, e, and micro SAAS solutions designed to revolutionize 
+              Discover our comprehensive suite of AI, IT infrastructure, and micro SAAS solutions designed to revolutionize 
               your business operations and drive unprecedented growth in 2028 and beyond.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -101,11 +104,10 @@ import { motion } from "framer-moti, on";import { Award, Brain;
         </div>
       </section>
 
-      {/* Contact Information Banner *,
-    /}
+      {/* Contact Information Banner */}
       <section className="bg-white/10 backdrop-blur-sm py-6 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex items-center justify-center space-x-2 text-white">
               <Phone className="w-5 h-5 text-blue-400" />
               <span>+1 302 464 0950</span>
@@ -116,25 +118,23 @@ import { motion } from "framer-moti, on";import { Award, Brain;
             </div>
             <div className="flex items-center justify-center space-x-2 text-white">
               <MapPin className="w-5 h-5 text-pink-400" />
-              <span>364 E Main St STE 1008,
-    Middletown DE 19709</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Service Categories Tabs *, /}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      {/* Service Categories Tabs */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -145,15 +145,15 @@ import { motion } from "framer-moti, on";import { Award, Brain;
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {serviceCategories.map((category) => (
               <button
-                key={category.i, d}
+                key={category.id}
                 onClick={() => setActiveTab(category.id)}
                 className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${
                   activeTab === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20'
-               ,  }`}
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
               >
-                {React.createElement(category.icon, { className: "w-5 h-5",  })}
+                {React.createElement(category.icon, { className: "w-5 h-5" })}
                 <span className="font-medium">{category.name}</span>
                 <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                   {category.services.length}
@@ -170,29 +170,28 @@ import { motion } from "framer-moti, on";import { Award, Brain;
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
           </div>
 
-          {/* Services Grid *,
-    /}
+          {/* Services Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map((service,
-    index) => (
+            {filteredServices.map((service, index) => (
               <motion.div
-                key={service.id}variants={itemVariants}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: bg-white/10 transition-all duration-300 transform hover:scale-105"
+                key={service.id};
+                variants={itemVariants}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.titl, e}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
                     <p className="text-gray-400 text-sm mb-3">{service.category} • {service.subcategory}</p>
                   </div>
                   <div className="text-right">
@@ -206,21 +205,20 @@ import { motion } from "framer-moti, on";import { Award, Brain;
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    <span>ROI: {service.ro, i}</span>
+                    <span>ROI: {service.roi}</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-400">
                     <Clock className="w-4 h-4 text-blue-400 mr-2" />
-                    <span>Delivery: {service.estimatedDeliver, y}</span>
+                    <span>Delivery: {service.estimatedDelivery}</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4 text-purple-400 mr-2" />
-                    <span>Market: {service.marketPric,
-    e}</span>
+                    <span>Market: {service.marketPrice}</span>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {service.tags.slice(03).map((tag) => (
+                  {service.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
                       className="px-2 py-1 bg-white/10 text-white text-xs rounded-full"
@@ -232,14 +230,14 @@ import { motion } from "framer-moti, on";import { Award, Brain;
 
                 <div className="flex space-x-2">
                   <a
-                    href={`tel: +13024640950, `}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
+                    href={`tel:+13024640950`}
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
                   >
                     Get Started
                   </a>
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.titl, e}`}
-                    className="px-4 py-2 border border-white/20 text-white rounded-lg hover: bg-white/10 transition-all duration-300"
+                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
+                    className="px-4 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
                   >
                     <Mail className="w-4 h-4" />
                   </a>
@@ -251,18 +249,16 @@ import { motion } from "framer-moti, on";import { Award, Brain;
       </section>
 
       {/* Market Analysis Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Market Analysis & Competitive Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -271,47 +267,42 @@ import { motion } from "framer-moti, on";import { Award, Brain;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {comprehensivePricingGuide2028.map((item,
-    index) => (
+            {comprehensivePricingGuide2028.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.2,  }}
-                viewport={{ once: true,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Market Size: </span>
-                    <span className="text-white font-medium">{item.marketInfo.marketSiz, e}</span>
+                    <span className="text-gray-400">Market Size:</span>
+                    <span className="text-white font-medium">{item.marketInfo.marketSize}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Growth Rate: </span>
-                    <span className="text-white font-medium">{item.marketInfo.growthRat, e}</span>
+                    <span className="text-gray-400">Growth Rate:</span>
+                    <span className="text-white font-medium">{item.marketInfo.growthRate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Average Price: </span>
-                    <span className="text-white font-medium">{item.marketInfo.averageMarketPric, e}</span>
+                    <span className="text-gray-400">Average Price:</span>
+                    <span className="text-white font-medium">{item.marketInfo.averageMarketPrice}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">ROI: </span>
-                    <span className="text-white font-medium">{item.marketInfo.ro,
-    i}</span>
+                    <span className="text-gray-400">ROI:</span>
+                    <span className="text-white font-medium">{item.marketInfo.roi}</span>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-400 mb-2">Top Competitors: </h4>
+                  <h4 className="text-sm font-medium text-gray-400 mb-2">Top Competitors:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {item.marketInfo.competitors.slice(0,
-    3).map((competitor) => (
+                    {item.marketInfo.competitors.slice(0, 3).map((competitor) => (
                       <span
-                        key={competito, r}
+                        key={competitor}
                         className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full"
                       >
                         {competitor}
@@ -321,8 +312,8 @@ import { motion } from "framer-moti, on";import { Award, Brain;
                 </div>
 
                 <a
-                  href={`mailto: kleber@ziontechgroup.com?subject=Detailed pricing for ${item.titl, e}`}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium"
+                  href={`mailto:kleber@ziontechgroup.com?subject=Detailed pricing for ${item.title}`}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium"
                 >
                   Get Detailed Pricing
                 </a>
@@ -333,18 +324,16 @@ import { motion } from "framer-moti, on";import { Award, Brain;
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -355,34 +344,29 @@ import { motion } from "framer-moti, on";import { Award, Brain;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Award,
-    title: "Industry Expertise, ",description: "20+ years of experience in cutting-edge technology solutions, ",color: "from-blue-600 to-purple-600"
-             ,  }{
-                icon: Rocket,
-    title: "Fast Implementation, ",description: "Get up and running in week, s, not months with our proven methodology",
-                color: "from-purple-600 to-pink-600"
-             ,  }{
-                icon: TrendingUp,
-    title: "Proven ROI, ",description: "See measurable results within 90 days with our data-driven approach, ",color: "from-pink-600 to-red-600"
-             ,  },
+                icon: Award,title: "Industry Expertise",description: "20+ years of experience in cutting-edge technology solutions",color: "from-blue-600 to-purple-600"
+              };
               {
-                icon: Shield,
-    title: "Enterprise Security, ",description: "Bank-grade security and compliance for your peace of mind, ",color: "from-red-600 to-orange-600"
-             ,  }
-            ].map((featureindex) => (
+                icon: Rocket,title: "Fast Implementation",description: "Get up and running in weeks, not months with our proven methodology",
+                color: "from-purple-600 to-pink-600"
+              };
+              {
+                icon: TrendingUp,title: "Proven ROI",description: "See measurable results within 90 days with our data-driven approach",color: "from-pink-600 to-red-600"
+              },
+              {
+                icon: Shield,title: "Enterprise Security",description: "Bank-grade security and compliance for your peace of mind",color: "from-red-600 to-orange-600"
+              }
+            ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="text-center"
               >
                 <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
-                  {React.createElement(feature.icon, { className: "w-10 h-10 text-white",
-     })}
+                  {React.createElement(feature.icon, { className: "w-10 h-10 text-white" })}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
@@ -393,22 +377,20 @@ import { motion } from "framer-moti, on";import { Award, Brain;
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the future of technology with our innovative services. Get started today and experience the power of AI,
-    advanced infrastructureand cutting-edge micro SAAS solutions.
+              Join the future of technology with our innovative services. Get started today and experience the power of AI;
+              advanced infrastructure, and cutting-edge micro SAAS solutions.
             </p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
@@ -431,7 +413,7 @@ import { motion } from "framer-moti, on";import { Award, Brain;
         </div>
       </section>
 
-      {/* Footer Contact Information *, /}
+      {/* Footer Contact Information */}
       <footer className="bg-white/5 backdrop-blur-sm py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -488,6 +470,6 @@ import { motion } from "framer-moti, on";import { Award, Brain;
         </div>
       </footer>
     </div>
-  ),
+  )
 };
-export default ComprehensiveServicesLanding202;8;
+export default ComprehensiveServicesLanding2028;

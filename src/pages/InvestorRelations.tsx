@@ -482,4 +482,4 @@ import { motion } from "framer-moti, on";import { SEO } from "../components/S, E
       </section>
     </div>
   );
-}
+};

@@ -1,27 +1,31 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { FileText, Shield;
-  Users;
-  Globe;
-  CheckCircle;
-  AlertTriangle;
-  Scale;
-  Lock;
-  Mail;
-  Phone;
-  MapPin;
-  Calendar;
-  CheckCircle;
-  AlertTriangle;
-  Lock;
-  Eye;
-  Database;
-  Zap;
-  Rocket;
-  Brain;
+import { motion } from "framer-motion";
+import {
+  FileText,
+  Shield,
+  Users,
+  Globe,
+  CheckCircle,
+  AlertTriangle,
+  Scale,
+  Lock,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar,
+  CheckCircle,
+  AlertTriangle,
+  Lock,
+  Eye,
+  Database,
+  Zap,
+  Rocket,
+  Brain,
   Cpu
-} from "lucide-react";import { SEO } from "../components/S, EO";const Terms: React.FC  = () => {
-  const currentYear = new Date().getFullYear,
-    (;);
+} from "lucide-react";
+import { SEO } from "../components/SEO";
+const Terms: React.FC = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -32,20 +36,18 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
                 <FileText className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Terms of Service
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -56,16 +58,13 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
         </div>
       </section>
 
-      {/* Key Terms Overview *,
-    /}
+      {/* Key Terms Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -77,23 +76,19 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {termsSections.map((section,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {termsSections.map((section, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <section.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{section.titl,
-    e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
                 <p className="text-gray-300">{section.description}</p>
               </motion.div>
             ))}
@@ -105,36 +100,30 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Obligations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              As a user of our servicesyou have certain responsibilities
+              As a user of our services, you have certain responsibilities
               that help ensure a secure and productive environment.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {userObligations.map((obligation,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {userObligations.map((obligation, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-blue-400/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligatio,
-    n}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
                 <p className="text-gray-300">{obligation.description}</p>
               </motion.div>
             ))}
@@ -145,14 +134,12 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
       {/* Prohibited Activities */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -160,11 +147,11 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                 <span>Last Updated</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                To maintain a secure and professional environmentcertain activities
+                To maintain a secure and professional environment, certain activities
                 are strictly prohibited when using our services.
               </p>
               <div className="space-y-4">
-                {prohibitedActivities.map((activityindex) => (
+                {prohibitedActivities.map((activity, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300 text-sm">{activity}</span>
@@ -174,13 +161,10 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.1,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
@@ -212,11 +196,9 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -229,19 +211,16 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {serviceLevels.map((level,
-    index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {serviceLevels.map((level, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                  transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
+                  initial={{ opacity: 0, y: 20 }};
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
                     level.included ? 'border-blue-400/50' : 'border-slate-700/50'
-                  } hover: border-blue-400/50 transition-all duration-300 hover:scale-105, `}
+                  } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
                 >
                   <div className="text-center mb-4">
                     <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>
@@ -253,9 +232,8 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   </div>
                   <p className="text-gray-300 text-center mb-4">{level.description}</p>
                   <div className="text-center">
-                    <span className="text-sm text-gray-400">Response Time: </span>
-                    <div className="text-lg font-semibold text-white">{level.respons,
-    e}</div>
+                    <span className="text-sm text-gray-400">Response Time:</span>
+                    <div className="text-lg font-semibold text-white">{level.response}</div>
                   </div>
                 </motion.div>
               ))}
@@ -267,13 +245,11 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
       {/* Intellectual Property */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0,
-    x: -20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-              transition={{ duration: 0.6,
-     }}
+              initial={{ opacity: 0, x: -20 }};
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Intellectual Property Rights
@@ -287,20 +263,17 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Service Usage</h3>
-                    <p>You must be at least 18 years old to use our servicesor have parental consent if under 18.</p>
+                    <p>You must be at least 18 years old to use our services, or have parental consent if under 18.</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.2,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -308,14 +281,13 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                 <span>Description of Service</span>
               </h2>
               <div className="space-y-4 text-gray-300">
-                <p>Zion Tech Group provides technology consultingAI solutions, quantum computing services, cybersecurity, and digital transformation services.</p>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
+                <p>Zion Tech Group provides technology consulting, AI solutions, quantum computing services, cybersecurity, and digital transformation services.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-start space-x-3">
                     <Brain className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-white">AI Solutions</h3>
-                      <p>Machine learning,
-    automatio, n, and intelligent systems</p>
+                      <p>Machine learning, automation, and intelligent systems</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -344,13 +316,10 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.3,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -376,7 +345,7 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Prohibited Activities</h3>
-                    <p>You may not use our services to transmit harmful codeviolate intellectual property rights, or engage in illegal activities.</p>
+                    <p>You may not use our services to transmit harmful code, violate intellectual property rights, or engage in illegal activities.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -390,13 +359,10 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.4,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -408,34 +374,31 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Our Rights</h3>
-                    <p>All contentfeatures, and functionality on our platforms are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.</p>
+                    <p>All content, features, and functionality on our platforms are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Your Content</h3>
-                    <p>You retain ownership of content you submitbut grant us a license to use it for service provision and improvement.</p>
+                    <p>You retain ownership of content you submit, but grant us a license to use it for service provision and improvement.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">License</h3>
-                    <p>We grant you a limitednon-exclusive, non-transferable license to access and use our services for your business needs.</p>
+                    <p>We grant you a limited, non-exclusive, non-transferable license to access and use our services for your business needs.</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.5,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -469,13 +432,10 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.6,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -494,7 +454,7 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Damages</h3>
-                    <p>Zion Tech Group shall not be liable for any indirectincidental, special, or consequential damages.</p>
+                    <p>Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -508,13 +468,10 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.7,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -540,20 +497,17 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Effect of Termination</h3>
-                    <p>Upon terminationyour right to use the services will cease immediately.</p>
+                    <p>Upon termination, your right to use the services will cease immediately.</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.8,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -566,7 +520,7 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Notification</h3>
-                    <p>Material changes will be communicated through our websiteemail, or other appropriate channels.</p>
+                    <p>Material changes will be communicated through our website, email, or other appropriate channels.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -580,13 +534,10 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.9,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -594,7 +545,7 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                 <span>Contact Information</span>
               </h2>
               <div className="space-y-4 text-gray-300">
-                <p>If you have any questions about these Terms of Serviceplease contact us: </p>
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-cyan-400" />
@@ -606,8 +557,7 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>Address: 364 E Main St STE 1008,
-    Middletown DE 19709</span>
+                    <span>Address: 364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
               </div>
@@ -616,29 +566,27 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
         </div>
       </section>
 
-      {/* Limitation of Liability *, /}
+      {/* Limitation of Liability */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Limitation of Liability
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We strive to provide reliable servicesbut it's important to understand
+              We strive to provide reliable services, but it's important to understand
               the scope of our liability and your responsibilities.
             </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-semibold text-white mb-4">What We Cover</h3>
                   <ul className="space-y-3">
@@ -679,15 +627,13 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
         </div>
       </section>
 
-      {/* Termination *,
-    /}
+      {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -700,7 +646,7 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
                 <h3 className="text-2xl font-semibold text-white mb-4">You May Terminate</h3>
                 <ul className="space-y-3">
@@ -740,28 +686,26 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
         </div>
       </section>
 
-      {/* Contact Information *,
-    /}
+      {/* Contact Information */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Terms?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about these terms or need clarificationplease contact our legal team.
+              If you have questions about these terms or need clarification;
+              please contact our legal team.
             </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
@@ -782,22 +726,19 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
         </div>
       </section>
 
-      {/* CTA Section *,
-    /}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              By using our servicesyou agree to these terms.
+              By using our services, you agree to these terms.
               Contact us if you need any clarification or have questions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -818,6 +759,6 @@ import { motion } from "framer-moti, on";import { FileText, Shield;
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default Term;s;
+export default Terms;

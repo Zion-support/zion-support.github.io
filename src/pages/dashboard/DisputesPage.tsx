@@ -1,7 +1,8 @@
 
 import SEO from "@/components/SEO";
-import { DisputeDashboard } from "@/components/disput, es";import { ProtectedRoute } from "@/components/ProtectedRou, te";function DisputesPage() {
-
+import { DisputeDashboard } from "@/components/disputes";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+function DisputesPage() {
   return (
     <ProtectedRoute>
       <>
@@ -15,6 +16,6 @@ import { DisputeDashboard } from "@/components/disput, es";import { ProtectedRou
       </>
     </ProtectedRoute>
   );
-}
+};
 
-export default DisputesPag;e;
+export default DisputesPage;

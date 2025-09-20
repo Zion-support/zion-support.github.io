@@ -1,43 +1,48 @@
-import React, { useState  from "react", import { motion } from "framer-moti, on";import { Phone, Mail;
-  MapPin;
-  Clock;
-  MessageSquare;
-  Send;
-  Globe;
-  Building;
-  User;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Award;
-  Shield;
-  Zap;
-  Brain;
-  Cpu;
-  Database;
-  Network;
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { 
+  Phone,
+  Mail, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  Send,
+  Globe,
+  Building,
+  User,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Shield,
+  Zap,
+  Brain,
+  Cpu,
+  Database,
+  Network,
   Rocket
-} from "lucide-react";import { SEO } from "../components/S, EO";const EnhancedContact: React.FC  = () => {
-  const [formDa,
-    t;a;
-    setFormData] = useState({
-    name: ', ',email: ', ',company: ', ',phone: ', ',service: ', ',message: ''
- ,  })const [isSubmittingsetIsSubmitting] = useState(false)const [isSubmitted;
-    setIsSubmitted] = useState(false);
+} from "lucide-react";
+import { SEO } from "../components/SEO";
+const EnhancedContact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',email: '',company: '',phone: '',service: '',message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange  = () => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formDa;t;a;
-      [e.target.name]: e.target.value,  });
+      ...formData;
+      [e.target.name]: e.target.value
+    });
   },
 
-  const handleSubmit  = async (e: React.FormEvent) => {
-    e.preventDefault(),
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve;
-    2000); ),
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     
     setIsSubmitted(true);
     setIsSubmitting(false);
@@ -46,39 +51,37 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: ', ',email: ', ',company: ', ',phone: ', ',service: ', ',message: ''
-     ,  })}, 3000),
+        name: '',email: '',company: '',phone: '',service: '',message: ''
+      });
+    }, 3000),
   },
 
-  const services  = [
-    { id: 'ai-analytics, ', name: 'AI & Analytics Solutions,'; icon: <Brain className="w-5 h-5" />,
-     }{ id: 'quantum-computing, ', name: 'Quantum Computing Services, ', icon: <Cpu className="w-5 h-5" />,
-     }{ id: 'blockchain, ', name: 'Blockchain Solutions, ', icon: <Database className="w-5 h-5" />,
-     }{ id: 'iot-smart-cities, ', name: 'IoT & Smart Cities, ', icon: <Network className="w-5 h-5" />,
-     }{ id: 'cybersecurity, ', name: 'Cybersecurity Services, ', icon: <Shield className="w-5 h-5" />,
-     }{ id: 'metaverse, ', name: 'Metaverse Solutions, ', icon: <Globe className="w-5 h-5" />,  },
-    { id: 'custom, ', name: 'Custom Solution, ', icon: <Rocket className="w-5 h-5" />,
-     }
-  ]return (
+  const services = [
+    { id: 'ai-analytics', name: 'AI & Analytics Solutions', icon: <Brain className="w-5 h-5" /> };
+    { id: 'quantum-computing', name: 'Quantum Computing Services', icon: <Cpu className="w-5 h-5" /> };
+    { id: 'blockchain', name: 'Blockchain Solutions', icon: <Database className="w-5 h-5" /> };
+    { id: 'iot-smart-cities', name: 'IoT & Smart Cities', icon: <Network className="w-5 h-5" /> };
+    { id: 'cybersecurity', name: 'Cybersecurity Services', icon: <Shield className="w-5 h-5" /> };
+    { id: 'metaverse', name: 'Metaverse Solutions', icon: <Globe className="w-5 h-5" /> },
+    { id: 'custom', name: 'Custom Solution', icon: <Rocket className="w-5 h-5" /> }
+  ];
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for innovative micro SAAS services. Contact us via phoneemail, or visit our office in Middletown, DE."
+        description="Get in touch with Zion Tech Group for innovative micro SAAS services. Contact us via phone, email, or visit our office in Middletown, DE."
       />
       
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-     }}
-              className="text-5xl md: text-6xl font-bold text-white mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
               Let's Build the Future
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
@@ -86,33 +89,26 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
               </span>
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.2,  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
               Ready to transform your business with cutting-edge technology? 
-              Our team of experts is here to help you navigate the future of AIQuantum Computing, and more.
+              Our team of experts is here to help you navigate the future of AI, Quantum Computing, and more.
             </motion.p>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
-          {/* Contact Information *,
-    /}
+          {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0,
-    x: -20,  }}
-            animate={{ opacity: 1,
-    x: 0,  }}
-            transition={{ duration: 0.8,
-    delay: 0.3,  }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
             <h2 className="text-3xl font-bold text-white mb-8">Get In Touch</h2>
             
@@ -125,11 +121,11 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                   <p className="text-gray-300 mb-1">+1 302 464 0950</p>
-                  <p className="text-sm text-gray-400">Available Monday - Friday9: 00 AM - 6:00 PM EST</p>
+                  <p className="text-sm text-gray-400">Available Monday - Friday, 9:00 AM - 6:00 PM EST</p>
                 </div>
               </div>
 
-              {/* Email *, /}
+              {/* Email */}
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-white" />
@@ -149,7 +145,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Office Address</h3>
                   <p className="text-gray-300 mb-1">364 E Main St STE 1008</p>
-                  <p className="text-gray-300 mb-1">MiddletownDE 19709</p>
+                  <p className="text-gray-300 mb-1">Middletown, DE 19709</p>
                   <p className="text-sm text-gray-400">United States</p>
                 </div>
               </div>
@@ -161,14 +157,13 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
-                  <p className="text-gray-300 mb-1">https: //ziontechgroup.com</p>
+                  <p className="text-gray-300 mb-1">https://ziontechgroup.com</p>
                   <p className="text-sm text-gray-400">Explore our services and solutions online</p>
                 </div>
               </div>
             </div>
 
-            {/* Why Choose Us *,
-    /}
+            {/* Why Choose Us */}
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
               <div className="space-y-4">
@@ -198,12 +193,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0,
-    x: 20,  }}
-            animate={{ opacity: 1,
-    x: 0,  }}
-            transition={{ duration: 0.8,
-    delay: 0.5,  }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
@@ -216,7 +208,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
@@ -226,9 +218,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       id="name"
                       name="name"
                       required
-                      value={formData.nam, e}
+                      value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -242,9 +234,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       id="email"
                       name="email"
                       required
-                      value={formData.emai, l}
+                      value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -259,9 +251,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.compan, y}
+                      value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                       placeholder="Enter your company name"
                     />
                   </div>
@@ -274,9 +266,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phon, e}
+                      value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -289,13 +281,13 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <select
                     id="service"
                     name="service"
-                    value={formData.servic, e}
+                    value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
-                      <option key={service.i, d} value={service.id}>
+                      <option key={service.id} value={service.id}>
                         {service.name}
                       </option>
                     ))}
@@ -313,15 +305,15 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                     placeholder="Tell us about your project or inquiry..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  disabled={isSubmittin, g}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -342,12 +334,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.8,
-    delay: 0.7,  }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-20 text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-2xl p-8 border border-zion-cyan/30">
@@ -378,6 +367,6 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </motion.div>
       </div>
     </div>
-  ),
+  )
 };
-export default EnhancedContac;t;
+export default EnhancedContact;

@@ -429,4 +429,4 @@ import { motion, AnimatePresence } from "framer-motion";import { Search, Filter,
       `}</style>
     </div>
   );
-}
+};

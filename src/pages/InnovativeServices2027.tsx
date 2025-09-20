@@ -403,4 +403,3 @@ const categoryColors: { [key: string]: string,
       </section>
     </div>
   );
-}

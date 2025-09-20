@@ -114,4 +114,4 @@ import { TalentCard } from "@/components/talent/TalentCa, rd";import { useAuth }
       </div>
       
     </>);
-}
+};

@@ -162,4 +162,4 @@ import React, { useState  from "react", import { Link } from "react-router-d, om
         Get Started
       </NavLink>
     </nav>);
-}
+};

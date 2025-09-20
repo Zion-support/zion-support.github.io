@@ -1,50 +1,51 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { SEO } from "../../components/S, EO";import { MessageCircle, Brain;
-  Target;
-  Zap;
-  BarChart3;
-  Clock;
-  Award;
-  Star;
-  Globe;
-  Cpu;
-  Database;
-  CheckCircle;
-  Eye;
-  Users;
-  FileText;
-  Shield;
-  TrendingUp;
-  Phone;
-  Mail;
-  Calendar;
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
+import { 
+  MessageCircle,
+  Brain, 
+  Target, 
+  Zap, 
+  BarChart3, 
+  Clock, 
+  Award, 
+  Star,
+  Globe,
+  Cpu,
+  Database,
+  CheckCircle,
+  Eye,
+  Users,
+  FileText,
+  Shield,
+  TrendingUp,
+  Phone,
+  Mail,
+  Calendar,
   Search
-} from "lucide-react";export default function HelpdeskPlatform() {
-
-  const features  = [
+} from "lucide-react";
+export default function HelpdeskPlatform() {
+  const features = [
     {
-      icon: Bra,
-    i;n;
-    title: "AI-Powered Support, ",description: "Intelligent chatbots and virtual assistants for instant customer support."
-   ,  }{
-      icon: MessageCircle,
-    title: "Multi-Channel Support, ",description: "Unified support across emai, l, chat, phone, and social media platforms."
+      icon: Brain,title: "AI-Powered Support",description: "Intelligent chatbots and virtual assistants for instant customer support."
+    };
+    {
+      icon: MessageCircle,title: "Multi-Channel Support",description: "Unified support across email, chat, phone, and social media platforms."
     },
     {
-      icon: Target,
-    title: "Smart Ticket Routing, ",description: "AI-driven ticket classification and automatic assignment to best agents."
-   ,  }{
-      icon: Zap,
-    title: "Automated Workflows, ",description: "Intelligent automation for common support scenarios and escalations."
-   ,  }{
-      icon: BarChart3,
-    title: "Performance Analytics, ",description: "Comprehensive insights into support metrics and customer satisfaction."
-   ,  },
+      icon: Target,title: "Smart Ticket Routing",description: "AI-driven ticket classification and automatic assignment to best agents."
+    };
     {
-      icon: Shield,
-    title: "Knowledge Management, ",description: "Centralized knowledge base with AI-powered search and suggestions."
-   ,  }
-  ]const benefits  = [
+      icon: Zap,title: "Automated Workflows",description: "Intelligent automation for common support scenarios and escalations."
+    };
+    {
+      icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into support metrics and customer satisfaction."
+    },
+    {
+      icon: Shield,title: "Knowledge Management",description: "Centralized knowledge base with AI-powered search and suggestions."
+    }
+  ];
+  const benefits = [
     "Reduce support response time by 60-80% with AI automation",
     "Improve customer satisfaction scores by 40-60%",
     "Reduce support costs by 30-50% through automation",
@@ -55,37 +56,39 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
 
   const supportChannels = [
     {
-      channel: "Live Chat, ",description: "Real-time chat support with AI-powered instant responses,";icon: MessageCircle
-   ,
-     };
+      channel: "Live Chat",description: "Real-time chat support with AI-powered instant responses",icon: MessageCircle
+    };
     {
-      channel: "Email Support, ",description: "Intelligent email routing and automated responses, ",icon: Mail,  }{
-      channel: "Phone Support, ",description: "Call center integration with smart call routing, ",icon: Phone,  }{
-      channel: "Social Media, ",description: "Multi-platform social media support integration, ",icon: Users,  }{
-      channel: "Self-Service, ",description: "Knowledge base and FAQ automation, ",icon: Search,  },
+      channel: "Email Support",description: "Intelligent email routing and automated responses",icon: Mail
+    };
     {
-      channel: "Mobile Support, ",description: "Mobile-optimized support experience, ",icon: Globe,  }
-  ]const useCases  = [
+      channel: "Phone Support",description: "Call center integration with smart call routing",icon: Phone
+    };
     {
-      industry: "E-commerc,
-    e";description: "Order support,
-    product inquirie, s, and customer service automation"
+      channel: "Social Media",description: "Multi-platform social media support integration",icon: Users
+    };
+    {
+      channel: "Self-Service",description: "Knowledge base and FAQ automation",icon: Search
     },
     {
-      industry: "SaaS & Technology, ",description: "Technical support,
-    user onboardin, g, and feature assistance"
+      channel: "Mobile Support",description: "Mobile-optimized support experience",icon: Globe
+    }
+  ];
+  const useCases = [
+    {
+      industry: "E-commerce",description: "Order support, product inquiries, and customer service automation"
     },
     {
-      industry: "Healthcare, ",description: "Patient support,
-    appointment schedulin, g, and medical inquiries"
+      industry: "SaaS & Technology",description: "Technical support, user onboarding, and feature assistance"
     },
     {
-      industry: "Financial Services, ",description: "Account support,
-    transaction assistanc, e, and security help"
+      industry: "Healthcare",description: "Patient support, appointment scheduling, and medical inquiries"
     },
     {
-      industry: "Education, ",description: "Student support,
-    course assistanc, e, and technical help"
+      industry: "Financial Services",description: "Account support, transaction assistance, and security help"
+    },
+    {
+      industry: "Education",description: "Student support, course assistance, and technical help"
     }
   ],
 
@@ -93,19 +96,17 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Helpdesk Platform - Zion Tech Group"
-        description="Transform your customer support with AI-powered helpdesk automationmulti-channel support, and intelligent ticket management solutions."
+        description="Transform your customer support with AI-powered helpdesk automation, multi-channel support, and intelligent ticket management solutions."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg: py-32">
+      <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
@@ -113,7 +114,7 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
               <span className="text-orange-300 font-medium">Helpdesk Platform</span>
             </div>
             
-            <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Revolutionize Customer Support with
               <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 {" "}AI-Powered Helpdesk
@@ -121,23 +122,22 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support operations with intelligent automation,
-    multi-channel 
-              supportand AI-powered insights that deliver exceptional customer experiences.
+              Transform your customer support operations with intelligent automation, multi-channel 
+              support, and AI-powered insights that deliver exceptional customer experiences.
             </p>
             
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
-                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10 transition-all duration-300"
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -146,19 +146,16 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
+      {/* Features Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Advanced Helpdesk Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -168,22 +165,18 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (
+            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover: border-orange-400/30 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-orange-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-orange-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.titl,
-    e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -195,14 +188,12 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Measurable Support Impact
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -215,15 +206,12 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit,
-    index) => (
+                {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0,
-    x: -20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-                    transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
+                    initial={{ opacity: 0, x: -20 }};
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
@@ -266,40 +254,34 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Multi-Channel Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our helpdesk platform provides unified support across all customer touchpoints,
-    ensuring consistent and efficient service delivery.
+              Our helpdesk platform provides unified support across all customer touchpoints;
+              ensuring consistent and efficient service delivery.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportChannels.map((channel,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {supportChannels.map((channel, index) => (
               <motion.div
                 key={channel.channel}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover: border-orange-400/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-orange-400/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center">
                     <channel.icon className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{channel.channe,
-    l}</h3>
+                  <h3 className="text-lg font-semibold text-white">{channel.channel}</h3>
                 </div>
                 <p className="text-gray-300 text-sm">{channel.description}</p>
               </motion.div>
@@ -312,41 +294,34 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered helpdesk solutions are designed to work across industries,
-    providing 
+              Our AI-powered helpdesk solutions are designed to work across industries, providing 
               tailored support strategies for your specific customer service needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover: border-orange-400/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-orange-400/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center">
                     <Globe className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{useCase.industr,
-    y}</h3>
+                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
                 </div>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
@@ -359,13 +334,12 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 p-12 rounded-2xl border border-orange-400/20 text-center"
           >
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -374,15 +348,15 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10 transition-all duration-300"
               >
                 Contact Sales
@@ -392,5 +366,5 @@ import { motion } from "framer-moti, on";import { SEO } from "../../components/S
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

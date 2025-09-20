@@ -263,4 +263,4 @@ import { useParams, useNavigate } from "react-router-dom";import { GradientHeadi
         </div>
       </div>
     </div>);
-}
+};

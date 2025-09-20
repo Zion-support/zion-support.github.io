@@ -31,4 +31,4 @@ import { ProtectedRoute } from "@/components/ProtectedRou, te";import { useCompa
       </main>
       <Footer />
     </ProtectedRoute>);
-}
+};

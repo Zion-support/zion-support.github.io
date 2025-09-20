@@ -1,96 +1,102 @@
-import React, { useState  from "react", import { SEO } from "../components/S, EO";import { HelpCircle, MessageCircle;
-  Phone;
-  Mail;
-  Clock;
-  Search;
-  BookOpen;
-  FileText;
-  Video;
-  Users;
-  Zap;
-  CheckCircle;
-  ArrowRight;
-  ExternalLink;
-  Ticket;
-  MessageCircle;
-  Headphones;
-  Globe;
-  Smartphone;
-  Monitor;
-  Shield;
-  Rocket;
-  Brain;
+import React, { useState } from "react";
+import { SEO } from "../components/SEO";
+import { 
+  HelpCircle,
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  Clock, 
+  Search,
+  BookOpen,
+  FileText,
+  Video,
+  Users,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Ticket,
+  MessageCircle,
+  Headphones,
+  Globe,
+  Smartphone,
+  Monitor,
+  Shield,
+  Rocket,
+  Brain,
   Cloud
-} from "lucide-react";const Support: React.FC  = () => {
-  const [searchQue,
-    r;y;
-    setSearchQuery] = useState('')const [selectedCategorysetSelectedCategory] = useState('all')const categories  = [
-    { id: 'all, ', name: 'All Categories,'; icon: HelpCircle,
-     };
-    { id: 'technical, ', name: 'Technical Issues, ', icon: Monitor,  }{ id: 'billing, ', name: 'Billing & Account, ', icon: FileText,  }{ id: 'product, ', name: 'Product Support, ', icon: Rocket,  }{ id: 'integration, ', name: 'Integration Help, ', icon: Zap,  },
-    { id: 'general, ', name: 'General Questions, ', icon: Users,  }
-  ]const supportChannels  = [
+} from "lucide-react";
+const Support: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: HelpCircle };
+    { id: 'technical', name: 'Technical Issues', icon: Monitor };
+    { id: 'billing', name: 'Billing & Account', icon: FileText };
+    { id: 'product', name: 'Product Support', icon: Rocket };
+    { id: 'integration', name: 'Integration Help', icon: Zap },
+    { id: 'general', name: 'General Questions', icon: Users }
+  ];
+  const supportChannels = [
     {
-      icon: MessageCircl,
-    etitle: 'Live Chat, ',description: 'Get instant help from our support team, ',availability: '24/7, ',responseTime: '< 2 minutes, ',priority: 'high, ',href: '/support/chat'
-   ,  }{
-      icon: Ticket,
-    title: 'Support Tickets, ',description: 'Submit detailed support requests, ',availability: '24/7, ',responseTime: '< 4 hours, ',priority: 'medium, ',href: '/support/tickets'
-   ,  }{
-      icon: Phone,
-    title: 'Phone Support, ',description: 'Speak directly with our experts, ',availability: 'Mon-Fr, i, 9AM-6PM EST',
-      responseTime: 'Immediate, ',priority: 'high, ',href: '/support/phone'
-   ,  },
+      icon: MessageCircle,title: 'Live Chat',description: 'Get instant help from our support team',availability: '24/7',responseTime: '< 2 minutes',priority: 'high',href: '/support/chat'
+    };
     {
-      icon: Mail,
-    title: 'Email Support, ',description: 'Send us detailed questions, ',availability: '24/7, ',responseTime: '< 24 hours, ',priority: 'medium, ',href: '/support/email'
-   ,  }
-  ]const quickSolutions  = [
+      icon: Ticket,title: 'Support Tickets',description: 'Submit detailed support requests',availability: '24/7',responseTime: '< 4 hours',priority: 'medium',href: '/support/tickets'
+    };
     {
-      icon: BookOpe,
-    ntitle: 'Knowledge Base, ',description: 'Browse our comprehensive documentation, ',articles: '500+ articles, ',href: '/docs'
-   ,  }{
-      icon: Video,
-    title: 'Video Tutorials, ',description: 'Step-by-step video guides, ',videos: '100+ tutorials, ',href: '/tutorials'
-   ,  }{
-      icon: Users,
-    title: 'Community Forum, ',description: 'Connect with other users, ',members: '1, 0,000+ members',
+      icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST',
+      responseTime: 'Immediate',priority: 'high',href: '/support/phone'
+    },
+    {
+      icon: Mail,title: 'Email Support',description: 'Send us detailed questions',availability: '24/7',responseTime: '< 24 hours',priority: 'medium',href: '/support/email'
+    }
+  ];
+  const quickSolutions = [
+    {
+      icon: BookOpen,title: 'Knowledge Base',description: 'Browse our comprehensive documentation',articles: '500+ articles',href: '/docs'
+    };
+    {
+      icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides',videos: '100+ tutorials',href: '/tutorials'
+    };
+    {
+      icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members',
       href: '/community'
-   ,  },
-    {
-      icon: FileText,
-    title: 'FAQ, ',description: 'Frequently asked questions, ',questions: '200+ FAQs, ',href: '/faq'
-   ,  }
-  ]const commonIssues  = [
-    {
-      category: 'Technical, ',title: 'How to reset my password?, ',solution: 'Go to the login page and click "Forgot Password" to reset your password via email., ',tags: ['passwordlogin, ', 'account']
     },
     {
-      category: 'Product, ',title: 'How to integrate with my existing systems?, ',solution: 'We provide comprehensive API documentation and integration guides for all major platforms., ',tags: ['integrationapi, ', 'documentation']
+      icon: FileText,title: 'FAQ',description: 'Frequently asked questions',questions: '200+ FAQs',href: '/faq'
+    }
+  ];
+  const commonIssues = [
+    {
+      category: 'Technical',title: 'How to reset my password?',solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',tags: ['passwordlogin', 'account']
     },
     {
-      category: 'Billing, ',title: 'How to update my billing information?, ',solution: 'Navigate to your account settings and update your billing information in the billing section., ',tags: ['billingaccount, ', 'payment']
+      category: 'Product',title: 'How to integrate with my existing systems?',solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',tags: ['integrationapi', 'documentation']
     },
     {
-      category: 'Technical',
-    title: 'Service is running slow,
-    what should I do?, ',
-      solution: 'Check your internet connection and try clearing your browser cache. If the issue persists,
-    contact support., ',
-      tags: ['performancetroubleshooting, ', 'speed']
+      category: 'Billing',title: 'How to update my billing information?',solution: 'Navigate to your account settings and update your billing information in the billing section.',tags: ['billingaccount', 'payment']
+    },
+    {
+      category: 'Technical',title: 'Service is running slow, what should I do?',
+      solution: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.',
+      tags: ['performancetroubleshooting', 'speed']
     }
   ],
 
-  const filteredIssues  = commonIssues.filter(issue => 
+  const filteredIssues = commonIssues.filter(issue => 
     (selectedCategory === 'all' || issue.category.toLowerCase() === selectedCategory) &&
     (issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.solution.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  )return (
+  );
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Support - Zion Tech Group"
-        description="Get help and support for all Zion Tech Group products and services. 24/7 support available through multiple channels including live chatphone, and email."
+        description="Get help and support for all Zion Tech Group products and services. 24/7 support available through multiple channels including live chat, phone, and email."
       />
       
       {/* Hero Section */}
@@ -102,7 +108,7 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
               <HelpCircle className="w-4 h-4 mr-2" />
               Customer Support
             </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               How Can We Help?
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -121,8 +127,7 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
         </div>
       </section>
 
-      {/* Search Section *,
-    /}
+      {/* Search Section */}
       <section className="py-12 bg-slate-800/20">
         <div className="container-responsive">
           <div className="max-w-2xl mx-auto">
@@ -130,18 +135,17 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search for help articlestutorials, or common issues..."
+                placeholder="Search for help articles, tutorials, or common issues..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg"
+                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Support Channels Section *,
-    /}
+      {/* Support Channels Section */}
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -154,14 +158,13 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportChannels.map((channel,
-    index) => (
-              <div key={inde, x} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                   <channel.icon className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{channel.titl, e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{channel.description}</p>
                 
                 <div className="space-y-2 mb-4 text-sm">
@@ -175,12 +178,11 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
                   </div>
                 </div>
                 
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover: from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
                   Get Help
                 </button>
               </div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
@@ -198,25 +200,24 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickSolutions.map((solution,
-    index) => (
-              <div key={inde, x} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickSolutions.map((solution, index) => (
+              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200">
                   <solution.icon className="w-6 h-6 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{solution.titl, e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{solution.description}</p>
                 
                 <div className="text-sm text-cyan-400 mb-4 font-medium">
                   {solution.articles || solution.videos || solution.questions || solution.members}
                 </div>
                 
-                <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg hover: bg-slate-600/50 transition-all duration-200 hover:scale-105">
+                <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-200 hover:scale-105">
                   Explore
                 </button>
               </div>
-            ), )}
+            ))}
           </div>
         </div>
       </section>
@@ -242,9 +243,8 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
                 className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-400/20 border-cyan-400/40 text-cyan-400'
-                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover: bg-slate-600/50 hover:border-cyan-400/30'
-               ,
-     }`}
+                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-cyan-400/30'
+                }`}
               >
                 <category.icon className="w-4 h-4 mr-2" />
                 {category.name}
@@ -252,14 +252,12 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
             ))}
           </div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">
-            {filteredIssues.map((issue,
-    index) => (
-              <div key={inde, x} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {filteredIssues.map((issue, index) => (
+              <div key={index} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200">
                 <div className="flex items-start justify-between mb-3">
                   <span className="inline-flex items-center px-2 py-1 bg-cyan-400/10 border border-cyan-400/20 rounded text-xs text-cyan-400">
-                    {issue.categor,
-    y}
+                    {issue.category}
                   </span>
                   <CheckCircle className="w-5 h-5 text-green-400" />
                 </div>
@@ -268,7 +266,7 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
                 <p className="text-gray-400 text-sm mb-4">{issue.solution}</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {issue.tags.map((tagtagIndex) => (
+                  {issue.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                       {tag}
                     </span>
@@ -308,6 +306,6 @@ import React, { useState  from "react", import { SEO } from "../components/S, EO
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default Suppor;t;
+export default Support;

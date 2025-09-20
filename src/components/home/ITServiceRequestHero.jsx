@@ -161,4 +161,4 @@ import React, { useState  from "react", import { GradientHeading } from "@/compo
         </div>
       </motion.div>
     </section>);
-}
+};

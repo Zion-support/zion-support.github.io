@@ -1,46 +1,64 @@
-import React, { useState  from "react", import { TrustedBySection } from "@/components/TrustedBySecti, on";import { Button } from "@/components/ui/butt, on";import { Badge } from "@/components/ui/bad, ge";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { MICRO_SAAS_SERVICES } from "@/data/microSaasServic, es";import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";import { Link } from "react-router-d, om";const categoryIcons  = {
-    'AI Business Solutions': Brain'IT Infrastructure': Cloud'Data Analytics': BarChart3'AI Development': Code'FinTech': DollarSign'HealthTech': Heart'E-commerce': ShoppingCart'EdTech': GraduationCap
+import React, { useState } from "react";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+const categoryIcons = {
+    'AI Business Solutions': Brain;
+    'IT Infrastructure': Cloud,
+    'Data Analytics': BarChart3,
+    'AI Development': Code,
+    'FinTech': DollarSign,
+    'HealthTech': Heart,
+    'E-commerce': ShoppingCart,
+    'EdTech': GraduationCap
 },
-const benefits  = [
+const benefits = [
     {
-        icon: <Zap className="h-6 w-6"/, >,title: "Immediate Deployment,"description: "All services are ready for immediate deployment with no setup delays"
-   ,
-     }{
-        icon: <Shield className="h-6 w-6"/, >,title: "Enterprise Security, ",description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
-   ,
-     }{
-        icon: <Users className="h-6 w-6"/, >,title: "Dedicated Support, ",description: "24/7 technical support with dedicated account managers"
-   ,  },
+        icon: <Zap className="h-6 w-6"/>,title: "Immediate Deployment",description: "All services are ready for immediate deployment with no setup delays"
+    };
     {
-        icon: <TrendingUp className="h-6 w-6"/, >,title: "Proven ROI, ",description: "Average 300% ROI within 6 months of implementation"
-   ,
-     }
-]const features  = [
+        icon: <Shield className="h-6 w-6"/>,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
+    };
+    {
+        icon: <Users className="h-6 w-6"/>,title: "Dedicated Support",description: "24/7 technical support with dedicated account managers"
+    },
+    {
+        icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
+    }
+];
+const features = [
     "AI-Powered Automation",
     "Real-time Analytics",
     "Multi-cloud Support",
     "API-First Architecture",
     "Scalable Infrastructure",
     "Custom Integrations",
-    "White-label Solutions""Comprehensive Documentation"
-]export default function MicroSaasServices() {
-
-    const [selectedCategorysetSelectedCategory] = useState('all')const filteredServices  = selectedCategory === 'all'
-        ? MICRO_SAAS_SERVICES: MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g'-') === selectedCategory),
+    "White-label Solutions",
+    "Comprehensive Documentation"
+],
+export default function MicroSaasServices() {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const filteredServices = selectedCategory === 'all'
+        ? MICRO_SAAS_SERVICES
+        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md: text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Micro SAAS Solutions
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Transform your business with our comprehensive suite of AI-powered micro SAAS services. 
-            From automation to analytic,
-    swe provide enterprise-grade solutions at startup prices.
+            From automation to analytics, we provide enterprise-grade solutions at startup prices.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-blue hover: bg-gray-100">
+            <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">
               <Globe className="h-5 w-5 mr-2"/>
               View All Services
             </Button>
@@ -52,12 +70,11 @@ const benefits  = [
         </div>
       </div>
 
-      {/* Benefits Section *,
-    /}
+      {/* Benefits Section */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -66,8 +83,7 @@ const benefits  = [
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit,
-    index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
+            {benefits.map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mb-4">
                     {benefit.icon}
@@ -86,18 +102,16 @@ const benefits  = [
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-zion-blue mb-4">
-              Enterprise Features,
-    Startup Pricing
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
+              Enterprise Features, Startup Pricing
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Every service includes our comprehensive feature set designed for growth and scalability
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
-            {features.map((feature,
-    index) => (<div key={inde, x} className="text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {features.map((feature, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-zion-purple"/>
                 </div>
@@ -122,13 +136,14 @@ const benefits  = [
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
   {
-    key: 'starter, ',name: 'Starter, ',price: '$29, ',features: ['Basic featuresEmail support, ', '1 user']
+    key: 'starter',name: 'Starter',price: '$29',features: ['Basic featuresEmail support', '1 user']
   },
   {
-    key: 'professional, ',name: 'Professional, ',price: '$99, ',features: ['Advanced featuresPriority support, ''5 users']
-  }{
-    key: 'enterprise, ',name: 'Enterprise, ',price: '$299, ',features: ['Custom features24/7 support, ', 'Unlimited users']
-  }
+    key: 'professional',name: 'Professional',price: '$99',features: ['Advanced featuresPriority support', '5 users']
+  };
+  {
+    key: 'enterprise',name: 'Enterprise',price: '$299',features: ['Custom features24/7 support', 'Unlimited users']
+  };
 ].map((tier) => (<Card key={tier.key} className={`relative ${tier.key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
                 {tier.key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-zion-purple text-white px-4 py-2">Most Popular</Badge>
@@ -145,7 +160,7 @@ const benefits  = [
                     <span className="text-gray-600 ml-2">per month</span>
                   </div>
                   <ul className="text-left space-y-2 mb-6">
-                    {tier.features.map((featureindex) => (
+                    {tier.features.map((feature, index) => (
                       <li key={index} className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
                         {feature}
@@ -177,19 +192,19 @@ const benefits  = [
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
               {getMicroSaasCategories().map((category) => {
-            const IconComponent  = categoryIcons[category.label,
-    ]return (<TabsTrigger key={category.value} value={category.value} className="text-white">
+            const IconComponent = categoryIcons[category.label];
+            return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
-                  </TabsTrigger>)})}
+                  </TabsTrigger>);
+        })}
             </TabsList>
             
             <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service) => (<Card key={service.i, d} className="bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-purple/50 transition-all duration-300 hover:scale-105">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                     <div className="relative">
-                      <img src={service.images[0,
-    ]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                      <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
                         {service.category}
                       </Badge>
@@ -197,7 +212,7 @@ const benefits  = [
                     <CardHeader>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
                       <CardDescription className="text-zion-slate-light">
-                        {service.description.substring(0120)}...
+                        {service.description.substring(0, 120)}...
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -208,7 +223,7 @@ const benefits  = [
                           <span className="text-zion-slate-light text-sm ml-1">({service.reviewCount})</span>
                         </div>
                         <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
-                          AI Score: {service.aiScor, e}
+                          AI Score: {service.aiScore}
                         </Badge>
                       </div>
                       <div className="flex items-center justify-between">
@@ -216,12 +231,12 @@ const benefits  = [
                           ${service.price}
                           <span className="text-sm text-zion-slate-light">/month</span>
                         </div>
-                        <Button size="sm" className="bg-zion-purple hover: bg-zion-purple-dark">
+                        <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark">
                           Learn More
                         </Button>
                       </div>
                     </CardContent>
-                  </Card>), )}
+                  </Card>))}
               </div>
             </TabsContent>
           </Tabs>
@@ -232,7 +247,7 @@ const benefits  = [
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-zion-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
@@ -248,7 +263,7 @@ const benefits  = [
                   <Phone className="h-5 w-5 text-zion-purple mr-3"/>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-600">{CONTACT_INFO.mobil, e}</p>
+                    <p className="text-gray-600">{CONTACT_INFO.mobile}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -269,8 +284,8 @@ const benefits  = [
                   <Globe className="h-5 w-5 text-zion-purple mr-3"/>
                   <div>
                     <p className="font-medium">Website</p>
-                    <a href={CONTACT_INFO.website} className="text-zion-cyan hover: underline">
-                      {CONTACT_INFO.websit, e}
+                    <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">
+                      {CONTACT_INFO.website}
                     </a>
                   </div>
                 </div>
@@ -281,7 +296,7 @@ const benefits  = [
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
               <div className="space-y-4">
                 <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark">
+                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
                     Request Custom Quote
                   </Button>
                 </Link>
@@ -312,8 +327,7 @@ const benefits  = [
         </div>
       </section>
 
-      {/* Trusted By Section *,
-    /}
+      {/* Trusted By Section */}
       <TrustedBySection />
     </div>);
-}
+};

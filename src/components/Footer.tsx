@@ -219,4 +219,4 @@ import { Link } from "react-router-d, om";import { motion } from "framer-moti, o
       </div>
     </footer>
   );
-}
+};

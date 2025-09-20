@@ -132,4 +132,4 @@ import { useWhitelabel } from "@/context/WhitelabelConte, xt";export default fun
                 id: job.id,
     title: job.titl, e,description: job.descriptio, n,company_name: job.company_name || "Company, ",budget: job.budge, t,client_id: job.client_id,  }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
-}
+};

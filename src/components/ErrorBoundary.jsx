@@ -1,17 +1,21 @@
-import React, { useState, useEffect  from "react";
-import { Button } from "@/components/ui/butt, on";import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "lucide-react";import { Link, useNavigate } from "react-router-dom";function ErrorFallback() {
-
-    const navigate  = useNavigate();
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+function ErrorFallback({ error, resetError, retryCount = 0 }) {
+    const navigate = useNavigate();
     const maxRetries = 3;
     
-    const handleRetry  = () => {
+    const handleRetry = () => {
         if (retryCount < maxRetries) {
-            resetError;(;);
+            resetError();
         } else {
-            // After max retries;
-    redirect to home
-            navigate('/')}
-    }const getErrorType  = () => {
+            // After max retries, redirect to home
+            navigate('/');
+        }
+    };
+
+    const getErrorType = (error) => {
         if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
             return 'network';
         };
@@ -24,35 +28,36 @@ import { Button } from "@/components/ui/butt, on";import { AlertTriangle, Refres
         return 'general';
     };
 
-    const errorType  = getErrorType(error);
+    const errorType = getErrorType(error);
     
-    const errorMessages  = {
+    const errorMessages = {
         network: {
-            title: 'Connection Error, ',
+            title: 'Connection Error',
             description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',
             icon: Shield,
-    color: 'text-orange-400'
-       ,  },
+            color: 'text-orange-400'
+        },
         runtime: {
-            title: 'Runtime Error, ',
-            description: 'Something unexpected happened while processing your request. Our team has been notified., ',
+            title: 'Runtime Error',
+            description: 'Something unexpected happened while processing your request. Our team has been notified.',
             icon: Bug,
-    color: 'text-red-400'
-       ,  },
+            color: 'text-red-400'
+        },
         reference: {
-            title: 'Reference Error, ',
-            description: 'There was an issue with the page resources. Please refresh and try again., ',
+            title: 'Reference Error',
+            description: 'There was an issue with the page resources. Please refresh and try again.',
             icon: AlertTriangle,
-    color: 'text-yellow-400'
-       ,  },
+            color: 'text-yellow-400'
+        },
         general: {
-            title: 'Something went wrong, ',
-            description: 'We encountered an unexpected error. Don\'t worry,
-    our team has been notified., ',
+            title: 'Something went wrong',
+            description: 'We encountered an unexpected error. Don\'t worry, our team has been notified.',
             icon: AlertTriangle,
-    color: 'text-zion-purple'
-       ,  }
-    }const currentError  = errorMessages[errorType]const IconComponent  = currentError.ico;n;
+            color: 'text-zion-purple'
+        }
+    };
+    const currentError = errorMessages[errorType];
+    const IconComponent = currentError.icon;
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
@@ -69,7 +74,7 @@ import { Button } from "@/components/ui/butt, on";import { AlertTriangle, Refres
                     {retryCount > 0 && (
                         <div className="mt-4 p-3 bg-zion-slate-dark/50 rounded-lg">
                             <p className="text-sm text-zion-slate-light">
-                                Retry attempt: {retryCoun, t}/{maxRetries}
+                                Retry attempt: {retryCount}/{maxRetries}
                             </p>
                         </div>
                     )}
@@ -77,21 +82,21 @@ import { Button } from "@/components/ui/butt, on";import { AlertTriangle, Refres
 
                 {error && process.env.NODE_ENV === 'development' && (
                     <details className="mb-6 text-left">
-                        <summary className="cursor-pointer text-zion-cyan hover: text-zion-cyan-light mb-3 flex items-center">
+                        <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">
                             <Bug className="w-4 h-4 mr-2" />
                             Error Details (Development)
                         </summary>
                         <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">
                             <div className="mb-2">
-                                <strong>Error:</strong> {error.name || 'Unknown Error, '}
+                                <strong>Error:</strong> {error.name || 'Unknown Error'}
                             </div>
                             <div className="mb-2">
-                                <strong>Message: </strong> {error.message || 'No message available, '}
+                                <strong>Message:</strong> {error.message || 'No message available'}
                             </div>
                             {error.stack && (
                                 <div>
-                                    <strong>Stack: </strong>
-                                    <pre className="mt-2 text-xs overflow-auto">{error.stac, k}</pre>
+                                    <strong>Stack:</strong>
+                                    <pre className="mt-2 text-xs overflow-auto">{error.stack}</pre>
                                 </div>
                             )}
                         </div>
@@ -102,27 +107,25 @@ import { Button } from "@/components/ui/butt, on";import { AlertTriangle, Refres
                     {retryCount < maxRetries ? (
                         <Button 
                             onClick={handleRetry} 
-                            className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white transition-all duration-200"
+                            className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200"
                         >
                             <RefreshCw className="w-4 h-4 mr-2" />
                             Try Again
                         </Button>
                     ) : (
                         <Button 
-                            onClick={() => window.location.reload,
-    ()} 
-                            className="w-full bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"
+                            onClick={() => window.location.reload()} 
+                            className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"
                         >
                             <Zap className="w-4 h-4 mr-2" />
                             Reload Page
                         </Button>
-                    ,
-    )}
+                    )}
                     
                     <Button 
                         variant="outline" 
                         onClick={() => navigate(-1)} 
-                        className="w-full border-zion-cyan text-zion-cyan hover: bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"
+                        className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"
                     >
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Go Back
@@ -138,63 +141,67 @@ import { Button } from "@/components/ui/butt, on";import { AlertTriangle, Refres
                 </div>
 
                 <div className="mt-8 text-xs text-zion-slate-light">
-                    <p>If this problem persists,
-    please contact our support team.</p>
+                    <p>If this problem persists, please contact our support team.</p>
                     <p className="mt-2">
-                        Error ID: {error?.name || 'Unknown, '} - {new Date().toISOString()}
+                        Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
                     </p>
                     <p className="mt-1">
-                        Retry Count: {retryCoun,
-    t}/{maxRetries}
+                        Retry Count: {retryCount}/{maxRetries}
                     </p>
                 </div>
             </div>
         </div>
-    )}
-function ErrorBoundary() {
-
-    const [hasErrorsetHasError] = useState(false);
-    const [error;
-    setError] = useState(null);
-    const [retryCount;
-    setRetryCount] = useState(0);
+    );
+};
+;
+function ErrorBoundary({ children, fallback, onError }) {
+    const [hasError, setHasError] = useState(false);
+    const [error, setError] = useState(null);
+    const [retryCount, setRetryCount] = useState(0);
 
     useEffect(() => {
-        const handleError  = () => {
-            setHasError(tru;e);
+        const handleError = (event) => {
+            setHasError(true);
             setError(event.error);
             if (onError) {
-                onError(event.error, { componentStack: event.error?.stack,  });
+                onError(event.error, { componentStack: event.error?.stack });
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:  , '; event.error);
+                console.error('ErrorBoundary caught an error:', event.error);
             }
         };
 
-        const handleUnhandledRejection  = () => {
-            setHasError(tru;e);
+        const handleUnhandledRejection = (event) => {
+            setHasError(true);
             setError(new Error(event.reason));
             if (onError) {
-                onError(new Error(event.reason); { componentStack: event.reason?.stack,  });
+                onError(new Error(event.reason), { componentStack: event.reason?.stack });
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:  , '; event.reason);
+                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
             }
         };
 
-        window.addEventListener('error', handleError)window.addEventListener('unhandledrejection', handleUnhandledRejection)return () => {
-            window.removeEventListener('error'; handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection)}}, [onError])const resetError  = () => {
-        setHasError(fals;e);
+        window.addEventListener('error', handleError);
+        window.addEventListener('unhandledrejection', handleUnhandledRejection);
+        
+        return () => {
+            window.removeEventListener('error', handleError);
+            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+        };
+    }, [onError]);
+
+    const resetError = () => {
+        setHasError(false);
         setError(null);
         setRetryCount(prev => prev + 1);
     };
 
     if (hasError) {
         if (fallback) {
-            return fallbac;k;
+            return fallback;
         }
         return (
             <ErrorFallback 
@@ -202,36 +209,31 @@ function ErrorBoundary() {
                 resetError={resetError}
                 retryCount={retryCount}
             />
-        ;);
+        );
     }
-;
-    return <>{children}</;>;
+
+    return <>{children}</>;
 }
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
+    const [error, setError] = useState(null);
 
-    const [erro;r;
-    setError] = useState(null);
-
-    const handleError  = () => {
-        setError(erro;r);
-        console.error('useErrorHandler caught an error:  , ', error);
+    const handleError = (error) => {
+        setError(error);
+        console.error('useErrorHandler caught an error:', error);
     };
 
-    const clearError  = () => {
-        setError(nul;l);
+    const clearError = () => {
+        setError(null);
     };
 
-    return { erro;r;
-    handleError, clearError };
+    return { error, handleError, clearError };
 }
 
 // Higher-order component for error handling
-export function withErrorBoundary() {
-
-    return function WrappedComponent() {
-
+export function withErrorBoundary(Component, fallback = null) {
+    return function WrappedComponent(props) {
         return (
             <ErrorBoundary fallback={fallback}>
                 <Component {...props} />
@@ -240,4 +242,5 @@ export function withErrorBoundary() {
     };
 }
 
-// Default export export default ErrorBoundar;y;
+// Default export
+export default ErrorBoundary;

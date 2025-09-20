@@ -1,70 +1,67 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Activity, Heart;
-  Brain;
-  Zap;
-  CheckCircle;
-  Clock;
-  DollarSign;
-  Users;
-  BarChart3;
-  Shield;
-  TrendingUp;
-  Award;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  ExternalLink;
-  Stethoscope;
-  Pill;
-  Microscope;
+import { motion } from "framer-motion";
+import { 
+  Activity,
+  Heart, 
+  Brain, 
+  Zap, 
+  CheckCircle, 
+  Clock, 
+  DollarSign,
+  Users,
+  BarChart3,
+  Shield,
+  TrendingUp,
+  Award,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Stethoscope,
+  Pill,
+  Microscope,
   Database
-} from "lucide-react";import { SEO } from "../../components/S, EO";export default function AIHealthcareAnalytics() {
-
-  const features  = [
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
+export default function AIHealthcareAnalytics() {
+  const features = [
     {
-      icon: <Brain className="w-6 h-6" /,>title: "Predictive Patient Analytic,
-    s";description: "AI algorithms predict patient outcomes,
-    readmission risk, s, and treatment effectiveness with 96% accuracy"
+      icon: <Brain className="w-6 h-6" />,title: "Predictive Patient Analytics",description: "AI algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 96% accuracy"
     },
     {
-      icon: <Activity className="w-6 h-6" /, >,title: "Real-time Health Monitoring, ",description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes"
-   ,
-     }{
-      icon: <Database className="w-6 h-6" /, >,title: "Clinical Data Integration, ";description: "Seamless integration with EHR systems,
-    medical device, s, and wearable technology for comprehensive data analysis"
+      icon: <Activity className="w-6 h-6" />,title: "Real-time Health Monitoring",description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes"
+    };
+    {
+      icon: <Database className="w-6 h-6" />,title: "Clinical Data Integration",description: "Seamless integration with EHR systems, medical devices, and wearable technology for comprehensive data analysis"
     },
     {
-      icon: <Microscope className="w-6 h-6" /, >,title: "Medical Image Analysis, ";description: "Advanced AI-powered analysis of X-rays,
-    MRI, s, and CT scans for faster and more accurate diagnoses"
+      icon: <Microscope className="w-6 h-6" />,title: "Medical Image Analysis",description: "Advanced AI-powered analysis of X-rays, MRIs, and CT scans for faster and more accurate diagnoses"
     },
     {
-      icon: <Shield className="w-6 h-6" /, >,title: "HIPAA-Compliant Security, ",description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
-   ,  },
+      icon: <Shield className="w-6 h-6" />,title: "HIPAA-Compliant Security",description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
+    },
     {
-      icon: <BarChart3 className="w-6 h-6" /, >,title: "Population Health Insights, ";description: "Comprehensive analytics for population health management,
-    disease trend, s, and preventive care strategies"
+      icon: <BarChart3 className="w-6 h-6" />,title: "Population Health Insights",description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies"
     }
   ],
 
-  const pricing  = [
+  const pricing = [
     {
-      name: "Clinic, ",price: "$399, ",period: "/mont,
-    h";features: [
-        "Up to 1,
-    000 patients, ",
+      name: "Clinic",price: "$399",period: "/month",features: [
+        "Up to 1,000 patients",
         "Basic predictive analytics",
         "Standard reporting",
         "Email support",
         "HIPAA compliance"
       ],
-      popular: false,  }{
-      name: "Hospital, ",price: "$1,
-    199, ",
-      period: "/month, ",features: [
-        "Up to 10,
-    000 patients, ",
+      popular: false
+    };
+    {
+      name: "Hospital",price: "$1,199",
+      period: "/month",features: [
+        "Up to 10,000 patients",
         "Advanced AI analytics",
         "Real-time monitoring",
         "Priority support",
@@ -72,11 +69,12 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
         "API access",
         "Integration support"
       ],
-      popular: true,  }{
-      name: "Health System, ",price: "$2,
-    999, ",
-      period: "/month, ",features: [
-        "Unlimited patients, ",
+      popular: true
+    };
+    {
+      name: "Health System",price: "$2,999",
+      period: "/month",features: [
+        "Unlimited patients",
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -84,8 +82,10 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
         "SLA guarantees",
         "On-premise deployment"
       ],
-      popular: false,  }
-  ]const benefits  = [
+      popular: false
+    }
+  ];
+  const benefits = [
     "Reduce readmission rates by 30%",
     "Improve diagnostic accuracy by 25%",
     "Reduce healthcare costs by 20-35%",
@@ -96,51 +96,45 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
 
   const useCases = [
     {
-      specialty: "Cardiolog,
-    y";description: "Predict heart failure risks,
-    monitor cardiac functio, n, and optimize treatment plans",
+      specialty: "Cardiology",description: "Predict heart failure risks, monitor cardiac function, and optimize treatment plans",
       improvement: "40% risk reduction"
-   ,  }{
-      specialty: "Oncology, ",description: "Personalized treatment recommendations,
-    drug response predictio, n, and survival analysis",
-      improvement: "35% treatment efficacy"
-   ,  }{
-      specialty: "Emergency Medicine, ",description: "Triage optimization,
-    resource allocatio, n, and patient flow management",
-      improvement: "50% efficiency gain"
-   ,  },
+    };
     {
-      specialty: "Primary Care, ",description: "Preventive care planning,
-    chronic disease managemen, t, and population health insights",
+      specialty: "Oncology",description: "Personalized treatment recommendations, drug response prediction, and survival analysis",
+      improvement: "35% treatment efficacy"
+    };
+    {
+      specialty: "Emergency Medicine",description: "Triage optimization, resource allocation, and patient flow management",
+      improvement: "50% efficiency gain"
+    },
+    {
+      specialty: "Primary Care",description: "Preventive care planning, chronic disease management, and population health insights",
       improvement: "45% preventive care"
-   ,  }
-  ]return (
+    }
+  ];
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI-Powered Healthcare Analytics Platform - Zion Tech Group"
-        description="Revolutionary AI platform for healthcare analyticspatient monitoring, and clinical insights. Improve patient outcomes while reducing healthcare costs by 20-35%."
+        description="Revolutionary AI platform for healthcare analytics, patient monitoring, and clinical insights. Improve patient outcomes while reducing healthcare costs by 20-35%."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Healthcare Analytics
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform healthcare delivery with intelligent analytics,
-    predictive insight, s, and real-time patient monitoring. 
+              Transform healthcare delivery with intelligent analytics, predictive insights, and real-time patient monitoring. 
               Improve patient outcomes while reducing costs by 20-35%.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
@@ -159,35 +153,29 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
         </div>
       </section>
 
-      {/* Key Benefits *,
-    /}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      {/* Key Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Healthcare Analytics Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built by healthcare experts and AI engineers,
-    our platform delivers unprecedented insights and patient care improvements.
+              Built by healthcare experts and AI engineers, our platform delivers unprecedented insights and patient care improvements.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-red-500 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
               >
                 <CheckCircle className="w-8 h-8 text-red-400 mb-4" />
-                <p className="text-white text-lg font-medium">{benefi,
-    t}</p>
+                <p className="text-white text-lg font-medium">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -195,7 +183,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -207,20 +195,16 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-red-500 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 group"
               >
                 <div className="text-red-400 mb-4 group-hover:text-red-300 transition-colors duration-300">
-                  {feature.ico,
-    n}
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -231,7 +215,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -243,19 +227,15 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase,
-    index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover: border-red-500 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.specialt,
-    y}</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.specialty}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 text-red-400 mr-2" />
@@ -268,7 +248,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -280,21 +260,17 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan,
-    index) => (
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-red-500 ring-2 ring-red-500/20' 
                     : 'border-slate-700'
-                } hover: border-red-500 transition-all duration-300,
-    `}
+                } hover:border-red-500 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -313,7 +289,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
                 </div>
                 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((featurefeatureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -322,13 +298,12 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
                 </ul>
                 
                 <a
-                  href="https: //ziontechgroup.com/contact"
+                  href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
-                 ,
-     }`}
+                  }`}
                 >
                   Get Started
                 </a>
@@ -339,15 +314,13 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
       </section>
 
       {/* Market Information */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0,
-    x: -20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-              transition={{ duration: 0.8,
-     }}
+              initial={{ opacity: 0, x: -20 }};
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Healthcare Solution
@@ -357,7 +330,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
                   <DollarSign className="w-6 h-6 text-red-400 mr-4" />
                   <div>
                     <p className="text-white font-semibold">Market Price Range</p>
-                    <p className="text-gray-300">$600 - $4000/month for similar solutions</p>
+                    <p className="text-gray-300">$600 - $4,000/month for similar solutions</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -378,18 +351,16 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
                   <Users className="w-6 h-6 text-purple-400 mr-4" />
                   <div>
                     <p className="text-white font-semibold">Target Market</p>
-                    <p className="text-gray-300">Hospitalsclinics, health systems, medical practices</p>
+                    <p className="text-gray-300">Hospitals, clinics, health systems, medical practices</p>
                   </div>
                 </div>
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0,
-    x: 20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-              transition={{ duration: 0.8,
-     }}
+              initial={{ opacity: 0, x: 20 }};
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Clinical Performance Metrics</h3>
@@ -417,13 +388,12 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-red-500/30"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -432,7 +402,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
             <p className="text-xl text-gray-300 mb-8">
               Join leading healthcare organizations who have already revolutionized patient care with AI analytics.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
@@ -452,7 +422,7 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
         </div>
       </section>
 
-      {/* Contact Information *, /}
+      {/* Contact Information */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
@@ -492,5 +462,5 @@ import { motion } from "framer-moti, on";import { Activity, Heart;
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

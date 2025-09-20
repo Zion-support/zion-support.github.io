@@ -1,63 +1,72 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Link } from "react-router-d, om";import { Zap, Brain;
-  Shield;
-  Cloud;
-  Cpu;
-  Rocket;
-  Atom;
-  Globe;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Users;
-  Lock;
-  Database;
-  Network;
-  CpuIcon;
-  Server;
-  CircuitBoard;
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { 
+  Zap,
+  Brain, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  Rocket, 
+  Atom, 
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Database,
+  Network,
+  CpuIcon,
+  Server,
+  CircuitBoard,
   Microchip
-} from "lucide-react";import { SEO } from "@/components/S, EO";const QuantumComputing  = () => {
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
+const QuantumComputing = () => {
   const features = [
     {
-      icon: At,
-    o;m;
-    title: "Quantum Processing, ",description: "Advanced quantum algorithms for complex computational problems"
-   ,  }{
-      icon: Brain,
-    title: "AI Integration, ",description: "Seamless integration with machine learning and AI systems"
-   ,  }{
-      icon: Shield,
-    title: "Quantum Security, ",description: "Unbreak,
-    able encryption using quantum key distribution"
-   ,  },
+      icon: Atom,title: "Quantum Processing",description: "Advanced quantum algorithms for complex computational problems"
+    };
     {
-      icon: Cloud,
-    title: "Cloud Quantum, ",description: "Access quantum computing power through our cloud platform"
-   ,  }
-  ]const useCases  = [
+      icon: Brain,title: "AI Integration",description: "Seamless integration with machine learning and AI systems"
+    };
     {
-      title: "Financial Modeling, ",description: "Quantum algorithms for risk assessment and portfolio optimization,";icon: TrendingUp
-   ,
-     };
+      icon: Shield,title: "Quantum Security",description: "Unbreakable encryption using quantum key distribution"
+    },
     {
-      title: "Drug Discovery, ",description: "Molecular simulation and protein folding for pharmaceutical research, ",icon: Brain,  }{
-      title: "Cryptography, ",description: "Quantum-resistant encryption and secure communications, ",icon: Lock,  },
+      icon: Cloud,title: "Cloud Quantum",description: "Access quantum computing power through our cloud platform"
+    }
+  ];
+  const useCases = [
     {
-      title: "Optimization, ",description: "Solving complex logistics and supply chain problems, ",icon: Network,  }
-  ]const technologies  = [
+      title: "Financial Modeling",description: "Quantum algorithms for risk assessment and portfolio optimization",icon: TrendingUp
+    };
+    {
+      title: "Drug Discovery",description: "Molecular simulation and protein folding for pharmaceutical research",icon: Brain
+    };
+    {
+      title: "Cryptography",description: "Quantum-resistant encryption and secure communications",icon: Lock
+    },
+    {
+      title: "Optimization",description: "Solving complex logistics and supply chain problems",icon: Network
+    }
+  ];
+  const technologies = [
     "Quantum Annealing",
     "Quantum Machine Learning",
     "Quantum Cryptography",
     "Quantum Error Correction",
-    "Quantum-Classical Hybrid Systems";
+    "Quantum-Classical Hybrid Systems",
     "Quantum Cloud Infrastructure"
-  ]return (
+  ],
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
         title="Quantum Computing Services - Zion Tech Group"
-        description="Revolutionary quantum computing solutions for complex computational problems. AI integrationquantum security, and cloud quantum services."
+        description="Revolutionary quantum computing solutions for complex computational problems. AI integration, quantum security, and cloud quantum services."
       />
       
       {/* Hero Section */}
@@ -70,11 +79,9 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
         
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
@@ -82,7 +89,7 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
               Revolutionary Technology
             </div>
 
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Solutions
@@ -113,16 +120,13 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
+      {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -133,23 +137,19 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature,
-    index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-cyan-400/30 transition-all duration-200 group"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 group"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.titl,
-    e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -161,11 +161,9 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -176,24 +174,19 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase,
-    index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
-                initial={{ opacity: 0,
-    x: index % 2 === 0 ? -20 : 20,
-     }}whileInView={{ opacity: 1,
-    x: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-400/30 transition-all duration-200"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.titl,
-    e}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 text-lg">{useCase.description}</p>
               </motion.div>
             ))}
@@ -205,11 +198,9 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -220,21 +211,17 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech,
-    index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((tech, index) => (
               <motion.div
                 key={tech}
-                initial={{ opacity: 0,
-    scale: 0.9,  }}whileInView={{ opacity: 1,
-    scale: 1,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover: border-cyan-400/30 transition-all duration-200"
+                initial={{ opacity: 0, scale: 0.9 }};
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-cyan-400/30 transition-all duration-200"
               >
                 <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                <span className="text-white">{tec,
-    h}</span>
+                <span className="text-white">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -245,10 +232,9 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Experience Quantum Computing?
@@ -276,6 +262,6 @@ import { motion } from "framer-moti, on";import { Link } from "react-router-d, o
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default QuantumComputin;g;
+export default QuantumComputing;

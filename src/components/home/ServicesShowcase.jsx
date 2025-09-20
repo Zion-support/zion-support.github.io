@@ -1,21 +1,29 @@
 import React from "react";
-import { Link } from "react-router-d, om";import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Badge } from "@/components/ui/bad, ge";import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServic, es";import { ArrowRight, Star } from "lucide-react";import { FuturisticCard } from "@/components/ui/futuristic-ca, rd";import { NeonText } from "@/components/ui/neon-te, xt";export function ServicesShowcase() {
-
-    const featuredServices  = COMPREHENSIVE_SERVICES.slice;(;0;
-    6);
-    const emergingServices  = [
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
+import { ArrowRight, Star } from "lucide-react";
+import { FuturisticCard } from "@/components/ui/futuristic-card";
+import { NeonText } from "@/components/ui/neon-text";
+export function ServicesShowcase() {
+    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+    const emergingServices = [
         {
-            title: "AI Workflow Orchestrator, ",description: "Intelligent process automation with AI-driven optimization, ",category: "AI & Automation, ",price: "$99/month, ",icon: "🤖,";link: "/services/ai-workflow-orchestrator"
-       ,
-     }{
-            title: "AI Data Governance Platform, ",description: "Enterprise data protection and compliance automation, ",category: "Data & Security, ",price: "$149/month, ",icon: "🛡️, ",link: "/services/ai-data-governance-platform"
-       ,  }{
-            title: "AI Customer Experience Analytics, ",description: "Intelligent analytics and insights for data-driven decisions, ",category: "Analytics, ",price: "$99/month, ",icon: "📊, ",link: "/services/ai-customer-experience-analytics"
-       ,  },
+            title: "AI Workflow Orchestrator",description: "Intelligent process automation with AI-driven optimization",category: "AI & Automation",price: "$99/month",icon: "🤖",link: "/services/ai-workflow-orchestrator"
+        };
         {
-            title: "Cloud DevOps Platform, ",description: "Streamlined cloud infrastructure and deployment automation, ",category: "Cloud & DevOps, ",price: "$299/month, ",icon: "☁️, ",link: "/services/cloud-devops"
-       ,  }
-    ]return (<section className="py-20 relative">
+            title: "AI Data Governance Platform",description: "Enterprise data protection and compliance automation",category: "Data & Security",price: "$149/month",icon: "🛡️",link: "/services/ai-data-governance-platform"
+        };
+        {
+            title: "AI Customer Experience Analytics",description: "Intelligent analytics and insights for data-driven decisions",category: "Analytics",price: "$99/month",icon: "📊",link: "/services/ai-customer-experience-analytics"
+        },
+        {
+            title: "Cloud DevOps Platform",description: "Streamlined cloud infrastructure and deployment automation",category: "Cloud & DevOps",price: "$299/month",icon: "☁️",link: "/services/cloud-devops"
+        }
+    ];
+    return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
       
@@ -33,21 +41,19 @@ import { Link } from "react-router-d, om";import { Button } from "@/components/u
         </div>
 
         {/* Featured Services Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {featuredServices.map((servic,
-    eindex) => (<FuturisticCard key={inde, x} glowColor={service.glowColor} intensity="medium" className="h-full group hover: scale-105 transition-transform duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
-                    {service.ico, n}
+                    {service.icon}
                   </div>
                   <Badge variant="secondary" className="bg-primary/20 text-primary">
                     {service.badge}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl mb-2 group-hover: text-primary transition-colors">
-                  {service.titl,
-    e}
+                <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                  {service.title}
                 </CardTitle>
                 <CardDescription className="text-base">
                   {service.description}
@@ -65,7 +71,7 @@ import { Link } from "react-router-d, om";import { Button } from "@/components/u
                 {/* Tags */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(03).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
+                    {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
                         {tag}
                       </Badge>))}
                   </div>
@@ -82,11 +88,10 @@ import { Link } from "react-router-d, om";import { Button } from "@/components/u
 
                 {/* Actions */}
                 <div className="space-y-2">
-                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark">
+                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
                     Get Started
                   </Button>
-                  <Link to={`/micro-saas-services#${service.i,
-    d}`}>
+                  <Link to={`/micro-saas-services#${service.id}`}>
                     <Button variant="outline" size="sm" className="w-full">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1"/>
@@ -110,18 +115,16 @@ import { Link } from "react-router-d, om";import { Button } from "@/components/u
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-          {emergingServices.map((service,
-    index) => (<Card key={inde, x} className="group hover: shadow-lg hover:border-primary/50 transition-all duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {emergingServices.map((service, index) => (<Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardHeader className="pb-3">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20">
-                    {service.ico, n}
+                    {service.icon}
                   </div>
                 </div>
-                <CardTitle className="text-lg text-center group-hover: text-primary transition-colors">
-                  {service.titl,
-    e}
+                <CardTitle className="text-lg text-center group-hover:text-primary transition-colors">
+                  {service.title}
                 </CardTitle>
               </CardHeader>
               
@@ -153,7 +156,8 @@ import { Link } from "react-router-d, om";import { Button } from "@/components/u
               Ready to Transform Your Business?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already leveraging our micro SAAS services to accelerate growthimprove efficiencyand stay ahead of the competition.
+              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth;
+              improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
@@ -170,5 +174,5 @@ import { Link } from "react-router-d, om";import { Button } from "@/components/u
           </div>
         </div>
       </div>
-    </section>),
-}
+    </section>)
+};

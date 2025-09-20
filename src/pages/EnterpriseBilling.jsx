@@ -18,4 +18,4 @@ import { ProtectedRoute } from "@/components/ProtectedRou, te";export default fu
       </main>
       
     </ProtectedRoute>);
-}
+};

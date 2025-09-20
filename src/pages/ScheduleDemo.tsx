@@ -1,90 +1,99 @@
-import React, { useState  from "react", import { motion } from "framer-moti, on";import { SEO } from "../components/S, EO";import { Calendar, Clock;
-  Users;
-  Video;
-  MessageCircle;
-  Phone;
-  Mail;
-  MapPin;
-  CheckCircle;
-  Star;
-  Zap;
-  Brain;
-  Shield;
-  Cloud;
-  Cpu;
-  Globe;
-  ArrowRight;
-  Play;
-  CalendarDays;
-  Clock3;
-  User;
-  Building;
-  MessageSquare;
-  PhoneCall;
-  Mail as MailIcon;
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { 
+  Calendar,
+  Clock, 
+  Users, 
+  Video, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  CheckCircle,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Globe,
+  ArrowRight,
+  Play,
+  CalendarDays,
+  Clock3,
+  User,
+  Building,
+  MessageSquare,
+  PhoneCall,
+  Mail as MailIcon,
   ExternalLink
-} from "lucide-react";export default function ScheduleDemo() {
-
-  const [selectedServic;e;
-    setSelectedService] = useState('')const [selectedDatesetSelectedDate] = useState('')const [selectedTimesetSelectedTime] = useState('')const [formDatasetFormData] = useState({
-    firstName: ', ',lastName: ', ',email: ', ',company: ', ',phone: ', ',attendees: 1,
-    message: ''
- ,  })const demoServices  = [
+} from "lucide-react";
+export default function ScheduleDemo() {
+  const [selectedService, setSelectedService] = useState('');
+  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedTime, setSelectedTime] = useState('');
+  const [formData, setFormData] = useState({
+    firstName: '',lastName: '',email: '',company: '',phone: '',attendees: 1,message: ''
+  });
+  const demoServices = [
     {
-      id: 'ai-platform, ',name: 'AI Platform Demo, ',description: 'Experience our comprehensive AI platform with real-time demonstrations',
-    icon: Brain,
-    color: 'from-purple-500 to-pink-500, ',duration: '45 min, ',features: ['AI Model TrainingReal-time Analytics, ', 'Custom WorkflowsIntegration Examples'],
-      popular: true,  }{
-      id: 'cybersecurity, ',name: 'Cybersecurity Solutions, ',description: 'See our advanced security platform in action with threat simulation, ',icon: Shield,
-    color: 'from-red-500 to-orange-500, ',duration: '60 min, ',features: ['Threat DetectionIncident Response, ', 'Compliance DashboardSecurity Analytics'],
-      popular: false,  }{
-      id: 'cloud-infrastructure, ',name: 'Cloud Infrastructure, ',description: 'Explore our cloud-native solutions and DevOps automation, ',icon: Cloud,
-    color: 'from-blue-500 to-cyan-500, ',duration: '50 min, ',features: ['Multi-cloud ManagementDevOps Automation, ', 'Cost OptimizationPerformance Monitoring'],
-      popular: true,  }{
-      id: 'quantum-computing, ',name: 'Quantum Computing, ',description: 'Discover quantum algorithms and quantum-classical hybrid solutions, ',icon: Cpu,
-    color: 'from-indigo-500 to-purple-500, ',duration: '75 min, ',features: ['Quantum AlgorithmsHybrid Solutions, ', 'Performance BenchmarksUse Case Examples'],
-      popular: false,  }{
-      id: 'data-analytics, ',name: 'Data Analytics Platform, ',description: 'Visualize and analyze your data with our advanced analytics tools, ',icon: Globe,
-    color: 'from-green-500 to-emerald-500, ',duration: '40 min, ',features: ['Real-time DashboardsPredictive Analytics, ', 'Data VisualizationCustom Reports'],
-      popular: false,  }{
-      id: 'custom-solution, ',name: 'Custom Solution Demo, ',description: 'Tailored demonstration based on your specific business needs, ',icon: Zap,
-    color: 'from-yellow-500 to-orange-500, ',duration: '60 min, ',features: ['Custom WorkflowsIntegration Planning, ', 'ROI AnalysisImplementation Roadmap'],
-      popular: false,  }
-  ]const availableTimes  = [
-    '9: 00 AM9:30 AM, ', '10: 00 AM10:30 AM',
-    '11: 00 AM11:30 AM',
-    '1:00 PM1:30 PM, ', '2: 00 PM2:30 PM, ', '3: 00 PM3:30 PM, ',
-    '4: 00 PM4:30 PM, ', '5: 00 PM'
-  ],
-    const demoBenefits  = [
+      id: 'ai-platform',name: 'AI Platform Demo',description: 'Experience our comprehensive AI platform with real-time demonstrations',icon: Brain,color: 'from-purple-500 to-pink-500',duration: '45 min',features: ['AI Model TrainingReal-time Analytics', 'Custom WorkflowsIntegration Examples'],
+      popular: true
+    };
     {
-      title: 'Personalized Experience, ',description: 'Tailored demonstrations based on your business needs and use cases',
-    icon: User,
-    color: 'text-blue-400'
-   ,  }{
-      title: 'Expert Guidance, ',description: 'Learn from our certified professionals with deep industry expertise, ',icon: Star,
-    color: 'text-yellow-400'
-   ,  }{
-      title: 'Interactive Sessions, ',description: 'Ask questions and explore features in real-time during the demo, ',icon: MessageSquare,
-    color: 'text-green-400'
-   ,  },
+      id: 'cybersecurity',name: 'Cybersecurity Solutions',description: 'See our advanced security platform in action with threat simulation',icon: Shield,color: 'from-red-500 to-orange-500',duration: '60 min',features: ['Threat DetectionIncident Response', 'Compliance DashboardSecurity Analytics'],
+      popular: false
+    };
     {
-      title: 'Follow-up Support, ',description: 'Comprehensive follow-up materials and next steps after your demo, ',icon: CheckCircle,
-    color: 'text-cyan-400'
-   ,  }
-  ]const handleSubmit  = () => {
+      id: 'cloud-infrastructure',name: 'Cloud Infrastructure',description: 'Explore our cloud-native solutions and DevOps automation',icon: Cloud,color: 'from-blue-500 to-cyan-500',duration: '50 min',features: ['Multi-cloud ManagementDevOps Automation', 'Cost OptimizationPerformance Monitoring'],
+      popular: true
+    };
+    {
+      id: 'quantum-computing',name: 'Quantum Computing',description: 'Discover quantum algorithms and quantum-classical hybrid solutions',icon: Cpu,color: 'from-indigo-500 to-purple-500',duration: '75 min',features: ['Quantum AlgorithmsHybrid Solutions', 'Performance BenchmarksUse Case Examples'],
+      popular: false
+    };
+    {
+      id: 'data-analytics',name: 'Data Analytics Platform',description: 'Visualize and analyze your data with our advanced analytics tools',icon: Globe,color: 'from-green-500 to-emerald-500',duration: '40 min',features: ['Real-time DashboardsPredictive Analytics', 'Data VisualizationCustom Reports'],
+      popular: false
+    };
+    {
+      id: 'custom-solution',name: 'Custom Solution Demo',description: 'Tailored demonstration based on your specific business needs',icon: Zap,color: 'from-yellow-500 to-orange-500',duration: '60 min',features: ['Custom WorkflowsIntegration Planning', 'ROI AnalysisImplementation Roadmap'],
+      popular: false
+    }
+  ];
+  const availableTimes = [
+    '9:00 AM9:30 AM', '10:00 AM10:30 AM', '11: 00 AM11:30 AM';
+    '1:00 PM1:30 PM', '2:00 PM2:30 PM', '3: 00 PM3:30 PM',
+    '4:00 PM4:30 PM', '5: 00 PM'
+  ];
+  const demoBenefits = [
+    {
+      title: 'Personalized Experience',description: 'Tailored demonstrations based on your business needs and use cases',icon: User,color: 'text-blue-400'
+    };
+    {
+      title: 'Expert Guidance',description: 'Learn from our certified professionals with deep industry expertise',icon: Star,color: 'text-yellow-400'
+    };
+    {
+      title: 'Interactive Sessions',description: 'Ask questions and explore features in real-time during the demo',icon: MessageSquare,color: 'text-green-400'
+    },
+    {
+      title: 'Follow-up Support',description: 'Comprehensive follow-up materials and next steps after your demo',icon: CheckCircle,color: 'text-cyan-400'
+    }
+  ];
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Demo request submitted:, ', {
-      service: selectedService,
-    date: selectedDat, e,time: selectedTime,
-    ...formData,  })},
+    console.log('Demo request submitted:', {
+      service: selectedService,date: selectedDate,time: selectedTime;
+      ...formData
+    });
+  },
 
-  const handleInputChange  = () => {
-    const { name;
-    value,  } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target,
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       [name]: value
     })),
   };
@@ -92,21 +101,19 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Schedule Demo - Zion Tech Group"
-        description="Schedule a personalized demo of our AIcybersecurity, cloud, and quantum computing solutions. Experience our technology firsthand with expert guidance."
+        description="Schedule a personalized demo of our AI, cybersecurity, cloud, and quantum computing solutions. Experience our technology firsthand with expert guidance."
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Schedule Your Demo
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -114,8 +121,8 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
               demonstration with our experts and discover how Zion Tech Group can transform your business.
             </p>
             
-            {/* Quick Stats *, /}
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-3xl mx-auto">
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl font-bold text-cyan-400">500+</div>
                 <div className="text-sm text-gray-400">Demos Delivered</div>
@@ -137,17 +144,14 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </div>
       </section>
 
-      {/* Demo Services *,
-    /}
+      {/* Demo Services */}
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Demo</h2>
@@ -156,21 +160,17 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {demoServices.map((service,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {demoServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover: border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
                   selectedService === service.id ? 'ring-2 ring-cyan-400/50' : ''
-               ,
-     }`}
+                }`}
                 onClick={() => setSelectedService(service.id)}
               >
                 <div className="p-6">
@@ -194,7 +194,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   </div>
 
                   <div className="space-y-2 mb-4">
-                    {service.features.map((featureidx) => (
+                    {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         {feature}
@@ -205,9 +205,8 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <div className={`w-full py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 ${
                     selectedService === service.id
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-700/50 text-gray-300 hover: bg-slate-600/50'
-                 ,
-     }`}>
+                      : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
+                  }`}>
                     {selectedService === service.id ? 'Selected' : 'Select Demo'}
                   </div>
                 </div>
@@ -221,12 +220,10 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Why Schedule a Demo?</h2>
@@ -235,18 +232,14 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {demoBenefits.map((benefit,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {demoBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="text-center"
               >
                 <div className={`p-4 rounded-xl bg-slate-700/30 mx-auto mb-4 w-16 h-16 flex items-center justify-center`}>
@@ -265,12 +258,10 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="mb-8"
             >
               <h2 className="text-3xl font-bold text-white text-center mb-4">Schedule Your Demo</h2>
@@ -280,17 +271,15 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </motion.div>
 
             <motion.form
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.2,  }}
-              viewport={{ once: true,  }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
               onSubmit={handleSubmit}
               className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
             >
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
-                {/* Date and Time Selection *, /}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* Date and Time Selection */}
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -300,7 +289,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       type="date"
                       value={selectedDate}
                       onChange={(e) => setSelectedDate(e.target.value)}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       required
                     />
                   </div>
@@ -309,14 +298,14 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                       Preferred Time
                     </label>
                     <select
-                      value={selectedTim, e}
+                      value={selectedTime}
                       onChange={(e) => setSelectedTime(e.target.value)}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       required
                     >
                       <option value="">Select a time</option>
                       {availableTimes.map(time => (
-                        <option key={tim, e} value={time}>{time}</option>
+                        <option key={time} value={time}>{time}</option>
                       ))}
                     </select>
                   </div>
@@ -330,19 +319,19 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     required
                   >
                     <option value="">Select a service</option>
                     {demoServices.map(service => (
-                      <option key={service.i, d} value={service.id}>{service.name}</option>
+                      <option key={service.id} value={service.id}>{service.name}</option>
                     ))}
                   </select>
                 </div>
               </div>
 
               {/* Personal Information */}
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     First Name *
@@ -350,9 +339,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <input
                     type="text"
                     name="firstName"
-                    value={formData.firstNam, e}
+                    value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -363,9 +352,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <input
                     type="text"
                     name="lastName"
-                    value={formData.lastNam, e}
+                    value={formData.lastName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -379,9 +368,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <input
                     type="email"
                     name="email"
-                    value={formData.emai, l}
+                    value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -392,9 +381,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <input
                     type="text"
                     name="company"
-                    value={formData.compan, y}
+                    value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -408,9 +397,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <input
                     type="tel"
                     name="phone"
-                    value={formData.phon, e}
+                    value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -419,10 +408,9 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   </label>
                   <select
                     name="attendees"
-                    value={formData.attendee,
-    s}
+                    value={formData.attendees}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                       <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
@@ -440,8 +428,8 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={4}
-                  placeholder="Tell us about your specific needsquestions, or any special requirements for the demo..."
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  placeholder="Tell us about your specific needs, questions, or any special requirements for the demo..."
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
 
@@ -459,16 +447,14 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </div>
       </section>
 
-      {/* Contact Information *,
-    /}
+      {/* Contact Information */}
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-8">Need Immediate Assistance?</h2>
@@ -516,5 +502,5 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

@@ -1,214 +1,232 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, ShieldCheck, Sparkles, Crown, Flame, Gauge, GitFork, Server, Smartphone, Database, Network, Clock, Truck, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, BarChart3, PenTool, Key, Globe2, Car, Home } from "lucide-react";import React, { useEffect, useState  from "react";
-import { Link } from "react-router-d, om";import { ThemeToggle } from "../components/ThemeTogg, le";export function AppHeader() {
-
-  const [mobileMenuOpe;n;
-    setMobileMenuOpen] = useState(false);
-  const [searchQuery;
-    setSearchQuery] = useState('')const [servicesDropdownOpensetServicesDropdownOpen] = useState(false)const [solutionsDropdownOpen;
-    setSolutionsDropdownOpen] = useState(false);
-  const [resourcesDropdownOpen;
-    setResourcesDropdownOpen] = useState(false);
-  const [scrolled;
-    setScrolled] = useState(false);
-  const [isSearching;
-    setIsSearching] = useState(false);
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, ShieldCheck, Sparkles, Crown, Flame, Gauge, GitFork, Server, Smartphone, Database, Network, Clock, Truck, Factory, City, CheckCircle, ArrowUpRight, Play, MailIcon, BarChart3, PenTool, Key, Globe2, Car, Home } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ThemeToggle } from "../components/ThemeToggle";
+export function AppHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
-    const handleScroll  = () => {
-      setScrolled(window.scrollY > 1;0);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
     },
 
-    window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll'; handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const handleSearch  = async (e: React.FormEvent) => {
-    e.preventDefault(),
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
       try {
-        await new Promise(resolve => setTimeout(resolve;
-    1000); ), // Simulate search
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+        await new Promise(resolve => setTimeout(resolve, 1000)), // Simulate search
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`,
       } finally {
         setIsSearching(false);
       }
     }
   },
 
-  const navigation  = [
-    { name: 'Home, ', href: '/,'; current: true,
-     };
-    { name: 'Services, ', href: '/services, ', current: false,
-    hasDropdown: true,  }{ name: 'Solutions, ', href: '/solutions, ', current: false,
-    hasDropdown: true,  }{ name: 'Pricing, ', href: '/pricing-guide-2030, ', current: false,  }{ name: 'Resources, ', href: '/resources, ', current: false,
-    hasDropdown: true,  }{ name: 'About, ', href: '/about, ', current: false,  },
-    { name: 'Contact, ', href: '/contact, ', current: false,  }
-  ]const services  = [
+  const navigation = [
+    { name: 'Home', href: '/', current: true };
+    { name: 'Services', href: '/services', current: false, hasDropdown: true };
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true };
+    { name: 'Pricing', href: '/pricing-guide-2030', current: false };
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true };
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false }
+  ];
+  const services = [
     // AI & Business Intelligence
     { 
-      name: 'Innovative Micro SAAS 2025, ',href: '/innovative-micro-saas-services-2025',
-    icon: Rocket,
-    description: 'Cutting-edge AI Services, ',featured: tru, e,color: 'from-purple-500 to-pink-500'
-   ,  }{ 
-      name: 'AI Business Intelligence, ',href: '/services/ai-business-intelligence, ',icon: Brain,
-    description: 'Machine Learning & Data Science, ',featured: tru, e,color: 'from-purple-500 to-cyan-500'
-   ,  }{ 
-      name: 'AI Autonomous Supply Chain, ',href: '/services/ai-autonomous-supply-chain-orchestrator, ',icon: Truck,
-    description: 'Autonomous Supply Chain Management, ',featured: tru, e,color: 'from-blue-500 to-indigo-500'
-   ,  }{ 
-      name: 'AI Autonomous Sales Intelligence, ',href: '/services/ai-autonomous-sales-intelligence, ',icon: Target,
-    description: 'Autonomous Sales & Lead Generation, ',featured: tru, e,color: 'from-green-500 to-emerald-500'
-   ,  }// AI & Healthcare
+      name: 'Innovative Micro SAAS 2025',href: '/innovative-micro-saas-services-2025',icon: Rocket,description: 'Cutting-edge AI Services',featured: true,color: 'from-purple-500 to-pink-500'
+    };
     { 
-      name: 'AI Healthcare Platform, ',href: '/services/ai-healthcare-platform, ',icon: Heart,
-    description: 'Medical AI & Diagnostics, ',featured: tru, e,color: 'from-red-500 to-pink-500'
-   ,  }{ 
-      name: 'Quantum AI Drug Discovery, ',href: '/services/quantum-ai-drug-discovery-platform, ',icon: Atom,
-    description: 'Quantum Drug Discovery, ',featured: tru, e,color: 'from-purple-500 to-pink-500'
-   ,  }// AI & Legal Tech
+      name: 'AI Business Intelligence',href: '/services/ai-business-intelligence',icon: Brain,description: 'Machine Learning & Data Science',featured: true,color: 'from-purple-500 to-cyan-500'
+    };
     { 
-      name: 'AI Legal Contract Analyzer, ',href: '/services/ai-autonomous-legal-contract-analyzer, ',icon: Scale,
-    description: 'Autonomous Legal Analysis, ',featured: tru, e,color: 'from-blue-500 to-indigo-500'
-   ,  }// AI & Content
+      name: 'AI Autonomous Supply Chain',href: '/services/ai-autonomous-supply-chain-orchestrator',icon: Truck,description: 'Autonomous Supply Chain Management',featured: true,color: 'from-blue-500 to-indigo-500'
+    };
     { 
-      name: 'AI Creative Studio, ',href: '/services/ai-autonomous-creative-studio, ',icon: PenTool,
-    description: 'Autonomous Content Creation, ',featured: tru, e,color: 'from-orange-500 to-red-500'
-   ,  }{ 
-      name: 'AI Content Creation, ',href: '/services/ai-content-creation, ',icon: FileText,
-    description: 'Content Generation & Optimization, ',featured: tru, e,color: 'from-blue-500 to-indigo-500'
-   ,  }// AI & Customer Support
+      name: 'AI Autonomous Sales Intelligence',href: '/services/ai-autonomous-sales-intelligence',icon: Target,description: 'Autonomous Sales & Lead Generation',featured: true,color: 'from-green-500 to-emerald-500'
+    };
+    // AI & Healthcare
     { 
-      name: 'AI Customer Success Platform, ',href: '/services/ai-autonomous-customer-success-platform, ',icon: MessageCircle,
-    description: 'Autonomous Customer Success, ',featured: tru, e,color: 'from-blue-500 to-purple-500'
-   ,  }{ 
-      name: 'AI Customer Support, ',href: '/services/ai-customer-support, ',icon: HelpCircle,
-    description: 'AI-Powered Support, ',featured: tru, e,color: 'from-green-500 to-blue-500'
-   ,  }// AI & Research
+      name: 'AI Healthcare Platform',href: '/services/ai-healthcare-platform',icon: Heart,description: 'Medical AI & Diagnostics',featured: true,color: 'from-red-500 to-pink-500'
+    };
     { 
-      name: 'AI Research Assistant, ',href: '/services/ai-autonomous-research-assistant, ',icon: BookOpen,
-    description: 'Autonomous Research Automation, ',featured: tru, e,color: 'from-purple-500 to-violet-500'
-   ,  }// AI & Education
+      name: 'Quantum AI Drug Discovery',href: '/services/quantum-ai-drug-discovery-platform',icon: Atom,description: 'Quantum Drug Discovery',featured: true,color: 'from-purple-500 to-pink-500'
+    };
+    // AI & Legal Tech
     { 
-      name: 'AI Education Platform, ',href: '/services/ai-autonomous-education-platform, ',icon: Users,
-    description: 'Autonomous Learning Management, ',featured: tru, e,color: 'from-blue-500 to-indigo-500'
-   ,  }// AI & HR
+      name: 'AI Legal Contract Analyzer',href: '/services/ai-autonomous-legal-contract-analyzer',icon: Scale,description: 'Autonomous Legal Analysis',featured: true,color: 'from-blue-500 to-indigo-500'
+    };
+    // AI & Content
     { 
-      name: 'AI HR Platform, ',href: '/services/ai-autonomous-hr-platform, ',icon: Users,
-    description: 'Autonomous HR Management, ',featured: tru, e,color: 'from-indigo-500 to-blue-500'
-   ,  }// AI & Entertainment
+      name: 'AI Creative Studio',href: '/services/ai-autonomous-creative-studio',icon: PenTool,description: 'Autonomous Content Creation',featured: true,color: 'from-orange-500 to-red-500'
+    };
     { 
-      name: 'AI Entertainment Platform, ',href: '/services/ai-autonomous-entertainment-platform, ',icon: Play,
-    description: 'Autonomous Entertainment Creation, ',featured: tru, e,color: 'from-purple-500 to-pink-500'
-   ,  }// AI & Metaverse
+      name: 'AI Content Creation',href: '/services/ai-content-creation',icon: FileText,description: 'Content Generation & Optimization',featured: true,color: 'from-blue-500 to-indigo-500'
+    };
+    // AI & Customer Support
     { 
-      name: 'AI Metaverse Platform, ',href: '/services/ai-autonomous-metaverse-platform, ',icon: Globe,
-    description: 'Autonomous Virtual Worlds, ',featured: tru, e,color: 'from-purple-500 to-indigo-500'
-   ,  }// AI & Space Tech
+      name: 'AI Customer Success Platform',href: '/services/ai-autonomous-customer-success-platform',icon: MessageCircle,description: 'Autonomous Customer Success',featured: true,color: 'from-blue-500 to-purple-500'
+    };
     { 
-      name: 'AI Space Technology, ',href: '/services/ai-autonomous-space-technology-platform, ',icon: Rocket,
-    description: 'Autonomous Space Operations, ',featured: tru, e,color: 'from-indigo-500 to-purple-500'
-   ,  }// AI & Green Tech
+      name: 'AI Customer Support',href: '/services/ai-customer-support',icon: HelpCircle,description: 'AI-Powered Support',featured: true,color: 'from-green-500 to-blue-500'
+    };
+    // AI & Research
     { 
-      name: 'AI Green Technology, ',href: '/services/ai-autonomous-green-technology-platform, ',icon: Leaf,
-    description: 'Autonomous Environmental Management, ',featured: tru, e,color: 'from-green-500 to-emerald-500'
-   ,  }// Cybersecurity
+      name: 'AI Research Assistant',href: '/services/ai-autonomous-research-assistant',icon: BookOpen,description: 'Autonomous Research Automation',featured: true,color: 'from-purple-500 to-violet-500'
+    };
+    // AI & Education
     { 
-      name: 'AI Autonomous Cybersecurity, ',href: '/services/ai-autonomous-cybersecurity-operations, ',icon: ShieldCheck,
-    description: 'Autonomous Security Operations, ',featured: tru, e,color: 'from-red-500 to-orange-500'
-   ,  }{ 
-      name: 'AI Cybersecurity, ',href: '/services/ai-cybersecurity, ',icon: Shield,
-    description: 'AI-Powered Security, ',featured: tru, e,color: 'from-green-500 to-blue-500'
-   ,  }// Quantum Computing
+      name: 'AI Education Platform',href: '/services/ai-autonomous-education-platform',icon: Users,description: 'Autonomous Learning Management',featured: true,color: 'from-blue-500 to-indigo-500'
+    };
+    // AI & HR
     { 
-      name: 'Quantum AI Trading Platform, ',href: '/services/quantum-ai-trading-platform, ',icon: Atom,
-    description: 'Quantum-Powered Trading, ',featured: tru, e,color: 'from-purple-500 to-pink-500'
-   ,  }{ 
-      name: 'Quantum Computing, ',href: '/services/quantum-computing, ',icon: Atom,
-    description: 'Quantum AI & Optimization, ',featured: tru, e,color: 'from-purple-500 to-pink-500'
-   ,  }// Blockchain & Web3
+      name: 'AI HR Platform',href: '/services/ai-autonomous-hr-platform',icon: Users,description: 'Autonomous HR Management',featured: true,color: 'from-indigo-500 to-blue-500'
+    };
+    // AI & Entertainment
     { 
-      name: 'Blockchain Governance Platform, ',href: '/services/blockchain-autonomous-governance-platform, ',icon: GitFork,
-    description: 'Decentralized Autonomous Governance, ',featured: tru, e,color: 'from-yellow-500 to-orange-500'
-   ,  }// Cloud & DevOps
+      name: 'AI Entertainment Platform',href: '/services/ai-autonomous-entertainment-platform',icon: Play,description: 'Autonomous Entertainment Creation',featured: true,color: 'from-purple-500 to-pink-500'
+    };
+    // AI & Metaverse
     { 
-      name: 'Cloud Infrastructure, ',href: '/services/cloud-devops, ',icon: Cloud,
-    description: 'Cloud & DevOps Solutions, ',featured: tru, e,color: 'from-blue-500 to-cyan-500'
-   ,  }// IoT & Edge Computing
+      name: 'AI Metaverse Platform',href: '/services/ai-autonomous-metaverse-platform',icon: Globe,description: 'Autonomous Virtual Worlds',featured: true,color: 'from-purple-500 to-indigo-500'
+    };
+    // AI & Space Tech
     { 
-      name: 'IoT Edge Computing, ',href: '/services/iot-edge-computing, ',icon: Cpu,
-    description: 'IoT & Real-time Processing, ',featured: tru, e,color: 'from-blue-500 to-cyan-500'
-   ,  }// Digital Twin
+      name: 'AI Space Technology',href: '/services/ai-autonomous-space-technology-platform',icon: Rocket,description: 'Autonomous Space Operations',featured: true,color: 'from-indigo-500 to-purple-500'
+    };
+    // AI & Green Tech
     { 
-      name: 'Digital Twin Platform, ',href: '/services/digital-twin, ',icon: Globe,
-    description: 'Virtual Replicas & Simulation, ',featured: tru, e,color: 'from-blue-500 to-indigo-500'
-   ,  }// Data Analytics
+      name: 'AI Green Technology',href: '/services/ai-autonomous-green-technology-platform',icon: Leaf,description: 'Autonomous Environmental Management',featured: true,color: 'from-green-500 to-emerald-500'
+    };
+    // Cybersecurity
     { 
-      name: 'Data Analytics, ',href: '/services/data-analytics, ',icon: BarChart3,
-    description: 'Advanced Analytics & BI, ',featured: tru, e,color: 'from-green-500 to-emerald-500'
-   ,  },
+      name: 'AI Autonomous Cybersecurity',href: '/services/ai-autonomous-cybersecurity-operations',icon: ShieldCheck,description: 'Autonomous Security Operations',featured: true,color: 'from-red-500 to-orange-500'
+    };
+    { 
+      name: 'AI Cybersecurity',href: '/services/ai-cybersecurity',icon: Shield,description: 'AI-Powered Security',featured: true,color: 'from-green-500 to-blue-500'
+    };
+    // Quantum Computing
+    { 
+      name: 'Quantum AI Trading Platform',href: '/services/quantum-ai-trading-platform',icon: Atom,description: 'Quantum-Powered Trading',featured: true,color: 'from-purple-500 to-pink-500'
+    };
+    { 
+      name: 'Quantum Computing',href: '/services/quantum-computing',icon: Atom,description: 'Quantum AI & Optimization',featured: true,color: 'from-purple-500 to-pink-500'
+    };
+    // Blockchain & Web3
+    { 
+      name: 'Blockchain Governance Platform',href: '/services/blockchain-autonomous-governance-platform',icon: GitFork,description: 'Decentralized Autonomous Governance',featured: true,color: 'from-yellow-500 to-orange-500'
+    };
+    // Cloud & DevOps
+    { 
+      name: 'Cloud Infrastructure',href: '/services/cloud-devops',icon: Cloud,description: 'Cloud & DevOps Solutions',featured: true,color: 'from-blue-500 to-cyan-500'
+    };
+    // IoT & Edge Computing
+    { 
+      name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Cpu,description: 'IoT & Real-time Processing',featured: true,color: 'from-blue-500 to-cyan-500'
+    };
+    // Digital Twin
+    { 
+      name: 'Digital Twin Platform',href: '/services/digital-twin',icon: Globe,description: 'Virtual Replicas & Simulation',featured: true,color: 'from-blue-500 to-indigo-500'
+    };
+    // Data Analytics
+    { 
+      name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Advanced Analytics & BI',featured: true,color: 'from-green-500 to-emerald-500'
+    },
     // IT Infrastructure
     { 
-      name: 'IT Infrastructure, ',href: '/services/it-infrastructure, ',icon: Server,
-    description: 'Infrastructure & Management, ',featured: tru, e,color: 'from-gray-500 to-slate-500'
-   ,  }
-  ]const solutions  = [
+      name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Infrastructure & Management',featured: true,color: 'from-gray-500 to-slate-500'
+    }
+  ];
+  const solutions = [
     {
-      title: 'Enterprise Solutions, ',items: [
-        { name: 'Digital Transformation, ', href: '/solutions/digital-transformation,'; description: 'Complete enterprise digital transformation',
-     }{ name: 'Cloud Migration, ', href: '/solutions/cloud-migration, ', description: 'Seamless cloud migration strategies',  }{ name: 'Data Strategy, ', href: '/solutions/data-strategy, ', description: 'Comprehensive data strategy implementation',  },
-        { name: 'AI Implementation, ', href: '/solutions/ai-implementation, ', description: 'End-to-end AI implementation',  }
+      title: 'Enterprise Solutions',items: [
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation', description: 'Complete enterprise digital transformation' };
+        { name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Seamless cloud migration strategies' };
+        { name: 'Data Strategy', href: '/solutions/data-strategy', description: 'Comprehensive data strategy implementation' },
+        { name: 'AI Implementation', href: '/solutions/ai-implementation', description: 'End-to-end AI implementation' }
       ]
-    }{
-      title: 'Industry Solutions, ',items: [
-        { name: 'Healthcare AI, ', href: '/solutions/healthcare-ai, ', description: 'AI solutions for healthcare industry',  }{ name: 'Financial Services, ', href: '/solutions/financial-services, ', description: 'FinTech and banking solutions',  }{ name: 'Manufacturing, ', href: '/solutions/manufacturing, ', description: 'Smart manufacturing solutions',  },
-        { name: 'Retail & E-commerce, ', href: '/solutions/retail-ecommerce, ', description: 'Retail transformation solutions',  }
+    };
+    {
+      title: 'Industry Solutions',items: [
+        { name: 'Healthcare AI', href: '/solutions/healthcare-ai', description: 'AI solutions for healthcare industry' };
+        { name: 'Financial Services', href: '/solutions/financial-services', description: 'FinTech and banking solutions' };
+        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing solutions' },
+        { name: 'Retail & E-commerce', href: '/solutions/retail-ecommerce', description: 'Retail transformation solutions' }
       ]
-    }{
-      title: 'Technology Solutions, ',items: [
-        { name: 'Cybersecurity, ', href: '/solutions/cybersecurity, ', description: 'Comprehensive security solutions',  }{ name: 'Blockchain, ', href: '/solutions/blockchain, ', description: 'Blockchain and Web3 solutions',  }{ name: 'IoT Solutions, ', href: '/solutions/iot, ', description: 'Internet of Things solutions',  },
-        { name: 'Quantum Computing, ', href: '/solutions/quantum-computing, ', description: 'Quantum computing applications',  }
+    };
+    {
+      title: 'Technology Solutions',items: [
+        { name: 'Cybersecurity', href: '/solutions/cybersecurity', description: 'Comprehensive security solutions' };
+        { name: 'Blockchain', href: '/solutions/blockchain', description: 'Blockchain and Web3 solutions' };
+        { name: 'IoT Solutions', href: '/solutions/iot', description: 'Internet of Things solutions' },
+        { name: 'Quantum Computing', href: '/solutions/quantum-computing', description: 'Quantum computing applications' }
       ]
     }
-  ]const resources  = [
+  ];
+  const resources = [
     {
-      title: 'Learning Resources, ',items: [
-        { name: 'Documentation, ', href: '/docs,'; description: 'Technical documentation and guides',
-     }{ name: 'API Reference, ', href: '/docs/api, ', description: 'Complete API documentation',  }{ name: 'SDKs & Libraries, ', href: '/docs/sdks, ', description: 'Software development kits',  },
-        { name: 'Code Examples, ', href: '/docs/examples, ', description: 'Code samples and tutorials',  }
+      title: 'Learning Resources',items: [
+        { name: 'Documentation', href: '/docs', description: 'Technical documentation and guides' };
+        { name: 'API Reference', href: '/docs/api', description: 'Complete API documentation' };
+        { name: 'SDKs & Libraries', href: '/docs/sdks', description: 'Software development kits' },
+        { name: 'Code Examples', href: '/docs/examples', description: 'Code samples and tutorials' }
       ]
-    }{
-      title: 'Research & Insights, ',items: [
-        { name: 'Case Studies, ', href: '/case-studies, ', description: 'Success stories and implementations',  }{ name: 'White Papers, ', href: '/white-papers, ', description: 'In-depth technical research',  }{ name: 'Blog, ', href: '/blog, ', description: 'Latest news and insights',  },
-        { name: 'Webinars, ', href: '/webinars, ', description: 'Educational webinars and events',  }
+    };
+    {
+      title: 'Research & Insights',items: [
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and implementations' };
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth technical research' };
+        { name: 'Blog', href: '/blog', description: 'Latest news and insights' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational webinars and events' }
       ]
-    }{
-      name: 'White Papers, ',href: '/white-papers, ',icon: FileText,
-    description: 'In-depth research and analysis, ',featured: true,  }{
-      name: 'Webinars, ',href: '/webinars, ',icon: Users,
-    description: 'Expert-led learning sessions, ',featured: true,  }{
-      name: 'Documentation, ',href: '/docs, ',icon: Code,
-    description: 'Technical guides and APIs, ',featured: true,  }{
-      name: 'FAQ & Support, ',href: '/faq, ',icon: HelpCircle,
-    description: 'Get help and answers, ',featured: true,  }{
-      name: 'Pricing Guide 2025, ',href: '/pricing-guide-2025, ',icon: DollarSign,
-    description: 'Complete pricing information, ',featured: true,  }
-  ]const quickLinks  = [
-    { name: 'Marketplace, ', href: '/marketplace,'; icon: ShoppingCart,
-     };
-    { name: 'Request Quote, ', href: '/request-quote, ', icon: MessageCircle,  }{ name: 'Pricing, ', href: '/pricing, ', icon: DollarSign,  }{ name: 'Careers, ', href: '/careers, ', icon: Users,  }{ name: 'Partners, ', href: '/partners, ', icon: HeartHandshake,  }{ name: 'Privacy, ', href: '/privacy, ', icon: Shield,  },
-    { name: 'Terms, ', href: '/terms, ', icon: BookOpen,  }
-  ]const contactInfo  = {
-    phone: '+1 302 464 0950, ',email: 'kleber@ziontechgroup.com,';address: '364 E Main St STE 1008 Middletown DE 19709'
- ,
-     }return (
+    };
+    {
+      name: 'White Papers',href: '/white-papers',icon: FileText,description: 'In-depth research and analysis',featured: true
+    };
+    {
+      name: 'Webinars',href: '/webinars',icon: Users,description: 'Expert-led learning sessions',featured: true
+    };
+    {
+      name: 'Documentation',href: '/docs',icon: Code,description: 'Technical guides and APIs',featured: true
+    };
+    {
+      name: 'FAQ & Support',href: '/faq',icon: HelpCircle,description: 'Get help and answers',featured: true
+    };
+    {
+      name: 'Pricing Guide 2025',href: '/pricing-guide-2025',icon: DollarSign,description: 'Complete pricing information',featured: true
+    }
+  ];
+  const quickLinks = [
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart };
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle };
+    { name: 'Pricing', href: '/pricing', icon: DollarSign };
+    { name: 'Careers', href: '/careers', icon: Users };
+    { name: 'Partners', href: '/partners', icon: HeartHandshake };
+    { name: 'Privacy', href: '/privacy', icon: Shield },
+    { name: 'Terms', href: '/terms', icon: BookOpen }
+  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+  return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50 dark: bg-gray-900/95 dark:border-gray-800/50' 
         : 'bg-transparent'
-   ,  }`}>
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo ,
-    */}
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -221,17 +239,18 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md: flex space-x-8">
+          <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <div key={item.nam,
-    e} className="relative">
+              <div key={item.name} className="relative">
                 <Link
                   to={item.href}
                   className="text-gray-700 hover: text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
                   onMouseEnter={() => {
                     if (item.hasDropdown) {
-                      if (item.name === 'Services') setServicesDropdownOpen(true),
-    if (item.name === 'Solutions') setSolutionsDropdownOpen(true)if (item.name === 'Resources') setResourcesDropdownOpen(true)}
+                      if (item.name === 'Services') setServicesDropdownOpen(true);
+                      if (item.name === 'Solutions') setSolutionsDropdownOpen(true);
+                      if (item.name === 'Resources') setResourcesDropdownOpen(true)
+                    }
                   }}
                 >
                   {item.name}
@@ -241,33 +260,33 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
                 {/* Services Dropdown */}
                 {item.name === 'Services' && servicesDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 w-screen max-w-6xl bg-white dark: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2"
+                    className="absolute top-full left-0 w-screen max-w-6xl bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2"
                     onMouseLeave={() => setServicesDropdownOpen(false)}
                   >
-                    <div className="p-6 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {services.map((service) => (
                         <Link
-                          key={service.nam, e}
+                          key={service.name}
                           to={service.href}
-                          className="group p-4 rounded-lg hover: bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                          className="group p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
                         >
                           <div className="flex items-center space-x-3">
-                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.colo, r} flex items-center justify-center group-hover: scale-110 transition-transform duration-200, `}>
+                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
                               <service.icon className="w-5 h-5 text-white" />
                             </div>
                             <div className="flex-1">
-                              <h3 className="font-semibold text-gray-900 dark: text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
-                                {service.nam, e}
+                              <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                                {service.name}
                               </h3>
-                              <p className="text-sm text-gray-600 dark: text-gray-400">
-                                {service.descriptio, n}
+                              <p className="text-sm text-gray-600 dark:text-gray-400">
+                                {service.description}
                               </p>
                             </div>
                           </div>
                         </Link>
                       ))}
                     </div>
-                    <div className="border-t border-gray-200 dark: border-gray-800 p-4">
+                    <div className="border-t border-gray-200 dark:border-gray-800 p-4">
                       <Link
                         to="/services"
                         className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
@@ -277,32 +296,31 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
                       </Link>
                     </div>
                   </div>
-                , )}
+                )}
 
                 {/* Solutions Dropdown */}
                 {item.name === 'Solutions' && solutionsDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 w-80 bg-white dark: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2"
+                    className="absolute top-full left-0 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2"
                     onMouseLeave={() => setSolutionsDropdownOpen(false)}
                   >
                     <div className="p-4">
-                      {solutions.map((section,
-    sectionIndex) => (
+                      {solutions.map((section, sectionIndex) => (
                         <div key={section.title} className={sectionIndex > 0 ? 'mt-6' : ''}>
-                          <h3 className="text-sm font-semibold text-gray-900 dark: text-white mb-2">
-                            {section.titl, e}
+                          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                            {section.title}
                           </h3>
                           {section.items.map((solution) => (
                             <Link
                               key={solution.name}
                               to={solution.href}
-                              className="block p-2 rounded hover: bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+                              className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
                             >
                               <div className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                                {solution.nam, e}
+                                {solution.name}
                               </div>
-                              <div className="text-sm text-gray-600 dark: text-gray-400">
-                                {solution.descriptio, n}
+                              <div className="text-sm text-gray-600 dark:text-gray-400">
+                                {solution.description}
                               </div>
                             </Link>
                           ))}
@@ -315,28 +333,26 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
                 {/* Resources Dropdown */}
                 {item.name === 'Resources' && resourcesDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 w-80 bg-white dark: bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2"
+                    className="absolute top-full left-0 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2"
                     onMouseLeave={() => setResourcesDropdownOpen(false)}
                   >
                     <div className="p-4">
-                      {resources.map((section,
-    sectionIndex) => (
+                      {resources.map((section, sectionIndex) => (
                         <div key={section.title} className={sectionIndex > 0 ? 'mt-6' : ''}>
-                          <h3 className="text-sm font-semibold text-gray-900 dark: text-white mb-2">
-                            {section.titl, e}
+                          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                            {section.title}
                           </h3>
                           {section.items.map((resource) => (
                             <Link
                               key={resource.name}
                               to={resource.href}
-                              className="block p-2 rounded hover: bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+                              className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
                             >
                               <div className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                                {resource.nam, e}
+                                {resource.name}
                               </div>
-                              <div className="text-sm text-gray-600 dark: text-gray-400">
-                                {resource.descriptio,
-    n}
+                              <div className="text-sm text-gray-600 dark:text-gray-400">
+                                {resource.description}
                               </div>
                             </Link>
                           ))}
@@ -349,23 +365,23 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
             ))}
           </nav>
 
-          {/* Right side - SearchTheme, Contact */}
+          {/* Right side - Search, Theme, Contact */}
           <div className="flex items-center space-x-4">
             {/* Search */}
-            <form onSubmit={handleSearch} className="hidden lg: flex relative">
+            <form onSubmit={handleSearch} className="hidden lg:flex relative">
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchQuer, y}
+                value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark: bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white"
+                className="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
               {isSearching && (
                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
                 </div>
-              , )}
+              )}
             </form>
 
             {/* Theme Toggle */}
@@ -374,22 +390,22 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
             {/* Contact Button */}
             <Link
               to="/contact"
-              className="hidden md: inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
+              className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
             >
               <Phone className="w-4 h-4 mr-2" />
               Contact Us
             </Link>
 
-            {/* Mobile menu button *, /}
+            {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
             >
               {mobileMenuOpen ? (
                 <X className="block h-6 w-6" />
               ) : (
                 <Menu className="block h-6 w-6" />
-              , )}
+              )}
             </button>
           </div>
         </div>
@@ -397,26 +413,26 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md: hidden">
+        <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-            {/* Mobile Search *, /}
+            {/* Mobile Search */}
             <form onSubmit={handleSearch} className="relative mb-4">
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark: bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white"
+                className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
             </form>
 
-            {/* Mobile Navigation *, /}
+            {/* Mobile Navigation */}
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className="block px-3 py-2 text-base font-medium text-gray-700 dark: text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
+                className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -426,7 +442,7 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
             {/* Mobile Contact Button */}
             <Link
               to="/contact"
-              className="mt-4 block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
+              className="mt-4 block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
               onClick={() => setMobileMenuOpen(false)}
             >
               <Phone className="w-4 h-4 inline mr-2" />
@@ -436,5 +452,5 @@ import { Link } from "react-router-d, om";import { ThemeToggle } from "../compon
         </div>
       )}
     </header>
-  ),
-}
+  );
+};

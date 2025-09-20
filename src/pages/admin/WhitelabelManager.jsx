@@ -87,4 +87,4 @@ import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelR
       </main>
       
     </>);
-}
+};

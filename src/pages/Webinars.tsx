@@ -1,86 +1,80 @@
 
 import React from "react";
-import { SEO } from "../components/S, EO";import { motion } from "framer-moti, on";import { Play, Calendar;
-  Clock;
-  Users;
-  Video;
-  Headphones;
-  BookOpen;
-  ArrowRight;
-  Star;
-  ExternalLink;
-  Clock3;
-  User;
-  Tag;
-  Download;
-  Share2;
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
+import { 
+  Play,
+  Calendar, 
+  Clock, 
+  Users, 
+  Video, 
+  Headphones, 
+  BookOpen, 
+  ArrowRight, 
+  Star, 
+  ExternalLink,
+  Clock3,
+  User,
+  Tag,
+  Download,
+  Share2,
   Bookmark
-} from "lucide-react";export const Webinars: React.FC  = () => {
+} from "lucide-react";
+export const Webinars: React.FC = () => {
   const webinars = [
     {
-      i,
-    d;: ;1;
-    title: 'AI-Powered Business Transformation: From Strategy to Implementation, ',description: 'Join industry experts as they discuss practical strategies for implementing AI solutions that drive real business value., ',category: 'AI & Business, ',speaker: 'Dr. Sarah Chen, ',date: '2025-02-15, ',time: '14:00 EST, ',duration: '60 min, ',attendees: 125, 0,featured: tru, e,status: 'upcoming, ',thumbnail: '/images/webinars/ai-business-transformation.jpg, ',tags: ['AIBusiness Strategy, ', 'Digital Transformation']
+      id: 1,title: 'AI-Powered Business Transformation: From Strategy to Implementation',description: 'Join industry experts as they discuss practical strategies for implementing AI solutions that drive real business value.',category: 'AI & Business',speaker: 'Dr. Sarah Chen',date: '2025-02-15',time: '14:00 EST',duration: '60 min',attendees: 1250,featured: true,status: 'upcoming',thumbnail: '/images/webinars/ai-business-transformation.jpg',tags: ['AIBusiness Strategy', 'Digital Transformation']
     },
     {
-      id: 2,
-    title: 'Quantum Computing: Breaking Down the Hype vs. Reality, ',description: 'A deep dive into current quantum computing capabilities and what businesses can realistically expect in the next 5 years., ',category: 'Quantum Computing, ',speaker: 'Dr. James Wilson, ',date: '2025-02-20, ',time: '15:30 EST, ',duration: '90 min, ',attendees: 89, 0,featured: tru, e,status: 'upcoming, ',thumbnail: '/images/webinars/quantum-computing-reality.jpg, ',tags: ['Quantum ComputingEmerging Tech, ', 'Future Trends']
+      id: 2,title: 'Quantum Computing: Breaking Down the Hype vs. Reality',description: 'A deep dive into current quantum computing capabilities and what businesses can realistically expect in the next 5 years.',category: 'Quantum Computing',speaker: 'Dr. James Wilson',date: '2025-02-20',time: '15:30 EST',duration: '90 min',attendees: 890,featured: true,status: 'upcoming',thumbnail: '/images/webinars/quantum-computing-reality.jpg',tags: ['Quantum ComputingEmerging Tech', 'Future Trends']
     },
     {
-      id: 3,
-    title: 'Cybersecurity in the AI Era: New Threat, s, New Solutions',
-      description: 'Explore emerging cybersecurity challenges posed by AI and learn about cutting-edge defense strategies., ',category: 'Cybersecurity, ',speaker: 'Marcus Rodriguez, ',date: '2025-02-25, ',time: '13:00 EST, ',duration: '75 min, ',attendees: 1100,
-    featured: tru, e,status: 'upcoming, ',thumbnail: '/images/webinars/ai-cybersecurity.jpg, ',tags: ['CybersecurityAI Security, ', 'Threat Prevention']
+      id: 3,title: 'Cybersecurity in the AI Era: New Threats, New Solutions',
+      description: 'Explore emerging cybersecurity challenges posed by AI and learn about cutting-edge defense strategies.',category: 'Cybersecurity',speaker: 'Marcus Rodriguez',date: '2025-02-25',time: '13:00 EST',duration: '75 min',attendees: 1100,featured: true,status: 'upcoming',thumbnail: '/images/webinars/ai-cybersecurity.jpg',tags: ['CybersecurityAI Security', 'Threat Prevention']
     },
     {
-      id: 4,
-    title: 'Cloud-Native AI: Building Scalable Machine Learning Platforms, ',description: 'Learn how to design and deploy AI applications that scale seamlessly in cloud environments., ',category: 'Cloud & DevOps, ',speaker: 'Alex Thompson, ',date: '2025-03-01, ',time: '14:30 EST, ',duration: '60 min, ',attendees: 75, 0,featured: fals, e,status: 'upcoming, ',thumbnail: '/images/webinars/cloud-native-ai.jpg, ',tags: ['Cloud ComputingAI Platforms, ', 'DevOps']
+      id: 4,title: 'Cloud-Native AI: Building Scalable Machine Learning Platforms',description: 'Learn how to design and deploy AI applications that scale seamlessly in cloud environments.',category: 'Cloud & DevOps',speaker: 'Alex Thompson',date: '2025-03-01',time: '14:30 EST',duration: '60 min',attendees: 750,featured: false,status: 'upcoming',thumbnail: '/images/webinars/cloud-native-ai.jpg',tags: ['Cloud ComputingAI Platforms', 'DevOps']
     },
     {
-      id: 5,
-    title: 'Data Analytics Revolution: From Insights to Action, ',description: 'Discover how modern analytics platforms are transforming business decision-making processes., ',category: 'Data Analytics, ',speaker: 'Dr. Emily Watson, ',date: '2025-03-05, ',time: '15:00 EST, ',duration: '60 min, ',attendees: 92, 0,featured: fals, e,status: 'upcoming, ',thumbnail: '/images/webinars/data-analytics-revolution.jpg, ',tags: ['Data AnalyticsBusiness Intelligence, ', 'Decision Making']
+      id: 5,title: 'Data Analytics Revolution: From Insights to Action',description: 'Discover how modern analytics platforms are transforming business decision-making processes.',category: 'Data Analytics',speaker: 'Dr. Emily Watson',date: '2025-03-05',time: '15:00 EST',duration: '60 min',attendees: 920,featured: false,status: 'upcoming',thumbnail: '/images/webinars/data-analytics-revolution.jpg',tags: ['Data AnalyticsBusiness Intelligence', 'Decision Making']
     },
     {
-      id: 6,
-    title: 'Digital Twin Technology: Real-World Applications and ROI, ',description: 'Case studies and implementation strategies for digital twin technology across various industries., ',category: 'Digital Twin, ',speaker: 'James Wilson, ',date: '2025-03-10, ',time: '14:00 EST, ',duration: '75 min, ',attendees: 68, 0,featured: fals, e,status: 'upcoming, ',thumbnail: '/images/webinars/digital-twin-applications.jpg, ',tags: ['Digital TwinIoT, ', 'Industry 4.0']
+      id: 6,title: 'Digital Twin Technology: Real-World Applications and ROI',description: 'Case studies and implementation strategies for digital twin technology across various industries.',category: 'Digital Twin',speaker: 'James Wilson',date: '2025-03-10',time: '14:00 EST',duration: '75 min',attendees: 680,featured: false,status: 'upcoming',thumbnail: '/images/webinars/digital-twin-applications.jpg',tags: ['Digital TwinIoT', 'Industry 4.0']
     }
   ],
 
-  const upcomingWebinars  = webinars.filter(w => w.status === 'upcoming')const featuredWebinars  = webinars.filter(w => w.featured)const categories  = [
-    { name: 'All',
-    count: webinars.length,
-    active: true,  }{ name: 'AI & Business, ', count: webinars.filter(w => w.category === 'AI & Business').length,
-    active: false,  }{ name: 'Quantum Computing, ', count: webinars.filter(w => w.category === 'Quantum Computing').length,
-    active: false,  }{ name: 'Cybersecurity, ', count: webinars.filter(w => w.category === 'Cybersecurity').length,
-    active: false,  }{ name: 'Cloud & DevOps, ', count: webinars.filter(w => w.category === 'Cloud & DevOps').length,
-    active: false,  }{ name: 'Data Analytics, ', count: webinars.filter(w => w.category === 'Data Analytics').length,
-    active: false,  },
-    { name: 'Digital Twin, ', count: webinars.filter(w => w.category === 'Digital Twin').length,
-    active: false,  }
-  ]const formatDate  = () => {
-    return new Date(dateString).toLocaleDateString('en-US, ', {
-      weekday: 'long, ',year: 'numeric, ',month: 'l,
-    ong';day: 'numeric'
-   ,
-     })},
+  const upcomingWebinars = webinars.filter(w => w.status === 'upcoming');
+  const featuredWebinars = webinars.filter(w => w.featured);
+
+  const categories = [
+    { name: 'All', count: webinars.length, active: true };
+    { name: 'AI & Business', count: webinars.filter(w => w.category === 'AI & Business').length, active: false };
+    { name: 'Quantum Computing', count: webinars.filter(w => w.category === 'Quantum Computing').length, active: false };
+    { name: 'Cybersecurity', count: webinars.filter(w => w.category === 'Cybersecurity').length, active: false };
+    { name: 'Cloud & DevOps', count: webinars.filter(w => w.category === 'Cloud & DevOps').length, active: false };
+    { name: 'Data Analytics', count: webinars.filter(w => w.category === 'Data Analytics').length, active: false },
+    { name: 'Digital Twin', count: webinars.filter(w => w.category === 'Digital Twin').length, active: false }
+  ];
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'
+    });
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Webinars - Zion Tech Group"
-        description="Join our expert-led webinars on AIquantum computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
+        description="Join our expert-led webinars on AI, quantum computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
@@ -88,7 +82,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
               Live Learning Sessions
             </div>
             
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Expert Webinars &
               <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-600 bg-clip-text text-transparent">
                 Learning Sessions
@@ -96,14 +90,14 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join industry experts and thought leaders for in-depth discussions on cutting-edge technologies,
-    practical implementation strategiesand future industry trends.
+              Join industry experts and thought leaders for in-depth discussions on cutting-edge technologies;
+              practical implementation strategies, and future industry trends.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center gap-2 text-gray-400">
                 <Calendar className="w-5 h-5" />
-                <span>{upcomingWebinars.lengt, h} Upcoming Sessions</span>
+                <span>{upcomingWebinars.length} Upcoming Sessions</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Users className="w-5 h-5" />
@@ -134,8 +128,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
                   category.active
                     ? 'border-purple-400 bg-purple-400/20 text-purple-400'
-                    : 'border-slate-600 text-gray-400 hover: border-slate-500 hover:text-gray-300'
-               ,  }`}
+                    : 'border-slate-600 text-gray-400 hover:border-slate-500 hover:text-gray-300'
+                }`}
               >
                 {category.name}
                 <span className="ml-2 text-sm opacity-75">({category.count})</span>
@@ -153,22 +147,20 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             <p className="text-gray-400">Don't miss these highly anticipated webinars</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredWebinars.map((webinar) => (
               <motion.div
-                key={webinar.i,
-    d}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,  }}
-                viewport={{ once: true,  }}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover: border-purple-400/50 transition-all duration-300 hover:bg-slate-800/70"
+                key={webinar.id}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:bg-slate-800/70"
               >
-                {/* Thumbnail *, /}
+                {/* Thumbnail */}
                 <div className="relative h-64 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20"></div>
-                  <Play className="w-20 h-20 text-purple-400 opacity-80 group-hover: opacity-100 transition-opacity duration-200" />
+                  <Play className="w-20 h-20 text-purple-400 opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
                   <div className="absolute top-4 right-4">
                     <span className="inline-flex items-center px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-400 text-xs font-medium">
                       <Star className="w-3 h-3 mr-1" />
@@ -178,7 +170,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   <div className="absolute bottom-4 left-4">
                     <span className="inline-flex items-center px-3 py-1 bg-green-500/20 border border-green-400/30 rounded-full text-green-400 text-xs font-medium">
                       <Clock3 className="w-3 h-3 mr-1" />
-                      {webinar.duratio, n}
+                      {webinar.duration}
                     </span>
                   </div>
                 </div>
@@ -189,9 +181,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                     <span className="inline-block px-3 py-1 bg-slate-700/50 text-purple-400 text-xs font-medium rounded-full mb-3">
                       {webinar.category}
                     </span>
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover: text-purple-400 transition-colors">
-                      {webinar.titl,
-    e}
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                      {webinar.title}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {webinar.description}
@@ -214,22 +205,21 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {webinar.tags.map((tagindex) => (
+                    {webinar.tags.map((tag, index) => (
                       <span key={index} className="inline-flex items-center px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <button className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                  <button className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <Calendar className="w-4 h-4" />
                     Register Now
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
@@ -246,15 +236,14 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             {upcomingWebinars.map((webinar) => (
               <motion.div
                 key={webinar.id}
-                initial={{ opacity: 0,
-    x: -20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-                transition={{ duration: 0.6,  }}
-                viewport={{ once: true,  }}
-                className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover: border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
+                initial={{ opacity: 0, x: -20 }};
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                  {/* Thumbnail *, /}
+                  {/* Thumbnail */}
                   <div className="flex-shrink-0 relative w-32 h-24 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg"></div>
                     <Play className="w-8 h-8 text-purple-400" />
@@ -283,9 +272,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                       </span>
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-white mb-2 group-hover: text-purple-400 transition-colors">
-                      {webinar.titl,
-    e}
+                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                      {webinar.title}
                     </h3>
                     
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
@@ -312,7 +300,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                     </div>
                     
                     <div className="flex flex-wrap gap-2 mt-3">
-                      {webinar.tags.map((tagindex) => (
+                      {webinar.tags.map((tag, index) => (
                         <span key={index} className="inline-flex items-center px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
                           {tag}
                         </span>
@@ -322,7 +310,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   
                   {/* Actions */}
                   <div className="flex-shrink-0 flex flex-col gap-3">
-                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
                       <Calendar className="w-4 h-4" />
                       Register
                       <ArrowRight className="w-4 h-4" />
@@ -339,8 +327,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   </div>
                 </div>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
@@ -349,18 +336,16 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Never Miss a Learning Opportunity
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get notified about upcoming webinarsnew learning resources, and exclusive content 
+              Get notified about upcoming webinars, new learning resources, and exclusive content 
               from our technology experts.
             </p>
             
@@ -382,6 +367,6 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default Webinar;s;
+export default Webinars;

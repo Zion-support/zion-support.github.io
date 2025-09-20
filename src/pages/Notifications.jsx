@@ -1,6 +1,15 @@
 import React from "react";
-import { useNotifications } from "@/context/notifications/NotificationConte, xt";import { formatDistanceToNow } from "date-f, ns";import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";import { Button } from "@/components/ui/butt, on";import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";import { Badge } from "@/components/ui/bad, ge";import { Skeleton } from "@/components/ui/skelet, on";import SEO from "@/components/SEO";
-import { useNavigate } from "react-router-d, om";import { cn } from "@/lib/uti, ls";const getNotificationIcon  = () => {
+import { useNotifications } from "@/context/notifications/NotificationContext";
+import { formatDistanceToNow } from "date-fns";
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
+import SEO from "@/components/SEO";
+import { useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
+const getNotificationIcon = (type, className = "h-5 w-5") => {
     switch (type) {
         case 'message':
             return <MessageCircle className={cn(className, "text-blue-500")}/>,
@@ -14,34 +23,40 @@ import { useNavigate } from "react-router-d, om";import { cn } from "@/lib/uti, 
             return <Settings className={cn(className, "text-zion-cyan")}/>,
         case 'system':
             return <AlertCircle className={cn(className, "text-yellow-500")}/>,
-        default: return <Bell className={cn(classNa,
-    m,e"text-gray-500")}/>}
-}const getNotificationTypeBadge = () => {
+        default:
+            return <Bell className={cn(className, "text-gray-500")}/>,
+    }
+};
+const getNotificationTypeBadge = (type) => {
     switch (type) {
         case 'message':
-            return <Badge className="bg-blue-500">Message</Badge>case 'quote_request':
+            return <Badge className="bg-blue-500">Message</Badge>;
+        case 'quote_request':
             return <Badge className="bg-purple-500">Quote Request</Badge>,
         case 'booking_confirmation':
-            return <Badge className="bg-green-500">Booking</Badge>
-  }case 'hire_request':
-            return <Badge className="bg-zion-purple">Hire Request</Badge>case 'onboarding':
-            return <Badge className="bg-zion-cyan">Onboarding</Badge>case 'system':
-            return <Badge className="bg-yellow-500">System</Badge>default: return <Badge variant="outline">Notification</Badge,
-    >
-   }
-}const NotificationCard  = () => {
-    const navigate  = useNavigate()const handleAction  = () => {
+            return <Badge className="bg-green-500">Booking</Badge>,
+        case 'hire_request':
+            return <Badge className="bg-zion-purple">Hire Request</Badge>,
+        case 'onboarding':
+            return <Badge className="bg-zion-cyan">Onboarding</Badge>,
+        case 'system':
+            return <Badge className="bg-yellow-500">System</Badge>;
+        default: return <Badge variant="outline">Notification</Badge>
+    }
+const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
+    const navigate = useNavigate();
+    const handleAction = () => {
         if (!notification.read) {
-            onMarkAsRead(notification.i;d);
+            onMarkAsRead(notification.id);
         };
         if (notification.action_url) {
             navigate(notification.action_url);
         }
     },
-    return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors"; notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
+    return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
         <div className="mt-1">
-          {getNotificationIcon(notification.type"h-6 w-6")}
+          {getNotificationIcon(notification.type, "h-6 w-6")}
         </div>
         <div className="flex-1">
           <div className="flex justify-between">
@@ -50,7 +65,7 @@ import { useNavigate } from "react-router-d, om";import { cn } from "@/lib/uti, 
               <div className="flex items-center gap-2 mb-2">
                 {getNotificationTypeBadge(notification.type)}
                 <span className="text-xs text-zion-slate-light">
-                  {formatDistanceToNow(new Date(notification.created_at){ addSuffix: true,  })}
+                  {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
                 </span>
                 {!notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>)}
               </div>
@@ -70,17 +85,16 @@ import { useNavigate } from "react-router-d, om";import { cn } from "@/lib/uti, 
           
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           
-          {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover: bg-zion-cyan hover:text-black" onClick={handleActio,
-    n}>
+          {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
               {notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4"/>
             </Button>)}
         </div>
       </div>
-    </div>)},
+    </div>);
+},
 export default function NotificationsPage() {
-
-    const { filteredNotificationsunreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
+    const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
       
@@ -129,4 +143,3 @@ export default function NotificationsPage() {
       </main>
       
     </>);
-}

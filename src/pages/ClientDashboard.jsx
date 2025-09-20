@@ -1,18 +1,31 @@
-import { useState, useEffect } from "react";import { JobsList } from "@/components/jobs/JobsLi, st";import { Button } from "@/components/ui/butt, on";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { Link } from "react-router-d, om";import SEO from "@/components/SEO";
-import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";import { ProtectedRoute } from "@/components/ProtectedRou, te";import { SuggestedTalents } from "@/components/jobs/SuggestedTalen, ts";import { useJobs } from "@/hooks/useJo, bs";import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSte, ps";import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCa, rd";import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCa, rd";import { useIsMobile } from "@/hooks/use-mobi, le";function ClientDashboardContent() {
-
-    const [activeTab;
-    setActiveTab] = useState("all")const { jobsisLoading } = useJobs()const [selectedJobId;
-    setSelectedJobId] = useState(null);
-    const [selectedJobTitle;
-    setSelectedJobTitle] = useState("")const isMobile  = useIsMobile()// Set the first job as selected when jobs are loaded (if any)
+import { useState, useEffect } from "react";
+import { JobsList } from "@/components/jobs/JobsList";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { useJobs } from "@/hooks/useJobs";
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+import { useIsMobile } from "@/hooks/use-mobile";
+function ClientDashboardContent() {
+    const [activeTab, setActiveTab] = useState("all");
+    const { jobs, isLoading } = useJobs();
+    const [selectedJobId, setSelectedJobId] = useState(null);
+    const [selectedJobTitle, setSelectedJobTitle] = useState("");
+    const isMobile = useIsMobile();
+    // Set the first job as selected when jobs are loaded (if any)
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
-            setSelectedJobId(jobs[0].id)setSelectedJobTitle(jobs[0].title);
+            setSelectedJobId(jobs[0].id);
+            setSelectedJobTitle(jobs[0].title);
         }
-    }, [jobs;
-    selectedJobId]),
-    const handleJobSelect  = () => {
+    }, [jobs, selectedJobId]),
+    const handleJobSelect = (jobId, jobTitle) => {
         setSelectedJobId(jobId);
         setSelectedJobTitle(jobTitle);
     },
@@ -20,8 +33,7 @@ import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";import { Protec
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
-        <div className={`flex flex-col ${!isMobile ? 'md: flex-row md:justify-between md:items-center' : ',
-    '} mb-8 gap-4`}>
+        <div className={`flex flex-col ${!isMobile ? 'md: flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>
             <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>
@@ -45,7 +57,7 @@ import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";import { Protec
           <ClientOnboardingSteps />
         </div>
 
-        <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
@@ -100,11 +112,9 @@ import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";import { Protec
         </div>
       </main>
       
-    </>),
-}
+    </>);
+};
 export default function ClientDashboard() {
-
     return (<ProtectedRoute>
       <ClientDashboardContent />
-    </ProtectedRoute;>;);
-}
+    </ProtectedRoute>);

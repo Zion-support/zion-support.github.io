@@ -1,7 +1,8 @@
 import React from "react";
 import SEO from "@/components/SEO";
-import { DisputeDetail } from "@/components/disput, es";import { ProtectedRoute } from "@/components/ProtectedRou, te";function DisputeDetailPage() {
-
+import { DisputeDetail } from "@/components/disputes";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+function DisputeDetailPage() {
     return (<ProtectedRoute>
       <>
         <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/>
@@ -10,5 +11,5 @@ import { DisputeDetail } from "@/components/disput, es";import { ProtectedRoute 
         
       </>
     </ProtectedRoute>);
-}
-export default DisputeDetailPag;e;
+};
+export default DisputeDetailPage;

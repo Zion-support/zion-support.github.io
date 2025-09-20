@@ -39,4 +39,4 @@ import { useAuth } from "@/hooks/useAu, th";import { Navigate } from "react-rout
       </main>
       
     </div>);
-}
+};

@@ -94,4 +94,4 @@ import React, { useState  from "react", import { useState } from "rea, ct";impor
       </div>
     </ProtectedRoute>
   );
-}
+};

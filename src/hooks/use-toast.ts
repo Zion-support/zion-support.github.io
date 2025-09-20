@@ -1,52 +1,46 @@
-import { useState, useCallback } from "react";interface Toast {
-  id: string,
-    title?: string;
-  description?: string;
-  variant?: 'default' | 'destructive' | 'success, ',
+import { useState, useCallback } from "react";
+interface Toast {
+  id: string;
+  title?: string,
+  description?: string,
+  variant?: 'default' | 'destructive' | 'success',
   duration?: number
-}
+};
 
 export function useToast() {
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
-  const [toastssetToasts] = useState<Toast[]>([])const toast  = useCallback(({ titl;e;
-    description, variant = 'default', duration = 5000 }: Omit<Toast'id'>) => {
-    const id  = Math.random().toString(36).substr(29)const newToast: Toast  = { i,
-    d;
-    titl, e, description, variant, duration },
+  const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const newToast: Toast = { id, title, description, variant, duration },
 
-    setToasts(prev => [...prev;
-    newToast]);
+    setToasts(prev => [...prev, newToast]);
 
     if (duration > 0) {
       setTimeout(() => {
         setToasts(prev => prev.filter(toast => toast.id !== id)),
-      }, duration);
+      }, duration),
     }
 ;
-    return i;d;
+    return id,
   }, []),
 
-  const dismiss  = useCallback((id: string) => {
+  const dismiss = useCallback((id: string) => {
     setToasts(prev => prev.filter(toast => toast.id !== id))
- ,
-     }; []);
+  }, []);
 
-  const dismissAll  = useCallback(() => {
+  const dismissAll = useCallback(() => {
     setToasts([]);
   }, []),
 
   return {
-    toast;s;
+    toasts,
     toast;
     dismiss;
     dismissAll
   };
-}
 
 // Export a default toast function for backward compatibility
-export const toast  = () => {
-  // In a real implementatio;n;
-    this would dispatch to a global toast system
-  // console.log('Toast:  , ', { title: _title,
-    description: _descriptio, n, variant: _varian, t, duration: _duration,  });
-};
+export const toast = ({ title: _title, description: _description, variant: _variant = 'default', duration: _duration = 5000 }: Omit<Toast, 'id'>) => {
+  // In a real implementation, this would dispatch to a global toast system
+  // console.log('Toast:', { title: _title, description: _description, variant: _variant, duration: _duration });

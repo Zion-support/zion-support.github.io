@@ -1,133 +1,127 @@
 
 import React from "react";
-import { SEO } from "../components/S, EO";import { motion } from "framer-moti, on";import { GraduationCap, BookOpen;
-  Users;
-  Clock;
-  Star;
-  ArrowRight;
-  Play;
-  Download;
-  Award;
-  Certificate;
-  Video;
-  FileText;
-  Code;
-  Brain;
-  Shield;
-  Cloud;
-  Zap;
-  Target;
-  TrendingUp;
-  CheckCircle;
-  Calendar;
-  MapPin;
-  Globe;
-  Smartphone;
-  Laptop;
-  Server;
-  Database;
-  Lock;
-  Key;
-  Rocket;
-  Atom;
-  Eye;
-  MessageSquare;
-  Image;
-  BarChart3;
-  Cpu;
-  Network;
-  Monitor;
-  Smartphone as SmartphoneIcon;
-  Tablet;
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
+import { 
+  GraduationCap,
+  BookOpen, 
+  Users, 
+  Clock, 
+  Star, 
+  ArrowRight, 
+  Play, 
+  Download, 
+  Award,
+  Certificate,
+  Video,
+  FileText,
+  Code,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Calendar,
+  MapPin,
+  Globe,
+  Smartphone,
+  Laptop,
+  Server,
+  Database,
+  Lock,
+  Key,
+  Rocket,
+  Atom,
+  Eye,
+  MessageSquare,
+  Image,
+  BarChart3,
+  Cpu,
+  Network,
+  Monitor,
+  Smartphone as SmartphoneIcon,
+  Tablet,
   Laptop as LaptopIcon
-} from "lucide-react";export const Training: React.FC  = () => {
-  const [selectedCateg,
-    o;r;y;
-    setSelectedCategory] = React.useState('all')const categories  = [
-    { id: 'all, ', name: 'All Courses',
-    count: 0,
-    active: true,  }{ id: 'ai-ml, ', name: 'AI & Machine Learning, ', count: 12,
-    active: false,  }{ id: 'cybersecurity, ', name: 'Cybersecurity, ', count: 8,
-    active: false,  }{ id: 'cloud-devops, ', name: 'Cloud & DevOps, ', count: 10,
-    active: false,  }{ id: 'data-analytics, ', name: 'Data Analytics, ', count: 6,
-    active: false,  }{ id: 'quantum-computing, ', name: 'Quantum Computing, ', count: 4,
-    active: false,  }{ id: 'iot-edge, ', name: 'IoT & Edge Computing, ', count: 5,
-    active: false,  },
-    { id: 'blockchain, ', name: 'Blockchain & Web3, ', count: 3,
-    active: false,  }
-  ]const trainingPrograms  = [
+} from "lucide-react";
+export const Training: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = React.useState('all');
+  const categories = [
+    { id: 'all', name: 'All Courses', count: 0, active: true };
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12, active: false };
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 8, active: false };
+    { id: 'cloud-devops', name: 'Cloud & DevOps', count: 10, active: false };
+    { id: 'data-analytics', name: 'Data Analytics', count: 6, active: false };
+    { id: 'quantum-computing', name: 'Quantum Computing', count: 4, active: false };
+    { id: 'iot-edge', name: 'IoT & Edge Computing', count: 5, active: false },
+    { id: 'blockchain', name: 'Blockchain & Web3', count: 3, active: false }
+  ];
+  const trainingPrograms = [
     {
-      id:  ,
-    1title: 'AI Fundamentals & Machine Learning, ',description: 'Master the basics of artificial intelligence and machine learning with hands-on projects and real-world applications., ',category: 'ai-ml, ',level: 'Beginner, ',duration: '8 weeks, ',format: 'Online + Live Sessions, ',instructor: 'Dr. Sarah Chen, ',rating: 4., 9,students: 124, 7,price: '$, 1,299',
-      featured: true,
-    icon: Brai, n,color: 'from-purple-500 to-pink-500, ',topics: ['Python ProgrammingMachine Learning Algorithms, ', 'Neural NetworksDeep Learning', 'AI Ethics'],
-      certification: true,
-    liveProjects: , 5,support: '24/7'
-   ,  }{
-      id: 2,
-    title: 'Advanced Cybersecurity & Threat Intelligence, ',description: 'Learn advanced cybersecurity technique, s, threat hunting, and incident response strategies.',
-      category: 'cybersecurity, ',level: 'Advanced, ',duration: '10 weeks, ',format: 'Hybrid, ',instructor: 'Marcus Rodriguez, ',rating: 4.8,
-    students: 89, 2,price: '$, 1,599',
-      featured: true,
-    icon: Shiel, d,color: 'from-green-500 to-emerald-500, ',topics: ['Penetration TestingThreat Hunting, ', 'Incident ResponseSecurity Architecture', 'Compliance'],
-      certification: true,
-    liveProjects: , 8,support: '24/7'
-   ,  }{
-      id: 3,
-    title: 'Cloud-Native Development & DevOps, ',description: 'Build scalable applications using modern cloud technologies and DevOps practices., ',category: 'cloud-devops, ',level: 'Intermediate, ',duration: '6 weeks, ',format: 'Online, ',instructor: 'Alex Thompson, ',rating: 4., 7,students: 110, 2,price: '$999, ',featured: tru, e,icon: Clou, d,color: 'from-blue-500 to-cyan-500, ',topics: ['Docker & KubernetesCI/CD Pipelines, ', 'AWS/Azure/GCPMicroservices', 'Infrastructure as Code'],
-      certification: true,
-    liveProjects: , 6,support: 'Business Hours'
-   ,  }{
-      id: 4,
-    title: 'Data Science & Business Intelligence, ',description: 'Transform raw data into actionable insights using modern analytics tools and techniques., ',category: 'data-analytics, ',level: 'Intermediate, ',duration: '8 weeks, ',format: 'Online + Workshops, ',instructor: 'Dr. Emily Watson, ',rating: 4., 6,students: 75, 6,price: '$, 1,199',
-      featured: false,
-    icon: BarChart, 3,color: 'from-orange-500 to-red-500, ',topics: ['Python & RStatistical Analysis, ', 'Data VisualizationSQL & NoSQL', 'Predictive Modeling'],
-      certification: true,
-    liveProjects: , 4,support: 'Business Hours'
-   ,  }{
-      id: 5,
-    title: 'Quantum Computing Fundamentals, ',description: 'Introduction to quantum computing principle, s, algorithms, and practical applications.',
-      category: 'quantum-computing, ',level: 'Advanced, ',duration: '12 weeks, ',format: 'Online + Lab Access, ',instructor: 'Dr. James Wilson, ',rating: 4.9,
-    students: 44, 5,price: '$, 2,199',
-      featured: true,
-    icon: Ato, m,color: 'from-indigo-500 to-purple-500, ',topics: ['Quantum MechanicsQuantum Algorithms, ', 'Qiskit ProgrammingQuantum Cryptography', 'Quantum Machine Learning'],
-      certification: true,
-    liveProjects: , 3,support: '24/7'
-   ,  }{
-      id: 6,
-    title: 'IoT & Edge Computing Solutions, ',description: 'Design and implement IoT systems with edge computing capabilities for real-time processing., ',category: 'iot-edge, ',level: 'Intermediate, ',duration: '7 weeks, ',format: 'Hybrid, ',instructor: 'David Chen, ',rating: 4., 5,students: 62, 3,price: '$899, ',featured: fals, e,icon: Za, p,color: 'from-yellow-500 to-orange-500, ',topics: ['IoT ArchitectureEdge Computing, ', 'Sensor NetworksReal-time Processing', 'Security'],
-      certification: true,
-    liveProjects: , 5,support: 'Business Hours'
-   ,  }
-  ]const filteredPrograms  = trainingPrograms.filter(program => 
+      id: 1,title: 'AI Fundamentals & Machine Learning',description: 'Master the basics of artificial intelligence and machine learning with hands-on projects and real-world applications.',category: 'ai-ml',level: 'Beginner',duration: '8 weeks',format: 'Online + Live Sessions',instructor: 'Dr. Sarah Chen',rating: 4.9,students: 1247,price: '$1,299',
+      featured: true,icon: Brain,color: 'from-purple-500 to-pink-500',topics: ['Python ProgrammingMachine Learning Algorithms', 'Neural NetworksDeep Learning', 'AI Ethics'],
+      certification: true,liveProjects: 5,support: '24/7'
+    };
+    {
+      id: 2,title: 'Advanced Cybersecurity & Threat Intelligence',description: 'Learn advanced cybersecurity techniques, threat hunting, and incident response strategies.',
+      category: 'cybersecurity',level: 'Advanced',duration: '10 weeks',format: 'Hybrid',instructor: 'Marcus Rodriguez',rating: 4.8,students: 892,price: '$1,599',
+      featured: true,icon: Shield,color: 'from-green-500 to-emerald-500',topics: ['Penetration TestingThreat Hunting', 'Incident ResponseSecurity Architecture', 'Compliance'],
+      certification: true,liveProjects: 8,support: '24/7'
+    };
+    {
+      id: 3,title: 'Cloud-Native Development & DevOps',description: 'Build scalable applications using modern cloud technologies and DevOps practices.',category: 'cloud-devops',level: 'Intermediate',duration: '6 weeks',format: 'Online',instructor: 'Alex Thompson',rating: 4.7,students: 1102,price: '$999',featured: true,icon: Cloud,color: 'from-blue-500 to-cyan-500',topics: ['Docker & KubernetesCI/CD Pipelines', 'AWS/Azure/GCPMicroservices', 'Infrastructure as Code'],
+      certification: true,liveProjects: 6,support: 'Business Hours'
+    };
+    {
+      id: 4,title: 'Data Science & Business Intelligence',description: 'Transform raw data into actionable insights using modern analytics tools and techniques.',category: 'data-analytics',level: 'Intermediate',duration: '8 weeks',format: 'Online + Workshops',instructor: 'Dr. Emily Watson',rating: 4.6,students: 756,price: '$1,199',
+      featured: false,icon: BarChart3,color: 'from-orange-500 to-red-500',topics: ['Python & RStatistical Analysis', 'Data VisualizationSQL & NoSQL', 'Predictive Modeling'],
+      certification: true,liveProjects: 4,support: 'Business Hours'
+    };
+    {
+      id: 5,title: 'Quantum Computing Fundamentals',description: 'Introduction to quantum computing principles, algorithms, and practical applications.',
+      category: 'quantum-computing',level: 'Advanced',duration: '12 weeks',format: 'Online + Lab Access',instructor: 'Dr. James Wilson',rating: 4.9,students: 445,price: '$2,199',
+      featured: true,icon: Atom,color: 'from-indigo-500 to-purple-500',topics: ['Quantum MechanicsQuantum Algorithms', 'Qiskit ProgrammingQuantum Cryptography', 'Quantum Machine Learning'],
+      certification: true,liveProjects: 3,support: '24/7'
+    };
+    {
+      id: 6,title: 'IoT & Edge Computing Solutions',description: 'Design and implement IoT systems with edge computing capabilities for real-time processing.',category: 'iot-edge',level: 'Intermediate',duration: '7 weeks',format: 'Hybrid',instructor: 'David Chen',rating: 4.5,students: 623,price: '$899',featured: false,icon: Zap,color: 'from-yellow-500 to-orange-500',topics: ['IoT ArchitectureEdge Computing', 'Sensor NetworksReal-time Processing', 'Security'],
+      certification: true,liveProjects: 5,support: 'Business Hours'
+    }
+  ];
+  const filteredPrograms = trainingPrograms.filter(program => 
     selectedCategory === 'all' || program.category === selectedCategory
-  )const getLevelColor  = () => {
+  );
+
+  const getLevelColor = (level: string) => {
     switch (level) {
       case 'Beginner': return 'bg-green-500/20 text-green-400 border-green-400/30';
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30,';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30',
       case 'Advanced': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
-   ,
-     }
-  }const getFormatIcon  = () => {
+    }
+  };
+  const getFormatIcon = (format: string) => {
     if (format.includes('Online')) return Smartphone;
-    if (format.includes('Hybrid')) return Laptopif (format.includes('Live')) return Usersreturn Globe,}return (
+    if (format.includes('Hybrid')) return Laptop,
+    if (format.includes('Live')) return Users,
+    return Globe
+  },
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Training & Certification - Zion Tech Group"
-        description="Professional training programs and certifications in AIcybersecurity, cloud computing, and emerging technologies. Advance your career with expert-led courses."
+        description="Professional training programs and certifications in AI, cybersecurity, cloud computing, and emerging technologies. Advance your career with expert-led courses."
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-400/30 rounded-full text-emerald-400 text-sm font-medium mb-6">
@@ -135,7 +129,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
               Professional Development
             </div>
             
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Training &
               <span className="block bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
                 Certification
@@ -143,14 +137,14 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advance your career with industry-leading training programs in AI,
-    cybersecuritycloud computingand emerging technologies. Learn from experts and earn recognized certifications.
+              Advance your career with industry-leading training programs in AI, cybersecurity; 
+              cloud computing, and emerging technologies. Learn from experts and earn recognized certifications.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center gap-2 text-gray-400">
                 <BookOpen className="w-5 h-5" />
-                <span>{trainingPrograms.lengt, h} Programs</span>
+                <span>{trainingPrograms.length} Programs</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Users className="w-5 h-5" />
@@ -182,8 +176,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'border-emerald-400 bg-emerald-400/20 text-emerald-400'
-                    : 'border-slate-600 text-gray-400 hover: border-slate-500 hover:text-gray-300'
-               ,  }`}
+                    : 'border-slate-600 text-gray-400 hover:border-slate-500 hover:text-gray-300'
+                }`}
               >
                 {category.name}
                 <span className="ml-2 text-sm opacity-75">({category.count})</span>
@@ -201,19 +195,17 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             <p className="text-gray-400">Our most popular and highly-rated training programs</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredPrograms.filter(program => program.featured).map((program) => (
               <motion.div
-                key={program.i,
-    d}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,  }}
-                viewport={{ once: true,  }}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover: border-emerald-400/50 transition-all duration-300 hover:bg-slate-800/70"
+                key={program.id}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-emerald-400/50 transition-all duration-300 hover:bg-slate-800/70"
               >
-                {/* Header *, /}
+                {/* Header */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center`}>
@@ -229,9 +221,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                     <span className="inline-block px-3 py-1 bg-slate-700/50 text-emerald-400 text-xs font-medium rounded-full mb-3">
                       {program.category.replace('- ').toUpperCase()}
                     </span>
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover: text-emerald-400 transition-colors">
-                      {program.titl,
-    e}
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+                      {program.title}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {program.description}
@@ -260,10 +251,9 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   
                   {/* Topics */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-medium text-white mb-2">What You'll Learn: </h4>
+                    <h4 className="text-sm font-medium text-white mb-2">What You'll Learn:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {program.topics.slice(0,
-    3).map((topi, c, index) => (
+                      {program.topics.slice(0, 3).map((topic, index) => (
                         <span key={index} className="inline-block px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
                           {topic}
                         </span>
@@ -277,7 +267,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   </div>
                   
                   {/* CTA */}
-                  <button className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover: from-emerald-600 hover:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                  <button className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <Play className="w-4 h-4" />
                     Enroll Now
                     <ArrowRight className="w-4 h-4" />
@@ -301,15 +291,14 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             {filteredPrograms.map((program) => (
               <motion.div
                 key={program.id}
-                initial={{ opacity: 0,
-    x: -20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-                transition={{ duration: 0.6,  }}
-                viewport={{ once: true,  }}
-                className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover: border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
+                initial={{ opacity: 0, x: -20 }};
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-                  {/* Icon *, /}
+                  {/* Icon */}
                   <div className={`flex-shrink-0 w-20 h-20 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center`}>
                     <program.icon className="w-10 h-10 text-white" />
                   </div>
@@ -331,18 +320,18 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                       )}
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-white mb-2 group-hover: text-emerald-400 transition-colors">
-                      {program.titl, e}
+                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                      {program.title}
                     </h3>
                     
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {program.description}
                     </p>
                     
-                    <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm text-gray-500 mb-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-500 mb-4">
                       <div className="flex items-center gap-2">
                         <Clock className="w-4 h-4" />
-                        <span>{program.duratio, n}</span>
+                        <span>{program.duration}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Users className="w-4 h-4" />
@@ -380,7 +369,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   {/* Price & CTA */}
                   <div className="flex-shrink-0 text-center">
                     <div className="text-3xl font-bold text-emerald-400 mb-3">{program.price}</div>
-                    <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover: from-emerald-600 hover:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25">
+                    <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25">
                       Enroll Now
                     </button>
                   </div>
@@ -399,42 +388,37 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             <p className="text-gray-400">Comprehensive learning experience designed for your success</p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Users,
-    title: 'Expert Instructors, ',description: 'Learn from industry professionals with years of real-world experience, ',color: 'from-blue-500 to-cyan-500'
-             ,  }{
-                icon: Award,
-    title: 'Industry Certifications, ',description: 'Earn recognized certifications that advance your career, ',color: 'from-emerald-500 to-teal-500'
-             ,  }{
-                icon: Code,
-    title: 'Hands-on Projects, ',description: 'Apply your learning with real-world projects and case studies, ',color: 'from-purple-500 to-pink-500'
-             ,  }{
-                icon: Globe,
-    title: 'Flexible Learning, ',description: 'Onlin, e, hybrid, and in-person options to fit your schedule',
-                color: 'from-orange-500 to-red-500'
-             ,  }{
-                icon: MessageSquare,
-    title: '24/7 Support, ',description: 'Get help whenever you need it with our comprehensive support system, ',color: 'from-indigo-500 to-purple-500'
-             ,  },
+                icon: Users,title: 'Expert Instructors',description: 'Learn from industry professionals with years of real-world experience',color: 'from-blue-500 to-cyan-500'
+              };
               {
-                icon: TrendingUp,
-    title: 'Career Advancement, ',description: 'Boost your skills and advance your career with our programs, ',color: 'from-green-500 to-emerald-500'
-             ,  }
-            ].map((featureindex) => (
+                icon: Award,title: 'Industry Certifications',description: 'Earn recognized certifications that advance your career',color: 'from-emerald-500 to-teal-500'
+              };
+              {
+                icon: Code,title: 'Hands-on Projects',description: 'Apply your learning with real-world projects and case studies',color: 'from-purple-500 to-pink-500'
+              };
+              {
+                icon: Globe,title: 'Flexible Learning',description: 'Online, hybrid, and in-person options to fit your schedule',
+                color: 'from-orange-500 to-red-500'
+              };
+              {
+                icon: MessageSquare,title: '24/7 Support',description: 'Get help whenever you need it with our comprehensive support system',color: 'from-indigo-500 to-purple-500'
+              },
+              {
+                icon: TrendingUp,title: 'Career Advancement',description: 'Boost your skills and advance your career with our programs',color: 'from-green-500 to-emerald-500'
+              }
+            ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="text-center group"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300,
-    `}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
@@ -449,11 +433,10 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,  }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Advance Your Career?
@@ -475,6 +458,6 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default Trainin;g;
+export default Training;

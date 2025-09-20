@@ -1,127 +1,123 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Shield, Lock;
-  Eye;
-  Database;
-  Globe;
-  Users;
-  Mail;
-  Phone;
-  Calendar;
-  CheckCircle;
-  AlertTriangle;
-  Info;
-  ArrowRight;
-  ExternalLink;
-  Download;
+import { motion } from "framer-motion";
+import {
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Globe,
+  Users,
+  Mail,
+  Phone,
+  Calendar,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  ArrowRight,
+  ExternalLink,
+  Download,
   FileText
-} from "lucide-react";const PrivacyPolicy  = () => {
+} from "lucide-react";
+const PrivacyPolicy = () => {
   const lastUpdated = '2025-01-15';
   
-  const sections  = [
+  const sections = [
     {
-      id: 'overview, ',title: 'Overview',
-    icon: Eye,
-    content: `Zion Tech Group ("w, e," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.`
+      id: 'overview',title: 'Overview',icon: Eye,content: `Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.`
     },
     {
-      id: 'information-collection, ',title: 'Information We Collect, ',icon: Database,
-    content: `We collect information you provide directly to u, s, such as when you create an account, use our services, or contact us. This may include your name, email address, phone number, company information, and any other information you choose to provide.`
+      id: 'information-collection',title: 'Information We Collect',icon: Database,content: `We collect information you provide directly to us, such as when you create an account, use our services, or contact us. This may include your name, email address, phone number, company information, and any other information you choose to provide.`
     },
     {
-      id: 'usage-information, ',title: 'How We Use Your Information, ',icon: Users,
-    content: `We use the information we collect to provid, e, maintain, and improve our services, communicate with you, process transactions, and ensure the security of our platform.`
+      id: 'usage-information',title: 'How We Use Your Information',icon: Users,content: `We use the information we collect to provide, maintain, and improve our services, communicate with you, process transactions, and ensure the security of our platform.`
     },
     {
-      id: 'information-sharing, ',title: 'Information Sharing and Disclosure, ',icon: Globe,
-    content: `We do not sel, l, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy or as required by law.`
+      id: 'information-sharing',title: 'Information Sharing and Disclosure',icon: Globe,content: `We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy or as required by law.`
     },
     {
-      id: 'data-security, ',title: 'Data Security, ',icon: Lock,
-    content: `We implement appropriate technical and organizational security measures to protect your personal information against unauthorized acces, s, alteration, disclosure, or destruction.`
+      id: 'data-security',title: 'Data Security',icon: Lock,content: `We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.`
     },
     {
-      id: 'your-rights, ',title: 'Your Rights and Choices, ',icon: CheckCircle,
-    content: `You have the right to acces, s, correct, or delete your personal information. You can also opt out of certain communications and control how your information is used.`
+      id: 'your-rights',title: 'Your Rights and Choices',icon: CheckCircle,content: `You have the right to access, correct, or delete your personal information. You can also opt out of certain communications and control how your information is used.`
     },
     {
-      id: 'cookies, ',title: 'Cookies and Tracking Technologies, ',icon: Eye,
-    content: `We use cookies and similar tracking technologies to enhance your experienc, e, analyze usage patterns, and provide personalized content and advertisements.`
+      id: 'cookies',title: 'Cookies and Tracking Technologies',icon: Eye,content: `We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and provide personalized content and advertisements.`
     },
     {
-      id: 'third-party, ',title: 'Third-Party Services, ',icon: ExternalLink,
-    content: `Our services may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these third parties.`
-   ,  }{
-      id: 'international, ',title: 'International Data Transfers, ',icon: Globe,
-    content: `Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.`
-   ,  }{
-      id: 'children, ',title: 'Children\'s Privacy, ',icon: Users,
-    content: `Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.`
-   ,  }{
-      id: 'changes, ',title: 'Changes to This Policy, ',icon: AlertTriangle,
-    content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
-   ,  },
+      id: 'third-party',title: 'Third-Party Services',icon: ExternalLink,content: `Our services may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these third parties.`
+    };
     {
-      id: 'contact, ',title: 'Contact Us, ',icon: Mail,
-    content: `If you have any questions about this Privacy Policy or our privacy practice, s, please contact us using the information provided below.`
+      id: 'international',title: 'International Data Transfers',icon: Globe,content: `Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.`
+    };
+    {
+      id: 'children',title: 'Children\'s Privacy',icon: Users,content: `Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.`
+    };
+    {
+      id: 'changes',title: 'Changes to This Policy',icon: AlertTriangle,content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
+    },
+    {
+      id: 'contact',title: 'Contact Us',icon: Mail,content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`
     }
   ],
 
-  const dataCategories  = [
+  const dataCategories = [
     {
-      category: 'Personal Information',
-    examples: ['Name,
-    email addres, s, phone numberCompany and job title', 'Billing and payment information'],
-      purpose: 'Account management,
-    service deliver, y, billing',
+      category: 'Personal Information',examples: ['Name, email address, phone numberCompany and job title', 'Billing and payment information'],
+      purpose: 'Account management, service delivery, billing',
       retention: 'As long as your account is active plus 7 years'
-   ,  }{
-      category: 'Usage Data, ',examples: ['Service usage patternsFeature interactions, ', 'Performance metrics'],
-      purpose: 'Service improvement,
-    analytic, s, troubleshooting',
+    };
+    {
+      category: 'Usage Data',examples: ['Service usage patternsFeature interactions', 'Performance metrics'],
+      purpose: 'Service improvement, analytics, troubleshooting',
       retention: '2 years from collection'
-   ,  }{
-      category: 'Technical Data, ',examples: ['IP address,
-    device informationBrowser type and version, ', 'Operating system'],
-      purpose: 'Security,
-    fraud preventio, n, service optimization',
+    };
+    {
+      category: 'Technical Data',examples: ['IP address, device informationBrowser type and version', 'Operating system'],
+      purpose: 'Security, fraud prevention, service optimization',
       retention: '1 year from collection'
-   ,  }{
-      category: 'Communication Data, ',examples: ['Support tickets,
-    chat logsEmail communications, ', 'Feedback and surveys'],
-      purpose: 'Customer support,
-    service improvement, ',
+    };
+    {
+      category: 'Communication Data',examples: ['Support tickets, chat logsEmail communications', 'Feedback and surveys'],
+      purpose: 'Customer support, service improvement',
       retention: '3 years from last interaction'
-   ,  }
-  ]const securityMeasures  = [
+    }
+  ];
+  const securityMeasures = [
     {
-      measure: 'Encryption, ',description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols,'icon: Lock
-   ,
-     }{
-      measure: 'Access Controls, ',description: 'Strict access controls and authentication mechanisms to prevent unauthorized access, ',icon: Shield,  }{
-      measure: 'Regular Audits, ',description: 'Regular security audits and penetration testing to identify and address vulnerabilities, ',icon: CheckCircle,  }{
-      measure: 'Data Backup, ',description: 'Regular data backups with disaster recovery procedures in place, ',icon: Database,  }{
-      measure: 'Employee Training, ',description: 'Regular security training for all employees to ensure data protection awareness, ',icon: Users,  },
+      measure: 'Encryption',description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',icon: Lock
+    };
     {
-      measure: 'Incident Response, ',description: 'Comprehensive incident response plan for handling security breaches, ',icon: AlertTriangle,  }
-  ]return (
+      measure: 'Access Controls',description: 'Strict access controls and authentication mechanisms to prevent unauthorized access',icon: Shield
+    };
+    {
+      measure: 'Regular Audits',description: 'Regular security audits and penetration testing to identify and address vulnerabilities',icon: CheckCircle
+    };
+    {
+      measure: 'Data Backup',description: 'Regular data backups with disaster recovery procedures in place',icon: Database
+    };
+    {
+      measure: 'Employee Training',description: 'Regular security training for all employees to ensure data protection awareness',icon: Users
+    },
+    {
+      measure: 'Incident Response',description: 'Comprehensive incident response plan for handling security breaches',icon: AlertTriangle
+    }
+  ];
+  return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
-        <meta name="description" content="Learn about Zion Tech Group's privacy practicesdata protection measures, and how we handle your personal information." />
-        <meta name="keywords" content="privacy policydata protection, GDPR, CCPA, Zion Tech Group, privacy practices" />
+        <meta name="description" content="Learn about Zion Tech Group's privacy practices, data protection measures, and how we handle your personal information." />
+        <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, Zion Tech Group, privacy practices" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-     }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -131,13 +127,10 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
 
             {/* Information We Collect */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.1,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -149,12 +142,12 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Personal Information</h3>
                   <p className="text-zion-slate-light mb-3">
-                    We may collect personal information that you voluntarily provide to usincluding: </p>
+                    We may collect personal information that you voluntarily provide to us, including:
+                  </p>
                   <ul className="space-y-2 text-zion-slate-light ml-6">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Name and contact information (email address,
-    phone numbe, r, mailing address)
+                      Name and contact information (email address, phone number, mailing address)
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -174,7 +167,8 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Automatically Collected Information</h3>
                   <p className="text-zion-slate-light mb-3">
-                    When you visit our websitewe automatically collect certain information, including: </p>
+                    When you visit our website, we automatically collect certain information, including:
+                  </p>
                   <ul className="space-y-2 text-zion-slate-light ml-6">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -222,16 +216,12 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
               </div>
             </motion.div>
 
-            {/* How We Use Your Information *,
-    /}
+            {/* How We Use Your Information */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.2,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -240,7 +230,8 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
               </h2>
 
               <p className="text-zion-slate-light mb-4">
-                We use the information we collect for various purposesincluding: </p>
+                We use the information we collect for various purposes, including:
+              </p>
 
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
@@ -257,12 +248,11 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Sending newsletters,
-    marketing material, s, and updates (with your consent)
+                  Sending newsletters, marketing materials, and updates (with your consent)
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Improving our websiteservices, and user experience
+                  Improving our website, services, and user experience
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -277,13 +267,10 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
 
             {/* Information Sharing and Disclosure */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.3,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -292,7 +279,8 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
               </h2>
 
               <p className="text-zion-slate-light mb-4">
-                We do not selltrade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances: </p>
+                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
+              </p>
 
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
@@ -305,26 +293,21 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Business Transfers:</strong> In the event of a merger,
-    acquisitio, n, or sale of assets, your information may be transferred
+                  <strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Consent: </strong> We may share information with your explicit consent
+                  <strong>Consent:</strong> We may share information with your explicit consent
                 </li>
               </ul>
             </motion.div>
 
-            {/* Data Security *,
-    /}
+            {/* Data Security */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.4,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -334,10 +317,11 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized accessalteration, disclosure, or destruction.
+                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
                 </p>
                 <p>
-                  Our security measures include: </p>
+                  Our security measures include:
+                </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -357,21 +341,17 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                   </li>
                 </ul>
                 <p>
-                  However,
-    no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal informatio, n, we cannot guarantee absolute security.
+                  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
                 </p>
               </div>
             </motion.div>
 
             {/* Your Rights and Choices */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.5,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -380,7 +360,8 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
               </h2>
 
               <p className="text-zion-slate-light mb-4">
-                You have certain rights regarding your personal information: </p>
+                You have certain rights regarding your personal information:
+              </p>
 
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
@@ -410,19 +391,16 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
               </ul>
 
               <p className="text-zion-slate-light mt-4">
-                To exercise these rights,
-    please contact us using the information provided below.
+                To exercise these rights, please contact us using the information provided below.
               </p>
             </motion.div>
 
-            {/* International Data Transfers *, /}
+            {/* International Data Transfers */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.6,  }}
-              viewport={{ once: true,  }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -435,20 +413,17 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                   Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
                 </p>
                 <p>
-                  For transfers to countries outside the European Economic Area (EEA)we rely on adequacy decisionsstandard contractual clauses, or other appropriate safeguards as required by law.
+                  For transfers to countries outside the European Economic Area (EEA), we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
                 </p>
               </div>
             </motion.div>
 
             {/* Children's Privacy */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.7,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -461,20 +436,17 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                   Our website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16.
                 </p>
                 <p>
-                  If you are a parent or guardian and believe your child has provided us with personal informationplease contact us immediately. We will take steps to remove such information from our records.
+                  If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
                 </p>
               </div>
             </motion.div>
 
             {/* Changes to This Policy */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.8,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -484,10 +456,11 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
 
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  We may update this Privacy Policy from time to time to reflect changes in our practices or for other operationallegal, or regulatory reasons.
+                  We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
                 </p>
                 <p>
-                  We will notify you of any material changes by: </p>
+                  We will notify you of any material changes by:
+                </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -503,21 +476,17 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
                   </li>
                 </ul>
                 <p>
-                  Your continue,
-    d use of our website after any changes indicates your acceptance of the updated policy.
+                  Your continued use of our website after any changes indicates your acceptance of the updated policy.
                 </p>
               </div>
             </motion.div>
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.8,
-    delay: 0.9,  }}
-              viewport={{ once: true,
-     }}
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
@@ -525,14 +494,14 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
               </h2>
 
               <p className="text-zion-slate-light mb-6">
-                If you have any questions about this Privacy Policy or our data practicesplease contact us: </p>
+                If you have any questions about this Privacy Policy or our data practices, please contact us:
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-zion-slate-light">
                     <Mail className="w-5 h-5 text-zion-cyan" />
-                    <span>{emai,
-    l}</span>
+                    <span>{email}</span>
                   </div>
                   <div className="flex items-center gap-3 text-zion-slate-light">
                     <Phone className="w-5 h-5 text-zion-cyan" />
@@ -559,39 +528,31 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
         </section>
 
         {/* Table of Contents */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.2,  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents
               </h2>
               
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section,
-    index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {sections.map((section, index) => (
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
-                    initial={{ opacity: 0,
-    y: 20,  }}
-                    animate={{ opacity: 1,
-    y: 0,  }}
-                    transition={{ duration: 0.6,
-    delay: 0.1 * index,  }}
-                    className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover: bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
                   >
                     <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
                       <section.icon className="w-4 h-4 text-blue-600" />
                     </div>
-                    <span className="font-medium text-slate-900">{section.titl,
-    e}</span>
+                    <span className="font-medium text-slate-900">{section.title}</span>
                     <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
                   </motion.a>
                 ))}
@@ -601,17 +562,14 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
         </section>
 
         {/* Policy Content */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.4,  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {sections.map((sectionindex) => (
+              {sections.map((section, index) => (
                 <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -630,55 +588,46 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
         </section>
 
         {/* Data Categories Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.6,  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Categories and Retention
               </h2>
               
-              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-                {dataCategories.map((category,
-    index) => (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {dataCategories.map((category, index) => (
                   <motion.div
                     key={category.category}
-                    initial={{ opacity: 0,
-    y: 20,  }}
-                    animate={{ opacity: 1,
-    y: 0,  }}
-                    transition={{ duration: 0.6,
-    delay: 0.1 * index,  }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
                     className="bg-slate-50 rounded-xl p-6 border border-slate-200"
                   >
                     <h3 className="text-xl font-semibold text-slate-900 mb-4">{category.category}</h3>
                     
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-medium text-slate-700 mb-2">Examples: </h4>
+                        <h4 className="font-medium text-slate-700 mb-2">Examples:</h4>
                         <ul className="list-disc list-inside text-slate-600 space-y-1">
-                          {category.examples.map((example,
-    idx) => (
-                            <li key={id, x}>{example}</li>
+                          {category.examples.map((example, idx) => (
+                            <li key={idx}>{example}</li>
                           ))}
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-medium text-slate-700 mb-2">Purpose: </h4>
-                        <p className="text-slate-600">{category.purpos, e}</p>
+                        <h4 className="font-medium text-slate-700 mb-2">Purpose:</h4>
+                        <p className="text-slate-600">{category.purpose}</p>
                       </div>
                       
                       <div>
-                        <h4 className="font-medium text-slate-700 mb-2">Retention Period: </h4>
-                        <p className="text-slate-600">{category.retentio,
-    n}</p>
+                        <h4 className="font-medium text-slate-700 mb-2">Retention Period:</h4>
+                        <p className="text-slate-600">{category.retention}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -689,38 +638,30 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
         </section>
 
         {/* Security Measures Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 0.8,  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Security Measures
               </h2>
               
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-                {securityMeasures.map((measure,
-    index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {securityMeasures.map((measure, index) => (
                   <motion.div
                     key={measure.measure}
-                    initial={{ opacity: 0,
-    y: 20,  }}
-                    animate={{ opacity: 1,
-    y: 0,  }}
-                    transition={{ duration: 0.6,
-    delay: 0.1 * index,  }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover: shadow-lg transition-all duration-300 border border-slate-100 hover:border-green-200"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-green-200"
                   >
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <measure.icon className="w-8 h-8 text-green-600" />
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3 text-center">{measure.measur,
-    e}</h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-3 text-center">{measure.measure}</h3>
                     <p className="text-slate-600 text-center">{measure.description}</p>
                   </motion.div>
                 ))}
@@ -730,15 +671,12 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0,
-    y: 20,  }}
-              animate={{ opacity: 1,
-    y: 0,  }}
-              transition={{ duration: 0.6,
-    delay: 1.0,  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Questions About Privacy?
@@ -772,6 +710,6 @@ import { motion } from "framer-moti, on";import { Shield, Lock;
         </section>
       </div>
     </>
-  ),
+  )
 };
-export default PrivacyPolic;y;
+export default PrivacyPolicy;

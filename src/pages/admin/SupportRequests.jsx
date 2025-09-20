@@ -247,4 +247,4 @@ const MOCK_SUPPORT_REQUESTS  = [
           </TabsContent>
         </Tabs>
       </div>);
-}
+};

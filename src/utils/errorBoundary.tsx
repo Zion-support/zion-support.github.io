@@ -1,60 +1,61 @@
-import React, { Component, ErrorInfo, ReactNode  from "react";
-import { motion } from "framer-moti, on";interface Props {
-  children: ReactNode,
-    fallback?: ReactNode, 
-}
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { motion } from "framer-motion";
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode
+};
 
 interface State {
-  hasError: boolean,
-    error?: Error;
-  errorInfo?: ErrorInfo;
-  retryCount: number,
-}
+  hasError: boolean;
+  error?: Error,
+  errorInfo?: ErrorInfo,
+  retryCount: number
 
-class ErrorBoundary extends Component<Props;
-    State> {
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props),
+    super(props);
     this.state = {
-      hasError: false,
-    retryCount: 0,  };
-  }
+      hasError: false,retryCount: 0
+    };
+  };
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: tru,
-    e;
-      error;
-      retryCount: 0,  };
-  }
+      hasError: true;
+      error,
+      retryCount: 0
+    };
+  };
 
-  componentDidCatch(error: Error,
-    errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:, ', errorerrorInfo)this.setState({
-errorerrorInfo
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({
+error,
+      errorInfo
     
 });
 
     // Log error to external service
-    this.logError(error;
-    errorInfo);
-  }
+    this.logError(error, errorInfo);
+  };
 
-  logError = () => {
+  logError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
-      console.group('Error Boundary Error')console.error('Error:, ', error)console.error('Error Info:  , ', errorInfo)console.groupEnd()}
+      console.group('Error Boundary Error');
+      console.error('Error:', error);
+      console.error('Error Info:', errorInfo);
+      console.groupEnd();
+    }
 
-    // In productionyou could send to error reporting service
-    // Example: Sentry,
-    LogRocke, t, etc.
+    // In production, you could send to error reporting service
+    // Example: Sentry, LogRocket, etc.
   },
 
   handleRetry = () => {
     this.setState(prevState => ({
-      hasError: fals,
-    e;
-    error: undefine, d,errorInfo: undefine, d,retryCount: prevState.retryCount + 1,  }));
+      hasError: false,error: undefined,errorInfo: undefined,retryCount: prevState.retryCount + 1
+    }));
   },
 
   handleReload = () => {
@@ -64,22 +65,19 @@ errorerrorInfo
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallbac;k;
+        return this.props.fallback;
       }
 ;
       return (
         <motion.div
-          initial={{ opacity:  ,
-    0;
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
         >
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
             <motion.div
-              initial={{ scale: 0.8,  }}
-              animate={{ scale: 1,  }}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
               className="text-center"
             >
               {/* Error Icon */}
@@ -116,13 +114,13 @@ errorerrorInfo
                   </summary>
                   <div className="text-sm text-red-300 space-y-2">
                     <div>
-                      <strong>Error: </strong> {this.state.error.messag, e}
+                      <strong>Error:</strong> {this.state.error.message}
                     </div>
                     {this.state.errorInfo && (
                       <div>
-                        <strong>Component Stack: </strong>
+                        <strong>Component Stack:</strong>
                         <pre className="mt-2 text-xs overflow-auto">
-                          {this.state.errorInfo.componentStac, k}
+                          {this.state.errorInfo.componentStack}
                         </pre>
                       </div>
                     )}
@@ -133,29 +131,28 @@ errorerrorInfo
               {/* Action Buttons */}
               <div className="space-y-3">
                 <motion.button
-                  whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   onClick={this.handleRetry}
-                  className="w-full bg-blue-600 hover: bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Try Again
                 </motion.button>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   onClick={this.handleReload}
-                  className="w-full bg-gray-600 hover: bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                  className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Reload Page
                 </motion.button>
               </div>
 
-              {/* Contact Information *,
-    /}
+              {/* Contact Information */}
               <div className="mt-6 pt-6 border-t border-white/20">
                 <p className="text-sm text-gray-400 mb-2">
-                  If this problem persistsplease contact us: </p>
+                  If this problem persists, please contact us: </p>
                 <div className="text-sm text-gray-300 space-y-1">
                   <div>📧 kleber@ziontechgroup.com</div>
                   <div>📱 +1 302 464 0950</div>
@@ -165,11 +162,9 @@ errorerrorInfo
           </div>
         </motion.div>
       )
-   ,
-     }
+    }
 ;
-    return this.props.childre;n;
-  }
-}
+    return this.props.children;
+  };
 
-export { ErrorBoundary ;};
+export { ErrorBoundary };

@@ -1,18 +1,15 @@
-import { useState, useEffect } from "react";import { Link, useNavigate } from "react-router-dom";export default function CartPage() {
-
-    const navigate  = useNavigate;(;);
-    const [items;
-    setItems] = useState([]);
-    const [loading;
-    setLoading] = useState(false);
-    const [cartLoading;
-    setCartLoading] = useState(true);
-    const [showEmpty;
-    setShowEmpty] = useState(false);
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+export default function CartPage() {
+    const navigate = useNavigate();
+    const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [cartLoading, setCartLoading] = useState(true);
+    const [showEmpty, setShowEmpty] = useState(false);
 
     useEffect(() => {
         // Simulate loading cart data
-        const timer  = setTimeout(() => {
+        const timer = setTimeout(() => {
             setCartLoading(false);
             setShowEmpty(true);
         }, 1000);
@@ -24,8 +21,10 @@ import { useState, useEffect } from "react";import { Link, useNavigate } from "r
                 <div className="h-8 w-1/3 bg-gray-200 rounded animate-pulse"/>
                 <div className="h-32 w-full bg-gray-200 rounded animate-pulse"/>
             </div>
-        )}
-if (showEmpty) {
+        );
+    }
+;
+    if (showEmpty) {
         return (
             <div className="container py-10 text-center">
                 <div className="mx-auto mb-4 w-48 h-36 bg-gray-200 rounded flex items-center justify-center">
@@ -39,10 +38,10 @@ if (showEmpty) {
                     Browse Services
                 </Link>
             </div>
-        ,
-    )
-   }
-return (
+        )
+    }
+;
+    return (
         <div className="container max-w-2xl py-10">
             <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
             <p className="text-gray-600">Cart functionality coming soon...</p>
@@ -55,6 +54,5 @@ return (
                 </Link>
             </div>
         </div>
-    ,
-    ); 
-}
+    )
+};

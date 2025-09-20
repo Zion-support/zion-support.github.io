@@ -1,20 +1,27 @@
-import React, { useState, useEffect  from "react";
-import { Sun, Moon } from "lucide-react";export const ThemeToggle  = () => {
-  const [isD;a;r;k;
-    setIsDark] = useState(false);
+import React, { useState, useEffect } from "react";
+import { Sun, Moon } from "lucide-react";
+export const ThemeToggle = () => {
+  const [isDark, setIsDark] = useState(false);
   useEffect(() => {
-    const savedTheme  = localStorage.getItem('theme')const prefersDark  = window.matchMedia('(prefers-color-scheme: dark)').matche,
-    sif (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true)document.documentElement.classList.add('dark')}
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark')
+    }
   }, []),
 
-  const toggleTheme  = () => {
+  const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
     
     if (newTheme) {
-      document.documentElement.classList.add('dark')localStorage.setItem('themedark')} else {
-      document.documentElement.classList.remove('dark')localStorage.setItem('themelight')}
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('themedark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('themelight');
+    }
   },
 
   return (
@@ -36,5 +43,5 @@ import { Sun, Moon } from "lucide-react";export const ThemeToggle  = () => {
         />
       </div>
     </button>
-  ),
+  );
 };

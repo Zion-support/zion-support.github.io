@@ -643,4 +643,4 @@ import { motion, AnimatePresence } from "framer-motion";import { Atom, TrendingU
       </section>
     </div>
   );
-}
+};

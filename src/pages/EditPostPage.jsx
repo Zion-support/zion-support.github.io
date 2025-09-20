@@ -80,4 +80,3 @@ const mockPost  = {
         <PostForm initialValues={initialValue,
     s} onSubmit={handleSubmit} isEditing={true}/>
       </div>);
-}

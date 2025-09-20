@@ -1,53 +1,51 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Brain, Zap;
-  TrendingUp;
-  BarChart3;
-  Clock;
-  DollarSign;
-  Shield;
-  Users;
-  Target;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Cpu;
-  Database;
-  Workflow;
+import { motion } from "framer-motion";
+import { 
+  Brain,
+  Zap, 
+  TrendingUp, 
+  BarChart3, 
+  Clock, 
+  DollarSign, 
+  Shield, 
+  Users, 
+  Target, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Database,
+  Workflow,
   Gauge
-} from "lucide-react";import { Link } from "react-router-d, om";const AIBusinessProcessOptimization: React.FC  = () => {
+} from "lucide-react";
+import { Link } from "react-router-dom";
+const AIBusinessProcessOptimization: React.FC = () => {
   const features = [
     {
-      icon: Bra,
-    i;n;
-    title: "AI-Powered Process Analysis, ",description: "Advanced machine learning algorithms analyze your business processes to identify inefficiencie, s, bottlenecks, and optimization opportunities in real-time."
+      icon: Brain,title: "AI-Powered Process Analysis",description: "Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time."
     },
     {
-      icon: Workflow,
-    title: "Intelligent Workflow Automation, ",description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
-   ,  },
-    {
-      icon: BarChart3,
-    title: "Predictive Performance Analytics, ",description: "Forecast process performanc, e, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
+      icon: Workflow,title: "Intelligent Workflow Automation",description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
     },
     {
-      icon: Zap,
-    title: "Real-Time Optimization, ",description: "Continuously monitor and optimize processes in real-tim, e, automatically adjusting parameters and workflows for maximum efficiency."
+      icon: BarChart3,title: "Predictive Performance Analytics",description: "Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
     },
     {
-      icon: Users,
-    title: "Human-AI Collaboration, ",description: "Seamless integration between human workers and AI system, s, with intelligent task allocation and decision support for optimal team performance."
+      icon: Zap,title: "Real-Time Optimization",description: "Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency."
     },
     {
-      icon: Shield,
-    title: "Compliance & Risk Management, ",description: "Built-in compliance monitoring and risk assessmen, t, ensuring all process optimizations meet regulatory requirements and industry standards."
+      icon: Users,title: "Human-AI Collaboration",description: "Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance."
+    },
+    {
+      icon: Shield,title: "Compliance & Risk Management",description: "Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards."
     }
   ],
 
-  const benefits  = [
+  const benefits = [
     "Reduce process execution time by 40-60%",
     "Cut operational costs by 25-35%",
     "Improve process accuracy by 95%",
@@ -58,37 +56,37 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
 
   const useCases = [
     {
-      title: "Manufacturing & Productio,
-    n";description: "Optimize production lines,
-    inventory managemen, t, and quality control processes for maximum efficiency and minimal waste.",
-      icon: Cpu,  }{
-      title: "Financial Services, ",description: "Streamline loan processing,
-    risk assessmen, t, compliance workflows, and customer onboarding for faster service delivery.",
-      icon: DollarSign,  }{
-      title: "Healthcare & Life Sciences, ",description: "Optimize patient care workflows,
-    clinical trial processe, s, and administrative operations for better patient outcomes.",
-      icon: Users,  },
+      title: "Manufacturing & Production",description: "Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.",
+      icon: Cpu
+    };
     {
-      title: "Retail & E-commerce, ",description: "Streamline order fulfillment,
-    inventory managemen, t, customer service, and supply chain operations for seamless customer experiences.",
-      icon: Globe,  }
-  ]const pricing  = [
+      title: "Financial Services",description: "Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.",
+      icon: DollarSign
+    };
     {
-      name: "Starter, ",price: "$799, ",period: "/month, ",description: "Perfect for small businesses starting their process optimization journey, ",features: [
-        "Up to 10 process workflows, ",
+      title: "Healthcare & Life Sciences",description: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.",
+      icon: Users
+    },
+    {
+      title: "Retail & E-commerce",description: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.",
+      icon: Globe
+    }
+  ];
+  const pricing = [
+    {
+      name: "Starter",price: "$799",period: "/month",description: "Perfect for small businesses starting their process optimization journey",features: [
+        "Up to 10 process workflows",
         "Basic AI analysis and recommendations",
         "Standard reporting and dashboards",
         "Email support",
         "Basic integration capabilities"
       ],
-      cta: "Start Free Trial,";popular: false
-   ,
-     };
+      cta: "Start Free Trial",popular: false
+    };
     {
-      name: "Professional, ",price: "$1,
-    999, ",
-      period: "/month, ",description: "Ideal for growing companies with complex process optimization needs, ",features: [
-        "Up to 50 process workflows, ",
+      name: "Professional",price: "$1,999",
+      period: "/month",description: "Ideal for growing companies with complex process optimization needs",features: [
+        "Up to 50 process workflows",
         "Advanced AI optimization algorithms",
         "Real-time monitoring and alerts",
         "Custom dashboards and reports",
@@ -96,11 +94,12 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
         "Advanced integrations",
         "Process simulation and testing"
       ],
-      cta: "Start Free Trial, ",popular: true,  }{
-      name: "Enterprise, ",price: "$4,
-    999, ",
-      period: "/month, ",description: "Comprehensive solution for large enterprises with complex operations, ",features: [
-        "Unlimited process workflows, ",
+      cta: "Start Free Trial",popular: true
+    };
+    {
+      name: "Enterprise",price: "$4,999",
+      period: "/month",description: "Comprehensive solution for large enterprises with complex operations",features: [
+        "Unlimited process workflows",
         "Custom AI model training",
         "Advanced analytics and insights",
         "White-label solutions",
@@ -109,44 +108,44 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
         "On-premise deployment options",
         "Advanced security and compliance"
       ],
-      cta: "Contact Sales, ",popular: false,  }
-  ]const roi  = [
+      cta: "Contact Sales",popular: false
+    }
+  ];
+  const roi = [
     {
-      metric: "Process Efficiency, ",improvement: "40-60%,";description: "Faster execution and reduced cycle times"
-   ,
-     }{
-      metric: "Cost Reduction, ",improvement: "25-35%, ",description: "Lower operational and labor costs"
-   ,  }{
-      metric: "Error Reduction, ",improvement: "90%, ",description: "Minimal manual errors and rework"
-   ,  },
+      metric: "Process Efficiency",improvement: "40-60%",description: "Faster execution and reduced cycle times"
+    };
     {
-      metric: "Productivity Gain, ",improvement: "30%, ",description: "Increased employee output and satisfaction"
-   ,  }
-  ]return (
+      metric: "Cost Reduction",improvement: "25-35%",description: "Lower operational and labor costs"
+    };
+    {
+      metric: "Error Reduction",improvement: "90%",description: "Minimal manual errors and rework"
+    },
+    {
+      metric: "Productivity Gain",improvement: "30%",description: "Increased employee output and satisfaction"
+    }
+  ];
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: ,
-    0y: 30,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8">
               <Workflow className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Business Process Optimization
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your business operations with intelligent process optimization that learns,
-    adapt, s, and continuously improves your workflows for maximum efficiency and cost savings.
+              Transform your business operations with intelligent process optimization that learns, adapts, and continuously improves your workflows for maximum efficiency and cost savings.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
@@ -166,45 +165,38 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Intelligent Process Optimization Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive tools to analyzeoptimize, and continuously improve your business processes.
+              Our AI-powered platform provides comprehensive tools to analyze, optimize, and continuously improve your business processes.
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hover:scale-105"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.titl,
-    e}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
@@ -213,41 +205,35 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Transform Your Business Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience measurable improvements in efficiencycost reduction, and operational excellence.
+              Experience measurable improvements in efficiency, cost reduction, and operational excellence.
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit,
-    index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: bg-white/15 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300"
               >
                 <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-white font-medium">{benefi,
-    t}</span>
+                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -255,15 +241,13 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -274,25 +258,21 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase,
-    index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{useCase.titl,
-    e}</h3>
+                  <h3 className="text-2xl font-bold text-white">{useCase.title}</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
               </motion.div>
@@ -302,15 +282,13 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -321,18 +299,14 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-3 gap-8">
-            {pricing.map((plan,
-    index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20' 
@@ -357,7 +331,7 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((featureidx) => (
+                  {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -365,9 +339,8 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
                   ))}
                 </ul>
 
-                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
-                  {plan.ct,
-    a}
+                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                  {plan.cta}
                 </button>
               </motion.div>
             ))}
@@ -376,15 +349,13 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
       </section>
 
       {/* ROI Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -395,21 +366,17 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
             </p>
           </motion.div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {roi.map((metric,
-    index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {roi.map((metric, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.5,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300"
               >
-                <div className="text-3xl font-bold text-blue-400 mb-2">{metric.improvemen,
-    t}</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">{metric.improvement}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{metric.metric}</h3>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
               </motion.div>
@@ -419,15 +386,13 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Business Processes?
@@ -436,7 +401,7 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
               Let's discuss how our AI-powered process optimization can transform your operations and drive measurable results for your business.
             </p>
             
-            <div className="grid md: grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-white">
                 <Phone className="w-5 h-5 text-blue-400" />
                 <span>+1 302 464 0950</span>
@@ -447,8 +412,7 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
               </div>
               <div className="flex items-center justify-center space-x-3 text-white">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span>364 E Main St STE 1008,
-    Middletown DE 19709</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 
@@ -472,7 +436,7 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
         </div>
       </section>
 
-      {/* Footer *, /}
+      {/* Footer */}
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
@@ -491,6 +455,6 @@ import { motion } from "framer-moti, on";import { Brain, Zap;
         </div>
       </footer>
     </div>
-  ),
+  )
 };
-export default AIBusinessProcessOptimizatio;n;
+export default AIBusinessProcessOptimization;

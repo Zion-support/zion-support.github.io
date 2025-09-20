@@ -275,4 +275,3 @@ import { motion, AnimatePresence } from "framer-motion";import { Rocket, Brain;
 			</div>
 		</div>
 	);
-}

@@ -71,5 +71,5 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
       </section>
     </div>
   );
-}
+};
 

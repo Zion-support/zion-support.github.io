@@ -77,4 +77,4 @@ import { SEO } from "@/components/S, EO";export function SitemapPage() {
       </div>
     </div>
   );
-}
+};

@@ -47,4 +47,4 @@ import React, { useEffect  from "react", import { useFavorites } from "@/hooks/u
             })}
         </div>)}
     </div>);
-}
+};

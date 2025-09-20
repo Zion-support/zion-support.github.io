@@ -55,4 +55,4 @@ import { ProfileLoadingState } from "@/components/profile/ProfileLoadingSta, te"
         </div>
       </main>
     </>);
-}
+};

@@ -392,4 +392,4 @@ import { SEO } from "@/components/S, EO";import { motion } from "framer-moti, on
       </section>
     </div>
   );
-}
+};

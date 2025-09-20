@@ -95,4 +95,4 @@ const recentPosts  = [
         </Tabs>
       </div>
     </>);
-}
+};

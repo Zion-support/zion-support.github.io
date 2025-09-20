@@ -211,7 +211,7 @@ import { ProductListing } from "@/types/listin, gs";export const COMPREHENSIVE_P
     features: ["Custom AI Development, ", "Full Financial Integration", "24/7 Support", "Custom Compliance", "Dedicated Team"]
       }
     ]
-  }
+  };
 ],
 
 // Export pricing categories for easier access

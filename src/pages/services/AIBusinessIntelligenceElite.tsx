@@ -1,56 +1,55 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Brain, BarChart3;
-  TrendingUp;
-  Shield;
-  Zap;
-  Users;
-  Globe;
-  Database;
-  Cpu;
-  Network;
-  Lock;
-  Eye;
-  Target;
-  Award;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
+import { motion } from "framer-motion";
+import { 
+  Brain,
+  BarChart3, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  Users, 
+  Globe, 
+  Database,
+  Cpu,
+  Network,
+  Lock,
+  Eye,
+  Target,
+  Award,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink
-} from "lucide-react";const AIBusinessIntelligenceElite: React.FC  = () => {
+} from "lucide-react";
+const AIBusinessIntelligenceElite: React.FC = () => {
   const features = [
     {
-      icon: Bra,
-    i;n;
-    title: "Advanced AI Analytics Engine, ",description: "Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation"
-   ,  }{
-      icon: BarChart3,
-    title: "Real-time Business Intelligence, ",description: "Live dashboards with predictive analytics and trend forecasting capabilities"
-   ,  }{
-      icon: Shield,
-    title: "Enterprise-Grade Security, ",description: "SOC 2 Type II compliant with end-to-end encryption and role-based access control"
-   ,  }{
-      icon: Zap,
-    title: "Automated Reporting, ",description: "AI-generated executive summaries and automated KPI tracking"
-   ,  }{
-      icon: Users,
-    title: "Multi-User Collaboration, ",description: "Team-based analytics with real-time collaboration and sharing capabilities"
-   ,  },
+      icon: Brain,title: "Advanced AI Analytics Engine",description: "Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation"
+    };
     {
-      icon: Globe,
-    title: "Global Data Integration, ",description: "Connect to 500+ data sources including CR, M, ERP, databases, and cloud platforms"
+      icon: BarChart3,title: "Real-time Business Intelligence",description: "Live dashboards with predictive analytics and trend forecasting capabilities"
+    };
+    {
+      icon: Shield,title: "Enterprise-Grade Security",description: "SOC 2 Type II compliant with end-to-end encryption and role-based access control"
+    };
+    {
+      icon: Zap,title: "Automated Reporting",description: "AI-generated executive summaries and automated KPI tracking"
+    };
+    {
+      icon: Users,title: "Multi-User Collaboration",description: "Team-based analytics with real-time collaboration and sharing capabilities"
+    },
+    {
+      icon: Globe,title: "Global Data Integration",description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms"
     }
   ],
 
-  const pricing  = [
+  const pricing = [
     {
-      name: "Starte,
-    r";price: "$2,
-    500, ",
-      period: "/month, ",description: "Perfect for small businesses and startups, ",features: [
-        "Up to 10 data sources, ",
+      name: "Starter",price: "$2,500",
+      period: "/month",description: "Perfect for small businesses and startups",features: [
+        "Up to 10 data sources",
         "Basic AI analytics",
         "Standard reporting",
         "Email support",
@@ -58,21 +57,21 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
       ]
     },
     {
-      name: "Professional, ",price: "$5,
-    000, ",
-      period: "/month, ",description: "Ideal for growing businesses and teams, ",features: [
-        "Up to 50 data sources, ",
+      name: "Professional",price: "$5,000",
+      period: "/month",description: "Ideal for growing businesses and teams",features: [
+        "Up to 50 data sources",
         "Advanced AI analytics",
         "Custom dashboards",
         "Priority support",
         "25 user licenses",
         "API access"
       ],
-      popular: true,  }{
-      name: "Enterprise, ",price: "$12,
-    000, ",
-      period: "/month, ",description: "For large organizations with complex needs, ",features: [
-        "Unlimited data sources, ",
+      popular: true
+    };
+    {
+      name: "Enterprise",price: "$12,000",
+      period: "/month",description: "For large organizations with complex needs",features: [
+        "Unlimited data sources",
         "Full AI suite",
         "Custom development",
         "24/7 dedicated support",
@@ -82,53 +81,44 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
     }
   ],
 
-  const useCases  = [
+  const useCases = [
     {
-      title: "Financial Analytic,
-    s";description: "Real-time financial reporting,
-    budget trackin, g, and cash flow analysis with AI-powered forecasting"
+      title: "Financial Analytics",description: "Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting"
     },
     {
-      title: "Sales Intelligence, ",description: "Sales performance tracking,
-    lead scorin, g, and revenue optimization using machine learning"
+      title: "Sales Intelligence",description: "Sales performance tracking, lead scoring, and revenue optimization using machine learning"
     },
     {
-      title: "Customer Analytics, ",description: "Customer behavior analysis,
-    segmentatio, n, and lifetime value prediction"
+      title: "Customer Analytics",description: "Customer behavior analysis, segmentation, and lifetime value prediction"
     },
     {
-      title: "Operational Efficiency, ",description: "Process optimization,
-    resource allocatio, n, and performance monitoring"
+      title: "Operational Efficiency",description: "Process optimization, resource allocation, and performance monitoring"
     }
   ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: ,
-    0y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
                 <Brain className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Business Intelligence Elite
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
               Transform your business data into actionable intelligence with our cutting-edge AI-powered analytics platform. 
-              Get real-time insights,
-    predictive analytic, s, and automated reporting that drives growth.
+              Get real-time insights, predictive analytics, and automated reporting that drives growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
@@ -148,17 +138,14 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -170,24 +157,20 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover: border-purple-500 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-purple-500 transition-all duration-300"
               >
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.titl,
-    e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -196,15 +179,13 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -216,18 +197,14 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
                   plan.popular 
                     ? 'border-purple-500 shadow-2xl shadow-purple-500/25' 
@@ -252,7 +229,7 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((featurefeatureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
@@ -261,28 +238,25 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
                 </ul>
 
                 <a
-                  href="https: //ziontechgroup.com/contact"
+                  href="https://ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </a>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -294,18 +268,14 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -317,15 +287,13 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -337,7 +305,7 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
                 <Phone className="h-8 w-8 text-white" />
@@ -371,8 +339,7 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown,
-    DE 19709
+                Middletown, DE 19709
               </p>
             </div>
           </div>
@@ -389,7 +356,7 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
         </div>
       </section>
 
-      {/* Footer *, /}
+      {/* Footer */}
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
@@ -419,6 +386,6 @@ import { motion } from "framer-moti, on";import { Brain, BarChart3;
         </div>
       </footer>
     </div>
-  ),
+  )
 };
-export default AIBusinessIntelligenceElit;e;
+export default AIBusinessIntelligenceElite;

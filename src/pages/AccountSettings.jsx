@@ -195,4 +195,4 @@ import { Wallet, Database, Save } from "lucide-react";import { Card, CardContent
       </main>
       
     </>);
-}
+};

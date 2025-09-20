@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from "lucide-react";export default function AIMarketingAutomationPersonalization() {
-
-  const features  = [
-    'AI-powered customer segmentation with behavioral analysisDynamic content personalization across all marketing channels';
-    'Predictive lead scoring and conversion optimizationMulti-channel campaign orchestration (emailSMS, social, web)',
+import { Link } from "react-router-dom";
+import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from "lucide-react";
+export default function AIMarketingAutomationPersonalization() {
+  const features = [
+    'AI-powered customer segmentation with behavioral analysisDynamic content personalization across all marketing channels',
+    'Predictive lead scoring and conversion optimizationMulti-channel campaign orchestration (email, SMS, social, web)',
     'Real-time A/B testing with AI-driven optimizationCustomer journey mapping and automated nurturing sequences',
-    'Advanced analytics and ROI tracking with attribution modelingIntegration with major CRMe-commerce, and advertising platforms'
+    'Advanced analytics and ROI tracking with attribution modelingIntegration with major CRM, e-commerce, and advertising platforms'
   ],
 
-  const benefits  = [
+  const benefits = [
     'Increase conversion rates by 40-60% with personalizationReduce customer acquisition costs by 30-50%',
     'Improve email open rates by 25-40% with AI optimizationGenerate 35-50% more qualified leads through automation',
     'Boost customer lifetime value by 20-35%Achieve 99.9% campaign delivery and tracking accuracy'
@@ -26,33 +27,40 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
     'Customer Behavior AnalysisPredictive Analytics',
     'Dynamic Content GenerationSmart Segmentation',
     'Lead Scoring & QualificationCampaign Optimization',
-    'Personalization EngineA/B Testing Automation';
+    'Personalization EngineA/B Testing Automation',
     'Performance PredictionROI Optimization'
-  ]const integrations  = [
+  ],
+
+  const integrations = [
     'Salesforce Marketing CloudHubSpot Marketing Hub';
     'MailchimpKlaviyo',
     'ShopifyWooCommerce';
     'Facebook AdsGoogle Ads',
     'LinkedIn AdsTikTok Ads'
-  ]const stack  = [
-    { name: 'OpenAI GPT-4,'; url: 'https://openai.com/gpt-4',
-     }{ name: 'TensorFlow, ', url: 'https://www.tensorflow.org/',  }{ name: 'Scikit-learn, ', url: 'https://scikit-learn.org/',  }{ name: 'Apache Spark, ', url: 'https://spark.apache.org/',  }{ name: 'Kubernetes, ', url: 'https://kubernetes.io/',  }{ name: 'Redis, ', url: 'https://redis.io/',  }{ name: 'PostgreSQL, ', url: 'https://www.postgresql.org/',  },
-    { name: 'Elasticsearch, ', url: 'https://www.elastic.co/',  }
+  ];
+  const stack = [
+    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' };
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' };
+    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' };
+    { name: 'Apache Spark', url: 'https://spark.apache.org/' };
+    { name: 'Kubernetes', url: 'https://kubernetes.io/' };
+    { name: 'Redis', url: 'https://redis.io/' };
+    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
+    { name: 'Elasticsearch', url: 'https://www.elastic.co/' }
   ];
   return (
     <div className="min-h-screen bg-futuristic">
-      <section className="relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your marketing with AI-driven automatio,
-    nintelligent personalizatio, n, and predictive analytics. 
+              Revolutionize your marketing with AI-driven automation, intelligent personalization, and predictive analytics. 
               Deliver the right message to the right person at the right time across all channels.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Marketing Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -80,8 +88,7 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
               <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
             </div>
             <ul className="space-y-3">
-              {features.slice(0,
-    4).map((item) => (
+              {features.slice(0, 4).map((item) => (
                 <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
                   {item}
@@ -98,7 +105,7 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
               <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>
             </div>
             <ul className="space-y-3">
-              {marketingChannels.slice(05).map((item) => (
+              {marketingChannels.slice(0, 5).map((item) => (
                 <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
                   {item}
@@ -115,12 +122,9 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
               <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>
             <ul className="space-y-3 text-slate-300">
-              <li>Starter: $299/month (up to 10,
-    000 contacts)</li>
-              <li>Professional: $799/month (up to 100,
-    000 contacts)</li>
-              <li>Enterprise: $1,
-    999/month (unlimited contacts)</li>
+              <li>Starter: $299/month (up to 10,000 contacts)</li>
+              <li>Professional: $799/month (up to 100,000 contacts)</li>
+              <li>Enterprise: $1,999/month (unlimited contacts)</li>
               <li>Custom: Tailored enterprise solutions</li>
             </ul>
             <div className="mt-6 text-sm text-slate-400">
@@ -179,7 +183,7 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>
           <div className="flex flex-wrap gap-3">
             {aiCapabilities.map((capability) => (
-              <span key={capabilit, y} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+              <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
                 {capability}
               </span>
             ))}
@@ -187,12 +191,12 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
         </div>
       </section>
 
-      <section className="py-12 px-4 sm: px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>
           <div className="flex flex-wrap gap-3">
             {integrations.map((integration) => (
-              <span key={integratio, n} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+              <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
                 {integration}
               </span>
             ))}
@@ -200,13 +204,13 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
         </div>
       </section>
 
-      <section className="py-12 px-4 sm: px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>
           <div className="flex flex-wrap gap-3">
             {stack.map((s) => (
-              <a key={s.nam, e} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover: text-white hover:border-cyan-500">
-                {s.nam, e}
+              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
+                {s.name}
               </a>
             ))}
           </div>
@@ -231,5 +235,5 @@ import { Link } from "react-router-d, om";import { Target, Mail, BarChart3, User
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

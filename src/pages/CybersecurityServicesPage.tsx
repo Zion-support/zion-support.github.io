@@ -1,45 +1,57 @@
-import React, { useState  from "react", import { Link } from "react-router-d, om";import { SEOHead } from "../components/seo/SEOHe, ad";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Button } from "@/components/ui/butt, on";import { Badge } from "@/components/ui/bad, ge";import { Shield, Lock;
-  Eye;
-  AlertTriangle;
-  Users;
-  Globe;
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Zap;
-  Brain;
-  Network;
-  Server;
-  Database;
-  Key;
-  Monitor;
-  TrendingUp;
-  ShieldCheck;
-  FileText;
-  Clock;
-  DollarSign;
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "../components/seo/SEOHead";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Users,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Brain,
+  Network,
+  Server,
+  Database,
+  Key,
+  Monitor,
+  TrendingUp,
+  ShieldCheck,
+  FileText,
+  Clock,
+  DollarSign,
   Code
-} from "lucide-react";import { ENHANCED_SERVICES } from "@/data/enhancedServic, es";import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServic, es";import { TrustedBySection } from "@/components/TrustedBySecti, on";import { QuoteFormSection } from "@/components/QuoteFormSecti, on";// Filter cybersecurity services
-const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
+} from "lucide-react";
+import { ENHANCED_SERVICES } from "@/data/enhancedServices";
+import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { QuoteFormSection } from "@/components/QuoteFormSection";
+// Filter cybersecurity services
+const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
-)const SECURITY_SERVICE_CATEGORIES  = [
+);
+const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: 'threat-detection, ',name: 'Threat Detection & Response, ',description: 'AI-powered security monitoring and incident response',
-    icon: Eye,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
- ,  },
+    id: 'threat-detection',name: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',icon: Eye,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
+  },
   {
-    id: 'zero-trust, ',name: 'Zero Trust Security, ',description: 'Identity verification and access management, ';icon: Lock,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
- ,
-     }
-]export default function CybersecurityServicesPage() {
-
-  const [selectedCategorysetSelectedCategory] = useState('all')// Data arrays
-  const securityTechnologies  = [
+    id: 'zero-trust',name: 'Zero Trust Security',description: 'Identity verification and access management',icon: Lock,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
+  };
+];
+export default function CybersecurityServicesPage() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  // Data arrays
+  const securityTechnologies = [
     'SIEM PlatformsEDR Solutions',
     'Zero Trust NetworkIdentity Management',
     'Threat IntelligenceVulnerability Management',
@@ -49,57 +61,57 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
   const complianceStandards = [
     'SOC 2 Type IIISO 27001',
     'PCI DSSNIST Framework',
-    'GDPR ComplianceHIPAA Security';
+    'GDPR ComplianceHIPAA Security',
     'FedRAMPCIS Controls'
-  ]const threatIntelligence  = [
+  ],
+
+  const threatIntelligence = [
     'Dark Web MonitoringThreat Hunting';
     'Malware AnalysisAPT Detection';
     'IOC ManagementThreat Modeling',
     'Risk AssessmentSecurity Metrics'
-  ]const securityServices  = [
+  ];
+  const securityServices = [
     {
-      id:  ,
-    1title: 'Threat Detection & Response, ',description: 'AI-powered security monitoring and incident response, ',category: 'Security, ',icon: '🛡️, ',features: ['Real-time monitoringAI threat detection, ', 'Incident response'],
-      price: 2500,
-    currency: '$, ',duration: 'Monthly'
-   ,  }{
-      id: 2,
-    title: 'Zero Trust Security, ',description: 'Identity verification and access management, ',category: 'Security, ',icon: '🔐, ',features: ['Identity managementAccess control, ', 'Multi-factor auth'],
-      price: 1800,
-    currency: '$, ',duration: 'Monthly'
-   ,  }{
-      id: 3,
-    title: 'Compliance Management, ',description: 'Regulatory compliance and audit support, ',category: 'Security, ',icon: '📋, ',features: ['SOC 2 complianceISO 27001, ', 'GDPR support'],
-      price: 3200,
-    currency: '$, ',duration: 'Monthly'
-   ,  }
-  ]const getCategoryIcon  = () => {
-    const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)return categoryData?.icon || Shiel;d
- ;  };
-  const getPricingModelLabel = () => {
+      id: 1,title: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',category: 'Security',icon: '🛡️',features: ['Real-time monitoringAI threat detection', 'Incident response'],
+      price: 2500,currency: '$',duration: 'Monthly'
+    };
+    {
+      id: 2,title: 'Zero Trust Security',description: 'Identity verification and access management',category: 'Security',icon: '🔐',features: ['Identity managementAccess control', 'Multi-factor auth'],
+      price: 1800,currency: '$',duration: 'Monthly'
+    };
+    {
+      id: 3,title: 'Compliance Management',description: 'Regulatory compliance and audit support',category: 'Security',icon: '📋',features: ['SOC 2 complianceISO 27001', 'GDPR support'],
+      price: 3200,currency: '$',duration: 'Monthly'
+    }
+  ];
+  const getCategoryIcon = (category: string) => {
+    const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
+    return categoryData?.icon || Shield
+  };
+  const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'one-time': return 'One-time';
-      case 'monthly': return 'Monthly, '
-  }case 'hourly': return 'Hourly';
+      case 'monthly': return 'Monthly',
+      case 'hourly': return 'Hourly',
       case 'project-based': return 'Project-based';
-      default: return mode,
-    l
-   ;  }
+      default: return model
+    }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
       <SEOHead
         title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity solutions including zero trust securitythreat detection, and compliance services to protect your business."
-        keywords={['cybersecuritysecurity services', 'threat detectioncompliance''zero trust']}
+        description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
+        keywords={['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust']}
         structuredData={{
-          "@context": "https: //schema.org",
-    "@type": "Service, ",
+          "@context": "https: //schema.org";
+          "@type": "Service",
           "name": "Cybersecurity Services",
           "description": "Comprehensive cybersecurity solutions",
-          "url": "https: //ziontechgroup.com/services/cybersecurity",
-    "provider": {
-            "@type": "Organization, ",
+          "url": "https: //ziontechgroup.com/services/cybersecurity";
+          "provider": {
+            "@type": "Organization",
             "name": "Zion Tech Group"
           }
         }}
@@ -109,11 +121,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />
-            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s',  }} />
-            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s',  }} />
+            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
                 Cybersecurity
               </span>
@@ -141,8 +153,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </div>
           </div>
         </section>
-        {/* Security Service Categories *,
-    /}
+        {/* Security Service Categories */}
         <section className="py-16 bg-zion-blue-dark">
           <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
@@ -153,15 +164,14 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category) => {
-                const IconComponent  = category.ico,
-    nreturn (
+                const IconComponent = category.icon;
+                return (
                   <Card key={category.id} className="text-center hover: shadow-lg transition-shadow cursor-pointer border-red-500/20">
                     <CardHeader>
                       <div className="bg-red-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <IconComponent className="h-10 w-10 text-red-600" />
                       </div>
-                      <CardTitle className="text-xl">{category.nam,
-    e}</CardTitle>
+                      <CardTitle className="text-xl">{category.name}</CardTitle>
                       <CardDescription>{category.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -170,20 +180,21 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                       </Badge>
                     </CardContent>
                   </Card>
-                )})}
+                );
+              })}
             </div>
           </div>
         </section>
         {/* Security Services Showcase */}
         <section className="py-16 bg-zion-blue">
-          <div className="container mx-auto px-4 md: px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4 text-white">Security Services Showcase</h2>
               <p className="text-zion-slate-light max-w-3xl mx-auto">
                 Discover how our cybersecurity solutions can protect your business and ensure compliance
               </p>
             </div>
-            <Tabs value={selectedCategor, y} onValueChange={setSelectedCategory} className="w-full">
+            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
               <TabsList className="grid w-full grid-cols-3 mb-8">
                 <TabsTrigger value="all">All Security Services</TabsTrigger>
                 {SECURITY_SERVICE_CATEGORIES.map((category) => (
@@ -193,18 +204,17 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 ))}
               </TabsList>
               <TabsContent value="all" className="space-y-6">
-                <div className="grid gap-6 md: grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {CYBERSECURITY_SERVICES.map((service) => (
-                    <SecurityServiceCard key={service.i, d} service={service} />
+                    <SecurityServiceCard key={service.id} service={service} />
                   ))}
                 </div>
               </TabsContent>
               {SECURITY_SERVICE_CATEGORIES.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="space-y-6">
-                  <div className="grid gap-6 md: grid-cols-2 lg:grid-cols-3">
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {category.services.map((service) => (
-                      <SecurityServiceCard key={service.i,
-    d} service={service} />
+                      <SecurityServiceCard key={service.id} service={service} />
                     ))}
                   </div>
                 </TabsContent>
@@ -214,7 +224,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
         </section>
         {/* Security Benefits Section */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 md: px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Why Choose Our Security Solutions?</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
@@ -246,8 +256,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 </div>
                 <h3 className="font-semibold mb-2">Compliance Ready</h3>
                 <p className="text-muted-foreground text-sm">
-                  Meet SOC2,
-    GDP, R, HIPAA, and other compliance requirements
+                  Meet SOC2, GDPR, HIPAA, and other compliance requirements
                 </p>
               </div>
               <div className="text-center">
@@ -264,7 +273,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
         </section>
         {/* Security Implementation Process */}
         <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4 md: px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Security Implementation Process</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
@@ -311,9 +320,9 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </div>
           </div>
         </section>
-        {/* Compliance & Standards *, /}
+        {/* Compliance & Standards */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 md: px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Compliance & Standards</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
@@ -322,18 +331,20 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </div>
             <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
               {[
-                { name: 'SOC2, ', icon: '🔒, ', description: 'Security Controls',
-     }{ name: 'GDPR, ', icon: '🇪🇺, ', description: 'Data Protection',  }{ name: 'HIPAA, ', icon: '🏥, ', description: 'Healthcare',  }{ name: 'PCI DSS, ', icon: '💳, ', description: 'Payment Security',  }{ name: 'ISO 27001, ', icon: '🌐, ', description: 'Information Security',  },
-                { name: 'NIST, ', icon: '🇺🇸, ', description: 'Cybersecurity Framework',  }
+                { name: 'SOC2', icon: '🔒', description: 'Security Controls' };
+                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' };
+                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' };
+                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' };
+                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
+                { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
               ].map((standard) => (
-                <Card key={standard.name} className="text-center hover: shadow-lg transition-shadow">
+                <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mb-4 flex items-center justify-center">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <CardTitle className="text-xl text-white">
-                      {service.titl,
-    e}
+                      {service.title}
                     </CardTitle>
                     <CardDescription className="text-gray-400">
                       {service.description}
@@ -341,7 +352,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((featurefeatureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -351,18 +362,18 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                     <div className="text-2xl font-bold text-red-400 mb-4">
                       {service.price}
                     </div>
-                    <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover: from-red-600 hover:to-orange-600">
+                    <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
                       Get Started
                     </Button>
                   </CardContent>
                 </Card>
-              ), )}
+              ))}
             </div>
           </div>
         </section>
         {/* Contact CTA */}
         <section className="py-16 bg-zion-blue">
-          <div className="container mx-auto px-4 md: px-6 text-center">
+          <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>
@@ -386,14 +397,14 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </div>
           </div>
         </section>
-      {/* Hero Section *, /}
+      {/* Hero Section */}
       <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-6">
               <Shield className="h-20 w-20 mx-auto text-red-200" />
             </div>
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Cybersecurity Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-red-100">
@@ -415,11 +426,10 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </div>
-      {/* Contact Information Banner *,
-    /}
+      {/* Contact Information Banner */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md: flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-red-600" />
@@ -431,14 +441,13 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-red-600" />
-                <span>364 E Main St STE 1008,
-    Middletown DE 19709</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-red-600" />
               <a
-                href="https: //ziontechgroup.com"
+                href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-600 hover:underline font-medium"
@@ -449,12 +458,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </div>
-      {/* Security Threats Overview *,
-    /}
+      {/* Security Threats Overview */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Modern Security Threats
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -474,8 +482,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 <Users className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Social Engineering</h3>
-              <p className="text-gray-600">Defend against phishing,
-    pretextin, g, and other human-based attack vectors</p>
+              <p className="text-gray-600">Defend against phishing, pretexting, and other human-based attack vectors</p>
             </div>
             <div className="text-center">
               <div className="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -507,10 +514,10 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {CYBERSECURITY_SERVICES.map((service) => (
-              <Card key={service.i, d} className="hover: shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
+              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
                 <div className="relative">
                   <img
-                    src={service.images[0, ]}
+                    src={service.images[0]}
                     alt={service.title}
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
@@ -556,10 +563,10 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <BarChart3 className="h-4 w-4" />
-                      <span>AI Score: {service.aiScor, e}%</span>
+                      <span>AI Score: {service.aiScore}%</span>
                     </div>
                     <Link to={`/services/${service.id}`}>
-                      <Button size="sm" className="bg-red-600 hover: bg-red-700">
+                      <Button size="sm" className="bg-red-600 hover:bg-red-700">
                         Learn More
                       </Button>
                     </Link>
@@ -573,8 +580,10 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No security services found</h3>
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={() => {
-                setSearchQuery(''),
-    setSelectedSubcategory('all')setPriceRange('all')}}>
+                setSearchQuery('');
+                setSelectedSubcategory('all');
+                setPriceRange('all');
+              }}>
                 Clear Filters
               </Button>
             </div>
@@ -590,7 +599,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
               Our security solutions protect businesses worldwide
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
               <div className="text-white font-semibold">Threat Detection Rate</div>
@@ -614,11 +623,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </section>
-      {/* Security Services Grid *, /}
+      {/* Security Services Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Security Services
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -628,12 +637,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service) => (
-              <div key={service.i, d} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover: border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
+              <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4">
                     <div className="text-white">
-                      {service.ico,
-    n}
+                      {service.icon}
                     </div>
                   </div>
                   <div>
@@ -643,10 +651,9 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
                 <div className="mb-4">
-                  <h4 className="text-white font-semibold mb-2">Key Features: </h4>
+                  <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0,
-    3).map((featur, e, index) => (
+                    {service.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
@@ -667,7 +674,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                   </div>
                 </div>
                 <Link to="/request-quote">
-                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     Get Quote
                   </Button>
                 </Link>
@@ -680,7 +687,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced Security Technologies
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -689,14 +696,12 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {securityTechnologies.map((tech,
-    index) => (
-              <div key={inde, x} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover: border-zion-purple/50 transition-all duration-300">
+            {securityTechnologies.map((tech, index) => (
+              <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{tec,
-    h}</h3>
+                <h3 className="text-white font-semibold text-sm">{tech}</h3>
               </div>
             ))}
           </div>
@@ -706,7 +711,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance & Standards
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -715,14 +720,12 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {complianceStandards.map((standard,
-    index) => (
-              <div key={inde, x} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover: border-zion-purple/50 transition-all duration-300">
+            {complianceStandards.map((standard, index) => (
+              <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{standar,
-    d}</h3>
+                <h3 className="text-white font-semibold text-sm">{standard}</h3>
               </div>
             ))}
           </div>
@@ -732,7 +735,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Threat Intelligence & Monitoring
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -741,14 +744,12 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {threatIntelligence.map((intel,
-    index) => (
-              <div key={inde, x} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover: border-zion-purple/50 transition-all duration-300">
+            {threatIntelligence.map((intel, index) => (
+              <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{inte,
-    l}</h3>
+                <h3 className="text-white font-semibold text-sm">{intel}</h3>
               </div>
             ))}
           </div>
@@ -758,7 +759,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose ZionTech Group for Cybersecurity?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -773,8 +774,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Certified Experts</h3>
               <p className="text-zion-slate-light">
-                CISSP,
-    CIS, M, and CEH certified security professionals with
+                CISSP, CISM, and CEH certified security professionals with
                 extensive experience in enterprise security.
               </p>
             </div>
@@ -805,7 +805,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Security Pricing
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -817,8 +817,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Essential Security</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">
-                $3,
-    800<span className="text-lg text-zion-slate-light">/project</span>
+                $3,800<span className="text-lg text-zion-slate-light">/project</span>
               </div>
               <ul className="text-zion-slate-light space-y-2 mb-8">
                 <li>Basic security assessment</li>
@@ -827,7 +826,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 <li>Email support</li>
               </ul>
               <Link to="/request-quote">
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Started
                 </Button>
               </Link>
@@ -840,8 +839,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
               </div>
               <h3 className="text-white text-2xl font-bold mb-4">Professional Security</h3>
               <div className="text-4xl font-bold text-white mb-6">
-                $7,
-    200<span className="text-lg text-zion-slate-light">/project</span>
+                $7,200<span className="text-lg text-zion-slate-light">/project</span>
               </div>
               <ul className="text-white space-y-2 mb-8">
                 <li>Comprehensive security audit</li>
@@ -850,7 +848,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 <li>Priority support</li>
               </ul>
               <Link to="/request-quote">
-                <Button className="w-full bg-white text-zion-purple hover: bg-zion-slate-light">
+                <Button className="w-full bg-white text-zion-purple hover:bg-zion-slate-light">
                   Get Started
                 </Button>
               </Link>
@@ -858,8 +856,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Enterprise Security</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">
-                $15,
-    000<span className="text-lg text-zion-slate-light">/project</span>
+                $15,000<span className="text-lg text-zion-slate-light">/project</span>
               </div>
               <ul className="text-zion-slate-light space-y-2 mb-8">
                 <li>Full security transformation</li>
@@ -876,10 +873,10 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </section>
-      {/* Contact Information *, /}
+      {/* Contact Information */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Secure Your Business?
           </h2>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -932,12 +929,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       </section>
       <TrustedBySection />
       <QuoteFormSection />
-      {/* Security Framework *,
-    /}
+      {/* Security Framework */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Security Framework & Standards
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -950,8 +946,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
                 <ShieldCheck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">SOC 2 Type II</h3>
-              <p className="text-gray-600">Security,
-    availabilit, y, and processing integrity controls for service organizations</p>
+              <p className="text-gray-600">Security, availability, and processing integrity controls for service organizations</p>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50">
               <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -981,15 +976,14 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Security Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Systematic approach to identifying,
-    assessin, g, and mitigating security risks
+              Systematic approach to identifying, assessing, and mitigating security risks
             </p>
           </div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 1
@@ -1021,11 +1015,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </div>
-      {/* Security Tools & Technologies *, /}
+      {/* Security Tools & Technologies */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Security Tools & Technologies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -1180,10 +1174,10 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </div>
-      {/* Call to Action *, /}
+      {/* Call to Action */}
       <div className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md: text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Secure Your Business Today
           </h2>
           <p className="text-xl mb-8 text-red-100 max-w-3xl mx-auto">
@@ -1205,8 +1199,7 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
           </div>
         </div>
       </div>
-      {/* Footer Contact *,
-    /}
+      {/* Footer Contact */}
       <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md: grid-cols-2 gap-8">
@@ -1241,12 +1234,11 @@ const CYBERSECURITY_SERVICES  = COMPREHENSIVE_SERVICES.filter(service =>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy,
-    2024 ZionTech Group. All rights reserved. | <a href="https: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
+            <p>&copy, 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
       <TrustedBySection />
     </div>
-  ),
-}
+  )
+};

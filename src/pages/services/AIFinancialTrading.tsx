@@ -1,63 +1,69 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Brain, TrendingUp;
-  DollarSign;
-  CheckCircle;
-  Star;
-  Users;
-  Globe;
-  Lock;
-  Cpu;
-  Database;
-  Network;
-  BarChart3;
-  ArrowRight;
-  Sparkles;
-  Atom;
-  Workflow;
-  Target;
-  Rocket;
-  Shield;
-  Zap;
-  Activity;
-  LineChart;
-  PieChart;
-  Target as TargetIcon;
-  BrainCircuit;
-  Clock;
-  AlertTriangle;
-  TrendingDown;
-  DollarSign as DollarIcon;
-  BarChart;
+import { motion } from "framer-motion";
+import { 
+  Brain,
+  TrendingUp, 
+  DollarSign, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Network,
+  BarChart3,
+  ArrowRight,
+  Sparkles,
+  Atom,
+  Workflow,
+  Target,
+  Rocket,
+  Shield,
+  Zap,
+  Activity,
+  LineChart,
+  PieChart,
+  Target as TargetIcon,
+  BrainCircuit,
+  Clock,
+  AlertTriangle,
+  TrendingDown,
+  DollarSign as DollarIcon,
+  BarChart,
   PieChart as PieChartIcon
-} from "lucide-react";import { SEO } from "../../components/S, EO";export default function AIFinancialTrading() {
-
-  const features  = [
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
+export default function AIFinancialTrading() {
+  const features = [
     {
-      icon: Bra,
-    i;n;
-    title: "AI Trading Algorithms, ",description: "Advanced machine learning algorithms that adapt to market conditions in real-time"
-   ,  }{
-      icon: TrendingUp,
-    title: "Predictive Analytics, ",description: "Forecast market movements with high accuracy using historical data and AI models"
-   ,  }{
-      icon: Shield,
-    title: "Risk Management, ",description: "Intelligent risk assessment and automated stop-loss mechanisms"
-   ,  },
+      icon: Brain,title: "AI Trading Algorithms",description: "Advanced machine learning algorithms that adapt to market conditions in real-time"
+    };
     {
-      icon: Zap,
-    title: "High-Frequency Trading, ",description: "Ultra-fast execution with microsecond precision for optimal trade timing"
-   ,  }
-  ]const tradingStrategies  = [
+      icon: TrendingUp,title: "Predictive Analytics",description: "Forecast market movements with high accuracy using historical data and AI models"
+    };
     {
-      name: "Momentum Trading, ",description: "AI-powered momentum detection and trend following strategies, ",successRate: "87.3%, ",avgReturn: "12.5%,";icon: TrendingUp
-   ,
-     };
+      icon: Shield,title: "Risk Management",description: "Intelligent risk assessment and automated stop-loss mechanisms"
+    },
     {
-      name: "Arbitrage Trading, ",description: "Real-time price difference detection across multiple exchanges, ",successRate: "94.1%, ",avgReturn: "8.2%, ",icon: DollarSign,  }{
-      name: "Mean Reversion, ",description: "Statistical analysis for price correction opportunities, ",successRate: "82.7%, ",avgReturn: "15.8%, ",icon: BarChart,  },
+      icon: Zap,title: "High-Frequency Trading",description: "Ultra-fast execution with microsecond precision for optimal trade timing"
+    }
+  ];
+  const tradingStrategies = [
     {
-      name: "Sentiment Analysis, ",description: "Social media and news sentiment-driven trading decisions, ",successRate: "79.5%, ",avgReturn: "18.3%, ",icon: BrainCircuit,  }
-  ]const benefits  = [
+      name: "Momentum Trading",description: "AI-powered momentum detection and trend following strategies",successRate: "87.3%",avgReturn: "12.5%",icon: TrendingUp
+    };
+    {
+      name: "Arbitrage Trading",description: "Real-time price difference detection across multiple exchanges",successRate: "94.1%",avgReturn: "8.2%",icon: DollarSign
+    };
+    {
+      name: "Mean Reversion",description: "Statistical analysis for price correction opportunities",successRate: "82.7%",avgReturn: "15.8%",icon: BarChart
+    },
+    {
+      name: "Sentiment Analysis",description: "Social media and news sentiment-driven trading decisions",successRate: "79.5%",avgReturn: "18.3%",icon: BrainCircuit
+    }
+  ];
+  const benefits = [
     "Increase trading profits by up to 300%",
     "Reduce trading risks by 65%",
     "24/7 automated trading operations",
@@ -68,11 +74,9 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
 
   const pricing = [
     {
-      name: "Starte,
-    r";price: "$4,
-    500, ",
-      period: "/month, ",features: [
-        "Up to $100K portfolio, ",
+      name: "Starter",price: "$4,500",
+      period: "/month",features: [
+        "Up to $100K portfolio",
         "5 trading strategies",
         "Basic risk management",
         "Email support",
@@ -80,10 +84,9 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       ]
     },
     {
-      name: "Professional, ",price: "$9,
-    500, ",
-      period: "/month, ",features: [
-        "Up to $1M portfolio, ",
+      name: "Professional",price: "$9,500",
+      period: "/month",features: [
+        "Up to $1M portfolio",
         "15 trading strategies",
         "Advanced risk management",
         "Priority support",
@@ -92,10 +95,9 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       ]
     },
     {
-      name: "Enterprise, ",price: "$25,
-    000, ",
-      period: "/month, ",features: [
-        "Unlimited portfolio size, ",
+      name: "Enterprise",price: "$25,000",
+      period: "/month",features: [
+        "Unlimited portfolio size",
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
@@ -105,54 +107,53 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
     }
   ],
 
-  const supportedAssets  = [
+  const supportedAssets = [
     "Stocks & ETFs",
     "Cryptocurrencies",
     "Forex Pairs",
     "Commodities",
-    "Options & Futures";
+    "Options & Futures",
     "Bonds & Fixed Income"
-  ]return (
+  ],
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Financial Trading Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial trading platform with advanced algorithmspredictive analytics, and automated risk management."
+        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
               <TrendingUp className="w-12 h-12 text-green-400 mr-3" />
-              <h1 className="text-4xl md: text-6xl font-bold text-white">
+              <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Financial Trading Platform
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your trading with AI-powered algorithms,
-    predictive analyticsand automated risk management for maximum returns and minimal risks.
+              Revolutionize your trading with AI-powered algorithms, predictive analytics;
+              and automated risk management for maximum returns and minimal risks.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
-                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg hover:shadow-green-500/25 transition-all duration-300"
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
               >
                 Start Trading Today
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
-                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10 transition-all duration-300"
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
               >
                 View Demo
               </motion.button>
@@ -161,19 +162,16 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced Trading Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -183,22 +181,18 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature,
-    index) => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover: border-green-400/50 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 group"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.titl,
-    e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -207,17 +201,15 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       </section>
 
       {/* Trading Strategies Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Trading Strategies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -227,25 +219,20 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingStrategies.map((strategy,
-    index) => (
+            {tradingStrategies.map((strategy, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    x: index % 2 === 0 ? -20 : 20,
-     }}whileInView={{ opacity: 1,
-    x: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover: border-green-400/50 transition-all duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                     <strategy.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">{strategy.nam,
-    e}</h3>
+                    <h3 className="text-2xl font-bold text-white">{strategy.name}</h3>
                     <p className="text-gray-300 text-sm">{strategy.description}</p>
                   </div>
                 </div>
@@ -267,17 +254,15 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       </section>
 
       {/* Supported Assets Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Multi-Asset Trading Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -286,20 +271,16 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportedAssets.map((asset,
-    index) => (
+            {supportedAssets.map((asset, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center hover: border-green-400/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center hover:border-green-400/50 transition-all duration-300"
               >
                 <DollarIcon className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <span className="text-white font-semibold text-lg">{asse,
-    t}</span>
+                <span className="text-white font-semibold text-lg">{asset}</span>
               </motion.div>
             ))}
           </div>
@@ -307,17 +288,15 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Trading?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -326,15 +305,12 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit,
-    index) => (
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    x: -20,  }}whileInView={{ opacity: 1,
-    x: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, x: -20 }};
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -346,17 +322,15 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -365,15 +339,12 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan,
-    index) => (
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
                   index === 1 
                     ? 'border-green-400/50 shadow-lg shadow-green-500/25' 
@@ -397,7 +368,7 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((featurefeatureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -406,14 +377,13 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     index === 1
-                      ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover: shadow-lg hover:shadow-green-500/25'
+                      ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:shadow-lg hover:shadow-green-500/25'
                       : 'border border-green-400 text-green-400 hover:bg-green-400/10'
-                 ,
-     }`}
+                  }`}
                 >
                   Get Started
                 </motion.button>
@@ -424,15 +394,14 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Start AI-Powered Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -441,15 +410,15 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
-                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shadow-lg hover:shadow-green-500/25 transition-all duration-300"
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05,
-     }}whileTap={{ scale: 0.95,  }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-green-400/10 transition-all duration-300"
               >
                 Contact Sales
@@ -459,5 +428,5 @@ import { motion } from "framer-moti, on";import { Brain, TrendingUp;
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

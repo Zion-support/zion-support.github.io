@@ -609,4 +609,4 @@ import { motion, AnimatePresence } from "framer-motion";import { Brain, Shield;
       </div>
     </div>
   );
-}
+};

@@ -5,7 +5,7 @@ interface PostCardProps {
       name: string,
     avatar: string,  };
   },
-}
+};
 
 export default function PostCard() {
 
@@ -52,4 +52,3 @@ export default function PostCard() {
       </div>
     </div>
   );
-}

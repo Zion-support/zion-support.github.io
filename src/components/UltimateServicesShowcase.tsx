@@ -1,89 +1,95 @@
-import React, { useState  from "react", import { motion } from "framer-moti, on";import { Link } from "react-router-d, om";import { Brain, Cloud;
-  Shield;
-  Globe;
-  Code;
-  BarChart3;
-  Users;
-  ShoppingCart;
-  MessageSquare;
-  FileText;
-  Settings;
-  Zap;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Phone;
-  Mail;
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Code,
+  BarChart3,
+  Users,
+  ShoppingCart,
+  MessageSquare,
+  FileText,
+  Settings,
+  Zap,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
   MapPin
-} from "lucide-react";// Import the new services
-import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansi, on";import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-servic, es";import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutio, ns";interface Service {
-  id: string,
-    name: strin, g,tagline: strin, g,price: strin, g,period: strin, g,description: strin, g,features: string[, ],popular: boolea, n,icon: strin, g,color: strin, g,textColor: strin, g,link: strin, g,marketPosition: strin, g,targetAudience: strin, g,trialDays: numbe, r,setupTime: strin, g,category: strin, g,realService: boolea, n,technology: string[, ],integrations: string[, ],useCases: string[, ],roi: strin, g,competitors: string[, ],marketSize: strin, g,growthRate: strin, g,contactInfo:  , {,
-    mobile: string,
-    email: strin, g,address: strin, g,website: string,  },
-  realImplementation: boolean,
-    implementationDetails: strin, g,launchDate: strin, g,customers: numbe, r,rating: numbe, r,reviews: numbe, r,innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging, ',patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source, ',aiCapabilities: string[, ],marketDisruption: string,
-}
-const contact  = {
-  mobile: '+1 302 464 0950, ',email: 'kleber@ziontechgroup.com, ',address: '364 E Main St STE 1008 Middletown DE 19709,';website: 'https://ziontechgroup.com',
-}const categories  = [
+} from "lucide-react";
+// Import the new services
+import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
+import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
+import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
+interface Service {
+  id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {,
+    mobile: string,email: string,address: string,website: string
+  },
+  realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number,innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',aiCapabilities: string[],marketDisruption: string
+};
+;
+const contact = {
+  mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
+const categories = [
   {
-    id: 'ai-services, ',name: 'AI & Autonomous Systems, ',description: 'Revolutionary AI solutions that transform business operations, ',icon: <Brain className="w-8 h-8" /, >,color: 'from-purple-600 to-pink-700,'services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
- ,
-     }{
-    id: 'it-infrastructure, ',name: 'IT Infrastructure & Enterprise, ',description: 'Cutting-edge infrastructure solutions for modern businesses, ',icon: <Cloud className="w-8 h-8" /, >,color: 'from-blue-600 to-cyan-700, ',services: enterpriseITInfrastructureServices2025,  },
+    id: 'ai-services',name: 'AI & Autonomous Systems',description: 'Revolutionary AI solutions that transform business operations',icon: <Brain className="w-8 h-8" />,color: 'from-purple-600 to-pink-700',services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
+  };
   {
-    id: 'micro-saas, ',name: 'Micro SAAS Solutions, ',description: 'Innovative software solutions for small businesses, ',icon: <Code className="w-8 h-8" /, >,color: 'from-green-600 to-emerald-700, ',services: innovativeMicroSaasSolutions2025
- ,
-     }
-]const innovationLevelColors  = {
+    id: 'it-infrastructure',name: 'IT Infrastructure & Enterprise',description: 'Cutting-edge infrastructure solutions for modern businesses',icon: <Cloud className="w-8 h-8" />,color: 'from-blue-600 to-cyan-700',services: enterpriseITInfrastructureServices2025
+  },
+  {
+    id: 'micro-saas',name: 'Micro SAAS Solutions',description: 'Innovative software solutions for small businesses',icon: <Code className="w-8 h-8" />,color: 'from-green-600 to-emerald-700',services: innovativeMicroSaasSolutions2025
+  };
+];
+const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
-}const patentStatusColors  = {
-  'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
-}export function UltimateServicesShowcase() {
 
-  const [selectedCategorysetSelectedCategory] = useState('all')const [selectedServicesetSelectedService] = useState<Service | null>(null)const allServices  = [
-    ...ultimateInnovativeServices202;5;
-    ...enterpriseITInfrastructureServices2025;
+const patentStatusColors = {
+  'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
+
+export function UltimateServicesShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const allServices = [
+    ...ultimateInnovativeServices2025;
+    ...enterpriseITInfrastructureServices2025,
     ...innovativeMicroSaasSolutions2025
   ];
-  const filteredServices  = selectedCategory === 'all'
-    ? allServices: categories.find(cat => cat.id === selectedCategory)?.services || [,
-    ]const containerVariants  = {
-    hidden: { opacity: 0,  },
-    visible:  {;
-      opacity: 1,
-    transition: , {,
-        staggerChildren: 0.1,
-    delayChildren: 0.2,  }
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : categories.find(cat => cat.id === selectedCategory)?.services || [];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
+        staggerChildren: 0.1,delayChildren: 0.2
+      }
     }
   };
-  const itemVariants  = {
-    hidden: { opacity: ,
-    0;
-    y: 20,  },
-    visible:  , {,
-      opacity: 1,
-    y: , 0,transition:  , {,
-        duration: 0.6,
-    ease: "easeOut"
-     ,  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
+        duration: 0.6,ease: "easeOut"
+      }
     }
-  }return (
+  };
+  return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-        {/* Header ,
-    */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.8,
-     }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Ultimate Innovation
             </span>
@@ -91,8 +97,7 @@ const contact  = {
             <span className="text-white">Services Showcase</span>
           </h1>
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
-            Discover our revolutionary AI,
-    IT infrastructur, e, and micro SAAS solutions that are transforming industries worldwide.
+            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.
             Each service is backed by cutting-edge technology and proven results.
           </p>
 
@@ -116,20 +121,17 @@ const contact  = {
         {/* Category Navigation */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.8,
-    delay: 0.2,  }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'
-           ,  }`}
+                : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
+            }`}
           >
             All Services ({allServices.length})
           </button>
@@ -140,8 +142,8 @@ const contact  = {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'
-             ,  }`}
+                  : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
+              }`}
             >
               {category.name} ({category.services.length})
             </button>
@@ -150,19 +152,19 @@ const contact  = {
 
         {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariant,
-    s}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {filteredServices.map((service) => (
             <motion.div
-              key={service.id}variants={itemVariants}
+              key={service.id};
+              variants={itemVariants}
               className="group relative"
             >
-              <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover: border-zion-cyan transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
-                {/* Service Header *, /}
+              <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover:border-zion-cyan transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+                {/* Service Header */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-3">
                     <div className="text-3xl">{service.icon}</div>
@@ -172,9 +174,8 @@ const contact  = {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-300">
-                    {service.nam,
-    e}
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                    {service.name}
                   </h3>
                   <p className="text-zion-gray-light text-sm leading-relaxed">
                     {service.tagline}
@@ -208,10 +209,9 @@ const contact  = {
 
                 {/* Key Features */}
                 <div className="mb-4">
-                  <h4 className="text-white font-semibold mb-2">Key Features: </h4>
+                  <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0,
-    3).map((featur, e, index) => (
+                    {service.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-sm text-zion-gray-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -222,12 +222,12 @@ const contact  = {
 
                 {/* ROI & Market Info */}
                 <div className="mb-4 p-3 bg-zion-slate rounded-lg">
-                  <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & Market: </p>
+                  <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & Market:</p>
                   <p className="text-zion-gray-light text-xs leading-relaxed">
-                    {service.ro, i}
+                    {service.roi}
                   </p>
                   <p className="text-zion-gray-light text-xs mt-1">
-                    Market: {service.marketSiz, e} • Growth: {service.growthRat, e}
+                    Market: {service.marketSize} • Growth: {service.growthRate}
                   </p>
                 </div>
 
@@ -247,14 +247,14 @@ const contact  = {
                 <div className="flex gap-2">
                   <button
                     onClick={() => setSelectedService(service)}
-                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover: from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
+                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <Link
-                    to={service.lin, k}
-                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
+                    to={service.link}
+                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
                   >
                     <Zap className="w-4 h-4" />
                   </Link>
@@ -267,12 +267,9 @@ const contact  = {
         {/* Call to Action */}
         <motion.div
           className="text-center mt-16"
-          initial={{ opacity: 0,
-    y: 20,  }}
-          animate={{ opacity: 1,
-    y: 0,  }}
-          transition={{ duration: 0.8,
-    delay: 0.4,  }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -284,16 +281,16 @@ const contact  = {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover: from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
-                href={`tel:${contact.mobil, e}`
+                href={`tel:${contact.mobile}`
                   .replace(/\s/g, '')
                   .replace(/[^\d+]/g, '')}
-                className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
@@ -303,7 +300,7 @@ const contact  = {
         </motion.div>
       </div>
 
-      {/* Service Detail Modal *, /}
+      {/* Service Detail Modal */}
       {selectedService && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-zion-slate-light rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -320,7 +317,7 @@ const contact  = {
                 </div>
                 <button
                   onClick={() => setSelectedService(null)}
-                  className="text-zion-gray-light hover: text-white text-2xl"
+                  className="text-zion-gray-light hover:text-white text-2xl"
                 >
                   ×
                 </button>
@@ -330,13 +327,12 @@ const contact  = {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">Description</h3>
                   <p className="text-zion-gray-light leading-relaxed mb-4">
-                    {selectedService.descriptio,
-    n}
+                    {selectedService.description}
                   </p>
 
                   <h3 className="text-xl font-bold text-white mb-3">Features</h3>
                   <ul className="space-y-2 mb-4">
-                    {selectedService.features.map((featureindex) => (
+                    {selectedService.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-zion-gray-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -346,7 +342,7 @@ const contact  = {
 
                   <h3 className="text-xl font-bold text-white mb-3">AI Capabilities</h3>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {selectedService.aiCapabilities.map((capabilityindex) => (
+                    {selectedService.aiCapabilities.map((capability, index) => (
                       <span key={index} className="bg-zion-cyan text-white text-sm px-3 py-1 rounded-full">
                         {capability}
                       </span>
@@ -358,31 +354,29 @@ const contact  = {
                   <h3 className="text-xl font-bold text-white mb-3">Market Information</h3>
                   <div className="space-y-3 mb-4">
                     <div>
-                      <span className="text-zion-cyan font-semibold">Market Position: </span>
-                      <p className="text-zion-gray-light text-sm">{selectedService.marketPositio, n}</p>
+                      <span className="text-zion-cyan font-semibold">Market Position:</span>
+                      <p className="text-zion-gray-light text-sm">{selectedService.marketPosition}</p>
                     </div>
                     <div>
-                      <span className="text-zion-cyan font-semibold">Target Audience: </span>
-                      <p className="text-zion-gray-light text-sm">{selectedService.targetAudienc, e}</p>
+                      <span className="text-zion-cyan font-semibold">Target Audience:</span>
+                      <p className="text-zion-gray-light text-sm">{selectedService.targetAudience}</p>
                     </div>
                     <div>
-                      <span className="text-zion-cyan font-semibold">ROI: </span>
-                      <p className="text-zion-gray-light text-sm">{selectedService.ro, i}</p>
+                      <span className="text-zion-cyan font-semibold">ROI:</span>
+                      <p className="text-zion-gray-light text-sm">{selectedService.roi}</p>
                     </div>
                     <div>
-                      <span className="text-zion-cyan font-semibold">Market Disruption: </span>
-                      <p className="text-zion-gray-light text-sm">{selectedService.marketDisruptio,
-    n}</p>
+                      <span className="text-zion-cyan font-semibold">Market Disruption:</span>
+                      <p className="text-zion-gray-light text-sm">{selectedService.marketDisruption}</p>
                     </div>
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-3">Technology & Integrations</h3>
                   <div className="space-y-3 mb-4">
                     <div>
-                      <span className="text-zion-cyan font-semibold">Technology: </span>
+                      <span className="text-zion-cyan font-semibold">Technology:</span>
                       <div className="flex flex-wrap gap-2 mt-1">
-                        {selectedService.technology.map((tech,
-    index) => (
+                        {selectedService.technology.map((tech, index) => (
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
                             {tech}
                           </span>
@@ -390,11 +384,10 @@ const contact  = {
                       </div>
                     </div>
                     <div>
-                      <span className="text-zion-cyan font-semibold">Integrations: </span>
+                      <span className="text-zion-cyan font-semibold">Integrations:</span>
                       <div className="flex flex-wrap gap-2 mt-1">
-                        {selectedService.integrations.map((integration,
-    index) => (
-                          <span key={inde, x} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
+                        {selectedService.integrations.map((integration, index) => (
+                          <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
                             {integration}
                           </span>
                         ))}
@@ -405,12 +398,12 @@ const contact  = {
                   <div className="flex gap-3">
                     <Link
                       to={selectedService.link}
-                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover: from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
                     >
                       Get Started
                     </Link>
                     <a
-                      href={`tel:${contact.mobil, e}`
+                      href={`tel:${contact.mobile}`
                         .replace(/\s/g, '')
                         .replace(/[^\d+]/g, '')}
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
@@ -425,7 +418,6 @@ const contact  = {
         </div>
       )}
     </section>
-  ),
-}
+  );
 
-export default UltimateServicesShowcas;e;
+export default UltimateServicesShowcase;

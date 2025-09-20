@@ -1,10 +1,26 @@
-import { useState } from "rea, ct";import { Button } from "@/components/ui/butt, on";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import Link from "next/link";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 import SEO from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";import { ProtectedRoute } from "@/components/ProtectedRou, te";import { SuggestedJobs } from "@/components/jobs/SuggestedJo, bs";import { useAuth } from "@/hooks/useAu, th";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Avatar } from "@/components/ui/avat, ar";import { Badge } from "@/components/ui/bad, ge";import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSte, ps";import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSte, ps";import { useOnboardingStatus } from "@/hooks/useOnboardingStat, us";import { MyApplications } from "@/components/jobs/MyApplicatio, ns";import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBann, er";import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCa, rd";function TalentDashboardContent() {
-
-    const { user }  = useAuth();
-    const [activeTab;
-    setActiveTab] = useState("job-matches")const onboardingStatus  = useOnboardingStatus()const showAdvanced  = onboardingStatus.profileCompleted &&
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
+import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { MyApplications } from "@/components/jobs/MyApplications";
+import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+function TalentDashboardContent() {
+    const { user } = useAuth();
+    const [activeTab, setActiveTab] = useState("job-matches");
+    const onboardingStatus = useOnboardingStatus();
+    const showAdvanced = onboardingStatus.profileCompleted &&
         onboardingStatus.skillsAdded &&
         onboardingStatus.availabilitySet &&
         onboardingStatus.matchReceived;
@@ -32,18 +48,17 @@ import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-reac
           </div>
         </div>
 
-        {/* Project Offer Banner - Show pending offers *, /}
+        {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
 
-        <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
-                      {user?.avatarUrl ? (<img loading="lazy" src={user.avatarU,
-    rl} alt={user.displayName || "User"}/>) : (<div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
+                      {user?.avatarUrl ? (<img loading="lazy" src={user.avatarUrl} alt={user.displayName || "User"}/>) : (<div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
                         </div>)}
                     </Avatar>
@@ -119,9 +134,8 @@ import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-reac
             </Card>
           </div>
           
-          <div className="lg: col-span-2">
-            <Tabs defaultValue="job-matches" onValueChange={setActiveTa,
-    b}>
+          <div className="lg:col-span-2">
+            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2"/>
@@ -164,10 +178,8 @@ import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-reac
       </main>
       
     </>);
-}
+};
 export default function TalentDashboard() {
-
     return (<ProtectedRoute>
       <TalentDashboardContent />
-    </ProtectedRoute;>;);
-}
+    </ProtectedRoute>);

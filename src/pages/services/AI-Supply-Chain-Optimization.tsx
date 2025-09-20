@@ -1,90 +1,91 @@
 import React from "react";
-import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, om";import { Truck, Brain;
-  BarChart3;
-  Zap;
-  CheckCircle;
-  ArrowRight;
-  DollarSign;
-  Clock;
-  Globe;
-  Shield;
-  Target;
-  TrendingUp;
-  Award;
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  Search;
-  AlertTriangle;
-  Package;
-  Route;
-  Warehouse;
-  Factory;
-  Ship;
-  Plane;
-  Train;
-  Car;
-  RouteIcon;
-  Gauge;
-  Activity;
-  PieChart;
-  LineChart;
-  TrendingDown;
-  AlertCircle;
-  CheckSquare;
-  Calendar;
-  Users;
-  Settings;
-  Database;
-  Cloud;
-  Lock;
-  Eye;
-  RefreshCw;
-  Target as TargetIcon;
-  Zap as ZapIcon;
-  Shield as ShieldIcon;
+import { SEO } from "@/components/SEO";
+import { Link } from "react-router-dom";
+import { 
+  Truck,
+  Brain, 
+  BarChart3, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign, 
+  Clock, 
+  Globe, 
+  Shield,
+  Target,
+  TrendingUp,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Search,
+  AlertTriangle,
+  Package,
+  Route,
+  Warehouse,
+  Factory,
+  Ship,
+  Plane,
+  Train,
+  Car,
+  RouteIcon,
+  Gauge,
+  Activity,
+  PieChart,
+  LineChart,
+  TrendingDown,
+  AlertCircle,
+  CheckSquare,
+  Calendar,
+  Users,
+  Settings,
+  Database,
+  Cloud,
+  Lock,
+  Eye,
+  RefreshCw,
+  Target as TargetIcon,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
   Globe as GlobeIcon
-} from "lucide-react";export default function AISupplyChainOptimization() {
-
-  const features  = [
+} from "lucide-react";
+export default function AISupplyChainOptimization() {
+  const features = [
     {
-      icon: <Brain className="w-6 h-6" /,>title: "AI-Powered Forecastin,
-    g";description: "Advanced machine learning models predict demand with 95% accuracy,
-    optimizing inventory levels and reducing stockouts."
-   ,  },
-    {
-      icon: <Route className="w-6 h-6" /, >,title: "Route Optimization, ",description: "Real-time route optimization reduces delivery costs by 30% and improves delivery times by 40%."
-   ,
-     }{
-      icon: <BarChart3 className="w-6 h-6" /, >,title: "Predictive Analytics, ",description: "Identify supply chain risks before they impact operations with AI-driven predictive modeling."
-   ,
-     }{
-      icon: <Warehouse className="w-6 h-6" /, >,title: "Inventory Management, ",description: "Smart inventory tracking with automated reorder points and demand-driven replenishment."
-   ,  },
-    {
-      icon: <Globe className="w-6 h-6" /, >,title: "Global Visibility, ";description: "End-to-end supply chain visibility across all suppliers,
-    warehouse, s, and distribution centers."
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Forecasting",description: "Advanced machine learning models predict demand with 95% accuracy, optimizing inventory levels and reducing stockouts."
     },
     {
-      icon: <Shield className="w-6 h-6" /, >,title: "Risk Management, ",description: "Proactive risk assessment and mitigation strategies for supply chain disruptions."
-   ,
-     }
-  ]const pricingPlans  = [
+      icon: <Route className="w-6 h-6" />,title: "Route Optimization",description: "Real-time route optimization reduces delivery costs by 30% and improves delivery times by 40%."
+    };
     {
-      name: "Starter, ",price: "$499, ",period: "/month, ",description: "Perfect for small to medium businesses, ",features: [
-        "Up to 5 warehouses, ",
+      icon: <BarChart3 className="w-6 h-6" />,title: "Predictive Analytics",description: "Identify supply chain risks before they impact operations with AI-driven predictive modeling."
+    };
+    {
+      icon: <Warehouse className="w-6 h-6" />,title: "Inventory Management",description: "Smart inventory tracking with automated reorder points and demand-driven replenishment."
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,title: "Global Visibility",description: "End-to-end supply chain visibility across all suppliers, warehouses, and distribution centers."
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,title: "Risk Management",description: "Proactive risk assessment and mitigation strategies for supply chain disruptions."
+    }
+  ];
+  const pricingPlans = [
+    {
+      name: "Starter",price: "$499",period: "/month",description: "Perfect for small to medium businesses",features: [
+        "Up to 5 warehouses",
         "Basic demand forecasting",
         "Route optimization",
         "Email support",
         "Standard analytics dashboard"
-      ]popular: false
-   ,
-     }{
-      name: "Professional, ",price: "$1,
-    299, ",
-      period: "/month, ",description: "Ideal for growing enterprises, ",features: [
-        "Up to 25 warehouses, ",
+      ],
+      popular: false
+    };
+    {
+      name: "Professional",price: "$1,299",
+      period: "/month",description: "Ideal for growing enterprises",features: [
+        "Up to 25 warehouses",
         "Advanced AI forecasting",
         "Multi-modal optimization",
         "Priority support",
@@ -92,9 +93,11 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
         "API access",
         "Custom integrations"
       ],
-      popular: true,  }{
-      name: "Enterprise, ",price: "Custom, ",period: ", ",description: "For large organizations with complex supply chains, ",features: [
-        "Unlimited warehouses, ",
+      popular: true
+    };
+    {
+      name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex supply chains",features: [
+        "Unlimited warehouses",
         "Custom AI model training",
         "Dedicated account manager",
         "24/7 phone support",
@@ -103,88 +106,80 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
         "Training & onboarding",
         "Custom development"
       ],
-      popular: false,  }
-  ]const benefits  = [
+      popular: false
+    }
+  ];
+  const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" /, >,title: "Cost Reduction,";description: "Reduce supply chain costs by 25-40% through optimized routes and inventory management"
-   ,
-     }{
-      icon: <Clock className="w-8 h-8" /, >,title: "Faster Delivery, ",description: "Improve delivery times by 30-50% with AI-powered route optimization"
-   ,
-     }{
-      icon: <Shield className="w-8 h-8" /, >,title: "Risk Mitigation, ",description: "Identify and prevent 90% of supply chain disruptions before they occur"
-   ,  },
+      icon: <DollarSign className="w-8 h-8" />,title: "Cost Reduction",description: "Reduce supply chain costs by 25-40% through optimized routes and inventory management"
+    };
     {
-      icon: <TrendingUp className="w-8 h-8" /, >,title: "Increased Efficiency, ",description: "Boost operational efficiency by 35% with automated processes and real-time insights"
-   ,
-     }
-  ]const useCases  = [
+      icon: <Clock className="w-8 h-8" />,title: "Faster Delivery",description: "Improve delivery times by 30-50% with AI-powered route optimization"
+    };
     {
-      title: "E-commerc,
-    e";description: "Optimize fulfillment centers,
-    last-mile deliver, y, and inventory management for online retailers",
+      icon: <Shield className="w-8 h-8" />,title: "Risk Mitigation",description: "Identify and prevent 90% of supply chain disruptions before they occur"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,title: "Increased Efficiency",description: "Boost operational efficiency by 35% with automated processes and real-time insights"
+    }
+  ];
+  const useCases = [
+    {
+      title: "E-commerce",description: "Optimize fulfillment centers, last-mile delivery, and inventory management for online retailers",
       icon: <Package className="w-6 h-6" />
-   ,
-     }{
-      title: "Manufacturing, ",description: "Streamline production planning,
-    supplier managemen, t, and distribution networks",
+    };
+    {
+      title: "Manufacturing",description: "Streamline production planning, supplier management, and distribution networks",
       icon: <Factory className="w-6 h-6" />
-   ,
-     }{
-      title: "Logistics, ",description: "Optimize multi-modal transportation,
-    warehousin, g, and cross-border operations",
+    };
+    {
+      title: "Logistics",description: "Optimize multi-modal transportation, warehousing, and cross-border operations",
       icon: <Truck className="w-6 h-6" />
-   ,  },
+    },
     {
-      title: "Retail, ";description: "Improve store replenishment,
-    seasonal plannin, g, and omnichannel inventory",
+      title: "Retail",description: "Improve store replenishment, seasonal planning, and omnichannel inventory",
       icon: <Warehouse className="w-6 h-6" />
-   ,
-     }
-  ]const transportationModes  = [
+    }
+  ];
+  const transportationModes = [
     {
-      icon: <Truck className="w-8 h-8" /, >,title: "Road Transpor,
-    t";description: "Optimize truck routes,
-    reduce fuel cost, s, and improve delivery efficiency"
+      icon: <Truck className="w-8 h-8" />,title: "Road Transport",description: "Optimize truck routes, reduce fuel costs, and improve delivery efficiency"
     },
     {
-      icon: <Ship className="w-8 h-8" /, >,title: "Maritime, ";description: "Optimize shipping routes,
-    container utilizatio, n, and port operations"
+      icon: <Ship className="w-8 h-8" />,title: "Maritime",description: "Optimize shipping routes, container utilization, and port operations"
     },
     {
-      icon: <Plane className="w-8 h-8" /, >,title: "Air Freight, ";description: "Optimize air routes,
-    cargo capacit, y, and time-sensitive deliveries"
+      icon: <Plane className="w-8 h-8" />,title: "Air Freight",description: "Optimize air routes, cargo capacity, and time-sensitive deliveries"
     },
     {
-      icon: <Train className="w-8 h-8" /, >,title: "Rail Transport, ";description: "Optimize rail networks,
-    intermodal connection, s, and bulk cargo"
+      icon: <Train className="w-8 h-8" />,title: "Rail Transport",description: "Optimize rail networks, intermodal connections, and bulk cargo"
     }
   ],
 
-  const keyMetrics  = [
+  const keyMetrics = [
     {
-      icon: <Gauge className="w-6 h-6" /, >,title: "Order Fill Rate, ",current: "98.5%, ",improvement: "+12%,";description: "Percentage of orders fulfilled completely and on time"
-   ,
-     }{
-      icon: <Clock className="w-6 h-6" /, >,title: "Cycle Time, ",current: "2.3 days, ",improvement: "-45%, ",description: "Time from order placement to delivery"
-   ,
-     }{
-      icon: <DollarSign className="w-6 h-6" /, >,title: "Cost per Order, ",current: "$18.50, ",improvement: "-32%, ",description: "Total cost to fulfill a single order"
-   ,  },
+      icon: <Gauge className="w-6 h-6" />,title: "Order Fill Rate",current: "98.5%",improvement: "+12%",description: "Percentage of orders fulfilled completely and on time"
+    };
     {
-      icon: <BarChart3 className="w-6 h-6" /, >,title: "Inventory Turnover, ",current: "8.2x, ",improvement: "+28%, ",description: "How quickly inventory is sold and replaced"
-   ,
-     }
-  ]return (
+      icon: <Clock className="w-6 h-6" />,title: "Cycle Time",current: "2.3 days",improvement: "-45%",description: "Time from order placement to delivery"
+    };
+    {
+      icon: <DollarSign className="w-6 h-6" />,title: "Cost per Order",current: "$18.50",improvement: "-32%",description: "Total cost to fulfill a single order"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,title: "Inventory Turnover",current: "8.2x",improvement: "+28%",description: "How quickly inventory is sold and replaced"
+    }
+  ];
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Supply Chain Optimization Platform | Zion Tech Group"
-        description="Transform your supply chain with AI-powered optimizationpredictive analytics, and real-time visibility. Reduce costs by 40%, improve delivery times by 50%, and mitigate risks proactively."
-        keywords="AI supply chain optimizationlogistics optimization, demand forecasting, route optimization, inventory management, supply chain analytics"
+        description="Transform your supply chain with AI-powered optimization, predictive analytics, and real-time visibility. Reduce costs by 40%, improve delivery times by 50%, and mitigate risks proactively."
+        keywords="AI supply chain optimization, logistics optimization, demand forecasting, route optimization, inventory management, supply chain analytics"
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -198,13 +193,12 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               Revolutionize your supply chain operations with our advanced AI platform. 
-              Optimize routes,
-    predict deman, d, manage inventory intelligently, and gain 
+              Optimize routes, predict demand, manage inventory intelligently, and gain 
               real-time visibility across your entire supply network.
             </p>
             
             {/* Contact Information */}
-            <div className="flex flex-col sm: flex-row items-center justify-center gap-6 mb-8 text-slate-300">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
@@ -219,16 +213,14 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>364 E Main St STE 1008,
-    Middletown DE 19709</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Optimization Demo Request&body=Hi,
-    I'm interested in a demo of your AI Supply Chain Optimization platform. Please provide more details about feature, s, pricing, and implementation timeline."
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Optimization Demo Request&body=Hi, I'm interested in a demo of your AI Supply Chain Optimization platform. Please provide more details about features, pricing, and implementation timeline."
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Request Demo
@@ -245,9 +237,8 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
         </div>
       </section>
 
-      {/* Key Metrics Section *,
-    /}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      {/* Key Metrics Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -259,12 +250,10 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {keyMetrics.map((metric,
-    index) => (
-              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover: border-cyan-500/50 transition-all duration-300">
+            {keyMetrics.map((metric, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                  {metric.ico,
-    n}
+                  {metric.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
                 <div className="mb-2">
@@ -281,7 +270,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -294,12 +283,10 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (
-              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover: border-cyan-500/50 transition-all duration-300">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-4">
-                  {feature.ico,
-    n}
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
@@ -310,7 +297,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
       </section>
 
       {/* Transportation Modes Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -322,12 +309,10 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {transportationModes.map((mode,
-    index) => (
-              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover: border-cyan-500/50 transition-all duration-300">
+            {transportationModes.map((mode, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                  {mode.ico,
-    n}
+                  {mode.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{mode.title}</h3>
                 <p className="text-slate-300 text-sm">{mode.description}</p>
@@ -338,7 +323,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -350,8 +335,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan,
-    index) => (
+            {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                 plan.popular 
                   ? 'border-cyan-500/50 bg-slate-800/70' 
@@ -375,7 +359,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((featurefeatureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>
@@ -385,23 +369,21 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
 
                 <div className="text-center">
                   <a
-                    href="mailto: kleber@ziontechgroup.com?subject=Pricing Inquiry - AI Supply Chain Optimization&body=Hi,
-    I'm interested in the {plan.nam, e} plan for your AI Supply Chain Optimization platform. Please provide more details about implementation and next steps."
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 w-full justify-center"
+                    href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry - AI Supply Chain Optimization&body=Hi, I'm interested in the {plan.name} plan for your AI Supply Chain Optimization platform. Please provide more details about implementation and next steps."
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 w-full justify-center"
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -413,8 +395,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit,
-    index) => (
+            {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                   {benefit.icon}
@@ -428,7 +409,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -440,11 +421,10 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase,
-    index) => (
-              <div key={inde, x} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover: border-cyan-500/50 transition-all duration-300">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                  {useCase.ico, n}
+                  {useCase.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-slate-300 text-sm">{useCase.description}</p>
@@ -455,7 +435,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
       </section>
 
       {/* Market Comparison Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -526,23 +506,20 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
         </div>
       </section>
 
-      {/* CTA Section *,
-    /}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Optimize Your <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Supply Chain</span>?
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Join hundreds of companies already using AI to optimize their supply chains,
-    reduce cost, s, and improve customer satisfaction.
+            Join hundreds of companies already using AI to optimize their supply chains, reduce costs, and improve customer satisfaction.
           </p>
           
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Optimization Demo Request&body=Hi,
-    I'm interested in a demo of your AI Supply Chain Optimization platform. Please provide more details about feature, s, pricing, and implementation timeline."
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Optimization Demo Request&body=Hi, I'm interested in a demo of your AI Supply Chain Optimization platform. Please provide more details about features, pricing, and implementation timeline."
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
               Request Demo
@@ -556,10 +533,10 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
             </a>
           </div>
           
-          {/* Quick Contact Info *, /}
+          {/* Quick Contact Info */}
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-600">
             <h3 className="text-lg font-semibold text-white mb-4">Get Started Today</h3>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center justify-center gap-2 text-slate-300">
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <span>+1 302 464 0950</span>
@@ -577,7 +554,7 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
         </div>
       </section>
 
-      {/* Contact Information Footer *, /}
+      {/* Contact Information Footer */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -613,5 +590,5 @@ import { SEO } from "@/components/S, EO";import { Link } from "react-router-d, o
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

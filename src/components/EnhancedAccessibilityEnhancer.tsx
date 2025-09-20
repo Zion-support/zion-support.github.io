@@ -1,57 +1,71 @@
-import { useEffect, useState } from "react";interface AccessibilitySettings {
-  highContrast: boolean,
-    largeText: boolea, n,reducedMotion: boolea, n,focusVisible: boolea, n,screenReader: boolea, n,keyboardNavigation: boolean,
-}
+import { useEffect, useState } from "react";
+interface AccessibilitySettings {
+  highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
+};
 
 export function EnhancedAccessibilityEnhancer() {
-
-  const [setting;s;
-    setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: fals, e,reducedMotion: fals, e,focusVisible: fals, e,screenReader: fals, e,keyboardNavigation: false,  });
-  const [isVisible;
-    setIsVisible] = useState(false);
-  const [announcements;
-    setAnnouncements] = useState<string[]>([]);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
+  });
+  const [isVisible, setIsVisible] = useState(false);
+  const [announcements, setAnnouncements] = useState<string[]>([]);
 
   useEffect(() => {
     // Check for reduced motion preference
-    const prefersReducedMotion  = window.matchMedia('(prefers-reduced-motion: reduce)').matche,
-    sconst prefersHighContrast  = window.matchMedia('(prefers-contrast: high)').matche,
-    ssetSettings(prev => ({
-      ...prevreducedMotion: prefersReducedMotion,
-    highContrast: prefersHighContrast,  }))// Apply accessibility settings to document
-    const root  = document.documentElemen;t;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    setSettings(prev => ({
+      ...prev,
+      reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
+    }));
+    // Apply accessibility settings to document
+    const root = document.documentElement;
     
     if (settings.highContrast) {
-      root.classList.add('high-contrast')} else {
-      root.classList.remove('high-contrast')}
-if (settings.largeText) {
-      root.classList.add('large-text')root.style.fontSize = '1.2em';
+      root.classList.add('high-contrast');
     } else {
-      root.classList.remove('large-text')root.style.fontSize = '';
+      root.classList.remove('high-contrast');
+    }
+;
+    if (settings.largeText) {
+      root.classList.add('large-text');
+      root.style.fontSize = '1.2em',
+    } else {
+      root.classList.remove('large-text');
+      root.style.fontSize = '',
     }
 ;
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion')root.style.setProperty('--animation-duration0.01ms')root.style.setProperty('--animation-iteration-count1')} else {
-      root.classList.remove('reduced-motion')root.style.removeProperty('--animation-duration')root.style.removeProperty('--animation-iteration-count')}
+      root.classList.add('reduced-motion');
+      root.style.setProperty('--animation-duration0.01ms');
+      root.style.setProperty('--animation-iteration-count1');
+    } else {
+      root.classList.remove('reduced-motion');
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--animation-iteration-count');
+    }
 
     // Show accessibility panel on Ctrl+Shift+A
-    const handleKeyPress  = () => {
+    const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-        setIsVisible(!isVisible)announce('Accessibility panel toggled')}
+        setIsVisible(!isVisible);
+        announce('Accessibility panel toggled')
+      }
     },
 
-    window.addEventListener('keydown', handleKeyPress)return () => window.removeEventListener('keydown'; handleKeyPress);
-  }, [settings;
-    isVisible]),
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [settings, isVisible]),
 
-  const announce = () => {
-    setAnnouncements(prev => [...prev.slice(;-;2); message])
-  };
+  const announce = (message: string) => {
+    setAnnouncements(prev => [...prev.slice(-2), message]),
+    
     // Create live region for screen readers
-    const announcement  = document.createElement('div')announcement.setAttribute('aria-livepolite')announcement.setAttribute('aria-atomictrue')announcement.className = 'sr-only';
-    announcement.textContent = message;
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-livepolite');
+    announcement.setAttribute('aria-atomictrue');
+    announcement.className = 'sr-only',
+    announcement.textContent = message,
     document.body.appendChild(announcement);
     
     setTimeout(() => {
@@ -59,22 +73,25 @@ if (settings.largeText) {
     }, 1000),
   },
 
-  const toggleSetting  = () => {
-    const newValue = !settings[settin;g;];
-    setSettings(prev => ({ ...pre, v, [setting]: newValue })),
+  const toggleSetting = (setting: keyof AccessibilitySettings) => {
+    const newValue = !settings[setting];
+    setSettings(prev => ({ ...prev, [setting]: newValue })),
     
-    const settingNames  = {
-      highContrast: 'High contrast mode, ',largeText: 'Large text, ',reducedMotion: 'Reduced motion, ',focusVisible: 'Focus indicators, ',screenReader: 'Screen reader mode,';keyboardNavigation: 'Keyboard navigation'
-   ,
-     }announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`)},
+    const settingNames = {
+      highContrast: 'High contrast mode',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus indicators',screenReader: 'Screen reader mode',keyboardNavigation: 'Keyboard navigation'
+    };
+    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
+  },
 
-  const resetSettings  = () => {
+  const resetSettings = () => {
     setSettings({
-      highContrast: fal,
-    selargeText: fals, e,reducedMotion: fals, e,focusVisible: fals, e,screenReader: fals, e,keyboardNavigation: false,  });
-    announce('Accessibility settings reset')},
+      highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
+    });
+    announce('Accessibility settings reset');
+  },
 
-  if (!isVisible) return nullreturn (
+  if (!isVisible) return null;
+  return (
     <>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
@@ -86,7 +103,7 @@ if (settings.largeText) {
           <h3 className="text-zion-cyan font-bold text-lg">♿ Accessibility</h3>
           <button
             onClick={() => setIsVisible(false)}
-            className="text-zion-cyan hover: text-white transition-colors p-1"
+            className="text-zion-cyan hover:text-white transition-colors p-1"
             aria-label="Close accessibility panel"
           >
             ×
@@ -100,8 +117,7 @@ if (settings.largeText) {
             </label>
             <button
               id="high-contrast"
-              onClick={() => toggleSetting('highContrast',
-    )}
+              onClick={() => toggleSetting('highContrast')}
               className={`w-12 h-6 rounded-full transition-colors ${
                 settings.highContrast ? 'bg-zion-cyan' : 'bg-gray-600'
               }`}
@@ -187,5 +203,4 @@ if (settings.largeText) {
         </div>
       </div>
     </>
-  ),
-}
+  )

@@ -82,4 +82,4 @@ import { Link } from "react-router-d, om";import { FeaturedListingsSection } fro
       <FloatingCTA />
       <Footer />
     </div>);
-}
+};

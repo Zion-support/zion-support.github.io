@@ -1,21 +1,22 @@
 import React from "react";
-import { SEO } from "@/components/S, EO";import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail } from "lucide-react";const CustomerSupportChatbot: React.FC = () => {
-    return (
+import { SEO } from "@/components/SEO";
+import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail } from "lucide-react";
+const CustomerSupportChatbot: React.FC = () => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO title="Customer Support Chatbot - Zion Tech Group" description="Automate L1/L2 support with retrieval-augmented generation and ticket deflection." />
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Customer Support Chatbot</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Reduce average handle time with AI responses grounded in your knowledge b,
-    aseproduct doc, s, and previous
+          Reduce average handle time with AI responses grounded in your knowledge base, product docs, and previous
           tickets. Escalation rules and CRM/Helpdesk logging included.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            'RAG answers with vector search and citationsZendesk,
-    Freshdes, k, Intercom integrations'
-  }'Multilingual (50+ locales) and tone controlAuto-categorizeprioritize, and tag tickets''Secure PII redaction and audit logsFallback to live agents with summaries'
+            'RAG answers with vector search and citationsZendesk, Freshdesk, Intercom integrations',
+            'Multilingual (50+ locales) and tone controlAuto-categorize, prioritize, and tag tickets';
+            'Secure PII redaction and audit logsFallback to live agents with summaries'
           ].map((b) => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
@@ -31,10 +32,8 @@ import { SEO } from "@/components/S, EO";import { CheckCircle2, MessageCircle, D
           <ul className="mt-3 grid gap-3 sm: grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $99/mo up to 2k conversations</li>
             <li>Growth: $299/mo up to 10k conversations</li>
-            <li>Enterprise: Custom,
-    SS, O, SLAs, audit, VPC</li>
-            <li>Setup: $3k–$15k,
-    fine-tuning optional</li>
+            <li>Enterprise: Custom, SSO, SLAs, audit, VPC</li>
+            <li>Setup: $3k–$15k, fine-tuning optional</li>
           </ul>
           <a className="mt-3 inline-flex items-center text-cyan-300 hover: text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
             Learn more <ExternalLink className="ml-1 h-3 w-3" />
@@ -46,6 +45,6 @@ import { SEO } from "@/components/S, EO";import { CheckCircle2, MessageCircle, D
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default CustomerSupportChatbo;t;
+export default CustomerSupportChatbot;

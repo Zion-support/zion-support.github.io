@@ -40,4 +40,4 @@ import { useToast } from "@/hooks/use-toa, st";export default function CreatePos
         <PostForm initialValues={initialValue,
     s} onSubmit={handleSubmit}/>
       </div>);
-}
+};

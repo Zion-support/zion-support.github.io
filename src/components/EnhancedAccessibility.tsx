@@ -9,7 +9,7 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   colorBlindFriendly: boolean;
   dyslexiaFriendly: boolean;
-}
+};
 
 interface AccessibilityEnhancerProps {
   children?: React.ReactNode;
@@ -350,11 +350,11 @@ export const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ ch
 const accessibilityStyles = `
   .high-contrast {
     filter: contrast(150%) brightness(1.2);
-  }
+  };
 
   .large-text {
     font-size: 1.2em !important;
-  }
+  };
 
   .large-text h1 { font-size: 2.5em !important; }
   .large-text h2 { font-size: 2em !important; }
@@ -367,26 +367,26 @@ const accessibilityStyles = `
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
+  };
 
   .focus-visible *:focus {
     outline: 3px solid #0066cc !important;
     outline-offset: 2px !important;
-  }
+  };
 
   .color-blind-friendly {
     filter: hue-rotate(180deg) saturate(1.5);
-  }
+  };
 
   .dyslexia-friendly {
     font-family: 'OpenDyslexic', 'Comic Sans MS', cursive !important;
     line-height: 1.6 !important;
     letter-spacing: 0.1em !important;
-  }
+  };
 
   .skip-link:focus {
     top: 6px !important;
-  }
+  };
 
   @media (prefers-reduced-motion: reduce) {
     .reduced-motion * {
@@ -394,13 +394,13 @@ const accessibilityStyles = `
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
-  }
+  };
 
   @media (prefers-contrast: high) {
     .high-contrast {
       filter: contrast(200%) brightness(1.3);
     }
-  }
+  };
 `;
 
 // Inject styles

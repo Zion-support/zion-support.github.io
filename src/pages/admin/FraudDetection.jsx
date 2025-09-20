@@ -152,4 +152,4 @@ import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from 
           </TabsContent>
         </Tabs>
       </div>);
-}
+};

@@ -1,30 +1,51 @@
-import React, { useState  from "react", import { Link, useLocation } from "react-router-dom";import { Logo } from "@/components/header/Lo, go";import { PointsBadge } from "@/components/loyalty/PointsBad, ge";import { UserMenu } from "@/components/header/UserMe, nu";import { LanguageSelector } from "@/components/header/LanguageSelect, or";import { ModeToggle } from "@/components/ModeTogg, le";import { useAuth } from "@/hooks/useAu, th";import { useIsMobile } from "@/hooks/use-mobi, le";import { useMessaging } from "@/context/MessagingConte, xt";import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInp, ut";import { generateSearchSuggestions } from "@/data/marketplaceDa, ta";import { slugify } from "@/lib/slugi, fy";import { ResponsiveNavigation } from "@/components/navigation/ResponsiveNavigati, on";import { MobileMenu } from "@/components/header/MobileMe, nu";import { MobileBottomNav } from "@/components/header/MobileBottomN, av";import { Menu, X, ShoppingCart } from "lucide-react";import { useTranslation } from "react-i18ne, xt";import { useSelector } from "react-red, ux";import type { RootState } from "@/store";export function PrimaryNav() {
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Logo } from "@/components/header/Logo";
+import { PointsBadge } from "@/components/loyalty/PointsBadge";
+import { UserMenu } from "@/components/header/UserMenu";
+import { LanguageSelector } from "@/components/header/LanguageSelector";
+import { ModeToggle } from "@/components/ModeToggle";
+import { useAuth } from "@/hooks/useAuth";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useMessaging } from "@/context/MessagingContext";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { slugify } from "@/lib/slugify";
+import { ResponsiveNavigation } from "@/components/navigation/ResponsiveNavigation";
+import { MobileMenu } from "@/components/header/MobileMenu";
+import { MobileBottomNav } from "@/components/header/MobileBottomNav";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/store";
+export function PrimaryNav() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const router = useLocation();
+  const [query, setQuery] = React.useState('');
+  const suggestions = generateSearchSuggestions();
 
-  const [mobileMenuOpe;n;
-    setMobileMenuOpen] = React.useState(false);
-  const { user }  = useAuth();
-  const isLoggedIn  = !!use;r;
-  const isMobile  = useIsMobile();
-  const { t }  = useTranslation();
-  const router  = useLocation();
-  const [query;
-    setQuery] = React.useState('')const suggestions  = generateSearchSuggestions()let unreadCount = 0try {
-    const messaging  = useMessaging();
+  let unreadCount = 0;
+  try {
+    const messaging = useMessaging();
     unreadCount = messaging.unreadCount;
   } catch {
     // context not available
-  }
+  };
 ;
-  const cartCount  = useSelector((s: RootState) =>
-    s.cart.items.reduce((su,
-    m;
-    i) => sum + i.quantit, y, 0);
+  const cartCount = useSelector((s: RootState) =>
+    s.cart.items.reduce((sum, i) => sum + i.quantity, 0);
   );
-  const handleSubmit  = () => {
-    e.preventDefault;(;);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:, ', query)router.push(`/search/${slugify(query)}`),
-      setQuery('')}
+      console.log('PrimaryNav search submit:', query);
+      router.push(`/search/${slugify(query)}`),
+      setQuery('');
+    }
   },
 
   return (
@@ -35,41 +56,45 @@ import React, { useState  from "react", import { Link, useLocation } from "react
         aria-label="Primary"
         data-testid="header"
       >
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm: px-6">
+        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
 
-          {/* Navigation - hidden on mobil,
-    eshown on desktop *, /}
-          <div className="hidden md: block order-1 flex-shrink-0">
+          {/* Navigation - hidden on mobile, shown on desktop */}
+          <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
 
-          {/* Actions container with responsive layout *, /}
-          <div className="hidden md: flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width *,
-    /}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem,
-    20v, w, 16rem)' }}>
+          {/* Actions container with responsive layout */}
+          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+            {/* Search form with clamped width */}
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:  , 'sugg)// Handle different suggestion types with proper navigation
+                  console.log('PrimaryNav search suggestion selected:', sugg);
+                  // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`)} else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                    router.push(`/marketplace/listing/${sugg.id}`);
+                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
+                    router.push(sugg.slug);
+                  } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`)} else {
+                    router.push(`/blog/${sugg.slug}`);
+                  } else {
                     // Default: search results page with slug
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`),
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
                   }
-                  setQuery('')// Track analytics event
+                  setQuery('');
+
+                  // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('eventsearch_suggestion_click', {
-                      search_term: sugg.text,
-    suggestion_type: sugg.typ, e,suggestion_id: sugg.id || sugg.slug,  })}
+                      search_term: sugg.text,suggestion_type: sugg.type,suggestion_id: sugg.id || sugg.slug
+                    });
+                  }
                 }}
                 searchSuggestions={suggestions}
               />
@@ -85,10 +110,10 @@ import React, { useState  from "react", import { Link, useLocation } from "react
                     className="relative p-1"
                     aria-label={t('nav.cartCart')}
                   >
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover: text-primary" />
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
-                        {cartCoun, t}
+                        {cartCount}
                       </span>
                     )}
                   </Link>
@@ -111,14 +136,14 @@ import React, { useState  from "react", import { Link, useLocation } from "react
                 <>
                   <Link
                     href="/auth/login"
-                    className="text-sm hover: text-primary whitespace-nowrap"
+                    className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
                   >
                     {t('auth.login')}
                   </Link>
                   <Link
                     href="/signup"
-                    className="text-sm hover: text-primary whitespace-nowrap"
+                    className="text-sm hover:text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
                   </Link>
@@ -130,7 +155,7 @@ import React, { useState  from "react", import { Link, useLocation } from "react
 
           {/* Mobile menu button */}
           <button
-            className="md: hidden p-2 rounded focus:outline-none flex-shrink-0"
+            className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
@@ -144,7 +169,7 @@ import React, { useState  from "react", import { Link, useLocation } from "react
         </div>
       </header>
       {mobileMenuOpen && (
-        <div className="md: hidden fixed inset-0 z-60 pt-16">
+        <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -160,5 +185,5 @@ import React, { useState  from "react", import { Link, useLocation } from "react
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
-  ),
-}
+  );
+};

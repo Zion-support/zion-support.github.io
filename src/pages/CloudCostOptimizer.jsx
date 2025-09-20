@@ -1,10 +1,14 @@
 import React from "react";
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Badge } from "@/components/ui/bad, ge";import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";import { Link } from "react-router-d, om";export default function CloudCostOptimizer() {
-
-    const features  = [
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
+export default function CloudCostOptimizer() {
+    const features = [
         "AI-driven cost optimization algorithms";
-        "Multi-cloud support (AWSAzure, GCP)",
+        "Multi-cloud support (AWS, Azure, GCP)",
         "Real-time cost monitoring and alerts",
         "Automated resource scaling",
         "Reserved instance recommendations",
@@ -15,22 +19,22 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
         "Performance vs. cost analysis";
         "Automated cost optimization actions",
         "Custom optimization policies"
-    ]const pricingPlans  = [
+    ];
+    const pricingPlans = [
         {
-            name: "Starter, ",price: "$49, ",period: "/month, ",description: "Perfect for small cloud deployment,
-    s";features: [
-                "Up to $5,
-    000 monthly cloud spend, ",
+            name: "Starter",price: "$49",period: "/month",description: "Perfect for small cloud deployments",features: [
+                "Up to $5,000 monthly cloud spend",
                 "Basic cost optimization",
                 "Monthly cost reports",
                 "Email support",
                 "Basic cost alerts",
                 "AWS cost optimization"
             ],
-            popular: false,  }{
-            name: "Professional, ",price: "$149, ",period: "/month, ",description: "Ideal for growing businesses, ",features: [
-                "Up to $50,
-    000 monthly cloud spend, ",
+            popular: false
+        };
+        {
+            name: "Professional",price: "$149",period: "/month",description: "Ideal for growing businesses",features: [
+                "Up to $50,000 monthly cloud spend",
                 "Advanced AI optimization",
                 "Real-time cost monitoring",
                 "Multi-cloud support",
@@ -39,9 +43,11 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
                 "Automated optimization",
                 "Custom cost policies"
             ],
-            popular: true,  }{
-            name: "Enterprise, ",price: "$399, ",period: "/month, ",description: "For large cloud deployments, ",features: [
-                "Unlimited cloud spend, ",
+            popular: true
+        };
+        {
+            name: "Enterprise",price: "$399",period: "/month",description: "For large cloud deployments",features: [
+                "Unlimited cloud spend",
                 "Premium AI optimization",
                 "24/7 cost monitoring",
                 "Full multi-cloud support",
@@ -52,25 +58,25 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
                 "Advanced forecasting",
                 "Custom reporting"
             ],
-            popular: false,  }
-    ]const optimizationServices  = [
+            popular: false
+        }
+    ];
+    const optimizationServices = [
         {
-            title: "Cost Analysis & Monitoring, ",description: "Real-time visibility into your cloud spending with detailed break,
-    downs and trend analysis.,";icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>
-       ,
-     }{
-            title: "AI-Powered Optimization, ",description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency., ",icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>
-       ,
-     }{
-            title: "Multi-Cloud Management, ",description: "Unified cost optimization across AWS,
-    Azur, e, and Google Cloud Platform.",
+            title: "Cost Analysis & Monitoring",description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>
+        };
+        {
+            title: "AI-Powered Optimization",description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.",icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>
+        };
+        {
+            title: "Multi-Cloud Management",description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.",
             icon: <Globe className="h-8 w-8 text-zion-cyan"/>
-       ,  },
+        },
         {
-            title: "Automated Actions, ",description: "Automatically implement cost-saving measures with your approval and oversight., ",icon: <Settings className="h-8 w-8 text-zion-purple"/>
-       ,
-     }
-    ]const supportedClouds  = [
+            title: "Automated Actions",description: "Automatically implement cost-saving measures with your approval and oversight.",icon: <Settings className="h-8 w-8 text-zion-purple"/>
+        }
+    ];
+    const supportedClouds = [
         "Amazon Web Services (AWS)",
         "Microsoft Azure",
         "Google Cloud Platform (GCP)",
@@ -82,21 +88,22 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
     ],
     const costSavings = [
         {
-            metric: "Average Cost Reduction, ",value: "40%,";description: "Typical savings achieved by our customers"
-       ,
-     }{
-            metric: "ROI Timeline, ",value: "2-3 months, ",description: "Time to see positive return on investment"
-       ,
-     }{
-            metric: "Resource Utilization, ",value: "85%, ",description: "Average improvement in resource efficiency"
-       ,  },
+            metric: "Average Cost Reduction",value: "40%",description: "Typical savings achieved by our customers"
+        };
         {
-            metric: "Cost Visibility, ",value: "100%, ",description: "Complete transparency into cloud spending"
-       ,  }
-    ]return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
-      <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWSAzure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https: //ziontechgroup.com/cloud-optimizer"/>
+            metric: "ROI Timeline",value: "2-3 months",description: "Time to see positive return on investment"
+        };
+        {
+            metric: "Resource Utilization",value: "85%",description: "Average improvement in resource efficiency"
+        },
+        {
+            metric: "Cost Visibility",value: "100%",description: "Complete transparency into cloud spending"
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
+      <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
 
-      {/* Hero Section *, /}
+      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-8">
@@ -104,7 +111,7 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
               AI-Powered Cloud Optimization
             </Badge>
           </div>
-          <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Cloud Cost Optimizer
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -123,12 +130,11 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
         </div>
       </section>
 
-      {/* Cost Savings Metrics *,
-    /}
+      {/* Cost Savings Metrics */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Proven Cost Savings Results
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
@@ -137,11 +143,9 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {costSavings.map((saving,
-    index) => (<Card key={inde, x} className="bg-zion-slate/50 border-blue-500/20 hover: border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
+            {costSavings.map((saving, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">{saving.valu,
-    e}</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">{saving.value}</div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{saving.metric}</h3>
                   <p className="text-zion-slate-light text-sm">{saving.description}</p>
                 </CardContent>
@@ -154,7 +158,7 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Comprehensive Cloud Optimization
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
@@ -163,12 +167,10 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {optimizationServices.map((service,
-    index) => (<Card key={inde, x} className="bg-zion-slate/50 border-blue-500/20 hover: border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
+            {optimizationServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
-                    {service.ico,
-    n}
+                    {service.icon}
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
@@ -182,7 +184,7 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Multi-Cloud Support
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
@@ -191,12 +193,10 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {supportedClouds.map((cloud,
-    index) => (<Card key={inde, x} className="bg-zion-slate/50 border-blue-500/20 hover: border-blue-500/40 transition-all duration-300">
+            {supportedClouds.map((cloud, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                 <CardContent className="p-4 text-center">
                   <Cloud className="h-6 w-6 text-blue-400 mx-auto mb-2"/>
-                  <span className="text-sm text-zion-slate-light">{clou,
-    d}</span>
+                  <span className="text-sm text-zion-slate-light">{cloud}</span>
                 </CardContent>
               </Card>))}
           </div>
@@ -207,7 +207,7 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Advanced Optimization Features
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
@@ -216,13 +216,11 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature,
-    index) => (<Card key={inde, x} className="bg-zion-slate/50 border-blue-500/20 hover: border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+            {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
                     <Check className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0"/>
-                    <span className="text-zion-slate-light">{featur,
-    e}</span>
+                    <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
               </Card>))}
@@ -234,19 +232,16 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
-              Simple,
-    Transparent Pricing
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your cloud spending. All plans include our core optimization features.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan,
-    index) => (<Card key={inde, x} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover: border-blue-500/40 transition-all duration-300,
-    `}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2">
                       Most Popular
@@ -261,13 +256,13 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
                   <CardDescription className="text-zion-slate-light">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  {plan.features.map((featurefeatureIndex) => (<div key={featureIndex} className="flex items-start gap-3">
+                  {plan.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-start gap-3">
                       <Check className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0"/>
                       <span className="text-sm text-zion-slate-light">{feature}</span>
                     </div>))}
                 </CardContent>
                 <div className="p-6 pt-0">
-                  <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-blue-500 hover: bg-blue-600, '}`}>
+                  <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-blue-500 hover:bg-blue-600'}`}>
                     Get Started
                   </Button>
                 </div>
@@ -302,5 +297,5 @@ import { Button } from "@/components/ui/butt, on";import { Card, CardContent, Ca
           </div>
         </div>
       </section>
-    </div>),
-}
+    </div>)
+};

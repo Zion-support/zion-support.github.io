@@ -1,181 +1,181 @@
-import React, { useState  from "react", import { motion } from "framer-moti, on";import { SEO } from "../components/S, EO";import { Users, MessageCircle;
-  Search;
-  Filter;
-  ArrowRight;
-  Star;
-  Bookmark;
-  Share2;
-  Copy;
-  CheckCircle;
-  Clock;
-  Tag;
-  Play;
-  Terminal;
-  FileText;
-  Key;
-  Lock;
-  Eye;
-  EyeOff;
-  ChevronDown;
-  ChevronRight;
-  AlertCircle;
-  Info;
-  TrendingUp;
-  Heart;
-  MessageSquare;
-  Award;
-  Zap;
-  Globe;
-  Calendar;
-  User;
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { 
+  Users,
+  MessageCircle, 
+  Search, 
+  Filter,
+  ArrowRight,
+  Star,
+  Bookmark,
+  Share2,
+  Copy,
+  CheckCircle,
+  Clock,
+  Tag,
+  Play,
+  Terminal,
+  FileText,
+  Key,
+  Lock,
+  Eye,
+  EyeOff,
+  ChevronDown,
+  ChevronRight,
+  AlertCircle,
+  Info,
+  TrendingUp,
+  Heart,
+  MessageSquare,
+  Award,
+  Zap,
+  Globe,
+  Calendar,
+  User,
   Plus
-} from "lucide-react";export default function Community() {
-
-  const [searchQuer;y;
-    setSearchQuery] = useState('')const [selectedCategorysetSelectedCategory] = useState('All')const [selectedSortsetSelectedSort] = useState('Latest')const categories  = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing'; 'BlockchainIoT & Edge'; 'Help & SupportShowcase']const sortOptions  = ['LatestMost Popular'; 'Most ActiveTrending']const forumCategories  = [
+} from "lucide-react";
+export default function Community() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedSort, setSelectedSort] = useState('Latest');
+  const categories = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing', 'BlockchainIoT & Edge', 'Help & SupportShowcase'];
+  const sortOptions = ['LatestMost Popular', 'Most ActiveTrending'];
+  const forumCategories = [
     {
-      id: 'general, ',name: 'General Discussion',
-    description: 'General topics,
-    announcement, s, and community discussions',
-      icon: Users,
-    color: 'from-blue-500 to-cyan-500, ',topics: 124, 7,posts: 893, 4,lastActivity: '2 hours ago, ',featured: true,  }{
-      id: 'ai-ml, ',name: 'AI & Machine Learning, ',description: 'Discussions about AI,
-    machine learnin, g, and data science',
-      icon: Zap,
-    color: 'from-purple-500 to-pink-500, ',topics: 89, 2,posts: 567, 8,lastActivity: '1 hour ago, ',featured: true,  }{
-      id: 'cybersecurity, ',name: 'Cybersecurity, ',description: 'Security discussions,
-    threat intelligenc, e, and best practices',
-      icon: Lock,
-    color: 'from-red-500 to-orange-500, ',topics: 45, 6,posts: 234, 5,lastActivity: '3 hours ago, ',featured: true,  }{
-      id: 'cloud-devops, ',name: 'Cloud & DevOps, ',description: 'Cloud computing,
-    DevOps practice, s, and infrastructure',
-      icon: Globe,
-    color: 'from-green-500 to-emerald-500, ',topics: 67, 8,posts: 345, 6,lastActivity: '4 hours ago, ',featured: false,  }{
-      id: 'quantum, ',name: 'Quantum Computing, ',description: 'Quantum computing research,
-    application, s, and developments',
-      icon: Atom,
-    color: 'from-indigo-500 to-purple-500, ',topics: 23, 4,posts: 123, 4,lastActivity: '6 hours ago, ',featured: false,  },
+      id: 'general',name: 'General Discussion',description: 'General topics, announcements, and community discussions',
+      icon: Users,color: 'from-blue-500 to-cyan-500',topics: 1247,posts: 8934,lastActivity: '2 hours ago',featured: true
+    };
     {
-      id: 'blockchain, ',name: 'Blockchain, ',description: 'Blockchain technology,
-    DeF, i, and Web3 discussions',
-      icon: Link,
-    color: 'from-yellow-500 to-orange-500, ',topics: 34, 5,posts: 178, 9,lastActivity: '8 hours ago, ',featured: false,  }
-  ]const recentDiscussions  = [
+      id: 'ai-ml',name: 'AI & Machine Learning',description: 'Discussions about AI, machine learning, and data science',
+      icon: Zap,color: 'from-purple-500 to-pink-500',topics: 892,posts: 5678,lastActivity: '1 hour ago',featured: true
+    };
     {
-      id:  ,
-    1title: 'Best practices for implementing AI in enterprise environments?, ',author: 'Sarah Chen, ',authorAvatar: '/avatars/sarah.jpg, ',category: 'AI & Machine Learning, ',replies: 2, 3,views: 45, 6,lastReply: '2 hours ago, ',tags: ['AIEnterprise, ', 'Best Practices'],
-      featured: true,
-    pinned: false,  }{
-      id: 2,
-    title: 'Zero Trust Security Architecture Implementation Guide, ',author: 'Mike Rodriguez, ',authorAvatar: '/avatars/mike.jpg, ',category: 'Cybersecurity, ',replies: 1, 8,views: 23, 4,lastReply: '4 hours ago, ',tags: ['SecurityZero Trust, ', 'Architecture'],
-      featured: false,
-    pinned: true,  }{
-      id: 3,
-    title: 'Quantum Computing vs Classical Computing for ML workloads, ',author: 'Dr. Emily Watson, ',authorAvatar: '/avatars/emily.jpg, ',category: 'Quantum Computing, ',replies: 3, 1,views: 78, 9,lastReply: '1 hour ago, ',tags: ['QuantumMachine Learning, ', 'Performance'],
-      featured: true,
-    pinned: false,  }{
-      id: 4,
-    title: 'DevOps transformation success stories and lessons learned, ',author: 'Alex Thompson, ',authorAvatar: '/avatars/alex.jpg, ',category: 'Cloud & DevOps, ',replies: 1, 5,views: 34, 5,lastReply: '5 hours ago, ',tags: ['DevOpsTransformation, ', 'Success Stories'],
-      featured: false,
-    pinned: false,  }{
-      id: 5,
-    title: 'Blockchain scalability solutions for enterprise applications, ',author: 'Maria Santos, ',authorAvatar: '/avatars/maria.jpg, ',category: 'Blockchain, ',replies: 2, 7,views: 56, 7,lastReply: '3 hours ago, ',tags: ['BlockchainScalability, ', 'Enterprise'],
-      featured: false,
-    pinned: false,  }
-  ]const communityStats  = [
-    { label: 'Members',
-    value: '12,
-    847, ', icon: User, s, color: 'text-blue-400',  }{ label: 'Topics, ', value: '4,
-    892, ', icon: MessageSquar, e, color: 'text-green-400',  }{ label: 'Posts, ', value: '23,
-    456, ', icon: MessageCircl, e, color: 'text-purple-400',  },
-    { label: 'Solutions, ', value: '8,
-    934, ', icon: CheckCircl, e, color: 'text-cyan-400',  }
-  ]const filteredDiscussions  = recentDiscussions.filter(discussion => {
+      id: 'cybersecurity',name: 'Cybersecurity',description: 'Security discussions, threat intelligence, and best practices',
+      icon: Lock,color: 'from-red-500 to-orange-500',topics: 456,posts: 2345,lastActivity: '3 hours ago',featured: true
+    };
+    {
+      id: 'cloud-devops',name: 'Cloud & DevOps',description: 'Cloud computing, DevOps practices, and infrastructure',
+      icon: Globe,color: 'from-green-500 to-emerald-500',topics: 678,posts: 3456,lastActivity: '4 hours ago',featured: false
+    };
+    {
+      id: 'quantum',name: 'Quantum Computing',description: 'Quantum computing research, applications, and developments',
+      icon: Atom,color: 'from-indigo-500 to-purple-500',topics: 234,posts: 1234,lastActivity: '6 hours ago',featured: false
+    },
+    {
+      id: 'blockchain',name: 'Blockchain',description: 'Blockchain technology, DeFi, and Web3 discussions',
+      icon: Link,color: 'from-yellow-500 to-orange-500',topics: 345,posts: 1789,lastActivity: '8 hours ago',featured: false
+    }
+  ];
+  const recentDiscussions = [
+    {
+      id: 1,title: 'Best practices for implementing AI in enterprise environments?',author: 'Sarah Chen',authorAvatar: '/avatars/sarah.jpg',category: 'AI & Machine Learning',replies: 23,views: 456,lastReply: '2 hours ago',tags: ['AIEnterprise', 'Best Practices'],
+      featured: true,pinned: false
+    };
+    {
+      id: 2,title: 'Zero Trust Security Architecture Implementation Guide',author: 'Mike Rodriguez',authorAvatar: '/avatars/mike.jpg',category: 'Cybersecurity',replies: 18,views: 234,lastReply: '4 hours ago',tags: ['SecurityZero Trust', 'Architecture'],
+      featured: false,pinned: true
+    };
+    {
+      id: 3,title: 'Quantum Computing vs Classical Computing for ML workloads',author: 'Dr. Emily Watson',authorAvatar: '/avatars/emily.jpg',category: 'Quantum Computing',replies: 31,views: 789,lastReply: '1 hour ago',tags: ['QuantumMachine Learning', 'Performance'],
+      featured: true,pinned: false
+    };
+    {
+      id: 4,title: 'DevOps transformation success stories and lessons learned',author: 'Alex Thompson',authorAvatar: '/avatars/alex.jpg',category: 'Cloud & DevOps',replies: 15,views: 345,lastReply: '5 hours ago',tags: ['DevOpsTransformation', 'Success Stories'],
+      featured: false,pinned: false
+    };
+    {
+      id: 5,title: 'Blockchain scalability solutions for enterprise applications',author: 'Maria Santos',authorAvatar: '/avatars/maria.jpg',category: 'Blockchain',replies: 27,views: 567,lastReply: '3 hours ago',tags: ['BlockchainScalability', 'Enterprise'],
+      featured: false,pinned: false
+    }
+  ];
+  const communityStats = [
+    { label: 'Members', value: '12,847', icon: Users, color: 'text-blue-400' };
+    { label: 'Topics', value: '4,892', icon: MessageSquare, color: 'text-green-400' };
+    { label: 'Posts', value: '23,456', icon: MessageCircle, color: 'text-purple-400' },
+    { label: 'Solutions', value: '8,934', icon: CheckCircle, color: 'text-cyan-400' }
+  ];
+  const filteredDiscussions = recentDiscussions.filter(discussion => {
     const matchesSearch = discussion.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))const matchesCategory  = selectedCategory === 'All' || discussion.category === selectedCategoryreturn matchesSearch && matchesCategory;
+                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory;
+    return matchesSearch && matchesCategory,
   });
 
-  const handleStartDiscussion  = () => {
+  const handleStartDiscussion = () => {
     // Navigate to create discussion page
-    console.log('Start new discussion')},
+    console.log('Start new discussion');
+  },
 
-  const handleJoinCommunity  = () => {
+  const handleJoinCommunity = () => {
     // Handle community join logic
-    console.log('Join community')},
+    console.log('Join community');
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Community - Zion Tech Group"
-        description="Join our vibrant community of technology professionals. Connectlearn, and collaborate with experts in AI, cybersecurity, quantum computing, and more."
+        description="Join our vibrant community of technology professionals. Connect, learn, and collaborate with experts in AI, cybersecurity, quantum computing, and more."
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Join Our Community
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Connect with thousands of technology professionals,
-    share knowledgeand stay updated with the latest trends in AIcybersecurit, y, quantum computing, and more.
+              Connect with thousands of technology professionals, share knowledge; 
+              and stay updated with the latest trends in AI, cybersecurity, quantum computing, and more.
             </p>
             
             {/* Search and Filters */}
-            <div className="flex flex-col md: flex-row gap-4 max-w-3xl mx-auto mb-8">
+            <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search discussions,
-    topic, s, or members..."
+                  placeholder="Search discussions, topics, or members..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
               <select
-                value={selectedCategor, y}
+                value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
                 {categories.map(category => (
-                  <option key={categor, y} value={category}>{category}</option>
+                  <option key={category} value={category}>{category}</option>
                 ))}
               </select>
               <select
                 value={selectedSort}
                 onChange={(e) => setSelectedSort(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
                 {sortOptions.map(option => (
-                  <option key={optio,
-    n} value={option}>{option}</option>
+                  <option key={option} value={option}>{option}</option>
                 ))}
               </select>
             </div>
 
             {/* Community Stats */}
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-3xl mx-auto">
-              {communityStats.map((stat,
-    index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              {communityStats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0,
-    y: 20,  }}
-                  animate={{ opacity: 1,
-    y: 0,  }}
-                  transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
                   <div className={`text-2xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
@@ -191,12 +191,10 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Forum Categories</h2>
@@ -205,22 +203,19 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {forumCategories.map((category,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {forumCategories.map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover: border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category.colo, r}`}>
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color}`}>
                       <category.icon className="w-6 h-6 text-white" />
                     </div>
                     {category.featured && (
@@ -239,16 +234,15 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   </div>
 
                   <div className="text-xs text-gray-500 mb-4">
-                    Last activity: {category.lastActivit, y}
+                    Last activity: {category.lastActivity}
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                     Browse Category
                   </button>
                 </div>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
@@ -263,7 +257,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
             </div>
             <button
               onClick={handleStartDiscussion}
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2"
             >
               <Plus className="w-4 h-4" />
               Start Discussion
@@ -271,20 +265,16 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
           </div>
 
           <div className="space-y-4">
-            {filteredDiscussions.map((discussion,
-    index) => (
+            {filteredDiscussions.map((discussion, index) => (
               <motion.div
                 key={discussion.id}
-                initial={{ opacity: 0,
-    y: 20,  }}
-                animate={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.05,  }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6 hover: border-cyan-400/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6 hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  {/* Author Avatar *, /}
+                  {/* Author Avatar */}
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <User className="w-6 h-6 text-white" />
                   </div>
@@ -293,9 +283,8 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <h3 className="text-lg font-semibold text-white hover: text-cyan-400 transition-colors cursor-pointer">
-                          {discussion.titl,
-    e}
+                        <h3 className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors cursor-pointer">
+                          {discussion.title}
                         </h3>
                         {discussion.pinned && (
                           <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
@@ -317,7 +306,7 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-3">
-                      {discussion.tags.map((tagidx) => (
+                      {discussion.tags.map((tag, idx) => (
                         <span key={idx} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                           {tag}
                         </span>
@@ -351,14 +340,13 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
                   </div>
                 </div>
               </motion.div>
-            ), )}
+            ))}
           </div>
 
           {filteredDiscussions.length === 0 && (
             <motion.div
-              initial={{ opacity: 0,  }}
-              animate={{ opacity: 1,
-     }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               className="text-center py-16"
             >
               <div className="text-gray-400 text-lg mb-4">
@@ -366,14 +354,15 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
               </div>
               <button
                 onClick={() => {
-                  setSearchQuery('')setSelectedCategory('All')}}
-                className="text-cyan-400 hover: text-cyan-300 transition-colors"
+                  setSearchQuery('');
+                  setSelectedCategory('All');
+                }}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 Clear filters
               </button>
             </motion.div>
-          ,
-    )}
+          )}
         </div>
       </section>
 
@@ -381,23 +370,22 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       <section className="py-16">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.6,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Join the Community?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Connect with thousands of technology professionalsshare your expertiseand learn from industry leaders. Join our community today!
+              Connect with thousands of technology professionals, share your expertise;
+              and learn from industry leaders. Join our community today!
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={handleJoinCommunit, y}
+                onClick={handleJoinCommunity}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Join Community
@@ -410,5 +398,5 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

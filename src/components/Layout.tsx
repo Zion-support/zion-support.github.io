@@ -117,4 +117,3 @@ const navigation: NavItem[]  = [
       </div>
     </div>
   );
-}

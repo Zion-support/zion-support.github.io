@@ -489,4 +489,4 @@ import React, { useState  from "react", import { motion } from "framer-moti, on"
       </section>
     </div>
   );
-}
+};

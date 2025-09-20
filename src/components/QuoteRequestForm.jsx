@@ -1,33 +1,37 @@
-import React, { useState  from "react", import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Button } from "@/components/ui/butt, on";import { Input } from "@/components/ui/Inp, ut";import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";import { CheckCircle, Send } from "lucide-react";export const QuoteRequestForm  = () => {
-  const [formD;a;t;a;
-    setFormData] = useState({
-    name: ', ',email: ', ',company: ', ',phone: ', ',service: ', ',budget: ', ',timeline: ', ',description: ''
- ,  })const [isSubmittingsetIsSubmitting] = useState(false)const [isSubmitted;
-    setIsSubmitted] = useState(false);
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CheckCircle, Send } from "lucide-react";
+export const QuoteRequestForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange  = () => {
-    const { na;m;e;
-    value } = e.target;
+  const handleChange = (e) => {
+    const { name, value } = e.target,
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       [name]: value
     })),
   },
 
-  const handleSelectChange  = () => {
+  const handleSelectChange = (name, value) => {
     setFormData(prev => ({
-      ...pre;v;
+      ...prev,
       [name]: value
     })),
   },
 
-  const handleSubmit  = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve;
-    1000)),
+    await new Promise(resolve => setTimeout(resolve, 1000)),
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -44,8 +48,10 @@ import React, { useState  from "react", import { Card, CardContent, CardDescript
           </p>
         </CardContent>
       </Card>
-    )}
-return (
+    );
+  };
+;
+  return (
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
       <CardHeader>
         <CardTitle className="text-2xl text-zion-cyan">Quote Request Form</CardTitle>
@@ -55,17 +61,17 @@ return (
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Full Name *
               </label>
               <Input
                 name="name"
-                value={formData.nam, e}
+                value={formData.name}
                 onChange={handleChange}
                 required
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan"
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter your full name"
               />
             </div>
@@ -77,10 +83,10 @@ return (
               <Input
                 name="email"
                 type="email"
-                value={formData.emai, l}
+                value={formData.email}
                 onChange={handleChange}
                 required
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan"
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter your email"
               />
             </div>
@@ -93,9 +99,9 @@ return (
               </label>
               <Input
                 name="company"
-                value={formData.compan, y}
+                value={formData.company}
                 onChange={handleChange}
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan"
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter company name"
               />
             </div>
@@ -106,9 +112,9 @@ return (
               </label>
               <Input
                 name="phone"
-                value={formData.phon, e}
+                value={formData.phone}
                 onChange={handleChange}
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan"
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 placeholder="Enter phone number"
               />
             </div>
@@ -119,8 +125,8 @@ return (
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Service Type *
               </label>
-              <Select value={formData.servic, e} onValueChange={(value) => handleSelectChange('service', value)}>
-                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">
+              <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>
+                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue border-zion-purple/30">
@@ -139,18 +145,16 @@ return (
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Budget Range
               </label>
-              <Select value={formData.budg,
-    et} onValueChange={(value) => handleSelectChange('budget'value)}>
-                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">
+              <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>
+                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
                   <SelectValue placeholder="Select budget range" />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue border-zion-purple/30">
-                  <SelectItem value="under-10k">Under $10,
-    000</SelectItem>
-                  <SelectItem value="10k-50k">$10000 - $5, 0,000</SelectItem>
-                  <SelectItem value="50k-100k">$50000 - $100,000</SelectItem>
-                  <SelectItem value="100k-500k">$100000 - $500,000</SelectItem>
-                  <SelectItem value="over-500k">Over $500000</SelectItem>
+                  <SelectItem value="under-10k">Under $10,000</SelectItem>
+                  <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
+                  <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
+                  <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
+                  <SelectItem value="over-500k">Over $500,000</SelectItem>
                   <SelectItem value="not-sure">Not sure yet</SelectItem>
                 </SelectContent>
               </Select>
@@ -162,7 +166,7 @@ return (
               Timeline
             </label>
             <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline', value)}>
-              <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">
+              <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">
                 <SelectValue placeholder="Select timeline" />
               </SelectTrigger>
               <SelectContent className="bg-zion-blue border-zion-purple/30">
@@ -182,14 +186,12 @@ return (
             </label>
             <textarea
               name="description"
-              value={formData.descriptio,
-    n}
+              value={formData.description}
               onChange={handleChange}
               required
               rows={6}
-              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan w-full p-3 rounded-md resize-none"
-              placeholder="Please describe your project requirements,
-    goal, s, and any specific details that would help us provide an accurate quote..."
+              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan w-full p-3 rounded-md resize-none"
+              placeholder="Please describe your project requirements, goals, and any specific details that would help us provide an accurate quote..."
             />
           </div>
 
@@ -209,8 +211,7 @@ return (
                   <Send className="h-5 w-5 mr-2" />
                   Submit Quote Request
                 </>
-              ,
-    )}
+              )}
             </Button>
           </div>
         </form>

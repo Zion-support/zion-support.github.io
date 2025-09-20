@@ -1,55 +1,55 @@
 import React from "react";
-import { motion } from "framer-moti, on";import { Atom, Cpu;
-  Zap;
-  Brain;
-  Users;
-  Globe;
-  Database;
-  Network;
-  Lock;
-  Eye;
-  Target;
-  Award;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  ExternalLink;
-  Rocket;
-  Microscope;
+import { motion } from "framer-motion";
+import { 
+  Atom,
+  Cpu, 
+  Zap, 
+  Brain, 
+  Users, 
+  Globe, 
+  Database,
+  Network,
+  Lock,
+  Eye,
+  Target,
+  Award,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Rocket,
+  Microscope,
   TestTube
-} from "lucide-react";const QuantumComputingElite: React.FC  = () => {
+} from "lucide-react";
+const QuantumComputingElite: React.FC = () => {
   const features = [
     {
-      icon: At,
-    o;m;
-    title: "Quantum Processing Units, ",description: "Access to 1000+ qubit quantum computers with error correction and quantum advantage algorithms"
-   ,  }{
-      icon: Brain,
-    title: "AI-Quantum Hybrid Systems, ",description: "Combines quantum computing with AI for unprecedented computational power and problem-solving"
-   ,  }{
-      icon: Zap,
-    title: "Quantum-Classical Integration, ",description: "Seamless integration between quantum and classical computing resources for optimal performance"
-   ,  }{
-      icon: Lock,
-    title: "Quantum-Safe Cryptography, ",description: "Post-quantum cryptography solutions that protect against future quantum attacks"
-   ,  }{
-      icon: Users,
-    title: "Multi-User Quantum Access, ",description: "Collaborative quantum computing with real-time sharing and resource optimization"
-   ,  },
+      icon: Atom,title: "Quantum Processing Units",description: "Access to 1000+ qubit quantum computers with error correction and quantum advantage algorithms"
+    };
     {
-      icon: Globe,
-    title: "Global Quantum Network, ",description: "Access to quantum computers across multiple locations and cloud providers"
-   ,  }
-  ]const pricing  = [
+      icon: Brain,title: "AI-Quantum Hybrid Systems",description: "Combines quantum computing with AI for unprecedented computational power and problem-solving"
+    };
     {
-      name: "Quantum Starte,
-    r";price: "$8,
-    500, ",
-      period: "/month, ",description: "Perfect for research institutions and startups, ",features: [
-        "Up to 100 qubit access, ",
+      icon: Zap,title: "Quantum-Classical Integration",description: "Seamless integration between quantum and classical computing resources for optimal performance"
+    };
+    {
+      icon: Lock,title: "Quantum-Safe Cryptography",description: "Post-quantum cryptography solutions that protect against future quantum attacks"
+    };
+    {
+      icon: Users,title: "Multi-User Quantum Access",description: "Collaborative quantum computing with real-time sharing and resource optimization"
+    },
+    {
+      icon: Globe,title: "Global Quantum Network",description: "Access to quantum computers across multiple locations and cloud providers"
+    }
+  ];
+  const pricing = [
+    {
+      name: "Quantum Starter",price: "$8,500",
+      period: "/month",description: "Perfect for research institutions and startups",features: [
+        "Up to 100 qubit access",
         "Basic quantum algorithms",
         "Standard quantum simulators",
         "Email support",
@@ -58,10 +58,9 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
       ]
     },
     {
-      name: "Quantum Professional, ",price: "$18,
-    000, ",
-      period: "/month, ",description: "Ideal for growing businesses and research teams, ",features: [
-        "Up to 500 qubit access, ",
+      name: "Quantum Professional",price: "$18,000",
+      period: "/month",description: "Ideal for growing businesses and research teams",features: [
+        "Up to 500 qubit access",
         "Advanced quantum algorithms",
         "Custom quantum circuits",
         "Priority support",
@@ -69,11 +68,12 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
         "API access",
         "Quantum consulting"
       ],
-      popular: true,  }{
-      name: "Quantum Enterprise, ",price: "$45,
-    000, ",
-      period: "/month, ",description: "For large organizations with complex quantum needs, ",features: [
-        "Unlimited qubit access, ",
+      popular: true
+    };
+    {
+      name: "Quantum Enterprise",price: "$45,000",
+      period: "/month",description: "For large organizations with complex quantum needs",features: [
+        "Unlimited qubit access",
         "Full quantum suite",
         "Custom quantum development",
         "24/7 dedicated support",
@@ -84,53 +84,53 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
     }
   ],
 
-  const quantumApplications  = [
+  const quantumApplications = [
     {
-      title: "Drug Discovery & Pharmaceutical,
-    s";description: "Quantum molecular modeling for faster drug discovery,
-    protein foldin, g, and chemical simulations"
+      title: "Drug Discovery & Pharmaceuticals",description: "Quantum molecular modeling for faster drug discovery, protein folding, and chemical simulations"
     },
     {
-      title: "Financial Modeling & Optimization, ",description: "Portfolio optimization,
-    risk assessmen, t, and algorithmic trading using quantum algorithms"
+      title: "Financial Modeling & Optimization",description: "Portfolio optimization, risk assessment, and algorithmic trading using quantum algorithms"
     },
     {
-      title: "Machine Learning & AI, ",description: "Quantum machine learning algorithms for pattern recognition and data analysis"
-   ,  }{
-      title: "Cryptography & Security, ",description: "Quantum-resistant encryption and quantum key distribution for ultra-secure communications"
-   ,  }{
-      title: "Supply Chain Optimization, ",description: "Complex logistics optimization and route planning using quantum algorithms"
-   ,  },
+      title: "Machine Learning & AI",description: "Quantum machine learning algorithms for pattern recognition and data analysis"
+    };
     {
-      title: "Climate Modeling, ",description: "Advanced climate simulations and weather forecasting with quantum computing power"
-   ,  }
-  ]const quantumTechnologies  = [
+      title: "Cryptography & Security",description: "Quantum-resistant encryption and quantum key distribution for ultra-secure communications"
+    };
+    {
+      title: "Supply Chain Optimization",description: "Complex logistics optimization and route planning using quantum algorithms"
+    },
+    {
+      title: "Climate Modeling",description: "Advanced climate simulations and weather forecasting with quantum computing power"
+    }
+  ];
+  const quantumTechnologies = [
     "Superconducting Qubits",
     "Trapped Ion Qubits",
     "Topological Qubits",
     "Photonic Qubits",
     "Silicon Spin Qubits",
     "Quantum Annealing",
-    "Quantum Error Correction";
+    "Quantum Error Correction",
     "Quantum Memory Systems"
-  ]return (
+  ],
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: ,
-    0y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
                 <Atom className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing Elite
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
@@ -157,45 +157,39 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Quantum Capabilities
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our quantum computing platform provides access to the most advanced quantum technologiesenabling breakthroughs in sciencetechnology, and business.
+              Our quantum computing platform provides access to the most advanced quantum technologies;
+              enabling breakthroughs in science, technology, and business.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover: border-blue-500 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-blue-500 transition-all duration-300"
               >
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mb-6">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.titl,
-    e}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -204,15 +198,13 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
       </section>
 
       {/* Quantum Applications Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -224,18 +216,14 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumApplications.map((app,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {quantumApplications.map((app, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{app.title}</h3>
@@ -247,38 +235,32 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
       </section>
 
       {/* Quantum Technologies Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Quantum Technologies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform supports multiple quantum computing approachesensuring optimal performance 
+              Our platform supports multiple quantum computing approaches, ensuring optimal performance 
               for different types of computational problems.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
-            {quantumTechnologies.map((tech,
-    index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {quantumTechnologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center"
               >
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">
@@ -292,15 +274,13 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -312,18 +292,14 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan,
-    index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.8,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,
-     }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
                   plan.popular 
                     ? 'border-blue-500 shadow-2xl shadow-blue-500/25' 
@@ -348,7 +324,7 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((featurefeatureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
@@ -357,28 +333,25 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
                 </ul>
 
                 <a
-                  href="https: //ziontechgroup.com/contact"
+                  href="https://ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Quantum Access
                 </a>
               </motion.div>
-            ),
-    )}
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -390,7 +363,7 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">
                 <Phone className="h-8 w-8 text-white" />
@@ -424,8 +397,7 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
               <h3 className="text-xl font-semibold text-white mb-2">Visit Quantum Center</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
-                Middletown,
-    DE 19709
+                Middletown, DE 19709
               </p>
             </div>
           </div>
@@ -442,7 +414,7 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
         </div>
       </section>
 
-      {/* Footer *, /}
+      {/* Footer */}
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
@@ -472,6 +444,6 @@ import { motion } from "framer-moti, on";import { Atom, Cpu;
         </div>
       </footer>
     </div>
-  ),
+  )
 };
-export default QuantumComputingElit;e;
+export default QuantumComputingElite;

@@ -315,4 +315,4 @@ import { motion } from "framer-moti, on";import { Cloud, Server;
       </section>
     </div>
   );
-}
+};

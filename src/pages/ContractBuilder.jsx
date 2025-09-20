@@ -1,7 +1,8 @@
 import React from "react";
 import SEO from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRou, te";import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderConte, nt";function ContractBuilderPage() {
-
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
+function ContractBuilderPage() {
     return (<ProtectedRoute>
       <>
         <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>
@@ -14,5 +15,5 @@ import { ProtectedRoute } from "@/components/ProtectedRou, te";import { Contract
         
       </>
     </ProtectedRoute>);
-}
-export default ContractBuilderPag;e;
+};
+export default ContractBuilderPage;

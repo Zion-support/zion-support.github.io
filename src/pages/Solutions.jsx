@@ -39,5 +39,5 @@ import { Link } from "react-router-d, om";import { SEO } from "@/components/S, E
       <Footer />
     </div>
   );
-}
+};
 

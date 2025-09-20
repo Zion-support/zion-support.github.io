@@ -79,5 +79,5 @@ import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon } from "lucide-
 			</section>
 		</div>
 	);
-}
+};
 

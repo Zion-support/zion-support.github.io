@@ -1,62 +1,82 @@
-import React, { useState  from "react", import { useNavigate, Link } from "react-router-dom";import { Badge } from "@/components/ui/bad, ge";import { Button } from "@/components/ui/butt, on";import { ProductListing } from "@/types/listin, gs";import { DollarSign } from "lucide-rea, ct";import { RatingStars } from "@/components/RatingSta, rs";import { FavoriteButton } from "@/components/FavoriteButt, on";import { useDispatch } from "react-red, ux";import type { AppDispatch } from "@/store";import { addItem } from "@/store/cartSli, ce";// Import next/image
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
+import { DollarSign } from "lucide-react";
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "@/store";
+import { addItem } from "@/store/cartSlice";
+// Import next/image
 
 interface ProductListingCardProps {
-  listing: ProductListing,
-    view?: 'grid' | 'list, ',
-  onRequestQuote?: (id: string) => void,
-    /**
+  listing: ProductListing;
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void;
+  /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
-  detailBasePath?: string, 
-}
+  detailBasePath?: string
+};
 
 export function ProductListingCard({
-  listingview = 'grid')onRequestQuotedetailBasePath = '/marketplace/listing'
+  listing,
+  view = 'grid',
+  onRequestQuote,
+  detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
-  const isGrid  = view === 'grid';
-  const navigate  = useNavigate();
-  const [loading;
-    setLoading] = useState(false);
-  const [imageSrc;
-    setImageSrc] = useState(
+  const isGrid = view === 'grid';
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0
     ? listing.images[0]
     : '/placeholder.svg'
-  )const [imageErrorsetImageError] = useState(false)const formatPrice  = () => {
+  );
+  const [imageError, setImageError] = useState(false);
+
+  const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()};`;
+    return `${listing.currency}${listing.price.toLocaleString()}`,
   };
 
-  const handleImageError  = () => {
+  const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg')setImageError(true)}
-  }const handleViewListing  = () => {
-    navigate(`${detailBasePath}/${listing.id};`);
+      setImageSrc('/placeholder.svg');
+      setImageError(true);
+    }
   };
-  const handleRequestQuote  = () => {
-    e.preventDefault;(;);
+  const handleViewListing = () => {
+    navigate(`${detailBasePath}/${listing.id}`);
+  };
+  const handleRequestQuote = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
 
     if (onRequestQuote) {
-      onRequestQuote(listing.id);  } else {
+      onRequestQuote(listing.id)
+    } else {
       navigate(`/request-quote?listing=${listing.id}`);
     }
   },
 
-  const imageContainerClasses  = isGrid ? 'h-48' : 'h-32 w-48';
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300,
-    `}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()handleViewListing()}
+          e.preventDefault();
+          handleViewListing();
+        }
       }}
     >
       {/* Image */}
@@ -67,7 +87,9 @@ export function ProductListingCard({
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()handleViewListing()}
+            e.preventDefault();
+            handleViewListing();
+          }
         }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
@@ -101,19 +123,18 @@ export function ProductListingCard({
 
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
-            <h3 className="font-semibold text-foreground mb-2 hover: text-primary transition-colors text-[clamp(1rem,
-    2.5v, w,1.125rem)]">
+            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
           </div>
-          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem2vw,1rem)]">
+          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
 
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tagidx) => (
+              {listing.tags.map((tag, idx) => (
                 <span
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
@@ -131,8 +152,7 @@ export function ProductListingCard({
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
-                {formatPrice(,
-    )}
+                {formatPrice()}
               </div>
             ) : (
               <span className="text-foreground/80">
@@ -146,8 +166,9 @@ export function ProductListingCard({
               size="sm"
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
               onClick={(e) => {
-                e.stopPropagation(),
-    navigate(`${detailBasePat, h}/${listing.id}`)}}
+                e.stopPropagation();
+                navigate(`${detailBasePath}/${listing.id}`);
+              }}
               disabled={loading}
             >
               {loading ? (
@@ -160,24 +181,22 @@ export function ProductListingCard({
                 </>
               ) : (
                 "Add to Cart"
-              , )}
+              )}
             </Button>
             {onRequestQuote && (
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
-                className="border-primary text-primary hover: bg-primary/10 hover:text-primary-foreground"
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
               </Button>
-            ,
-    )}
+            )}
           </div>
         </div>
       </div>
     </div>
   );
-}
 
 export default React.memo(ProductListingCard);

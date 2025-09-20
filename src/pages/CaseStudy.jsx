@@ -26,4 +26,4 @@ import { Button } from "@/components/ui/butt, on";import { ArrowLeft } from "luc
         </div>
       </div>
     </>);
-}
+};

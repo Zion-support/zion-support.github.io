@@ -1,175 +1,194 @@
-import React, { useState  from "react", import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from "lucide-react";export default function ApiPlayground() {
-
-  const [searchQuer;y;
-    setSearchQuery] = useState('')const [activeCategorysetActiveCategory] = useState('all')const [activeMethodsetActiveMethod] = useState('all')const [selectedApisetSelectedApi] = useState<any>(null)const [requestBody;
-    setRequestBody] = useState('')const [responseDatasetResponseData] = useState('')const [isLoadingsetIsLoading] = useState(false)const [activeTab;
-    setActiveTab] = useState('playground')const categories  = [
-    { id: 'all, ', name: 'All Categories, ', icon: <Code className="w-5 h-5" /,>count: 0,
-     }{ id: 'ai-ml, ', name: 'AI & Machine Learning, ', icon: <Brain className="w-5 h-5" /, >, count: 8,
-     }{ id: 'cloud, ', name: 'Cloud & Infrastructure, ', icon: <Cloud className="w-5 h-5" /, >, count: 6,
-     }{ id: 'security, ', name: 'Cybersecurity, ', icon: <Shield className="w-5 h-5" /, >, count: 5,
-     }{ id: 'data, ', name: 'Data & Analytics, ', icon: <Database className="w-5 h-5" /, >, count: 7,  },
-    { id: 'iot, ', name: 'IoT & Edge, ', icon: <Network className="w-5 h-5" /, >, count: 4,
-     }
-  ]const methods  = [
-    { id: 'all, ', name: 'All Methods,'count: 0,
-     }{ id: 'GET, ', name: 'GET, ', count: 0,
-    color: 'text-green-400',  }{ id: 'POST, ', name: 'POST, ', count: 0,
-    color: 'text-blue-400',  }{ id: 'PUT, ', name: 'PUT, ', count: 0,
-    color: 'text-yellow-400',  },
-    { id: 'DELETE, ', name: 'DELETE, ', count: 0,
-    color: 'text-red-400',  }
-  ]const apis  = [
+import React, { useState } from "react";
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from "lucide-react";
+export default function ApiPlayground() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeMethod, setActiveMethod] = useState('all');
+  const [selectedApi, setSelectedApi] = useState<any>(null);
+  const [requestBody, setRequestBody] = useState('');
+  const [responseData, setResponseData] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState('playground');
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 };
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 };
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 };
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 };
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
+    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 }
+  ];
+  const methods = [
+    { id: 'all', name: 'All Methods', count: 0 };
+    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' };
+    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' };
+    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
+    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' }
+  ];
+  const apis = [
     {
-      id:  ,
-    1name: 'AI Text Analysis, ',description: 'Analyze text sentimen, t, extract entities, and perform language processing tasks.',
-      category: 'ai-ml, ',method: 'POST, ',endpoint: '/api/v1/ai/text-analysis, ',baseUrl: 'https://api.ziontechgroup.com, ',version: '1.0.0, ',status: 'stable, ',rateLimit: '1000 requests/hour, ',authentication: 'Bearer Token, ',parameters: [
-        { name: 'text, ', type: 'string, ', required: true,
-    description: 'Text to analyze',  }{ name: 'language, ', type: 'string, ', required: false,
-    description: 'Language code (default: auto-detect)',  },
-        { name: 'features, ', type: 'array, ', required: false,
-    description: 'Analysis features to enable',  }
+      id: 1,name: 'AI Text Analysis',description: 'Analyze text sentiment, extract entities, and perform language processing tasks.',
+      category: 'ai-ml',method: 'POST',endpoint: '/api/v1/ai/text-analysis',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '1000 requests/hour',authentication: 'Bearer Token',parameters: [
+        { name: 'text', type: 'string', required: true, description: 'Text to analyze' };
+        { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' },
+        { name: 'features', type: 'array', required: false, description: 'Analysis features to enable' }
       ],
-      requestExample:  , {,
-        text: "I love this new AI technology! It's amazing how it can understand context., ",language: "en, ",features: ["sentiment, ", "entities", "keywords"]
+      requestExample: {,
+        text: "I love this new AI technology! It's amazing how it can understand context.",language: "en",features: ["sentiment", "entities", "keywords"]
       },
-      responseExample:  , {,
-        sentiment: { score: 0.9,
-    label: "positive",  },
+      responseExample: {,
+        sentiment: { score: 0.9, label: "positive" },
         entities: [
-          { text: "AI technology, ", type: "technology, ", confidence: 0.95,  }
+          { text: "AI technology", type: "technology", confidence: 0.95 }
         ],
-        keywords: ["AI, ", "technology", "amazing", "context"],
+        keywords: ["AI", "technology", "amazing", "context"],
         language: "en"
-     ,  },
-      documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis, ',sdk: 'https://github.com/ziontechgroup/ai-sdk, ',featured: true,  }{
-      id: 2,
-    name: 'Cloud Resource Management, ',description: 'Manage cloud infrastructur, e, deploy resources, and monitor performance.',
-      category: 'cloud, ',method: 'GET, ',endpoint: '/api/v1/cloud/resources, ',baseUrl: 'https://api.ziontechgroup.com, ',version: '1.0.0, ',status: 'stable, ',rateLimit: '500 requests/hour, ',authentication: 'API Key, ',parameters: [
-        { name: 'region, ', type: 'string, ', required: false,
-    description: 'Cloud region',  }{ name: 'type, ', type: 'string, ', required: false,
-    description: 'Resource type',  },
-        { name: 'status, ', type: 'string, ', required: false,
-    description: 'Resource status',  }
+      },
+      documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',sdk: 'https://github.com/ziontechgroup/ai-sdk',featured: true
+    };
+    {
+      id: 2,name: 'Cloud Resource Management',description: 'Manage cloud infrastructure, deploy resources, and monitor performance.',
+      category: 'cloud',method: 'GET',endpoint: '/api/v1/cloud/resources',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '500 requests/hour',authentication: 'API Key',parameters: [
+        { name: 'region', type: 'string', required: false, description: 'Cloud region' };
+        { name: 'type', type: 'string', required: false, description: 'Resource type' },
+        { name: 'status', type: 'string', required: false, description: 'Resource status' }
       ],
-      requestExample:  , {,
-        region: "us-east-1, ",type: "compute, ",status: "running"
-     ,  },
-      responseExample:  , {,
+      requestExample: {,
+        region: "us-east-1",type: "compute",status: "running"
+      },
+      responseExample: {,
         resources: [
           {
-            id: "i-1234567890abcdef0, ",name: "web-server-01, ",type: "compute, ",status: "running, ",region: "us-east-1"
-         ,  }
+            id: "i-1234567890abcdef0",name: "web-server-01",type: "compute",status: "running",region: "us-east-1"
+          }
         ],
-        total: 1,  },
-      documentation: 'https://docs.ziontechgroup.com/api/cloud-resources, ',sdk: 'https://github.com/ziontechgroup/cloud-sdk, ',featured: false,  }{
-      id: 3,
-    name: 'Security Threat Detection, ',description: 'Detect and analyze security threats in real-time., ',category: 'security, ',method: 'POST, ',endpoint: '/api/v1/security/threats, ',baseUrl: 'https://api.ziontechgroup.com, ',version: '1.0.0, ',status: 'beta, ',rateLimit: '200 requests/hour, ',authentication: 'OAuth 2.0, ',parameters: [
-        { name: 'data, ', type: 'object, ', required: true,
-    description: 'Security event data',  }{ name: 'source, ', type: 'string, ', required: true,
-    description: 'Data source identifier',  },
-        { name: 'timestamp, ', type: 'string, ', required: false,
-    description: 'Event timestamp',  }
+        total: 1
+      },
+      documentation: 'https://docs.ziontechgroup.com/api/cloud-resources',sdk: 'https://github.com/ziontechgroup/cloud-sdk',featured: false
+    };
+    {
+      id: 3,name: 'Security Threat Detection',description: 'Detect and analyze security threats in real-time.',category: 'security',method: 'POST',endpoint: '/api/v1/security/threats',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'beta',rateLimit: '200 requests/hour',authentication: 'OAuth 2.0',parameters: [
+        { name: 'data', type: 'object', required: true, description: 'Security event data' };
+        { name: 'source', type: 'string', required: true, description: 'Data source identifier' },
+        { name: 'timestamp', type: 'string', required: false, description: 'Event timestamp' }
       ],
-      requestExample:  , {,
+      requestExample: {,
         data: {
-          ip: "192.168.1.100, ",user_agent: "Mozilla/5.0..., ",action: "login_attempt"
-       ,  },
-        source: "web_application, ",timestamp: "2024-01-15T10:30:00Z"
-     ,  },
-      responseExample:  , {,
-        threat_level: "low, ",risk_score: 0.2,
-    recommendations: ["Enable 2FA, ", "Monitor login patterns"],
-        detected: false,  },
-      documentation: 'https://docs.ziontechgroup.com/api/security-threats, ',sdk: 'https://github.com/ziontechgroup/security-sdk, ',featured: true,  }{
-      id: 4,
-    name: 'Data Analytics Query, ',description: 'Query and analyze large datasets with SQL-like syntax., ',category: 'data, ',method: 'POST, ',endpoint: '/api/v1/data/query, ',baseUrl: 'https://api.ziontechgroup.com, ',version: '1.0.0, ',status: 'stable, ',rateLimit: '100 requests/hour, ',authentication: 'API Key, ',parameters: [
-        { name: 'query, ', type: 'string, ', required: true,
-    description: 'SQL query string',  },
-        { name: 'format, ', type: 'string, ', required: false,
-    description: 'Response format (jso, n, csv, xml)' },
-        { name: 'timeout, ', type: 'integer, ', required: false,
-    description: 'Query timeout in seconds',  }
+          ip: "192.168.1.100",user_agent: "Mozilla/5.0...",action: "login_attempt"
+        },
+        source: "web_application",timestamp: "2024-01-15T10:30:00Z"
+      },
+      responseExample: {,
+        threat_level: "low",risk_score: 0.2,recommendations: ["Enable 2FA", "Monitor login patterns"],
+        detected: false
+      },
+      documentation: 'https://docs.ziontechgroup.com/api/security-threats',sdk: 'https://github.com/ziontechgroup/security-sdk',featured: true
+    };
+    {
+      id: 4,name: 'Data Analytics Query',description: 'Query and analyze large datasets with SQL-like syntax.',category: 'data',method: 'POST',endpoint: '/api/v1/data/query',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '100 requests/hour',authentication: 'API Key',parameters: [
+        { name: 'query', type: 'string', required: true, description: 'SQL query string' },
+        { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' },
+        { name: 'timeout', type: 'integer', required: false, description: 'Query timeout in seconds' }
       ],
-      requestExample:  , {,
-        query: "SELECT user_id,
-    COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10, ",
-        format: "json, ",timeout: 30,  },
-      responseExample:  , {,
+      requestExample: {,
+        query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",
+        format: "json",timeout: 30
+      },
+      responseExample: {,
         results: [
-          { user_id: "user123, ", login_count: 45,  },
-          { user_id: "user456, ", login_count: 38,  }
+          { user_id: "user123", login_count: 45 },
+          { user_id: "user456", login_count: 38 }
         ],
-        total_rows: 2,
-    execution_time: 0.15,  },
-      documentation: 'https://docs.ziontechgroup.com/api/data-query, ',sdk: 'https://github.com/ziontechgroup/data-sdk, ',featured: false,  }{
-      id: 5,
-    name: 'IoT Device Management, ',description: 'Manage IoT device, s, monitor sensors, and control actuators.',
-      category: 'iot, ',method: 'GET, ',endpoint: '/api/v1/iot/devices, ',baseUrl: 'https://api.ziontechgroup.com, ',version: '1.0.0, ',status: 'stable, ',rateLimit: '300 requests/hour, ',authentication: 'API Key, ',parameters: [
-        { name: 'location, ', type: 'string, ', required: false,
-    description: 'Device location',  }{ name: 'type, ', type: 'string, ', required: false,
-    description: 'Device type',  },
-        { name: 'status, ', type: 'string, ', required: false,
-    description: 'Device status',  }
+        total_rows: 2,execution_time: 0.15
+      },
+      documentation: 'https://docs.ziontechgroup.com/api/data-query',sdk: 'https://github.com/ziontechgroup/data-sdk',featured: false
+    };
+    {
+      id: 5,name: 'IoT Device Management',description: 'Manage IoT devices, monitor sensors, and control actuators.',
+      category: 'iot',method: 'GET',endpoint: '/api/v1/iot/devices',baseUrl: 'https://api.ziontechgroup.com',version: '1.0.0',status: 'stable',rateLimit: '300 requests/hour',authentication: 'API Key',parameters: [
+        { name: 'location', type: 'string', required: false, description: 'Device location' };
+        { name: 'type', type: 'string', required: false, description: 'Device type' },
+        { name: 'status', type: 'string', required: false, description: 'Device status' }
       ],
-      requestExample:  , {,
-        location: "building-a, ",type: "sensor, ",status: "active"
-     ,  },
-      responseExample:  , {,
+      requestExample: {,
+        location: "building-a",type: "sensor",status: "active"
+      },
+      responseExample: {,
         devices: [
           {
-            id: "sensor-001, ",name: "Temperature Sensor A1, ",type: "sensor, ",location: "building-a, ",status: "active, ",last_reading: 22.5,  }
+            id: "sensor-001",name: "Temperature Sensor A1",type: "sensor",location: "building-a",status: "active",last_reading: 22.5
+          }
         ],
-        total: 1,  },
-      documentation: 'https://docs.ziontechgroup.com/api/iot-devices, ',sdk: 'https://github.com/ziontechgroup/iot-sdk, ',featured: false,  }
-  ]// Update counts
+        total: 1
+      },
+      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',sdk: 'https://github.com/ziontechgroup/iot-sdk',featured: false
+    }
+  ];
+  // Update counts
   categories.forEach(cat => {
-    cat.count = apis.filter(api => api.category === cat.id).length}),
+    cat.count = apis.filter(api => api.category === cat.id).length,
+  }),
 
   methods.forEach(method => {
-    method.count = apis.filter(api => api.method === method.id).length}),
+    method.count = apis.filter(api => api.method === method.id).length,
+  }),
 
-  const filteredApis  = apis.filter(api => {
+  const filteredApis = apis.filter(api => {
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         api.description.toLowerCase().includes(searchQuery.toLowerCase())const matchesCategory  = activeCategory === 'all' || api.category === category.idconst matchesMethod  = activeMethod === 'all' || api.method === method.idreturn matchesSearch && matchesCategory && matchesMethod});
+                         api.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-  const getCategoryIcon  = () => {
+    const matchesCategory = activeCategory === 'all' || api.category === category.id;
+    const matchesMethod = activeMethod === 'all' || api.method === method.id;
+
+    return matchesSearch && matchesCategory && matchesMethod,
+  });
+
+  const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />
- };
-  const getMethodColor  = () => {
+  };
+  const getMethodColor = (method: string) => {
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'
- }const getStatusColor  = () => {
+  };
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'stable': return 'text-green-400';
-      case 'beta': return 'text-yellow-400,';
+      case 'beta': return 'text-yellow-400',
       case 'alpha': return 'text-red-400';
       default: return 'text-zion-slate-light'
-   ,
-     }
-  }const handleApiSelect = () => {
-    setSelectedApi(api)setRequestBody(JSON.stringify(api.requestExample;
-    nul, l, 2))
+    }
   };
-    setResponseData('')setActiveTab('playground')},
+  const handleApiSelect = (api: any) => {
+    setSelectedApi(api);
+    setRequestBody(JSON.stringify(api.requestExample, null, 2)),
+    setResponseData('');
+    setActiveTab('playground');
+  },
 
-  const handleTestApi  = async () => {
-    if (!selectedApi) returnsetIsLoading(true);
+  const handleTestApi = async () => {
+    if (!selectedApi) return;
+
+    setIsLoading(true);
 
     // Simulate API call
     setTimeout(() => {
-      setResponseData(JSON.stringify(selectedApi.responseExample;
-    null, 2)),
+      setResponseData(JSON.stringify(selectedApi.responseExample, null, 2)),
       setIsLoading(false);
     }, 1500),
   },
 
-  const copyToClipboard  = () => {
-    navigator.clipboard.writeText(tex;t);  };
-  const downloadResponse  = () => {
-    if (!responseData) retu;r;n;
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+  };
+  const downloadResponse = () => {
+    if (!responseData) return;
 
-    const blob  = new Blob([responseData;]; { type: 'application/json',
-     })const url  = URL.createObjectURL(blob)const a  = document.createElement('a')a.href = urla.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`document.body.appendChild(a)a.click()document.body.removeChild(a);
+    const blob = new Blob([responseData], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url,
+    a.download = `${selectedApi?.name.toLowerCase().replace(/\s+/g, '-')}-response.json`,
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
   return (
@@ -186,7 +205,7 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
             API Playground
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Exploretest, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
+            Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
           </p>
         </div>
       </div>
@@ -203,12 +222,12 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search APIs..."
-                  className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
 
               <div className="flex flex-wrap gap-4">
-                {/* Categories *, /}
+                {/* Categories */}
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
                     <button
@@ -217,8 +236,8 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                         activeCategory === category.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: bg-zion-slate-light hover:text-white'
-                     ,  }`}
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      }`}
                     >
                       {category.icon}
                       {category.name} ({category.count})
@@ -235,8 +254,8 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                         activeMethod === method.id
                           ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover: bg-zion-slate-light hover:text-white'
-                     ,  }`}
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      }`}
                     >
                       {method.name} ({method.count})
                     </button>
@@ -245,18 +264,18 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-              {/* API List *, /}
-              <div className="lg: col-span-1">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* API List */}
+              <div className="lg:col-span-1">
                 <h2 className="text-2xl font-bold text-white mb-6">Available APIs</h2>
                 <div className="space-y-4">
                   {filteredApis.map((api) => (
                     <div
-                      key={api.i, d}
+                      key={api.id}
                       onClick={() => handleApiSelect(api)}
-                      className={`bg-zion-slate border border-zion-slate-light rounded-lg p-4 cursor-pointer hover: border-zion-cyan transition-colors ${
+                      className={`bg-zion-slate border border-zion-slate-light rounded-lg p-4 cursor-pointer hover:border-zion-cyan transition-colors ${
                         selectedApi?.id === api.id ? 'border-zion-cyan ring-2 ring-zion-cyan/20' : ''
-                     ,  }`}
+                      }`}
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2">
@@ -296,10 +315,10 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
               </div>
 
               {/* API Playground */}
-              <div className="lg: col-span-2">
+              <div className="lg:col-span-2">
                 {selectedApi ? (
                   <div className="bg-zion-slate border border-zion-slate-light rounded-lg">
-                    {/* API Header *, /}
+                    {/* API Header */}
                     <div className="p-6 border-b border-zion-slate-light">
                       <div className="flex items-center justify-between mb-4">
                         <div>
@@ -317,8 +336,8 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                       </div>
 
                       <div className="bg-zion-slate-dark p-4 rounded-lg font-mono text-sm">
-                        <div className="text-zion-slate-light mb-2">Endpoint: </div>
-                        <div className="text-white">{selectedApi.baseUr, l}{selectedApi.endpoint}</div>
+                        <div className="text-zion-slate-light mb-2">Endpoint:</div>
+                        <div className="text-white">{selectedApi.baseUrl}{selectedApi.endpoint}</div>
                       </div>
                     </div>
 
@@ -329,8 +348,8 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                         className={`px-6 py-3 font-medium transition-colors ${
                           activeTab === 'playground'
                             ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover: text-white'
-                       ,  }`}
+                            : 'text-zion-slate-light hover:text-white'
+                        }`}
                       >
                         Playground
                       </button>
@@ -339,8 +358,8 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                         className={`px-6 py-3 font-medium transition-colors ${
                           activeTab === 'docs'
                             ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover: text-white'
-                       ,  }`}
+                            : 'text-zion-slate-light hover:text-white'
+                        }`}
                       >
                         Documentation
                       </button>
@@ -349,8 +368,8 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                         className={`px-6 py-3 font-medium transition-colors ${
                           activeTab === 'sdk'
                             ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover: text-white'
-                         ,  }`}
+                            : 'text-zion-slate-light hover:text-white'
+                          }`}
                       >
                         SDK
                       </button>
@@ -368,26 +387,26 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                                 <span className="text-zion-slate-light text-sm">Request Body (JSON)</span>
                                 <button
                                   onClick={() => copyToClipboard(requestBody)}
-                                  className="text-zion-cyan hover: text-zion-cyan-light transition-colors"
+                                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
                                 >
                                   <Copy className="w-4 h-4" />
                                 </button>
                               </div>
                               <textarea
-                                value={requestBod, y}
+                                value={requestBody}
                                 onChange={(e) => setRequestBody(e.target.value)}
-                                className="w-full h-32 bg-zion-slate border border-zion-slate-light rounded p-3 text-white font-mono text-sm resize-none focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                                className="w-full h-32 bg-zion-slate border border-zion-slate-light rounded p-3 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                                 placeholder="Enter request body..."
                               />
                             </div>
                           </div>
 
-                          {/* Test Button *, /}
+                          {/* Test Button */}
                           <div className="flex justify-center">
                             <button
                               onClick={handleTestApi}
                               disabled={isLoading}
-                              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover: bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
+                              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
                             >
                               {isLoading ? (
                                 <>
@@ -399,7 +418,7 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                                   <Play className="w-5 h-5" />
                                   Test API
                                 </>
-                              , )}
+                              )}
                             </button>
                           </div>
 
@@ -413,21 +432,20 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                                   <div className="flex items-center gap-2">
                                     <button
                                       onClick={() => copyToClipboard(responseData)}
-                                      className="text-zion-cyan hover: text-zion-cyan-light transition-colors"
+                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
                                     >
                                       <Copy className="w-4 h-4" />
                                     </button>
                                     <button
-                                      onClick={downloadRespons, e}
-                                      className="text-zion-cyan hover: text-zion-cyan-light transition-colors"
+                                      onClick={downloadResponse}
+                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
                                     >
                                       <Download className="w-4 h-4" />
                                     </button>
                                   </div>
                                 </div>
                                 <pre className="text-white font-mono text-sm overflow-x-auto">
-                                  {responseDat,
-    a}
+                                  {responseData}
                                 </pre>
                               </div>
                             </div>
@@ -440,7 +458,7 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                           <div>
                             <h3 className="text-lg font-semibold text-white mb-3">Parameters</h3>
                             <div className="space-y-3">
-                              {selectedApi.parameters.map((paramindex) => (
+                              {selectedApi.parameters.map((param, index) => (
                                 <div key={index} className="bg-zion-slate-dark p-4 rounded-lg">
                                   <div className="flex items-center justify-between mb-2">
                                     <span className="text-white font-medium">{param.name}</span>
@@ -464,14 +482,14 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                               href={selectedApi.documentation}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover: bg-zion-purple-light transition-colors inline-flex items-center gap-2"
+                              className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2"
                             >
                               <BookOpen className="w-5 h-5" />
                               View Full Documentation
                             </a>
                           </div>
                         </div>
-                      , )}
+                      )}
 
                       {activeTab === 'sdk' && (
                         <div className="space-y-6">
@@ -488,7 +506,7 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                                   href={selectedApi.sdk}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover: bg-zion-cyan-light transition-colors inline-flex items-center gap-2"
+                                  className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2"
                                 >
                                   <ExternalLink className="w-5 h-5" />
                                   View SDK
@@ -497,8 +515,7 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
                             </div>
                           </div>
                         </div>
-                      ,
-    )}
+                      )}
                     </div>
                   </div>
                 ) : (
@@ -523,7 +540,7 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Get your API keysexplore our documentation, and start building with our powerful APIs.
+            Get your API keys, explore our documentation, and start building with our powerful APIs.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
             <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
@@ -536,5 +553,5 @@ import React, { useState  from "react", import { Code, Play, Copy, Download, Boo
         </div>
       </div>
     </div>
-  ),
-}
+  )
+};

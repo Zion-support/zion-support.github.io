@@ -1,6 +1,6 @@
-import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield } from "lucide-react";export default function AIFinancialAnalyticsPlatform() {
-
-  const features  = [
+import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield } from "lucide-react";
+export default function AIFinancialAnalyticsPlatform() {
+  const features = [
     'AI-powered financial forecasting and modelingReal-time market data analysis and insights',
     'Predictive risk assessment and managementPortfolio optimization and rebalancing',
     'Automated financial reporting and complianceCash flow prediction and optimization',
@@ -9,41 +9,40 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
   ],
 
   const benefits = [
-    'Improve investment returns by 15-35%Reduce financial risk by 40-60%';
-    'Automate 80% of financial analysis tasksReal-time market insights and alerts';
+    'Improve investment returns by 15-35%Reduce financial risk by 40-60%',
+    'Automate 80% of financial analysis tasksReal-time market insights and alerts',
     'Data-driven investment decisionsComprehensive compliance coverage'
-  ]const useCases  = [
+  ],
+
+  const useCases = [
     'Investment portfolio managementCorporate financial planning';
     'Risk management and complianceTrading strategy optimization',
     'Mergers and acquisitions analysisFinancial market research'
-  ]const tiers  = [
+  ];
+  const tiers = [
     { 
-      name: 'Professional',
-    price: '$2,
-    999/mo, ', 
-      details: ['Up to 10 portfoliosBasic AI insights, ', 'Email supportStandard market data'] 
+      name: 'Professional',price: '$2,999/mo', 
+      details: ['Up to 10 portfoliosBasic AI insights', 'Email supportStandard market data'] 
     },
     { 
-      name: 'Institutional, ',price: '$7,
-    999/mo, ', 
-      details: ['Up to 100 portfoliosAdvanced AI analytics, ', 'Priority supportPremium market data'] 
+      name: 'Institutional',price: '$7,999/mo', 
+      details: ['Up to 100 portfoliosAdvanced AI analytics', 'Priority supportPremium market data'] 
     },
     { 
-      name: 'Enterprise, ',price: '$19,
-    999/mo, ', 
-      details: ['Unlimited portfoliosCustom AI models, ', 'Dedicated supportWhite-label solution'] 
+      name: 'Enterprise',price: '$19,999/mo', 
+      details: ['Unlimited portfoliosCustom AI models', 'Dedicated supportWhite-label solution'] 
     }
   ],
 
-  const financialTools  = [
+  const financialTools = [
     'Portfolio AnalyticsRisk Management',
     'Performance AttributionAsset Allocation',
     'Scenario AnalysisCompliance Reporting'
   ],
 
   const aiCapabilities = [
-    'Predictive modelingRisk assessment';
-    'Market analysisPortfolio optimization';
+    'Predictive modelingRisk assessment',
+    'Market analysisPortfolio optimization',
     'Anomaly detectionTrend forecasting'
   ];
   return (
@@ -53,34 +52,32 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <DollarSign className="w-4 h-4 mr-2" /> AI-Powered Financial Analytics
           </div>
-          <h1 className="text-4xl md: text-6xl font-bold text-white mb-4">AI Financial Analytics Platform</h1>
-          <p className="text-green-100 text-xl">Make smarter financial decisions with AI-powered analytic,
-    spredictive modelin, g, and real-time market insights.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Financial Analytics Platform</h1>
+          <p className="text-green-100 text-xl">Make smarter financial decisions with AI-powered analytics, predictive modeling, and real-time market insights.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md: grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Advanced Financial Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
-                <li key={,
-    f} className="flex items-start">
+                <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>
             <div className="mt-6 text-sm text-zion-slate-light">
-              SOC 2 Type IIFINRA, SEC compliant. Real-time market data feeds. 99.99% uptime SLA.
+              SOC 2 Type II, FINRA, SEC compliant. Real-time market data feeds. 99.99% uptime SLA.
             </div>
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Financial Plans</h3>
-            <div className="grid md: grid-cols-1 gap-4">
+            <div className="grid md:grid-cols-1 gap-4">
               {tiers.map((t) => (
-                <div key={t.nam, e} className="rounded-lg p-4 border border-zion-slate-light/30">
+                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-green-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-zion-slate-dark space-y-1">
@@ -90,7 +87,7 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-green-600/10 text-green-600 rounded-lg hover: bg-green-600/20 transition-colors inline-flex items-center">
+              <a href="/pricing" className="px-5 py-3 bg-green-600/10 text-green-600 rounded-lg hover:bg-green-600/20 transition-colors inline-flex items-center">
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-green-600 text-green-600 rounded-lg inline-flex items-center">
@@ -105,7 +102,7 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Financial Benefits</h3>
             <ul className="space-y-3">
               {benefits.map((b) => (
-                <li key={, b} className="flex items-start">
+                <li key={b} className="flex items-start">
                   <TrendingUp className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{b}</span>
                 </li>
@@ -127,9 +124,9 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Financial Analysis Tools</h3>
-          <div className="grid md: grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {financialTools.map((t) => (
-              <div key={, t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+              <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <PieChart className="w-6 h-6 text-green-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{t}</div>
               </div>
@@ -139,10 +136,9 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
-          <div className="grid md: grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {aiCapabilities.map((c) => (
-              <div key={,
-    c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+              <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-green-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
@@ -152,7 +148,7 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
 
         <div className="mt-12 bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Financial Analytics Workflow</h3>
-          <div className="grid md: grid-cols-4 gap-4 text-center">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
               <h4 className="font-semibold text-zion-slate-dark mb-1">Data Collection</h4>
@@ -182,8 +178,7 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
             <div className="text-center">
               <Shield className="w-12 h-12 text-blue-600 mx-auto mb-3" />
               <h4 className="font-semibold text-zion-slate-dark mb-2">Financial Regulations</h4>
-              <p className="text-sm text-zion-slate-light">FINRA,
-    SE, C, Basel III, Dodd-Frank compliance</p>
+              <p className="text-sm text-zion-slate-light">FINRA, SEC, Basel III, Dodd-Frank compliance</p>
             </div>
             <div className="text-center">
               <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-3" />
@@ -209,5 +204,5 @@ import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Br
         </div>
       </section>
     </div>
-  ),
-}
+  )
+};

@@ -1,169 +1,161 @@
 import React from "react";
-import { SEO } from "../components/S, EO";import { motion } from "framer-moti, on";import { BookOpen, Code;
-  FileText;
-  Search;
-  Filter;
-  ArrowRight;
-  ExternalLink;
-  Download;
-  Copy;
-  CheckCircle;
-  Clock;
-  User;
-  Star;
-  Bookmark;
-  Share2;
-  ChevronRight;
-  ChevronDown;
-  Terminal;
-  Database;
-  Code2;
-  Cpu;
-  Shield;
-  Cloud;
-  Brain;
-  Zap;
-  Globe;
-  Settings;
-  Play;
-  Code2;
-  GitBranch;
-  Package;
-  Server;
-  Lock;
-  Key;
-  Database as DatabaseIcon;
-  Network;
-  Monitor;
-  Smartphone;
-  Tablet;
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
+import { 
+  BookOpen,
+  Code, 
+  FileText, 
+  Search, 
+  Filter, 
+  ArrowRight, 
+  ExternalLink, 
+  Download, 
+  Copy, 
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Bookmark,
+  Share2,
+  ChevronRight,
+  ChevronDown,
+  Terminal,
+  Database,
+  Code2,
+  Cpu,
+  Shield,
+  Cloud,
+  Brain,
+  Zap,
+  Globe,
+  Settings,
+  Play,
+  Code2,
+  GitBranch,
+  Package,
+  Server,
+  Lock,
+  Key,
+  Database as DatabaseIcon,
+  Network,
+  Monitor,
+  Smartphone,
+  Tablet,
   Laptop
-} from "lucide-react";export const Documentation: React.FC  = () => {
-  const [searchQu,
-    e;r;y;
-    setSearchQuery] = React.useState('')const [selectedCategorysetSelectedCategory] = React.useState('all')const [expandedSectionssetExpandedSections] = React.useState<string[]>(['getting-started'])const categories  = [
-    { id: 'all, ', name: 'All',
-    count: 0,
-    active: true,  }{ id: 'getting-started, ', name: 'Getting Started, ', count: 8,
-    active: false,  }{ id: 'api, ', name: 'API Reference, ', count: 12,
-    active: false,  }{ id: 'sdks, ', name: 'SDKs & Libraries, ', count: 6,
-    active: false,  }{ id: 'tutorials, ', name: 'Tutorials, ', count: 15,
-    active: false,  }{ id: 'examples, ', count: 10,
-    active: false,  }{ id: 'deployment, ', name: 'Deployment, ', count: 8,
-    active: false,  },
-    { id: 'troubleshooting, ', name: 'Troubleshooting, ', count: 5,
-    active: false,  }
-  ]const documentationSections  = [
+} from "lucide-react";
+export const Documentation: React.FC = () => {
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = React.useState('all');
+  const [expandedSections, setExpandedSections] = React.useState<string[]>(['getting-started']);
+  const categories = [
+    { id: 'all', name: 'All', count: 0, active: true };
+    { id: 'getting-started', name: 'Getting Started', count: 8, active: false };
+    { id: 'api', name: 'API Reference', count: 12, active: false };
+    { id: 'sdks', name: 'SDKs & Libraries', count: 6, active: false };
+    { id: 'tutorials', name: 'Tutorials', count: 15, active: false };
+    { id: 'examples', count: 10, active: false };
+    { id: 'deployment', name: 'Deployment', count: 8, active: false },
+    { id: 'troubleshooting', name: 'Troubleshooting', count: 5, active: false }
+  ];
+  const documentationSections = [
     {
-      id: 'getting-started, ',title: 'Getting Started',
-    icon: Play,
-    color: 'from-green-500 to-emerald-500, ',articles: [
+      id: 'getting-started',title: 'Getting Started',icon: Play,color: 'from-green-500 to-emerald-500',articles: [
         {
-          title: 'Quick Start Guide, ',description: 'Get up and running with Zion Tech Group services in under 10 minutes, ',difficulty: 'Beginner, ',readTime: '5 min, ',featured: true,
-    path: '/docs/getting-started/quick-start'
-       ,  }{
-          title: 'Installation & Setup, ',description: 'Complete installation guide for all platforms and environments, ',difficulty: 'Beginner, ',readTime: '15 min, ',featured: false,
-    path: '/docs/getting-started/installation'
-       ,  }{
-          title: 'First Project, ',description: 'Create your first AI-powered application step by step, ',difficulty: 'Beginner, ',readTime: '20 min, ',featured: true,
-    path: '/docs/getting-started/first-project'
-       ,  },
+          title: 'Quick Start Guide',description: 'Get up and running with Zion Tech Group services in under 10 minutes',difficulty: 'Beginner',readTime: '5 min',featured: true,path: '/docs/getting-started/quick-start'
+        };
         {
-          title: 'Authentication, ',description: 'Set up secure authentication for your applications, ',difficulty: 'Intermediate, ',readTime: '12 min, ',featured: false,
-    path: '/docs/getting-started/authentication'
-       ,  }
+          title: 'Installation & Setup',description: 'Complete installation guide for all platforms and environments',difficulty: 'Beginner',readTime: '15 min',featured: false,path: '/docs/getting-started/installation'
+        };
+        {
+          title: 'First Project',description: 'Create your first AI-powered application step by step',difficulty: 'Beginner',readTime: '20 min',featured: true,path: '/docs/getting-started/first-project'
+        },
+        {
+          title: 'Authentication',description: 'Set up secure authentication for your applications',difficulty: 'Intermediate',readTime: '12 min',featured: false,path: '/docs/getting-started/authentication'
+        }
       ]
-    }{
-              id: 'api, ',title: 'API Reference, ',icon: Code2,
-    color: 'from-blue-500 to-cyan-500, ',articles: [
+    };
+    {
+              id: 'api',title: 'API Reference',icon: Code2,color: 'from-blue-500 to-cyan-500',articles: [
         {
-          title: 'REST API Overview, ',description: 'Complete REST API documentation with examples, ',difficulty: 'Intermediate, ',readTime: '25 min, ',featured: true,
-    path: '/docs/api/rest-overview'
-       ,  }{
-          title: 'GraphQL API, ',description: 'GraphQL endpoint documentation and schema reference, ',difficulty: 'Advanced, ',readTime: '30 min, ',featured: false,
-    path: '/docs/api/graphql'
-       ,  }{
-          title: 'WebSocket API, ',description: 'Real-time communication API documentation, ',difficulty: 'Advanced, ',readTime: '20 min, ',featured: false,
-    path: '/docs/api/websocket'
-       ,  },
+          title: 'REST API Overview',description: 'Complete REST API documentation with examples',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/api/rest-overview'
+        };
         {
-          title: 'Rate Limiting, ',description: 'Understanding API rate limits and best practices, ',difficulty: 'Intermediate, ',readTime: '10 min, ',featured: false,
-    path: '/docs/api/rate-limiting'
-       ,  }
+          title: 'GraphQL API',description: 'GraphQL endpoint documentation and schema reference',difficulty: 'Advanced',readTime: '30 min',featured: false,path: '/docs/api/graphql'
+        };
+        {
+          title: 'WebSocket API',description: 'Real-time communication API documentation',difficulty: 'Advanced',readTime: '20 min',featured: false,path: '/docs/api/websocket'
+        },
+        {
+          title: 'Rate Limiting',description: 'Understanding API rate limits and best practices',difficulty: 'Intermediate',readTime: '10 min',featured: false,path: '/docs/api/rate-limiting'
+        }
       ]
-    }{
-      id: 'sdks, ',title: 'SDKs & Libraries, ',icon: Package,
-    color: 'from-purple-500 to-pink-500, ',articles: [
+    };
+    {
+      id: 'sdks',title: 'SDKs & Libraries',icon: Package,color: 'from-purple-500 to-pink-500',articles: [
         {
-          title: 'JavaScript/TypeScript SDK, ',description: 'Official SDK for Node.js and browser environments, ',difficulty: 'Intermediate, ',readTime: '18 min, ',featured: true,
-    path: '/docs/sdks/javascript'
-       ,  }{
-          title: 'Python SDK, ',description: 'Python client library with examples and best practices, ',difficulty: 'Intermediate, ',readTime: '20 min, ',featured: true,
-    path: '/docs/sdks/python'
-       ,  }{
-          title: 'Java SDK, ',description: 'Java client library for enterprise applications, ',difficulty: 'Intermediate, ',readTime: '22 min, ',featured: false,
-    path: '/docs/sdks/java'
-       ,  },
+          title: 'JavaScript/TypeScript SDK',description: 'Official SDK for Node.js and browser environments',difficulty: 'Intermediate',readTime: '18 min',featured: true,path: '/docs/sdks/javascript'
+        };
         {
-          title: 'Mobile SDKs, ',description: 'iOS and Android SDKs for mobile applications, ',difficulty: 'Advanced, ',readTime: '25 min, ',featured: false,
-    path: '/docs/sdks/mobile'
-       ,  }
+          title: 'Python SDK',description: 'Python client library with examples and best practices',difficulty: 'Intermediate',readTime: '20 min',featured: true,path: '/docs/sdks/python'
+        };
+        {
+          title: 'Java SDK',description: 'Java client library for enterprise applications',difficulty: 'Intermediate',readTime: '22 min',featured: false,path: '/docs/sdks/java'
+        },
+        {
+          title: 'Mobile SDKs',description: 'iOS and Android SDKs for mobile applications',difficulty: 'Advanced',readTime: '25 min',featured: false,path: '/docs/sdks/mobile'
+        }
       ]
-    }{
-      id: 'tutorials, ',title: 'Tutorials, ',icon: BookOpen,
-    color: 'from-orange-500 to-red-500, ',articles: [
+    };
+    {
+      id: 'tutorials',title: 'Tutorials',icon: BookOpen,color: 'from-orange-500 to-red-500',articles: [
         {
-          title: 'Building an AI Chatbot, ',description: 'Create a conversational AI chatbot from scratch, ',difficulty: 'Intermediate, ',readTime: '45 min, ',featured: true,
-    path: '/docs/tutorials/ai-chatbot'
-       ,  }{
-          title: 'Image Recognition API, ',description: 'Implement computer vision in your applications, ',difficulty: 'Intermediate, ',readTime: '35 min, ',featured: true,
-    path: '/docs/tutorials/image-recognition'
-       ,  }{
-          title: 'Natural Language Processing, ',description: 'Build text analysis and language understanding features, ',difficulty: 'Advanced, ',readTime: '50 min, ',featured: false,
-    path: '/docs/tutorials/nlp'
-       ,  },
+          title: 'Building an AI Chatbot',description: 'Create a conversational AI chatbot from scratch',difficulty: 'Intermediate',readTime: '45 min',featured: true,path: '/docs/tutorials/ai-chatbot'
+        };
         {
-          title: 'Real-time Analytics Dashboard, ',description: 'Create live data visualization dashboards, ',difficulty: 'Advanced, ',readTime: '60 min, ',featured: false,
-    path: '/docs/tutorials/analytics-dashboard'
-       ,  }
+          title: 'Image Recognition API',description: 'Implement computer vision in your applications',difficulty: 'Intermediate',readTime: '35 min',featured: true,path: '/docs/tutorials/image-recognition'
+        };
+        {
+          title: 'Natural Language Processing',description: 'Build text analysis and language understanding features',difficulty: 'Advanced',readTime: '50 min',featured: false,path: '/docs/tutorials/nlp'
+        },
+        {
+          title: 'Real-time Analytics Dashboard',description: 'Create live data visualization dashboards',difficulty: 'Advanced',readTime: '60 min',featured: false,path: '/docs/tutorials/analytics-dashboard'
+        }
       ]
-    }{
-      id: 'deployment, ',title: 'Deployment, ',icon: Server,
-    color: 'from-indigo-500 to-purple-500, ',articles: [
+    };
+    {
+      id: 'deployment',title: 'Deployment',icon: Server,color: 'from-indigo-500 to-purple-500',articles: [
         {
-          title: 'Docker Deployment, ',description: 'Containerize and deploy your applications, ',difficulty: 'Intermediate, ',readTime: '25 min, ',featured: true,
-    path: '/docs/deployment/docker'
-       ,  }{
-          title: 'Kubernetes Orchestration, ',description: 'Scale your applications with Kubernetes, ',difficulty: 'Advanced, ',readTime: '40 min, ',featured: false,
-    path: '/docs/deployment/kubernetes'
-       ,  }{
-          title: 'Cloud Deployment, ',description: 'Deploy to AWS,
-    Azur, e, and Google Cloud',
-          difficulty: 'Intermediate, ',readTime: '30 min, ',featured: false,
-    path: '/docs/deployment/cloud'
-       ,  },
+          title: 'Docker Deployment',description: 'Containerize and deploy your applications',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/deployment/docker'
+        };
         {
-          title: 'CI/CD Pipeline, ',description: 'Set up automated deployment pipelines, ',difficulty: 'Advanced, ',readTime: '35 min, ',featured: false,
-    path: '/docs/deployment/cicd'
-       ,  }
+          title: 'Kubernetes Orchestration',description: 'Scale your applications with Kubernetes',difficulty: 'Advanced',readTime: '40 min',featured: false,path: '/docs/deployment/kubernetes'
+        };
+        {
+          title: 'Cloud Deployment',description: 'Deploy to AWS, Azure, and Google Cloud',
+          difficulty: 'Intermediate',readTime: '30 min',featured: false,path: '/docs/deployment/cloud'
+        },
+        {
+          title: 'CI/CD Pipeline',description: 'Set up automated deployment pipelines',difficulty: 'Advanced',readTime: '35 min',featured: false,path: '/docs/deployment/cicd'
+        }
       ]
     }
-  ]const toggleSection = () => {
+  ];
+  const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionId) 
         ? prev.filter(id => id !== sectionId)
-        : [...prev;
-    sectionId]
-    , )
-  };
+        : [...prev, sectionId]
+    ),
   },
 
-  const filteredSections  = documentationSections.filter(section => 
+  const filteredSections = documentationSections.filter(section => 
     selectedCategory === 'all' || section.id === selectedCategory
-  )const allArticles  = documentationSections.flatMap(section => 
-    section.articles.map(article => ({ ...articlesection: section.title,  }))
   );
-  const filteredArticles  = allArticles.filter(article =>
+
+  const allArticles = documentationSections.flatMap(section => 
+    section.articles.map(article => ({ ...article, section: section.title }))
+  );
+  const filteredArticles = allArticles.filter(article =>
     article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.section.toLowerCase().includes(searchQuery.toLowerCase())
@@ -173,26 +165,27 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
   React.useEffect(() => {
     categories.forEach(cat => {
       if (cat.id !== 'all') {
-        const section  = documentationSections.find(s => s.id === cat.id)cat.count = section ? section.articles.length: 0,  }
-    })categories[0].count = allArticles.length}, []),
+        const section = documentationSections.find(s => s.id === cat.id);
+        cat.count = section ? section.articles.length : 0
+      }
+    }),
+    categories[0].count = allArticles.length,
+  }, []),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Documentation - Zion Tech Group"
-        description="Comprehensive documentationAPI references, tutorials, and guides for Zion Tech Group services and APIs."
+        description="Comprehensive documentation, API references, tutorials, and guides for Zion Tech Group services and APIs."
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,
-     }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-400 text-sm font-medium mb-6">
@@ -200,7 +193,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
               Developer Resources
             </div>
             
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Documentation &
               <span className="block bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
                 Developer Guides
@@ -208,8 +201,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Everything you need to build,
-    integrat, e, and deploy with Zion Tech Group services. 
+              Everything you need to build, integrate, and deploy with Zion Tech Group services. 
               From quick start guides to advanced API references.
             </p>
             
@@ -240,8 +232,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
       {/* Search and Filter Section */}
       <section className="py-12 border-b border-slate-700/50">
         <div className="container-responsive">
-          <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">
-            {/* Search *, /}
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
@@ -249,11 +241,11 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                 placeholder="Search documentation..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
               />
             </div>
 
-            {/* Category Filter *, /}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -262,9 +254,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-blue-400/20 border-blue-400/40 text-blue-400'
-                      : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover: bg-slate-600/50 hover:border-blue-400/30'
-                 ,
-     }`}
+                      : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-blue-400/30'
+                  }`}
                 >
                   {category.name}
                   <span className="ml-2 text-xs opacity-75">({category.count})</span>
@@ -291,22 +282,19 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
               </div>
               
               <div className="space-y-4">
-                {filteredArticles.map((articleindex) => (
+                {filteredArticles.map((article, index) => (
                   <motion.div
                     key={`${article.section}-${index}`}
-                    initial={{ opacity: 0,
-    y: 20,  }}
-                    animate={{ opacity: 1,
-    y: 0,  }}
-                    transition={{ duration: 0.3,
-    delay: index * 0.1,  }}
-                    className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover: border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           <span className="inline-block px-3 py-1 bg-slate-700/50 text-blue-400 text-xs font-medium rounded-full">
-                            {article.sectio, n}
+                            {article.section}
                           </span>
                           {article.featured && (
                             <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
@@ -316,8 +304,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                           )}
                         </div>
                         
-                        <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-blue-400 transition-colors">
-                          {article.titl, e}
+                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                          {article.title}
                         </h3>
                         
                         <p className="text-gray-400 text-sm mb-3">
@@ -337,15 +325,14 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                       </div>
                       
                       <div className="flex-shrink-0 ml-4">
-                        <button className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-400 text-sm font-medium rounded-lg hover: bg-blue-500/30 transition-all duration-300">
+                        <button className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-500/30 transition-all duration-300">
                           View
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
                   </motion.div>
-                ),
-    )}
+                ))}
               </div>
               
               {filteredArticles.length === 0 && (
@@ -359,32 +346,28 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
           ) : (
             // Category-based Documentation
             <div className="space-y-8">
-              {filteredSections.map((sectionsectionIndex) => (
+              {filteredSections.map((section, sectionIndex) => (
                 <motion.div
                   key={section.id}
-                  initial={{ opacity: 0,
-    y: 20,  }}
-                  animate={{ opacity: 1,
-    y: 0,  }}
-                  transition={{ duration: 0.6,
-    delay: sectionIndex * 0.1,  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
                   className="bg-slate-800/30 border border-slate-700/30 rounded-2xl overflow-hidden"
                 >
                   {/* Section Header */}
                   <button
                     onClick={() => toggleSection(section.id)}
-                    className="w-full p-6 text-left hover: bg-slate-800/50 transition-colors duration-200"
+                    className="w-full p-6 text-left hover:bg-slate-800/50 transition-colors duration-200"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${section.colo,
-    r} flex items-center justify-center`}>
+                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${section.color} flex items-center justify-center`}>
                           <section.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                           <p className="text-gray-400 text-sm">
-                            {section.articles.length} articles • {section.articles.reduce((accarticle) => acc + parseInt(article.readTime)0)} min total
+                            {section.articles.length} articles • {section.articles.reduce((acc, article) => acc + parseInt(article.readTime), 0)} min total
                           </p>
                         </div>
                       </div>
@@ -399,24 +382,20 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                   {/* Section Content */}
                   {expandedSections.includes(section.id) && (
                     <div className="border-t border-slate-700/30">
-                      <div className="grid grid-cols-1 md: grid-cols-2 gap-4 p-6">
-                        {section.articles.map((article,
-    articleIndex) => (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
+                        {section.articles.map((article, articleIndex) => (
                           <motion.div
                             key={article.path}
-                            initial={{ opacity: 0,
-    scale: 0.95,  }}
-                            animate={{ opacity: 1,
-    scale: 1,  }}
-                            transition={{ duration: 0.3,
-    delay: articleIndex * 0.1,  }}
-                            className="group bg-slate-700/20 border border-slate-600/20 rounded-xl p-4 hover: border-slate-500/40 hover:bg-slate-700/30 transition-all duration-300"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3, delay: articleIndex * 0.1 }}
+                            className="group bg-slate-700/20 border border-slate-600/20 rounded-xl p-4 hover:border-slate-500/40 hover:bg-slate-700/30 transition-all duration-300"
                           >
                             <div className="flex items-start justify-between mb-3">
                               <div className="flex items-center gap-2">
                                 {article.featured && (
                                   <Star className="w-4 h-4 text-yellow-400" />
-                                , )}
+                                )}
                                 <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full ${
                                   article.difficulty === 'Beginner' 
                                     ? 'bg-green-500/20 text-green-400' 
@@ -430,8 +409,8 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                               <span className="text-xs text-gray-500">{article.readTime}</span>
                             </div>
                             
-                            <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-blue-400 transition-colors">
-                              {article.titl, e}
+                            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                              {article.title}
                             </h3>
                             
                             <p className="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -439,7 +418,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                             </p>
                             
                             <div className="flex items-center justify-between">
-                              <button className="inline-flex items-center gap-2 text-blue-400 hover: text-blue-300 text-sm font-medium transition-colors">
+                              <button className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
                                 Read Article
                                 <ArrowRight className="w-4 h-4" />
                               </button>
@@ -454,7 +433,7 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
                               </div>
                             </div>
                           </motion.div>
-                        ), )}
+                        ))}
                       </div>
                     </div>
                   )}
@@ -473,32 +452,27 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
             <p className="text-gray-400">Get started quickly with these popular resources</p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'API Playground, 'icon: Terminal,
-    color: 'from-green-500 to-emerald-500, ', href: '/docs/api-playground',  }{ name: 'SDK Downloads, ', icon: Download,
-    color: 'from-blue-500 to-cyan-500, ', href: '/docs/sdks/downloads',  }{ name: 'Code Examples, ', icon: Code2,
-    color: 'from-purple-500 to-pink-500, ', href: '/docs/examples',  },
-              { name: 'Support Forum, ', icon: Globe,
-    color: 'from-orange-500 to-red-500, ', href: '/support',  }
-            ].map((actionindex) => (
+              { name: 'API Playground', icon: Terminal, color: 'from-green-500 to-emerald-500', href: '/docs/api-playground' };
+              { name: 'SDK Downloads', icon: Download, color: 'from-blue-500 to-cyan-500', href: '/docs/sdks/downloads' };
+              { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' },
+              { name: 'Support Forum', icon: Globe, color: 'from-orange-500 to-red-500', href: '/support' }
+            ].map((action, index) => (
               <motion.a
                 key={action.name}
                 href={action.href}
-                initial={{ opacity: 0,
-    y: 20,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-                transition={{ duration: 0.6,
-    delay: index * 0.1,  }}
-                viewport={{ once: true,  }}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover: border-blue-400/50 transition-all duration-300 hover:bg-slate-800/70"
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-400/50 transition-all duration-300 hover:bg-slate-800/70"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${action.colo, r} flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300, `}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${action.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <action.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white group-hover: text-blue-400 transition-colors">
-                  {action.nam,
-    e}
+                <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                  {action.name}
                 </h3>
               </motion.a>
             ))}
@@ -510,19 +484,17 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0,
-    y: 30,  }}whileInView={{ opacity: 1,
-    y: 0,  }}
-            transition={{ duration: 0.8,  }}
-            viewport={{ once: true,
-     }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Need Help with Implementation?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Our developer support team is here to help you succeed. 
-              Get expert guidancecode reviews, and implementation support.
+              Get expert guidance, code reviews, and implementation support.
             </p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -537,6 +509,6 @@ import { SEO } from "../components/S, EO";import { motion } from "framer-moti, o
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default Documentatio;n;
+export default Documentation;

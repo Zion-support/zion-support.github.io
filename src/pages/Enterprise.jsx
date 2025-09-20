@@ -1,47 +1,42 @@
 import React from "react";
 import SEO from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Button } from "@/components/ui/butt, on";import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from "lucide-react";export default function Enterprise() {
-
-    const features  = [
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from "lucide-react";
+export default function Enterprise() {
+    const features = [
         {
-            icon: <Users className="h-8 w-8 text-zion-cyan"/,>title: "Team Managemen,
-    t";description: "Manage multiple teams,
-    project, s, and stakeholders with enterprise-grade collaboration tools."
+            icon: <Users className="h-8 w-8 text-zion-cyan"/>,title: "Team Management",description: "Manage multiple teams, projects, and stakeholders with enterprise-grade collaboration tools."
         },
         {
-            icon: <Shield className="h-8 w-8 text-zion-cyan"/, >,title: "Advanced Security, ";description: "Enterprise-level security with SSO,
-    role-based access contro, l, and compliance certifications."
+            icon: <Shield className="h-8 w-8 text-zion-cyan"/>,title: "Advanced Security",description: "Enterprise-level security with SSO, role-based access control, and compliance certifications."
         },
         {
-            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/, >,title: "Analytics & Reporting, ";description: "Comprehensive insights into team performance,
-    project metric, s, and ROI tracking."
+            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,title: "Analytics & Reporting",description: "Comprehensive insights into team performance, project metrics, and ROI tracking."
         },
         {
-            icon: <Zap className="h-8 w-8 text-zion-cyan"/, >,title: "Custom Integrations, ",description: "Seamlessly integrate with your existing tools and workflows through our API."
-       ,  },
+            icon: <Zap className="h-8 w-8 text-zion-cyan"/>,title: "Custom Integrations",description: "Seamlessly integrate with your existing tools and workflows through our API."
+        },
         {
-            icon: <Globe className="h-8 w-8 text-zion-cyan"/, >,title: "Global Talent Pool, ";description: "Access to verified tech professionals from around the world,
-    available 24/7."
-       ,  },
+            icon: <Globe className="h-8 w-8 text-zion-cyan"/>,title: "Global Talent Pool",description: "Access to verified tech professionals from around the world, available 24/7."
+        },
         {
-            icon: <Phone className="h-8 w-8 text-zion-cyan"/, >,title: "Dedicated Support, ",description: "Priority support with dedicated account managers and 24/7 technical assistance."
-       ,
-     }
-    ]const plans  = [
+            icon: <Phone className="h-8 w-8 text-zion-cyan"/>,title: "Dedicated Support",description: "Priority support with dedicated account managers and 24/7 technical assistance."
+        }
+    ];
+    const plans = [
         {
-            name: "Starter, ",price: "$999, ",period: "/month, ",description: "Perfect for growing teams, ",features: [
-                "Up to 25 team members, ",
+            name: "Starter",price: "$999",period: "/month",description: "Perfect for growing teams",features: [
+                "Up to 25 team members",
                 "Basic analytics",
                 "Email support",
                 "Standard integrations"
             ]
         },
         {
-            name: "Professiona,
-    l";price: "$2,
-    499, ",
-            period: "/month, ",description: "Ideal for established companies, ",features: [
-                "Up to 100 team members, ",
+            name: "Professional",price: "$2,499",
+            period: "/month",description: "Ideal for established companies",features: [
+                "Up to 100 team members",
                 "Advanced analytics",
                 "Priority support",
                 "Custom integrations",
@@ -49,8 +44,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
             ]
         },
         {
-            name: "Enterprise, ",price: "Custom, ",period: ", ",description: "For large organizations, ",features: [
-                "Unlimited team members, ",
+            name: "Enterprise",price: "Custom",period: "",description: "For large organizations",features: [
+                "Unlimited team members",
                 "Custom analytics",
                 "Dedicated support",
                 "Full API access",
@@ -58,11 +53,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
                 "On-premise options"
             ]
         }
-    ]return (<div className="min-h-screen bg-background">
-      <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutionsenterprise AI, tech consulting, team management, Zion Tech Group" canonical="https: //ziontechgroup.com/enterprise"/>
+    ];
+    return (<div className="min-h-screen bg-background">
+      <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
 
-      {/* Hero Section *,
-    /}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -70,9 +65,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Scale your tech operations with Zion Tech Group's comprehensive enterprise platform. 
-            Access global talentadvanced tools, and dedicated support for your organization.
+            Access global talent, advanced tools, and dedicated support for your organization.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
               Schedule Demo
             </Button>
@@ -83,8 +78,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
         </div>
       </section>
 
-      {/* Features Section *,
-    /}
+      {/* Features Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -96,12 +90,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature,
-    index) => (<Card key={inde, x} className="bg-zion-blue border-zion-purple/20 hover: border-zion-purple/40 transition-colors">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (<Card key={index} className="bg-zion-blue border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
-                  <div className="mb-4">{feature.ico,
-    n}</div>
+                  <div className="mb-4">{feature.icon}</div>
                   <CardTitle className="text-white text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -126,9 +118,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {plans.map((plan,
-    index) => (<Card key={index} className={`bg-zion-blue-dark border-zion-purple/20 ${plan.name === "Professional" ? "ring-2 ring-zion-purple" : ""}`}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {plans.map((plan, index) => (<Card key={index} className={`bg-zion-blue-dark border-zion-purple/20 ${plan.name === "Professional" ? "ring-2 ring-zion-purple" : ""}`}>
                 <CardHeader className="text-center">
                   <CardTitle className="text-white text-2xl">{plan.name}</CardTitle>
                   <div className="mb-2">
@@ -141,14 +132,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
-                    {plan.features.map((featurefeatureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
+                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <Check className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
                         {feature}
                       </li>))}
                   </ul>
                   <Button className={`w-full ${plan.name === "Professional"
-                ? "bg-zion-purple hover: bg-zion-purple-light"
-                : "bg-zion-blue hover:bg-zion-blue-light, "}`}>
+                ? "bg-zion-purple hover:bg-zion-purple-light"
+                : "bg-zion-blue hover:bg-zion-blue-light"}`}>
                     {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
                   </Button>
                 </CardContent>
@@ -179,5 +170,5 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
           </div>
         </div>
       </section>
-    </div>),
-}
+    </div>)
+};

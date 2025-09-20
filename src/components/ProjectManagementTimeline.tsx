@@ -1,192 +1,203 @@
-import React, { useState, useEffect  from "react";
-import { motion, AnimatePresence } from "framer-motion";import { Calendar, Clock;
-  CheckCircle;
-  Circle;
-  AlertCircle;
-  Play;
-  Pause;
-  StopCircle;
-  Users;
-  Target;
-  TrendingUp;
-  FileText;
-  MessageSquare;
-  Link;
-  Download;
-  Share2;
-  Filter;
-  Search;
-  Plus;
-  Edit;
-  Trash2;
-  Eye;
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Calendar,
+  Clock,
+  CheckCircle,
+  Circle,
+  AlertCircle,
+  Play,
+  Pause,
+  StopCircle,
+  Users,
+  Target,
+  TrendingUp,
+  FileText,
+  MessageSquare,
+  Link,
+  Download,
+  Share2,
+  Filter,
+  Search,
+  Plus,
+  Edit,
+  Trash2,
+  Eye,
   Settings
-} from "lucide-react";interface Project {
-  id: string,
-    name: strin, g,description: strin, g,status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled, ',priority: 'low' | 'medium' | 'high' | 'critical, ',startDate: strin, g,endDate: strin, g,progress: numbe, r,team: string[, ],client: strin, g,budget: numbe, r,tags: string[, ],milestones: Milestone[],
-}
+} from "lucide-react";
+interface Project {
+  id: string,name: string,description: string,status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priority: 'low' | 'medium' | 'high' | 'critical',startDate: string,endDate: string,progress: number,team: string[],client: string,budget: number,tags: string[],milestones: Milestone[]
+};
 
 interface Milestone {
-  id: string,
-    title: strin, g,description: strin, g,dueDate: strin, g,status: 'pending' | 'in-progress' | 'completed' | 'overdue, ',assignee: strin, g,priority: 'low' | 'medium' | 'high',
-}
+  id: string,title: string,description: string,dueDate: string,status: 'pending' | 'in-progress' | 'completed' | 'overdue',assignee: string,priority: 'low' | 'medium' | 'high'
 
 interface ProjectManagementTimelineProps {
-  showFilters?: booleanshowStats?: booleanmaxProjects?: number}
+  showFilters?: boolean;
+  showStats?: boolean,
+  maxProjects?: number,
 
-export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>  = () => {
-  const [project,
-    s;
-    setProjects] = useState<Project[]>([]);
-  const [filteredProjects;
-    setFilteredProjects] = useState<Project[]>([]);
-  const [selectedStatus;
-    setSelectedStatus] = useState<string>('all')const [selectedPrioritysetSelectedPriority] = useState<string>('all')const [searchQuerysetSearchQuery] = useState('')const [viewModesetViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline')const [showProjectFormsetShowProjectForm] = useState(false)const [editingProject;
-    setEditingProject] = useState<Project | null>(null);
+export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
+  showFilters = true;
+  showStats = true,
+  maxProjects = 10
+}) => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline');
+  const [showProjectForm, setShowProjectForm] = useState(false);
+  const [editingProject, setEditingProject] = useState<Project | null>(null);
 
   // Sample project data
   useEffect(() => {
-    const sampleProjects: Project[]  = [
+    const sampleProjects: Project[] = [
       {
-        id: '1, ',name: 'AI-Powered Customer Analytics Platform, ',description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics., ',status: 'active, ',priority: 'high, ',startDate: '2024-01-01, ',endDate: '2024-06-30,';progress: 65,
-    team: ['Sarah JohnsonMichael Chen, ', 'Emily Rodriguez'],
-        client: 'TechCorp Inc., ',budget: 250000,
-    tags: ['AIMachine Learning, ', 'AnalyticsPlatform'],
+        id: '1',name: 'AI-Powered Customer Analytics Platform',description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',status: 'active',priority: 'high',startDate: '2024-01-01',endDate: '2024-06-30',progress: 65,team: ['Sarah JohnsonMichael Chen', 'Emily Rodriguez'],
+        client: 'TechCorp Inc.',budget: 250000,tags: ['AIMachine Learning', 'AnalyticsPlatform'],
         milestones: [
           {
-            id: 'm1, ',title: 'Requirements Analysis, ',description: 'Complete stakeholder interviews and document requirements, ',dueDate: '2024-01-15, ',status: 'completed, ',assignee: 'Sarah Johnson, ',priority: 'high'
-         ,  }{
-            id: 'm2, ',title: 'System Architecture Design, ',description: 'Design system architecture and database schema, ',dueDate: '2024-02-15, ',status: 'completed, ',assignee: 'Michael Chen, ',priority: 'high'
-         ,  }{
-            id: 'm3, ',title: 'Core Development, ',description: 'Develop core platform features and API endpoints, ',dueDate: '2024-04-15, ',status: 'in-progress, ',assignee: 'Emily Rodriguez, ',priority: 'high'
-         ,  },
+            id: 'm1',title: 'Requirements Analysis',description: 'Complete stakeholder interviews and document requirements',dueDate: '2024-01-15',status: 'completed',assignee: 'Sarah Johnson',priority: 'high'
+          };
           {
-            id: 'm4, ',title: 'Testing & QA, ',description: 'Comprehensive testing and quality assurance, ',dueDate: '2024-05-15, ',status: 'pending, ',assignee: 'Sarah Johnson, ',priority: 'medium'
-         ,  }
+            id: 'm2',title: 'System Architecture Design',description: 'Design system architecture and database schema',dueDate: '2024-02-15',status: 'completed',assignee: 'Michael Chen',priority: 'high'
+          };
+          {
+            id: 'm3',title: 'Core Development',description: 'Develop core platform features and API endpoints',dueDate: '2024-04-15',status: 'in-progress',assignee: 'Emily Rodriguez',priority: 'high'
+          },
+          {
+            id: 'm4',title: 'Testing & QA',description: 'Comprehensive testing and quality assurance',dueDate: '2024-05-15',status: 'pending',assignee: 'Sarah Johnson',priority: 'medium'
+          }
         ]
-      }{
-        id: '2, ',name: 'Cloud Migration & Infrastructure Modernization, ',description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and performance., ',status: 'active, ',priority: 'critical, ',startDate: '2024-02-01, ',endDate: '2024-08-31, ',progress: 35,
-    team: ['David KimLisa Thompson, ', 'Alex Wong'],
-        client: 'Global Enterprises Ltd., ',budget: 500000,
-    tags: ['CloudMigration, ', 'InfrastructureDevOps'],
+      };
+      {
+        id: '2',name: 'Cloud Migration & Infrastructure Modernization',description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and performance.',status: 'active',priority: 'critical',startDate: '2024-02-01',endDate: '2024-08-31',progress: 35,team: ['David KimLisa Thompson', 'Alex Wong'],
+        client: 'Global Enterprises Ltd.',budget: 500000,tags: ['CloudMigration', 'InfrastructureDevOps'],
         milestones: [
           {
-            id: 'm5, ',title: 'Infrastructure Assessment, ',description: 'Assess current infrastructure and plan migration strategy, ',dueDate: '2024-02-28, ',status: 'completed, ',assignee: 'David Kim, ',priority: 'critical'
-         ,  },
+            id: 'm5',title: 'Infrastructure Assessment',description: 'Assess current infrastructure and plan migration strategy',dueDate: '2024-02-28',status: 'completed',assignee: 'David Kim',priority: 'critical'
+          },
           {
-            id: 'm6, ',title: 'Cloud Setup, ',description: 'Set up cloud infrastructure and security configurations, ',dueDate: '2024-04-15, ',status: 'in-progress, ',assignee: 'Lisa Thompson, ',priority: 'critical'
-         ,  }
+            id: 'm6',title: 'Cloud Setup',description: 'Set up cloud infrastructure and security configurations',dueDate: '2024-04-15',status: 'in-progress',assignee: 'Lisa Thompson',priority: 'critical'
+          }
         ]
-      }{
-        id: '3, ',name: 'Cybersecurity Enhancement Program, ',description: 'Implement comprehensive cybersecurity measures including threat detection,
-    incident respons, e, and security awareness training.',
-        status: 'planning, ',priority: 'high, ',startDate: '2024-03-01, ',endDate: '2024-09-30, ',progress: 15,
-    team: ['James WilsonMaria Garcia', ],client: 'SecureBank Corp., ',budget: 30000, 0,tags: ['CybersecurityThreat Detection, ', 'TrainingCompliance'],
+      };
+      {
+        id: '3',name: 'Cybersecurity Enhancement Program',description: 'Implement comprehensive cybersecurity measures including threat detection, incident response, and security awareness training.',
+        status: 'planning',priority: 'high',startDate: '2024-03-01',endDate: '2024-09-30',progress: 15,team: ['James WilsonMaria Garcia'],client: 'SecureBank Corp.',budget: 300000,tags: ['CybersecurityThreat Detection', 'TrainingCompliance'],
         milestones: [
           {
-            id: 'm7, ',title: 'Security Assessment, ',description: 'Conduct comprehensive security audit and vulnerability assessment, ',dueDate: '2024-03-31, ',status: 'in-progress, ',assignee: 'James Wilson, ',priority: 'high'
-         ,  }
+            id: 'm7',title: 'Security Assessment',description: 'Conduct comprehensive security audit and vulnerability assessment',dueDate: '2024-03-31',status: 'in-progress',assignee: 'James Wilson',priority: 'high'
+          }
         ]
       }
-    ]setProjects(sampleProjects)setFilteredProjects(sampleProjects)}, []),
+    ];
+    setProjects(sampleProjects);
+    setFilteredProjects(sampleProjects);
+  }, []),
 
   // Filter projects
   useEffect(() => {
-    let filtered  = project;s;
+    let filtered = projects;
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(p => p.status === selectedStatus)}
-if (selectedPriority !== 'all') {
-      filtered = filtered.filter(p => p.priority === selectedPriority)}
-if (searchQuery) {
+      filtered = filtered.filter(p => p.status === selectedStatus);
+    }
+;
+    if (selectedPriority !== 'all') {
+      filtered = filtered.filter(p => p.priority === selectedPriority);
+    }
+;
+    if (searchQuery) {
       filtered = filtered.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )}
+      ),
+    }
 
-    setFilteredProjects(filtered.slice(0;
-    maxProjects)),
-  }, [projects;
-    selectedStatus, selectedPriority, searchQuery, maxProjects]),
+    setFilteredProjects(filtered.slice(0, maxProjects)),
+  }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]),
 
   // Calculate project stats
-  const projectStats  = {
-    total: projects.lengt,
-    h;
-    active: projects.filter(p => p.status === 'active').lengt, h,completed: projects.filter(p => p.status === 'completed').lengt, h,onHold: projects.filter(p => p.status === 'on-hold').lengt, h,totalBudget: projects.reduce((su, m, p) => sum + p.budget, 0)averageProgress: projects.reduce((sum,
-    p) => sum + p.progres, s, 0) / projects.length || 0
+  const projectStats = {
+    total: projects.length,active: projects.filter(p => p.status === 'active').length,completed: projects.filter(p => p.status === 'completed').length,onHold: projects.filter(p => p.status === 'on-hold').length,totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),
+    averageProgress: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0
   },
 
   // Get status color and icon
-  const getStatusDisplay  = () => {
+  const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'planning':
-        return { color: 'text-blue-400 bg-blue-400,
-    /20'; icon: <Circle className="w-4 h-4" />,
-     }case 'active':
-        return { color: 'text-green-400 bg-green-400/20,'icon: <Play className="w-4 h-4" />,
-     }case 'on-hold':
-        return { color: 'text-yellow-400 bg-yellow-400/20,'icon: <Pause className="w-4 h-4" />,
-     }case 'completed':
-        return { color: 'text-purple-400 bg-purple-400/20,'icon: <CheckCircle className="w-4 h-4" />,
-     }case 'cancelled':
-        return { color: 'text-red-400 bg-red-400/20, ', icon: <StopCircle className="w-4 h-4" />,  },
-      default: return { color: 'text-zinc-400 bg-zinc-400/20,'icon: <Circle className="w-4 h-4" />,
-     }}
+        return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
+      case 'active':
+        return { color: 'text-green-400 bg-green-400/20', icon: <Play className="w-4 h-4" /> };
+      case 'on-hold':
+        return { color: 'text-yellow-400 bg-yellow-400/20', icon: <Pause className="w-4 h-4" /> };
+      case 'completed':
+        return { color: 'text-purple-400 bg-purple-400/20', icon: <CheckCircle className="w-4 h-4" /> };
+      case 'cancelled':
+        return { color: 'text-red-400 bg-red-400/20', icon: <StopCircle className="w-4 h-4" /> },
+      default:
+        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
+    }
   },
 
   // Get priority color
-  const getPriorityColor = () => {
+  const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'low': return 'text-green-400 bg-green-400/20'case 'medium': return 'text-yellow-400 bg-yellow-400/20, '
-  }case 'high': return 'text-orange-400 bg-orange-400/20'case 'critical': return 'text-red-400 bg-red-400/20';
+      case 'low': return 'text-green-400 bg-green-400/20';
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
+      case 'high': return 'text-orange-400 bg-orange-400/20',
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
-   ,
-     }
-  }// Get milestone status color
-  const getMilestoneStatusColor = () => {
+    }
+  };
+  // Get milestone status color
+  const getMilestoneStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
-      case 'in-progress': return 'text-blue-400 bg-blue-400/20, '
-  }case 'completed': return 'text-green-400 bg-green-400/20';
+      case 'in-progress': return 'text-blue-400 bg-blue-400/20',
+      case 'completed': return 'text-green-400 bg-green-400/20',
       case 'overdue': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
-   ,
-     }
-  }// Format currency
-  const formatCurrency  = () => {
-    return new Intl.NumberFormat('en-US, ', {
-      style: 'curren,
-    cy,';currency: 'USD',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,  }).format(amount)},
+    }
+  };
+  // Format currency
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',currency: 'USD',minimumFractionDigits: 0,maximumFractionDigits: 0
+    }).format(amount);
+  },
 
   // Calculate days remaining
-  const getDaysRemaining  = () => {
-    const end = new Date(endDate)const today  = new Date();
-    const diffTime  = end.getTime() - today.getTime();
-    const diffDays  = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDay;s
- ;  };
+  const getDaysRemaining = (endDate: string) => {
+    const end = new Date(endDate);
+    const today = new Date();
+    const diffTime = end.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between mb-8">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Project Management</h1>
           <p className="text-zinc-400 text-lg">Track and manage all your projects and milestones</p>
         </div>
 
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
-          {/* View Mode Toggle *, /}
+          {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
             {[
-              { id: 'timeline, ', label: 'Timeline,'icon: <Calendar className="w-4 h-4" />,
-     }{ id: 'grid, ', label: 'Grid, ', icon: <Target className="w-4 h-4" />,  },
-              { id: 'list, ', label: 'List, ', icon: <FileText className="w-4 h-4" />,  }
+              { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> };
+              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> },
+              { id: 'list', label: 'List', icon: <FileText className="w-4 h-4" /> }
             ].map((mode) => (
               <button
                 key={mode.id}
@@ -194,8 +205,8 @@ if (searchQuery) {
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
-                    : 'text-zinc-400 hover: text-white hover:bg-zinc-800/50'
-               ,  }`}
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                }`}
               >
                 {mode.icon}
                 {mode.label}
@@ -206,7 +217,7 @@ if (searchQuery) {
           {/* Add Project Button */}
           <button
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors flex items-center gap-2"
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             Add Project
@@ -214,15 +225,12 @@ if (searchQuery) {
         </div>
       </div>
 
-      {/* Stats Section *,
-    /}
+      {/* Stats Section */}
       {showStats && (
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
@@ -230,12 +238,9 @@ if (searchQuery) {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ delay: 0.1,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-green-400 mb-1">{projectStats.active}</div>
@@ -243,12 +248,9 @@ if (searchQuery) {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ delay: 0.2,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-purple-400 mb-1">{projectStats.completed}</div>
@@ -256,12 +258,9 @@ if (searchQuery) {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ delay: 0.3,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-yellow-400 mb-1">{projectStats.onHold}</div>
@@ -269,12 +268,9 @@ if (searchQuery) {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ delay: 0.4,
-     }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
@@ -282,11 +278,9 @@ if (searchQuery) {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ delay: 0.5,  }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
@@ -302,7 +296,7 @@ if (searchQuery) {
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           >
             <option value="all">All Statuses</option>
             <option value="planning">Planning</option>
@@ -312,11 +306,11 @@ if (searchQuery) {
             <option value="cancelled">Cancelled</option>
           </select>
 
-          {/* Priority Filter *, /}
+          {/* Priority Filter */}
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           >
             <option value="all">All Priorities</option>
             <option value="low">Low</option>
@@ -325,7 +319,7 @@ if (searchQuery) {
             <option value="critical">Critical</option>
           </select>
 
-          {/* Search *, /}
+          {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
@@ -333,7 +327,7 @@ if (searchQuery) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search projects..."
-              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
           </div>
         </div>
@@ -341,18 +335,15 @@ if (searchQuery) {
 
       {/* Projects Display */}
       <div className="space-y-6">
-        {filteredProjects.map((project,
-    index) => (
+        {filteredProjects.map((project, index) => (
           <motion.div
             key={project.id}
-            initial={{ opacity: 0,
-    y: 20,  }}
-            animate={{ opacity: 1,
-    y: 0,  }}
-            transition={{ delay: index * 0.1,  }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: bg-zinc-900/50 transition-all duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
           >
-            {/* Project Header *, /}
+            {/* Project Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
@@ -395,7 +386,7 @@ if (searchQuery) {
               </div>
 
               <div className="flex items-center gap-2 ml-4">
-                <button className="p-2 text-zinc-400 hover: text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
+                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
                   <Eye className="w-4 h-4" />
                 </button>
                 <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
@@ -407,7 +398,7 @@ if (searchQuery) {
               </div>
             </div>
 
-            {/* Progress Bar *, /}
+            {/* Progress Bar */}
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-zinc-300">Progress</span>
@@ -415,11 +406,9 @@ if (searchQuery) {
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <motion.div
-                  initial={{ width: 0,  }}
-                  animate={{ width: `${project.progres,
-    s}%` }}
-                  transition={{ duration: 1,
-    delay: index * 0.1,  }}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${project.progress}%` }}
+                  transition={{ duration: 1, delay: index * 0.1 }}
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
                 />
               </div>
@@ -473,8 +462,8 @@ if (searchQuery) {
       {/* No Results */}
       {filteredProjects.length === 0 && (
         <motion.div
-          initial={{ opacity: 0,  }}
-          animate={{ opacity: 1,  }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           className="text-center py-12"
         >
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -484,12 +473,11 @@ if (searchQuery) {
           </p>
           <button
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors"
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
             Create Project
           </button>
         </motion.div>
       )}
     </div>
-  ),
-};
+  );

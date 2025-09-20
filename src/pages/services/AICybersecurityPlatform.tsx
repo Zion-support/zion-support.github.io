@@ -1,15 +1,19 @@
 import React from "react";
-import { SEO } from "../../components/S, EO";import { Button } from "../../components/ui/Butt, on";import { Card } from "../../components/ui/Ca, rd";import { Badge } from "../../components/ui/Bad, ge";import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu } from "lucide-react";const AICybersecurityPlatform: React.FC  = () => {
+import { SEO } from "../../components/SEO";
+import { Button } from "../../components/ui/Button";
+import { Card } from "../../components/ui/Card";
+import { Badge } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu } from "lucide-react";
+const AICybersecurityPlatform: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Cybersecurity Platform - Zion Tech Group"
-        description="Revolutionary AI-powered cybersecurity platform that provides 99.9% threat detect,
-    ionzero false positive, s, and automated response with advanced machine learning algorithms."
+        description="Revolutionary AI-powered cybersecurity platform that provides 99.9% threat detection, zero false positives, and automated response with advanced machine learning algorithms."
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
@@ -20,12 +24,12 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
               AI Cybersecurity Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Protect your organization with AI that detects threats in real-time,
-    prevents attacks before they happenand provides 99.9% threat detection with zero false positives.
+              Protect your organization with AI that detects threats in real-time, prevents attacks before they happen; 
+              and provides 99.9% threat detection with zero false positives.
             </p>
           </div>
           
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
               Start Free Trial
             </Button>
@@ -36,9 +40,8 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
         </div>
       </section>
 
-      {/* Key Benefits *,
-    /}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      {/* Key Benefits */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Why Choose AI Cybersecurity?
@@ -58,8 +61,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <Zap className="w-8 h-8 text-orange-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Zero False Positives</h3>
-              <p className="text-gray-300">Machine learning eliminates false alarms,
-    reducing alert fatigue by 95%</p>
+              <p className="text-gray-300">Machine learning eliminates false alarms, reducing alert fatigue by 95%</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
@@ -67,7 +69,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <Clock className="w-8 h-8 text-yellow-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Response</h3>
-              <p className="text-gray-300">Automated threat response in milliseconds100x faster than human operators</p>
+              <p className="text-gray-300">Automated threat response in milliseconds, 100x faster than human operators</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
@@ -82,7 +84,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
       </section>
 
       {/* Features */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Advanced Security Features
@@ -94,8 +96,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">AI Threat Detection</h3>
-                  <p className="text-gray-300">Machine learning algorithms analyze network traffic,
-    user behavio, r, and system logs to identify sophisticated threats</p>
+                  <p className="text-gray-300">Machine learning algorithms analyze network traffic, user behavior, and system logs to identify sophisticated threats</p>
                 </div>
               </div>
               
@@ -111,7 +112,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Automated Response</h3>
-                  <p className="text-gray-300">Intelligent automation blocks threatsisolates compromised systems, and initiates incident response</p>
+                  <p className="text-gray-300">Intelligent automation blocks threats, isolates compromised systems, and initiates incident response</p>
                 </div>
               </div>
               
@@ -137,7 +138,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Network Security</h3>
-                  <p className="text-gray-300">AI-driven network traffic analysisintrusion detection, and firewall optimization</p>
+                  <p className="text-gray-300">AI-driven network traffic analysis, intrusion detection, and firewall optimization</p>
                 </div>
               </div>
               
@@ -145,7 +146,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Cloud Security</h3>
-                  <p className="text-gray-300">Multi-cloud security monitoringconfiguration management, and compliance tracking</p>
+                  <p className="text-gray-300">Multi-cloud security monitoring, configuration management, and compliance tracking</p>
                 </div>
               </div>
               
@@ -153,7 +154,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Compliance Automation</h3>
-                  <p className="text-gray-300">Automated compliance reporting for SOC 2ISO 27001, GDPR, and industry standards</p>
+                  <p className="text-gray-300">Automated compliance reporting for SOC 2, ISO 27001, GDPR, and industry standards</p>
                 </div>
               </div>
             </div>
@@ -162,7 +163,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
       </section>
 
       {/* Security Solutions */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Comprehensive Security Solutions
@@ -174,8 +175,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <Network className="w-6 h-6 text-red-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Network Security</h3>
-              <p className="text-gray-300">AI-powered intrusion detection,
-    traffic analysi, s, and network segmentation</p>
+              <p className="text-gray-300">AI-powered intrusion detection, traffic analysis, and network segmentation</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
@@ -191,7 +191,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <Database className="w-6 h-6 text-yellow-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Data Protection</h3>
-              <p className="text-gray-300">Encryptionaccess control, and data loss prevention with AI monitoring</p>
+              <p className="text-gray-300">Encryption, access control, and data loss prevention with AI monitoring</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
@@ -199,7 +199,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <Users className="w-6 h-6 text-green-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Identity & Access</h3>
-              <p className="text-gray-300">Multi-factor authenticationprivileged access management, and user behavior analytics</p>
+              <p className="text-gray-300">Multi-factor authentication, privileged access management, and user behavior analytics</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
@@ -207,7 +207,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <Globe className="w-6 h-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Cloud Security</h3>
-              <p className="text-gray-300">Multi-cloud securityconfiguration management, and compliance monitoring</p>
+              <p className="text-gray-300">Multi-cloud security, configuration management, and compliance monitoring</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
@@ -215,14 +215,14 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                 <AlertTriangle className="w-6 h-6 text-purple-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Incident Response</h3>
-              <p className="text-gray-300">Automated incident detectionresponse orchestration, and forensic analysis</p>
+              <p className="text-gray-300">Automated incident detection, response orchestration, and forensic analysis</p>
             </Card>
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Competitive Pricing
@@ -267,14 +267,13 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$1,
-    599</span>
+                <span className="text-4xl font-bold text-white">$1,599</span>
                 <span className="text-red-100">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 1000 endpoints
+                  Up to 1,000 endpoints
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
@@ -293,7 +292,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
                   API access
                 </li>
               </ul>
-              <Button className="w-full bg-white text-red-600 hover: bg-gray-100">
+              <Button className="w-full bg-white text-red-600 hover:bg-gray-100">
                 Get Started
               </Button>
             </Card>
@@ -304,8 +303,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Ultimate</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$3,
-    999</span>
+                <span className="text-4xl font-bold text-white">$3,999</span>
                 <span className="text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
@@ -338,8 +336,8 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
         </div>
       </section>
 
-      {/* Market Information *, /}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+      {/* Market Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Market Analysis & ROI
@@ -366,7 +364,7 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
         </div>
       </section>
 
-      {/* Contact Section *, /}
+      {/* Contact Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -405,6 +403,6 @@ import { SEO } from "../../components/S, EO";import { Button } from "../../compo
         </div>
       </section>
     </div>
-  ),
+  )
 };
-export default AICybersecurityPlatfor;m;
+export default AICybersecurityPlatform;
