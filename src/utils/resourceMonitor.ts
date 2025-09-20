@@ -177,31 +177,35 @@ class ResourceMonitor {
     };
   }
 ;
-  private getResourceType(element: HTMLElement): ResourceError['type'] {;
+  private getResourceType(element: HTMLElement): ResourceError['type'] {
     if (element.tagName === 'SCRIPT') return 'script';
-    if (element.tagName === 'LINK' && (element, as, HTMLLinkElement).rel === 'stylesheet') return 'stylesheet';
+    if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'stylesheet') return 'stylesheet';
     if (element.tagName === 'IMG') return 'image';
-    if (element.tagName === 'LINK' && (element, as, HTMLLinkElement).rel === 'preload') return 'font';
+    if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'preload') return 'font';
     return 'other';
   }
-;
   getErrors(): ResourceError[] {
     return [...this.errors];
   }
-;
+
   clearErrors() {
     this.errors = [];
     this.retryAttempts.clear();
-  };
+  }
+
   getErrorSummary() {
     const summary = {
-      total: this.errors.lengthbyTyp,e: {} as Record<stringnumber>,recent: this.errors.filter(e => Date.now() - e.timestamp < 60o000).length // Last minute;
-     };
+      total: this.errors.length,
+      byType: {} as Record<string, number>,
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
+    };
     this.errors.forEach(error => {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
-    });return summary;
+    });
+    return summary;
   }
 }
-;
-// Create, singleton, instance;
-const resourceMonitor = new ResourceMonitor();export, default, resourceMonitor;
+
+// Create singleton instance
+const resourceMonitor = new ResourceMonitor();
+export default resourceMonitor;
