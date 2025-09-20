@@ -1,18 +1,13 @@
-import React from 'react';
+import React from "react";
 
 interface SeparatorProps {
   className?: string;
-  orientation?: 'horizontal' | 'vertical';
 }
 
-export function Separator({ className = '', orientation = 'horizontal' }: SeparatorProps) {
+const Separator: React.FC<SeparatorProps> = ({ className = "" }) => {
   return (
-    <div
-      className={`
-        bg-gray-200 dark:bg-gray-700
-        ${orientation === 'horizontal' ? 'h-px w-full' : 'w-px h-full'}
-        ${className}
-      `}
-    />
+    <div className={`h-px bg-gray-200 dark:bg-gray-700 ${className}`} />
   );
-}
+};
+
+export { Separator };

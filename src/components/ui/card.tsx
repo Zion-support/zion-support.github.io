@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface CardProps {
   className?: string;
   children: React.ReactNode;
 }
 
-export const Card: React.FC<CardProps> = ({ className = "", children }) => {
+const Card: React.FC<CardProps> = ({ className = "", children }) => {
   return (
     <div className={`p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {children}
@@ -13,44 +13,9 @@ export const Card: React.FC<CardProps> = ({ className = "", children }) => {
   );
 };
 
-export const CardHeader: React.FC<CardProps> = ({ className = "", children }) => {
-  return (
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export const CardTitle: React.FC<CardProps> = ({ className = "", children }) => {
-  return (
-    <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
-      {children}
-    </h3>
-  );
-};
-
-export const CardDescription: React.FC<CardProps> = ({ className = "", children }) => {
-  return (
-    <p className={`text-sm text-muted-foreground ${className}`}>
-      {children}
-    </p>
-  );
-};
-
-export const CardContent: React.FC<CardProps> = ({ className = "", children }) => {
-  return (
-    <div className={`p-6 pt-0 ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export const CardFooter: React.FC<CardProps> = ({ className = "", children }) => {
-  return (
-    <div className={`flex items-center p-6 pt-0 ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default Card;
+export { Card };
+export { Card as CardContent };
+export { Card as CardHeader };
+export { Card as CardFooter };
+export { Card as CardTitle };
+export { Card as CardDescription };

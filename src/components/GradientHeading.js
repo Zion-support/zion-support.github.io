@@ -1,22 +1,16 @@
 import React from 'react';
 
-const GradientHeading = ({ 
-  children, 
-  level = 'h1', 
-  className = '',
-  ...props 
-}) => {
-  const Component = level;
+const GradientHeading = ({ level = 'h1', children, className = '', ...props }) => {
+  const Tag = level;
   
   return (
-    <Component 
-      className={`bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent ${className}`}
+    <Tag 
+      className={`bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent ${className}`}
       {...props}
     >
       {children}
-    </Component>
+    </Tag>
   );
 };
 
 export { GradientHeading };
-export default GradientHeading;

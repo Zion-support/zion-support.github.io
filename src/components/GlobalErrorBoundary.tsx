@@ -7,7 +7,6 @@ interface ErrorBoundaryState {
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
-  fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>;
 }
 
 export default class GlobalErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -24,29 +23,20 @@ export default class GlobalErrorBoundary extends React.Component<ErrorBoundaryPr
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
-  resetError = () => {
-    this.setState({ hasError: false, error: undefined });
-  };
-
   render() {
     if (this.state.hasError) {
-      const FallbackComponent = this.props.fallback;
-      if (FallbackComponent) {
-        return <FallbackComponent error={this.state.error} resetError={this.resetError} />;
-      }
-
       return (
-        <div className="min-h-screen flex items-center justify-center bg-zion-blue">
-          <div className="text-center p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
-            <p className="text-zion-slate-light mb-6">
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+          <div className="text-center max-w-md mx-auto px-4">
+            <h1 className="text-3xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-zion-slate-light mb-8">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <button
-              onClick={this.resetError}
-              className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark px-6 py-2 rounded-md font-medium transition-colors"
+              onClick={() => window.location.reload()}
+              className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-6 py-3 rounded-lg transition-colors"
             >
-              Try Again
+              Refresh Page
             </button>
           </div>
         </div>
