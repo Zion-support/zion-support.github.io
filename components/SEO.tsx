@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 interface SEOProps {
   title?: string
@@ -36,13 +37,13 @@ export default function SEO({
   nofollow, 
   jsonLd 
 }: SEOProps) {
-  const router = useRouter()
+  const pathname = usePathname()
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url
   const pageTitle = title || DEFAULTS.title
   const pageDescription = description || DEFAULTS.description
   
   // Derive canonical from baseUrl + path, ensure single slash and trailing slash
-  const pagePath = typeof router?.asPath === 'string' ? router.asPath : (url || '/')
+  const pagePath = pathname || (url || '/')
   const rawDerived = baseUrl.replace(/\/$/, '') + (pagePath.startsWith('/') ? pagePath : `/${pagePath}`)
   const normalizedCanonical = rawDerived.endsWith('/') ? rawDerived : `${rawDerived}/`
   
