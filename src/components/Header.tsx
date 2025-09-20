@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Menu;
+  Menu,
   X,
   ChevronDown,
   Brain,
@@ -10,18 +10,18 @@ import {
   Cpu,
   Heart,
   Rocket,
-  Sparkles;
-  BarChart3;
-  Network;
-  Globe;
-  Users;
-  FileText;
-  Phone;
-  Mail;
-  MapPin;
-  Search;
-  Bell;
-  User;
+  Sparkles,
+  BarChart3,
+  Network,
+  Globe,
+  Users,
+  FileText,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+  Bell,
+  User,
   Settings
 } from "lucide-react";
 export function Header() {

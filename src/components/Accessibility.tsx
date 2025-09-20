@@ -15,13 +15,21 @@ import {
   Settings
 } from "lucide-react";
 interface AccessibilitySettings {
-  fontSize: number,highContrast: boolean,reducedMotion: boolean,soundEnabled: boolean,theme: 'light' | 'dark' | 'auto'
+  fontSize: number;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  soundEnabled: boolean;
+  theme: 'light' | 'dark' | 'auto';
 }
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
+    fontSize: 16,
+    highContrast: false,
+    reducedMotion: false,
+    soundEnabled: true,
+    theme: 'auto'
   });
   useEffect(() => {
     // Load settings from localStorage

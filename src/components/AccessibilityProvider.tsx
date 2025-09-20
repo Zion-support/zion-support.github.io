@@ -2,7 +2,18 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
 import { motion, AnimatePresence } from "framer-motion";
 import { Braille } from "lucide-react";
 interface AccessibilityContextType {
-  highContrast: boolean,toggleHighContrast: () => void,reducedMotion: boolean,toggleReducedMotion: () => void,fontSize: number,increaseFontSize: () => void,decreaseFontSize: () => void,resetFontSize: () => void,showSkipLinks: boolean,setShowSkipLinks: (show: boolean) => void,voiceNavigation: boolean,toggleVoiceNavigation: () => void
+  highContrast: boolean;
+  toggleHighContrast: () => void;
+  reducedMotion: boolean;
+  toggleReducedMotion: () => void;
+  fontSize: number;
+  increaseFontSize: () => void;
+  decreaseFontSize: () => void;
+  resetFontSize: () => void;
+  showSkipLinks: boolean;
+  setShowSkipLinks: (show: boolean) => void;
+  voiceNavigation: boolean;
+  toggleVoiceNavigation: () => void;
 }
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -11,7 +22,7 @@ export const useAccessibility = () => {
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   };
-  return context,
+  return context;
 };
 
 interface AccessibilityProviderProps {

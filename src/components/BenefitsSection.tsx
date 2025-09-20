@@ -2,13 +2,24 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from "lucide-react";
 interface Benefit {
-  title: string,description: string,icon: React.ReactNode,color: string,bgColor: string,stats: string,features: string[]
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+  bgColor: string;
+  stats: string;
+  features: string[];
 }
 ;
 const benefits: Benefit[] = [
   {
-    title: "AI-Powered Matchmaking",description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,color: "from-zion-cyan to-zion-cyan-dark",bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",stats: "95% Match Rate",features: [
+    title: "AI-Powered Matchmaking",
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
+    icon: <Bot className="w-8 h-8" />,
+    color: "from-zion-cyan to-zion-cyan-dark",
+    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
+    stats: "95% Match Rate",
+    features: [
       "Intelligent service matching",
       "Real-time availability",
       "Expert talent matching",
@@ -16,8 +27,13 @@ const benefits: Benefit[] = [
     ]
   },
   {
-    title: "Global Availability",description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
-    icon: <Globe className="w-8 h-8" />,color: "from-zion-purple to-zion-purple-dark",bgColor: "from-zion-purple/20 to-zion-purple-dark/20",stats: "150+ Countries",features: [
+    title: "Global Availability",
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
+    icon: <Globe className="w-8 h-8" />,
+    color: "from-zion-purple to-zion-purple-dark",
+    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+    stats: "150+ Countries",
+    features: [
       "Worldwide talent pool",
       "24/7 availability",
       "Multi-language support",
@@ -25,7 +41,13 @@ const benefits: Benefit[] = [
     ]
   },
   {
-    title: "24/7 Support",description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",icon: <Clock className="w-8 h-8" />,color: "from-zion-blue to-zion-blue-dark",bgColor: "from-zion-blue/20 to-zion-blue-dark/20",stats: "99.9% Uptime",features: [
+    title: "24/7 Support",
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
+    icon: <Clock className="w-8 h-8" />,
+    color: "from-zion-blue to-zion-blue-dark",
+    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
+    stats: "99.9% Uptime",
+    features: [
       "Round-the-clock assistance",
       "Expert technical support",
       "Rapid response times",
@@ -33,7 +55,13 @@ const benefits: Benefit[] = [
     ]
   },
   {
-    title: "Cost Reduction",description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",icon: <TrendingDown className="w-8 h-8" />,color: "from-zion-green to-zion-green-dark",bgColor: "from-zion-green/20 to-zion-green-dark/20",stats: "40% Cost Savings",features: [
+    title: "Cost Reduction",
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
+    icon: <TrendingDown className="w-8 h-8" />,
+    color: "from-zion-green to-zion-green-dark",
+    bgColor: "from-zion-green/20 to-zion-green-dark/20",
+    stats: "40% Cost Savings",
+    features: [
       "Direct provider connections",
       "Competitive pricing",
       "Bulk discount options",
@@ -46,9 +74,11 @@ export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {,
-      opacity: 1,transition: {,
-        staggerChildren: 0.2,delayChildren: 0.1
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
       }
     }
   };
