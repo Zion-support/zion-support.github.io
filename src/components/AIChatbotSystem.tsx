@@ -38,6 +38,7 @@ interface AIChatbotSystemProps {
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean;
+}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
