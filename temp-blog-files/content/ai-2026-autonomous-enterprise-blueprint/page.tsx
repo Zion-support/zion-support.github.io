@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group',
+  title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group'
   description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.'
 }
 export default function AutonomousEnterpriseBlueprint2026Page() {
@@ -11,7 +11,7 @@ export default function AutonomousEnterpriseBlueprint2026Page() {
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Autonomous Enterprise Blueprint</h1>
           <p>
-            A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.,
+            A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.
           </p>
         </div>
       </section>
@@ -19,8 +19,8 @@ export default function AutonomousEnterpriseBlueprint2026Page() {
         <div>
           <h2>Why Autonomous, Why Now</h2>
           <p>
-            Enterprises are moving beyond workflow automation to systems that plan, act, and learn with explicit guardrails and measurable outcomes.,
-            This blueprint outlines architecture, governance, and operating models to get there safely.,
+            Enterprises are moving beyond workflow automation to systems that plan, act, and learn with explicit guardrails and measurable outcomes.
+            This blueprint outlines architecture, governance, and operating models to get there safely.
           </p>
           <h2>Reference Architecture</h2>
           <ul>

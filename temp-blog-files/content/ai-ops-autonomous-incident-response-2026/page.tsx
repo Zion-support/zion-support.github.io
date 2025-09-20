@@ -1,6 +1,6 @@
 import React from 'react'
 export const metadata = {
-	 title: 'AI-Ops: Autonomous Incident Response (2026)',
+	 title: 'AI-Ops: Autonomous Incident Response (2026)'
 	 description: 'Design autonomous incident response with event-driven pipelines, agents, and policy-as-code.'
 }
 export default function AIOpsAutonomousIncidentResponse2026() {
@@ -8,7 +8,7 @@ export default function AIOpsAutonomousIncidentResponse2026() {
 		 <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
 			 <h1 className="text-4xl font-bold text-gray-900 mb-4">AI-Ops: Autonomous Incident Response (2026)</h1>
 			 <p>
-				 Architect event-driven observability, agentic playbooks, and guardrails to reduce MTTR and eliminate toil.,
+				 Architect event-driven observability, agentic playbooks, and guardrails to reduce MTTR and eliminate toil.
 			 </p>
 			 <section className="prose max-w-none">
 				 <h2>Reference Architecture</h2>

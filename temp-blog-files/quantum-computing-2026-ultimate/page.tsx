@@ -3,8 +3,8 @@ import Link from 'next/link'
 import SEO from '../../components/SEO';
 import Card from '../../components/ui/Card';
 export const metadata = {
-  title: 'Quantum Computing 2026 Ultimate - The Next Computing Revolution',
-  description: 'Explore the ultimate quantum computing breakthroughs of 2026 that are revolutionizing computation, cryptography, and problem-solving capabilities.',
+  title: 'Quantum Computing 2026 Ultimate - The Next Computing Revolution'
+  description: 'Explore the ultimate quantum computing breakthroughs of 2026 that are revolutionizing computation, cryptography, and problem-solving capabilities.'
   keywords: ['quantum computing 2026quantum supremacyquantum algorithmsquantum cryptography', 'quantum AI']
 }
 export default function QuantumComputing2026Ultimate() {
@@ -24,24 +24,24 @@ export default function QuantumComputing2026Ultimate() {
               <span className="text-sm font-medium">⚛️ QUANTUM REVOLUTION</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-              Quantum Computing 2026 Ultimate,
+              Quantum Computing 2026 Ultimate
             </h1>
             <p>
-              Experience the ultimate quantum computing revolution of 2026. From quantum supremacy to,
-              practical applications, discover how quantum computing is transforming every industry.,
+              Experience the ultimate quantum computing revolution of 2026. From quantum supremacy to
+              practical applications, discover how quantum computing is transforming every industry.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105"
               >
-                Access Quantum Solutions,
+                Access Quantum Solutions
               </Link>
-              <Link,
-                href="/quantum-computing-revolution-2025",
+              <Link
+                href="/quantum-computing-revolution-2025"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-900 transition-all"
               >
-                Explore Applications,
+                Explore Applications
               </Link>
             </div>
           </div>
@@ -56,8 +56,8 @@ export default function QuantumComputing2026Ultimate() {
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Supremacy Achieved</h3>
               <p>
-                Breakthrough quantum processors that can solve problems in minutes that would take,
-                classical computers thousands of years to complete.,
+                Breakthrough quantum processors that can solve problems in minutes that would take
+                classical computers thousands of years to complete.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• 1000+ qubit processors</li>
@@ -69,8 +69,8 @@ export default function QuantumComputing2026Ultimate() {
               <div className="text-4xl mb-4">🔐</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Cryptography</h3>
               <p>
-                Unbreakable quantum encryption systems that provide absolute security for,
-                communications and data protection in the quantum era.,
+                Unbreakable quantum encryption systems that provide absolute security for
+                communications and data protection in the quantum era.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• Quantum key distribution</li>
@@ -82,8 +82,8 @@ export default function QuantumComputing2026Ultimate() {
               <div className="text-4xl mb-4">🧮</div>
               <h3 className="text-2xl font-bold mb-4">Quantum Algorithms</h3>
               <p>
-                Revolutionary quantum algorithms that solve complex optimization problems,
-                machine learning tasks, and scientific simulations with unprecedented speed.,
+                Revolutionary quantum algorithms that solve complex optimization problems
+                machine learning tasks, and scientific simulations with unprecedented speed.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• Shor's algorithm implementation</li>
@@ -183,21 +183,21 @@ export default function QuantumComputing2026Ultimate() {
         <div>
           <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>
           <p>
-            Be among the first to leverage quantum computing power for your business.,
-            Transform your operations with the ultimate computing technology of 2026.,
+            Be among the first to leverage quantum computing power for your business.
+            Transform your operations with the ultimate computing technology of 2026.
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105"
             >
-              Get Quantum Access,
+              Get Quantum Access
             </Link>
-            <Link,
-              href="/quantum-computing-business-applications-2025",
+            <Link
+              href="/quantum-computing-business-applications-2025"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-900 transition-all"
             >
-              View Applications,
+              View Applications
             </Link>
           </div>
         </div>

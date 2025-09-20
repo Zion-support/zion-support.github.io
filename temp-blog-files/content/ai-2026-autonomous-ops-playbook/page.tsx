@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Autonomous Ops Playbook | Zion Tech Group',
+  title: 'AI 2026: Autonomous Ops Playbook | Zion Tech Group'
   description:
     'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.'
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Quantum AI 2026: Revolutionary Computing Breakthrough',
-  description: 'Explore how quantum computing will transform AI capabilities in 2026, enabling 1000x performance improvements and breakthrough applications.',
+  title: 'Quantum AI 2026: Revolutionary Computing Breakthrough'
+  description: 'Explore how quantum computing will transform AI capabilities in 2026, enabling 1000x performance improvements and breakthrough applications.'
   keywords: ['quantum AIquantum computingquantum machine learningAI 2026', 'quantum algorithms']
 }
 export default function QuantumAI2026() {
@@ -20,11 +20,11 @@ export default function QuantumAI2026() {
             <span>2026</span>
           </div>
           <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
-            Quantum AI 2026: Revolutionary Computing Breakthrough,
+            Quantum AI 2026: Revolutionary Computing Breakthrough
           </h1>
           <p>
-            Discover how quantum computing will transform AI capabilities in 2026, enabling 1000x performance,
-            improvements and breakthrough applications across industries.,
+            Discover how quantum computing will transform AI capabilities in 2026, enabling 1000x performance
+            improvements and breakthrough applications across industries.
           </p>
         </div>
         {/* Executive Summary */}
@@ -46,9 +46,9 @@ export default function QuantumAI2026() {
               </div>
             </div>
             <p>
-              Quantum AI represents the next frontier in artificial intelligence, combining the power of quantum,
-              computing with advanced machine learning algorithms to solve previously intractable problems and,
-              unlock unprecedented computational capabilities.,
+              Quantum AI represents the next frontier in artificial intelligence, combining the power of quantum
+              computing with advanced machine learning algorithms to solve previously intractable problems and
+              unlock unprecedented computational capabilities.
             </p>
           </div>
         </section>
@@ -110,7 +110,7 @@ export default function QuantumAI2026() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Drug Discovery</h3>
               <p>
-                Quantum AI accelerates molecular simulation and drug design, reducing discovery time from years to months.,
+                Quantum AI accelerates molecular simulation and drug design, reducing discovery time from years to months.
               </p>
               <div>
                 <div className="text-sm text-gray-600">• Molecular property prediction</div>
@@ -124,7 +124,7 @@ export default function QuantumAI2026() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Modeling</h3>
               <p>
-                Quantum AI enables complex risk analysis and portfolio optimization with unprecedented accuracy.,
+                Quantum AI enables complex risk analysis and portfolio optimization with unprecedented accuracy.
               </p>
               <div>
                 <div className="text-sm text-gray-600">• Monte Carlo simulations</div>
@@ -138,7 +138,7 @@ export default function QuantumAI2026() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Cryptography & Security</h3>
               <p>
-                Quantum AI develops new cryptographic methods and breaks existing ones, reshaping digital security.,
+                Quantum AI develops new cryptographic methods and breaks existing ones, reshaping digital security.
               </p>
               <div>
                 <div className="text-sm text-gray-600">• Quantum key distribution</div>
@@ -283,21 +283,21 @@ export default function QuantumAI2026() {
           <div>
             <h2 className="text-4xl font-bold mb-6">Ready to Embrace Quantum AI?</h2>
             <p>
-              Stay ahead of the quantum revolution with our comprehensive quantum AI consulting and implementation services.,
-              Transform your organization for the quantum computing era.,
+              Stay ahead of the quantum revolution with our comprehensive quantum AI consulting and implementation services.
+              Transform your organization for the quantum computing era.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Schedule Quantum AI Consultation,
+                Schedule Quantum AI Consultation
               </Link>
-              <Link,
-                href="/services/quantum-ai",
+              <Link
+                href="/services/quantum-ai"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Explore Quantum AI Services,
+                Explore Quantum AI Services
               </Link>
             </div>
           </div>

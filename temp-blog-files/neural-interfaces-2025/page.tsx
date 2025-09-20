@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'Neural Interfaces 2025 - Zion Tech Group',
-  description: 'Revolutionary brain-computer interfaces enabling 300% productivity gains through direct thought control. Explore the future of human-computer interaction.',
+  title: 'Neural Interfaces 2025 - Zion Tech Group'
+  description: 'Revolutionary brain-computer interfaces enabling 300% productivity gains through direct thought control. Explore the future of human-computer interaction.'
   keywords: ['neural interfacesbrain-computer interfaceBCIcognitive enhancement', 'AI 2025']
 }
 export default function NeuralInterfaces2025Page() {
@@ -24,24 +24,24 @@ export default function NeuralInterfaces2025Page() {
                 <span className="text-sm font-medium">🧠 NEURAL INTERFACES 2025</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Revolutionary Neural Interface Technology,
+                Revolutionary Neural Interface Technology
               </h1>
               <p>
-                Experience the future of human-computer interaction with direct brain-computer interfaces.,
-                Achieve unprecedented productivity gains through thought-controlled systems and cognitive enhancement.,
+                Experience the future of human-computer interaction with direct brain-computer interfaces.
+                Achieve unprecedented productivity gains through thought-controlled systems and cognitive enhancement.
               </p>
               <div>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Schedule Demo,
+                  Schedule Demo
                 </Link>
-                <Link,
-                  href="/blog/ai-2025-neural-interfaces-revolution-ultimate-guide",
+                <Link
+                  href="/blog/ai-2025-neural-interfaces-revolution-ultimate-guide"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Read Full Guide,
+                  Read Full Guide
                 </Link>
               </div>
             </div>
@@ -55,21 +55,21 @@ export default function NeuralInterfaces2025Page() {
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">300% Productivity Boost</h3>
                 <p>
-                  Direct thought-to-text systems and mental command interfaces enable unprecedented productivity gains.,
+                  Direct thought-to-text systems and mental command interfaces enable unprecedented productivity gains.
                 </p>
               </div>
               <div>
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">99.7% Accuracy</h3>
                 <p>
-                  Advanced neural signal processing with sub-millisecond latency and exceptional accuracy rates.,
+                  Advanced neural signal processing with sub-millisecond latency and exceptional accuracy rates.
                 </p>
               </div>
               <div>
                 <div className="text-4xl mb-4">🔒</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Secure & Private</h3>
                 <p>
-                  End-to-end encryption and zero-knowledge architecture protect your neural data and privacy.,
+                  End-to-end encryption and zero-knowledge architecture protect your neural data and privacy.
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function NeuralInterfaces2025Page() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Productivity</h3>
                     <p>
-                      Direct thought-to-text systems enable 300% faster typing speeds and seamless integration with business software.,
+                      Direct thought-to-text systems enable 300% faster typing speeds and seamless integration with business software.
                     </p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function NeuralInterfaces2025Page() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Healthcare Enhancement</h3>
                     <p>
-                      Enhanced diagnostic capabilities and improved surgical precision through real-time neural feedback systems.,
+                      Enhanced diagnostic capabilities and improved surgical precision through real-time neural feedback systems.
                     </p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function NeuralInterfaces2025Page() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Manufacturing Control</h3>
                     <p>
-                      Direct neural control of robotic systems with enhanced safety through predictive neural monitoring.,
+                      Direct neural control of robotic systems with enhanced safety through predictive neural monitoring.
                     </p>
                   </div>
                 </div>
@@ -168,21 +168,21 @@ export default function NeuralInterfaces2025Page() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Ready to Experience Neural Interface Technology?</h2>
             <p>
-              Transform your business operations with revolutionary brain-computer interfaces.,
-              Schedule a demo to experience the future of human-computer interaction.,
+              Transform your business operations with revolutionary brain-computer interfaces.
+              Schedule a demo to experience the future of human-computer interaction.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Schedule Demo,
+                Schedule Demo
               </Link>
-              <Link,
-                href="/services",
+              <Link
+                href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                View All Services,
+                View All Services
               </Link>
             </div>
           </div>

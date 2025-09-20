@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Trust Grid for Autonomous Agents',
+  title: 'AI 2026: Trust Grid for Autonomous Agents'
   description:
     'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.'
 }
@@ -10,15 +10,15 @@ export default function TrustGridForAgentsPage() {
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Trust Grid for Autonomous Agents</h1>
       <p>
-        An operational model to quantify and enforce trust across agent behaviors with layered,
-        controls, evaluation gates, and auditable evidence.,
+        An operational model to quantify and enforce trust across agent behaviors with layered
+        controls, evaluation gates, and auditable evidence.
       </p>
       <section className="prose prose-lg max-w-none">
         <h2>Overview</h2>
         <p>
-          The Trust Grid unifies safety, security, reliability, and compliance signals into a,
-          single risk-tiered model. It enables policy-as-code guardrails, pre-deployment and,
-          runtime evaluations, and continuous monitoring for production agents.,
+          The Trust Grid unifies safety, security, reliability, and compliance signals into a
+          single risk-tiered model. It enables policy-as-code guardrails, pre-deployment and
+          runtime evaluations, and continuous monitoring for production agents.
         </p>
         <h3>Key Pillars</h3>
         <ul>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Strategic AI Roadmap for Executives',
+  title: 'AI 2026: Strategic AI Roadmap for Executives'
   description: 'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 2026.'
 }
 export default function Page() {
@@ -17,9 +17,9 @@ export default function Page() {
         <div>
           <h2>Executive Summary</h2>
           <p>
-            This roadmap focuses on business outcomes first: revenue acceleration, cost reduction, and risk mitigation.,
-            It provides a time-boxed approach across 30, 60, 90, and 180 days to deliver measurable value and establish,
-            the operating model for AI at scale.,
+            This roadmap focuses on business outcomes first: revenue acceleration, cost reduction, and risk mitigation.
+            It provides a time-boxed approach across 30, 60, 90, and 180 days to deliver measurable value and establish
+            the operating model for AI at scale.
           </p>
           <h3>30 Days: Diagnose and De-risk</h3>
           <ul>
@@ -47,13 +47,13 @@ export default function Page() {
           </ul>
           <h3>Funding and ROI</h3>
           <p>
-            Start with staged funding tied to milestone outcomes. Use a blended ROI model that captures hard savings,
-            and revenue impact, plus risk-reduction value. Reinvest a fixed percentage of realized savings into core,
-            platform capabilities to accelerate compounding returns.,
+            Start with staged funding tied to milestone outcomes. Use a blended ROI model that captures hard savings
+            and revenue impact, plus risk-reduction value. Reinvest a fixed percentage of realized savings into core
+            platform capabilities to accelerate compounding returns.
           </p>
           <div>
             <Link href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-700">
-              Talk to an Expert,
+              Talk to an Expert
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Model Routing Cookbook',
+  title: 'AI 2026: Model Routing Cookbook'
   description: 'Practical recipes for policy-gated routing, fallbacks, and cost-aware selection.'
 }
 export default function Page() {

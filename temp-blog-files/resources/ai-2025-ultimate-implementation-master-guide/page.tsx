@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft; Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react',
+import { ArrowLeft; Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react'
 export default function AI2025UltimateImplementationMasterGuide() {
   return (
     <div>
@@ -13,14 +13,14 @@ export default function AI2025UltimateImplementationMasterGuide() {
             <span className="text-sm font-medium">ULTIMATE GUIDE</span>
           </div>
           <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
-            AI 2025 Ultimate Implementation,
+            AI 2025 Ultimate Implementation
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-              Master Guide,
+              Master Guide
             </span>
           </h1>
           <p>
-            The most comprehensive AI implementation guide for 2025. Includes templates, checklists,
-            best practices, and step-by-step strategies for successful AI transformation in any organization.,
+            The most comprehensive AI implementation guide for 2025. Includes templates, checklists
+            best practices, and step-by-step strategies for successful AI transformation in any organization.
           </p>
           <div>
             <div>
@@ -40,12 +40,12 @@ export default function AI2025UltimateImplementationMasterGuide() {
       {/* Navigation */}
       <div>
         <div>
-          <Link,
-            href="/resources",
+          <Link
+            href="/resources"
             className="inline-flex items-center gap-2 text-gray-600 hover: text-blue-600 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Resources,
+            Back to Resources
           </Link>
         </div>
       </div>
@@ -56,13 +56,13 @@ export default function AI2025UltimateImplementationMasterGuide() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <Brain className="w-6 h-6 text-indigo-600" />
-              Guide Overview,
+              Guide Overview
             </h2>
             <p>
-              This comprehensive master guide provides everything you need to successfully implement AI,
-              in your organization. From initial assessment to full-scale deployment, you'll find,
-              practical tools, templates, and strategies that have been proven to deliver results,
-              across industries and company sizes.,
+              This comprehensive master guide provides everything you need to successfully implement AI
+              in your organization. From initial assessment to full-scale deployment, you'll find
+              practical tools, templates, and strategies that have been proven to deliver results
+              across industries and company sizes.
             </p>
             <div>
               {/* Templates & Checklists */}
@@ -200,7 +200,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
               <div>
                 <div>
                   <div>
-                    1,
+                    1
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Assessment & Planning</h3>
@@ -256,7 +256,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
               <div>
                 <div>
                   <div>
-                    2,
+                    2
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Pilot Implementation</h3>
@@ -312,7 +312,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
               <div>
                 <div>
                   <div>
-                    3,
+                    3
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Full-Scale Deployment</h3>
@@ -370,19 +370,19 @@ export default function AI2025UltimateImplementationMasterGuide() {
           <div>
             <h2 className="text-3xl font-bold mb-4">Get Your Complete Toolkit</h2>
             <p>
-              Download the complete AI 2025 Ultimate Implementation Master Guide with all templates,
-              checklists, and resources included.,
+              Download the complete AI 2025 Ultimate Implementation Master Guide with all templates
+              checklists, and resources included.
             </p>
             <div>
               <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
                 <Download className="w-5 h-5" />
-                Download Complete Guide,
+                Download Complete Guide
               </button>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                Get Expert Consultation,
+                Get Expert Consultation
               </Link>
             </div>
           </div>

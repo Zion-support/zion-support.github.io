@@ -1,10 +1,10 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, TagIcon, DocumentTextIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline',
+import { ArrowLeftIcon; CalendarIcon, ClockIcon, TagIcon, DocumentTextIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
-  title: 'AI 2025 Implementation Ultimate Framework: Complete Roadmap to 1,200% ROI',
-  description: 'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations.',
+  title: 'AI 2025 Implementation Ultimate Framework: Complete Roadmap to 1,200% ROI'
+  description: 'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations.'
   keywords: 'AI implementation, framework, roadmap, ROI, AI strategy, implementation guide, best practices, 2025'
 }
 export default function AI2025ImplementationFrameworkPage() {
@@ -14,12 +14,12 @@ export default function AI2025ImplementationFrameworkPage() {
       <div>
         <div>
           <div>
-            <Link,
-              href="/resources",
+            <Link
+              href="/resources"
               className="flex items-center text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeftIcon className="w-5 h-5 mr-2" />
-              Back to Resources,
+              Back to Resources
             </Link>
           </div>
           <div>
@@ -31,23 +31,23 @@ export default function AI2025ImplementationFrameworkPage() {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            AI 2025 Implementation Ultimate Framework,
+            AI 2025 Implementation Ultimate Framework
           </h1>
           <p>
-            Complete Roadmap to 1,200% ROI,
+            Complete Roadmap to 1,200% ROI
           </p>
           <div>
             <div>
               <CalendarIcon className="w-4 h-4 mr-2" />
-              January 17, 2025,
+              January 17, 2025
             </div>
             <div>
               <ClockIcon className="w-4 h-4 mr-2" />
-              35 min read,
+              35 min read
             </div>
             <div>
               <TagIcon className="w-4 h-4 mr-2" />
-              Implementation Framework, AI Strategy, ROI,
+              Implementation Framework, AI Strategy, ROI
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function AI2025ImplementationFrameworkPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
             <p>
-              This comprehensive framework provides a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations across Fortune 500 companies, this guide offers proven strategies, methodologies, and best practices for AI transformation success.,
+              This comprehensive framework provides a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations across Fortune 500 companies, this guide offers proven strategies, methodologies, and best practices for AI transformation success.
             </p>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Framework Overview</h2>
@@ -462,21 +462,21 @@ export default function AI2025ImplementationFrameworkPage() {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Organization with AI?</h3>
             <p>
-              Contact our expert team for a personalized AI readiness assessment and implementation roadmap.,
-              Discover how your company can achieve 1,200% ROI and join the AI revolution.,
+              Contact our expert team for a personalized AI readiness assessment and implementation roadmap.
+              Discover how your company can achieve 1,200% ROI and join the AI revolution.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
-                Get AI Consultation,
+                Get AI Consultation
               </Link>
-              <Link,
-                href="/resources",
+              <Link
+                href="/resources"
                 className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
               >
-                View All Resources,
+                View All Resources
               </Link>
             </div>
           </div>

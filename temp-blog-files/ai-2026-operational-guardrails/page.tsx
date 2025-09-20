@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Operational Guardrails',
+  title: 'AI 2026: Operational Guardrails'
   description: 'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.'
 }
 export default function OperationalGuardrails2026Page() {
@@ -9,8 +9,8 @@ export default function OperationalGuardrails2026Page() {
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">AI 2026: Operational Guardrails</h1>
       <p>
-        Establish operational guardrails to ensure safe, reliable, and compliant autonomous AI systems. This guide covers,
-        runtime protections, policy gates, evaluation SLAs, and incident response.,
+        Establish operational guardrails to ensure safe, reliable, and compliant autonomous AI systems. This guide covers
+        runtime protections, policy gates, evaluation SLAs, and incident response.
       </p>
       <section className="space-y-6">
         <div>
@@ -27,17 +27,17 @@ export default function OperationalGuardrails2026Page() {
           <ul className="list-disc pl-6 text-gray-700 space-y-1">
             <li>
               <Link href="/blog/ai-2026-production-guardrails-playbook" className="text-purple-700 hover: underline">
-                Production Guardrails Playbook,
+                Production Guardrails Playbook
               </Link>
             </li>
             <li>
               <Link href="/content/ai-2026-agent-risk-management-framework" className="text-purple-700 hover:underline">
-                Agent Risk Management Framework,
+                Agent Risk Management Framework
               </Link>
             </li>
             <li>
               <Link href="/content/ai-2026-autonomous-ops-playbook" className="text-purple-700 hover:underline">
-                Autonomous Ops Playbook,
+                Autonomous Ops Playbook
               </Link>
             </li>
           </ul>

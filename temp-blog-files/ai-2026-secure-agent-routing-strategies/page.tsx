@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Secure Agent Routing Strategies',
+  title: 'AI 2026: Secure Agent Routing Strategies'
   description:
     'Least‑privilege routing, tiered trust, eval‑gated execution, and runtime guards for safe autonomous agents.'
 }
@@ -10,11 +10,11 @@ export default function Page() {
       <header className="mb-8">
         <p className="text-sm font-semibold text-purple-700">New content · September 2025</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-          AI 2026: Secure Agent Routing Strategies,
+          AI 2026: Secure Agent Routing Strategies
         </h1>
         <p>
-          Design safe, reliable routing for autonomous agents with least‑privilege policies, tiered trust, and,
-          evaluation‑gated execution.,
+          Design safe, reliable routing for autonomous agents with least‑privilege policies, tiered trust, and
+          evaluation‑gated execution.
         </p>
       </header>
       <article className="prose prose-purple max-w-none">
@@ -36,12 +36,12 @@ export default function Page() {
         <ul>
           <li>
             <Link className="text-purple-600 font-semibold" href="/content/ai-2026-secure-tooling-permissions-blueprint">
-              Permissions Blueprint,
+              Permissions Blueprint
             </Link>
           </li>
           <li>
             <Link className="text-purple-600 font-semibold" href="/content/ai-2026-evaluation-hub">
-              Evaluation Hub,
+              Evaluation Hub
             </Link>
           </li>
         </ul>

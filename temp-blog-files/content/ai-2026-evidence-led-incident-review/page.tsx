@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Evidence‑Led Incident Review | Zion Tech Group',
+  title: 'AI 2026: Evidence‑Led Incident Review | Zion Tech Group'
   description:
     'Run blameless, evidence‑first incident reviews for agentic systems with eval traces, policy events, and corrective actions.'
 }
@@ -10,9 +10,9 @@ export default function EvidenceLedIncidentReviewPage() {
       <p className="text-sm text-rose-600 font-semibold mb-2">Incident Response</p>
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Evidence‑Led Incident Review</h1>
       <p>
-        Conduct high‑quality post‑incident reviews by assembling verifiable evidence bundles across traces,
-        evaluations, and policy events. This guide details templates, timelines, and roles to ensure durable,
-        corrective actions and safer autonomy over time.,
+        Conduct high‑quality post‑incident reviews by assembling verifiable evidence bundles across traces
+        evaluations, and policy events. This guide details templates, timelines, and roles to ensure durable
+        corrective actions and safer autonomy over time.
       </p>
       <div>
         <h2 className="text-xl font-semibold text-rose-900 mb-2">What You’ll Establish</h2>
@@ -36,12 +36,12 @@ export default function EvidenceLedIncidentReviewPage() {
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
           <li>
             <Link href="/content/ai-2026-agent-incident-response-runbook" className="text-rose-700 hover: underline">
-              Agent Incident Response Runbook,
+              Agent Incident Response Runbook
             </Link>
           </li>
           <li>
             <Link href="/content/ai-2026-evidence-driven-operations" className="text-rose-700 hover:underline">
-              Evidence‑Driven AI Operations,
+              Evidence‑Driven AI Operations
             </Link>
           </li>
         </ul>

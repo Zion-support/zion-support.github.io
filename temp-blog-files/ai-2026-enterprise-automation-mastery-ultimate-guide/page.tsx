@@ -3,15 +3,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata: Metadata = {
-  title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide to Business Transformation',
-  description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies and ROI strategies.',
-  keywords: ['AI automationEnterprise automationAI 2026Business transformation', 'Machine learningProcess optimization'],
-  openGraph: {,
-    title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide',
-    description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies.',
-    type: 'article',
-    publishedTime: '2025-01-14T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
+  title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide to Business Transformation'
+  description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies and ROI strategies.'
+  keywords: ['AI automationEnterprise automationAI 2026Business transformation', 'Machine learningProcess optimization']
+  openGraph: {
+    title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide'
+    description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies.'
+    type: 'article'
+    publishedTime: '2025-01-14T00:00:00.000Z'
+    authors: ['Zion Tech Group']
     tags: ['AIEnterprise AutomationBusiness TransformationAI 2026']
   }
 }
@@ -32,23 +32,23 @@ export default function AI2026EnterpriseAutomationGuide() {
               <span className="text-sm font-medium">🚀 AI 2026 ENTERPRISE AUTOMATION</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI 2026 Enterprise Automation Mastery,
+              AI 2026 Enterprise Automation Mastery
             </h1>
             <p>
-              The Ultimate Guide to Business Transformation with Cutting-Edge AI Technologies,
+              The Ultimate Guide to Business Transformation with Cutting-Edge AI Technologies
             </p>
             <div>
-              <Link,
-                href="#download-guide",
+              <Link
+                href="#download-guide"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Download Complete Guide,
+                Download Complete Guide
               </Link>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Get Expert Consultation,
+                Get Expert Consultation
               </Link>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function AI2026EnterpriseAutomationGuide() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What You'll Achieve</h2>
             <p>
-              Transform your business with AI 2026 technologies and achieve unprecedented results,
+              Transform your business with AI 2026 technologies and achieve unprecedented results
             </p>
           </div>
           <div>
@@ -90,8 +90,8 @@ export default function AI2026EnterpriseAutomationGuide() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Implementation Guide</h2>
               <p>
-                This comprehensive guide covers everything you need to know about implementing,
-                AI 2026 enterprise automation technologies in your organization.,
+                This comprehensive guide covers everything you need to know about implementing
+                AI 2026 enterprise automation technologies in your organization.
               </p>
               <div>
                 <div>
@@ -157,44 +157,44 @@ export default function AI2026EnterpriseAutomationGuide() {
         <div>
           <h2 className="text-3xl font-bold mb-6">Get Your Complete AI 2026 Guide</h2>
           <p>
-            Download the complete implementation guide and start transforming your business today,
+            Download the complete implementation guide and start transforming your business today
           </p>
           <div>
             <div>
               <div>
                 <h3 className="text-2xl font-bold mb-4">Free Download</h3>
                 <p>
-                  Get instant access to the complete AI 2026 Enterprise Automation Mastery guide.,
-                  No registration required.,
+                  Get instant access to the complete AI 2026 Enterprise Automation Mastery guide.
+                  No registration required.
                 </p>
                 <div>
                   <div>
                     <span className="text-green-400 mr-2">✓</span>
-                    Complete 45-page implementation guide,
+                    Complete 45-page implementation guide
                   </div>
                   <div>
                     <span className="text-green-400 mr-2">✓</span>
-                    Real-world case studies and examples,
+                    Real-world case studies and examples
                   </div>
                   <div>
                     <span className="text-green-400 mr-2">✓</span>
-                    ROI calculation templates,
+                    ROI calculation templates
                   </div>
                   <div>
                     <span className="text-green-400 mr-2">✓</span>
-                    Implementation checklist,
+                    Implementation checklist
                   </div>
                 </div>
               </div>
               <div>
-                <Link,
-                  href="/resources/ai-2026-implementation-master-guide",
+                <Link
+                  href="/resources/ai-2026-implementation-master-guide"
                   className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors inline-block"
                 >
-                  Download Now,
+                  Download Now
                 </Link>
                 <p>
-                  PDF • 45 pages • 2.3 MB,
+                  PDF • 45 pages • 2.3 MB
                 </p>
               </div>
             </div>
@@ -209,37 +209,37 @@ export default function AI2026EnterpriseAutomationGuide() {
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum AI Revolution</h3>
               <p>
-                Discover how quantum AI is revolutionizing business operations with breakthrough technologies.,
+                Discover how quantum AI is revolutionizing business operations with breakthrough technologies.
               </p>
-              <Link,
-                href="/blog/quantum-ai-2026-business-revolution-complete-guide",
+              <Link
+                href="/blog/quantum-ai-2026-business-revolution-complete-guide"
                 className="text-purple-600 font-semibold hover:text-purple-800"
               >
-                Read Guide →,
+                Read Guide →
               </Link>
             </div>
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Systems</h3>
               <p>
-                Master autonomous AI systems for enterprise transformation with complete implementation strategies.,
+                Master autonomous AI systems for enterprise transformation with complete implementation strategies.
               </p>
-              <Link,
-                href="/blog/ai-2026-autonomous-systems-enterprise-breakthrough",
+              <Link
+                href="/blog/ai-2026-autonomous-systems-enterprise-breakthrough"
                 className="text-purple-600 font-semibold hover:text-purple-800"
               >
-                Learn More →,
+                Learn More →
               </Link>
             </div>
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation Master Guide</h3>
               <p>
-                The definitive guide to implementing AI 2026 technologies in your enterprise.,
+                The definitive guide to implementing AI 2026 technologies in your enterprise.
               </p>
-              <Link,
-                href="/resources/ai-2026-implementation-master-guide",
+              <Link
+                href="/resources/ai-2026-implementation-master-guide"
                 className="text-purple-600 font-semibold hover:text-purple-800"
               >
-                Download Guide →,
+                Download Guide →
               </Link>
             </div>
           </div>
@@ -250,20 +250,20 @@ export default function AI2026EnterpriseAutomationGuide() {
         <div>
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p>
-            Get expert guidance on implementing AI 2026 technologies in your organization,
+            Get expert guidance on implementing AI 2026 technologies in your organization
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Schedule Consultation,
+              Schedule Consultation
             </Link>
-            <Link,
-              href="/resources",
+            <Link
+              href="/resources"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Browse All Resources,
+              Browse All Resources
             </Link>
           </div>
         </div>

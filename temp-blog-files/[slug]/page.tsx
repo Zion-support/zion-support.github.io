@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react'
+const page: React.FC = () => {
+=======
 <<<<<<< HEAD:temp-blog-files/[slug]/page.tsx
 import React from 'react';
 
@@ -13,10 +17,14 @@ export async function generateStaticParams() {
 }
 
 const page: React.FC<PageProps> = ({ params }) => {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
   return (
     <div>
-      <h3 className="text-xl font-bold mb-4">Blog Post: {params.slug}</h3>
+      <h3 className="text-xl font-bold mb-4">page</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
+<<<<<<< HEAD
+    </div>)}
+=======
     </div>
   );
 };
@@ -30,4 +38,5 @@ const page: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519:temp-problematic-files/[slug]/page.tsx
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
 export default page;

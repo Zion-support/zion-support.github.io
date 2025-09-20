@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Agentic Lifecycle Checklists',
+  title: 'AI 2026: Agentic Lifecycle Checklists'
   description:
     'Practical, evaluation-first checklists for safe, reliable, and cost-effective autonomous agent lifecycles in production.'
 }
@@ -13,15 +13,15 @@ export default function Page() {
           <p className="text-sm font-semibold opacity-90">NEW • September 2025</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">AI 2026: Agentic Lifecycle Checklists</h1>
           <p>
-            A set of concise, adoption-ready checklists covering evaluation gates, safety, observability,
-            incident response, change management, and cost control for enterprise agent platforms.,
+            A set of concise, adoption-ready checklists covering evaluation gates, safety, observability
+            incident response, change management, and cost control for enterprise agent platforms.
           </p>
           <div>
             <Link href="/blog/ai-2026-agent-runbooks-blueprint" className="bg-white text-purple-700 px-5 py-3 rounded-lg font-semibold hover: bg-gray-100">
-              Related: Runbooks Blueprint,
+              Related: Runbooks Blueprint
             </Link>
             <Link href="/content/ai-2026-evaluation-harness-blueprint" className="border-2 border-white text-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700">
-              Evaluation Harness,
+              Evaluation Harness
             </Link>
           </div>
         </div>
@@ -40,10 +40,10 @@ export default function Page() {
             </ul>
             <h2>How to use</h2>
             <p>
-              Start with the readiness checklist, adopt the pre-deploy gates to prevent regressions, then,
-              wire in runtime observability and live evaluations. Standardize changes via approvals and,
-              progressive rollouts. Use the incident response checklist to operationalize a safe default,
-              and continuously optimize costs.,
+              Start with the readiness checklist, adopt the pre-deploy gates to prevent regressions, then
+              wire in runtime observability and live evaluations. Standardize changes via approvals and
+              progressive rollouts. Use the incident response checklist to operationalize a safe default
+              and continuously optimize costs.
             </p>
             <h2>Downloadable templates</h2>
             <ul>

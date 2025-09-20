@@ -4,7 +4,7 @@ import SEO from '../../components/SEO';
 export const metadata = {
   title: 'AI 2026 - Future AI Technologies | Zion Tech Group',
   description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
-  keywords: ['AI 2026future AIquantum AIrevolutionary technology', 'artificial general intelligence']
+  keywords: ['AI 2026', 'future AI', 'quantum AI', 'revolutionary technology', 'artificial general intelligence']
 }
 export default function AI2026Page() {
   return (

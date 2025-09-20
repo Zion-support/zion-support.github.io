@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 'use client';
 
 import React from 'react';
+import Head from 'next/head';
 import { usePathname } from 'next/navigation';
-=======
-'use client'
-import React from 'react'
-import Head from 'next/head'
-import { usePathname } from 'next/navigation'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519
 
 interface SEOProps {
   title?: string;
@@ -25,11 +19,12 @@ interface SEOProps {
 }
 
 const DEFAULTS = {
-  title: 'Zion Tech Group - Revolutionary Technology Solutions',
-  description: 'Leading provider of AI, micro SaaS, and IT services. Transform your business with cutting-edge technology solutions.',
+  title: 'Zion Tech Group - Revolutionary Technology Solutions | AI, Quantum Computing, Micro SAAS',
+  description:
+    "Transform your business with Zion Tech Group's revolutionary AI, quantum computing, and micro SAAS solutions. Leading-edge technology for unprecedented growth.",
   url: 'https://ziontechgroup.com',
   image: 'https://ziontechgroup.com/og-image.svg'
-}
+};
 
 export default function SEO({ 
   title, 
@@ -44,39 +39,25 @@ export default function SEO({
   nofollow, 
   jsonLd 
 }: SEOProps) {
-<<<<<<< HEAD
   const pathname = usePathname();
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url;
   const pageTitle = title || DEFAULTS.title;
   const pageDescription = description || DEFAULTS.description;
   const pagePath = pathname || '/';
-
+  
   // Derive canonical from baseUrl + path, ensure single slash and trailing slash
   const rawDerived = baseUrl.replace(/\/$/, '') + (pagePath.startsWith('/') ? pagePath : `/${pagePath}`);
   const normalizedCanonical = rawDerived.endsWith('/') ? rawDerived : `${rawDerived}/`;
-
-=======
-  const pathname = usePathname()
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url
-  const pageTitle = title || DEFAULTS.title
-  const pageDescription = description || DEFAULTS.description
   
-  // Derive canonical from baseUrl + path, ensure single slash and trailing slash
-  const pagePath = pathname || (url || '/')
-  const rawDerived = baseUrl.replace(/\/$/, '') + (pagePath.startsWith('/') ? pagePath : `/${pagePath}`)
-  const normalizedCanonical = rawDerived.endsWith('/') ? rawDerived : `${rawDerived}/`
-  
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519
   // Prefer explicit image, then ogImage, then default; resolve to absolute URL
   const requestedImage = image || ogImage || DEFAULTS.image;
   const imageUrl = /^(https?:)?\/\//.test(requestedImage)
     ? requestedImage
     : baseUrl.replace(/\/$/, '') + (requestedImage.startsWith('/') ? requestedImage : `/${requestedImage}`);
-
+  
   const envNoIndex = process.env.NEXT_PUBLIC_NOINDEX === 'true';
   const isNoIndex = envNoIndex || (noIndex ?? false) || (noindex ?? false);
   const robotsContent = `${isNoIndex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`;
-
   const imageAlt = 'Zion Tech Group - Revolutionary Technology Solutions';
 
   // Normalize provided canonical (if any) to an absolute URL with trailing slash
@@ -90,6 +71,7 @@ export default function SEO({
   }
   
   const canonicalUrl = withTrailingSlash(canonical ? toAbsoluteUrl(canonical) : normalizedCanonical);
+
   // Default JSON-LD if none provided
   const defaultJsonLd = [
     {
@@ -120,7 +102,7 @@ export default function SEO({
   ];
 
   return (
-    <>
+    <Head>
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -148,6 +130,6 @@ export default function SEO({
       ) : (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(defaultJsonLd) }} />
       )}
-    </>
+    </Head>
   );
 }

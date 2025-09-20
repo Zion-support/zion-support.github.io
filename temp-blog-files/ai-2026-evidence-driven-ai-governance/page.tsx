@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Evidence-Driven AI Governance',
+  title: 'AI 2026: Evidence-Driven AI Governance'
   description:
     'Operationalize governance with verifiable evidence: evaluation results, approvals, and runtime telemetry as first-class artifacts.'
 }
@@ -10,15 +10,15 @@ export default function EvidenceDrivenGovernancePage() {
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Evidence-Driven AI Governance</h1>
       <p>
-        Shift from policy documents to enforceable policy-as-code with automated evidence,
-        collection across the AI lifecycle.,
+        Shift from policy documents to enforceable policy-as-code with automated evidence
+        collection across the AI lifecycle.
       </p>
       <section className="prose prose-lg max-w-none">
         <h2>Foundations</h2>
         <p>
-          Tie every control to verifiable artifacts: evaluation reports, signed approvals,
-          lineage attestations, and runtime telemetry. Gate deployments on evidence quality,
-          not intuition.,
+          Tie every control to verifiable artifacts: evaluation reports, signed approvals
+          lineage attestations, and runtime telemetry. Gate deployments on evidence quality
+          not intuition.
         </p>
         <h3>Implementation Checklist</h3>
         <ul>

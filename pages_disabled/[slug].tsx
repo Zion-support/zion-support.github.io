@@ -1,157 +1,152 @@
-import NextHead from 'next/head';
-import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturisticBackground';
-import UIButton from '../components/ui/Button';
-import UICard from '../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import NextHead from 'next/head'
+import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturisticBackground'
+import UIButton from '../components/ui/Button'
+import UICard from '../components/ui/Card'
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
 
-import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
+import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const service = useMemo(() => {
-    if (!slug) return undefined;
+    if (!slug) return undefined
     const all: any[] = ([] as any[])
       .concat(
-        enhancedRealMicroSaasServices as any,
-        extraServices as any,
-        additionalEnhancedServices as any,
-        innovativeAIServices as any,
-        quantumSpaceServices as any,
-        enterpriseITServices as any,
-        newRealServices as any,
-        marketReadyServices as any,
-        realMarketServices as any,
-        new2025Services as any,
-        newRealInnovations as any,
-        emergingTechnologyServices as any,
-        comprehensiveITSolutions as any,
-        marketValidatedServices as any,
-        curatedMarketServices as any,
-        cuttingEdgeITServices as any,
-        nextGenerationAIServices as any,
-        nextGenAIServices as any,
-        industryRealServices as any,
-        professionalServices as any,
-        realEnterpriseServices2025 as any,
+        enhancedRealMicroSaasServices as any
+        extraServices as any
+        additionalEnhancedServices as any
+        innovativeAIServices as any
+        quantumSpaceServices as any
+        enterpriseITServices as any
+        newRealServices as any
+        marketReadyServices as any
+        realMarketServices as any
+        new2025Services as any
+        newRealInnovations as any
+        emergingTechnologyServices as any
+        comprehensiveITSolutions as any
+        marketValidatedServices as any
+        curatedMarketServices as any
+        cuttingEdgeITServices as any
+        nextGenerationAIServices as any
+        nextGenAIServices as any
+        industryRealServices as any
+        professionalServices as any
+        realEnterpriseServices2025 as any
         realImplementationServices2025 as any
-      );
+      )
     const byLink = all.find(s => {
       try {
-        const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+        const url = new URL(s.link)
+        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-        return false;
+        return false
       }
-    });
-    if (byLink) return byLink;
-<<<<<<< HEAD
-=======
+    })
+    if (byLink) return byLink
 // Node modules will be required inside getStaticPaths to avoid client bundling
 
-type Service = typeof servicesData[number];
+type Service = typeof servicesData[number]
 
 function getAllServices(): Service[] {
-  return servicesData;
+  return servicesData
 }
 
 function toSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractSlugFromLink(link: string): string | null {
   try {
-    const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    if (!path) return null;
-    const parts = path.split('/');
-    return parts[parts.length - 1] || null;
+    const url = new URL(link)
+    const path = url.pathname.replace(/^\/+|\/+$/g, '')
+    if (!path) return null
+    const parts = path.split('/')
+    return parts[parts.length - 1] || null
   } catch {
-    return null;
+    return null
   }
 }
 
 export async function getStaticPaths() {
-  const services = getAllServices();
-  const slugs = new Set<string>();
+  const services = getAllServices()
+  const slugs = new Set<string>()
 
   for (const s of services) {
     if (s.link) {
-      const fromLink = extractSlugFromLink(s.link);
+      const fromLink = extractSlugFromLink(s.link)
       if (fromLink) {
-        slugs.add(fromLink);
-        continue;
+        slugs.add(fromLink)
+        continue
       }
     }
-    if (s.id) slugs.add(toSlug(s.id));
-    else if (s.name) slugs.add(toSlug(s.name));
+    if (s.id) slugs.add(toSlug(s.id))
+    else if (s.name) slugs.add(toSlug(s.name))
   }
 
   // Exclude any slugs that already have explicit pages under /pages
-  const fs = require('fs');
-  const path = require('path');
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-  const existing = new Set<string>();
+  const fs = require('fs')
+  const path = require('path')
+  const pagesDir = path.join(process.cwd(), 'pages')
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
+  const existing = new Set<string>()
   for (const entry of entries) {
     // skip internals and folders we don't want to shadow
-    if (entry.name.startsWith('_')) continue;
-    if (['api', 'reports', 'services'].includes(entry.name)) continue;
+    if (entry.name.startsWith('_')) continue
+    if (['api', 'reports', 'services'].includes(entry.name)) continue
     if (entry.isDirectory()) {
-      existing.add(entry.name);
-      continue;
+      existing.add(entry.name)
+      continue
     }
     if (entry.isFile()) {
-      const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+      const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/)
       if (m) {
-        const base = m[1];
-        if (!['index', '[slug]'].includes(base)) existing.add(base);
+        const base = m[1]
+        if (!['index', '[slug]'].includes(base)) existing.add(base)
       }
     }
   }
 
-  const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+  const filtered = Array.from(slugs).filter((slug) => !existing.has(slug))
 
   return {
-    paths: filtered.map((slug) => ({ params: { slug } })),
+    paths: filtered.map((slug) => ({ params: { slug } }))
     fallback: false
-  };
+  }
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const services = getAllServices();
-  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+  const services = getAllServices()
+  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '')
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   let service: Service | undefined = services.find((s) => {
-    if (!s.link) return false;
-    const fromLink = extractSlugFromLink(s.link);
-    return fromLink === incomingSlug;
-  });
+    if (!s.link) return false
+    const fromLink = extractSlugFromLink(s.link)
+    return fromLink === incomingSlug
+  })
 
   if (!service) {
-    service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+    service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
   }
 
   if (!service) {
-    return { notFound: true };
+    return { notFound: true }
   }
 
   return {
     props: { service }
-  };
+  }
 }
 
 export default function ServiceDetailTopLevelPage({ service }: { service: Service }) {
   const contactInfo = service.contactInfo || {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-  };
+  }
 
   return (
     <UltraFuturisticBackgroundComponent variant="quantum" intensity="high">
@@ -248,5 +243,5 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
         </div>
       </div>
     </UltraFuturisticBackgroundComponent>
-  );
+  )
 }

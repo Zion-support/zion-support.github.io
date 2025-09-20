@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
+import React from 'react'
+import SEO from '@/components/SEO'
 
 export default function AutonomousSystems2026Page() {
   return (
@@ -17,5 +17,5 @@ export default function AutonomousSystems2026Page() {
         </div>
       </div>
     </div>
-  );
+  )
 }

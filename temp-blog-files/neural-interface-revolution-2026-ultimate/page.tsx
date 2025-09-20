@@ -3,8 +3,8 @@ import Link from 'next/link'
 import SEO from '../../components/SEO';
 import Card from '../../components/ui/Card';
 export const metadata = {
-  title: 'Neural Interface Revolution 2026 Ultimate - Direct Brain-Computer Integration',
-  description: 'Experience the ultimate neural interface revolution of 2026, where direct brain-computer integration transforms human capabilities and communication.',
+  title: 'Neural Interface Revolution 2026 Ultimate - Direct Brain-Computer Integration'
+  description: 'Experience the ultimate neural interface revolution of 2026, where direct brain-computer integration transforms human capabilities and communication.'
   keywords: ['neural interface 2026brain-computer interfaceneural implantsmind control', 'neural technology']
 }
 export default function NeuralInterfaceRevolution2026Ultimate() {
@@ -24,24 +24,24 @@ export default function NeuralInterfaceRevolution2026Ultimate() {
               <span className="text-sm font-medium">🧠 NEURAL REVOLUTION</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
-              Neural Interface Revolution 2026 Ultimate,
+              Neural Interface Revolution 2026 Ultimate
             </h1>
             <p>
-              Experience the ultimate neural interface revolution of 2026. Direct brain-computer integration,
-              that transforms human capabilities, communication, and interaction with technology.,
+              Experience the ultimate neural interface revolution of 2026. Direct brain-computer integration
+              that transforms human capabilities, communication, and interaction with technology.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all transform hover:scale-105"
               >
-                Join the Revolution,
+                Join the Revolution
               </Link>
-              <Link,
-                href="/neural-interface-revolution-2025",
+              <Link
+                href="/neural-interface-revolution-2025"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-all"
               >
-                Learn More,
+                Learn More
               </Link>
             </div>
           </div>
@@ -56,8 +56,8 @@ export default function NeuralInterfaceRevolution2026Ultimate() {
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold mb-4">Direct Neural Control</h3>
               <p>
-                Revolutionary neural interfaces that enable direct control of devices,
-                computers, and prosthetics through pure thought.,
+                Revolutionary neural interfaces that enable direct control of devices
+                computers, and prosthetics through pure thought.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• 99.9% accuracy in thought detection</li>
@@ -69,8 +69,8 @@ export default function NeuralInterfaceRevolution2026Ultimate() {
               <div className="text-4xl mb-4">💭</div>
               <h3 className="text-2xl font-bold mb-4">Neural Communication</h3>
               <p>
-                Breakthrough technology enabling direct brain-to-brain communication,
-                sharing thoughts, emotions, and experiences instantly.,
+                Breakthrough technology enabling direct brain-to-brain communication
+                sharing thoughts, emotions, and experiences instantly.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• Instant thought transmission</li>
@@ -82,8 +82,8 @@ export default function NeuralInterfaceRevolution2026Ultimate() {
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Enhanced Cognition</h3>
               <p>
-                Neural enhancement systems that augment human intelligence, memory,
-                and cognitive abilities beyond natural limitations.,
+                Neural enhancement systems that augment human intelligence, memory
+                and cognitive abilities beyond natural limitations.
               </p>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>• 10x memory enhancement</li>
@@ -214,21 +214,21 @@ export default function NeuralInterfaceRevolution2026Ultimate() {
         <div>
           <h2 className="text-4xl font-bold mb-6">Transform Your Human Potential</h2>
           <p>
-            Join the neural interface revolution and unlock unprecedented human capabilities.,
-            Experience the future of human-computer interaction today.,
+            Join the neural interface revolution and unlock unprecedented human capabilities.
+            Experience the future of human-computer interaction today.
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all transform hover:scale-105"
             >
-              Start Your Neural Journey,
+              Start Your Neural Journey
             </Link>
-            <Link,
-              href="/neural-interfaces-2025",
+            <Link
+              href="/neural-interfaces-2025"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-all"
             >
-              Explore Technology,
+              Explore Technology
             </Link>
           </div>
         </div>

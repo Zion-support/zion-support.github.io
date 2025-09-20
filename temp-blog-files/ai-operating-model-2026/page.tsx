@@ -1,6 +1,6 @@
 import React from 'react'
 export const metadata = {
-	title: 'AI Operating Model 2026',
+	title: 'AI Operating Model 2026'
 	description: 'Design an outcome-driven AI operating model: teams, processes, and platforms.'
 }
 export default function AIOperatingModel2026() {
@@ -8,7 +8,7 @@ export default function AIOperatingModel2026() {
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
 			<h1 className="text-4xl font-bold text-gray-900 mb-4">AI Operating Model 2026</h1>
 			<p>
-				A practical guide to structuring AI teams, workflows, and platform capabilities to deliver sustained business value.,
+				A practical guide to structuring AI teams, workflows, and platform capabilities to deliver sustained business value.
 			</p>
 			<section className="prose max-w-none">
 				<h2>Model Components</h2>
@@ -19,7 +19,7 @@ export default function AIOperatingModel2026() {
 				</ul>
 				<h2>Getting Started</h2>
 				<p>
-					Start with one pod, clear KPIs, and a thin platform slice. Iterate every quarter based on outcomes and developer feedback.,
+					Start with one pod, clear KPIs, and a thin platform slice. Iterate every quarter based on outcomes and developer feedback.
 				</p>
 			</section>
 		</main>)

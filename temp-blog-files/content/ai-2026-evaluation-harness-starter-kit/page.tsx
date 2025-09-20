@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Evaluation Harness Starter Kit',
+  title: 'AI 2026: Evaluation Harness Starter Kit'
   description: 'Ready-to-run scenarios, metrics, and CI hooks to begin eval-driven development.'
 }
 export default function Page() {
