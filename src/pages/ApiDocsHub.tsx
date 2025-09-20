@@ -1,9 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return <div>Component</div>;
-=======
 export default function ApiDocsHub() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -15,5 +11,4 @@ export default function ApiDocsHub() {
       </div>
     </div>
   );
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }

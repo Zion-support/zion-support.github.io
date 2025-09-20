@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   description: 'Advanced AI solutions and technologies for 2025'
 }
 
-<<<<<<< HEAD
-export default function AI2025Page() {
-=======
 export default function AI2025Page() : any {
   const solutions = [
     {
@@ -113,7 +110,6 @@ export default function AI2025Page() : any {
     return colors[color as keyof typeof colors] || colors.blue
   }
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

@@ -1,25 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-=======
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-}
-
-export function SEO({ title, description, keywords, canonical }: SEOProps) {
-  return (
-    <>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-    </>
-  );
-}
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 interface SEOProps {
   title: string;
@@ -27,13 +6,15 @@ interface SEOProps {
   canonical?: string;
   url?: string;
   image?: string;
+  keywords?: string;
 }
 
-export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, image }) => {
+export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, image, keywords }) => {
   return (
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical || url} />
       {image && <meta property="og:image" content={image} />}
       <meta property="og:title" content={title} />

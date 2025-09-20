@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages/CategoryDetail.tsx
-<<<<<<< HEAD:temp_broken_pages/CategoryDetail.tsx
-return (
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -22,7 +18,6 @@ export default function CategoryDetail({ params }: CategoryDetailProps) {
   };
 
   return (
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CategoryDetail.tsx
     <>
       <SEO
         title={`${category.title} | Zion AI`}
@@ -55,25 +50,7 @@ export default function CategoryDetail({ params }: CategoryDetailProps) {
             <p className="text-gray-300">Category details and services coming soon...</p>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_pages/CategoryDetail.tsx
-      </Suspense>
-</>
-  )
-import React from 'react';
-
-export default function CategoryDetail() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">CategoryDetail</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
-      </div>
-    </div>
-  );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/CategoryDetail.tsx
-=======
       </div>
     </>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CategoryDetail.tsx
 }

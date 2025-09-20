@@ -52,27 +52,3 @@ const refCode = localStorage.getItem("referral_code");
 if (!refCode) return;
 
 // Call API to record the referral;
-<<<<<<< HEAD
-const response = await apiClient("/api/track-referral", {
-method: "POST",;
-headers: {;
-"Content-Type": "application/json";
-},
-body: JSON.stringify({;
-refCode;
-userId;
-email;,
-ipAddress: "" // This will be captured by the server;
-})});
-ipAddress: "" // This will be captured by the server;})});
-
-if (response.ok) {
-// Clear the stored referral code;
-localStorage.removeItem("referral_code");
-}
-} catch (error) {
-
-}
-}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

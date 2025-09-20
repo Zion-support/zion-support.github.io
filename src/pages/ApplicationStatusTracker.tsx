@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-interface Service {
-  id: string;
-  name: string;
-}
-
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Briefcase, Inbox } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-
-const mockApplications = [
-  {
-    id: "1",
-    jobTitle: "Senior React Developer",
-    company: "Tech Corp",
-    status: "Under Review",
-    appliedDate: "2024-01-15",
-    lastUpdate: "2024-01-20"
-  },
-  {
-    id: "2", 
-    jobTitle: "Full Stack Engineer",
-    company: "StartupXYZ",
-    status: "Interview Scheduled",
-    appliedDate: "2024-01-10",
-    lastUpdate: "2024-01-18"
-  },
-  {
-    id: "3",
-    jobTitle: "Frontend Developer",
-    company: "Design Co",
-    status: "Rejected",
-    appliedDate: "2024-01-05",
-    lastUpdate: "2024-01-12"
-  }
-];
-=======
 import { SEO } from '@/components/SEO';
 import { ApplicationsTracker } from '@/components/jobs/applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -101,7 +62,6 @@ function ApplicationStatusTrackerContent() {
     </>
   );
 }
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function ApplicationStatusTracker() {
   return (
@@ -126,7 +86,7 @@ export default function ApplicationStatusTracker() {
                 <Briefcase className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">{mockApplications.length}</div>
+                <div className="text-2xl font-bold">1</div>
               </CardContent>
             </Card>
 
@@ -136,9 +96,7 @@ export default function ApplicationStatusTracker() {
                 <Inbox className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">
-                  {mockApplications.filter(app => app.status === "Under Review").length}
-                </div>
+                <div className="text-2xl font-bold">1</div>
               </CardContent>
             </Card>
 
@@ -148,9 +106,7 @@ export default function ApplicationStatusTracker() {
                 <Briefcase className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">
-                  {mockApplications.filter(app => app.status === "Interview Scheduled").length}
-                </div>
+                <div className="text-2xl font-bold">0</div>
               </CardContent>
             </Card>
           </div>

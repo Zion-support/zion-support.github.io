@@ -1,30 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
-<<<<<<< HEAD:src/pages/Careers.tsx
-import { SEO } from "@/components/SEO";,
-import { GradientHeading } from "@/components/GradientHeading";,
-import { Button } from "@/components/ui/button";,
-import { Card, CardContent } from "@/components/ui/card";,
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
-import Link from "next/link";
-import { CAREER_JOBS } from "@/data/careersJobs";
-
-export default function Careers() {
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
-  return (
-  return (
-  return (
-    <>
-      <SEO
-title='Careers at Zion - Join Our Team'
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -35,12 +8,6 @@ import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careersJobs";
 
 export default function Careers() {
-  return (
-    <>
-      <SEO
-        title='Careers at Zion - Join Our Team'
->>>>>>> 9ed9c11c4cc6835af67936874b7aa0ffe8bbcb03:temp_broken_pages/Careers.tsx
-=======
   const featuredJobs = CAREER_JOBS.filter(job => job.featured);
   const allJobs = CAREER_JOBS;
 
@@ -48,7 +15,6 @@ export default function Careers() {
     <>
       <SEO
         title='Careers at Zion - Join Our Team'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers AI jobs tech careers remote work startup jobs'
         canonical='https://app.ziontechgroup.com/careers'
@@ -131,38 +97,6 @@ export default function Careers() {
           </Tabs>
         </div>
       </main>
-<<<<<<< HEAD:temp_broken_pages/Careers.tsx
-</>
-  )
-import React from 'react';
-import { SEO } from "../components/SEO";
-const Careers: React.FC = () => {
-  return(<>
-      <SEO title="Careers - Zion Tech Group" />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>
-          <p className="text-lg text-gray-600">Content coming soon...</p>
-        </div>
-      </div>
-</>
-  )
-}
-export default Careers
-import React from 'react';
-
-export default function Careers() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
-        <p className="text-lg text-gray-600">Join our team...</p>
-      </div>
-    </div>
-  );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Careers.tsx
-=======
     </>
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Careers.tsx
 }

@@ -32,10 +32,6 @@ const stats = [
   { label: "Successful Matches", value: "95%" },
   { label: "Client Satisfaction", value: "98%" },
   { label: "Time Saved", value: "70%" }
-<<<<<<< HEAD:src/pages/AITalentMatchingPage.tsx
-];
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5:temp_broken_pages_all/AITalentMatchingPage.tsx
 
 export default function AITalentMatchingPage() {
   return (
@@ -49,7 +45,3 @@ export default function AITalentMatchingPage() {
       ctaLink="/contact"
     />
   );
-<<<<<<< HEAD:src/pages/AITalentMatchingPage.tsx
-}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5:temp_broken_pages_all/AITalentMatchingPage.tsx

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter } from 'next/router';
 import { SEO } from '@/components/SEO';
-import Header from '@/components/Header';
-import { CategoryCard } from '@/components/CategoryCard';
+import { Header } from '@/components/Header';
+import { ListingGridSkeleton } from '@/components/ListingGridSkeleton';
 import { Folder } from 'lucide-react';
 
 interface Listing {
@@ -14,22 +13,6 @@ interface Listing {
   image: string;
   category: string;
 }
-
-const ListingGridSkeleton = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {Array.from({ length: 6 }).map((_, index) => (
-      <div key={index} className="bg-white rounded-lg shadow-md p-6 animate-pulse">
-        <div className="w-full h-48 bg-gray-300 rounded mb-4"></div>
-        <div className="h-4 bg-gray-300 rounded mb-2"></div>
-        <div className="h-4 bg-gray-300 rounded mb-4"></div>
-        <div className="h-8 bg-gray-300 rounded"></div>
-      </div>
-    ))}
-  </div>
-);
-=======
-import React from 'react';
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function CategoryDetail() {
   const router = useRouter();
