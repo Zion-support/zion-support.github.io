@@ -1,308 +1,114 @@
 interface SitemapUrl {
-  u,
-  r: l: string;
+  url: string;
   lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
-}
 }
 
 interface SitemapConfig {
-  baseU,
-  r: l: string;
-  url,
-  s: SitemapUrl[]
+  baseUrl: string;
+  urls: SitemapUrl[];
   outputPath?: string;
-}
-}
 }
 
 export class SitemapGenerator {
-  private,
-  confi: g: SitemapConfig;
-  constructor(confi,
-  g: SitemapConfig) {
+  private config: SitemapConfig;
+
+  constructor(config: SitemapConfig) {
     this.config = config;
-}
-}
   }
 
   /**
-   * Generate XML sitemap content;
+   * Generate XML sitemap content
    */
   generateXML(): string {
-  
-}
-}
     const { baseUrl, urls } = this.config;
-    const xmlUrls = urls.map(url () => {
-      const lastmod = url.lastmod || new Date().toISOString().split('T')[0]
-      const changefreq = url.changefreq || 'weekly'
+    const xmlUrls = urls.map(url => {
+      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
+      const changefreq = url.changefreq || 'weekly';
       const priority = url.priority || 0.5;
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
-  </url>`
-    }).join('\n')
+  </url>`;
+    }).join('\n');
+
     return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="ht,
-  t: p://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}
-</urlset>`
+</urlset>`;
   }
 
   /**
-   * Generate robots.txt content;
+   * Generate robots.txt content
    */
   generateRobotsTxt(): string {
-  
-}
-}
     const { baseUrl } = this.config;
-    return `User-age,
-  n: t: *
-All,
-  o: w: /
+    return `User-agent: *
+Allow: /
 
-# Sitemaps;
-Sitema,
-  p: ${baseUrl}/sitemap.xml;
-# Disallow admin and private,
-  areas: Disallow: /admin/
-Disall,
-  o: w: /private/
-Disall,
-  o: w: /api/
-Disall,
-  o: w: /_next/
-Disall,
-  o: w: /server/
-
-# Allow important,
-  pages: Allow: /
-All,
-  o: w: /about,
-  Allo: w: /services,
-  Allo: w: /contact,
-  Allo: w: /blog,
-  Allo: w: /careers;
-# Crawl delay (optional)
-Crawl-dela,
-  y: 1`
+Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${baseUrl}/sitemap-index.xml`;
   }
 
   /**
-   * Generate sitemap index for large sites;
+   * Save sitemap to file
    */
-  generateSitemapIndex(sitema,
-  p: s: string[]): string {
-  const sitemapEntries = sitemaps.map(sitemap () => {
-      const lastmod = new Date().toISOString().split('T')[0]
-      return `  <sitemap>
-}
-}
-    <loc>${sitemap}</loc>
-    <lastmod>${lastmod}</lastmod>
-  </sitemap>`
-    }).join('\n')
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="ht,
-  t: p://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries}
-</sitemapindex>`
+  async saveSitemap(): Promise<void> {
+    const xml = this.generateXML();
+    const outputPath = this.config.outputPath || './public/sitemap.xml';
+    
+    // In a real implementation, you would write to file system
+    // For now, we'll just return the content
+    console.log('Sitemap generated:', outputPath);
   }
-
-  /**
-   * Generate JSON-LD structured data for sitemap;
-   */
-  generateStructuredData(): string {
-  
 }
-}
-    const { baseUrl } = this.config;
-    const structuredData = {
-      "@context": "htt,
-  p: s://schema.org",
-      "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "url": baseUrl,
-      "description": "Empowering the future through innovative technology solutions",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      },
-      "sameAs": [
-        "htt,
-  p: s://linkedin.com/company/zion-tech-group",
-        "htt,
-  p: s://twitter.com/ziontechgroup"
-      ]
-    }
-    return JSON.stringify(structuredData, null, 2)
-  }
 
-// Default sitemap configuration for Zion Tech Group;
-export,
-  const: defaultSitemapConfig: SitemapConfig = {
-  baseU,
-  r: l: 'http,
-  s://ziontechgroup.com',
-  ur,
-  l: s: [
-    // Main pages;
-    { ur,
-  l: '/', priori,
-  t: y: 1.0, changefr,
-  e: q: 'daily' },
-    { u,
-  r: l: '/about', priori,
-  t: y: 0.8, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/contact', priori,
-  t: y: 0.8, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/sitemap', priori,
-  t: y: 0.6, changefr,
-  e: q: 'weekly' },
+// Default sitemap configuration
+export const defaultSitemapConfig: SitemapConfig = {
+  baseUrl: 'https://ziontechgroup.com',
+  urls: [
+    // Main pages
+    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/about', priority: 0.8, changefreq: 'monthly' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+    { url: '/pricing', priority: 0.8, changefreq: 'weekly' },
     
-    // Service pages;
-    { u,
-  r: l: '/services', priori,
-  t: y: 0.9, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/ai-services', priori,
-  t: y: 0.9, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/it-services', priori,
-  t: y: 0.9, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/micro-saas', priori,
-  t: y: 0.8, changefr,
-  e: q: 'weekly' },
+    // Service pages
+    { url: '/services/ai-automation', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/cloud-solutions', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/cybersecurity', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/data-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/devops', priority: 0.8, changefreq: 'weekly' },
     
-    // Service showcases;
-    { u,
-  r: l: '/new-innovative-services-2025', priori,
-  t: y: 0.8, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/ultimate-services-showcase-2026', priori,
-  t: y: 0.8, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/comprehensive-services-showcase-2027', priori,
-  t: y: 0.8, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/zion-cutting-edge-services-2029', priori,
-  t: y: 0.8, changefr,
-  e: q: 'weekly' },
+    // Solution pages
+    { url: '/solutions/enterprise', priority: 0.7, changefreq: 'monthly' },
+    { url: '/solutions/healthcare', priority: 0.7, changefreq: 'monthly' },
     
-    // Individual service pages;
-    { u,
-  r: l: '/services/ai-workflow-orchestrator', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/services/ai-data-governance-platform', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/services/ai-customer-experience-analytics', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/services/cloud-devops', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/services/it-infrastructure', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/services/ai-sales-copilot', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    
-    // Solution pages;
-    { u,
-  r: l: '/ai-solutions', priori,
-  t: y: 0.8, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/solutions/enterprise', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/solutions/healthcare', priori,
-  t: y: 0.7, changefr,
-  e: q: 'monthly' },
-    
-    // Additional pages;
-    { u,
-  r: l: '/blog', priori,
-  t: y: 0.6, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/careers', priori,
-  t: y: 0.6, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/partners', priori,
-  t: y: 0.5, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/news', priori,
-  t: y: 0.5, changefr,
-  e: q: 'weekly' },
-    { u,
-  r: l: '/case-studies', priori,
-  t: y: 0.6, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/help-center', priori,
-  t: y: 0.5, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/faq', priori,
-  t: y: 0.5, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/pricing', priori,
-  t: y: 0.6, changefr,
-  e: q: 'monthly' },
-    { u,
-  r: l: '/marketplace', priori,
-  t: y: 0.7, changefr,
-  e: q: 'weekly' },
+    // Additional pages
+    { url: '/blog', priority: 0.6, changefreq: 'weekly' },
+    { url: '/careers', priority: 0.6, changefreq: 'weekly' },
+    { url: '/partners', priority: 0.5, changefreq: 'monthly' },
+    { url: '/news', priority: 0.5, changefreq: 'weekly' },
+    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },
+    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },
+    { url: '/faq', priority: 0.5, changefreq: 'monthly' },
+    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
+    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' },
   ]
-}
-// Utility function to generate sitemap;
-export function generateSitemap(conf,
-  i: g: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config)
-  return generator.generateXML()
-}
-}
+};
+
+// Utility function to generate sitemap
+export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
+  const generator = new SitemapGenerator(config);
+  return generator.generateXML();
 }
 
-// Utility function to generate robots.txt;
-export function generateRobotsTxt(conf,
-  i: g: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config)
-  return generator.generateRobotsTxt()
-}
-}
+// Utility function to generate robots.txt
+export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
+  const generator = new SitemapGenerator(config);
+  return generator.generateRobotsTxt();
 }

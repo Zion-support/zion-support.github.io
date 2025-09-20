@@ -1,38 +1,39 @@
-import { apiClient   } from "@/services/api";
-export async function rewardOnboarding(user,
-  I: d: string) {
+import { apiClient } from "@/services/api";
+
+export async function rewardOnboarding(userId: string, action: string, amount: number) {
   await apiClient('/functions/v1/token-manager/earn', {
-  meth,
-  o: d: 'POST',bo,
-  d: y: JSON.stringify({ userId, action, amount })
-  })
+    method: 'POST',
+    body: JSON.stringify({ userId, action, amount })
+  });
 }
 
 export async function earnTokensForPurchase(
-  user,
-  I: d: string,purchaseAmou,
-  n: t: number,purchaseTy,
-  p: e: string;
+  userId: string,
+  purchaseAmount: number,
+  purchaseType: string
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
-  meth,
-  o: d: 'POST',bo,
-  d: y: JSON.stringify({ userId, acti,
-  o: n: 'purchase', amou,
-  n: t: purchaseAmount, purchaseType })
-  })
+    method: 'POST',
+    body: JSON.stringify({ 
+      userId, 
+      action: 'purchase', 
+      amount: purchaseAmount, 
+      purchaseType 
+    })
+  });
 }
 
 export async function earnTokensForReferral(
-  user,
-  I: d: string,referredUser,
-  I: d: string;
+  userId: string,
+  referredUserId: string
 ): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
-  meth,
-  o: d: 'POST',bo,
-  d: y: JSON.stringify({ userId, acti,
-  o: n: 'referral', referredUserId, amou,
-  n: t: 100 })
-  })
+    method: 'POST',
+    body: JSON.stringify({ 
+      userId, 
+      action: 'referral', 
+      referredUserId, 
+      amount: 100 
+    })
+  });
 }
