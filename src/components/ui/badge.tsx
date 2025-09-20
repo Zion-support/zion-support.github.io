@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import { cn } from "@/lib/utils";
-
-interface BadgeProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: "default" | "secondary" | "destructive" | "outline";
-=======
-=======
->>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -42,10 +29,3 @@ const Badge: React.FC<BadgeProps> = ({
 };
 
 export { Badge };
-<<<<<<< HEAD
-
-=======
-export { Badge };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb
-=======
->>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
