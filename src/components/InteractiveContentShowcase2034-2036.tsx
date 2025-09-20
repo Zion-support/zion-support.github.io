@@ -1,182 +1,61 @@
-import React, { useState } from 'react';
-
-
-const InteractiveContentShowcase2034_2036: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const contentItems = [
-    {
-      id: 0,
-      title: "Next-Gen AI Revolution 2034",
-      description: "Experience the most advanced AI systems that transcend human intelligence with consciousness transfer and quantum neural networks.",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500",
-      features: [
-        "Consciousness Transfer Technology",
-        "Quantum Neural Networks", 
-        "Omniversal Computing",
-        "Synthetic Consciousness",
-        "Temporal Processing",
-        "Reality Synthesis"
-      ],
-      link: "/pages/NextGenAIRevolution2034"
-    },
-    {
-      id: 1,
-      title: "Quantum Reality Manipulation 2035",
-      description: "Master the fundamental forces of reality through quantum field manipulation, dimensional engineering, and matter synthesis.",
-      icon: "⚛️",
-      color: "from-cyan-500 to-purple-500",
-      features: [
-        "Quantum Field Manipulation",
-        "Dimensional Engineering",
-        "Matter Synthesis",
-        "Gravity Manipulation",
-        "Temporal Engineering",
-        "Consciousness Projection"
-      ],
-      link: "/pages/QuantumRealityManipulation2035"
-    },
-    {
-      id: 2,
-      title: "Transcendent Consciousness 2036",
-      description: "Achieve the highest state of consciousness evolution, transcending physical limitations and achieving universal awareness.",
-      icon: "🧘",
-      color: "from-pink-500 to-indigo-500",
-      features: [
-        "Universal Awareness",
-        "Transcendent Intelligence",
-        "Omniscient Perception",
-        "Infinite Wisdom",
-        "Consciousness Evolution",
-        "Divine Connection"
-      ],
-      link: "/pages/TranscendentConsciousness2036"
-    }
-  ];
-
-  return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">
-      <div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Interactive Technology Showcase 2034-2036
-        </h2>
-        <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
-          Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself</p>
-        </p>
-      {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        {contentItems.map((item, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeTab === index
-                ? 'bg-white text-purple-600 shadow-lg'
-                : 'bg-white/20 text-white hover:bg-white/30'
-            }`}
-            whileHover={{ scale: 1.05 }}</button>
-            whileTap={{ scale: 0.95 }}</button>
-          ></button>
-            <span className="mr-2">{item.icon}</span>
-            {item.title.split(' ')[0]} {item.title.split(' ')[1]}
-          </button>
-        ))}
-      {/* Content Display */}
-      <div className="relative min-h-[500px]">
-        <AnimatePresence mode="wait">
-          <div
-            key={activeTab}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
-            className="grid md:grid-cols-2 gap-12 items-center"
-          >
-            {/* Content Info */}
-            <div>
-              <div className="flex items-center space-x-4 mb-6">
-                <div className={`text-6xl bg-gradient-to-r ${contentItems[activeTab].color} bg-clip-text text-transparent`}>
-                  {contentItems[activeTab].icon}
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">
-                    {contentItems[activeTab].title}
-                  </h3>
-                  <div className={`w-16 h-1 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}>
-              <p className="text-lg text-gray-300 mb-8"></p>
-                {contentItems[activeTab].description}</p>
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {contentItems[activeTab].features.map((feature, idx) => (
-                  <div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="flex items-center space-x-2 text-sm text-gray-300"
-                  >
-                    <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}>
-                    <span>{feature}</span>
-                ))}
-              <motion.a
-                href={contentItems[activeTab].link}
-                className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Explore {contentItems[activeTab].title.split(' ')[0]} Technology →
-              </motion.a>
-            {/* Interactive Visualization */}
-            <div className="relative">
-              <div className={`bg-gradient-to-br ${contentItems[activeTab].color}/20 backdrop-blur-sm rounded-3xl p-8 border border-white/20`}>
-                <div className="text-center">
-                  <div className="text-8xl mb-6 animate-pulse">
-                    {contentItems[activeTab].icon}
-                  <div className="space-y-4">
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-gray-300">Technology Level</span>
-                        <span className="text-lg font-bold text-white">2034-2036</span>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '95%' }}>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-gray-300">Revolutionary Impact</span>
-                        <span className="text-lg font-bold text-white">∞</span>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}>
-                    <div className="bg-white/10 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-gray-300">Consciousness Integration</span>
-                        <span className="text-lg font-bold text-white">Perfect</span>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}>
-        </AnimatePresence>
-      {/* Additional Features */}
-      <div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="mt-12 grid md:grid-cols-3 gap-6"
-      >
-        <div className="text-center">
-          <div className="text-4xl mb-4">🚀
-          <h4 className="text-xl font-bold text-white mb-2">Revolutionary Technology</h4>
-          <p className="text-gray-300 text-sm">Cutting-edge innovations that transcend current limitations</p>
-        <div className="text-center">
-          <div className="text-4xl mb-4">🧠
-          <h4 className="text-xl font-bold text-white mb-2">Consciousness Evolution</h4>
-          <p className="text-gray-300 text-sm">Advanced consciousness expansion and awareness technologies</p>
-        <div className="text-center">
-          <div className="text-4xl mb-4">⚛️
-          <h4 className="text-xl font-bold text-white mb-2">Reality Manipulation</h4>
-          <p className="text-gray-300 text-sm">Direct control over the fundamental forces of reality</p>
-  );
-};
-
-export default InteractiveContentShowcase2034_2036;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

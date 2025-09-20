@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
 export default FloatingActionButton;
 import { motion, AnimatePresence  } from 'framer-motion';
 

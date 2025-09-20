@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react';
 import { Navigate } from 'react-router-dom';
@@ -55,14 +54,3 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 };
 
 export default ProtectedRoute;
-=======
-import React from 'react';
-export function SupportChatbot() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

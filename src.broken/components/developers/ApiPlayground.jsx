@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
@@ -10,7 +9,6 @@ import { useLocalStorage } from '@/hooks';"
 import { Input } from '@/components/ui/input';"
 import { Textarea } from '@/components/ui/textarea';"
 import { Button } from '@/components/ui/button';"
->>>>>>> main
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
 "
@@ -44,64 +42,8 @@ export function ApiPlayground({ method, path, params = [] }) {
 `
                 Authorization: `Bearer ${apiKey
 
-<<<<<<< HEAD
 }`,
                 "Content-Type": "application/json",
             },
         };
-=======
-
-`
-}`,"
-                "Content-Type": "application/json"}};"
->>>>>>> main
-        if(method !== "GET" && method !== "DELETE") {
-
-            try {
-                options.body = JSON.stringify(JSON.parse(body))}
-            catch {
-
-                options.body = body}
-        }
-        setLoading(true);
-        setResponse(null);
-        try {
-            const res = await fetch(url, options);
-            const text = await res.text();
-            setResponse(text)}
-        catch(err) {
-            setResponse(err.message)}
-        finally {
-
-            setLoading(false)}
-    };"
-    return (<div className="space-y-4">"
-      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>"
-      {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {
-
-  (e) => handleParamChange(p.name,
-  e.target.value)
-
-<<<<<<< HEAD
 } placeholder={p.name}/>))}
-=======
-
-} placeholder={p.name}/>))}"
->>>>>>> main
-      {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}
-      <Button onClick={sendRequest} disabled={loading}>"
-        {loading ? "Sending..." : "Send Request"}
-      </Button>"
-      {response && <CodeBlock code={response} language="json"/>}
-    </div>)};
-export { ApiPlayground };
-export default ApiPlayground;
-;
-export default ApiPlayground;
-export default ApiPlayground;
-export default ApiPlayground;
-export default ApiPlayground;
-export default ApiPlayground;
-export default ApiPlayground;
-export default ApiPlayground;
-"`

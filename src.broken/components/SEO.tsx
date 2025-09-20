@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-import { NextSeo } from 'next-seo';
-
-interface SEOProps {
-=======
-type SEOProps = {
->>>>>>> main
-  title?: string;
-  description?: string;
-  url?: string;
-  image?: string;
-<<<<<<< HEAD
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;

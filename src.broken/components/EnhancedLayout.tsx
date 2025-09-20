@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   children: ReactNode;
   showSidebar?: boolean}
@@ -31,5 +30,3 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
       <FuturisticFooter  />;
     </div>;) };
 '"`
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { <<<<<<< HEAD AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap,  } from 'lucide-react';
  from 'lucide-react';
 import { Link, useNavigate  } from 'react-router-dom';
 
 ) {
->>>>>>> main
 
   const navigate = useNavigate();
   const maxRetries = 3;

@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import { Badge } from '@/components / ui / badge';
  from '@/components / ui / button';
  from '@/components / ui / card';

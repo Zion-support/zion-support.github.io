@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 const steps = [{

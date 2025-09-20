@@ -1,4 +1,3 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
  from 'lucide-react';
 

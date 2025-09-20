@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:zion-os.disabled/zion-os/src/components/Header.tsx
 import React from 'react';
 const Header: React.FC = () => {,
   return (,
@@ -9,20 +7,6 @@ const Header: React.FC = () => {,
     </div>,
   ),};
 export default Header;
-========
-'use client';
-
-import { useState, useEffect } from 'react';
-=======
-'use client';
-
-import { useState } from 'react';
->>>>>>> origin/zion-website-clean
-import Link from 'next/link';
-
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-<<<<<<< HEAD
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,28 +17,9 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-=======
->>>>>>> origin/zion-website-clean
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-<<<<<<< HEAD
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Research & Development', href: '/research-development' },
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Research', href: '/research-development' },
->>>>>>> origin/zion-website-clean
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
-  const services = [
-<<<<<<< HEAD
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
     { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
@@ -84,57 +49,12 @@ export default function Header() {
               <span className="text-xl font-bold gradient-text text-shadow">
                 Zion Tech Group
               </span>
-=======
-    { name: 'AI Automation', href: '/ai-automation-services' },
-    { name: 'Autonomous Business', href: '/ai-autonomous-business-operations' },
-    { name: 'Cybersecurity', href: '/advanced-cybersecurity-suite' },
-    { name: 'IT Infrastructure', href: '/advanced-it-infrastructure-services' },
-    { name: 'Quantum Computing', href: '/quantum-services' },
-    { name: 'Space Technology', href: '/space-tech' },
-  ];
-
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">Zion Tech Group</span>
->>>>>>> origin/zion-website-clean
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-<<<<<<< HEAD
           <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
-=======
-          <nav className="hidden md:flex space-x-8">
->>>>>>> origin/zion-website-clean
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-<<<<<<< HEAD
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"
                 aria-label={`Navigate to ${item.name} page`}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
-=======
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                {item.name}
->>>>>>> origin/zion-website-clean
-              </Link>
-            ))}
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-<<<<<<< HEAD
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -148,18 +68,6 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6 grid grid-cols-1 gap-3">
-=======
-              <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                Services
-              </button>
-              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-2">
->>>>>>> origin/zion-website-clean
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-<<<<<<< HEAD
                       className="text-gray-300 hover:text-white p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group/item"
                       aria-label={`Navigate to ${service.name} service page`}
                     >
@@ -169,38 +77,11 @@ export default function Header() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-=======
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    >
-                      {service.name}
->>>>>>> origin/zion-website-clean
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </nav>
-
-          {/* CTA Button */}
-<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               aria-label="Get started with Zion Tech Group"
-=======
-          <div className="hidden md:block">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors"
->>>>>>> origin/zion-website-clean
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-<<<<<<< HEAD
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
@@ -216,27 +97,6 @@ export default function Header() {
               )}
             </svg>
           </button>
-=======
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
->>>>>>> origin/zion-website-clean
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-<<<<<<< HEAD
           <div 
             id="mobile-menu"
             className="lg:hidden border-t border-white/10 animate-fade-in"
@@ -244,79 +104,18 @@ export default function Header() {
             aria-label="Mobile menu"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-=======
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mb-4">
->>>>>>> origin/zion-website-clean
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-<<<<<<< HEAD
                   className="block px-3 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                   aria-label={`Navigate to ${item.name} page`}
-=======
-                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                  onClick={() => setIsMenuOpen(false)}
->>>>>>> origin/zion-website-clean
-                >
-                  {item.name}
-                </Link>
-              ))}
-<<<<<<< HEAD
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
-=======
-              <div className="pt-4 border-t border-gray-200">
-                <p className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  Services
-                </p>
->>>>>>> origin/zion-website-clean
-                {services.map((service) => (
-                  <Link
-                    key={service.name}
-                    href={service.href}
-<<<<<<< HEAD
                     className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                     aria-label={`Navigate to ${service.name} service page`}
-=======
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                    onClick={() => setIsMenuOpen(false)}
->>>>>>> origin/zion-website-clean
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-<<<<<<< HEAD
               <div className="pt-4">
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                   aria-label="Get started with Zion Tech Group"
-=======
-              <div className="pt-4 border-t border-gray-200">
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                  onClick={() => setIsMenuOpen(false)}
->>>>>>> origin/zion-website-clean
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-<<<<<<< HEAD
 }
->>>>>>>> origin/pm2-automation-fixes:zion-os/src/components/Header.tsx
-=======
-}
->>>>>>> origin/zion-website-clean

@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
 export default InnovativeServicesShowcase;
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 

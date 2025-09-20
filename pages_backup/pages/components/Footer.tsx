@@ -1,77 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Database Solutions', href: '/database-solutions' }
-    ],
-    solutions: [
-      { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-      { name: 'Startup Solutions', href: '/startup-solutions' },
-      { name: 'Industries', href: '/industries' },
-      { name: 'Custom Development', href: '/custom-development' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Consulting', href: '/consulting' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'News', href: '/news' },
-      { name: 'Partners', href: '/partners' }
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Documentation', href: '/docs/api' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Security', href: '/security' },
-      { name: 'Compliance', href: '/compliance' },
-      { name: 'Accessibility', href: '/accessibility' }
-    ]
-  };
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
-  ];
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>Footer | Zion Tech Group</title>
-        <meta name="description" content="Footer - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Footer</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default Footer;
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
+      <Helmet>,
+        <title>Footer | Zion Tech Group</title>,
+        <meta name="description" content="Footer - Revolutionary technology solutions" />,
+      </Helmet>,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center">,
+          <h1 className="text-4xl font-bold mb-6">Footer</h1>,
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
+        </div>,
+      </div>,
+    </div>,

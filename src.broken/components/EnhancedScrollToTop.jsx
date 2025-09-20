@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 export default EnhancedScrollToTop;
 import { motion, AnimatePresence  } from 'framer-motion';
 

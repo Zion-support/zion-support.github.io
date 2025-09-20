@@ -1,4 +1,3 @@
-import { <<<<<<< HEAD import { Badge } from './ui / badge';
 
 export default function Page() {
   };
