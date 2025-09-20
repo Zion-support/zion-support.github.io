@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-problematic-pages/admin/ReviewsModeration.tsx
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 <<<<<<<< HEAD:backup-problematic-pages/admin/ReviewsModeration.tsx
 import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
@@ -16,7 +12,6 @@ CardHeader;
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from "@/utils/productionLogger";
-========
 import { SEO,  } from '@/components/SEO'
 import { ReviewsModerationTable,  } from '@/components/admin/reviews/ReviewsModerationTable'
 import { ProtectedRoute,  } from '@/components/ProtectedRoute'
@@ -118,7 +113,6 @@ export default function ReviewsModeration() {
 return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage approve or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5" /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTable reviews= {reviews}isLoading= {isLoading}onRefresh= {
   handleRefresh "
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>)
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -141,4 +135,3 @@ export default function ReviewsModeration() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/admin/ReviewsModeration.tsx

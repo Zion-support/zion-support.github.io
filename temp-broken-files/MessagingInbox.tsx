@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import React { useEffect useState } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import { MessageSquare, Video } from "lucide-react";
@@ -21,7 +20,6 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
-========
 import { MessageSquare, Video,  } from 'lucide-react';
 import { useMessaging,  } from '@/context/MessagingContext';
 import { ProtectedRoute,  } from '@/components/ProtectedRoute';
@@ -125,4 +123,3 @@ export default function MessagingInbox() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MessagingInbox.tsx

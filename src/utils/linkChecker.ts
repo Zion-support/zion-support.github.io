@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-export interface LinkInfo {url: string, status: "working" | "broken" | "missing" | "external";,
-page: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 anchor?: string;}
 error?: string}
@@ -106,9 +101,6 @@ getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 getMissingPages(): string[] {return this.missingPages}
 }
 
-<<<<<<< HEAD
-export default LinkChecker;
-=======
 private extractPageTitle(content: string): string {
 const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
 return titleMatch ? titleMatch[1].trim() : "Untitled"}
@@ -128,4 +120,3 @@ return this.missingPages}
 
 export default LinkChecker;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

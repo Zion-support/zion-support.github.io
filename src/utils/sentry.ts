@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-let nodeSentry: any;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 try {// Optional dependency for server-side logging;
 nodeSentry = require("@sentry/node")} catch {nodeSentry = null}
 
@@ -15,7 +11,4 @@ if (typeof console !== "undefined") {
 (window as any).Sentry.captureException(error)} else if (nodeSentry?.captureException) {nodeSentry.captureException(error)}
 }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

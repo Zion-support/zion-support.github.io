@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
@@ -13,7 +12,6 @@ import { useAuth } from "@/context/auth/AuthProvider";
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { MAX_PRICE, MIN_PRICE } from "@/data/marketplaceData";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
-========
 import { useRouter, ,  } from 'next/router';
 import { useApiErrorHandling, ,  } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -349,7 +347,6 @@ export default function Marketplace() {
   );
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
 }
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -372,4 +369,3 @@ export default function Marketplace() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Marketplace.tsx

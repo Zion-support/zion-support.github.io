@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-export interface LinkValidationResult {url: string, status: "valid" | "broken" | "external" | "protocol";
-parentPage?: string;
-suggestedFix?: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 httpStatus?: number;}
 error?: string}
@@ -160,9 +154,5 @@ ${redirects}`;
 static generateSitemapExclusions(): string[] {return Object.keys(this.BROKEN_LINK_MAPPINGS)}
 }
 
-<<<<<<< HEAD
-export const linkValidator = new LinkValidator();
-=======
 export const linkValidator = new LinkValidator();
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

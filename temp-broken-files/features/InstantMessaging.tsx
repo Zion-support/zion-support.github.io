@@ -3,11 +3,6 @@ import { SEO } from "@/components/SEO";
 
 export default function InstantMessaging() {
   return (
-<<<<<<< HEAD:temp-broken-files/features/InstantMessaging.tsx
-  return (
-  return (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/InstantMessaging.tsx
     <>
       <SEO 
         title="InstantMessaging - Zion Tech Group"
@@ -21,13 +16,7 @@ export default function InstantMessaging() {
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
-<<<<<<< HEAD:temp-broken-files/features/InstantMessaging.tsx
-      </main>
-</>
-}
-=======
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/InstantMessaging.tsx

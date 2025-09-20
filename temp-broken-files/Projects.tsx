@@ -1,7 +1,5 @@
 <<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
 import { Clock, Briefcase } from "lucide-react";
-========
 import { Clock, Briefcase,  } from 'lucide-react'
 >>>>>>>> pr-22690:temp-broken-files/Projects.tsx
 function ProjectsContent() { const { projects, isLoading } = useProjects()
@@ -92,5 +90,4 @@ export default function Projects() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Projects.tsx
 }

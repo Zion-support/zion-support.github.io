@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { createContext, useContext } from "react";
-import { useAuth } from "@/hooks/useAuth";
-
-export const AuthProvider: any = ({ children }: { children: React.ReactNode }) => {;
-const {;
-user; setUser;
-isLoading; setIsLoading;
-onboardingStep; setOnboardingStep;
-tokens; setTokens;
-=======
 import React, { useEffect } from "react";
 import { supabase, getFromProfiles } from "../../integrations/supabase/client, ";
 import { useAuthOperations } from "../../hooks/useAuthOperations, ";
@@ -31,17 +20,12 @@ user, setUser;
 isLoading, setIsLoading;
 onboardingStep, setOnboardingStep;
 tokens, setTokens;
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 } = useAuthState();
 
 const navigate = useNavigate();
 const location = useLocation();
 const dispatch = useDispatch<AppDispatch>();
-<<<<<<< HEAD
-const { handleSignedIn; handleSignedOut } = useAuthEventHandlers(setUser; setOnboardingStep);
-=======
 const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 
 const {
 login: loginImpl;,
@@ -53,19 +37,11 @@ loginWithGoogle;
 loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3;
-<<<<<<< HEAD
-} = useAuthOperations(setUser; setIsLoading);
-
-// Wrapper for login to match the AuthContextType interface;
-const login = async (email: string; password: string) => {
-const { res; data } = await loginUser(email; password); // Calls /api/auth/login;
-=======
 } = useAuthOperations(setUser, setIsLoading);
 
 // Wrapper for login to match the AuthContextType interface;
 const login = async (email: string, password: string) => {
 const { res, data } = await loginUser(email, password); // Calls /api/auth/login;
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 
 // Check for specific "Email not confirmed" error first;
 if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
@@ -75,37 +51,6 @@ description: data.error || "Email not confirmed. Please check your inbox to veri
 variant: "destructive";
 });
 return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
-<<<<<<< HEAD
-interface AuthContextType {
-  user: any;
-  loading: boolean;
-  login: (email: string, password: string) => Promise<any>;
-  logout: () => void;
-  register: (email: string, password: string, name: string) => Promise<any>;
-  isAuthenticated: boolean;
-  isAdmin: boolean;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const auth = useAuth();
-
-  return (
-    <AuthContext.Provider value={auth}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuthContext = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuthContext must be used within an AuthProvider");
-  }
-  return context;
-};
-=======
 }
 
 // Handle other errors from the API call;
@@ -263,4 +208,3 @@ return (
 </AuthContext.Provider>
 );
 };<//AuthContext.Provider><///AuthContext.Provider>
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff

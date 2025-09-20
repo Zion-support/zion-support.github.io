@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/pages/ClientDashboard.tsx
-import React from 'react';
-
-=======
 import { useState, useEffect,  } from "react",
 import { JobsList,  } from "@/components/jobs/JobsList",
 import { Button,  } from "@/components/ui/button",
@@ -115,7 +111,6 @@ title="Client Dashboard | Zion AI Marketplace"
     </>
   )
 }
->>>>>>> pr-22690:temp-broken-files/ClientDashboard.tsx
 export default function ClientDashboard() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

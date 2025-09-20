@@ -36,9 +36,4 @@ const loadComponent = componentName => {    return import(`./components/${compon
 return { loadComponent }
 };
 link.rel = "preload";
-<<<<<<< HEAD
 link.href = resource, link.as = resource.endsWith(".css") ? "style" : "font";
-link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font";
-=======
-link.href = resource, link.as = resource.endsWith(".css") ? "style" : "font";
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff

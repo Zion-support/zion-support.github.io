@@ -1,12 +1,6 @@
-<<<<<<< HEAD:src/pages/BlogPost.tsx
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import { Separator } from "@/components/ui/separator";
-=======
 import { ArrowLeft,, Calendar,, Clock,, ChevronLeft,, ChevronRight,, Share2,, Facebook,, Twitter, Linkedin,  } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator,  } from "@/components/ui/separator";
->>>>>>> pr-22690:temp-broken-files/BlogPost.tsx
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app you would fetch this from an API,

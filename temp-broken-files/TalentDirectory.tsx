@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/TalentDirectory.tsx
 import React { useState useEffect } from 'react';
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import Link from 'next/link';
@@ -14,7 +13,6 @@ import { useTalentDirectory } from "@/hooks/useTalentDirectory";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-========
 import { useAuth, ,  } from '@/hooks/useAuth';
 import { useRouterReady,, useRouteChange, ,  } from '@/hooks/useRouterReady';
 import { FilterSidebar, ,  } from '@/components/talent/FilterSidebar';
@@ -101,7 +99,6 @@ export default function TalentDirectory() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">TalentDirectory</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentDirectory.tsx
       </div>
     </div>
   );

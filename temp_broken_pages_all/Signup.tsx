@@ -1,7 +1,5 @@
 <<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { useFormik } from "formik";
@@ -15,7 +13,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import { AuthButtons } from "@/components/AuthButtons";
 import { AlertCircle, CheckCircle, Mail } from "lucide-react";
-========
 import { useState,, useEffect, ,  } from 'react';
 import { useRouter,  } from 'next/router', // Changed from react-router-dom,
 import { useFormik, ,  } from 'formik';
@@ -104,7 +101,6 @@ FormControl;
 FormItem;
 , FormLabel,;
 FormMessage } from "@/components/ui/form";
-========
 import { useState,  } from "react"
 import { Link,, Navigate, useNavigate,  } from "react-router-dom"
 import { useForm,, type, UseFormReturn,  } from "react-hook-form"
@@ -255,12 +251,10 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 const Signup = () => {
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
 export default function Signup() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Signup.tsx
   return (
     <>
       <SEO 
@@ -271,7 +265,6 @@ export default function Signup() {
       <div className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center">
-<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Signup
             </h1>
@@ -321,8 +314,6 @@ export default function Signup() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Signup.tsx
-=======
             <h1 className="text-3xl font-bold text-white mb-4">Signup</h1>
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
@@ -331,4 +322,3 @@ export default function Signup() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Signup.tsx

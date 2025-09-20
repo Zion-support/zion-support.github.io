@@ -15,57 +15,6 @@ interface BrowseCardsProps {,
 items: BrowseItem[];,
 type: "jobs" | "talents";
 }
-<<<<<<< HEAD
-onViewDetails: (id: string) => void,}
-export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
-const [savedItems; setSavedItems] = useState<string[]>([]),
-
-const toggleSaved = null;
-return (
-<div className="space-y-4 pb-24">;
-{items.map(item => (
-<Card key={item.id} className="overflow-hidden">;
-<CardContent className="p-0">;
-<div className="p-4">;
-<div className="flex justify-between">;
-<div className="flex items-center gap-3">;
-{type === "talents" ? (
-<Avatar className="h-12 w-12">        <Card key={item.id} className="overflow-hidden">;
-<CardContent className="p-0">;
-<div className="p-4">;
-<div className="flex justify-between">;
-<div className="flex items-center gap-3">;
-{type === "talents" ? (
-<Avatar className="h-12 w-12">;
-<AvatarImage src={item.image} alt={item.title} />;
-<AvatarFallback>;
-{item.title.charAt(0).toUpperCase()}
-</AvatarFallback>;
-</Avatar>;
-) : (
-<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
-<span className="text-primary font-semibold">JOB</span>;
-</div>;
-)}
-<div>;
-<h3 className="font-medium">{item.title}</h3>;
-<p className="text-sm text-muted-foreground">;
-{item.subtitle}
-</p>;
-</div>;
-</div>;
-<button;
-className="h-8 w-8 flex items-center justify-center"
-onClick={() => toggleSaved(item.id)}                >;
-{savedItems.includes(item.id) ? (
-<BookmarkCheck className="h-5 w-5 text-primary" />;
-) : (
-<Bookmark className="h-5 w-5 text-muted-foreground" />;
-)}
-</button>;
-</div>;
-<div className="mt-3 flex flex-wrap gap-1">;
-=======
 onViewDetails: (id: string) => void}
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
 const [savedItems, setSavedItems] = useState<string[]>([]),
@@ -115,26 +64,11 @@ onClick={() => toggleSaved(item.id)}                >
 </button>
 </div>
 <div className="mt-3 flex flex-wrap gap-1">
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 {item.badges.map((badge index) => (
 <Badge;
 key={index}
 variant="outline"
 className="text-xs font-normal"                  >                      <AvatarImage src={item.image} alt={item.title} />
-<<<<<<< HEAD
-<AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>;
-</Avatar>;
-) : (
-<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
-<span className="text-primary font-semibold">JOB</span>;
-</div>;
-)}
-<div>;
-<h3 className="font-medium">{item.title}</h3>;
-<p className="text-sm text-muted-foreground">{item.subtitle}</p>;
-</div>;
-</div>;
-=======
 <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
 </Avatar>
 ) : (
@@ -147,21 +81,11 @@ className="text-xs font-normal"                  >                      <AvatarI
 <p className="text-sm text-muted-foreground">{item.subtitle}</p>
 </div>
 </div>
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 <button;
 className="h-8 w-8 flex items-center justify-center"
 onClick={() => toggleSaved(item.id)}
 >;
 {savedItems.includes(item.id) ? (
-<<<<<<< HEAD
-<BookmarkCheck className="h-5 w-5 text-primary" />;
-) : (
-<Bookmark className="h-5 w-5 text-muted-foreground" />;
-)}
-</button>;
-</div>;
-<div className="mt-3 flex flex-wrap gap-1">;
-=======
 <BookmarkCheck className="h-5 w-5 text-primary" />
 ) : (
 <Bookmark className="h-5 w-5 text-muted-foreground" />
@@ -169,65 +93,12 @@ onClick={() => toggleSaved(item.id)}
 </button>
 </div>
 <div className="mt-3 flex flex-wrap gap-1">
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 {item.badges.map((badge index) => (
 <Badge;
 key = {index}
 variant="outline"
 className="text-xs font-normal"
 {badge}
-<<<<<<< HEAD
-</Badge>;
-))}
-</div>;
-<p className="mt-3 text-sm line-clamp-2">{item.description}</p>;
-<div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
-{item.location && (
-<div className="flex items-center gap-1">;
-<MapPin className="h-3 w-3" />;
-<span>{item.location}</span>;
-</div>;
-)}
-{item.price && (
-<div className="flex items-center gap-1">;
-<DollarSign className="h-3 w-3" />;
-<span>{item.price}</span>;
-</div>;
-)}
-{item.timePosted && (
-<div className="flex items-center gap-1">;
-<Clock className="h-3 w-3" />;
-<span>{item.timePosted}</span>;
-</div>;
-)}
-{item.match && (
-<div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">                    {item.match}% match                {item.location && (
-<div className="flex items-center gap-1">;
-<MapPin className="h-3 w-3" />;
-<span>{item.location}</span>;
-</div>;
-)}
-{item.price && (
-<div className="flex items-center gap-1">;
-<DollarSign className="h-3 w-3" />;
-<span>{item.price}</span>;
-</div>;
-)}
-{item.timePosted && (
-<div className="flex items-center gap-1">;
-<Clock className="h-3 w-3" />;
-<span>{item.timePosted}</span>;
-</div>;
-)}
-{item.match && (
-<div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
-{item.match}% match;
-</div>;
-)}
-</div>;
-</div>;
-<div className="border-t border-border p-3 flex justify-end">;
-=======
 </Badge>
 ))}
 </div>
@@ -278,25 +149,10 @@ className="text-xs font-normal"
 </div>
 </div>
 <div className="border-t border-border p-3 flex justify-end">
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 <Button;
 size="sm";
 onClick={() => onViewDetails(item.id)}
 className="gap-1"              >
-<<<<<<< HEAD
-View Details <ChevronRight className="h-4 w-4" />              </Button>;
-View Details <ChevronRight className="h-4 w-4" />;
-onClick={() => onViewDetails(item.id)}
-className="gap-1"
->;
-View Details <ChevronRight className="h-4 w-4" />;
-</Button>;
-</div>;
-</CardContent>;
-</Card>;
-))}
-</div>;
-=======
 View Details <ChevronRight className="h-4 w-4" />              </Button>
 View Details <ChevronRight className="h-4 w-4" />
 onClick={() => onViewDetails(item.id)}
@@ -309,6 +165,5 @@ View Details <ChevronRight className="h-4 w-4" />
 </Card>
 ))}
 </div>
->>>>>>> 89dc065d06be7c6f791a12b1b01db05ffc95e4ff
 )
 }}})))

@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-export interface ContentQualityMetrics {
-pageUrl: string;
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;
-metaDescriptionLength: number;
-hasStructuredData: boolean;
-readabilityScore: number;
-seoScore: number;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 overallScore: number;,
 issues: string[];,
 recommendations: string[];
@@ -406,9 +392,5 @@ this.analyzedPages.clear();
 }
 }
 
-<<<<<<< HEAD
-export default ContentQualityAnalyzer;
-=======
 export default ContentQualityAnalyzer;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

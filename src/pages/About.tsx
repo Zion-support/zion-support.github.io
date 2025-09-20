@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { SEO } from "@/components/SEO";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb
 
 export default function About() {
   return (

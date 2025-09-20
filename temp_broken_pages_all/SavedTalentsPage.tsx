@@ -1,7 +1,5 @@
 <<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 import { useState, useEffect } from "react";,
 import { SEO } from "@/components/SEO";,
 import { TalentCard } from "@/components/talent/TalentCard";,
@@ -14,7 +12,6 @@ import { logErrorToProduction } from "@/utils/productionLogger";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from "lucide-react";
 import { logInfo, logWarn } from "@/utils/productionLogger";
-========
 import { useState, useEffect,  } from "react",
 import { SEO,  } from "@/components/SEO",
 import { TalentCard,  } from "@/components/talent/TalentCard",
@@ -32,13 +29,11 @@ export default function SavedTalentsPage() {
   return (
   return (
   return (
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
 export default function SavedTalentsPage() {
   return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/SavedTalentsPage.tsx
     <>
       <SEO 
         title="SavedTalentsPage - Zion Tech Group"
@@ -53,7 +48,6 @@ export default function SavedTalentsPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 </>
   )
 }, [user router])
@@ -115,9 +109,6 @@ export default function SavedTalentsPage() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SavedTalentsPage.tsx
-=======
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/SavedTalentsPage.tsx
