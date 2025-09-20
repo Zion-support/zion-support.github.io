@@ -1,21 +1,18 @@
 
 export interface SEOData {
-title: string;,
-description: string;,
-keywords: string[];
-ogImage?: string;
-canonicalUrl?: string;
-}
-structuredData?: object;}
+  title: string;
+  description: string;
+  keywords: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: object;
 }
 
 export interface ContentQualityIssue {
-page: string;
-issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";,
-severity: "high" | "medium" | "low";,
-suggestedFix: string;
-}
-}
+  page: string;
+  issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
+  severity: "high" | "medium" | "low";
+  suggestedFix: string;
 }
 
 export class SEOOptimizer {
@@ -170,66 +167,74 @@ suggestedFix: "Add a descriptive title tag with relevant keywords"});
 }
 
 // Check for missing meta description;
-if (!content.includes("name="description"")) {issues.push({
-page;
-issue: "missing-description"
-severity: "high"
-suggestedFix: "Add a meta description tag with compelling content"});
+if (!content.includes("name=\"description\"")) {
+  issues.push({
+    page,
+    issue: "missing-description",
+    severity: "high",
+    suggestedFix: "Add a meta description tag with compelling content"
+  });
 }
 
-// Check for short meta description;
+// Check for short meta description
 const descMatch = content.match(/name="description" content="([^"]+)"/);
-if (descMatch && descMatch[1].length < 120) {issues.push({
-page;
-issue: "short-description"
-severity: "medium"
-suggestedFix: "Expand meta description to 120-160 characters for better SEO"});
+if (descMatch && descMatch[1].length < 120) {
+  issues.push({
+    page,
+    issue: "short-description",
+    severity: "medium",
+    suggestedFix: "Expand meta description to 120-160 characters for better SEO"
+  });
 }
 
-// Check for missing headings;
-if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {issues.push({
-page;
-issue: "no-headings"
-severity: "medium"
-suggestedFix: "Add proper heading structure (H1, H2; H3) for better content organization"});
+// Check for missing headings
+if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
+  issues.push({
+    page,
+    issue: "no-headings",
+    severity: "medium",
+    suggestedFix: "Add proper heading structure (H1, H2, H3) for better content organization"
+  });
 }
 
-// Check for minimal content;
+// Check for minimal content
 const textContent = content.replace(/<[^>]*>/g, "").trim();
-if (textContent.length < 300) {issues.push({
-page;
-issue: "minimal-content"
-severity: "medium"
-suggestedFix: "Add more relevant content to improve user experience and SEO value"});
+if (textContent.length < 300) {
+  issues.push({
+    page,
+    issue: "minimal-content",
+    severity: "medium",
+    suggestedFix: "Add more relevant content to improve user experience and SEO value"
+  });
 }
 
 return issues;
 }
 
 static generateMetaTags(seoData: SEOData): string {
-return `;
-<title>${seoData.title}</title>;
-<meta name="description" content="${seoData.description}" />;
-<meta name="keywords" content="${seoData.keywords.join(", ")}" />;
-<link rel="canonical" href="${seoData.canonicalUrl}" />;
+  return `
+<title>${seoData.title}</title>
+<meta name="description" content="${seoData.description}" />
+<meta name="keywords" content="${seoData.keywords.join(", ")}" />
+<link rel="canonical" href="${seoData.canonicalUrl}" />
 
-<!-- Open Graph -->;
-<meta property="og:title" content="${seoData.title}" />;
-<meta property="og:description" content="${seoData.description}" />;
-<meta property="og:type" content="website" />;
-<meta property="og:url" content="${seoData.canonicalUrl}" />;
-<meta property="og:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />;
+<!-- Open Graph -->
+<meta property="og:title" content="${seoData.title}" />
+<meta property="og:description" content="${seoData.description}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="${seoData.canonicalUrl}" />
+<meta property="og:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />
 
-<!-- Twitter -->;
-<meta name="twitter:card" content="summary_large_image" />;
-<meta name="twitter:title" content="${seoData.title}" />;
-<meta name="twitter:description" content="${seoData.description}" />;
-<meta name="twitter:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />;
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${seoData.title}" />
+<meta name="twitter:description" content="${seoData.description}" />
+<meta name="twitter:image" content="${seoData.ogImage || "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}" />
 
-<!-- Structured Data -->;
-<script type="application/ld+json">;
-${JSON.stringify(seoData.structuredData, null; 2)}
-</script>;
+<!-- Structured Data -->
+<script type="application/ld+json">
+${JSON.stringify(seoData.structuredData, null, 2)}
+</script>
 `;
 }
 }
