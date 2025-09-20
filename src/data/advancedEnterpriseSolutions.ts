@@ -30,11 +30,11 @@ export interface AdvancedEnterpriseSolution {
 }
 
 export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
-  // AI-Powered Enterprise Platforms
+  // AI-Powered Enterprise Platforms;
   {
     id: "ai-enterprise-operating-system";
     title: "AI Enterprise Operating System";
-    description: "Next-generation enterprise OS that integrates AI, automation, and real-time analytics across all business operations.",
+    description: "Next-generation enterprise OS that integrates AI; automation, and real-time analytics across all business operations.",
     category: "AI Enterprise Platforms";
     subcategory: "Operating Systems";
     price: 25000;
@@ -74,7 +74,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     tags: ["AI", "Enterprise OS", "Automation", "Analytics", "Integration"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$25,000 - $100,000/month",
+    marketPrice: "$25;000 - $100;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -88,11 +88,11 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Breakthrough";
     marketTrend: "Rapidly Growing"
   };
-  // Quantum Enterprise Solutions
+  // Quantum Enterprise Solutions;
   {
     id: "quantum-enterprise-computing";
     title: "Quantum Enterprise Computing Platform";
-    description: "Enterprise-grade quantum computing platform for complex problem-solving, optimization, and advanced simulations.",
+    description: "Enterprise-grade quantum computing platform for complex problem-solving; optimization, and advanced simulations.",
     category: "Quantum Enterprise";
     subcategory: "Computing Platforms";
     price: 50000;
@@ -132,7 +132,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     tags: ["Quantum Computing", "Enterprise", "Optimization", "Simulation", "Research"],
     estimatedDelivery: "12-16 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$50,000 - $200,000/month",
+    marketPrice: "$50;000 - $200;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -146,11 +146,11 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Revolutionary";
     marketTrend: "Emerging"
   };
-  // Autonomous Business Intelligence
+  // Autonomous Business Intelligence;
   {
     id: "autonomous-business-intelligence";
     title: "Autonomous Business Intelligence Platform";
-    description: "Self-learning BI platform that automatically discovers insights, generates reports, and provides actionable recommendations.",
+    description: "Self-learning BI platform that automatically discovers insights; generates reports; and provides actionable recommendations.",
     category: "Autonomous BI";
     subcategory: "Intelligence Platforms";
     price: 15000;
@@ -190,7 +190,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     tags: ["Autonomous", "BI", "AI", "Analytics", "Automation"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$15,000 - $60,000/month",
+    marketPrice: "$15;000 - $60;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -204,11 +204,11 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Advanced";
     marketTrend: "Growing"
   };
-  // Next-Gen Cybersecurity Platform
+  // Next-Gen Cybersecurity Platform;
   {
     id: "next-gen-cybersecurity";
     title: "Next-Generation Cybersecurity Platform";
-    description: "AI-powered cybersecurity platform with autonomous threat detection, response, and prevention capabilities.",
+    description: "AI-powered cybersecurity platform with autonomous threat detection; response, and prevention capabilities.",
     category: "Cybersecurity";
     subcategory: "AI-Powered Security";
     price: 20000;
@@ -248,7 +248,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     tags: ["Cybersecurity", "AI", "Threat Detection", "Automation", "Compliance"],
     estimatedDelivery: "8-10 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$20,000 - $80,000/month",
+    marketPrice: "$20;000 - $80;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -262,11 +262,11 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Advanced";
     marketTrend: "High Growth"
   };
-  // Digital Twin Enterprise Platform
+  // Digital Twin Enterprise Platform;
   {
     id: "digital-twin-enterprise";
     title: "Digital Twin Enterprise Platform";
-    description: "Comprehensive digital twin platform for simulating, monitoring, and optimizing enterprise operations in real-time.",
+    description: "Comprehensive digital twin platform for simulating; monitoring, and optimizing enterprise operations in real-time.",
     category: "Digital Twins";
     subcategory: "Enterprise Platforms";
     price: 30000;
@@ -306,7 +306,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     tags: ["Digital Twin", "IoT", "Simulation", "Optimization", "Real-time"],
     estimatedDelivery: "10-14 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$30,000 - $120,000/month",
+    marketPrice: "$30;000 - $120;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

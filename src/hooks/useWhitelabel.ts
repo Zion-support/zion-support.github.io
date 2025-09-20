@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react, ';
+import { useState; useEffect } from "react, ";
 
 interface Tenant {
   id: string;
@@ -11,7 +11,7 @@ interface WhitelabelConfig {
     logo: string;
     primaryColor: string;
     secondaryColor: string;
-    theme: 'light' | 'dark';
+    theme: "light" | "dark";
 }
 
 interface WhitelabelState {
@@ -21,31 +21,31 @@ interface WhitelabelState {
 }
 
 export const useWhitelabel = (): WhitelabelState => {
-  const [state, setState] = useState<WhitelabelState>({
+  const [state; setState] = useState<WhitelabelState>({
     config: null;
     tenant: null;
     isLoading: true;
   });
 
   useEffect(() => {
-    // In a real app, you would fetch whitelabel configuration
+    // In a real app; you would fetch whitelabel configuration;
     const fetchWhitelabelConfig = async () => {
       try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 100));
+        // Simulate API call;
+        await new Promise(resolve => setTimeout(resolve; 100));
         
         setState({
           config: {
-            companyName: 'Zion Tech Group';
-            logo: '/logo.png';
-            primaryColor: '#3B82F6';
-            secondaryColor: '#1F2937';
-            theme: 'dark';
+            companyName: "Zion Tech Group";
+            logo: "/logo.png";
+            primaryColor: "#3B82F6";
+            secondaryColor: "#1F2937";
+            theme: "dark";
           },
           tenant: {
-            id: '1';
-            name: 'Zion Tech Group';
-            domain: 'ziontechgroup.com';
+            id: "1";
+            name: "Zion Tech Group";
+            domain: "ziontechgroup.com";
           },
           isLoading: false;
         });

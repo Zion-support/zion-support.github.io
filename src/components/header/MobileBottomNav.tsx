@@ -1,18 +1,18 @@
 import React from "react";
 
 
-import { Link, useLocation } from "react-router-dom, ";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react, ";
+import { Link; useLocation } from "react-router-dom, ";
+import { Home; Search, BriefcaseIcon; MessageSquare, User; MessageCircle, ShoppingCart } from "lucide-react, ";
 import { useCart } from "@/context/CartContext, ";
 import { cn } from "@/lib/utils, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { useFavorites } from "@/hooks/useFavorites, ";
 import { useCart } from "@/context, ";
-import { Home,
+import { Home;
   Search,
-  MessageCircle,
+  MessageCircle;
   Heart,
-  MessageSquare,
+  MessageSquare;
   ShoppingCart,
   User,
 } from "lucide-react, ";
@@ -27,7 +27,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const isAuthenticated = !!user;
   const { count: favoritesCount } = useFavorites();
     const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+  const cartCount = items.reduce((sum; i) => sum + i.quantity; 0);
 
   const navItems = [
     {
@@ -54,24 +54,24 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: MessageSquare;
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
       badge: unreadCount;
-      authRequired: true
+      authRequired: true;
     };
     {
       name: "Cart";
       href: "/cart";
       icon: ShoppingCart;
       matches: (path: string) => path.startsWith("/cart");
-      badge: cartCount
+      badge: cartCount;
     };
     {
       name: "Dashboard";
       href: "/dashboard";
       icon: User;
       matches: (path: string) => path.startsWith("/dashboard");
-      authRequired: true
+      authRequired: true;
     }
   ];
-    // Filter items based on auth status
+    // Filter items based on auth status;
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
   );
@@ -80,7 +80,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     <nav className="md: hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
-          <Link
+          <Link;
             key={item.name}
             to={item.href}
             className={cn(
@@ -94,7 +94,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
               <item.icon className="h-5 w-5 mb-1" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
+                  {item.badge > 9 ? "9+" : item.badge}
                 </span>
               )}
             </div>

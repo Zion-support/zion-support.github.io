@@ -1,12 +1,12 @@
 import { ProductListing } from "@/types/listings, ";
 
-// Advanced Micro SAAS Services & AI Solutions
+// Advanced Micro SAAS Services & AI Solutions;
 export const ADVANCED_SERVICES: ProductListing[] = [
-  // AI-Powered Business Solutions
+  // AI-Powered Business Solutions;
   {
     id: "ai-business-automation";
     title: "AI Business Process Automation Suite";
-    description: "Complete automation solution for repetitive business tasks using AI. Includes document processing, email automation, customer service bots, and workflow optimization. Reduces manual work by 80% and increases productivity.",
+    description: "Complete automation solution for repetitive business tasks using AI. Includes document processing; email automation; customer service bots; and workflow optimization. Reduces manual work by 80% and increases productivity.",
     category: "AI Automation";
     subcategory: "Business Process";
     price: 2999;
@@ -30,7 +30,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-customer-intelligence";
     title: "AI Customer Intelligence Platform";
-    description: "Advanced customer analytics platform that predicts customer behavior, identifies churn risks, and provides personalized recommendations. Includes sentiment analysis, purchase prediction, and customer lifetime value optimization.",
+    description: "Advanced customer analytics platform that predicts customer behavior; identifies churn risks; and provides personalized recommendations. Includes sentiment analysis; purchase prediction; and customer lifetime value optimization.",
     category: "AI Analytics";
     subcategory: "Customer Intelligence";
     price: 4499;
@@ -54,7 +54,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-supply-chain-optimization";
     title: "AI Supply Chain Optimization Engine";
-    description: "Intelligent supply chain management system that optimizes inventory levels, predicts demand fluctuations, and automates procurement decisions. Reduces costs by 25% and improves delivery times.",
+    description: "Intelligent supply chain management system that optimizes inventory levels; predicts demand fluctuations; and automates procurement decisions. Reduces costs by 25% and improves delivery times.",
     category: "AI Analytics";
     subcategory: "Supply Chain";
     price: 5999;
@@ -74,11 +74,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "4-5 Weeks"
   };
-  // Cybersecurity & Compliance Solutions
+  // Cybersecurity & Compliance Solutions;
   {
     id: "ai-threat-detection";
     title: "AI-Powered Threat Detection System";
-    description: "Advanced cybersecurity solution that uses machine learning to detect and prevent sophisticated cyber threats in real-time. Includes behavioral analysis, anomaly detection, and automated incident response.",
+    description: "Advanced cybersecurity solution that uses machine learning to detect and prevent sophisticated cyber threats in real-time. Includes behavioral analysis; anomaly detection; and automated incident response.",
     category: "Cybersecurity";
     subcategory: "Threat Detection";
     price: 7999;
@@ -102,7 +102,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "compliance-automation";
     title: "Automated Compliance Management Platform";
-    description: "Comprehensive compliance automation tool for GDPR, HIPAA, SOX, and other regulatory frameworks. Automates compliance monitoring, reporting, and audit preparation.",
+    description: "Comprehensive compliance automation tool for GDPR; HIPAA, SOX; and other regulatory frameworks. Automates compliance monitoring; reporting, and audit preparation.",
     category: "Compliance";
     subcategory: "Automation";
     price: 3499;
@@ -122,7 +122,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "3-4 Weeks"
   };
-  // Cloud & DevOps Solutions
+  // Cloud & DevOps Solutions;
   {
     id: "ai-cloud-cost-optimization";
     title: "AI Cloud Cost Optimization Engine";
@@ -150,7 +150,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "devops-automation-platform";
     title: "DevOps Automation & CI/CD Platform";
-    description: "Complete DevOps automation solution with intelligent CI/CD pipelines, automated testing, deployment automation, and monitoring. Accelerates development cycles by 5x.",
+    description: "Complete DevOps automation solution with intelligent CI/CD pipelines; automated testing; deployment automation; and monitoring. Accelerates development cycles by 5x.",
     category: "DevOps";
     subcategory: "Automation";
     price: 3999;
@@ -170,11 +170,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "3-4 Weeks"
   };
-  // Data & Analytics Solutions
+  // Data & Analytics Solutions;
   {
     id: "ai-data-quality-platform";
     title: "AI Data Quality & Governance Platform";
-    description: "Intelligent data quality management system that automatically detects, cleans, and validates data. Ensures data accuracy, consistency, and compliance across all systems.",
+    description: "Intelligent data quality management system that automatically detects; cleans, and validates data. Ensures data accuracy; consistency, and compliance across all systems.",
     category: "Data Management";
     subcategory: "Quality & Governance";
     price: 5499;
@@ -197,7 +197,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "real-time-analytics-dashboard";
     title: "Real-Time Business Analytics Dashboard";
-    description: "Live business intelligence dashboard with real-time data visualization, predictive analytics, and automated reporting. Provides instant insights for data-driven decision making.",
+    description: "Live business intelligence dashboard with real-time data visualization; predictive analytics; and automated reporting. Provides instant insights for data-driven decision making.",
     category: "Analytics";
     subcategory: "Real-Time";
     price: 2999;
@@ -217,11 +217,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "2-3 Weeks"
   };
-  // Marketing & Sales Automation
+  // Marketing & Sales Automation;
   {
     id: "ai-marketing-automation";
     title: "AI Marketing Automation Suite";
-    description: "Intelligent marketing automation platform with personalized content generation, audience segmentation, campaign optimization, and ROI tracking. Increases conversion rates by 35%.",
+    description: "Intelligent marketing automation platform with personalized content generation; audience segmentation; campaign optimization; and ROI tracking. Increases conversion rates by 35%.",
     category: "Marketing";
     subcategory: "Automation";
     price: 3999;
@@ -245,7 +245,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-sales-intelligence";
     title: "AI Sales Intelligence & Lead Scoring";
-    description: "Advanced sales intelligence platform that predicts customer buying behavior, scores leads automatically, and provides personalized sales recommendations. Increases sales conversion by 40%.",
+    description: "Advanced sales intelligence platform that predicts customer buying behavior; scores leads automatically; and provides personalized sales recommendations. Increases sales conversion by 40%.",
     category: "Sales";
     subcategory: "Intelligence";
     price: 4499;
@@ -265,11 +265,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "2-3 Weeks"
   };
-  // HR & Talent Management
+  // HR & Talent Management;
   {
     id: "ai-hr-automation";
     title: "AI HR Automation & Talent Management";
-    description: "Comprehensive HR automation platform with AI-powered recruitment, employee performance tracking, training recommendations, and workforce analytics. Streamlines HR operations by 60%.",
+    description: "Comprehensive HR automation platform with AI-powered recruitment; employee performance tracking; training recommendations; and workforce analytics. Streamlines HR operations by 60%.",
     category: "HR Technology";
     subcategory: "Automation";
     price: 3499;
@@ -289,11 +289,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "3-4 Weeks"
   };
-  // Financial Technology Solutions
+  // Financial Technology Solutions;
   {
     id: "ai-financial-analytics";
     title: "AI Financial Analytics & Risk Management";
-    description: "Intelligent financial analytics platform with automated risk assessment, fraud detection, investment recommendations, and financial forecasting. Provides real-time financial insights and risk alerts.",
+    description: "Intelligent financial analytics platform with automated risk assessment; fraud detection; investment recommendations; and financial forecasting. Provides real-time financial insights and risk alerts.",
     category: "FinTech";
     subcategory: "Analytics";
     price: 6999;
@@ -314,11 +314,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "4-5 Weeks"
   };
-  // Healthcare Technology
+  // Healthcare Technology;
   {
     id: "ai-healthcare-analytics";
     title: "AI Healthcare Analytics & Patient Care";
-    description: "Advanced healthcare analytics platform with patient outcome prediction, treatment optimization, and automated medical record analysis. Improves patient care quality and reduces medical errors.",
+    description: "Advanced healthcare analytics platform with patient outcome prediction; treatment optimization; and automated medical record analysis. Improves patient care quality and reduces medical errors.",
     category: "Healthcare Tech";
     subcategory: "Analytics";
     price: 8999;
@@ -338,11 +338,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "5-6 Weeks"
   };
-  // Manufacturing & IoT
+  // Manufacturing & IoT;
   {
     id: "ai-manufacturing-optimization";
     title: "AI Manufacturing Optimization & Predictive Maintenance";
-    description: "Smart manufacturing solution with predictive maintenance, quality control automation, and production optimization. Reduces downtime by 45% and increases production efficiency by 30%.",
+    description: "Smart manufacturing solution with predictive maintenance; quality control automation; and production optimization. Reduces downtime by 45% and increases production efficiency by 30%.",
     category: "Manufacturing";
     subcategory: "Optimization";
     price: 7499;
@@ -362,11 +362,11 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global";
     availability: "4-5 Weeks"
   };
-  // Retail & E-commerce
+  // Retail & E-commerce;
   {
     id: "ai-retail-optimization";
     title: "AI Retail Optimization & Customer Experience";
-    description: "Intelligent retail solution with inventory optimization, personalized recommendations, demand forecasting, and customer behavior analysis. Increases sales by 25% and customer satisfaction.",
+    description: "Intelligent retail solution with inventory optimization; personalized recommendations; demand forecasting; and customer behavior analysis. Increases sales by 25% and customer satisfaction.",
     category: "Retail Tech";
     subcategory: "Optimization";
     price: 3999;
@@ -387,70 +387,70 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks"
   }
 ];
-    // Service Categories for better organization
+    // Service Categories for better organization;
 export const SERVICE_CATEGORIES = [
   {
     id: "ai-automation";
     name: "AI Automation";
     description: "Intelligent automation solutions for business processes";
     icon: "🤖";
-    count: 3
+    count: 3;
   };
   {
     id: "cybersecurity";
     name: "Cybersecurity";
     description: "Advanced security and compliance solutions";
     icon: "🔒";
-    count: 2
+    count: 2;
   };
   {
     id: "cloud-devops";
     name: "Cloud & DevOps";
     description: "Cloud optimization and development automation";
     icon: "☁️";
-    count: 2
+    count: 2;
   };
   {
     id: "data-analytics";
     name: "Data & Analytics";
     description: "Intelligent data management and insights";
     icon: "📊";
-    count: 2
+    count: 2;
   };
   {
     id: "marketing-sales";
     name: "Marketing & Sales";
     description: "AI-powered marketing and sales automation";
     icon: "📈";
-    count: 2
+    count: 2;
   };
   {
     id: "hr-finance";
     name: "HR & Finance";
     description: "Human resources and financial technology solutions";
     icon: "💼";
-    count: 2
+    count: 2;
   };
   {
     id: "healthcare-manufacturing";
     name: "Healthcare & Manufacturing";
     description: "Specialized solutions for healthcare and manufacturing";
     icon: "🏥";
-    count: 2
+    count: 2;
   };
   {
     id: "retail-ecommerce";
     name: "Retail & E-commerce";
     description: "Retail optimization and customer experience";
     icon: "🛍️";
-    count: 1
+    count: 1;
   }
 ];
-    // Pricing Tiers for different business sizes
+    // Pricing Tiers for different business sizes;
 export const PRICING_TIERS = [
   {
     name: "Starter";
-    price: "$2,999",
+    price: "$2;999",
     description: "Perfect for small businesses and startups";
     features: [
       "Basic AI integration";
@@ -461,7 +461,7 @@ export const PRICING_TIERS = [
   },
   {
     name: "Professional";
-    price: "$4,999",
+    price: "$4;999",
     description: "Ideal for growing businesses";
     features: [
       "Advanced AI capabilities";
@@ -473,7 +473,7 @@ export const PRICING_TIERS = [
   },
   {
     name: "Enterprise";
-    price: "$7,999+",
+    price: "$7;999+",
     description: "For large organizations";
     features: [
       "Full AI suite";

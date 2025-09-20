@@ -31,14 +31,14 @@ export interface AdvancedInnovativeService {
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
-  // AI-Powered Predictive Maintenance Platform
+  // AI-Powered Predictive Maintenance Platform;
   {
     id: "ai-predictive-maintenance-platform",
     title: "AI Predictive Maintenance Platform",
-    description: "Intelligent IoT-based predictive maintenance solution that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.",
+    description: "Intelligent IoT-based predictive maintenance solution that uses machine learning to predict equipment failures; optimize maintenance schedules; and reduce downtime costs.",
     category: "AI & IoT",
     subcategory: "Predictive Maintenance",
-    price: 599,
+    price: 599;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -78,7 +78,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Industry 4.0", "Smart Manufacturing"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$599 - $2,500/month",
+    marketPrice: "$599 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -94,14 +94,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"
   },
 
-  // Quantum Machine Learning Platform
+  // Quantum Machine Learning Platform;
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
-    price: 1500,
+    price: 1500;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -141,7 +141,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1,500 - $8,000/month",
+    marketPrice: "$1;500 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -157,14 +157,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
   },
 
-  // Autonomous Drone Fleet Management
+  // Autonomous Drone Fleet Management;
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
-    description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
+    description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection, surveillance; and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
-    price: 799,
+    price: 799;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -204,7 +204,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$799 - $3,000/month",
+    marketPrice: "$799 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -220,14 +220,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrends: ["Growing biotech investment", "AI drug discovery boom", "Increasing regulatory support"]
   },
 
-  // AI-Powered Climate Intelligence Platform
+  // AI-Powered Climate Intelligence Platform;
   {
     id: "ai-climate-intelligence-platform",
     title: "AI Climate Intelligence Platform - Intelligent Environmental Monitoring",
-    description: "Advanced AI platform that monitors, predicts, and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
+    description: "Advanced AI platform that monitors; predicts, and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
     category: "AI & Climate Technology",
     subcategory: "Environmental Intelligence",
-    price: 1800,
+    price: 1800;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -266,7 +266,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Climate Technology", "Sustainability", "Environmental Monitoring", "Risk Assessment"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,800 - $6,000/month",
+    marketPrice: "$1;800 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -282,14 +282,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrends: ["Growing climate awareness", "Increasing regulations", "Rising sustainability demand"]
   },
 
-  // AI-Powered Cybersecurity Intelligence Platform
+  // AI-Powered Cybersecurity Intelligence Platform;
   {
     id: "ai-cybersecurity-intelligence-platform",
     title: "AI Cybersecurity Intelligence Platform - Intelligent Threat Defense",
-    description: "Next-generation cybersecurity platform that uses AI to detect, analyze, and respond to cyber threats in real-time with unprecedented accuracy and speed.",
+    description: "Next-generation cybersecurity platform that uses AI to detect; analyze, and respond to cyber threats in real-time with unprecedented accuracy and speed.",
     category: "AI & Cybersecurity",
     subcategory: "Threat Intelligence",
-    price: 2200,
+    price: 2200;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -328,7 +328,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Cybersecurity", "Threat Intelligence", "Incident Response", "Compliance"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,200 - $8,000/month",
+    marketPrice: "$2;200 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -344,14 +344,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrends: ["Rising cyber threats", "Increasing regulations", "Growing AI adoption"]
   },
 
-  // AI-Powered Financial Trading Platform
+  // AI-Powered Financial Trading Platform;
   {
     id: "ai-financial-trading-platform",
     title: "AI Financial Trading Platform - Intelligent Trading Intelligence",
-    description: "Advanced AI-powered trading platform that uses machine learning to analyze markets, predict trends, and execute trades with optimal timing and risk management.",
+    description: "Advanced AI-powered trading platform that uses machine learning to analyze markets; predict trends; and execute trades with optimal timing and risk management.",
     category: "AI & Financial Technology",
     subcategory: "Algorithmic Trading",
-    price: 2800,
+    price: 2800;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -390,7 +390,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Financial Technology", "Algorithmic Trading", "Risk Management", "Market Analysis"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,800 - $10,000/month",
+    marketPrice: "$2;800 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -406,14 +406,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrends: ["Growing algorithmic trading", "Increasing AI adoption", "Rising market volatility"]
   },
 
-  // AI-Powered Manufacturing Intelligence Platform
+  // AI-Powered Manufacturing Intelligence Platform;
   {
     id: "ai-manufacturing-intelligence-platform",
     title: "AI Manufacturing Intelligence Platform - Intelligent Industry 4.0",
-    description: "Advanced AI platform that transforms manufacturing operations through predictive maintenance, quality control, and process optimization using Industry 4.0 technologies.",
+    description: "Advanced AI platform that transforms manufacturing operations through predictive maintenance; quality control; and process optimization using Industry 4.0 technologies.",
     category: "AI & Manufacturing",
     subcategory: "Industry 4.0",
-    price: 2400,
+    price: 2400;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -452,7 +452,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Manufacturing", "Industry 4.0", "Predictive Maintenance", "Quality Control"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,400 - $8,000/month",
+    marketPrice: "$2;400 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -468,14 +468,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrends: ["Industry 4.0 adoption", "Smart manufacturing growth", "IoT integration increase"]
   },
 
-  // AI-Powered Energy Grid Intelligence Platform
+  // AI-Powered Energy Grid Intelligence Platform;
   {
     id: "ai-energy-grid-intelligence-platform",
     title: "AI Energy Grid Intelligence Platform - Intelligent Power Management",
-    description: "Advanced AI platform that optimizes energy grid operations, predicts demand, and manages renewable energy integration for efficient and sustainable power distribution.",
+    description: "Advanced AI platform that optimizes energy grid operations; predicts demand; and manages renewable energy integration for efficient and sustainable power distribution.",
     category: "AI & Energy Technology",
     subcategory: "Grid Management",
-    price: 3200,
+    price: 3200;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -514,11 +514,11 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Energy Technology", "Grid Management", "Renewable Energy", "Smart Grid"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$22,000 - $70,000/month",
+    marketPrice: "$22;000 - $70;000/month",
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$799 - $3,000/month",
+    marketPrice: "$799 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -534,14 +534,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First comprehensive platform for multi-drone autonomous operations"
   },
 
-  // Blockchain-Based Digital Identity Platform
+  // Blockchain-Based Digital Identity Platform;
   {
     id: "blockchain-digital-identity-platform",
     title: "Blockchain Digital Identity Platform",
-    description: "Decentralized digital identity solution using blockchain technology for secure, verifiable, and privacy-preserving identity management across organizations.",
+    description: "Decentralized digital identity solution using blockchain technology for secure; verifiable, and privacy-preserving identity management across organizations.",
     category: "Blockchain & Identity",
     subcategory: "Digital Identity",
-    price: 299,
+    price: 299;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -581,7 +581,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Blockchain", "Digital Identity", "Privacy", "Security", "Compliance", "SSI"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$299 - $1,200/month",
+    marketPrice: "$299 - $1;200/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -597,14 +597,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features"
   },
 
-  // AI-Powered Legal Document Analysis
+  // AI-Powered Legal Document Analysis;
   {
     id: "ai-legal-document-analysis",
     title: "AI Legal Document Analysis Platform",
-    description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents, extract key information, and provide legal insights.",
+    description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents; extract key information; and provide legal insights.",
     category: "AI & Legal Tech",
     subcategory: "Document Analysis",
-    price: 449,
+    price: 449;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -644,7 +644,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Legal Tech", "Document Analysis", "NLP", "Compliance", "Risk Management"],
     estimatedDelivery: "3-5 weeks",
     supportLevel: "premium",
-    marketPrice: "$449 - $1,800/month",
+    marketPrice: "$449 - $1;800/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -660,14 +660,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First comprehensive legal document analysis platform with risk scoring"
   },
 
-  // Sustainable Energy Management Platform
+  // Sustainable Energy Management Platform;
   {
     id: "sustainable-energy-management",
     title: "Sustainable Energy Management Platform",
-    description: "AI-powered platform for optimizing renewable energy systems, monitoring carbon footprints, and implementing sustainable business practices with real-time analytics.",
+    description: "AI-powered platform for optimizing renewable energy systems; monitoring carbon footprints; and implementing sustainable business practices with real-time analytics.",
     category: "Sustainability & Green Tech",
     subcategory: "Energy Management",
-    price: 399,
+    price: 399;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -707,7 +707,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Sustainability", "Green Tech", "Energy Management", "ESG", "Carbon Tracking", "Renewable Energy"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$399 - $1,500/month",
+    marketPrice: "$399 - $1;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -723,14 +723,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First comprehensive platform combining energy management with ESG compliance"
   },
 
-  // Advanced Cybersecurity Threat Intelligence
+  // Advanced Cybersecurity Threat Intelligence;
   {
     id: "advanced-cybersecurity-threat-intelligence",
     title: "Advanced Cybersecurity Threat Intelligence Platform",
-    description: "Next-generation threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time.",
+    description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze, and respond to cybersecurity threats in real-time.",
     category: "Cybersecurity",
     subcategory: "Threat Intelligence",
-    price: 899,
+    price: 899;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -770,7 +770,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Cybersecurity", "Threat Intelligence", "AI", "Machine Learning", "Incident Response", "Compliance"],
     estimatedDelivery: "5-7 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$899 - $3,500/month",
+    marketPrice: "$899 - $3;500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -786,14 +786,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First AI-powered platform combining threat detection with automated response"
   },
 
-  // Smart City IoT Management Platform
+  // Smart City IoT Management Platform;
   {
     id: "smart-city-iot-management",
     title: "Smart City IoT Management Platform",
-    description: "Comprehensive IoT platform for managing smart city infrastructure, including traffic management, environmental monitoring, and public services optimization.",
+    description: "Comprehensive IoT platform for managing smart city infrastructure; including traffic management; environmental monitoring; and public services optimization.",
     category: "Smart Cities & IoT",
     subcategory: "Urban Management",
-    price: 699,
+    price: 699;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -833,7 +833,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Smart Cities", "IoT", "Urban Planning", "Sustainability", "Public Services", "Infrastructure"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$699 - $2,800/month",
+    marketPrice: "$699 - $2;800/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -849,14 +849,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First integrated platform managing all aspects of smart city operations"
   },
 
-  // AI-Powered Healthcare Diagnostics
+  // AI-Powered Healthcare Diagnostics;
   {
     id: "ai-healthcare-diagnostics",
     title: "AI-Powered Healthcare Diagnostics Platform",
-    description: "Advanced AI platform for medical image analysis, diagnostic assistance, and patient care optimization using deep learning and computer vision.",
+    description: "Advanced AI platform for medical image analysis; diagnostic assistance; and patient care optimization using deep learning and computer vision.",
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
-    price: 599,
+    price: 599;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -896,7 +896,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Healthcare", "Medical Diagnostics", "Computer Vision", "Deep Learning", "Telemedicine"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$599 - $2,200/month",
+    marketPrice: "$599 - $2;200/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -912,14 +912,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support"
   },
 
-  // Quantum-Safe Communication Platform
+  // Quantum-Safe Communication Platform;
   {
     id: "quantum-safe-communication",
     title: "Quantum-Safe Communication Platform",
     description: "Future-proof communication platform that implements post-quantum cryptography to secure communications against quantum computing threats.",
     category: "Quantum Computing",
     subcategory: "Secure Communications",
-    price: 799,
+    price: 799;
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -959,7 +959,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Quantum Computing", "Cryptography", "Security", "Communications", "Compliance", "Future-Proof"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$799 - $3,200/month",
+    marketPrice: "$799 - $3;200/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

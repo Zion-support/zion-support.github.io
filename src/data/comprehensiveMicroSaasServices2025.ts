@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface ComprehensiveMicroSaasService {
   id: string;
     title: string;
@@ -36,11 +36,11 @@ export interface ComprehensiveMicroSaasService {
 }
 
 export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasService[] = [
-  // AI-Powered Business Intelligence & Analytics
+  // AI-Powered Business Intelligence & Analytics;
   {
     id: "ai-business-intelligence-suite";
     title: "AI Business Intelligence Suite - Intelligent Data Insights";
-    description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for data-driven decision making.",
+    description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights; predictive analytics; and automated reporting for data-driven decision making.",
     category: "AI & Business Intelligence";
     subcategory: "Data Analytics";
     price: 599;
@@ -82,7 +82,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Business Intelligence", "Data Analytics", "Predictive Analytics", "Reporting"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$599 - $2,500/month",
+    marketPrice: "$599 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -100,11 +100,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Enterprise-grade with unlimited users and data";
     customizationLevel: "Highly customizable with white-label options"
   };
-  // AI-Powered Customer Experience Platform
+  // AI-Powered Customer Experience Platform;
   {
     id: "ai-customer-experience-platform";
     title: "AI Customer Experience Platform - Personalized Customer Journeys";
-    description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions, predicts customer needs, and optimizes customer journeys across all touchpoints.",
+    description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions; predicts customer needs; and optimizes customer journeys across all touchpoints.",
     category: "AI & Customer Experience";
     subcategory: "Customer Journey Optimization";
     price: 449;
@@ -146,7 +146,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Customer Experience", "Personalization", "Customer Journey", "Analytics"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$449 - $1,800/month",
+    marketPrice: "$449 - $1;800/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -164,11 +164,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Handles millions of customer interactions";
     customizationLevel: "Fully customizable customer journey workflows"
   };
-  // AI-Powered Supply Chain & Logistics Optimization
+  // AI-Powered Supply Chain & Logistics Optimization;
   {
     id: "ai-supply-chain-optimizer-pro";
     title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";
-    description: "Advanced AI-powered supply chain optimization platform that predicts demand, optimizes inventory, reduces costs, and improves delivery efficiency through machine learning algorithms.",
+    description: "Advanced AI-powered supply chain optimization platform that predicts demand; optimizes inventory; reduces costs; and improves delivery efficiency through machine learning algorithms.",
     category: "AI & Supply Chain";
     subcategory: "Logistics Optimization";
     price: 799;
@@ -210,7 +210,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$799 - $3,000/month",
+    marketPrice: "$799 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -228,11 +228,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Enterprise-grade with multi-company support";
     customizationLevel: "Industry-specific optimization algorithms"
   };
-  // AI-Powered Financial Technology Platform
+  // AI-Powered Financial Technology Platform;
   {
     id: "ai-fintech-platform-elite";
     title: "AI FinTech Platform Elite - Intelligent Financial Solutions";
-    description: "Comprehensive AI-powered financial technology platform that provides intelligent banking, investment management, risk assessment, and financial planning solutions for businesses and individuals.",
+    description: "Comprehensive AI-powered financial technology platform that provides intelligent banking; investment management; risk assessment; and financial planning solutions for businesses and individuals.",
     category: "AI & Financial Technology";
     subcategory: "Financial Services";
     price: 699;
@@ -274,7 +274,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "FinTech", "Financial Services", "Investment", "Risk Management"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$699 - $2,500/month",
+    marketPrice: "$699 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -292,11 +292,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Banking-grade infrastructure with unlimited scalability";
     customizationLevel: "White-label solutions for financial institutions"
   };
-  // AI-Powered Healthcare & Medical Solutions
+  // AI-Powered Healthcare & Medical Solutions;
   {
     id: "ai-healthcare-solutions-suite";
     title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";
-    description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, patient monitoring, medical image analysis, and healthcare workflow optimization for medical professionals and institutions.",
+    description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance; patient monitoring; medical image analysis; and healthcare workflow optimization for medical professionals and institutions.",
     category: "AI & Healthcare";
     subcategory: "Medical Technology";
     price: 899;
@@ -338,7 +338,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Healthcare", "Medical Technology", "Diagnostics", "Patient Care"],
     estimatedDelivery: "4-5 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$899 - $4,000/month",
+    marketPrice: "$899 - $4;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -356,11 +356,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Enterprise healthcare infrastructure with multi-institution support";
     customizationLevel: "Specialized medical AI models for different specialties"
   };
-  // AI-Powered Education & Learning Platform
+  // AI-Powered Education & Learning Platform;
   {
     id: "ai-education-learning-platform";
     title: "AI Education & Learning Platform - Intelligent Learning Solutions";
-    description: "Advanced AI-powered education platform that personalizes learning experiences, provides intelligent tutoring, automates assessment, and optimizes educational content delivery for students and educators.",
+    description: "Advanced AI-powered education platform that personalizes learning experiences; provides intelligent tutoring; automates assessment; and optimizes educational content delivery for students and educators.",
     category: "AI & Education";
     subcategory: "Learning Technology";
     price: 399;
@@ -402,7 +402,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Education", "Learning Technology", "Personalization", "Assessment"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$399 - $1,500/month",
+    marketPrice: "$399 - $1;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -420,11 +420,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Multi-institution platform with unlimited student support";
     customizationLevel: "Customizable learning paths and curriculum design"
   };
-  // AI-Powered Cybersecurity & Threat Intelligence
+  // AI-Powered Cybersecurity & Threat Intelligence;
   {
     id: "ai-cybersecurity-threat-intelligence";
     title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";
-    description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, vulnerability assessment, and security intelligence for organizations of all sizes.",
+    description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection; automated incident response; vulnerability assessment; and security intelligence for organizations of all sizes.",
     category: "AI & Cybersecurity";
     subcategory: "Threat Intelligence";
     price: 649;
@@ -466,7 +466,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Cybersecurity", "Threat Intelligence", "Security", "Compliance"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$649 - $2,500/month",
+    marketPrice: "$649 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -484,11 +484,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Enterprise-grade security infrastructure with unlimited scalability";
     customizationLevel: "Industry-specific security frameworks and compliance"
   };
-  // AI-Powered Marketing & Advertising Platform
+  // AI-Powered Marketing & Advertising Platform;
   {
     id: "ai-marketing-advertising-platform";
     title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";
-    description: "Advanced AI-powered marketing platform that optimizes campaigns, personalizes content, predicts customer behavior, and automates marketing workflows for maximum ROI and customer engagement.",
+    description: "Advanced AI-powered marketing platform that optimizes campaigns; personalizes content; predicts customer behavior; and automates marketing workflows for maximum ROI and customer engagement.",
     category: "AI & Marketing";
     subcategory: "Marketing Automation";
     price: 549;
@@ -530,7 +530,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Marketing", "Advertising", "Automation", "Personalization"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$549 - $2,000/month",
+    marketPrice: "$549 - $2;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -548,11 +548,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Multi-client platform with unlimited campaign support";
     customizationLevel: "Custom marketing workflows and automation rules"
   };
-  // AI-Powered Human Resources & Talent Management
+  // AI-Powered Human Resources & Talent Management;
   {
     id: "ai-hr-talent-management-suite";
     title: "AI HR & Talent Management Suite - Intelligent People Management";
-    description: "Comprehensive AI-powered HR platform that streamlines recruitment, optimizes employee performance, predicts turnover, and automates HR processes for better talent management and organizational success.",
+    description: "Comprehensive AI-powered HR platform that streamlines recruitment; optimizes employee performance; predicts turnover; and automates HR processes for better talent management and organizational success.",
     category: "AI & Human Resources";
     subcategory: "Talent Management";
     price: 499;
@@ -594,7 +594,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Performance"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$499 - $1,800/month",
+    marketPrice: "$499 - $1;800/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -612,11 +612,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Multi-company platform with enterprise HR capabilities";
     customizationLevel: "Customizable HR workflows and compliance frameworks"
   };
-  // AI-Powered Legal Technology & Compliance
+  // AI-Powered Legal Technology & Compliance;
   {
     id: "ai-legal-technology-compliance";
     title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";
-    description: "Advanced AI-powered legal technology platform that automates contract analysis, provides legal research assistance, monitors compliance, and optimizes legal workflows for law firms and legal departments.",
+    description: "Advanced AI-powered legal technology platform that automates contract analysis; provides legal research assistance; monitors compliance; and optimizes legal workflows for law firms and legal departments.",
     category: "AI & Legal Technology";
     subcategory: "Legal Automation";
     price: 749;
@@ -658,7 +658,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Legal Technology", "Compliance", "Contract Analysis", "Legal Research"],
     estimatedDelivery: "3-4 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$749 - $3,000/month",
+    marketPrice: "$749 - $3;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -676,11 +676,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Enterprise legal platform with multi-firm support";
     customizationLevel: "Industry-specific legal workflows and compliance frameworks"
   };
-  // AI-Powered Real Estate & Property Management
+  // AI-Powered Real Estate & Property Management;
   {
     id: "ai-real-estate-property-management";
     title: "AI Real Estate & Property Management - Intelligent Property Solutions";
-    description: "Comprehensive AI-powered real estate platform that optimizes property management, predicts market trends, automates tenant screening, and provides intelligent property insights for real estate professionals and investors.",
+    description: "Comprehensive AI-powered real estate platform that optimizes property management; predicts market trends; automates tenant screening; and provides intelligent property insights for real estate professionals and investors.",
     category: "AI & Real Estate";
     subcategory: "Property Management";
     price: 399;
@@ -722,7 +722,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Real Estate", "Property Management", "Investment", "Market Analysis"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$399 - $1,500/month",
+    marketPrice: "$399 - $1;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -740,11 +740,11 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     scalability: "Multi-property platform with unlimited portfolio support";
     customizationLevel: "Customizable property workflows and reporting"
   };
-  // AI-Powered Manufacturing & Industrial IoT
+  // AI-Powered Manufacturing & Industrial IoT;
   {
     id: "ai-manufacturing-industrial-iot";
     title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";
-    description: "Advanced AI-powered manufacturing platform that optimizes production processes, predicts equipment failures, monitors quality control, and enables smart manufacturing through IoT integration and machine learning.",
+    description: "Advanced AI-powered manufacturing platform that optimizes production processes; predicts equipment failures; monitors quality control; and enables smart manufacturing through IoT integration and machine learning.",
     category: "AI & Manufacturing";
     subcategory: "Industrial IoT";
     price: 899;
@@ -786,7 +786,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     tags: ["AI", "Manufacturing", "Industrial IoT", "Predictive Maintenance", "Quality Control"],
     estimatedDelivery: "4-5 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$899 - $3,500/month",
+    marketPrice: "$899 - $3;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

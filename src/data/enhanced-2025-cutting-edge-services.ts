@@ -34,11 +34,11 @@ export interface CuttingEdgeService {
 }
 
 export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
-  // 1. AI-Powered Quantum Financial Trading Platform
+  // 1. AI-Powered Quantum Financial Trading Platform;
   {
     id: "quantum-financial-ai-pro";
     title: "Quantum Financial AI Pro - Next-Gen Trading Intelligence";
-    description: "Revolutionary AI-powered quantum computing platform for high-frequency trading, risk management, and portfolio optimization with real-time market analysis.",
+    description: "Revolutionary AI-powered quantum computing platform for high-frequency trading; risk management; and portfolio optimization with real-time market analysis.",
     category: "AI & Quantum Computing";
     subcategory: "Financial Technology";
     price: 25000;
@@ -80,7 +80,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["AI", "Quantum Computing", "FinTech", "Trading", "Risk Management"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$25,000 - $75,000/month",
+    marketPrice: "$25;000 - $75;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -98,7 +98,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$12.5 billion by 2027";
     growthPotential: "High - 45% CAGR expected"
   };
-  // 2. Neuromorphic Edge AI Platform
+  // 2. Neuromorphic Edge AI Platform;
   {
     id: "neuromorphic-edge-ai-elite";
     title: "Neuromorphic Edge AI Elite - Brain-Inspired Computing";
@@ -144,7 +144,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["Neuromorphic", "Edge AI", "IoT", "Machine Learning", "Hardware"],
     estimatedDelivery: "8-10 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$35,000 - $100,000/month",
+    marketPrice: "$35;000 - $100;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -162,11 +162,11 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$8.9 billion by 2026";
     growthPotential: "Very High - 55% CAGR expected"
   };
-  // 3. Federated Learning Privacy Platform
+  // 3. Federated Learning Privacy Platform;
   {
     id: "federated-learning-privacy-pro";
     title: "Federated Learning Privacy Pro - Collaborative AI Without Data Sharing";
-    description: "Advanced federated learning platform that enables organizations to collaborate on AI model training without sharing sensitive data, ensuring privacy and compliance.",
+    description: "Advanced federated learning platform that enables organizations to collaborate on AI model training without sharing sensitive data; ensuring privacy and compliance.",
     category: "AI & Privacy";
     subcategory: "Federated Learning";
     price: 18000;
@@ -208,7 +208,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["Federated Learning", "Privacy", "AI Collaboration", "Compliance", "Security"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$18,000 - $45,000/month",
+    marketPrice: "$18;000 - $45;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -226,11 +226,11 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$6.2 billion by 2026";
     growthPotential: "High - 40% CAGR expected"
   };
-  // 4. AI Ethics & Governance Platform
+  // 4. AI Ethics & Governance Platform;
   {
     id: "ai-ethics-governance-elite";
     title: "AI Ethics & Governance Elite - Responsible AI Framework";
-    description: "Comprehensive AI ethics and governance platform that ensures responsible AI development, deployment, and monitoring with automated compliance and bias detection.",
+    description: "Comprehensive AI ethics and governance platform that ensures responsible AI development; deployment, and monitoring with automated compliance and bias detection.",
     category: "AI & Governance";
     subcategory: "Ethics & Compliance";
     price: 22000;
@@ -272,7 +272,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency"],
     estimatedDelivery: "5-7 weeks";
     supportLevel: "premium";
-    marketPrice: "$22,000 - $55,000/month",
+    marketPrice: "$22;000 - $55;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -290,7 +290,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$4.8 billion by 2026";
     growthPotential: "High - 35% CAGR expected"
   };
-  // 5. Quantum-Safe Cybersecurity Suite
+  // 5. Quantum-Safe Cybersecurity Suite;
   {
     id: "quantum-safe-cybersecurity-elite";
     title: "Quantum-Safe Cybersecurity Elite - Post-Quantum Security";
@@ -336,7 +336,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["Quantum-Safe", "Cybersecurity", "Post-Quantum", "AI Security", "Zero-Trust"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$28,000 - $75,000/month",
+    marketPrice: "$28;000 - $75;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -354,11 +354,11 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$15.3 billion by 2027";
     growthPotential: "Very High - 50% CAGR expected"
   };
-  // 6. Autonomous DevOps Platform
+  // 6. Autonomous DevOps Platform;
   {
     id: "autonomous-devops-elite";
     title: "Autonomous DevOps Elite - Self-Healing Infrastructure";
-    description: "Intelligent DevOps platform that autonomously manages, monitors, and heals infrastructure using AI and machine learning for continuous optimization.",
+    description: "Intelligent DevOps platform that autonomously manages; monitors, and heals infrastructure using AI and machine learning for continuous optimization.",
     category: "DevOps & Automation";
     subcategory: "Autonomous Operations";
     price: 15000;
@@ -400,7 +400,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["Autonomous DevOps", "Self-Healing", "AI Operations", "Infrastructure", "Automation"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$15,000 - $40,000/month",
+    marketPrice: "$15;000 - $40;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -418,7 +418,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$18.7 billion by 2026";
     growthPotential: "High - 42% CAGR expected"
   };
-  // 7. Edge AI Orchestration Platform
+  // 7. Edge AI Orchestration Platform;
   {
     id: "edge-ai-orchestration-elite";
     title: "Edge AI Orchestration Elite - Distributed Intelligence";
@@ -464,7 +464,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["Edge AI", "Orchestration", "Distributed Computing", "IoT", "Real-time"],
     estimatedDelivery: "5-7 weeks";
     supportLevel: "premium";
-    marketPrice: "$20,000 - $50,000/month",
+    marketPrice: "$20;000 - $50;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -482,11 +482,11 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     marketSize: "$11.2 billion by 2026";
     growthPotential: "Very High - 48% CAGR expected"
   };
-  // 8. Blockchain AI Integration Platform
+  // 8. Blockchain AI Integration Platform;
   {
     id: "blockchain-ai-integration-elite";
     title: "Blockchain AI Integration Elite - Decentralized Intelligence";
-    description: "Revolutionary platform that combines blockchain technology with AI to create decentralized, transparent, and intelligent systems for various industries.",
+    description: "Revolutionary platform that combines blockchain technology with AI to create decentralized; transparent, and intelligent systems for various industries.",
     category: "Blockchain & AI";
     subcategory: "Integration Platform";
     price: 25000;
@@ -528,7 +528,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
     tags: ["Blockchain", "AI", "DeFi", "Smart Contracts", "Decentralized"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$25,000 - $70,000/month",
+    marketPrice: "$25;000 - $70;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

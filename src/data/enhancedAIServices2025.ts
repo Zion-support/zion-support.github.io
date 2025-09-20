@@ -41,14 +41,14 @@ export interface AIService {
     industrySpecific: boolean;
 }
 
-// Enhanced AI Services for 2025
+// Enhanced AI Services for 2025;
 export const enhancedAIServices2025: AIService[] = [
   {
     id: 1;
     name: "AI Vision Pro";
     category: "Computer Vision";
     pricing: "Usage-based";
-    description: "Advanced computer vision platform with real-time object detection, facial recognition, and image analysis capabilities",
+    description: "Advanced computer vision platform with real-time object detection; facial recognition; and image analysis capabilities",
     price: 0.05;
     pricingModel: "per API call";
     features: [
@@ -97,14 +97,14 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Millions of requests/day";
     realTimeProcessing: true;
     multilingualSupport: true;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 2;
     name: "NLP Genius";
     category: "Natural Language Processing";
     pricing: "Tiered";
-    description: "Comprehensive NLP platform with text analysis, sentiment analysis, language translation, and chatbot capabilities",
+    description: "Comprehensive NLP platform with text analysis; sentiment analysis; language translation; and chatbot capabilities",
     price: 199;
     pricingModel: "monthly";
     features: [
@@ -153,7 +153,7 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Unlimited requests";
     realTimeProcessing: true;
     multilingualSupport: true;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 3;
@@ -209,7 +209,7 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Enterprise-grade";
     realTimeProcessing: true;
     multilingualSupport: false;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 4;
@@ -265,14 +265,14 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Unlimited conversations";
     realTimeProcessing: true;
     multilingualSupport: true;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 5;
     name: "AI Content Creator";
     category: "Content Generation";
     pricing: "Usage-based";
-    description: "AI-powered content creation platform for generating articles, marketing copy, and creative content",
+    description: "AI-powered content creation platform for generating articles; marketing copy; and creative content",
     price: 0.10;
     pricingModel: "per word";
     features: [
@@ -321,14 +321,14 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Unlimited words";
     realTimeProcessing: true;
     multilingualSupport: true;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 6;
     name: "AI Data Scientist";
     category: "Data Science";
     pricing: "Enterprise";
-    description: "Automated data science platform with AI model development, deployment, and monitoring capabilities",
+    description: "Automated data science platform with AI model development; deployment, and monitoring capabilities",
     price: 1499;
     pricingModel: "monthly";
     features: [
@@ -377,14 +377,14 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Enterprise-grade";
     realTimeProcessing: true;
     multilingualSupport: false;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 7;
     name: "AI Voice Assistant";
     category: "Voice AI";
     pricing: "Tiered";
-    description: "Advanced voice AI platform with speech recognition, text-to-speech, and voice command capabilities",
+    description: "Advanced voice AI platform with speech recognition; text-to-speech; and voice command capabilities",
     price: 299;
     pricingModel: "monthly";
     features: [
@@ -433,14 +433,14 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Unlimited requests";
     realTimeProcessing: true;
     multilingualSupport: true;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 8;
     name: "AI Recommendation Engine";
     category: "Recommendation Systems";
     pricing: "Usage-based";
-    description: "Intelligent recommendation engine with personalized suggestions for products, content, and services",
+    description: "Intelligent recommendation engine with personalized suggestions for products; content, and services",
     price: 0.001;
     pricingModel: "per recommendation";
     features: [
@@ -489,7 +489,7 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Millions of recommendations";
     realTimeProcessing: true;
     multilingualSupport: false;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 9;
@@ -545,7 +545,7 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Enterprise-grade";
     realTimeProcessing: true;
     multilingualSupport: false;
-    industrySpecific: true
+    industrySpecific: true;
   };
   {
     id: 10;
@@ -601,7 +601,7 @@ export const enhancedAIServices2025: AIService[] = [
     scalability: "Enterprise-grade";
     realTimeProcessing: true;
     multilingualSupport: false;
-    industrySpecific: true
+    industrySpecific: true;
   }
 ];
     export default enhancedAIServices2025;

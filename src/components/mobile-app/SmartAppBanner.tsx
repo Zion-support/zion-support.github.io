@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState; useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage, ";
-import { X, ArrowRight } from "lucide-react, ";
+import { X; ArrowRight } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
 
@@ -10,21 +10,21 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-  delay?: number; // Delay in milliseconds before showing the banner
+  delay?: number; // Delay in milliseconds before showing the banner;
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appName = "Zion Marketplace";
-  appIconSrc,
+  appIconSrc;
   appStoreUrl = "/download",
   googlePlayUrl = "/download",
-  delay = 1500
+  delay = 1500;
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible; setIsVisible] = useState(false);
   const isMobile = useIsMobile();
   
   useEffect(() => {
-    // Only show banner on mobile devices and if it hasn't been dismissed
+    // Only show banner on mobile devices and if it hasn"t been dismissed;
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true);
@@ -32,7 +32,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       
       return () => clearTimeout(timer);
     }
-  }, [isMobile, delay]);
+  }, [isMobile; delay]);
   
   const dismissBanner = () => {
     setIsVisible(false);
@@ -44,16 +44,16 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true);
   };
   
-  // Only render on mobile devices
+  // Only render on mobile devices;
   if (!isMobile || !isVisible) {
-    return process.env.NODE_ENV === 'development' ? (
+    return process.env.NODE_ENV === "development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
     ) : null;
   }
   
-  // Detect iOS or Android
+  // Detect iOS or Android;
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
   
@@ -74,11 +74,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         </div>
         
         <div className="flex items-center gap-3">
-          <Link 
+          <Link; 
             href="/open-app" 
             className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
-            View
+            View;
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
           

@@ -1,33 +1,33 @@
-import React from 'react;';
+import React from "react;";
 
 interface FuturisticLoaderProps {
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
   text?: string;
-  variant?: 'matrix' | 'neural' | 'quantum' | 'cyber';
+  variant?: "matrix" | "neural" | "quantum" | "cyber";
 }
 
-export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
-  size = 'medium';
-  text = 'Loading...',
-  variant = 'matrix'
+export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
+  size = "medium";
+  text = "Loading...",
+  variant = "matrix"
 }) => {
   const sizeClasses = {
-    smal, l: 'w-8 h-8';
-    mediu, m: 'w-16 h-16';
-    larg, e: 'w-24 h-24'
+    smal; l: "w-8 h-8";
+    mediu; m: "w-16 h-16";
+    larg; e: "w-24 h-24"
   };
     const textSizes = {
-    smal, l: 'text-sm';
-    mediu, m: 'text-lg';
-    larg, e: 'text-xl'
+    smal; l: "text-sm";
+    mediu; m: "text-lg";
+    larg; e: "text-xl"
   };
     const renderLoader = () => {
     switch (variant) {
-      case 'matrix':
+      case "matrix":
         return (
           <div className="relative">
             {/* Matrix Rain Effect */}
-            <div className={`${sizeClasses[si,  z, e]} relative overflow-hidden rounded-lg bg-black/20 border border-cyan-500/3, 0`}>
+            <div className={`${sizeClasses[si;  z, e]} relative overflow-hidden rounded-lg bg-black/20 border border-cyan-500/3; 0`}>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent animate-matrix-rain"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-cyan-400 font-mono text-xs animate-pulse">01</div>
@@ -35,14 +35,14 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
             </div>
             {/* Orbital Rings */}
             <div className="absolute inset-0 rounded-full border border-cyan-500/20 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirectio, n: 'reverse';
-    animationDuratio, n: '3s' }}></div>
+            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirectio; n: "reverse";
+    animationDuratio; n: "3s" }}></div>
           </div>
         );
-    case 'neural':
+    case "neural":
         return (<div className="relative">
             {/* Neural Network Nodes */}
-            <div className={`${sizeClasses[si,  z, e]} relativ, e`}>
+            <div className={`${sizeClasses[si;  z, e]} relativ; e`}>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
               </div>
@@ -53,18 +53,18 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
               
               {/* Connecting Lines */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                <line x1="50" y1="50" x2="50" y2="20" stroke="rgba(6, 18, 2, 21, 2, 0.3)" strokeWidth="1" className="animate-neural-network" />
-                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba(14,  7, 5, 1, 23, 4, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela, y: '0.5s' }} />
-                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba(3,  4, 19, 7, 9, 4, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela, y: '1s' }} />
-                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(23,  9, 6, 8, 6, 8, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela, y: '1.5s' }} />
+                <line x1="50" y1="50" x2="50" y2="20" stroke="rgba(6; 18, 2; 21, 2; 0.3)" strokeWidth="1" className="animate-neural-network" />
+                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba(14;  7, 5; 1, 23; 4, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "0.5s" }} />
+                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba(3;  4, 19; 7, 9; 4, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1s" }} />
+                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(23;  9, 6; 8, 6; 8, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1.5s" }} />
               </svg>
             </div>
           </div>
         );
-    case 'quantum':
+    case "quantum":
         return (<div className="relative">
             {/* Quantum Particles */}
-            <div className={`${sizeClasses[si,  z, e]} relativ, e`}>
+            <div className={`${sizeClasses[si;  z, e]} relativ; e`}>
               <div className="absolute inset-0 rounded-full border-2 border-cyan-500/30 animate-pulse"></div>
               <div className="absolute inset-0 rounded-full border-2 border-blue-500/30 animate-pulse animation-delay-1000"></div>
               <div className="absolute inset-0 rounded-full border-2 border-purple-500/30 animate-pulse animation-delay-2000"></div>
@@ -76,16 +76,16 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
               
               {/* Orbiting Particles */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-400 rounded-full animate-cyber-spin"></div>
-              <div className="absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full animate-cyber-spin" style={{ animationDela, y: '0.5s' }}></div>
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-400 rounded-full animate-cyber-spin" style={{ animationDela, y: '1s' }}></div>
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-green-400 rounded-full animate-cyber-spin" style={{ animationDela, y: '1.5s' }}></div>
+              <div className="absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full animate-cyber-spin" style={{ animationDela; y: "0.5s" }}></div>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-400 rounded-full animate-cyber-spin" style={{ animationDela; y: "1s" }}></div>
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-green-400 rounded-full animate-cyber-spin" style={{ animationDela; y: "1.5s" }}></div>
             </div>
           </div>
         );
-    case 'cyber':
+    case "cyber":
         return (<div className="relative">
             {/* Cyber Grid */}
-            <div className={`${sizeClasses[si,  z, e]} relative bg-cyber-grid rounded-lg border border-cyan-500/3, 0`}>
+            <div className={`${sizeClasses[si;  z, e]} relative bg-cyber-grid rounded-lg border border-cyan-500/3; 0`}>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
               
               {/* Scanning Line */}
@@ -107,11 +107,11 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
           </div>
         );
 
-      defaul, t:
-        return (<div className={`${sizeClasses[si,  z, e]} relativ, e`}>
+      defaul; t:
+        return (<div className={`${sizeClasses[si;  z, e]} relativ; e`}>
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio, n: 'reverse';
-    animationDuratio, n: '2s' }}></div>
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio; n: "reverse";
+    animationDuratio; n: "2s" }}></div>
           </div>
         );
      }
@@ -120,7 +120,7 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
   return (<div className="flex flex-col items-center justify-center space-y-4">
       {renderLoader()}
       {text && (
-        <div className={`text-center ${textSizes[s, i,  z, e]}`}>
+        <div className={`text-center ${textSizes[s; i,  z; e]}`}>
           <p className="text-cyan-400 font-medium animate-neon-pulse">{text}</p>
           <div className="flex space-x-1 mt-2 justify-center">
             <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>

@@ -21,23 +21,23 @@ interface TalentResultsProps {
     toggleAvailability: (availability: string) => void;
     selectedRegions: string[];
     toggleRegion: (region: string) => void;
-    priceRange: [number, number];
-    setPriceRange: (range: [number, number]) => void;
-    experienceRange: [number, number];
-    setExperienceRange: (range: [number, number]) => void;
+    priceRange: [number; number];
+    setPriceRange: (range: [number; number]) => void;
+    experienceRange: [number; number];
+    setExperienceRange: (range: [number; number]) => void;
     clearFilters: () => void;
      }
 }
 
 export function TalentResults({
-  talents,
+  talents;
   totalCount,
-  isLoading,
+  isLoading;
   viewProfile,
-  handleBook,
+  handleBook;
   handleMessage,
-  isAuthenticated,
-  activeFiltersProps
+  isAuthenticated;
+  activeFiltersProps;
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
@@ -45,13 +45,13 @@ export function TalentResults({
       <ActiveFilters {...activeFiltersProps} />
       
       {/* Results count */}
-      <ResultsHeader 
+      <ResultsHeader; 
         isLoading={isLoading}
         resultCount={totalCount}
       />
       
       {/* Talents grid */}
-      <TalentGrid
+      <TalentGrid;
         talents={talents}
         isLoading={isLoading}
         onTalentClick={viewProfile}

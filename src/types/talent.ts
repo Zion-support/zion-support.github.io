@@ -13,7 +13,7 @@ export interface Talent {
     country: string;
     timezone: string;
      };
-  availability: 'full-time' | 'part-time' | 'contract' | 'freelance';
+  availability: "full-time" | "part-time" | "contract" | "freelance";
     rating: number;
     reviewCount: number;
     portfolio: PortfolioItem[];
@@ -23,7 +23,7 @@ export interface Talent {
     socialLinks: SocialLinks;
     createdAt: Date;
     updatedAt: Date;
-    status: 'active' | 'inactive' | 'suspended';
+    status: "active" | "inactive" | "suspended";
     verified: boolean;
     featured: boolean;
 }
@@ -59,7 +59,7 @@ export interface Certification {
 
 export interface Language {
   name: string;
-    proficiency: 'basic' | 'conversational' | 'fluent' | 'native';
+    proficiency: "basic" | "conversational" | "fluent" | "native";
 }
 
 export interface SocialLinks {
@@ -84,8 +84,8 @@ export interface TalentFilter {
   rating?: number;
   verified?: boolean;
   featured?: boolean;
-  sortBy?: 'rating' | 'experience' | 'hourlyRate' | 'createdAt';
-  sortOrder?: 'asc' | 'desc';
+  sortBy?: "rating" | "experience" | "hourlyRate" | "createdAt";
+  sortOrder?: "asc" | "desc";
 }
 
 export interface TalentSearchResult {

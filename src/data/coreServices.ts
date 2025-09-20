@@ -6,14 +6,14 @@ export interface CoreService {
     subcategory: string;
     price: number;
     currency: string;
-    pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
+    pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium";
     features: string[];
     benefits: string[];
     useCases: string[];
     targetAudience: string[];
     tags: string[];
     estimatedDelivery: string;
-    supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+    supportLevel: "basic" | "standard" | "premium" | "enterprise";
     marketPrice: string;
     contactInfo: {
     phone: string;
@@ -35,7 +35,7 @@ export const CORE_SERVICES: CoreService[] = [
   {
     id: "ai-content-hub-pro";
     title: "AI Content Hub Pro - Intelligent Content Management";
-    description: "Advanced AI-powered content creation, management, and optimization platform that generates high-quality content across multiple formats and channels.",
+    description: "Advanced AI-powered content creation; management, and optimization platform that generates high-quality content across multiple formats and channels.",
     category: "AI & Content Management";
     subcategory: "Content Creation";
     price: 399;
@@ -87,12 +87,12 @@ export const CORE_SERVICES: CoreService[] = [
     rating: 4.9;
     reviewCount: 156;
     aiScore: 95;
-    featured: true
+    featured: true;
   };
   {
     id: "cloud-infrastructure-pro";
     title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
-    description: "Enterprise-grade cloud infrastructure services including hosting, scaling, security, and monitoring for high-performance applications.",
+    description: "Enterprise-grade cloud infrastructure services including hosting; scaling, security; and monitoring for high-performance applications.",
     category: "Cloud & Infrastructure";
     subcategory: "Cloud Hosting";
     price: 599;
@@ -144,12 +144,12 @@ export const CORE_SERVICES: CoreService[] = [
     rating: 4.8;
     reviewCount: 89;
     aiScore: 88;
-    featured: true
+    featured: true;
   };
   {
     id: "cybersecurity-shield";
     title: "Cybersecurity Shield - Advanced Security Solutions";
-    description: "Comprehensive cybersecurity services including threat detection, vulnerability assessment, and security monitoring for businesses of all sizes.",
+    description: "Comprehensive cybersecurity services including threat detection; vulnerability assessment; and security monitoring for businesses of all sizes.",
     category: "Cybersecurity";
     subcategory: "Security Services";
     price: 299;
@@ -201,30 +201,30 @@ export const CORE_SERVICES: CoreService[] = [
     rating: 4.7;
     reviewCount: 234;
     aiScore: 92;
-    featured: true
+    featured: true;
   }
 ];
     export const SERVICE_CATEGORIES = [
-  { label: 'AI & Content Management', value: 'ai-content' };
-  { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' };
-  { label: 'Cybersecurity', value: 'cybersecurity' };
-  { label: 'Digital Transformation', value: 'digital-transformation' };
-  { label: 'IT Consulting', value: 'it-consulting' };
-  { label: 'Software Development', value: 'software-development' }
+  { label: "AI & Content Management", value: "ai-content" };
+  { label: "Cloud & Infrastructure", value: "cloud-infrastructure" };
+  { label: "Cybersecurity", value: "cybersecurity" };
+  { label: "Digital Transformation", value: "digital-transformation" };
+  { label: "IT Consulting", value: "it-consulting" };
+  { label: "Software Development", value: "software-development" }
 ];
     export const SERVICE_SUBCATEGORIES = {
-  'ai-content': ['Content Creation', 'Content Management', 'SEO Optimization', 'Marketing Automation'],
-  'cloud-infrastructure': ['Cloud Hosting', 'DevOps', 'Infrastructure as Code', 'Monitoring'],
-  'cybersecurity': ['Security Services', 'Compliance', 'Threat Detection', 'Incident Response'],
-  'digital-transformation': ['Process Automation', 'Digital Strategy', 'Change Management', 'Technology Integration'],
-  'it-consulting': ['Strategy', 'Architecture', 'Implementation', 'Optimization'],
-  'software-development': ['Custom Development', 'API Integration', 'Maintenance', 'Support']
+  "ai-content": ["Content Creation", "Content Management", "SEO Optimization", "Marketing Automation"],
+  "cloud-infrastructure": ["Cloud Hosting", "DevOps", "Infrastructure as Code", "Monitoring"],
+  "cybersecurity": ["Security Services", "Compliance", "Threat Detection", "Incident Response"],
+  "digital-transformation": ["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"],
+  "it-consulting": ["Strategy", "Architecture", "Implementation", "Optimization"],
+  "software-development": ["Custom Development", "API Integration", "Maintenance", "Support"]
 };
 
 export const PRICING_TIERS = {
-  basic: { name: 'Basic', multiplier: 1 };
-  professional: { name: 'Professional', multiplier: 1.5 };
-  enterprise: { name: 'Enterprise', multiplier: 2.5 }
+  basic: { name: "Basic", multiplier: 1 };
+  professional: { name: "Professional", multiplier: 1.5 };
+  enterprise: { name: "Enterprise", multiplier: 2.5 }
 };
     export const CONTACT_INFO = {
   phone: "+1 302 464 0950";

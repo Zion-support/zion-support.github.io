@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface AdvancedAIService {
   id: string;
     title: string;
@@ -31,11 +31,11 @@ export interface AdvancedAIService {
 }
 
 export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
-  // AI-Powered Financial Trading Platform
+  // AI-Powered Financial Trading Platform;
   {
     id: "ai-financial-trading-platform";
     title: "AI Financial Trading Platform";
-    description: "Advanced algorithmic trading platform that uses machine learning to analyze market data, predict trends, and execute trades with high accuracy and minimal risk.",
+    description: "Advanced algorithmic trading platform that uses machine learning to analyze market data; predict trends; and execute trades with high accuracy and minimal risk.",
     category: "AI & Financial Technology";
     subcategory: "Algorithmic Trading";
     price: 2500;
@@ -75,7 +75,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Algorithmic Trading", "Financial Technology", "Machine Learning", "Risk Management"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,500 - $10,000/month",
+    marketPrice: "$2;500 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -89,18 +89,18 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$12.5 billion";
     growthRate: "23.5% annually"
   };
-  // AI-Powered Healthcare Diagnostics
+  // AI-Powered Healthcare Diagnostics;
   {
     id: "ai-healthcare-diagnostics";
     title: "AI Healthcare Diagnostics Platform";
-    description: "Comprehensive medical diagnostics platform that uses deep learning to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
+    description: "Comprehensive medical diagnostics platform that uses deep learning to analyze medical images; patient data; and symptoms to provide accurate diagnoses and treatment recommendations.",
     category: "AI & Healthcare";
     subcategory: "Medical Diagnostics";
     price: 1500;
     currency: "$";
     pricingModel: "monthly";
     features: [
-      "Medical image analysis (X-rays, MRIs, CT scans)",
+      "Medical image analysis (X-rays; MRIs, CT scans)",
       "Symptom analysis and diagnosis",
       "Patient data integration",
       "Treatment recommendations",
@@ -133,7 +133,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Healthcare", "Medical Diagnostics", "Deep Learning", "Medical Imaging"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,500 - $5,000/month",
+    marketPrice: "$1;500 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -147,11 +147,11 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$8.2 billion";
     growthRate: "28.7% annually"
   };
-  // AI-Powered Supply Chain Optimization
+  // AI-Powered Supply Chain Optimization;
   {
     id: "ai-supply-chain-optimization";
     title: "AI Supply Chain Optimization Platform";
-    description: "Intelligent supply chain management platform that uses AI to predict demand, optimize inventory, reduce costs, and improve efficiency across the entire supply chain.",
+    description: "Intelligent supply chain management platform that uses AI to predict demand; optimize inventory; reduce costs; and improve efficiency across the entire supply chain.",
     category: "AI & Supply Chain";
     subcategory: "Optimization";
     price: 1200;
@@ -191,7 +191,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,200 - $4,000/month",
+    marketPrice: "$1;200 - $4;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -205,11 +205,11 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$15.8 billion";
     growthRate: "18.9% annually"
   };
-  // AI-Powered Cybersecurity Threat Detection
+  // AI-Powered Cybersecurity Threat Detection;
   {
     id: "ai-cybersecurity-threat-detection";
     title: "AI Cybersecurity Threat Detection Platform";
-    description: "Advanced cybersecurity platform that uses machine learning to detect, analyze, and respond to cyber threats in real-time, providing comprehensive protection for organizations.",
+    description: "Advanced cybersecurity platform that uses machine learning to detect; analyze, and respond to cyber threats in real-time; providing comprehensive protection for organizations.",
     category: "AI & Cybersecurity";
     subcategory: "Threat Detection";
     price: 1800;
@@ -249,7 +249,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Analytics"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,800 - $6,000/month",
+    marketPrice: "$1;800 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -263,11 +263,11 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$22.4 billion";
     growthRate: "31.2% annually"
   };
-  // AI-Powered Content Creation Studio
+  // AI-Powered Content Creation Studio;
   {
     id: "ai-content-creation-studio";
     title: "AI Content Creation Studio";
-    description: "Comprehensive content creation platform that uses AI to generate high-quality articles, videos, graphics, and social media content with human-like creativity and accuracy.",
+    description: "Comprehensive content creation platform that uses AI to generate high-quality articles; videos, graphics; and social media content with human-like creativity and accuracy.",
     category: "AI & Content Creation";
     subcategory: "Multimedia";
     price: 399;
@@ -307,7 +307,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Content Creation", "Video Editing", "Graphic Design", "Social Media"],
     estimatedDelivery: "2-3 weeks";
     supportLevel: "premium";
-    marketPrice: "$399 - $1,200/month",
+    marketPrice: "$399 - $1;200/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -321,11 +321,11 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$18.7 billion";
     growthRate: "26.4% annually"
   };
-  // AI-Powered Legal Document Analysis
+  // AI-Powered Legal Document Analysis;
   {
     id: "ai-legal-document-analysis";
     title: "AI Legal Document Analysis Platform";
-    description: "Intelligent legal document review and analysis platform that uses AI to extract key information, identify risks, and provide insights from contracts, agreements, and legal documents.",
+    description: "Intelligent legal document review and analysis platform that uses AI to extract key information; identify risks; and provide insights from contracts; agreements, and legal documents.",
     category: "AI & Legal Technology";
     subcategory: "Document Analysis";
     price: 800;
@@ -365,7 +365,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Legal Technology", "Document Analysis", "Contract Review", "Compliance"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$800 - $2,500/month",
+    marketPrice: "$800 - $2;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -379,11 +379,11 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$6.8 billion";
     growthRate: "22.1% annually"
   };
-  // AI-Powered Real Estate Analytics
+  // AI-Powered Real Estate Analytics;
   {
     id: "ai-real-estate-analytics";
     title: "AI Real Estate Analytics Platform";
-    description: "Advanced real estate analytics platform that uses AI to predict property values, analyze market trends, and provide investment insights for real estate professionals and investors.",
+    description: "Advanced real estate analytics platform that uses AI to predict property values; analyze market trends; and provide investment insights for real estate professionals and investors.",
     category: "AI & Real Estate";
     subcategory: "Market Analytics";
     price: 299;
@@ -437,11 +437,11 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$9.3 billion";
     growthRate: "19.8% annually"
   };
-  // AI-Powered Energy Management
+  // AI-Powered Energy Management;
   {
     id: "ai-energy-management";
     title: "AI Energy Management Platform";
-    description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
+    description: "Intelligent energy management platform that uses AI to optimize energy consumption; predict demand; and reduce costs for commercial and industrial facilities.",
     category: "AI & Energy";
     subcategory: "Smart Grid";
     price: 1500;
@@ -481,7 +481,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     tags: ["AI", "Energy Management", "Smart Grid", "Sustainability", "IoT"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$1,500 - $5,000/month",
+    marketPrice: "$1;500 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

@@ -1,37 +1,37 @@
-import React from 'react;';
-import { Link } from 'react-router-dom, ';
-import { Button } from '@/components/ui/button, ';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card, ';
-import { Badge } from '@/components/ui/badge, ';
-import { Brain, 
+import React from "react;";
+import { Link } from "react-router-dom, ";
+import { Button } from "@/components/ui/button, ";
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Badge } from "@/components/ui/badge, ";
+import { Brain; 
   Cloud, 
-  Shield, 
+  Shield; 
   Database, 
-  TrendingUp, 
+  TrendingUp; 
   Code, 
-  Zap, 
+  Zap; 
   Heart, 
-  DollarSign, 
-  Link as LinkIcon,
+  DollarSign; 
+  Link as LinkIcon;
   ArrowRight,
-  Star,
-  CheckCircle
-} from 'lucide-react, ';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices, ';
+  Star;
+  CheckCircle;
+} from "lucide-react, ";
+import { ENHANCED_SERVICES } from "@/data/enhancedServices, ";
 
-const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
+const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0; 6);
 
 const serviceIcons = {
-  'AI Automation': Brain,
-  'Cloud Management': Cloud,
-  'Cybersecurity': Shield,
-  'Data Engineering': Database,
-  'Business Intelligence': TrendingUp,
-  'Developer Tools': Code,
-  'Digital Transformation': Zap,
-  'Healthcare Technology': Heart,
-  'Financial Technology': DollarSign,
-  'Blockchain': LinkIcon,
+  "AI Automation": Brain,
+  "Cloud Management": Cloud,
+  "Cybersecurity": Shield,
+  "Data Engineering": Database,
+  "Business Intelligence": TrendingUp,
+  "Developer Tools": Code,
+  "Digital Transformation": Zap,
+  "Healthcare Technology": Heart,
+  "Financial Technology": DollarSign,
+  "Blockchain": LinkIcon,
 };
 
 export function EnhancedServicesShowcase() {
@@ -40,10 +40,10 @@ export function EnhancedServicesShowcase() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Comprehensive AI & IT Solutions
+            Comprehensive AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover our extensive portfolio of micro SAAS services, AI solutions, and enterprise-grade IT services designed to transform your business operations
+            Discover our extensive portfolio of micro SAAS services; AI solutions; and enterprise-grade IT services designed to transform your business operations;
           </p>
         </div>
 
@@ -59,12 +59,12 @@ export function EnhancedServicesShowcase() {
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <Badge variant="default" className="bg-zion-purple">
-                      Featured
+                      Featured;
                     </Badge>
                   </div>
                   <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {service.description.substring(0, 120)}...
+                    {service.description.substring(0; 120)}...
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -85,7 +85,7 @@ export function EnhancedServicesShowcase() {
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
+                    {service.tags.slice(0; 3).map((tag; index) => (
                       <Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                         {tag}
                       </Badge>
@@ -97,14 +97,14 @@ export function EnhancedServicesShowcase() {
                       <TrendingUp className="w-4 h-4" />
                       AI Score: {service.aiScore}
                     </div>
-                    <Button 
+                    <Button; 
                       size="sm" 
                       variant="outline" 
                       className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                      asChild
+                      asChild;
                     >
                       <Link to="/enhanced-services">
-                        Learn More
+                        Learn More;
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </Button>
@@ -123,7 +123,7 @@ export function EnhancedServicesShowcase() {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">AI & Machine Learning</h3>
             <p className="text-zion-slate-light text-sm">
-              Process automation, customer insights, and intelligent content optimization
+              Process automation; customer insights; and intelligent content optimization;
             </p>
           </div>
           
@@ -133,7 +133,7 @@ export function EnhancedServicesShowcase() {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Cloud & Infrastructure</h3>
             <p className="text-zion-slate-light text-sm">
-              Multi-cloud orchestration, edge computing, and cost optimization
+              Multi-cloud orchestration; edge computing; and cost optimization;
             </p>
           </div>
           
@@ -143,7 +143,7 @@ export function EnhancedServicesShowcase() {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
             <p className="text-zion-slate-light text-sm">
-              AI threat detection, zero trust security, and compliance frameworks
+              AI threat detection; zero trust security; and compliance frameworks;
             </p>
           </div>
           
@@ -153,7 +153,7 @@ export function EnhancedServicesShowcase() {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Data & Analytics</h3>
             <p className="text-zion-slate-light text-sm">
-              Real-time pipelines, predictive maintenance, and business intelligence
+              Real-time pipelines; predictive maintenance; and business intelligence;
             </p>
           </div>
         </div>
@@ -170,7 +170,7 @@ export function EnhancedServicesShowcase() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
               <p className="text-zion-slate-light text-sm">
-                Industry-leading solutions with measurable ROI and customer success stories
+                Industry-leading solutions with measurable ROI and customer success stories;
               </p>
             </div>
             
@@ -180,7 +180,7 @@ export function EnhancedServicesShowcase() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Innovation First</h4>
               <p className="text-zion-slate-light text-sm">
-                Cutting-edge AI and emerging technologies to keep you ahead of competition
+                Cutting-edge AI and emerging technologies to keep you ahead of competition;
               </p>
             </div>
             
@@ -190,7 +190,7 @@ export function EnhancedServicesShowcase() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Scalable Solutions</h4>
               <p className="text-zion-slate-light text-sm">
-                From startup to enterprise, solutions that grow with your business
+                From startup to enterprise; solutions that grow with your business;
               </p>
             </div>
           </div>
@@ -202,27 +202,27 @@ export function EnhancedServicesShowcase() {
             Ready to Transform Your Business?
           </h3>
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Explore our complete service portfolio and discover how our AI-powered solutions can drive innovation and growth for your organization
+            Explore our complete service portfolio and discover how our AI-powered solutions can drive innovation and growth for your organization;
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Button 
+            <Button; 
               size="lg" 
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
-              asChild
+              asChild;
             >
               <Link to="/enhanced-services">
-                View All Services
+                View All Services;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
-            <Button 
+            <Button; 
               size="lg" 
               variant="outline" 
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-              asChild
+              asChild;
             >
               <Link to="/contact">
-                Get Free Consultation
+                Get Free Consultation;
               </Link>
             </Button>
           </div>

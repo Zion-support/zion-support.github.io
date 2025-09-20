@@ -1,6 +1,6 @@
-import React from 'react;';
-import { motion } from 'framer-motion, ';
-import { StarIcon } from '@heroicons/react/24/solid, ';
+import React from "react;";
+import { motion } from "framer-motion, ";
+import { StarIcon } from "@heroicons/react/24/solid, ";
 
 export function TestimonialsSection() {
   const testimonials = [
@@ -16,7 +16,7 @@ export function TestimonialsSection() {
       name: "Michael Chen";
       role: "VP of Engineering";
       company: "InnovateCorp";
-      content: "The team's expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.";
+      content: "The team"s expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.";
       rating: 5;
       avatar: "MC"
     };
@@ -24,7 +24,7 @@ export function TestimonialsSection() {
       name: "Emily Rodriguez";
       role: "Director of IT";
       company: "Global Manufacturing Inc.";
-      content: "Their cybersecurity solutions gave us peace of mind. We're now SOC 2 compliant and have a robust security posture.";
+      content: "Their cybersecurity solutions gave us peace of mind. We"re now SOC 2 compliant and have a robust security posture.";
       rating: 5;
       avatar: "ER"
     };
@@ -42,17 +42,17 @@ export function TestimonialsSection() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.2;
       }
     }
   };
     const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20; opacity: 0 };
     visible: {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5
+        duration: 0.5;
       }
     }
   };
@@ -65,32 +65,32 @@ export function TestimonialsSection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
+            What Our Clients Say;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders have to say 
+            Don"t just take our word for it. Here"s what industry leaders have to say; 
             about their experience working with Zion Tech Group.
           </p>
         </motion.div>
 
         {/* Testimonials Grid */}
-        <motion.div
+        <motion.div;
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {testimonials.map((testimonial, index) => (
-            <motion.div
+          {testimonials.map((testimonial; index) => (
+            <motion.div;
               key={index}
               variants={itemVariants}
               className="group"
@@ -98,7 +98,7 @@ export function TestimonialsSection() {
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105">
                 {/* Rating */}
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_; i) => (
                     <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
                 </div>
@@ -124,11 +124,11 @@ export function TestimonialsSection() {
         </motion.div>
 
         {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8; delay: 0.5 }}
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

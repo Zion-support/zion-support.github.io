@@ -1,12 +1,12 @@
-import React from 'react;';
-import { motion } from 'framer-motion, ';
-import { CheckCircleIcon,
+import React from "react;";
+import { motion } from "framer-motion, ";
+import { CheckCircleIcon;
   ClockIcon,
-  UserGroupIcon,
+  UserGroupIcon;
   ShieldCheckIcon,
-  RocketLaunchIcon,
-  CogIcon
-} from '@heroicons/react/24/outline, ';
+  RocketLaunchIcon;
+  CogIcon;
+} from "@heroicons/react/24/outline, ";
 
 export function FeaturesSection() {
   const features = [
@@ -52,17 +52,17 @@ export function FeaturesSection() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.1;
       }
     }
   };
     const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20; opacity: 0 };
     visible: {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5
+        duration: 0.5;
       }
     }
   };
@@ -75,9 +75,9 @@ export function FeaturesSection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -86,21 +86,21 @@ export function FeaturesSection() {
             Why Choose Zion Tech Group?
           </h2>
           <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-            We combine cutting-edge technology with proven methodologies to deliver 
+            We combine cutting-edge technology with proven methodologies to deliver; 
             exceptional results that drive your business forward.
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <motion.div
+        <motion.div;
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {features.map((feature, index) => (
-            <motion.div
+          {features.map((feature; index) => (
+            <motion.div;
               key={index}
               variants={itemVariants}
               className="group"
@@ -124,11 +124,11 @@ export function FeaturesSection() {
         </motion.div>
 
         {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8; delay: 0.5 }}
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
@@ -136,15 +136,15 @@ export function FeaturesSection() {
               Ready to Experience the Difference?
             </h3>
             <p className="text-zion-slate mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their businesses 
+              Join hundreds of satisfied clients who have transformed their businesses; 
               with our innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                Get Started Today
+                Get Started Today;
               </button>
               <button className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>

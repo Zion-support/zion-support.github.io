@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const HowItWorksSection = () => {
   return (
@@ -11,28 +11,28 @@ export const HowItWorksSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-              01
+              01;
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Consultation</h3>
             <p className="text-gray-600">We analyze your requirements and propose the best solution</p>
           </div>
           <div className="text-center">
             <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-              02
+              02;
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Planning</h3>
             <p className="text-gray-600">Detailed project planning and resource allocation</p>
           </div>
           <div className="text-center">
             <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-              03
+              03;
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3>
             <p className="text-gray-600">Expert execution with regular progress updates</p>
           </div>
           <div className="text-center">
             <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-              04
+              04;
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
             <p className="text-gray-600">Ongoing maintenance and continuous optimization</p>

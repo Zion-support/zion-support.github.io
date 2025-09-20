@@ -1,11 +1,11 @@
-import React from 'react;';
-import { motion } from 'framer-motion, ';
-import { Link } from 'react-router-dom, ';
-import { RocketLaunchIcon,
+import React from "react;";
+import { motion } from "framer-motion, ";
+import { Link } from "react-router-dom, ";
+import { RocketLaunchIcon;
   PhoneIcon,
-  EnvelopeIcon,
-  CalendarIcon
-} from '@heroicons/react/24/outline, ';
+  EnvelopeIcon;
+  CalendarIcon;
+} from "@heroicons/react/24/outline, ";
 
 export function CTASection() {
   const ctaOptions = [
@@ -39,17 +39,17 @@ export function CTASection() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.1;
       }
     }
   };
     const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20; opacity: 0 };
     visible: {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5
+        duration: 0.5;
       }
     }
   };
@@ -62,9 +62,9 @@ export function CTASection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -75,45 +75,45 @@ export function CTASection() {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Transform Your Business
+            Transform Your Business;
             <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-              Today
+              Today;
             </span>
           </h2>
           
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Join hundreds of companies that have already transformed their operations 
-            with our cutting-edge technology solutions. Let's discuss how we can help 
+            Join hundreds of companies that have already transformed their operations; 
+            with our cutting-edge technology solutions. Let's discuss how we can help; 
             you achieve your goals.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
+            <Link;
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
             >
               <RocketLaunchIcon className="w-5 h-5" />
-              Get Free Consultation
+              Get Free Consultation;
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
-              Explore Services
+              Explore Services;
             </Link>
           </div>
         </motion.div>
 
         {/* Contact Options */}
-        <motion.div
+        <motion.div;
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {ctaOptions.map((option, index) => (
-            <motion.div
+          {ctaOptions.map((option; index) => (
+            <motion.div;
               key={index}
               variants={itemVariants}
               className="group"
@@ -144,17 +144,17 @@ export function CTASection() {
         </motion.div>
 
         {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0; y: 20 }}
+          whileInView={{ opacity: 1; y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8; delay: 0.5 }}
           className="text-center mt-16"
         >
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
             <span className="text-zion-slate-light text-sm">
-              Response within 2 hours • Free initial consultation
+              Response within 2 hours • Free initial consultation;
             </span>
           </div>
         </motion.div>

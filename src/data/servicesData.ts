@@ -26,7 +26,7 @@ export const SERVICES: ProductListing[] = [
     id: "service-2";
     title: "Cloud Infrastructure Management";
     description:
-      "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
+      "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance; security, and cost efficiency.",
     category: "Management";
     price: 3000;
     currency: "$";
@@ -88,7 +88,7 @@ export const SERVICES: ProductListing[] = [
     id: "service-5";
     title: "IT Infrastructure Modernization";
     description:
-      "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
+      "Transform your legacy systems into modern; agile infrastructure that supports innovation and business growth.",
     category: "Consulting";
     price: 8500;
     currency: "$";

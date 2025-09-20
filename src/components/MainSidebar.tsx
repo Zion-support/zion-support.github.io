@@ -1,173 +1,205 @@
-import React from 'react;';
-import { Lin, k, useLocation } from 'react-router-dom, ';
-import { cn } from '@/lib/utils, ';
-import { Hom, e, 
-  ShoppingCar, t, 
-  User, s, 
-  Setting, s, 
-  MessageSquar, e, 
-  FileTex, t, 
-  HelpCircl, e, 
-  Cod, e, 
-  BarChart, 3, 
-  Briefcas, e,
-  Lea, f,
-  Buildin, g,
-  Mai, l,
-  Calenda, r,
-  Glob, e,
-  Zap
-} from 'lucide-react, ';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { 
+  Home, 
+  ShoppingCart, 
+  Users, 
+  Settings, 
+  MessageSquare, 
+  FileText, 
+  HelpCircle, 
+  Code, 
+  BarChart3, 
+  Briefcase,
+  Leaf,
+  Building,
+  Mail,
+  Calendar,
+  Globe,
+  Zap,
+} from "lucide-react";
 
-interface SidebarItem {
-  ke, y: string;
-    hre, f: string;
-    ico, n: React.ReactNode;
-    labe, l: string;
-    description?: string;
+const navigation = [
+  { name: "Dashboard", href: "/", icon: Home },
+  { name: "Services", href: "/services", icon: Code },
+  { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
+  { name: "Community", href: "/community", icon: Users },
+  { name: "Blog", href: "/blog", icon: FileText },
+  { name: "Contact", href: "/contact", icon: Mail },
+  { name: "About", href: "/about", icon: HelpCircle },
+];
+
+const tools = [
+  { name: "AI Tools", href: "/tools", icon: Zap },
+  { name: "Analytics", href: "/analytics", icon: BarChart3 },
+  { name: "Projects", href: "/projects", icon: Briefcase },
+  { name: "Calendar", href: "/calendar", icon: Calendar },
+];
+
+const company = [
+  { name: "Sustainability", href: "/sustainability", icon: Leaf },
+  { name: "Enterprise", href: "/enterprise", icon: Building },
+  { name: "Global", href: "/global", icon: Globe },
+];
+
+interface MainSidebarProps {
+  className?: string;
 }
 
-interface SidebarSection {
-  titl, e: string;
-    item, s: SidebarItem[];
-}
-
-export function MainSidebar() {
+export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
   const location = useLocation();
 
-  const sidebarSection,  s: SidebarSection[] = [
-    {
-      tit, l, e: 'Mai, n',
-    ite, m, s: [
-        { k, e, y: 'hom, e',
-    hr, e, f: '/', ic, o, n: <Hom, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Hom, e' },
-        { k, e, y: 'marketplac, e',
-    hr, e, f: '/marketplac, e', ic, o, n: <ShoppingCar, t classNam, e="w-4 h-4" />,
-    lab, e, l: 'Marketplac, e' },
-        { k, e, y: 'service, s',
-    hr, e, f: '/service, s', ic, o, n: <Setting, s classNam, e="w-4 h-4" />,
-    lab, e, l: 'Service, s' },
-        { k, e, y: 'talen, t',
-    hr, e, f: '/talen, t', ic, o, n: <User, s classNam, e="w-4 h-4" />,
-    lab, e, l: 'Talen, t' },
-        { k, e, y: 'equipmen, t',
-    hr, e, f: '/equipmen, t', ic, o, n: <BarChart, 3 classNam, e="w-4 h-4" />,
-    lab, e, l: 'Equipmen, t' },
-      ]
-    },
-    {
-      titl, e: 'Company';
-    item, s: [
-        { k, e, y: 'abou, t',
-    hr, e, f: '/abou, t', ic, o, n: <Buildin, g classNam, e="w-4 h-4" />,
-    lab, e, l: 'Abou, t U, s' },
-        { k, e, y: 'career, s',
-    hr, e, f: '/career, s', ic, o, n: <Briefcas, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Career, s' },
-        { k, e, y: 'partner, s',
-    hr, e, f: '/partner, s', ic, o, n: <User, s classNam, e="w-4 h-4" />,
-    lab, e, l: 'Partner, s' },
-        { k, e, y: 'contac, t',
-    hr, e, f: '/contac, t', ic, o, n: <Mai, l classNam, e="w-4 h-4" />,
-    lab, e, l: 'Contac, t' },
-      ]
-    },
-    {
-      titl, e: 'Resources';
-    item, s: [
-        { k, e, y: 'blo, g',
-    hr, e, f: '/blo, g', ic, o, n: <FileTex, t classNam, e="w-4 h-4" />,
-    lab, e, l: 'Blo, g' },
-        { k, e, y: 'communit, y',
-    hr, e, f: '/communit, y', ic, o, n: <Glob, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Communit, y' },
-        { k, e, y: 'gree, n-i, t',
-    hr, e, f: '/gree, n-i, t', ic, o, n: <Lea, f classNam, e="w-4 h-4" />,
-    lab, e, l: 'Gree, n I, T' },
-        { k, e, y: 'zio, n-hir, e-a, i',
-    hr, e, f: '/zio, n-hir, e-a, i', ic, o, n: <Za, p classNam, e="w-4 h-4" />,
-    lab, e, l: 'A, I Hirin, g' },
-      ]
-    },
-    {
-      titl, e: 'Support';
-    item, s: [
-        { k, e, y: 'hel, p',
-    hr, e, f: '/hel, p', ic, o, n: <HelpCircl, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Hel, p Cente, r' },
-        { k, e, y: 'developer, s',
-    hr, e, f: '/developer, s', ic, o, n: <Cod, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'Develope, r Porta, l' },
-        { k, e, y: 'ap, i-doc, s',
-    hr, e, f: '/ap, i-doc, s', ic, o, n: <Cod, e classNam, e="w-4 h-4" />,
-    lab, e, l: 'AP, I Doc, s' },
-        { k, e, y: 'sitema, p',
-    hr, e, f: '/sitema, p', ic, o, n: <Calenda, r classNam, e="w-4 h-4" />,
-    lab, e, l: 'Sitema, p' },
-      ]
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return location.pathname === "/";
     }
-  ];
-
-  const isActive = (hre, f: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-     }
     return location.pathname.startsWith(href);
   };
 
   return (
-    <aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
-      <div className="mb-8">
+    <div className={cn("flex flex-col h-full bg-gray-50 dark:bg-gray-900", className)}>
+      {/* Logo */}
+      <div className="flex items-center h-16 px-6 border-b border-gray-200 dark:border-gray-700">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-            ZION
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Zap className="w-5 h-5 text-white" />
+          </div>
+          <span className="text-xl font-bold text-gray-900 dark:text-white">
+            Zion Tech
           </span>
         </Link>
-        <p className="text-zion-slate-light text-sm mt-2">
-          Tech & AI Marketplace
-        </p>
       </div>
 
-      <nav className="space-y-6">
-        {sidebarSections.map((section) => (
-          <div key={section.title}>
-            <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
-              {section.title}
-            </h3>
-            <ul className="space-y-1">
-              {section.items.map((item) => (
-                <li key={item.key}>
-                  <Link
-                    to={item.href}
+      {/* Navigation */}
+      <nav className="flex-1 px-4 py-6 space-y-8">
+        {/* Main Navigation */}
+        <div>
+          <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Navigation
+          </h3>
+          <div className="mt-3 space-y-1">
+            {navigation.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    isActive(item.href)
+                      ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                  )}
+                >
+                  <Icon
                     className={cn(
-                      "flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors", 
+                      "mr-3 h-5 w-5 flex-shrink-0",
                       isActive(item.href)
-                        ? "bg-zion-purple/20 text-zion-cyan"
-                        : "text-zion-slate-light hove, r:bg-zion-purple/10 hove, r:text-zion-cyan"
+                        ? "text-blue-500 dark:text-blue-400"
+                        : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
                     )}
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                  />
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
-        ))}
+        </div>
+
+        {/* Tools */}
+        <div>
+          <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Tools
+          </h3>
+          <div className="mt-3 space-y-1">
+            {tools.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    isActive(item.href)
+                      ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                  )}
+                >
+                  <Icon
+                    className={cn(
+                      "mr-3 h-5 w-5 flex-shrink-0",
+                      isActive(item.href)
+                        ? "text-blue-500 dark:text-blue-400"
+                        : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+                    )}
+                  />
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            Company
+          </h3>
+          <div className="mt-3 space-y-1">
+            {company.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    isActive(item.href)
+                      ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+                      : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                  )}
+                >
+                  <Icon
+                    className={cn(
+                      "mr-3 h-5 w-5 flex-shrink-0",
+                      isActive(item.href)
+                        ? "text-blue-500 dark:text-blue-400"
+                        : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+                    )}
+                  />
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </nav>
 
-      <div className="mt-8 pt-6 border-t border-zion-blue-light">
-        <div className="text-zion-slate-light text-xs">
-          <p className="mb-2">Need help?</p>
-          <Link 
-            to="/contact" 
-            className="text-zion-cyan hove, r: text-zion-purple transition-colors"
-          >
-            Contact Support
-          </Link>
-        </div>
+      {/* Settings */}
+      <div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
+        <Link
+          to="/settings"
+          className={cn(
+            "group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
+            isActive("/settings")
+              ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200"
+              : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+          )}
+        >
+          <Settings
+            className={cn(
+              "mr-3 h-5 w-5 flex-shrink-0",
+              isActive("/settings")
+                ? "text-blue-500 dark:text-blue-400"
+                : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+            )}
+          />
+          Settings
+        </Link>
       </div>
-    </aside>
+    </div>
   );
-}
+};
+
+export default MainSidebar;

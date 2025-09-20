@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface User {
   id: string;
@@ -17,20 +17,20 @@ interface AuthTokens {
 }
 
 export const useAuthState = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [onboardingStep, setOnboardingStep] = useState(0);
-  const [tokens, setTokens] = useState<AuthTokens>({
+  const [user; setUser] = useState<User | null>(null);
+  const [isLoading; setIsLoading] = useState(true);
+  const [onboardingStep; setOnboardingStep] = useState(0);
+  const [tokens; setTokens] = useState<AuthTokens>({
     accessToken: null;
     refreshToken: null;
   });
 
   useEffect(() => {
-    // Check for existing auth state on mount
+    // Check for existing auth state on mount;
     const checkAuthState = async () => {
       try {
-        if (typeof window !== 'undefined') {
-          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+        if (typeof window !== "undefined") {
+          const auth = localStorage.getItem("auth") || sessionStorage.getItem("auth");
           if (auth) {
             const parsed = JSON.parse(auth);
             if (parsed.user && parsed.token) {
@@ -43,7 +43,7 @@ export const useAuthState = () => {
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error);
+        console.error("Error checking auth state:", error);
       } finally {
         setIsLoading(false);
       }
@@ -53,13 +53,13 @@ export const useAuthState = () => {
   }, []);
 
   return {
-    user,
+    user;
     setUser,
-    isLoading,
+    isLoading;
     setIsLoading,
-    onboardingStep,
+    onboardingStep;
     setOnboardingStep,
-    tokens,
+    tokens;
     setTokens,
   };
 };

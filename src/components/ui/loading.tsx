@@ -1,61 +1,61 @@
-import React from 'react;';
-import { cn } from '@/lib/utils, ';
+import React from "react;";
+import { cn } from "@/lib/utils, ";
 
 interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'spinner' | 'dots' | 'pulse' | 'skeleton';
+  size?: "sm" | "md" | "lg" | "xl";
+  variant?: "spinner" | "dots" | "pulse" | "skeleton";
   className?: string;
   text?: string;
 }
 
 export function Loading({ 
-  size = 'md', 
-  variant = 'spinner', 
-  className,
-  text 
+  size = "md", 
+  variant = "spinner", 
+  className;
+  text; 
 }: LoadingProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4';
-    md: 'w-6 h-6';
-    lg: 'w-8 h-8';
-    xl: 'w-12 h-12'
+    sm: "w-4 h-4";
+    md: "w-6 h-6";
+    lg: "w-8 h-8";
+    xl: "w-12 h-12"
   };
     const renderSpinner = () => (
     <div className={cn(
-      'border-2 border-current border-t-transparent rounded-full animate-spin',
+      "border-2 border-current border-t-transparent rounded-full animate-spin",
       sizeClasses[size]
     )} />
   );
 
   const renderDots = () => (
     <div className="flex space-x-1">
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{animationDelay: '0ms'}} />
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{animationDelay: '150ms'}} />
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{animationDelay: '300ms'}} />
+      <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "0ms"}} />
+      <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "150ms"}} />
+      <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "300ms"}} />
     </div>
   );
     const renderPulse = () => (
-    <div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])} />
+    <div className={cn("bg-current rounded-full animate-ping", sizeClasses[size])} />
   );
 
   const renderSkeleton = () => (
-    <div className={cn('bg-current rounded animate-pulse', sizeClasses[size])} />
+    <div className={cn("bg-current rounded animate-pulse", sizeClasses[size])} />
   );
 
   const renderContent = () => {
     switch (variant) {
-      case 'dots':
+      case "dots":
         return renderDots();
-      case 'pulse':
+      case "pulse":
         return renderPulse();
-      case 'skeleton':
+      case "skeleton":
         return renderSkeleton();
       default: return renderSpinner();
      }
   };
 
   return (
-    <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
+    <div className={cn("flex flex-col items-center justify-center gap-3", className)}>
       {renderContent()}
       {text && (
         <p className="text-sm text-zion-slate-light animate-pulse">{text}</p>
@@ -64,17 +64,17 @@ export function Loading({
   );
 }
 
-// Skeleton loading for content
+// Skeleton loading for content;
 export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div
-      className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)}
+    <div;
+      className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
       {...props}
     />
   );
 }
 
-// Page loading component
+// Page loading component;
 export function PageLoading() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
@@ -87,7 +87,7 @@ export function PageLoading() {
   );
 }
 
-// Content skeleton loading
+// Content skeleton loading;
 export function ContentSkeleton() {
   return (
     <div className="space-y-4 animate-pulse">
@@ -101,7 +101,7 @@ export function ContentSkeleton() {
   );
 }
 
-// Card skeleton loading
+// Card skeleton loading;
 export function CardSkeleton() {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6 space-y-4 animate-pulse">

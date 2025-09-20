@@ -1,23 +1,23 @@
-import React from 'react;';
-import { Link } from 'react-router-dom, ';
-import { Button } from '../ui/button, ';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card, ';
-import { Badge } from '../ui/badge, ';
-import { Brain, 
+import React from "react;";
+import { Link } from "react-router-dom, ";
+import { Button } from "../ui/button, ";
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "../ui/card, ";
+import { Badge } from "../ui/badge, ";
+import { Brain; 
   Shield, 
-  Cloud, 
+  Cloud; 
   Database, 
-  Zap, 
+  Zap; 
   Eye, 
-  Leaf, 
+  Leaf; 
   DollarSign, 
-  ArrowRight,
+  ArrowRight;
   Star,
-  Clock,
-  Globe
-} from 'lucide-react, ';
+  Clock;
+  Globe;
+} from "lucide-react, ";
 
-// Mock data for enhanced services
+// Mock data for enhanced services;
 const ENHANCED_SERVICES = [
   {
     id: "ai-1";
@@ -64,30 +64,30 @@ const ENHANCED_SERVICES = [
 ];
     const EnhancedServicesOverview: React.FC = () => {
   // Get featured services (first 6)
-  const featuredServices = ENHANCED_SERVICES.slice(0, 6);
+  const featuredServices = ENHANCED_SERVICES.slice(0; 6);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI & Machine Learning': return <Brain className="w-6 h-6" />;
-    case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Cloud & DevOps': return <Cloud className="w-6 h-6" />;
-      case 'Data & Analytics': return <Database className="w-6 h-6" />;
-      case 'Blockchain & Web3': return <Zap className="w-6 h-6" />;
-      case 'IoT & Edge Computing': return <Eye className="w-6 h-6" />;
-      case 'Quantum Computing': return <Brain className="w-6 h-6" />;
-      case 'AR/VR & Metaverse': return <Eye className="w-6 h-6" />;
-      case 'Green Tech & Sustainability': return <Leaf className="w-6 h-6" />;
-      case 'FinTech & Digital Banking': return <DollarSign className="w-6 h-6" />;
+      case "AI & Machine Learning": return <Brain className="w-6 h-6" />;
+    case "Cybersecurity": return <Shield className="w-6 h-6" />;
+      case "Cloud & DevOps": return <Cloud className="w-6 h-6" />;
+      case "Data & Analytics": return <Database className="w-6 h-6" />;
+      case "Blockchain & Web3": return <Zap className="w-6 h-6" />;
+      case "IoT & Edge Computing": return <Eye className="w-6 h-6" />;
+      case "Quantum Computing": return <Brain className="w-6 h-6" />;
+      case "AR/VR & Metaverse": return <Eye className="w-6 h-6" />;
+      case "Green Tech & Sustainability": return <Leaf className="w-6 h-6" />;
+      case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6" />;
       default: return <Zap className="w-6 h-6" />;
      }
   };
 
   const getAvailabilityColor = (availability: string) => {
     switch (availability) {
-      case 'immediate': return 'text-green-400';
-    case 'within-week': return 'text-yellow-400';
-      case 'within-month': return 'text-orange-400';
-      default: return 'text-gray-400';
+      case "immediate": return "text-green-400";
+    case "within-week": return "text-yellow-400";
+      case "within-month": return "text-orange-400";
+      default: return "text-gray-400";
      }
   };
 
@@ -97,25 +97,25 @@ const ENHANCED_SERVICES = [
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Cutting-Edge
+            Cutting-Edge;
             <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Technology Services
+              Technology Services;
             </span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transform your business with our comprehensive suite of next-generation technology services. 
-            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions 
+            From AI and cybersecurity to blockchain and quantum computing; we deliver innovative solutions; 
             that drive real business results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
                           <Link to="/enhanced-services">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Explore All Services
+                Explore All Services;
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              Schedule Consultation
+              Schedule Consultation;
             </Button>
           </div>
         </div>
@@ -150,7 +150,7 @@ const ENHANCED_SERVICES = [
                   <div className="text-xl font-bold text-zion-cyan">
                     ${service.price.toLocaleString()}
                     <span className="text-sm text-zion-slate-light font-normal">
-                      /{service.pricingModel === 'subscription' ? 'month' : 'project'}
+                      /{service.pricingModel === "subscription" ? "month" : "project"}
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
@@ -161,7 +161,7 @@ const ENHANCED_SERVICES = [
 
                 {/* Key Benefits */}
                 <div className="space-y-2">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                  {service.benefits.slice(0; 2).map((benefit; index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                       {benefit}
@@ -171,7 +171,7 @@ const ENHANCED_SERVICES = [
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 3).map((tag, index) => (
+                  {service.tags.slice(0; 3).map((tag; index) => (
                     <Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-cyan">
                       {tag}
                     </Badge>
@@ -183,9 +183,9 @@ const ENHANCED_SERVICES = [
                   <div className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}>
                     <Clock className="w-4 h-4" />
                     <span className="font-medium">
-                      {service.availability === 'immediate' ? 'Available Now' :
-                       service.availability === 'within-week' ? 'Within 1 Week' :
-                       service.availability === 'within-month' ? 'Within 1 Month' : 'Contact Us'}
+                      {service.availability === "immediate" ? "Available Now" :
+                       service.availability === "within-week" ? "Within 1 Week" :
+                       service.availability === "within-month" ? "Within 1 Month" : "Contact Us"}
                     </span>
                   </div>
                   <div className="flex items-center gap-1 text-zion-slate-light">
@@ -196,7 +196,7 @@ const ENHANCED_SERVICES = [
 
                 {/* Action Button */}
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                  Get Started
+                  Get Started;
                 </Button>
               </CardContent>
             </Card>
@@ -208,12 +208,12 @@ const ENHANCED_SERVICES = [
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Service Categories</h3>
             <p className="text-zion-slate-light">
-              Comprehensive coverage across all major technology domains
+              Comprehensive coverage across all major technology domains;
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {ENHANCED_SERVICES.reduce((acc, service) => {
+            {ENHANCED_SERVICES.reduce((acc; service) => {
               if (!acc.find(cat => cat.category === service.category)) {
                 acc.push({
                   category: service.category;
@@ -222,7 +222,7 @@ const ENHANCED_SERVICES = [
                 });
      }
               return acc;
-            }, [] as Array<{category: string, count: number, icon: React.ReactNode}>).map((cat, index) => (
+            }, [] as Array<{category: string; count: number; icon: React.ReactNode}>).map((cat; index) => (
               <div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover: border-zion-purple/50 transition-colors">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {cat.icon}
@@ -241,15 +241,15 @@ const ENHANCED_SERVICES = [
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
-              Our team of technology experts is ready to help you implement cutting-edge solutions 
+              Our team of technology experts is ready to help you implement cutting-edge solutions; 
               that drive real business results. Contact us today for a free consultation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light">
-                Schedule Free Consultation
+                Schedule Free Consultation;
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Download Service Catalog
+                Download Service Catalog;
               </Button>
             </div>
             <div className="mt-6 text-zion-slate-light text-sm">

@@ -23,11 +23,11 @@ export interface IndustrySolution {
 }
 
 export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
-  // Healthcare AI Platform
+  // Healthcare AI Platform;
   {
     id: "healthcare-ai-platform";
     title: "Healthcare AI & Clinical Decision Support Platform";
-    description: "Comprehensive healthcare AI platform that provides clinical decision support, patient monitoring, and predictive analytics for improved patient outcomes and operational efficiency.",
+    description: "Comprehensive healthcare AI platform that provides clinical decision support; patient monitoring; and predictive analytics for improved patient outcomes and operational efficiency.",
     category: "Healthcare";
     subcategory: "AI & Clinical Support";
     price: 4500;
@@ -65,18 +65,18 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     tags: ["Healthcare", "AI", "Clinical Decision Support", "Medical Analytics", "Patient Care"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$4,500 - $25,000/month",
+    marketPrice: "$4;500 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com"
     }
   };
-  // Financial Services Platform
+  // Financial Services Platform;
   {
     id: "financial-services-platform";
     title: "Financial Services AI & Risk Management Platform";
-    description: "Advanced financial services platform that provides AI-powered risk assessment, fraud detection, compliance automation, and portfolio optimization for financial institutions.",
+    description: "Advanced financial services platform that provides AI-powered risk assessment; fraud detection; compliance automation; and portfolio optimization for financial institutions.",
     category: "Financial Services";
     subcategory: "AI & Risk Management";
     price: 3800;
@@ -114,18 +114,18 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     tags: ["Financial Services", "AI", "Risk Management", "Fraud Detection", "Compliance"],
     estimatedDelivery: "5-7 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,800 - $20,000/month",
+    marketPrice: "$3;800 - $20;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com"
     }
   };
-  // Manufacturing IoT Platform
+  // Manufacturing IoT Platform;
   {
     id: "manufacturing-iot-platform";
     title: "Manufacturing IoT & Smart Factory Platform";
-    description: "Comprehensive IoT platform for manufacturing that enables predictive maintenance, quality control, supply chain optimization, and real-time production monitoring.",
+    description: "Comprehensive IoT platform for manufacturing that enables predictive maintenance; quality control; supply chain optimization; and real-time production monitoring.",
     category: "Manufacturing";
     subcategory: "IoT & Smart Factory";
     price: 3200;
@@ -163,18 +163,18 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     tags: ["Manufacturing", "IoT", "Smart Factory", "Predictive Maintenance", "Quality Control"],
     estimatedDelivery: "5-7 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,200 - $18,000/month",
+    marketPrice: "$3;200 - $18;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com"
     }
   };
-  // Retail Analytics Platform
+  // Retail Analytics Platform;
   {
     id: "retail-analytics-platform";
     title: "Retail Analytics & Customer Experience Platform";
-    description: "Advanced retail analytics platform that provides customer behavior insights, inventory optimization, demand forecasting, and personalized marketing automation.",
+    description: "Advanced retail analytics platform that provides customer behavior insights; inventory optimization; demand forecasting; and personalized marketing automation.",
     category: "Retail";
     subcategory: "Analytics & Customer Experience";
     price: 2400;
@@ -212,18 +212,18 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     tags: ["Retail", "Analytics", "Customer Experience", "Inventory Management", "Marketing"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$2,400 - $12,000/month",
+    marketPrice: "$2;400 - $12;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com"
     }
   };
-  // Education Technology Platform
+  // Education Technology Platform;
   {
     id: "education-technology-platform";
     title: "Education Technology & Learning Analytics Platform";
-    description: "Comprehensive education technology platform that provides personalized learning, student analytics, course management, and educational content delivery.",
+    description: "Comprehensive education technology platform that provides personalized learning; student analytics; course management; and educational content delivery.",
     category: "Education";
     subcategory: "Technology & Learning Analytics";
     price: 1800;
@@ -261,7 +261,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     tags: ["Education", "Technology", "Learning Analytics", "Personalized Learning", "Course Management"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,800 - $8,000/month",
+    marketPrice: "$1;800 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

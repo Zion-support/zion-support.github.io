@@ -1,4 +1,4 @@
-// Interface definitions
+// Interface definitions;
 export interface ServiceContact {
   phone: string;
     email: string;
@@ -71,7 +71,7 @@ export interface AIService {
     useCases: string[];
 }
 
-// Additional Advanced AI Services
+// Additional Advanced AI Services;
 export const additionalAdvancedAIServices2025: AIService[] = [
   {
     id: 1;
@@ -107,7 +107,7 @@ export const additionalAdvancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/quantum-neural-networks";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$4,500-15,000/month",
+    marketPrice: "$4;500-15;000/month",
     aiModels: ["Quantum Neural Networks", "Hybrid models", "Quantum ML", "Custom algorithms"],
     accuracy: "Quantum advantage";
     trainingData: "Quantum datasets";
@@ -149,7 +149,7 @@ export const additionalAdvancedAIServices2025: AIService[] = [
       website: "https://ziontechgroup.com/autonomous-ai-agents";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,200-10,000/month",
+    marketPrice: "$3;200-10;000/month",
     aiModels: ["Reinforcement Learning", "Multi-agent systems", "Decision trees", "Neural networks"],
     accuracy: "95.3%";
     trainingData: "Multi-domain datasets";
@@ -159,7 +159,7 @@ export const additionalAdvancedAIServices2025: AIService[] = [
   }
 ];
 
-// Advanced Blockchain Services
+// Advanced Blockchain Services;
 export const advancedBlockchainServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -196,7 +196,7 @@ export const advancedBlockchainServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/cross-chain-bridge";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$399-1,299/month",
+    marketPrice: "$399-1;299/month",
     competitors: ["Multichain", "Stargate", "Hop Protocol"],
     roi: "600% within 12 months";
     setupTime: "1-2 weeks";
@@ -209,7 +209,7 @@ export const advancedBlockchainServices2025: MicroSaasService[] = [
     name: "Decentralized Identity Platform";
     category: "Identity Management";
     pricing: "Professional";
-    description: "Self-sovereign identity platform built on blockchain technology for secure, privacy-preserving digital identity management",
+    description: "Self-sovereign identity platform built on blockchain technology for secure; privacy-preserving digital identity management",
     price: 249;
     pricingModel: "monthly";
     userLimit: "Unlimited identities";
@@ -248,13 +248,13 @@ export const advancedBlockchainServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Advanced Cybersecurity Services
+    // Advanced Cybersecurity Services;
 export const advancedCybersecurityServices2025: ITService[] = [
   {
     id: 1;
     name: "AI-Powered SOC Platform";
     category: "Security Operations";
-    description: "Intelligent Security Operations Center platform with AI-driven threat detection, automated response, and advanced analytics",
+    description: "Intelligent Security Operations Center platform with AI-driven threat detection; automated response; and advanced analytics",
     hourlyRate: 175;
     projectRate: 20000;
     features: [
@@ -283,7 +283,7 @@ export const advancedCybersecurityServices2025: ITService[] = [
       website: "https://ziontechgroup.com/ai-soc-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$20,000-60,000/project",
+    marketPrice: "$20;000-60;000/project",
     responseTime: "30 minutes";
     sla: "99.99% uptime";
     certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
@@ -323,7 +323,7 @@ export const advancedCybersecurityServices2025: ITService[] = [
       website: "https://ziontechgroup.com/quantum-safe-cryptography";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$30,000-80,000/project",
+    marketPrice: "$30;000-80;000/project",
     responseTime: "4 hours";
     sla: "99.9% uptime";
     certifications: ["Cryptography", "Security", "Quantum Computing"],
@@ -331,13 +331,13 @@ export const advancedCybersecurityServices2025: ITService[] = [
     support: "Business hours"
   }
 ];
-    // Advanced Cloud & DevOps Services
+    // Advanced Cloud & DevOps Services;
 export const advancedCloudDevOpsServices2025: ITService[] = [
   {
     id: 1;
     name: "AI-Powered DevOps Automation";
     category: "DevOps";
-    description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment strategies",
+    description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines; infrastructure management; and deployment strategies",
     hourlyRate: 150;
     projectRate: 18000;
     features: [
@@ -366,7 +366,7 @@ export const advancedCloudDevOpsServices2025: ITService[] = [
       website: "https://ziontechgroup.com/ai-devops-automation";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$18,000-50,000/project",
+    marketPrice: "$18;000-50;000/project",
     responseTime: "6 hours";
     sla: "99.5% uptime";
     certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
@@ -374,13 +374,13 @@ export const advancedCloudDevOpsServices2025: ITService[] = [
     support: "Business hours"
   }
 ];
-    // Advanced Healthcare Services
+    // Advanced Healthcare Services;
 export const advancedHealthcareServices2025: AIService[] = [
   {
     id: 1;
     name: "Genomic AI Platform";
     category: "Genomics";
-    description: "Advanced AI platform for genomic analysis, personalized medicine, and drug discovery with cutting-edge machine learning algorithms",
+    description: "Advanced AI platform for genomic analysis; personalized medicine; and drug discovery with cutting-edge machine learning algorithms",
     pricing: "Enterprise";
     price: 4200;
     pricingModel: "monthly";
@@ -410,7 +410,7 @@ export const advancedHealthcareServices2025: AIService[] = [
       website: "https://ziontechgroup.com/genomic-ai-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$4,200-15,000/month",
+    marketPrice: "$4;200-15;000/month",
     aiModels: ["Deep learning", "Neural networks", "Custom ML", "Bioinformatics"],
     accuracy: "97.1%";
     trainingData: "Genomic datasets";
@@ -420,14 +420,14 @@ export const advancedHealthcareServices2025: AIService[] = [
   }
 ];
 
-// Advanced IoT Services
+// Advanced IoT Services;
 export const advancedIoTServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Industrial IoT Analytics";
     category: "Industrial IoT";
     pricing: "Enterprise";
-    description: "Comprehensive industrial IoT analytics platform for manufacturing optimization, predictive maintenance, and operational intelligence",
+    description: "Comprehensive industrial IoT analytics platform for manufacturing optimization; predictive maintenance; and operational intelligence",
     price: 1500;
     pricingModel: "monthly";
     userLimit: "Unlimited devices";
@@ -457,7 +457,7 @@ export const advancedIoTServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/industrial-iot-analytics";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,500-6,000/month",
+    marketPrice: "$1;500-6;000/month",
     competitors: ["Siemens", "GE Digital", "PTC"],
     roi: "350% within 18 months";
     setupTime: "3-5 weeks";
@@ -466,7 +466,7 @@ export const advancedIoTServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Advanced Quantum Services
+    // Advanced Quantum Services;
 export const advancedQuantumServices2025: AIService[] = [
   {
     id: 1;
@@ -502,7 +502,7 @@ export const advancedQuantumServices2025: AIService[] = [
       website: "https://ziontechgroup.com/quantum-ml-suite";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$6,000-25,000/month",
+    marketPrice: "$6;000-25;000/month",
     aiModels: ["Quantum ML", "Hybrid models", "Quantum algorithms", "Custom models"],
     accuracy: "Quantum advantage";
     trainingData: "Quantum datasets";
@@ -512,14 +512,14 @@ export const advancedQuantumServices2025: AIService[] = [
   }
 ];
 
-// Advanced Space Services
+// Advanced Space Services;
 export const advancedSpaceServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Space Traffic Management";
     category: "Space Operations";
     pricing: "Enterprise";
-    description: "Advanced space traffic management platform for satellite collision avoidance, orbital optimization, and space debris monitoring",
+    description: "Advanced space traffic management platform for satellite collision avoidance; orbital optimization; and space debris monitoring",
     price: 2500;
     pricingModel: "monthly";
     userLimit: "Unlimited satellites";
@@ -549,7 +549,7 @@ export const advancedSpaceServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/space-traffic-management";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,500-10,000/month",
+    marketPrice: "$2;500-10;000/month",
     competitors: ["LeoLabs", "Space-Track", "ESA"],
     roi: "500% within 24 months";
     setupTime: "4-6 weeks";
@@ -558,14 +558,14 @@ export const advancedSpaceServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Advanced Sustainability Services
+    // Advanced Sustainability Services;
 export const advancedSustainabilityServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Circular Economy Platform";
     category: "Circular Economy";
     pricing: "Professional";
-    description: "Comprehensive circular economy platform for waste reduction, resource optimization, and sustainable business practices",
+    description: "Comprehensive circular economy platform for waste reduction; resource optimization; and sustainable business practices",
     price: 299;
     pricingModel: "monthly";
     userLimit: "Up to 200 users";
@@ -604,14 +604,14 @@ export const advancedSustainabilityServices2025: MicroSaasService[] = [
     trialPeriod: "21 days"
   }
 ];
-    // Advanced Fintech Services
+    // Advanced Fintech Services;
 export const advancedFintechServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "RegTech Compliance Platform";
     category: "RegTech";
     pricing: "Enterprise";
-    description: "Advanced regulatory technology platform for automated compliance monitoring, risk assessment, and regulatory reporting",
+    description: "Advanced regulatory technology platform for automated compliance monitoring; risk assessment; and regulatory reporting",
     price: 1200;
     pricingModel: "monthly";
     userLimit: "Unlimited users";
@@ -641,7 +641,7 @@ export const advancedFintechServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/regtech-compliance";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,200-4,000/month",
+    marketPrice: "$1;200-4;000/month",
     competitors: ["ComplyAdvantage", "RegTech", "Compliance.ai"],
     roi: "400% within 15 months";
     setupTime: "3-4 weeks";
@@ -650,7 +650,7 @@ export const advancedFintechServices2025: MicroSaasService[] = [
     trialPeriod: "21 days"
   }
 ];
-    // Export all additional services
+    // Export all additional services;
 export const allAdditionalServices2025 = {
   advancedAI: additionalAdvancedAIServices2025;
   blockchain: advancedBlockchainServices2025;
@@ -661,26 +661,26 @@ export const allAdditionalServices2025 = {
   quantum: advancedQuantumServices2025;
   space: advancedSpaceServices2025;
   sustainability: advancedSustainabilityServices2025;
-  fintech: advancedFintechServices2025
+  fintech: advancedFintechServices2025;
 };
-    // Combined services export
+    // Combined services export;
 export const allComprehensiveServices2025 = {
-  ...allAdditionalServices2025
+  ...allAdditionalServices2025;
 };
 
-// Helper functions for additional services
+// Helper functions for additional services;
 export const getAdditionalServicesByCategory = (category: string) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
     return allServices.filter(service => service.category === category);
 };
 
-export const getAdditionalServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getAdditionalServicesByPriceRange = (minPrice: number; maxPrice: number) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
     return allServices.filter(service => {
-    if ('price' in service) {
+    if ("price" in service) {
       return service.price >= minPrice && service.price <= maxPrice;
     }
-    if ('hourlyRate' in service) {
+    if ("hourlyRate" in service) {
       return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice;
     }
     return false;
@@ -689,7 +689,7 @@ export const getAdditionalServicesByPriceRange = (minPrice: number, maxPrice: nu
 
 export const getAdditionalPopularServices = (limit: number = 10) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
-    return allServices.slice(0, limit);
+    return allServices.slice(0; limit);
 };
 
 export const searchAdditionalServices = (query: string) => {

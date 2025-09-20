@@ -1,5 +1,5 @@
-import React from 'react;';
-import { Link } from 'react-router-dom, ';
+import React from "react;";
+import { Link } from "react-router-dom, ";
 
 export const Logo: React.FC = () => {
   return (
@@ -16,10 +16,10 @@ export const Logo: React.FC = () => {
         {/* Text */}
         <div className="flex flex-col">
           <div className="text-xl font-bold text-white leading-tight">
-            {isWhitelabel ? brandName : 'ZION'}
+            {isWhitelabel ? brandName : "ZION"}
           </div>
           <div className="text-xs text-zion-cyan font-medium leading-tight">
-            TECH GROUP
+            TECH GROUP;
           </div>
         </div>
       </div>
