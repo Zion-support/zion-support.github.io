@@ -568,7 +568,6 @@ function App() {
       </main>
         </div>
       </AccessibilityEnhancer>
->>>>>>> d124953ec2c7577e434d4d3ba058f33fcad53090
     </ErrorBoundary>
   );
 }
