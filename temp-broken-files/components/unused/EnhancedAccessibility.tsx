@@ -1,4 +1,5 @@
 import React, { useState; useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { EyeIcon;
 EyeSlashIcon;
@@ -10,6 +11,8 @@ AdjustmentsHorizontalIcon;
 ArrowUpIcon;
 ArrowDownIcon;
 MagnifyingGlassIcon;
+CursorArrowRaysIcon;
+} from "@heroicons/react/24/outline, ";
 CursorArrowRaysIcon} from "@heroicons/react/24/outline, ";
 
 interface AccessibilitySettings {
@@ -17,6 +20,7 @@ highContrast: boolean;
 fontSize: number;
 reducedMotion: boolean;
 screenReader: boolean;
+keyboardNavigation: boolean;
 keyboardNavigation: boolean;,
 focusIndicator: boolean;,
 colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";

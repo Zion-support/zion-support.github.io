@@ -20,7 +20,7 @@ import { toast,  } from "sonner";
 import { logErrorToProduction,  } from '@/utils/productionLogger';
 >>>>>>>> pr-22690:temp-broken-files/WhitepaperGeneratorPage.tsx
 interface WhitepaperSection {
-  
+
 }
 {'
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
@@ -58,7 +58,7 @@ governanceLogic,
 legalDisclaimers
 distributionBreakdown}
 if (processedDistData.length > 0) {apiPayload.distributionData = processedDistData}const {
-  
+
   data error: funcError '
 }= await supabase.functions.invoke ('generate-whitepaper', {
   body: apiPayload;
@@ -78,10 +78,10 @@ setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
 setError (e.message |'An unexpected error occurred.')
 setSections ([])
 }finally {
-  
+
   setIsLoading (false)
 interface DistributionChartItem {
-  
+
 import React from 'react';
 
 export default function WhitepaperGeneratorPage() {

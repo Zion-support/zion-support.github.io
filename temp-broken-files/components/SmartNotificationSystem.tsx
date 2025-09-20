@@ -1,3 +1,5 @@
+import React from "react",
+import { import { motion, AnimatePresence,  } from "framer-motion",
 import React from "react";;
 import { import { motion; AnimatePresence   } from "framer-motion";
 import React from "react",;
@@ -22,4 +24,5 @@ if(!enabled) return null;
 return <div className="hidden" aria-hidden="true"  />},
 export default SmartNotificationSystem, </SmartNotificationSystemProps>,"};
 )})",;
+</SmartNotificationSystemProps, >;<//SmartNotificationSystemProps, ><///SmartNotificationSystemProps, >;
 </SmartNotificationSystemProps>;<//SmartNotificationSystemProps><///SmartNotificationSystemProps>;

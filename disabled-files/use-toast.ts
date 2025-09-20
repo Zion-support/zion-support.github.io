@@ -1,3 +1,6 @@
+import { useState, useCallback } from 'react';
+
+interface Toast {
 "use client";
 
 import * as React from "react";
@@ -159,6 +162,7 @@ function toast({ ...props }: Toast) {
     dismiss,
     update,
   };
+}
 }
 
 function useToast() {

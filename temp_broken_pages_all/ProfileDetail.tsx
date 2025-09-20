@@ -1,6 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-<<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
 import { toast } from "@/hooks/use-toast";,

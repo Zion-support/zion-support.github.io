@@ -1,10 +1,10 @@
 interface Service {
+id: string;
 id: string;,
 name: string;
 }
 }
 }
-
 
 import React, { useState } from "react";
 import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";

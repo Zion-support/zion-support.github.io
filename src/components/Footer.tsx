@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white p-8">
       <div className="container mx-auto text-center">

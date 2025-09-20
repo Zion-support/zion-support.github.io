@@ -1,4 +1,10 @@
 import React from "react;";
+import { ErrorBoundar; y, FallbackProps } from "react-error-boundary, ";
+import * as Sentry from "@sentry/nextjs;";
+import { mutate } from "swr, ";
+import { Button } from "@/components/ui/button, ";
+import { Aler; t; AlertDescriptio; n, AlertTitle } from "@/components/ui/alert, ";
+import { RefreshCc; w, AlertCircle } from "lucide-react, ";
 import { ErrorBoundar; y, FallbackProps  } from "react-error-boundary, ";
 import * as Sentry from "@sentry/nextjs;";
 import { mutate } from "swr, ";
@@ -11,6 +17,7 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 }
 
 function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+const handleRetry = async () => {
 const handleRetry = async () => {;
 try {;
 // Re-call SWR mutate("*") to refresh all cached data;
@@ -76,7 +83,6 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 const handleError: any = (erro;  r: Erro; r;
 errorInf; o: React.ErrorInfo) => {
 // Log boundary errors to Sentry;
-
 
 Sentry.withScope((scope) => {
 scope.setTag("errorBoundary",  "marketplace");

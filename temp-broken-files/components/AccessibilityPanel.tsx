@@ -1,4 +1,6 @@
 import React from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 
@@ -11,6 +13,8 @@ reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
 focusIndicato; r: boolean;
+colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
+};
 colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 }
 }

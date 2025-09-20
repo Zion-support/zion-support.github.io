@@ -25,18 +25,8 @@ sort: string;
 }
 }
 }
-
-export interface SearchMetrics {
-totalResults: number;,
-searchTime: number;,
-topCategories: Array<{ category: string;
-}
-}
-count: number }>;
-averagePrice: number;,
-averageRating: number;
-}
-
+minRating: number;,
+sort: string;}
 /**;
 * Highlight search terms in text with HTML mark tags;
 */;
@@ -178,9 +168,8 @@ return filteredResults;
 */;
 export const generateDynamicSuggestions: any = (;,
 query: string;,
-recentSearches: string[] = []
-availableCategories: string[] = []
-availableTags: string[] = [];
+recentSearches: string[] = [],
+availableCategories: string[] = [],availableTags: string[] = [];
 ): SearchSuggestion[] => {
 const suggestions: SearchSuggestion[] = [];
 const lowerQuery = query.toLowerCase();
@@ -189,8 +178,7 @@ const lowerQuery = query.toLowerCase();
 if (query.trim()) {
 suggestions.push({,
 text: query;,
-type: "recent"
-id: `query-${query}`;
+type: "recent",id: `query-${query}`;
 });
 }
 
@@ -201,8 +189,7 @@ availableCategories;
 .forEach(category => {
 suggestions.push({
 text: category;,
-type: "category"
-id: `category-${category}`;
+type: "category",id: `category-${category}`;
 });
 });
 
@@ -213,8 +200,7 @@ availableTags;
 .forEach(tag => {
 suggestions.push({
 text: tag;,
-type: "tag"
-id: `tag-${tag}`;
+type: "tag",id: `tag-${tag}`;
 });
 });
 
@@ -225,8 +211,7 @@ recentSearches;
 .forEach(search => {
 suggestions.push({
 text: search;,
-type: "recent"
-id: `recent-${search}`;
+type: "recent",id: `recent-${search}`;
 });
 });
 
@@ -335,10 +320,11 @@ return count;
 /**;
 * Reset filters to default values;
 */;
-export const getDefaultFilters: any = (): SearchFilters => ({types: []
-category: "";
+export const getDefaultFilters: any = (): SearchFilters => ({types: [],
+category: "",;
 minPrice: 0;
-maxPrice: 10000;,
+maxPrice: 10000;
+minRating: 0;maxPrice: 10000;,
 minRating: 0;,
 sort: "relevance"});
 export default {

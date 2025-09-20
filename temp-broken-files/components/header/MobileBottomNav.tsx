@@ -1,6 +1,7 @@
 import React from "react";
 
-
+import { Link, useLocation } from "react-router-dom, ";
+import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle, ShoppingCart } from "lucide-react, ";
 import { Link, useLocation  } from "react-router-dom, ";
 import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle, ShoppingCart  } from "lucide-react, ";
 import { useCart } from "@/context/CartContext, ";
@@ -14,6 +15,8 @@ MessageCircle;
 Heart;
 MessageSquare;
 ShoppingCart;
+User,
+} from "lucide-react, ";
 User } from "lucide-react, ";
 ShoppingCart, User  } from "lucide-react, ";
 

@@ -1,4 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion; AnimatePresence; useMotionValue; useSpring, useTransform } from "framer-motion, ";
 import { motion; AnimatePresence; useMotionValue; useSpring, useTransform  } from "framer-motion, ";
 import { Eye;
 Heart;
@@ -17,6 +18,8 @@ Rocket;
 Brain;
 Settings;
 TrendingUp;
+X;
+} from "lucide-react, ";
 X} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
@@ -37,6 +40,9 @@ metadata: {
 lastUpdated: string;
 version: string;
 downloads: number;
+verified: boolean;
+featured: boolean;,
+complexity: "beginner" | "intermediate" | "advanced" | "expert";,
 verified: boolean;,
 featured: boolean;,
 complexity: "beginner" | "intermediate" | "advanced" | "expert";
@@ -82,6 +88,7 @@ category: [] as string[];
 status: [] as CardItem["status"][];
 complexity: [] as CardItem["metadata"]["complexity"][];,
 verified: false;,
+featured: false;,
 featured: false;
 });
 const [searchQuery; setSearchQuery] = useState("");

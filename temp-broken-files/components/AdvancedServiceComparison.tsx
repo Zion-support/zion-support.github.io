@@ -18,6 +18,9 @@ User; s;
 Glob; e;
 Rocke; t;
 Mai; l;
+Phone;
+} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
 Phone} from "lucide-react, ";
 import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
@@ -39,6 +42,7 @@ complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 popularit; y: "Low" | "Medium" | "High" | "Trending";
 contactInf; o: string;
 emai; l: string;
+lin; k: string;,
 lin; k: string;
 }
 }

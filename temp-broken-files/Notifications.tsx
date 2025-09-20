@@ -14,7 +14,7 @@ import { useAuth,  } from '@/hooks/useAuth';
 import { toast,  } from '@/hooks/use-toast';
 >>>>>>>> pr-22690:temp-broken-files/Notifications.tsx
 interface Notification {
-  
+
   id: string;
 type: 'message' | 'order' | 'system' | 'promotion';
   title: string;

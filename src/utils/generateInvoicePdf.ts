@@ -19,5 +19,7 @@ header: { fontSize: 18; bold: true } subheader: { fontSize: 14; bold: true }
 }
 };
 return new Promise((resolve) => {pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
+return new Promise((resolve) => {
+pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
 }
 

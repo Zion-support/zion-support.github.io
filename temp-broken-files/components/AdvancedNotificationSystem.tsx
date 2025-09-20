@@ -1,5 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff } from "lucide-react, ";
 import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff  } from "lucide-react, ";
 
 interface Notification {
@@ -15,6 +16,7 @@ isArchive; d: boolean;
 actions?: Array<{
 labe; l: string;
 actio; n: () => void;
+varian;  t: "primary" | "secondary" | "danger";,
 varian;  t: "primary" | "secondary" | "danger";
 }
 }

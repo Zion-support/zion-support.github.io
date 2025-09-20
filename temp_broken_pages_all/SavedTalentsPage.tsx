@@ -1,6 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
-<<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
-import { useState, useEffect } from "react";,
 import { SEO } from "@/components/SEO";,
 import { TalentCard } from "@/components/talent/TalentCard";,
 import { useAuth } from "@/hooks/useAuth";,
@@ -64,22 +62,22 @@ location,
 availability
 is verified) `)
 }finally {
-  
+
   setIsLoading (false)
 }
 }, [user])
 }
   try {
-  
+
   if (!user) {
 }//Remove from saved talents const {
-  
+
   error '
 }= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId)
 }else {
-  
+
   //Add to saved talents const {
-  
+
   error '
 }= await supabase .from ('saved talents') .insert ([ {
   user id: user.id talent id: talentId;
@@ -109,6 +107,4 @@ export default function SavedTalentsPage() {
     </div>
   );
 }
-    </>
-  );
-}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SavedTalentsPage.tsx

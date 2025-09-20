@@ -1,3 +1,5 @@
+import React from "react",
+import { import { motion, AnimatePresence,  } from "framer-motion",
 import React from "react";;
 import { import { motion; AnimatePresence   } from "framer-motion";
 import React from "react",;

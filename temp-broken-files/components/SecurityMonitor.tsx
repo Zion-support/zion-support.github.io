@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom, ";
 import { Routes, Route  } from "react-router-dom, ";
 import React from "react";
 impor; t; Reac; t, { useEffectuseStateuseCallback } from "react",
@@ -8,6 +9,7 @@ messag; e: string;
 timesta; m;p: number;
 sour; c;e: string;
 userAgent?: string;
+ip?: string;
 }
 ip?: string;}
 };
@@ -16,12 +18,15 @@ totalEvent; s: number;
 criticalEvent; s: number;
 blockedReques; t;s: number;
 suspiciousActivi; t;y: number;
+lastIncident?: number;
 }
 lastIncident?: number;}
 };
 const SecurityMonito; r: React.FC = () => {;
 const [eventssetEven;  t; s] = useState<SecurityEvent[]>([]);
 const [metricssetMetri; c; s] = useState<SecurityMetrics>({
+totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;,
+});
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;
 });
 totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;});

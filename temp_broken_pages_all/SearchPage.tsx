@@ -1,6 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
-<<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";,
@@ -20,7 +18,7 @@ import { Tabs;
 , , TabsTrigger } from "@/components/ui/tabs";
 import { Loader2 } from "lucide-react";
 interface SearchResult {
-  
+
 description: string;
 }
 }
@@ -147,13 +145,13 @@ key={`blog-${r.id}`}
 if (query.trim () ) {
   fetchResults (query.trim () )
 }else {
-  
+
   setResults ([])
 }, [router.isReady query]), //Fixed dependency array const fetchResults = async (term: string) => {if (!term.trim () ) {
   setResults ([])
 return}setLoading (true)
 try {
-  
+
   const res = await fetch (`/api/search?query=$ {
   encodeURIComponent (term)
 }`)
@@ -161,7 +159,7 @@ const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
 }else {
-  
+
   ;
   ;
   ;
@@ -175,7 +173,7 @@ logErrorToProduction ('Search API response structure is not as expected:', {
 })
 setResults ([])
 }finally {
-  
+
   setLoading (false)
 }
 const handleSubmit = (e: React.FormEvent) => {
@@ -284,25 +282,4 @@ export default function SearchPage() {
     </div>
   );
 }
-import React from 'react';
-import { SEO } from "@/components/SEO";
-
-export default function SearchPage() {
-  return (
-    <>
-      <SEO 
-        title="SearchPage - Zion Tech Group"
-        description="Page description"
-        keywords="keywords"
-      />
-      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-white mb-4">SearchPage</h1>
-            <p className="text-zion-slate-light text-lg">Coming soon...</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SearchPage.tsx

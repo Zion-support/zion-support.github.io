@@ -1,4 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { Eye;
 Volume2;
@@ -9,6 +10,8 @@ ZoomIn;
 ZoomOut;
 Settings;
 Accessibility;
+X;
+} from "lucide-react, ";
 X} from "lucide-react, ";
 import { Button } from "./button, ";
 
@@ -16,6 +19,7 @@ interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
+screenReader: boolean;
 screenReader: boolean;,
 fontSize: number;,
 colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";

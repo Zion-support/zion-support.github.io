@@ -155,9 +155,10 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         return {
             xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;
      };
+            xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;};
     }
     catch() {
-        
+
         throw error };
 },export, default, SitemapGenerator,<//html><///html>
 

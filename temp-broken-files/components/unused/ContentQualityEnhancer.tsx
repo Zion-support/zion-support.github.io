@@ -1,4 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { DocumentTextIcon;
 MagnifyingGlassIcon;
@@ -10,6 +11,8 @@ ChartBarIcon;
 EyeIcon;
 PencilIcon;
 XMarkIcon;
+ArrowPathIcon;
+} from "@heroicons/react/24/outline, ";
 ArrowPathIcon} from "@heroicons/react/24/outline, ";
 
 interface ContentAnalysis {
@@ -17,6 +20,7 @@ wordCount: number;
 readabilityScore: number;
 seoScore: number;
 engagementScore: number;
+issues: ContentIssue[];
 issues: ContentIssue[];,
 suggestions: ContentSuggestion[];,
 overallScore: number;

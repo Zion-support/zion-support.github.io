@@ -1,4 +1,6 @@
 import React, { useState; useEffect; useRef } from "react;";
+import { Search; X, ArrowDown } from "lucide-react, ";
+
 import { Search; X; ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {id: string; title: string; type: "service" | "talent" | "equipment";

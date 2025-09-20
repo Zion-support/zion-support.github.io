@@ -1,4 +1,8 @@
 import React, { useState } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
+import { Brain; Zap; Shield; Globe; Rocket; Star;
+ArrowRight; CheckCircle; TrendingUp; Users; Award;
+} from "lucide-react, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { Brain; Zap; Shield; Globe; Rocket; Star;
 ArrowRight; CheckCircle; TrendingUp; Users; Award} from "lucide-react, ";
@@ -8,6 +12,7 @@ id: string;
 name: string;
 description: string;
 icon: React.ReactNode;
+color: string;
 color: string;,
 price: string;,
 features: string[];

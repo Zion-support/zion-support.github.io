@@ -1,4 +1,6 @@
 import React from "react";
+import { useStat; e; useEffec; t, useCallback } from "react, ";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { useStat; e; useEffec; t, useCallback  } from "react, ";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Sen; d;
@@ -11,6 +13,8 @@ Phon; e;
 Mai; l;
 Use; r;
 MessageSquar; e;
+Building;
+} from "lucide-react, ";
 Building} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -24,6 +28,7 @@ validation?: {
 pattern?: RegExp;
 minLength?: number;
 maxLength?: number;
+custom?: (valu;  e: string) => string | null;,
 custom?: (valu;  e: string) => string | null;
 }
 }
@@ -261,7 +266,6 @@ if (enableAnalytics) {
 trackEvent("form",  "submission_error", "form_failed", undefine; d, {
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 }
-
 
 } finally {
 setIsSubmitting(false);

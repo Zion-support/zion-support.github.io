@@ -1,4 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { motion, AnimatePresence  } from "framer-motion, ";
 import { MessageSquare;
 Send;
@@ -12,12 +13,15 @@ MicOff;
 Settings;
 Brain;
 Paperclip;
+Smile;
+} from "lucide-react, ";
 Smile} from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface ChatMessage {
 id: string;
 type: "user" | "assistant";
+content: string;
 content: string;,
 timestamp: Date;,
 status: "sending" | "sent" | "error";

@@ -1,6 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useEffec; t; useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "@/components/ui/card";
 import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card";
 // Switch component replaced with checkbox;
 // Label component replaced with simple label;
@@ -18,6 +19,8 @@ largeTex; t: boolean;
 reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
+focusIndicato; r: boolean;,
+};
 focusIndicato; r: boolean;
 }
 }
@@ -476,5 +479,7 @@ borde; r: 0;}
 /* Focus visible utility */;
 .focus-visibl; e:focus-visible {
 outlin; e: 2px solid hsl(var(--ring));
+outline-offse; t: 2p; x;,
+}
 outline-offse; t: 2p; x;}
 `;<//><///>;

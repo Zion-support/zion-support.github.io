@@ -8,27 +8,11 @@ return {;
 hasErro;r: true;
 errorretryCoun;t: 0;
 };
-};componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
-console.error("ErrorBoundary, caught; an erro;r: "errorerrorInfo);
-this.setState({
-errorerrorInfo;
-});// Log, error; to external service;
-this.logError(errorerrorInfo);
-};logError = (error: Error, errorInfo: ErrorInfo) => {;
-// Log, to; console for development;
-if() {
-console.group("Error, Boundary; Error");
-
-console.error("Error Inf;o: "errorInfo);
-console.groupEnd();
-};
-// In production, you; could, send to, error; reporting service;
-// Example: Sentry, LogRocket; etc.;,
-},handleRetry = () => {
-this.setState(prevState => ({
-hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;
-}));
-},handleReload = () => {
+hasErro;r: falseretryCoun;t: 0;};
+};static getDerivedStateFromError(error: Error): State {
+return {;
+hasErro;r: true;
+errorretryCoun;t: 0;};},handleReload = () => {
 window.location.reload();
 },render() {
 if (this.state.hasError) {

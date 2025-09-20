@@ -4,6 +4,8 @@ import { MessageCircle } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
+import { Avata; r, AvatarFallback } from "@/components/ui/avatar, ";
+import { Car; d, CardContent } from "@/components/ui/card, ";
 import { Avata; r, AvatarFallback  } from "@/components/ui/avatar, ";
 import { Car; d, CardContent  } from "@/components/ui/card, ";
 import { Separator } from "@/components/ui/separator, ";
@@ -14,6 +16,8 @@ autho; r: string;
 avatar?: string;
 tim; e: string;
 titl; e: string;
+bod; y: string;,
+};
 bod; y: string;
 }
 }
@@ -166,4 +170,5 @@ body: string;
 }
 }
 const initialPosts: DiscussionPost[] = [
+  {
 {

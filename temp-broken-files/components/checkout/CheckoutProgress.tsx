@@ -1,4 +1,6 @@
 import React from "react;";
+import { Steps, Step } from "@/components/ui/steps, ";
+
 import { Steps, Step  } from "@/components/ui/steps, ";
 
 interface CheckoutProgressProps {currentStep: number;

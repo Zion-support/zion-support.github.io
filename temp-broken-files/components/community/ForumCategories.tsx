@@ -1,6 +1,8 @@
 import React from "react";
 import { ForumCategoryInfo } from "@/types/community";
 
+export default function ForumCategories() {
+const categories: ForumCategoryInfo[] = [
 export default function ForumCategories() {const categories: ForumCategoryInfo[] = [
 {,
 id: "1",
@@ -72,4 +74,5 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare; Briefcase, Code; FileText, Megaphone } from "lucide-react";
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
+  {
 {
