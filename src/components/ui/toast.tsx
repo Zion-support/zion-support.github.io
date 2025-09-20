@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import * as React from "react";
@@ -7,6 +8,16 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ToastProvider = ToastPrimitives.Provider;
+=======
+import * as React from 'react'
+import * as ToastPrimitives from '@radix-ui/react-toast'
+import { cva, type VariantProps } from 'class-variance-authority'
+import { X } from 'lucide-react'
+
+import { cn } from '@/lib/utils'
+
+const ToastProvider = ToastPrimitives.Provider
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>,
@@ -20,8 +31,13 @@ const ToastViewport = React.forwardRef<
     )}
     {...props}
   />
+<<<<<<< HEAD
 ));
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
+=======
+))
+ToastViewport.displayName = ToastPrimitives.Viewport.displayName
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
@@ -37,7 +53,11 @@ const toastVariants = cva(
       variant: "default",
     },
   }
+<<<<<<< HEAD
 );
+=======
+)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
@@ -50,9 +70,15 @@ const Toast = React.forwardRef<
       className={cn(toastVariants({ variant }), className)}
       {...props}
     />
+<<<<<<< HEAD
   );
 });
 Toast.displayName = ToastPrimitives.Root.displayName;
+=======
+  )
+})
+Toast.displayName = ToastPrimitives.Root.displayName
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const ToastAction = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Action>,
@@ -66,8 +92,13 @@ const ToastAction = React.forwardRef<
     )}
     {...props}
   />
+<<<<<<< HEAD
 ));
 ToastAction.displayName = ToastPrimitives.Action.displayName;
+=======
+))
+ToastAction.displayName = ToastPrimitives.Action.displayName
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const ToastClose = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Close>,
@@ -84,8 +115,13 @@ const ToastClose = React.forwardRef<
   >
     <X className="h-4 w-4" />
   </ToastPrimitives.Close>
+<<<<<<< HEAD
 ));
 ToastClose.displayName = ToastPrimitives.Close.displayName;
+=======
+))
+ToastClose.displayName = ToastPrimitives.Close.displayName
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const ToastTitle = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Title>,
@@ -96,8 +132,13 @@ const ToastTitle = React.forwardRef<
     className={cn("text-sm font-semibold", className)}
     {...props}
   />
+<<<<<<< HEAD
 ));
 ToastTitle.displayName = ToastPrimitives.Title.displayName;
+=======
+))
+ToastTitle.displayName = ToastPrimitives.Title.displayName
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 const ToastDescription = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Description>,
@@ -108,12 +149,21 @@ const ToastDescription = React.forwardRef<
     className={cn("text-sm opacity-90", className)}
     {...props}
   />
+<<<<<<< HEAD
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
 type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
 
 type ToastActionElement = React.ReactElement<typeof ToastAction>;
+=======
+))
+ToastDescription.displayName = ToastPrimitives.Description.displayName
+
+type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>
+
+type ToastActionElement = React.ReactElement<typeof ToastAction>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 export {
   type ToastProps,
@@ -125,4 +175,8 @@ export {
   ToastDescription,
   ToastClose,
   ToastAction,
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a

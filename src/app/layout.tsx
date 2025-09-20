@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
 import React from "react";
 import type { Metadata } from "next";
+=======
+import type { Metadata, Viewport } from "next";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
+=======
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 
@@ -32,7 +40,15 @@ export const metadata: Metadata = {
     title: "Zion Tech Group - Innovative Technology Solutions",
     description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
   },
+<<<<<<< HEAD
   viewport: "width=device-width, initial-scale=1",
+=======
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
   themeColor: "#0ea5e9",
 };
 

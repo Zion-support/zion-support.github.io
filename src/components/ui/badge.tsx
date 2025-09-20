@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
@@ -32,4 +36,29 @@ function Badge({ className, variant, ...props }: BadgeProps) {
   );
 }
 
+<<<<<<< HEAD
 export { Badge, badgeVariants };
+=======
+const Badge: React.FC<BadgeProps> = ({
+  children,
+  className = "",
+  variant = "default"
+}) => {
+  const baseClasses = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors";
+
+  const variantClasses = {
+    default: "border-transparent bg-primary text-primary-foreground",
+    secondary: "border-transparent bg-secondary text-secondary-foreground",
+    destructive: "border-transparent bg-destructive text-destructive-foreground",
+    outline: "text-foreground"
+  };
+
+  return (
+    <div className={cn(baseClasses, variantClasses[variant], className)}>
+      {children}
+    </div>
+  );
+};
+
+export { Badge };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a

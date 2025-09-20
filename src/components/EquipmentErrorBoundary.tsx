@@ -1,7 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+=======
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 
 interface Props {
   children: React.ReactNode;
@@ -16,6 +22,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
+<<<<<<< HEAD
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -26,6 +33,16 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
     console.error('Equipment page error:', error, {
       componentStack: errorInfo.componentStack,
     });
+=======
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Equipment page error:', error, errorInfo);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
   }
 
   render() {

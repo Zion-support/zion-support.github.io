@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useState } from 'react';
@@ -17,13 +18,34 @@ export default function AuthButtons({
   handleSignIn, 
   loadingProvider 
 }: AuthButtonsProps) {
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Facebook, Github } from 'lucide-react'
+
+interface AuthButtonsProps {
+  providers: string[];
+  onSignIn: (provider: string) => void;
+  loadingProvider?: string | null;
+}
+
+export function AuthButtons({ providers, onSignIn, loadingProvider }: AuthButtonsProps) {
+  const gridCols = providers.length === 1 ? 'grid-cols-1' : 
+                   providers.length === 2 ? 'grid-cols-2' : 
+                   'grid-cols-2';
+
+  const handleSignIn = (provider: string) => {
+    onSignIn(provider);
+  };
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
         <Button
           type='button'
           variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          className='w-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
           onClick={() => handleSignIn('google')}
           disabled={loadingProvider !== null}
         >
@@ -61,7 +83,7 @@ export default function AuthButtons({
         <Button
           type='button'
           variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          className='w-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
           onClick={() => handleSignIn('github')}
           disabled={loadingProvider !== null}
         >
@@ -69,6 +91,7 @@ export default function AuthButtons({
           {loadingProvider === 'github' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
           ) : (
+<<<<<<< HEAD
             <svg className='h-5 w-5' fill='currentColor' viewBox='0 0 20 20'>
               <path
                 fillRule='evenodd'
@@ -76,6 +99,9 @@ export default function AuthButtons({
                 clipRule='evenodd'
               />
             </svg>
+=======
+            <Github className='h-5 w-5' />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
           )}
         </Button>
       )}
@@ -83,7 +109,7 @@ export default function AuthButtons({
         <Button
           type='button'
           variant='outline'
-          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          className='w-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
           onClick={() => handleSignIn('facebook')}
           disabled={loadingProvider !== null}
         >
@@ -99,7 +125,7 @@ export default function AuthButtons({
         <Button
           type='button'
           variant='outline'
-          className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          className='col-span-2 border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
           onClick={() => handleSignIn('credentials')}
           disabled={loadingProvider !== null}
         >
