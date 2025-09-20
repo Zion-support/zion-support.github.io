@@ -6,9 +6,9 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean,
+  hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null,
+  errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
 
