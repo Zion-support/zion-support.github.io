@@ -1,4 +1,4 @@
-import { console.errorToProduction } from '@/utils/productionLogger';
+// import { console.errorToProduction } from '@/utils/productionLogger';
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check

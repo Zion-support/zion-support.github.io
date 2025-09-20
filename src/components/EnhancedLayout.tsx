@@ -1,40 +1,8 @@
-import React from "react";
-impor, t, Reac, t, from "react";
-import { ReactNode } from "react";
-import { FuturisticNavigation } from "./FuturisticNavigation";
-import { FuturisticFooter } from "./FuturisticFooter";
-import { EnhancedSidebar } from "./EnhancedSidebar";
-import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
-interface EnhancedLayoutProps {
-  childre, n: ReactNode;
-  showSidebar?: boolean;
-};
-;
-expor, t, cons, t, EnhancedLayo, u, t: React.FC<EnhancedLayoutProps> = ({;
-  childrenshowSidebar = true;
-}) => {
-  return(<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">;
-      {{/* Futuristi,  c, Animate, d, Background */},;
-  };
-      <FuturisticAnimatedBackground />;
-      {{/* Navigation */},;
-  };
-      <FuturisticNavigation />;
-      {{/* Mai, n, Conten, t, with Sidebar */},;
-  };
-      <div className="fle, x, relativ, e, z-10">;
-        {{/* Sidebar */},;
-  },;
-  {{showSidebar && <EnhancedSidebar />},;
-  },;
-  {{/* Main Content */},;
-  };
-        <main className={`flex-1 ${showSidebar ? 'l, g: ml-8, 0' : ''}`}>;
-          {{children},;
-  };
-        </main>;
-      </div>;
-      {{/* Footer */}};
-      <FuturisticFooter />;
-    </div>;
-  );
+import React from 'react',
+const EnhancedLayout: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">EnhancedLayout</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>)},
+export default EnhancedLayout,
