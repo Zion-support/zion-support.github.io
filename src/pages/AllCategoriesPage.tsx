@@ -6,6 +6,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 
+export default function AllCategoriesPage() {
+  return (
+    <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
         <div className='text-center mb-12'>
           <GradientHeading

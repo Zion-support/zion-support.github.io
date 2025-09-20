@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight, ChevronDown } from "lucide-react";
+import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight, ChevronDown, Mail } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 interface Service {
-  
   id: string;
   name: string;
 }
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {;
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -19,17 +23,17 @@ interface Service {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {;
+  const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsSidebarOpen(false); // Close sidebar if menu is toggled
   };
 
-  const toggleSidebar = () => {;
+  const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
     setIsMenuOpen(false); // Close menu if sidebar is toggled
   };
 
-  const handleDropdownToggle = (dropdownName: string) => {;
+  const handleDropdownToggle = (dropdownName: string) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
@@ -42,8 +46,8 @@ interface Service {
         { name: "AI & Machine Learning", href: "/solutions/ai-ml" },
         { name: "Cloud & DevOps", href: "/solutions/cloud-devops" },
         { name: "Cybersecurity", href: "/solutions/cybersecurity" },
-        { name: "Data Analytics", href: "/solutions/data-analytics" }
-      ]
+        { name: "Data Analytics", href: "/solutions/data-analytics" },
+      ],
     },
     {
       name: "Services",
@@ -53,8 +57,8 @@ interface Service {
         { name: "Managed IT", href: "/services/managed-it" },
         { name: "Consulting", href: "/services/consulting" },
         { name: "Web Development", href: "/services/web-development" },
-        { name: "Mobile App Development", href: "/services/mobile-app-development" }
-      ]
+        { name: "Mobile App Development", href: "/services/mobile-app-development" },
+      ],
     },
     {
       name: "Company",
@@ -64,11 +68,11 @@ interface Service {
         { name: "About Us", href: "/company/about" },
         { name: "Careers", href: "/company/careers" },
         { name: "Contact", href: "/company/contact" },
-        { name: "Blog", href: "/company/blog" }
-      ]
+        { name: "Blog", href: "/company/blog" },
+      ],
     },
     { name: "Pricing", href: "/pricing", icon: Target },
-    { name: "Contact", href: "/contact", icon: Mail }
+    { name: "Contact", href: "/contact", icon: Mail },
   ];
 
   return (
@@ -108,11 +112,14 @@ interface Service {
                       ))}
                     </div>
                   )}
-</>
+                </>
               ) : (
                 <Link
                   href={item.href}
                   className="text-white hover:text-blue-400 transition-colors text-lg"
+                >
+                  {item.name}
+                </Link>
               )}
             </div>
           ))}
@@ -171,7 +178,7 @@ interface Service {
                       ))}
                     </div>
                   )}
-</>
+                </>
               ) : (
                 <Link
                   href={item.href}
@@ -192,3 +199,8 @@ interface Service {
           </Link>
         </nav>
       </div>
+    </header>
+  );
+};
+
+export default Header;
