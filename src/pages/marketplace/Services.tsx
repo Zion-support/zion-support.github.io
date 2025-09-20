@@ -1,11 +1,11 @@
-import React from "react";
-const Services: React.FC  = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Marketplace - Services</h1>
-			<p className="text-xl text-gray-300">Explore services.</p>
-		</div>
-	</div>
-)
-export default Servi,
-    c;e;s;, 
+import, React, from "react";
+const Services: React.FC  = () => (;
+  <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0, flex, items-center justify-center">;
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">Marketplace - Services</h1>;
+			<p className="text-xl text-gray-30o0">Explore services.</p>;
+		</div>;
+	</div>;
+);
+export, default, Servi,;
+    c;e;s;,;

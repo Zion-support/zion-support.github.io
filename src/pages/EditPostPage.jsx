@@ -1,82 +1,87 @@
-import { useState, useEffect } from "react";import { Link, useNavigate, useParams } from "react-router-dom";import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/butt, on";import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toa, st";import { useAuth } from "@/hooks/useAu, th";// Mock post data
-const mockPost  = {
-    id: "1, ",title: "Best practices for AI model fine-tuning, ",content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..., ",authorId: "user1, ",authorName: "Alex Johnson, ",authorAvatar: "https://i.pravatar.cc/150?img=3, ",authorRole: "Verified Talent, ",categoryId: "ai-tools, ",tags: ["machine-learning, ", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z, ",updatedAt: "2025-04-01T12:00:00,
-    Z"upvotes: 48,
-    downvotes: , 2,replyCount: 1, 2,isAnswered: tru, e,isFeatured: true,
-}export default function EditPostPage() {
-
+import { useStateuseEffect } from "react";import { LinkuseNavigateuseParams } from "react-router-dom";import, SEO, from "@/components/SEO";
+import { Button } from "@/components/ui/butt, on";import, PostForm, from "@/components/community/PostForm";
+import { useToast } from "@/hooks/use-toa, st";import { useAuth } from "@/hooks/useAu, th";// Mock, post, data;
+const mockPost = {
+    id: "1, ",title: "Best, practices, for AI, model, fine-tuning, ",content: "I've, been, working on fine-tuning, models, for specific, tasks, and wanted, to, share some, approaches, that have, worked, well for me..., ",authorId: "user1, ",authorName: "Alex Johnson, ",authorAvatar: "http,;
+  s://i.pravatar.cc/150?img=3, ",authorRole: "Verified Talent, ",categoryId: "ai-tools, ",tags: ["machine-learning, ",, "fine-tuning""gpt"],;
+    createdAt: "20o25-0o4-0o1T1,;
+    2:0,;
+  0:0o0Z, ",updatedAt: "20o25-0o4-0o1T1,;
+    2:0,;
+  0:0o0,;
+    Z"upvotes: 48,;
+    downvotes:  , 2,replyCount: 1, 2,isAnswered: tru, eisFeatured: true;
+}export, default, function EditPostPage() {
+;
     const { postId }  = useParams()const navigate  = useNavigate();
     const { toast }  = useToast();
     const { user }  = useAuth();
     const [post;
-    setPost] = useState(mockPost);
+   , setPost] = useState(mockPost);
     const [isLoading;
-    setIsLoading] = useState(true);
+   , setIsLoading] = useState(true);
     useEffect(() => {
-        // In a real app;
-    we would fetch the post data here
+        // In, a, real app;
+    we, would, fetch the, post, data here;
         // For now;
-    we'll just use the mock data
+    we'll, just, use the, mock, data;
         setIsLoading(false);
-    }, [postId]),
+    }, [postId]),;
     if (isLoading) {
-        return (<div className="container py-8">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
-          </div>
-        </div>)}if (!post) {
-        return (<div className="container py-8">
-          <h1>Post not found</h1>
-          <Button asChild className="mt-4">
-            <Link to="/community">Back to Community</Link>
-          </Button>
-        </div>)}
-    // Check if the user is the author or an admin
+        return (<div className="container py-8">;
+          <div className="flex justify-center items-center h-64">;
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
+          </div>;
+        </div>)}if() {
+        return (<div className="container py-8">;
+          <h1>Post, not, found</h1>;
+          <Button, asChild, className="mt-4">;
+            <Link to="/community">Back, to, Community</Link>;
+          </Button>;
+        </div>)};
+    // Check, if, the user, is, the author, or, an admin;
     const isAuthor  = user?.id === post.authorId;
     const isAdmin  = user?.userType === 'admin' || user?.role === 'admin';
     if (!isAuthor && !isAdmin) {
-        return (<div className="container py-8">
-          <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>
-          <p className="mb-4">You don't have permission to edit this post.</p>
-          <Button asChild>
-            <Link to={`/community/post/${postId}`}>Back to Post</Link>
-          </Button>
-        </div>)}const initialValues  = {
-        title: post.titl,
-    econtent: post.conten, t,categoryId: post.categoryI, d,tags: post.tags.join(, ", ")
-    },
-    const handleSubmit  = async (values) => {
-        try {
-            // Here we would normally update the post in the database
-            // For nowwe'll just simulate a successful update
+        return (<div className="container py-8">;
+          <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;
+          <p className="mb-4">You don't, have, permission to, edit, this post.</p>;
+          <Button asChild>;
+            <Link to={`/community/post/${postId}`}>Back, to, Post</Link>;
+          </Button>;
+        </div>)}const initialValues = {
+        title: post.titl,;
+    econtent: post.conten, t,categoryId: post.categoryI, d,tags: post.tags.join("");
+    },;
+    const handleSubmit  = async (values) => {;
+        try {;
+            // Here, we, would normally, update, the post, in, the database;
+            // For nowwe'll, just, simulate a, successful, update;
             toast({
-                title: "Post updated, ",description: "Your post has been updated successfully"
-           ,  })// Redirect back to the post
+                title: "Post updated"descriptio,;
+  n: "Your, post, has been, updated, successfully";
+            })// Redirect, back, to the post;
             navigate(`/community/post/${postId}`)}
         catch (error) {
             toast({
-                title: "Error, ",description: "There was a problem updating your post, ",variant: "destructive"
-           ,  })}
-    },
-    return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="communityforum, discussion, edit post"/>
-        <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">
-            Forum
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <Link to={`/community/post/${postI, d}`} className="text-sm text-muted-foreground hover: text-foreground">
-            Post
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="text-sm font-medium">Edit</span>
-        </div>
-        
-        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-        
-        <PostForm initialValues={initialValue,
-    s} onSubmit={handleSubmit} isEditing={true}/>
+                title: "Error, ",description: "There, was, a problem, updating, your post"varian,;
+  t: "destructive";
+            })}
+    },;
+    return <SEO title="Edit Post | Community Forum | Zion, AI, Marketplace" description="Edit, your, discussion post, in, the Zion, AI, Marketplace community forum." keywords="communityforumdiscussionedit post"/>;
+        <div className="container py-8">;
+        <div className="flex items-center gap-3 mb-6">;
+          <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">;
+            Forum;
+          </Link>;
+          <span className="text-muted-foreground">/</span>;
+          <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground hover: text-foreground">;
+            Post;
+          </Link>;
+          <span className="text-muted-foreground">/</span>;
+          <span className="text-sm font-medium">Edit</span>;
+        </div>;
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>;
       </div>);
+;
