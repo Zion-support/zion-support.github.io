@@ -8,7 +8,7 @@ interface SEOProps {
   image?: string;
 }
 
-export const SEO: React.FC<SEOProps> = ({ title; description, canonical; url, image }) => {
+export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, image }) => {
   return (
     <>
       <title>{title}</title>
