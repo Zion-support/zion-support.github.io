@@ -50,26 +50,26 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      };
+          setIsVisible(true)
+},
+  };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('innovative-services-2027');
+const element = document.getElementById('innovative-services-2027');
     if (element) {
-      observer.observe(element);
-    }
+      observer.observe(element)
+}
 
-    return () => observer.disconnect();
-  }, []),
+    return () => observer.disconnect()
+}, []),
 
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
-  const toggleServiceExpansion = (serviceId: string) => {
+const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   };
-  const contactInfo = {
+const contactInfo = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
   return (
@@ -84,9 +84,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+  }
+          transition={{ duration: 0.8 },
+  }
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
@@ -110,9 +113,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+  }
+          transition={{ duration: 0.8, delay: 0.2 },
+  }
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -138,27 +144,33 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                       : 'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
                   }`}
                 >
-                  {Icon && <Icon className="w-4 h-4" />}
-                  {category}
+                  {Icon && <Icon className="w-4 h-4" />},
+  {category}
                 </button>
-              );
-            })}
+              )
+})}
           </div>
         </motion.div>
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+  }
+              transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -183,8 +195,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                     >
                       {tech}
                     </span>
-                  ))}
-                  {service.technology.length > 3 && (
+                  ))},
+  {service.technology.length > 3 && (
                     <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
                       +{service.technology.length - 3} more
                     </span>
@@ -210,8 +222,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                     onClick={() => toggleServiceExpansion(service.id)}
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
                   >
-                    {expandedService === service.id ? 'Less' : 'Learn More'}
-                    {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    {expandedService === service.id ? 'Less' : 'Learn More'},
+  {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
                 </div>
 
@@ -219,10 +231,14 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                 <AnimatePresence>
                   {expandedService === service.id && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      initial={{ opacity: 0, height: 0 },
+  }
+                      animate={{ opacity: 1, height: 'auto' },
+  }
+                      exit={{ opacity: 0, height: 0 },
+  }
+                      transition={{ duration: 0.3 },
+  }
                       className="overflow-hidden"
                     >
                       <div className="border-t border-zion-cyan/20 pt-4 space-y-4">
@@ -286,9 +302,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
 
         {/* Contact Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+  }
+          transition={{ duration: 0.8, delay: 0.6 },
+  }
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">

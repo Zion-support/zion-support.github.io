@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   Shield;
   Lock;
   Eye;
@@ -15,7 +15,7 @@ import {;
   MapPin;
   Calendar;
   CheckCircle;
-  AlertTriangle;
+  AlertTriangle
 } from "lucide-react";
 import SEO from "../components/SEO";
 const Privacy: React.FC = () => {
@@ -27,14 +27,18 @@ const Privacy: React.FC = () => {
         description="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy ensures transparency and data protection.";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
@@ -52,13 +56,17 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* Privacy Principles */}}
+      {{/* Privacy Principles */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -71,12 +79,16 @@ const Privacy: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {privacyPrinciples.map((principle, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -90,13 +102,17 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* Information We Collect */}}
+      {{/* Information We Collect */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -109,21 +125,26 @@ const Privacy: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataCategories.map((category, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {dataCategories.map((category, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 <div className="space-y-2">
-                  {category.examples.map((example, exampleIndex) => (;
-                    <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
+                  {category.examples.map((example, exampleIndex) => (
+  <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {{example}}
+                      {{example},
+  }
                     </div>
                   ))}
                 </div>
@@ -133,13 +154,17 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* How We Use Your Data */}}
+      {{/* How We Use Your Data */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -152,12 +177,16 @@ const Privacy: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataUses.map((use, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {dataUses.map((use, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
@@ -168,13 +197,17 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* Your Rights */}}
+      {{/* Your Rights */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -187,12 +220,16 @@ const Privacy: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {userRights.map((right, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{right.right}</h3>
@@ -203,15 +240,20 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* Data Security */}}
+      {{/* Data Security */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -248,10 +290,14 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.1 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -284,10 +330,14 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.2 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -327,10 +377,14 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.3 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -363,10 +417,14 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.4 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -399,10 +457,14 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.5 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -442,10 +504,14 @@ const Privacy: React.FC = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.6 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -474,13 +540,17 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -514,13 +584,17 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Privacy?;

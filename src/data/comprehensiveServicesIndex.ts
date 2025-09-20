@@ -11,14 +11,14 @@ export type { EmergingTechService } from "./emergingTechServices2025";
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
 // Combined Services Array;
-export const ALL_COMPREHENSIVE_SERVICES = [;
+export const ALL_COMPREHENSIVE_SERVICES = [
   ...EXPANDED_INNOVATIVE_SERVICES_2025;
   ...EMERGING_TECH_SERVICES_2025;
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
+  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
 ]
 
 // Service Categories;
-export const SERVICE_CATEGORIES = [;
+export const SERVICE_CATEGORIES = [
   'AI & AnalyticsAI & Customer Experience';
   'AI & Supply ChainAI & Legal Tech';
   'AI & HealthcareAI & Financial Services';
@@ -29,52 +29,54 @@ export const SERVICE_CATEGORIES = [;
   'Space TechnologyNeuromorphic Computing';
   'Digital Twin & SimulationSynthetic Biology';
   'Brain-Computer InterfaceSustainability & Energy';
-  'Autonomous Vehicles & Fleet Management';
+  'Autonomous Vehicles & Fleet Management'
 ]
 
 // Innovation Levels;
-export const INNOVATION_LEVELS = [;
+export const INNOVATION_LEVELS = [
   'Cutting-edgeAdvanced';
-  'Professional';
+  'Professional'
 ]
 
 // Support Levels;
-export const SUPPORT_LEVELS = [;
+export const SUPPORT_LEVELS = [
   'enterpriseprofessional';
-  'basic';
+  'basic'
 ]
 // Pricing Models;
-export const PRICING_MODELS = [;
+export const PRICING_MODELS = [
   'monthlyannual';
-  'one-timeusage-based';
+  'one-timeusage-based'
 ]
 // Contact Information;
-export const const CONTACT_INFO = {; = {
-  phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com',address: '364 E Main St STE 1008, Middletown DE 19709';
+export const const CONTACT_INFO = {
+  = {
+  phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com',address: '364 E Main St STE 1008, Middletown DE 19709'
 }
 
 // Service Statistics;
-export const const SERVICE_STATS = {; = {
-  totalServices: ALL_COMPREHENSIVE_SERVICES.length,categories: SERVICE_CATEGORIES.length,innovationLevels: INNOVATION_LEVELS.length,supportLevels: SUPPORT_LEVELS.length,pricingModels: PRICING_MODELS.length;
+export const const SERVICE_STATS = {
+  = {
+  totalServices: ALL_COMPREHENSIVE_SERVICES.length,categories: SERVICE_CATEGORIES.length,innovationLevels: INNOVATION_LEVELS.length,supportLevels: SUPPORT_LEVELS.length,pricingModels: PRICING_MODELS.length
 }
 // Helper Functions;
-export const getServicesByCategory = (category: string) => {;
+export const getServicesByCategory = (category: string) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)
 }
-export const getServicesByInnovationLevel = (level: string) => {;
+export const getServicesByInnovationLevel = (level: string) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)
 }
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice;
-  )
+    service.price >= minPrice && service.price <= maxPrice
+)
 }
-export const getServicesByTags = (tags: string[]) => {;
+export const getServicesByTags = (tags: string[]) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     tags.some(tag => service.tags.includes(tag))
   )
 }
-export const searchServices = (query: string) => {;
+export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase()
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.title.toLowerCase().includes(searchTerm) ||;

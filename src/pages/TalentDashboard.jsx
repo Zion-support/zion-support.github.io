@@ -16,8 +16,8 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-function TalentDashboardContent() {;
-    const { user } = useAuth()
+function TalentDashboardContent() {
+  const { user } = useAuth()
     const [activeTab, setActiveTab] = useState("job-matches")
     const onboardingStatus = useOnboardingStatus()
     const showAdvanced = onboardingStatus.profileCompleted &&;
@@ -48,7 +48,8 @@ function TalentDashboardContent() {;
           </div>
         </div>
 
-        {{/* Project Offer Banner - Show pending offers */}}
+        {{/* Project Offer Banner - Show pending offers */},
+  }
         <ProjectOfferBanner />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -59,7 +60,8 @@ function TalentDashboardContent() {;
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (<img loading="lazy" src={user.avatarUrl} alt={user.displayName || "User"}/>) : (<div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {{user?.displayName?.charAt(0) || "U"}}
+                          {{user?.displayName?.charAt(0) || "U"},
+  }
                         </div>)}
                     </Avatar>
                     <div>
@@ -96,13 +98,15 @@ function TalentDashboardContent() {;
               </CardContent>
             </Card>
             ;
-            {{/* New Onboarding Progress Tracker */}}
+            {{/* New Onboarding Progress Tracker */},
+  }
             <TalentOnboardingSteps />
             {showAdvanced && (<div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>)}
             ;
-            {{/* Upcoming Interviews Card */}}
+            {{/* Upcoming Interviews Card */},
+  }
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
@@ -179,8 +183,8 @@ function TalentDashboardContent() {;
       ;
     </>)
 }
-export default function TalentDashboard() {;
-    return (<ProtectedRoute>
+export default function TalentDashboard() {
+  return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)
 }

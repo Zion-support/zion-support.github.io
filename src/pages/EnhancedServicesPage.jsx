@@ -8,12 +8,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
-export default function EnhancedServicesPage() {;
-    const [searchTerm, setSearchTerm] = useState('')
+export default function EnhancedServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [selectedPriceRange, setSelectedPriceRange] = useState('all')
-    const filteredServices = ENHANCED_SERVICES.filter(service => {;
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+    const filteredServices = ENHANCED_SERVICES.filter(service => {
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
         const matchesCategory = selectedCategory === 'all' ||;
@@ -22,11 +22,11 @@ export default function EnhancedServicesPage() {;
             (selectedPriceRange === 'basic' && service.price <= 2000) ||;
             (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||;
             (selectedPriceRange === 'enterprise' && service.price > 8000)
-        return matchesSearch && matchesCategory && matchesPrice;
-    })
-    const getCategoryIcon = (category) => {;
-        switch (category.toLowerCase()) {;
-            case 'ai automation':;
+        return matchesSearch && matchesCategory && matchesPrice
+})
+    const getCategoryIcon = (category) => {
+  switch (category.toLowerCase()) {
+  case 'ai automation':;
             case 'ai & machine learning':;
                 return <Brain className="w-5 h-5"/>;
             case 'cloud management':;
@@ -54,19 +54,20 @@ export default function EnhancedServicesPage() {;
             case 'quantum computing':;
                 return <Zap className="w-5 h-5"/>
             default: return <Code className="w-5 h-5"/>
-        }
-    }
-    const getPriceRange = (price) => {;
-        if (price <= 2000)
+        },
+  }
+    const getPriceRange = (price) => {
+  if (price <= 2000)
             return 'basic';
         if (price <= 8000)
             return 'professional';
-        return 'enterprise';
-    }
+        return 'enterprise'
+}
     return (<div className="min-h-screen bg-background">
       <SEO title="Enhanced IT & AI Services - Zion Tech Group" description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness." keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group" canonical="https://ziontechgroup.com/enhanced-services"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -86,7 +87,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </div>
 
-      {{/* Pricing Tiers Overview */}}
+      {{/* Pricing Tiers Overview */},
+  }
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -97,7 +99,8 @@ export default function EnhancedServicesPage() {;
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {{info.range}}
+                    {{info.range},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -108,7 +111,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Search and Filters */}}
+      {{/* Search and Filters */},
+  }
       <section className="py-8 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4">
@@ -123,7 +127,8 @@ export default function EnhancedServicesPage() {;
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
                 {ENHANCED_SERVICE_CATEGORIES.map(category => (<SelectItem key={category.value} value={category.value}>
-                    {{category.label}}
+                    {{category.label},
+  }
                   </SelectItem>))}
               </SelectContent>
             </Select>
@@ -142,7 +147,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section id="services-grid" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -159,9 +165,11 @@ export default function EnhancedServicesPage() {;
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      {{getCategoryIcon(service.category)}}
+                      {{getCategoryIcon(service.category)},
+  }
                       <Badge variant={getPriceRange(service.price) === 'enterprise' ? 'default' : 'secondary'}>
-                        {{getPriceRange(service.price)}}
+                        {{getPriceRange(service.price)},
+  }
                       </Badge>
                     </div>
                     {service.featured && (<Badge variant="default" className="bg-zion-purple">
@@ -170,7 +178,8 @@ export default function EnhancedServicesPage() {;
                   </div>
                   <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-sm text-zion-slate">
-                    {{service.description}}
+                    {{service.description},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -182,28 +191,34 @@ export default function EnhancedServicesPage() {;
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-blue">
-                        {service.currency}{{service.price?.toLocaleString()}}
+                        {service.currency},
+  {{service.price?.toLocaleString()},
+  }
                       </div>
                       <div className="text-sm text-zion-slate">
-                        {{service.availability}}
+                        {{service.availability},
+  }
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
-                        {{tag}}
+                        {{tag},
+  }
                       </Badge>))}
                   </div>
 
                   <div className="flex items-center justify-between text-sm text-zion-slate">
                     <div className="flex items-center gap-1">
                       <Globe className="w-4 h-4"/>
-                      {{service.location}}
+                      {{service.location},
+  }
                     </div>
                     <div className="flex items-center gap-1">
                       <TrendingUp className="w-4 h-4"/>
-                      AI Score: {{service.aiScore}}
+                      AI Score: {{service.aiScore},
+  }
                     </div>
                   </div>
 
@@ -221,7 +236,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Service Categories Tabs */}}
+      {{/* Service Categories Tabs */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -230,7 +246,8 @@ export default function EnhancedServicesPage() {;
           <Tabs defaultValue="ai-ml" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
               {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsTrigger key={category.value} value={category.value} className="text-zion-slate-light data-[state=active]:text-zion-cyan">
-                  {{category.label}}
+                  {{category.label},
+  }
                 </TabsTrigger>))}
             </TabsList>
             ;
@@ -249,7 +266,9 @@ export default function EnhancedServicesPage() {;
                         <CardContent>
                           <div className="flex items-center justify-between">
                             <span className="text-zion-cyan font-bold">
-                              {service.currency}{{service.price?.toLocaleString()}}
+                              {service.currency},
+  {{service.price?.toLocaleString()},
+  }
                             </span>
                             <Button size="sm" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                               Learn More;
@@ -263,7 +282,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -310,7 +330,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section id="contact-section" className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

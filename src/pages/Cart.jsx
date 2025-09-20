@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-export default function CartPage() {;
-    const navigate = useNavigate()
+export default function CartPage() {
+  const navigate = useNavigate()
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(false)
     const [cartLoading, setCartLoading] = useState(true)
@@ -9,13 +9,14 @@ export default function CartPage() {;
 
     useEffect(() => {
         // Simulate loading cart data;
-        const timer = setTimeout(() => {
+const timer = setTimeout(() => {
             setCartLoading(false)
             setShowEmpty(true)
         }, 1000)
         return () => clearTimeout(timer)
     }, [])
-    if (if (cartLoading) {;) {
+    if (if (cartLoading) {
+  ) {
         return (
             <div className="container py-10 space-y-4">
                 <div className="h-8 w-1/3 bg-gray-200 rounded animate-pulse"/>
@@ -24,7 +25,8 @@ export default function CartPage() {;
         )
     }
 
-    if (if (showEmpty) {;) {
+    if (if (showEmpty) {
+  ) {
         return (
             <div className="container py-10 text-center">
                 <div className="mx-auto mb-4 w-48 h-36 bg-gray-200 rounded flex items-center justify-center">

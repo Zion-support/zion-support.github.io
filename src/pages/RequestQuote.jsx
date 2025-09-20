@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {CheckCircle, Clock, Users, Zap} from "lucide-react";
-export default function RequestQuote() {;
+export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
       <SEO ;
@@ -18,7 +18,8 @@ export default function RequestQuote() {;
       ;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {{/* Hero Section */}}
+          {{/* Hero Section */},
+  }
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               Get Your Custom Quote;
@@ -29,7 +30,8 @@ export default function RequestQuote() {;
             </p>
           </div>
 
-          {{/* Benefits Section */}}
+          {{/* Benefits Section */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
@@ -80,7 +82,8 @@ export default function RequestQuote() {;
             </Card>
           </div>
 
-          {{/* Services Overview */}}
+          {{/* Services Overview */},
+  }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Our Services;
@@ -156,7 +159,8 @@ export default function RequestQuote() {;
             </div>
           </div>
 
-          {{/* Quote Form Section */}}
+          {{/* Quote Form Section */},
+  }
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -170,7 +174,8 @@ export default function RequestQuote() {;
             <QuoteRequestForm />
           </div>
 
-          {{/* Additional Information */}}
+          {{/* Additional Information */},
+  }
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-bold text-white mb-6">
               Need Immediate Assistance?;

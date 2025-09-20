@@ -5,13 +5,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function EnterpriseDemo() {;
-    return (<>
+export default function EnterpriseDemo() {
+  return (<>
       <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https://ziontechgroup.com/enterprise/demo"/>
       ;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {{/* Hero Section */}}
+          {{/* Hero Section */},
+  }
           <div className="text-center mb-16">
             <GradientHeading>Enterprise Demo</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
@@ -19,7 +20,8 @@ export default function EnterpriseDemo() {;
             </p>
           </div>
 
-          {{/* Demo Benefits */}}
+          {{/* Demo Benefits */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
@@ -68,9 +70,11 @@ export default function EnterpriseDemo() {;
             </Card>
           </div>
 
-          {{/* Demo Options */}}
+          {{/* Demo Options */},
+  }
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {{/* Live Demo */}}
+            {{/* Live Demo */},
+  }
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader>
                 <CardTitle className="text-white text-2xl">Live Interactive Demo</CardTitle>
@@ -100,7 +104,8 @@ export default function EnterpriseDemo() {;
               </CardContent>
             </Card>
 
-            {{/* Self-Guided Demo */}}
+            {{/* Self-Guided Demo */},
+  }
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader>
                 <CardTitle className="text-white text-2xl">Self-Guided Tour</CardTitle>
@@ -131,7 +136,8 @@ export default function EnterpriseDemo() {;
             </Card>
           </div>
 
-          {{/* What You'll See */}}
+          {{/* What You'll See */},
+  }
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">What You'll See in the Demo</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -165,7 +171,8 @@ export default function EnterpriseDemo() {;
             </div>
           </div>
 
-          {{/* CTA Section */}}
+          {{/* CTA Section */},
+  }
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to See Zion in Action?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">

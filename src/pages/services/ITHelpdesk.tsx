@@ -1,14 +1,20 @@
 import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } from "lucide-react";
-export default function ITHelpdesk() {;
-  const features = [;
-    'Ticketing with SLA and automation rulesSelf-service knowledge base and chat widget';
+export default function ITHelpdesk() {
+  const features = [
+  'Ticketing with SLA and automation rulesSelf-service knowledge base and chat widget';
     'Asset inventory and remote assistanceEmail-to-ticket and status notifications';
-    'Multi-tenant client portalsReports: MTTR, CSAT, backlog trends';
-  ]
-  const pricing = [;
-    {{ name: 'Basic', price: '$199/mo', details: ['3 agentsEmail support', 'KB'] }}
-    {{ name: 'Team', price: '$499/mo', details: ['10 agentsSLAs', 'Automation'] }}
-    {{ name: 'Business', price: '$999/mo', details: ['25 agentsSSO', 'Advanced reports'] }}
+    'Multi-tenant client portalsReports: MTTR, CSAT, backlog trends'
+]
+  const pricing = [
+  {{ name: 'Basic', price: '$199/mo', details: ['3 agentsEmail support', 'KB'],
+  },
+  },
+  {{ name: 'Team', price: '$499/mo', details: ['10 agentsSLAs', 'Automation'],
+  },
+  },
+  {{ name: 'Business', price: '$999/mo', details: ['25 agentsSSO', 'Advanced reports'],
+  },
+  },
   ]
   return (
     <div className="min-h-screen bg-white">
@@ -26,8 +32,8 @@ export default function ITHelpdesk() {;
         <div>
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Capabilities</h2>
           <ul className="space-y-3">
-            {features.map((f) => (;
-              <li key={f} className="flex items-start">
+            {features.map((f) => (
+  <li key={f} className="flex items-start">
                 <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                 <span className="text-zion-slate-dark">{f}</span>
               </li>
@@ -37,8 +43,8 @@ export default function ITHelpdesk() {;
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>
           <div className="grid md:grid-cols-3 gap-4">
-            {pricing.map((p) => (;
-              <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+            {pricing.map((p) => (
+  <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                 <div className="text-lg font-semibold mb-1">{p.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{p.price}</div>
                 <ul className="text-sm text-zion-slate-dark space-y-1">
@@ -55,8 +61,9 @@ export default function ITHelpdesk() {;
 
       <section className="pb-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-6">
-          {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map((c) => (;
-            <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+          {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'},
+  ].map((c) => (
+  <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ;
+import {
   Brain;
-  Search, ;
-  TrendingUp, ;
-  Zap, ;
-  Shield, ;
-  Users, ;
-  Clock, ;
-  DollarSign, ;
-  CheckCircle, ;
+  Search,
+  TrendingUp,
+  Zap,
+  Shield,
+  Users,
+  Clock,
+  DollarSign,
+  CheckCircle,
   Star;
   ArrowRight;
   Globe;
@@ -38,9 +38,9 @@ import { ;
   Zap as ZapIcon;
   Phone;
   Mail;
-  MapPin;
+  MapPin
 } from "lucide-react";
-export default function AIAutonomousResearchAssistant() {;
+export default function AIAutonomousResearchAssistant() {
   const [activeTab, setActiveTab] = useState('overview')
   const [isVisible, setIsVisible] = useState(false)
 
@@ -48,8 +48,8 @@ export default function AIAutonomousResearchAssistant() {;
     setIsVisible(true)
   }, [])
 
-  const features = [;
-    "Fully autonomous research execution";
+  const features = [
+  "Fully autonomous research execution";
     "Multi-domain knowledge synthesis";
     "Real-time data collection & analysis";
     "Intelligent hypothesis generation";
@@ -58,103 +58,127 @@ export default function AIAutonomousResearchAssistant() {;
     "Trend prediction algorithms";
     "Natural language output";
     "API integration capabilities";
-    "Custom research templates";
-  ]
+    "Custom research templates"
+]
 
-  const benefits = [;
-    "Reduce research time by 90%";
+  const benefits = [
+  "Reduce research time by 90%";
     "24/7 autonomous operation";
     "Unbiased data analysis";
     "Comprehensive coverage";
-    "Scalable research capacity";
-  ]
+    "Scalable research capacity"
+]
 
-  const useCases = [;
-    "Market research automation";
+  const useCases = [
+  "Market research automation";
     "Scientific literature review";
     "Competitive intelligence";
     "Trend analysis";
-    "Academic research support";
+    "Academic research support"
+]
+  const const technicalSpecs = {
+  = {
+    technology: [["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"],
   ]
-  const const technicalSpecs = {; = {
-    technology: [["GPT-4", "BERT", "Python", "TensorFlow", "PyTorch", "React", "Node.js"];]
-    integrations: [["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"];]
-    apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"];]
+    integrations: [["PubMed", "arXiv", "Google Scholar", "Web of Science", "JSTOR"],
+  ]
+    apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"],
+  ],
   }
 
-  const const pricing = {; = {
+  const const pricing = {
+  = {
     monthly: "$4,999";
     yearly: "$49,999";
-    enterprise: "Custom",features: [;
-      "Full autonomous research capabilities";
+    enterprise: "Custom",features: [
+  "Full autonomous research capabilities";
       "Unlimited research domains";
       "Priority support";
       "Custom integrations";
-      "Advanced analytics";
-    ]
+      "Advanced analytics"
+],
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
-      {{/* Futuristic Animated Background */}}
+      {{/* Futuristic Animated Background */},
+  }
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {{/* Animated grid with neon effect */}}
+        {{/* Animated grid with neon effect */},
+  }
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         ;
-        {{/* Floating particles with neon glow */}}
+        {{/* Floating particles with neon glow */},
+  }
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (;
-            <motion.div;
-              key={{i}}
+          {[...Array(20)].map((_, i) => (
+  <motion.div;
+              key={{i},
+  }
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50";"
-              animate={{;
-                x: [0, 100, 0]
+              animate={{
+  x: [0, 100, 0]
                 y: [0, -100, 0]
                 opacity: [0.4, 1, 0.4]
-                scale: [[0.5, 1.5, 0.5];]
-              }}
-              transition={{;
-                duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut";
-              }}
-              style={{;
-                left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`;
-              }}
+                scale: [[0.5, 1.5, 0.5],
+  ],
+  },
+  }
+              transition={{
+  duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
+},
+  }
+              style={{
+  left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`
+},
+  }
             />
           ))}
         </div>
         ;
-        {{/* Gradient orbs with neon glow */}}
+        {{/* Gradient orbs with neon glow */},
+  }
         <motion.div ;
           className="className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl";"
-          animate={{;
-            scale: [1, 1.2, 1]
-            opacity: [[0.2, 0.5, 0.2];]
-          }}
-          transition={{;
-            duration: 4,repeat: Infinity,ease: "easeInOut";
-          }}
+          animate={{
+  scale: [1, 1.2, 1]
+            opacity: [[0.2, 0.5, 0.2],
+  ],
+  },
+  }
+          transition={{
+  duration: 4,repeat: Infinity,ease: "easeInOut"
+},
+  }
         />
         ;
         <motion.div ;
           className="className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl";"
-          animate={{;
-            scale: [1.2, 1, 1.2]
-            opacity: [[0.5, 0.2, 0.5];]
-          }}
-          transition={{;
-            duration: 5,repeat: Infinity,ease: "easeInOut",delay: 1;
-          }}
+          animate={{
+  scale: [1.2, 1, 1.2]
+            opacity: [[0.5, 0.2, 0.5],
+  ],
+  },
+  }
+          transition={{
+  duration: 5,repeat: Infinity,ease: "easeInOut",delay: 1
+},
+  }
         />
       </div>
 
-      {{/* Header Section */}}
+      {{/* Header Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -169,11 +193,15 @@ export default function AIAutonomousResearchAssistant() {;
             </p>
           </motion.div>
 
-          {{/* Key Metrics */}}
+          {{/* Key Metrics */},
+  }
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12";"
           >
             <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-sm">
@@ -194,11 +222,15 @@ export default function AIAutonomousResearchAssistant() {;
             </div>
           </motion.div>
 
-          {{/* CTA Buttons */}}
+          {{/* CTA Buttons */},
+  }
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
             className="className="flex flex-col sm:flex-row gap-4 justify-center items-center";"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center">
@@ -213,38 +245,48 @@ export default function AIAutonomousResearchAssistant() {;
         </div>
       </section>
 
-      {{/* Navigation Tabs */}}
+      {{/* Navigation Tabs */},
+  }
       <div className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overviewfeatures', 'pricingtechnical', 'contact'].map((tab) => (;
-              <button;
-                key={{tab}}
-                onClick={{onClick={() => setActiveTab(tab)}}}
-                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
-                  activeTab === tab;
+            {['overviewfeatures', 'pricingtechnical', 'contact'].map((tab) => (
+  <button;
+                key={{tab},
+  }
+                onClick={{onClick={() => setActiveTab(tab)},
+  },
+  }
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+  activeTab === tab;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25';
-                    : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white';
-                }`}
+                    : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'
+}`}
               >
-                {{tab.charAt(0).toUpperCase() + tab.slice(1)}}
+                {{tab.charAt(0).toUpperCase() + tab.slice(1)},
+  }
               </button>
             ))}
           </div>
         </div>
       </div>
 
-      {{/* Content Sections */}}
+      {{/* Content Sections */},
+  }
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
-            {activeTab === 'overview' && (;
-              <motion.div;
+            {activeTab === 'overview' && (
+  <motion.div;
                 key="overview";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                exit={{ opacity: 0, y: -20 },
+  }
+                transition={{ duration: 0.5 },
+  }
                 className="className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center";"
               >
                 <div>
@@ -302,15 +344,18 @@ export default function AIAutonomousResearchAssistant() {;
                   </div>
                 </div>
               </motion.div>
-            )}
-
-            {activeTab === 'features' && (;
-              <motion.div;
+            )},
+  {activeTab === 'features' && (
+  <motion.div;
                 key="features";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                exit={{ opacity: 0, y: -20 },
+  }
+                transition={{ duration: 0.5 },
+  }
                 className="className="space-y-8";"
               >
                 <div className="text-center mb-12">
@@ -323,12 +368,16 @@ export default function AIAutonomousResearchAssistant() {;
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index) => (;
-                    <motion.div;
-                      key={{index}}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                  {features.map((feature, index) => (
+  <motion.div;
+                      key={{index},
+  }
+                      initial={{ opacity: 0, y: 20 },
+  }
+                      animate={{ opacity: 1, y: 0 },
+  }
+                      transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                       className="className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-300 group";"
                     >
                       <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -342,15 +391,18 @@ export default function AIAutonomousResearchAssistant() {;
                   ))}
                 </div>
               </motion.div>
-            )}
-
-            {activeTab === 'pricing' && (;
-              <motion.div;
+            )},
+  {activeTab === 'pricing' && (
+  <motion.div;
                 key="pricing";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                exit={{ opacity: 0, y: -20 },
+  }
+                transition={{ duration: 0.5 },
+  }
                 className="className="space-y-8";"
               >
                 <div className="text-center mb-12">
@@ -363,17 +415,19 @@ export default function AIAutonomousResearchAssistant() {;
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {{/* Monthly Plan */}}
+                  {{/* Monthly Plan */},
+  }
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/30 rounded-3xl p-8 backdrop-blur-sm relative">
                     <div className="text-center">
                       <h3 className="text-2xl font-bold text-white mb-4">Monthly</h3>
                       <div className="text-5xl font-bold text-cyan-400 mb-2">{pricing.monthly}</div>
                       <div className="text-gray-400 mb-6">per month</div>
                       <ul className="space-y-3 mb-8 text-left">
-                        {pricing.features.slice(0, 3).map((feature, index) => (;
-                          <li key={index} className="flex items-center text-gray-300">
+                        {pricing.features.slice(0, 3).map((feature, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {{feature}}
+                            {{feature},
+  }
                           </li>
                         ))}
                       </ul>
@@ -383,7 +437,8 @@ export default function AIAutonomousResearchAssistant() {;
                     </div>
                   </div>
 
-                  {{/* Yearly Plan */}}
+                  {{/* Yearly Plan */},
+  }
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -395,10 +450,11 @@ export default function AIAutonomousResearchAssistant() {;
                       <div className="text-5xl font-bold text-cyan-400 mb-2">{pricing.yearly}</div>
                       <div className="text-gray-400 mb-6">per year (Save 17%)</div>
                       <ul className="space-y-3 mb-8 text-left">
-                        {pricing.features.map((feature, index) => (;
-                          <li key={index} className="flex items-center text-gray-300">
+                        {pricing.features.map((feature, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {{feature}}
+                            {{feature},
+  }
                           </li>
                         ))}
                       </ul>
@@ -408,7 +464,8 @@ export default function AIAutonomousResearchAssistant() {;
                     </div>
                   </div>
 
-                  {{/* Enterprise Plan */}}
+                  {{/* Enterprise Plan */},
+  }
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative">
                     <div className="text-center">
                       <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
@@ -439,15 +496,18 @@ export default function AIAutonomousResearchAssistant() {;
                   </div>
                 </div>
               </motion.div>
-            )}
-
-            {activeTab === 'technical' && (;
-              <motion.div;
+            )},
+  {activeTab === 'technical' && (
+  <motion.div;
                 key="technical";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                exit={{ opacity: 0, y: -20 },
+  }
+                transition={{ duration: 0.5 },
+  }
                 className="className="space-y-8";"
               >
                 <div className="text-center mb-12">
@@ -467,9 +527,10 @@ export default function AIAutonomousResearchAssistant() {;
                         Technology Stack;
                       </h3>
                       <div className="grid grid-cols-2 gap-3">
-                        {technicalSpecs.technology.map((tech, index) => (;
-                          <div key={index} className="bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300">
-                            {{tech}}
+                        {technicalSpecs.technology.map((tech, index) => (
+  <div key={index} className="bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300">
+                            {{tech},
+  }
                           </div>
                         ))}
                       </div>
@@ -481,10 +542,11 @@ export default function AIAutonomousResearchAssistant() {;
                         Integrations;
                       </h3>
                       <div className="space-y-2">
-                        {technicalSpecs.integrations.map((integration, index) => (;
-                          <div key={index} className="flex items-center text-gray-300">
+                        {technicalSpecs.integrations.map((integration, index) => (
+  <div key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {{integration}}
+                            {{integration},
+  }
                           </div>
                         ))}
                       </div>
@@ -519,10 +581,11 @@ export default function AIAutonomousResearchAssistant() {;
                         Security Standards;
                       </h3>
                       <div className="space-y-2">
-                        {technicalSpecs.security.map((standard, index) => (;
-                          <div key={index} className="flex items-center text-gray-300">
+                        {technicalSpecs.security.map((standard, index) => (
+  <div key={index} className="flex items-center text-gray-300">
                             <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {{standard}}
+                            {{standard},
+  }
                           </div>
                         ))}
                       </div>
@@ -530,15 +593,18 @@ export default function AIAutonomousResearchAssistant() {;
                   </div>
                 </div>
               </motion.div>
-            )}
-
-            {activeTab === 'contact' && (;
-              <motion.div;
+            )},
+  {activeTab === 'contact' && (
+  <motion.div;
                 key="contact";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                exit={{ opacity: 0, y: -20 },
+  }
+                transition={{ duration: 0.5 },
+  }
                 className="className="max-w-4xl mx-auto";"
               >
                 <div className="text-center mb-12">
@@ -595,7 +661,8 @@ export default function AIAutonomousResearchAssistant() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">

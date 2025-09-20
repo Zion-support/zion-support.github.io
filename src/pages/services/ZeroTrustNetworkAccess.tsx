@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Shield;
-  Lock, ;
-  Eye, ;
-  CheckCircle, ;
-  Users, ;
-  Clock, ;
+  Lock,
+  Eye,
+  CheckCircle,
+  Users,
+  Clock,
   ArrowRight;
   Play;
   Settings;
@@ -31,74 +31,78 @@ import { ;
   Globe2;
   Server;
   Database;
-  Smartphone;
+  Smartphone
 } from "lucide-react";
 const ZeroTrustNetworkAccess = () => {
-  const features = [;
-    {;
-      icon: Shield,title: 'Identity Verification',description: 'Multi-factor authentication and continuous identity validation';
-    }
-    {;
-      icon: Lock,title: 'Least Privilege Access',description: 'Granular access controls based on user context and needs';
-    }
-    {;
-      icon: Eye,title: 'Continuous Monitoring',description: 'Real-time monitoring of all network activities and access patterns';
-    }
-    {;
-      icon: Network,title: 'Micro-segmentation',description: 'Network segmentation at the application and workload level';
-    }
-    {;
-      icon: Key,title: 'Encrypted Communication',description: 'End-to-end encryption for all data in transit and at rest';
-    }
-    {;
-      icon: Monitor,title: 'Threat Detection',description: 'Advanced threat detection and automated response capabilities';
-    }
+  const features = [
+  {
+  icon: Shield,title: 'Identity Verification',description: 'Multi-factor authentication and continuous identity validation'
+},
+  {
+  icon: Lock,title: 'Least Privilege Access',description: 'Granular access controls based on user context and needs'
+},
+  {
+  icon: Eye,title: 'Continuous Monitoring',description: 'Real-time monitoring of all network activities and access patterns'
+},
+  {
+  icon: Network,title: 'Micro-segmentation',description: 'Network segmentation at the application and workload level'
+},
+  {
+  icon: Key,title: 'Encrypted Communication',description: 'End-to-end encryption for all data in transit and at rest'
+},
+  {
+  icon: Monitor,title: 'Threat Detection',description: 'Advanced threat detection and automated response capabilities'
+},
   ]
-  const benefits = [;
-    'Eliminate network perimeter vulnerabilitiesReduce attack surface by 90%';
+  const benefits = [
+  'Eliminate network perimeter vulnerabilitiesReduce attack surface by 90%';
     'Enable secure remote work from anywhereComply with industry security standards';
-    'Improve incident response time by 80%Enhance user experience with seamless access';
-  ]
+    'Improve incident response time by 80%Enhance user experience with seamless access'
+]
 
-  const useCases = [;
-    {;
-      industry: 'Financial Services',description: 'Secure access to banking systems and customer data';
-    }
-    {;
-      industry: 'Healthcare',description: 'Protected access to patient records and medical systems';
-    }
-    {;
-      industry: 'Government',description: 'Secure access to classified systems and citizen data';
-    }
-    {;
-      industry: 'Enterprise',description: 'Protected access to corporate resources and applications';
-    }
+  const useCases = [
+  {
+  industry: 'Financial Services',description: 'Secure access to banking systems and customer data'
+},
+  {
+  industry: 'Healthcare',description: 'Protected access to patient records and medical systems'
+},
+  {
+  industry: 'Government',description: 'Secure access to classified systems and citizen data'
+},
+  {
+  industry: 'Enterprise',description: 'Protected access to corporate resources and applications'
+},
   ]
-  const securityLayers = [;
-    {;
-      icon: Fingerprint,title: 'User Identity',description: 'Multi-factor authentication, biometric verification, and behavioral analytics';
-    }
-    {;
-      icon: Device,title: 'Device Security',description: 'Device health checks, compliance validation, and security posture assessment';
-    }
-    {;
-      icon: Globe2,title: 'Network Security',description: 'Encrypted tunnels, micro-segmentation, and traffic inspection';
-    }
-    {;
-      icon: Database,title: 'Application Security',description: 'API security, application-level access controls, and data protection';
-    }
+  const securityLayers = [
+  {
+  icon: Fingerprint,title: 'User Identity',description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
+},
+  {
+  icon: Device,title: 'Device Security',description: 'Device health checks, compliance validation, and security posture assessment'
+},
+  {
+  icon: Globe2,title: 'Network Security',description: 'Encrypted tunnels, micro-segmentation, and traffic inspection'
+},
+  {
+  icon: Database,title: 'Application Security',description: 'API security, application-level access controls, and data protection'
+},
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
@@ -130,13 +134,17 @@ const ZeroTrustNetworkAccess = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -149,12 +157,16 @@ const ZeroTrustNetworkAccess = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-500/30 transition-all duration-200";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
@@ -168,13 +180,17 @@ const ZeroTrustNetworkAccess = () => {
         </div>
       </section>
 
-      {{/* Security Layers Section */}}
+      {{/* Security Layers Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -187,12 +203,16 @@ const ZeroTrustNetworkAccess = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityLayers.map((layer, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {securityLayers.map((layer, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -210,13 +230,17 @@ const ZeroTrustNetworkAccess = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -229,12 +253,16 @@ const ZeroTrustNetworkAccess = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (;
-                <motion.div;
-                  key={{index}}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+              {benefits.slice(0, 3).map((benefit, index) => (
+  <motion.div;
+                  key={{index},
+  }
+                  initial={{ opacity: 0, x: -20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
@@ -243,12 +271,16 @@ const ZeroTrustNetworkAccess = () => {
               ))}
             </div>
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (;
-                <motion.div;
-                  key={{index + 3}}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+              {benefits.slice(3).map((benefit, index) => (
+  <motion.div;
+                  key={{index + 3},
+  }
+                  initial={{ opacity: 0, x: 20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
@@ -260,13 +292,17 @@ const ZeroTrustNetworkAccess = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -279,12 +315,16 @@ const ZeroTrustNetworkAccess = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-red-500/30 transition-all duration-200";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -298,13 +338,17 @@ const ZeroTrustNetworkAccess = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Secure Your Network Today;

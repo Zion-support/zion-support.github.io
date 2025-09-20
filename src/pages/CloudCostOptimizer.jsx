@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function CloudCostOptimizer() {;
-    const features = [;
-        "AI-driven cost optimization algorithms";
+export default function CloudCostOptimizer() {
+  const features = [
+  "AI-driven cost optimization algorithms";
         "Multi-cloud support (AWS, Azure, GCP)";
         "Real-time cost monitoring and alerts";
         "Automated resource scaling";
@@ -18,36 +18,36 @@ export default function CloudCostOptimizer() {;
         "Budget forecasting and planning";
         "Performance vs. cost analysis";
         "Automated cost optimization actions";
-        "Custom optimization policies";
-    ]
-    const pricingPlans = [;
-        {;
-            name: "Starter",price: "$49",period: "/month",description: "Perfect for small cloud deployments",features: [;
-                "Up to $5,000 monthly cloud spend";
+        "Custom optimization policies"
+]
+    const pricingPlans = [
+  {
+  name: "Starter",price: "$49",period: "/month",description: "Perfect for small cloud deployments",features: [
+  "Up to $5,000 monthly cloud spend";
                 "Basic cost optimization";
                 "Monthly cost reports";
                 "Email support";
                 "Basic cost alerts";
-                "AWS cost optimization";
-            ]
-            popular: false;
-        }
-        {;
-            name: "Professional",price: "$149",period: "/month",description: "Ideal for growing businesses",features: [;
-                "Up to $50,000 monthly cloud spend";
+                "AWS cost optimization"
+]
+            popular: false
+},
+  {
+  name: "Professional",price: "$149",period: "/month",description: "Ideal for growing businesses",features: [
+  "Up to $50,000 monthly cloud spend";
                 "Advanced AI optimization";
                 "Real-time cost monitoring";
                 "Multi-cloud support";
                 "Priority support";
                 "Advanced analytics";
                 "Automated optimization";
-                "Custom cost policies";
-            ]
-            popular: true;
-        }
-        {;
-            name: "Enterprise",price: "$399",period: "/month",description: "For large cloud deployments",features: [;
-                "Unlimited cloud spend";
+                "Custom cost policies"
+]
+            popular: true
+},
+  {
+  name: "Enterprise",price: "$399",period: "/month",description: "For large cloud deployments",features: [
+  "Unlimited cloud spend";
                 "Premium AI optimization";
                 "24/7 cost monitoring";
                 "Full multi-cloud support";
@@ -56,54 +56,55 @@ export default function CloudCostOptimizer() {;
                 "API access & integrations";
                 "Dedicated cost analyst";
                 "Advanced forecasting";
-                "Custom reporting";
-            ]
-            popular: false;
-        }
-    ]
-    const optimizationServices = [;
-        {;
-            title: "Cost Analysis & Monitoring",description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>
-        }
-        {;
-            title: "AI-Powered Optimization",description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.",icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>
-        }
-        {;
-            title: "Multi-Cloud Management",description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.";
+                "Custom reporting"
+]
+            popular: false
+},
+  ]
+    const optimizationServices = [
+  {
+  title: "Cost Analysis & Monitoring",description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>
+        },
+  {
+  title: "AI-Powered Optimization",description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.",icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>
+        },
+  {
+  title: "Multi-Cloud Management",description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.";
             icon: <Globe className="h-8 w-8 text-zion-cyan"/>
-        }
-        {;
-            title: "Automated Actions",description: "Automatically implement cost-saving measures with your approval and oversight.",icon: <Settings className="h-8 w-8 text-zion-purple"/>
-        }
-    ]
-    const supportedClouds = [;
-        "Amazon Web Services (AWS)";
+        },
+  {
+  title: "Automated Actions",description: "Automatically implement cost-saving measures with your approval and oversight.",icon: <Settings className="h-8 w-8 text-zion-purple"/>
+        },
+  ]
+    const supportedClouds = [
+  "Amazon Web Services (AWS)";
         "Microsoft Azure";
         "Google Cloud Platform (GCP)";
         "Oracle Cloud";
         "IBM Cloud";
         "DigitalOcean";
         "Linode";
-        "Vultr";
-    ]
-    const costSavings = [;
-        {;
-            metric: "Average Cost Reduction",value: "40%",description: "Typical savings achieved by our customers";
-        }
-        {;
-            metric: "ROI Timeline",value: "2-3 months",description: "Time to see positive return on investment";
-        }
-        {;
-            metric: "Resource Utilization",value: "85%",description: "Average improvement in resource efficiency";
-        }
-        {;
-            metric: "Cost Visibility",value: "100%",description: "Complete transparency into cloud spending";
-        }
-    ]
+        "Vultr"
+]
+    const costSavings = [
+  {
+  metric: "Average Cost Reduction",value: "40%",description: "Typical savings achieved by our customers"
+},
+  {
+  metric: "ROI Timeline",value: "2-3 months",description: "Time to see positive return on investment"
+},
+  {
+  metric: "Resource Utilization",value: "85%",description: "Average improvement in resource efficiency"
+},
+  {
+  metric: "Cost Visibility",value: "100%",description: "Complete transparency into cloud spending"
+},
+  ]
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-8">
@@ -130,7 +131,8 @@ export default function CloudCostOptimizer() {;
         </div>
       </section>
 
-      {{/* Cost Savings Metrics */}}
+      {{/* Cost Savings Metrics */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -154,7 +156,8 @@ export default function CloudCostOptimizer() {;
         </div>
       </section>
 
-      {{/* Optimization Services */}}
+      {{/* Optimization Services */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -170,7 +173,8 @@ export default function CloudCostOptimizer() {;
             {optimizationServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
-                    {{service.icon}}
+                    {{service.icon},
+  }
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
@@ -180,7 +184,8 @@ export default function CloudCostOptimizer() {;
         </div>
       </section>
 
-      {{/* Supported Cloud Providers */}}
+      {{/* Supported Cloud Providers */},
+  }
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -203,7 +208,8 @@ export default function CloudCostOptimizer() {;
         </div>
       </section>
 
-      {{/* Features Grid */}}
+      {{/* Features Grid */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -228,7 +234,8 @@ export default function CloudCostOptimizer() {;
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -271,7 +278,8 @@ export default function CloudCostOptimizer() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">

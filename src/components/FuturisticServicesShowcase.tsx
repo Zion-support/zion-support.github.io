@@ -49,43 +49,46 @@ const futuristicServices: ServiceShowcase[] = [
 		id: 'autonomous-robotics-platform',title: 'Autonomous Robotics Platform',description: 'Complete robotics platform for autonomous manufacturing and logistics operations.',icon: Bot,color: 'from-gray-500 to-slate-600',features: ['Autonomous navigationTask learning', 'Multi-robot coordination'],
 		price: '$22,000/month',
 		status: 'active'
-	}
-];
+	},
+  ];
 export default function FuturisticServicesShowcase() {
 	const [currentService, setCurrentService] = useState(0);
-	const [isPlaying, setIsPlaying] = useState(true);
+const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return,
 		const interval = setInterval(() => {
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
-		}, 5000);
-		return () => clearInterval(interval);
-	}, [isPlaying]);
-	const getStatusColor = (status: string) => {
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length)
+}, 5000);
+		return () => clearInterval(interval)
+}, [isPlaying]);
+const getStatusColor = (status: string) => {
 		switch (status) {
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'
-		}
-	};
-	const getStatusText = (status: string) => {
+		},
+  };
+const getStatusText = (status: string) => {
 		switch (status) {
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
 			case 'active': return 'ACTIVE';
 			default: return 'UNKNOWN'
-		}
-	};
+		},
+  };
 	return (
 		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
 			<div className="container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-16">
 					<motion.h2
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
+						initial={{ opacity: 0, y: 20 },
+  }
+						whileInView={{ opacity: 1, y: 0 },
+  }
+						transition={{ duration: 0.6 },
+  }
 						className="text-4xl md:text-6xl font-bold text-white mb-6"
 					>
 						Futuristic
@@ -94,9 +97,12 @@ export default function FuturisticServicesShowcase() {
 						</span>
 					</motion.h2>
 					<motion.p
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.2 }}
+						initial={{ opacity: 0, y: 20 },
+  }
+						whileInView={{ opacity: 1, y: 0 },
+  }
+						transition={{ duration: 0.6, delay: 0.2 },
+  }
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
 					>
 						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
@@ -132,10 +138,14 @@ export default function FuturisticServicesShowcase() {
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={currentService}
-							initial={{ opacity: 0, x: 100 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -100 }}
-							transition={{ duration: 0.5 }}
+							initial={{ opacity: 0, x: 100 },
+  }
+							animate={{ opacity: 1, x: 0 },
+  }
+							exit={{ opacity: 0, x: -100 },
+  }
+							transition={{ duration: 0.5 },
+  }
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
 						>
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -163,9 +173,12 @@ export default function FuturisticServicesShowcase() {
 											{futuristicServices[currentService].features.map((feature, index) => (
 												<motion.li
 													key={index}
-													initial={{ opacity: 0, x: -20 }}
-													animate={{ opacity: 1, x: 0 }}
-													transition={{ delay: index * 0.1 }}
+													initial={{ opacity: 0, x: -20 },
+  }
+													animate={{ opacity: 1, x: 0 },
+  }
+													transition={{ delay: index * 0.1 },
+  }
 													className="flex items-center text-zion-slate-light"
 												>
 													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
@@ -195,11 +208,13 @@ export default function FuturisticServicesShowcase() {
 										<motion.div
 											animate={{
 												rotate: [0, 360],
-												scale: [1, 1.1, 1]
-											}}
+												scale: [1, 1.1, 1],
+  },
+  }
 											transition={{
 												duration: 20,repeat: Infinity,ease: "linear"
-											}}
+											},
+  }
 											className="absolute inset-0"
 										>
 											<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full"></div>
@@ -221,9 +236,12 @@ export default function FuturisticServicesShowcase() {
 						{futuristicServices.map((service, index) => (
 							<motion.div
 								key={service.id}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
+								initial={{ opacity: 0, y: 20 },
+  }
+								whileInView={{ opacity: 1, y: 0 },
+  }
+								transition={{ duration: 0.5, delay: index * 0.1 },
+  }
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
 							>
@@ -250,5 +268,5 @@ export default function FuturisticServicesShowcase() {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }

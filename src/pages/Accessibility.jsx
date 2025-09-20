@@ -1,90 +1,91 @@
 import React from "react";
 import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from "lucide-react";
-export default function Accessibility() {;
-  const accessibilityFeatures = [;
-    {;
-      icon: <Eye className="w-8 h-8" />,title: 'Visual Accessibility',description: 'Support for screen readers, high contrast modes, and text scaling';
-      features: [;
-        'Screen reader compatibility (NVDA, JAWS, VoiceOver)High contrast color schemes';
+export default function Accessibility() {
+  const accessibilityFeatures = [
+  {
+  icon: <Eye className="w-8 h-8" />,title: 'Visual Accessibility',description: 'Support for screen readers, high contrast modes, and text scaling';
+      features: [
+  'Screen reader compatibility (NVDA, JAWS, VoiceOver)High contrast color schemes';
         'Adjustable text sizes (up to 200%)Alternative text for images';
-        'Keyboard navigation supportFocus indicators and landmarks';
-      ]
-    }
-    {;
-      icon: <Ear className="w-8 h-8" />,title: 'Auditory Accessibility',description: 'Captions, transcripts, and audio alternatives for multimedia content';
-      features: [;
-        'Closed captions for videosAudio descriptions for visual content';
+        'Keyboard navigation supportFocus indicators and landmarks'
+],
+  },
+  {
+  icon: <Ear className="w-8 h-8" />,title: 'Auditory Accessibility',description: 'Captions, transcripts, and audio alternatives for multimedia content';
+      features: [
+  'Closed captions for videosAudio descriptions for visual content';
         'Transcripts for audio contentVolume controls and audio indicators';
-        'Visual alerts and notifications';
-      ]
-    }
-    {;
-      icon: <Hand className="w-8 h-8" />,title: 'Motor Accessibility',description: 'Keyboard navigation, voice control, and assistive technology support';
-      features: [;
-        'Full keyboard navigationVoice control compatibility';
+        'Visual alerts and notifications'
+],
+  },
+  {
+  icon: <Hand className="w-8 h-8" />,title: 'Motor Accessibility',description: 'Keyboard navigation, voice control, and assistive technology support';
+      features: [
+  'Full keyboard navigationVoice control compatibility';
         'Switch device supportCustomizable click targets';
-        'Gesture alternativesTiming adjustments';
-      ]
-    }
-    {;
-      icon: <Brain className="w-8 h-8" />,title: 'Cognitive Accessibility',description: 'Clear navigation, consistent design, and simplified interfaces';
-      features: [;
-        'Clear and simple languageConsistent navigation patterns';
+        'Gesture alternativesTiming adjustments'
+],
+  },
+  {
+  icon: <Brain className="w-8 h-8" />,title: 'Cognitive Accessibility',description: 'Clear navigation, consistent design, and simplified interfaces';
+      features: [
+  'Clear and simple languageConsistent navigation patterns';
         'Logical content structureError prevention and recovery';
-        'Help and support resourcesMinimal distractions';
-      ]
-    }
+        'Help and support resourcesMinimal distractions'
+],
+  },
   ]
 
-  const complianceStandards = [;
-    {;
-      name: 'WCAG 2.1 AA',description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    }
-    {;
-      name: 'Section 508',description: 'Federal accessibility requirements for electronic and information technology',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    }
-    {;
-      name: 'ADA Title III',description: 'Americans with Disabilities Act accessibility requirements',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    }
-    {;
-      name: 'EN 301 549',description: 'European accessibility requirements for ICT products and services',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
-    }
+  const complianceStandards = [
+  {
+  name: 'WCAG 2.1 AA',description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    },
+  {
+  name: 'Section 508',description: 'Federal accessibility requirements for electronic and information technology',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    },
+  {
+  name: 'ADA Title III',description: 'Americans with Disabilities Act accessibility requirements',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    },
+  {
+  name: 'EN 301 549',description: 'European accessibility requirements for ICT products and services',status: 'Compliant',icon: <CheckCircle className="w-6 h-6 text-green-500" />
+    },
   ]
-  const assistiveTechnologies = [;
-    {;
-      name: 'Screen Readers',description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software';
-      compatibility: 'Full';
-    }
-    {;
-      name: 'Voice Control',description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software';
-      compatibility: 'Full';
-    }
-    {;
-      name: 'Switch Devices',description: 'Single switch, multiple switch, and scanning software support';
-      compatibility: 'Full';
-    }
-    {;
-      name: 'Magnification',description: 'ZoomText, Windows Magnifier, and other magnification software';
-      compatibility: 'Full';
-    }
+  const assistiveTechnologies = [
+  {
+  name: 'Screen Readers',description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software';
+      compatibility: 'Full'
+},
+  {
+  name: 'Voice Control',description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software';
+      compatibility: 'Full'
+},
+  {
+  name: 'Switch Devices',description: 'Single switch, multiple switch, and scanning software support';
+      compatibility: 'Full'
+},
+  {
+  name: 'Magnification',description: 'ZoomText, Windows Magnifier, and other magnification software';
+      compatibility: 'Full'
+},
   ]
-  const accessibilityTools = [;
-    {;
-      title: 'Accessibility Checker',description: 'Built-in tool to identify and fix accessibility issues',link: '/accessibility-checker',icon: <CheckCircle className="w-6 h-6" />
-    }
-    {;
-      title: 'High Contrast Mode',description: 'Toggle high contrast color schemes for better visibility',link: '/high-contrast',icon: <Eye className="w-6 h-6" />
-    }
-    {;
-      title: 'Text Size Adjuster',description: 'Increase or decrease text size for better readability',link: '/text-size',icon: <Globe className="w-6 h-6" />
-    }
-    {;
-      title: 'Keyboard Shortcuts',description: 'Complete list of keyboard navigation shortcuts',link: '/keyboard-shortcuts',icon: <Hand className="w-6 h-6" />
-    }
+  const accessibilityTools = [
+  {
+  title: 'Accessibility Checker',description: 'Built-in tool to identify and fix accessibility issues',link: '/accessibility-checker',icon: <CheckCircle className="w-6 h-6" />
+    },
+  {
+  title: 'High Contrast Mode',description: 'Toggle high contrast color schemes for better visibility',link: '/high-contrast',icon: <Eye className="w-6 h-6" />
+    },
+  {
+  title: 'Text Size Adjuster',description: 'Increase or decrease text size for better readability',link: '/text-size',icon: <Globe className="w-6 h-6" />
+    },
+  {
+  title: 'Keyboard Shortcuts',description: 'Complete list of keyboard navigation shortcuts',link: '/keyboard-shortcuts',icon: <Hand className="w-6 h-6" />
+    },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
@@ -101,7 +102,8 @@ export default function Accessibility() {;
         </div>
       </div>
 
-      {{/* Commitment Statement */}}
+      {{/* Commitment Statement */},
+  }
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -121,26 +123,29 @@ export default function Accessibility() {;
         </div>
       </div>
 
-      {{/* Accessibility Features */}}
+      {{/* Accessibility Features */},
+  }
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Accessibility Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {accessibilityFeatures.map((feature, index) => (;
-              <div;
-                key={{index}}
+            {accessibilityFeatures.map((feature, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
               >
                 <div className="text-zion-cyan mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, itemIndex) => (;
-                    <li key={itemIndex} className="flex items-start gap-2 text-zion-slate-light text-sm">
+                  {feature.features.map((item, itemIndex) => (
+  <li key={itemIndex} className="flex items-start gap-2 text-zion-slate-light text-sm">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0 mt-0.5" />
-                      {{item}}
+                      {{item},
+  }
                     </li>))}
                 </ul>
               </div>))}
@@ -148,23 +153,26 @@ export default function Accessibility() {;
         </div>
       </div>
 
-      {{/* Compliance Standards */}}
+      {{/* Compliance Standards */},
+  }
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Accessibility Compliance;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {complianceStandards.map((standard, index) => (;
-              <div;
-                key={{index}}
+            {complianceStandards.map((standard, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 text-center";"
               >
                 <div className="flex justify-center mb-4">{standard.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{standard.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{standard.description}</p>
                 <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full font-medium">
-                  {{standard.status}}
+                  {{standard.status},
+  }
                 </span>
               </div>
             ))}
@@ -172,16 +180,18 @@ export default function Accessibility() {;
         </div>
       </div>
 
-      {{/* Assistive Technology Support */}}
+      {{/* Assistive Technology Support */},
+  }
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Assistive Technology Support;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {assistiveTechnologies.map((tech, index) => (;
-              <div;
-                key={{index}}
+            {assistiveTechnologies.map((tech, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6";"
               >
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
@@ -189,7 +199,8 @@ export default function Accessibility() {;
                 <div className="flex items-center gap-2">
                   <span className="text-zion-slate-light text-sm">Compatibility:</span>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
-                    {{tech.compatibility}}
+                    {{tech.compatibility},
+  }
                   </span>
                 </div>
               </div>
@@ -198,23 +209,26 @@ export default function Accessibility() {;
         </div>
       </div>
 
-      {{/* Accessibility Tools */}}
+      {{/* Accessibility Tools */},
+  }
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Accessibility Tools;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {accessibilityTools.map((tool, index) => (;
-              <div;
-                key={{index}}
+            {accessibilityTools.map((tool, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
               >
                 <div className="text-zion-cyan mb-4">{tool.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{tool.description}</p>
                 <a;
-                  href={{tool.link}}
+                  href={{tool.link},
+  }
                   className="className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm";"
                 >
                   Access Tool;
@@ -226,7 +240,8 @@ export default function Accessibility() {;
         </div>
       </div>
 
-      {{/* Feedback and Support */}}
+      {{/* Feedback and Support */},
+  }
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">

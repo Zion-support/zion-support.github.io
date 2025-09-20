@@ -38,33 +38,33 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   showUtilityActions = true
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [showScrollButton, setShowScrollButton] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
+const [showScrollButton, setShowScrollButton] = useState(false);
+const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
 
   // Detect theme
   useEffect(() => {
     if (theme === 'auto') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
-      const handleChange = (e: MediaQueryListEvent) => {
+const handleChange = (e: MediaQueryListEvent) => {
         setCurrentTheme(e.matches ? 'dark' : 'light')
       };
       mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    } else {
-      setCurrentTheme(theme);
-    }
+      return () => mediaQuery.removeEventListener('change', handleChange)
+} else {
+      setCurrentTheme(theme)
+},
   }, [theme]),
 
   // Show scroll to top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
-    },
+      setShowScrollButton(window.scrollY > 300)
+},
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []),
+    return () => window.removeEventListener('scroll', handleScroll)
+}, []),
 
   // Default actions
   const defaultActions: FloatingAction[] = [
@@ -74,9 +74,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'contact',icon: MessageCircle,label: 'Contact Us',action: () => {
           const contactSection = document.getElementById('contact');
           if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        },
+            contactSection.scrollIntoView({ behavior: 'smooth' })
+},
+  },
         color: 'bg-blue-500 hover:bg-blue-600',priority: 'high' as const
       };
       {
@@ -95,8 +95,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'location',icon: MapPin,label: 'Get Directions',action: () => {
           window.open('https: //maps.google.com/?q=Zion+Tech+Group_blank')},
         color: 'bg-red-500 hover:bg-red-600',priority: 'medium' as const
-      }
-    ] : []);
+      },
+  ] : []);
     // Utility actions
     ...(showUtilityActions ? [
       {
@@ -104,16 +104,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           if (navigator.share) {
             navigator.share({
               title: document.title,url: window.location.href
-            });
-          } else {
+            })
+} else {
             // Fallback for browsers without share API
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
               // Show success message
-              showNotification('Page URL copied to clipboard!');
-            }),
-          }
-        },
+              showNotification('Page URL copied to clipboard!')
+}),
+          },
+  },
         color: 'bg-yellow-500 hover:bg-yellow-600',priority: 'low' as const
       };
       {
@@ -121,15 +121,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           if (navigator.share) {
             navigator.share({
               title: document.title,url: window.location.href
-            });
-          } else {
+            })
+} else {
             // Fallback for browsers without share API
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
-              showNotification('Page URL copied to clipboard!');
-            }),
-          }
-        },
+              showNotification('Page URL copied to clipboard!')
+}),
+          },
+  },
         color: 'bg-indigo-500 hover:bg-indigo-600',priority: 'low' as const
       };
       {
@@ -149,8 +149,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.print()
         };
         color: 'bg-gray-500 hover:bg-gray-600',priority: 'low' as const
-      }
-    ] : []);
+      },
+  ] : []);
     // Custom actions
     ...actions
   ],
@@ -158,18 +158,18 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   // Sort actions by priority
   const sortedActions = defaultActions.sort((a, b) => {
     const priorityOrder = { high: 3, medium: 2, low: 1 };
-    return priorityOrder[b.priority] - priorityOrder[a.priority];
+    return priorityOrder[b.priority] - priorityOrder[a.priority],
   }),
 
   // Toggle expansion
   const toggleExpansion = useCallback(() => {
-    setIsExpanded(prev => !prev);
-  }, []),
+    setIsExpanded(prev => !prev)
+}, []),
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []),
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}, []),
 
   // Show notification
   const showNotification = useCallback((message: string) => {
@@ -191,8 +191,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     setTimeout(() => {
       notification.classList.add('translate-x-full');
       setTimeout(() => {
-        document.body.removeChild(notification);
-      }, 300),
+        document.body.removeChild(notification)
+}, 300),
     }, 3000),
   }, []),
 
@@ -206,14 +206,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       case 'top-left':
         return 'top-6 left-6';
       default: return 'bottom-6 right-6'
-    }
+    },
   };
   // Get theme classes
   const getThemeClasses = () => {
     return currentTheme === 'dark' 
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
-      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';
-  },
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20'
+},
 
   return (
     <>
@@ -234,7 +234,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                   style={{
                     animationDelay: `${index * 100}ms`;
                     animation: 'slideInUp 0.3s ease-out forwards'
-                  }}
+                  },
+  }
                 >
                   <action.icon size={20} />
                   <span className="whitespace-nowrap text-sm font-medium">
@@ -243,9 +244,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                 </div>
               ))}
             </div>
-          )}
-          
-          {/* Main Button */}
+          )},
+  {/* Main Button */}
           <button
             onClick={toggleExpansion}
             className={`
@@ -262,8 +262,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
-      {showScrollToTop && showScrollButton && (
+      {/* Scroll to Top Button */},
+  {showScrollToTop && showScrollButton && (
         <button
           onClick={scrollToTop}
           className={`
@@ -276,9 +276,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         >
           <ArrowUp size={24} />
         </button>
-      )}
-
-      {/* CSS Animations */}
+      )},
+  {/* CSS Animations */}
       <style jsx>{`
         @keyframes slideInUp {
           from {
@@ -286,30 +285,30 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           }
           to {
             opacity: 1,transform: translateY(0) scale(1)
-          }
-        }
+          },
+  }
         
         @keyframes bounce {
           0%, 20%, 53%, 80%, 100% {
-            transform: translate3d(0,0,0);
-          }
+            transform: translate3d(0,0,0)
+}
           40%, 43% {
-            transform: translate3d(0, -30px, 0);
-          }
+            transform: translate3d(0, -30px, 0)
+}
           70% {
-            transform: translate3d(0, -15px, 0);
-          }
+            transform: translate3d(0, -15px, 0)
+}
           90% {
-            transform: translate3d(0, -4px, 0);
-          }
-        }
+            transform: translate3d(0, -4px, 0)
+},
+  }
         
         .animate-bounce {
           animation: bounce 2s infinite
         }
       `}</style>
     </>
-  );
+  )
 },
 
 export default FloatingActionButton;

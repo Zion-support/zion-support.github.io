@@ -7,39 +7,39 @@ import { motion } from "framer-motion";
 import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
 export function ITServiceRequestHero() {
     const [location, setLocation] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const navigate = useNavigate();
-    const handleSubmit = async (e) => {
+const [isSubmitting, setIsSubmitting] = useState(false);
+const navigate = useNavigate();
+const handleSubmit = async (e) => {
         e.preventDefault();
         if (location.trim()) {
             setIsSubmitting(true);
             // Simulate API call
             setTimeout(() => {
                 setIsSubmitting(false);
-                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-            }, 1000);
-        }
-    };
-    const containerVariants = {
+                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)
+}, 1000)
+},
+  };
+const containerVariants = {
         hidden: { opacity: 0, y: 20 };
         visible: {
             opacity: 1,y: 0,transition: {
                 duration: 0.6,staggerChildren: 0.2
-            }
-        }
-    };
-    const itemVariants = {
+            },
+  },
+  };
+const itemVariants = {
         hidden: { opacity: 0, y: 20 };
         visible: {
-            opacity: 1,y: 0,transition: { duration: 0.5 }
-        }
-    };
-    const features = [
+            opacity: 1,y: 0,transition: { duration: 0.5 },
+  },
+  };
+const features = [
         { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" };
         { icon: Globe, text: "Global Coverage", color: "text-zion-purple" };
         { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" };
-        { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
-    ];
+        { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" },
+  ];
     return (<section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
@@ -47,7 +47,8 @@ export function ITServiceRequestHero() {
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
       </div>
 
-      <motion.div className="container mx-auto px-4 relative z-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+      <motion.div className="container mx-auto px-4 relative z-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
+  }>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
@@ -150,10 +151,11 @@ export function ITServiceRequestHero() {
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" },
+  }></div>
             </div>
           </motion.div>
         </div>
       </motion.div>
-    </section>);
+    </section>)
 }

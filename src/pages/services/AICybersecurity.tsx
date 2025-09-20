@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Shield;
-  Brain, ;
-  Eye, ;
-  Lock, ;
+  Brain,
+  Eye,
+  Lock,
   AlertTriangle;
   CheckCircle;
   ArrowRight;
@@ -22,49 +22,53 @@ import { ;
   Activity;
   Fingerprint;
   Key;
-  Search;
+  Search
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
-export default function AICybersecurity() {;
-  const features = [;
-    {;
-      icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that identify and respond to threats in real-time";
-    }
-    {;
-      icon: Shield,title: "Intelligent Security",description: "Automated security responses and proactive threat prevention";
-    }
-    {;
-      icon: Eye,title: "Continuous Monitoring",description: "24/7 surveillance of your digital infrastructure with AI-driven insights";
-    }
-    {;
-      icon: Lock,title: "Zero-Trust Security",description: "Comprehensive security framework with AI-enhanced authentication and access control";
-    }
+export default function AICybersecurity() {
+  const features = [
+  {
+  icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that identify and respond to threats in real-time"
+},
+  {
+  icon: Shield,title: "Intelligent Security",description: "Automated security responses and proactive threat prevention"
+},
+  {
+  icon: Eye,title: "Continuous Monitoring",description: "24/7 surveillance of your digital infrastructure with AI-driven insights"
+},
+  {
+  icon: Lock,title: "Zero-Trust Security",description: "Comprehensive security framework with AI-enhanced authentication and access control"
+},
   ]
-  const services = [;
-    {;
-      title: "Threat Intelligence",description: "AI-powered analysis of global threat landscapes and predictive security insights",icon: Target,features: [["Real-time threat feeds", "Predictive analytics", "Global threat monitoring"];]
-    }
-    {;
-      title: "Incident Response",description: "Automated incident detection and response with AI-driven decision making",icon: AlertTriangle,features: [["Instant threat detection", "Automated response", "Incident analysis"];]
-    }
-    {;
-      title: "Vulnerability Assessment",description: "Continuous scanning and AI-powered vulnerability identification and remediation",icon: Search,features: [["Automated scanning", "Risk prioritization", "Remediation guidance"];]
-    }
-    {;
-      title: "Security Analytics",description: "Advanced analytics and reporting for comprehensive security insights",icon: TrendingUp,features: [["Security dashboards", "Compliance reporting", "Performance metrics"];]
-    }
+  const services = [
+  {
+  title: "Threat Intelligence",description: "AI-powered analysis of global threat landscapes and predictive security insights",icon: Target,features: [["Real-time threat feeds", "Predictive analytics", "Global threat monitoring"],
+  ],
+  },
+  {
+  title: "Incident Response",description: "Automated incident detection and response with AI-driven decision making",icon: AlertTriangle,features: [["Instant threat detection", "Automated response", "Incident analysis"],
+  ],
+  },
+  {
+  title: "Vulnerability Assessment",description: "Continuous scanning and AI-powered vulnerability identification and remediation",icon: Search,features: [["Automated scanning", "Risk prioritization", "Remediation guidance"],
+  ],
+  },
+  {
+  title: "Security Analytics",description: "Advanced analytics and reporting for comprehensive security insights",icon: TrendingUp,features: [["Security dashboards", "Compliance reporting", "Performance metrics"],
+  ],
+  },
   ]
 
-  const technologies = [;
-    "Machine Learning Algorithms";
+  const technologies = [
+  "Machine Learning Algorithms";
     "Behavioral Analysis";
     "Threat Intelligence Platforms";
     "Security Information and Event Management (SIEM)";
     "Endpoint Detection and Response (EDR)";
     "Network Traffic Analysis";
     "Cloud Security Posture Management";
-    "Identity and Access Management (IAM)";
-  ]
+    "Identity and Access Management (IAM)"
+]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO ;
@@ -72,7 +76,8 @@ export default function AICybersecurity() {;
         description="Advanced AI-powered cybersecurity solutions for comprehensive threat detection, prevention, and response. Protect your business with intelligent security.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
@@ -82,9 +87,12 @@ export default function AICybersecurity() {;
         ;
         <div className="relative z-10 container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-full text-red-300 text-sm font-medium mb-6">
@@ -123,13 +131,17 @@ export default function AICybersecurity() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -142,12 +154,16 @@ export default function AICybersecurity() {;
           </motion.div>
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 group";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-red-400/40 group-hover:to-orange-500/40 transition-all duration-200">
@@ -161,13 +177,17 @@ export default function AICybersecurity() {;
         </div>
       </section>
 
-      {{/* Services Section */}}
+      {{/* Services Section */},
+  }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -180,12 +200,16 @@ export default function AICybersecurity() {;
           </motion.div>
           ;
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (;
-              <motion.div;
-                key={{service.title}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {services.map((service, index) => (
+  <motion.div;
+                key={{service.title},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-red-400/30 transition-all duration-200";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -194,10 +218,11 @@ export default function AICybersecurity() {;
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 text-lg mb-6">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-slate-300">
+                  {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-slate-300">
                       <CheckCircle className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -207,13 +232,17 @@ export default function AICybersecurity() {;
         </div>
       </section>
 
-      {{/* Technologies Section */}}
+      {{/* Technologies Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -225,12 +254,16 @@ export default function AICybersecurity() {;
           </motion.div>
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (;
-              <motion.div;
-                key={{tech}}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {technologies.map((tech, index) => (
+  <motion.div;
+                key={{tech},
+  }
+                initial={{ opacity: 0, scale: 0.9 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-red-400/30 transition-all duration-200";"
               >
                 <Shield className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
@@ -241,13 +274,17 @@ export default function AICybersecurity() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Secure Your Business?;

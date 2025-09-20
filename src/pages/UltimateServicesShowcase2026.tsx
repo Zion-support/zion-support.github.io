@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Star;
-  Rocket, ;
-  Brain, ;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
-  Atom, ;
-  Cpu, ;
-  Network, ;
+  Rocket,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Atom,
+  Cpu,
+  Network,
   Database;
   TrendingUp;
   Users;
@@ -44,73 +44,88 @@ import { ;
   Briefcase;
   Newspaper;
   BookOpen;
-  ExternalLink;
+  ExternalLink
 } from "lucide-react";
-export default function UltimateServicesShowcase2026() {;
-  const services = [;
-    {;
-      category: 'AI & Machine Learning',icon: Brain,services: [;
-        {;
-          name: 'AI Workflow Orchestrator',description: 'Intelligent process automation and workflow management',href: '/services/ai-workflow-orchestrator',features: [['Process AutomationWorkflow Optimization', 'AI Decision MakingIntegration Hub'];]
-        }
-        {;
-          name: 'AI Data Governance Platform',description: 'Comprehensive data management and compliance',href: '/services/ai-data-governance-platform',features: [['Data QualityCompliance Management', 'Privacy ProtectionAudit Trails'];]
-        }
-        {;
-          name: 'AI Customer Experience Analytics',description: 'Deep insights into customer behavior and satisfaction',href: '/services/ai-customer-experience-analytics',features: [['Behavior AnalysisSentiment Analysis', 'Predictive InsightsPersonalization'];]
-        }
-      ]
-    }
-    {;
-      category: 'Cloud & Infrastructure',icon: Cloud,services: [;
-        {;
-          name: 'Cloud DevOps',description: 'Streamlined development and operations',href: '/services/cloud-devops',features: [['CI/CD PipelinesInfrastructure as Code', 'MonitoringAutomation'];]
-        }
-        {;
-          name: 'FinOps Advisor',description: 'Cloud cost optimization and management',href: '/services/finops-advisor',features: [['Cost AnalysisResource Optimization', 'Budget ManagementROI Tracking'];]
-        }
-      ]
-    }
-    {;
-      category: 'Cybersecurity',icon: Shield,services: [;
-        {;
-          name: 'AI Cybersecurity Platform',description: 'AI-powered threat detection and response',href: '/services/ai-cybersecurity-platform',features: [['Threat DetectionAutomated Response', 'Risk AssessmentCompliance'];]
-        }
-        {;
-          name: 'Zero Trust Network Access',description: 'Secure access control and network security',href: '/services/zero-trust-network-access',features: [['Identity VerificationAccess Control', 'Network SegmentationMonitoring'];]
-        }
-      ]
-    }
-    {;
-      category: 'Emerging Technologies',icon: Atom,services: [;
-        {;
-          name: 'Quantum Computing Solutions',description: 'Next-generation quantum computing services',href: '/services/quantum-computing',features: [['Quantum AlgorithmsOptimization', 'SimulationResearch'];]
-        }
-        {;
-          name: 'IoT Edge Computing',description: 'Smart device networks and edge processing',href: '/services/iot-edge-computing',features: [['Device ManagementEdge Processing', 'Real-time AnalyticsConnectivity'];]
-        }
-      ]
-    }
-    {;
-      category: 'Micro SaaS Solutions',icon: ShoppingCart,services: [;
-        {;
-          name: 'Micro CRM',description: 'Customer relationship management for small businesses',href: '/services/micro-crm',features: [['Contact ManagementSales Tracking', 'Customer InsightsAutomation'];]
-        }
-        {;
-          name: 'Website Analytics',description: 'Privacy-first analytics for small businesses',href: '/services/website-analytics',features: [['Visitor TrackingPerformance Metrics', 'Privacy ComplianceInsights'];]
-        }
-      ]
-    }
+export default function UltimateServicesShowcase2026() {
+  const services = [
+  {
+  category: 'AI & Machine Learning',icon: Brain,services: [
+  {
+  name: 'AI Workflow Orchestrator',description: 'Intelligent process automation and workflow management',href: '/services/ai-workflow-orchestrator',features: [['Process AutomationWorkflow Optimization', 'AI Decision MakingIntegration Hub'],
+  ],
+  },
+  {
+  name: 'AI Data Governance Platform',description: 'Comprehensive data management and compliance',href: '/services/ai-data-governance-platform',features: [['Data QualityCompliance Management', 'Privacy ProtectionAudit Trails'],
+  ],
+  },
+  {
+  name: 'AI Customer Experience Analytics',description: 'Deep insights into customer behavior and satisfaction',href: '/services/ai-customer-experience-analytics',features: [['Behavior AnalysisSentiment Analysis', 'Predictive InsightsPersonalization'],
+  ],
+  },
+  ],
+  },
+  {
+  category: 'Cloud & Infrastructure',icon: Cloud,services: [
+  {
+  name: 'Cloud DevOps',description: 'Streamlined development and operations',href: '/services/cloud-devops',features: [['CI/CD PipelinesInfrastructure as Code', 'MonitoringAutomation'],
+  ],
+  },
+  {
+  name: 'FinOps Advisor',description: 'Cloud cost optimization and management',href: '/services/finops-advisor',features: [['Cost AnalysisResource Optimization', 'Budget ManagementROI Tracking'],
+  ],
+  },
+  ],
+  },
+  {
+  category: 'Cybersecurity',icon: Shield,services: [
+  {
+  name: 'AI Cybersecurity Platform',description: 'AI-powered threat detection and response',href: '/services/ai-cybersecurity-platform',features: [['Threat DetectionAutomated Response', 'Risk AssessmentCompliance'],
+  ],
+  },
+  {
+  name: 'Zero Trust Network Access',description: 'Secure access control and network security',href: '/services/zero-trust-network-access',features: [['Identity VerificationAccess Control', 'Network SegmentationMonitoring'],
+  ],
+  },
+  ],
+  },
+  {
+  category: 'Emerging Technologies',icon: Atom,services: [
+  {
+  name: 'Quantum Computing Solutions',description: 'Next-generation quantum computing services',href: '/services/quantum-computing',features: [['Quantum AlgorithmsOptimization', 'SimulationResearch'],
+  ],
+  },
+  {
+  name: 'IoT Edge Computing',description: 'Smart device networks and edge processing',href: '/services/iot-edge-computing',features: [['Device ManagementEdge Processing', 'Real-time AnalyticsConnectivity'],
+  ],
+  },
+  ],
+  },
+  {
+  category: 'Micro SaaS Solutions',icon: ShoppingCart,services: [
+  {
+  name: 'Micro CRM',description: 'Customer relationship management for small businesses',href: '/services/micro-crm',features: [['Contact ManagementSales Tracking', 'Customer InsightsAutomation'],
+  ],
+  },
+  {
+  name: 'Website Analytics',description: 'Privacy-first analytics for small businesses',href: '/services/website-analytics',features: [['Visitor TrackingPerformance Metrics', 'Privacy ComplianceInsights'],
+  ],
+  },
+  ],
+  },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -134,13 +149,17 @@ export default function UltimateServicesShowcase2026() {;
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -152,12 +171,16 @@ export default function UltimateServicesShowcase2026() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((category, categoryIndex) => (;
-              <motion.div;
-                key={{category.category}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * categoryIndex }}
+            {services.map((category, categoryIndex) => (
+  <motion.div;
+                key={{category.category},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.1 * categoryIndex },
+  }
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
@@ -168,22 +191,25 @@ export default function UltimateServicesShowcase2026() {;
                 </div>
                 ;
                 <div className="space-y-4">
-                  {category.services.map((service, serviceIndex) => (;
-                    <div key={service.name} className="border-l-2 border-blue-500 pl-4">
+                  {category.services.map((service, serviceIndex) => (
+  <div key={service.name} className="border-l-2 border-blue-500 pl-4">
                       <h4 className="text-lg font-medium text-white mb-2">{service.name}</h4>
                       <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                       <div className="flex flex-wrap gap-2 mb-3">
-                        {service.features.map((feature, featureIndex) => (;
-                          <span;
-                            key={{featureIndex}}
+                        {service.features.map((feature, featureIndex) => (
+  <span;
+                            key={{featureIndex},
+  }
                             className="className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full";"
                           >
-                            {{feature}}
+                            {{feature},
+  }
                           </span>
                         ))}
                       </div>
                       <a;
-                        href={{service.href}}
+                        href={{service.href},
+  }
                         className="className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors";"
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-1" />
@@ -197,13 +223,17 @@ export default function UltimateServicesShowcase2026() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?;

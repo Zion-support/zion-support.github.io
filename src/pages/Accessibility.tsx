@@ -1,7 +1,7 @@
 import React from "react";
 import SEO from "@/components/SEO";
-export default function Accessibility() {;
-	return (
+export default function Accessibility() {
+  return (
 		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
 			<SEO;
 				title="Accessibility - Zion Tech Group";

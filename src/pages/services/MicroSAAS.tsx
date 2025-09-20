@@ -1,75 +1,85 @@
 import React from "react";
 import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from "lucide-react";
 const MicroSAAS = () => {
-  const microsaasServices = [;
-    {;
-      icon: Package,title: "SAAS Development",description: "End-to-end development of scalable software-as-a-service applications",price: "From $25,000/project";
-      features: [["Custom SAAS platforms", "Multi-tenant architecture", "Subscription management", "API development"];]
-    }
-    {;
-      icon: Zap,title: "Rapid Prototyping",description: "Quick development of MVPs and prototypes to validate business ideas",price: "From $15,000/project";
-      features: [["MVP development", "Proof of concept", "User testing", "Iterative design"];]
-    }
-    {;
-      icon: Users,title: "User Management",description: "Comprehensive user authentication, authorization, and management systems";
+  const microsaasServices = [
+  {
+  icon: Package,title: "SAAS Development",description: "End-to-end development of scalable software-as-a-service applications",price: "From $25,000/project";
+      features: [["Custom SAAS platforms", "Multi-tenant architecture", "Subscription management", "API development"],
+  ],
+  },
+  {
+  icon: Zap,title: "Rapid Prototyping",description: "Quick development of MVPs and prototypes to validate business ideas",price: "From $15,000/project";
+      features: [["MVP development", "Proof of concept", "User testing", "Iterative design"],
+  ],
+  },
+  {
+  icon: Users,title: "User Management",description: "Comprehensive user authentication, authorization, and management systems";
       price: "From $8,500/month";
-      features: [["User registration", "Role-based access", "Single sign-on", "User analytics"];]
-    }
-    {;
-      icon: Database,title: "Data Management",description: "Scalable database design and data processing solutions",price: "From $12,000/month";
-      features: [["Database architecture", "Data migration", "Backup strategies", "Performance optimization"];]
-    }
-    {;
-      icon: Shield,title: "Security & Compliance",description: "Enterprise-grade security and compliance for SAAS applications",price: "From $18,000/month";
-      features: [["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"];]
-    }
-    {;
-      icon: Globe,title: "Cloud Deployment",description: "Scalable cloud infrastructure and deployment solutions",price: "From $15,000/month";
-      features: [["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"];]
-    }
+      features: [["User registration", "Role-based access", "Single sign-on", "User analytics"],
+  ],
+  },
+  {
+  icon: Database,title: "Data Management",description: "Scalable database design and data processing solutions",price: "From $12,000/month";
+      features: [["Database architecture", "Data migration", "Backup strategies", "Performance optimization"],
+  ],
+  },
+  {
+  icon: Shield,title: "Security & Compliance",description: "Enterprise-grade security and compliance for SAAS applications",price: "From $18,000/month";
+      features: [["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"],
+  ],
+  },
+  {
+  icon: Globe,title: "Cloud Deployment",description: "Scalable cloud infrastructure and deployment solutions",price: "From $15,000/month";
+      features: [["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"],
+  ],
+  },
   ]
 
-  const benefits = [;
-    "Lower development costs and faster time to market";
+  const benefits = [
+  "Lower development costs and faster time to market";
     "Scalable architecture that grows with your business";
     "Reduced infrastructure management overhead";
     "Access to enterprise-grade security and compliance";
     "Flexible subscription models and pricing strategies";
-    "Continuous updates and feature improvements";
+    "Continuous updates and feature improvements"
+]
+
+  const technologies = [
+  {
+  name: "Frontend",description: "React, Vue.js, Angular with modern UI frameworks";
+      icon: Cpu,features: [["Modern frameworks", "Responsive design", "Component architecture", "State management"],
+  ],
+  },
+  {
+  name: "Backend",description: "Node.js, Python, Java with microservices architecture";
+      icon: Database,features: [["Microservices", "API development", "Scalable architecture", "Performance optimization"],
+  ],
+  },
+  {
+  name: "Cloud",description: "AWS, Azure, GCP with containerization and orchestration";
+      icon: Globe,features: [["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"],
+  ],
+  },
   ]
 
-  const technologies = [;
-    {;
-      name: "Frontend",description: "React, Vue.js, Angular with modern UI frameworks";
-      icon: Cpu,features: [["Modern frameworks", "Responsive design", "Component architecture", "State management"];]
-    }
-    {;
-      name: "Backend",description: "Node.js, Python, Java with microservices architecture";
-      icon: Database,features: [["Microservices", "API development", "Scalable architecture", "Performance optimization"];]
-    }
-    {;
-      name: "Cloud",description: "AWS, Azure, GCP with containerization and orchestration";
-      icon: Globe,features: [["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"];]
-    }
-  ]
-
-  const industries = [;
-    {;
-      title: "Healthcare",description: "HIPAA-compliant patient management and telemedicine platforms",icon: Shield;
-    }
-    {;
-      title: "Finance",description: "Secure financial planning and investment management tools",icon: TrendingUp;
-    }
-    {;
-      title: "Education",description: "Learning management systems and educational technology platforms",icon: Users;
-    }
-    {;
-      title: "E-commerce",description: "Online marketplace and retail management solutions",icon: Package;
-    }
+  const industries = [
+  {
+  title: "Healthcare",description: "HIPAA-compliant patient management and telemedicine platforms",icon: Shield
+},
+  {
+  title: "Finance",description: "Secure financial planning and investment management tools",icon: TrendingUp
+},
+  {
+  title: "Education",description: "Learning management systems and educational technology platforms",icon: Users
+},
+  {
+  title: "E-commerce",description: "Online marketplace and retail management solutions",icon: Package
+},
   ]
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -97,7 +107,8 @@ const MicroSAAS = () => {
         </div>
       </section>
 
-      {{/* MicroSAAS Services Grid */}}
+      {{/* MicroSAAS Services Grid */},
+  }
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -111,8 +122,8 @@ const MicroSAAS = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microsaasServices.map((service, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
+            {microsaasServices.map((service, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -120,10 +131,11 @@ const MicroSAAS = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-indigo-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {service.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -133,7 +145,8 @@ const MicroSAAS = () => {
         </div>
       </section>
 
-      {{/* Technologies */}}
+      {{/* Technologies */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -147,17 +160,18 @@ const MicroSAAS = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {technologies.map((tech, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
                 <ul className="space-y-2">
-                  {tech.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400">
-                      {{feature}}
+                  {tech.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400">
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -167,7 +181,8 @@ const MicroSAAS = () => {
         </div>
       </section>
 
-      {{/* Industries */}}
+      {{/* Industries */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -181,8 +196,8 @@ const MicroSAAS = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {industries.map((industry, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-6 h-6 text-white"/>
                 </div>
@@ -194,7 +209,8 @@ const MicroSAAS = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -207,10 +223,11 @@ const MicroSAAS = () => {
                 to building profitable, scalable software businesses with recurring revenue.;
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (;
-                  <li key={index} className="flex items-center text-gray-300">
+                {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
-                    {{benefit}}
+                    {{benefit},
+  }
                   </li>
                 ))}
               </ul>
@@ -234,7 +251,8 @@ const MicroSAAS = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

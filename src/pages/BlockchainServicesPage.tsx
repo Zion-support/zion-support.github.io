@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   Link;
   Coins;
   Shield;
@@ -23,92 +23,99 @@ import {;
   ChevronRight;
   Users;
   Clock;
-  Check;
+  Check
 } from "lucide-react";
 const BlockchainServicesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-  const blockchainServices = [;
-    {;
-      id: "smart-contracts",title: "Smart Contract Development",description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.";
-      price: 3500,currency: "$",period: "/project",features: [;
-        "Custom smart contract development";
+  const blockchainServices = [
+  {
+  id: "smart-contracts",title: "Smart Contract Development",description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.";
+      price: 3500,currency: "$",period: "/project",features: [
+  "Custom smart contract development";
         "Security auditing & testing";
         "Gas optimization";
         "Multi-chain deployment";
         "Documentation & training";
-        "Ongoing support";
-      ]
-      icon: Zap,category: "Development",badge: "Popular",image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500";
-    }
-    {;
-      id: "defi-platform",title: "DeFi Platform Development",description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.";
-      price: 15000,currency: "$",period: "/platform",features: [;
-        "DEX development";
+        "Ongoing support"
+]
+      icon: Zap,category: "Development",badge: "Popular",image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
+},
+  {
+  id: "defi-platform",title: "DeFi Platform Development",description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.";
+      price: 15000,currency: "$",period: "/platform",features: [
+  "DEX development";
         "Lending protocols";
         "Yield farming";
         "Liquidity management";
         "Security audits";
-        "UI/UX design";
-      ]
-      icon: Coins,category: "DeFi",badge: "Enterprise",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
-    }
-    {;
-      id: "nft-marketplace",title: "NFT Marketplace Development",description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.";
-      price: 8000,currency: "$",period: "/marketplace",features: [;
-        "NFT minting & trading";
+        "UI/UX design"
+]
+      icon: Coins,category: "DeFi",badge: "Enterprise",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+},
+  {
+  id: "nft-marketplace",title: "NFT Marketplace Development",description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.";
+      price: 8000,currency: "$",period: "/marketplace",features: [
+  "NFT minting & trading";
         "Auction system";
         "Royalty distribution";
         "Multi-chain support";
         "Admin dashboard";
-        "Analytics & reporting";
-      ]
-      icon: Database,category: "NFTs",badge: "Featured",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
-    }
-    {;
-      id: "enterprise-blockchain",title: "Enterprise Blockchain Solutions",description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.";
-      price: 25000,currency: "$",period: "/solution",features: [;
-        "Private blockchain setup";
+        "Analytics & reporting"
+]
+      icon: Database,category: "NFTs",badge: "Featured",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+},
+  {
+  id: "enterprise-blockchain",title: "Enterprise Blockchain Solutions",description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.";
+      price: 25000,currency: "$",period: "/solution",features: [
+  "Private blockchain setup";
         "Consensus mechanisms";
         "Identity management";
         "Supply chain tracking";
         "Integration APIs";
-        "Training & support";
-      ]
-      icon: Network,category: "Enterprise",badge: "Custom",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
-    }
-    {;
-      id: "blockchain-security",title: "Blockchain Security & Auditing",description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.";
-      price: 5000,currency: "$",period: "/audit",features: [;
-        "Smart contract auditing";
+        "Training & support"
+]
+      icon: Network,category: "Enterprise",badge: "Custom",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+},
+  {
+  id: "blockchain-security",title: "Blockchain Security & Auditing",description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.";
+      price: 5000,currency: "$",period: "/audit",features: [
+  "Smart contract auditing";
         "Penetration testing";
         "Vulnerability assessment";
         "Security best practices";
         "Compliance review";
-        "Remediation guidance";
-      ]
-      icon: Shield,category: "Security",badge: "Essential",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
-    }
-    {;
-      id: "cross-chain",title: "Cross-Chain Solutions",description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",price: 12000,currency: "$",period: "/solution",features: [;
-        "Bridge development";
+        "Remediation guidance"
+]
+      icon: Shield,category: "Security",badge: "Essential",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+},
+  {
+  id: "cross-chain",title: "Cross-Chain Solutions",description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",price: 12000,currency: "$",period: "/solution",features: [
+  "Bridge development";
         "Cross-chain messaging";
         "Asset interoperability";
         "Multi-chain wallets";
         "Atomic swaps";
-        "Network monitoring";
-      ]
-      icon: Globe,category: "Interoperability",badge: "Advanced",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
-    }
+        "Network monitoring"
+]
+      icon: Globe,category: "Interoperability",badge: "Advanced",image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
+},
   ]
-  const categories = [;
-    {{ id: 'all', name: 'All Services', count: blockchainServices.length }}
-    {{ id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length }}
-    {{ id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length }}
-    {{ id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length }}
-    {{ id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length }}
-    {{ id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length }}
-    {{ id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length }}
+  const categories = [
+  {{ id: 'all', name: 'All Services', count: blockchainServices.length },
+  },
+  {{ id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length },
+  },
+  {{ id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },
+  },
+  {{ id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },
+  },
+  {{ id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length },
+  },
+  {{ id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },
+  },
+  {{ id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length },
+  },
   ]
   const filteredServices = selectedCategory === 'all';
     ? blockchainServices;
@@ -116,7 +123,8 @@ const BlockchainServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -131,7 +139,8 @@ const BlockchainServicesPage = () => {
           </div>
 
           <h1 className="text-6xl md: text-7xl font-bold text-white mb-8 leading-tight">
-            Blockchain{{' '}}
+            Blockchain{{' '},
+  }
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Services;
             </span>
@@ -152,7 +161,8 @@ const BlockchainServicesPage = () => {
         </div>
       </section>
 
-      {{/* Category Filter */}}
+      {{/* Category Filter */},
+  }
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -165,21 +175,27 @@ const BlockchainServicesPage = () => {
               </p>
             </div>
 
-            {{/* Category Tabs */}}
+            {{/* Category Tabs */},
+  }
             <div className="flex flex-wrap gap-3 justify-center mb-8">
-              {categories.map((category) => (;
-                <button;
-                  key={{category.id}}
-                  onClick={{onClick={() => setSelectedCategory(category.id)}}}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${;
-                    selectedCategory === category.id;
+              {categories.map((category) => (
+  <button;
+                  key={{category.id},
+  }
+                  onClick={{onClick={() => setSelectedCategory(category.id)},
+  },
+  }
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+  selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg';
-                      : 'bg-zion-blue-dark/50 text-zion-slate-light hover:bg-zion-cyan/20 hover:text-white border border-zion-cyan/20';
-                  }`}
+                      : 'bg-zion-blue-dark/50 text-zion-slate-light hover:bg-zion-cyan/20 hover:text-white border border-zion-cyan/20'
+}`}
                 >
-                  {{category.name}}
+                  {{category.name},
+  }
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                    {{category.count}}
+                    {{category.count},
+  }
                   </span>
                 </button>
               ))}
@@ -188,77 +204,93 @@ const BlockchainServicesPage = () => {
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredServices.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {filteredServices.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
-                {{/* Service Image */}}
+                {{/* Service Image */},
+  }
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative overflow-hidden">
                   <service.icon className="w-16 h-16 text-zion-cyan z-10" />
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
                 </div>
 
                 <div className="p-6">
-                  {{/* Header */}}
+                  {{/* Header */},
+  }
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                        {{service.title}}
+                        {{service.title},
+  }
                       </h3>
                       <p className="text-zion-slate-light text-sm leading-relaxed">
-                        {{service.description}}
+                        {{service.description},
+  }
                       </p>
                     </div>
                   </div>
 
-                  {{/* Badge */}}
+                  {{/* Badge */},
+  }
                   <div className="mb-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      service.badge === 'Popular' ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' :;
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+  service.badge === 'Popular' ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' :;
                       service.badge === 'Enterprise' ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white' :;
                       service.badge === 'Featured' ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white' :;
                       service.badge === 'Custom' ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white' :;
                       service.badge === 'Essential' ? 'bg-gradient-to-r from-zion-cyan to-zion-green text-white' :;
-                      'bg-gradient-to-r from-zion-cyan to-zion-purple text-white';
-                    }`}>
-                      {{service.badge}}
+                      'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
+}`}>
+                      {{service.badge},
+  }
                     </span>
                   </div>
 
-                  {{/* Price */}}
+                  {{/* Price */},
+  }
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl font-bold text-zion-cyan">
-                        {service.currency}{{service.price.toLocaleString()}}
+                        {service.currency},
+  {{service.price.toLocaleString()},
+  }
                       </span>
                       <span className="text-zion-slate-light">{service.period}</span>
                     </div>
                   </div>
 
-                  {{/* Features */}}
+                  {{/* Features */},
+  }
                   <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (;
-                      <div key={featureIndex} className="flex items-center gap-3">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+  <div key={featureIndex} className="flex items-center gap-3">
                         <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>
-                    ))}
-                    {service.features.length > 4 && (;
-                      <div className="text-zion-cyan text-sm font-medium">
+                    ))},
+  {service.features.length > 4 && (
+  <div className="text-zion-cyan text-sm font-medium">
                         +{service.features.length - 4} more features;
                       </div>
                     )}
                   </div>
 
-                  {{/* CTA */}}
+                  {{/* CTA */},
+  }
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover: scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started;
                     <ArrowRight className="w-4 h-4" />
@@ -270,7 +302,8 @@ const BlockchainServicesPage = () => {
         </div>
       </section>
 
-      {{/* Why Choose Us */}}
+      {{/* Why Choose Us */},
+  }
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -284,31 +317,35 @@ const BlockchainServicesPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[;
-              {;
-                icon: Shield,title: "Security First",description: "Enterprise-grade security with comprehensive auditing and testing protocols.";
-              }
-              {;
-                icon: Rocket,title: "Scalable Solutions",description: "Built for growth with architecture that scales with your business needs.";
-              }
-              {;
-                icon: Users,title: "Expert Team",description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions.";
-              }
-              {;
-                icon: Clock,title: "Fast Delivery",description: "Agile development process ensuring rapid delivery without compromising quality.";
-              }
-              {;
-                icon: CheckCircle,title: "Proven Track Record",description: "Successfully delivered blockchain solutions for companies across industries.";
-              }
-              {;
-                icon: Globe,title: "Multi-Chain Support",description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks.";
-              }
-            ].map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {[
+  {
+  icon: Shield,title: "Security First",description: "Enterprise-grade security with comprehensive auditing and testing protocols."
+},
+  {
+  icon: Rocket,title: "Scalable Solutions",description: "Built for growth with architecture that scales with your business needs."
+},
+  {
+  icon: Users,title: "Expert Team",description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions."
+},
+  {
+  icon: Clock,title: "Fast Delivery",description: "Agile development process ensuring rapid delivery without compromising quality."
+},
+  {
+  icon: CheckCircle,title: "Proven Track Record",description: "Successfully delivered blockchain solutions for companies across industries."
+},
+  {
+  icon: Globe,title: "Multi-Chain Support",description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
+},
+  ].map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -323,7 +360,8 @@ const BlockchainServicesPage = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">

@@ -1,18 +1,19 @@
-export interface ExpandedInnovativeService {;
-  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {;
-    phone: string,email: string,website: string;
-  }
-  technicalSpecs?: {;
-    technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[];]
-  }
+export interface ExpandedInnovativeService {
+  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
+  phone: string,email: string,website: string
 }
+  technicalSpecs?: {
+  technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
+  ],
+  },
+  }
 
-export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
+export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   // AI-Powered Cybersecurity Threat Intelligence;
-  {;
-    id: "ai-cybersecurity-threat-intelligence",title: "AI Cybersecurity Threat Intelligence Platform",description: "Advanced threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time, providing proactive protection for organizations.";
-    category: "Cybersecurity & AI",subcategory: "Threat Intelligence",price: 2499,currency: "$",pricingModel: "monthly",features: [;
-      "AI-powered threat detection";
+  {
+  id: "ai-cybersecurity-threat-intelligence",title: "AI Cybersecurity Threat Intelligence Platform",description: "Advanced threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time, providing proactive protection for organizations.";
+    category: "Cybersecurity & AI",subcategory: "Threat Intelligence",price: 2499,currency: "$",pricingModel: "monthly",features: [
+  "AI-powered threat detection";
       "Real-time threat analysis";
       "Behavioral analytics";
       "Automated incident response";
@@ -21,46 +22,47 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Security orchestration";
       "Compliance reporting";
       "Threat intelligence sharing";
-      "24/7 monitoring";
-    ]
-    benefits: [;
-      "Reduce threat response time by 90%";
+      "24/7 monitoring"
+]
+    benefits: [
+  "Reduce threat response time by 90%";
       "Prevent 95% of cyber attacks";
       "Automated threat mitigation";
       "Compliance with security standards";
-      "Proactive security posture";
-    ]
-    useCases: [;
-      "Enterprise security operations";
+      "Proactive security posture"
+]
+    useCases: [
+  "Enterprise security operations";
       "Financial services protection";
       "Healthcare data security";
       "Government cybersecurity";
-      "Critical infrastructure protection";
-    ]
-    targetAudience: [;
-      "CISOs";
+      "Critical infrastructure protection"
+]
+    targetAudience: [
+  "CISOs";
       "Security analysts";
       "IT security teams";
       "Financial institutions";
-      "Healthcare organizations";
-    ]
+      "Healthcare organizations"
+]
     tags: ["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Security"]
     estimatedDelivery: "8-10 weeks",supportLevel: "enterprise",marketPrice: "$2,499 - $7,999/month";
-    roi: "300-500%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
-    technicalSpecs: {;
-      technology: ["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"]
+    roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+}
+    technicalSpecs: {
+  technology: ["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"]
       integrations: ["AWS", "Azure", "GCP", "Splunk", "QRadar"]
-      apiEndpoints: 150,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"];]
-    }
+      apiEndpoints: 150,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
+  ],
+  },
   }
 
   // AI Sales Co-pilot for SMBs;
-  {;
-    id: "ai-sales-copilot-smb",title: "AI Sales Co‑pilot for SMBs",description: "Conversational AI that prioritizes leads, drafts emails, summarizes calls, and updates your CRM automatically. Trains on your deals and playbooks for on‑brand outreach.";
-    category: "AI & Customer Experience",subcategory: "Sales Enablement",price: 799,currency: "$",pricingModel: "monthly",features: [;
-      "Lead scoring with behavioral intent";
+  {
+  id: "ai-sales-copilot-smb",title: "AI Sales Co‑pilot for SMBs",description: "Conversational AI that prioritizes leads, drafts emails, summarizes calls, and updates your CRM automatically. Trains on your deals and playbooks for on‑brand outreach.";
+    category: "AI & Customer Experience",subcategory: "Sales Enablement",price: 799,currency: "$",pricingModel: "monthly",features: [
+  "Lead scoring with behavioral intent";
       "Auto‑generated email sequences";
       "Meeting transcription + action items";
       "CRM sync (HubSpot, Salesforce, Pipedrive)";
@@ -69,40 +71,41 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Calendar + dialer integrations";
       "Pipeline risk detection";
       "Rep performance coaching";
-      "Admin analytics dashboard";
-    ]
-    benefits: [;
-      "30–50% lift in meeting bookings";
+      "Admin analytics dashboard"
+]
+    benefits: [
+  "30–50% lift in meeting bookings";
       "2–3x faster follow‑ups";
       "Consistent pipeline hygiene";
       "Shorter sales cycles";
-      "Lower CAC via improved targeting";
-    ]
-    useCases: [;
-      "Inbound lead triage";
+      "Lower CAC via improved targeting"
+]
+    useCases: [
+  "Inbound lead triage";
       "Outbound personalization";
       "Post‑demo follow‑ups";
       "Quarterly pipeline reviews";
-      "Manager coaching";
-    ]
+      "Manager coaching"
+]
     targetAudience: ["SMB sales teams", "RevOps", "Founders doing sales"]
     tags: ["AI", "Sales", "CRM", "Email", "Automation"]
     estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1,499/month";
-    roi: "200–350%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
-    technicalSpecs: {;
-      technology: ["LLM", "Vector DB", "RAG", "Webhooks"]
+    roi: "200–350%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+}
+    technicalSpecs: {
+  technology: ["LLM", "Vector DB", "RAG", "Webhooks"]
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"]
-      apiEndpoints: 42,uptime: "99.9%",security: [["SOC 2", "GDPR", "SAML SSO"];]
-    }
+      apiEndpoints: 42,uptime: "99.9%",security: [["SOC 2", "GDPR", "SAML SSO"],
+  ],
+  },
   }
 
   // FinOps cost optimization for cloud;
-  {;
-    id: "cloud-finops-optimizer",title: "Cloud FinOps Optimizer",description: "Automated rightsizing, commitment planning, and anomaly detection across AWS, Azure, and GCP with policy‑driven savings actions and executive reporting.";
-    category: "Cloud & Infrastructure",subcategory: "Cost Optimization",price: 1499,currency: "$",pricingModel: "monthly",features: [;
-      "Rightsizing + scheduling";
+  {
+  id: "cloud-finops-optimizer",title: "Cloud FinOps Optimizer",description: "Automated rightsizing, commitment planning, and anomaly detection across AWS, Azure, and GCP with policy‑driven savings actions and executive reporting.";
+    category: "Cloud & Infrastructure",subcategory: "Cost Optimization",price: 1499,currency: "$",pricingModel: "monthly",features: [
+  "Rightsizing + scheduling";
       "Savings Plans/RIs recommendations";
       "Egress + storage tiering";
       "Kubernetes cost allocation (Kubecost API)";
@@ -111,32 +114,34 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Automated policy actions";
       "Forecasting";
       "Multi‑cloud support";
-      "Slack/Teams alerts";
-    ]
-    benefits: [;
-      "15–35% cloud bill reduction";
+      "Slack/Teams alerts"
+]
+    benefits: [
+  "15–35% cloud bill reduction";
       "Faster budget cycles";
       "Predictable spend";
       "Cleaner tagging and governance";
-      "Fewer surprise bills";
-    ]
+      "Fewer surprise bills"
+]
     useCases: ["CFO reporting", "K8s allocation", "Dev/test scheduling", "Data egress control"]
     targetAudience: ["FinOps", "Platform Engineering", "CFOs"]
     tags: ["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"]
     estimatedDelivery: "2–4 weeks",supportLevel: "enterprise",marketPrice: "$1,200 – $5,000/month";
-    roi: "200–500%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["AWS CUR", "BigQuery", "Athena", "Prometheus"]
+    roi: "200–500%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["AWS CUR", "BigQuery", "Athena", "Prometheus"]
       integrations: ["AWS", "Azure", "GCP", "Datadog", "PagerDuty"]
-      apiEndpoints: 65,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "SSO"];]
-    }
+      apiEndpoints: 65,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "SSO"],
+  ],
+  },
   }
 
   // Managed MLOps platform;
-  {;
-    id: "managed-mlops-platform",title: "Managed MLOps Platform",description: "End‑to‑end model lifecycle with experiment tracking, feature store, CI/CD for ML, drift monitoring, and governance—fully managed by Zion Tech Group.";
-    category: "AI & Analytics",subcategory: "MLOps",price: 3299,currency: "$",pricingModel: "monthly",features: [;
-      "Experiment tracking";
+  {
+  id: "managed-mlops-platform",title: "Managed MLOps Platform",description: "End‑to‑end model lifecycle with experiment tracking, feature store, CI/CD for ML, drift monitoring, and governance—fully managed by Zion Tech Group.";
+    category: "AI & Analytics",subcategory: "MLOps",price: 3299,currency: "$",pricingModel: "monthly",features: [
+  "Experiment tracking";
       "Feature store";
       "Model registry";
       "Canary + shadow deploys";
@@ -145,32 +150,34 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Drift + bias monitoring";
       "Approval workflows";
       "Audit + governance";
-      "SDK + API access";
-    ]
-    benefits: [;
-      "Faster time‑to‑production";
+      "SDK + API access"
+]
+    benefits: [
+  "Faster time‑to‑production";
       "Lower operational risk";
       "Improved model quality";
       "Compliance‑ready";
-      "Scalable across teams";
-    ]
+      "Scalable across teams"
+]
     useCases: ["Churn models", "LTV scoring", "Quality inspection", "Forecasting"]
     targetAudience: ["Data Science", "ML Engineers", "Risk & Compliance"]
     tags: ["MLOps", "Feature Store", "Monitoring", "Compliance"]
     estimatedDelivery: "4–8 weeks",supportLevel: "enterprise",marketPrice: "$2,500 – $8,000/month";
-    roi: "250–400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"]
+    roi: "250–400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"]
       integrations: ["SageMaker", "Vertex AI", "Databricks", "Snowflake"]
-      apiEndpoints: 93,uptime: "99.95%",security: [["SOC 2", "HIPAA", "GDPR"];]
-    }
+      apiEndpoints: 93,uptime: "99.95%",security: [["SOC 2", "HIPAA", "GDPR"],
+  ],
+  },
   }
 
   // eCommerce personalization micro‑SaaS;
-  {;
-    id: "ecommerce-personalization-engine",title: "eCommerce Personalization Engine",description: "Plug‑and‑play recommendations, bundles, and on‑site search tuning that lift AOV and conversion without heavy dev work.";
-    category: "AI & Content Marketing",subcategory: "Personalization",price: 499,currency: "$",pricingModel: "monthly",features: [;
-      "1:1 product recommendations";
+  {
+  id: "ecommerce-personalization-engine",title: "eCommerce Personalization Engine",description: "Plug‑and‑play recommendations, bundles, and on‑site search tuning that lift AOV and conversion without heavy dev work.";
+    category: "AI & Content Marketing",subcategory: "Personalization",price: 499,currency: "$",pricingModel: "monthly",features: [
+  "1:1 product recommendations";
       "Search relevance optimization";
       "Bundle + upsell widgets";
       "Email + SMS triggers";
@@ -179,26 +186,27 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Headless SDK";
       "Attribution dashboards";
       "Latency <100ms";
-      "Multi‑region edge";
-    ]
-    benefits: [;
-      "5–12% conversion lift";
+      "Multi‑region edge"
+]
+    benefits: [
+  "5–12% conversion lift";
       "+10–20% AOV";
       "Less merch ops overhead";
       "Faster experimentation";
-      "No heavy integration";
-    ]
+      "No heavy integration"
+]
     useCases: ["PLP/PDP recommendations", "Cart cross‑sell", "Search re‑ranking"]
     targetAudience: ["DTC brands", "Retailers", "Marketplaces"]
     tags: ["eCommerce", "Personalization", "Shopify", "Search", "CDP"]
     estimatedDelivery: "3–7 days",supportLevel: "professional",marketPrice: "$299 – $1,999/month";
-    roi: "300–700%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
+    roi: "300–700%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  },
   }
   // SOC2-in-a-box compliance automation;
-  {;
-    id: "soc2-in-a-box",title: "SOC 2‑in‑a‑Box Compliance Automation",description: "Prebuilt controls, evidence collection, risk register, and auditor‑ready reports with integrations to your cloud and tooling.";
-    category: "Cybersecurity & AI",subcategory: "Compliance Automation",price: 999,currency: "$",pricingModel: "monthly",features: [;
-      "Automated evidence gathering";
+  {
+  id: "soc2-in-a-box",title: "SOC 2‑in‑a‑Box Compliance Automation",description: "Prebuilt controls, evidence collection, risk register, and auditor‑ready reports with integrations to your cloud and tooling.";
+    category: "Cybersecurity & AI",subcategory: "Compliance Automation",price: 999,currency: "$",pricingModel: "monthly",features: [
+  "Automated evidence gathering";
       "Policy management";
       "Risk register + treatments";
       "Vendor management";
@@ -207,26 +215,27 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Continuous monitoring";
       "Pre‑audit readiness";
       "Auditor collaboration";
-      "Report generation";
-    ]
-    benefits: [;
-      "Audit time cut by 60%";
+      "Report generation"
+]
+    benefits: [
+  "Audit time cut by 60%";
       "Lower external audit fees";
       "Reduced compliance toil";
       "Improved security posture";
-      "Board‑ready reporting";
-    ]
+      "Board‑ready reporting"
+]
     useCases: ["SOC 2", "ISO 27001", "HIPAA readiness"]
     targetAudience: ["Startups", "Scaleups", "Security & GRC"]
     tags: ["Compliance", "Security", "Audit", "GRC"]
     estimatedDelivery: "2–3 weeks",supportLevel: "professional",marketPrice: "$700 – $3,500/month";
-    roi: "200–400%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
+    roi: "200–400%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  },
   }
   // Data platform in a week (modern stack)
-  {;
-    id: "modern-data-platform-week",title: "Modern Data Platform in a Week",description: "Fixed‑scope build of ingestion, warehouse, metrics layer, and BI with dbt, a cloud warehouse, and a production‑grade CI/CD.";
-    category: "AI & Analytics",subcategory: "Data Platform",price: 19999,currency: "$",pricingModel: "one-time",features: [;
-      "Ingestion (ELT) setup";
+  {
+  id: "modern-data-platform-week",title: "Modern Data Platform in a Week",description: "Fixed‑scope build of ingestion, warehouse, metrics layer, and BI with dbt, a cloud warehouse, and a production‑grade CI/CD.";
+    category: "AI & Analytics",subcategory: "Data Platform",price: 19999,currency: "$",pricingModel: "one-time",features: [
+  "Ingestion (ELT) setup";
       "Warehouse + role modeling";
       "dbt transformations";
       "Metrics/semantic layer";
@@ -235,32 +244,34 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Data contracts";
       "Cost controls";
       "Runbook + handoff";
-      "Enablement sessions";
-    ]
-    benefits: [;
-      "Production analytics in 5 days";
+      "Enablement sessions"
+]
+    benefits: [
+  "Production analytics in 5 days";
       "Lower ongoing costs";
       "Reliable, testable models";
       "Self‑serve metrics";
-      "Future‑proof architecture";
-    ]
+      "Future‑proof architecture"
+]
     useCases: ["Executive KPIs", "Marketing attribution", "RevOps metrics"]
     targetAudience: ["Founders", "Data leaders", "Ops"]
     tags: ["Data", "dbt", "Snowflake", "BigQuery", "Metrics"]
     estimatedDelivery: "1 week",supportLevel: "professional",marketPrice: "$15,000 – $45,000 one‑time";
-    roi: "150–300%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"]
+    roi: "150–300%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"]
       integrations: ["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"]
-      apiEndpoints: 18,uptime: "99.9%",security: [["SSO", "Row‑level security"];]
-    }
+      apiEndpoints: 18,uptime: "99.9%",security: [["SSO", "Row‑level security"],
+  ],
+  },
   }
 
   // Blockchain-Based Supply Chain Transparency;
-  {;
-    id: "blockchain-supply-chain-transparency",title: "Blockchain Supply Chain Transparency Platform",description: "End-to-end supply chain transparency solution using blockchain technology to track products from source to consumer, ensuring authenticity, compliance, and ethical sourcing.";
-    category: "Blockchain & Supply Chain",subcategory: "Transparency & Traceability",price: 1899,currency: "$",pricingModel: "monthly",features: [;
-      "Blockchain-based tracking";
+  {
+  id: "blockchain-supply-chain-transparency",title: "Blockchain Supply Chain Transparency Platform",description: "End-to-end supply chain transparency solution using blockchain technology to track products from source to consumer, ensuring authenticity, compliance, and ethical sourcing.";
+    category: "Blockchain & Supply Chain",subcategory: "Transparency & Traceability",price: 1899,currency: "$",pricingModel: "monthly",features: [
+  "Blockchain-based tracking";
       "Product authentication";
       "Supply chain mapping";
       "Compliance verification";
@@ -269,40 +280,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Smart contract automation";
       "Audit trail generation";
       "Mobile app access";
-      "API integration";
-    ]
-    benefits: [;
-      "100% supply chain transparency";
+      "API integration"
+]
+    benefits: [
+  "100% supply chain transparency";
       "Reduce counterfeit products by 99%";
       "Automated compliance verification";
       "Enhanced brand trust";
-      "Operational efficiency gains";
-    ]
-    useCases: [;
-      "Food safety tracking";
+      "Operational efficiency gains"
+]
+    useCases: [
+  "Food safety tracking";
       "Luxury goods authentication";
       "Pharmaceutical verification";
       "Sustainable sourcing";
-      "Regulatory compliance";
-    ]
-    targetAudience: [;
-      "Supply chain managers";
+      "Regulatory compliance"
+]
+    targetAudience: [
+  "Supply chain managers";
       "Brand protection teams";
       "Compliance officers";
       "Retailers";
-      "Manufacturers";
-    ]
+      "Manufacturers"
+]
     tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance"]
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$1,899 - $5,999/month";
-    roi: "250-400%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // IoT Edge Computing Analytics Platform;
-  {;
-    id: "iot-edge-computing-analytics",title: "IoT Edge Computing Analytics Platform",description: "Intelligent edge computing platform that processes IoT data locally, reducing latency, bandwidth costs, and enabling real-time decision making for industrial and smart city applications.";
-    category: "IoT & Edge Computing",subcategory: "Edge Analytics",price: 2799,currency: "$",pricingModel: "monthly",features: [;
-      "Edge data processing";
+  {
+  id: "iot-edge-computing-analytics",title: "IoT Edge Computing Analytics Platform",description: "Intelligent edge computing platform that processes IoT data locally, reducing latency, bandwidth costs, and enabling real-time decision making for industrial and smart city applications.";
+    category: "IoT & Edge Computing",subcategory: "Edge Analytics",price: 2799,currency: "$",pricingModel: "monthly",features: [
+  "Edge data processing";
       "Real-time analytics";
       "Predictive maintenance";
       "Energy optimization";
@@ -311,40 +322,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Alert management";
       "Data visualization";
       "API gateway";
-      "Cloud synchronization";
-    ]
-    benefits: [;
-      "Reduce latency by 95%";
+      "Cloud synchronization"
+]
+    benefits: [
+  "Reduce latency by 95%";
       "Cut bandwidth costs by 60%";
       "Real-time decision making";
       "Improved operational efficiency";
-      "Enhanced security";
-    ]
-    useCases: [;
-      "Smart manufacturing";
+      "Enhanced security"
+]
+    useCases: [
+  "Smart manufacturing";
       "Energy management";
       "Smart cities";
       "Transportation";
-      "Agriculture";
-    ]
-    targetAudience: [;
-      "IoT engineers";
+      "Agriculture"
+]
+    targetAudience: [
+  "IoT engineers";
       "Operations managers";
       "Facility managers";
       "City planners";
-      "Industrial companies";
-    ]
+      "Industrial companies"
+]
     tags: ["IoT", "Edge Computing", "Analytics", "Real-time", "Industrial"]
     estimatedDelivery: "10-14 weeks",supportLevel: "enterprise",marketPrice: "$2,799 - $8,999/month";
-    roi: "300-450%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "300-450%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // AI-Powered Legal Document Analysis;
-  {;
-    id: "ai-legal-document-analysis",title: "AI Legal Document Analysis Platform",description: "Intelligent legal document analysis platform that uses AI to review, analyze, and extract key information from contracts, legal documents, and regulatory filings.";
-    category: "AI & Legal Tech",subcategory: "Document Analysis",price: 1599,currency: "$",pricingModel: "monthly",features: [;
-      "AI document review";
+  {
+  id: "ai-legal-document-analysis",title: "AI Legal Document Analysis Platform",description: "Intelligent legal document analysis platform that uses AI to review, analyze, and extract key information from contracts, legal documents, and regulatory filings.";
+    category: "AI & Legal Tech",subcategory: "Document Analysis",price: 1599,currency: "$",pricingModel: "monthly",features: [
+  "AI document review";
       "Contract analysis";
       "Risk assessment";
       "Compliance checking";
@@ -353,40 +364,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Clause extraction";
       "Legal precedent analysis";
       "Regulatory updates";
-      "Collaboration tools";
-    ]
-    benefits: [;
-      "Reduce review time by 80%";
+      "Collaboration tools"
+]
+    benefits: [
+  "Reduce review time by 80%";
       "Improve accuracy by 95%";
       "Automated risk identification";
       "Cost-effective legal services";
-      "Enhanced compliance";
-    ]
-    useCases: [;
-      "Contract review";
+      "Enhanced compliance"
+]
+    useCases: [
+  "Contract review";
       "Due diligence";
       "Regulatory compliance";
       "Legal research";
-      "Risk assessment";
-    ]
-    targetAudience: [;
-      "Law firms";
+      "Risk assessment"
+]
+    targetAudience: [
+  "Law firms";
       "Legal departments";
       "Compliance officers";
       "Contract managers";
-      "Legal professionals";
-    ]
+      "Legal professionals"
+]
     tags: ["AI", "Legal Tech", "Document Analysis", "Compliance", "Automation"]
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$1,599 - $4,999/month";
-    roi: "200-350%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // Quantum-Ready Cryptography Platform;
-  {;
-    id: "quantum-ready-cryptography",title: "Quantum-Ready Cryptography Platform",description: "Future-proof cryptography platform that implements post-quantum cryptographic algorithms, ensuring data security against quantum computing threats.";
-    category: "Cybersecurity & Quantum",subcategory: "Post-Quantum Cryptography",price: 3999,currency: "$",pricingModel: "monthly",features: [;
-      "Post-quantum algorithms";
+  {
+  id: "quantum-ready-cryptography",title: "Quantum-Ready Cryptography Platform",description: "Future-proof cryptography platform that implements post-quantum cryptographic algorithms, ensuring data security against quantum computing threats.";
+    category: "Cybersecurity & Quantum",subcategory: "Post-Quantum Cryptography",price: 3999,currency: "$",pricingModel: "monthly",features: [
+  "Post-quantum algorithms";
       "Hybrid cryptography";
       "Key management";
       "Digital signatures";
@@ -395,40 +406,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Compliance frameworks";
       "Performance optimization";
       "Migration tools";
-      "Security auditing";
-    ]
-    benefits: [;
-      "Future-proof security";
+      "Security auditing"
+]
+    benefits: [
+  "Future-proof security";
       "Quantum-resistant encryption";
       "Regulatory compliance";
       "Enhanced data protection";
-      "Competitive advantage";
-    ]
-    useCases: [;
-      "Government communications";
+      "Competitive advantage"
+]
+    useCases: [
+  "Government communications";
       "Financial services";
       "Healthcare data";
       "Critical infrastructure";
-      "Long-term data storage";
-    ]
-    targetAudience: [;
-      "Government agencies";
+      "Long-term data storage"
+]
+    targetAudience: [
+  "Government agencies";
       "Financial institutions";
       "Healthcare organizations";
       "Defense contractors";
-      "Security-conscious enterprises";
-    ]
+      "Security-conscious enterprises"
+]
     tags: ["Quantum", "Cryptography", "Cybersecurity", "Future-proof", "Compliance"]
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$3,999 - $12,999/month";
-    roi: "400-600%",innovationLevel: "Cutting-edge",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "400-600%",innovationLevel: "Cutting-edge",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // AI-Powered Healthcare Diagnostics;
-  {;
-    id: "ai-healthcare-diagnostics",title: "AI Healthcare Diagnostics Platform",description: "Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to assist healthcare professionals in diagnosis and treatment planning.";
-    category: "AI & Healthcare",subcategory: "Medical Diagnostics",price: 3299,currency: "$",pricingModel: "monthly",features: [;
-      "Medical image analysis";
+  {
+  id: "ai-healthcare-diagnostics",title: "AI Healthcare Diagnostics Platform",description: "Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to assist healthcare professionals in diagnosis and treatment planning.";
+    category: "AI & Healthcare",subcategory: "Medical Diagnostics",price: 3299,currency: "$",pricingModel: "monthly",features: [
+  "Medical image analysis";
       "Symptom assessment";
       "Diagnostic suggestions";
       "Patient data integration";
@@ -437,40 +448,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Clinical decision support";
       "Electronic health records";
       "Telemedicine integration";
-      "Regulatory compliance";
-    ]
-    benefits: [;
-      "Improve diagnostic accuracy by 30%";
+      "Regulatory compliance"
+]
+    benefits: [
+  "Improve diagnostic accuracy by 30%";
       "Reduce diagnosis time by 50%";
       "Enhanced patient outcomes";
       "Cost-effective healthcare";
-      "Better resource utilization";
-    ]
-    useCases: [;
-      "Radiology";
+      "Better resource utilization"
+]
+    useCases: [
+  "Radiology";
       "Pathology";
       "Cardiology";
       "Oncology";
-      "Primary care";
-    ]
-    targetAudience: [;
-      "Hospitals";
+      "Primary care"
+]
+    targetAudience: [
+  "Hospitals";
       "Clinics";
       "Radiologists";
       "Pathologists";
-      "Healthcare providers";
-    ]
+      "Healthcare providers"
+]
     tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Decision Support"]
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$3,299 - $9,999/month";
-    roi: "350-500%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "350-500%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // Sustainable Energy Management Platform;
-  {;
-    id: "sustainable-energy-management",title: "Sustainable Energy Management Platform",description: "Comprehensive energy management platform that optimizes energy consumption, integrates renewable energy sources, and provides sustainability analytics for organizations.";
-    category: "Sustainability & Energy",subcategory: "Energy Management",price: 2199,currency: "$",pricingModel: "monthly",features: [;
-      "Energy consumption monitoring";
+  {
+  id: "sustainable-energy-management",title: "Sustainable Energy Management Platform",description: "Comprehensive energy management platform that optimizes energy consumption, integrates renewable energy sources, and provides sustainability analytics for organizations.";
+    category: "Sustainability & Energy",subcategory: "Energy Management",price: 2199,currency: "$",pricingModel: "monthly",features: [
+  "Energy consumption monitoring";
       "Renewable energy integration";
       "Carbon footprint tracking";
       "Sustainability reporting";
@@ -479,39 +490,39 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Grid integration";
       "Demand response";
       "Compliance reporting";
-      "Mobile app access";
-    ]
-    benefits: [;
-      "Reduce energy costs by 25%";
+      "Mobile app access"
+]
+    benefits: [
+  "Reduce energy costs by 25%";
       "Decrease carbon footprint by 40%";
       "Achieve sustainability goals";
       "Regulatory compliance";
-      "Enhanced brand reputation";
-    ]
-    useCases: [;
-      "Commercial buildings";
+      "Enhanced brand reputation"
+]
+    useCases: [
+  "Commercial buildings";
       "Manufacturing facilities";
       "Data centers";
       "Retail chains";
-      "Educational institutions";
-    ]
-    targetAudience: [;
-      "Facility managers";
+      "Educational institutions"
+]
+    targetAudience: [
+  "Facility managers";
       "Sustainability officers";
       "Energy managers";
       "Building owners";
-      "Corporate sustainability teams";
-    ]
+      "Corporate sustainability teams"
+]
     tags: ["Sustainability", "Energy Management", "Renewable Energy", "Carbon Tracking", "Optimization"]
     estimatedDelivery: "10-12 weeks",supportLevel: "enterprise",marketPrice: "$2,199 - $6,999/month";
-    roi: "250-400%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // AI-Powered Financial Fraud Detection;
-  {;
-    id: "ai-financial-fraud-detection",title: "AI Financial Fraud Detection Platform",description: "Advanced fraud detection platform that uses AI and machine learning to identify and prevent financial fraud in real-time across multiple channels and transaction types.",category: "AI & Financial Services",subcategory: "Fraud Detection",price: 2899,currency: "$",pricingModel: "monthly",features: [;
-      "Real-time fraud detection";
+  {
+  id: "ai-financial-fraud-detection",title: "AI Financial Fraud Detection Platform",description: "Advanced fraud detection platform that uses AI and machine learning to identify and prevent financial fraud in real-time across multiple channels and transaction types.",category: "AI & Financial Services",subcategory: "Fraud Detection",price: 2899,currency: "$",pricingModel: "monthly",features: [
+  "Real-time fraud detection";
       "Multi-channel monitoring";
       "Behavioral analytics";
       "Risk scoring";
@@ -520,40 +531,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Pattern recognition";
       "Compliance reporting";
       "API integration";
-      "24/7 monitoring";
-    ]
-    benefits: [;
-      "Prevent 99% of fraud attempts";
+      "24/7 monitoring"
+]
+    benefits: [
+  "Prevent 99% of fraud attempts";
       "Reduce false positives by 80%";
       "Real-time protection";
       "Compliance with regulations";
-      "Cost savings on fraud losses";
-    ]
-    useCases: [;
-      "Banking";
+      "Cost savings on fraud losses"
+]
+    useCases: [
+  "Banking";
       "Credit cards";
       "Insurance";
       "E-commerce";
-      "Payment processing";
-    ]
-    targetAudience: [;
-      "Banks";
+      "Payment processing"
+]
+    targetAudience: [
+  "Banks";
       "Credit unions";
       "Insurance companies";
       "Fintech companies";
-      "E-commerce platforms";
-    ]
+      "E-commerce platforms"
+]
     tags: ["AI", "Fraud Detection", "Financial Services", "Machine Learning", "Security"]
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2,899 - $8,999/month";
-    roi: "300-500%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // Autonomous Vehicle Fleet Management;
-  {;
-    id: "autonomous-vehicle-fleet-management",title: "Autonomous Vehicle Fleet Management Platform",description: "Comprehensive fleet management platform for autonomous vehicles, providing real-time monitoring, route optimization, safety management, and operational analytics.";
-    category: "Autonomous Vehicles & Fleet Management",subcategory: "Fleet Operations",price: 4499,currency: "$",pricingModel: "monthly",features: [;
-      "Real-time vehicle monitoring";
+  {
+  id: "autonomous-vehicle-fleet-management",title: "Autonomous Vehicle Fleet Management Platform",description: "Comprehensive fleet management platform for autonomous vehicles, providing real-time monitoring, route optimization, safety management, and operational analytics.";
+    category: "Autonomous Vehicles & Fleet Management",subcategory: "Fleet Operations",price: 4499,currency: "$",pricingModel: "monthly",features: [
+  "Real-time vehicle monitoring";
       "Route optimization";
       "Safety management";
       "Predictive maintenance";
@@ -562,40 +573,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Emergency response";
       "Compliance tracking";
       "Mobile app access";
-      "API integration";
-    ]
-    benefits: [;
-      "Reduce operational costs by 35%";
+      "API integration"
+]
+    benefits: [
+  "Reduce operational costs by 35%";
       "Improve safety by 90%";
       "Optimize fleet utilization";
       "Enhanced compliance";
-      "Real-time operational insights";
-    ]
-    useCases: [;
-      "Logistics companies";
+      "Real-time operational insights"
+]
+    useCases: [
+  "Logistics companies";
       "Transportation services";
       "Delivery companies";
       "Public transportation";
-      "Mining operations";
-    ]
-    targetAudience: [;
-      "Fleet managers";
+      "Mining operations"
+]
+    targetAudience: [
+  "Fleet managers";
       "Logistics companies";
       "Transportation providers";
       "Delivery services";
-      "Public transit agencies";
-    ]
+      "Public transit agencies"
+]
     tags: ["Autonomous Vehicles", "Fleet Management", "IoT", "Safety", "Optimization"]
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$4,499 - $14,999/month";
-    roi: "400-600%",innovationLevel: "Cutting-edge",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "400-600%",innovationLevel: "Cutting-edge",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // AI-Powered Content Creation Platform;
-  {;
-    id: "ai-content-creation-platform",title: "AI Content Creation Platform",description: "Intelligent content creation platform that uses AI to generate high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.";
-    category: "AI & Content Marketing",subcategory: "Content Creation",price: 1299,currency: "$",pricingModel: "monthly",features: [;
-      "AI content generation";
+  {
+  id: "ai-content-creation-platform",title: "AI Content Creation Platform",description: "Intelligent content creation platform that uses AI to generate high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.";
+    category: "AI & Content Marketing",subcategory: "Content Creation",price: 1299,currency: "$",pricingModel: "monthly",features: [
+  "AI content generation";
       "Multi-format support";
       "Brand voice customization";
       "SEO optimization";
@@ -604,40 +615,40 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Collaboration tools";
       "Template library";
       "API integration";
-      "Multi-language support";
-    ]
-    benefits: [;
-      "Increase content production by 500%";
+      "Multi-language support"
+]
+    benefits: [
+  "Increase content production by 500%";
       "Reduce content costs by 70%";
       "Improve engagement rates";
       "Consistent brand voice";
-      "SEO optimization";
-    ]
-    useCases: [;
-      "Content marketing";
+      "SEO optimization"
+]
+    useCases: [
+  "Content marketing";
       "Social media management";
       "Blog creation";
       "Email marketing";
-      "Product descriptions";
-    ]
-    targetAudience: [;
-      "Marketing teams";
+      "Product descriptions"
+]
+    targetAudience: [
+  "Marketing teams";
       "Content creators";
       "Agencies";
       "E-commerce businesses";
-      "Publishers";
-    ]
+      "Publishers"
+]
     tags: ["AI", "Content Creation", "Marketing", "Automation", "SEO"]
     estimatedDelivery: "4-6 weeks",supportLevel: "professional",marketPrice: "$1,299 - $3,999/month";
-    roi: "200-400%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
+    roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+},
   }
   // AI Agent Helpdesk for ITSM;
-  {;
-    id: "ai-agent-itsm-helpdesk",title: "AI Agent Helpdesk for ITSM",description: "Autonomous LLM agents triage, resolve, and route IT tickets with knowledge-grounded answers, Change/Incident workflows, and audit trails integrated with your ITSM.";
-    category: "AI & Analytics",subcategory: "IT Service Management",price: 1599,currency: "$",pricingModel: "monthly",features: [;
-      "Multi-channel intake (Slack/Teams/Email)";
+  {
+  id: "ai-agent-itsm-helpdesk",title: "AI Agent Helpdesk for ITSM",description: "Autonomous LLM agents triage, resolve, and route IT tickets with knowledge-grounded answers, Change/Incident workflows, and audit trails integrated with your ITSM.";
+    category: "AI & Analytics",subcategory: "IT Service Management",price: 1599,currency: "$",pricingModel: "monthly",features: [
+  "Multi-channel intake (Slack/Teams/Email)";
       "RAG over KBs and runbooks";
       "Automated ticket classification & routing";
       "Action execution via secure connectors";
@@ -646,36 +657,38 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "SLA tracking and analytics";
       "PII redaction & policy guardrails";
       "SSO + RBAC";
-      "Admin dashboard";
-    ]
-    benefits: [;
-      "25–45% reduction in ticket volume";
+      "Admin dashboard"
+]
+    benefits: [
+  "25–45% reduction in ticket volume";
       "Faster MTTR and fewer escalations";
       "Consistent policy-compliant responses";
-      "Lower support costs";
-    ]
-    useCases: [;
-      "Password and access requests";
+      "Lower support costs"
+]
+    useCases: [
+  "Password and access requests";
       "VPN and device troubleshooting";
       "Software requests and approvals";
-      "Knowledge discovery";
-    ]
+      "Knowledge discovery"
+]
     targetAudience: ["IT Operations", "Service Desk Managers", "Platform Engineering"]
     tags: ["ITSM", "LLM", "RAG", "Automation", "Service Desk"]
     estimatedDelivery: "2–4 weeks",supportLevel: "enterprise",marketPrice: "$1,200 – $4,000/month";
-    roi: "200–400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"]
+    roi: "200–400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"]
       integrations: ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"]
-      apiEndpoints: 38,uptime: "99.9%",security: [["SOC 2", "GDPR", "SAML SSO"];]
-    }
+      apiEndpoints: 38,uptime: "99.9%",security: [["SOC 2", "GDPR", "SAML SSO"],
+  ],
+  },
   }
 
   // Data Governance & Quality as a Service;
-  {;
-    id: "data-governance-quality-aas",title: "Data Governance & Quality as a Service",description: "Turnkey data governance with lineage, quality checks, SLAs, and incident workflows. We implement metrics layer, contracts, and alerting across your stack.";
-    category: "AI & Analytics",subcategory: "Data Governance",price: 2499,currency: "$",pricingModel: "monthly",features: [;
-      "End-to-end lineage and impact analysis";
+  {
+  id: "data-governance-quality-aas",title: "Data Governance & Quality as a Service",description: "Turnkey data governance with lineage, quality checks, SLAs, and incident workflows. We implement metrics layer, contracts, and alerting across your stack.";
+    category: "AI & Analytics",subcategory: "Data Governance",price: 2499,currency: "$",pricingModel: "monthly",features: [
+  "End-to-end lineage and impact analysis";
       "Quality checks & anomaly detection";
       "Data SLAs and ownership";
       "Semantic/metrics layer";
@@ -684,31 +697,33 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Self-serve data catalog";
       "Role-based policies";
       "Cost and performance guardrails";
-      "Executive reporting";
-    ]
-    benefits: [;
-      "Fewer data incidents";
+      "Executive reporting"
+]
+    benefits: [
+  "Fewer data incidents";
       "Trustworthy dashboards";
       "Reduced time-to-insight";
-      "Audit-ready governance";
-    ]
+      "Audit-ready governance"
+]
     useCases: ["Revenue reporting", "Regulatory analytics", "Marketing attribution"]
     targetAudience: ["Data Platform", "Analytics Engineering", "Compliance"]
     tags: ["Data Governance", "Lineage", "Quality", "Observability"]
     estimatedDelivery: "4–8 weeks",supportLevel: "enterprise",marketPrice: "$2,000 – $7,000/month";
-    roi: "200–350%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"]
+    roi: "200–350%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"]
       integrations: ["Snowflake", "BigQuery", "Redshift", "Looker"]
-      apiEndpoints: 22,uptime: "99.9%",security: [["SSO", "Row-level security"];]
-    }
+      apiEndpoints: 22,uptime: "99.9%",security: [["SSO", "Row-level security"],
+  ],
+  },
   }
 
   // Cloud Landing Zone in 10 Days;
-  {;
-    id: "cloud-landing-zone-10-days",title: "Cloud Landing Zone in 10 Days",description: "Secure, compliant, and cost-governed multi-account cloud landing zone with network, IAM, logging, and guardrails—delivered fast.";
-    category: "Cloud & Infrastructure",subcategory: "Foundation",price: 24999,currency: "$",pricingModel: "one-time",features: [;
-      "Multi-account org and SSO";
+  {
+  id: "cloud-landing-zone-10-days",title: "Cloud Landing Zone in 10 Days",description: "Secure, compliant, and cost-governed multi-account cloud landing zone with network, IAM, logging, and guardrails—delivered fast.";
+    category: "Cloud & Infrastructure",subcategory: "Foundation",price: 24999,currency: "$",pricingModel: "one-time",features: [
+  "Multi-account org and SSO";
       "Network hub/spoke & transit";
       "Logging and audit baseline";
       "CIS/NIST guardrails";
@@ -717,31 +732,33 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Backup and DR patterns";
       "IaC with GitOps";
       "Runbook and enablement";
-      "Handoff workshop";
-    ]
-    benefits: [;
-      "Production-ready foundation";
+      "Handoff workshop"
+]
+    benefits: [
+  "Production-ready foundation";
       "Faster app onboarding";
       "Lower security risk";
-      "Predictable costs";
-    ]
+      "Predictable costs"
+]
     useCases: ["Greenfield cloud", "Migrations", "Subsidiary onboarding"]
     targetAudience: ["Platform Engineering", "Security", "IT"]
     tags: ["Landing Zone", "Security", "IaC", "Governance"]
     estimatedDelivery: "2 weeks",supportLevel: "professional",marketPrice: "$20,000 – $60,000 one-time";
-    roi: "150–300%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"]
+    roi: "150–300%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"]
       integrations: ["Okta", "Datadog", "PagerDuty"]
-      apiEndpoints: 12,uptime: "99.9%",security: [["CIS", "NIST", "SSO"];]
-    }
+      apiEndpoints: 12,uptime: "99.9%",security: [["CIS", "NIST", "SSO"],
+  ],
+  },
   }
 
   // Marketing Content Ops Co-pilot;
-  {;
-    id: "marketing-content-ops-copilot",title: "Marketing Content Ops Co‑pilot",description: "Workflow and AI generation for briefs, calendars, assets, and approvals with brand voice controls and analytics.";
-    category: "AI & Content Marketing",subcategory: "Content Ops",price: 799,currency: "$",pricingModel: "monthly",features: [;
-      "Brief generation and planning";
+  {
+  id: "marketing-content-ops-copilot",title: "Marketing Content Ops Co‑pilot",description: "Workflow and AI generation for briefs, calendars, assets, and approvals with brand voice controls and analytics.";
+    category: "AI & Content Marketing",subcategory: "Content Ops",price: 799,currency: "$",pricingModel: "monthly",features: [
+  "Brief generation and planning";
       "Brand voice and style guides";
       "Multi-channel publishing";
       "Asset versioning and review";
@@ -750,26 +767,27 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Templates and automations";
       "Webhook/API integrations";
       "SSO and permissions";
-      "Audit and archives";
-    ]
-    benefits: [;
-      "Faster content throughput";
+      "Audit and archives"
+]
+    benefits: [
+  "Faster content throughput";
       "Higher quality and consistency";
       "Measurable campaign ROI";
-      "Lower production costs";
-    ]
+      "Lower production costs"
+]
     useCases: ["Blog + social", "Product launches", "Lifecycle campaigns"]
     targetAudience: ["Marketing Ops", "Content Teams", "Agencies"]
     tags: ["LLM", "Content", "Workflow", "SEO"]
     estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1,999/month";
-    roi: "250–500%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
+    roi: "250–500%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  },
   }
   ;
   // Cloud Cost Optimization AI;
-  {;
-    id: "cloud-cost-optimizer-ai",title: "Cloud Cost Optimizer AI",description: "Autonomous cloud cost optimization that rightsizes, schedules, and negotiates waste across AWS, Azure, and GCP using reinforcement learning and business policies.";
-    category: "AI & Financial Services",subcategory: "FinOps Automation",price: 1499,currency: "$",pricingModel: "monthly",features: [;
-      "Automated rightsizing & scheduling";
+  {
+  id: "cloud-cost-optimizer-ai",title: "Cloud Cost Optimizer AI",description: "Autonomous cloud cost optimization that rightsizes, schedules, and negotiates waste across AWS, Azure, and GCP using reinforcement learning and business policies.";
+    category: "AI & Financial Services",subcategory: "FinOps Automation",price: 1499,currency: "$",pricingModel: "monthly",features: [
+  "Automated rightsizing & scheduling";
       "Spot/RI/Savings Plans optimization";
       "Multi-cloud & multi-account support";
       "Unit economics & chargeback";
@@ -778,45 +796,46 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Policy-based guardrails";
       "Ticketing integrations (Jira, ServiceNow)";
       "Slack/MS Teams notifications";
-      "FinOps reports & forecasts";
-    ]
-    benefits: [;
-      "Cut cloud spend by 20-45%";
+      "FinOps reports & forecasts"
+]
+    benefits: [
+  "Cut cloud spend by 20-45%";
       "Automate savings with guardrails";
       "Improve forecasting accuracy";
       "Reduce toil for platform teams";
-      "Transparent chargeback/showback";
-    ]
-    useCases: [;
-      "SaaS infra optimization";
+      "Transparent chargeback/showback"
+]
+    useCases: [
+  "SaaS infra optimization";
       "Kubernetes platform cost control";
       "Budget governance";
       "Anomaly detection";
-      "CFO reporting";
-    ]
-    targetAudience: [;
-      "FinOps teams";
+      "CFO reporting"
+]
+    targetAudience: [
+  "FinOps teams";
       "Platform engineering";
       "CIO/CTO";
       "CFO/Finance";
-      "DevOps";
-    ]
+      "DevOps"
+]
     tags: ["FinOps", "Cloud", "Kubernetes", "Cost Optimization", "AI"]
     estimatedDelivery: "2-4 weeks",supportLevel: "professional",marketPrice: "$1,499 - $6,999/month";
-    roi: "200-500%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
-    technicalSpecs: {;
-      technology: ["Python", "dbt", "BigQuery", "Athena", "K8s"]
+    roi: "200-500%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+}
+    technicalSpecs: {
+  technology: ["Python", "dbt", "BigQuery", "Athena", "K8s"]
       integrations: ["AWS", "Azure", "GCP", "Datadog", "Snowflake"]
-      apiEndpoints: 85,uptime: "99.9%",security: [["SOC 2", "ISO 27001"];]
-    }
+      apiEndpoints: 85,uptime: "99.9%",security: [["SOC 2", "ISO 27001"],
+  ],
+  },
   }
   // SOC 2 & ISO 27001 Compliance Copilot;
-  {;
-    id: "soc2-iso-compliance-copilot",title: "Compliance Copilot for SOC 2 & ISO 27001",description: "Evidence collection, control mapping, and auditor-ready reports with continuous monitoring across your SaaS stack.";
-    category: "AI & Legal Tech",subcategory: "Compliance Automation",price: 1999,currency: "$",pricingModel: "monthly",features: [;
-      "Automated evidence collection";
+  {
+  id: "soc2-iso-compliance-copilot",title: "Compliance Copilot for SOC 2 & ISO 27001",description: "Evidence collection, control mapping, and auditor-ready reports with continuous monitoring across your SaaS stack.";
+    category: "AI & Legal Tech",subcategory: "Compliance Automation",price: 1999,currency: "$",pricingModel: "monthly",features: [
+  "Automated evidence collection";
       "Control library & mapping";
       "Change monitoring & drift alerts";
       "Vendor risk management";
@@ -825,33 +844,34 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Ticketing & workflow automation";
       "SSO/SaaS integrations";
       "Data lineage & retention";
-      "Board-ready reports";
-    ]
-    benefits: [;
-      "Cut audit prep time by 70%";
+      "Board-ready reports"
+]
+    benefits: [
+  "Cut audit prep time by 70%";
       "Reduce compliance costs";
       "Always-on readiness";
       "Lower security risk";
-      "Faster enterprise deals";
-    ]
+      "Faster enterprise deals"
+]
     useCases: ["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"]
     targetAudience: ["Security", "GRC", "Legal", "Founders", "Ops"]
     tags: ["Compliance", "Security", "Audit", "GRC", "Automation"]
     estimatedDelivery: "3-6 weeks",supportLevel: "professional",marketPrice: "$1,999 - $7,999/month";
-    roi: "150-400%",innovationLevel: "Advanced",contactInfo: {;
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com";
-    }
-    technicalSpecs: {;
-      technology: ["Node.js", "PostgreSQL", "OpenAPI", "LLM"]
+    roi: "150-400%",innovationLevel: "Advanced",contactInfo: {
+  phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
+}
+    technicalSpecs: {
+  technology: ["Node.js", "PostgreSQL", "OpenAPI", "LLM"]
       integrations: ["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"]
-      apiEndpoints: 110,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "SAML", "SCIM"];]
-    }
+      apiEndpoints: 110,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "SAML", "SCIM"],
+  ],
+  },
   }
   // Data Pipeline Observability Platform;
-  {;
-    id: "data-pipeline-observability",title: "Data Pipeline Observability Platform",description: "End-to-end data quality, freshness, and lineage monitoring for modern data stacks with incident auto-remediation.";
-    category: "AI & Analytics",subcategory: "Data Reliability",price: 1290,currency: "$",pricingModel: "monthly",features: [;
-      "Freshness & volume SLAs";
+  {
+  id: "data-pipeline-observability",title: "Data Pipeline Observability Platform",description: "End-to-end data quality, freshness, and lineage monitoring for modern data stacks with incident auto-remediation.";
+    category: "AI & Analytics",subcategory: "Data Reliability",price: 1290,currency: "$",pricingModel: "monthly",features: [
+  "Freshness & volume SLAs";
       "Schema change detection";
       "Anomaly detection with LLM root-cause";
       "Data lineage graph";
@@ -860,31 +880,33 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Incident postmortems";
       "Cost & performance insights";
       "Column-level profiling";
-      "Alert deduplication";
-    ]
-    benefits: [;
-      "Reduce data incidents by 60%";
+      "Alert deduplication"
+]
+    benefits: [
+  "Reduce data incidents by 60%";
       "Improve trust in analytics";
       "Faster incident resolution";
       "Fewer false positives";
-      "Better SLA adherence";
-    ]
+      "Better SLA adherence"
+]
     useCases: ["Analytics SLAs", "ML data drift", "Reverse ETL quality", "Compliance"]
     targetAudience: ["Data engineering", "Analytics", "Platform"]
     tags: ["DataOps", "Observability", "LLM", "dbt", "Lineage"]
     estimatedDelivery: "3-5 weeks",supportLevel: "professional",marketPrice: "$1,290 - $5,999/month";
-    roi: "200-350%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["Python", "Airflow", "dbt", "Spark"]
+    roi: "200-350%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["Python", "Airflow", "dbt", "Spark"]
       integrations: ["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"]
-      apiEndpoints: 95,uptime: "99.9%",security: [["SOC 2", "Row-level security"];]
-    }
+      apiEndpoints: 95,uptime: "99.9%",security: [["SOC 2", "Row-level security"],
+  ],
+  },
   }
   // AI Customer Support Agent Platform;
-  {;
-    id: "ai-customer-support-agent",title: "AI Customer Support Agent Platform",description: "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets. Escalates with full context.";
-    category: "AI & Customer Experience",subcategory: "Support Automation",price: 899,currency: "$",pricingModel: "monthly",features: [;
-      "Omnichannel (chat, email, voice)";
+  {
+  id: "ai-customer-support-agent",title: "AI Customer Support Agent Platform",description: "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets. Escalates with full context.";
+    category: "AI & Customer Experience",subcategory: "Support Automation",price: 899,currency: "$",pricingModel: "monthly",features: [
+  "Omnichannel (chat, email, voice)";
       "Secure RAG over private data";
       "Hallucination guardrails";
       "CRM/ticketing sync";
@@ -893,31 +915,33 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "Intent/routing";
       "Multilingual";
       "A/B workflows";
-      "Feedback loops";
-    ]
-    benefits: [;
-      "30-60% ticket deflection";
+      "Feedback loops"
+]
+    benefits: [
+  "30-60% ticket deflection";
       "Higher CSAT";
       "Faster resolution";
       "Lower support costs";
-      "24/7 coverage";
-    ]
+      "24/7 coverage"
+]
     useCases: ["Support deflection", "Agent assist", "Self-service", "Onboarding"]
     targetAudience: ["CX leaders", "Support ops", "Founders"]
     tags: ["RAG", "LLM", "CX", "Zendesk", "Intercom"]
     estimatedDelivery: "2-4 weeks",supportLevel: "professional",marketPrice: "$899 - $3,999/month";
-    roi: "200-600%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["Typescript", "Vector DB", "LLM", "gRPC"]
+    roi: "200-600%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  }
+    technicalSpecs: {
+  technology: ["Typescript", "Vector DB", "LLM", "gRPC"]
       integrations: ["Zendesk", "Intercom", "Salesforce", "HubSpot"]
-      apiEndpoints: 70,uptime: "99.9%",security: [["SOC 2", "PII redaction"];]
-    }
+      apiEndpoints: 70,uptime: "99.9%",security: [["SOC 2", "PII redaction"],
+  ],
+  },
   }
   // Privacy Request Automation (DSAR)
-  {;
-    id: "privacy-request-automation",title: "Privacy Request Automation (DSAR)",description: "Automated data subject request intake, identity verification, and data discovery across SaaS and data lakes.";
-    category: "AI & Legal Tech",subcategory: "Privacy Automation",price: 1090,currency: "$",pricingModel: "monthly",features: [;
-      "DSAR intake portal";
+  {
+  id: "privacy-request-automation",title: "Privacy Request Automation (DSAR)",description: "Automated data subject request intake, identity verification, and data discovery across SaaS and data lakes.";
+    category: "AI & Legal Tech",subcategory: "Privacy Automation",price: 1090,currency: "$",pricingModel: "monthly",features: [
+  "DSAR intake portal";
       "Identity verification";
       "Automated data discovery";
       "Deletion/rectification workflows";
@@ -926,26 +950,27 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "PII detection & redaction";
       "Data map & lineage";
       "SaaS connectors";
-      "Legal hold integration";
-    ]
-    benefits: [;
-      "Avoid regulatory fines";
+      "Legal hold integration"
+]
+    benefits: [
+  "Avoid regulatory fines";
       "Reduce manual review";
       "Improve accuracy";
       "Meet SLA requirements";
-      "Improve trust";
-    ]
+      "Improve trust"
+]
     useCases: ["GDPR/CCPA DSAR", "Right to be forgotten", "DPIA support"]
     targetAudience: ["Legal", "Privacy", "Security", "Data"]
     tags: ["Privacy", "Compliance", "DSAR", "Automation"]
     estimatedDelivery: "3-6 weeks",supportLevel: "professional",marketPrice: "$1,090 - $4,999/month";
-    roi: "200-400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
+    roi: "200-400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+  },
   }
   // MLOps Continuous Delivery Platform;
-  {;
-    id: "mlops-continuous-delivery",title: "MLOps Continuous Delivery Platform",description: "Feature store, model registry, canary deployments, drift detection, and governance for reliable AI delivery.";
-    category: "AI & Analytics",subcategory: "MLOps Platform",price: 2490,currency: "$",pricingModel: "monthly",features: [;
-      "Feature store & pipelines";
+  {
+  id: "mlops-continuous-delivery",title: "MLOps Continuous Delivery Platform",description: "Feature store, model registry, canary deployments, drift detection, and governance for reliable AI delivery.";
+    category: "AI & Analytics",subcategory: "MLOps Platform",price: 2490,currency: "$",pricingModel: "monthly",features: [
+  "Feature store & pipelines";
       "Model registry & lineage";
       "Shadow/canary/blue-green";
       "Real-time drift & bias detection";
@@ -954,26 +979,28 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [;
       "RBAC & audit trails";
       "Cloud-native deployment";
       "SDK & CLI";
-      "Compliance templates";
-    ]
-    benefits: [;
-      "Ship models faster";
+      "Compliance templates"
+]
+    benefits: [
+  "Ship models faster";
       "Reduce incidents";
       "Improve accuracy";
       "Lower ops costs";
-      "Meet compliance";
-    ]
+      "Meet compliance"
+]
     useCases: ["Personalization", "Forecasting", "Fraud", "NLP", "Vision"]
     targetAudience: ["ML engineers", "Data science", "Platform"]
     tags: ["MLOps", "LLMOps", "Feature Store", "Registry"]
     estimatedDelivery: "4-8 weeks",supportLevel: "enterprise",marketPrice: "$2,490 - $9,999/month";
-    roi: "200-500%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }}
-    technicalSpecs: {;
-      technology: ["Kubernetes", "Kafka", "Ray", "Feast"]
-      integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"]
-      apiEndpoints: 140,uptime: "99.95%",security: [["SOC 2", "RBAC", "IAM"];]
-    }
+    roi: "200-500%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
   }
-]
+    technicalSpecs: {
+  technology: ["Kubernetes", "Kafka", "Ray", "Feast"]
+      integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"]
+      apiEndpoints: 140,uptime: "99.95%",security: [["SOC 2", "RBAC", "IAM"],
+  ],
+  },
+  },
+  ]
 
 export default EXPANDED_INNOVATIVE_SERVICES_2025;

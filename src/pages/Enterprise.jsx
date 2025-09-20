@@ -3,61 +3,62 @@ import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from "lucide-react";
-export default function Enterprise() {;
-    const features = [;
-        {;
-            icon: <Users className="h-8 w-8 text-zion-cyan"/>,title: "Team Management",description: "Manage multiple teams, projects, and stakeholders with enterprise-grade collaboration tools.";
-        }
-        {;
-            icon: <Shield className="h-8 w-8 text-zion-cyan"/>,title: "Advanced Security",description: "Enterprise-level security with SSO, role-based access control, and compliance certifications.";
-        }
-        {;
-            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,title: "Analytics & Reporting",description: "Comprehensive insights into team performance, project metrics, and ROI tracking.";
-        }
-        {;
-            icon: <Zap className="h-8 w-8 text-zion-cyan"/>,title: "Custom Integrations",description: "Seamlessly integrate with your existing tools and workflows through our API.";
-        }
-        {;
-            icon: <Globe className="h-8 w-8 text-zion-cyan"/>,title: "Global Talent Pool",description: "Access to verified tech professionals from around the world, available 24/7.";
-        }
-        {;
-            icon: <Phone className="h-8 w-8 text-zion-cyan"/>,title: "Dedicated Support",description: "Priority support with dedicated account managers and 24/7 technical assistance.";
-        }
-    ]
-    const plans = [;
-        {;
-            name: "Starter",price: "$999",period: "/month",description: "Perfect for growing teams",features: [;
-                "Up to 25 team members";
+export default function Enterprise() {
+  const features = [
+  {
+  icon: <Users className="h-8 w-8 text-zion-cyan"/>,title: "Team Management",description: "Manage multiple teams, projects, and stakeholders with enterprise-grade collaboration tools."
+},
+  {
+  icon: <Shield className="h-8 w-8 text-zion-cyan"/>,title: "Advanced Security",description: "Enterprise-level security with SSO, role-based access control, and compliance certifications."
+},
+  {
+  icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,title: "Analytics & Reporting",description: "Comprehensive insights into team performance, project metrics, and ROI tracking."
+},
+  {
+  icon: <Zap className="h-8 w-8 text-zion-cyan"/>,title: "Custom Integrations",description: "Seamlessly integrate with your existing tools and workflows through our API."
+},
+  {
+  icon: <Globe className="h-8 w-8 text-zion-cyan"/>,title: "Global Talent Pool",description: "Access to verified tech professionals from around the world, available 24/7."
+},
+  {
+  icon: <Phone className="h-8 w-8 text-zion-cyan"/>,title: "Dedicated Support",description: "Priority support with dedicated account managers and 24/7 technical assistance."
+},
+  ]
+    const plans = [
+  {
+  name: "Starter",price: "$999",period: "/month",description: "Perfect for growing teams",features: [
+  "Up to 25 team members";
                 "Basic analytics";
                 "Email support";
-                "Standard integrations";
-            ]
-        }
-        {;
-            name: "Professional",price: "$2,499";
-            period: "/month",description: "Ideal for established companies",features: [;
-                "Up to 100 team members";
+                "Standard integrations"
+],
+  },
+  {
+  name: "Professional",price: "$2,499";
+            period: "/month",description: "Ideal for established companies",features: [
+  "Up to 100 team members";
                 "Advanced analytics";
                 "Priority support";
                 "Custom integrations";
-                "SSO authentication";
-            ]
-        }
-        {;
-            name: "Enterprise",price: "Custom",period: "",description: "For large organizations",features: [;
-                "Unlimited team members";
+                "SSO authentication"
+],
+  },
+  {
+  name: "Enterprise",price: "Custom",period: "",description: "For large organizations",features: [
+  "Unlimited team members";
                 "Custom analytics";
                 "Dedicated support";
                 "Full API access";
                 "Custom security";
-                "On-premise options";
-            ]
-        }
-    ]
+                "On-premise options"
+],
+  },
+  ]
     return (<div className="min-h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -78,7 +79,8 @@ export default function Enterprise() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -98,7 +100,8 @@ export default function Enterprise() {;
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-zion-slate-light">
-                    {{feature.description}}
+                    {{feature.description},
+  }
                   </CardDescription>
                 </CardContent>
               </Card>))}
@@ -106,7 +109,8 @@ export default function Enterprise() {;
         </div>
       </section>
 
-      {{/* Plans Section */}}
+      {{/* Plans Section */},
+  }
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -127,20 +131,23 @@ export default function Enterprise() {;
                     <span className="text-zion-slate-light">{plan.period}</span>
                   </div>
                   <CardDescription className="text-zion-slate-light">
-                    {{plan.description}}
+                    {{plan.description},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <Check className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
-                        {{feature}}
+                        {{feature},
+  }
                       </li>))}
                   </ul>
                   <Button className={`w-full ${plan.name === "Professional";
                 ? "bg-zion-purple hover:bg-zion-purple-light";
                 : "bg-zion-blue hover:bg-zion-blue-light"}`}>
-                    {{plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}}
+                    {{plan.name === "Enterprise" ? "Contact Sales" : "Get Started"},
+  }
                   </Button>
                 </CardContent>
               </Card>))}
@@ -148,7 +155,8 @@ export default function Enterprise() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">

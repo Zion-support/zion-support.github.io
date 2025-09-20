@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {;
+import {
   Brain;
   Cpu;
   Zap;
@@ -21,80 +21,87 @@ import {;
   Heart;
   DollarSign;
   Factory;
-  ShoppingCart;
+  ShoppingCart
 } from "lucide-react";
-export default function AIServices() {;
-  const aiServices = [;
-    {;
-      name: "AI Strategy & Consulting",description: "Strategic guidance on implementing AI solutions across your organization",icon: Target,features: [;
-        "AI readiness assessment";
+export default function AIServices() {
+  const aiServices = [
+  {
+  name: "AI Strategy & Consulting",description: "Strategic guidance on implementing AI solutions across your organization",icon: Target,features: [
+  "AI readiness assessment";
         "Technology roadmap planning";
         "ROI analysis and business case development";
-        "Change management strategies";
-      ]
+        "Change management strategies"
+]
       price: "From $2,500";
-      duration: "2-4 weeks";
-    }
-    {;
-      name: "Machine Learning Development",description: "Custom ML models and algorithms tailored to your specific business needs",icon: Brain,features: [;
-        "Custom model development";
+      duration: "2-4 weeks"
+},
+  {
+  name: "Machine Learning Development",description: "Custom ML models and algorithms tailored to your specific business needs",icon: Brain,features: [
+  "Custom model development";
         "Data preprocessing and feature engineering";
         "Model training and optimization";
-        "Performance monitoring and maintenance";
-      ]
+        "Performance monitoring and maintenance"
+]
       price: "From $5,000";
-      duration: "4-8 weeks";
-    }
-    {;
-      name: "AI-Powered Applications",description: "Intelligent automation and insights through custom AI applications",icon: Zap,features: [;
-        "Chatbot and virtual assistant development";
+      duration: "4-8 weeks"
+},
+  {
+  name: "AI-Powered Applications",description: "Intelligent automation and insights through custom AI applications",icon: Zap,features: [
+  "Chatbot and virtual assistant development";
         "Predictive analytics applications";
         "Computer vision solutions";
-        "Natural language processing systems";
-      ]
+        "Natural language processing systems"
+]
       price: "From $8,500";
-      duration: "6-12 weeks";
-    }
-    {;
-      name: "AI Infrastructure & MLOps",description: "Scalable AI infrastructure and machine learning operations",icon: Cloud,features: [;
-        "ML pipeline automation";
+      duration: "6-12 weeks"
+},
+  {
+  name: "AI Infrastructure & MLOps",description: "Scalable AI infrastructure and machine learning operations",icon: Cloud,features: [
+  "ML pipeline automation";
         "Model versioning and deployment";
         "Scalable training infrastructure";
-        "Monitoring and alerting systems";
-      ]
+        "Monitoring and alerting systems"
+]
       price: "From $6,000";
-      duration: "4-10 weeks";
-    }
+      duration: "4-10 weeks"
+},
   ]
-  const aiTechnologies = [;
-    {{ name: "TensorFlow", description: "Open-source ML framework", icon: Code }}
-    {{ name: "PyTorch", description: "Deep learning research platform", icon: Brain }}
-    {{ name: "OpenAI GPT", description: "Advanced language models", icon: Cpu }}
-    {{ name: "Computer Vision", description: "Image and video analysis", icon: Eye }}
-    {{ name: "NLP", description: "Natural language processing", icon: MessageSquare }}
-    {{ name: "AutoML", description: "Automated machine learning", icon: Zap }}
+  const aiTechnologies = [
+  {{ name: "TensorFlow", description: "Open-source ML framework", icon: Code },
+  },
+  {{ name: "PyTorch", description: "Deep learning research platform", icon: Brain },
+  },
+  {{ name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
+  },
+  {{ name: "Computer Vision", description: "Image and video analysis", icon: Eye },
+  },
+  {{ name: "NLP", description: "Natural language processing", icon: MessageSquare },
+  },
+  {{ name: "AutoML", description: "Automated machine learning", icon: Zap },
+  },
   ]
-  const useCases = [;
-    {;
-      industry: "Healthcare",applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"]
-      icon: Heart;
-    }
-    {;
-      industry: "Finance",applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"]
-      icon: DollarSign;
-    }
-    {;
-      industry: "Manufacturing",applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"]
-      icon: Factory;
-    }
-    {;
-      industry: "Retail",applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"]
-      icon: ShoppingCart;
-    }
+  const useCases = [
+  {
+  industry: "Healthcare",applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"]
+      icon: Heart
+},
+  {
+  industry: "Finance",applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"]
+      icon: DollarSign
+},
+  {
+  industry: "Manufacturing",applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"]
+      icon: Factory
+},
+  {
+  industry: "Retail",applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"]
+      icon: ShoppingCart
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -124,7 +131,8 @@ export default function AIServices() {;
           </div>
         </div>
 
-        {{/* Background Elements */}}
+        {{/* Background Elements */},
+  }
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
@@ -132,7 +140,8 @@ export default function AIServices() {;
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -145,9 +154,10 @@ export default function AIServices() {;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (;
-              <div;
-                key={{index}}
+            {aiServices.map((service, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className="flex items-center mb-6">
@@ -161,10 +171,11 @@ export default function AIServices() {;
                 </div>
 
                 <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-slate-300">
+                  {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-slate-300">
                       <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -187,7 +198,8 @@ export default function AIServices() {;
         </div>
       </section>
 
-      {{/* Technologies Section */}}
+      {{/* Technologies Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -200,9 +212,10 @@ export default function AIServices() {;
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {aiTechnologies.map((tech, index) => (;
-              <div;
-                key={{index}}
+            {aiTechnologies.map((tech, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -216,7 +229,8 @@ export default function AIServices() {;
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -229,9 +243,10 @@ export default function AIServices() {;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (;
-              <div;
-                key={{index}}
+            {useCases.map((useCase, index) => (
+  <div;
+                key={{index},
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
@@ -239,10 +254,11 @@ export default function AIServices() {;
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
-                  {useCase.applications.map((app, appIndex) => (;
-                    <li key={appIndex} className="text-slate-300 text-sm flex items-center">
+                  {useCase.applications.map((app, appIndex) => (
+  <li key={appIndex} className="text-slate-300 text-sm flex items-center">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
-                      {{app}}
+                      {{app},
+  }
                     </li>
                   ))}
                 </ul>
@@ -252,7 +268,8 @@ export default function AIServices() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">

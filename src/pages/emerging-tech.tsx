@@ -1,56 +1,67 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Atom;
-  Brain, ;
-  Network, ;
-  Satellite, ;
-  TrendingUp, ;
+  Brain,
+  Network,
+  Satellite,
+  TrendingUp,
   Leaf;
   Zap;
   Shield;
   Cloud;
   Globe;
   Rocket;
-  Star;
+  Star
 } from "lucide-react";
 import { Link } from "react-router-dom";
 const EmergingTech: React.FC = () => {
-  const technologies = [;
-    {;
-      title: 'Quantum Computing',description: 'Revolutionary quantum computing solutions for complex problem-solving and optimization.',icon: Atom,path: '/services/quantum-computing',features: [['Quantum algorithmsOptimization problems', 'CryptographyMachine learning'];]
-    }
-    {;
-      title: 'IoT Edge Computing',description: 'Next-generation IoT solutions with edge computing capabilities for real-time processing.',icon: Network,path: '/services/iot-edge-computing',features: [['Real-time processingLow latency', 'Edge AISmart sensors'];]
-    }
-    {;
-      title: 'AI Quantum Hybrid Platform',description: 'Combining AI and quantum computing for unprecedented computational power.',icon: Brain,path: '/services/ai-quantum-hybrid-platform',features: [['Hybrid algorithmsQuantum ML', 'AI optimizationQuantum AI'];]
-    }
-    {;
-      title: 'Space Technology',description: 'Cutting-edge space technology solutions for satellite and aerospace applications.',icon: Satellite,path: '/space-tech',features: [['Satellite systemsAerospace solutions', 'Space dataOrbital mechanics'];]
-    }
-    {;
-      title: 'Quantum Machine Learning',description: 'Quantum-enhanced machine learning algorithms for superior pattern recognition.',icon: Atom,path: '/services/quantum-machine-learning',features: [['Quantum neural networksPattern recognition', 'OptimizationQuantum algorithms'];]
-    }
-    {;
-      title: 'AI Predictive Maintenance',description: 'AI-powered predictive maintenance systems for industrial equipment and machinery.',icon: TrendingUp,path: '/services/ai-predictive-maintenance',features: [['Equipment monitoringPredictive analytics', 'Maintenance schedulingCost optimization'];]
-    }
-    {;
-      title: 'Sustainable Technology',description: 'Green technology solutions for environmental sustainability and energy efficiency.',icon: Leaf,path: '/services/sustainable-technology',features: [['Energy efficiencyGreen computing', 'Carbon reductionSustainable AI'];]
-    }
+  const technologies = [
+  {
+  title: 'Quantum Computing',description: 'Revolutionary quantum computing solutions for complex problem-solving and optimization.',icon: Atom,path: '/services/quantum-computing',features: [['Quantum algorithmsOptimization problems', 'CryptographyMachine learning'],
+  ],
+  },
+  {
+  title: 'IoT Edge Computing',description: 'Next-generation IoT solutions with edge computing capabilities for real-time processing.',icon: Network,path: '/services/iot-edge-computing',features: [['Real-time processingLow latency', 'Edge AISmart sensors'],
+  ],
+  },
+  {
+  title: 'AI Quantum Hybrid Platform',description: 'Combining AI and quantum computing for unprecedented computational power.',icon: Brain,path: '/services/ai-quantum-hybrid-platform',features: [['Hybrid algorithmsQuantum ML', 'AI optimizationQuantum AI'],
+  ],
+  },
+  {
+  title: 'Space Technology',description: 'Cutting-edge space technology solutions for satellite and aerospace applications.',icon: Satellite,path: '/space-tech',features: [['Satellite systemsAerospace solutions', 'Space dataOrbital mechanics'],
+  ],
+  },
+  {
+  title: 'Quantum Machine Learning',description: 'Quantum-enhanced machine learning algorithms for superior pattern recognition.',icon: Atom,path: '/services/quantum-machine-learning',features: [['Quantum neural networksPattern recognition', 'OptimizationQuantum algorithms'],
+  ],
+  },
+  {
+  title: 'AI Predictive Maintenance',description: 'AI-powered predictive maintenance systems for industrial equipment and machinery.',icon: TrendingUp,path: '/services/ai-predictive-maintenance',features: [['Equipment monitoringPredictive analytics', 'Maintenance schedulingCost optimization'],
+  ],
+  },
+  {
+  title: 'Sustainable Technology',description: 'Green technology solutions for environmental sustainability and energy efficiency.',icon: Leaf,path: '/services/sustainable-technology',features: [['Energy efficiencyGreen computing', 'Carbon reductionSustainable AI'],
+  ],
+  },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Header */}}
+      {{/* Header */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         ;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="flex justify-center mb-6">
@@ -69,15 +80,20 @@ const EmergingTech: React.FC = () => {
         </div>
       </div>
 
-      {{/* Technologies Grid */}}
+      {{/* Technologies Grid */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (;
-            <motion.div;
-              key={{tech.title}}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+          {technologies.map((tech, index) => (
+  <motion.div;
+              key={{tech.title},
+  }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 group";"
             >
               <div className="flex items-center space-x-3 mb-4">
@@ -88,14 +104,15 @@ const EmergingTech: React.FC = () => {
               </div>
               ;
               <p className="text-gray-300 mb-4 leading-relaxed">
-                {{tech.description}}
+                {{tech.description},
+  }
               </p>
               ;
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {tech.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
+                  {tech.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{feature}</span>
                     </li>
@@ -104,7 +121,8 @@ const EmergingTech: React.FC = () => {
               </div>
               ;
               <Link;
-                to={{tech.path}}
+                to={{tech.path},
+  }
                 className="className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group";"
               >
                 <span className="font-medium">Learn More</span>
@@ -115,12 +133,16 @@ const EmergingTech: React.FC = () => {
         </div>
       </div>
 
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.5 },
+  }
           className="className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">

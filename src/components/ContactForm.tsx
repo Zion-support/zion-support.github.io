@@ -6,7 +6,7 @@ interface FormData {
   company: string;
   service: string;
   message: string;
-  budget: string;
+  budget: string
 }
 
 const ContactForm: React.FC = () => {
@@ -18,19 +18,16 @@ const ContactForm: React.FC = () => {
     message: '',
     budget: ''
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+    }))
+};
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate API call
@@ -44,15 +41,14 @@ const ContactForm: React.FC = () => {
         service: '',
         message: '',
         budget: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+      })
+} catch (error) {
+      setSubmitStatus('error')
+} finally {
+      setIsSubmitting(false)
+},
   };
-
-  const services = [
+const services = [
     'AI Services',
     'Micro SaaS',
     'IT Services',
@@ -60,8 +56,7 @@ const ContactForm: React.FC = () => {
     'Blockchain',
     'Space Technology'
   ];
-
-  const budgetRanges = [
+const budgetRanges = [
     'Under $5,000',
     '$5,000 - $25,000',
     '$25,000 - $100,000',
@@ -172,7 +167,6 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
+  )
 };
-
 export default ContactForm;

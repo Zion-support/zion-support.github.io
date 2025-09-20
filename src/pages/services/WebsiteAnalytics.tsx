@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   BarChart3;
-  TrendingUp, ;
-  CheckCircle, ;
- ;
+  TrendingUp,
+  CheckCircle,
   ArrowRight;
   Play;
   Settings;
@@ -147,73 +146,77 @@ import { ;
   Cpu;
   Memory;
   HardDrive;
-  Server;
+  Server
 } from "lucide-react";
 const WebsiteAnalytics = () => {
-  const features = [;
-    {;
-      icon: BarChart3,title: 'Real-time Analytics',description: 'Live website performance monitoring and insights';
-    }
-    {;
-      icon: Users2,title: 'User Behavior Tracking',description: 'Comprehensive user journey and interaction analysis';
-    }
-    {;
-      icon: MousePointer,title: 'Click Tracking',description: 'Detailed click heatmaps and user interaction data';
-    }
-    {;
-      icon: Clock,title: 'Performance Monitoring',description: 'Page load times and performance optimization insights';
-    }
-    {;
-      icon: MapPin,title: 'Geographic Analytics',description: 'User location and regional performance data';
-    }
-    {;
-      icon: Device,title: 'Device Analytics',description: 'Cross-device performance and user experience insights';
-    }
+  const features = [
+  {
+  icon: BarChart3,title: 'Real-time Analytics',description: 'Live website performance monitoring and insights'
+},
+  {
+  icon: Users2,title: 'User Behavior Tracking',description: 'Comprehensive user journey and interaction analysis'
+},
+  {
+  icon: MousePointer,title: 'Click Tracking',description: 'Detailed click heatmaps and user interaction data'
+},
+  {
+  icon: Clock,title: 'Performance Monitoring',description: 'Page load times and performance optimization insights'
+},
+  {
+  icon: MapPin,title: 'Geographic Analytics',description: 'User location and regional performance data'
+},
+  {
+  icon: Device,title: 'Device Analytics',description: 'Cross-device performance and user experience insights'
+},
   ]
-  const benefits = [;
-    'Improve website conversion rates by 35%Reduce bounce rates by 25%';
+  const benefits = [
+  'Improve website conversion rates by 35%Reduce bounce rates by 25%';
     'Optimize user experience based on dataIdentify and fix performance bottlenecks';
-    'Make data-driven design decisionsTrack marketing campaign effectiveness';
-  ]
+    'Make data-driven design decisionsTrack marketing campaign effectiveness'
+]
 
-  const services = [;
-    {;
-      icon: Monitor,title: 'Analytics Dashboard',description: 'Comprehensive analytics dashboard with real-time data';
-    }
-    {;
-      icon: Eye2,title: 'User Session Recording',description: 'Record and analyze user sessions for insights';
-    }
-    {;
-      icon: TrendingUp,title: 'Conversion Tracking',description: 'Track conversions and optimize funnels';
-    }
-    {;
-      icon: Search,title: 'SEO Analytics',description: 'Monitor search performance and rankings';
-    }
+  const services = [
+  {
+  icon: Monitor,title: 'Analytics Dashboard',description: 'Comprehensive analytics dashboard with real-time data'
+},
+  {
+  icon: Eye2,title: 'User Session Recording',description: 'Record and analyze user sessions for insights'
+},
+  {
+  icon: TrendingUp,title: 'Conversion Tracking',description: 'Track conversions and optimize funnels'
+},
+  {
+  icon: Search,title: 'SEO Analytics',description: 'Monitor search performance and rankings'
+},
   ]
-  const useCases = [;
-    {;
-      industry: 'E-commerce',description: 'Track sales funnels and customer behavior';
-    }
-    {;
-      industry: 'Marketing',description: 'Measure campaign performance and ROI';
-    }
-    {;
-      industry: 'Content',description: 'Analyze content engagement and user preferences';
-    }
-    {;
-      industry: 'SaaS',description: 'Monitor user onboarding and feature usage';
-    }
+  const useCases = [
+  {
+  industry: 'E-commerce',description: 'Track sales funnels and customer behavior'
+},
+  {
+  industry: 'Marketing',description: 'Measure campaign performance and ROI'
+},
+  {
+  industry: 'Content',description: 'Analyze content engagement and user preferences'
+},
+  {
+  industry: 'SaaS',description: 'Monitor user onboarding and feature usage'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
@@ -245,13 +248,17 @@ const WebsiteAnalytics = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -264,12 +271,16 @@ const WebsiteAnalytics = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
@@ -283,13 +294,17 @@ const WebsiteAnalytics = () => {
         </div>
       </section>
 
-      {{/* Services Section */}}
+      {{/* Services Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -302,12 +317,16 @@ const WebsiteAnalytics = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {services.map((service, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -325,13 +344,17 @@ const WebsiteAnalytics = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -344,12 +367,16 @@ const WebsiteAnalytics = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (;
-                <motion.div;
-                  key={{index}}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+              {benefits.slice(0, 3).map((benefit, index) => (
+  <motion.div;
+                  key={{index},
+  }
+                  initial={{ opacity: 0, x: -20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -358,12 +385,16 @@ const WebsiteAnalytics = () => {
               ))}
             </div>
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (;
-                <motion.div;
-                  key={{index + 3}}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+              {benefits.slice(3).map((benefit, index) => (
+  <motion.div;
+                  key={{index + 3},
+  }
+                  initial={{ opacity: 0, x: 20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -375,13 +406,17 @@ const WebsiteAnalytics = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -394,12 +429,16 @@ const WebsiteAnalytics = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/30 transition-all duration-200";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -413,13 +452,17 @@ const WebsiteAnalytics = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Analyzing Your Website Today;

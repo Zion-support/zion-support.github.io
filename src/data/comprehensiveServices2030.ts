@@ -41,7 +41,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     competitors: ["McKinsey", "BCG", "Deloitte"],
     roi: "1000% within 18 months",
     setupTime: "8-12 weeks",
-    integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom Systems"]
+    integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom Systems"],
   },
 
   // Advanced Cybersecurity Solutions
@@ -53,7 +53,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$12,000-30,000",
     competitors: ["NIST", "Cloudflare", "Google"],
-    roi: "800% within 24 months",setupTime: "6-8 weeks",integrations: ["PKI Systems", "SSL/TLS", "VPN Solutions", "Hardware Security Modules", "Cloud Security"]
+    roi: "800% within 24 months",setupTime: "6-8 weeks",integrations: ["PKI Systems", "SSL/TLS", "VPN Solutions", "Hardware Security Modules", "Cloud Security"],
   },
 
   // Space Technology Solutions
@@ -66,7 +66,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$6,000-15,000",
     competitors: ["LeoLabs", "ESA", "NASA"],
-    roi: "600% within 18 months",setupTime: "4-6 weeks",integrations: ["Satellite Control Systems", "Ground Stations", "Space Traffic Management", "AI Prediction Models"]
+    roi: "600% within 18 months",setupTime: "4-6 weeks",integrations: ["Satellite Control Systems", "Ground Stations", "Space Traffic Management", "AI Prediction Models"],
   },
 
   // Metaverse & AR/VR Solutions
@@ -79,7 +79,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$10,000-25,000",
     competitors: ["Meta", "Microsoft", "NVIDIA"],
-    roi: "700% within 20 months",setupTime: "6-8 weeks",integrations: ["Microsoft Teams", "Zoom", "Slack", "Salesforce", "Custom Business Applications"]
+    roi: "700% within 20 months",setupTime: "6-8 weeks",integrations: ["Microsoft Teams", "Zoom", "Slack", "Salesforce", "Custom Business Applications"],
   },
 
   // Advanced AI Development Tools
@@ -92,7 +92,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$4,000-12,000",
     competitors: ["DataRobot", "H2O.ai", "Google AutoML"],
-    roi: "500% within 12 months",setupTime: "2-4 weeks",integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubeflow", "AWS SageMaker"]
+    roi: "500% within 12 months",setupTime: "2-4 weeks",integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubeflow", "AWS SageMaker"],
   },
 
   // Sustainable Technology Solutions
@@ -105,7 +105,7 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$5,000-15,000",
     competitors: ["Schneider Electric", "Siemens", "Honeywell"],
-    roi: "400% within 15 months",setupTime: "3-5 weeks",integrations: ["Building Management Systems", "IoT Sensors", "Smart Meters", "Renewable Energy Systems", "Utility APIs"]
+    roi: "400% within 15 months",setupTime: "3-5 weeks",integrations: ["Building Management Systems", "IoT Sensors", "Smart Meters", "Renewable Energy Systems", "Utility APIs"],
   },
 
   // Entertainment AI Solutions
@@ -118,91 +118,71 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$3,000-8,000",
     competitors: ["Netflix", "Spotify", "YouTube"],
-    roi: "450% within 10 months",setupTime: "2-3 weeks",integrations: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"]
-  }
-];
+    roi: "450% within 10 months",setupTime: "2-3 weeks",integrations: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"],
+  },
+  ];
 
 // Export individual categories for easier access
 export const AI_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category.includes('AI')
 );
-
 export const CYBERSECURITY_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Cybersecurity'
 );
-
 export const CLOUD_DEVOPS_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Cloud & DevOps'
 );
-
 export const BLOCKCHAIN_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Blockchain & Web3'
 );
-
 export const QUANTUM_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Quantum Computing'
 );
-
 export const IOT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'IoT & Edge Computing'
 );
-
 export const HEALTHCARE_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Healthcare'
 );
-
 export const FINTECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'FinTech'
 );
-
 export const LEGAL_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Legal Tech'
 );
-
 export const EDUCATION_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Education'
 );
-
 export const SPACE_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Space Technology'
 );
-
 export const SUSTAINABLE_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Sustainable Technology'
 );
-
 export const ENTERTAINMENT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Entertainment'
 );
-
 export const METAVERSE_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Metaverse'
 );
-
 export const RESEARCH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Research'
 );
-
 export const GREEN_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Green Tech'
 );
-
 export const OPERATIONS_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Operations'
 );
-
 export const DEVELOPMENT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Development'
 );
-
 export const MARKETING_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Marketing'
 );
-
 export const CONTENT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Content'
 );
-
 export const CUSTOMER_SUPPORT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Customer Support'
 );

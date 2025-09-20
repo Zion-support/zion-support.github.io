@@ -14,8 +14,8 @@ const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProp
         className={cn(
           'font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent';
           className
-        )}
-        {...props}
+        )},
+  {...props}
       >
         {children}
       </Component>

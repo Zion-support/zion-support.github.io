@@ -5,49 +5,50 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from "lucide-react";
-export default function AffiliateTracking() {;
-  const features: { title: string, description: string }[] = [;
-    {;
-      title: 'Multi-channel attribution',description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.';
-    }
-    {;
-      title: 'Real-time fraud prevention',description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.';
-    }
-    {;
-      title: 'Payout automation',description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.';
-    }
-    {;
-      title: 'Partner CRM',description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.';
-    }
-    {;
-      title: 'E‑commerce integrations',description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.';
-    }
-    {;
-      title: 'Analytics & BI',description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
-    }
+export default function AffiliateTracking() {
+  const features: { title: string, description: string },
+  [] = [
+  {
+  title: 'Multi-channel attribution',description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
+},
+  {
+  title: 'Real-time fraud prevention',description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
+},
+  {
+  title: 'Payout automation',description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
+},
+  {
+  title: 'Partner CRM',description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
+},
+  {
+  title: 'E‑commerce integrations',description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
+},
+  {
+  title: 'Analytics & BI',description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
+},
   ]
 
-  const plans = [;
-    {;
-      name: 'Starter',price: 49,unit: 'month',bestFor: 'Founders validating their first affiliate program',bullets: [;
-        'Up to 200 partnersBasic tracking links and coupons';
-        'Manual approvals and payoutsEmail support';
-      ]
-    }
-    {;
-      name: 'Growth',price: 199,unit: 'month',bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',bullets: [;
-        'Up to 2,500 partnersAttribution across links, QR and coupons';
+  const plans = [
+  {
+  name: 'Starter',price: 49,unit: 'month',bestFor: 'Founders validating their first affiliate program',bullets: [
+  'Up to 200 partnersBasic tracking links and coupons';
+        'Manual approvals and payoutsEmail support'
+],
+  },
+  {
+  name: 'Growth',price: 199,unit: 'month',bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',bullets: [
+  'Up to 2,500 partnersAttribution across links, QR and coupons';
         'Fraud prevention + sandboxAutomated Stripe/PayPal payouts';
-        'Slack alerts and webhooks';
-      ]
-    }
-    {;
-      name: 'Enterprise',price: 599,unit: 'month',bestFor: 'Global programs, agencies and marketplaces';
-      bullets: [;
-        'Unlimited partners and campaignsSAML SSO and audit trails';
-        'Custom data retention + warehouse syncDedicated CSM and 99.9% SLA';
-      ]
-    }
+        'Slack alerts and webhooks'
+],
+  },
+  {
+  name: 'Enterprise',price: 599,unit: 'month',bestFor: 'Global programs, agencies and marketplaces';
+      bullets: [
+  'Unlimited partners and campaignsSAML SSO and audit trails';
+        'Custom data retention + warehouse syncDedicated CSM and 99.9% SLA'
+],
+  },
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -57,14 +58,18 @@ export default function AffiliateTracking() {;
         keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts";
       />
 
-      {{/* Hero */}}
+      {{/* Hero */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto">
           <motion.h1;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-4xl md:text-6xl font-bold text-white mb-6";"
           >
             Affiliate Tracking Platform;
@@ -89,17 +94,23 @@ export default function AffiliateTracking() {;
         </div>
       </section>
 
-      {{/* Feature grid */}}
+      {{/* Feature grid */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((f) => (;
-              <motion.div;
-                key={{f.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
+            {features.map((f) => (
+  <motion.div;
+                key={{f.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.4 },
+  }
                 className="className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50";"
               >
                 <div className="flex items-start gap-3">
@@ -115,7 +126,8 @@ export default function AffiliateTracking() {;
         </div>
       </section>
 
-      {{/* Market context */}}
+      {{/* Market context */},
+  }
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -130,29 +142,38 @@ export default function AffiliateTracking() {;
             </div>
           </div>
           <p className="text-zion-slate-light mt-3 text-sm">
-            Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{{' '}}
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{{' '}}
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{{' '}}
+            Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{{' '},
+  }
+            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{{' '},
+  }
+            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{{' '},
+  }
             <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">Post Affiliate Pro</a>.;
           </p>
         </div>
       </section>
 
-      {{/* Plans */}}
+      {{/* Plans */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, i) => (;
-              <motion.div;
-                key={{plan.name}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
+            {plans.map((plan, i) => (
+  <motion.div;
+                key={{plan.name},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.5, delay: i * 0.05 },
+  }
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
               >
-                {i === 1 && (;
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                {i === 1 && (
+  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
                   </div>
                 )}
@@ -164,8 +185,8 @@ export default function AffiliateTracking() {;
                   <span className="text-zion-slate-light">/{plan.unit}</span>
                 </div>
                 <div className="space-y-2 mb-6">
-                  {plan.bullets.map((b) => (;
-                    <div key={b} className="flex items-start gap-2">
+                  {plan.bullets.map((b) => (
+  <div key={b} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5" />
                       <span className="text-zion-slate-light text-sm">{b}</span>
                     </div>
@@ -183,7 +204,8 @@ export default function AffiliateTracking() {;
         </div>
       </section>
 
-      {{/* CTA */}}
+      {{/* CTA */},
+  }
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
@@ -201,7 +223,8 @@ export default function AffiliateTracking() {;
         </div>
       </section>
 
-      {{/* References */}}
+      {{/* References */},
+  }
       <section className="py-8 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>

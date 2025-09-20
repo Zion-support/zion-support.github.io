@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SEO } from "../components/SEO";
-import { ;
+import {
   Calculator;
-  FileText, ;
-  Clock, ;
-  CheckCircle, ;
+  FileText,
+  Clock,
+  CheckCircle,
   AlertCircle;
   Building2;
   Users;
@@ -36,188 +36,198 @@ import { ;
   DollarSign;
   Package;
   Truck;
-  Headphones;
+  Headphones
 } from "lucide-react";
-export default function RequestQuote() {;
-  const [formData, setFormData] = useState({;
-    companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [] as string[],urgency: 'medium',preferredContact: 'email';
-  })
+export default function RequestQuote() {
+  const [formData, setFormData] = useState({
+  companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [] as string[],urgency: 'medium',preferredContact: 'email'
+})
   const [formStep, setFormStep] = useState(1)
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [isSubmitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const companySizes = [;
-    '1-10 employees11-50 employees';
+  const companySizes = [
+  '1-10 employees11-50 employees';
     '51-200 employees201-500 employees';
-    '500+ employees';
-  ]
+    '500+ employees'
+]
 
-  const industries = [;
-    'TechnologyHealthcare';
+  const industries = [
+  'TechnologyHealthcare';
     'FinanceManufacturing';
     'RetailEducation';
     'Real EstateConsulting';
-    'Non-profitOther';
-  ]
+    'Non-profitOther'
+]
 
-  const projectTypes = [;
-    'New DevelopmentSystem Upgrade';
+  const projectTypes = [
+  'New DevelopmentSystem Upgrade';
     'IntegrationConsulting';
     'Support & MaintenanceTraining';
-    'Other';
-  ]
+    'Other'
+]
 
-  const budgets = [;
-    'Under $10,000$10,000 - $25,000';
+  const budgets = [
+  'Under $10,000$10,000 - $25,000';
     '$25,000 - $50,000$50,000 - $100,000';
-    '$100,000 - $250,000$250,000+';
-  ]
+    '$100,000 - $250,000$250,000+'
+]
 
-  const timelines = [;
-    'ASAP1-2 weeks';
+  const timelines = [
+  'ASAP1-2 weeks';
     '1-2 months3-6 months';
-    '6+ monthsFlexible';
-  ]
+    '6+ monthsFlexible'
+]
 
-  const urgencyLevels = [;
-    {{ value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' }}
-    {{ value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' }}
-    {{ value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' }}
-    {{ value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }}
+  const urgencyLevels = [
+  {{ value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
+  },
+  {{ value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text-yellow-400' },
+  },
+  {{ value: 'high', label: 'High', description: 'Urgent deadline', color: 'text-orange-400' },
+  },
+  {{ value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' },
+  },
   ]
-  const contactMethods = [;
-    {{ value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' }}
-    {{ value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' }}
-    {{ value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }}
+  const contactMethods = [
+  {{ value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },
+  },
+  {{ value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
+  },
+  {{ value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' },
+  },
   ]
-  const services = [;
-    {;
-      id: 'ai-ml',name: 'AI & Machine Learning',icon: Bot,description: 'Custom AI solutions, ML models, and intelligent automation';
-      features: [;
-        'Custom AI model developmentMachine learning pipelines';
+  const services = [
+  {
+  id: 'ai-ml',name: 'AI & Machine Learning',icon: Bot,description: 'Custom AI solutions, ML models, and intelligent automation';
+      features: [
+  'Custom AI model developmentMachine learning pipelines';
         'Natural language processingComputer vision solutions';
-        'Predictive analyticsAI-powered automation';
-      ]
+        'Predictive analyticsAI-powered automation'
+]
       pricing: 'Starting from $25,000';
-      timeline: '4-12 weeks',category: 'AI Services';
-    }
-    {;
-      id: 'cloud-devops',name: 'Cloud & DevOps',icon: Cloud,description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation';
-      features: [;
-        'AWS/Azure/GCP setupKubernetes orchestration';
+      timeline: '4-12 weeks',category: 'AI Services'
+},
+  {
+  id: 'cloud-devops',name: 'Cloud & DevOps',icon: Cloud,description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation';
+      features: [
+  'AWS/Azure/GCP setupKubernetes orchestration';
         'CI/CD pipeline developmentInfrastructure as Code';
-        'Monitoring & loggingSecurity & compliance';
-      ]
+        'Monitoring & loggingSecurity & compliance'
+]
       pricing: 'Starting from $15,000';
-      timeline: '2-8 weeks',category: 'IT Services';
-    }
-    {;
-      id: 'web-development',name: 'Web Development',icon: Monitor,description: 'Modern web applications, e-commerce, and custom web solutions';
-      features: [;
-        'React/Next.js applicationsE-commerce platforms';
+      timeline: '2-8 weeks',category: 'IT Services'
+},
+  {
+  id: 'web-development',name: 'Web Development',icon: Monitor,description: 'Modern web applications, e-commerce, and custom web solutions';
+      features: [
+  'React/Next.js applicationsE-commerce platforms';
         'Custom web portalsAPI development';
-        'Performance optimizationSEO & accessibility';
-      ]
+        'Performance optimizationSEO & accessibility'
+]
       pricing: 'Starting from $10,000';
-      timeline: '3-10 weeks',category: 'IT Services';
-    }
-    {;
-      id: 'mobile-apps',name: 'Mobile Applications',icon: Smartphone,description: 'iOS and Android apps with cross-platform solutions',features: [;
-        'Native iOS developmentNative Android development';
+      timeline: '3-10 weeks',category: 'IT Services'
+},
+  {
+  id: 'mobile-apps',name: 'Mobile Applications',icon: Smartphone,description: 'iOS and Android apps with cross-platform solutions',features: [
+  'Native iOS developmentNative Android development';
         'React Native appsFlutter applications';
-        'App store optimizationPush notifications';
-      ]
+        'App store optimizationPush notifications'
+]
       pricing: 'Starting from $20,000';
-      timeline: '6-16 weeks',category: 'IT Services';
-    }
-    {;
-      id: 'data-analytics',name: 'Data & Analytics',icon: BarChart3,description: 'Data warehousing, business intelligence, and advanced analytics';
-      features: [;
-        'Data warehouse designETL pipeline development';
+      timeline: '6-16 weeks',category: 'IT Services'
+},
+  {
+  id: 'data-analytics',name: 'Data & Analytics',icon: BarChart3,description: 'Data warehousing, business intelligence, and advanced analytics';
+      features: [
+  'Data warehouse designETL pipeline development';
         'Business intelligence dashboardsAdvanced analytics';
-        'Data visualizationPredictive modeling';
-      ]
+        'Data visualizationPredictive modeling'
+]
       pricing: 'Starting from $18,000';
-      timeline: '4-12 weeks',category: 'AI Services';
-    }
-    {;
-      id: 'cybersecurity',name: 'Cybersecurity',icon: Shield,description: 'Security audits, compliance, and threat protection';
-      features: [;
-        'Security assessmentsPenetration testing';
+      timeline: '4-12 weeks',category: 'AI Services'
+},
+  {
+  id: 'cybersecurity',name: 'Cybersecurity',icon: Shield,description: 'Security audits, compliance, and threat protection';
+      features: [
+  'Security assessmentsPenetration testing';
         'Compliance frameworksThreat detection';
-        'Incident responseSecurity training';
-      ]
+        'Incident responseSecurity training'
+]
       pricing: 'Starting from $12,000';
-      timeline: '2-6 weeks',category: 'Security';
-    }
-    {;
-      id: 'micro-saas',name: 'Micro SaaS Solutions',icon: Package,description: 'Custom SaaS applications and business automation tools',features: [;
-        'Custom SaaS platformsBusiness process automation';
+      timeline: '2-6 weeks',category: 'Security'
+},
+  {
+  id: 'micro-saas',name: 'Micro SaaS Solutions',icon: Package,description: 'Custom SaaS applications and business automation tools',features: [
+  'Custom SaaS platformsBusiness process automation';
         'Workflow managementUser management systems';
-        'Subscription billingAnalytics & reporting';
-      ]
+        'Subscription billingAnalytics & reporting'
+]
       pricing: 'Starting from $30,000';
-      timeline: '8-20 weeks',category: 'Micro SaaS';
-    }
-    {;
-      id: 'integration',name: 'System Integration',icon: Settings,description: 'API development, third-party integrations, and data synchronization';
-      features: [;
-        'API developmentThird-party integrations';
+      timeline: '8-20 weeks',category: 'Micro SaaS'
+},
+  {
+  id: 'integration',name: 'System Integration',icon: Settings,description: 'API development, third-party integrations, and data synchronization';
+      features: [
+  'API developmentThird-party integrations';
         'Data synchronizationWebhook implementation';
-        'Custom connectorsIntegration testing';
-      ]
+        'Custom connectorsIntegration testing'
+]
       pricing: 'Starting from $15,000';
-      timeline: '3-8 weeks',category: 'IT Services';
-    }
+      timeline: '3-8 weeks',category: 'IT Services'
+},
   ]
-  const benefits = [;
-    {;
-      icon: Calculator,title: 'Transparent Pricing',description: 'Clear, upfront pricing with no hidden fees';
-    }
-    {;
-      icon: Clock,title: 'Fast Response',description: 'Get a detailed quote within 24-48 hours';
-    }
-    {;
-      icon: FileText,title: 'Detailed Proposals',description: 'Comprehensive project breakdowns and timelines';
-    }
-    {;
-      icon: CheckCircle,title: 'Quality Guarantee',description: 'We stand behind our work with satisfaction guarantees';
-    }
+  const benefits = [
+  {
+  icon: Calculator,title: 'Transparent Pricing',description: 'Clear, upfront pricing with no hidden fees'
+},
+  {
+  icon: Clock,title: 'Fast Response',description: 'Get a detailed quote within 24-48 hours'
+},
+  {
+  icon: FileText,title: 'Detailed Proposals',description: 'Comprehensive project breakdowns and timelines'
+},
+  {
+  icon: CheckCircle,title: 'Quality Guarantee',description: 'We stand behind our work with satisfaction guarantees'
+},
   ]
-  const handleInputChange = (field: string, value: string | string[]) => {;
-    setFormData(prev => ({;
-      ...prev;
-      [field]: value;
-    }))
+  const handleInputChange = (field: string, value: string | string[]) => {
+  setFormData(prev => ({
+  ...prev;
+      [field]: value
+}))
   }
 
-  const toggleService = (serviceId: string) => {;
-    setFormData(prev => ({;
-      ...prev;
+  const toggleService = (serviceId: string) => {
+  setFormData(prev => ({
+  ...prev;
       services: prev.services.includes(serviceId)
         ? prev.services.filter(id => id !== serviceId)
-        : [[...prev.services, serviceId];]
-    }))
+        : [[...prev.services, serviceId],
+  ],
+  }))
   }
 
-  const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId)
+  const toggleServiceExpansion = (serviceId: string) => {
+  setExpandedService(expandedService === serviceId ? null : serviceId)
   }
   const nextStep = () => {
-    if (if (formStep < 3) {;) {
+    if (if (formStep < 3) {
+  ) {
       setFormStep(formStep + 1)
-    }
+    },
   }
 
   const prevStep = () => {
-    if (if (formStep > 1) {;) {
+    if (if (formStep > 1) {
+  ) {
       setFormStep(formStep - 1)
-    }
+    },
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
     setSubmitting(true)
     ;
     // Simulate API call;
@@ -228,14 +238,15 @@ export default function RequestQuote() {;
   }
 
   const resetForm = () => {
-    setFormData({;
-      companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [],urgency: 'medium',preferredContact: 'email';
-    })
+    setFormData({
+  companyName: '',contactName: '',email: '',phone: '',companySize: '',industry: '',projectType: '',budget: '',timeline: '',description: '',services: [],urgency: 'medium',preferredContact: 'email'
+})
     setFormStep(1)
     setSubmitted(false)
   }
 
-  if (if (submitted) {;) {
+  if (if (submitted) {
+  ) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
         <SEO ;
@@ -244,9 +255,12 @@ export default function RequestQuote() {;
         />
         ;
         <motion.div;
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, scale: 0.9 },
+  }
+          animate={{ opacity: 1, scale: 1 },
+  }
+          transition={{ duration: 0.5 },
+  }
           className="className="text-center max-w-2xl mx-auto px-6";"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full mb-8">
@@ -292,7 +306,9 @@ export default function RequestQuote() {;
           ;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button;
-              onClick={{onClick={resetForm}}}
+              onClick={{onClick={resetForm},
+  },
+  }
               className="className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
             >
               Request Another Quote;
@@ -316,14 +332,18 @@ export default function RequestQuote() {;
         description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -340,16 +360,21 @@ export default function RequestQuote() {;
         </div>
       </section>
 
-      {{/* Benefits */}}
+      {{/* Benefits */},
+  }
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{benefit.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{benefit.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: index * 0.1 },
+  }
                 className="className="text-center";"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">
@@ -363,46 +388,57 @@ export default function RequestQuote() {;
         </div>
       </section>
 
-      {{/* Main Form Section */}}
+      {{/* Main Form Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {{/* Form */}}
+              {{/* Form */},
+  }
               <div className="lg:col-span-2">
                 <motion.div;
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
+                  initial={{ opacity: 0, x: -20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.8 },
+  }
                   className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-8";"
                 >
-                  {{/* Progress Steps */}}
+                  {{/* Progress Steps */},
+  }
                   <div className="flex items-center justify-between mb-8">
-                    {[1, 2, 3].map((step) => (;
-                      <div key={step} className="flex items-center">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${;
-                          formStep >= step ;
+                    {[1, 2, 3].map((step) => (
+  <div key={step} className="flex items-center">
+                        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
+  formStep >= step ;
                             ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white' ;
-                            : 'bg-slate-700 text-gray-400';
-                        }`}>
-                          {{step}}
+                            : 'bg-slate-700 text-gray-400'
+}`}>
+                          {{step},
+  }
                         </div>
-                        {step < 3 && (;
-                          <div className={`w-16 h-1 mx-2 ${;
-                            formStep > step ? 'bg-gradient-to-r from-green-400 to-blue-500' : 'bg-slate-700';
-                          }`}></div>
+                        {step < 3 && (
+  <div className={`w-16 h-1 mx-2 ${
+  formStep > step ? 'bg-gradient-to-r from-green-400 to-blue-500' : 'bg-slate-700'
+}`}></div>
                         )}
                       </div>
                     ))}
                   </div>
 
                   <form onSubmit={handleSubmit}>
-                    {{/* Step 1: Basic Information */}}
-                    {formStep === 1 && (;
-                      <motion.div;
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                    {{/* Step 1: Basic Information */},
+  },
+  {formStep === 1 && (
+  <motion.div;
+                        initial={{ opacity: 0, y: 20 },
+  }
+                        animate={{ opacity: 1, y: 0 },
+  }
+                        transition={{ duration: 0.5 },
+  }
                         className="className="space-y-6";"
                       >
                         <h3 className="text-2xl font-bold text-white mb-6">Basic Information</h3>
@@ -413,8 +449,10 @@ export default function RequestQuote() {;
                             <input;
                               type="text";
                               required;
-                              value={{formData.companyName}}
-                              onChange={{(e) => handleInputChange('companyName', e.target.value)}}
+                              value={{formData.companyName},
+  }
+                              onChange={{(e) => handleInputChange('companyName', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="Your company name";
                             />
@@ -425,8 +463,10 @@ export default function RequestQuote() {;
                             <input;
                               type="text";
                               required;
-                              value={{formData.contactName}}
-                              onChange={{(e) => handleInputChange('contactName', e.target.value)}}
+                              value={{formData.contactName},
+  }
+                              onChange={{(e) => handleInputChange('contactName', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="Your full name";
                             />
@@ -439,8 +479,10 @@ export default function RequestQuote() {;
                             <input;
                               type="email";
                               required;
-                              value={{formData.email}}
-                              onChange={{(e) => handleInputChange('email', e.target.value)}}
+                              value={{formData.email},
+  }
+                              onChange={{(e) => handleInputChange('email', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="your.email@company.com";
                             />
@@ -450,8 +492,10 @@ export default function RequestQuote() {;
                             <label className="block text-white font-medium mb-2">Phone</label>
                             <input;
                               type="tel";
-                              value={{formData.phone}}
-                              onChange={{(e) => handleInputChange('phone', e.target.value)}}
+                              value={{formData.phone},
+  }
+                              onChange={{(e) => handleInputChange('phone', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="+1 (555) 123-4567";
                             />
@@ -462,13 +506,15 @@ export default function RequestQuote() {;
                           <div>
                             <label className="block text-white font-medium mb-2">Company Size</label>
                             <select;
-                              value={{formData.companySize}}
-                              onChange={{(e) => handleInputChange('companySize', e.target.value)}}
+                              value={{formData.companySize},
+  }
+                              onChange={{(e) => handleInputChange('companySize', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select company size</option>
-                              {companySizes.map((size) => (;
-                                <option key={size} value={size}>{size}</option>
+                              {companySizes.map((size) => (
+  <option key={size} value={size}>{size}</option>
                               ))}
                             </select>
                           </div>
@@ -476,26 +522,31 @@ export default function RequestQuote() {;
                           <div>
                             <label className="block text-white font-medium mb-2">Industry</label>
                             <select;
-                              value={{formData.industry}}
-                              onChange={{(e) => handleInputChange('industry', e.target.value)}}
+                              value={{formData.industry},
+  }
+                              onChange={{(e) => handleInputChange('industry', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select industry</option>
-                              {industries.map((industry) => (;
-                                <option key={industry} value={industry}>{industry}</option>
+                              {industries.map((industry) => (
+  <option key={industry} value={industry}>{industry}</option>
                               ))}
                             </select>
                           </div>
                         </div>
                       </motion.div>
-                    )}
-
-                    {{/* Step 2: Project Details */}}
-                    {formStep === 2 && (;
-                      <motion.div;
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                    )},
+  {{/* Step 2: Project Details */},
+  },
+  {formStep === 2 && (
+  <motion.div;
+                        initial={{ opacity: 0, y: 20 },
+  }
+                        animate={{ opacity: 1, y: 0 },
+  }
+                        transition={{ duration: 0.5 },
+  }
                         className="className="space-y-6";"
                       >
                         <h3 className="text-2xl font-bold text-white mb-6">Project Details</h3>
@@ -504,13 +555,15 @@ export default function RequestQuote() {;
                           <div>
                             <label className="block text-white font-medium mb-2">Project Type</label>
                             <select;
-                              value={{formData.projectType}}
-                              onChange={{(e) => handleInputChange('projectType', e.target.value)}}
+                              value={{formData.projectType},
+  }
+                              onChange={{(e) => handleInputChange('projectType', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select project type</option>
-                              {projectTypes.map((type) => (;
-                                <option key={type} value={type}>{type}</option>
+                              {projectTypes.map((type) => (
+  <option key={type} value={type}>{type}</option>
                               ))}
                             </select>
                           </div>
@@ -518,13 +571,15 @@ export default function RequestQuote() {;
                           <div>
                             <label className="block text-white font-medium mb-2">Budget Range</label>
                             <select;
-                              value={{formData.budget}}
-                              onChange={{(e) => handleInputChange('budget', e.target.value)}}
+                              value={{formData.budget},
+  }
+                              onChange={{(e) => handleInputChange('budget', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select budget range</option>
-                              {budgets.map((budget) => (;
-                                <option key={budget} value={budget}>{budget}</option>
+                              {budgets.map((budget) => (
+  <option key={budget} value={budget}>{budget}</option>
                               ))}
                             </select>
                           </div>
@@ -534,13 +589,15 @@ export default function RequestQuote() {;
                           <div>
                             <label className="block text-white font-medium mb-2">Timeline</label>
                             <select;
-                              value={{formData.timeline}}
-                              onChange={{(e) => handleInputChange('timeline', e.target.value)}}
+                              value={{formData.timeline},
+  }
+                              onChange={{(e) => handleInputChange('timeline', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select timeline</option>
-                              {timelines.map((timeline) => (;
-                                <option key={timeline} value={timeline}>{timeline}</option>
+                              {timelines.map((timeline) => (
+  <option key={timeline} value={timeline}>{timeline}</option>
                               ))}
                             </select>
                           </div>
@@ -548,13 +605,16 @@ export default function RequestQuote() {;
                           <div>
                             <label className="block text-white font-medium mb-2">Urgency Level</label>
                             <select;
-                              value={{formData.urgency}}
-                              onChange={{(e) => handleInputChange('urgency', e.target.value)}}
+                              value={{formData.urgency},
+  }
+                              onChange={{(e) => handleInputChange('urgency', e.target.value)},
+  }
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
-                              {urgencyLevels.map((level) => (;
-                                <option key={level.value} value={level.value}>
-                                  {level.label} - {{level.description}}
+                              {urgencyLevels.map((level) => (
+  <option key={level.value} value={level.value}>
+                                  {level.label} - {{level.description},
+  }
                                 </option>
                               ))}
                             </select>
@@ -565,22 +625,28 @@ export default function RequestQuote() {;
                           <label className="block text-white font-medium mb-2">Project Description *</label>
                           <textarea;
                             required;
-                            rows={{4}}
-                            value={{formData.description}}
-                            onChange={{(e) => handleInputChange('description', e.target.value)}}
+                            rows={{4},
+  }
+                            value={{formData.description},
+  }
+                            onChange={{(e) => handleInputChange('description', e.target.value)},
+  }
                             className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             placeholder="Describe your project requirements, goals, and any specific features you need...";
                           />
                         </div>
                       </motion.div>
-                    )}
-
-                    {{/* Step 3: Services & Preferences */}}
-                    {formStep === 3 && (;
-                      <motion.div;
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                    )},
+  {{/* Step 3: Services & Preferences */},
+  },
+  {formStep === 3 && (
+  <motion.div;
+                        initial={{ opacity: 0, y: 20 },
+  }
+                        animate={{ opacity: 1, y: 0 },
+  }
+                        transition={{ duration: 0.5 },
+  }
                         className="className="space-y-6";"
                       >
                         <h3 className="text-2xl font-bold text-white mb-6">Services & Preferences</h3>
@@ -588,22 +654,26 @@ export default function RequestQuote() {;
                         <div>
                           <label className="block text-white font-medium mb-4">Select Services (Optional)</label>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {services.map((service) => (;
-                              <div key={service.id} className="relative">
+                            {services.map((service) => (
+  <div key={service.id} className="relative">
                                 <input;
                                   type="checkbox";
-                                  id={{service.id}}
-                                  checked={{formData.services.includes(service.id)}}
-                                  onChange={{() => toggleService(service.id)}}
+                                  id={{service.id},
+  }
+                                  checked={{formData.services.includes(service.id)},
+  }
+                                  onChange={{() => toggleService(service.id)},
+  }
                                   className="className="sr-only";"
                                 />
                                 <label;
-                                  htmlFor={{service.id}}
-                                  className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${;
-                                    formData.services.includes(service.id)
+                                  htmlFor={{service.id},
+  }
+                                  className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
+  formData.services.includes(service.id)
                                       ? 'border-green-400 bg-green-400/10';
-                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30';
-                                  }`}
+                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30'
+}`}
                                 >
                                   <div className="flex items-start">
                                     <div className="flex-shrink-0">
@@ -624,24 +694,29 @@ export default function RequestQuote() {;
                         <div>
                           <label className="block text-white font-medium mb-4">Preferred Contact Method</label>
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {contactMethods.map((method) => (;
-                              <div key={method.value} className="relative">
+                            {contactMethods.map((method) => (
+  <div key={method.value} className="relative">
                                 <input;
                                   type="radio";
-                                  id={{method.value}}
+                                  id={{method.value},
+  }
                                   name="preferredContact";
-                                  value={{method.value}}
-                                  checked={{formData.preferredContact === method.value}}
-                                  onChange={{(e) => handleInputChange('preferredContact', e.target.value)}}
+                                  value={{method.value},
+  }
+                                  checked={{formData.preferredContact === method.value},
+  }
+                                  onChange={{(e) => handleInputChange('preferredContact', e.target.value)},
+  }
                                   className="className="sr-only";"
                                 />
                                 <label;
-                                  htmlFor={{method.value}}
-                                  className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${;
-                                    formData.preferredContact === method.value;
+                                  htmlFor={{method.value},
+  }
+                                  className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
+  formData.preferredContact === method.value;
                                       ? 'border-green-400 bg-green-400/10';
-                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30';
-                                  }`}
+                                      : 'border-slate-600 hover:border-slate-500 bg-slate-800/30'
+}`}
                                 >
                                   <div className="text-center">
                                     <method.icon className="w-8 h-8 text-blue-400 mx-auto mb-2" />
@@ -654,14 +729,16 @@ export default function RequestQuote() {;
                           </div>
                         </div>
                       </motion.div>
-                    )}
-
-                    {{/* Navigation Buttons */}}
+                    )},
+  {{/* Navigation Buttons */},
+  }
                     <div className="flex justify-between mt-8">
-                      {formStep > 1 && (;
-                        <button;
+                      {formStep > 1 && (
+  <button;
                           type="button";
-                          onClick={{onClick={prevStep}}}
+                          onClick={{onClick={prevStep},
+  },
+  }
                           className="className="px-6 py-3 border border-slate-600 text-gray-300 font-semibold rounded-lg hover:border-slate-500 hover:text-white transition-all duration-200";"
                         >
                           Previous;
@@ -669,21 +746,25 @@ export default function RequestQuote() {;
                       )}
                       ;
                       <div className="ml-auto">
-                        {formStep < 3 ? (;
-                          <button;
+                        {formStep < 3 ? (
+  <button;
                             type="button";
-                            onClick={{onClick={nextStep}}}
+                            onClick={{onClick={nextStep},
+  },
+  }
                             className="className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                           >
                             Next Step;
                           </button>
-                        ) : (;
-                          <button;
+                        ) : (
+  <button;
                             type="submit";
-                            disabled={{isSubmitting}}
+                            disabled={{isSubmitting},
+  }
                             className="className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed";"
                           >
-                            {{isSubmitting ? 'Submitting...' : 'Submit Quote Request'}}
+                            {{isSubmitting ? 'Submitting...' : 'Submit Quote Request'},
+  }
                           </button>
                         )}
                       </div>
@@ -692,12 +773,16 @@ export default function RequestQuote() {;
                 </motion.div>
               </div>
 
-              {{/* Services Sidebar */}}
+              {{/* Services Sidebar */},
+  }
               <div className="lg:col-span-1">
                 <motion.div;
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
+                  initial={{ opacity: 0, x: 20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.8 },
+  }
                   className="className="space-y-6";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-6">
@@ -707,10 +792,12 @@ export default function RequestQuote() {;
                     </p>
                     ;
                     <div className="space-y-3">
-                      {services.map((service) => (;
-                        <div key={service.id} className="border border-slate-600/50 rounded-lg overflow-hidden">
+                      {services.map((service) => (
+  <div key={service.id} className="border border-slate-600/50 rounded-lg overflow-hidden">
                           <button;
-                            onClick={{onClick={() => toggleServiceExpansion(service.id)}}}
+                            onClick={{onClick={() => toggleServiceExpansion(service.id)},
+  },
+  }
                             className="className="w-full p-3 text-left hover:bg-slate-700/50 transition-colors duration-200";"
                           >
                             <div className="flex items-center justify-between">
@@ -718,28 +805,33 @@ export default function RequestQuote() {;
                                 <service.icon className="w-5 h-5 text-blue-400 mr-3" />
                                 <span className="text-white font-medium text-sm">{service.name}</span>
                               </div>
-                              {expandedService === service.id ? (;
-                                <ChevronUp className="w-4 h-4 text-gray-400" />
-                              ) : (;
-                                <ChevronDown className="w-4 h-4 text-gray-400" />
+                              {expandedService === service.id ? (
+  <ChevronUp className="w-4 h-4 text-gray-400" />
+                              ) : (
+  <ChevronDown className="w-4 h-4 text-gray-400" />
                               )}
                             </div>
                           </button>
                           ;
-                          {expandedService === service.id && (;
-                            <motion.div;
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
+                          {expandedService === service.id && (
+  <motion.div;
+                              initial={{ opacity: 0, height: 0 },
+  }
+                              animate={{ opacity: 1, height: 'auto' },
+  }
+                              exit={{ opacity: 0, height: 0 },
+  }
+                              transition={{ duration: 0.3 },
+  }
                               className="className="px-3 pb-3 border-t border-slate-600/50";"
                             >
                               <p className="text-gray-300 text-sm mt-3 mb-3">{service.description}</p>
                               <div className="space-y-2">
-                                {service.features.map((feature, index) => (;
-                                  <div key={index} className="flex items-center text-gray-300 text-sm">
+                                {service.features.map((feature, index) => (
+  <div key={index} className="flex items-center text-gray-300 text-sm">
                                     <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                                    {{feature}}
+                                    {{feature},
+  }
                                   </div>
                                 ))}
                               </div>
@@ -793,13 +885,17 @@ export default function RequestQuote() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Need Immediate Assistance?;

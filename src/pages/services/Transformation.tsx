@@ -1,47 +1,51 @@
 import React from "react";
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight } from "lucide-react";
 const DigitalTransformation = () => {
-  const transformationServices = [;
-    {;
-      title: "Process Automation",description: "Streamline workflows with intelligent automation and AI-powered solutions.",price: "From $15,000/project";
+  const transformationServices = [
+  {
+  title: "Process Automation",description: "Streamline workflows with intelligent automation and AI-powered solutions.",price: "From $15,000/project";
       features: ["Workflow automation", "AI-powered decision making", "Process optimization", "Performance monitoring"]
-      icon: Zap;
-    }
-    {;
-      title: "Legacy Modernization",description: "Update and integrate legacy systems with modern technologies.",price: "From $25,000/project";
+      icon: Zap
+},
+  {
+  title: "Legacy Modernization",description: "Update and integrate legacy systems with modern technologies.",price: "From $25,000/project";
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"]
-      icon: RefreshCw;
-    }
-    {;
-      title: "Change Management",description: "Guide your team through digital adoption and transformation.",price: "From $8,000/month";
+      icon: RefreshCw
+},
+  {
+  title: "Change Management",description: "Guide your team through digital adoption and transformation.",price: "From $8,000/month";
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"]
-      icon: Users;
-    }
+      icon: Users
+},
   ]
-  const transformationAreas = [;
-    {;
-      name: "Customer Experience",description: "Enhance customer interactions and satisfaction",icon: Target,features: [["Digital touchpoints", "Personalization", "Omnichannel strategy", "Customer analytics"];]
-    }
-    {;
-      name: "Operations",description: "Optimize internal processes and efficiency",icon: TrendingUp,features: [["Process redesign", "Automation", "Performance metrics", "Continuous improvement"];]
-    }
-    {;
-      name: "Technology",description: "Modernize your technology stack and infrastructure",icon: BarChart3,features: [["Cloud migration", "API integration", "Data modernization", "Security enhancement"];]
-    }
+  const transformationAreas = [
+  {
+  name: "Customer Experience",description: "Enhance customer interactions and satisfaction",icon: Target,features: [["Digital touchpoints", "Personalization", "Omnichannel strategy", "Customer analytics"],
+  ],
+  },
+  {
+  name: "Operations",description: "Optimize internal processes and efficiency",icon: TrendingUp,features: [["Process redesign", "Automation", "Performance metrics", "Continuous improvement"],
+  ],
+  },
+  {
+  name: "Technology",description: "Modernize your technology stack and infrastructure",icon: BarChart3,features: [["Cloud migration", "API integration", "Data modernization", "Security enhancement"],
+  ],
+  },
   ]
 
-  const benefits = [;
-    "Increased operational efficiency and productivity";
+  const benefits = [
+  "Increased operational efficiency and productivity";
     "Enhanced customer experience and satisfaction";
     "Improved data insights and decision making";
     "Reduced operational costs and manual work";
     "Faster time to market for new products";
-    "Better competitive positioning in the market";
-  ]
+    "Better competitive positioning in the market"
+]
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -69,7 +73,8 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
-      {{/* Transformation Services */}}
+      {{/* Transformation Services */},
+  }
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -83,8 +88,8 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
+            {transformationServices.map((service, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -92,10 +97,11 @@ const DigitalTransformation = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-indigo-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
+                  {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -105,7 +111,8 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
-      {{/* Transformation Areas */}}
+      {{/* Transformation Areas */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -119,17 +126,18 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {transformationAreas.map((area, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {transformationAreas.map((area, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <area.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{area.name}</h3>
                 <p className="text-gray-300 mb-4">{area.description}</p>
                 <ul className="space-y-2">
-                  {area.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400">
-                      {{feature}}
+                  {area.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400">
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -139,7 +147,8 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -152,10 +161,11 @@ const DigitalTransformation = () => {
                 competitive and meet evolving customer expectations.;
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (;
-                  <li key={index} className="flex items-center text-gray-300">
+                {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
-                    {{benefit}}
+                    {{benefit},
+  }
                   </li>
                 ))}
               </ul>
@@ -179,7 +189,8 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

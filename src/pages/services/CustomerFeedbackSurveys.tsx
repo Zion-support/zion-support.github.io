@@ -1,6 +1,6 @@
 import React from "react";
 import SEO from "@/components/SEO";
-export default function CustomerFeedbackSurveys() {;
+export default function CustomerFeedbackSurveys() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO;

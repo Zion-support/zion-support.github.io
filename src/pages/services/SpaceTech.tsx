@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Rocket;
-  Satellite, ;
-  CheckCircle, ;
-  Users, ;
-  Clock, ;
+  Satellite,
+  CheckCircle,
+  Users,
+  Clock,
   ArrowRight;
   Play;
   Settings;
@@ -73,73 +73,77 @@ import { ;
   Navigation;
   Earth;
   Moon;
-  Sun;
+  Sun
 } from "lucide-react";
 const SpaceTech = () => {
-  const features = [;
-    {;
-      icon: Satellite,title: 'Satellite Technology',description: 'Advanced satellite design, deployment, and management solutions';
-    }
-    {;
-      icon: Orbit,title: 'Orbital Mechanics',description: 'Precise orbital calculations and trajectory optimization';
-    }
-    {;
-      icon: Antenna,title: 'Ground Station Systems',description: 'Earth-based communication and control infrastructure';
-    }
-    {;
-      icon: Signal,title: 'Space Communications',description: 'Reliable data transmission between space and ground';
-    }
-    {;
-      icon: Navigation,title: 'Space Navigation',description: 'Advanced positioning and navigation systems for space missions';
-    }
-    {;
-      icon: Telescope,title: 'Space Observation',description: 'Earth observation and space monitoring capabilities';
-    }
+  const features = [
+  {
+  icon: Satellite,title: 'Satellite Technology',description: 'Advanced satellite design, deployment, and management solutions'
+},
+  {
+  icon: Orbit,title: 'Orbital Mechanics',description: 'Precise orbital calculations and trajectory optimization'
+},
+  {
+  icon: Antenna,title: 'Ground Station Systems',description: 'Earth-based communication and control infrastructure'
+},
+  {
+  icon: Signal,title: 'Space Communications',description: 'Reliable data transmission between space and ground'
+},
+  {
+  icon: Navigation,title: 'Space Navigation',description: 'Advanced positioning and navigation systems for space missions'
+},
+  {
+  icon: Telescope,title: 'Space Observation',description: 'Earth observation and space monitoring capabilities'
+},
   ]
-  const benefits = [;
-    'Enable global connectivity and coverageProvide critical Earth observation data';
+  const benefits = [
+  'Enable global connectivity and coverageProvide critical Earth observation data';
     'Support space exploration missionsEnable advanced navigation systems';
-    'Support disaster response and monitoringDrive innovation in space technology';
-  ]
+    'Support disaster response and monitoringDrive innovation in space technology'
+]
 
-  const services = [;
-    {;
-      icon: Rocket,title: 'Launch Services',description: 'Satellite launch coordination and mission planning';
-    }
-    {;
-      icon: Planet,title: 'Earth Observation',description: 'Satellite imagery and environmental monitoring';
-    }
-    {;
-      icon: Star,title: 'Space Research',description: 'Scientific research and space exploration support';
-    }
-    {;
-      icon: Globe2,title: 'Global Communications',description: 'Satellite communications and internet services';
-    }
+  const services = [
+  {
+  icon: Rocket,title: 'Launch Services',description: 'Satellite launch coordination and mission planning'
+},
+  {
+  icon: Planet,title: 'Earth Observation',description: 'Satellite imagery and environmental monitoring'
+},
+  {
+  icon: Star,title: 'Space Research',description: 'Scientific research and space exploration support'
+},
+  {
+  icon: Globe2,title: 'Global Communications',description: 'Satellite communications and internet services'
+},
   ]
-  const useCases = [;
-    {;
-      industry: 'Telecommunications',description: 'Global satellite communications and internet services';
-    }
-    {;
-      industry: 'Environmental Monitoring',description: 'Climate change tracking and natural disaster monitoring';
-    }
-    {;
-      industry: 'Agriculture',description: 'Crop monitoring and precision agriculture support';
-    }
-    {;
-      industry: 'Defense & Security',description: 'Surveillance and national security applications';
-    }
+  const useCases = [
+  {
+  industry: 'Telecommunications',description: 'Global satellite communications and internet services'
+},
+  {
+  industry: 'Environmental Monitoring',description: 'Climate change tracking and natural disaster monitoring'
+},
+  {
+  industry: 'Agriculture',description: 'Crop monitoring and precision agriculture support'
+},
+  {
+  industry: 'Defense & Security',description: 'Surveillance and national security applications'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
@@ -171,13 +175,17 @@ const SpaceTech = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -190,12 +198,16 @@ const SpaceTech = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
@@ -209,13 +221,17 @@ const SpaceTech = () => {
         </div>
       </section>
 
-      {{/* Services Section */}}
+      {{/* Services Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -228,8 +244,8 @@ const SpaceTech = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {spaceTechnologies.map((tech, index) => (;
-              <motion.div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: border-purple-500/50 transition-all duration-300">
+            {spaceTechnologies.map((tech, index) => (
+  <motion.div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -239,7 +255,8 @@ const SpaceTech = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -252,10 +269,11 @@ const SpaceTech = () => {
                 monitor, and understand our world and beyond.;
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (;
-                  <li key={index} className="flex items-center text-gray-300">
+                {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    {{benefit}}
+                    {{benefit},
+  }
                   </li>
                 ))}
               </ul>
@@ -279,7 +297,8 @@ const SpaceTech = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -300,13 +319,17 @@ const SpaceTech = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Launch Your Space Project Today;

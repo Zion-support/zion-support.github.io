@@ -5,84 +5,84 @@ import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function AIContentGenerator() {;
-    const features = [;
-        {;
-            title: "AI Writing Assistant",description: "Generate high-quality content for blogs, social media, and marketing campaigns";
+export default function AIContentGenerator() {
+  const features = [
+  {
+  title: "AI Writing Assistant",description: "Generate high-quality content for blogs, social media, and marketing campaigns";
             icon: <PenTool className="h-6 w-6 text-zion-cyan"/>
-        }
-        {;
-            title: "Multi-Format Support",description: "Create content in various formats: text, images, videos, and audio";
+        },
+  {
+  title: "Multi-Format Support",description: "Create content in various formats: text, images, videos, and audio";
             icon: <FileText className="h-6 w-6 text-zion-purple"/>
-        }
-        {;
-            title: "Brand Voice Consistency",description: "Maintain your brand's unique voice across all content pieces",icon: <Type className="h-6 w-6 text-zion-blue"/>
-        }
-        {;
-            title: "SEO Optimization",description: "AI-powered SEO suggestions to improve content visibility and ranking",icon: <Target className="h-6 w-6 text-zion-cyan"/>
-        }
-    ]
-    const contentTypes = [;
-        {;
-            title: "Blog Posts",description: "Long-form articles and blog content",icon: <FileText className="h-8 w-8 text-zion-cyan"/>
-        }
-        {;
-            title: "Social Media",description: "Posts for all major social platforms",icon: <Users className="h-8 w-8 text-zion-purple"/>
-        }
-        {;
-            title: "Marketing Copy",description: "Ads, landing pages, and promotional content";
+        },
+  {
+  title: "Brand Voice Consistency",description: "Maintain your brand's unique voice across all content pieces",icon: <Type className="h-6 w-6 text-zion-blue"/>
+        },
+  {
+  title: "SEO Optimization",description: "AI-powered SEO suggestions to improve content visibility and ranking",icon: <Target className="h-6 w-6 text-zion-cyan"/>
+        },
+  ]
+    const contentTypes = [
+  {
+  title: "Blog Posts",description: "Long-form articles and blog content",icon: <FileText className="h-8 w-8 text-zion-cyan"/>
+        },
+  {
+  title: "Social Media",description: "Posts for all major social platforms",icon: <Users className="h-8 w-8 text-zion-purple"/>
+        },
+  {
+  title: "Marketing Copy",description: "Ads, landing pages, and promotional content";
             icon: <Target className="h-8 w-8 text-zion-blue"/>
-        }
-        {;
-            title: "Product Descriptions",description: "Compelling product and service descriptions",icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
-        }
-        {;
-            title: "Email Campaigns",description: "Newsletters and email marketing content",icon: <Mail className="h-8 w-8 text-zion-purple"/>
-        }
-        {;
-            title: "Video Scripts",description: "Scripts for video content and presentations",icon: <Video className="h-8 w-8 text-zion-blue"/>
-        }
-    ]
-    const pricingPlans = [;
-        {;
-            name: "Starter",price: "$49",period: "/month",description: "Perfect for individuals and small businesses",features: [;
-                "Up to 50 content pieces/month";
+        },
+  {
+  title: "Product Descriptions",description: "Compelling product and service descriptions",icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
+        },
+  {
+  title: "Email Campaigns",description: "Newsletters and email marketing content",icon: <Mail className="h-8 w-8 text-zion-purple"/>
+        },
+  {
+  title: "Video Scripts",description: "Scripts for video content and presentations",icon: <Video className="h-8 w-8 text-zion-blue"/>
+        },
+  ]
+    const pricingPlans = [
+  {
+  name: "Starter",price: "$49",period: "/month",description: "Perfect for individuals and small businesses",features: [
+  "Up to 50 content pieces/month";
                 "Basic AI writing tools";
                 "Standard templates";
                 "Email support";
-                "Basic SEO suggestions";
-            ]
-            popular: false;
-        }
-        {;
-            name: "Professional",price: "$99",period: "/month",description: "Ideal for growing businesses and content teams",features: [;
-                "Up to 200 content pieces/month";
+                "Basic SEO suggestions"
+]
+            popular: false
+},
+  {
+  name: "Professional",price: "$99",period: "/month",description: "Ideal for growing businesses and content teams",features: [
+  "Up to 200 content pieces/month";
                 "Advanced AI writing tools";
                 "Premium templates";
                 "Priority support";
                 "Advanced SEO optimization";
                 "Brand voice training";
                 "Content calendar";
-                "Team collaboration";
-            ]
-            popular: true;
-        }
-        {;
-            name: "Enterprise",price: "$199",period: "/month",description: "For large organizations with advanced needs",features: [;
-                "Unlimited content pieces";
+                "Team collaboration"
+]
+            popular: true
+},
+  {
+  name: "Enterprise",price: "$199",period: "/month",description: "For large organizations with advanced needs",features: [
+  "Unlimited content pieces";
                 "Custom AI models";
                 "White-label solutions";
                 "Dedicated account manager";
                 "Custom integrations";
                 "Advanced analytics";
                 "Multi-language support";
-                "API access";
-            ]
-            popular: false;
-        }
-    ]
-    const benefits = [;
-        "AI-powered content generation for any industry";
+                "API access"
+]
+            popular: false
+},
+  ]
+    const benefits = [
+  "AI-powered content generation for any industry";
         "SEO-optimized content with keyword research";
         "Multiple content formats (blogs, social media, emails)";
         "Brand voice customization and consistency";
@@ -93,8 +93,8 @@ export default function AIContentGenerator() {;
         "Performance analytics and insights";
         "Team collaboration tools";
         "API access for enterprise integration";
-        "24/7 customer support";
-    ]
+        "24/7 customer support"
+]
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -103,7 +103,8 @@ export default function AIContentGenerator() {;
                 description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more.";
             />
             ;
-            {{/* Hero Section */}}
+            {{/* Hero Section */},
+  }
             <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
@@ -131,7 +132,8 @@ export default function AIContentGenerator() {;
                 </div>
             </section>
 
-            {{/* Features Section */}}
+            {{/* Features Section */},
+  }
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -145,11 +147,12 @@ export default function AIContentGenerator() {;
                     </div>
                     ;
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {features.map((feature, index) => (;
-                            <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
+                        {features.map((feature, index) => (
+  <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
                                 <CardContent className="p-6 text-center">
                                     <div className="flex justify-center mb-4">
-                                        {{feature.icon}}
+                                        {{feature.icon},
+  }
                                     </div>
                                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                                     <p className="text-gray-400">{feature.description}</p>
@@ -160,7 +163,8 @@ export default function AIContentGenerator() {;
                 </div>
             </section>
 
-            {{/* Content Types Section */}}
+            {{/* Content Types Section */},
+  }
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -173,11 +177,12 @@ export default function AIContentGenerator() {;
                     </div>
                     ;
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {contentTypes.map((type, index) => (;
-                            <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                        {contentTypes.map((type, index) => (
+  <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
                                 <CardContent className="p-6 text-center">
                                     <div className="flex justify-center mb-4">
-                                        {{type.icon}}
+                                        {{type.icon},
+  }
                                     </div>
                                     <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
                                     <p className="text-gray-400">{type.description}</p>
@@ -188,7 +193,8 @@ export default function AIContentGenerator() {;
                 </div>
             </section>
 
-            {{/* Pricing Section */}}
+            {{/* Pricing Section */},
+  }
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -201,12 +207,12 @@ export default function AIContentGenerator() {;
                     </div>
                     ;
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {pricingPlans.map((plan, index) => (;
-                            <Card key={index} className={`relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${;
-                                plan.popular ? 'border-cyan-500 shadow-cyan-500/25' : '';
-                            }`}>
-                                {plan.popular && (;
-                                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        {pricingPlans.map((plan, index) => (
+  <Card key={index} className={`relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${
+  plan.popular ? 'border-cyan-500 shadow-cyan-500/25' : ''
+}`}>
+                                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                         <Badge className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2">
                                             Most Popular;
                                         </Badge>
@@ -222,10 +228,11 @@ export default function AIContentGenerator() {;
                                 </CardHeader>
                                 <CardContent>
                                     <ul className="space-y-3 mb-6">
-                                        {plan.features.map((feature, featureIndex) => (;
-                                            <li key={featureIndex} className="flex items-center text-gray-300">
+                                        {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-300">
                                                 <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                                                {{feature}}
+                                                {{feature},
+  }
                                             </li>
                                         ))}
                                     </ul>
@@ -239,7 +246,8 @@ export default function AIContentGenerator() {;
                 </div>
             </section>
 
-            {{/* Benefits Section */}}
+            {{/* Benefits Section */},
+  }
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -252,8 +260,8 @@ export default function AIContentGenerator() {;
                     </div>
                     ;
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {benefits.map((benefit, index) => (;
-                            <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">
+                        {benefits.map((benefit, index) => (
+  <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">
                                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
                             </div>
@@ -262,7 +270,8 @@ export default function AIContentGenerator() {;
                 </div>
             </section>
 
-            {{/* CTA Section */}}
+            {{/* CTA Section */},
+  }
             <section className="py-20 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

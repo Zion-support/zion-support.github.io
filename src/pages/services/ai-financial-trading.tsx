@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   TrendingUp;
-  DollarSign, ;
-  Brain, ;
-  Zap, ;
-  CheckCircle, ;
-  Clock, ;
+  DollarSign,
+  Brain,
+  Zap,
+  CheckCircle,
+  Clock,
   Shield;
   Users;
   BarChart3;
@@ -22,91 +22,91 @@ import { ;
   TrendingUp;
   Target;
   Cpu;
-  Activity;
+  Activity
 } from "lucide-react";
 import { SEO } from "../../components/SEO";
-export default function AIFinancialTrading() {;
-  const features = [;
-    {;
-      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Market Analysis",description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy";
-    }
-    {;
-      icon: <TrendingUp className="w-6 h-6" />,title: "Predictive Trading Signals",description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators";
-    }
-    {;
-      icon: <Target className="w-6 h-6" />,title: "Portfolio Optimization",description: "Intelligent portfolio rebalancing and risk management with automated position sizing";
-    }
-    {;
-      icon: <Activity className="w-6 h-6" />,title: "Real-time Market Monitoring",description: "24/7 market surveillance with instant alerts for trading opportunities and risk events";
-    }
-    {;
-      icon: <Shield className="w-6 h-6" />,title: "Advanced Risk Management",description: "Multi-layered risk controls including stop-loss automation and position limit management";
-    }
-    {;
-      icon: <BarChart3 className="w-6 h-6" />,title: "Performance Analytics",description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools";
-    }
+export default function AIFinancialTrading() {
+  const features = [
+  {
+  icon: <Brain className="w-6 h-6" />,title: "AI-Powered Market Analysis",description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy"
+},
+  {
+  icon: <TrendingUp className="w-6 h-6" />,title: "Predictive Trading Signals",description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators"
+},
+  {
+  icon: <Target className="w-6 h-6" />,title: "Portfolio Optimization",description: "Intelligent portfolio rebalancing and risk management with automated position sizing"
+},
+  {
+  icon: <Activity className="w-6 h-6" />,title: "Real-time Market Monitoring",description: "24/7 market surveillance with instant alerts for trading opportunities and risk events"
+},
+  {
+  icon: <Shield className="w-6 h-6" />,title: "Advanced Risk Management",description: "Multi-layered risk controls including stop-loss automation and position limit management"
+},
+  {
+  icon: <BarChart3 className="w-6 h-6" />,title: "Performance Analytics",description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
+},
   ]
 
-  const pricing = [;
-    {;
-      name: "Starter",price: "$299",period: "/month",features: [;
-        "Basic AI trading signals";
+  const pricing = [
+  {
+  name: "Starter",price: "$299",period: "/month",features: [
+  "Basic AI trading signals";
         "Portfolio tracking";
         "Email alerts";
         "Standard analytics";
-        "Basic risk management";
-      ]
-      popular: false;
-    }
-    {;
-      name: "Professional",price: "$799",period: "/month",features: [;
-        "Advanced AI algorithms";
+        "Basic risk management"
+]
+      popular: false
+},
+  {
+  name: "Professional",price: "$799",period: "/month",features: [
+  "Advanced AI algorithms";
         "Real-time signals";
         "Portfolio optimization";
         "Priority support";
         "Advanced analytics";
         "API access";
-        "Custom strategies";
-      ]
-      popular: true;
-    }
-    {;
-      name: "Institutional",price: "$1,999";
-      period: "/month",features: [;
-        "Custom AI models";
+        "Custom strategies"
+]
+      popular: true
+},
+  {
+  name: "Institutional",price: "$1,999";
+      period: "/month",features: [
+  "Custom AI models";
         "White-label platform";
         "Dedicated support";
         "SLA guarantees";
         "Advanced risk controls";
         "Multi-account management";
-        "On-premise deployment";
-      ]
-      popular: false;
-    }
+        "On-premise deployment"
+]
+      popular: false
+},
   ]
-  const benefits = [;
-    "Increase trading returns by 25-40%";
+  const benefits = [
+  "Increase trading returns by 25-40%";
     "Reduce trading risks by 60%";
     "Automate 80% of trading decisions";
     "24/7 market monitoring and alerts";
     "Professional-grade risk management";
-    "Access to institutional-level tools";
-  ]
+    "Access to institutional-level tools"
+]
 
-  const tradingStrategies = [;
-    {;
-      strategy: "Momentum Trading",description: "AI-powered momentum detection and trend following with dynamic position sizing",performance: "35% annual return";
-    }
-    {;
-      strategy: "Mean Reversion",description: "Statistical arbitrage using machine learning to identify overbought/oversold conditions",performance: "28% annual return";
-    }
-    {;
-      strategy: "Sentiment Analysis",description: "Social media and news sentiment analysis for market direction prediction",performance: "42% annual return";
-    }
-    {;
-      strategy: "Multi-Factor Models",description: "Combined technical, fundamental, and macroeconomic factor analysis";
-      performance: "38% annual return";
-    }
+  const tradingStrategies = [
+  {
+  strategy: "Momentum Trading",description: "AI-powered momentum detection and trend following with dynamic position sizing",performance: "35% annual return"
+},
+  {
+  strategy: "Mean Reversion",description: "Statistical arbitrage using machine learning to identify overbought/oversold conditions",performance: "28% annual return"
+},
+  {
+  strategy: "Sentiment Analysis",description: "Social media and news sentiment analysis for market direction prediction",performance: "42% annual return"
+},
+  {
+  strategy: "Multi-Factor Models",description: "Combined technical, fundamental, and macroeconomic factor analysis";
+      performance: "38% annual return"
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -115,13 +115,17 @@ export default function AIFinancialTrading() {;
         description="Revolutionary AI platform for financial trading, portfolio optimization, and risk management. Increase returns by 25-40% while reducing risks by 60%.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Financial Trading Platform;
@@ -149,7 +153,8 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Key Benefits */}}
+      {{/* Key Benefits */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -162,12 +167,16 @@ export default function AIFinancialTrading() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300";"
               >
                 <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
@@ -178,7 +187,8 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Features */}}
+      {{/* Features */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -191,16 +201,21 @@ export default function AIFinancialTrading() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300 group";"
               >
                 <div className="text-yellow-400 mb-4 group-hover:text-yellow-300 transition-colors duration-300">
-                  {{feature.icon}}
+                  {{feature.icon},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -210,7 +225,8 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Trading Strategies */}}
+      {{/* Trading Strategies */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -223,12 +239,16 @@ export default function AIFinancialTrading() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingStrategies.map((strategy, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {tradingStrategies.map((strategy, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-yellow-500 transition-all duration-300";"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{strategy.strategy}</h3>
@@ -243,7 +263,8 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Pricing */}}
+      {{/* Pricing */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -256,20 +277,24 @@ export default function AIFinancialTrading() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${;
-                  plan.popular ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
+  plan.popular ;
                     ? 'border-yellow-500 ring-2 ring-yellow-500/20' ;
-                    : 'border-slate-700';
-                } hover:border-yellow-500 transition-all duration-300`}
+                    : 'border-slate-700'
+} hover:border-yellow-500 transition-all duration-300`}
               >
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -285,21 +310,22 @@ export default function AIFinancialTrading() {;
                 </div>
                 ;
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
                 ;
                 <a;
                   href="https://ziontechgroup.com/contact";
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
-                    plan.popular;
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+  plan.popular;
                       ? 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white hover:from-yellow-700 hover:to-orange-700';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';
-                  }`}
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+}`}
                 >
                   Get Started;
                 </a>
@@ -309,14 +335,18 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Market Information */}}
+      {{/* Market Information */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Trading Solution;
@@ -354,9 +384,12 @@ export default function AIFinancialTrading() {;
             </motion.div>
             ;
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700";"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Performance Metrics</h3>
@@ -383,13 +416,17 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 border border-yellow-500/30";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -418,7 +455,8 @@ export default function AIFinancialTrading() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>

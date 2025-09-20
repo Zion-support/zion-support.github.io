@@ -41,11 +41,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   const [imageSrc, setImageSrc] = useState<string>(src),
   const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(priority);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
+const [hasError, setHasError] = useState(false);
+const [isIntersecting, setIsIntersecting] = useState(priority);
+const [isLoaded, setIsLoaded] = useState(false);
+const imgRef = useRef<HTMLImageElement>(null);
+const observerRef = useRef<IntersectionObserver | null>(null);
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority || !lazy) {
@@ -59,9 +59,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsIntersecting(true);
-          observerRef.current?.disconnect();
-        }
-      },
+          observerRef.current?.disconnect()
+},
+  },
       {
         rootMargin: '50px',threshold: 0.1
       }
@@ -69,9 +69,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     observerRef.current.observe(imgRef.current);
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    },
+        observerRef.current.disconnect()
+},
+  },
   }, [priority, lazy]),
 
   // Handle image load
@@ -86,21 +86,21 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (imageSrc !== fallbackSrc) {
       setImageSrc(fallbackSrc);
       setHasError(false);
-      setIsLoading(true);
-    } else {
+      setIsLoading(true)
+} else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: ${src}`));
-    }
+      onError?.(new Error(`Failed to load image: ${src}`))
+},
   },
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    },
+        observerRef.current.disconnect()
+},
+  },
   }, []),
 
   // Generate optimized src with quality parameter
@@ -113,13 +113,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     try {
       const url = new URL(src);
       if (url.searchParams.has('quality')) {
-        return src;
-      }
+        return src
+}
       url.searchParams.set('quality', quality.toString()),
-      return url.toString();
-    } catch {
-      return src;
-    }
+      return url.toString()
+} catch {
+      return src
+},
   },
 
   const optimizedSrc = getOptimizedSrc(imageSrc);
@@ -141,7 +141,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return (
       <div 
         className={`${baseClasses} bg-gray-200 dark:bg-gray-700 animate-pulse`}
-        style={{ width, height }}
+        style={{ width, height },
+  }
       >
         <div className="w-full h-full flex items-center justify-center">
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
@@ -155,7 +156,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return (
       <div 
         className={`${baseClasses} bg-gray-100 dark:bg-gray-800 flex items-center justify-center`}
-        style={{ width, height }}
+        style={{ width, height },
+  }
       >
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-2" />
@@ -166,13 +168,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
   return (
-    <div className="relative" style={{ width, height }}>
+    <div className="relative" style={{ width, height },
+  }>
       {/* Loading overlay */}
       <AnimatePresence>
         {isLoading && (
           <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 1 },
+  }
+            exit={{ opacity: 0 },
+  }
             className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center z-10"
           >
             <div className="text-center">
@@ -183,35 +188,38 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </AnimatePresence>
 
-      {/* Placeholder */}
-      {placeholder === 'shimmer' && !isLoaded && (
+      {/* Placeholder */},
+  {placeholder === 'shimmer' && !isLoaded && (
         <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse" />
-      )}
-
-      {/* Main image */}
+      )},
+  {/* Main image */}
       <motion.img
         ref={imgRef}
         src={optimizedSrc}
         alt={alt}
         className={baseClasses}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100%', height: '100%' },
+  }
         loading={lazy ? 'lazy' : 'eager'}
         sizes={sizes}
         onLoad={handleImageLoad}
         onError={handleImageError}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isLoaded ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+        initial={{ opacity: 0 },
+  }
+        animate={{ opacity: isLoaded ? 1 : 0 },
+  }
+        transition={{ duration: 0.3 },
+  }
       />
 
-      {/* Fallback icon for broken images */}
-      {!isLoading && !isLoaded && (
+      {/* Fallback icon for broken images */},
+  {!isLoading && !isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
           <ImageIcon className="w-16 h-16 text-gray-400" />
         </div>
       )}
     </div>
-  );
+  )
 },
 
 // Specialized image components
@@ -225,11 +233,12 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
   return (
     <OptimizedImage
       {...props}
-      className={`${sizeClasses[size]} rounded-full object-cover ${props.className || ''}`}
+      className={`${sizeClasses[size],
+  } rounded-full object-cover ${props.className || ''}`}
       rounded={false}
       objectFit="cover"
     />
-  );
+  )
 },
 
 export const CardImage: React.FC<OptimizedImageProps> = (props) => (

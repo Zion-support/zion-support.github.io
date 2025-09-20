@@ -7,37 +7,37 @@ import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, 
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import SEO from "@/components/SEO";
-export default function AllServicesLandingPage() {;
-    const getCategoryIcon = (category) => {;
-        switch (category) {;
-            case 'AI Services': return '🤖';
+export default function AllServicesLandingPage() {
+  const getCategoryIcon = (category) => {
+  switch (category) {
+  case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-            default: return '⚡';
-        }
-    }
-    const getCategoryIconComponent = (category) => {;
-        switch (category) {;
-            case 'AI Services': return <Brain className="h-6 w-6"/>;
+            default: return '⚡'
+},
+  }
+    const getCategoryIconComponent = (category) => {
+  switch (category) {
+  case 'AI Services': return <Brain className="h-6 w-6"/>;
             case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;
             case 'IT Services': return <Code className="h-6 w-6"/>;
             case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
             default: return <Settings className="h-6 w-6"/>
-        }
-    }
-    const getPricingModelColor = (model) => {;
-        switch (model) {;
-            case 'subscription': return 'bg-blue-100 text-blue-800';
+        },
+  }
+    const getPricingModelColor = (model) => {
+  switch (model) {
+  case 'subscription': return 'bg-blue-100 text-blue-800';
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
-    }
-    const getServiceIcon = (subcategory) => {;
-        switch (subcategory) {;
-            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>;
+            default: return 'bg-gray-100 text-gray-800'
+},
+  }
+    const getServiceIcon = (subcategory) => {
+  switch (subcategory) {
+  case 'Customer Service': return <MessageSquare className="h-5 w-5"/>;
             case 'Analytics': return <BarChart3 className="h-5 w-5"/>;
             case 'Content Creation': return <FileText className="h-5 w-5"/>;
             case 'Inventory Management': return <Database className="h-5 w-5"/>;
@@ -49,12 +49,13 @@ export default function AllServicesLandingPage() {;
             case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;
             case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
             default: return <Settings className="h-5 w-5"/>
-        }
-    }
+        },
+  }
     return (<div className="min-h-screen bg-background">
       <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -76,7 +77,8 @@ export default function AllServicesLandingPage() {;
             </Button>
           </div>
 
-          {{/* Quick Stats */}}
+          {{/* Quick Stats */},
+  }
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">{EXPANDED_SERVICES.length}</div>
@@ -98,7 +100,8 @@ export default function AllServicesLandingPage() {;
         </div>
       </section>
 
-      {{/* Services by Category Tabs */}}
+      {{/* Services by Category Tabs */},
+  }
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -121,7 +124,8 @@ export default function AllServicesLandingPage() {;
             {SERVICE_CATEGORIES.map((category) => (<TabsContent key={category.id} value={category.id} className="space-y-8">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full mb-4">
-                    {{getCategoryIconComponent(category.name)}}
+                    {{getCategoryIconComponent(category.name)},
+  }
                   </div>
                   <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">{category.name}</h3>
                   <p className="text-gray-600 max-w-2xl mx-auto">{category.description}</p>
@@ -133,21 +137,25 @@ export default function AllServicesLandingPage() {;
                         <div className="flex items-start justify-between mb-2">
                           <div className="text-2xl">{getCategoryIcon(service.category)}</div>
                           <Badge className={getPricingModelColor(service.pricingModel)}>
-                            {{service.pricingModel.replace('- ')}}
+                            {{service.pricingModel.replace('- ')},
+  }
                           </Badge>
                         </div>
                         <div className="flex items-center space-x-2 mb-2">
-                          {{getServiceIcon(service.subcategory)}}
+                          {{getServiceIcon(service.subcategory)},
+  }
                           <span className="text-sm text-zion-purple font-medium">{service.subcategory}</span>
                         </div>
                         <CardTitle className="text-lg text-zion-blue-dark">{service.title}</CardTitle>
                         <CardDescription className="text-gray-600">
-                          {{service.description}}
+                          {{service.description},
+  }
                         </CardDescription>
                       </CardHeader>
                       ;
                       <CardContent className="space-y-4">
-                        {{/* Rating and AI Score */}}
+                        {{/* Rating and AI Score */},
+  }
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
                             <div className="flex items-center">
@@ -162,32 +170,38 @@ export default function AllServicesLandingPage() {;
                           </div>
                         </div>
 
-                        {{/* Price and Market Price */}}
+                        {{/* Price and Market Price */},
+  }
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
                             <span className="text-2xl font-bold text-zion-blue-dark">
-                              ${{service.price.toLocaleString()}}
+                              ${{service.price.toLocaleString()},
+  }
                             </span>
                             <span className="text-sm text-gray-500">
-                              Market: {{service.marketPrice}}
+                              Market: {{service.marketPrice},
+  }
                             </span>
                           </div>
                         </div>
 
-                        {{/* Key Features */}}
+                        {{/* Key Features */},
+  }
                         <div className="space-y-2">
                           <h4 className="font-semibold text-zion-blue-dark text-sm">Key Features:</h4>
                           <div className="flex flex-wrap gap-1">
                             {service.features.slice(0, 3).map((feature, index) => (<Badge key={index} variant="secondary" className="text-xs">
-                                {{feature}}
-                              </Badge>))}
-                            {service.features.length > 3 && (<Badge variant="outline" className="text-xs">
+                                {{feature},
+  }
+                              </Badge>))},
+  {service.features.length > 3 && (<Badge variant="outline" className="text-xs">
                                 +{service.features.length - 3} more;
                               </Badge>)}
                           </div>
                         </div>
 
-                        {{/* Top Benefits */}}
+                        {{/* Top Benefits */},
+  }
                         <div className="space-y-2">
                           <h4 className="font-semibold text-zion-blue-dark text-sm">Key Benefits:</h4>
                           <ul className="space-y-1">
@@ -198,7 +212,8 @@ export default function AllServicesLandingPage() {;
                           </ul>
                         </div>
 
-                        {{/* Service Details */}}
+                        {{/* Service Details */},
+  }
                         <div className="pt-4 border-t border-gray-200 space-y-2">
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-gray-600">Availability:</span>
@@ -214,7 +229,8 @@ export default function AllServicesLandingPage() {;
                           </div>
                         </div>
 
-                        {{/* Contact Information */}}
+                        {{/* Contact Information */},
+  }
                         <div className="pt-4 border-t border-gray-200">
                           <div className="space-y-2">
                             <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -234,7 +250,8 @@ export default function AllServicesLandingPage() {;
                           </div>
                         </div>
 
-                        {{/* Action Buttons */}}
+                        {{/* Action Buttons */},
+  }
                         <div className="flex space-x-2 pt-4">
                           <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
                             Get Quote;
@@ -251,7 +268,8 @@ export default function AllServicesLandingPage() {;
         </div>
       </section>
 
-      {{/* Why Choose Zion Section */}}
+      {{/* Why Choose Zion Section */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
@@ -290,7 +308,8 @@ export default function AllServicesLandingPage() {;
         </div>
       </section>
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

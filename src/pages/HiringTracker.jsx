@@ -6,8 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
-function HiringTrackerContent() {;
-    const { jobId } = useParams()
+function HiringTrackerContent() {
+  const { jobId } = useParams()
     const [activeTab, setActiveTab] = useState("kanban")
     return (<>
       <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
@@ -43,8 +43,8 @@ function HiringTrackerContent() {;
       ;
     </>)
 }
-export default function HiringTracker() {;
-    return (<ProtectedRoute>
+export default function HiringTracker() {
+  return (<ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>)
 }

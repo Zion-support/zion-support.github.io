@@ -3,10 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import SEO from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { useIsMobile } from "@/hooks/use-mobile";
-export default function PostJob() {;
-    const { isAuthenticated, isLoading } = useAuth()
+export default function PostJob() {
+  const { isAuthenticated, isLoading } = useAuth()
     const isMobile = useIsMobile()
-    if (if (isLoading) {;) {
+    if (if (isLoading) {
+  ) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>)
@@ -28,7 +29,9 @@ export default function PostJob() {;
         </Card>
       </main>
       ;
-      {{/* Add extra bottom padding on mobile to account for the bottom nav */}}
-      {{isMobile && <div className="h-16"></div>}}
+      {{/* Add extra bottom padding on mobile to account for the bottom nav */},
+  },
+  {{isMobile && <div className="h-16"></div>},
+  }
     </>)
 }
