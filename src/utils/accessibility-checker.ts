@@ -5,10 +5,10 @@ id: string;,
 name: string;
 }
 
-// Accessibility checker utilities,
+// Accessibility checker utilities;
 export const checkAccessibility: any = () => {;
-console.log('Checking accessibility...');
+console.log("Checking accessibility...");
 }
 export const validateAriaLabels: any = () => {;
-console.log('Validating ARIA labels...');
+console.log("Validating ARIA labels...");
 }

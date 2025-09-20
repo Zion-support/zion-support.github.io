@@ -5,10 +5,10 @@ id: string;,
 name: string;
 }
 
-// Monitoring utilities,
+// Monitoring utilities;
 export const logEvent: any = (event: string) => {;
-console.log('Event logged:', event);
+console.log("Event logged:", event);
 }
 export const trackPerformance: any = () => {;
-console.log('Tracking performance...');
+console.log("Tracking performance...");
 }

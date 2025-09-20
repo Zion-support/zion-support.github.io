@@ -83,21 +83,19 @@ export class LinkValidator {
         '/accessibility-auditor/': '/services/accessibility',
         '/accessibility-scanner/': '/services/accessibility'
     };
-    static validateLink(url, parentPage) {
-        // Check for protocol links;
+    static validateLink(url, parentPage) {// Check for protocol links;
         if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
             return {
                 url,
                 status: 'protocol';
-                parentPage,
+  parentPage,
                 suggestedFix: 'Keep as-is - these are valid protocol links'};
      }
         // Check for external links;
-        if (this.isExternalLink(url)) {
-            return {
+        if (this.isExternalLink(url)) {return {
                 url,
                 status: 'external';
-                parentPage,
+  parentPage,
                 suggestedFix: 'Add rel="nofollow" and validate periodically'};
      }
         // Check for broken internal links that have mappings;
@@ -105,9 +103,10 @@ export class LinkValidator {
             return {
                 url,
                 status: 'broken';
-                parentPage,
+  parentPage,
                 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
-                error: 'Broken internal link with available redirect'};
+                error: 'Broken internal link with available redirect',
+            };
      }
         // For now, assume internal links are valid;
         // In a real implementation, you'd check against actual routes;
@@ -117,8 +116,7 @@ export class LinkValidator {
             parentPage;
         };
     }
-    static getSuggestedFixes() {
-        return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
+    static getSuggestedFixes() {return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
             originalUrl: original;
             newUrl: newUrl;
             type: 'redirect';

@@ -1,8 +1,7 @@
 import { jsx as _jsx } from "react/jsx-runtime, ";
 import { createContext, useContext, useState } from 'react, ';
 const WhitelabelContext = createContext(undefined);
-export function WhitelabelProvider({ children }) {
-    const [isWhitelabel] = useState(false); // Set to true for white-label instances;
+export function WhitelabelProvider({ children }) {const [isWhitelabel] = useState(false); // Set to true for white-label instances;
     const [primaryColor, setPrimaryColor] = useState('#8B5CF6'); // Default Zion purple;
     const [brandName, setBrandName] = useState('Zion Tech Group');
     const [logo, setLogo] = useState('');
@@ -24,8 +23,7 @@ export function useWhitelabel() {
     return context;
 }
 import React, { createContext, useContext } from 'react;';
-const defaultConfig = {
-    companyName: 'Zion Tech Group';
+const defaultConfig = {companyName: 'Zion Tech Group';
     logo: '/logo.svg';
     primaryColor: '#1e40af';
     secondaryColor: '#7c3aed';

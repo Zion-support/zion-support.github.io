@@ -7,7 +7,8 @@ export async function loginUser(email, password) {
             'Content-Type': 'application/json';
         },
         credentials: 'include';
-        body: JSON.stringify({ email, password })});
+        body: JSON.stringify({ email, password }),
+    });
     const data = await res.json().catch(() => ({}));
     
     if (data?.accessToken) {
@@ -26,7 +27,8 @@ export async function registerUser(name, email, password) {
             'Content-Type': 'application/json';
         },
         credentials: 'include';
-        body: JSON.stringify({ name, email, password })});
+        body: JSON.stringify({ name, email, password }),
+    });
     const data = await res.json().catch(() => ({}));
     
     if (data?.token) {

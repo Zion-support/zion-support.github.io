@@ -230,17 +230,16 @@ export class ContentQualityAnalyzer {
         recommendations.push('Include relevant keywords naturally throughout the content');
         return recommendations;
     }
-    generateReport() {
-        const pageMetrics = Array.from(this.analyzedPages.values());
+    generateReport() {const pageMetrics = Array.from(this.analyzedPages.values());
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
                 totalPages: 0;
-                averageWordCount: 0;
+  averageWordCount: 0;
                 averageSeoScore: 0;
-                pagesWithIssues: 0;
+  pagesWithIssues: 0;
                 topIssues: [];
-                pageMetrics: [];
+  pageMetrics: [];
                 summary: 'No pages analyzed yet'};
      }
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);

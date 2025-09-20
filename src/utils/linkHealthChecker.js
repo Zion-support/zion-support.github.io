@@ -1,7 +1,6 @@
 export class LinkHealthChecker {
     config;
-    constructor(config = {}) {
-        this.config = {
+    constructor(config = {}) {this.config = {
             timeout: config.timeout || 10000,
             retries: config.retries || 3,
             userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
@@ -16,10 +15,10 @@ export class LinkHealthChecker {
                 headers: {
                     'User-Agent': this.config.userAgent;
                 },
-                redirect: this.config.followRedirects ? 'follow' : 'manual'});
+                redirect: this.config.followRedirects ? 'follow' : 'manual',
+            });
             const responseTime = Date.now() - startTime;
-            if (response.ok || response.status < 400) {
-                return {
+            if (response.ok || response.status < 400) {return {
                     url,
                     status: 'healthy',
                     statusCode: response.status,
@@ -33,11 +32,11 @@ export class LinkHealthChecker {
                     statusCode: response.status,
                     responseTime,
                     error: `HTTP ${response.status}: ${response.statusText}`,
-                    lastChecked: new Date()};
+                    lastChecked: new Date(),
+                };
             }
         }
-        catch (error) {
-            return {
+        catch (error) {return {
                 url,
                 status: 'error',
                 error: error instanceof Error ? error.message : 'Unknown error',
@@ -51,8 +50,7 @@ export class LinkHealthChecker {
                 const result = await this.checkLink(url);
                 results.push(result);
             }
-            catch (error) {
-                results.push({
+            catch (error) {results.push({
                     url,
                     status: 'error',
                     error: error instanceof Error ? error.message : 'Unknown error',
@@ -82,7 +80,8 @@ export class LinkHealthChecker {
             url,
             status: 'error',
             error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-            lastChecked: new Date()};
+            lastChecked: new Date(),
+        };
     }
     getHealthSummary(results) {
         const total = results.length;

@@ -2,8 +2,10 @@ interface Service {
 id: string;,
 name: string;
 }
+}
+}
 
-import { loadStripe, Stripe  } from "@stripe/stripe-js, ";
+import { loadStripe, Stripe } from "@stripe/stripe-js, ";
 
 let stripePromise: Promise<Stripe | null>;
 export function getStripe() {

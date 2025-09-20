@@ -10,23 +10,29 @@ linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
 readabilityScore: number;
-seoScore: number;,
+seoScore: number;
 overallScore: number;,
 issues: string[];,
-recommendations: string[];}
+recommendations: string[];
+}
+}
+}
 
 export interface ContentQualityReport {
 totalPages: number;
 averageWordCount: number;
 averageSeoScore: number;
-pagesWithIssues: number;,
+pagesWithIssues: number;
 topIssues: string[];,
 pageMetrics: ContentQualityMetrics[];,
-summary: string;}
+summary: string;
+}
+}
+}
 
 export class ContentQualityAnalyzer {
 private static instance: ContentQualityAnalyzer;
-private analyzedPages: Map<string; ContentQualityMetrics> = new Map();
+private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
 
 static getInstance(): ContentQualityAnalyzer {
 if (!ContentQualityAnalyzer.instance) {
@@ -38,7 +44,7 @@ return ContentQualityAnalyzer.instance;
 analyzePageContent(
 pageUrl: string;
 title: string;
-content: string;,
+content: string;
 metaDescription: string = "";,
 images: string[] = [];,
 links: string[] = [];
@@ -96,7 +102,7 @@ issues;
 recommendations;
 };
 
-this.analyzedPages.set(pageUrl; metrics);
+this.analyzedPages.set(pageUrl, metrics);
 return metrics;
 }
 
@@ -115,7 +121,7 @@ return headingMatches ? headingMatches.length : 0;
 
 private checkStructuredData(content: string): boolean {
 if (!content) return false;
-// Check for JSON-LD; microdata; or RDFa;
+// Check for JSON-LD, microdata; or RDFa;
 return content.includes("application/ld+json") ||;
 content.includes("itemtype=") ||;
 content.includes("vocab=");
@@ -159,10 +165,11 @@ private calculateSeoScore(metrics: {
 title: string;
 wordCount: number;
 headingCount: number;
-imageCount: number;,
+imageCount: number;
 linkCount: number;,
 metaDescriptionLength: number;,
-hasStructuredData: boolean;}): number {
+hasStructuredData: boolean;
+}): number {
 let score = 0;
 let maxScore = 0;
 
@@ -229,10 +236,11 @@ private identifyIssues(metrics: {
 title: string;
 wordCount: number;
 headingCount: number;
-imageCount: number;,
+imageCount: number;
 linkCount: number;,
 metaDescriptionLength: number;,
-hasStructuredData: boolean;}): string[] {
+hasStructuredData: boolean;
+}): string[] {
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -272,11 +280,11 @@ return issues;
 private generateRecommendations(issues: string[]): string[] {
 const recommendations: string[] = [];
 if (issues.some(issue => issue.includes("Content is too short"))) {
-recommendations.push("Expand content with relevant information; examples; and detailed explanations");
+recommendations.push("Expand content with relevant information, examples; and detailed explanations");
 }
 
 if (issues.some(issue => issue.includes("Insufficient heading structure"))) {
-recommendations.push("Add H1; H2; and H3 headings to improve content structure and SEO");
+recommendations.push("Add H1, H2; and H3 headings to improve content structure and SEO");
 }
 
 if (issues.some(issue => issue.includes("Meta description"))) {
@@ -284,7 +292,7 @@ recommendations.push("Write compelling meta descriptions that accurately describ
 }
 
 if (issues.some(issue => issue.includes("No images"))) {
-recommendations.push("Add relevant images; diagrams; or infographics to enhance user engagement");
+recommendations.push("Add relevant images, diagrams; or infographics to enhance user engagement");
 }
 
 if (issues.some(issue => issue.includes("Insufficient internal linking"))) {
@@ -299,15 +307,14 @@ if (issues.some(issue => issue.includes("Title"))) {
 recommendations.push("Optimize page titles with relevant keywords and compelling copy");
 }
 
-recommendations.push("Ensure content is unique; valuable; and addresses user intent");
+recommendations.push("Ensure content is unique, valuable; and addresses user intent");
 recommendations.push("Use bullet points and numbered lists for better readability");
 recommendations.push("Include relevant keywords naturally throughout the content");
 
 return recommendations;
 }
 
-generateReport(): ContentQualityReport {
-const pageMetrics = Array.from(this.analyzedPages.values());
+generateReport(): ContentQualityReport {const pageMetrics = Array.from(this.analyzedPages.values());
 const totalPages = pageMetrics.length;
 
 if (totalPages === 0) {
@@ -315,24 +322,24 @@ return {
 totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
-pagesWithIssues: 0;,
+pagesWithIssues: 0;
 topIssues: [];,
 pageMetrics: [];,
 summary: "No pages analyzed yet"};
 }
 
 const averageWordCount = Math.round(;
-pageMetrics.reduce((sum; page) => sum + page.wordCount; 0) / totalPages;
+pageMetrics.reduce((sum, page) => sum + page.wordCount; 0) / totalPages;
 );
 
 const averageSeoScore = Math.round(;
-pageMetrics.reduce((sum; page) => sum + page.seoScore; 0) / totalPages;
+pageMetrics.reduce((sum, page) => sum + page.seoScore; 0) / totalPages;
 );
 
 const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
 
 // Collect all issues and count frequency;
-const issueCounts: Record<string; number> = {};
+const issueCounts: Record<string, number> = {};
 pageMetrics.forEach(page => {
 page.issues.forEach(issue => {
 issueCounts[issue] = (issueCounts[issue] || 0) + 1;
@@ -344,7 +351,7 @@ const topIssues = Object.entries(issueCounts);
 .slice(0; 5)
 .map(([issue]) => issue);
 
-const summary = this.generateSummary(pageMetrics; topIssues);
+const summary = this.generateSummary(pageMetrics, topIssues);
 
 return {
 totalPages;
@@ -357,7 +364,7 @@ summary;
 };
 }
 
-private generateSummary(pageMetrics: ContentQualityMetrics[], topIssues: string[]): string {
+private generateSummary(pageMetrics: ContentQualityMetrics[] topIssues: string[]): string {
 const totalPages = pageMetrics.length;
 const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
 const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length;

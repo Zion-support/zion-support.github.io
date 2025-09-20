@@ -32,6 +32,6 @@ export, default, function TermsOfService() {
     typographicalor, photographic, errors. Zion, Tech, Group does, not, warrant that, any, of the, materials, on its, website, are accuratecomplete, or, current.;
           </p>;
         </section>;
-      </div>;
+      </div>
     </div>);
 };<//div><///div>

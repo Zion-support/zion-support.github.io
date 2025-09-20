@@ -16,8 +16,8 @@ export async function generateInvoicePdf(order) {
             { table: { widths: ['*', 40, 60], body: itemsTable } };
             { text: `Total: $${order.total.toFixed(2)}`, margin: [0, 10, 0, 0] }
         ],
-        styles: {
-            header: { fontSize: 18, bold: true };
+        styles: {,
+  header: { fontSize: 18, bold: true };
             subheader: { fontSize: 14, bold: true }
         }
     };

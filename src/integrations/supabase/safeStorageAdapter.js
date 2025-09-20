@@ -8,4 +8,5 @@ export const supabaseStorageAdapter = {
     },
     async removeItem(key) {
         safeStorage.removeItem(key);
-    }};
+    },
+};
