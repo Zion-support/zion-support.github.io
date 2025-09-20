@@ -46,7 +46,7 @@ const ModernPricingComparison: React.FC = () => {
         'Basic customization',
         'Standard SLA'
       ],
-      icon: <Zap className="h-8 w-8" />
+      icon: <Zap className="h-8 w-8" />,
       color: 'blue',
       cta: 'Start Free Trial',
       ctaLink: '/contact?plan=starter'
@@ -73,7 +73,7 @@ const ModernPricingComparison: React.FC = () => {
         'Limited custom AI training',
         'Standard performance SLA'
       ],
-      icon: <Crown className="h-8 w-8" />
+      icon: <Crown className="h-8 w-8" />,
       color: 'purple',
       popular: true,
       cta: 'Start Free Trial',
@@ -102,7 +102,7 @@ const ModernPricingComparison: React.FC = () => {
         'White-label options'
       ],
       limitations: [],
-      icon: <Rocket className="h-8 w-8" />
+      icon: <Rocket className="h-8 w-8" />,
       color: 'indigo',
       cta: 'Contact Sales',
       ctaLink: '/contact?plan=enterprise'

@@ -5,6 +5,14 @@ const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
+  
+  // Disable static optimization temporarily to fix build issues
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
+  
+  // Disable static generation temporarily
+  generateStaticParams: false,
 
   // Performance optimizations
   compress: true,
