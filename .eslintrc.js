@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
-    "eslint:recommended",
-    "@typescript-eslint/recommended"
+    "eslint:recommended"
   ],
   rules: {
     "react-hooks/rules-of-hooks": "error",
