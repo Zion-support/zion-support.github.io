@@ -4,7 +4,6 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './app/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
@@ -77,6 +76,16 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
         glow: {
           "0%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
           "100%": { boxShadow: "0 0 30px rgba(147, 51, 234, 0.6)" },
@@ -89,24 +98,29 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "neon-pulse": {
+          "0%, 100%": {
+            boxShadow:
+              "0 0 5px rgba(0, 212, 255, 0.5), 0 0 10px rgba(0, 212, 255, 0.3), 0 0 15px rgba(0, 212, 255, 0.1)",
+          },
+          "50%": {
+            boxShadow:
+              "0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.5), 0 0 30px rgba(0, 212, 255, 0.3)",
+          },
+        },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
-        "neon-pulse": {
-          "0%": { 
-            textShadow: "0 0 5px rgba(34, 221, 210, 0.5), 0 0 10px rgba(34, 221, 210, 0.3), 0 0 15px rgba(34, 221, 210, 0.1)" 
-          },
-          "100%": { 
-            textShadow: "0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)" 
-          },
-        },
       },
-      backdropBlur: {
-        'xs': '2px',
-        '4xl': '72px',
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
       },
       boxShadow: {
+        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
         'neon': '0 0 20px rgba(34, 221, 210, 0.5)',
         'neon-lg': '0 0 30px rgba(34, 221, 210, 0.6)',
         'neon-xl': '0 0 40px rgba(34, 221, 210, 0.7)',
@@ -146,16 +160,6 @@ module.exports = {
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-        '5xl': '2.5rem',
-      },
-      screens: {
-        'xs': '475px',
-        '3xl': '1600px',
-        '4xl': '1920px',
-        '5xl': '2560px',
       },
     },
   },

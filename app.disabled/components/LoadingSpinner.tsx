@@ -1,3 +1,12 @@
+<<<<<<< HEAD:app/components/LoadingSpinner.tsx
+import React from 'react'
+const LoadingSpinner: React.FC = () => {;
+  return (
+    <div>
+      <h3 className="text-xl font-bold mb-4">LoadingSpinner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>)}
+=======
 import React from 'react';
 const LoadingSpinner: React.FC = () => {;
   return (
@@ -5,4 +14,5 @@ const LoadingSpinner: React.FC = () => {;
       <h3 className="text-xl font-bold mb-4">LoadingSpinner</h3>;
       <p className="text-gray-300">Revolutionary technology component</p>;
     </div>)};
+>>>>>>> 8d50de2a5fd61293ef47f57d45cc2b2a4177ae15:app.disabled/components/LoadingSpinner.tsx
 export default LoadingSpinner;

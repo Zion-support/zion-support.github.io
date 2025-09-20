@@ -1,38 +1,10 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'blue' | 'white' | 'gray';
-  text?: string;
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  color = 'blue', 
-  text,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    blue: 'text-blue-600',
-    white: 'text-white',
-    gray: 'text-gray-600'
-  };
-
+const LoadingSpinner: React.FC = () => {
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`} />
-      {text && (
-        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
-          {text}
-        </p>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Loading...</h3>
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
     </div>
   );
 };
