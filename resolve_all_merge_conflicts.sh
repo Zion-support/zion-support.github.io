@@ -14,13 +14,15 @@ log_message() {
 # Step 1: Resolve divergent branches
 log_message "🔧 Step 1: Resolving divergent branches..."
 git config pull.rebase false
-git pull origin main --no-rebase || {
+
+# Try to pull with merge strategy
+if ! git pull origin main --no-rebase; then
     log_message "⚠️  Pull failed, trying merge strategy..."
-    git merge origin/main --no-ff -m "Merge remote changes to resolve divergent branches" || {
+    if ! git merge origin/main --no-ff -m "Merge remote changes to resolve divergent branches"; then
         log_message "❌ Merge failed, trying reset strategy..."
         git reset --hard origin/main
-    }
-}
+    fi
+fi
 
 # Step 2: Find and process open PRs
 log_message "🔍 Step 2: Finding open PRs..."
@@ -109,8 +111,8 @@ merge_branch() {
     fi
 }
 
-# Process each branch
-for branch in "${PR_BRANCHES[@]}"; do
+# Process each branch (limit to 20 per run to avoid timeouts)
+for branch in "${PR_BRANCHES[@]:0:20}"; do
     echo "---"
     merge_branch "$branch"
     echo "---"
