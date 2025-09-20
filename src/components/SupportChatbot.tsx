@@ -9,79 +9,74 @@ interface Msg {
   message: string;
 }
 
-const fallbackResponses = [
-  "I'm here to help! How can I assist you today?",
-  "That's a great question. Let me help you with that.",
-  "I understand your concern. Here's what I can suggest...",
-  "Thanks for reaching out! I'll do my best to help you.",
-  "I'm sorry, but I need more information to help you properly."
-];
-
 export function SupportChatbot() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [typing, setTyping] = useState(false);
+  const endRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const fallbackResponses = [
+    "I'm here to help! What questions do you have about Zion?",
+    "Feel free to ask me anything about our AI and tech marketplace services.",
+    "I can help you understand our platform features and how to get started.",
+    "What specific information are you looking for today?"
+  ];
+
+  const getRandomFallback = () => {
+    return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
   };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+  const sendMessage = async (message: string) => {
+    if (!message.trim()) return;
 
-  const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
-
-    const userMessage: Msg = {
+    const userMsg: Msg = {
       id: Date.now().toString(),
       role: 'user',
-      message: inputValue
+      message: message.trim()
     };
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsLoading(true);
+    setMessages(prev => [...prev, userMsg]);
+    setLoading(true);
+    setTyping(true);
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const assistantMessage: Msg = {
+      const assistantMsg: Msg = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        message: fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)]
+        message: getRandomFallback()
       };
 
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      logErrorToProduction('Chatbot error', error);
-      const errorMessage: Msg = {
-        id: (Date.now() + 1).toString(),
+      setMessages(prev => [...prev, assistantMsg]);
+    } catch (err) {
+      logErrorToProduction('Chatbot error:', { data: err });
+      const errorMsg: Msg = {
+        id: Date.now().toString() + '-e',
         role: 'assistant',
-        message: "I'm sorry, I'm having trouble right now. Please try again later."
+        message: "I'm sorry, I'm having trouble right now. Please try again later or contact our support team."
       };
-      setMessages(prev => [...prev, errorMessage]);
+      setMessages(prev => [...prev, errorMsg]);
     } finally {
-      setIsLoading(false);
+      setLoading(false);
+      setTyping(false);
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
+  useEffect(() => {
+    if (endRef.current) {
+      endRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }, [messages]);
 
-  if (!isOpen) {
+  if (!open) {
     return (
       <Button
-        onClick={() => setIsOpen(true)}
+        onClick={() => setOpen(true)}
         size='icon'
-        variant='outline'
+        
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'
       >
@@ -91,78 +86,74 @@ export function SupportChatbot() {
   }
 
   return (
-    <div className='fixed bottom-4 right-4 w-80 h-96 bg-white rounded-lg shadow-xl border z-50 flex flex-col'>
-      <div className='flex items-center justify-between p-4 border-b bg-zion-purple text-white rounded-t-lg'>
-        <h3 className='font-semibold'>Support Chat</h3>
+    <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>
+      <div className='bg-zion-blue-dark p-2 flex justify-between items-center'>
+        <span className='text-white font-medium'>Help Bot</span>
         <Button
-          onClick={() => setIsOpen(false)}
+          
           size='icon'
-          variant='ghost'
-          className='h-8 w-8 text-white hover:bg-zion-purple-light'
+          className='text-white'
+          onClick={() => setOpen(false)}
+          aria-label='Close help bot'
         >
-          <X className='h-4 w-4' />
+          <X className='h-5 w-5' />
         </Button>
       </div>
-      
-      <div className='flex-1 overflow-y-auto p-4 space-y-3'>
+      <div
+        className='flex-1 overflow-y-auto p-3 space-y-4'
+        style={{ maxHeight: '400px' }}
+      >
         {messages.length === 0 && (
-          <div className='text-center text-gray-500 text-sm'>
-            <MessageSquare className='h-8 w-8 mx-auto mb-2 text-gray-400' />
-            <p>How can I help you today?</p>
+          <div className='text-zion-slate-light text-sm'>
+            Hi! I'm here to help you with questions about Zion. What can I assist you with today?
           </div>
         )}
-        
-        {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-          >
-            <div
-              className={`max-w-[80%] p-3 rounded-lg text-sm ${
-                msg.role === 'user'
-                  ? 'bg-zion-purple text-white'
-                  : 'bg-gray-100 text-gray-800'
-              }`}
-            >
-              {msg.message}
+        {messages.map(m => (
+          <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+            <div className={`max-w-xs px-3 py-2 rounded-lg ${
+              m.role === 'user' 
+                ? 'bg-zion-purple text-white' 
+                : 'bg-zion-blue-light text-zion-slate-light'
+            }`}>
+              {m.message}
             </div>
           </div>
         ))}
-        
-        {isLoading && (
+        {typing && (
           <div className='flex justify-start'>
-            <div className='bg-gray-100 p-3 rounded-lg text-sm'>
-              <div className='flex space-x-1'>
-                <div className='w-2 h-2 bg-gray-400 rounded-full animate-bounce'></div>
-                <div className='w-2 h-2 bg-gray-400 rounded-full animate-bounce' style={{ animationDelay: '0.1s' }}></div>
-                <div className='w-2 h-2 bg-gray-400 rounded-full animate-bounce' style={{ animationDelay: '0.2s' }}></div>
-              </div>
+            <div className='bg-zion-blue-light text-zion-slate-light px-3 py-2 rounded-lg'>
+              ...
             </div>
           </div>
         )}
-        
-        <div ref={messagesEndRef} />
+        <div ref={endRef} />
       </div>
-      
-      <div className='p-4 border-t'>
-        <div className='flex space-x-2'>
-          <input
-            type='text'
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder='Type your message...'
-            className='flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent'
-            disabled={isLoading}
-          />
-          <Button
-            onClick={handleSendMessage}
-            disabled={!inputValue.trim() || isLoading}
-            className='bg-zion-purple text-white hover:bg-zion-purple-light'
-          >
-            Send
-          </Button>
-        </div>
+      <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          const input = e.currentTarget.querySelector('input');
+          if (input?.value) {
+            sendMessage(input.value);
+            input.value = '';
+          }
+        }}>
+          <div className='flex gap-2'>
+            <input
+              type='text'
+              placeholder='Type your message...'
+              className='flex-1 px-3 py-2 bg-zion-blue border border-zion-purple/20 rounded text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-purple'
+              disabled={loading}
+            />
+            <Button
+              type='submit'
+              size='sm'
+              disabled={loading}
+              className='bg-zion-purple hover:bg-zion-purple-light text-white'
+            >
+              Send
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
   );

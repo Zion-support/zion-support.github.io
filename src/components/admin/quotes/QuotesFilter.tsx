@@ -1,8 +1,8 @@
 import React from 'react';
-import { Calendar, RefreshCw } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Calendar, RefreshCw } from 'lucide-react';
 
 type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired';
 type DateRange = {
@@ -35,6 +35,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm border">
+      <div className="flex items-center space-x-2 mb-4">
+        <Calendar className="h-5 w-5 text-gray-600" />
+        <h3 className="text-lg font-semibold text-gray-900">Filter Quotes</h3>
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -46,7 +51,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Status
@@ -56,7 +61,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               <SelectValue placeholder="All statuses" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All statuses</SelectItem>
+              <SelectItem value="all">All Statuses</SelectItem>
               <SelectItem value="pending">Pending</SelectItem>
               <SelectItem value="approved">Approved</SelectItem>
               <SelectItem value="rejected">Rejected</SelectItem>
@@ -64,7 +69,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </SelectContent>
           </Select>
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Archive Status
@@ -74,23 +79,33 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               <SelectValue placeholder="All quotes" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All quotes</SelectItem>
+              <SelectItem value="all">All Quotes</SelectItem>
               <SelectItem value="active">Active</SelectItem>
               <SelectItem value="archived">Archived</SelectItem>
             </SelectContent>
           </Select>
         </div>
-        
-        <div className="flex items-end">
-          <Button
-            variant="outline"
-            onClick={onReset}
-            className="w-full"
-          >
-            <RefreshCw className="h-4 w-4 mr-2" />
-            Reset Filters
-          </Button>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Date Range
+          </label>
+          <Input
+            type="date"
+            value={dateRange?.from ? dateRange.from.toISOString().split('T')[0] : ''}
+            onChange={(e) => {
+              const from = e.target.value ? new Date(e.target.value) : undefined;
+              setDateRange(from ? { from, to: dateRange?.to || new Date() } : undefined);
+            }}
+          />
         </div>
+      </div>
+
+      <div className="flex justify-end space-x-2 mt-4">
+        <Button  onClick={onReset}>
+          <RefreshCw className="h-4 w-4 mr-2" />
+          Reset Filters
+        </Button>
       </div>
     </div>
   );

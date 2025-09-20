@@ -1,7 +1,7 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 interface Props {
   children: React.ReactNode;
@@ -23,9 +23,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Equipment page error:', error, {
-      componentStack: errorInfo.componentStack,
-    });
+    console.error('Equipment page error:', error, errorInfo);
   }
 
   render() {
@@ -46,14 +44,14 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   onClick={() =>
                     this.setState({ hasError: false, error: undefined })
                   }
-                  variant='outline'
+                  
                 >
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again
                 </Button>
                 <Button
                   onClick={() => window.location.reload()}
-                  variant='default'
+                  
                 >
                   Refresh Page
                 </Button>

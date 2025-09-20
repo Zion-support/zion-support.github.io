@@ -1,4 +1,13 @@
 import React from 'react';
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
+import Link from "next/link";
+
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === "" || envVar === "undefined") {
+    return fallback;
+  }
+  return envVar;
+}
 
 export function Footer() {
   return (
@@ -11,5 +20,3 @@ export function Footer() {
     </footer>
   );
 }
-
-export default Footer;

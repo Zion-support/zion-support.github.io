@@ -5,32 +5,32 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from 'lucide-react';
 
 interface FraudFiltersProps {
-  onFiltersChange: (filters: any) => void;
+  onFilterChange: (filters: any) => void;
   resetFilters: () => void;
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  onFiltersChange,
+  onFilterChange,
   resetFilters
 }) => {
   const [filters, setFilters] = useState({
     search: '',
-    status: '',
     riskLevel: '',
+    status: '',
     dateRange: ''
   });
 
   const handleFilterChange = (key: string, value: string) => {
     const newFilters = { ...filters, [key]: value };
     setFilters(newFilters);
-    onFiltersChange(newFilters);
+    onFilterChange(newFilters);
   };
 
   const handleReset = () => {
     setFilters({
       search: '',
-      status: '',
       riskLevel: '',
+      status: '',
       dateRange: ''
     });
     resetFilters();
@@ -38,9 +38,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm border">
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex items-center space-x-2 mb-4">
         <Filter className="h-5 w-5 text-gray-600" />
-        <h3 className="text-lg font-semibold">Filters</h3>
+        <h3 className="text-lg font-semibold text-gray-900">Fraud Detection Filters</h3>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -58,24 +58,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
             />
           </div>
         </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Status
-          </label>
-          <Select value={filters.status} onValueChange={(value) => handleFilterChange('status', value)}>
-            <SelectTrigger>
-              <SelectValue placeholder="All statuses" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="">All statuses</SelectItem>
-              <SelectItem value="pending">Pending</SelectItem>
-              <SelectItem value="approved">Approved</SelectItem>
-              <SelectItem value="rejected">Rejected</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Risk Level
@@ -85,14 +68,31 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
               <SelectValue placeholder="All risk levels" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All risk levels</SelectItem>
-              <SelectItem value="low">Low</SelectItem>
-              <SelectItem value="medium">Medium</SelectItem>
-              <SelectItem value="high">High</SelectItem>
+              <SelectItem value="low">Low Risk</SelectItem>
+              <SelectItem value="medium">Medium Risk</SelectItem>
+              <SelectItem value="high">High Risk</SelectItem>
+              <SelectItem value="critical">Critical Risk</SelectItem>
             </SelectContent>
           </Select>
         </div>
-        
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Status
+          </label>
+          <Select value={filters.status} onValueChange={(value) => handleFilterChange('status', value)}>
+            <SelectTrigger>
+              <SelectValue placeholder="All statuses" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="pending">Pending</SelectItem>
+              <SelectItem value="reviewed">Reviewed</SelectItem>
+              <SelectItem value="approved">Approved</SelectItem>
+              <SelectItem value="rejected">Rejected</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Date Range
@@ -102,18 +102,21 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
               <SelectValue placeholder="All dates" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All dates</SelectItem>
               <SelectItem value="today">Today</SelectItem>
-              <SelectItem value="week">This week</SelectItem>
-              <SelectItem value="month">This month</SelectItem>
+              <SelectItem value="week">This Week</SelectItem>
+              <SelectItem value="month">This Month</SelectItem>
+              <SelectItem value="quarter">This Quarter</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
-      
-      <div className="flex justify-end mt-4">
-        <Button variant="outline" onClick={handleReset}>
+
+      <div className="flex justify-end space-x-2 mt-4">
+        <Button  onClick={handleReset}>
           Reset Filters
+        </Button>
+        <Button onClick={() => onFilterChange(filters)}>
+          Apply Filters
         </Button>
       </div>
     </div>
