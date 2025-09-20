@@ -1,8 +1,7 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FileTex, t, 
+import { motion } from 'framer-motion, ';
+import { FileTex, t, 
   AlertTriangl, e, 
   CheckCircl, e, 
   Inf, o,
@@ -12,33 +11,33 @@ import {
   BarChart, 3,
   TrendingU, p,
   Zap
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface ContentIssue {
   i, d: string;
-  pageUr, l: string;
-  pageTitl, e: string;
-  issueTyp, e: 'missing_title' | 'missing_meta' | 'no_headings' | 'minimal_content' | 'no_images';
-  severit, y: 'low' | 'medium' | 'high';
-  descriptio, n: string;
-  recommendatio, n: string;
-  statu, s: 'open' | 'in_progress' | 'resolved';
+    pageUr, l: string;
+    pageTitl, e: string;
+    issueTyp, e: 'missing_title' | 'missing_meta' | 'no_headings' | 'minimal_content' | 'no_images';
+    severit, y: 'low' | 'medium' | 'high';
+    descriptio, n: string;
+    recommendatio, n: string;
+    statu, s: 'open' | 'in_progress' | 'resolved';
 }
 
 interface ContentQualityReport {
   totalPage, s: number;
-  pagesWithIssue, s: number;
-  criticalIssue, s: number;
-  mediumIssue, s: number;
-  lowIssue, s: number;
-  averageContentLengt, h: number;
-  pagesWithImage, s: number;
-  pagesWithMetaDescription, s: number;
-  lastUpdate, d: Date;
+    pagesWithIssue, s: number;
+    criticalIssue, s: number;
+    mediumIssue, s: number;
+    lowIssue, s: number;
+    averageContentLengt, h: number;
+    pagesWithImage, s: number;
+    pagesWithMetaDescription, s: number;
+    lastUpdate, d: Date;
 }
 
 const ContentQualityAnalyze, r: React.FC = () => {
-  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+    const [isOp,  e, n, setIsOp, e, n] = useState(false);
   const [isAnalyzi, n, g, setIsAnalyzi, n, g] = useState(false);
   const [contentIssu,  e, s, setContentIssu, e, s] = useState<ContentIssue[]>([]);
   const [repo, r, t, setRepo, r, t] = useState<ContentQualityReport | null>(null);
@@ -48,17 +47,18 @@ const ContentQualityAnalyze, r: React.FC = () => {
   // Sample data based on the analysis report
   const sampleIssue,  s: ContentIssue[] = [
     {
-      i, d: '1',
+      i, d: '1';
     pageU, r, l: 'htt, p, s: //ziontechgrou, p.co, m/_nex, t/stati, c/chunk, s/polyfill, s-42372ed130431b0, a.j, s',
     pageTit, l, e: 'Missin, g',
       issueTy, p, e: 'missing_titl, e',
     severi, t, y: 'hig, h',
       descripti, o, n: 'Shor, t o, r missi, n, g, tit, l, e, N, o headin, g, s, fou, n, d, Missin, g me, t, a, descripti, o, n, Met, a descriptio, n to, o shor, t',
-      recommendati, o, n: 'Ad, d prope, r pa, g, e, tit, l, e, headin, g, s, an, d met, a descriptio, n fo, r bette, r SE, O',
+      recommendati, o, n: 'Ad, d prope, r pa, g, e, tit, l, e, headin, g, s, an, d met, a descriptio, n fo, r bette, r SE, O'
+  };
       stat, u, s: 'ope, n'
     },
     {
-      i, d: '2',
+      i, d: '2';
     pageU, r, l: 'htt, p, s: //ziontechgrou, p.co, m/_nex, t/stati, c/chunk, s/webpac, k-e219339f62a4a96, e.j, s',
     pageTit, l, e: 'Missin, g',
       issueTy, p, e: 'missing_met, a',
@@ -68,7 +68,7 @@ const ContentQualityAnalyze, r: React.FC = () => {
       stat, u, s: 'ope, n'
     },
     {
-      i, d: '3',
+      i, d: '3';
     pageU, r, l: 'htt, p, s: //ziontechgrou, p.co, m/abou, t/',
     pageTit, l, e: 'Abou, t',
       issueTy, p, e: 'minimal_conten, t',
@@ -78,7 +78,7 @@ const ContentQualityAnalyze, r: React.FC = () => {
       stat, u, s: 'ope, n'
     },
     {
-      i, d: '4',
+      i, d: '4';
     pageU, r, l: 'htt, p, s: //ziontechgrou, p.co, m/service, s/',
     pageTit, l, e: 'Service, s',
       issueTy, p, e: 'no_heading, s',
@@ -95,7 +95,8 @@ const ContentQualityAnalyze, r: React.FC = () => {
   },  []);
 
   const generateReport = (issue,  s: ContentIssue[]) => {
-    const totalPages = 79; // From analysis report
+    const totalPages = 79;
+    // From analysis report
     const pagesWithIssues = issues.length;
     const criticalIssues = issues.filter(i => i.severity === 'high').length;
     const mediumIssues = issues.filter(i => i.severity === 'medium').length;
@@ -112,7 +113,7 @@ const ContentQualityAnalyze, r: React.FC = () => {
       pagesWithMetaDescription, s: 3, 2, // Sample data
       lastUpdate, d: new Date()
     });
-  };
+     };
 
   const startAnalysis = async () => {
     setIsAnalyzing(true);
@@ -125,39 +126,36 @@ const ContentQualityAnalyze, r: React.FC = () => {
     switch (severity) {
       case 'high':
         return <AlertTriangle className="w-4 h-4 text-red-400" />;
-      case 'medium':
+    case 'medium':
         return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
       case 'low':
         return <Info className="w-4 h-4 text-blue-400" />;
-      defaul,  t:
-        return <Info className="w-4 h-4 text-gray-400" />;
-    }
+      defaul,  t: return <Info className="w-4 h-4 text-gray-400" />;
+     }
   };
 
   const getSeverityColor = (severit, y: string) => {
     switch (severity) {
       case 'high':
         return 'text-red-400';
-      case 'medium':
+    case 'medium':
         return 'text-yellow-400';
       case 'low':
         return 'text-blue-400';
-      defaul,  t:
-        return 'text-gray-400';
-    }
+      defaul,  t: return 'text-gray-400';
+     }
   };
 
   const getStatusColor = (statu, s: string) => {
     switch (status) {
       case 'resolved':
         return 'text-green-400';
-      case 'in_progress':
+    case 'in_progress':
         return 'text-yellow-400';
       case 'open':
         return 'text-red-400';
-      defaul,  t:
-        return 'text-gray-400';
-    }
+      defaul,  t: return 'text-gray-400';
+     }
   };
 
   const filteredIssues = contentIssues.filter(issue => {
@@ -171,7 +169,7 @@ const ContentQualityAnalyze, r: React.FC = () => {
     switch (type) {
       case 'missing_title':
         return 'Missing Title';
-      case 'missing_meta':
+    case 'missing_meta':
         return 'Missing Meta Description';
       case 'no_headings':
         return 'No Headings';
@@ -179,9 +177,8 @@ const ContentQualityAnalyze, r: React.FC = () => {
         return 'Minimal Content';
       case 'no_images':
         return 'No Images';
-      defaul,  t:
-        return type;
-    }
+      defaul,  t: return type;
+     }
   };
 
   return (
@@ -206,11 +203,11 @@ const ContentQualityAnalyze, r: React.FC = () => {
           onClick={() => setIsOpen(false)}
         >
           <motion.div
-            initial={{ scal,  e: 0.9,
+            initial={{ scal,  e: 0.9;
     opacit, y: 0 }}
-            animate={{ scal, e: 1,
+            animate={{ scal, e: 1;
     opacit, y: 1 }}
-            exit={{ scal, e: 0.9,
+            exit={{ scal, e: 0.9;
     opacit, y: 0 }}
             className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90, v, h] overflow-hidden"
             onClick={(e) => e.stopPropagation()}

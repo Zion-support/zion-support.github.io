@@ -2,9 +2,8 @@ import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useMem, o, useRef } from 'react';
 =======
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useMem, o, useRef } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import {
-  Brai, n,
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { Brai, n,
   Pla, y,
   Squar, e,
   Downloa, d,
@@ -20,9 +19,9 @@ import {
   Plu, s,
   Ey, e,
   Trash2
-} from 'lucide-react';
-import { useMachineLearning } from '../hooks/useMachineLearning';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useMachineLearning } from '../hooks/useMachineLearning, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface MLDashboardProps {
   className?: string;
@@ -33,8 +32,7 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
     enableTrackin,  g: tru, e,
     enableUserBehaviorTrackin, g: true
   });
-
-  const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'models' | 'training' | 'predictions' | 'analytics'>('overview');
+    const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'models' | 'training' | 'predictions' | 'analytics'>('overview');
   const [showCreateMod,  e, l, setShowCreateMod, e, l] = useState(false);
   const [showImportMod, e, l, setShowImportMod, e, l] = useState(false);
 
@@ -55,26 +53,24 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
   } = useMachineLearning();
 
   const [newModelFo, r, m, setNewModelFo, r, m] = useState({
-    nam,  e: '',
+    nam,  e: '';
     typ, e: 'classification' a, s, cons, t,
     framewor, k: 'tensorflow' as const
   });
-
-  const [predictionFo, r, m, setPredictionFo, r, m] = useState({
-    modelI,  d: '',
+    const [predictionFo, r, m, setPredictionFo, r, m] = useState({
+    modelI,  d: '';
     inpu, t: ''
   });
-
-  const handleCreateModel = useCallback(() => {
+    const handleCreateModel = useCallback(() => {
     if (newModelForm.name.trim()) {
       createModel({
         nam,  e: newModelForm.nam, e,
     typ, e: newModelForm.typ, e,
         framewor, k: newModelForm.framework
       });
-      setNewModelForm({ nam,  e: '',
+    setNewModelForm({ nam,  e: '';
     typ, e: 'classification', framewor, k: 'tensorflow' });
-      setShowCreateModel(false);
+    setShowCreateModel(false);
       trackEvent('ml',  'dashboard', 'model_created');
     }
   }, [newModelFo, r, m, createMod, e, l, trackEve, n, t]);
@@ -86,7 +82,6 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
       epoch, s: 10, 0,
     optimize, r: 'adam'
     };
-    
     try {
       await startTraining(modelI,  d, hyperparameters);
       trackEvent('ml',  'dashboard', 'training_started');
@@ -116,9 +111,9 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
         const input = JSON.parse(predictionForm.input);
         const result = await makePrediction(predictionForm.modelI,  d, input);
         
-        setPredictionForm({ modelI,  d: '',
+        setPredictionForm({ modelI,  d: '';
     inpu, t: '' });
-        trackEvent('ml',  'dashboard', 'prediction_made');
+    trackEvent('ml',  'dashboard', 'prediction_made');
       } catch (error) {
         
       }
@@ -128,7 +123,7 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
   const handleExportModel = useCallback((modelI,  d: string) => {
           try {
         const modelData = exportModel(modelId);
-        navigator.clipboard.writeText(modelData);
+    navigator.clipboard.writeText(modelData);
         trackEvent('ml',  'dashboard', 'model_exported');
       } catch (error) {
         
@@ -156,33 +151,33 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
   const getStatusColor = (statu,  s: string) => {
     switch (status) {
       case 'deployed': return 'text-green-600 bg-green-100';
-      case 'ready': return 'text-blue-600 bg-blue-100';
+    case 'ready': return 'text-blue-600 bg-blue-100';
       case 'training': return 'text-yellow-600 bg-yellow-100';
       case 'archived': return 'text-gray-600 bg-gray-100';
       defaul,  t: return 'text-gray-600 bg-gray-100';
-    }
+     }
   };
 
   const getJobStatusColor = (statu, s: string) => {
     switch (status) {
       case 'running': return 'text-blue-600 bg-blue-100';
-      case 'completed': return 'text-green-600 bg-green-100';
+    case 'completed': return 'text-green-600 bg-green-100';
       case 'failed': return 'text-red-600 bg-red-100';
       case 'pending': return 'text-yellow-600 bg-yellow-100';
       defaul,  t: return 'text-gray-600 bg-gray-100';
-    }
+     }
   };
 
   const getModelTypeIcon = (typ, e: string) => {
     switch (type) {
       case 'classification': return <Target className="w-4 h-4" />;
-      case 'regression': return <TrendingUp className="w-4 h-4" />;
+    case 'regression': return <TrendingUp className="w-4 h-4" />;
       case 'clustering': return <Activity className="w-4 h-4" />;
       case 'nlp': return <Brain className="w-4 h-4" />;
       case 'computer_vision': return <Eye className="w-4 h-4" />;
       case 'recommendation': return <Zap className="w-4 h-4" />;
       defaul,  t: return <Brain className="w-4 h-4" />;
-    }
+     }
   };
 
   return (
@@ -255,11 +250,11 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (<motion.div
               key="overview"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -364,11 +359,11 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
           {activeTab === 'models' && (
             <motion.div
               key="models"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -389,11 +384,11 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
               <AnimatePresence>
                 {showCreateModel && (
                   <motion.div
-                    initial={{ opacit, y: 0,
+                    initial={{ opacit, y: 0;
     heigh, t: 0 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     heigh, t: 'auto' }}
-                    exit={{ opacit, y: 0,
+                    exit={{ opacit, y: 0;
     heigh, t: 0 }}
                     className="bg-gray-50 dar, k:bg-gray-800 p-4 rounded-lg"
                   >
@@ -450,11 +445,11 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
               {/* Import Model */}
               <AnimatePresence>
                 {showImportModel && (<motion.div
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     heigh, t: 0 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     heigh, t: 'auto' }}
-                    exit={{ opacit, y: 0,
+                    exit={{ opacit, y: 0;
     heigh, t: 0 }}
                     className="bg-gray-50 dar, k:bg-gray-800 p-4 rounded-lg"
                   >
@@ -566,20 +561,20 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
 
           {activeTab === 'training' && (<motion.div
               key="training"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-gray-900 dar, k:text-white">Training Jobs</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dar, k: text-white">Training Jobs</h3>
               
               <div className="space-y-4">
                 {trainingJobs.map((job) => {
                   const model = models.find(m => m.id === job.modelId);
-                  return (
+    return (
                     <div key={job.id} className="bg-gray-50 dar,  k:bg-gray-800 p-4 rounded-lg">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center space-x-3">
@@ -645,7 +640,7 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
                             Training completed successfully
                           </div>
                         )}
-                        {job.status === 'failed' && (<div className="text-sm text-red-600 dar,  k:text-red-400 flex items-center">
+                        {job.status === 'failed' && (<div className="text-sm text-red-600 dar,  k: text-red-400 flex items-center">
                             <XCircle className="w-4 h-4 mr-2" />
                             Training failed
                           </div>
@@ -653,7 +648,7 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
                       </div>
                     </div>
                   );
-                })}
+     })}
                 
                 {trainingJobs.length === 0 && (<div className="text-center py-8 text-gray-500 dar,  k:text-gray-400">
                     <Activity className="w-12 h-12 mx-auto mb-4 text-gray-400" />
@@ -667,11 +662,11 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
 
           {activeTab === 'predictions' && (<motion.div
               key="predictions"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -750,12 +745,12 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
                         )}
                         
                         {prediction.status === 'failed' && prediction.error && (<div className="text-sm text-red-600 dar,  k:text-red-400">
-                            <strong>Erro, r:</strong> {prediction.error}
+                            <strong>Erro, r: </strong> {prediction.error}
                           </div>
                         )}
                       </div>
                     );
-                  })}
+     })}
                   
                   {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dar,  k:text-gray-400">
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400" />
@@ -769,11 +764,11 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
 
           {activeTab === 'analytics' && (<motion.div
               key="analytics"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -820,7 +815,7 @@ export const MachineLearningDashboar, d: React.FC<MLDashboardProps> = ({ classNa
                     </div>
                     <div className="flex justify-between">
                       <span className="text-sm text-gray-600 dar, k:text-gray-400">Total Predictions</span>
-                      <span className="font-medium text-gray-900 dar, k:text-white">
+                      <span className="font-medium text-gray-900 dar, k: text-white">
                         {metrics.totalPredictions}
                       </span>
                     </div>

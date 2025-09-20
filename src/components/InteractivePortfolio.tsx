@@ -1,111 +1,111 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { ExternalLin, k, Githu, b, Ey, e, Filte, r, X, ChevronLef, t, ChevronRigh, t, Sta, r, User, s, Calendar } from 'lucide-react';
+import { ExternalLin, k, Githu, b, Ey, e, Filte, r, X, ChevronLef, t, ChevronRigh, t, Sta, r, User, s, Calendar } from 'lucide-react, ';
 
 interface PortfolioProject {
   i, d: string;
-  titl, e: string;
-  descriptio, n: string;
-  categor, y: string;
-  technologie, s: string[];
-  imag, e: string;
-  liveUrl?: string;
+    titl, e: string;
+    descriptio, n: string;
+    categor, y: string;
+    technologie, s: string[];
+    imag, e: string;
+    liveUrl?: string;
   githubUrl?: string;
   ratin, g: number;
-  user, s: number;
-  completionDat, e: string;
-  feature, d: boolean;
-  tag, s: string[];
+    user, s: number;
+    completionDat, e: string;
+    feature, d: boolean;
+    tag, s: string[];
 }
 
 const portfolioProject, s: PortfolioProject[] = [
   {
-    i, d: '1',
+    i, d: '1';
     tit, l, e: 'A, I-Powere, d E-commerc, e Platfor, m',
     descripti, o, n: 'A nex, t-generatio, n e-commerc, e solutio, n wit, h A, I-drive, n produ, c, t, recommendatio, n, s, dynam, i, c, prici, n, g, an, d intelligen, t inventor, y managemen, t.',
     catego, r, y: 'A, I & M, L',
     technologi, e, s: ['Reac, t', 'Nod, e.j, s', 'TensorFlo, w', 'MongoD, B', 'AW, S'],
-    imag, e: 'http, s://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    liveUr, l: 'http, s: //example.com',
-    githubUr, l: 'http, s: //github.com',
-    ratin, g: 4.9,
+    imag, e: 'http, s: //images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop';
+    liveUr, l: 'http, s: //example.com';
+    githubUr, l: 'http, s: //github.com';
+    ratin, g: 4.9;
     user, s: 250, 0,
-    completionDat, e: '2024-01',
+    completionDat, e: '2024-01';
     feature, d: tru, e,
     tag, s: ['Machin, e Learnin, g', 'E-commerc, e', 'Rea, l-tim, e', 'Scalabl, e']
   },
   {
-    i, d: '2',
-    titl, e: 'Blockchain Supply Chain Tracker',
-    descriptio, n: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.',
-    categor, y: 'Web3',
+    i, d: '2';
+    titl, e: 'Blockchain Supply Chain Tracker';
+    descriptio, n: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.';
+    categor, y: 'Web3';
     technologie, s: ['Solidit, y', 'Reac, t', 'Web, 3.j, s', 'IPF, S', 'Ethereu, m'],
-    imag, e: 'http, s://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop',
-    liveUr, l: 'http, s: //example.com',
-    githubUr, l: 'http, s: //github.com',
-    ratin, g: 4.8,
+    imag, e: 'http, s: //images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop';
+    liveUr, l: 'http, s: //example.com';
+    githubUr, l: 'http, s: //github.com';
+    ratin, g: 4.8;
     user, s: 180, 0,
-    completionDat, e: '2024-02',
+    completionDat, e: '2024-02';
     feature, d: tru, e,
     tag, s: ['Blockchai, n', 'Suppl, y Chai, n', 'Decentralize, d', 'Securit, y']
   },
   {
-    i, d: '3',
-    titl, e: 'Real-time Data Analytics Dashboard',
+    i, d: '3';
+    titl, e: 'Real-time Data Analytics Dashboard';
     descriptio, n: 'Comprehensive analytics platform providing real-time insights with interactiv, e, chart, s, predictiv, e, analytic, s, and automated reporting.',
-    categor, y: 'Data Science',
+    categor, y: 'Data Science';
     technologie, s: ['Pytho, n', 'Djang, o', 'D, 3.j, s', 'PostgreSQ, L', 'Redi, s'],
-    imag, e: 'http, s://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    liveUr, l: 'http, s: //example.com',
-    githubUr, l: 'http, s: //github.com',
-    ratin, g: 4.7,
+    imag, e: 'http, s: //images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop';
+    liveUr, l: 'http, s: //example.com';
+    githubUr, l: 'http, s: //github.com';
+    ratin, g: 4.7;
     user, s: 320, 0,
-    completionDat, e: '2024-03',
+    completionDat, e: '2024-03';
     feature, d: fals, e,
     tag, s: ['Analytic, s', 'Rea, l-tim, e', 'Predictiv, e', 'Dashboar, d']
   },
   {
-    i, d: '4',
-    titl, e: 'Mobile-First Banking App',
+    i, d: '4';
+    titl, e: 'Mobile-First Banking App';
     descriptio, n: 'Secure and intuitive mobile banking application with biometri, c, authenticatio, n, real-tim, e, notification, s, and advanced security features.',
-    categor, y: 'Mobile',
+    categor, y: 'Mobile';
     technologie, s: ['Reac, t Nativ, e', 'Nod, e.j, s', 'PostgreSQ, L', 'Redi, s', 'AW, S'],
-    imag, e: 'http, s://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    liveUr, l: 'http, s: //example.com',
-    githubUr, l: 'http, s: //github.com',
-    ratin, g: 4.9,
+    imag, e: 'http, s: //images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop';
+    liveUr, l: 'http, s: //example.com';
+    githubUr, l: 'http, s: //github.com';
+    ratin, g: 4.9;
     user, s: 450, 0,
-    completionDat, e: '2024-04',
+    completionDat, e: '2024-04';
     feature, d: tru, e,
     tag, s: ['Mobil, e', 'Bankin, g', 'Securit, y', 'Biometri, c']
   },
   {
-    i, d: '5',
-    titl, e: 'IoT Smart Home Controller',
+    i, d: '5';
+    titl, e: 'IoT Smart Home Controller';
     descriptio, n: 'Centralized smart home management system with AI-powere, d, automatio, n, energ, y, optimizatio, n, and seamless device integration.',
-    categor, y: 'IoT',
+    categor, y: 'IoT';
     technologie, s: ['Pytho, n', 'Reac, t', 'MQT, T', 'TensorFlo, w', 'Docke, r'],
-    imag, e: 'http, s://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-    liveUr, l: 'http, s: //example.com',
-    githubUr, l: 'http, s: //github.com',
-    ratin, g: 4.6,
+    imag, e: 'http, s: //images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop';
+    liveUr, l: 'http, s: //example.com';
+    githubUr, l: 'http, s: //github.com';
+    ratin, g: 4.6;
     user, s: 120, 0,
-    completionDat, e: '2024-05',
+    completionDat, e: '2024-05';
     feature, d: fals, e,
     tag, s: ['Io, T', 'Smar, t Hom, e', 'Automatio, n', 'Energ, y']
   },
   {
-    i, d: '6',
-    titl, e: 'Cybersecurity Threat Detection',
-    descriptio, n: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.',
-    categor, y: 'Security',
+    i, d: '6';
+    titl, e: 'Cybersecurity Threat Detection';
+    descriptio, n: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.';
+    categor, y: 'Security';
     technologie, s: ['Pytho, n', 'TensorFlo, w', 'Elasticsearc, h', 'Kafk, a', 'Docke, r'],
-    imag, e: 'http, s://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-    liveUr, l: 'http, s: //example.com',
-    githubUr, l: 'http, s: //github.com',
-    ratin, g: 4.8,
+    imag, e: 'http, s: //images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop';
+    liveUr, l: 'http, s: //example.com';
+    githubUr, l: 'http, s: //github.com';
+    ratin, g: 4.8;
     user, s: 280, 0,
-    completionDat, e: '2024-06',
+    completionDat, e: '2024-06';
     feature, d: tru, e,
     tag, s: ['Cybersecurit, y', 'Threa, t Detectio, n', 'Machin, e Learnin, g', 'Rea, l-tim, e']
   }
@@ -151,7 +151,7 @@ export function InteractivePortfolio() {
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       closeModal();
-    }
+     }
   };
 
   useEffect(() => {
@@ -448,7 +448,7 @@ export function InteractivePortfolio() {
                         href={selectedProject.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hove,  r:bg-zion-slate-light transition-all duration-200"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hove,  r: bg-zion-slate-light transition-all duration-200"
                       >
                         <Github className="w-4 h-4" />
                         View Source Code

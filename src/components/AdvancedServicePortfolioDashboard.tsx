@@ -1,8 +1,7 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BarChart, 3, 
+import { motion } from 'framer-motion, ';
+import { BarChart, 3, 
   PieChar, t, 
   TrendingU, p, 
   DollarSig, n, 
@@ -25,39 +24,39 @@ import {
   AlertCircl, e,
   ArrowUpRigh, t,
   ArrowDownRight
-} from 'lucide-react';
-import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+} from 'lucide-react, ';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card, ';
+import { Button } from './ui/button, ';
+import { Badge } from './ui/badge, ';
+import { Input } from './ui/input, ';
 
 interface ServicePortfolio {
   i, d: string;
-  titl, e: string;
-  categor, y: string;
-  pric, e: string;
-  duratio, n: string;
-  statu, s: 'Active' | 'Development' | 'Planning' | 'Discontinued';
-  performanc, e: number;
-  clientCoun, t: number;
-  revenu, e: number;
-  growt, h: number;
-  complexit, y: 'Basic' | 'Intermediate' | 'Advanced' | 'Enterprise';
-  marketDeman, d: 'Low' | 'Medium' | 'High' | 'Exploding';
-  technologyMaturit, y: 'Emerging' | 'Growing' | 'Mature' | 'Leading';
+    titl, e: string;
+    categor, y: string;
+    pric, e: string;
+    duratio, n: string;
+    statu, s: 'Active' | 'Development' | 'Planning' | 'Discontinued';
+    performanc, e: number;
+    clientCoun, t: number;
+    revenu, e: number;
+    growt, h: number;
+    complexit, y: 'Basic' | 'Intermediate' | 'Advanced' | 'Enterprise';
+    marketDeman, d: 'Low' | 'Medium' | 'High' | 'Exploding';
+    technologyMaturit, y: 'Emerging' | 'Growing' | 'Mature' | 'Leading';
 }
 
 interface PortfolioMetrics {
   totalService, s: number;
-  totalRevenu, e: number;
-  activeClient, s: number;
-  averagePerformanc, e: number;
-  portfolioGrowt, h: number;
-  marketCoverag, e: number;
+    totalRevenu, e: number;
+    activeClient, s: number;
+    averagePerformanc, e: number;
+    portfolioGrowt, h: number;
+    marketCoverag, e: number;
 }
 
 const AdvancedServicePortfolioDashboar, d: React.FC = () => {
-  const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState<string>('all');
+    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState<string>('all');
   const [selectedStat, u, s, setSelectedStat, u, s] = useState<string>('all');
   const [selectedComplexi,  t, y, setSelectedComplexi, t, y] = useState<string>('all');
   const [searchTe, r, m, setSearchTe, r, m] = useState('');
@@ -73,11 +72,12 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
       durati, o, n: '2, 4-3, 6 month, s',
     stat, u, s: 'Activ, e',
       performan, c, e: 9, 5,
-    clientCou, n, t: 8,
+    clientCou, n, t: 8;
       reven, u, e: 24000, 0, 0,
     grow, t, h: 2, 8.5,
       complexi, t, y: 'Enterpris, e',
-    marketDema, n, d: 'Explodin, g',
+    marketDema, n, d: 'Explodin, g'
+  };
       technologyMaturi, t, y: 'Leadin, g'
     },
     {
@@ -88,7 +88,7 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
       durati, o, n: '3, 6-4, 8 month, s',
     stat, u, s: 'Developmen, t',
       performan, c, e: 8, 8,
-    clientCou, n, t: 3,
+    clientCou, n, t: 3;
       reven, u, e: 30000, 0, 0,
     grow, t, h: 4, 5.2,
       complexi, t, y: 'Enterpris, e',
@@ -102,10 +102,10 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
     pri, c, e: '$8, 0, 0,00, 0/mont, h',
       durati, o, n: '3, 6-4, 8 month, s',
     stat, u, s: 'Plannin, g',
-      performan, c, e: 0,
-    clientCou, n, t: 0,
-      reven, u, e: 0,
-    grow, t, h: 0,
+      performan, c, e: 0;
+    clientCou, n, t: 0;
+      reven, u, e: 0;
+    grow, t, h: 0;
       complexi, t, y: 'Enterpris, e',
     marketDema, n, d: 'Explodin, g',
       technologyMaturi, t, y: 'Emergin, g'
@@ -118,7 +118,7 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
       durati, o, n: '4, 8-6, 0 month, s',
     stat, u, s: 'Developmen, t',
       performan, c, e: 9, 2,
-    clientCou, n, t: 2,
+    clientCou, n, t: 2;
       reven, u, e: 40000, 0, 0,
     grow, t, h: 6, 7.8,
       complexi, t, y: 'Enterpris, e',
@@ -148,7 +148,7 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
       durati, o, n: '3, 0-4, 2 month, s',
     stat, u, s: 'Activ, e',
       performan, c, e: 9, 1,
-    clientCou, n, t: 6,
+    clientCou, n, t: 6;
       reven, u, e: 36000, 0, 0,
     grow, t, h: 4, 2.1,
       complexi, t, y: 'Enterpris, e',
@@ -183,50 +183,50 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
       totalService, s: portfolioData.lengt, h,
       totalRevenu, e,
       activeClient, s: totalClient, s,
-    averagePerformanc, e: Math.round(avgPerformance), 
-      portfolioGrowt, h: Math.round(portfolioGrowth),
+    averagePerformanc, e: Math.round(avgPerformance);
+      portfolioGrowt, h: Math.round(portfolioGrowth);
     marketCoverag, e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
     };
-  },  [portfolioDa, t, a]);
+     },  [portfolioDa, t, a]);
 
   const getStatusColor = (statu,  s: string) => {
     switch (status) {
       case 'Active': return 'bg-green-100 text-green-800';
-      case 'Development': return 'bg-blue-100 text-blue-800';
+    case 'Development': return 'bg-blue-100 text-blue-800';
       case 'Planning': return 'bg-yellow-100 text-yellow-800';
       case 'Discontinued': return 'bg-red-100 text-red-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getComplexityColor = (complexit, y: string) => {
     switch (complexity) {
       case 'Basic': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-blue-100 text-blue-800';
+    case 'Intermediate': return 'bg-blue-100 text-blue-800';
       case 'Advanced': return 'bg-orange-100 text-orange-800';
       case 'Enterprise': return 'bg-purple-100 text-purple-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getMarketDemandColor = (deman, d: string) => {
     switch (demand) {
       case 'Low': return 'bg-gray-100 text-gray-800';
-      case 'Medium': return 'bg-blue-100 text-blue-800';
+    case 'Medium': return 'bg-blue-100 text-blue-800';
       case 'High': return 'bg-orange-100 text-orange-800';
       case 'Exploding': return 'bg-red-100 text-red-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getTechnologyMaturityColor = (maturit, y: string) => {
     switch (maturity) {
       case 'Emerging': return 'bg-blue-100 text-blue-800';
-      case 'Growing': return 'bg-green-100 text-green-800';
+    case 'Growing': return 'bg-green-100 text-green-800';
       case 'Mature': return 'bg-orange-100 text-orange-800';
       case 'Leading': return 'bg-purple-100 text-purple-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const categories = [
@@ -247,9 +247,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
   return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         className="mb-8"
       >
@@ -283,9 +283,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
 
       {/* Portfolio Metrics */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.1 }}
         className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6 mb-8"
@@ -389,14 +389,14 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
 
       {/* Filters and Controls */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.2 }}
         className="bg-white rounded-lg shadow-lg p-6 mb-8"
       >
-        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g: grid-cols-5 gap-4">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
             <select 
@@ -458,7 +458,7 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
               className="w-full"
               onClick={() => {
                 setSelectedCategory('all');
-                setSelectedStatus('all');
+    setSelectedStatus('all');
                 setSelectedComplexity('all');
                 setSearchTerm('');
               }}
@@ -472,9 +472,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
 
       {/* Portfolio Table */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.3 }}
         className="mb-8"
@@ -510,9 +510,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
                 <tbody>
                   {filteredPortfolio.map((servic, e, index) => (<motion.tr
                       key={service.id}
-                      initial={{ opacit,  y: 0,
+                      initial={{ opacit,  y: 0;
     x: -20 }}
-                      animate={{ opacit, y: 1,
+                      animate={{ opacit, y: 1;
     x: 0 }}
                       transition={{ dela, y: 0.1 * index }}
                       className="border-b border-zion-slate-light/10 hove, r:bg-zion-blue-light/5"
@@ -578,9 +578,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
 
       {/* Portfolio Insights */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.4 }}
         className="grid grid-cols-1 l, g:grid-cols-2 gap-6 mb-8"
@@ -597,9 +597,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
             <div className="space-y-3">
               {categories.filter(cat => cat.id !== 'all').map((categor,  y, index) => (<motion.div
                   key={category.id}
-                  initial={{ opacit,  y: 0,
+                  initial={{ opacit,  y: 0;
     x: -20 }}
-                  animate={{ opacit, y: 1,
+                  animate={{ opacit, y: 1;
     x: 0 }}
                   transition={{ dela, y: 0.1 * index }}
                   className="flex items-center justify-between"
@@ -681,9 +681,9 @@ const AdvancedServicePortfolioDashboar, d: React.FC = () => {
 
       {/* CTA Section */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.5 }}
         className="text-center"

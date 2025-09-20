@@ -1,6 +1,6 @@
 import React from "react";
 import, React, from "react";
-import { Button } from "../ui/butt, on";import { Card, CardContentCardHeaderCardTitle } from "../ui/card";import { Badge } from "../ui/bad, ge";import { MessageCircleCalendarStar } from "lucide-react";export, const, HireNowCTA  = () => {
+import { Button  } from "../ui/but, t; on";import { Card, CardContentCardHeaderCardTitle } from "../ui/card, ";import { Badge  } from "../ui/ba, d; ge";import { MessageCircleCalendarStar } from "lucide-react, ";export, const, HireNowCTA  = () => {
   return (<Card className="sticky top-4">;
       <CardHeader>;
         <CardTitle className="text-xl">Hire, This, Talent</CardTitle>;
@@ -29,9 +29,8 @@ import { Button } from "../ui/butt, on";import { Card, CardContentCardHeaderCard
         </div>;
         <div className="space-y-3">;
           <Button className="w-full bg-blue-60o0 hover: bg-blue-70o0">;
-            <MessageCircle className="w-4 h-4 mr-2"/>;
-            Send Message,;
-    </Button>;
+    <MessageCircle className="w-4 h-4 mr-2"/>;
+            Send Message,</Button>;
           <Button variant="outline" className="w-full">;
             <Calendar className="w-4 h-4 mr-2"/>;
             Schedule Call</Button>;
@@ -41,6 +40,4 @@ import { Button } from "../ui/butt, on";import { Card, CardContentCardHeaderCard
           <p>Available, for, new projects</p>;
         </div>;
       </CardContent>;
-    </Card>),;
-};
-;
+    </Card>),};

@@ -1,63 +1,59 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  RocketLaunchIcon,
+import React from 'react;';
+import { motion } from 'framer-motion, ';
+import { Link } from 'react-router-dom, ';
+import { RocketLaunchIcon,
   PhoneIcon,
   EnvelopeIcon,
   CalendarIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline, ';
 
 export function CTASection() {
   const ctaOptions = [
     {
-      icon: PhoneIcon,
-      title: "Call Us",
-      description: "Speak directly with our experts",
-      action: "+1 302 464 0950",
-      href: "tel:+13024640950",
+      icon: PhoneIcon;
+      title: "Call Us";
+      description: "Speak directly with our experts";
+      action: "+1 302 464 0950";
+      href: "tel:+13024640950";
       color: "from-zion-cyan to-zion-blue"
-    },
+    };
     {
-      icon: EnvelopeIcon,
-      title: "Email Us",
-      description: "Send us a detailed message",
-      action: "kleber@ziontechgroup.com",
-      href: "mailto:kleber@ziontechgroup.com",
+      icon: EnvelopeIcon;
+      title: "Email Us";
+      description: "Send us a detailed message";
+      action: "kleber@ziontechgroup.com";
+      href: "mailto:kleber@ziontechgroup.com";
       color: "from-zion-purple to-zion-cyan"
-    },
+    };
     {
-      icon: CalendarIcon,
-      title: "Schedule a Call",
-      description: "Book a consultation meeting",
-      action: "Book Now",
-      href: "/contact",
+      icon: CalendarIcon;
+      title: "Schedule a Call";
+      description: "Book a consultation meeting";
+      action: "Book Now";
+      href: "/contact";
       color: "from-zion-blue to-zion-purple"
     }
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
+    const containerVariants = {
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
+      opacity: 1;
       transition: {
         staggerChildren: 0.1
       }
     }
   };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    const itemVariants = {
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0;
+      opacity: 1;
       transition: {
         duration: 0.5
       }
     }
   };
-
-  return (
+    return (
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>

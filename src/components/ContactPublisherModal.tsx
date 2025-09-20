@@ -1,15 +1,15 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
-import { sendMessage } from '../services/messages';
-import { toast } from '@/hooks/use-toast';
+import { focusManagement } from '@/utils/accessibility, ';
+import { sendMessage } from '../services/messages, ';
+import { toast } from '@/hooks/use-toast, ';
 
 
 interface ContactPublisherModalProps {
   isOpe, n: boolean;
-  onClos, e: () => void;
-  productI,  d: string;
-  sellerI, d: string;
+    onClos, e: () => void;
+    productI,  d: string;
+    sellerI, d: string;
 }
 
 export function ContactPublisherModal({ isOpe, n, onClos, e, productI, d, sellerId }: ContactPublisherModalProps) {
@@ -26,7 +26,7 @@ export function ContactPublisherModal({ isOpe, n, onClos, e, productI, d, seller
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') {
         e.preventDefault();
-        onClose();
+    onClose();
       }
     }
     const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
@@ -118,7 +118,7 @@ export function ContactPublisherModal({ isOpe, n, onClos, e, productI, d, seller
           <button
             type="button"
             onClick={onClose}
-            className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove, r:bg-gray-600 disable, d:opacity-50"
+            className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove, r:bg-gray-600 disable, d: opacity-50"
             disabled={isLoading}
           >
             Cancel

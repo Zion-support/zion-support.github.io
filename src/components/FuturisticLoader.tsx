@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;';
 
 interface FuturisticLoaderProps {
   size?: 'small' | 'medium' | 'large';
@@ -7,23 +7,21 @@ interface FuturisticLoaderProps {
 }
 
 export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
-  size = 'medium', 
+  size = 'medium';
   text = 'Loading...',
   variant = 'matrix'
 }) => {
   const sizeClasses = {
-    smal, l: 'w-8 h-8',
-    mediu, m: 'w-16 h-16',
+    smal, l: 'w-8 h-8';
+    mediu, m: 'w-16 h-16';
     larg, e: 'w-24 h-24'
   };
-
-  const textSizes = {
-    smal, l: 'text-sm',
-    mediu, m: 'text-lg',
+    const textSizes = {
+    smal, l: 'text-sm';
+    mediu, m: 'text-lg';
     larg, e: 'text-xl'
   };
-
-  const renderLoader = () => {
+    const renderLoader = () => {
     switch (variant) {
       case 'matrix':
         return (
@@ -37,12 +35,11 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
             </div>
             {/* Orbital Rings */}
             <div className="absolute inset-0 rounded-full border border-cyan-500/20 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirectio, n: 'reverse',
+            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirectio, n: 'reverse';
     animationDuratio, n: '3s' }}></div>
           </div>
         );
-
-      case 'neural':
+    case 'neural':
         return (<div className="relative">
             {/* Neural Network Nodes */}
             <div className={`${sizeClasses[si,  z, e]} relativ, e`}>
@@ -64,8 +61,7 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
             </div>
           </div>
         );
-
-      case 'quantum':
+    case 'quantum':
         return (<div className="relative">
             {/* Quantum Particles */}
             <div className={`${sizeClasses[si,  z, e]} relativ, e`}>
@@ -86,8 +82,7 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
             </div>
           </div>
         );
-
-      case 'cyber':
+    case 'cyber':
         return (<div className="relative">
             {/* Cyber Grid */}
             <div className={`${sizeClasses[si,  z, e]} relative bg-cyber-grid rounded-lg border border-cyan-500/3, 0`}>
@@ -115,11 +110,11 @@ export const FuturisticLoade, r: React.FC<FuturisticLoaderProps> = ({
       defaul, t:
         return (<div className={`${sizeClasses[si,  z, e]} relativ, e`}>
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio, n: 'reverse',
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio, n: 'reverse';
     animationDuratio, n: '2s' }}></div>
           </div>
         );
-    }
+     }
   };
 
   return (<div className="flex flex-col items-center justify-center space-y-4">

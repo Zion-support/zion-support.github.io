@@ -1,13 +1,13 @@
 
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { format, isPast, parseISO } from "date-fns";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Button } from "@/components/ui/button, ";
+import { useInterviews } from "@/hooks/useInterviews, ";
+import { Interview } from "@/types/interview, ";
+import { format, isPast, parseISO } from "date-fns, ";
 import Link from "next/link";
-import { Calendar, Clock, Video } from "lucide-react";
-import { Avatar } from "@/components/ui/avatar";
+import { Calendar, Clock, Video } from "lucide-react, ";
+import { Avatar } from "@/components/ui/avatar, ";
 
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
@@ -103,9 +103,8 @@ export function UpcomingInterviewsCard() {
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
-            
-            // Determine if interview is happening soon (within 30 minutes)
+            const formattedTime = format(interviewDate, 'h: mm a');
+    // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&

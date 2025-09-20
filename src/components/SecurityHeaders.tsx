@@ -1,5 +1,5 @@
-import React from 'react';
-import { Shiel, d, Loc, k, CheckCircl, e, AlertTriangle } from 'lucide-react';
+import React from 'react;';
+import { Shiel, d, Loc, k, CheckCircl, e, AlertTriangle } from 'lucide-react, ';
 
 interface SecurityHeadersProps {
   className?: string;
@@ -125,7 +125,7 @@ export function SecurityHeaders({ className }: SecurityHeadersProps) {
         </div>
 
         {/* Security Metrics */}
-        <div className="grid grid-cols-1 m,  d:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 m,  d: grid-cols-3 gap-8 mb-16">
           <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>
             <div className="text-zion-slate-light">Uptime SLA</div>

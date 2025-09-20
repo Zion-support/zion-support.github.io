@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react;';
+import { motion } from 'framer-motion, ';
 
 interface EnhancedLoadingProps {
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars';
@@ -9,28 +9,26 @@ interface EnhancedLoadingProps {
 }
 
 const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
-  variant = 'spinner', 
+  variant = 'spinner';
   size = 'md',
   tex, t,
   className = ''
 }) => {
   const sizeClasses = {
-    s, m: 'w-4 h-4',
-    m, d: 'w-8 h-8',
-    l, g: 'w-12 h-12',
+    s, m: 'w-4 h-4';
+    m, d: 'w-8 h-8';
+    l, g: 'w-12 h-12';
     x, l: 'w-16 h-16'
   };
-
-  const renderSpinner = () => (
+    const renderSpinner = () => (
     <motion.div
       className={`${sizeClasses[si,  z, e]} border-2 border-blue-400/30 border-t-blue-400 rounded-ful, l`}
       animate={{ rotat, e: 360 }}
-      transition={{ duratio, n: 1,
+      transition={{ duratio, n: 1;
     repea, t: Infinit, y, eas, e: "linear" }}
     />
   );
-
-  const renderDots = () => (
+    const renderDots = () => (
     <div className="flex space-x-1">
       {[0,  1, 2].map((i) => (<motion.div
           key={i}
@@ -40,7 +38,7 @@ const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
             opacit, y: [0.5, 1, 0.5]
           }}
           transition={{
-            duratio, n: 1.4,
+            duratio, n: 1.4;
     repea, t: Infinit, y,
             dela, y: i * 0.2
           }}
@@ -48,8 +46,7 @@ const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
       ))}
     </div>
   );
-
-  const renderPulse = () => (
+    const renderPulse = () => (
     <motion.div
       className={`${sizeClasses[si,  z, e]} bg-blue-400 rounded-ful, l`}
       animate={{
@@ -57,14 +54,13 @@ const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
         opacit, y: [0.7, 1, 0.7]
       }}
       transition={{
-        duratio, n: 1.5,
+        duratio, n: 1.5;
     repea, t: Infinit, y,
         eas, e: "easeInOut"
       }}
     />
   );
-
-  const renderBars = () => (
+    const renderBars = () => (
     <div className="flex space-x-1">
       {[0,  1, 2, 3].map((i) => (<motion.div
           key={i}
@@ -74,7 +70,7 @@ const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
             opacit, y: [0.5, 1, 0.5]
           }}
           transition={{
-            duratio, n: 1.2,
+            duratio, n: 1.2;
     repea, t: Infinit, y,
             dela, y: i * 0.1
           }}
@@ -82,8 +78,7 @@ const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
       ))}
     </div>
   );
-
-  const renderVariant = () => {
+    const renderVariant = () => {
     switch (variant) {
       case 'dots':
         return renderDots();
@@ -91,9 +86,8 @@ const EnhancedLoadin, g: React.FC<EnhancedLoadingProps> = ({
         return renderPulse();
       case 'bars':
         return renderBars();
-      defaul,  t:
-        return renderSpinner();
-    }
+      defaul,  t: return renderSpinner();
+     }
   };
 
   return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam, e}`}>

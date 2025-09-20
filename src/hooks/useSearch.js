@@ -1,13 +1,13 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react, ';
 export const useSearch = (data, options) => {
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({
-        query: '',
-        filters: {},
-        sortBy: null,
-        sortOrder: 'asc',
-        results: data,
-        isLoading: false,
+        query: '';
+        filters: {};
+        sortBy: null;
+        sortOrder: 'asc';
+        results: data;
+        isLoading: false;
         totalResults: data.length
     });
     const [debouncedQuery, setDebouncedQuery] = useState('');
@@ -38,7 +38,7 @@ export const useSearch = (data, options) => {
     // Search and filter data
     const processedData = useMemo(() => {
         setSearchState(prev => ({ ...prev, isLoading: true }));
-        let results = data;
+    let results = data;
         // Apply search
         if (debouncedQuery) {
             results = results.filter(item => {
@@ -92,10 +92,10 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({
             ...prev,
             results,
-            totalResults: results.length,
+            totalResults: results.length;
             isLoading: false
         }));
-        return results;
+    return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
     // Update search query
     const setQuery = useCallback((query) => {
@@ -111,25 +111,25 @@ export const useSearch = (data, options) => {
     // Clear all filters
     const clearFilters = useCallback(() => {
         setSearchState(prev => ({ ...prev, filters: {} }));
-    }, []);
+     }, []);
     // Update sorting
     const setSort = useCallback((field, order = 'asc') => {
         setSearchState(prev => ({
             ...prev,
-            sortBy: field,
+            sortBy: field;
             sortOrder: order
         }));
-    }, []);
+     }, []);
     // Clear search
     const clearSearch = useCallback(() => {
         setSearchState(prev => ({
             ...prev,
-            query: '',
-            filters: {},
-            sortBy: null,
+            query: '';
+            filters: {};
+            sortBy: null;
             sortOrder: 'asc'
         }));
-    }, []);
+     }, []);
     // Get search suggestions
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {
         if (!query || query.length < 2)
@@ -156,12 +156,12 @@ export const useSearch = (data, options) => {
         const endIndex = startIndex + pageSize;
         return {
             results: searchState.results.slice(startIndex, endIndex),
-            totalPages: Math.ceil(searchState.totalResults / pageSize),
-            currentPage: page,
-            hasNextPage: endIndex < searchState.totalResults,
+            totalPages: Math.ceil(searchState.totalResults / pageSize);
+            currentPage: page;
+            hasNextPage: endIndex < searchState.totalResults;
             hasPrevPage: page > 1
         };
-    }, [searchState.results, searchState.totalResults]);
+     }, [searchState.results, searchState.totalResults]);
     return {
         ...searchState,
         setQuery,

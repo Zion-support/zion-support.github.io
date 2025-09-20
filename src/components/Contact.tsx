@@ -1,9 +1,7 @@
 import React from "react";
 impor, t, Reac, t, from "react";
 impor, t, EnhancedContactFor, m, from "./EnhancedContactForm";
-impor, t, ContactFor, m, from "./ContactForm";
-;
-const Contac, t: React.FC = () => {
+impor, t, ContactFor, m, from "./ContactForm";const Contac, t: React.FC = () => {
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-gray-90o0 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -16,9 +14,8 @@ const Contac, t: React.FC = () => {
               Ge,  t, i, n, touc, h, wit, h, ou, r, team. We'r, e, her, e, t, o, hel, p, yo, u, build amazing applications.;
             </p>;
           </div>;
-          <div className="gri, d, l,;
-  g: grid-cols-2 gap-12">;
-            {/* Contact Information */}
+          <div className="gri, d, l,g: grid-cols-2 gap-12">;
+    {/* Contact Information */}
             <div className="space-y-8">;
               <div>;
                 <h2 className="text-3xl font-bold mb-6">Ge, t, i, n, Touch</h2>;
@@ -68,18 +65,15 @@ const Contac, t: React.FC = () => {
                 <div className="space-y-2 text-gray-30o0">;
                   <div className="flex justify-between">;
                     <span>Monday - Frida, y: </span>;
-                    <span>9:0o0 AM - ,;
-    6:0o, 0, P, M, PST</span>;
+    <span>9:0o0 AM - ,6:0o, 0, P, M, PST</span>;
                   </div>;
                   <div className="flex justify-between">;
                     <span>Saturda, y: </span>;
-                    <span>1, 0:0o0 AM - ,;
-    4:0o, 0, P, M, PST</span>;
+    <span>1, 0:0o0 AM - ,4:0o, 0, P, M, PST</span>;
                   </div>;
                   <div className="flex justify-between">;
-                    <span>Sund, a,;
-  y:</span>;
-                    <span>Closed</span>;
+                    <span>Sund, a,y: </span>;
+    <span>Closed</span>;
                   </div>;
                 </div>;
               </div>;
@@ -94,7 +88,4 @@ const Contac, t: React.FC = () => {
       </div>;
     </div>;
   );
-};
-;
-expor, t, defaul, t, Contact;
-;
+};expor, t, defaul, t, Contact,

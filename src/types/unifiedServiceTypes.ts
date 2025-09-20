@@ -1,22 +1,22 @@
 // Unified service types that combine all service variants
 export interface BaseService {
   id: string;
-  title?: string;
+    title?: string;
   name?: string;
   description: string;
-  category: string;
-  subcategory?: string;
+    category: string;
+    subcategory?: string;
   price?: number | {
     monthly?: number;
     yearly?: number;
     oneTime?: number;
     currency: string;
     pricingModel: string;
-  };
+     };
   currency?: string;
   pricingModel?: string;
   features: string[];
-  benefits?: string[];
+    benefits?: string[];
   useCases?: string[];
   targetAudience?: string[];
   tags?: string[];
@@ -38,7 +38,7 @@ export type UnifiedService = BaseService;
 
 // Helper type guards
 export const hasProperty = <T, K extends string>(
-  obj: T,
+  obj: T;
   prop: K
 ): obj is T & Record<K, any> => {
   return obj && typeof obj === 'object' && prop in obj;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react;';
 
 interface FloatingOrbsProps {
   count?: number;
@@ -26,14 +26,13 @@ export function FloatingOrbs({ count = 6, className = '' }: FloatingOrbsProps) {
     // Orb class
     class Orb {
       x: number;
-      y: number;
+    y: number;
       radius: number;
-      vx: number;
-      vy: number;
-      opacity: number;
-      color: string;
-
-      constructor() {
+    vx: number;
+    vy: number;
+    opacity: number;
+    color: string;
+    constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 3 + 1;

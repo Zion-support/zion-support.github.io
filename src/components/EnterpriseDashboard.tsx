@@ -2,9 +2,8 @@ import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useMemo } from 'react';
 =======
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useMemo } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { 
-  Activit, y, 
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { Activit, y, 
   Serve, r, 
   Shiel, d, 
   User, s, 
@@ -16,60 +15,60 @@ import {
   Clock, 3,
   RefreshC, w,
   Loader2
-} from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface SystemMetric {
   i, d: string;
-  nam, e: string;
-  valu, e: number;
-  uni, t: string;
-  statu, s: 'healthy' | 'warning' | 'critical' | 'offline';
-  tren, d: 'up' | 'down' | 'stable';
-  chang, e: number;
-  threshol, d: {
+    nam, e: string;
+    valu, e: number;
+    uni, t: string;
+    statu, s: 'healthy' | 'warning' | 'critical' | 'offline';
+    tren, d: 'up' | 'down' | 'stable';
+    chang, e: number;
+    threshol, d: {
     warnin, g: number;
     critica, l: number;
-  };
+     };
   lastUpdate, d: Date;
 }
 
 interface ServiceStatus {
   i, d: string;
-  nam, e: string;
-  statu, s: 'online' | 'offline' | 'degraded' | 'maintenance';
-  uptim, e: number;
-  responseTim, e: number;
-  errorRat, e: number;
-  lastIncident?: {
+    nam, e: string;
+    statu, s: 'online' | 'offline' | 'degraded' | 'maintenance';
+    uptim, e: number;
+    responseTim, e: number;
+    errorRat, e: number;
+    lastIncident?: {
     typ, e: string;
     timestam, p: Date;
     resolve, d: boolean;
-  };
+     };
 }
 
 interface SecurityAlert {
   i, d: string;
-  severit, y: 'low' | 'medium' | 'high' | 'critical';
-  typ, e: 'intrusion' | 'malware' | 'data_breach' | 'access_violation' | 'anomaly';
-  titl, e: string;
-  descriptio, n: string;
-  timestam, p: Date;
-  statu, s: 'new' | 'investigating' | 'resolved' | 'false_positive';
-  affecte, d: string[];
-  sourc, e: string;
+    severit, y: 'low' | 'medium' | 'high' | 'critical';
+    typ, e: 'intrusion' | 'malware' | 'data_breach' | 'access_violation' | 'anomaly';
+    titl, e: string;
+    descriptio, n: string;
+    timestam, p: Date;
+    statu, s: 'new' | 'investigating' | 'resolved' | 'false_positive';
+    affecte, d: string[];
+    sourc, e: string;
 }
 
 interface UserActivity {
   i, d: string;
-  userI, d: string;
-  userNam, e: string;
-  actio, n: string;
-  resourc, e: string;
-  timestam, p: Date;
-  ipAddres, s: string;
-  userAgen, t: string;
-  statu, s: 'success' | 'failure' | 'pending';
+    userI, d: string;
+    userNam, e: string;
+    actio, n: string;
+    resourc, e: string;
+    timestam, p: Date;
+    ipAddres, s: string;
+    userAgen, t: string;
+    statu, s: 'success' | 'failure' | 'pending';
 }
 
 export const EnterpriseDashboar, d: React.FC = () => {
@@ -77,8 +76,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
     enableTrackin,  g: tru, e,
     enableUserBehaviorTrackin, g: true
   });
-
-  const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'performance' | 'security' | 'users' | 'services' | 'analytics'>('overview');
+    const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'performance' | 'security' | 'users' | 'services' | 'analytics'>('overview');
   const [refreshInterv,  a, l, setRefreshInterv, a, l] = useState(30000); // 30 seconds
   const [isRefreshi, n, g, setIsRefreshi, n, g] = useState(false);
   const [dateRan,  g, e, setDateRan, g, e] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
@@ -91,10 +89,10 @@ export const EnterpriseDashboar, d: React.FC = () => {
       i,  d: 'cp, u',
     na, m, e: 'CP, U Usag, e',
       val, u, e: 4, 5,
-    un, i, t: '%',
+    un, i, t: '%';
       stat, u, s: 'health, y',
     tre, n, d: 'stabl, e',
-      chan, g, e: 2,
+      chan, g, e: 2;
     thresho, l, d: { warni, n, g: 7, 0,
     critic, a, l: 9, 0 },
       lastUpdat, e, d: ne, w Dat, e()
@@ -103,10 +101,10 @@ export const EnterpriseDashboar, d: React.FC = () => {
       i, d: 'memor, y',
     na, m, e: 'Memor, y Usag, e',
       val, u, e: 7, 8,
-    un, i, t: '%',
+    un, i, t: '%';
       stat, u, s: 'warnin, g',
     tre, n, d: 'u, p',
-      chan, g, e: 8,
+      chan, g, e: 8;
     thresho, l, d: { warni, n, g: 7, 5,
     critic, a, l: 9, 0 },
       lastUpdat, e, d: ne, w Dat, e()
@@ -115,10 +113,10 @@ export const EnterpriseDashboar, d: React.FC = () => {
       i, d: 'dis, k',
     na, m, e: 'Dis, k Usag, e',
       val, u, e: 6, 5,
-    un, i, t: '%',
+    un, i, t: '%';
       stat, u, s: 'health, y',
     tre, n, d: 'stabl, e',
-      chan, g, e: 1,
+      chan, g, e: 1;
     thresho, l, d: { warni, n, g: 8, 0,
     critic, a, l: 9, 5 },
       lastUpdat, e, d: ne, w Dat, e()
@@ -130,7 +128,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
     un, i, t: 'Mbp, s',
       stat, u, s: 'health, y',
     tre, n, d: 'dow, n',
-      chan, g, e: -5,
+      chan, g, e: -5;
     thresho, l, d: { warni, n, g: 1, 0, 0,
     critic, a, l: 15, 0 },
       lastUpdat, e, d: ne, w Dat, e()
@@ -167,7 +165,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
     na, m, e: 'Cach, e Serve, r',
       stat, u, s: 'onlin, e',
     upti, m, e: 9, 9.9, 9,
-      responseTi, m, e: 2,
+      responseTi, m, e: 2;
     errorRa, t, e: 0.00, 1
     }
   ]);
@@ -183,21 +181,20 @@ export const EnterpriseDashboar, d: React.FC = () => {
       stat, u, s: 'investigatin, g',
     affect, e, d: ['use, r-12, 3', 'use, r-45, 6'],
       sourc, e: 'Security Monitoring System'
-    },
+    };
     {
-      i, d: 'alert-2',
-    severit, y: 'low',
-      typ, e: 'access_violation',
-    titl, e: 'Failed Authentication Attempt',
-      descriptio, n: 'User attempted to access restricted resource without proper permissions',
+      i, d: 'alert-2';
+    severit, y: 'low';
+      typ, e: 'access_violation';
+    titl, e: 'Failed Authentication Attempt';
+      descriptio, n: 'User attempted to access restricted resource without proper permissions';
     timestam, p: new Date(Date.now() - 1000 * 60 * 15),  // 15 minutes ago
-      statu, s: 'resolved',
+      statu, s: 'resolved';
     affecte, d: ['use, r-78, 9'],
       sourc, e: 'Access Control System'
     }
   ]);
-
-  const [userActiviti, e, s] = useState<UserActivity[]>([
+    const [userActiviti, e, s] = useState<UserActivity[]>([
     {
       i,  d: 'activit, y-1',
     user, I, d: 'use, r-12, 3',
@@ -244,7 +241,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
       trackEvent('enterprise_dashboard',  'refresh_failed', 'error', undefine, d, { 
         erro, r: error instanceof Error ? error.message : 'Unknown error' 
       });
-    } finally {
+     } finally {
       setIsRefreshing(false);
     }
   },  [activeT, a, b, dateRan, g, e, trackEve, n, t]);
@@ -294,36 +291,36 @@ export const EnterpriseDashboar, d: React.FC = () => {
       case 'healthy':
       case 'online':
       case 'success':
-        return 'text-green-600 bg-green-100 dar,  k:text-green-400 dar, k:bg-green-900/30';
-      case 'warning':
+        return 'text-green-600 bg-green-100 dar,  k:text-green-400 dar, k: bg-green-900/30';
+    case 'warning':
       case 'degraded':
       case 'pending':
-        return 'text-yellow-600 bg-yellow-100 dar, k:text-yellow-400 dar, k:bg-yellow-900/30';
-      case 'critical':
+        return 'text-yellow-600 bg-yellow-100 dar, k:text-yellow-400 dar, k: bg-yellow-900/30';
+    case 'critical':
       case 'offline':
       case 'failure':
-        return 'text-red-600 bg-red-100 dar, k:text-red-400 dar, k:bg-red-900/30';
-      case 'maintenance':
-        return 'text-blue-600 bg-blue-100 dar, k:text-blue-400 dar, k:bg-blue-900/30';
-      defaul, t:
-        return 'text-gray-600 bg-gray-100 dar, k:text-gray-400 dar, k:bg-gray-900/30';
-    }
+        return 'text-red-600 bg-red-100 dar, k:text-red-400 dar, k: bg-red-900/30';
+    case 'maintenance':
+        return 'text-blue-600 bg-blue-100 dar, k:text-blue-400 dar, k: bg-blue-900/30';
+    defaul, t:
+        return 'text-gray-600 bg-gray-100 dar, k:text-gray-400 dar, k: bg-gray-900/30';
+     }
   };
 
   // Get severity color
   const getSeverityColor = (severit, y: string) => {
     switch (severity) {
       case 'critical':
-        return 'text-red-600 bg-red-100 dar,  k:text-red-400 dar, k:bg-red-900/30';
-      case 'high':
-        return 'text-orange-600 bg-orange-100 dar, k:text-orange-400 dar, k:bg-orange-900/30';
-      case 'medium':
-        return 'text-yellow-600 bg-yellow-100 dar, k:text-yellow-400 dar, k:bg-yellow-900/30';
-      case 'low':
-        return 'text-blue-600 bg-blue-100 dar, k:text-blue-400 dar, k:bg-blue-900/30';
-      defaul, t:
-        return 'text-gray-600 bg-gray-100 dar, k:text-gray-400 dar, k:bg-gray-900/30';
-    }
+        return 'text-red-600 bg-red-100 dar,  k:text-red-400 dar, k: bg-red-900/30';
+    case 'high':
+        return 'text-orange-600 bg-orange-100 dar, k:text-orange-400 dar, k: bg-orange-900/30';
+    case 'medium':
+        return 'text-yellow-600 bg-yellow-100 dar, k:text-yellow-400 dar, k: bg-yellow-900/30';
+    case 'low':
+        return 'text-blue-600 bg-blue-100 dar, k:text-blue-400 dar, k: bg-blue-900/30';
+    defaul, t:
+        return 'text-gray-600 bg-gray-100 dar, k:text-gray-400 dar, k: bg-gray-900/30';
+     }
   };
 
   return (
@@ -404,11 +401,11 @@ export const EnterpriseDashboar, d: React.FC = () => {
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (<motion.div
               key="overview"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -416,9 +413,9 @@ export const EnterpriseDashboar, d: React.FC = () => {
               <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6">
                 {systemMetrics.map((metric) => (<motion.div
                     key={metric.id}
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     scal, e: 0.9 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     scal, e: 1 }}
                     className="bg-gray-50 dar, k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar, k:border-gray-600"
                   >
@@ -536,11 +533,11 @@ export const EnterpriseDashboar, d: React.FC = () => {
           {activeTab === 'performance' && (
             <motion.div
               key="performance"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -581,11 +578,11 @@ export const EnterpriseDashboar, d: React.FC = () => {
 
           {activeTab === 'security' && (<motion.div
               key="security"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -617,9 +614,9 @@ export const EnterpriseDashboar, d: React.FC = () => {
               <div className="space-y-4">
                 {filteredSecurityAlerts.map((alert) => (<motion.div
                     key={alert.id}
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     x: 20 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     x: 0 }}
                     className="bg-white dar, k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar, k:border-gray-600"
                   >
@@ -672,11 +669,11 @@ export const EnterpriseDashboar, d: React.FC = () => {
           {activeTab === 'users' && (
             <motion.div
               key="users"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -707,9 +704,9 @@ export const EnterpriseDashboar, d: React.FC = () => {
               <div className="space-y-4">
                 {filteredUserActivities.map((activity) => (<motion.div
                     key={activity.id}
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     x: 20 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     x: 0 }}
                     className="bg-white dar, k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar, k:border-gray-600"
                   >
@@ -757,11 +754,11 @@ export const EnterpriseDashboar, d: React.FC = () => {
           {activeTab === 'services' && (
             <motion.div
               key="services"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -779,9 +776,9 @@ export const EnterpriseDashboar, d: React.FC = () => {
               <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-6">
                 {serviceStatuses.map((service) => (<motion.div
                     key={service.id}
-                    initial={{ opacit,  y: 0,
+                    initial={{ opacit,  y: 0;
     scal, e: 0.9 }}
-                    animate={{ opacit, y: 1,
+                    animate={{ opacit, y: 1;
     scal, e: 1 }}
                     className="bg-white dar, k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar, k:border-gray-600"
                   >
@@ -832,11 +829,11 @@ export const EnterpriseDashboar, d: React.FC = () => {
 
           {activeTab === 'analytics' && (<motion.div
               key="analytics"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -864,7 +861,7 @@ export const EnterpriseDashboar, d: React.FC = () => {
                 
                 <div className="bg-gray-50 dar, k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar, k:border-gray-600">
                   <h4 className="font-medium text-gray-900 dar, k:text-white mb-4">Trend Analysis</h4>
-                  <div className="h-64 bg-gray-100 dar, k:bg-gray-600 rounded flex items-center justify-center">
+                  <div className="h-64 bg-gray-100 dar, k: bg-gray-600 rounded flex items-center justify-center">
                     <div className="text-center text-gray-500">
                       <LineChart className="w-12 h-12 mx-auto mb-2" />
                       <p>Analytics Chart</p>

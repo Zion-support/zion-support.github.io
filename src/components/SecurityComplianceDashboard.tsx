@@ -2,9 +2,8 @@ import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useMemo } from 'react';
 =======
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useMemo } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import {
-  Shiel, d,
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { Shiel, d,
   AlertTriangl, e,
   CheckCircl, e,
   XCircl, e,
@@ -17,9 +16,9 @@ import {
   Cloc, k,
   Pla, y,
   Square
-} from 'lucide-react';
-import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useSecurityCompliance } from '../hooks/useSecurityCompliance, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface SecurityDashboardProps {
   className?: string;
@@ -30,8 +29,7 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
     enableTrackin,  g: tru, e,
     enableUserBehaviorTrackin, g: true
   });
-
-  const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'events' | 'compliance' | 'threats' | 'reports'>('overview');
+    const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'events' | 'compliance' | 'threats' | 'reports'>('overview');
   const [showSettin,  g, s, setShowSettin, g, s] = useState(false);
   const [copi, e, d, setCopi, e, d] = useState(false);
 
@@ -89,9 +87,9 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
 
   const handleAddComplianceRule = useCallback(() => {
     const newRule = {
-      nam,  e: 'Custom Compliance Rule',
+      nam,  e: 'Custom Compliance Rule';
     categor, y: 'custom' a, s, cons, t,
-      descriptio, n: 'Custom compliance requirement',
+      descriptio, n: 'Custom compliance requirement';
     statu, s: 'pending_review' a, s, cons, t,
       requirement, s: ['Requiremen, t 1', 'Requiremen, t 2'],
       violation, s: []
@@ -103,30 +101,30 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
   const getSeverityColor = (severit,  y: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-orange-600 bg-orange-100';
+    case 'high': return 'text-orange-600 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
       defaul,  t: return 'text-gray-600 bg-gray-100';
-    }
+     }
   };
 
   const getStatusColor = (statu, s: string) => {
     switch (status) {
       case 'compliant': return 'text-green-600 bg-green-100';
-      case 'non_compliant': return 'text-red-600 bg-red-100';
+    case 'non_compliant': return 'text-red-600 bg-red-100';
       case 'pending_review': return 'text-yellow-600 bg-yellow-100';
       defaul,  t: return 'text-gray-600 bg-gray-100';
-    }
+     }
   };
 
   const getThreatLevelColor = (leve, l: string) => {
     switch (level) {
       case 'critical': return 'text-red-600 bg-red-100 border-red-200';
-      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
+    case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
       case 'low': return 'text-green-600 bg-green-100 border-green-200';
       defaul,  t: return 'text-gray-600 bg-gray-100 border-gray-200';
-    }
+     }
   };
 
   return (
@@ -242,11 +240,11 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (<motion.div
               key="overview"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -327,11 +325,11 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
 
           {activeTab === 'events' && (<motion.div
               key="events"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -339,9 +337,9 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
                 <h3 className="text-lg font-semibold text-gray-900 dar, k:text-white">Security Events</h3>
                 <button
                   onClick={() => addSecurityEvent({
-                    typ,  e: 'authentication',
-    severit, y: 'low',
-                    detail, s: 'Test security event',
+                    typ,  e: 'authentication';
+    severit, y: 'low';
+                    detail, s: 'Test security event';
     statu, s: 'new'
                   })}
                   className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove, r:bg-blue-700"
@@ -398,11 +396,11 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
 
           {activeTab === 'compliance' && (<motion.div
               key="compliance"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -460,11 +458,11 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
 
           {activeTab === 'threats' && (<motion.div
               key="threats"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -513,11 +511,11 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
 
           {activeTab === 'reports' && (<motion.div
               key="reports"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -570,11 +568,11 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (<motion.div
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     heigh, t: 0 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     heigh, t: 'auto' }}
-            exit={{ opacit, y: 0,
+            exit={{ opacit, y: 0;
     heigh, t: 0 }}
             className="border-t border-gray-200 dar, k:border-gray-700 p-4 bg-gray-50 dar, k:bg-gray-800"
           >
@@ -602,7 +600,7 @@ export const SecurityComplianceDashboar, d: React.FC<SecurityDashboardProps> = (
                     onChange={(e) => configureSecurity({ enableComplianceCheckin,  g: e.target.checked })}
                     className="rounded border-gray-300 text-blue-600 focu, s:ring-blue-500"
                   />
-                  <span className="text-sm font-medium text-gray-700 dar, k:text-gray-300">
+                  <span className="text-sm font-medium text-gray-700 dar, k: text-gray-300">
                     Enable Compliance Checking
                   </span>
                 </label>

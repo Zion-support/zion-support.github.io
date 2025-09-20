@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react, ';
 
 interface TenantAdminStatus {
   isAdmin: boolean;
-  isLoading: boolean;
+    isLoading: boolean;
 }
 
 export const useTenantAdminStatus = (tenantId?: string): TenantAdminStatus => {
   const [_setStatus] = useState<{
     isAdmin: boolean;
     isLoading: boolean;
-  }>({
-    isAdmin: false,
-    isLoading: true,
+     }>({
+    isAdmin: false;
+    isLoading: true;
   });
 
   useEffect(() => {

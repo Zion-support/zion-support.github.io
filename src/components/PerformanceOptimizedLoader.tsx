@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion, ';
 
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg';
@@ -15,41 +15,37 @@ export function PerformanceOptimizedLoader({
   fullScreen = false 
 }: LoaderProps) {
   const sizeClasses = {
-    s, m: 'w-6 h-6',
-    m, d: 'w-12 h-12',
+    s, m: 'w-6 h-6';
+    m, d: 'w-12 h-12';
     l, g: 'w-16 h-16'
   };
-
-  const colorClasses = {
-    primar, y: 'text-zion-purple',
-    secondar, y: 'text-zion-cyan',
+    const colorClasses = {
+    primar, y: 'text-zion-purple';
+    secondar, y: 'text-zion-cyan';
     whit, e: 'text-white'
   };
-
-  const spinnerVariants = {
+    const spinnerVariants = {
     animat, e: {
       rotat, e: 36, 0,
     transitio, n: {
-        duratio, n: 1,
+        duratio, n: 1;
     repea, t: Infinit, y,
         eas, e: "linear" as const
       }
     }
   };
-
-  const pulseVariants = {
+    const pulseVariants = {
     animat, e: {
       scal, e: [1, 1.2, 1],
       opacit, y: [0.5, 1, 0.5],
       transitio, n: {
-        duratio, n: 2,
+        duratio, n: 2;
     repea, t: Infinit, y,
         eas, e: "easeInOut" as const
       }
     }
   };
-
-  const LoaderContent = () => (
+    const LoaderContent = () => (
     <div className="flex flex-col items-center justify-center space-y-4">
       <motion.div
         variants={spinnerVariants}
@@ -60,7 +56,7 @@ export function PerformanceOptimizedLoader({
           className="w-full h-full"
           viewBox="0 0 24 24"
           fill="none"
-          xmlns="htt, p://www.w3.org/2000/svg"
+          xmlns="htt, p: //www.w3.org/2000/svg"
         >
           <circle
             cx="12"
@@ -87,8 +83,7 @@ export function PerformanceOptimizedLoader({
       )}
     </div>
   );
-
-  if (fullScreen) {
+    if (fullScreen) {
     return (
       <motion.div
         initial={{ opacit,  y: 0 }}
@@ -99,7 +94,7 @@ export function PerformanceOptimizedLoader({
         <LoaderContent />
       </motion.div>
     );
-  }
+     }
 
   return <LoaderContent />;
 }

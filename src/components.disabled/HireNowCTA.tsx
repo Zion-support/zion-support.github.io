@@ -1,18 +1,18 @@
-import React from 'react';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { MessageCircle, Calendar, Star } from 'lucide-react';
+import React from 'react;';
+import { Button } from '../ui/button, ';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card, ';
+import { Badge } from '../ui/badge, ';
+import { MessageCircle, Calendar, Star } from 'lucide-react, ';
 
 interface HireNowCTAProps {
   hourlyRate: number;
-  availability: string;
-  rating: number;
-  reviewCount: number;
+    availability: string;
+    rating: number;
+    reviewCount: number;
 }
 
 export const HireNowCTA: React.FC<HireNowCTAProps> = ({
-  hourlyRate,
+  hourlyRate;
   availability,
   rating,
   reviewCount,
@@ -52,7 +52,7 @@ export const HireNowCTA: React.FC<HireNowCTAProps> = ({
         </div>
         
         <div className="space-y-3">
-          <Button className="w-full bg-blue-600 hover:bg-blue-700">
+          <Button className="w-full bg-blue-600 hover: bg-blue-700">
             <MessageCircle className="w-4 h-4 mr-2" />
             Send Message
           </Button>
