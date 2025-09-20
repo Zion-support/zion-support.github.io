@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+impor, t, Reac, t, { useEffec, t, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
@@ -15,52 +15,52 @@ interface SEOEnhancerProps {
   className?: string;
 };
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion - Tech & AI Marketplace',
-  description = 'Discover top AI and tech talent, services, and equipment in one place. Connect with experts, find innovative solutions, and grow your business.',
-  keywords = ['AI', 'technology', 'marketplace', 'talent', 'services', 'equipment', 'innovation'],
-  canonicalUrl = window.location.href,
+const SEOEnhance, r: React.FC<SEOEnhancerProps> = ({
+  title = 'Zion - Tech & AI Marketplace', 
+  description = 'Discover top AI and tec, h, talen, t, service, s, and equipment in one place. Connect wit, h, expert, s, find innovativ, e, solution, s, and grow your business.',
+  keywords = ['A, I', 'technolog, y', 'marketplac, e', 'talen, t', 'service, s', 'equipmen, t', 'innovatio, n'],
+  canonicalUrl = window.location.hre, f,
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData,
-  enableAnalytics = true,
-  enableSitemap = true,
+  structuredDat, a,
+  enableAnalytics = tru, e,
+  enableSitemap = tru, e,
   className = ''
 }) => {
-  const [pageData, setPageData] = useState({
-    title,
-    description,
-    keywords,
-    canonicalUrl,
-    ogImage,
-    ogType,
+  const [pageDa, t, a, setPageDa, t, a] = useState({
+    titl,  e,
+    descriptio, n,
+    keyword, s,
+    canonicalUr, l,
+    ogImag, e,
+    ogTyp, e,
     twitterCard
   });
 
   // Generate structured data
   const generateStructuredData = () => {
     const baseStructuredData = {
-      '@context': 'https://schema.org',
+      '@context': 'http,  s://schema.org',
       '@type': 'WebSite',
-      name: 'Zion - Tech & AI Marketplace',
-      description: description,
-      url: canonicalUrl,
-      potentialAction: {
+      nam, e: 'Zion - Tech & AI Marketplace',
+    descriptio, n: descriptio, n,
+      ur, l: canonicalUr, l,
+    potentialActio, n: {
         '@type': 'SearchAction',
-        target: {
+        targe, t: {
           '@type': 'EntryPoint',
-          urlTemplate: `${window.location.origin}/search?q={search_term_string}`
+          urlTemplat, e: `${window.location.origin}/search?q={search_term_strin, g}`
         },
         'query-input': 'required name=search_term_string'
       },
-      publisher: {
+      publishe, r: {
         '@type': 'Organization',
-        name: 'Zion Holdings',
-        url: 'https://zion.app',
-        logo: {
+        nam, e: 'Zion Holdings',
+    ur, l: 'http, s: //zion.app',
+    log, o: {
           '@type': 'ImageObject',
-          url: 'https://zion.app/logo.png'
+          ur, l: 'http, s://zion.app/logo.png'
         }
       }
     };
@@ -73,14 +73,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     if (!enableSitemap) return;
 
     const sitemapEntry = {
-      url: canonicalUrl,
-      lastmod: new Date().toISOString(),
-      changefreq: 'daily',
-      priority: 0.8
+      ur,  l: canonicalUr, l,
+    lastmo, d: new Date().toISOString(), 
+      changefre, q: 'daily',
+    priorit, y: 0.8
     };
 
-    // In a real implementation, this would be sent to a sitemap service
-    console.log('Sitemap entry:', sitemapEntry);
+    // In a rea, l, implementatio, n, this would be sent to a sitemap service
+    console.log('Sitemap entr, y:', sitemapEntry);
   };
 
   // Initialize analytics
@@ -90,73 +90,72 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     // Google Analytics 4
     const gtag = (window as any).gtag;
     if (gtag) {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageData.title,
-        page_location: pageData.canonicalUrl
+      gtag('config',  'GA_MEASUREMENT_ID', {
+        page_titl, e: pageData.titl, e,
+    page_locatio, n: pageData.canonicalUrl
       });
     }
 
     // Custom analytics
     const analyticsData = {
-      page: window.location.pathname,
-      title: pageData.title,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      referrer: document.referrer
+      pag, e: window.location.pathnam, e,
+    titl, e: pageData.titl, e,
+      timestam, p: new Date().toISOString(), 
+    userAgen, t: navigator.userAgen, t,
+      referre, r: document.referrer
     };
 
-    // Send analytics data (in real implementation, this would be sent to analytics service)
-    console.log('Analytics data:', analyticsData);
-  }, [pageData, enableAnalytics]);
+    // Send analytics data (in rea, l, implementatio, n, this would be sent to analytics service)
+    console.log('Analytics dat,  a:', analyticsData);
+  }, [pageDa, t, a, enableAnalyti, c, s]);
 
   // Generate sitemap entry on mount
   useEffect(() => {
     generateSitemapEntry();
-  }, [canonicalUrl, enableSitemap]);
+  },  [canonicalU, r, l, enableSitem, a, p]);
 
   // Update page data when props change
   useEffect(() => {
     setPageData({
-      title,
-      description,
-      keywords,
-      canonicalUrl,
-      ogImage,
-      ogType,
+      titl,  e,
+      descriptio, n,
+      keyword, s,
+      canonicalUr, l,
+      ogImag, e,
+      ogTyp, e,
       twitterCard
     });
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard]);
+  }, [tit, l, e, descripti, o, n, keywor, d, s, canonicalU, r, l, ogIma, g, e, ogTy, p, e, twitterCa, r, d]);
 
-  return (
-    <div className={`seo-enhancer ${className}`}>
+  return (<div className={`seo-enhancer ${classNam, e}`}>
       <Helmet>
         {/* Basic Meta Tags */}
         <title>{pageData.title}</title>
         <meta name="description" content={pageData.description} />
-        <meta name="keywords" content={pageData.keywords.join(', ')} />
+        <meta name="keywords" content={pageData.keywords.join(',  ')} />
         <link rel="canonical" href={pageData.canonicalUrl} />
         
         {/* Open Graph Tags */}
-        <meta property="og:title" content={pageData.title} />
-        <meta property="og:description" content={pageData.description} />
-        <meta property="og:url" content={pageData.canonicalUrl} />
-        <meta property="og:type" content={pageData.ogType} />
-        <meta property="og:image" content={pageData.ogImage} />
-        <meta property="og:site_name" content="Zion - Tech & AI Marketplace" />
+        <meta property="o, g:title" content={pageData.title} />
+        <meta property="o, g:description" content={pageData.description} />
+        <meta property="o, g:url" content={pageData.canonicalUrl} />
+        <meta property="o, g:type" content={pageData.ogType} />
+        <meta property="o, g:image" content={pageData.ogImage} />
+        <meta property="o, g:site_name" content="Zion - Tech & AI Marketplace" />
         
         {/* Twitter Card Tags */}
-        <meta name="twitter:card" content={pageData.twitterCard} />
-        <meta name="twitter:title" content={pageData.title} />
-        <meta name="twitter:description" content={pageData.description} />
-        <meta name="twitter:image" content={pageData.ogImage} />
+        <meta name="twitte, r:card" content={pageData.twitterCard} />
+        <meta name="twitte, r:title" content={pageData.title} />
+        <meta name="twitte, r:description" content={pageData.description} />
+        <meta name="twitte, r:image" content={pageData.ogImage} />
         
         {/* Additional SEO Tags */}
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
+        <meta name="robots" content="inde, x, follo, w, max-image-previe, w:larg, e, max-snippe, t:-1, max-video-previe, w:-1" />
+        <meta name="googlebot" content="inde, x, follow" />
+        <meta name="bingbot" content="inde, x, follow" />
         
         {/* Mobile Optimization */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta name="viewport" content="width=device-widt, h, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -164,8 +163,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {/* Performance Hints */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="http, s://fonts.googleapis.com" />
+        <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
         <script type="application/ld+json">

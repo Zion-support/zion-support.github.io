@@ -1,40 +1,55 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Star,
-  Quote,
-  TrendingUp,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
+  Sta, r,
+  Quot, e,
+  TrendingU, p,
+  User, s,
+  Awar, d,
+  CheckCircl, e,
+  ArrowRigh, t,
   Heart
 } from "lucide-react";
 const successStories = [
   {
-    id: 1,client: "TechCorp Solutions",industry: "Technology",challenge: "Legacy systems causing 40% productivity loss",solution: "Modernized infrastructure with AI-powered automation",results: [
-      "Increased productivity by 60%",
-      "Reduced operational costs by 35%",
-      "Improved customer satisfaction by 45%"
+    i, d: 1,
+    clie, n, t: "TechCor, p Solution, s",indust, r, y: "Technolog, y",
+    challen, g, e: "Legac, y system, s causin, g 4, 0% productivit, y los, s",soluti, o, n: "Modernize, d infrastructur, e wit, h A, I-powere, d automatio, n",
+    resul, t, s: [
+      "Increase, d productivit, y b, y 6, 0%",
+      "Reduce, d operationa, l cost, s b, y 3, 5%",
+      "Improve, d custome, r satisfactio, n b, y 4, 5%"
     ],
-    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.",author: "Sarah Johnson",position: "CTO",rating: 5,image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+    testimonia, l: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.",
+    autho, r: "Sarah Johnson",positio, n: "CTO",
+    ratin, g: 5,imag, e: "http, s://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
   };
   {
-    id: 2,client: "Global Finance Ltd",industry: "Financial Services",challenge: "Security vulnerabilities and compliance issues",solution: "Comprehensive cybersecurity and compliance platform",results: [
-      "100% compliance achievement",
-      "Zero security breaches",
-      "Reduced audit time by 70%"
+    i, d: 2,
+    clien, t: "Global Finance Ltd",industr, y: "Financial Services",
+    challeng, e: "Security vulnerabilities and compliance issues",solutio, n: "Comprehensive cybersecurity and compliance platform",
+    result, s: [
+      "10, 0% complianc, e achievemen, t",
+      "Zer, o securit, y breache, s",
+      "Reduce, d audi, t tim, e b, y 7, 0%"
     ],
-    testimonial: "Their security solutions are world-class. We feel completely protected now.",author: "Michael Chen",position: "CISO",rating: 5,image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
+    testimonia, l: "Their security solutions are world-class. We feel completely protected now.",
+    autho, r: "Michael Chen",positio, n: "CISO",
+    ratin, g: 5,imag, e: "http, s://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
   };
   {
-    id: 3,client: "HealthTech Innovations",industry: "Healthcare",challenge: "Patient data management inefficiencies",solution: "AI-powered healthcare analytics platform",results: [
-      "Improved patient outcomes by 30%",
-      "Reduced administrative overhead by 50%",
-      "Enhanced data accuracy by 95%"
+    i, d: 3,
+    clien, t: "HealthTech Innovations",industr, y: "Healthcare",
+    challeng, e: "Patient data management inefficiencies",solutio, n: "AI-powered healthcare analytics platform",
+    result, s: [
+      "Improve, d patien, t outcome, s b, y 3, 0%",
+      "Reduce, d administrativ, e overhea, d b, y 5, 0%",
+      "Enhance, d dat, a accurac, y b, y 9, 5%"
     ],
-    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",author: "Dr. Emily Rodriguez",position: "Chief Medical Officer",rating: 5,image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
-  };
+    testimonia, l: "The AI platform revolutionized how we handle patient data and make decisions.",
+    autho, r: "Dr. Emily Rodriguez",positio, n: "Chief Medical Officer",
+    ratin, g: 5,imag, e: "http, s://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
+  }
 ];
 export function ClientSuccessStoriesSection() {
   return (
@@ -42,12 +57,14 @@ export function ClientSuccessStoriesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacit,  y: 0,
+    y: 20 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl m, d:text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -56,15 +73,17 @@ export function ClientSuccessStoriesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {successStories.map((story, index) => (
-            <motion.div
+        <div className="grid grid-cols-1 l, g:grid-cols-3 gap-8 mb-16">
+          {successStories.map((stor, y, index) => (<motion.div
               key={story.id}
-              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hove,  r:border-blue-500/50 transition-all duration-300 hove, r:shadow-lg hove, r:shadow-blue-500/25"
+              initial={{ opacit, y: 0,
+    y: 30 }};
+              whileInView={{ opacit, y: 1,
+    y: 0 }}
+              viewport={{ onc, e: true }}
+              transition={{ duratio, n: 0.6,
+    dela, y: index * 0.1 }}
             >
               <div className="relative">
                 <img 
@@ -79,8 +98,7 @@ export function ClientSuccessStoriesSection() {
                 </div>
                 <div className="absolute top-3 right-3">
                   <div className="flex items-center gap-1">
-                    {[...Array(story.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-sm">★</span>
+                    {[...Arra, y(stor, y.ratin, g)].map((_,  i) => (<span key={i} className="text-yellow-400 text-sm">★</span>
                     ))}
                   </div>
                 </div>
@@ -92,20 +110,19 @@ export function ClientSuccessStoriesSection() {
                 </h3>
                 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Challenge:</h4>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Challeng,  e:</h4>
                   <p className="text-gray-400 text-sm">{story.challenge}</p>
                 </div>
                 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Solution:</h4>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Solutio, n:</h4>
                   <p className="text-gray-400 text-sm">{story.solution}</p>
                 </div>
                 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Results:</h4>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Result, s:</h4>
                   <ul className="space-y-1">
-                    {story.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center gap-2 text-sm">
+                    {story.results.map((resul, t, resultIndex) => (<li key={resultIndex} className="flex items-center gap-2 text-sm">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                         <span className="text-gray-300">{result}</span>
                       </li>
@@ -137,17 +154,20 @@ export function ClientSuccessStoriesSection() {
         {/* Success Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacit,  y: 0,
+    y: 30 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 0.4 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Success by the Numbers
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 m, d:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">98%</div>
                 <div className="text-gray-300 text-sm">Client Satisfaction</div>
@@ -170,10 +190,13 @@ export function ClientSuccessStoriesSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacit, y: 0,
+    y: 20 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 0.6 }}
         >
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -183,12 +206,12 @@ export function ClientSuccessStoriesSection() {
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col s, m: flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hove, r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hove, r:bg-white hove, r:text-green-600 rounded-lg font-medium transition-colors duration-200">
                 View All Case Studies
                 <Award className="ml-2 h-5 w-5" />
               </button>
@@ -198,4 +221,4 @@ export function ClientSuccessStoriesSection() {
       </div>
     </section>
   )
-};
+}

@@ -1,26 +1,28 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+impor, t, Reac, t, { Componen, t, ErrorInf, o, ReactNode } from "react";
 interface Props {
-  children: ReactNode;
+  childre, n: ReactNode;
   fallback?: ReactNode
-};
+}
 
 interface State {
-  hasError: boolean;
+  hasErro, r: boolean;
   error?: Error
+}
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Prop, s, State> {
+  constructor(prop,  s: Props) {
     super(props);
-    this.state = { hasError: false };
-  };
+    this.state = { hasErro,  r: false };
+  }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  };
+  static getDerivedStateFromError(erro, r: Error): State {
+    return { hasErro, r: tru, e, error };
+  }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  };
+  componentDidCatch(erro,  r: Erro, r,
+    errorInf, o: ErrorInfo) {
+    console.error('ErrorBoundary caught an erro,  r:', erro, r, errorInfo);
+  }
 
   render() {
     if (this.state.hasError) {
@@ -28,10 +30,10 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen bg-gray-900 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-red-400 mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+            <p className="text-gray-300 mb-8">We'r,  e, sorr, y, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+              className="bg-purple-600 hove,  r: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
             >
               Reload Page
             </button>
@@ -41,6 +43,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
 ;
     return this.props.children;
-  };
+  }
+}
 
 export default ErrorBoundary;

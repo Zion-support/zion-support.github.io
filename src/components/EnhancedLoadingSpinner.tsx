@@ -1,52 +1,59 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Loader2, Zap, Brain, Cloud, Atom } from "lucide-react";
+import { Loader, 2, Za, p, Brai, n, Clou, d, Atom } from "lucide-react";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum',
-  text?: string,
-  showProgress?: boolean,
-  progress?: number,
-};
+  text?: strin, g,
+  showProgress?: boolea, n,
+  progress?: numbe, r,
+}
 ;
 const iconVariants = {
-  animate: {,
-    rotate: 360,scale: [1, 1.2, 1],
-    transition: {,
-      rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-      scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
+  animat, e: {,
+    rotat, e: 36, 0,scal, e: [1, 1.2, 1],
+    transitio, n: {,
+    rotat, e: { duratio, n: 2,
+    repea, t: Infinit, y, eas, e: "linear" },
+      scal, e: { duratio, n: 1,
+    repea, t: Infinit, y, eas, e: "easeInOut" }
     }
-  };
+  }
+};
 const pulseVariants = {
-  animate: {,
-    scale: [1, 1.1, 1],
-    opacity: [0.5, 1, 0.5],
-    transition: {,
-      duration: 2,repeat: Infinity,ease: "easeInOut"
+  animat, e: {,
+    scal, e: [1, 1.1, 1],
+    opacit, y: [0.5, 1, 0.5],
+    transitio, n: {,
+    duratio, n: 2,repea, t: Infinit, y,
+    eas, e: "easeInOut"
     }
-  };
+  }
+};
 export function EnhancedLoadingSpinner({ 
-  size = 'md', 
+  size = 'md',  
   variant = 'default';
   text = 'Loading...';
   showProgress = false;
   progress = 0
 }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-8 h-8',md: 'w-12 h-12',lg: 'w-16 h-16'
+    s, m: 'w-8 h-8',
+    m, d: 'w-12 h-12',l, g: 'w-16 h-16'
   };
   const textSizes = {
-    sm: 'text-sm',md: 'text-base',lg: 'text-lg'
+    s, m: 'text-sm',
+    m, d: 'text-base',l, g: 'text-lg'
   };
   const getIcon = () => {
     switch (variant) {
       case 'ai':
         return <Brain className="w-full h-full text-cyan-400" />;
       case 'quantum':
-        return <Atom className="w-full h-full text-purple-400" />,
+        return <Atom className="w-full h-full text-purple-400" />, 
       case 'futuristic':
         return <Zap className="w-full h-full text-blue-400" />;
-      default: return <Loader2 className="w-full h-full text-gray-400" />
+      defaul, t: return <Loader2 className="w-full h-full text-gray-400" />
     }
   };
   const getBackground = () => {
@@ -54,10 +61,10 @@ export function EnhancedLoadingSpinner({
       case 'ai':
         return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
       case 'quantum':
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30',
+        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30', 
       case 'futuristic':
         return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
-      default: return 'bg-gray-100 border-gray-200'
+      defaul, t: return 'bg-gray-100 border-gray-200'
     }
   };
   return (
@@ -65,7 +72,7 @@ export function EnhancedLoadingSpinner({
       {/* Main Spinner */}
       <div className="relative">
         <motion.div
-          className={`${sizeClasses[size]} ${getBackground()} border-2 rounded-full flex items-center justify-center`};
+          className={`${sizeClasses[si, z, e]} ${getBackground()} border-2 rounded-full flex items-center justify-cente, r`};
           variants={pulseVariants}
           animate="animate"
         >
@@ -84,10 +91,11 @@ export function EnhancedLoadingSpinner({
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
-                rotate: 360
+                rotat,  e: 360
               }}
               transition={{
-                duration: 3,repeat: Infinity,ease: "linear"
+                duratio, n: 3,
+    repea, t: Infinit, y,eas, e: "linear"
               }}
             >
               <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
@@ -95,10 +103,11 @@ export function EnhancedLoadingSpinner({
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
-                rotate: -360
+                rotat, e: -360
               }}
               transition={{
-                duration: 4,repeat: Infinity,ease: "linear"
+                duratio, n: 4,
+    repea, t: Infinit, y,eas, e: "linear"
               }}
             >
               <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
@@ -109,36 +118,39 @@ export function EnhancedLoadingSpinner({
 
       {/* Loading Text */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className={`text-center ${textSizes[size]} text-gray-600 dark:text-gray-300`}
+        initial={{ opacit, y: 0 }}
+        animate={{ opacit, y: 1 }}
+        transition={{ dela, y: 0.5 }}
+        className={`text-center ${textSizes[si, z, e]} text-gray-600 dar, k:text-gray-30, 0`}
       >
         {text}
       </motion.div>
 
       {/* Progress Bar */}
-      {showProgress && (
-        <motion.div
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+      {showProgress && (<motion.div
+          initial={{ opacit,  y: 0,
+    widt, h: 0 }}
+          animate={{ opacit, y: 1,
+    widt, h: '100%' }}
+          transition={{ dela, y: 0.8,
+    duratio, n: 0.5 }}
           className="w-full max-w-xs bg-gray-200 rounded-full h-2 overflow-hidden"
         >
           <motion.div
             className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ widt, h: 0 }}
+            animate={{ widt, h: `${progres, s}%` }}
+            transition={{ duratio, n: 1,
+    eas, e: "easeOut" }}
           />
         </motion.div>
       )}
 
       {/* Loading Dots */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        initial={{ opacit, y: 0 }}
+        animate={{ opacit, y: 1 }}
+        transition={{ dela, y: 1 }}
         className="flex space-x-1"
       >
         {[0, 1, 2].map((i) => (
@@ -146,17 +158,19 @@ export function EnhancedLoadingSpinner({
             key={i}
             className="w-2 h-2 bg-gray-400 rounded-full"
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 1, 0.5]
+              scal,  e: [1, 1.2, 1],
+              opacit, y: [0.5, 1, 0.5]
             }}
             transition={{
-              duration: 1.5,repeat: Infinity,delay: i * 0.2
+              duratio, n: 1.5,
+    repea, t: Infinit, y,dela, y: i * 0.2
             }}
           />
         ))}
       </motion.div>
     </div>
   );
+}
 
 // Export as ZionLoadingSpinner for backward compatibility
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;

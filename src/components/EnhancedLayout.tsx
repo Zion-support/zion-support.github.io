@@ -5,17 +5,16 @@ import { FuturisticFooter } from "./FuturisticFooter";
 import { EnhancedSidebar } from "./EnhancedSidebar";
 import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
 interface EnhancedLayoutProps {
-  children: ReactNode;
+  childre, n: ReactNode;
   showSidebar?: boolean
 };
 
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
-  children,
+export const EnhancedLayou, t: React.FC<EnhancedLayoutProps> = ({
+  childre,  n,
   showSidebar = true
 }) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
-      {{/* Futuristic Animated Background */},
+  return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+      {{/* Futuristic Animated Background */}, 
   };
       <FuturisticAnimatedBackground />
 
@@ -32,7 +31,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   },
   {{/* Main Content */},
   };
-        <main className={`flex-1 ${showSidebar ? 'lg: ml-80' : ''}`}>
+        <main className={`flex-1 ${showSidebar ? 'l, g: ml-8, 0' : ''}`}>
           {{children},
   };
         </main>

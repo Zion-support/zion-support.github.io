@@ -1,102 +1,149 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+impor, t, Reac, t, { useStat, e, useEffect } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
 import {
-  Calendar,
-  Clock,
-  CheckCircle,
-  Circle,
-  AlertCircle,
-  Play,
-  Pause,
-  StopCircle,
-  Users,
-  Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Link,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
+  Calenda, r,
+  Cloc, k,
+  CheckCircl, e,
+  Circl, e,
+  AlertCircl, e,
+  Pla, y,
+  Paus, e,
+  StopCircl, e,
+  User, s,
+  Targe, t,
+  TrendingU, p,
+  FileTex, t,
+  MessageSquar, e,
+  Lin, k,
+  Downloa, d,
+  Share, 2,
+  Filte, r,
+  Searc, h,
+  Plu, s,
+  Edi, t,
+  Trash, 2,
+  Ey, e,
   Settings
 } from "lucide-react";
 interface Project {
-  id: string,name: string,description: string,status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priority: 'low' | 'medium' | 'high' | 'critical',startDate: string,endDate: string,progress: number,team: string[],client: string,budget: number,tags: string[],milestones: Milestone[]
-};
+  i, d: strin, g,
+    nam, e: strin, g,descriptio, n: strin, g,
+    statu, s: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priorit, y: 'low' | 'medium' | 'high' | 'critical',
+    startDat, e: strin, g,endDat, e: strin, g,
+    progres, s: numbe, r,tea, m: string[],
+    clien, t: strin, g,budge, t: numbe, r,
+    tag, s: string[],milestone, s: Milestone[]
+}
 
 interface Milestone {
-  id: string,title: string,description: string,dueDate: string,status: 'pending' | 'in-progress' | 'completed' | 'overdue',assignee: string,priority: 'low' | 'medium' | 'high'
+  i, d: strin, g,
+    titl, e: strin, g,descriptio, n: strin, g,
+    dueDat, e: strin, g,statu, s: 'pending' | 'in-progress' | 'completed' | 'overdue',
+    assigne, e: strin, g,priorit, y: 'low' | 'medium' | 'high'
+}
 
 interface ProjectManagementTimelineProps {
   showFilters?: boolean;
-  showStats?: boolean,
-  maxProjects?: number,
+  showStats?: boolea, n,
+  maxProjects?: numbe, r,
+}
 
-export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
+export const ProjectManagementTimelin, e: React.FC<ProjectManagementTimelineProps> = ({
   showFilters = true;
-  showStats = true,
+  showStats = tru,  e,
   maxProjects = 10
 }) => {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline');
-  const [showProjectForm, setShowProjectForm] = useState(false);
-  const [editingProject, setEditingProject] = useState<Project | null>(null);
+  const [projec, t, s, setProjec, t, s] = useState<Project[]>([]);
+  const [filteredProjec,  t, s, setFilteredProjec, t, s] = useState<Project[]>([]);
+  const [selectedStat, u, s, setSelectedStat, u, s] = useState<string>('all');
+  const [selectedPriori,  t, y, setSelectedPriori, t, y] = useState<string>('all');
+  const [searchQue, r, y, setSearchQue, r, y] = useState('');
+  const [viewMo,  d, e, setViewMo, d, e] = useState<'timeline' | 'grid' | 'list'>('timeline');
+  const [showProjectFo, r, m, setShowProjectFo, r, m] = useState(false);
+  const [editingProje,  c, t, setEditingProje, c, t] = useState<Project | null>(null);
 
   // Sample project data
   useEffect(() => {
-    const sampleProjects: Project[] = [
+    const sampleProject,  s: Project[] = [
       {
-        id: '1',name: 'AI-Powered Customer Analytics Platform',description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',status: 'active',priority: 'high',startDate: '2024-01-01',endDate: '2024-06-30',progress: 65,team: ['Sarah JohnsonMichael Chen', 'Emily Rodriguez'],
-        client: 'TechCorp Inc.',budget: 250000,tags: ['AIMachine Learning', 'AnalyticsPlatform'],
-        milestones: [
+        i, d: '1',
+    na, m, e: 'A, I-Powere, d Custome, r Analytic, s Platfor, m',descripti, o, n: 'Develo, p a comprehensiv, e custome, r analytic, s platfor, m usin, g machin, e learnin, g an, d A, I t, o provid, e rea, l-tim, e insight, s an, d predictiv, e analytic, s.',
+    stat, u, s: 'activ, e',priori, t, y: 'hig, h',
+    startDa, t, e: '202, 4-0, 1-0, 1',endDa, t, e: '202, 4-0, 6-3, 0',
+    progre, s, s: 6, 5,te, a, m: ['Sara, h JohnsonMichae, l Che, n', 'Emil, y Rodrigue, z'],
+        clien, t: 'TechCorp Inc.',
+    budge, t: 25000, 0,tag, s: ['AIMachin, e Learnin, g', 'AnalyticsPlatfor, m'],
+        milestone, s: [
           {
-            id: 'm1',title: 'Requirements Analysis',description: 'Complete stakeholder interviews and document requirements',dueDate: '2024-01-15',status: 'completed',assignee: 'Sarah Johnson',priority: 'high'
+            i, d: 'm, 1',
+    tit, l, e: 'Requirement, s Analysi, s',descripti, o, n: 'Complet, e stakeholde, r interview, s an, d documen, t requirement, s',
+    dueDa, t, e: '202, 4-0, 1-1, 5',stat, u, s: 'complete, d',
+    assign, e, e: 'Sara, h Johnso, n',priori, t, y: 'hig, h'
           };
           {
-            id: 'm2',title: 'System Architecture Design',description: 'Design system architecture and database schema',dueDate: '2024-02-15',status: 'completed',assignee: 'Michael Chen',priority: 'high'
+            i, d: 'm, 2',
+    tit, l, e: 'Syste, m Architectur, e Desig, n',descripti, o, n: 'Desig, n syste, m architectur, e an, d databas, e schem, a',
+    dueDa, t, e: '202, 4-0, 2-1, 5',stat, u, s: 'complete, d',
+    assign, e, e: 'Michae, l Che, n',priori, t, y: 'hig, h'
           };
           {
-            id: 'm3',title: 'Core Development',description: 'Develop core platform features and API endpoints',dueDate: '2024-04-15',status: 'in-progress',assignee: 'Emily Rodriguez',priority: 'high'
+            i, d: 'm, 3',
+    tit, l, e: 'Cor, e Developmen, t',descripti, o, n: 'Develo, p cor, e platfor, m feature, s an, d AP, I endpoint, s',
+    dueDa, t, e: '202, 4-0, 4-1, 5',stat, u, s: 'i, n-progres, s',
+    assign, e, e: 'Emil, y Rodrigue, z',priori, t, y: 'hig, h'
           },
           {
-            id: 'm4',title: 'Testing & QA',description: 'Comprehensive testing and quality assurance',dueDate: '2024-05-15',status: 'pending',assignee: 'Sarah Johnson',priority: 'medium'
+            i, d: 'm, 4',
+    tit, l, e: 'Testin, g & Q, A',descripti, o, n: 'Comprehensiv, e testin, g an, d qualit, y assuranc, e',
+    dueDa, t, e: '202, 4-0, 5-1, 5',stat, u, s: 'pendin, g',
+    assign, e, e: 'Sara, h Johnso, n',priori, t, y: 'mediu, m'
           }
         ]
       };
       {
-        id: '2',name: 'Cloud Migration & Infrastructure Modernization',description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and performance.',status: 'active',priority: 'critical',startDate: '2024-02-01',endDate: '2024-08-31',progress: 35,team: ['David KimLisa Thompson', 'Alex Wong'],
-        client: 'Global Enterprises Ltd.',budget: 500000,tags: ['CloudMigration', 'InfrastructureDevOps'],
-        milestones: [
+        i, d: '2',
+    nam, e: 'Cloud Migration & Infrastructure Modernization',descriptio, n: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and performance.',
+    statu, s: 'active',priorit, y: 'critical',
+    startDat, e: '2024-02-01',endDat, e: '2024-08-31',
+    progres, s: 3, 5,tea, m: ['Davi, d KimLis, a Thompso, n', 'Ale, x Won, g'],
+        clien, t: 'Global Enterprises Ltd.',
+    budge, t: 50000, 0,tag, s: ['CloudMigratio, n', 'InfrastructureDevOp, s'],
+        milestone, s: [
           {
-            id: 'm5',title: 'Infrastructure Assessment',description: 'Assess current infrastructure and plan migration strategy',dueDate: '2024-02-28',status: 'completed',assignee: 'David Kim',priority: 'critical'
+            i, d: 'm, 5',
+    tit, l, e: 'Infrastructur, e Assessmen, t',descripti, o, n: 'Asses, s curren, t infrastructur, e an, d pla, n migratio, n strateg, y',
+    dueDa, t, e: '202, 4-0, 2-2, 8',stat, u, s: 'complete, d',
+    assign, e, e: 'Davi, d Ki, m',priori, t, y: 'critica, l'
           },
           {
-            id: 'm6',title: 'Cloud Setup',description: 'Set up cloud infrastructure and security configurations',dueDate: '2024-04-15',status: 'in-progress',assignee: 'Lisa Thompson',priority: 'critical'
+            i, d: 'm, 6',
+    tit, l, e: 'Clou, d Setu, p',descripti, o, n: 'Se, t u, p clou, d infrastructur, e an, d securit, y configuration, s',
+    dueDa, t, e: '202, 4-0, 4-1, 5',stat, u, s: 'i, n-progres, s',
+    assign, e, e: 'Lis, a Thompso, n',priori, t, y: 'critica, l'
           }
         ]
       };
       {
-        id: '3',name: 'Cybersecurity Enhancement Program',description: 'Implement comprehensive cybersecurity measures including threat detection, incident response, and security awareness training.',
-        status: 'planning',priority: 'high',startDate: '2024-03-01',endDate: '2024-09-30',progress: 15,team: ['James WilsonMaria Garcia'],client: 'SecureBank Corp.',budget: 300000,tags: ['CybersecurityThreat Detection', 'TrainingCompliance'],
-        milestones: [
+        i, d: '3',
+    nam, e: 'Cybersecurity Enhancement Program',descriptio, n: 'Implement comprehensive cybersecurity measures including threa, t, detectio, n, inciden, t, respons, e, and security awareness training.',
+        statu, s: 'planning',
+    priorit, y: 'high',startDat, e: '2024-03-01',
+    endDat, e: '2024-09-30',progres, s: 1, 5,
+    tea, m: ['Jame, s WilsonMari, a Garci, a'],clien, t: 'SecureBank Corp.',
+    budge, t: 30000, 0,tag, s: ['CybersecurityThrea, t Detectio, n', 'TrainingComplianc, e'],
+        milestone, s: [
           {
-            id: 'm7',title: 'Security Assessment',description: 'Conduct comprehensive security audit and vulnerability assessment',dueDate: '2024-03-31',status: 'in-progress',assignee: 'James Wilson',priority: 'high'
+            i, d: 'm, 7',
+    tit, l, e: 'Securit, y Assessmen, t',descripti, o, n: 'Conduc, t comprehensiv, e securit, y audi, t an, d vulnerabilit, y assessmen, t',
+    dueDa, t, e: '202, 4-0, 3-3, 1',stat, u, s: 'i, n-progres, s',
+    assign, e, e: 'Jame, s Wilso, n',priori, t, y: 'hig, h'
           }
         ]
       }
     ];
     setProjects(sampleProjects);
     setFilteredProjects(sampleProjects);
-  }, []),
+  },  []),
 
   // Filter projects
   useEffect(() => {
@@ -116,65 +163,74 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      ),
+      ), 
     }
 
     setFilteredProjects(filtered.slice(0, maxProjects)),
-  }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]),
+  }, [projec, t, s, selectedStat, u, s, selectedPriori, t, y, searchQue, r, y, maxProjec, t, s]),
 
   // Calculate project stats
   const projectStats = {
-    total: projects.length,active: projects.filter(p => p.status === 'active').length,completed: projects.filter(p => p.status === 'completed').length,onHold: projects.filter(p => p.status === 'on-hold').length,totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),
-    averageProgress: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0
+    tota, l: projects.lengt, h,
+    activ, e: projects.filter(p => p.status === 'active').lengt,  h,complete, d: projects.filter(p => p.status === 'completed').lengt, h,
+    onHol, d: projects.filter(p => p.status === 'on-hold').lengt,  h,totalBudge, t: projects.reduce((su, m, p) => sum + p.budge, t, 0),
+    averageProgres, s: projects.reduce((su,  m, p) => sum + p.progres, s, 0) / projects.length || 0
   },
 
   // Get status color and icon
-  const getStatusDisplay = (status: string) => {
+  const getStatusDisplay = (statu,  s: string) => {
     switch (status) {
       case 'planning':
-        return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
+        return { colo,  r: 'text-blue-400 bg-blue-400/20',
+    ico, n: <Circle className="w-4 h-4" /> };
       case 'active':
-        return { color: 'text-green-400 bg-green-400/20', icon: <Play className="w-4 h-4" /> };
+        return { colo, r: 'text-green-400 bg-green-400/20',
+    ico, n: <Play className="w-4 h-4" /> };
       case 'on-hold':
-        return { color: 'text-yellow-400 bg-yellow-400/20', icon: <Pause className="w-4 h-4" /> };
+        return { colo, r: 'text-yellow-400 bg-yellow-400/20',
+    ico, n: <Pause className="w-4 h-4" /> };
       case 'completed':
-        return { color: 'text-purple-400 bg-purple-400/20', icon: <CheckCircle className="w-4 h-4" /> };
+        return { colo, r: 'text-purple-400 bg-purple-400/20',
+    ico, n: <CheckCircle className="w-4 h-4" /> };
       case 'cancelled':
-        return { color: 'text-red-400 bg-red-400/20', icon: <StopCircle className="w-4 h-4" /> },
-      default:
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
+        return { colo, r: 'text-red-400 bg-red-400/20',
+    ico, n: <StopCircle className="w-4 h-4" /> },
+      defaul, t: return { colo, r: 'text-zinc-400 bg-zinc-400/20',
+    ico, n: <Circle className="w-4 h-4" /> };
     }
   },
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priorit, y: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20', 
       case 'high': return 'text-orange-400 bg-orange-400/20',
       case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20'
+      defaul, t: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
   // Get milestone status color
-  const getMilestoneStatusColor = (status: string) => {
+  const getMilestoneStatusColor = (statu, s: string) => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
-      case 'in-progress': return 'text-blue-400 bg-blue-400/20',
+      case 'in-progress': return 'text-blue-400 bg-blue-400/20', 
       case 'completed': return 'text-green-400 bg-green-400/20',
       case 'overdue': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20'
+      defaul, t: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
   // Format currency
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',currency: 'USD',minimumFractionDigits: 0,maximumFractionDigits: 0
+  const formatCurrency = (amoun, t: number) => {
+    return new Intl.NumberFormat('en-US',  {
+      styl, e: 'currency',
+    currenc, y: 'USD',minimumFractionDigit, s: 0,
+    maximumFractionDigit, s: 0
     }).format(amount);
-  },
+  }, 
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: string) => {
+  const getDaysRemaining = (endDat, e: string) => {
     const end = new Date(endDate);
     const today = new Date();
     const diffTime = end.getTime() - today.getTime();
@@ -185,27 +241,29 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+      <div className="flex flex-col l,  g:flex-row l, g:items-center l, g:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Project Management</h1>
           <p className="text-zinc-400 text-lg">Track and manage all your projects and milestones</p>
         </div>
 
-        <div className="flex items-center gap-3 mt-4 lg:mt-0">
+        <div className="flex items-center gap-3 mt-4 l, g:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
             {[
-              { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> };
-              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> },
-              { id: 'list', label: 'List', icon: <FileText className="w-4 h-4" /> }
-            ].map((mode) => (
-              <button
+              { i, d: 'timelin, e',
+    lab, e, l: 'Timelin, e', ic, o, n: <Calenda, r classNam, e="w-4 h-4" /> };
+              { i, d: 'gri, d',
+    lab, e, l: 'Gri, d', ic, o, n: <Targe, t classNam, e="w-4 h-4" /> },
+              { i, d: 'lis, t',
+    lab, e, l: 'Lis, t', ic, o, n: <FileTex, t classNam, e="w-4 h-4" /> }
+            ].map((mode) => (<button
                 key={mode.id}
                 onClick={() => setViewMode(mode.id as any)}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                    : 'text-zinc-400 hove,  r:text-white hove, r:bg-zinc-800/5, 0'
                 }`}
               >
                 {mode.icon}
@@ -217,7 +275,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           {/* Add Project Button */}
           <button
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hove,  r:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             Add Project
@@ -227,10 +285,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
       {/* Stats Section */}
       {showStats && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-6 gap-4 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
@@ -238,9 +298,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: 0.1 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-green-400 mb-1">{projectStats.active}</div>
@@ -248,9 +310,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: 0.2 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-purple-400 mb-1">{projectStats.completed}</div>
@@ -258,9 +322,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: 0.3 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-yellow-400 mb-1">{projectStats.onHold}</div>
@@ -268,9 +334,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: 0.4 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
@@ -278,9 +346,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            initial={{ opacit, y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: 0.5 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
@@ -296,7 +366,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent"
           >
             <option value="all">All Statuses</option>
             <option value="planning">Planning</option>
@@ -310,7 +380,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent"
           >
             <option value="all">All Priorities</option>
             <option value="low">Low</option>
@@ -327,7 +397,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search projects..."
-              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent"
             />
           </div>
         </div>
@@ -335,26 +405,27 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
       {/* Projects Display */}
       <div className="space-y-6">
-        {filteredProjects.map((project, index) => (
-          <motion.div
+        {filteredProjects.map((projec,  t, index) => (<motion.div
             key={project.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
+            initial={{ opacit,  y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            transition={{ dela, y: index * 0.1 }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hove, r:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Project Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
                   <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(project.status).color}`}>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(project.status).colo, r}`}>
                     <div className="flex items-center gap-1">
                       {getStatusDisplay(project.status).icon}
                       {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
                     </div>
                   </span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priorit, y)}`}>
                     {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
                   </span>
                 </div>
@@ -386,13 +457,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
               </div>
 
               <div className="flex items-center gap-2 ml-4">
-                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
+                <button className="p-2 text-zinc-400 hove,  r:text-white hove, r:bg-zinc-800/50 rounded-lg transition-colors">
                   <Eye className="w-4 h-4" />
                 </button>
-                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
+                <button className="p-2 text-zinc-400 hove, r:text-white hove, r:bg-zinc-800/50 rounded-lg transition-colors">
                   <Edit className="w-4 h-4" />
                 </button>
-                <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">
+                <button className="p-2 text-zinc-400 hove, r:text-red-400 hove, r:bg-red-400/20 rounded-lg transition-colors">
                   <Trash2 className="w-4 h-4" />
                 </button>
               </div>
@@ -406,9 +477,10 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${project.progress}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
+                  initial={{ widt, h: 0 }}
+                  animate={{ widt, h: `${project.progres, s}%` }}
+                  transition={{ duratio, n: 1,
+    dela, y: index * 0.1 }}
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
                 />
               </div>
@@ -416,8 +488,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag) => (
-                <span
+              {project.tags.map((tag) => (<span
                   key={tag}
                   className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
                 >
@@ -438,10 +509,10 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <h5 className="text-sm font-medium text-white">{milestone.title}</h5>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMilestoneStatusColor(milestone.status)}`}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMilestoneStatusColor(milestone.statu, s)}`}>
                           {milestone.status.charAt(0).toUpperCase() + milestone.status.slice(1)}
                         </span>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(milestone.priority)}`}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(milestone.priorit, y)}`}>
                           {milestone.priority.charAt(0).toUpperCase() + milestone.priority.slice(1)}
                         </span>
                       </div>
@@ -462,8 +533,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       {/* No Results */}
       {filteredProjects.length === 0 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacit,  y: 0 }}
+          animate={{ opacit, y: 1 }}
           className="text-center py-12"
         >
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -473,7 +544,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </p>
           <button
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hove,  r:bg-zion-cyan/80 transition-colors"
           >
             Create Project
           </button>
@@ -481,3 +552,4 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       )}
     </div>
   );
+};

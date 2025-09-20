@@ -1,30 +1,22 @@
-import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, DollarSign, Briefcase } from "@/components/icons";
-import { formatDistanceToNow } from "date-fns";
-import { toast } from "sonner";
-import { useAuth } from "@/hooks/useAuth";
-import useJobDetails from "@/hooks/useJobDetails";
-import { ApplyToJobModal } from "@/components/messaging/job-application";
-import SEO from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-export default function JobDetails() {
+import React, { useState  from "react", import { useParams, useNavigate } from "react-router-dom";import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";import { Badge } from "@/components/ui/bad, ge";import { Calendar, Clock, DollarSign, Briefcase } from "@/components/icons";import { formatDistanceToNow } from "date-f, ns";import { toast } from "sonn, er";import { useAuth } from "@/hooks/useAu, th";import useJobDetails from "@/hooks/useJobDetails";
+import { ApplyToJobModal } from "@/components/messaging/job-applicati, on";import SEO from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelConte, xt";export default function JobDetails() {
+
     // Cast to specify the expected route param type since useParams may be untyped
-    const { jobId } = useParams();
-    const { job, isLoading, error } = useJobDetails(jobId);
-    const { user, isAuthenticated } = useAuth();
-    const navigate = useNavigate();
-    const { isWhitelabel, brandName } = useWhitelabel();
-    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+    const { jobId }  = useParams;(;);
+    const { job;
+    isLoading, error } = useJobDetails(jobId);
+    const { user;
+    isAuthenticated } = useAuth();
+    const navigate  = useNavigate();
+    const { isWhitelabel;
+    brandName } = useWhitelabel();
+    const [isApplyModalOpen;
+    setIsApplyModalOpen] = useState(false);
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>);
-    };
-    if (error || !job) {
+      </div>)}if (error || !job) {
         return (<>
         
         <div className="container mx-auto px-4 py-16 text-center">
@@ -33,32 +25,21 @@ export default function JobDetails() {
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
         
-      </>);
-    };
-    const handleApply = () => {
+      </>)}const handleApply  = () => {
         if (!isAuthenticated) {
-            toast.error("Please log in to apply for this job");
-            navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
-            return,
-        };
-        if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-            toast.error("Only job seekers can apply for jobs");
-            return,
-        }
-        setIsApplyModalOpen(true);
-    },
-    const handleApplySuccess = async (appliedJobId) => {
-        toast.success("Application submitted successfully!");
-        setIsApplyModalOpen(false);
-    },
-    const formatBudget = (budget) => {
+            toast.error("Please log in to apply for this job")navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`))return}if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
+            toast.error("Only job seekers can apply for jobs")return}
+        setIsApplyModalOpen(true)},
+    const handleApplySuccess  = async (appliedJobId) => {
+        toast.success("Application submitted successfully!")setIsApplyModalOpen(false)},
+    const formatBudget  = () => {
         if (!budget)
-            return "Not specified";
-        return `$${budget.min} - $${budget.max}`;
+            return "Not specified"return `$${budget.min} - $${budget.max};`;
     };
-    const isOwnJob = user?.id === job.client_id;
+    const isOwnJob  = user?.id === job.client_i;d;
     return (<>
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
+      <SEO title={`${job.title} - ${isWhitelabel ? brandName: 'Zion AI Marketplace'}`} description={job.description.substring(0,
+    160)}/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -67,16 +48,17 @@ export default function JobDetails() {
           </Button>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
+                    <CardTitle className="text-2xl mb-2">{job.titl,
+    e}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4"/>
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true,  })}</span>
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
@@ -93,7 +75,7 @@ export default function JobDetails() {
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {job.skills?.map((skill, i) => (<Badge key={i} variant="secondary">
+                    {job.skills?.map((skilli) => (<Badge key={i} variant="secondary">
                         {skill}
                       </Badge>))}
                   </div>
@@ -147,7 +129,7 @@ export default function JobDetails() {
       
       {/* Job application modal */}
       {job && (<ApplyToJobModal job={{
-                id: job.id,title: job.title,description: job.description,company_name: job.company_name || "Company",budget: job.budget,client_id: job.client_id
-            }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
+                id: job.id,
+    title: job.titl, e,description: job.descriptio, n,company_name: job.company_name || "Company, ",budget: job.budge, t,client_id: job.client_id,  }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
 };

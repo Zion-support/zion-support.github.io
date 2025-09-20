@@ -5,7 +5,7 @@ export const EnhancedPricingComparison = () () => {
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl,
+          <h2 className="text-4x,  l,
   m: d: text-5xl font-bold text-white mb-6">
             Enhanced <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Pricing</span>
           </h2>
@@ -33,8 +33,8 @@ export const EnhancedPricingComparison = () () => {
                 Email Support
               </li>
             </ul>
-            <Link to="/pricing" className="block w-full text-center bg-cyan-600,
-  hove: r:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <Link to="/pricing" className="block w-full text-center bg-cyan-60, 0,
+  hov, e: r:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
               Get Started
             </Link>
           </div>
@@ -59,8 +59,8 @@ export const EnhancedPricingComparison = () () => {
                 Priority Support
               </li>
             </ul>
-            <Link to="/pricing" className="block w-full text-center bg-cyan-600,
-  hove: r:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <Link to="/pricing" className="block w-full text-center bg-cyan-60,  0,
+  hov, e: r:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
               Get Started
             </Link>
           </div>
@@ -82,7 +82,7 @@ export const EnhancedPricingComparison = () () => {
                 24/7 Support
               </li>
             </ul>
-            <Link to="/pricing" className="block w-full text-center bg-cyan-600 hove,
+            <Link to="/pricing" className="block w-full text-center bg-cyan-60, 0, hov, e,
   r:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
               Contact Sales
             </Link>
