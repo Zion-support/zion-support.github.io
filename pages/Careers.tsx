@@ -5,7 +5,45 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careerJobs";
+import { Briefcase, DollarSign, Heart, Lightbulb } from 'lucide-react';
+import React from 'react';
+
+const whyWork = `At Zion, we're building the future of AI and technology. Join a team of passionate innovators who are creating groundbreaking solutions that will shape tomorrow's digital landscape.
+
+We offer:
+• Competitive compensation and equity packages
+• Flexible remote work opportunities
+• Cutting-edge technology stack
+• Collaborative and inclusive culture
+• Professional development opportunities`;
+
+const benefits = [
+  {
+    title: 'Competitive Compensation',
+    description: 'Attractive salaries and performance-based bonuses.',
+    icon: <DollarSign className='h-6 w-6 text-zion-purple' />,
+  },
+  {
+    title: 'Health & Wellness',
+    description: 'Comprehensive health, dental, and vision plans.',
+    icon: <Heart className='h-6 w-6 text-zion-purple' />,
+  },
+  {
+    title: 'Professional Growth',
+    description: 'Opportunities for learning, development, and career advancement.',
+    icon: <Lightbulb className='h-6 w-6 text-zion-purple' />,
+  },
+  {
+    title: 'Innovative Environment',
+    description: 'Work on cutting-edge AI and technology projects.',
+    icon: <Briefcase className='h-6 w-6 text-zion-purple' />,
+  },
+];
+
 function Careers() {
+  const jobs = CAREER_JOBS;
+  const applyEmail = 'careers@ziontechgroup.com';
+
 return (
     <>
       <SEO
