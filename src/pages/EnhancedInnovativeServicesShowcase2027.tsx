@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   Brain;
   Globe;
   Zap;
@@ -53,7 +53,7 @@ import {;
   Play;
   Eye;
   X;
-  Beaker;
+  Beaker
 } from "lucide-react";
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
@@ -65,35 +65,38 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
   const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null)
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const categories = [['all', ...Array.from(new Set(services.map(s => s.category)))];]
-  const innovationLevels = [['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))];]
+  const categories = [['all', ...Array.from(new Set(services.map(s => s.category)))],
+  ]
+  const innovationLevels = [['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))],
+  ]
 
-  const filteredServices = services.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = services.filter(service => {
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
     ;
-    return matchesSearch && matchesCategory && matchesInnovation;
-  })
+    return matchesSearch && matchesCategory && matchesInnovation
+})
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
+  const sortedServices = [...filteredServices].sort((a, b) => {
+  switch (sortBy) {
+  case 'price':;
         return a.price - b.price;
       case 'innovation':;
-        const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 }}
+const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 },
+  }
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -;
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0)
       case 'roi':;
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''))
       default: return a.title.localeCompare(b.title)
-    }
+    },
   })
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />
+  const getCategoryIcon = (category: string) => {
+  switch (category) {
+  case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
       case 'AI & Supply Chain': return <Network className="w-5 h-5" />;
       case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />;
@@ -104,56 +107,64 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
       case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />
-    }
+    },
   }
-  const getInnovationLevelColor = (level: string) => {;
-    switch (level) {;
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+  const getInnovationLevelColor = (level: string) => {
+  switch (level) {
+  case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
-    }
+      default: return 'bg-gray-600'
+},
   }
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {;
-    setSelectedService(service)
+  const handleServiceClick = (service: EnhancedInnovativeService2027) => {
+  setSelectedService(service)
     setCurrentSlide(0)
   }
 
   const nextSlide = () => {
-    if (if (selectedService) {;) {
+    if (if (selectedService) {
+  ) {
       setCurrentSlide((prev) => (prev + 1) % 4)
-    }
+    },
   }
 
   const prevSlide = () => {
-    if (if (selectedService) {;) {
+    if (if (selectedService) {
+  ) {
       setCurrentSlide((prev) => (prev - 1 + 4) % 4)
-    }
+    },
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Header Section */}}
+      {{/* Header Section */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
               Enhanced Innovative Services 2027;
             </h1>
             <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">
-              Discover the future of technology with our comprehensive suite of AI, quantum computing, ;
-              and cutting-edge innovative services designed to revolutionize your business.;
+              Discover the future of technology with our comprehensive suite of AI, quantum computing,
+  and cutting-edge innovative services designed to revolutionize your business.;
             </p>
             <div className="flex justify-center space-x-4">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                 onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -161,8 +172,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                 <span>Explore Services</span>
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -174,52 +187,67 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
         </div>
       </div>
 
-      {{/* Search and Filter Section */}}
+      {{/* Search and Filter Section */},
+  }
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {{/* Search */}}
+            {{/* Search */},
+  }
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
               <input;
                 type="text";
                 placeholder="Search services...";
-                value={{searchTerm}}
-                onChange={{(e) => setSearchTerm(e.target.value)}}
+                value={{searchTerm},
+  }
+                onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                 className="className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan";"
               />
             </div>
 
-            {{/* Category Filter */}}
+            {{/* Category Filter */},
+  }
             <select;
-              value={{selectedCategory}}
-              onChange={{(e) => setSelectedCategory(e.target.value)}}
+              value={{selectedCategory},
+  }
+              onChange={{(e) => setSelectedCategory(e.target.value)},
+  }
               className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
             >
-              {categories.map(category => (;
-                <option key={category} value={category}>
-                  {{category === 'all' ? 'All Categories' : category}}
+              {categories.map(category => (
+  <option key={category} value={category}>
+                  {{category === 'all' ? 'All Categories' : category},
+  }
                 </option>
               ))}
             </select>
 
-            {{/* Innovation Level Filter */}}
+            {{/* Innovation Level Filter */},
+  }
             <select;
-              value={{selectedInnovationLevel}}
-              onChange={{(e) => setSelectedInnovationLevel(e.target.value)}}
+              value={{selectedInnovationLevel},
+  }
+              onChange={{(e) => setSelectedInnovationLevel(e.target.value)},
+  }
               className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
             >
-              {innovationLevels.map(level => (;
-                <option key={level} value={level}>
-                  {{level === 'all' ? 'All Innovation Levels' : level}}
+              {innovationLevels.map(level => (
+  <option key={level} value={level}>
+                  {{level === 'all' ? 'All Innovation Levels' : level},
+  }
                 </option>
               ))}
             </select>
 
-            {{/* Sort By */}}
+            {{/* Sort By */},
+  }
             <select;
-              value={{sortBy}}
-              onChange={{(e) => setSortBy(e.target.value)}}
+              value={{sortBy},
+  }
+              onChange={{(e) => setSortBy(e.target.value)},
+  }
               className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
             >
               <option value="title">Sort by Title</option>
@@ -231,34 +259,45 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
         </div>
       </div>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <div id="services-grid" className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index) => (;
-            <motion.div;
-              key={{service.id}}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+          {sortedServices.map((service, index) => (
+  <motion.div;
+              key={{service.id},
+  }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.5, delay: index * 0.1 },
+  }
               className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group";"
-              onClick={{onClick={() => handleServiceClick(service)}}}
+              onClick={{onClick={() => handleServiceClick(service)},
+  },
+  }
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                  {{getCategoryIcon(service.category)}}
+                  {{getCategoryIcon(service.category)},
+  }
                   <span className="text-zion-gray-light text-sm">{service.category}</span>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                  {{service.innovationLevel}}
+                  {{service.innovationLevel},
+  }
                 </span>
               </div>
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                {{service.title}}
+                {{service.title},
+  }
               </h3>
 
               <p className="text-zion-gray-light mb-4 leading-relaxed">
-                {{service.description}}
+                {{service.description},
+  }
               </p>
 
               <div className="flex items-center justify-between mb-4">
@@ -272,17 +311,20 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {service.tags.slice(0, 3).map((tag, tagIndex) => (;
-                  <span;
-                    key={{tagIndex}}
+                {service.tags.slice(0, 3).map((tag, tagIndex) => (
+  <span;
+                    key={{tagIndex},
+  }
                     className="className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full";"
                   >
-                    {{tag}}
+                    {{tag},
+  }
                   </span>
-                ))}
-                {service.tags.length > 3 && (;
-                  <span className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full">
-                    +{{service.tags.length - 3}}
+                ))},
+  {service.tags.length > 3 && (
+  <span className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full">
+                    +{{service.tags.length - 3},
+  }
                   </span>
                 )}
               </div>
@@ -299,57 +341,74 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
         </div>
       </div>
 
-      {{/* Service Detail Modal */}}
-      {selectedService && (;
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      {{/* Service Detail Modal */},
+  },
+  {selectedService && (
+  <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div;
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.9 },
+  }
+            animate={{ opacity: 1, scale: 1 },
+  }
+            exit={{ opacity: 0, scale: 0.9 },
+  }
             className="className="bg-zion-slate-dark rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto";"
           >
             <div className="p-8">
-              {{/* Header */}}
+              {{/* Header */},
+  }
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  {{getCategoryIcon(selectedService.category)}}
+                  {{getCategoryIcon(selectedService.category)},
+  }
                   <div>
                     <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
                     <p className="text-zion-gray-light">{selectedService.category}</p>
                   </div>
                 </div>
                 <button;
-                  onClick={{onClick={() => setSelectedService(null)}}}
+                  onClick={{onClick={() => setSelectedService(null)},
+  },
+  }
                   className="className="text-zion-gray-light hover:text-white transition-colors";"
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
 
-              {{/* Navigation Tabs */}}
+              {{/* Navigation Tabs */},
+  }
               <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
-                {['OverviewFeatures', 'Technical SpecsContact'].map((tab, index) => (;
-                  <button;
-                    key={{tab}}
-                    onClick={{onClick={() => setCurrentSlide(index)}}}
-                    className={`pb-2 px-4 transition-colors ${;
-                      currentSlide === index;
+                {['OverviewFeatures', 'Technical SpecsContact'].map((tab, index) => (
+  <button;
+                    key={{tab},
+  }
+                    onClick={{onClick={() => setCurrentSlide(index)},
+  },
+  }
+                    className={`pb-2 px-4 transition-colors ${
+  currentSlide === index;
                         ? 'text-zion-cyan border-b-2 border-zion-cyan';
-                        : 'text-zion-gray-light hover:text-white';
-                    }`}
+                        : 'text-zion-gray-light hover:text-white'
+}`}
                   >
-                    {{tab}}
+                    {{tab},
+  }
                   </button>
                 ))}
               </div>
 
-              {{/* Content Slides */}}
+              {{/* Content Slides */},
+  }
               <div className="relative">
-                {{/* Overview Slide */}}
-                {currentSlide === 0 && (;
-                  <motion.div;
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                {{/* Overview Slide */},
+  },
+  {currentSlide === 0 && (
+  <motion.div;
+                    initial={{ opacity: 0, x: 20 },
+  }
+                    animate={{ opacity: 1, x: 0 },
+  }
                     className="className="space-y-6";"
                   >
                     <div className="bg-white/5 rounded-xl p-6">
@@ -364,8 +423,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Key Benefits</span>
                         </h4>
                         <ul className="space-y-2">
-                          {selectedService.benefits.map((benefit, index) => (;
-                            <li key={index} className="text-zion-gray-light flex items-start space-x-2">
+                          {selectedService.benefits.map((benefit, index) => (
+  <li key={index} className="text-zion-gray-light flex items-start space-x-2">
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                               <span>{benefit}</span>
                             </li>
@@ -379,25 +438,29 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Target Audience</span>
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.targetAudience.map((audience, index) => (;
-                            <span;
-                              key={{index}}
+                          {selectedService.targetAudience.map((audience, index) => (
+  <span;
+                              key={{index},
+  }
                               className="className="px-3 py-1 bg-zion-slate-light text-zion-gray-light text-sm rounded-full";"
                             >
-                              {{audience}}
+                              {{audience},
+  }
                             </span>
                           ))}
                         </div>
                       </div>
                     </div>
                   </motion.div>
-                )}
-
-                {{/* Features Slide */}}
-                {currentSlide === 1 && (;
-                  <motion.div;
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                )},
+  {{/* Features Slide */},
+  },
+  {currentSlide === 1 && (
+  <motion.div;
+                    initial={{ opacity: 0, x: 20 },
+  }
+                    animate={{ opacity: 1, x: 0 },
+  }
                     className="className="space-y-6";"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -407,8 +470,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Key Features</span>
                         </h4>
                         <ul className="space-y-2">
-                          {selectedService.features.map((feature, index) => (;
-                            <li key={index} className="text-zion-gray-light flex items-start space-x-2">
+                          {selectedService.features.map((feature, index) => (
+  <li key={index} className="text-zion-gray-light flex items-start space-x-2">
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                               <span>{feature}</span>
                             </li>
@@ -422,8 +485,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Use Cases</span>
                         </h4>
                         <ul className="space-y-2">
-                          {selectedService.useCases.map((useCase, index) => (;
-                            <li key={index} className="text-zion-gray-light flex items-start space-x-2">
+                          {selectedService.useCases.map((useCase, index) => (
+  <li key={index} className="text-zion-gray-light flex items-start space-x-2">
                               <ArrowRight className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                               <span>{useCase}</span>
                             </li>
@@ -432,13 +495,15 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       </div>
                     </div>
                   </motion.div>
-                )}
-
-                {{/* Technical Specs Slide */}}
-                {currentSlide === 2 && selectedService.technicalSpecs && (;
-                  <motion.div;
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                )},
+  {{/* Technical Specs Slide */},
+  },
+  {currentSlide === 2 && selectedService.technicalSpecs && (
+  <motion.div;
+                    initial={{ opacity: 0, x: 20 },
+  }
+                    animate={{ opacity: 1, x: 0 },
+  }
                     className="className="space-y-6";"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -448,12 +513,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Technology Stack</span>
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.technology.map((tech, index) => (;
-                            <span;
-                              key={{index}}
+                          {selectedService.technicalSpecs.technology.map((tech, index) => (
+  <span;
+                              key={{index},
+  }
                               className="className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full";"
                             >
-                              {{tech}}
+                              {{tech},
+  }
                             </span>
                           ))}
                         </div>
@@ -465,12 +532,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Integrations</span>
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.integrations.map((integration, index) => (;
-                            <span;
-                              key={{index}}
+                          {selectedService.technicalSpecs.integrations.map((integration, index) => (
+  <span;
+                              key={{index},
+  }
                               className="className="px-3 py-1 bg-green-400/20 text-green-300 text-sm rounded-full";"
                             >
-                              {{integration}}
+                              {{integration},
+  }
                             </span>
                           ))}
                         </div>
@@ -495,12 +564,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Security</h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.security.map((security, index) => (;
-                            <span;
-                              key={{index}}
+                          {selectedService.technicalSpecs.security.map((security, index) => (
+  <span;
+                              key={{index},
+  }
                               className="className="px-2 py-1 bg-red-400/20 text-red-300 text-xs rounded-full";"
                             >
-                              {{security}}
+                              {{security},
+  }
                             </span>
                           ))}
                         </div>
@@ -509,25 +580,29 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Compliance</h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.compliance.map((compliance, index) => (;
-                            <span;
-                              key={{index}}
+                          {selectedService.technicalSpecs.compliance.map((compliance, index) => (
+  <span;
+                              key={{index},
+  }
                               className="className="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full";"
                             >
-                              {{compliance}}
+                              {{compliance},
+  }
                             </span>
                           ))}
                         </div>
                       </div>
                     </div>
                   </motion.div>
-                )}
-
-                {{/* Contact Slide */}}
-                {currentSlide === 3 && (;
-                  <motion.div;
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                )},
+  {{/* Contact Slide */},
+  },
+  {currentSlide === 3 && (
+  <motion.div;
+                    initial={{ opacity: 0, x: 20 },
+  }
+                    animate={{ opacity: 1, x: 0 },
+  }
                     className="className="space-y-6";"
                   >
                     <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-xl p-8 text-center">
@@ -577,7 +652,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                             <div className="flex items-center space-x-3">
                               <ExternalLink className="w-5 h-5 text-zion-cyan" />
                               <a;
-                                href={{selectedService.contactInfo.website}}
+                                href={{selectedService.contactInfo.website},
+  }
                                 target="_blank";
                                 rel="noopener noreferrer";
                                 className="className="text-zion-cyan hover:text-white transition-colors";"
@@ -591,8 +667,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
 
                       <div className="flex justify-center space-x-4">
                         <motion.button;
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.05 },
+  }
+                          whileTap={{ scale: 0.95 },
+  }
                           className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                           onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
                         >
@@ -600,8 +678,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <span>Call Now</span>
                         </motion.button>
                         <motion.button;
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.05 },
+  }
+                          whileTap={{ scale: 0.95 },
+  }
                           className="className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                           onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
                         >
@@ -614,10 +694,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                 )}
               </div>
 
-              {{/* Navigation Arrows */}}
+              {{/* Navigation Arrows */},
+  }
               <div className="flex items-center justify-between mt-8">
                 <button;
-                  onClick={{onClick={prevSlide}}}
+                  onClick={{onClick={prevSlide},
+  },
+  }
                   className="className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors";"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -625,19 +708,24 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                 </button>
 
                 <div className="flex space-x-2">
-                  {[0, 1, 2, 3].map((index) => (;
-                    <button;
-                      key={{index}}
-                      onClick={{onClick={() => setCurrentSlide(index)}}}
-                      className={`w-2 h-2 rounded-full transition-colors ${;
-                        currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark';
-                      }`}
+                  {[0, 1, 2, 3].map((index) => (
+  <button;
+                      key={{index},
+  }
+                      onClick={{onClick={() => setCurrentSlide(index)},
+  },
+  }
+                      className={`w-2 h-2 rounded-full transition-colors ${
+  currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark'
+}`}
                     />
                   ))}
                 </div>
 
                 <button;
-                  onClick={{onClick={nextSlide}}}
+                  onClick={{onClick={nextSlide},
+  },
+  }
                   className="className="flex items-center space-x-2 text-zion-gray-light hover: text-white transition-colors";"
                 >
                   <span>Next</span>
@@ -647,9 +735,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      )}
-
-      {{/* Contact Section */}}
+      )},
+  {{/* Contact Section */},
+  }
       <div id="contact" className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -678,10 +766,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
 
           <motion.button;
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 },
+  }
+            whileTap={{ scale: 0.95 },
+  }
             className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto";"
-            onClick={{onClick={() => window.open('https://ziontechgroup.com_blank')}}}
+            onClick={{onClick={() => window.open('https://ziontechgroup.com_blank')},
+  },
+  }
           >
             <ExternalLink className="w-5 h-5" />
             <span>Visit Zion Tech Group</span>

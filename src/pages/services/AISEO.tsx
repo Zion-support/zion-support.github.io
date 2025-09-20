@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Search;
-  TrendingUp, ;
-  Target, ;
-  BarChart3, ;
+  TrendingUp,
+  Target,
+  BarChart3,
   CheckCircle;
   ArrowRight;
   Star;
@@ -22,44 +22,48 @@ import { ;
   Share2;
   Brain;
   Zap;
-  Shield;
+  Shield
 } from "lucide-react";
 const AISEO: React.FC = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Keyword Research',description: 'Advanced algorithms to discover high-value keywords and search opportunities';
-    }
-    {;
-      icon: Target,title: 'Content Optimization',description: 'AI-driven recommendations to improve content relevance and search rankings';
-    }
-    {;
-      icon: TrendingUp,title: 'Performance Tracking',description: 'Real-time monitoring of SEO metrics and ranking improvements';
-    }
-    {;
-      icon: Shield,title: 'Technical SEO Audit',description: 'Automated detection and fixing of technical SEO issues';
-    }
-    {;
-      icon: Zap,title: 'Competitive Analysis',description: 'AI-powered insights into competitor strategies and opportunities';
-    }
-    {;
-      icon: BarChart3,title: 'Ranking Predictions',description: 'Predict future ranking changes based on current optimization efforts';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Keyword Research',description: 'Advanced algorithms to discover high-value keywords and search opportunities'
+},
+  {
+  icon: Target,title: 'Content Optimization',description: 'AI-driven recommendations to improve content relevance and search rankings'
+},
+  {
+  icon: TrendingUp,title: 'Performance Tracking',description: 'Real-time monitoring of SEO metrics and ranking improvements'
+},
+  {
+  icon: Shield,title: 'Technical SEO Audit',description: 'Automated detection and fixing of technical SEO issues'
+},
+  {
+  icon: Zap,title: 'Competitive Analysis',description: 'AI-powered insights into competitor strategies and opportunities'
+},
+  {
+  icon: BarChart3,title: 'Ranking Predictions',description: 'Predict future ranking changes based on current optimization efforts'
+},
   ]
-  const benefits = [;
-    'Improve search rankings by 40%Increase organic traffic by 60%';
+  const benefits = [
+  'Improve search rankings by 40%Increase organic traffic by 60%';
     'Reduce SEO audit time by 80%Boost conversion rates by 25%';
-    'Identify new keyword opportunitiesAutomate technical SEO fixes';
-  ]
+    'Identify new keyword opportunitiesAutomate technical SEO fixes'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 text-orange-400 text-sm font-medium mb-6">
               <Search className="w-4 h-4 mr-2" />
@@ -88,14 +92,19 @@ const AISEO: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -107,13 +116,18 @@ const AISEO: React.FC = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
@@ -127,14 +141,19 @@ const AISEO: React.FC = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -147,15 +166,19 @@ const AISEO: React.FC = () => {
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (;
-                  <div key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => (
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -164,10 +187,14 @@ const AISEO: React.FC = () => {
             </motion.div>
             ;
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-xl p-8";"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Ready to Boost Rankings?</h3>
@@ -182,14 +209,19 @@ const AISEO: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Dominate Search Rankings?;

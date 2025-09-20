@@ -2,46 +2,46 @@ import React from "react";
 import { SEO } from "../../components/SEO";
 import { motion } from "framer-motion";
 import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu } from "lucide-react";
-export default function QuantumComputingSolutions() {;
-  const features = [;
-    {;
-      icon: Atom,title: 'Quantum Processing',description: 'Advanced quantum computing solutions for complex computational problems and simulations.';
-    }
-    {;
-      icon: Brain,title: 'Quantum Machine Learning',description: 'Quantum-enhanced ML algorithms that outperform classical approaches for specific applications.';
-    }
-    {;
-      icon: Target,title: 'Optimization Solutions',description: 'Quantum optimization algorithms for logistics, finance, and complex system design.';
-    }
-    {;
-      icon: TrendingUp,title: 'Performance Analytics',description: 'Real-time monitoring and analysis of quantum computing performance and results.';
-    }
-    {;
-      icon: Shield,title: 'Quantum Security',description: 'Quantum-resistant cryptography and quantum key distribution for enhanced security.';
-    }
-    {;
-      icon: Users,title: 'Expert Consultation',description: 'Access to quantum computing experts and specialized implementation support.';
-    }
+export default function QuantumComputingSolutions() {
+  const features = [
+  {
+  icon: Atom,title: 'Quantum Processing',description: 'Advanced quantum computing solutions for complex computational problems and simulations.'
+},
+  {
+  icon: Brain,title: 'Quantum Machine Learning',description: 'Quantum-enhanced ML algorithms that outperform classical approaches for specific applications.'
+},
+  {
+  icon: Target,title: 'Optimization Solutions',description: 'Quantum optimization algorithms for logistics, finance, and complex system design.'
+},
+  {
+  icon: TrendingUp,title: 'Performance Analytics',description: 'Real-time monitoring and analysis of quantum computing performance and results.'
+},
+  {
+  icon: Shield,title: 'Quantum Security',description: 'Quantum-resistant cryptography and quantum key distribution for enhanced security.'
+},
+  {
+  icon: Users,title: 'Expert Consultation',description: 'Access to quantum computing experts and specialized implementation support.'
+},
   ]
-  const benefits = [;
-    'Solve previously intractable problemsExponential speedup for specific algorithms';
+  const benefits = [
+  'Solve previously intractable problemsExponential speedup for specific algorithms';
     'Enhanced machine learning capabilitiesImproved optimization and simulation';
-    'Future-proof security solutionsCompetitive advantage in research';
-  ]
+    'Future-proof security solutionsCompetitive advantage in research'
+]
 
-  const solutions = [;
-    {;
-      title: 'Quantum Algorithm Development',description: 'Custom quantum algorithms designed for your specific business challenges and use cases.',icon: Brain;
-    }
-    {;
-      title: 'Quantum Cloud Access',description: 'Access to leading quantum computing platforms through our managed cloud services.',icon: Cloud;
-    }
-    {;
-      title: 'Quantum Software Integration',description: 'Seamless integration of quantum computing capabilities into existing software systems.',icon: Cpu;
-    }
-    {;
-      title: 'Quantum Research & Development',description: 'Collaborative R&D programs to explore quantum computing applications for your industry.',icon: Lightbulb;
-    }
+  const solutions = [
+  {
+  title: 'Quantum Algorithm Development',description: 'Custom quantum algorithms designed for your specific business challenges and use cases.',icon: Brain
+},
+  {
+  title: 'Quantum Cloud Access',description: 'Access to leading quantum computing platforms through our managed cloud services.',icon: Cloud
+},
+  {
+  title: 'Quantum Software Integration',description: 'Seamless integration of quantum computing capabilities into existing software systems.',icon: Cpu
+},
+  {
+  title: 'Quantum Research & Development',description: 'Collaborative R&D programs to explore quantum computing applications for your industry.',icon: Lightbulb
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -50,14 +50,18 @@ export default function QuantumComputingSolutions() {;
         description="Harness the power of quantum computing with our advanced solutions. Solve complex problems, enhance machine learning, and gain competitive advantages.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">
@@ -83,13 +87,17 @@ export default function QuantumComputingSolutions() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -102,12 +110,16 @@ export default function QuantumComputingSolutions() {;
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -121,13 +133,17 @@ export default function QuantumComputingSolutions() {;
         </div>
       </section>
 
-      {{/* Solutions Section */}}
+      {{/* Solutions Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -140,12 +156,16 @@ export default function QuantumComputingSolutions() {;
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {solutions.map((solution, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -162,14 +182,18 @@ export default function QuantumComputingSolutions() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Quantum Computing Benefits;
@@ -179,8 +203,8 @@ export default function QuantumComputingSolutions() {;
                 complex problems and gain competitive advantages in your industry.;
               </p>
               <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (;
-                  <div key={index} className="flex items-center space-x-3">
+                {benefits.map((benefit, index) => (
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>
                   </div>
@@ -189,9 +213,12 @@ export default function QuantumComputingSolutions() {;
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="relative";"
             >
               <div className="bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl p-8 border border-purple-400/30">
@@ -213,13 +240,17 @@ export default function QuantumComputingSolutions() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="max-w-3xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">

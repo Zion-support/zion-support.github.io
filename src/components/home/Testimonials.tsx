@@ -7,7 +7,7 @@ interface Testimonial {
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const testimonials: Testimonial[] = [
+const testimonials: Testimonial[] = [
     {
       id: 1,name: "Sarah Chen",role: "CTO",company: "TechFlow Solutions",content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",rating: 5,avatar: "/images/testimonials/sarah-chen.jpg",industry: "Technology"
     };
@@ -20,15 +20,15 @@ const Testimonials: React.FC = () => {
     };
     {
       id: 4,name: "David Kim",role: "CEO",company: "FinTech Innovations",content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",rating: 5,avatar: "/images/testimonials/david-kim.jpg",industry: "Financial Services"
-    }
+    },
   ];
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  },
+const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+},
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  },
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+},
 
   const goToTestimonial = (index: number) => {
     setCurrentIndex(index)
@@ -38,10 +38,14 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
+          viewport={{ once: true },
+  }
         >
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
@@ -62,10 +66,14 @@ const Testimonials: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: 100 },
+  }
+              animate={{ opacity: 1, x: 0 },
+  }
+              exit={{ opacity: 0, x: -100 },
+  }
+              transition={{ duration: 0.5 },
+  }
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
             >
               {/* Background decoration */}
@@ -142,10 +150,14 @@ const Testimonials: React.FC = () => {
         {/* Trust Indicators */}
         <motion.div
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
+          viewport={{ once: true },
+  }
         >
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-2xl mx-auto">

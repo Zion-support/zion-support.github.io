@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {;
+import {
   Brain;
   Cloud;
   Shield;
@@ -55,24 +55,24 @@ import {;
   Target as TargetIcon;
   Zap as ZapIcon;
   Grid;
-  List;
+  List
 } from "lucide-react";
 // Import our existing service data;
 import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
 import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
-interface Service {;
-  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {;
-    starter: number,professional: number,enterprise: number,currency: string,billingCycle: string;
-  }
+interface Service {
+  id: string,name: string,category: string,description: string,features: string[],benefits: string[],pricing: {
+  starter: number,professional: number,enterprise: number,currency: string,billingCycle: string
+}
   rating: number,reviewCount: number,launchDate: string,status: string,marketPrice: string,estimatedDelivery: string;
   website?: string;
-  contactInfo?: {;
-    phone: string,email: string,address: string;
-  }
+  contactInfo?: {
+  phone: string,email: string,address: string
+}
   innovationLevel?: string;
   marketSize?: string;
   growthRate?: string;
-  roi?: string;
+  roi?: string
 }
 
 const EnhancedComprehensiveServices2026: React.FC = () => {
@@ -83,48 +83,50 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
 
   // Combine services from multiple sources;
-  const allServices: Service[] = useMemo(() => {
-    const services: Service[] = [[];]
+const allServices: Service[] = useMemo(() => {
+    const services: Service[] = [[],
+  ]
     // Add services from ultimateInnovativeServices2026;
-    ultimateInnovativeServices2026.forEach(service => {;
-      services.push({;
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {;
-          starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle;
-        }
-        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo;
-      })
+    ultimateInnovativeServices2026.forEach(service => {
+  services.push({
+  id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+  starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
+}
+        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
+})
     })
 
     // Add services from zion2026ComprehensiveServices;
-    zion2026ComprehensiveServices.forEach(service => {;
-      services.push({;
-        id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {;
-          starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle;
-        }
-        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo;
-      })
+    zion2026ComprehensiveServices.forEach(service => {
+  services.push({
+  id: service.id,name: service.name,category: service.category,description: service.description,features: service.features,benefits: service.benefits,pricing: {
+  starter: service.pricing.starter,professional: service.pricing.professional,enterprise: service.pricing.enterprise,currency: service.pricing.currency,billingCycle: service.pricing.billingCycle
+}
+        rating: service.rating,reviewCount: service.reviewCount,launchDate: service.launchDate,status: service.status,marketPrice: service.marketPrice,estimatedDelivery: service.estimatedDelivery,website: service.website,contactInfo: service.contactInfo
+})
     })
 
-    return services;
-  }, [])
+    return services
+}, [])
 
   const categories = useMemo(() => {
-    const cats = [['All', ...Array.from(new Set(allServices.map(s => s.category)))];]
+    const cats = [['All', ...Array.from(new Set(allServices.map(s => s.category)))],
+  ]
     return cats.sort()
   }, [allServices])
 
   const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+    let filtered = allServices.filter(service => {
+  const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    })
+      return matchesSearch && matchesCategory
+})
 
     // Sort services;
-    switch (sortBy) {;
-      case 'name':;
+    switch (sortBy) {
+  case 'name':;
         filtered.sort((a, b) => a.name.localeCompare(b.name))
         break;
       case 'price':;
@@ -139,15 +141,15 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'innovation':;
         // Sort by innovation level if available, otherwise by rating;
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()))
-        break;
-    }
+        break
+}
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy])
+    return filtered
+}, [allServices, searchTerm, selectedCategory, sortBy])
 
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'Artificial Intelligence':;
+  const getCategoryIcon = (category: string) => {
+  switch (category) {
+  case 'Artificial Intelligence':;
         return <Brain className="w-6 h-6" />
       case 'Quantum Computing':;
         return <Atom className="w-6 h-6" />;
@@ -168,11 +170,11 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'Space Technology':;
         return <Satellite className="w-6 h-6" />;
       default: return <Lightbulb className="w-6 h-6" />
-    }
+    },
   }
-  const getStatusColor = (status: string) => {;
-    switch (status.toLowerCase()) {;
-      case 'live':;
+  const getStatusColor = (status: string) => {
+  switch (status.toLowerCase()) {
+  case 'live':;
         return 'bg-green-100 text-green-800';
       case 'beta':;
         return 'bg-blue-100 text-blue-800';
@@ -180,28 +182,34 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         return 'bg-yellow-100 text-yellow-800';
       case 'preview':;
         return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+      default: return 'bg-gray-100 text-gray-800'
+},
   }
-  const getInnovationBadge = (service: Service) => {;
-    if (if (service.innovationLevel === 'Revolutionary') {;) {
+  const getInnovationBadge = (service: Service) => {
+  if (if (service.innovationLevel === 'Revolutionary') {
+  ) {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>
-    } else if (if (service.innovationLevel === 'Cutting-Edge') {;) {
+    } else if (if (service.innovationLevel === 'Cutting-Edge') {
+  ) {
       return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>
     }
-    return null;
-  }
+    return null
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {{/* Header */}}
+      {{/* Header */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -213,16 +221,20 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2";"
               >
                 <Play className="w-5 h-5" />
                 Watch Demo;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2";"
               >
                 <BookOpen className="w-5 h-5" />
@@ -233,42 +245,52 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         </div>
       </div>
 
-      {{/* Search and Filters */}}
+      {{/* Search and Filters */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-6">
-            {{/* Search */}}
+            {{/* Search */},
+  }
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search revolutionary services...";
-                  value={{searchTerm}}
-                  onChange={{(e) => setSearchTerm(e.target.value)}}
+                  value={{searchTerm},
+  }
+                  onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                   className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500";"
                 />
               </div>
             </div>
 
-            {{/* Category Filter */}}
+            {{/* Category Filter */},
+  }
             <div className="flex-shrink-0">
               <select;
-                value={{selectedCategory}}
-                onChange={{(e) => setSelectedCategory(e.target.value)}}
+                value={{selectedCategory},
+  }
+                onChange={{(e) => setSelectedCategory(e.target.value)},
+  }
                 className="className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500";"
               >
-                {categories.map(category => (;
-                  <option key={category} value={category}>{category}</option>
+                {categories.map(category => (
+  <option key={category} value={category}>{category}</option>
                 ))}
               </select>
             </div>
 
-            {{/* Sort */}}
+            {{/* Sort */},
+  }
             <div className="flex-shrink-0">
               <select;
-                value={{sortBy}}
-                onChange={{(e) => setSortBy(e.target.value as any)}}
+                value={{sortBy},
+  }
+                onChange={{(e) => setSortBy(e.target.value as any)},
+  }
                 className="className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500";"
               >
                 <option value="name">Sort by Name</option>
@@ -279,22 +301,27 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               </select>
             </div>
 
-            {{/* View Mode Toggle */}}
+            {{/* View Mode Toggle */},
+  }
             <div className="flex-shrink-0">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button;
-                  onClick={{onClick={() => setViewMode('grid')}}}
-                  className={`px-3 py-2 rounded-md transition-colors ${;
-                    viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white';
-                  }`}
+                  onClick={{onClick={() => setViewMode('grid')},
+  },
+  }
+                  className={`px-3 py-2 rounded-md transition-colors ${
+  viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
+}`}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button;
-                  onClick={{onClick={() => setViewMode('list')}}}
-                  className={`px-3 py-2 rounded-md transition-colors ${;
-                    viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white';
-                  }`}
+                  onClick={{onClick={() => setViewMode('list')},
+  },
+  }
+                  className={`px-3 py-2 rounded-md transition-colors ${
+  viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
+}`}
                 >
                   <List className="w-4 h-4" />
                 </button>
@@ -304,32 +331,44 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         </div>
       </div>
 
-      {{/* Services Grid/List */}}
+      {{/* Services Grid/List */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {viewMode === 'grid' ? (;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {viewMode === 'grid' ? (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (;
-                <motion.div;
-                  key={{service.id}}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
+              {filteredServices.map((service, index) => (
+  <motion.div;
+                  key={{service.id},
+  }
+                  initial={{ opacity: 0, y: 20 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                  whileHover={{ y: -5 },
+  }
                   className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer";"
-                  onClick={{onClick={() => setSelectedService(service)}}}
+                  onClick={{onClick={() => setSelectedService(service)},
+  },
+  }
                 >
-                  {{/* Service Header */}}
+                  {{/* Service Header */},
+  }
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      {{getCategoryIcon(service.category)}}
+                      {{getCategoryIcon(service.category)},
+  }
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>
                         <div className="flex gap-2">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
-                            {{service.status}}
+                            {{service.status},
+  }
                           </span>
-                          {{getInnovationBadge(service)}}
+                          {{getInnovationBadge(service)},
+  }
                         </div>
                       </div>
                     </div>
@@ -340,44 +379,53 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                     </div>
                   </div>
 
-                  {{/* Description */}}
+                  {{/* Description */},
+  }
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
 
-                  {{/* Pricing */}}
+                  {{/* Pricing */},
+  }
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
                       <DollarSign className="w-4 h-4 text-green-400" />
                       <span className="text-sm text-gray-300">Starting from</span>
                       <span className="text-lg font-bold text-green-400">
-                        {service.pricing.currency}{{service.pricing.starter.toLocaleString()}}
+                        {service.pricing.currency},
+  {{service.pricing.starter.toLocaleString()},
+  }
                       </span>
                       <span className="text-xs text-gray-400">/{service.pricing.billingCycle}</span>
                     </div>
                     <div className="text-xs text-gray-400">
-                      Market price: {{service.marketPrice}}
+                      Market price: {{service.marketPrice},
+  }
                     </div>
                   </div>
 
-                  {{/* Features Preview */}}
+                  {{/* Features Preview */},
+  }
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {service.features.slice(0, 3).map((feature, idx) => (;
-                        <span;
-                          key={{idx}}
+                      {service.features.slice(0, 3).map((feature, idx) => (
+  <span;
+                          key={{idx},
+  }
                           className="className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full";"
                         >
-                          {{feature}}
+                          {{feature},
+  }
                         </span>
-                      ))}
-                      {service.features.length > 3 && (;
-                        <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
+                      ))},
+  {service.features.length > 3 && (
+  <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
                           +{service.features.length - 3} more;
                         </span>
                       )}
                     </div>
                   </div>
 
-                  {{/* Action Buttons */}}
+                  {{/* Action Buttons */},
+  }
                   <div className="flex gap-2">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Get Started;
@@ -390,21 +438,28 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               ))}
             </AnimatePresence>
           </div>
-        ) : (;
-          <div className="space-y-4">
+        ) : (
+  <div className="space-y-4">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (;
-                <motion.div;
-                  key={{service.id}}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+              {filteredServices.map((service, index) => (
+  <motion.div;
+                  key={{service.id},
+  }
+                  initial={{ opacity: 0, x: -20 },
+  }
+                  animate={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer";"
-                  onClick={{onClick={() => setSelectedService(service)}}}
+                  onClick={{onClick={() => setSelectedService(service)},
+  },
+  }
                 >
                   <div className="flex items-center gap-6">
                     <div className="flex-shrink-0">
-                      {{getCategoryIcon(service.category)}}
+                      {{getCategoryIcon(service.category)},
+  }
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
@@ -412,9 +467,11 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                           <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>
                           <div className="flex gap-2 mb-2">
                             <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
-                              {{service.status}}
+                              {{service.status},
+  }
                             </span>
-                            {{getInnovationBadge(service)}}
+                            {{getInnovationBadge(service)},
+  }
                           </div>
                         </div>
                         <div className="flex items-center gap-1">
@@ -426,7 +483,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                       <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                       <div className="flex items-center gap-4 text-sm">
                         <span className="text-green-400 font-medium">
-                          From {service.pricing.currency}{service.pricing.starter.toLocaleString()}/{{service.pricing.billingCycle}}
+                          From {service.pricing.currency},
+  {service.pricing.starter.toLocaleString()}/{{service.pricing.billingCycle},
+  }
                         </span>
                         <span className="text-gray-400">Market: {service.marketPrice}</span>
                       </div>
@@ -441,13 +500,15 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               ))}
             </AnimatePresence>
           </div>
-        )}
-
-        {{/* No Results */}}
-        {filteredServices.length === 0 && (;
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+        )},
+  {{/* No Results */},
+  },
+  {filteredServices.length === 0 && (
+  <motion.div;
+            initial={{ opacity: 0 },
+  }
+            animate={{ opacity: 1 },
+  }
             className="className="text-center py-16";"
           >
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -457,39 +518,55 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         )}
       </div>
 
-      {{/* Service Detail Modal */}}
+      {{/* Service Detail Modal */},
+  }
       <AnimatePresence>
-        {selectedService && (;
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        {selectedService && (
+  <motion.div;
+            initial={{ opacity: 0 },
+  }
+            animate={{ opacity: 1 },
+  }
+            exit={{ opacity: 0 },
+  }
             className="className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";"
-            onClick={{onClick={() => setSelectedService(null)}}}
+            onClick={{onClick={() => setSelectedService(null)},
+  },
+  }
           >
             <motion.div;
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 },
+  }
+              animate={{ scale: 1, opacity: 1 },
+  }
+              exit={{ scale: 0.9, opacity: 0 },
+  }
               className="className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";"
-              onClick={{onClick={(e) => e.stopPropagation()}}}
+              onClick={{onClick={(e) => e.stopPropagation()},
+  },
+  }
             >
               <div className="p-6">
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4">
-                    {{getCategoryIcon(selectedService.category)}}
+                    {{getCategoryIcon(selectedService.category)},
+  }
                     <div>
                       <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
                       <div className="flex gap-2 mb-2">
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}>
-                          {{selectedService.status}}
+                          {{selectedService.status},
+  }
                         </span>
-                        {{getInnovationBadge(selectedService)}}
+                        {{getInnovationBadge(selectedService)},
+  }
                       </div>
                     </div>
                   </div>
                   <button;
-                    onClick={{onClick={() => setSelectedService(null)}}}
+                    onClick={{onClick={() => setSelectedService(null)},
+  },
+  }
                     className="className="p-2 hover:bg-white/10 rounded-lg transition-colors";"
                   >
                     <X className="w-6 h-6 text-gray-400" />
@@ -497,33 +574,37 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {{/* Left Column */}}
+                  {{/* Left Column */},
+  }
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
                     <p className="text-gray-300 mb-6">{selectedService.description}</p>
 
                     <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedService.features.map((feature, idx) => (;
-                        <li key={idx} className="flex items-center gap-2 text-gray-300">
+                      {selectedService.features.map((feature, idx) => (
+  <li key={idx} className="flex items-center gap-2 text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {{feature}}
+                          {{feature},
+  }
                         </li>
                       ))}
                     </ul>
 
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedService.benefits.map((benefit, idx) => (;
-                        <li key={idx} className="flex items-center gap-2 text-gray-300">
+                      {selectedService.benefits.map((benefit, idx) => (
+  <li key={idx} className="flex items-center gap-2 text-gray-300">
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                          {{benefit}}
+                          {{benefit},
+  }
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {{/* Right Column */}}
+                  {{/* Right Column */},
+  }
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Pricing Plans</h3>
                     <div className="space-y-4 mb-6">
@@ -531,7 +612,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium text-white">Starter</span>
                           <span className="text-2xl font-bold text-green-400">
-                            {selectedService.pricing.currency}{{selectedService.pricing.starter.toLocaleString()}}
+                            {selectedService.pricing.currency},
+  {{selectedService.pricing.starter.toLocaleString()},
+  }
                           </span>
                         </div>
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
@@ -541,7 +624,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium text-white">Professional</span>
                           <span className="text-2xl font-bold text-blue-400">
-                            {selectedService.pricing.currency}{{selectedService.pricing.professional.toLocaleString()}}
+                            {selectedService.pricing.currency},
+  {{selectedService.pricing.professional.toLocaleString()},
+  }
                           </span>
                         </div>
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
@@ -551,7 +636,9 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium text-white">Enterprise</span>
                           <span className="text-2xl font-bold text-purple-400">
-                            {selectedService.pricing.currency}{{selectedService.pricing.enterprise.toLocaleString()}}
+                            {selectedService.pricing.currency},
+  {{selectedService.pricing.enterprise.toLocaleString()},
+  }
                           </span>
                         </div>
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
@@ -573,8 +660,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                           <span className="text-blue-200">Delivery:</span>
                           <span className="text-white">{selectedService.estimatedDelivery}</span>
                         </div>
-                        {selectedService.innovationLevel && (;
-                          <div className="flex justify-between">
+                        {selectedService.innovationLevel && (
+  <div className="flex justify-between">
                             <span className="text-blue-200">Innovation Level:</span>
                             <span className="text-white">{selectedService.innovationLevel}</span>
                           </div>
@@ -582,21 +669,24 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                       </div>
                     </div>
 
-                    {selectedService.contactInfo && (;
-                      <div className="bg-white/10 rounded-lg p-4">
+                    {selectedService.contactInfo && (
+  <div className="bg-white/10 rounded-lg p-4">
                         <h4 className="text-white font-semibold mb-3">Contact Information</h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-center gap-2 text-gray-300">
                             <Phone className="w-4 h-4" />
-                            {{selectedService.contactInfo.phone}}
+                            {{selectedService.contactInfo.phone},
+  }
                           </div>
                           <div className="flex items-center gap-2 text-gray-300">
                             <Mail className="w-4 h-4" />
-                            {{selectedService.contactInfo.email}}
+                            {{selectedService.contactInfo.email},
+  }
                           </div>
                           <div className="flex items-center gap-2 text-gray-300">
                             <MapPin className="w-4 h-4" />
-                            {{selectedService.contactInfo.address}}
+                            {{selectedService.contactInfo.address},
+  }
                           </div>
                         </div>
                       </div>
@@ -604,7 +694,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
                   </div>
                 </div>
 
-                {{/* Action Buttons */}}
+                {{/* Action Buttons */},
+  }
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started Now;
@@ -622,7 +713,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Experience Revolutionary Technology?</h2>
@@ -631,16 +723,20 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button;
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 },
+  }
+              whileTap={{ scale: 0.95 },
+  }
               className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center";"
             >
               <Phone className="w-5 h-5" />
               Call +1 302 464 0950;
             </motion.button>
             <motion.button;
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 },
+  }
+              whileTap={{ scale: 0.95 },
+  }
               className="className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center";"
             >
               <Mail className="w-5 h-5" />

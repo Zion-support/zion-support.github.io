@@ -1,18 +1,18 @@
 import React from "react";
 import { SEO } from "../../components/SEO";
-import { ;
+import {
   MessageCircle;
-  Brain, ;
-  Zap, ;
-  Users, ;
-  TrendingUp, ;
-  Shield, ;
+  Brain,
+  Zap,
+  Users,
+  TrendingUp,
+  Shield,
   Clock;
   BarChart3;
   Headphones;
-  Bot;
+  Bot
 } from "lucide-react";
-export default function AICustomerSupport() {;
+export default function AICustomerSupport() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO ;
@@ -20,7 +20,8 @@ export default function AICustomerSupport() {;
         description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +46,8 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -121,7 +123,8 @@ export default function AICustomerSupport() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">

@@ -6,22 +6,25 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
-export default function IntegrationsFeature() {;
-    const const schema = {; = {
+export default function IntegrationsFeature() {
+  const const schema = {
+  = {
         "@context": "https: //schema.org";
         "@type": "WebPage";
         "name": "API & Integrations";
         "description": "Connect Zion with Slack, your website and other tools via our API and widgets.";
-        "url": "https: //app.ziontechgroup.com/features/integrations";
-    }
+        "url": "https: //app.ziontechgroup.com/features/integrations"
+}
     const { markSlackConnected } = useAdvancedOnboardingStatus()
     useEffect(() => {
         markSlackConnected()
     }, [markSlackConnected])
     return (<>
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
-      {{/* Use a normal script tag so JSON-LD is correctly parsed */}}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      {{/* Use a normal script tag so JSON-LD is correctly parsed */},
+  }
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) },
+  }></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">

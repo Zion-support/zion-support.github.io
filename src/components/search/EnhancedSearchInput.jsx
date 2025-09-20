@@ -8,25 +8,25 @@ export function EnhancedSearchInput({
   compact = false
 }) {
   const [query, setQuery] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
-  const handleSearch = (e) => {
+const [isFocused, setIsFocused] = useState(false);
+const handleSearch = (e) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
       onSearch(query.trim()),
-    }
+    },
   },
 
   const handleClear = () => {
     setQuery('');
     if (onSearch) {
-      onSearch('');
-    }
+      onSearch('')
+},
   },
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      handleSearch(e);
-    }
+      handleSearch(e)
+},
   };
   return (
     <div className={`relative ${className}`}>
@@ -60,8 +60,8 @@ export function EnhancedSearchInput({
         </div>
       </form>
       
-      {/* Search suggestions dropdown */}
-      {isFocused && query && (
+      {/* Search suggestions dropdown */},
+  {isFocused && query && (
         <div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark border border-zion-blue-light/20 rounded-lg shadow-xl z-50 max-h-64 overflow-y-auto">
           <div className="py-2">
             <div className="px-4 py-2 text-sm text-gray-400 border-b border-zion-blue-light/20">
@@ -72,8 +72,9 @@ export function EnhancedSearchInput({
                 key={index}
                 onClick={() => {
                   setQuery(suggestion);
-                  if (onSearch) onSearch(suggestion);
-                }}
+                  if (onSearch) onSearch(suggestion)
+},
+  }
                 className="w-full px-4 py-2 text-left text-white hover:bg-zion-blue-light/20 transition-colors duration-200"
               >
                 {suggestion}
@@ -83,5 +84,5 @@ export function EnhancedSearchInput({
         </div>
       )}
     </div>
-  );
+  )
 }

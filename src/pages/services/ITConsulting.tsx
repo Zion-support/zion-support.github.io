@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   Users;
   Cpu;
   Shield;
@@ -157,74 +157,78 @@ import {;
   Zap;
   Cpu;
   Server;
-  Network2;
+  Network2
 } from "lucide-react";
 const ITConsulting = () => {
-  const features = [;
-    {;
-      icon: Briefcase,title: 'Strategic IT Planning',description: 'Comprehensive IT strategy development and roadmap planning';
-    }
-    {;
-      icon: Cpu,title: 'Technology Assessment',description: 'Evaluate current technology stack and identify optimization opportunities';
-    }
-    {;
-      icon: Server,title: 'Infrastructure Planning',description: 'Design scalable and secure IT infrastructure solutions';
-    }
-    {;
-      icon: Network2,title: 'Network Design',description: 'Plan and implement robust network architectures';
-    }
-    {;
-      icon: Shield,title: 'Security Consulting',description: 'Develop comprehensive cybersecurity strategies and policies';
-    }
-    {;
-      icon: Cloud,title: 'Cloud Strategy',description: 'Plan cloud migration and hybrid cloud solutions';
-    }
+  const features = [
+  {
+  icon: Briefcase,title: 'Strategic IT Planning',description: 'Comprehensive IT strategy development and roadmap planning'
+},
+  {
+  icon: Cpu,title: 'Technology Assessment',description: 'Evaluate current technology stack and identify optimization opportunities'
+},
+  {
+  icon: Server,title: 'Infrastructure Planning',description: 'Design scalable and secure IT infrastructure solutions'
+},
+  {
+  icon: Network2,title: 'Network Design',description: 'Plan and implement robust network architectures'
+},
+  {
+  icon: Shield,title: 'Security Consulting',description: 'Develop comprehensive cybersecurity strategies and policies'
+},
+  {
+  icon: Cloud,title: 'Cloud Strategy',description: 'Plan cloud migration and hybrid cloud solutions'
+},
   ]
-  const benefits = [;
-    'Optimize IT infrastructure and reduce costs by 25%Improve system performance and reliability';
+  const benefits = [
+  'Optimize IT infrastructure and reduce costs by 25%Improve system performance and reliability';
     'Enhance cybersecurity posture and complianceEnable digital transformation initiatives';
-    'Streamline IT operations and processesAlign technology with business objectives';
-  ]
+    'Streamline IT operations and processesAlign technology with business objectives'
+]
 
-  const services = [;
-    {;
-      icon: Strategy,title: 'IT Strategy',description: 'Develop comprehensive IT strategies aligned with business goals';
-    }
-    {;
-      icon: Workflow,title: 'Process Optimization',description: 'Optimize IT processes and workflows for efficiency';
-    }
-    {;
-      icon: Brain,title: 'Technology Advisory',description: 'Expert guidance on technology selection and implementation';
-    }
-    {;
-      icon: Scale,title: 'Scalability Planning',description: 'Plan for future growth and technology scaling';
-    }
+  const services = [
+  {
+  icon: Strategy,title: 'IT Strategy',description: 'Develop comprehensive IT strategies aligned with business goals'
+},
+  {
+  icon: Workflow,title: 'Process Optimization',description: 'Optimize IT processes and workflows for efficiency'
+},
+  {
+  icon: Brain,title: 'Technology Advisory',description: 'Expert guidance on technology selection and implementation'
+},
+  {
+  icon: Scale,title: 'Scalability Planning',description: 'Plan for future growth and technology scaling'
+},
   ]
-  const useCases = [;
-    {;
-      industry: 'Enterprise',description: 'Large-scale IT transformation and optimization';
-    }
-    {;
-      industry: 'Healthcare',description: 'HIPAA-compliant IT infrastructure and systems';
-    }
-    {;
-      industry: 'Financial Services',description: 'Secure, compliant financial technology solutions';
-    }
-    {;
-      industry: 'Manufacturing',description: 'Industry 4.0 and smart manufacturing IT';
-    }
+  const useCases = [
+  {
+  industry: 'Enterprise',description: 'Large-scale IT transformation and optimization'
+},
+  {
+  industry: 'Healthcare',description: 'HIPAA-compliant IT infrastructure and systems'
+},
+  {
+  industry: 'Financial Services',description: 'Secure, compliant financial technology solutions'
+},
+  {
+  industry: 'Manufacturing',description: 'Industry 4.0 and smart manufacturing IT'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
@@ -259,14 +263,18 @@ const ITConsulting = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -279,12 +287,16 @@ const ITConsulting = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {services.map((service, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start gap-4 mb-6">
@@ -300,10 +312,11 @@ const ITConsulting = () => {
                 <div className="mb-6">
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
+                    {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {{feature}}
+                        {{feature},
+  }
                       </li>
                     ))}
                   </ul>
@@ -316,14 +329,18 @@ const ITConsulting = () => {
         </div>
       </section>
 
-      {{/* Expertise Areas */}}
+      {{/* Expertise Areas */},
+  }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -336,12 +353,16 @@ const ITConsulting = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {expertise.map((area, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {expertise.map((area, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -362,14 +383,18 @@ const ITConsulting = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -381,13 +406,17 @@ const ITConsulting = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -400,14 +429,18 @@ const ITConsulting = () => {
         </div>
       </section>
 
-      {{/* Industries Section */}}
+      {{/* Industries Section */},
+  }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -420,12 +453,16 @@ const ITConsulting = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {industries.map((industry, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200";"
               >
                 <div className="text-zion-cyan font-semibold">{industry}</div>
@@ -435,14 +472,18 @@ const ITConsulting = () => {
         </div>
       </section>
 
-      {{/* Process Section */}}
+      {{/* Process Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Consulting Process;
@@ -453,21 +494,30 @@ const ITConsulting = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[;
-              {{ step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' }}
-              {{ step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' }}
-              {{ step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' }}
-              {{ step: '04', title: 'Implementation', description: 'Support implementation and measure results' }}
-            ].map((phase, index) => (;
-              <motion.div;
-                key={{index}}
+            {[
+  {{ step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
+  },
+  {{ step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },
+  },
+  {{ step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
+  },
+  {{ step: '04', title: 'Implementation', description: 'Support implementation and measure results' },
+  },
+  ].map((phase, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="text-center";"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                  {{phase.step}}
+                  {{phase.step},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -477,14 +527,18 @@ const ITConsulting = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your IT Consultation Today;

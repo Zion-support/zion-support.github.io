@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import {;
+import {
   Award;
   Brain;
   CheckCircle;
@@ -14,7 +14,7 @@ import {;
   Server;
   Shield;
   Sparkles;
-  TrendingUp;
+  TrendingUp
 } from "lucide-react";
 import React, { useState } from "react";
 import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices2028";
@@ -25,49 +25,58 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai')
   const [searchTerm, setSearchTerm] = useState('')
 
-  const serviceCategories = [;
-    {;
-      id: 'ai',name: 'AI & Machine Learning',description: 'Revolutionary AI solutions that transform business operations',icon: Brain,services: ADVANCED_AI_SERVICES_2028,color: 'from-blue-600 to-purple-600',bgColor: 'bg-blue-500/10',borderColor: 'border-blue-500/30';
-    }
-    {;
-      id: 'infrastructure',name: 'IT Infrastructure',description: 'Next-generation infrastructure solutions for modern businesses',icon: Server,services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,color: 'from-green-600 to-emerald-600',bgColor: 'bg-green-500/10',borderColor: 'border-green-500/30';
-    }
-    {;
-      id: 'saas',name: 'Micro SAAS',description: 'Innovative micro SAAS solutions for every business need',icon: Cloud,services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,color: 'from-purple-600 to-pink-600',bgColor: 'bg-purple-500/10',borderColor: 'border-purple-500/30';
-    }
+  const serviceCategories = [
+  {
+  id: 'ai',name: 'AI & Machine Learning',description: 'Revolutionary AI solutions that transform business operations',icon: Brain,services: ADVANCED_AI_SERVICES_2028,color: 'from-blue-600 to-purple-600',bgColor: 'bg-blue-500/10',borderColor: 'border-blue-500/30'
+},
+  {
+  id: 'infrastructure',name: 'IT Infrastructure',description: 'Next-generation infrastructure solutions for modern businesses',icon: Server,services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,color: 'from-green-600 to-emerald-600',bgColor: 'bg-green-500/10',borderColor: 'border-green-500/30'
+},
+  {
+  id: 'saas',name: 'Micro SAAS',description: 'Innovative micro SAAS solutions for every business need',icon: Cloud,services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,color: 'from-purple-600 to-pink-600',bgColor: 'bg-purple-500/10',borderColor: 'border-purple-500/30'
+},
   ]
-  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [[];]
+  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [[],
+  ]
   const filteredServices = activeServices.filter(service =>
     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
     service.category.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-  const const containerVariants = {; = {
-    hidden: {{ opacity: 0 }}
-    visible: {;
-      opacity: 1,transition: {;
-        staggerChildren: 0.1;
-      }
-    }
+  const const containerVariants = {
+  = {
+    hidden: {{ opacity: 0 },
   }
-  const const itemVariants = {; = {
-    hidden: {{ y: 20, opacity: 0 }}
-    visible: {;
-      y: 0,opacity: 1,transition: {;
-        duration: 0.5;
-      }
-    }
+    visible: {
+  opacity: 1,transition: {
+  staggerChildren: 0.1
+},
+  },
+  }
+  const const itemVariants = {
+  = {
+    hidden: {{ y: 20, opacity: 0 },
+  }
+    visible: {
+  y: 0,opacity: 1,transition: {
+  duration: 0.5
+},
+  },
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
@@ -104,7 +113,8 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Information Banner */}}
+      {{/* Contact Information Banner */},
+  }
       <section className="bg-white/10 backdrop-blur-sm py-6 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -124,14 +134,19 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </section>
 
-      {{/* Service Categories Tabs */}}
+      {{/* Service Categories Tabs */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -143,50 +158,61 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {serviceCategories.map((category) => (;
-              <button;
-                key={{category.id}}
-                onClick={{onClick={() => setActiveTab(category.id)}}}
-                className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${;
-                  activeTab === category.id;
+            {serviceCategories.map((category) => (
+  <button;
+                key={{category.id},
+  }
+                onClick={{onClick={() => setActiveTab(category.id)},
+  },
+  }
+                className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${
+  activeTab === category.id;
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20';
-                }`}
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+}`}
               >
                 {React.createElement(category.icon, { className: "w-5 h-5" })}
                 <span className="font-medium">{category.name}</span>
                 <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                  {{category.services.length}}
+                  {{category.services.length},
+  }
                 </span>
               </button>
             ))}
           </div>
 
-          {{/* Search Bar */}}
+          {{/* Search Bar */},
+  }
           <div className="max-w-md mx-auto mb-8">
             <div className="relative">
               <input;
                 type="text";
                 placeholder="Search services...";
-                value={{searchTerm}}
-                onChange={{(e) => setSearchTerm(e.target.value)}}
+                value={{searchTerm},
+  }
+                onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                 className="className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
           </div>
 
-          {{/* Services Grid */}}
+          {{/* Services Grid */},
+  }
           <motion.div;
-            variants={{containerVariants}}
+            variants={{containerVariants},
+  }
             initial="hidden";
             animate="visible";
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
           >
-            {filteredServices.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                variants={{itemVariants}}
+            {filteredServices.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                variants={{itemVariants},
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105";"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -195,7 +221,8 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                     <p className="text-gray-400 text-sm mb-3">{service.category} • {service.subcategory}</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-green-400">{service.currency}{service.price.toLocaleString()}</div>
+                    <div className="text-2xl font-bold text-green-400">{service.currency},
+  {service.price.toLocaleString()}</div>
                     <div className="text-sm text-gray-400">per month</div>
                   </div>
                 </div>
@@ -218,19 +245,22 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {service.tags.slice(0, 3).map((tag) => (;
-                    <span;
-                      key={{tag}}
+                  {service.tags.slice(0, 3).map((tag) => (
+  <span;
+                      key={{tag},
+  }
                       className="className="px-2 py-1 bg-white/10 text-white text-xs rounded-full";"
                     >
-                      {{tag}}
+                      {{tag},
+  }
                     </span>
                   ))}
                 </div>
 
                 <div className="flex space-x-2">
                   <a;
-                    href={{`tel:+13024640950`}}
+                    href={{`tel:+13024640950`},
+  }
                     className="className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium";"
                   >
                     Get Started;
@@ -248,14 +278,19 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </section>
 
-      {{/* Market Analysis Section */}}
+      {{/* Market Analysis Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -267,13 +302,18 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {comprehensivePricingGuide2028.map((item, index) => (;
-              <motion.div;
-                key={{item.id}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
+            {comprehensivePricingGuide2028.map((item, index) => (
+  <motion.div;
+                key={{item.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: index * 0.2 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
@@ -300,12 +340,14 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-400 mb-2">Top Competitors:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {item.marketInfo.competitors.slice(0, 3).map((competitor) => (;
-                      <span;
-                        key={{competitor}}
+                    {item.marketInfo.competitors.slice(0, 3).map((competitor) => (
+  <span;
+                        key={{competitor},
+  }
                         className="className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full";"
                       >
-                        {{competitor}}
+                        {{competitor},
+  }
                       </span>
                     ))}
                   </div>
@@ -323,14 +365,19 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </section>
 
-      {{/* Why Choose Us Section */}}
+      {{/* Why Choose Us Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -342,27 +389,32 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[;
-              {;
-                icon: Award,title: "Industry Expertise",description: "20+ years of experience in cutting-edge technology solutions",color: "from-blue-600 to-purple-600";
-              }
-              {;
-                icon: Rocket,title: "Fast Implementation",description: "Get up and running in weeks, not months with our proven methodology";
-                color: "from-purple-600 to-pink-600";
-              }
-              {;
-                icon: TrendingUp,title: "Proven ROI",description: "See measurable results within 90 days with our data-driven approach",color: "from-pink-600 to-red-600";
-              }
-              {;
-                icon: Shield,title: "Enterprise Security",description: "Bank-grade security and compliance for your peace of mind",color: "from-red-600 to-orange-600";
-              }
-            ].map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {[
+  {
+  icon: Award,title: "Industry Expertise",description: "20+ years of experience in cutting-edge technology solutions",color: "from-blue-600 to-purple-600"
+},
+  {
+  icon: Rocket,title: "Fast Implementation",description: "Get up and running in weeks, not months with our proven methodology";
+                color: "from-purple-600 to-pink-600"
+},
+  {
+  icon: TrendingUp,title: "Proven ROI",description: "See measurable results within 90 days with our data-driven approach",color: "from-pink-600 to-red-600"
+},
+  {
+  icon: Shield,title: "Enterprise Security",description: "Bank-grade security and compliance for your peace of mind",color: "from-red-600 to-orange-600"
+},
+  ].map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="text-center";"
               >
                 <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
@@ -376,14 +428,19 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </section>
 
-      {{/* Call to Action Section */}}
+      {{/* Call to Action Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -413,7 +470,8 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </section>
 
-      {{/* Footer Contact Information */}}
+      {{/* Footer Contact Information */},
+  }
       <footer className="bg-white/5 backdrop-blur-sm py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

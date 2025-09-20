@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { SEO } from "../components/SEO";
-import { ;
+import {
   HelpCircle;
-  MessageCircle, ;
-  Phone, ;
-  Mail, ;
-  Clock, ;
+  MessageCircle,
+  Phone,
+  Mail,
+  Clock,
   Search;
   BookOpen;
   FileText;
@@ -24,65 +24,75 @@ import { ;
   Shield;
   Rocket;
   Brain;
-  Cloud;
+  Cloud
 } from "lucide-react";
 const Support: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-  const categories = [;
-    {{ id: 'all', name: 'All Categories', icon: HelpCircle }}
-    {{ id: 'technical', name: 'Technical Issues', icon: Monitor }}
-    {{ id: 'billing', name: 'Billing & Account', icon: FileText }}
-    {{ id: 'product', name: 'Product Support', icon: Rocket }}
-    {{ id: 'integration', name: 'Integration Help', icon: Zap }}
-    {{ id: 'general', name: 'General Questions', icon: Users }}
+  const categories = [
+  {{ id: 'all', name: 'All Categories', icon: HelpCircle },
+  },
+  {{ id: 'technical', name: 'Technical Issues', icon: Monitor },
+  },
+  {{ id: 'billing', name: 'Billing & Account', icon: FileText },
+  },
+  {{ id: 'product', name: 'Product Support', icon: Rocket },
+  },
+  {{ id: 'integration', name: 'Integration Help', icon: Zap },
+  },
+  {{ id: 'general', name: 'General Questions', icon: Users },
+  },
   ]
-  const supportChannels = [;
-    {;
-      icon: MessageCircle,title: 'Live Chat',description: 'Get instant help from our support team',availability: '24/7',responseTime: '< 2 minutes',priority: 'high',href: '/support/chat';
-    }
-    {;
-      icon: Ticket,title: 'Support Tickets',description: 'Submit detailed support requests',availability: '24/7',responseTime: '< 4 hours',priority: 'medium',href: '/support/tickets';
-    }
-    {;
-      icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST';
-      responseTime: 'Immediate',priority: 'high',href: '/support/phone';
-    }
-    {;
-      icon: Mail,title: 'Email Support',description: 'Send us detailed questions',availability: '24/7',responseTime: '< 24 hours',priority: 'medium',href: '/support/email';
-    }
+  const supportChannels = [
+  {
+  icon: MessageCircle,title: 'Live Chat',description: 'Get instant help from our support team',availability: '24/7',responseTime: '< 2 minutes',priority: 'high',href: '/support/chat'
+},
+  {
+  icon: Ticket,title: 'Support Tickets',description: 'Submit detailed support requests',availability: '24/7',responseTime: '< 4 hours',priority: 'medium',href: '/support/tickets'
+},
+  {
+  icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST';
+      responseTime: 'Immediate',priority: 'high',href: '/support/phone'
+},
+  {
+  icon: Mail,title: 'Email Support',description: 'Send us detailed questions',availability: '24/7',responseTime: '< 24 hours',priority: 'medium',href: '/support/email'
+},
   ]
-  const quickSolutions = [;
-    {;
-      icon: BookOpen,title: 'Knowledge Base',description: 'Browse our comprehensive documentation',articles: '500+ articles',href: '/docs';
-    }
-    {;
-      icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides',videos: '100+ tutorials',href: '/tutorials';
-    }
-    {;
-      icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members';
-      href: '/community';
-    }
-    {;
-      icon: FileText,title: 'FAQ',description: 'Frequently asked questions',questions: '200+ FAQs',href: '/faq';
-    }
+  const quickSolutions = [
+  {
+  icon: BookOpen,title: 'Knowledge Base',description: 'Browse our comprehensive documentation',articles: '500+ articles',href: '/docs'
+},
+  {
+  icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides',videos: '100+ tutorials',href: '/tutorials'
+},
+  {
+  icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members';
+      href: '/community'
+},
+  {
+  icon: FileText,title: 'FAQ',description: 'Frequently asked questions',questions: '200+ FAQs',href: '/faq'
+},
   ]
-  const commonIssues = [;
-    {;
-      category: 'Technical',title: 'How to reset my password?',solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',tags: [['passwordlogin', 'account'];]
-    }
-    {;
-      category: 'Product',title: 'How to integrate with my existing systems?',solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',tags: [['integrationapi', 'documentation'];]
-    }
-    {;
-      category: 'Billing',title: 'How to update my billing information?',solution: 'Navigate to your account settings and update your billing information in the billing section.',tags: [['billingaccount', 'payment'];]
-    }
-    {;
-      category: 'Technical',title: 'Service is running slow, what should I do?';
+  const commonIssues = [
+  {
+  category: 'Technical',title: 'How to reset my password?',solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',tags: [['passwordlogin', 'account'],
+  ],
+  },
+  {
+  category: 'Product',title: 'How to integrate with my existing systems?',solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',tags: [['integrationapi', 'documentation'],
+  ],
+  },
+  {
+  category: 'Billing',title: 'How to update my billing information?',solution: 'Navigate to your account settings and update your billing information in the billing section.',tags: [['billingaccount', 'payment'],
+  ],
+  },
+  {
+  category: 'Technical',title: 'Service is running slow, what should I do?';
       solution: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.';
-      tags: [['performancetroubleshooting', 'speed'];]
-    }
+      tags: [['performancetroubleshooting', 'speed'],
+  ],
+  },
   ]
 
   const filteredIssues = commonIssues.filter(issue => ;
@@ -99,7 +109,8 @@ const Support: React.FC = () => {
         description="Get help and support for all Zion Tech Group products and services. 24/7 support available through multiple channels including live chat, phone, and email.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
         <div className="container-responsive relative z-10">
@@ -127,7 +138,8 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Search Section */}}
+      {{/* Search Section */},
+  }
       <section className="py-12 bg-slate-800/20">
         <div className="container-responsive">
           <div className="max-w-2xl mx-auto">
@@ -136,8 +148,10 @@ const Support: React.FC = () => {
               <input;
                 type="text";
                 placeholder="Search for help articles, tutorials, or common issues...";
-                value={{searchQuery}}
-                onChange={{(e) => setSearchQuery(e.target.value)}}
+                value={{searchQuery},
+  }
+                onChange={{(e) => setSearchQuery(e.target.value)},
+  }
                 className="className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg";"
               />
             </div>
@@ -145,7 +159,8 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Support Channels Section */}}
+      {{/* Support Channels Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -159,8 +174,8 @@ const Support: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportChannels.map((channel, index) => (;
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {supportChannels.map((channel, index) => (
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                   <channel.icon className="w-6 h-6 text-cyan-400" />
                 </div>
@@ -170,11 +185,13 @@ const Support: React.FC = () => {
                 <div className="space-y-2 mb-4 text-sm">
                   <div className="flex items-center text-gray-400">
                     <Clock className="w-4 h-4 mr-2" />
-                    {{channel.availability}}
+                    {{channel.availability},
+  }
                   </div>
                   <div className="flex items-center text-gray-400">
                     <Zap className="w-4 h-4 mr-2" />
-                    {{channel.responseTime}}
+                    {{channel.responseTime},
+  }
                   </div>
                 </div>
                 ;
@@ -187,7 +204,8 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Quick Solutions Section */}}
+      {{/* Quick Solutions Section */},
+  }
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -201,8 +219,8 @@ const Support: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickSolutions.map((solution, index) => (;
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+            {quickSolutions.map((solution, index) => (
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200">
                   <solution.icon className="w-6 h-6 text-purple-400" />
                 </div>
@@ -210,7 +228,8 @@ const Support: React.FC = () => {
                 <p className="text-gray-400 text-sm mb-4">{solution.description}</p>
                 ;
                 <div className="text-sm text-cyan-400 mb-4 font-medium">
-                  {{solution.articles || solution.videos || solution.questions || solution.members}}
+                  {{solution.articles || solution.videos || solution.questions || solution.members},
+  }
                 </div>
                 ;
                 <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-200 hover:scale-105">
@@ -222,7 +241,8 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Common Issues Section */}}
+      {{/* Common Issues Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -234,30 +254,36 @@ const Support: React.FC = () => {
             </p>
           </div>
           ;
-          {{/* Category Filter */}}
+          {{/* Category Filter */},
+  }
           <div className="flex flex-wrap gap-2 justify-center mb-8">
-            {categories.map((category) => (;
-              <button;
-                key={{category.id}}
-                onClick={{onClick={() => setSelectedCategory(category.id)}}}
-                className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${;
-                  selectedCategory === category.id;
+            {categories.map((category) => (
+  <button;
+                key={{category.id},
+  }
+                onClick={{onClick={() => setSelectedCategory(category.id)},
+  },
+  }
+                className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
+  selectedCategory === category.id;
                     ? 'bg-cyan-400/20 border-cyan-400/40 text-cyan-400';
-                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-cyan-400/30';
-                }`}
+                    : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-cyan-400/30'
+}`}
               >
                 <category.icon className="w-4 h-4 mr-2" />
-                {{category.name}}
+                {{category.name},
+  }
               </button>
             ))}
           </div>
           ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {filteredIssues.map((issue, index) => (;
-              <div key={index} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200">
+            {filteredIssues.map((issue, index) => (
+  <div key={index} className="p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-200">
                 <div className="flex items-start justify-between mb-3">
                   <span className="inline-flex items-center px-2 py-1 bg-cyan-400/10 border border-cyan-400/20 rounded text-xs text-cyan-400">
-                    {{issue.category}}
+                    {{issue.category},
+  }
                   </span>
                   <CheckCircle className="w-5 h-5 text-green-400" />
                 </div>
@@ -266,9 +292,10 @@ const Support: React.FC = () => {
                 <p className="text-gray-400 text-sm mb-4">{issue.solution}</p>
                 ;
                 <div className="flex flex-wrap gap-2">
-                  {issue.tags.map((tag, tagIndex) => (;
-                    <span key={tagIndex} className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
-                      {{tag}}
+                  {issue.tags.map((tag, tagIndex) => (
+  <span key={tagIndex} className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
+                      {{tag},
+  }
                     </span>
                   ))}
                 </div>
@@ -276,8 +303,8 @@ const Support: React.FC = () => {
             ))}
           </div>
           ;
-          {filteredIssues.length === 0 && (;
-            <div className="text-center py-12">
+          {filteredIssues.length === 0 && (
+  <div className="text-center py-12">
               <HelpCircle className="w-24 h-24 text-gray-400 mx-auto mb-6" />
               <p className="text-gray-400 text-lg">No issues match your search criteria.</p>
             </div>
@@ -285,7 +312,8 @@ const Support: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Support Section */}}
+      {{/* Contact Support Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20">
         <div className="container-responsive text-center">
           <h2 className="text-4xl font-bold text-white mb-6">

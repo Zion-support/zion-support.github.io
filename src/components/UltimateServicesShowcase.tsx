@@ -44,8 +44,8 @@ const categories = [
   };
   {
     id: 'micro-saas',name: 'Micro SAAS Solutions',description: 'Innovative software solutions for small businesses',icon: <Code className="w-8 h-8" />,color: 'from-green-600 to-emerald-700',services: innovativeMicroSaasSolutions2025
-  }
-];
+  },
+  ];
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
 };
@@ -54,31 +54,31 @@ const patentStatusColors = {
 };
 export function UltimateServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
+const [selectedService, setSelectedService] = useState<Service | null>(null),
 
   const allServices = [
     ...ultimateInnovativeServices2025;
     ...enterpriseITInfrastructureServices2025;
     ...innovativeMicroSaasSolutions2025
   ];
-  const filteredServices = selectedCategory === 'all'
+const filteredServices = selectedCategory === 'all'
     ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
-  const containerVariants = {
+const containerVariants = {
     hidden: { opacity: 0 };
     visible: {
       opacity: 1,transition: {
         staggerChildren: 0.1,delayChildren: 0.2
-      }
-    }
+      },
+  },
   };
-  const itemVariants = {
+const itemVariants = {
     hidden: { opacity: 0, y: 20 };
     visible: {
       opacity: 1,y: 0,transition: {
         duration: 0.6,ease: "easeOut"
-      }
-    }
+      },
+  },
   };
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -86,9 +86,12 @@ export function UltimateServicesShowcase() {
         {/* Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
@@ -122,9 +125,12 @@ export function UltimateServicesShowcase() {
         {/* Category Navigation */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.2 },
+  }
         >
           <button
             onClick={() => setSelectedCategory('all')}
@@ -200,10 +206,12 @@ export function UltimateServicesShowcase() {
 
                 {/* Innovation Level & Patent Status */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                  <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel],
+  } text-white text-xs px-3 py-1 rounded-full font-semibold`}>
                     {service.innovationLevel}
                   </span>
-                  <span className={`bg-gradient-to-r ${patentStatusColors[service.patentStatus]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                  <span className={`bg-gradient-to-r ${patentStatusColors[service.patentStatus],
+  } text-white text-xs px-3 py-1 rounded-full font-semibold`}>
                     {service.patentStatus}
                   </span>
                 </div>
@@ -268,9 +276,12 @@ export function UltimateServicesShowcase() {
         {/* Call to Action */}
         <motion.div
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -301,8 +312,8 @@ export function UltimateServicesShowcase() {
         </motion.div>
       </div>
 
-      {/* Service Detail Modal */}
-      {selectedService && (
+      {/* Service Detail Modal */},
+  {selectedService && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-zion-slate-light rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
@@ -419,7 +430,7 @@ export function UltimateServicesShowcase() {
         </div>
       )}
     </section>
-  );
+  )
 }
 
 export default UltimateServicesShowcase;

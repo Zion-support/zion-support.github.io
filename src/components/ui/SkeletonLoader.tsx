@@ -16,13 +16,13 @@ export function Skeleton({
   animation = 'pulse' 
 }: SkeletonProps) {
   const baseClasses = 'bg-gray-300 dark: bg-gray-700';
-  const variantClasses = {
+const variantClasses = {
     text: 'h-4 rounded',circular: 'rounded-full',rectangular: '',rounded: 'rounded-lg'
   };
-  const animationClasses = {
+const animationClasses = {
     pulse: 'animate-pulse',wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',none: ''
   };
-  const style = {
+const style = {
     width: typeof width === 'number' ? `${width}px` : width;
     height: typeof height === 'number' ? `${height}px` : height
   };
@@ -88,8 +88,8 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         ))}
       </div>
       
-      {/* Rows */}
-      {Array.from({ length: rows }).map((_, rowIndex) => (
+      {/* Rows */},
+  {Array.from({ length: rows }).map((_, rowIndex) => (
         <div key={rowIndex} className="flex space-x-4">
           {Array.from({ length: columns }).map((_, colIndex) => (
             <Skeleton
@@ -148,5 +148,5 @@ export function SkeletonHero({ className }: { className?: string }) {
         <Skeleton variant="rounded" width={140} height={48} />
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
@@ -19,7 +18,8 @@ const Contact: React.FC = () => {
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
-              }}
+              },
+  }
             />
           ))}
         </div>
@@ -71,7 +71,6 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default Contact;

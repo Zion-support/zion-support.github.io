@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {;
+import {
   Leaf;
   Zap;
   Shield;
@@ -23,68 +23,76 @@ import {;
   Gauge;
   Target;
   Award;
-  BarChart3;
+  BarChart3
 } from "lucide-react";
 import SEO from "../../components/SEO";
-export default function GreenIT() {;
-  const features = [;
-    {;
-      icon: Leaf,title: 'Sustainable Infrastructure',description: 'Design and implement eco-friendly IT infrastructure with reduced carbon footprint.';
-    }
-    {;
-      icon: Zap,title: 'Energy Optimization',description: 'Optimize energy consumption through smart power management and efficient systems.';
-    }
-    {;
-      icon: Cloud,title: 'Green Cloud Solutions',description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.';
-    }
-    {;
-      icon: Recycle,title: 'Circular IT Economy',description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.';
-    }
+export default function GreenIT() {
+  const features = [
+  {
+  icon: Leaf,title: 'Sustainable Infrastructure',description: 'Design and implement eco-friendly IT infrastructure with reduced carbon footprint.'
+},
+  {
+  icon: Zap,title: 'Energy Optimization',description: 'Optimize energy consumption through smart power management and efficient systems.'
+},
+  {
+  icon: Cloud,title: 'Green Cloud Solutions',description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.'
+},
+  {
+  icon: Recycle,title: 'Circular IT Economy',description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'
+},
   ]
-  const solutions = [;
-    {;
-      title: 'Energy-Efficient Data Centers',description: 'Design and optimize data centers for maximum energy efficiency and minimal environmental impact',icon: Database,benefits: [['Reduced power consumptionLower cooling costs', 'Improved PUE ratings'];]
-    }
-    {;
-      title: 'Renewable Energy Integration',description: 'Integrate solar, wind, and other renewable energy sources into IT infrastructure';
-      icon: Sun,benefits: [['Carbon-neutral operationsEnergy cost savings', 'Sustainable power supply'];]
-    }
-    {;
-      title: 'Smart Power Management',description: 'Implement intelligent power management systems for optimal energy usage',icon: Gauge,benefits: [['Automated power optimizationReal-time monitoring', 'Predictive maintenance'];]
-    }
-    {;
-      title: 'Green Software Development',description: 'Develop energy-efficient software applications and optimize existing systems',icon: Code,benefits: [['Reduced computational overheadLower energy consumption', 'Improved performance'];]
-    }
-  ]
-
-  const useCases = [;
-    {;
-      industry: 'Enterprise',description: 'Large-scale IT infrastructure optimization and sustainability initiatives',icon: Building,metrics: [['Energy SavingsCarbon Reduction', 'Cost Optimization'];]
-    }
-    {;
-      industry: 'Healthcare',description: 'Sustainable medical technology and energy-efficient healthcare IT systems',icon: Heart,metrics: [['Equipment EfficiencyEnergy Costs', 'Environmental Impact'];]
-    }
-    {;
-      industry: 'Education',description: 'Green campus technology and sustainable educational IT infrastructure',icon: GraduationCap,metrics: [['Student ExperienceOperational Costs', 'Sustainability Goals'];]
-    }
-    {;
-      industry: 'Manufacturing',description: 'Smart manufacturing with energy-efficient automation and monitoring',icon: Factory,metrics: [['Production EfficiencyEnergy Consumption', 'Environmental Compliance'];]
-    }
+  const solutions = [
+  {
+  title: 'Energy-Efficient Data Centers',description: 'Design and optimize data centers for maximum energy efficiency and minimal environmental impact',icon: Database,benefits: [['Reduced power consumptionLower cooling costs', 'Improved PUE ratings'],
+  ],
+  },
+  {
+  title: 'Renewable Energy Integration',description: 'Integrate solar, wind, and other renewable energy sources into IT infrastructure';
+      icon: Sun,benefits: [['Carbon-neutral operationsEnergy cost savings', 'Sustainable power supply'],
+  ],
+  },
+  {
+  title: 'Smart Power Management',description: 'Implement intelligent power management systems for optimal energy usage',icon: Gauge,benefits: [['Automated power optimizationReal-time monitoring', 'Predictive maintenance'],
+  ],
+  },
+  {
+  title: 'Green Software Development',description: 'Develop energy-efficient software applications and optimize existing systems',icon: Code,benefits: [['Reduced computational overheadLower energy consumption', 'Improved performance'],
+  ],
+  },
   ]
 
-  const benefits = [;
-    {;
-      icon: TrendingUp,title: 'Cost Savings',description: 'Reduce energy costs and operational expenses through efficient technology';
-    }
-    {;
-      icon: Shield,title: 'Compliance',description: 'Meet environmental regulations and sustainability standards';
-    }
-    {;
-      icon: Globe,title: 'Environmental Impact',description: 'Reduce carbon footprint and contribute to environmental conservation';
-    }
-    {;
-      icon: Award,title: 'Brand Reputation',description: 'Enhance brand image through commitment to sustainability';
-    }
+  const useCases = [
+  {
+  industry: 'Enterprise',description: 'Large-scale IT infrastructure optimization and sustainability initiatives',icon: Building,metrics: [['Energy SavingsCarbon Reduction', 'Cost Optimization'],
+  ],
+  },
+  {
+  industry: 'Healthcare',description: 'Sustainable medical technology and energy-efficient healthcare IT systems',icon: Heart,metrics: [['Equipment EfficiencyEnergy Costs', 'Environmental Impact'],
+  ],
+  },
+  {
+  industry: 'Education',description: 'Green campus technology and sustainable educational IT infrastructure',icon: GraduationCap,metrics: [['Student ExperienceOperational Costs', 'Sustainability Goals'],
+  ],
+  },
+  {
+  industry: 'Manufacturing',description: 'Smart manufacturing with energy-efficient automation and monitoring',icon: Factory,metrics: [['Production EfficiencyEnergy Consumption', 'Environmental Compliance'],
+  ],
+  },
+  ]
+
+  const benefits = [
+  {
+  icon: TrendingUp,title: 'Cost Savings',description: 'Reduce energy costs and operational expenses through efficient technology'
+},
+  {
+  icon: Shield,title: 'Compliance',description: 'Meet environmental regulations and sustainability standards'
+},
+  {
+  icon: Globe,title: 'Environmental Impact',description: 'Reduce carbon footprint and contribute to environmental conservation'
+},
+  {
+  icon: Award,title: 'Brand Reputation',description: 'Enhance brand image through commitment to sustainability'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -93,14 +101,18 @@ export default function GreenIT() {;
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards.";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">
@@ -127,14 +139,18 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* What is Green IT */}}
+      {{/* What is Green IT */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Green IT?;
@@ -170,9 +186,12 @@ export default function GreenIT() {;
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.6 },
+  }
               className="className="relative";"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
@@ -210,13 +229,17 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* Key Features */}}
+      {{/* Key Features */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -229,12 +252,16 @@ export default function GreenIT() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -248,13 +275,17 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* Core Solutions */}}
+      {{/* Core Solutions */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -267,12 +298,16 @@ export default function GreenIT() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {solutions.map((solution, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -283,10 +318,11 @@ export default function GreenIT() {;
                 </div>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <div className="space-y-2">
-                  {solution.benefits.map((benefit, benefitIndex) => (;
-                    <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                  {solution.benefits.map((benefit, benefitIndex) => (
+  <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {{benefit}}
+                      {{benefit},
+  }
                     </div>
                   ))}
                 </div>
@@ -296,13 +332,17 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* Industry Use Cases */}}
+      {{/* Industry Use Cases */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -315,12 +355,16 @@ export default function GreenIT() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -331,10 +375,11 @@ export default function GreenIT() {;
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (;
-                    <div key={metricIndex} className="flex items-center text-sm text-gray-400">
+                  {useCase.metrics.map((metric, metricIndex) => (
+  <div key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {{metric}}
+                      {{metric},
+  }
                     </div>
                   ))}
                 </div>
@@ -344,13 +389,17 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* Benefits */}}
+      {{/* Benefits */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -363,12 +412,16 @@ export default function GreenIT() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -382,13 +435,17 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* Implementation Process */}}
+      {{/* Implementation Process */},
+  }
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -400,29 +457,34 @@ export default function GreenIT() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[;
-              {;
-                step: '01',title: 'Assessment',description: 'Evaluate current IT infrastructure and identify sustainability opportunities';
-              }
-              {;
-                step: '02',title: 'Strategy',description: 'Develop comprehensive Green IT strategy and implementation roadmap';
-              }
-              {;
-                step: '03',title: 'Implementation',description: 'Deploy sustainable solutions and optimize existing systems';
-              }
-              {;
-                step: '04',title: 'Optimization',description: 'Monitor performance and continuously improve sustainability metrics';
-              }
-            ].map((phase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {[
+  {
+  step: '01',title: 'Assessment',description: 'Evaluate current IT infrastructure and identify sustainability opportunities'
+},
+  {
+  step: '02',title: 'Strategy',description: 'Develop comprehensive Green IT strategy and implementation roadmap'
+},
+  {
+  step: '03',title: 'Implementation',description: 'Deploy sustainable solutions and optimize existing systems'
+},
+  {
+  step: '04',title: 'Optimization',description: 'Monitor performance and continuously improve sustainability metrics'
+},
+  ].map((phase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="text-center";"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                  {{phase.step}}
+                  {{phase.step},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
@@ -432,13 +494,17 @@ export default function GreenIT() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.6 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green with Your IT?;

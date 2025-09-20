@@ -13,12 +13,12 @@ const PriceIntelligenceService: React.FC = () => {
         </p>
 
         <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
-          {[;
-            'Competitor crawl + marketplace APIsSKU matching and outlier detection';
+          {[
+  'Competitor crawl + marketplace APIsSKU matching and outlier detection';
             'Price elasticity and cannibalization modelsMAP compliance alerts and workflows';
-            'Channel-specific rules and overridesBI dashboards and anomaly alerts';
-          ].map((b) => (;
-            <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
+            'Channel-specific rules and overridesBI dashboards and anomaly alerts'
+].map((b) => (
+  <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
             </div>

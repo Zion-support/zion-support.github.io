@@ -1,7 +1,7 @@
 import React from "react";
 import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function StatusIncidentHub() {;
+export default function StatusIncidentHub() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
@@ -10,13 +10,17 @@ export default function StatusIncidentHub() {;
         </h1>
         <p className="mt-4 text-slate-300">Public status pages, incident timelines, SLA tracking, and subscriber notifications. Integrates with PagerDuty, Opsgenie, and Slack.</p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {[;
-            {{ title: 'Multi‑service monitoring', desc: 'Track APIs, regions and dependencies.' }}
-            {{ title: 'Incident comms', desc: 'Templates, timelines, and subscriber updates.' }}
-            {{ title: 'SLA/SLO dashboards', desc: 'Burn rates, availability and error budgets.' }}
-            {{ title: 'Webhooks & integrations', desc: 'PagerDuty, Opsgenie, Slack, Email.' }}
-          ].map((f) => (;
-            <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
+          {[
+  {{ title: 'Multi‑service monitoring', desc: 'Track APIs, regions and dependencies.' },
+  },
+  {{ title: 'Incident comms', desc: 'Templates, timelines, and subscriber updates.' },
+  },
+  {{ title: 'SLA/SLO dashboards', desc: 'Burn rates, availability and error budgets.' },
+  },
+  {{ title: 'Webhooks & integrations', desc: 'PagerDuty, Opsgenie, Slack, Email.' },
+  },
+  ].map((f) => (
+  <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
               <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
             </div>

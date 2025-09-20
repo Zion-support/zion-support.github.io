@@ -1,94 +1,101 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Brain;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
-  Globe, ;
-  Cpu, ;
-  Lock, ;
-  Heart, ;
-  Users, ;
-  ShoppingCart, ;
-  BookOpen, ;
-  MessageCircle, ;
-  HelpCircle, ;
-  DollarSign, ;
-  Gauge, ;
-  BarChart3, ;
-  Target, ;
-  Lightbulb, ;
-  Database, ;
-  Network, ;
-  Eye, ;
-  Globe2, ;
-  Smartphone, ;
-  Monitor, ;
-  Server, ;
-  Atom, ;
-  Car, ;
-  Scale, ;
-  Leaf, ;
-  Factory, ;
-  Building, ;
-  Clock, ;
-  Phone, ;
-  Mail, ;
-  TrendingUp, ;
-  ArrowRight;
+  Cloud,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  BarChart3,
+  Target,
+  Lightbulb,
+  Database,
+  Network,
+  Eye,
+  Globe2,
+  Smartphone,
+  Monitor,
+  Server,
+  Atom,
+  Car,
+  Scale,
+  Leaf,
+  Factory,
+  Building,
+  Clock,
+  Phone,
+  Mail,
+  TrendingUp,
+  ArrowRight
 } from "lucide-react";
 export const EnhancedServicesShowcase: React.FC = () => {
-  const services = [;
-    {;
-      title: 'AI-Powered Solutions',description: 'Cutting-edge artificial intelligence and machine learning services',icon: Brain,color: 'from-blue-500 to-cyan-500',features: ['Machine LearningNatural Language Processing', 'Computer VisionPredictive Analytics']
-      href: '/ai-solutions';
-    }
-    {;
-      title: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and automated deployment solutions',icon: Cloud,color: 'from-purple-500 to-pink-500',features: ['AWS/Azure/GCPContainer Orchestration', 'CI/CD PipelinesInfrastructure as Code']
-      href: '/services/cloud-devops';
-    }
-    {;
-      title: 'Cybersecurity',description: 'Comprehensive security and compliance solutions',icon: Shield,color: 'from-red-500 to-orange-500',features: ['Threat DetectionVulnerability Assessment', 'Compliance ManagementIncident Response']
-      href: '/services/cybersecurity';
-    }
-    {;
-      title: 'Digital Transformation',description: 'End-to-end digital modernization services',icon: Zap,color: 'from-yellow-500 to-green-500',features: ['Process AutomationLegacy Modernization', 'Change ManagementDigital Strategy']
-      href: '/services/digital-transformation';
-    }
-    {;
-      title: 'Data Analytics',description: 'Advanced data insights and business intelligence',icon: BarChart3,color: 'from-indigo-500 to-purple-500',features: ['Big Data ProcessingReal-time Analytics', 'Data VisualizationBusiness Intelligence']
-      href: '/services/data-analytics';
-    }
-    {;
-      title: 'IoT Solutions',description: 'Connected device ecosystems and smart infrastructure',icon: Globe,color: 'from-teal-500 to-blue-500',features: ['Sensor NetworksEdge Computing', 'Smart CitiesIndustrial IoT']
-      href: '/services/iot-solutions';
-    }
+  const services = [
+  {
+  title: 'AI-Powered Solutions',description: 'Cutting-edge artificial intelligence and machine learning services',icon: Brain,color: 'from-blue-500 to-cyan-500',features: ['Machine LearningNatural Language Processing', 'Computer VisionPredictive Analytics']
+      href: '/ai-solutions'
+},
+  {
+  title: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and automated deployment solutions',icon: Cloud,color: 'from-purple-500 to-pink-500',features: ['AWS/Azure/GCPContainer Orchestration', 'CI/CD PipelinesInfrastructure as Code']
+      href: '/services/cloud-devops'
+},
+  {
+  title: 'Cybersecurity',description: 'Comprehensive security and compliance solutions',icon: Shield,color: 'from-red-500 to-orange-500',features: ['Threat DetectionVulnerability Assessment', 'Compliance ManagementIncident Response']
+      href: '/services/cybersecurity'
+},
+  {
+  title: 'Digital Transformation',description: 'End-to-end digital modernization services',icon: Zap,color: 'from-yellow-500 to-green-500',features: ['Process AutomationLegacy Modernization', 'Change ManagementDigital Strategy']
+      href: '/services/digital-transformation'
+},
+  {
+  title: 'Data Analytics',description: 'Advanced data insights and business intelligence',icon: BarChart3,color: 'from-indigo-500 to-purple-500',features: ['Big Data ProcessingReal-time Analytics', 'Data VisualizationBusiness Intelligence']
+      href: '/services/data-analytics'
+},
+  {
+  title: 'IoT Solutions',description: 'Connected device ecosystems and smart infrastructure',icon: Globe,color: 'from-teal-500 to-blue-500',features: ['Sensor NetworksEdge Computing', 'Smart CitiesIndustrial IoT']
+      href: '/services/iot-solutions'
+},
   ]
-  const const containerVariants = {; = {
-    hidden: {{ opacity: 0 }}
-    visible: {;
-      opacity: 1,transition: {;
-        staggerChildren: 0.1;
-      }
-    }
+  const const containerVariants = {
+  = {
+    hidden: {{ opacity: 0 },
   }
-  const const itemVariants = {; = {
-    hidden: {{ y: 20, opacity: 0 }}
-    visible: {;
-      y: 0,opacity: 1,transition: {;
-        duration: 0.5;
-      }
-    }
+    visible: {
+  opacity: 1,transition: {
+  staggerChildren: 0.1
+},
+  },
+  }
+  const const itemVariants = {
+  = {
+    hidden: {{ y: 20, opacity: 0 },
+  }
+    visible: {
+  y: 0,opacity: 1,transition: {
+  duration: 0.5
+},
+  },
   }
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.6 },
+  }
           className="className="text-center mb-16";"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -101,16 +108,20 @@ export const EnhancedServicesShowcase: React.FC = () => {
         </motion.div>
 
         <motion.div;
-          variants={{containerVariants}}
+          variants={{containerVariants},
+  }
           initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
+          viewport={{ once: true },
+  }
           className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
         >
-          {services.map((service, index) => (;
-            <motion.div;
-              key={{index}}
-              variants={{itemVariants}}
+          {services.map((service, index) => (
+  <motion.div;
+              key={{index},
+  }
+              variants={{itemVariants},
+  }
               className="className="group relative";"
             >
               <Link to={service.href} className="block">
@@ -120,18 +131,21 @@ export const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                   ;
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                    {{service.title}}
+                    {{service.title},
+  }
                   </h3>
                   ;
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {{service.description}}
+                    {{service.description},
+  }
                   </p>
                   ;
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className="flex items-center text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                    {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 group-hover:bg-cyan-300 transition-colors duration-300" />
-                        {{feature}}
+                        {{feature},
+  }
                       </li>
                     ))}
                   </ul>
@@ -149,9 +163,12 @@ export const EnhancedServicesShowcase: React.FC = () => {
         </motion.div>
 
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.6, delay: 0.3 },
+  }
           className="className="text-center mt-16";"
         >
           <Link;

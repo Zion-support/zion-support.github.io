@@ -2,91 +2,95 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from "lucide-react";
 const CloudDevOpsServices = () => {
-    const cloudServices = [;
-        {;
-            title: "Cloud Migration & Strategy",description: "Seamless migration to cloud platforms with strategic planning and execution.",icon: Cloud,features: [;
-                "Multi-cloud Strategy";
+    const cloudServices = [
+  {
+  title: "Cloud Migration & Strategy",description: "Seamless migration to cloud platforms with strategic planning and execution.",icon: Cloud,features: [
+  "Multi-cloud Strategy";
                 "Legacy System Migration";
                 "Cost Optimization";
                 "Performance Optimization";
-                "Security Assessment";
-            ]
-        }
-        {;
-            title: "DevOps Implementation",description: "Streamline development and operations with modern DevOps practices and tools.",icon: GitFork,features: [;
-                "CI/CD Pipeline Setup";
+                "Security Assessment"
+],
+  },
+  {
+  title: "DevOps Implementation",description: "Streamline development and operations with modern DevOps practices and tools.",icon: GitFork,features: [
+  "CI/CD Pipeline Setup";
                 "Infrastructure as Code";
                 "Automated Testing";
                 "Deployment Automation";
-                "Monitoring & Alerting";
-            ]
-        }
-        {;
-            title: "Container Orchestration",description: "Manage and scale containerized applications with Kubernetes and Docker.",icon: Server,features: [;
-                "Kubernetes Deployment";
+                "Monitoring & Alerting"
+],
+  },
+  {
+  title: "Container Orchestration",description: "Manage and scale containerized applications with Kubernetes and Docker.",icon: Server,features: [
+  "Kubernetes Deployment";
                 "Docker Containerization";
                 "Service Mesh";
                 "Auto-scaling";
-                "Load Balancing";
-            ]
-        }
-        {;
-            title: "Database Management",description: "Optimize and manage databases in cloud environments for performance and reliability.",icon: Database,features: [;
-                "Database Migration";
+                "Load Balancing"
+],
+  },
+  {
+  title: "Database Management",description: "Optimize and manage databases in cloud environments for performance and reliability.",icon: Database,features: [
+  "Database Migration";
                 "Performance Tuning";
                 "Backup & Recovery";
                 "High Availability";
-                "Data Security";
-            ]
-        }
-        {;
-            title: "Security & Compliance",description: "Ensure cloud security and compliance with industry standards and best practices.",icon: Shield,features: [;
-                "Identity & Access Management";
+                "Data Security"
+],
+  },
+  {
+  title: "Security & Compliance",description: "Ensure cloud security and compliance with industry standards and best practices.",icon: Shield,features: [
+  "Identity & Access Management";
                 "Network Security";
                 "Data Encryption";
                 "Compliance Auditing";
-                "Threat Detection";
-            ]
-        }
-        {;
-            title: "Monitoring & Observability",description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",icon: Monitor,features: [;
-                "Real-time Monitoring";
+                "Threat Detection"
+],
+  },
+  {
+  title: "Monitoring & Observability",description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",icon: Monitor,features: [
+  "Real-time Monitoring";
                 "Log Management";
                 "Performance Metrics";
                 "Alert Management";
-                "Troubleshooting Tools";
-            ]
-        }
-    ]
-    const benefits = [;
-        "Faster time to market with automated deployments";
+                "Troubleshooting Tools"
+],
+  },
+  ]
+    const benefits = [
+  "Faster time to market with automated deployments";
         "Improved reliability and uptime";
         "Cost optimization through resource management";
         "Enhanced security and compliance";
         "Scalable infrastructure that grows with your business";
-        "Better collaboration between development and operations teams";
-    ]
-    const technologies = [;
-        "AWS, Azure, GCP";
+        "Better collaboration between development and operations teams"
+]
+    const technologies = [
+  "AWS, Azure, GCP";
         "Kubernetes & Docker";
         "Terraform & Ansible";
         "Jenkins & GitLab CI";
         "Prometheus & Grafana";
-        "ELK Stack";
-    ]
-    const cloudPlatforms = [;
-        {;
-            name: "Amazon Web Services",description: "Leading cloud platform with comprehensive services",features: [["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"];]
-        }
-        {;
-            name: "Microsoft Azure",description: "Enterprise-grade cloud solutions for Windows environments",features: [["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"];]
-        }
-        {;
-            name: "Google Cloud Platform",description: "Innovative cloud services with AI and ML capabilities",features: [["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"];]
-        }
-    ]
+        "ELK Stack"
+]
+    const cloudPlatforms = [
+  {
+  name: "Amazon Web Services",description: "Leading cloud platform with comprehensive services",features: [["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"],
+  ],
+  },
+  {
+  name: "Microsoft Azure",description: "Enterprise-grade cloud solutions for Windows environments",features: [["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"],
+  ],
+  },
+  {
+  name: "Google Cloud Platform",description: "Innovative cloud services with AI and ML capabilities",features: [["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"],
+  ],
+  },
+  ]
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -108,7 +112,8 @@ const CloudDevOpsServices = () => {
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -127,15 +132,18 @@ const CloudDevOpsServices = () => {
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  {{service.title}}
+                  {{service.title},
+  }
                 </h3>
                 <p className="text-slate-600 mb-6">
-                  {{service.description}}
+                  {{service.description},
+  }
                 </p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>))}
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
@@ -147,7 +155,8 @@ const CloudDevOpsServices = () => {
         </div>
       </section>
 
-      {{/* Cloud Platforms Section */}}
+      {{/* Cloud Platforms Section */},
+  }
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -163,15 +172,18 @@ const CloudDevOpsServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  {{platform.name}}
+                  {{platform.name},
+  }
                 </h3>
                 <p className="text-slate-600 mb-6">
-                  {{platform.description}}
+                  {{platform.description},
+  }
                 </p>
                 <ul className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
                       <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>))}
                 </ul>
               </div>))}
@@ -179,7 +191,8 @@ const CloudDevOpsServices = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -202,7 +215,8 @@ const CloudDevOpsServices = () => {
         </div>
       </section>
 
-      {{/* Technologies Section */}}
+      {{/* Technologies Section */},
+  }
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -222,7 +236,8 @@ const CloudDevOpsServices = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">

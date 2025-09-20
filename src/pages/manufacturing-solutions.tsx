@@ -1,67 +1,77 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Factory;
-  Cog, ;
-  Bot, ;
-  TrendingUp, ;
-  Shield, ;
+  Cog,
+  Bot,
+  TrendingUp,
+  Shield,
   Zap;
   BarChart3;
   Network;
   Eye;
   Brain;
   Cloud;
-  Star;
+  Star
 } from "lucide-react";
 import { Link } from "react-router-dom";
 const ManufacturingSolutions: React.FC = () => {
-  const solutions = [;
-    {;
-      title: 'Smart Factory Automation',description: 'Intelligent automation systems that optimize production processes and increase efficiency.',icon: Bot,features: [['Process optimizationReal-time monitoring', 'Predictive maintenanceQuality control'];]
-    }
-    {;
-      title: 'Industrial IoT Integration',description: 'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',icon: Network,features: [['Sensor networksData collection', 'Remote monitoringPredictive analytics'];]
-    }
-    {;
-      title: 'AI-Powered Quality Control',description: 'Advanced AI systems for automated quality inspection and defect detection.',icon: Eye,features: [['Visual inspectionDefect detection', 'Quality assuranceCompliance monitoring'];]
-    }
-    {;
-      title: 'Predictive Maintenance',description: 'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',icon: TrendingUp,features: [['Equipment monitoringFailure prediction', 'Maintenance schedulingCost optimization'];]
-    }
-    {;
-      title: 'Supply Chain Optimization',description: 'Intelligent supply chain management with AI-powered forecasting and optimization.',icon: Cog,features: [['Demand forecastingInventory optimization', 'Route planningSupplier management'];]
-    }
-    {;
-      title: 'Digital Twin Technology',description: 'Virtual replicas of physical manufacturing systems for simulation and optimization.',icon: Cloud,features: [['System simulationPerformance optimization', 'Scenario testingReal-time monitoring'];]
-    }
+  const solutions = [
+  {
+  title: 'Smart Factory Automation',description: 'Intelligent automation systems that optimize production processes and increase efficiency.',icon: Bot,features: [['Process optimizationReal-time monitoring', 'Predictive maintenanceQuality control'],
+  ],
+  },
+  {
+  title: 'Industrial IoT Integration',description: 'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',icon: Network,features: [['Sensor networksData collection', 'Remote monitoringPredictive analytics'],
+  ],
+  },
+  {
+  title: 'AI-Powered Quality Control',description: 'Advanced AI systems for automated quality inspection and defect detection.',icon: Eye,features: [['Visual inspectionDefect detection', 'Quality assuranceCompliance monitoring'],
+  ],
+  },
+  {
+  title: 'Predictive Maintenance',description: 'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',icon: TrendingUp,features: [['Equipment monitoringFailure prediction', 'Maintenance schedulingCost optimization'],
+  ],
+  },
+  {
+  title: 'Supply Chain Optimization',description: 'Intelligent supply chain management with AI-powered forecasting and optimization.',icon: Cog,features: [['Demand forecastingInventory optimization', 'Route planningSupplier management'],
+  ],
+  },
+  {
+  title: 'Digital Twin Technology',description: 'Virtual replicas of physical manufacturing systems for simulation and optimization.',icon: Cloud,features: [['System simulationPerformance optimization', 'Scenario testingReal-time monitoring'],
+  ],
+  },
   ]
 
-  const benefits = [;
-    {;
-      title: 'Increased Efficiency',description: 'Optimize production processes and reduce waste',icon: TrendingUp;
-    }
-    {;
-      title: 'Cost Reduction',description: 'Lower operational costs through intelligent automation',icon: BarChart3;
-    }
-    {;
-      title: 'Quality Improvement',description: 'Enhanced product quality and consistency',icon: Star;
-    }
-    {;
-      title: 'Predictive Capabilities',description: 'Anticipate and prevent issues before they occur',icon: Brain;
-    }
+  const benefits = [
+  {
+  title: 'Increased Efficiency',description: 'Optimize production processes and reduce waste',icon: TrendingUp
+},
+  {
+  title: 'Cost Reduction',description: 'Lower operational costs through intelligent automation',icon: BarChart3
+},
+  {
+  title: 'Quality Improvement',description: 'Enhanced product quality and consistency',icon: Star
+},
+  {
+  title: 'Predictive Capabilities',description: 'Anticipate and prevent issues before they occur',icon: Brain
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {{/* Header */}}
+      {{/* Header */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         ;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="flex justify-center mb-6">
@@ -80,12 +90,16 @@ const ManufacturingSolutions: React.FC = () => {
         </div>
       </div>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.2 },
+  }
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -97,12 +111,16 @@ const ManufacturingSolutions: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (;
-            <motion.div;
-              key={{benefit.title}}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+          {benefits.map((benefit, index) => (
+  <motion.div;
+              key={{benefit.title},
+  }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 },
+  }
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/50 transition-all duration-300";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -115,12 +133,16 @@ const ManufacturingSolutions: React.FC = () => {
         </div>
       </div>
 
-      {{/* Solutions Grid */}}
+      {{/* Solutions Grid */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -132,12 +154,16 @@ const ManufacturingSolutions: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (;
-            <motion.div;
-              key={{solution.title}}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+          {solutions.map((solution, index) => (
+  <motion.div;
+              key={{solution.title},
+  }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 },
+  }
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 group";"
             >
               <div className="flex items-center space-x-3 mb-4">
@@ -148,14 +174,15 @@ const ManufacturingSolutions: React.FC = () => {
               </div>
               ;
               <p className="text-gray-300 mb-4 leading-relaxed">
-                {{solution.description}}
+                {{solution.description},
+  }
               </p>
               ;
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {solution.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
+                  {solution.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{feature}</span>
                     </li>
@@ -167,12 +194,16 @@ const ManufacturingSolutions: React.FC = () => {
         </div>
       </div>
 
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.6 },
+  }
           className="className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">

@@ -8,7 +8,8 @@ import App from "./App";
 import './index.css';
 import { BrowserRouter } from "react-router-dom";
 const rootElement = document.getElementById('root')
-if (if (!rootElement) {;) {
+if (if (!rootElement) {
+  ) {
     throw new Error('Root element not found')
 }
 const root = createRoot(rootElement)

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {;
+import {
   Code;
   Smartphone;
   Globe;
@@ -24,69 +24,81 @@ import {;
   Building2;
   Cpu;
   Network;
-  GitFork;
+  GitFork
 } from "lucide-react";
-export default function CustomDevelopment() {;
-  const services = [;
-    {;
-      title: 'Web Applications',description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',icon: Globe,features: [['Responsive DesignProgressive Web Apps', 'E-commerce SolutionsContent Management Systems'];]
-    }
-    {;
-      title: 'Mobile Applications',description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',icon: Smartphone,features: [['iOS DevelopmentAndroid Development', 'Cross-platform AppsApp Store Optimization'];]
-    }
-    {;
-      title: 'API Development',description: 'Robust and scalable APIs that enable seamless integration between systems and services.',icon: Network,features: [['RESTful APIsGraphQL APIs', 'API DocumentationIntegration Support'];]
-    }
-    {;
-      title: 'System Integration',description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',icon: GitFork,features: [['Legacy System IntegrationThird-party APIs', 'Data SynchronizationWorkflow Automation'];]
-    }
+export default function CustomDevelopment() {
+  const services = [
+  {
+  title: 'Web Applications',description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',icon: Globe,features: [['Responsive DesignProgressive Web Apps', 'E-commerce SolutionsContent Management Systems'],
+  ],
+  },
+  {
+  title: 'Mobile Applications',description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',icon: Smartphone,features: [['iOS DevelopmentAndroid Development', 'Cross-platform AppsApp Store Optimization'],
+  ],
+  },
+  {
+  title: 'API Development',description: 'Robust and scalable APIs that enable seamless integration between systems and services.',icon: Network,features: [['RESTful APIsGraphQL APIs', 'API DocumentationIntegration Support'],
+  ],
+  },
+  {
+  title: 'System Integration',description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',icon: GitFork,features: [['Legacy System IntegrationThird-party APIs', 'Data SynchronizationWorkflow Automation'],
+  ],
+  },
   ]
 
-  const technologies = [;
-    {;
-      title: 'Frontend',description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',icon: Monitor,stack: [['ReactVue.js', 'AngularTypeScript', 'Tailwind CSS'];]
-    }
-    {;
-      title: 'Backend',description: 'Robust backend technologies for scalable and secure applications.',icon: Cpu, // Changed from Server to Cpu;
-      stack: [['Node.jsPython', 'JavaC#', 'Go'];]
-    }
-    {;
-      title: 'Mobile',description: 'Cross-platform and native mobile development technologies.',icon: Smartphone,stack: [['React NativeFlutter', 'SwiftKotlin', 'Xamarin'];]
-    }
-    {;
-      title: 'Database',description: 'Modern database solutions for data storage and management.',icon: Database,stack: [['PostgreSQLMongoDB', 'MySQLRedis', 'Elasticsearch'];]
-    }
+  const technologies = [
+  {
+  title: 'Frontend',description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',icon: Monitor,stack: [['ReactVue.js', 'AngularTypeScript', 'Tailwind CSS'],
+  ],
+  },
+  {
+  title: 'Backend',description: 'Robust backend technologies for scalable and secure applications.',icon: Cpu, // Changed from Server to Cpu;
+      stack: [['Node.jsPython', 'JavaC#', 'Go'],
+  ],
+  },
+  {
+  title: 'Mobile',description: 'Cross-platform and native mobile development technologies.',icon: Smartphone,stack: [['React NativeFlutter', 'SwiftKotlin', 'Xamarin'],
+  ],
+  },
+  {
+  title: 'Database',description: 'Modern database solutions for data storage and management.',icon: Database,stack: [['PostgreSQLMongoDB', 'MySQLRedis', 'Elasticsearch'],
+  ],
+  },
   ]
 
-  const benefits = [;
-    {;
-      title: 'Custom Solutions',description: 'Tailored software solutions designed specifically for your business needs and workflows.',icon: Target;
-    }
-    {;
-      title: 'Scalability',description: 'Applications built to grow with your business and handle increasing demands.',icon: TrendingUp;
-    }
-    {;
-      title: 'Security',description: 'Enterprise-grade security measures built into every application.',icon: Shield;
-    }
-    {;
-      title: 'Support & Maintenance',description: 'Ongoing support and maintenance to ensure your applications run smoothly.',icon: Settings;
-    }
+  const benefits = [
+  {
+  title: 'Custom Solutions',description: 'Tailored software solutions designed specifically for your business needs and workflows.',icon: Target
+},
+  {
+  title: 'Scalability',description: 'Applications built to grow with your business and handle increasing demands.',icon: TrendingUp
+},
+  {
+  title: 'Security',description: 'Enterprise-grade security measures built into every application.',icon: Shield
+},
+  {
+  title: 'Support & Maintenance',description: 'Ongoing support and maintenance to ensure your applications run smoothly.',icon: Settings
+},
   ]
-  const industries = [;
-    'HealthcareFinance', 'ManufacturingRetail', 'GovernmentEducation', 'TransportationEnergy';
-  ]
+  const industries = [
+  'HealthcareFinance', 'ManufacturingRetail', 'GovernmentEducation', 'TransportationEnergy'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Custom Development;
@@ -113,14 +125,18 @@ export default function CustomDevelopment() {;
         </div>
       </section>
 
-      {{/* Services Overview */}}
+      {{/* Services Overview */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Custom Development Services;
@@ -132,13 +148,17 @@ export default function CustomDevelopment() {;
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (;
-              <motion.div;
-                key={{index}}
+            {services.map((service, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10";"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
@@ -153,10 +173,11 @@ export default function CustomDevelopment() {;
                 <div className="mb-6">
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
+                    {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {{feature}}
+                        {{feature},
+  }
                       </li>
                     ))}
                   </ul>
@@ -167,14 +188,18 @@ export default function CustomDevelopment() {;
         </div>
       </section>
 
-      {{/* Technology Stack */}}
+      {{/* Technology Stack */},
+  }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Technology Stack;
@@ -186,13 +211,17 @@ export default function CustomDevelopment() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (;
-              <motion.div;
-                key={{index}}
+            {technologies.map((tech, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group";"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
@@ -202,8 +231,8 @@ export default function CustomDevelopment() {;
                 <p className="text-zion-slate-light mb-4 leading-relaxed text-sm">{tech.description}</p>
 
                 <div className="space-y-2">
-                  {tech.stack.map((item, itemIndex) => (;
-                    <div key={itemIndex} className="text-zion-cyan text-sm font-medium">{item}</div>
+                  {tech.stack.map((item, itemIndex) => (
+  <div key={itemIndex} className="text-zion-cyan text-sm font-medium">{item}</div>
                   ))}
                 </div>
               </motion.div>
@@ -212,14 +241,18 @@ export default function CustomDevelopment() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Custom Development?;
@@ -230,13 +263,17 @@ export default function CustomDevelopment() {;
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -249,14 +286,18 @@ export default function CustomDevelopment() {;
         </div>
       </section>
 
-      {{/* Industries Section */}}
+      {{/* Industries Section */},
+  }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve;
@@ -268,13 +309,17 @@ export default function CustomDevelopment() {;
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (;
-              <motion.div;
-                key={{index}}
+            {industries.map((industry, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10";"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
@@ -283,14 +328,18 @@ export default function CustomDevelopment() {;
         </div>
       </section>
 
-      {{/* Development Process */}}
+      {{/* Development Process */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Development Process;
@@ -301,21 +350,30 @@ export default function CustomDevelopment() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[;
-              {{ step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' }}
-              {{ step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' }}
-              {{ step: '03', title: 'Development', description: 'Build the application using agile development practices' }}
-              {{ step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }}
-            ].map((phase, index) => (;
-              <motion.div;
-                key={{index}}
+            {[
+  {{ step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
+  },
+  {{ step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
+  },
+  {{ step: '03', title: 'Development', description: 'Build the application using agile development practices' },
+  },
+  {{ step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' },
+  },
+  ].map((phase, index) => (
+  <motion.div;
+                key={{index},
+  }
                 className="className="text-center";"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                  {{phase.step}}
+                  {{phase.step},
+  }
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>
@@ -325,14 +383,18 @@ export default function CustomDevelopment() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
               Ready to Build Your Custom Solution?;

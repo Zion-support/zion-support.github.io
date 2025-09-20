@@ -53,16 +53,16 @@ interface SidebarItem {
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
+const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
   const location = useLocation();
-  const toggleSection = (section: string) => {
+const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
-  };
-  const navigation: SidebarItem[] = [
+    )
+};
+const navigation: SidebarItem[] = [
     {
       title: 'Main',items: [
         { name: 'Home', href: '/', icon: Home };
@@ -75,9 +75,9 @@ export function MainSidebar() {
         { name: 'Events', href: '/events', icon: Video };
         { name: 'News', href: '/news', icon: Newspaper };
         { name: 'Contact', href: '/contact', icon: Mail };
-        { name: 'Blog', href: '/blog', icon: FileText }
-      ]
-    };
+        { name: 'Blog', href: '/blog', icon: FileText },
+  ],
+  };
     {
       name: 'Core Services',href: '#',icon: Target,children: [
         {
@@ -91,9 +91,9 @@ export function MainSidebar() {
         };
         {
           name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Hardware & Network'
-        }
-      ]
-    };
+        },
+  ],
+  };
     {
       name: 'AI Products',href: '#',icon: Brain,children: [
         {
@@ -107,9 +107,9 @@ export function MainSidebar() {
         };
         {
           name: 'LLM Content Studio',href: '/services/llm-content-studio',icon: PenTool,description: 'Content Creation'
-        }
-      ]
-    };
+        },
+  ],
+  };
     {
       name: 'Emerging Tech',href: '#',icon: Rocket,children: [
         {
@@ -123,9 +123,9 @@ export function MainSidebar() {
         };
         {
           name: 'AI Content Creation',href: '/services/ai-content-creation',icon: Video,description: 'Creative AI'
-        }
-      ]
-    };
+        },
+  ],
+  };
     {
       name: 'Business Solutions',href: '#',icon: Briefcase,children: [
         {
@@ -139,9 +139,9 @@ export function MainSidebar() {
         };
         {
           name: 'Request Quote',href: '/request-quote',icon: MessageCircle,description: 'Get Pricing'
-        }
-      ]
-    };
+        },
+  ],
+  };
     {
       name: 'Company',href: '#',icon: Info,children: [
         {
@@ -155,9 +155,9 @@ export function MainSidebar() {
         };
         {
           name: 'Partners',href: '/partners',icon: Users,description: 'Partnerships'
-        }
-      ]
-    };
+        },
+  ],
+  };
     {
       name: 'Resources',href: '#',icon: BookOpen,children: [
         {
@@ -171,18 +171,18 @@ export function MainSidebar() {
         };
         {
           name: 'Documentation',href: '/docs',icon: BookOpen,description: 'Technical Docs'
-        }
-      ]
-    };
+        },
+  ],
+  };
     {
       name: 'Contact',href: '/contact',icon: Phone
-    }
+    },
   ];
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
+const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const isFeatured = item.featured;
+const hasChildren = item.children && item.children.length > 0;
+const isExpanded = expandedSections.includes(item.name.toLowerCase());
+const isFeatured = item.featured;
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (
@@ -235,8 +235,8 @@ export function MainSidebar() {
           </Link>
         )}
       </div>
-    );
-  },
+    )
+},
 
   return (
     <>
@@ -291,13 +291,13 @@ export function MainSidebar() {
         </div>
       </div>
 
-      {/* Overlay */}
-      {isOpen && (
+      {/* Overlay */},
+  {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
     </>
-  );
+  )
 }

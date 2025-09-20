@@ -1,63 +1,63 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   ArrowRight;
-  CheckCircle, ;
-  Cloud, ;
-  Cpu, ;
-  Shield, ;
-  Zap, ;
-  Brain, ;
-  Globe, ;
+  CheckCircle,
+  Cloud,
+  Cpu,
+  Shield,
+  Zap,
+  Brain,
+  Globe,
   Lock;
   BarChart3;
   Users;
-  Rocket;
+  Rocket
 } from "lucide-react";
 import { SEO } from "../components/SEO";
-const featuredServices = [;
-  {;
-    name: 'AI-Powered Analytics',description: 'Advanced machine learning algorithms that provide real-time insights and predictive analytics for your business.',category: 'AI & ML',color: 'from-blue-500 to-cyan-500',icon: Brain,features: ['Real-time data processingPredictive analytics', 'Custom ML modelsAPI integration']
-    href: '/services/ai-analytics';
-  }
-  {;
-    name: 'Cloud Infrastructure',description: 'Scalable cloud solutions with automated deployment and management for optimal performance.',category: 'Cloud',color: 'from-purple-500 to-pink-500',icon: Cloud,features: ['Auto-scalingLoad balancing', 'Monitoring & alertsSecurity compliance']
-    href: '/services/cloud-infrastructure';
-  }
-  {;
-    name: 'Cybersecurity Suite',description: 'Comprehensive security solutions protecting your digital assets from evolving threats.',category: 'Security',color: 'from-red-500 to-orange-500',icon: Shield,features: ['Threat detectionVulnerability assessment', 'Incident responseCompliance reporting']
-    href: '/services/cybersecurity';
-  }
-  {;
-    name: 'Performance Optimization',description: 'Optimize your applications and infrastructure for maximum speed and efficiency.',category: 'Performance',color: 'from-green-500 to-emerald-500',icon: Zap,features: ['Performance monitoringOptimization recommendations', 'Load testingCaching strategies']
-    href: '/services/performance-optimization';
-  }
-  {;
-    name: 'Data Management',description: 'Comprehensive data solutions including storage, processing, and analytics.';
+const featuredServices = [
+  {
+  name: 'AI-Powered Analytics',description: 'Advanced machine learning algorithms that provide real-time insights and predictive analytics for your business.',category: 'AI & ML',color: 'from-blue-500 to-cyan-500',icon: Brain,features: ['Real-time data processingPredictive analytics', 'Custom ML modelsAPI integration']
+    href: '/services/ai-analytics'
+},
+  {
+  name: 'Cloud Infrastructure',description: 'Scalable cloud solutions with automated deployment and management for optimal performance.',category: 'Cloud',color: 'from-purple-500 to-pink-500',icon: Cloud,features: ['Auto-scalingLoad balancing', 'Monitoring & alertsSecurity compliance']
+    href: '/services/cloud-infrastructure'
+},
+  {
+  name: 'Cybersecurity Suite',description: 'Comprehensive security solutions protecting your digital assets from evolving threats.',category: 'Security',color: 'from-red-500 to-orange-500',icon: Shield,features: ['Threat detectionVulnerability assessment', 'Incident responseCompliance reporting']
+    href: '/services/cybersecurity'
+},
+  {
+  name: 'Performance Optimization',description: 'Optimize your applications and infrastructure for maximum speed and efficiency.',category: 'Performance',color: 'from-green-500 to-emerald-500',icon: Zap,features: ['Performance monitoringOptimization recommendations', 'Load testingCaching strategies']
+    href: '/services/performance-optimization'
+},
+  {
+  name: 'Data Management',description: 'Comprehensive data solutions including storage, processing, and analytics.';
     category: 'Data',color: 'from-indigo-500 to-blue-500',icon: BarChart3,features: ['Data warehousingETL pipelines', 'Data governanceBusiness intelligence']
-    href: '/services/data-management';
-  }
-  {;
-    name: 'Team Collaboration',description: 'Tools and platforms to enhance team productivity and communication.',category: 'Collaboration',color: 'from-yellow-500 to-orange-500',icon: Users,features: ['Project managementCommunication tools', 'File sharingWorkflow automation']
-    href: '/services/team-collaboration';
-  }
-]
-const emergingTechnologies = [;
-  {;
-    name: 'Quantum Computing',description: 'Explore the future of computing with quantum algorithms and applications.',icon: Cpu,color: 'from-purple-600 to-indigo-600';
-  }
-  {;
-    name: 'Edge Computing',description: 'Process data closer to the source for faster response times and reduced latency.',icon: Globe,color: 'from-blue-600 to-cyan-600';
-  }
-  {;
-    name: 'Blockchain Solutions',description: 'Secure, transparent, and decentralized solutions for modern business needs.';
-    icon: Lock,color: 'from-green-600 to-emerald-600';
-  }
-  {;
-    name: 'IoT Integration',description: 'Connect and manage your devices for smart automation and insights.',icon: Rocket,color: 'from-orange-600 to-red-600';
-  }
-]
-export default function InnovativeServicesLanding2025() {;
+    href: '/services/data-management'
+},
+  {
+  name: 'Team Collaboration',description: 'Tools and platforms to enhance team productivity and communication.',category: 'Collaboration',color: 'from-yellow-500 to-orange-500',icon: Users,features: ['Project managementCommunication tools', 'File sharingWorkflow automation']
+    href: '/services/team-collaboration'
+},
+  ]
+const emergingTechnologies = [
+  {
+  name: 'Quantum Computing',description: 'Explore the future of computing with quantum algorithms and applications.',icon: Cpu,color: 'from-purple-600 to-indigo-600'
+},
+  {
+  name: 'Edge Computing',description: 'Process data closer to the source for faster response times and reduced latency.',icon: Globe,color: 'from-blue-600 to-cyan-600'
+},
+  {
+  name: 'Blockchain Solutions',description: 'Secure, transparent, and decentralized solutions for modern business needs.';
+    icon: Lock,color: 'from-green-600 to-emerald-600'
+},
+  {
+  name: 'IoT Integration',description: 'Connect and manage your devices for smart automation and insights.',icon: Rocket,color: 'from-orange-600 to-red-600'
+},
+  ]
+export default function InnovativeServicesLanding2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO;
@@ -67,13 +67,17 @@ export default function InnovativeServicesLanding2025() {;
         canonical="https://ziontechgroup.com/innovative-services-2025";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -97,13 +101,17 @@ export default function InnovativeServicesLanding2025() {;
         </div>
       </section>
 
-      {{/* Featured Services */}}
+      {{/* Featured Services */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -115,12 +123,16 @@ export default function InnovativeServicesLanding2025() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (;
-              <motion.div;
-                key={{service.name}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
+            {featuredServices.map((service, index) => (
+  <motion.div;
+                key={{service.name},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.1 * index },
+  }
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group hover:scale-105";"
               >
                 <div className="flex items-center mb-6">
@@ -136,8 +148,8 @@ export default function InnovativeServicesLanding2025() {;
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 ;
                 <div className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (;
-                    <div key={featureIndex} className="flex items-center text-sm">
+                  {service.features.map((feature, featureIndex) => (
+  <div key={featureIndex} className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </div>
@@ -145,7 +157,8 @@ export default function InnovativeServicesLanding2025() {;
                 </div>
                 ;
                 <a;
-                  href={{service.href}}
+                  href={{service.href},
+  }
                   className="className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group-hover:text-blue-300";"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -156,7 +169,8 @@ export default function InnovativeServicesLanding2025() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
@@ -178,13 +192,17 @@ export default function InnovativeServicesLanding2025() {;
         </div>
       </section>
 
-      {{/* Emerging Technologies */}}
+      {{/* Emerging Technologies */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -196,12 +214,16 @@ export default function InnovativeServicesLanding2025() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {emergingTechnologies.map((tech, index) => (;
-              <motion.div;
-                key={{tech.name}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
+            {emergingTechnologies.map((tech, index) => (
+  <motion.div;
+                key={{tech.name},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.1 * index },
+  }
                 className="className="text-center group";"
               >
                 <div className={`p-6 bg-gradient-to-r ${tech.color} rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -215,13 +237,17 @@ export default function InnovativeServicesLanding2025() {;
         </div>
       </section>
 
-      {{/* Final CTA */}}
+      {{/* Final CTA */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.6 },
+  }
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Start Your Digital Transformation Today;

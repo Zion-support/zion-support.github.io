@@ -3,15 +3,16 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { MessageCircle, Calendar, Star } from "lucide-react";
-export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) => {;
-    return (<Card className="sticky top-4">
+export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) => {
+  return (<Card className="sticky top-4">
       <CardHeader>
         <CardTitle className="text-xl">Hire This Talent</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="text-center">
           <div className="text-3xl font-bold text-blue-600 mb-2">
-            ${{hourlyRate}}
+            ${{hourlyRate},
+  }
           </div>
           <div className="text-gray-600">per hour</div>
         </div>
@@ -29,7 +30,8 @@ export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) =>
           <div className="flex items-center justify-between">
             <span className="text-gray-600">Availability</span>
             <Badge variant={availability === 'available' ? 'default' : 'secondary'} className={availability === 'available' ? 'bg-green-100 text-green-800' : ''}>
-              {{availability}}
+              {{availability},
+  }
             </Badge>
           </div>
         </div>

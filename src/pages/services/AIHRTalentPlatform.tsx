@@ -1,46 +1,47 @@
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award } from "lucide-react";
-export default function AIHRTalentPlatform() {;
-  const features = [;
-    'AI-powered candidate screening and matchingAutomated resume parsing and skill assessment';
+export default function AIHRTalentPlatform() {
+  const features = [
+  'AI-powered candidate screening and matchingAutomated resume parsing and skill assessment';
     'Intelligent interview scheduling and feedbackEmployee performance analytics and insights';
     'Predictive turnover analysis and retention strategiesAutomated onboarding and training workflows';
-    'Diversity and inclusion analyticsCompliance monitoring and reporting';
-  ]
+    'Diversity and inclusion analyticsCompliance monitoring and reporting'
+]
 
-  const benefits = [;
-    'Reduce time-to-hire by 60%Improve candidate quality by 40%';
+  const benefits = [
+  'Reduce time-to-hire by 60%Improve candidate quality by 40%';
     'Reduce hiring costs by 30%Increase employee retention by 25%';
-    'Automate routine HR tasksData-driven decision making';
+    'Automate routine HR tasksData-driven decision making'
+]
+  const pricing = [
+  {
+  name: 'Starter',price: '$149/mo',features: ['Up to 50 employeesBasic AI screening', 'Standard reportingEmail support']
+      popular: false
+},
+  {
+  name: 'Professional',price: '$399/mo',features: ['Up to 200 employeesAdvanced AI analytics', 'Custom workflowsPriority support', 'Integration APIs']
+      popular: true
+},
+  {
+  name: 'Enterprise',price: '$999/mo',features: ['Unlimited employeesFull AI suite', 'Custom AI trainingDedicated support', 'White-label solutionsAdvanced compliance']
+      popular: false
+},
   ]
-  const pricing = [;
-    { ;
-      name: 'Starter',price: '$149/mo',features: ['Up to 50 employeesBasic AI screening', 'Standard reportingEmail support']
-      popular: false;
-    }
-    { ;
-      name: 'Professional',price: '$399/mo',features: ['Up to 200 employeesAdvanced AI analytics', 'Custom workflowsPriority support', 'Integration APIs']
-      popular: true;
-    }
-    { ;
-      name: 'Enterprise',price: '$999/mo',features: ['Unlimited employeesFull AI suite', 'Custom AI trainingDedicated support', 'White-label solutionsAdvanced compliance']
-      popular: false;
-    }
-  ]
-  const useCases = [;
-    'Recruitment and talent acquisitionEmployee performance management';
+  const useCases = [
+  'Recruitment and talent acquisitionEmployee performance management';
     'Learning and developmentWorkforce planning and analytics';
-    'Compliance and HR operationsEmployee engagement and retention';
-  ]
+    'Compliance and HR operationsEmployee engagement and retention'
+]
 
-  const platformModules = [;
-    'Talent AcquisitionPerformance Management';
+  const platformModules = [
+  'Talent AcquisitionPerformance Management';
     'Learning & DevelopmentWorkforce Analytics';
     'Employee EngagementCompliance & Reporting';
-    'Onboarding & OffboardingSuccession Planning';
-  ]
+    'Onboarding & OffboardingSuccession Planning'
+]
   return (
     <div className="min-h-screen bg-white">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -62,7 +63,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive HR Intelligence</h2>
@@ -73,8 +75,8 @@ export default function AIHRTalentPlatform() {;
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
             <ul className="space-y-4">
-              {features.map((feature, index) => (;
-                <li key={index} className="flex items-start">
+              {features.map((feature, index) => (
+  <li key={index} className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
                 </li>
@@ -85,8 +87,8 @@ export default function AIHRTalentPlatform() {;
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>
             <ul className="space-y-4">
-              {benefits.map((benefit, index) => (;
-                <li key={index} className="flex items-start">
+              {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-start">
                   <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{benefit}</span>
                 </li>
@@ -96,7 +98,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* Platform Modules Section */}}
+      {{/* Platform Modules Section */},
+  }
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -105,8 +108,8 @@ export default function AIHRTalentPlatform() {;
           </div>
           ;
           <div className="grid md:grid-cols-4 gap-6">
-            {platformModules.map((module, index) => (;
-              <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
+            {platformModules.map((module, index) => (
+  <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
                 <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
               </div>
@@ -115,7 +118,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
@@ -123,8 +127,8 @@ export default function AIHRTalentPlatform() {;
         </div>
         ;
         <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (;
-            <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          {useCases.map((useCase, index) => (
+  <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <Target className="w-8 h-8 text-orange-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
@@ -132,7 +136,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* AI Capabilities Section */}}
+      {{/* AI Capabilities Section */},
+  }
       <section className="py-16 bg-orange-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -160,7 +165,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section id="pricing" className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -169,12 +175,12 @@ export default function AIHRTalentPlatform() {;
           </div>
           ;
           <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${;
-                plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200';
-              }`}>
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            {pricing.map((plan, index) => (
+  <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
+  plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'
+}`}>
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -188,19 +194,19 @@ export default function AIHRTalentPlatform() {;
                 </div>
                 ;
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-start">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 ;
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${;
-                  plan.popular ;
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+  plan.popular ;
                     ? 'bg-orange-600 text-white hover:bg-orange-700' ;
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
-                }`}>
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+}`}>
                   Get Started;
                 </button>
               </div>
@@ -216,7 +222,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* ROI Section */}}
+      {{/* ROI Section */},
+  }
       <section className="py-16 bg-orange-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
@@ -237,7 +244,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your HR Operations?</h2>
@@ -255,7 +263,8 @@ export default function AIHRTalentPlatform() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
         <div className="grid md: grid-cols-2 gap-8">

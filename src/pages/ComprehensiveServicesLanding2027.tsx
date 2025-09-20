@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Brain;
-  Cloud, ;
-  Shield, ;
-  Rocket, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
+  Cloud,
+  Shield,
+  Rocket,
+  Zap,
+  Users,
+  Globe,
   Cpu;
   Lock;
   Heart;
@@ -124,63 +124,86 @@ import { ;
   Award as AwardIcon2;
   Phone as PhoneIcon2;
   MapPin as MapPinIcon2;
-  Infinity as InfinityIcon2;
+  Infinity as InfinityIcon2
 } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027";
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027";
-export default function ComprehensiveServicesLanding2027() {;
+export default function ComprehensiveServicesLanding2027() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
 
   // Combine all services;
-  const allServices = [;
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
+const allServices = [
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
     ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
-    ...EMERGING_TECHNOLOGY_SERVICES_2027;
-  ]
+    ...EMERGING_TECHNOLOGY_SERVICES_2027
+]
   // Get unique categories with counts;
-  const categories = [;
-    {{ id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' }}
-    {{ id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: allServices.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' }}
-    {{ id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' }}
-    {{ id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' }}
-    {{ id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' }}
-    {{ id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' }}
-    {{ id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' }}
-    {{ id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' }}
-    {{ id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' }}
-    {{ id: 'Sustainable Technology', name: 'Sustainable Technology', count: allServices.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' }}
-    {{ id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' }}
-    {{ id: 'FinTech', name: 'FinTech', count: allServices.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' }}
-    {{ id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' }}
-    {{ id: 'IT Infrastructure', name: 'IT Infrastructure', count: allServices.filter(s => s.category === 'IT Infrastructure').length, icon: '🏗️', color: 'from-gray-500 to-slate-500' }}
-    {{ id: 'AI & Computing', name: 'AI & Computing', count: allServices.filter(s => s.category === 'AI & Computing').length, icon: '💻', color: 'from-cyan-500 to-blue-500' }}
-    {{ id: 'Biotechnology', name: 'Biotechnology', count: allServices.filter(s => s.category === 'Biotechnology').length, icon: '🧬', color: 'from-green-500 to-emerald-500' }}
-    {{ id: 'Energy Technology', name: 'Energy Technology', count: allServices.filter(s => s.category === 'Energy Technology').length, icon: '⚡', color: 'from-yellow-500 to-orange-500' }}
-    {{ id: 'Metaverse & AR/VR', name: 'Metaverse & AR/VR', count: allServices.filter(s => s.category === 'Metaverse & AR/VR').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' }}
-    {{ id: 'Neurotechnology', name: 'Neurotechnology', count: allServices.filter(s => s.category === 'Neurotechnology').length, icon: '🧠', color: 'from-indigo-500 to-purple-500' }}
-    {{ id: 'Quantum Technology', name: 'Quantum Technology', count: allServices.filter(s => s.category === 'Quantum Technology').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' }}
-    {{ id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' }}
-    {{ id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' }}
+const categories = [
+  {{ id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
+  },
+  {{ id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: allServices.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
+  },
+  {{ id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
+  },
+  {{ id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
+  },
+  {{ id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
+  },
+  {{ id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
+  },
+  {{ id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
+  },
+  {{ id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
+  },
+  {{ id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
+  },
+  {{ id: 'Sustainable Technology', name: 'Sustainable Technology', count: allServices.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
+  },
+  {{ id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
+  },
+  {{ id: 'FinTech', name: 'FinTech', count: allServices.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
+  },
+  {{ id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
+  },
+  {{ id: 'IT Infrastructure', name: 'IT Infrastructure', count: allServices.filter(s => s.category === 'IT Infrastructure').length, icon: '🏗️', color: 'from-gray-500 to-slate-500' },
+  },
+  {{ id: 'AI & Computing', name: 'AI & Computing', count: allServices.filter(s => s.category === 'AI & Computing').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
+  },
+  {{ id: 'Biotechnology', name: 'Biotechnology', count: allServices.filter(s => s.category === 'Biotechnology').length, icon: '🧬', color: 'from-green-500 to-emerald-500' },
+  },
+  {{ id: 'Energy Technology', name: 'Energy Technology', count: allServices.filter(s => s.category === 'Energy Technology').length, icon: '⚡', color: 'from-yellow-500 to-orange-500' },
+  },
+  {{ id: 'Metaverse & AR/VR', name: 'Metaverse & AR/VR', count: allServices.filter(s => s.category === 'Metaverse & AR/VR').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
+  },
+  {{ id: 'Neurotechnology', name: 'Neurotechnology', count: allServices.filter(s => s.category === 'Neurotechnology').length, icon: '🧠', color: 'from-indigo-500 to-purple-500' },
+  },
+  {{ id: 'Quantum Technology', name: 'Quantum Technology', count: allServices.filter(s => s.category === 'Quantum Technology').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
+  },
+  {{ id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' },
+  },
+  {{ id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' },
+  },
   ]
   // Filter services based on category and search;
-  const filteredServices = allServices.filter(service => {;
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = searchQuery === '' || ;
+const filteredServices = allServices.filter(service => {
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+const matchesSearch = searchQuery === '' || ;
       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    return matchesCategory && matchesSearch;
-  })
+    return matchesCategory && matchesSearch
+})
 
-  const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId)
+  const toggleServiceExpansion = (serviceId: string) => {
+  setExpandedService(expandedService === serviceId ? null : serviceId)
   }
-  const getCategoryIcon = (category: string) => {;
-    const const iconMap: { [key: string]: React.ReactNode } = {; = {
+  const getCategoryIcon = (category: string) => {
+  const const iconMap: { [key: string]: React.ReactNode } = {
+  = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />
       'Cybersecurity': <Shield className="w-6 h-6" />;
       'Cloud & DevOps': <Cloud className="w-6 h-6" />;
@@ -203,15 +226,16 @@ export default function ComprehensiveServicesLanding2027() {;
       'Autonomous Systems': <Car className="w-6 h-6" />;
       'Robotics & Automation': <Bot className="w-6 h-6" />
     }
-    return iconMap[category] || <Star className="w-6 h-6" />;
-  }
+    return iconMap[category] || <Star className="w-6 h-6" />
+}
 
-  const formatPrice = (price: number) => {;
-    if (if (price >= 1000) {;) {
-      return `$${(price / 1000).toFixed(1)}K`;
-    }
-    return `$${price}`;
-  }
+  const formatPrice = (price: number) => {
+  if (if (price >= 1000) {
+  ) {
+      return `$${(price / 1000).toFixed(1)}K`
+}
+    return `$${price}`
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -221,14 +245,18 @@ export default function ComprehensiveServicesLanding2027() {;
         keywords="AI services, quantum computing, space technology, emerging tech, Zion Tech Group, innovative solutions";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -239,20 +267,27 @@ export default function ComprehensiveServicesLanding2027() {;
           </motion.h1>
           ;
           <motion.p ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
           >
             Discover our complete portfolio of cutting-edge technology services designed to ;
             transform your business and drive innovation across every industry.;
           </motion.p>
 
-          {{/* Search Bar */}}
+          {{/* Search Bar */},
+  }
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
             className="className="max-w-2xl mx-auto mb-8";"
           >
             <div className="relative">
@@ -260,18 +295,24 @@ export default function ComprehensiveServicesLanding2027() {;
               <input;
                 type="text";
                 placeholder="Search for services, technologies, or solutions...";
-                value={{searchQuery}}
-                onChange={{(e) => setSearchQuery(e.target.value)}}
+                value={{searchQuery},
+  }
+                onChange={{(e) => setSearchQuery(e.target.value)},
+  }
                 className="className="w-full px-12 py-4 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg";"
               />
             </div>
           </motion.div>
 
-          {{/* Quick Stats */}}
+          {{/* Quick Stats */},
+  }
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.6 },
+  }
             className="className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto";"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -298,14 +339,19 @@ export default function ComprehensiveServicesLanding2027() {;
         </div>
       </section>
 
-      {{/* Category Navigation */}}
+      {{/* Category Navigation */},
+  }
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -317,21 +363,29 @@ export default function ComprehensiveServicesLanding2027() {;
             </p>
           </motion.div>
 
-          {{/* Category Grid */}}
+          {{/* Category Grid */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {categories.map((category, index) => (;
-              <motion.button;
-                key={{category.id}}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                onClick={{onClick={() => setActiveCategory(category.id)}}}
-                className={`p-6 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${;
-                  activeCategory === category.id;
+            {categories.map((category, index) => (
+  <motion.button;
+                key={{category.id},
+  }
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
+                onClick={{onClick={() => setActiveCategory(category.id)},
+  },
+  }
+                className={`p-6 rounded-2xl border transition-all duration-300 transform hover:scale-105 ${
+  activeCategory === category.id;
                     ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50';
-                    : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30';
-                }`}
+                    : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30'
+}`}
               >
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
@@ -342,14 +396,19 @@ export default function ComprehensiveServicesLanding2027() {;
         </div>
       </section>
 
-      {{/* Services Showcase */}}
+      {{/* Services Showcase */},
+  }
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -358,30 +417,38 @@ export default function ComprehensiveServicesLanding2027() {;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {activeCategory === 'all' ;
                 ? 'Explore our complete portfolio of innovative services and solutions.';
-                : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`;
-              }
+                : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
+}
             </p>
           </motion.div>
 
-          {{/* Services Grid */}}
+          {{/* Services Grid */},
+  }
           <div className="space-y-6">
-            {filteredServices.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {filteredServices.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden";"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-4">
-                      {{getCategoryIcon(service.category)}}
+                      {{getCategoryIcon(service.category)},
+  }
                       <div>
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
                         <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">
-                          {{service.category}}
+                          {{service.category},
+  }
                         </span>
                       </div>
                     </div>
@@ -414,16 +481,18 @@ export default function ComprehensiveServicesLanding2027() {;
 
                   <div className="flex items-center justify-between">
                     <button;
-                      onClick={{onClick={() => toggleServiceExpansion(service.id)}}}
+                      onClick={{onClick={() => toggleServiceExpansion(service.id)},
+  },
+  }
                       className="className="inline-flex items-center px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300";"
                     >
-                      {expandedService === service.id ? (;
-                        <>
+                      {expandedService === service.id ? (
+  <>
                           <ChevronUp className="w-4 h-4 mr-2" />
                           Hide Details;
                         </>
-                      ) : (;
-                        <>
+                      ) : (
+  <>
                           <ChevronDown className="w-4 h-4 mr-2" />
                           View Details;
                         </>
@@ -448,14 +517,19 @@ export default function ComprehensiveServicesLanding2027() {;
                   </div>
                 </div>
 
-                {{/* Expanded Details */}}
+                {{/* Expanded Details */},
+  }
                 <AnimatePresence>
-                  {expandedService === service.id && (;
-                    <motion.div;
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                  {expandedService === service.id && (
+  <motion.div;
+                      initial={{ height: 0, opacity: 0 },
+  }
+                      animate={{ height: "auto", opacity: 1 },
+  }
+                      exit={{ height: 0, opacity: 0 },
+  }
+                      transition={{ duration: 0.3 },
+  }
                       className="className="border-t border-white/20 bg-white/5";"
                     >
                       <div className="p-6">
@@ -463,8 +537,8 @@ export default function ComprehensiveServicesLanding2027() {;
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                             <div className="space-y-2">
-                              {service.tags.slice(0, 8).map((tag, tagIndex) => (;
-                                <div key={tagIndex} className="flex items-center">
+                              {service.tags.slice(0, 8).map((tag, tagIndex) => (
+  <div key={tagIndex} className="flex items-center">
                                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                                   <span className="text-gray-300">{tag}</span>
                                 </div>
@@ -474,14 +548,14 @@ export default function ComprehensiveServicesLanding2027() {;
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>
                             <div className="space-y-2">
-                              {service.integrations?.slice(0, 6).map((integration, integrationIndex) => (;
-                                <div key={integrationIndex} className="flex items-center">
+                              {service.integrations?.slice(0, 6).map((integration, integrationIndex) => (
+  <div key={integrationIndex} className="flex items-center">
                                   <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
                                   <span className="text-gray-300">{integration}</span>
                                 </div>
-                              ))}
-                              {service.integrations && service.integrations.length > 6 && (;
-                                <div className="text-gray-400 text-sm">
+                              ))},
+  {service.integrations && service.integrations.length > 6 && (
+  <div className="text-gray-400 text-sm">
                                   +{service.integrations.length - 6} more integrations;
                                 </div>
                               )}
@@ -495,9 +569,10 @@ export default function ComprehensiveServicesLanding2027() {;
                             <div>
                               <h5 className="text-sm font-medium text-gray-400 mb-2">Competitors</h5>
                               <div className="space-y-1">
-                                {service.competitors?.slice(0, 3).map((competitor, competitorIndex) => (;
-                                  <div key={competitorIndex} className="text-gray-300 text-sm">
-                                    • {{competitor}}
+                                {service.competitors?.slice(0, 3).map((competitor, competitorIndex) => (
+  <div key={competitorIndex} className="text-gray-300 text-sm">
+                                    • {{competitor},
+  }
                                   </div>
                                 ))}
                               </div>
@@ -518,13 +593,15 @@ export default function ComprehensiveServicesLanding2027() {;
                   )}
                 </AnimatePresence>
               </motion.div>
-            ))}
-
-            {{/* No Results Message */}}
-            {filteredServices.length === 0 && (;
-              <motion.div ;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+            ))},
+  {{/* No Results Message */},
+  },
+  {filteredServices.length === 0 && (
+  <motion.div ;
+                initial={{ opacity: 0 },
+  }
+                animate={{ opacity: 1 },
+  }
                 className="className="text-center py-20";"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -536,14 +613,19 @@ export default function ComprehensiveServicesLanding2027() {;
         </div>
       </section>
 
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20";"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -569,7 +651,8 @@ export default function ComprehensiveServicesLanding2027() {;
               </a>
             </div>
 
-            {{/* Contact Information */}}
+            {{/* Contact Information */},
+  }
             <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-6">
               <div className="text-center">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -602,7 +685,7 @@ export default function ComprehensiveServicesLanding2027() {;
 }
 
 // Helper component for DNA icon;
-function Dna({ className }: { className?: string }) {;
+function Dna({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>

@@ -6,12 +6,13 @@ import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 // Mock post data;
-const const mockPost = {; = {
+const const mockPost = {
+  = {
     id: "1",title: "Best practices for AI model fine-tuning",content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",authorId: "user1",authorName: "Alex Johnson",authorAvatar: "https://i.pravatar.cc/150?img=3",authorRole: "Verified Talent",categoryId: "ai-tools",tags: ["machine-learning", "fine-tuning", "gpt"]
-    createdAt: "2025-04-01T12:00:00Z",updatedAt: "2025-04-01T12:00:00Z",upvotes: 48,downvotes: 2,replyCount: 12,isAnswered: true,isFeatured: true;
+    createdAt: "2025-04-01T12:00:00Z",updatedAt: "2025-04-01T12:00:00Z",upvotes: 48,downvotes: 2,replyCount: 12,isAnswered: true,isFeatured: true
 }
-export default function EditPostPage() {;
-    const { postId } = useParams()
+export default function EditPostPage() {
+  const { postId } = useParams()
     const navigate = useNavigate()
     const { toast } = useToast()
     const { user } = useAuth()
@@ -22,14 +23,16 @@ export default function EditPostPage() {;
         // For now, we'll just use the mock data;
         setIsLoading(false)
     }, [postId])
-    if (if (isLoading) {;) {
+    if (if (isLoading) {
+  ) {
         return (<div className="container py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>)
     }
-    if (if (!post) {;) {
+    if (if (!post) {
+  ) {
         return (<div className="container py-8">
           <h1>Post not found</h1>
           <Button asChild className="mt-4">
@@ -38,9 +41,10 @@ export default function EditPostPage() {;
         </div>)
     }
     // Check if the user is the author or an admin;
-    const isAuthor = user?.id === post.authorId;
-    const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-    if (if (!isAuthor && !isAdmin) {;) {
+const isAuthor = user?.id === post.authorId;
+const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+    if (if (!isAuthor && !isAdmin) {
+  ) {
         return (<div className="container py-8">
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>
           <p className="mb-4">You don't have permission to edit this post.</p>
@@ -49,25 +53,26 @@ export default function EditPostPage() {;
           </Button>
         </div>)
     }
-    const const initialValues = {; = {
+    const const initialValues = {
+  = {
         title: post.title,content: post.content,categoryId: post.categoryId,tags: post.tags.join(", ")
     }
-    const handleSubmit = async (values) => {;
-        try {;
-            // Here we would normally update the post in the database;
+    const handleSubmit = async (values) => {
+  try {
+  // Here we would normally update the post in the database;
             // For now, we'll just simulate a successful update;
-            toast({;
-                title: "Post updated",description: "Your post has been updated successfully";
-            })
+            toast({
+  title: "Post updated",description: "Your post has been updated successfully"
+})
             // Redirect back to the post;
             navigate(`/community/post/${postId}`)
         }
-        catch (error) {;
-            toast({;
-                title: "Error",description: "There was a problem updating your post",variant: "destructive";
-            })
-        }
-    }
+        catch (error) {
+  toast({
+  title: "Error",description: "There was a problem updating your post",variant: "destructive"
+})
+        },
+  }
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
         ;
             <div className="container py-8">

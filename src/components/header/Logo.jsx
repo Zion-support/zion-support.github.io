@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Zap } from "lucide-react";
-export function Logo({ customLogo, customColor, className = '' }) {;
-  if (if (customLogo) {;) {
+export function Logo({ customLogo, customColor, className = '' }) {
+  if (if (customLogo) {
+  ) {
     return (
       <Link to="/" className={`flex-shrink-0 group ${className}`}>
         <img ;
@@ -22,18 +23,21 @@ export function Logo({ customLogo, customColor, className = '' }) {;
         <div className="relative">
           <div ;
             className="className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300";"
-            style={{ backgroundColor: logoColor }}
+            style={{ backgroundColor: logoColor },
+  }
           >
             <Zap className="w-6 h-6 text-white" />
           </div>
           <div ;
             className="className="absolute inset-0 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300";"
-            style={{ backgroundColor: logoColor }}
+            style={{ backgroundColor: logoColor },
+  }
           ></div>
         </div>
         <h1 ;
           className="className="text-2xl font-bold group-hover:scale-105 transition-transform duration-300";"
-          style={{ color: logoColor }}
+          style={{ color: logoColor },
+  }
         >
           Zion Tech Group;
         </h1>

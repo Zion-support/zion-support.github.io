@@ -7,8 +7,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   enabled = true 
 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [accentColor, setAccentColor] = useState('#0ea5e9');
-  const enhanceTypography = useCallback(() => {
+const [accentColor, setAccentColor] = useState('#0ea5e9');
+const enhanceTypography = useCallback(() => {
     if (!enabled) return;
     // Add modern font loading
     const fontLink = document.createElement('link');
@@ -23,11 +23,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--font-weight-normal400');
     root.style.setProperty('--font-weight-medium500');
     root.style.setProperty('--font-weight-semibold600');
-    root.style.setProperty('--font-weight-bold700');
-  }, [enabled]);
-  const enhanceColorScheme = useCallback(() => {
+    root.style.setProperty('--font-weight-bold700')
+}, [enabled]);
+const enhanceColorScheme = useCallback(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+const root = document.documentElement;
     // Modern color palette
     const colors = {
       primary: accentColor,secondary: '#6366f1',success: '#10b981',warning: '#f59e0b',error: '#ef4444',info: '#3b82f6',neutral: {
@@ -41,27 +41,27 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         700: '#334155';
         800: '#1e293b',
         900: '#0f172a'
-      }
-    };
+      },
+  };
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
       if (typeof value === 'string') {
-        root.style.setProperty(`--color-${key}`, value);
-      } else {
+        root.style.setProperty(`--color-${key}`, value)
+} else {
         Object.entries(value).forEach(([shade, colorValue]) => {
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue);
-        }),
-      }
-    }),
+          root.style.setProperty(`--color-${key}-${shade}`, colorValue)
+}),
+      },
+  }),
 
     // Apply accent color variations
     root.style.setProperty('--color-primary-light', `${accentColor}20`);
-    root.style.setProperty('--color-primary-dark', `${accentColor}80`);
-  }, [enabled, accentColor]),
+    root.style.setProperty('--color-primary-dark', `${accentColor}80`)
+}, [enabled, accentColor]),
 
   const enhanceSpacing = useCallback(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+const root = document.documentElement;
     // Modern spacing scale (4px base unit)
     const spacing = {
       0: '0px',
@@ -84,13 +84,13 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       32: '128px'
     };
     Object.entries(spacing).forEach(([key, value]) => {
-      root.style.setProperty(`--spacing-${key}`, value);
-    }),
+      root.style.setProperty(`--spacing-${key}`, value)
+}),
   }, [enabled]),
 
   const enhanceShadows = useCallback(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+const root = document.documentElement;
     // Modern shadow system
     const shadows = {
       xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
@@ -100,13 +100,13 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
     };
     Object.entries(shadows).forEach(([key, value]) => {
-      root.style.setProperty(`--shadow-${key}`, value);
-    }),
+      root.style.setProperty(`--shadow-${key}`, value)
+}),
   }, [enabled]),
 
   const enhanceTransitions = useCallback(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+const root = document.documentElement;
     // Modern transition system
     const transitions = {
       fast: '150ms ease-in-out',normal: '250ms ease-in-out',slow: '350ms ease-in-out',bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
@@ -115,40 +115,40 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     },
 
     Object.entries(transitions).forEach(([key, value]) => {
-      root.style.setProperty(`--transition-${key}`, value);
-    }),
+      root.style.setProperty(`--transition-${key}`, value)
+}),
   }, [enabled]),
 
   const enhanceBorderRadius = useCallback(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+const root = document.documentElement;
     // Modern border radius system
     const radius = {
       none: '0px',sm: '2px',md: '6px',lg: '8px',xl: '12px2xl': '16px3xl': '24px',full: '9999px'
     };
     Object.entries(radius).forEach(([key, value]) => {
-      root.style.setProperty(`--radius-${key}`, value);
-    }),
+      root.style.setProperty(`--radius-${key}`, value)
+}),
   }, [enabled]),
 
   const enhanceDarkMode = useCallback(() => {
     if (!enabled) return;
-    const root = document.documentElement;
+const root = document.documentElement;
     if (isDarkMode) {
       root.classList.add('dark');
       root.style.setProperty('--bg-primary#0f172a');
       root.style.setProperty('--bg-secondary#1e293b');
       root.style.setProperty('--text-primary#f8fafc');
       root.style.setProperty('--text-secondary#cbd5e1');
-      root.style.setProperty('--border-color#334155');
-    } else {
+      root.style.setProperty('--border-color#334155')
+} else {
       root.classList.remove('dark');
       root.style.setProperty('--bg-primary#ffffff');
       root.style.setProperty('--bg-secondary#f8fafc');
       root.style.setProperty('--text-primary#0f172a');
       root.style.setProperty('--text-secondary#475569');
-      root.style.setProperty('--border-color#e2e8f0');
-    }
+      root.style.setProperty('--border-color#e2e8f0')
+},
   }, [enabled, isDarkMode]),
 
   const enhanceComponents = useCallback(() => {
@@ -163,8 +163,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           font-weight: var(--font-weight-medium);
           box-shadow: var(--shadow-sm);
         `
-      }
-    }),
+      },
+  }),
 
     // Add modern card styles
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
@@ -175,8 +175,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           border-radius: var(--radius-lg);
           box-shadow: var(--shadow-md),transition: var(--transition-normal);border: 1px solid var(--border-color);
         `
-      }
-    }),
+      },
+  }),
   }, [enabled]),
 
   useEffect(() => {
@@ -189,8 +189,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     enhanceTransitions();
     enhanceBorderRadius();
     enhanceDarkMode();
-    enhanceComponents();
-  }, [
+    enhanceComponents()
+}, [
     enabled,
     enhanceTypography,
     enhanceColorScheme,
@@ -203,5 +203,5 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   ]),
 
   // Don't render anything - this is a utility component
-  return null;
+  return null
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Brain;
-  BarChart3, ;
-  TrendingUp, ;
-  Shield, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
+  BarChart3,
+  TrendingUp,
+  Shield,
+  Zap,
+  Users,
+  Globe,
   Database;
   Cpu;
   Network;
@@ -21,90 +21,94 @@ import { ;
   Phone;
   Mail;
   MapPin;
-  ExternalLink;
+  ExternalLink
 } from "lucide-react";
 const AIBusinessIntelligenceElite: React.FC = () => {
-  const features = [;
-    {;
-      icon: Brain,title: "Advanced AI Analytics Engine",description: "Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation";
-    }
-    {;
-      icon: BarChart3,title: "Real-time Business Intelligence",description: "Live dashboards with predictive analytics and trend forecasting capabilities";
-    }
-    {;
-      icon: Shield,title: "Enterprise-Grade Security",description: "SOC 2 Type II compliant with end-to-end encryption and role-based access control";
-    }
-    {;
-      icon: Zap,title: "Automated Reporting",description: "AI-generated executive summaries and automated KPI tracking";
-    }
-    {;
-      icon: Users,title: "Multi-User Collaboration",description: "Team-based analytics with real-time collaboration and sharing capabilities";
-    }
-    {;
-      icon: Globe,title: "Global Data Integration",description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms";
-    }
+  const features = [
+  {
+  icon: Brain,title: "Advanced AI Analytics Engine",description: "Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation"
+},
+  {
+  icon: BarChart3,title: "Real-time Business Intelligence",description: "Live dashboards with predictive analytics and trend forecasting capabilities"
+},
+  {
+  icon: Shield,title: "Enterprise-Grade Security",description: "SOC 2 Type II compliant with end-to-end encryption and role-based access control"
+},
+  {
+  icon: Zap,title: "Automated Reporting",description: "AI-generated executive summaries and automated KPI tracking"
+},
+  {
+  icon: Users,title: "Multi-User Collaboration",description: "Team-based analytics with real-time collaboration and sharing capabilities"
+},
+  {
+  icon: Globe,title: "Global Data Integration",description: "Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms"
+},
   ]
 
-  const pricing = [;
-    {;
-      name: "Starter",price: "$2,500";
-      period: "/month",description: "Perfect for small businesses and startups",features: [;
-        "Up to 10 data sources";
+  const pricing = [
+  {
+  name: "Starter",price: "$2,500";
+      period: "/month",description: "Perfect for small businesses and startups",features: [
+  "Up to 10 data sources";
         "Basic AI analytics";
         "Standard reporting";
         "Email support";
-        "5 user licenses";
-      ]
-    }
-    {;
-      name: "Professional",price: "$5,000";
-      period: "/month",description: "Ideal for growing businesses and teams",features: [;
-        "Up to 50 data sources";
+        "5 user licenses"
+],
+  },
+  {
+  name: "Professional",price: "$5,000";
+      period: "/month",description: "Ideal for growing businesses and teams",features: [
+  "Up to 50 data sources";
         "Advanced AI analytics";
         "Custom dashboards";
         "Priority support";
         "25 user licenses";
-        "API access";
-      ]
-      popular: true;
-    }
-    {;
-      name: "Enterprise",price: "$12,000";
-      period: "/month",description: "For large organizations with complex needs",features: [;
-        "Unlimited data sources";
+        "API access"
+]
+      popular: true
+},
+  {
+  name: "Enterprise",price: "$12,000";
+      period: "/month",description: "For large organizations with complex needs",features: [
+  "Unlimited data sources";
         "Full AI suite";
         "Custom development";
         "24/7 dedicated support";
         "Unlimited users";
-        "White-label options";
-      ]
-    }
+        "White-label options"
+],
+  },
   ]
 
-  const useCases = [;
-    {;
-      title: "Financial Analytics",description: "Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting";
-    }
-    {;
-      title: "Sales Intelligence",description: "Sales performance tracking, lead scoring, and revenue optimization using machine learning";
-    }
-    {;
-      title: "Customer Analytics",description: "Customer behavior analysis, segmentation, and lifetime value prediction";
-    }
-    {;
-      title: "Operational Efficiency",description: "Process optimization, resource allocation, and performance monitoring";
-    }
+  const useCases = [
+  {
+  title: "Financial Analytics",description: "Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting"
+},
+  {
+  title: "Sales Intelligence",description: "Sales performance tracking, lead scoring, and revenue optimization using machine learning"
+},
+  {
+  title: "Customer Analytics",description: "Customer behavior analysis, segmentation, and lifetime value prediction"
+},
+  {
+  title: "Operational Efficiency",description: "Process optimization, resource allocation, and performance monitoring"
+},
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
@@ -138,14 +142,19 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -158,13 +167,18 @@ const AIBusinessIntelligenceElite: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-purple-500 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6">
@@ -178,14 +192,19 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -198,21 +217,26 @@ const AIBusinessIntelligenceElite: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${;
-                  plan.popular ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
+                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
+  plan.popular ;
                     ? 'border-purple-500 shadow-2xl shadow-purple-500/25' ;
-                    : 'border-zion-slate-light';
-                }`}
+                    : 'border-zion-slate-light'
+}`}
               >
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -229,8 +253,8 @@ const AIBusinessIntelligenceElite: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
                     </li>
@@ -249,14 +273,19 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -269,13 +298,18 @@ const AIBusinessIntelligenceElite: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -286,14 +320,19 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -356,7 +395,8 @@ const AIBusinessIntelligenceElite: React.FC = () => {
         </div>
       </section>
 
-      {{/* Footer */}}
+      {{/* Footer */},
+  }
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">

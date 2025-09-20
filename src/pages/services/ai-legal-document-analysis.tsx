@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   FileText;
-  Search, ;
-  Shield, ;
-  Zap, ;
-  Brain, ;
-  CheckCircle, ;
-  Clock, ;
+  Search,
+  Shield,
+  Zap,
+  Brain,
+  CheckCircle,
+  Clock,
   DollarSign;
   Users;
   BarChart3;
@@ -19,76 +19,76 @@ import { ;
   Phone;
   Mail;
   MapPin;
-  ExternalLink;
+  ExternalLink
 } from "lucide-react";
 import { SEO } from "../../components/SEO";
-export default function AILegalDocumentAnalysis() {;
-  const features = [;
-    {;
-      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Contract Analysis",description: "Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy";
-    }
-    {;
-      icon: <Search className="w-6 h-6" />,title: "Intelligent Document Search",description: "Semantic search across millions of legal documents with context-aware results and relevance scoring";
-    }
-    {;
-      icon: <Shield className="w-6 h-6" />,title: "Compliance Monitoring",description: "Real-time compliance tracking with automated alerts for regulatory changes and deadline management";
-    }
-    {;
-      icon: <Zap className="w-6 h-6" />,title: "Automated Risk Assessment",description: "AI-driven risk scoring and mitigation recommendations for legal documents and contracts";
-    }
-    {;
-      icon: <Users className="w-6 h-6" />,title: "Collaborative Review",description: "Multi-user document review with version control, comments, and approval workflows";
-    }
-    {;
-      icon: <BarChart3 className="w-6 h-6" />,title: "Analytics Dashboard",description: "Comprehensive insights into document patterns, risk trends, and compliance metrics";
-    }
+export default function AILegalDocumentAnalysis() {
+  const features = [
+  {
+  icon: <Brain className="w-6 h-6" />,title: "AI-Powered Contract Analysis",description: "Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy"
+},
+  {
+  icon: <Search className="w-6 h-6" />,title: "Intelligent Document Search",description: "Semantic search across millions of legal documents with context-aware results and relevance scoring"
+},
+  {
+  icon: <Shield className="w-6 h-6" />,title: "Compliance Monitoring",description: "Real-time compliance tracking with automated alerts for regulatory changes and deadline management"
+},
+  {
+  icon: <Zap className="w-6 h-6" />,title: "Automated Risk Assessment",description: "AI-driven risk scoring and mitigation recommendations for legal documents and contracts"
+},
+  {
+  icon: <Users className="w-6 h-6" />,title: "Collaborative Review",description: "Multi-user document review with version control, comments, and approval workflows"
+},
+  {
+  icon: <BarChart3 className="w-6 h-6" />,title: "Analytics Dashboard",description: "Comprehensive insights into document patterns, risk trends, and compliance metrics"
+},
   ]
 
-  const pricing = [;
-    {;
-      name: "Starter",price: "$299",period: "/month",features: [;
-        "Up to 100 documents/month";
+  const pricing = [
+  {
+  name: "Starter",price: "$299",period: "/month",features: [
+  "Up to 100 documents/month";
         "Basic AI analysis";
         "Standard search";
         "Email support";
-        "Basic compliance alerts";
-      ]
-      popular: false;
-    }
-    {;
-      name: "Professional",price: "$799",period: "/month",features: [;
-        "Up to 1,000 documents/month";
+        "Basic compliance alerts"
+]
+      popular: false
+},
+  {
+  name: "Professional",price: "$799",period: "/month",features: [
+  "Up to 1,000 documents/month";
         "Advanced AI analysis";
         "Semantic search";
         "Priority support";
         "Full compliance monitoring";
         "Risk assessment";
-        "API access";
-      ]
-      popular: true;
-    }
-    {;
-      name: "Enterprise",price: "$1,999";
-      period: "/month",features: [;
-        "Unlimited documents";
+        "API access"
+]
+      popular: true
+},
+  {
+  name: "Enterprise",price: "$1,999";
+      period: "/month",features: [
+  "Unlimited documents";
         "Custom AI models";
         "Advanced analytics";
         "Dedicated support";
         "Custom integrations";
         "White-label options";
-        "SLA guarantees";
-      ]
-      popular: false;
-    }
+        "SLA guarantees"
+]
+      popular: false
+},
   ]
-  const benefits = [;
-    "Reduce legal review time by 85%";
+  const benefits = [
+  "Reduce legal review time by 85%";
     "Identify contract risks 3x faster";
     "Ensure 100% compliance accuracy";
     "Save $50,000+ annually on legal costs";
     "Improve contract negotiation outcomes";
-    "Streamline due diligence processes";
-  ]
+    "Streamline due diligence processes"
+]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -96,13 +96,17 @@ export default function AILegalDocumentAnalysis() {;
         description="Advanced AI platform for legal document analysis, contract review, and compliance monitoring. Reduce legal review time by 85% with intelligent automation.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Legal Document Analysis;
@@ -130,7 +134,8 @@ export default function AILegalDocumentAnalysis() {;
         </div>
       </section>
 
-      {{/* Key Benefits */}}
+      {{/* Key Benefits */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -143,12 +148,16 @@ export default function AILegalDocumentAnalysis() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300";"
               >
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
@@ -159,7 +168,8 @@ export default function AILegalDocumentAnalysis() {;
         </div>
       </section>
 
-      {{/* Features */}}
+      {{/* Features */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -172,16 +182,21 @@ export default function AILegalDocumentAnalysis() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 group";"
               >
                 <div className="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors duration-300">
-                  {{feature.icon}}
+                  {{feature.icon},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -191,7 +206,8 @@ export default function AILegalDocumentAnalysis() {;
         </div>
       </section>
 
-      {{/* Pricing */}}
+      {{/* Pricing */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -204,20 +220,24 @@ export default function AILegalDocumentAnalysis() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
-                  plan.popular ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+  plan.popular ;
                     ? 'border-blue-500 ring-2 ring-blue-500/20' ;
-                    : 'border-slate-700';
-                } hover:border-blue-500 transition-all duration-300`}
+                    : 'border-slate-700'
+} hover:border-blue-500 transition-all duration-300`}
               >
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -233,21 +253,22 @@ export default function AILegalDocumentAnalysis() {;
                 </div>
                 ;
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
                 ;
                 <a;
                   href="https://ziontechgroup.com/contact";
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
-                    plan.popular;
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+  plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';
-                  }`}
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+}`}
                 >
                   Get Started;
                 </a>
@@ -257,14 +278,18 @@ export default function AILegalDocumentAnalysis() {;
         </div>
       </section>
 
-      {{/* Market Information */}}
+      {{/* Market Information */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Legal Tech Solution;
@@ -302,9 +327,12 @@ export default function AILegalDocumentAnalysis() {;
             </motion.div>
             ;
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700";"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantages</h3>
@@ -331,13 +359,17 @@ export default function AILegalDocumentAnalysis() {;
         </div>
       </section>
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-blue-500/30";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -366,7 +398,8 @@ export default function AILegalDocumentAnalysis() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>

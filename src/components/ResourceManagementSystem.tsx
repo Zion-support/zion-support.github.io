@@ -46,7 +46,7 @@ interface Resource {
 }
 
 interface ResourceStats {
-  totalResources: number,availableResources: number,allocatedResources: number,maintenanceResources: number,totalCapacity: number,currentUtilization: number,averageCost: number,topDepartments: Array<{ name: string, count: number, percentage: number }>;
+  totalResources: number,availableResources: number,allocatedResources: number,maintenanceResources: number,totalCapacity: number,currentUtilization: number,averageCost: number,topDepartments: Array<{ name: string, count: number, percentage: number }>
 }
 
 interface ResourceManagementSystemProps {
@@ -68,9 +68,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
   const [selectedPriority, setSelectedPriority] = useState<string>('all'),
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid'),
+const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid'),
   const [showResourceForm, setShowResourceForm] = useState(false);
-  const [editingResource, setEditingResource] = useState<Resource | null>(null),
+const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
   // Sample resource data
   useEffect(() => {
@@ -95,27 +95,27 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {
         id: '5',name: 'DevOps Tools Suite',type: 'software',category: 'Development',status: 'allocated',priority: 'medium',capacity: 50,currentUsage: 45,location: 'Cloud Platform',department: 'Engineering',cost: 30000,lastUpdated: '2024-01-11',tags: ['DevOpsCI/CD', 'Automation'],
         description: 'Complete DevOps toolchain for continuous integration and deployment',manager: 'Alex Wong',utilization: 90
-      }
-    ];
+      },
+  ];
     setResources(sampleResources);
-    setFilteredResources(sampleResources);
-  }, []),
+    setFilteredResources(sampleResources)
+}, []),
 
   // Filter resources
   useEffect(() => {
     let filtered = resources,
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType);
-    }
+      filtered = filtered.filter(r => r.type === selectedType)
+}
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus);
-    }
+      filtered = filtered.filter(r => r.status === selectedStatus)
+}
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(r => r.priority === selectedPriority);
-    }
+      filtered = filtered.filter(r => r.priority === selectedPriority)
+}
 
     if (searchQuery) {
       filtered = filtered.filter(r =>
@@ -137,8 +137,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     topDepartments: (() => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1,
-        return acc;
-      }, {} as Record<string, number>),
+        return acc
+}, {} as Record<string, number>),
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
@@ -147,8 +147,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           percentage: (count / resources.length) * 100
         }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
-    })()
+        .slice(0, 5)
+})()
   },
 
   // Get status color and icon
@@ -163,8 +163,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'unavailable':
         return { color: 'text-red-400 bg-red-400/20', icon: <XCircle className="w-4 h-4" /> };
       default:
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
-    }
+        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> },
+  },
   },
 
   // Get type icon
@@ -176,7 +176,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'equipment': return <Briefcase className="w-5 h-5" />;
       case 'facility': return <Building className="w-5 h-5" />;
       default: return <Globe className="w-5 h-5" />
-    }
+    },
   };
   // Get priority color
   const getPriorityColor = (priority: string) => {
@@ -186,14 +186,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'high': return 'text-orange-400 bg-orange-400/20';
       case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
-    }
+    },
   };
   // Format currency
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',currency: 'USD',minimumFractionDigits: 0,maximumFractionDigits: 0
-    }).format(amount);
-  },
+    }).format(amount)
+},
 
   // Get utilization color
   const getUtilizationColor = (utilization: number) => {
@@ -217,8 +217,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             {[
               { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> };
               { id: 'list', label: 'List', icon: <BarChart3 className="w-4 h-4" /> };
-              { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> }
-            ].map((mode) => (
+              { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> },
+  ].map((mode) => (
               <button
                 key={mode.id}
                 onClick={() => setViewMode(mode.id as any)}
@@ -228,8 +228,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
               >
-                {mode.icon}
-                {mode.label}
+                {mode.icon},
+  {mode.label}
               </button>
             ))}
           </div>
@@ -245,12 +245,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         </div>
       </div>
 
-      {/* Stats Section */}
-      {showStats && (
+      {/* Stats Section */},
+  {showStats && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-white mb-2">{resourceStats.totalResources}</div>
@@ -258,9 +260,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: 0.1 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-green-400 mb-2">{resourceStats.availableResources}</div>
@@ -268,9 +273,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: 0.2 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-blue-400 mb-2">{resourceStats.allocatedResources}</div>
@@ -278,24 +286,29 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: 0.3 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.currentUtilization.toFixed(1)}%</div>
             <div className="text-zinc-400">Avg Utilization</div>
           </motion.div>
         </div>
-      )}
-
-      {/* Additional Stats */}
-      {showStats && (
+      )},
+  {/* Additional Stats */},
+  {showStats && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: 0.4 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Total Capacity</h3>
@@ -304,9 +317,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: 0.5 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Average Cost</h3>
@@ -315,9 +331,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: 0.6 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Maintenance</h3>
@@ -325,19 +344,21 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             <div className="text-zinc-400 text-sm">Resources under maintenance</div>
           </motion.div>
         </div>
-      )}
-
-      {/* Top Departments */}
-      {showStats && (
+      )},
+  {/* Top Departments */},
+  {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {resourceStats.topDepartments.map((dept, index) => (
               <motion.div
                 key={dept.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.9 },
+  }
+                animate={{ opacity: 1, scale: 1 },
+  }
+                transition={{ delay: index * 0.1 },
+  }
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
               >
                 <div className="text-2xl font-bold text-white mb-1">{dept.count}</div>
@@ -347,10 +368,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             ))}
           </div>
         </div>
-      )}
-
-      {/* Filters and Search */}
-      {showFilters && (
+      )},
+  {/* Filters and Search */},
+  {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Type Filter */}
           <select
@@ -404,16 +424,18 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             />
           </div>
         </div>
-      )}
-
-      {/* Resources Display */}
+      )},
+  {/* Resources Display */}
       <div className="space-y-6">
         {filteredResources.map((resource, index) => (
           <motion.div
             key={resource.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ delay: index * 0.1 },
+  }
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Resource Header */}
@@ -432,8 +454,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(resource.status).color}`}>
                     <div className="flex items-center gap-1">
-                      {getStatusDisplay(resource.status).icon}
-                      {resource.status.charAt(0).toUpperCase() + resource.status.slice(1)}
+                      {getStatusDisplay(resource.status).icon},
+  {resource.status.charAt(0).toUpperCase() + resource.status.slice(1)}
                     </div>
                   </span>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(resource.priority)}`}>
@@ -491,9 +513,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${resource.utilization}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
+                  initial={{ width: 0 },
+  }
+                  animate={{ width: `${resource.utilization}%` },
+  }
+                  transition={{ duration: 1, delay: index * 0.1 },
+  }
                   className={`h-2 rounded-full transition-all duration-300 ${
                     resource.utilization >= 90 ? 'bg-red-500' :
                     resource.utilization >= 75 ? 'bg-yellow-500' :
@@ -539,11 +564,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         ))}
       </div>
 
-      {/* No Results */}
-      {filteredResources.length === 0 && (
+      {/* No Results */},
+  {filteredResources.length === 0 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 },
+  }
+          animate={{ opacity: 1 },
+  }
           className="text-center py-12"
         >
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -560,5 +587,5 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         </motion.div>
       )}
     </div>
-  );
+  )
 };

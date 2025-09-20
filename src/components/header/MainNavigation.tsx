@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+const [isResourcesOpen, setIsResourcesOpen] = useState(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
@@ -160,5 +160,5 @@ export function MainNavigation({ className }) {
       <NavLink to="/signup" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground", "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1")}>
         Get Started
       </NavLink>
-    </nav>);
+    </nav>)
 }

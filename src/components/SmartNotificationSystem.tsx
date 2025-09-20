@@ -33,9 +33,9 @@ interface Props {
 export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]),
   const [isVisible, setIsVisible] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
-  const [showSettings, setShowSettings] = useState(false);
+const [isMuted, setIsMuted] = useState(false);
+const [unreadCount, setUnreadCount] = useState(0);
+const [showSettings, setShowSettings] = useState(false);
   // Generate sample notifications
   const generateSampleNotifications = useCallback(() => {
     const sampleNotifications: Notification[] = [
@@ -43,14 +43,14 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         id: '1',type: 'success',title: 'Welcome to Zion Tech Group!',message: 'Your account has been successfully created. Explore our AI-powered solutions.',timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
         read: false,priority: 'high',category: 'onboarding',action: {
           label: 'Get Started',onClick: () => console.log('Get Started clicked')
-        }
-      };
+        },
+  };
       {
         id: '2',type: 'achievement',title: 'Performance Milestone Reached!',message: 'Your website performance score has improved to 95%. Great job!',timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
         read: false,priority: 'medium',category: 'performance',action: {
           label: 'View Details',onClick: () => console.log('View Details clicked')
-        }
-      };
+        },
+  };
       {
         id: '3',type: 'info',title: 'New Feature Available',message: 'Try our new AI-powered content generator. Create engaging content in seconds.',timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
         read: true,priority: 'low',category: 'features'
@@ -59,9 +59,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         id: '4',type: 'warning',title: 'Security Update Required',message: 'Please update your password to maintain account security.',timestamp: new Date(Date.now() - 1000 * 60 * 60), // 1 hour ago
         read: false,priority: 'high',category: 'security',action: {
           label: 'Update Now',onClick: () => console.log('Update Now clicked')
-        }
-      }
-    ];
+        },
+  },
+  ];
     setNotifications(sampleNotifications);
     setUnreadCount(sampleNotifications.filter(n => !n.read).length),
   }, []),
@@ -69,8 +69,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   // Initialize with sample notifications
   useEffect(() => {
     if (enabled) {
-      generateSampleNotifications();
-    }
+      generateSampleNotifications()
+},
   }, [enabled, generateSampleNotifications]),
 
   // Auto-expire notifications
@@ -78,23 +78,23 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
     const interval = setInterval(() => {
       setNotifications(prev => {
         const now = new Date();
-        const filtered = prev.filter(notification => {
+const filtered = prev.filter(notification => {
           if (notification.expiresAt && notification.expiresAt < now) {
-            return false;
-          }
-          return true;
-        }),
+            return false
+}
+          return true
+}),
         
         if (filtered.length !== prev.length) {
           setUnreadCount(filtered.filter(n => !n.read).length),
         }
         
-        return filtered;
-      }),
+        return filtered
+}),
     }, 60000), // Check every minute
 
-    return () => clearInterval(interval);
-  }, []),
+    return () => clearInterval(interval)
+}, []),
 
   // Mark notification as read
   const markAsRead = useCallback((id: string) => {
@@ -103,8 +103,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         n.id === id ? { ...n, read: true } : n
       );
       setUnreadCount(updated.filter(n => !n.read).length),
-      return updated;
-    }),
+      return updated
+}),
   }, []),
 
   // Mark all as read
@@ -112,8 +112,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
     setNotifications(prev => {
       const updated = prev.map(n => ({ ...n, read: true }));
       setUnreadCount(0);
-      return updated;
-    }),
+      return updated
+}),
   }, []),
 
   // Remove notification
@@ -122,19 +122,19 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       const filtered = prev.filter(n => n.id !== id);
       setUnreadCount(filtered.filter(n => !n.read).length),
       return filtered
-    });
-  }, []),
+    })
+}, []),
 
   // Clear all notifications
   const clearAllNotifications = useCallback(() => {
     setNotifications([]);
-    setUnreadCount(0);
-  }, []),
+    setUnreadCount(0)
+}, []),
 
   // Toggle mute
   const toggleMute = useCallback(() => {
-    setIsMuted(!isMuted);
-  }, [isMuted]),
+    setIsMuted(!isMuted)
+}, [isMuted]),
 
   // Get notification icon
   const getNotificationIcon = (type: Notification['type']) => {
@@ -150,7 +150,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       case 'achievement':
         return <Award className="w-5 h-5 text-purple-500" />;
       default: return <Info className="w-5 h-5 text-gray-500" />
-    }
+    },
   };
   // Get priority color
   const getPriorityColor = (priority: Notification['priority']) => {
@@ -162,20 +162,20 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       case 'low':
         return 'border-l-blue-500';
       default: return 'border-l-gray-500'
-    }
+    },
   };
   // Format timestamp
   const formatTimestamp = (timestamp: Date) => {
     const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
-    const minutes = Math.floor(diff / (1000 * 60));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+const diff = now.getTime() - timestamp.getTime();
+const minutes = Math.floor(diff / (1000 * 60));
+const hours = Math.floor(diff / (1000 * 60 * 60));
+const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     if (minutes < 1) return 'Just now';
     if (minutes < 60) return `${minutes}m ago`;
     if (hours < 24) return `${hours}h ago`;
-    return `${days}d ago`;
-  },
+    return `${days}d ago`
+},
 
   if (!enabled) return null;
   if (!isVisible) {
@@ -183,31 +183,38 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       <motion.button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-56 right-4 z-50 p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 relative"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1 },
+  }
+        whileTap={{ scale: 0.9 },
+  }
         title="Notifications"
         aria-label="Open notifications"
       >
         <Bell className="w-6 h-6 text-white" />
         {unreadCount > 0 && (
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ scale: 0 },
+  }
+            animate={{ scale: 1 },
+  }
             className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
           >
             {unreadCount > 9 ? '9+' : unreadCount}
           </motion.div>
         )}
       </motion.button>
-    );
-  }
+    )
+}
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, x: 300 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 300 }}
+        initial={{ opacity: 0, x: 300 },
+  }
+        animate={{ opacity: 1, x: 0 },
+  }
+        exit={{ opacity: 0, x: 300 },
+  }
         className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden"
       >
         {/* Header */}
@@ -253,9 +260,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         <AnimatePresence>
           {showSettings && (
             <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
+              initial={{ height: 0, opacity: 0 },
+  }
+              animate={{ height: 'auto', opacity: 1 },
+  }
+              exit={{ height: 0, opacity: 0 },
+  }
               className="border-b border-gray-200 p-4 bg-gray-50"
             >
               <div className="space-y-3">
@@ -296,9 +306,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
               {notifications.map((notification) => (
                 <motion.div
                   key={notification.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 20 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  exit={{ opacity: 0, y: -20 },
+  }
                   className={`p-4 hover:bg-gray-50 transition-colors cursor-pointer border-l-4 ${getPriorityColor(notification.priority)} ${
                     !notification.read ? 'bg-blue-50/50' : ''
                   }`}
@@ -323,8 +336,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                notification.action!.onClick();
-                              }}
+                                notification.action!.onClick()
+},
+  }
                               className="mt-2 text-xs text-blue-600 hover: text-blue-800 font-medium transition-colors"
                             >
                               {notification.action.label} →
@@ -340,8 +354,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              removeNotification(notification.id);
-                            }}
+                              removeNotification(notification.id)
+},
+  }
                             className="p-1 text-gray-400 hover:text-red-500 transition-colors"
                             title="Remove notification"
                           >
@@ -364,8 +379,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
           )}
         </div>
 
-        {/* Footer */}
-        {notifications.length > 0 && (
+        {/* Footer */},
+  {notifications.length > 0 && (
           <div className="p-3 border-t border-gray-200 bg-gray-50">
             <div className="flex items-center justify-between text-xs text-gray-500">
               <span>{notifications.length} notification{notifications.length !== 1 ? 's' : ''}</span>
@@ -375,5 +390,5 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         )}
       </motion.div>
     </AnimatePresence>
-  );
+  )
 }

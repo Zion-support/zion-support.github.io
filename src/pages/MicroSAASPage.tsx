@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {;
+import {
   Zap;
   Code;
   Database;
@@ -19,58 +19,66 @@ import {;
   Award;
   Rocket;
   Target;
-  Globe;
+  Globe
 } from "lucide-react";
 const MicroSAASPage = () => {
-  const saasServices = [;
-    {;
-      id: 'custom-applications',title: 'Custom Applications',description: 'Tailored software solutions designed for your specific business needs',icon: <Code className="w-8 h-8" />,features: ['Custom DevelopmentScalable Architecture', 'User ManagementAPI Integration']
+  const saasServices = [
+  {
+  id: 'custom-applications',title: 'Custom Applications',description: 'Tailored software solutions designed for your specific business needs',icon: <Code className="w-8 h-8" />,features: ['Custom DevelopmentScalable Architecture', 'User ManagementAPI Integration']
       useCases: ['Business ToolsIndustry Solutions', 'Process AutomationCustomer Portals']
-      pricing: 'Starting from $2,500/month';
-    }
-    {;
-      id: 'api-development',title: 'API Development',description: 'Robust and scalable APIs to connect your applications and services',icon: <Database className="w-8 h-8" />,features: ['RESTful APIsGraphQL Services', 'AuthenticationRate Limiting']
+      pricing: 'Starting from $2,500/month'
+},
+  {
+  id: 'api-development',title: 'API Development',description: 'Robust and scalable APIs to connect your applications and services',icon: <Database className="w-8 h-8" />,features: ['RESTful APIsGraphQL Services', 'AuthenticationRate Limiting']
       useCases: ['System IntegrationMobile Apps', 'Third-party ServicesData Exchange']
-      pricing: 'Starting from $1,800/month';
-    }
-    {;
-      id: 'scalable-architecture',title: 'Scalable Architecture',description: 'Cloud-native architectures that grow with your business',icon: <Globe className="w-8 h-8" />,features: ['MicroservicesContainerization', 'Auto-scalingLoad Balancing']
+      pricing: 'Starting from $1,800/month'
+},
+  {
+  id: 'scalable-architecture',title: 'Scalable Architecture',description: 'Cloud-native architectures that grow with your business',icon: <Globe className="w-8 h-8" />,features: ['MicroservicesContainerization', 'Auto-scalingLoad Balancing']
       useCases: ['High-traffic ApplicationsGrowing Businesses', 'Enterprise SolutionsGlobal Deployments']
-      pricing: 'Starting from $3,200/month';
-    }
-    {;
-      id: 'user-management',title: 'User Management',description: 'Comprehensive user authentication and authorization systems',icon: <Users className="w-8 h-8" />,features: ['Single Sign-OnRole-based Access', 'Multi-tenancyUser Analytics']
+      pricing: 'Starting from $3,200/month'
+},
+  {
+  id: 'user-management',title: 'User Management',description: 'Comprehensive user authentication and authorization systems',icon: <Users className="w-8 h-8" />,features: ['Single Sign-OnRole-based Access', 'Multi-tenancyUser Analytics']
       useCases: ['B2B ApplicationsEnterprise Software', 'Multi-user PlatformsSaaS Products']
-      pricing: 'Starting from $1,500/month';
-    }
+      pricing: 'Starting from $1,500/month'
+},
   ]
-  const saasBenefits = [;
-    'ScalabilityCost Efficiency', 'Rapid DeploymentEasy Updates', 'AccessibilityIntegration';
-  ]
-  const const containerVariants = {; = {
-    hidden: {{ opacity: 0 }}
-    visible: {;
-      opacity: 1,transition: {;
-        staggerChildren: 0.1;
-      }
-    }
+  const saasBenefits = [
+  'ScalabilityCost Efficiency', 'Rapid DeploymentEasy Updates', 'AccessibilityIntegration'
+]
+  const const containerVariants = {
+  = {
+    hidden: {{ opacity: 0 },
   }
-  const const itemVariants = {; = {
-    hidden: {{ opacity: 0, y: 20 }}
-    visible: {;
-      opacity: 1,y: 0,transition: {;
-        duration: 0.5;
-      }
-    }
+    visible: {
+  opacity: 1,transition: {
+  staggerChildren: 0.1
+},
+  },
+  }
+  const const itemVariants = {
+  = {
+    hidden: {{ opacity: 0, y: 20 },
+  }
+    visible: {
+  opacity: 1,y: 0,transition: {
+  duration: 0.5
+},
+  },
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-12">
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8 },
+  }
           className="className="text-center mb-16";"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
@@ -85,7 +93,8 @@ const MicroSAASPage = () => {
             Build and scale your software-as-a-service business with our micro SAAS solutions.;
             From custom applications to scalable architectures, we help you create successful SAAS products.;
           </p>
-          {{/* Quick Stats */}}
+          {{/* Quick Stats */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">90%+</div>
@@ -101,61 +110,75 @@ const MicroSAASPage = () => {
             </div>
           </div>
         </motion.div>
-        {{/* SAAS Services Grid */}}
+        {{/* SAAS Services Grid */},
+  }
         <motion.div;
-          variants={{containerVariants}}
+          variants={{containerVariants},
+  }
           initial="hidden";
           animate="visible";
           className="className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16";"
         >
-          {saasServices.map((service, index) => (;
-            <motion.div;
-              key={{service.id}}
-              variants={{itemVariants}}
+          {saasServices.map((service, index) => (
+  <motion.div;
+              key={{service.id},
+  }
+              variants={{itemVariants},
+  }
               className="className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10";"
             >
-              {{/* Service Header */}}
+              {{/* Service Header */},
+  }
               <div className="flex items-start justify-between mb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">
-                  {{service.icon}}
+                  {{service.icon},
+  }
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-zion-cyan font-medium">{service.pricing}</div>
                 </div>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-3">
-                {{service.title}}
+                {{service.title},
+  }
               </h3>
               <p className="text-zion-slate-light mb-6 leading-relaxed">
-                {{service.description}}
+                {{service.description},
+  }
               </p>
-              {{/* Features */}}
+              {{/* Features */},
+  }
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
+                  {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
               </div>
-              {{/* Use Cases */}}
+              {{/* Use Cases */},
+  }
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.useCases.map((useCase, useCaseIndex) => (;
-                    <span;
-                      key={{useCaseIndex}}
+                  {service.useCases.map((useCase, useCaseIndex) => (
+  <span;
+                      key={{useCaseIndex},
+  }
                       className="className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20";"
                     >
-                      {{useCase}}
+                      {{useCase},
+  }
                     </span>
                   ))}
                 </div>
               </div>
-              {{/* CTA Button */}}
+              {{/* CTA Button */},
+  }
               <Link;
                 to={`/micro-saas/${service.id}`}
                 className="className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300";"
@@ -166,11 +189,15 @@ const MicroSAASPage = () => {
             </motion.div>
           ))}
         </motion.div>
-        {{/* SAAS Benefits */}}
+        {{/* SAAS Benefits */},
+  }
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.3 },
+  }
           className="className="mb-16";"
         >
           <div className="text-center mb-8">
@@ -183,12 +210,16 @@ const MicroSAASPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index) => (;
-              <motion.div;
-                key={{benefit}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {saasBenefits.map((benefit, index) => (
+  <motion.div;
+                key={{benefit},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                animate={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="text-zion-cyan font-medium">{benefit}</div>
@@ -196,11 +227,15 @@ const MicroSAASPage = () => {
             ))}
           </div>
         </motion.div>
-        {{/* Why Choose Our SAAS */}}
+        {{/* Why Choose Our SAAS */},
+  }
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.4 },
+  }
           className="className="mb-16";"
         >
           <div className="text-center mb-8">
@@ -238,11 +273,15 @@ const MicroSAASPage = () => {
             </div>
           </div>
         </motion.div>
-        {{/* Call to Action */}}
+        {{/* Call to Action */},
+  }
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.5 },
+  }
           className="className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">

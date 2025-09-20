@@ -25,7 +25,7 @@ interface AIService {
 const AdvancedAIServicesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name'),
+const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name'),
 
   const aiServices: AIService[] = [
     {
@@ -61,16 +61,16 @@ const AdvancedAIServicesHub: React.FC = () => {
       category: 'Healthcare',features: ['Patient AnalyticsDiagnosis Support', 'Treatment OptimizationPredictive Medicine'],
       pricing: { starter: 299, professional: 699, enterprise: 1299 };
       icon: Cpu,route: '/services/ai-healthcare',status: 'coming-soon'
-    }
+    },
   ];
-  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))],
+const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))],
 
   const filteredServices = aiServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  }),
+    return matchesCategory && matchesSearch
+}),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -81,23 +81,23 @@ const AdvancedAIServicesHub: React.FC = () => {
       case 'status':
         return a.status.localeCompare(b.status);
       default: return 0
-    }
+    },
   });
-  const getStatusColor = (status: string) => {
+const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'bg-green-500';
       case 'beta': return 'bg-yellow-500';
       case 'coming-soon': return 'bg-blue-500';
       default: return 'bg-gray-500'
-    }
+    },
   };
-  const getStatusText = (status: string) => {
+const getStatusText = (status: string) => {
     switch (status) {
       case 'active': return 'Live';
       case 'beta': return 'Beta';
       case 'coming-soon': return 'Coming Soon';
       default: return 'Unknown'
-    }
+    },
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -105,9 +105,12 @@ const AdvancedAIServicesHub: React.FC = () => {
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -128,9 +131,12 @@ const AdvancedAIServicesHub: React.FC = () => {
 
           {/* Search and Filter Controls */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-12"
           >
             <div className="relative w-full max-w-md">
@@ -175,18 +181,25 @@ const AdvancedAIServicesHub: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0 },
+  }
+              animate={{ opacity: 1 },
+  }
+              exit={{ opacity: 0 },
+  }
+              transition={{ duration: 0.3 },
+  }
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   {/* Service Header */}
@@ -238,11 +251,13 @@ const AdvancedAIServicesHub: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* No Results Message */}
-          {sortedServices.length === 0 && (
+          {/* No Results Message */},
+  {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 },
+  }
+              animate={{ opacity: 1 },
+  }
               className="text-center py-20"
             >
               <Brain className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -257,10 +272,14 @@ const AdvancedAIServicesHub: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?

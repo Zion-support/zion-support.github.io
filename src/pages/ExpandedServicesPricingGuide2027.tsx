@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {;
+import {
   Search;
   Filter;
   Grid3X3;
@@ -59,12 +59,12 @@ import {;
   ChevronRight;
   Info;
   AlertTriangle;
-  Zap;
+  Zap
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import {;
+import {
   ALL_EXPANDED_SERVICES_PRICING;
-  type ExpandedServicePricing;
+  type ExpandedServicePricing
 } from "@/data/expandedServicesPricing2027";
 const ExpandedServicesPricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -72,14 +72,17 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING)
 
-  const categories = [['AllCybersecurity', 'Data AnalyticsCloud & DevOps', 'IoT & Edge ComputingFinancial Technology', 'Healthcare Technology'];]
+  const categories = [['AllCybersecurity', 'Data AnalyticsCloud & DevOps', 'IoT & Edge ComputingFinancial Technology', 'Healthcare Technology'],
+  ]
 
   useEffect(() => {
     let pricing = ALL_EXPANDED_SERVICES_PRICING;
-    if (if (selectedCategory !== 'All') {;) {
+    if (if (selectedCategory !== 'All') {
+  ) {
       pricing = pricing.filter(p => p.category === selectedCategory)
     }
-    if (if (searchQuery) {;) {
+    if (if (searchQuery) {
+  ) {
       pricing = pricing.filter(p =>
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -89,9 +92,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     setFilteredPricing(pricing)
   }, [selectedCategory, searchQuery])
 
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'Cybersecurity':;
+  const getCategoryIcon = (category: string) => {
+  switch (category) {
+  case 'Cybersecurity':;
         return Shield;
       case 'Data Analytics':;
         return BarChart3;
@@ -103,12 +106,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         return FinTech;
       case 'Healthcare Technology':;
         return Healthcare;
-      default: return Rocket;
-    }
+      default: return Rocket
+},
   }
-  const getCategoryColor = (category: string) => {;
-    switch (category) {;
-      case 'Cybersecurity':;
+  const getCategoryColor = (category: string) => {
+  switch (category) {
+  case 'Cybersecurity':;
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':;
         return 'from-blue-500 to-cyan-600';
@@ -120,12 +123,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         return 'from-yellow-500 to-orange-600';
       case 'Healthcare Technology':;
         return 'from-teal-500 to-blue-600';
-      default: return 'from-gray-500 to-slate-600';
-    }
+      default: return 'from-gray-500 to-slate-600'
+},
   }
-  const getMarketPositionColor = (position: string) => {;
-    switch (position) {;
-      case 'leader':;
+  const getMarketPositionColor = (position: string) => {
+  switch (position) {
+  case 'leader':;
         return 'bg-green-100 text-green-800';
       case 'challenger':;
         return 'bg-blue-100 text-blue-800';
@@ -133,22 +136,27 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         return 'bg-purple-100 text-purple-800';
       case 'emerging':;
         return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+      default: return 'bg-gray-100 text-gray-800'
+},
   }
-  const renderPricingCard = (pricing: ExpandedServicePricing) => {;
-    const CategoryIcon = getCategoryIcon(pricing.category)
+  const renderPricingCard = (pricing: ExpandedServicePricing) => {
+  const CategoryIcon = getCategoryIcon(pricing.category)
     const categoryColor = getCategoryColor(pricing.category)
 
     return (
       <motion.div;
-        key={{pricing.serviceId}}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        key={{pricing.serviceId},
+  }
+        initial={{ opacity: 0, y: 20 },
+  }
+        animate={{ opacity: 1, y: 0 },
+  }
+        transition={{ duration: 0.5 },
+  }
         className="className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden";"
       >
-        {{/* Header */}}
+        {{/* Header */},
+  }
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-3">
@@ -159,39 +167,47 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               </div>
             </div>
             <span className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm font-semibold">
-              {{pricing.subcategory}}
+              {{pricing.subcategory},
+  }
             </span>
           </div>
         </div>
 
-        {{/* Content */}}
+        {{/* Content */},
+  }
         <div className="p-6">
-          {{/* Pricing Tiers */}}
+          {{/* Pricing Tiers */},
+  }
           <div className="mb-6">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Pricing Tiers</h4>
             <div className="space-y-4">
-              {{/* Starter */}}
+              {{/* Starter */},
+  }
               <div className="border border-gray-200 dark:border-slate-600 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h5 className="font-semibold text-gray-900 dark:text-white">Starter</h5>
                   <span className="text-2xl font-bold text-blue-600">
-                    ${{pricing.pricingTiers.starter.price.toLocaleString()}}
+                    ${{pricing.pricingTiers.starter.price.toLocaleString()},
+  }
                     <span className="text-sm text-gray-500">/month</span>
                   </span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                  Setup fee: ${{pricing.pricingTiers.starter.setupFee.toLocaleString()}}
+                  Setup fee: ${{pricing.pricingTiers.starter.setupFee.toLocaleString()},
+  }
                 </p>
                 <div className="space-y-2">
-                  {pricing.pricingTiers.starter.features.slice(0, 3).map((feature, index) => (;
-                    <div key={index} className="flex items-center space-x-2">
+                  {pricing.pricingTiers.starter.features.slice(0, 3).map((feature, index) => (
+  <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </div>
-                  ))}
-                  {pricing.pricingTiers.starter.features.length > 3 && (;
-                    <button;
-                      onClick={{onClick={() => setExpandedService(expandedService === pricing.serviceId + '-starter' ? null : pricing.serviceId + '-starter')}}}
+                  ))},
+  {pricing.pricingTiers.starter.features.length > 3 && (
+  <button;
+                      onClick={{onClick={() => setExpandedService(expandedService === pricing.serviceId + '-starter' ? null : pricing.serviceId + '-starter')},
+  },
+  }
                       className="className="text-sm text-blue-600 dark:text-blue-400 hover:underline";"
                     >
                       {expandedService === pricing.serviceId + '-starter' ? 'Show less' : `+${pricing.pricingTiers.starter.features.length - 3} more features`}
@@ -200,16 +216,19 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 </div>
 
                 <AnimatePresence>
-                  {expandedService === pricing.serviceId + '-starter' && (;
-                    <motion.div;
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                  {expandedService === pricing.serviceId + '-starter' && (
+  <motion.div;
+                      initial={{ opacity: 0, height: 0 },
+  }
+                      animate={{ opacity: 1, height: 'auto' },
+  }
+                      exit={{ opacity: 0, height: 0 },
+  }
                       className="className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600";"
                     >
                       <div className="space-y-2">
-                        {pricing.pricingTiers.starter.features.slice(3).map((feature, index) => (;
-                          <div key={index} className="flex items-center space-x-2">
+                        {pricing.pricingTiers.starter.features.slice(3).map((feature, index) => (
+  <div key={index} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-500" />
                             <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                           </div>
@@ -220,7 +239,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 </AnimatePresence>
               </div>
 
-              {{/* Professional */}}
+              {{/* Professional */},
+  }
               <div className="border-2 border-blue-500 rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center space-x-2">
@@ -228,23 +248,27 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                     <span className="px-2 py-1 bg-blue-500 text-white text-xs rounded-full">Popular</span>
                   </div>
                   <span className="text-2xl font-bold text-blue-600">
-                    ${{pricing.pricingTiers.professional.price.toLocaleString()}}
+                    ${{pricing.pricingTiers.professional.price.toLocaleString()},
+  }
                     <span className="text-sm text-gray-500">/month</span>
                   </span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                  Setup fee: ${{pricing.pricingTiers.professional.setupFee.toLocaleString()}}
+                  Setup fee: ${{pricing.pricingTiers.professional.setupFee.toLocaleString()},
+  }
                 </p>
                 <div className="space-y-2">
-                  {pricing.pricingTiers.professional.features.slice(0, 3).map((feature, index) => (;
-                    <div key={index} className="flex items-center space-x-2">
+                  {pricing.pricingTiers.professional.features.slice(0, 3).map((feature, index) => (
+  <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </div>
-                  ))}
-                  {pricing.pricingTiers.professional.features.length > 3 && (;
-                    <button;
-                      onClick={{onClick={() => setExpandedService(expandedService === pricing.serviceId + '-professional' ? null : pricing.serviceId + '-professional')}}}
+                  ))},
+  {pricing.pricingTiers.professional.features.length > 3 && (
+  <button;
+                      onClick={{onClick={() => setExpandedService(expandedService === pricing.serviceId + '-professional' ? null : pricing.serviceId + '-professional')},
+  },
+  }
                       className="className="text-sm text-blue-600 dark:text-blue-400 hover:underline";"
                     >
                       {expandedService === pricing.serviceId + '-professional' ? 'Show less' : `+${pricing.pricingTiers.professional.features.length - 3} more features`}
@@ -253,16 +277,19 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 </div>
 
                 <AnimatePresence>
-                  {expandedService === pricing.serviceId + '-professional' && (;
-                    <motion.div;
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                  {expandedService === pricing.serviceId + '-professional' && (
+  <motion.div;
+                      initial={{ opacity: 0, height: 0 },
+  }
+                      animate={{ opacity: 1, height: 'auto' },
+  }
+                      exit={{ opacity: 0, height: 0 },
+  }
                       className="className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-700";"
                     >
                       <div className="space-y-2">
-                        {pricing.pricingTiers.professional.features.slice(3).map((feature, index) => (;
-                          <div key={index} className="flex items-center space-x-2">
+                        {pricing.pricingTiers.professional.features.slice(3).map((feature, index) => (
+  <div key={index} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-500" />
                             <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                           </div>
@@ -273,28 +300,33 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 </AnimatePresence>
               </div>
 
-              {{/* Enterprise */}}
+              {{/* Enterprise */},
+  }
               <div className="border border-gray-200 dark:border-slate-600 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h5 className="font-semibold text-gray-900 dark:text-white">Enterprise</h5>
                   <span className="text-2xl font-bold text-blue-600">
-                    ${{pricing.pricingTiers.enterprise.price.toLocaleString()}}
+                    ${{pricing.pricingTiers.enterprise.price.toLocaleString()},
+  }
                     <span className="text-sm text-gray-500">/month</span>
                   </span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                  Setup fee: ${{pricing.pricingTiers.enterprise.setupFee.toLocaleString()}}
+                  Setup fee: ${{pricing.pricingTiers.enterprise.setupFee.toLocaleString()},
+  }
                 </p>
                 <div className="space-y-2">
-                  {pricing.pricingTiers.enterprise.features.slice(0, 3).map((feature, index) => (;
-                    <div key={index} className="flex items-center space-x-2">
+                  {pricing.pricingTiers.enterprise.features.slice(0, 3).map((feature, index) => (
+  <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </div>
-                  ))}
-                  {pricing.pricingTiers.enterprise.features.length > 3 && (;
-                    <button;
-                      onClick={{onClick={() => setExpandedService(expandedService === pricing.serviceId + '-enterprise' ? null : pricing.serviceId + '-enterprise')}}}
+                  ))},
+  {pricing.pricingTiers.enterprise.features.length > 3 && (
+  <button;
+                      onClick={{onClick={() => setExpandedService(expandedService === pricing.serviceId + '-enterprise' ? null : pricing.serviceId + '-enterprise')},
+  },
+  }
                       className="className="text-sm text-blue-600 dark:text-blue-400 hover:underline";"
                     >
                       {expandedService === pricing.serviceId + '-enterprise' ? 'Show less' : `+${pricing.pricingTiers.enterprise.features.length - 3} more features`}
@@ -303,16 +335,19 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 </div>
 
                 <AnimatePresence>
-                  {expandedService === pricing.serviceId + '-enterprise' && (;
-                    <motion.div;
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                  {expandedService === pricing.serviceId + '-enterprise' && (
+  <motion.div;
+                      initial={{ opacity: 0, height: 0 },
+  }
+                      animate={{ opacity: 1, height: 'auto' },
+  }
+                      exit={{ opacity: 0, height: 0 },
+  }
                       className="className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600";"
                     >
                       <div className="space-y-2">
-                        {pricing.pricingTiers.enterprise.features.slice(3).map((feature, index) => (;
-                          <div key={index} className="flex items-center space-x-2">
+                        {pricing.pricingTiers.enterprise.features.slice(3).map((feature, index) => (
+  <div key={index} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-500" />
                             <span className="text-sm text-gray-600 dark: text-gray-300">{feature}</span>
                           </div>
@@ -325,28 +360,34 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             </div>
           </div>
 
-          {{/* Market Comparison */}}
+          {{/* Market Comparison */},
+  }
           <div className="mb-6">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Market Position</h4>
             <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-4">
               <div className="flex items-center justify-between mb-2">
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getMarketPositionColor(pricing.marketComparison.marketPosition)}`}>
-                  {{pricing.marketComparison.marketPosition.toUpperCase()}}
+                  {{pricing.marketComparison.marketPosition.toUpperCase()},
+  }
                 </span>
                 <span className="text-sm text-gray-600 dark:text-gray-300">
-                  vs {{pricing.marketComparison.competitors.join()}}
+                  vs {{pricing.marketComparison.competitors.join()},
+  }
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                <strong>Price Advantage:</strong> {{pricing.marketComparison.priceAdvantage}}
+                <strong>Price Advantage:</strong> {{pricing.marketComparison.priceAdvantage},
+  }
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                <strong>Value Proposition:</strong> {{pricing.marketComparison.valueProposition}}
+                <strong>Value Proposition:</strong> {{pricing.marketComparison.valueProposition},
+  }
               </p>
             </div>
           </div>
 
-          {{/* ROI Analysis */}}
+          {{/* ROI Analysis */},
+  }
           <div className="mb-6">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">ROI Analysis</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -369,7 +410,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             </div>
           </div>
 
-          {{/* Implementation Details */}}
+          {{/* Implementation Details */},
+  }
           <div className="mb-6">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Implementation</h4>
             <div className="grid grid-cols-2 gap-4 text-sm">
@@ -383,12 +425,13 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               </div>
               <div>
                 <p className="text-gray-500 dark:text-gray-400">Complexity</p>
-                <span className={`px-2 py-1 rounded-full text-xs font-semibold ${;
-                  pricing.implementation.integrationComplexity === 'low' ? 'bg-green-100 text-green-800' :;
+                <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+  pricing.implementation.integrationComplexity === 'low' ? 'bg-green-100 text-green-800' :;
                   pricing.implementation.integrationComplexity === 'medium' ? 'bg-yellow-100 text-yellow-800' :;
-                  'bg-red-100 text-red-800';
-                }`}>
-                  {{pricing.implementation.integrationComplexity.toUpperCase()}}
+                  'bg-red-100 text-red-800'
+}`}>
+                  {{pricing.implementation.integrationComplexity.toUpperCase()},
+  }
                 </span>
               </div>
               <div>
@@ -398,7 +441,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             </div>
           </div>
 
-          {{/* Contact and Actions */}}
+          {{/* Contact and Actions */},
+  }
           <div className="border-t border-gray-200 dark:border-slate-700 pt-4">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
@@ -416,7 +460,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 <span>Get Pricing</span>
               </a>
               <a;
-                href={{pricing.contactInfo.website}}
+                href={{pricing.contactInfo.website},
+  }
                 target="_blank";
                 rel="noopener noreferrer";
                 className="className="flex-1 bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2";"
@@ -438,14 +483,18 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6";"
             >
               Expanded Services;
@@ -454,20 +503,27 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.2 },
+  }
               className="className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto";"
             >
               Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services.;
               Find the perfect pricing tier for your business needs.;
             </motion.p>
 
-            {{/* Contact Info */}}
+            {{/* Contact Info */},
+  }
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.4 },
+  }
               className="className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block";"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -499,35 +555,44 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         </div>
       </div>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {{/* Filters and Search */}}
+        {{/* Filters and Search */},
+  }
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
-            {{/* Search */}}
+            {{/* Search */},
+  }
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search pricing...";
-                  value={{searchQuery}}
-                  onChange={{(e) => setSearchQuery(e.target.value)}}
+                  value={{searchQuery},
+  }
+                  onChange={{(e) => setSearchQuery(e.target.value)},
+  }
                   className="className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white";"
                 />
               </div>
             </div>
 
-            {{/* Category Filter */}}
+            {{/* Category Filter */},
+  }
             <div className="flex items-center space-x-4">
               <select;
-                value={{selectedCategory}}
-                onChange={{(e) => setSelectedCategory(e.target.value)}}
+                value={{selectedCategory},
+  }
+                onChange={{(e) => setSelectedCategory(e.target.value)},
+  }
                 className="className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white";"
               >
-                {categories.map((category) => (;
-                  <option key={category} value={category}>
-                    {{category}}
+                {categories.map((category) => (
+  <option key={category} value={category}>
+                    {{category},
+  }
                   </option>
                 ))}
               </select>
@@ -535,20 +600,23 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
           </div>
         </div>
 
-        {{/* Pricing Count */}}
+        {{/* Pricing Count */},
+  }
         <div className="mb-8">
           <p className="text-gray-600 dark:text-gray-300">
             Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans;
           </p>
         </div>
 
-        {{/* Pricing Grid */}}
-        {filteredPricing.length > 0 ? (;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {{filteredPricing.map((pricing) => renderPricingCard(pricing))}}
+        {{/* Pricing Grid */},
+  },
+  {filteredPricing.length > 0 ? (
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {{filteredPricing.map((pricing) => renderPricingCard(pricing))},
+  }
           </div>
-        ) : (;
-          <div className="text-center py-16">
+        ) : (
+  <div className="text-center py-16">
             <div className="text-gray-400 dark:text-gray-500 mb-4">
               <Search className="w-16 h-16 mx-auto" />
             </div>
@@ -560,7 +628,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         )}
       </div>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

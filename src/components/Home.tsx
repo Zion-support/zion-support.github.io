@@ -1,20 +1,18 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [hoveredService, setHoveredService] = useState<number | null>(null);
-
-  const handleScroll = useCallback(() => {
-    setScrollY(window.scrollY);
-  }, []);
+const [scrollY, setScrollY] = useState(0);
+const [hoveredService, setHoveredService] = useState<number | null>(null);
+const handleScroll = useCallback(() => {
+    setScrollY(window.scrollY)
+}, []);
 
   useEffect(() => {
     setIsLoaded(true);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  const services = useMemo(() => [
+    return () => window.removeEventListener('scroll', handleScroll)
+}, [handleScroll]);
+const services = useMemo(() => [
     {
       title: "AI Services",
       description: "Cutting-edge artificial intelligence solutions for your business needs.",
@@ -62,7 +60,7 @@ const Home: React.FC = () => {
       features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
       gradient: "from-sky-500 to-blue-500",
       price: "Starting at $15,000/month"
-    }
+    },
   ], []);
 
   return (
@@ -83,7 +81,8 @@ const Home: React.FC = () => {
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
-              }}
+              },
+  }
             />
           ))}
         </div>
@@ -209,8 +208,8 @@ const Home: React.FC = () => {
                       date: "September 15, 2025",
                       excerpt: "Our research team achieves 99.9% quantum error correction, paving the way for practical quantum applications.",
                       category: "Research"
-                    }
-                  ].map((news, index) => (
+                    },
+  ].map((news, index) => (
                     <div
                       key={index}
                       className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
@@ -260,8 +259,8 @@ const Home: React.FC = () => {
                       role: "VP Engineering, SpaceTech",
                       content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
                       rating: 5
-                    }
-                  ].map((testimonial, index) => (
+                    },
+  ].map((testimonial, index) => (
                     <div
                       key={index}
                       className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"

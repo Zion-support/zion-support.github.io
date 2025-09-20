@@ -8,7 +8,8 @@ const AuthRoutes = () => {
       <Route path="/login" element={<Login />}/>
       <Route path="/signup" element={<Signup />}/>
 
-      {{/* Protected routes that require authentication */}}
+      {{/* Protected routes that require authentication */},
+  }
       <Route path="/profile" element={<ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>}/>
