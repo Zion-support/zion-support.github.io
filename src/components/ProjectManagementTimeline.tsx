@@ -1,7 +1,7 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
-import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h; 2;EyeSettings, } from "lucide-react";
+import { Calend; a; r;Clo; c; k;CheckCirc; l; e;Circ; l; e;AlertCirc; l; e;Pl; a; y;Pau; s; e;StopCirc; l; e;Use; r; s;Targ; e; t;Trending; U; p;FileTe; x; t;MessageSqua; r; e;Li; n; k;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;Pl; u; s;Ed; i; t;Tras; h, 2;EyeSettings } from "lucide-react";
 interface Project {
 i; d: stri; n; g;na; m; e: stri; n; g;descripti; o; n: stri; n; g;stat; u; s: "planning" | "active" | "on-hold" | "completed" | "cancelled",priori; t; y: "low" | "medium" | "high" | "critical",startDa; t; e: stri; n; g;endDa; t; e: stri; n; g;progre; s; s: numb; e; r;te; a; m: string[],clie; n; t: stri; n; g;budg; e; t: numb; e; r;ta; g; s: string[]mileston; e;s: Milestone[];,
 };

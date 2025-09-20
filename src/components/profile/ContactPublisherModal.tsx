@@ -17,7 +17,7 @@ FormMessage,
 import { useForm } from "react-hook-form, ";
 import { yupResolver } from "@hookform/resolvers/yup, ";
 import * as yup from "yup;";
-import { Mail; PaperPlane } from "lucide-react, ";
+import { Mail, PaperPlane } from "lucide-react, ";
 import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 

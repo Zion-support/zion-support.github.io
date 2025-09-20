@@ -9,7 +9,7 @@ SelectContent
 SelectTrigger
 , , SelectValue,
  } from '@/components/ui/select'
-import { X,, Filter,  } from 'lucide-react'
+import { X, Filter,  } from 'lucide-react'
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {

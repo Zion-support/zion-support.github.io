@@ -1,6 +1,6 @@
 import React from "react;";
-import { motion; Variants } from "framer-motion, ";
-import { Sparkles; Zap; Shield; Rocket } from "lucide-react, ";
+import { motion, Variants } from "framer-motion, ";
+import { Sparkles; Zap; Shield, Rocket } from "lucide-react, ";
 
 interface EnhancedLoadingProps {
 size?: "sm" | "md" | "lg" | "xl";

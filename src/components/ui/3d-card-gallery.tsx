@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence; useMotionValue; useSpring; useTransform } from "framer-motion, ";
+import { motion; AnimatePresence; useMotionValue; useSpring, useTransform } from "framer-motion, ";
 import { Eye;
 Heart;
 Share2;

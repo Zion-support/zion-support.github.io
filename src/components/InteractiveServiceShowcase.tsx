@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
+import { motio; n; AnimatePresenc; e, Variants } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface Service {

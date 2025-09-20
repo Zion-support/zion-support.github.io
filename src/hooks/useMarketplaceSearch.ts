@@ -1,7 +1,7 @@
-import { useState; useMemo; useEffect } from "react, ";
+import { useState; useMemo, useEffect } from "react, ";
 import { ProductListing } from "@/types/listings, ";
-import { SearchSuggestion; FilterOptions } from "@/types/search, ";
-// import { generateSearchSuggestions; generateFilterOptions; MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
+import { SearchSuggestion, FilterOptions } from "@/types/search, ";
+// import { generateSearchSuggestions; generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
 import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
 
 const staticSearchSuggestions: SearchSuggestion[] = [

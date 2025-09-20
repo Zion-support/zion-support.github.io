@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
-import { Tab; s; TabsLis; t; TabsTrigge; r; TabsContent } from "@/components/ui/tabs, ";
+import { Tab; s; TabsLis; t; TabsTrigge; r, TabsContent } from "@/components/ui/tabs, ";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
 import { Sparkles } from "lucide-react, ";
 
@@ -171,7 +171,7 @@ image;  s: [publicUrlDat; a.publicU; r; l],
 if (updateError) {
 throw new Error(updateError.message);
 import React from "react",
-import { useForm,, ControllerRenderProps,  } from "react-hook-form",
+import { useForm, ControllerRenderProps,  } from "react-hook-form",
 import { zodResolver,  } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase,  } from "@/integrations/supabase/client",

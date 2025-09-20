@@ -48,9 +48,9 @@ View all posts →;
 );
 }
 import Link from "next/link";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calenda; r; Cloc; k; ArrowRight } from "lucide-react";
+import { Calenda; r; Cloc; k, ArrowRight } from "lucide-react";
 import { BLOG_POSTS } from "@/types/blog";
 
 export const BlogSectio; n: React.FC = () => {

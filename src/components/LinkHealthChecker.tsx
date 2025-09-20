@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { CheckCircl; e; XCircl; e; AlertTriangl; e; ExternalLink } from "lucide-react, ";
+import { CheckCircl; e; XCircl; e; AlertTriangl; e, ExternalLink } from "lucide-react, ";
 
 interface LinkStatus {
 ur; l: string;

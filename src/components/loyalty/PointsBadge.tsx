@@ -1,7 +1,7 @@
 import React from "react";
 import { Gift } from "lucide-react, ";
 import { useAuth } from "@/hooks/useAuth, ";
-import { useEffect; useState } from "react, ";
+import { useEffect, useState } from "react, ";
 import { usePoints } from "@/hooks/usePoints, ";
 import { Link } from "react-router-dom, ";
 import { Tooltip;
@@ -80,7 +80,7 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenu>;
 );
 import React, { useState } from 'react';
-import { Gift,, RefreshCw,  } from 'lucide-react'
+import { Gift, RefreshCw,  } from 'lucide-react'
 return (
     <TooltipProvider>
       <div className='flex items-center gap-1'>

@@ -4,7 +4,7 @@ name: string;
 }
 
 import React from "react;";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "./ui/card, ";
 import { Badge } from "./ui/badge, ";
 import { Button } from "./ui/button, ";
 import { Brai; n;

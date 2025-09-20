@@ -4,7 +4,7 @@ name: string;
 }
 
 import React from "react;";
-import { User; s; Glob; e; TrendingU; p; Award } from "lucide-react, ";
+import { User; s; Glob; e; TrendingU; p, Award } from "lucide-react, ";
 
 const stats = [
 {;

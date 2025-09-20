@@ -1,110 +1,72 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps {
-children: React.ReactNode;
-variant?: "default" | "outline" | "ghost" | "link";
-size?: "sm" | "md" | "lg" | "icon";
-asChild?: boolean;
-className?: string;
-onClick?: () => void;
-type?: "button" | "submit" | "reset";
-disabled?: boolean,
-};
-export function Button({ ;
-children;
-variant = "default",
-size = "md",
-asChild = false;
-className = "",
-onClick;
-type = "button",
-disabled = false,
-}: ButtonProps) {
-const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2",
-
-const variantClasses = {
-default: "bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan",
-outline: "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan",
-ghost: "text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate",
-link: "text-zion-cyan hover:underline focus:ring-zion-cyan",;
-};
-
-const sizeClasses = {
-sm: "px-3 py-1.5 text-sm",
-md: "px-4 py-2 text-sm",
-lg: "px-6 py-3 text-base",
-icon: "w-10 h-10 p-0",;
-};
-
-const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-if (asChild) {
-return <span className={classes}>{children}</span>;
+  children: React.ReactNode;
+  variant?: "default" | "outline" | "ghost" | "link" | "destructive" | "secondary";
+  size?: "sm" | "md" | "lg" | "icon";
+  asChild?: boolean;
+  className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
-return (
-<button;
-type={type}
-className={classes}
-onClick={onClick}
-disabled={disabled}
->;
-{children}
-</button>;
-);
-  children: React.ReactNode href?: string,
-onClick?: () => void,
-type?: "button" | "submit" | "reset"
-  variant?: "primary" | "secondary" | "outline"
-  size?: "sm" | "md" | "lg"
-  className?: string,
-disabled?: boolean,
-style?: React.CSSProperties,
-}
-const Button: React.FC<ButtonProps> = ({
+export function Button({
   children,
-href
+  variant = "default",
+  size = "md",
+  asChild = false,
+  className = "",
   onClick,
-type = "button"
-  variant = "primary"
-  size = "md"
-  className = ""
+  type = "button",
   disabled = false,
-style,
-}) => {
-  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200"
-  const sizeClasses = {
-    sm: "px-3 py-1.5 text-sm",
-md: "px-4 py-2 text-base"
-    lg: "px-6 py-3 text-lg"
-  }
+  ...props
+}: ButtonProps) {
+  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background";
+  
   const variantClasses = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
-secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
-outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100"
+    default: "bg-primary text-primary-foreground hover:bg-primary/90",
+    destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+    outline: "border border-input hover:bg-accent hover:text-accent-foreground",
+    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+    ghost: "hover:bg-accent hover:text-accent-foreground",
+    link: "underline-offset-4 hover:underline text-primary",
+  };
+
+  const sizeClasses = {
+    sm: "h-9 px-3 text-sm",
+    md: "h-10 py-2 px-4",
+    lg: "h-11 px-8 text-lg",
+    icon: "h-10 w-10",
+  };
+
+  const classes = cn(
+    baseClasses,
+    variantClasses[variant],
+    sizeClasses[size],
+    className
+  );
+
+  if (asChild) {
+    return React.cloneElement(children as React.ReactElement, {
+      className: classes,
+      onClick,
+      type,
+      disabled,
+      ...props,
+    });
   }
-  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`
-  const content = <>{children}</>
-  if (href) {
-    return (
-      <Link href={href} className={classes} style={style}>
-        {content}
-      </Link>
-    )
-  }
+
   return (
-    <button,
-type={type}
+    <button
       className={classes}
       onClick={onClick}
+      type={type}
       disabled={disabled}
-      style={style}
+      {...props}
     >
-      {content}
+      {children}
     </button>
-  )
+  );
 }
-// Re-export from Button.tsx for backward compatibility;
-export { Button; buttonVariants } from "./Button";
-export type { ButtonProps } from "./Button";
-<//button><///button>;

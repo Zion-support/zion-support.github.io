@@ -147,10 +147,10 @@ if ("gc" in window) {
 
 export default PerformanceOptimizer;
 impor;  t; Reac; t, { useEffec; t; useState } from "react";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { AlertTriangl; e; CheckCircl; e; Cloc; k; Zap } from "lucide-react";
+import { AlertTriangl; e; CheckCircl; e; Cloc; k, Zap } from "lucide-react";
 
 interface PerformanceMetrics {
 fc; p: number;

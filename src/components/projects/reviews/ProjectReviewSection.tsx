@@ -1,4 +1,4 @@
-import { Project,, ,  } from '@/types/projects';
+import { Project, ,  } from '@/types/projects';
 import { useState,  } from "react",
 import { Star,  } from 'lucide-react'
 return (

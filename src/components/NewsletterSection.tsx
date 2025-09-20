@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r; Award } from "lucide-react";
+import { motio; n, AnimatePresence } from "framer-motion";
+import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r, Award } from "lucide-react";
 
 const benefits = [
 {;

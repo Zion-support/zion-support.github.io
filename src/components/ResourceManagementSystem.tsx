@@ -1,7 +1,7 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion, ";
-import { Use; r; s;Calend; a; r;Clo; c; k;Targ; e; t;Trending; U; p;AlertCirc; l; e;CheckCirc; l; e;XCirc; l; e;Pl; u; s;Ed; i; t;Tras; h; 2;E; y; e;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;BarChar; t; 3;PieCha; r; t;Activi; t; y;Z; a; p;Bra; i; n;Clo; u; d;Shie; l; d;Glo; b; e;Settin; g; s;Refresh; C; w;Arrow; U; p;ArrowDo; w; n;Min; u; s;St; a; r;Awa; r; d;Briefca; s; e;Ho; m; e;Buildi; n; g;Wi; f; i;Serv; e; r;Databa; s; e;LockUnlock, } from "lucide-react";
+import { Use; r; s;Calend; a; r;Clo; c; k;Targ; e; t;Trending; U; p;AlertCirc; l; e;CheckCirc; l; e;XCirc; l; e;Pl; u; s;Ed; i; t;Tras; h; 2;E; y; e;Downlo; a; d;Shar; e; 2;Filt; e; r;Sear; c; h;BarChar; t; 3;PieCha; r; t;Activi; t; y;Z; a; p;Bra; i; n;Clo; u; d;Shie; l; d;Glo; b; e;Settin; g; s;Refresh; C; w;Arrow; U; p;ArrowDo; w; n;Min; u; s;St; a; r;Awa; r; d;Briefca; s; e;Ho; m; e;Buildi; n; g;Wi; f; i;Serv; e; r;Databa; s, e;LockUnlock } from "lucide-react";
 interface Resource {
 i; d: stri; n; g;na; m; e: stri; n; g;ty; p; e: "human" | "infrastructure" | "software" | "equipment" | "facility",catego; r; y: stri; n; g;stat; u; s: "available" | "allocated" | "maintenance" | "unavailable",priori; t; y: "low" | "medium" | "high" | "critical",capaci; t; y: numb; e; r;currentUsa; g; e: numb; e; r;locati; o; n: stri; n; g;departme; n; t: stri; n; g;co; s; t: numb; e; r;lastUpdat; e; d: stri; n; g;ta; g; s: string[],descripti; o; n: stri; n; g;manag; e; r: stri; n;
 gutilizatio; n: number;,

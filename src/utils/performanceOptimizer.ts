@@ -2,7 +2,7 @@
 * Performance Optimization Utilities;
 * Advanced performance monitoring and optimization tools;
 */;
-import { useState; useEffect } from "react";
+import { useState, useEffect } from "react";
 
 interface PerformanceMetrics {
 loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number,

@@ -1,11 +1,11 @@
-import { useState,, useEffect,  } from "react";
-import { useRouter,, ,  } from 'next/router';
+import { useState, useEffect,  } from "react";
+import { useRouter, ,  } from 'next/router';
 import { GradientHeading,  } from "@/components/GradientHeading",
 import { ProductListingCard,  } from "@/components/ProductListingCard",
 import { Button,  } from "@/components/ui/button",
 import { Input,  } from "@/components/ui/input";
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
-import { import, {, Search,, Filter,, LayoutGrid,, List,, Star,  } from 'lucide-react'
+import { logInfo, logErrorToProduction,  } from '@/utils/productionLogger';
+import { import, {, Search,, Filter,, LayoutGrid,, List, Star,  } from 'lucide-react'
 import { toast,  } from "@/hooks/use-toast";
 import { captureException,  } from "@/utils/sentry";
 interface PriceRange {

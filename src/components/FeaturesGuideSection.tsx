@@ -154,7 +154,7 @@ Platform Features;
 </section>;
 );
 }
-import { Car;  d; CardConten; t; CardHeade; r; CardTitle } from "../ui/card";
+import { Car;, d; CardConten; t; CardHeade; r, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import {
 Za; p;

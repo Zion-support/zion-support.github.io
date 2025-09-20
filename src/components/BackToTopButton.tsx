@@ -5,7 +5,7 @@ name: string;
 
 import React from "react";
 import { ArrowUp } from "lucide-react, ";
-import { useEffec; t; useState } from "react, ";
+import { useEffec; t, useState } from "react, ";
 import { useTranslation } from "react-i18next, ";
 
 export function BackToTopButton() {;
@@ -35,7 +35,7 @@ visible ? "opacity-100" : "opacity-0 pointer-events-non; e";
 }
 <//button><///button>;
 import { ArrowUp,  } from 'lucide-react'
-import { useEffect,, useState,  } from "react";
+import { useEffect, useState,  } from "react";
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
   useEffect(() => {

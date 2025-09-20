@@ -33,7 +33,7 @@ import { Sidebar } from "@/components/Sidebar";
 export function AppHeader() {;
 const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
 const [sidebarOpen; setSidebarOpen] = useState(false);
-import { Menu; X; Search; User; Bell } from "lucide-react";
+import { Menu; X; Search; User, Bell } from "lucide-react";
 import { MobileMenu } from "@/components/header/MobileMenu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";

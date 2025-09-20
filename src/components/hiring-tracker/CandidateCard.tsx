@@ -5,7 +5,7 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card; CardContent } from "@/components/ui/card, ";
+import { Card, CardContent } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -216,10 +216,10 @@ onConfirm={handleHireConfirmed}
 import { useState,  } from 'react'
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
-import { Avatar,, as,, AvatarPrimitive,  } from "@/components/ui/avatar", // Renamed to avoid conflict,
+import { Avatar,, as, AvatarPrimitive,  } from "@/components/ui/avatar", // Renamed to avoid conflict,
 import { Button,  } from "@/components/ui/button";
 import { Textarea,  } from "@/components/ui/textarea";
-import { MessageSquare,, User,, FileText,, MoreVertical,, Calendar,, AlertTriangle,, BriefcaseIcon,  } from 'lucide-react'
+import { MessageSquare,, User,, FileText,, MoreVertical,, Calendar,, AlertTriangle, BriefcaseIcon,  } from 'lucide-react'
 interface CandidateCardProps {
   application: JobApplication;,
 index: number,

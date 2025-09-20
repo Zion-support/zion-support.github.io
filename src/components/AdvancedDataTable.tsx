@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useMem; o; useCallback } from "react, ";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { useStat; e; useMem; o, useCallback } from "react, ";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { ChevronU; p;
 ChevronDow; n;
 Searc; h;

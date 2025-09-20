@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 price: number;
 currency: string;
 pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium";

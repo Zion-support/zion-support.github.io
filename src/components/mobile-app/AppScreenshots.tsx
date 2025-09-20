@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react";
-import { ChevronLeft; ChevronRight } from "lucide-react, ";
+import { ChevronLeft, ChevronRight } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 
 // These would be replaced with actual screenshots;
@@ -79,6 +79,6 @@ aria-label="Scroll right";
 );
 };
 <//section><///section>;
-import { ChevronLeft,, ChevronRight,  } from 'lucide-react'
+import { ChevronLeft, ChevronRight,  } from 'lucide-react'
 import { Button,  } from "@/components/ui/button";
 // These would be replaced with actual screenshots

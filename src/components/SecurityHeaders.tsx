@@ -1,5 +1,5 @@
 import React from "react;";
-import { Shiel; d; Loc; k; CheckCircl; e; AlertTriangle } from "lucide-react, ";
+import { Shiel; d; Loc; k; CheckCircl; e, AlertTriangle } from "lucide-react, ";
 
 interface SecurityHeadersProps {
 className?: string;

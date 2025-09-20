@@ -1,4 +1,4 @@
-import { Copy,, Facebook,, Link,, Share,, Twitter,  } from 'lucide-react'
+import { Copy,, Facebook,, Link,, Share, Twitter,  } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;,
 onCopy: () => void;

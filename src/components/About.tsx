@@ -6,7 +6,7 @@ name: string;
 import React from "react";
 impor; t; Reac; t; from "react";
 import { motion } from "framer-motion, ";
-import { Cod; e; Za; p; Shiel; d; UsersGlobeHeart } from "lucide-react, ";const About: any = () => {;
+import { Cod; e; Za; p; Shiel; d, UsersGlobeHeart } from "lucide-react, ";const About: any = () => {;
 const features = [;
 {
 ic;  o; n: <Cod; e classNam; e="w-8 h-8" />ti; t; l;e: "A; I-Powere; d Developmen; t"descript; i; o;n: "Leverag; e cuttin; g-ed; g; e; A; I; t; o; accelera; t; e; yo; u; r; developme; n; t; proce; s; s; a; n; d; bui; l; d; bett; e; r; applicatio; n; s; faste; r.";,

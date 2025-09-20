@@ -42,7 +42,7 @@ return (
 };<//div><///div>;
 
 import React from "react",
-import { Card,, CardContent,  } from "@/components/ui/card";
+import { Card, CardContent,  } from "@/components/ui/card";
 import { Check,  } from 'lucide-react'
 import { cn,  } from "@/lib/utils";
 interface FeatureHighlightsProps {
@@ -92,7 +92,7 @@ key={index}
     </section>
   )
 }
-import { motion,, ,  } from 'framer-motion'
+import { motion, ,  } from 'framer-motion'
   {
     icon: "⚡",
 title: "Lightning Fast Performance"

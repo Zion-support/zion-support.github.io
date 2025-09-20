@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { LinkValidato; r; LinkValidationResul; t; LinkFix } from "../utils/linkValidator, ";
+import { LinkValidato; r; LinkValidationResul; t, LinkFix } from "../utils/linkValidator, ";
 
 interface LinkMonitorProps {
 onLinkIssue?: (issu;  e: LinkValidationResult) => void;

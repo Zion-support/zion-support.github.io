@@ -1,74 +1,70 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 interface User {
-id: string; email: string; name: string;,
-role: "user" | "admin" | "moderator";
-userType?: string;
-displayName?: string;
-avatarUrl?: string,
+  id: string;
+  email: string;
+  name?: string;
 }
 
-export function useAuth() {
-const [user; setUser] = useState<User | null>(null);
-const [loading; setLoading] = useState(true);
-
-useEffect(() => {
-// Check if user is logged in (e.g., check localStorage; cookies; etc.)
-const checkAuth: any = () => {;
-const storedUser = localStorage.getItem("zion_user");
-if (storedUser) {
-try {
-setUser(JSON.parse(storedUser)),
-} catch (error) {
-
+interface AuthState {
+  user: User | null;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  register: (email: string, password: string, name?: string) => Promise<void>;
 }
-}
-setLoading(false);
-};
 
-checkAuth();
-}, []);
+export function useAuth(): AuthState {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
-const login = async (email: string; password: string) => {
-// Implement actual login logic here;
-const mockUser: User = {
-id: "1";
-email;,
-name: "User",
-role: "user",
-};
-setUser(mockUser);
-localStorage.setItem("zion_user", JSON.stringify(mockUser));
-return mockUser;
-};
+  useEffect(() => {
+    // Check for existing session
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+    setLoading(false);
+  }, []);
 
-const logout: any = () => {;
-setUser(null);
-localStorage.removeItem("zion_user"),
-};
+  const login = async (email: string, password: string) => {
+    setLoading(true);
+    try {
+      // Mock login - replace with actual API call
+      const mockUser = { id: '1', email, name: email.split('@')[0] };
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      throw new Error('Login failed');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-const register = async (email: string; password: string; name: string) => {
-// Implement actual registration logic here;
-const mockUser: User = {
-id: "1";
-email;
-name;,
-role: "user",
-};
-setUser(mockUser);
-localStorage.setItem("zion_user", JSON.stringify(mockUser));
-return mockUser;
-};
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('user');
+  };
 
-return {
-user;
-loading;
-login;
-logout;
-register;
-isAuthenticated: !!user;,
-isAdmin: user?.role === "admin",
-};
-}
-};
+  const register = async (email: string, password: string, name?: string) => {
+    setLoading(true);
+    try {
+      // Mock registration - replace with actual API call
+      const mockUser = { id: '1', email, name: name || email.split('@')[0] };
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      throw new Error('Registration failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return {
+    user,
+    loading,
+    login,
+    logout,
+    register,
+  };
 }

@@ -6,7 +6,7 @@ name: string;
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { Link } from "react-router-dom, ";
-import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e; Cloud } from "lucide-react, ";
+import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e, Cloud } from "lucide-react, ";
 
 export function MicroSaasShowcase() {;
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");

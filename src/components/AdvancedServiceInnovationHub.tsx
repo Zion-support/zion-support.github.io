@@ -27,7 +27,7 @@ Dn; a;
 Shiel; d;
 Leaf;
 } from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";

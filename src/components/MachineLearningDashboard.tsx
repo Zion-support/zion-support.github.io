@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMem; o; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence } from "framer-motion, ";
 import { Brai; n;
 Pla; y;
 Squar; e;

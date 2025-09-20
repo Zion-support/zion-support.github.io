@@ -1,4 +1,4 @@
-import { User,, Mail,, MapPin,, CreditCard,  } from 'lucide-react'
+import { User,, Mail,, MapPin, CreditCard,  } from 'lucide-react'
 import { isProdDomain,  } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
 return (

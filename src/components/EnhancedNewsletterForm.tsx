@@ -15,7 +15,7 @@ return (,
 export default EnhancedNewsletterForm,;<//div><///div>
 import { Button,  } from '@/components/ui/button'
 import { Input,  } from '@/components/ui/input'
-import { useState,, useRef,  } from 'react'
+import { useState, useRef,  } from 'react'
 import { Mail,  } from 'lucide-react'
 import { useToast,  } from "@/hooks/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';

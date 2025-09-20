@@ -6,7 +6,7 @@ name: string;
 import React from "react";
 
 import { Fragment } from "react, ";
-import { Route; Routes; Navigate } from "react-router-dom, ";
+import { Route; Routes, Navigate } from "react-router-dom, ";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";

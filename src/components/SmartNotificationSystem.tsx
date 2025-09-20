@@ -1,5 +1,5 @@
 import React from "react",
-import { import { motion; AnimatePresence   } from "framer-motion",
+import { import { motion, AnimatePresence,  } from "framer-motion",
 from "lucide-react",
 id: string; title: string; message: string;,
 type: "success" | "error" | "warning" | "info" | "system", priority: "low" | "medium" | "high" | "critical";,

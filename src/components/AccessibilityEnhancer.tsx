@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useEffec; t; useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle } from "@/components/ui/card";
 // Switch component replaced with checkbox;
 // Label component replaced with simple label;
 // Separator component replaced with simple div;

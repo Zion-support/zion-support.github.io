@@ -1,28 +1,28 @@
 import React from "react";
 
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown; Users; Briefcase; Settings; BarChart3 } from "lucide-react";
-import { MessageSquare; ChevronDown; Brain; Shield; Cloud; Zap } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Briefcase; Settings, BarChart3 } from "lucide-react";
+import { MessageSquare; ChevronDown; Brain; Shield; Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown; Users; Settings; HelpCircle; FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useEffect; useRef } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { useState; useRef, useEffect } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { MessageSquare; ChevronDown; Users; Settings; HelpCircle, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useRef, useEffect } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState; useEffect, useRef } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -410,7 +410,7 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
                       </span>
-import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3',, ,  } from 'lucide-react'
+import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3', ,  } from 'lucide-react'
 export default function Page() { [])
   const baseLinks: NavigationLink[] = [{,
 key: 'home'

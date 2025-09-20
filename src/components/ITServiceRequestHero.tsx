@@ -5,7 +5,7 @@ name: string;
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
-import { ArrowRigh; t; Za; p; Brai; n; Shiel; d; Cloud } from "lucide-react, ";
+import { ArrowRigh; t; Za; p; Brai; n; Shiel; d, Cloud } from "lucide-react, ";
 import { GradientHeading } from "../ui/GradientHeading, ";
 import { NeonGlow } from "../ui/NeonGlow, ";
 

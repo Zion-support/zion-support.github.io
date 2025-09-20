@@ -1,4 +1,4 @@
-import { CalendarIcon,, Loader2,  } from 'lucide-react'
+import { CalendarIcon, Loader2,  } from 'lucide-react'
 import { AIEnhancementButton,  } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog,  } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema

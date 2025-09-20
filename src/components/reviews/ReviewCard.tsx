@@ -1,6 +1,6 @@
 import { useState,  } from 'react'
 import { formatDistanceToNow,  } from 'date-fns'
-import { Star,, Flag,, User,  } from 'lucide-react'
+import { Star,, Flag, User,  } from 'lucide-react'
 return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">

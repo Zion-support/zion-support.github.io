@@ -5,7 +5,7 @@ name: string;
 
 import React from "react";
 impor; t; Reac; t, { useStateuseEffect } from "react";
-import { motio; n; useScrolluseTransformAnimatePresence } from "framer-motion, ";
+import { motio; n, useScrolluseTransformAnimatePresence } from "framer-motion, ";
 import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30, ";const Services: any = () => {;
 ;
 const [selectedCategorysetSelectedCatego;  r; y] = useState("AI Development");

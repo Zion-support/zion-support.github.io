@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
 import Search from "lucide-react/dist/esm/icons/search";
@@ -149,12 +149,12 @@ className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-
 }
 <//div><///div>;
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { Home,, Search,, BriefcaseIcon,, MessageSquare,, User,, X,, MessageCircle,  } from 'lucide-react'
-import { cn,, ,  } from '@/lib/utils';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { Button,, ,  } from '@/components/ui/button';
-import { ModeToggle,, ,  } from '@/components/ModeToggle';
+import { useRouter, ,  } from 'next/router';
+import { Home,, Search,, BriefcaseIcon,, MessageSquare,, User,, X, MessageCircle,  } from 'lucide-react'
+import { cn, ,  } from '@/lib/utils';
+import { useAuth, ,  } from '@/hooks/useAuth';
+import { Button, ,  } from '@/components/ui/button';
+import { ModeToggle, ,  } from '@/components/ModeToggle';
 import { useTranslation,  } from 'react-i18next';
 export interface MobileMenuProps {
   unreadCount?: number;

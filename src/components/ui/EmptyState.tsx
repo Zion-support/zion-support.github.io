@@ -1,4 +1,4 @@
-import { Package,, RefreshCw,  } from 'lucide-react'
+import { Package, RefreshCw,  } from 'lucide-react'
 import { Button,  } from './button';
 interface EmptyStateProps {
   text?: string;

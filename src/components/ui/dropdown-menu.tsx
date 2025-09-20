@@ -15,7 +15,7 @@ return (,
 export default dropdown-menu,;<//div><///div>
 import * as React from &quot;react&quot;
 import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
-import { Check,, ChevronRight,, Circle,  } from 'lucide-react'
+import { Check,, ChevronRight, Circle,  } from 'lucide-react'
 import { cn,  } from &quot;@/lib/utils&quot;
 const DropdownMenu = DropdownMenuPrimitive.Root,
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger,

@@ -1,5 +1,5 @@
-import { Routes; Route } from "react-router-dom, ";
-import { useState; useCallback; useRef; useEffect } from "react, ";
+import { Routes, Route } from "react-router-dom, ";
+import { useState; useCallback; useRef, useEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CodeSuggestion {
@@ -624,7 +624,7 @@ return code;
 
 // Helper functions for test generation;
 const generateJestTests: any = (_code: string): string => {;
-return `import { render; screen; fireEvent } from "@testing-library/react, ";
+return `import { render; screen, fireEvent } from "@testing-library/react, ";
 import GeneratedComponent from "./GeneratedComponent;";
 
 describe("GeneratedComponent", () => {

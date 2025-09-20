@@ -1,5 +1,5 @@
 import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import { cva,, type,, VariantProps,  } from &quot;class-variance-authority&quot;
+import { cva,, type, VariantProps,  } from &quot;class-variance-authority&quot;
 import { X,  } from 'lucide-react'
 import * as React from &quot;react&quot;
 import { cn,  } from &quot;@/lib/utils&quot;
