@@ -12,5 +12,12 @@ readonly PROD: boolean}
 interface ImportMeta {readonly env: ImportMetaEnv}
 
 declare namespace JSX {interface IntrinsicElements {
+readonly PROD: boolean}
+
+interface ImportMeta {
+readonly env: ImportMetaEnv}
+
+declare namespace JSX {
+interface IntrinsicElements {
 [elemName: string]: any}
 }

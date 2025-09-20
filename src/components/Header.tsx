@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 export function Header() {
@@ -30,11 +31,19 @@ import { ThemeToggle } from "./ThemeToggle";
               <span className="text-xl font-bold text-gray-900">Zion AI</span>
             </Link>
 =======
+=======
+import React, { useState, useEffect } from "react";
+
+export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
+<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -106,24 +115,48 @@ import { ThemeToggle } from "./ThemeToggle";
             })}
           </nav>
 
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+=======
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+      isScrolled ? "bg-white shadow-md" : "bg-transparent"
+    }`}>
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-8">
+            <a href="/" className="text-2xl font-bold text-gray-900">
+              Zion
+            </a>
+            <div className="hidden md:flex space-x-6">
+              <a href="/" className="text-gray-600 hover:text-gray-900">
+                Home
+              </a>
+              <a href="/blog" className="text-gray-600 hover:text-gray-900">
+                Blog
+              </a>
+              <a href="/contact" className="text-gray-600 hover:text-gray-900">
+                Contact
+              </a>
+            </div>
           </div>
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
+          <div className="flex items-center space-x-4">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+              Get Started
+            </button>
+          </div>
+<<<<<<< HEAD
           <span className="text-xl font-bold">Zion Tech Group</span>
+=======
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
         </div>
-        <nav className="hidden md:flex space-x-6">
-          <a href="/" className="hover:text-zion-cyan">Home</a>
-          <a href="/services" className="hover:text-zion-cyan">Services</a>
-          <a href="/about" className="hover:text-zion-cyan">About</a>
-          <a href="/contact" className="hover:text-zion-cyan">Contact</a>
-        </nav>
-      </div>
+      </nav>
     </header>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -132,3 +165,8 @@ import { ThemeToggle } from "./ThemeToggle";
 export default Header;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
+=======
+}
+
+export default Header;
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787

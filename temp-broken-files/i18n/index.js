@@ -9,6 +9,9 @@ if (!i18n) {
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");
 }
 else {// Initialize i18next;
+    console.error("CRITICAL: i18next failed to import. Internationalization will not work.");}
+else {
+    // Initialize i18next;
     i18n;
         .use(LanguageDetector) // Detect user language;
         .use(initReactI18next) // Initialize react-i18next;
@@ -18,6 +21,10 @@ else {// Initialize i18next;
                 translation: enTranslation};
             'en-US': {translation: enTranslation};
             es: {translation: esTranslation}
+            'en-US': {
+                translation: enTranslation};
+            es: {
+                translation: esTranslation}
         };
         lng: storedLang;
         fallbackLng: 'en', // Default language;

@@ -1,4 +1,3 @@
-=======
 export interface Real2026Addition {
   id: string;
   name: string;
@@ -14,6 +13,5 @@ export const real2026Additions: Real2026Addition[] = [
     tagline: '2026 innovation service',
     price: '$699',
     features: ['2026 features', 'Latest technology', 'Future-ready']
-=======
   }
 ];

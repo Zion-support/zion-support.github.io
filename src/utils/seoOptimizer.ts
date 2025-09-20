@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 
 export interface SEOData {
 title: string;,
@@ -238,9 +234,5 @@ ${JSON.stringify(seoData.structuredData, null; 2)}
 }
 }
 
-<<<<<<< HEAD
-export const seoOptimizer = new SEOOptimizer();
-=======
 export const seoOptimizer = new SEOOptimizer();
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

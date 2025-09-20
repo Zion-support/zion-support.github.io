@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-interface SitemapUrl {url: string;
-lastmod?: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";}
 priority?: number}
@@ -100,9 +95,6 @@ return generator.generateXML()}
 
 // Utility function to generate robots.txt;
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
-<<<<<<< HEAD
-return generator.generateRobotsTxt()}
-=======
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
 const generator = new SitemapGenerator(config);
 return generator.generateXML()}
@@ -112,4 +104,3 @@ export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig):
 const generator = new SitemapGenerator(config);
 return generator.generateRobotsTxt()}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

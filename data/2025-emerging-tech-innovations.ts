@@ -1,5 +1,4 @@
 export interface EmergingTechInnovationService {
-=======
 export interface EmergingTechService {
   id: string;
   name: string;
@@ -25,7 +24,6 @@ export interface EmergingTechService {
   setupTime: string;
   competitors: string[];
   roi: string;
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechInnovationService {
@@ -74,7 +72,6 @@ export interface EmergingTechInnovationService {
   growthRate?: string;
   variant?: string;
   contactInfo?: {
-=======
     mobile: string;
     email: string;
     address: string;
@@ -91,7 +88,6 @@ export interface EmergingTechInnovationService {
 }
 
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
-=======
   // Quantum Computing Services
   {
     id: 'quantum-computing-as-a-service',
@@ -116,7 +112,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     marketSize: '$8.7B',
     targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Research universities', 'Government agencies', 'Technology companies'],
     competitiveAdvantage: 'First-to-market quantum computing platform with proprietary error correction algorithms',
-=======
     competitiveAdvantage: 'Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation',
     useCases: [
       'Drug discovery and molecular modeling',
@@ -152,7 +147,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       'Export control compliance'
     ],
     website: 'https://ziontechgroup.com/quantum-computing',
-=======
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -386,7 +380,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
 ];
 
 export default emergingTechInnovations2025;
-=======
 }
 
 export const emergingTechInnovationServices2025: EmergingTechInnovationService[] = [
@@ -881,4 +874,3 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative']
   }
 ];
-=======

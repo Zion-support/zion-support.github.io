@@ -11,18 +11,22 @@ export const CONTRACT_TEMPLATES = [{
                 description: 'Name of the client';
                 required: true;
             },
+                required: true;},
             {
                 name: 'serviceDescription';
                 type: 'string';
                 description: 'Description of services to be provided';
                 required: true;
             },
+                required: true;},
             {
                 name: 'rate';
                 type: 'number';
                 description: 'Hourly rate for services';
                 required: true;
             }],
+                required: true;},
+        ],
         isPublic: true;
         createdAt: '2024-01-01T00:00:00Z';
         updatedAt: '2024-01-01T00:00:00Z';
@@ -30,8 +34,7 @@ export const CONTRACT_TEMPLATES = [{
         authorName: 'Admin';
         usageCount: 1250;
         rating: 4.8;
-        tags: ['freelance', 'agreement', 'services'],
-    },
+        tags: ['freelance', 'agreement', 'services']},
     {
         id: '2';
         name: 'Non-Disclosure Agreement';
@@ -44,6 +47,7 @@ export const CONTRACT_TEMPLATES = [{
                 description: 'Name of the company';
                 required: true;
             },
+                required: true;},
             {
                 name: 'confidentialityPeriod';
                 type: 'number';
@@ -51,6 +55,8 @@ export const CONTRACT_TEMPLATES = [{
                 required: true;
                 defaultValue: 2;
             }],
+                defaultValue: 2;},
+        ],
         isPublic: true;
         createdAt: '2024-01-01T00:00:00Z';
         updatedAt: '2024-01-01T00:00:00Z';
@@ -58,6 +64,5 @@ export const CONTRACT_TEMPLATES = [{
         authorName: 'Admin';
         usageCount: 890;
         rating: 4.6;
-        tags: ['nda', 'confidentiality', 'legal'],
-    },
+        tags: ['nda', 'confidentiality', 'legal']},
 ];

@@ -1,6 +1,5 @@
-<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 import { useRouter } from "next/router";, // Changed from useParams,
 import { useEffect, useState } from "react";
 import Image from 'next/image';
@@ -9,7 +8,6 @@ import { NEW_PRODUCTS } from "@/data/newProductsData";
 import { useCart } from "@/context/CartContext";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
-========
 import { useRouter,  } from 'next/router', // Changed from useParams,
 import { useEffect,, useState, ,  } from 'react';
 import Image from 'next/image';
@@ -21,13 +19,11 @@ import { SEO, ,  } from '@/components/SEO';
 >>>>>>>> pr-22690:temp-broken-files/ProductPage.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ProductPage() {return (
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
 export default function ProductPage() {
   return (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProductPage.tsx
     <>
       <SEO 
         title="ProductPage - Zion Tech Group"
@@ -45,7 +41,6 @@ export default function ProductPage() {
     </>
   );
 }
-<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 //Only fetch if id is available (from router) ;
 }const inCart = items.some (i => i.id === product.id);
 const handleAdd = () => {if (inCart) return;
@@ -75,7 +70,4 @@ export default function ProductPage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProductPage.tsx
 }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProductPage.tsx

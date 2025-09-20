@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-pages/EquipmentPage.tsx
 <<<<<<<< HEAD:backup-problematic-pages/EquipmentPage.tsx
 import { useRouter } from "next/router";
 import { useState, useEffect, useCallback, useMemo } from "react";
@@ -14,7 +13,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary } from "@/components/EquipmentErrorBoundary";
 import { useCurrency } from "@/hooks/useCurrency";
-========
 import { useRouter, ,  } from 'next/router';
 import { useState,, useEffect,, useCallback,, useMemo, ,  } from 'react';
 import { motion,, AnimatePresence, ,  } from 'framer-motion';
@@ -63,7 +61,6 @@ import React from 'react';
 
 export default function EquipmentPage() {
   return (
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -86,4 +83,3 @@ export default function EquipmentPage() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentPage.tsx

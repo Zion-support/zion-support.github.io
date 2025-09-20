@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 export interface SearchResult {
 id: string;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 title: string;,
 description: string;,
 type: "product" | "talent" | "blog" | "service" | "doc";
@@ -358,9 +355,6 @@ formatSearchQuery;
 hasActiveFilters;
 getActiveFilterCount;
 getDefaultFilters;
-<<<<<<< HEAD
 };
-=======
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

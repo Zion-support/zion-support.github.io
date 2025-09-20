@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-}
-
-export function formatPhoneNumber(phoneNumber: string): string {
-const cleaned = phoneNumber.replace(/\D/g, "");
-const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
-if (match) {
-return `(${match[1]}) ${match[2]}-${match[3]}`;
-}
-return phoneNumber;
-}
-
-=======
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -71,4 +54,3 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

@@ -19,4 +19,3 @@ export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
     features: ['Emerging tech features', '2029 breakthroughs', 'Future technology']
   }
 ];
-=======

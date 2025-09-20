@@ -15,18 +15,24 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <title>{title}</title>
       <meta name="description" content={description} />
 <<<<<<< HEAD
+<<<<<<< HEAD
       {canonical && <link rel="canonical" href={canonical} />}
       {url && <meta property="og:url" content={url} />}
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
 =======
+=======
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical || url} />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
       {image && <meta property="og:image" content={image} />}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787

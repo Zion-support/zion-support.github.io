@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src/pages/TranslationManager.tsx
-import React from 'react';
-=======
 import React { useState useEffect } from 'react',
 import { Header,  } from "@/components/Header",
 import { SEO,  } from "@/components/SEO",
@@ -17,7 +14,6 @@ import { useLanguage, SupportedLanguage,  } from "@/context/LanguageContext",
 import { useTranslationService,  } from "@/hooks/useTranslationService";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TranslationManager() {
->>>>>>> pr-22690:temp-broken-files/TranslationManager.tsx
 
 export default function TranslationManager() {
   return (

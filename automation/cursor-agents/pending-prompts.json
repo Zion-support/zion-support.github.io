@@ -2,9 +2,7 @@
   {
 <<<<<<< Updated upstream
     "id": "cursor-prompt-1755536747329-0",
-=======
     "id": "cursor-prompt-1755537252462-0",
->>>>>>> Stashed changes
     "gap": {
       "type": "missing_content",
       "category": "insights",
@@ -22,14 +20,12 @@
   },
   {
     "id": "cursor-prompt-1755536747329-1",
-=======
     "createdAt": "2025-08-18T17:14:12.462Z",
     "priority": 2,
     "sentAt": "2025-08-18T17:14:12.463Z"
   },
   {
     "id": "cursor-prompt-1755537252462-1",
->>>>>>> Stashed changes
     "gap": {
       "type": "missing_content",
       "category": "dossiers",
@@ -47,14 +43,12 @@
   },
   {
     "id": "cursor-prompt-1755536747329-2",
-=======
     "createdAt": "2025-08-18T17:14:12.462Z",
     "priority": 2,
     "sentAt": "2025-08-18T17:14:15.466Z"
   },
   {
     "id": "cursor-prompt-1755537252462-2",
->>>>>>> Stashed changes
     "gap": {
       "type": "content_quality",
       "url": "https://ziontechgroup.com/components/form-demo",
@@ -72,14 +66,12 @@
   },
   {
     "id": "cursor-prompt-1755536747329-3",
-=======
     "createdAt": "2025-08-18T17:14:12.462Z",
     "priority": 2,
     "sentAt": "2025-08-18T17:14:18.470Z"
   },
   {
     "id": "cursor-prompt-1755537252462-3",
->>>>>>> Stashed changes
     "gap": {
       "type": "content_quality",
       "url": "https://ziontechgroup.com/components/modal-demo",
@@ -126,10 +118,8 @@
     "createdAt": "2025-08-18T17:05:47.329Z",
     "priority": 3,
     "sentAt": "2025-08-18T17:05:52.249Z"
-=======
     "createdAt": "2025-08-18T17:14:12.462Z",
     "priority": 2,
     "sentAt": "2025-08-18T17:14:21.473Z"
->>>>>>> Stashed changes
   }
 ]

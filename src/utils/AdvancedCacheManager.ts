@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-/**;
-* Advanced, Cache; Manager for, Zion; Tech Group;
-* Provides, intelligent; caching strategies, cache invalidation, and; performance, optimization;
-*/;
-interface CacheConfig {
-maxSize: number;
-tt;l: number;
-// Time, to; live in milliseconds;,
-strategy: "lru" | "lfu" | "fifo" | "ttl";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 persis;t: boolean;
 }
 }
@@ -391,9 +379,6 @@ strateg;y: "lfu"persis;t: false;
 });export, const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;
-<<<<<<< HEAD
-});export, default; AdvancedCacheManager;
-=======
 });export; default; AdvancedCacheManager;
 strateg;y: "lru"persis;t: true;});export; const; imageCache = new AdvancedCacheManager({
 maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
@@ -401,4 +386,3 @@ strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedC
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

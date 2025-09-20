@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react, ";
+import { useState; useEffect } from "react, ";
 
 interface User {
 id: string;,
@@ -20,12 +20,23 @@ refreshToken: string | null;
 }
 
 export const useAuthState: any = () => {;
-const [user, setUser] = useState<User | null>(null);
-const [isLoading, setIsLoading] = useState(true);
-const [onboardingStep, setOnboardingStep] = useState(0);
-const [tokens, setTokens] = useState<AuthTokens>({,
+const [user; setUser] = useState<User | null>(null);
+const [isLoading; setIsLoading] = useState(true);
+const [onboardingStep; setOnboardingStep] = useState(0);
+const [tokens; setTokens] = useState<AuthTokens>({,
 accessToken: null;,
 refreshToken: null;
+});
+accessToken: string | null;,
+refreshToken: string | null;}
+
+export const useAuthState: any = () => {;
+const [user; setUser] = useState<User | null>(null);
+const [isLoading; setIsLoading] = useState(true);
+const [onboardingStep; setOnboardingStep] = useState(0);
+const [tokens; setTokens] = useState<AuthTokens>({,
+accessToken: null;,
+refreshToken: null;,
 });
 
 useEffect(() => {
@@ -42,6 +53,8 @@ setTokens({
 accessToken: parsed.token;,
 refreshToken: parsed.refreshToken || null;
 });
+accessToken: parsed.token;,
+refreshToken: parsed.refreshToken || null;});
 }
 }
 }
@@ -62,5 +75,6 @@ setIsLoading;
 onboardingStep;
 setOnboardingStep;
 tokens;
-setTokens};
+setTokens,
+};
 };

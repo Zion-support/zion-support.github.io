@@ -122,7 +122,6 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     marketSize: "$3.2 billion",
     growthRate: "22.8% annually",
     fundingTrends: "High interest in quantum computing applications"
-=======
     id: 'market-augmentation-1',
     name: 'Market Augmentation Service 1',
     tagline: 'Enhance your market presence',
@@ -146,6 +145,4 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     features: ['Market analysis', 'Strategy development', 'Implementation support']
   }
 ];
-=======
 ];
-=======

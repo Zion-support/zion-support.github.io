@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src/pages/TalentsPage.tsx
-import React from 'react';
-=======
 import { useRouter, ,  } from 'next/router';
 import { useState,, useEffect,, useCallback,, useMemo, ,  } from 'react';
 import { motion,, AnimatePresence, ,  } from 'framer-motion';
@@ -37,7 +34,6 @@ initial={{ opacity: 0 y: 20 }}
       </div>
     )
   }
->>>>>>> pr-22690:temp-broken-files/TalentsPage.tsx
 
 export default function TalentsPage() {
   return (

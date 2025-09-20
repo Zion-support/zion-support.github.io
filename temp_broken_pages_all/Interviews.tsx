@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_pages_all/Interviews.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/Interviews.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Interviews.tsx
 import React { useEffect useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";,
 import { Interview } from "@/types/interview";,
@@ -13,7 +11,6 @@ import { InterviewCard } from "@/components/interviews/InterviewCard";,
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
-========
 import React { useEffect useState } from "react",
 import { useInterviews,  } from "@/hooks/useInterviews",
 import { Interview,  } from "@/types/interview",
@@ -144,9 +141,7 @@ export default function Interviews() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Interviews.tsx
 }
-=======
 import { SEO } from "@/components/SEO";
 
 export default function Interviews() {
@@ -168,4 +163,3 @@ export default function Interviews() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Interviews.tsx
