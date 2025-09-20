@@ -7,7 +7,7 @@ interface SkeletonProps {
   width?: string,
   rounded?: string | boolean,
   animated?: boolean,
-};
+}
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
@@ -18,6 +18,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   animated = true
 }) => {
   const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
+  
   if (animated) {
     return (
       <>
@@ -26,18 +27,17 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             key={index}
             className={`animate-pulse ${baseClasses}`}
             animate={{
-              opacity: [0.5, 1, 0.5],
-  },
-  };
+              opacity: [0.5, 1, 0.5]
+            }}
             transition={{
               duration: 1.5,repeat: Infinity,ease: "easeInOut"
-            },
-  };
+            }}
           />
         ))}
       </>
-    )
-  
+    );
+  }
+  ;
   return (
     <>
       {Array.from({ length: count }).map((_, index) => (
@@ -48,7 +48,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       ))}
     </>
   ),
-},
+};
 
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
@@ -93,6 +93,7 @@ interface TableSkeletonProps {
   rows?: number,
   columns?: number,
   className?: string
+}
 
 export function TableSkeleton({ 
   rows = 5, 
@@ -127,11 +128,13 @@ export function TableSkeleton({
       </div>
     </div>
   ),
+}
 
 interface ListSkeletonProps {
   items?: number,
-  className?: string,
-  showAvatar?: boolean
+  className?: string;
+  showAvatar?: boolean;
+}
 
 export function ListSkeleton({ 
   items = 5;
@@ -152,13 +155,15 @@ export function ListSkeleton({
         </div>
       ))}
     </div>
-  )
+  );
+}
 
 interface GridSkeletonProps {
   items?: number,
   columns?: number,
   className?: string,
   showImage?: boolean,
+}
 
 export function GridSkeleton({ 
   items = 6;
@@ -174,4 +179,5 @@ export function GridSkeleton({
         />
       ))}
     </div>
-  )
+  );
+}

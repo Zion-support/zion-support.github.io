@@ -31,43 +31,43 @@ import { Link } from "react-router-dom";
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
-  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
+  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {,
     phone: string,email: string,website: string
   };
   technicalSpecs?: {
-    technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[],
-  },
+    technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   };
+};
 const ComprehensiveServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),
-  const [searchTerm, setSearchTerm] = useState<string>(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   // Combine all services
   const allServices: Service[] = [
-    ...EXPANDED_INNOVATIVE_SERVICES_2025;
+    ...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ],
   // Get unique categories
   const categories = useMemo(() => {
     const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
-    return cats
-}, [allServices]),
+    return cats,
+  }, [allServices]),
   // Get unique innovation levels
   const innovationLevels = useMemo(() => {
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],
-    return levels
-}, [allServices]),
+    return levels,
+  }, [allServices]);
   // Filter services
   const filteredServices = useMemo(() => {
     return allServices.filter(service => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesInnovationLevel && matchesSearch
-}),
-  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),
+      return matchesCategory && matchesInnovationLevel && matchesSearch,
+    }),
+  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Analytics':
@@ -80,44 +80,44 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
         return <Brain className="h-6 w-6" />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
-        return <Shield className="h-6 w-6" />;
+        return <Shield className="h-6 w-6" />,
       case 'Blockchain & Supply Chain':
-        return <Database className="h-6 w-6" />;
+        return <Database className="h-6 w-6" />,
       case 'IoT & Edge Computing':
-        return <Network className="h-6 w-6" />;
+        return <Network className="h-6 w-6" />,
       case 'Quantum Computing':
-        return <Cpu className="h-6 w-6" />;
+        return <Cpu className="h-6 w-6" />,
       case 'AR/VR & Immersive Tech':
-        return <Eye className="h-6 w-6" />;
+        return <Eye className="h-6 w-6" />,
       case '5G & Telecommunications':
-        return <Globe className="h-6 w-6" />;
+        return <Globe className="h-6 w-6" />,
       case 'Space Technology':
-        return <Rocket className="h-6 w-6" />;
+        return <Rocket className="h-6 w-6" />,
       case 'Neuromorphic Computing':
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6" />,
       case 'Digital Twin & Simulation':
-        return <Settings className="h-6 w-6" />;
+        return <Settings className="h-6 w-6" />,
       case 'Synthetic Biology':
-        return <Target className="h-6 w-6" />;
+        return <Target className="h-6 w-6" />,
       case 'Brain-Computer Interface':
-        return <Brain className="h-6 w-6" />;
+        return <Brain className="h-6 w-6" />,
       case 'Sustainability & Energy':
-        return <Zap className="h-6 w-6" />;
+        return <Zap className="h-6 w-6" />,
       case 'Autonomous Vehicles & Fleet Management':
         return <Rocket className="h-6 w-6" />;
       default: return <Star className="h-6 w-6" />
-    },
+    }
   };
-const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Cutting-edge':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
-        return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+        return 'bg-gradient-to-r from-blue-600 to-cyan-600',
       case 'Professional':
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
-    },
+    }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
@@ -237,12 +237,9 @@ const getInnovationLevelColor = (level: string) => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 },
-  };
-                animate={{ opacity: 1, y: 0 },
-  };
-                transition={{ duration: 0.5, delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -260,8 +257,7 @@ const getInnovationLevelColor = (level: string) => {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-blue">
-                        {service.currency},
-  {service.price.toLocaleString()}
+                        {service.currency}{service.price.toLocaleString()}
                       </div>
                       <div className="text-sm text-gray-500">per {service.pricingModel}</div>
                     </div>
@@ -304,8 +300,8 @@ const getInnovationLevelColor = (level: string) => {
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                           {feature}
                         </div>
-                      ))},
-  {service.features.length > 5 && (
+                      ))}
+                      {service.features.length > 5 && (
                         <div className="text-sm text-zion-cyan font-medium">
                           +{service.features.length - 5} more features
                         </div>
@@ -365,9 +361,8 @@ const getInnovationLevelColor = (level: string) => {
                 onClick={() => {
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
-                  setSearchTerm('')
-},
-  };
+                  setSearchTerm('');
+                }}
                 className="text-zion-cyan hover: text-zion-cyan-light font-medium"
               >
                 Clear all filters

@@ -20,12 +20,12 @@ import {
   CheckCircle
 } from "lucide-react";
 interface Service {
-  id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>;
+  id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>,
   category: string,features: string[],pricing: string,rating: number,reviews: number,color: string;
   popular?: boolean,
   link: string
-};
-
+}
+;
 const services: Service[] = [
   {
     id: 'ai-business-intelligence',title: 'AI Business Intelligence Platform',description: 'Advanced analytics with AI-powered insights and predictive modeling',icon: Brain,category: 'AI & Machine Learning',features: ['Real-time analyticsPredictive modeling', 'Custom dashboardsAPI integration'],
@@ -65,10 +65,10 @@ const services: Service[] = [
     id: 'healthcare-ai',title: 'Healthcare AI Solutions',description: 'AI-powered diagnostic and patient care optimization',icon: Users,category: 'Healthcare AI',features: ['Medical imaging AIPredictive diagnostics', 'Patient monitoringHIPAA compliant'],
     pricing: '$4,500/month',
     rating: 4.9,reviews: 78,color: 'from-emerald-500 to-teal-500',link: '/ai-services/healthcare'
-  },
-  ];
+  }
+];
 const categories = [
-  'All ServicesAI & Machine Learning';
+  'All ServicesAI & Machine Learning',
   'Emerging TechCybersecurity',
   'Cloud & DevOpsBlockchain & Web3',
   'Digital TransformationMicro SAAS',
@@ -77,28 +77,30 @@ const categories = [
 
 export const EnhancedServiceShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
-const [hoveredService, setHoveredService] = useState<string | null>(null),
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
-},
-  };
+          setIsVisible(true);
+        }
+      };
       { threshold: 0.1 }
     );
-const element = document.getElementById('service-showcase');
+    const element = document.getElementById('service-showcase');
     if (element) {
-      observer.observe(element)
-
-    return () => observer.disconnect()
-}, []),
+      observer.observe(element);
+    }
+;
+    return () => observer.disconnect();
+  }, []),
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
     : services.filter(service => service.category === selectedCategory);
-const renderStars = (rating: number) => {
+
+  const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
@@ -109,19 +111,16 @@ const renderStars = (rating: number) => {
         }`}
       />
     )),
-  },
+  };
 
   return (
     <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  };
-          transition={{ duration: 0.6 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -137,12 +136,9 @@ const renderStars = (rating: number) => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  };
-          transition={{ duration: 0.6, delay: 0.2 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category, index) => (
@@ -162,43 +158,36 @@ const renderStars = (rating: number) => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0 },
-  };
-          animate={isVisible ? { opacity: 1 } : { opacity: 0 },
-  };
-          transition={{ duration: 0.6, delay: 0.4 },
-  };
+          initial={{ opacity: 0 }}
+          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 },
-  };
-                animate={{ opacity: 1, y: 0 },
-  };
-                exit={{ opacity: 0, y: -20 },
-  };
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{
                   duration: 0.6,delay: index * 0.1,type: "spring",stiffness: 100
-                },
-  };
-                whileHover={{ y: -10 },
-  };
+                }};
+                whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className="relative group"
               >
                 <Link to={service.link}>
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
-                    {/* Popular Badge */},
-  {service.popular && (
+                    {/* Popular Badge */}
+                    {service.popular && (
                       <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-black px-4 py-1 rounded-full text-sm font-bold">
                         Popular
                       </div>
-                    )},
-  {/* Service Icon */}
+                    )}
+
+                    {/* Service Icon */}
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
@@ -220,8 +209,8 @@ const renderStars = (rating: number) => {
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                             {feature}
                           </div>
-                        ))},
-  {service.features.length > 3 && (
+                        ))}
+                        {service.features.length > 3 && (
                           <div className="text-sm text-zion-cyan">
                             +{service.features.length - 3} more features
                           </div>
@@ -258,12 +247,9 @@ const renderStars = (rating: number) => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  };
-          transition={{ duration: 0.6, delay: 0.6 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
@@ -295,3 +281,4 @@ const renderStars = (rating: number) => {
       </div>
     </section>
   )
+};

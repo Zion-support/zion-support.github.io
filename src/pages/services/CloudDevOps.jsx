@@ -4,88 +4,77 @@ import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from "luc
 import { SEO } from "@/components/SEO";
 const CloudDevOps = () => {
   const cloudServices = [
-  {
-  icon: Cloud,title: "Cloud Migration",description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",features: [["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"],
+    {
+      icon: Cloud,title: "Cloud Migration",description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+    },
+    {
+      icon: Server,title: "Infrastructure as Code",description: "Automated infrastructure provisioning and management using modern DevOps practices.",features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+    },
+    {
+      icon: GitFork,title: "CI/CD Pipelines",description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
+      features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
+    },
+    {
+      icon: Database,title: "Database Management",description: "Scalable database solutions with high availability and disaster recovery.",features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
+    }
   ],
-  },
-  {
-  icon: Server,title: "Infrastructure as Code",description: "Automated infrastructure provisioning and management using modern DevOps practices.",features: [["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"],
-  ],
-  },
-  {
-  icon: GitFork,title: "CI/CD Pipelines",description: "Automated build, test, and deployment pipelines for faster, more reliable releases.";
-      features: [["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"],
-  ],
-  },
-  {
-  icon: Database,title: "Database Management",description: "Scalable database solutions with high availability and disaster recovery.",features: [["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"],
-  ],
-  },
-  ]
 
   const platforms = [
-  {
-  name: "AWS",description: "Amazon Web Services cloud platform solutions",icon: "☁️"
-},
-  {
-  name: "Azure",description: "Microsoft Azure cloud services and solutions",icon: "🔷"
-},
-  {
-  name: "Google Cloud",description: "Google Cloud Platform infrastructure and services",icon: "🔵"
-},
-  {
-  name: "Multi-Cloud",description: "Hybrid and multi-cloud strategy implementation",icon: "🌐"
-},
-  ]
+    {
+      name: "AWS",description: "Amazon Web Services cloud platform solutions",icon: "☁️"
+    };
+    {
+      name: "Azure",description: "Microsoft Azure cloud services and solutions",icon: "🔷"
+    };
+    {
+      name: "Google Cloud",description: "Google Cloud Platform infrastructure and services",icon: "🔵"
+    },
+    {
+      name: "Multi-Cloud",description: "Hybrid and multi-cloud strategy implementation",icon: "🌐"
+    }
+  ];
   const devOpsTools = [
-  { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"],
-  },
-  { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"],
-  },
-  { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"],
-  },
-  {{ category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"],
-  },
-  },
-  ]
+    { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
+    { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
+    { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
+    { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO;
-        title="Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services";
-        description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices.";
-        keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD";
-        canonical="https://ziontechgroup.com/services/cloud-devops";
+      <SEO
+        title="Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services"
+        description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices."
+        keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD"
+        canonical="https://ziontechgroup.com/services/cloud-devops"
       />
 
-      {{/* Hero Section */},
-  };
+      {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2"/>
-              Cloud & DevOps;
+              Cloud & DevOps
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Infrastructure with;
+              Transform Your Infrastructure with
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Modern DevOps</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Expert cloud migration and DevOps implementation services for modern, scalable, and secure infrastructure.;
+              Expert cloud migration and DevOps implementation services for modern, scalable, and secure infrastructure.
             </p>
           </div>
         </div>
       </section>
 
-      {{/* Services Overview */},
-  };
+      {/* Services Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Cloud & DevOps Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cloudServices.map((service, index) => (
-  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white"/>
                 </div>
@@ -93,10 +82,9 @@ const CloudDevOps = () => {
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-  <li key={idx} className="text-gray-400 text-sm flex items-center">
+                    <li key={idx} className="text-gray-400 text-sm flex items-center">
                       <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                      {{feature},
-  };
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -106,14 +94,13 @@ const CloudDevOps = () => {
         </div>
       </section>
 
-      {{/* Cloud Platforms */},
-  };
+      {/* Cloud Platforms */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Platforms We Support</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {platforms.map((platform, index) => (
-  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all">
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all">
                 <div className="text-4xl mb-4">{platform.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{platform.name}</h3>
                 <p className="text-gray-300 text-sm">{platform.description}</p>
@@ -123,21 +110,19 @@ const CloudDevOps = () => {
         </div>
       </section>
 
-      {{/* DevOps Tools */},
-  };
+      {/* DevOps Tools */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">DevOps Tools & Technologies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {devOpsTools.map((category, index) => (
-  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{category.category}</h3>
                 <div className="space-y-2">
                   {category.tools.map((tool, idx) => (
-  <div key={idx} className="text-gray-300 text-sm flex items-center">
+                    <div key={idx} className="text-gray-300 text-sm flex items-center">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                      {{tool},
-  };
+                      {tool}
                     </div>
                   ))}
                 </div>
@@ -147,26 +132,25 @@ const CloudDevOps = () => {
         </div>
       </section>
 
-      {{/* CTA Section */},
-  };
+      {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Infrastructure?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our cloud migration and DevOps services can help you achieve faster deployments, better scalability, and improved security.;
+            Let's discuss how our cloud migration and DevOps services can help you achieve faster deployments, better scalability, and improved security.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a ;
-              href="tel:+13024640950" ;
-              className="className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105";"
+            <a 
+              href="tel:+13024640950" 
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
-              📞 Call +1 (302) 464-0950;
+              📞 Call +1 (302) 464-0950
             </a>
-            <a ;
-              href="/contact" ;
-              className="className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all";"
+            <a 
+              href="/contact" 
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
-              Get Started;
+              Get Started
             </a>
           </div>
         </div>

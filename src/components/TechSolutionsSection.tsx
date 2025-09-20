@@ -27,17 +27,11 @@ const techSolutions = [
     color: "from-blue-500 to-cyan-500"
   };
   {
-    icon: "🔒",
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions protecting your digital assets and data",
-      benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
+    icon: "🔒",title: "Cybersecurity",description: "Comprehensive security solutions protecting your digital assets and data",benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],
     color: "from-red-500 to-orange-500"
   };
   {
-    icon: "📱",
-      title: "Mobile Solutions",
-      description: "Cross-platform mobile applications and responsive web solutions",
-      benefits: ["Native performance", "Cross-platform", "Offline capability"],
+    icon: "📱",title: "Mobile Solutions",description: "Cross-platform mobile applications and responsive web solutions",benefits: ["Native performance", "Cross-platform", "Offline capability"],
     color: "from-green-500 to-emerald-500"
   };
   {
@@ -46,27 +40,20 @@ const techSolutions = [
     color: "from-indigo-500 to-purple-500"
   };
   {
-    icon: "📊",
-      title: "Data Analytics",
-      description: "Business intelligence and data-driven insights for strategic decision making",
-      benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
+    icon: "📊",title: "Data Analytics",description: "Business intelligence and data-driven insights for strategic decision making",benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
     color: "from-yellow-500 to-orange-500"
-  },
-  ];
+  }
+];
 export function TechSolutionsSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 },
-  };
-          whileInView={{ opacity: 1, y: 0 },
-  };
-          viewport={{ once: true },
-  };
-          transition={{ duration: 0.6 },
-  };
+          initial={{ opacity: 0, y: 20 }};
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Technology Solutions
@@ -82,14 +69,10 @@ export function TechSolutionsSection() {
             <motion.div
               key={solution.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-              initial={{ opacity: 0, y: 30 },
-  };
-              whileInView={{ opacity: 1, y: 0 },
-  };
-              viewport={{ once: true },
-  };
-              transition={{ duration: 0.6, delay: index * 0.1 },
-  };
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <span className="text-3xl">{solution.icon}</span>
@@ -123,14 +106,10 @@ export function TechSolutionsSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 },
-  };
-          whileInView={{ opacity: 1, y: 0 },
-  };
-          viewport={{ once: true },
-  };
-          transition={{ duration: 0.6, delay: 0.4 },
-  };
+          initial={{ opacity: 0, y: 20 }};
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -161,4 +140,4 @@ export function TechSolutionsSection() {
       </div>
     </section>
   )
-};
+}

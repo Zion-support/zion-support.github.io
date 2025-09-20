@@ -6,35 +6,40 @@ interface SEOData {
   ogType?: string,
   canonicalUrl?: string,
   structuredData?: object
-};
+}
 
 interface EnhancedSEOManagerProps {
   seoData: SEOData,children: React.ReactNode
-
+}
+;
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
     // Update meta tags dynamically
     const updateMetaTags = () => {
       // Update title
       document.title = seoData.title;
+      
       // Update meta description
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('namedescription');
-        document.head.appendChild(metaDesc)
+        document.head.appendChild(metaDesc);
+      }
       metaDesc.setAttribute('content', seoData.description);
+      
       // Update keywords
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('namekeywords');
-        document.head.appendChild(metaKeywords)
+        document.head.appendChild(metaKeywords);
+      }
       metaKeywords.setAttribute('content', seoData.keywords.join()),
     },
 
-    updateMetaTags()
-}, [seoData]),
+    updateMetaTags();
+  }, [seoData]),
 
   return (
     <>
@@ -47,21 +52,25 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta property="og:title" content={seoData.title} />
         <meta property="og:description" content={seoData.description} />
         <meta property="og:type" content={seoData.ogType || 'website'} />
-        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />},
-  {/* Twitter Card */}
+        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />}
+        
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
-        {seoData.ogImage && <meta name="twitter:image" content={seoData.ogImage} />},
-  {/* Canonical URL */},
-  {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />},
-  {/* Structured Data */},
-  {seoData.structuredData && (
+        {seoData.ogImage && <meta name="twitter:image" content={seoData.ogImage} />}
+        
+        {/* Canonical URL */}
+        {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />}
+        
+        {/* Structured Data */}
+        {seoData.structuredData && (
           <script type="application/ld+json">
             {JSON.stringify(seoData.structuredData)}
           </script>
-        )},
-  {/* Performance Optimizations */}
+        )}
+        
+        {/* Performance Optimizations */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         
@@ -73,6 +82,6 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       {children}
     </>
   ),
-},
+};
 
 export default EnhancedSEOManager;

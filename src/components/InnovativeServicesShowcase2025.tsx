@@ -50,21 +50,22 @@ import {
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from "@/data/innovativeServices2025";
 export default function InnovativeServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'aiScore' | 'name'>('name'),
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
-  const [selectedService, setSelectedService] = useState<any>(null),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'aiScore' | 'name'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
-const categories = ['all', ...Object.keys(INNOVATIVE_SERVICE_CATEGORIES_2025)],
+
+  const categories = ['all', ...Object.keys(INNOVATIVE_SERVICE_CATEGORIES_2025)],
 
   const filteredServices = INNOVATIVE_SERVICES_2025.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch
-}),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     let aValue, bValue,
@@ -81,7 +82,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       case 'aiScore':
         aValue = a.aiScore,
         bValue = b.aiScore,
-        break,
+        break;
       case 'name':
         aValue = a.title;
         bValue = b.title;
@@ -89,34 +90,35 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       default: aValue = a.title;
         bValue = b.title
     }
-
+;
     if (sortOrder === 'asc') {
       return aValue > bValue ? 1 : -1
-} else {
+    } else {
       return aValue < bValue ? 1 : -1
-},
-  }),
+    }
+  });
 
   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
-      <Rocket className="w-6 h-6" />
-},
+      <Rocket className="w-6 h-6" />,
+  };
 
   const getCategoryColor = (category: string) => {
     if (category === 'all') return 'from-cyan-500 to-blue-500';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'
   };
-const openServiceModal = (service: any) => {
+
+  const openServiceModal = (service: any) => {
     setSelectedService(service);
     setShowModal(true)
   },
 
   const closeModal = () => {
     setShowModal(false);
-    setSelectedService(null)
-},
+    setSelectedService(null);
+  },
 
   return (
     <div className="min-h-screen futuristic-bg">
@@ -129,12 +131,9 @@ const openServiceModal = (service: any) => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 50 },
-  };
-            animate={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="futuristic-heading text-5xl md:text-7xl mb-8">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -150,10 +149,8 @@ const openServiceModal = (service: any) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 },
-  };
-                whileTap={{ scale: 0.95 },
-  };
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
                 className="futuristic-btn inline-flex items-center px-8 py-4"
                 onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -161,11 +158,9 @@ const openServiceModal = (service: any) => {
                 Explore Services
               </motion.button>
               <motion.a
-                href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
-                whileHover={{ scale: 1.05 },
-  };
-                whileTap={{ scale: 0.95 },
-  };
+                href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`};
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -226,11 +221,9 @@ const openServiceModal = (service: any) => {
             <div className="flex gap-2">
               {categories.map((category) => (
                 <motion.button
-                  key={category}
-                  whileHover={{ scale: 1.05 },
-  };
-                  whileTap={{ scale: 0.95 },
-  };
+                  key={category};
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category
@@ -272,9 +265,8 @@ const openServiceModal = (service: any) => {
                 onChange={(e) => {
                   const [newSortBy, newSortOrder] = e.target.value.split('-');
                   setSortBy(newSortBy as any);
-                  setSortOrder(newSortOrder as any)
-},
-  };
+                  setSortOrder(newSortOrder as any);
+                }}
                 className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >
                 <option value="name-desc">Name (A-Z)</option>
@@ -294,14 +286,10 @@ const openServiceModal = (service: any) => {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 },
-  };
-                animate={{ opacity: 1, y: 0 },
-  };
-                exit={{ opacity: 0, y: -50 },
-  };
-                transition={{ duration: 0.5, delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={viewMode === 'grid' ? 'futuristic-card p-6' : 'futuristic-card p-6'}
               >
                 {viewMode === 'grid' ? (
@@ -334,8 +322,7 @@ const openServiceModal = (service: any) => {
                           <div className="w-16 bg-gray-700 rounded-full h-2">
                             <div 
                               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"
-                              style={{ width: `${service.aiScore}%` },
-  };
+                              style={{ width: `${service.aiScore}%` }}
                             ></div>
                           </div>
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
@@ -355,14 +342,11 @@ const openServiceModal = (service: any) => {
 
                     <div className="flex items-center justify-between mt-auto">
                       <div className="text-2xl font-bold text-cyan-400">
-                        {service.currency},
-  {service.price.toLocaleString()}
+                        {service.currency}{service.price.toLocaleString()}
                       </div>
                       <motion.button
-                        whileHover={{ scale: 1.05 },
-  };
-                        whileTap={{ scale: 0.95 },
-  };
+                        whileHover={{ scale: 1.05 }};
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => openServiceModal(service)}
                         className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
@@ -396,14 +380,11 @@ const openServiceModal = (service: any) => {
                     
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-3">
-                        {service.currency},
-  {service.price.toLocaleString()}
+                        {service.currency}{service.price.toLocaleString()}
                       </div>
                       <motion.button
-                        whileHover={{ scale: 1.05 },
-  };
-                        whileTap={{ scale: 0.95 },
-  };
+                        whileHover={{ scale: 1.05 }};
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => openServiceModal(service)}
                         className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
@@ -417,8 +398,8 @@ const openServiceModal = (service: any) => {
           </AnimatePresence>
         </div>
 
-        {/* No Results Message */},
-  {sortedServices.length === 0 && (
+        {/* No Results Message */}
+        {sortedServices.length === 0 && (
           <div className="text-center py-16">
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -431,22 +412,16 @@ const openServiceModal = (service: any) => {
       <AnimatePresence>
         {showModal && selectedService && (
           <motion.div
-            initial={{ opacity: 0 },
-  };
-            animate={{ opacity: 1 },
-  };
-            exit={{ opacity: 0 },
-  };
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 },
-  };
-              animate={{ scale: 1, opacity: 1 },
-  };
-              exit={{ scale: 0.9, opacity: 0 },
-  };
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="futuristic-card max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -491,8 +466,7 @@ const openServiceModal = (service: any) => {
                           <div className="w-24 bg-gray-700 rounded-full h-3">
                             <div 
                               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full"
-                              style={{ width: `${selectedService.aiScore}%` },
-  };
+                              style={{ width: `${selectedService.aiScore}%` }}
                             ></div>
                           </div>
                           <span className="text-cyan-400 font-semibold">{selectedService.aiScore}%</span>
@@ -533,17 +507,14 @@ const openServiceModal = (service: any) => {
                   <div>
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-cyan-400 mb-2">
-                        {selectedService.currency},
-  {selectedService.price.toLocaleString()}
+                        {selectedService.currency}{selectedService.price.toLocaleString()}
                       </h3>
                       <p className="text-gray-400 mb-4">One-time setup fee</p>
                       
                       <div className="space-y-3">
                         <motion.button
-                          whileHover={{ scale: 1.02 },
-  };
-                          whileTap={{ scale: 0.98 },
-  };
+                          whileHover={{ scale: 1.02 }};
+                          whileTap={{ scale: 0.98 }}
                           className="w-full futuristic-btn py-3"
                           onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`, '_blank')}
                         >
@@ -551,10 +522,8 @@ const openServiceModal = (service: any) => {
                         </motion.button>
                         
                         <motion.button
-                          whileHover={{ scale: 1.02 },
-  };
-                          whileTap={{ scale: 0.98 },
-  };
+                          whileHover={{ scale: 1.02 }};
+                          whileTap={{ scale: 0.98 }}
                           className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
                           onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`, '_blank')}
                         >
@@ -604,9 +573,8 @@ const openServiceModal = (service: any) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025).map(([key, value]) => (
             <motion.div
-              key={key}
-              whileHover={{ scale: 1.05 },
-  };
+              key={key};
+              whileHover={{ scale: 1.05 }}
               className="futuristic-card p-6 text-center"
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
@@ -629,11 +597,9 @@ const openServiceModal = (service: any) => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
-              href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
-              whileHover={{ scale: 1.05 },
-  };
-              whileTap={{ scale: 0.95 },
-  };
+              href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`};
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }}
               className="futuristic-btn inline-flex items-center px-8 py-4"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -641,11 +607,9 @@ const openServiceModal = (service: any) => {
             </motion.a>
             
             <motion.a
-              href={`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}`}
-              whileHover={{ scale: 1.05 },
-  };
-              whileTap={{ scale: 0.95 },
-  };
+              href={`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}`};
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               <Mail className="w-5 h-5 mr-2" />
@@ -660,5 +624,5 @@ const openServiceModal = (service: any) => {
         </div>
       </div>
     </div>
-  )
-};
+  );
+}

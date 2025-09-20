@@ -49,19 +49,20 @@ interface SidebarItem {
   children?: SidebarItem[],
   featured?: boolean,
   description?: string
-};
+}
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);
-const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
-const toggleSection = (section: string) => {
+  const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    )
-const navigation: SidebarItem[] = [
+    );
+  };
+  const navigation: SidebarItem[] = [
     {
       title: 'Main',items: [
         { name: 'Home', href: '/', icon: Home };
@@ -73,10 +74,10 @@ const navigation: SidebarItem[] = [
         { name: 'Research', href: '/research-development', icon: TestTube };
         { name: 'Events', href: '/events', icon: Video };
         { name: 'News', href: '/news', icon: Newspaper };
-        { name: 'Contact', href: '/contact', icon: Mail };
-        { name: 'Blog', href: '/blog', icon: FileText },
-  ],
-  };
+        { name: 'Contact', href: '/contact', icon: Mail },
+        { name: 'Blog', href: '/blog', icon: FileText }
+      ]
+    };
     {
       name: 'Core Services',href: '#',icon: Target,children: [
         {
@@ -87,12 +88,12 @@ const navigation: SidebarItem[] = [
         };
         {
           name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Business Intelligence'
-        };
+        },
         {
           name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Hardware & Network'
-        },
-  ],
-  };
+        }
+      ]
+    };
     {
       name: 'AI Products',href: '#',icon: Brain,children: [
         {
@@ -103,12 +104,12 @@ const navigation: SidebarItem[] = [
         };
         {
           name: 'AI Auto Email Responder',href: '/services/ai-auto-email-responder',icon: MessageCircle,description: 'Email Automation'
-        };
+        },
         {
           name: 'LLM Content Studio',href: '/services/llm-content-studio',icon: PenTool,description: 'Content Creation'
-        },
-  ],
-  };
+        }
+      ]
+    };
     {
       name: 'Emerging Tech',href: '#',icon: Rocket,children: [
         {
@@ -119,12 +120,12 @@ const navigation: SidebarItem[] = [
         };
         {
           name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Smartphone,description: 'Connected Ecosystems'
-        };
+        },
         {
           name: 'AI Content Creation',href: '/services/ai-content-creation',icon: Video,description: 'Creative AI'
-        },
-  ],
-  };
+        }
+      ]
+    };
     {
       name: 'Business Solutions',href: '#',icon: Briefcase,children: [
         {
@@ -135,12 +136,12 @@ const navigation: SidebarItem[] = [
         };
         {
           name: 'Equipment Services',href: '/equipment',icon: Server,description: 'Hardware Solutions'
-        };
+        },
         {
           name: 'Request Quote',href: '/request-quote',icon: MessageCircle,description: 'Get Pricing'
-        },
-  ],
-  };
+        }
+      ]
+    };
     {
       name: 'Company',href: '#',icon: Info,children: [
         {
@@ -151,12 +152,12 @@ const navigation: SidebarItem[] = [
         };
         {
           name: 'Careers',href: '/careers',icon: Briefcase,description: 'Join Us'
-        };
+        },
         {
           name: 'Partners',href: '/partners',icon: Users,description: 'Partnerships'
-        },
-  ],
-  };
+        }
+      ]
+    };
     {
       name: 'Resources',href: '#',icon: BookOpen,children: [
         {
@@ -167,21 +168,22 @@ const navigation: SidebarItem[] = [
         };
         {
           name: 'Help Center',href: '/help',icon: MessageCircle,description: 'Support Resources'
-        };
+        },
         {
           name: 'Documentation',href: '/docs',icon: BookOpen,description: 'Technical Docs'
-        },
-  ],
-  };
+        }
+      ]
+    };
     {
       name: 'Contact',href: '/contact',icon: Phone
-    },
+    }
   ];
-const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
+  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
-const hasChildren = item.children && item.children.length > 0;
-const isExpanded = expandedSections.includes(item.name.toLowerCase());
-const isFeatured = item.featured;
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const isFeatured = item.featured;
+
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (
@@ -234,8 +236,8 @@ const isFeatured = item.featured;
           </Link>
         )}
       </div>
-    )
-},
+    );
+  },
 
   return (
     <>
@@ -290,12 +292,13 @@ const isFeatured = item.featured;
         </div>
       </div>
 
-      {/* Overlay */},
-  {isOpen && (
+      {/* Overlay */}
+      {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
     </>
-  )
+  );
+}

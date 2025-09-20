@@ -22,11 +22,11 @@ export interface Notification {
   timestamp: Date,read: boolean;
   action?: {
     label: string,onClick: () => void
-  };
+  },
   priority: 'low' | 'medium' | 'high';
   category?: string,
   icon?: React.ReactNode
-};
+}
 
 interface NotificationSystemProps {
   maxNotifications?: number,
@@ -35,9 +35,11 @@ interface NotificationSystemProps {
   enableVibration?: boolean,
   autoDismiss?: boolean,
   defaultDuration?: number,
+}
 
 interface NotificationSettings {
   sound: boolean,vibration: boolean,autoDismiss: boolean,position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',maxNotifications: number,defaultDuration: number
+}
 
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5;
@@ -47,23 +49,24 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   autoDismiss = true,
   defaultDuration = 5000
 }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]),
+  const [notifications, setNotifications] = useState<Notification[]>([]);
   const [settings, setSettings] = useState<NotificationSettings>({
     sound: enableSound,vibration: enableVibration,autoDismiss: autoDismiss;
     position,
     maxNotifications,
     defaultDuration
-  }),
+  });
   const [showSettings, setShowSettings] = useState(false);
-const [isOpen, setIsOpen] = useState(false);
-const [unreadCount, setUnreadCount] = useState(0);
-const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   // Initialize audio for notification sounds
   useEffect(() => {
     if (settings.sound) {
       audioRef.current = new Audio('/notification-sound.mp3'), // You can add a custom sound file
       audioRef.current.volume = 0.3,
-    },
+    }
   }, [settings.sound]),
 
   // Update unread count
@@ -81,14 +84,14 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
         const timeout = setTimeout(() => {
           dismissNotification(notification.id)
         }, notification.duration || settings.defaultDuration),
-        timeouts.push(timeout)
-},
-  }),
+        timeouts.push(timeout);
+      }
+    }),
 
     return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout))
-},
-  }, [notifications, settings.autoDismiss, settings.defaultDuration]),
+      timeouts.forEach(timeout => clearTimeout(timeout)),
+    },
+  }, [notifications, settings.autoDismiss, settings.defaultDuration]);
 
   // Play notification sound
   const playSound = useCallback(() => {
@@ -96,22 +99,22 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
       try {
         audioRef.current.play().catch(() => {
           // Ignore autoplay restrictions
-        })
-} catch (error) {
-        console.warn('Could not play notification sound:', error)
-},
-  },
+        });
+      } catch (error) {
+        console.warn('Could not play notification sound:', error);
+      }
+    }
   }, [settings.sound]),
 
   // Trigger vibration
   const triggerVibration = useCallback(() => {
     if (settings.vibration && 'vibrate' in navigator) {
       try {
-        navigator.vibrate(200)
-} catch (error) {
-        console.warn('Could not trigger vibration:', error)
-},
-  },
+        navigator.vibrate(200);
+      } catch (error) {
+        console.warn('Could not trigger vibration:', error);
+      }
+    }
   }, [settings.vibration]),
 
   // Add notification
@@ -123,13 +126,13 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
     };
     setNotifications(prev => {
       const updated = [newNotification, ...prev],
-      return updated.slice(0, settings.maxNotifications)
-}),
+      return updated.slice(0, settings.maxNotifications);
+    }),
 
     // Play sound and vibrate
     playSound();
-    triggerVibration()
-}, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]),
+    triggerVibration();
+  }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]),
 
   // Dismiss notification
   const dismissNotification = useCallback((id: string) => {
@@ -140,35 +143,35 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
   const markAsRead = useCallback((id: string) => {
     setNotifications(prev =>
       prev.map(n => n.id === id ? { ...n, read: true } : n)
-    )
-}, []),
+    );
+  }, []),
 
   // Mark all as read
   const markAllAsRead = useCallback(() => {
-    setNotifications(prev => prev.map(n => ({ ...n, read: true })))
-}, []),
+    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
+  }, []),
 
   // Clear all notifications
   const clearAll = useCallback(() => {
-    setNotifications([])
-}, []),
+    setNotifications([]);
+  }, []),
 
   // Get notification icon
   const getNotificationIcon = (type: NotificationType, priority: string) => {
     const iconProps = { className: "w-5 h-5" };
     switch (type) {
       case 'success':
-        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`} />;
+        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`} />,
       case 'warning':
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`} />;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`} />,
       case 'error':
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`} />;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`} />,
       case 'info':
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`} />;
+        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`} />,
       case 'achievement':
         return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`} />;
-      default: return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />
-},
+      default: return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />;
+    }
   },
 
   // Get notification styles
@@ -176,17 +179,17 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
     const baseStyles = "border-l-4 ";
     switch (type) {
       case 'success':
-        return baseStyles + (priority === 'high' ? 'border-green-600 bg-green-50' : 'border-green-500 bg-green-50/80');
+        return baseStyles + (priority === 'high' ? 'border-green-600 bg-green-50' : 'border-green-500 bg-green-50/80'),
       case 'warning':
-        return baseStyles + (priority === 'high' ? 'border-yellow-600 bg-yellow-50' : 'border-yellow-500 bg-yellow-50/80');
+        return baseStyles + (priority === 'high' ? 'border-yellow-600 bg-yellow-50' : 'border-yellow-500 bg-yellow-50/80'),
       case 'error':
-        return baseStyles + (priority === 'high' ? 'border-red-600 bg-red-50' : 'border-red-500 bg-red-50/80');
+        return baseStyles + (priority === 'high' ? 'border-red-600 bg-red-50' : 'border-red-500 bg-red-50/80'),
       case 'info':
-        return baseStyles + (priority === 'high' ? 'border-blue-600 bg-blue-50' : 'border-blue-500 bg-blue-50/80');
+        return baseStyles + (priority === 'high' ? 'border-blue-600 bg-blue-50' : 'border-blue-500 bg-blue-50/80'),
       case 'achievement':
         return baseStyles + (priority === 'high' ? 'border-purple-600 bg-purple-50' : 'border-purple-500 bg-purple-50/80');
       default: return baseStyles + 'border-zion-slate bg-zion-slate/10'
-    },
+    }
   };
   // Get position classes
   const getPositionClasses = () => {
@@ -194,13 +197,13 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
       case 'top-left':
         return 'top-4 left-4';
       case 'top-right':
-        return 'top-4 right-4';
+        return 'top-4 right-4',
       case 'bottom-left':
-        return 'bottom-4 left-4';
+        return 'bottom-4 left-4',
       case 'bottom-right':
         return 'bottom-4 right-4';
       default: return 'top-4 right-4'
-    },
+    }
   };
   // Update settings
   const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {
@@ -211,9 +214,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     (window as any).addNotification = addNotification,
     return () => {
-      delete (window as any).addNotification
-},
-  }, [addNotification]),
+      delete (window as any).addNotification,
+    },
+  }, [addNotification]);
 
   return (
     <>
@@ -226,13 +229,11 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
         >
           <Bell className="w-6 h-6 text-zion-slate-dark" />
 
-          {/* Unread count badge */},
-  {unreadCount > 0 && (
+          {/* Unread count badge */}
+          {unreadCount > 0 && (
             <motion.div
-              initial={{ scale: 0 },
-  };
-              animate={{ scale: 1 },
-  };
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
             >
               {unreadCount > 99 ? '99+' : unreadCount}
@@ -254,12 +255,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
       <AnimatePresence>
         {showSettings && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: -10 },
-  };
-            animate={{ opacity: 1, scale: 1, y: 0 },
-  };
-            exit={{ opacity: 0, scale: 0.9, y: -10 },
-  };
+            initial={{ opacity: 0, scale: 0.9, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: -10 }}
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
           >
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>
@@ -327,12 +325,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: -10 },
-  };
-            animate={{ opacity: 1, scale: 1, y: 0 },
-  };
-            exit={{ opacity: 0, scale: 0.9, y: -10 },
-  };
+            initial={{ opacity: 0, scale: 0.9, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: -10 }}
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
           >
             {/* Header */}
@@ -351,10 +346,8 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
               <AnimatePresence>
                 {notifications.length === 0 ? (
                   <motion.div
-                    initial={{ opacity: 0 },
-  };
-                    animate={{ opacity: 1 },
-  };
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     className="text-center py-8 text-zion-slate/60"
                   >
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />
@@ -365,12 +358,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
                   notifications.map((notification) => (
                     <motion.div
                       key={notification.id}
-                      initial={{ opacity: 0, x: 50 },
-  };
-                      animate={{ opacity: 1, x: 0 },
-  };
-                      exit={{ opacity: 0, x: -50, height: 0 },
-  };
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -50, height: 0 }}
                       layout
                       className={`p-4 rounded-xl ${getNotificationStyles(notification.type, notification.priority)} ${
                         !notification.read ? 'ring-2 ring-zion-cyan/20' : ''
@@ -412,15 +402,15 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
                                 <button
                                   onClick={() => {
                                     notification.action!.onClick();
-                                    markAsRead(notification.id)
-},
-  };
+                                    markAsRead(notification.id);
+                                  }}
                                   className="text-xs px-2 py-1 bg-zion-cyan/10 hover: bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}
                                 </button>
-                              )},
-  {!notification.read && (
+                              )}
+
+                              {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}
                                   className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors"
@@ -441,18 +431,18 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
         )}
       </AnimatePresence>
     </>
-  )
+  );
 },
 
 // Hook for using notifications in components
 export const useNotifications = () => {
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     if ((window as any).addNotification) {
-      (window as any).addNotification(notification)
-},
+      (window as any).addNotification(notification);
+    }
   }, []);
-  return { addNotification },
-  };
+  return { addNotification };
+};
 // Utility functions for common notification types
 export const notificationUtils = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
@@ -463,8 +453,8 @@ export const notificationUtils = {
         message,
         priority: 'medium';
         ...options
-      })
-},
+      });
+    }
   },
 
   warning: (title: string, message: string, options?: Partial<Notification>) => {
@@ -475,8 +465,8 @@ export const notificationUtils = {
         message,
         priority: 'medium';
         ...options
-      })
-},
+      });
+    }
   },
 
   error: (title: string, message: string, options?: Partial<Notification>) => {
@@ -487,8 +477,8 @@ export const notificationUtils = {
         message,
         priority: 'high';
         ...options
-      })
-},
+      });
+    }
   },
 
   info: (title: string, message: string, options?: Partial<Notification>) => {
@@ -499,8 +489,8 @@ export const notificationUtils = {
         message,
         priority: 'low';
         ...options
-      })
-},
+      });
+    }
   },
 
   achievement: (title: string, message: string, options?: Partial<Notification>) => {
@@ -511,7 +501,7 @@ export const notificationUtils = {
         message,
         priority: 'high';
         ...options
-      })
-},
-  },
-  };
+      });
+    }
+  }
+};

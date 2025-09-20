@@ -6,8 +6,8 @@ class EnhancedErrorBoundary extends Component {
         super(props);
         this.state = {
             hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
-        },
-  };
+        };
+    }
 
     static getDerivedStateFromError(error) {
         return {
@@ -25,10 +25,11 @@ errorInfo
         console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
-            this.props.onError(error, errorInfo)
-};
+            this.props.onError(error, errorInfo);
+        }
         // Send error to error reporting service (if available)
-        this.reportError(error, errorInfo)
+        this.reportError(error, errorInfo);
+    }
 
     static generateErrorId() {
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -38,30 +39,33 @@ errorInfo
         // In a real application, you would send this to your error reporting service
         // For example: Sentry, LogRocket, Bugsnag, etc.
         const errorReport = {
-            id: this.state.errorId,timestamp: new Date().toISOString(),error: {
+            id: this.state.errorId,timestamp: new Date().toISOString(),error: {,
                 name: error.name,message: error.message,stack: error.stack
-            };
-            errorInfo: {
-                componentStack: errorInfo.componentStack
-            };
-            userAgent: navigator.userAgent,url: window.location.href,viewport: {
-                width: window.innerWidth,height: window.innerHeight
             },
-  };
+            errorInfo: {,
+                componentStack: errorInfo.componentStack
+            },
+            userAgent: navigator.userAgent,url: window.location.href,viewport: {,
+                width: window.innerWidth,height: window.innerHeight
+            }
+        };
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
             console.group('Error Report');
             console.log('Error ID:', errorReport.id);
             console.log('Error Details:', errorReport);
-            console.groupEnd()
+            console.groupEnd();
+        }
         // In production, you would send this to your error reporting service
-        // Example: Sentry.captureException(error, { extra: errorReport })
+        // Example: Sentry.captureException(error, { extra: errorReport });
+    }
 
     handleRetry() {
         this.setState({
 hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
         
-})
+});
+    }
 
     handleGoHome() {
         window.location.href = '/',
@@ -69,7 +73,7 @@ hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
 
     handleReportIssue() {
         const error = this.state.error;
-const errorInfo = this.state.errorInfo;
+        const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
             const issueBody = `
 ## Error Report
@@ -96,26 +100,26 @@ Please provide any additional context about what you were doing when this error 
             `;
             // Open email client with pre-filled error report
             const mailtoLink = `mailto: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
-            window.open(mailtoLink)
-},
-  };
+            window.open(mailtoLink);
+        }
+    }
 
     toggleStackTrace() {
-        this.setState(prev => ({ showStackTrace: !prev.showStackTrace }))
+        this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
+    }
 
     render() {
         if (this.state.hasError) {
             // Custom fallback UI
             if (this.props.fallback) {
-                return this.props.fallback
+                return this.props.fallback;
+            }
             // Default error UI
             return (
                 <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
                     <motion.div 
-                        initial={{ opacity: 0, scale: 0.9 },
-  } 
-                        animate={{ opacity: 1, scale: 1 },
-  } 
+                        initial={{ opacity: 0, scale: 0.9 }} 
+                        animate={{ opacity: 1, scale: 1 }} 
                         className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden"
                     >
                         {/* Header */}
@@ -151,8 +155,8 @@ Please provide any additional context about what you were doing when this error 
                                 </div>
                             </div>
 
-                            {/* Stack Trace (Collapsible) */},
-  {this.state.error?.stack && (
+                            {/* Stack Trace (Collapsible) */}
+                            {this.state.error?.stack && (
                                 <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
                                     <button 
                                         onClick={this.toggleStackTrace} 
@@ -172,9 +176,10 @@ Please provide any additional context about what you were doing when this error 
                                         </div>
                                     )}
                                 </div>
-                            )},
-  {/* Component Stack (if available) */},
-  {this.state.errorInfo?.componentStack && (
+                            )}
+
+                            {/* Component Stack (if available) */}
+                            {this.state.errorInfo?.componentStack && (
                                 <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
                                     <div className="px-4 py-3 bg-slate-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-700">
                                         <span className="font-medium text-slate-700 dark:text-slate-300">
@@ -187,8 +192,9 @@ Please provide any additional context about what you were doing when this error 
                                         </pre>
                                     </div>
                                 </div>
-                            )},
-  {/* Action Buttons */}
+                            )}
+
+                            {/* Action Buttons */}
                             <div className="flex flex-col sm:flex-row gap-3">
                                 <button 
                                     onClick={this.handleRetry} 
@@ -235,9 +241,9 @@ Please provide any additional context about what you were doing when this error 
                 </div>
             )
         }
-
-        return this.props.children
-},
-  };
+;
+        return this.props.children;
+    }
+}
 
 export default EnhancedErrorBoundary;

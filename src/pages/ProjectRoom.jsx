@@ -8,63 +8,58 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from "lu
 import { VideoCallRoom } from "@/components/video/VideoCallRoom";
 import { toast } from "sonner";
 export default function ProjectRoom() {
-  const { projectId } = useParams()
-    const [activeTab, setActiveTab] = useState('chat')
-    const [isInCall, setIsInCall] = useState(false)
+    const { projectId } = useParams();
+    const [activeTab, setActiveTab] = useState('chat');
+    const [isInCall, setIsInCall] = useState(false);
     const [callParticipants, setCallParticipants] = useState([
-  {
-  id: 'user-1',name: 'You',isHost: true,isVideoEnabled: true,isMuted: false
-},
-  ])
+        {
+            id: 'user-1',name: 'You',isHost: true,isVideoEnabled: true,isMuted: false
+        }
+    ]);
     const startVideoCall = () => {
-        setIsInCall(true)
+        setIsInCall(true);
         toast.success("Video call started", {
-  description: "Others can join with the project room link"
-})
-        // Switch to video tab if not already there;
-        if (if (activeTab !== 'video') {
-  ) {
-            setActiveTab('video')
-        },
-  };
+            description: "Others can join with the project room link"
+        });
+        // Switch to video tab if not already there
+        if (activeTab !== 'video') {
+            setActiveTab('video');
+        }
+    },
     const endVideoCall = () => {
-        setIsInCall(false)
+        setIsInCall(false);
         toast.info("Video call ended", {
-  description: "Call duration and participants will be logged"
-})
-    }
+            description: "Call duration and participants will be logged"
+        });
+    },
     const simulateUserJoining = () => {
-        // This is just for demo purposes - in a real app, this would be handled by the video call service;
-const mockUsers = [
-  {{ id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-  },
-  {{ id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-  },
-  {{ id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true },
-  },
-  ]
-        const randomUser = mockUsers[[Math.floor(Math.random() * mockUsers.length)],
-  ]
+        // This is just for demo purposes - in a real app, this would be handled by the video call service
+        const mockUsers = [
+            { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
+            { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+            { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+        ];
+        const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!callParticipants.find(p => p.id === randomUser.id)) {
-  setCallParticipants(prev => [...prev, randomUser])
-            toast(`${randomUser.name} joined the call`)
-        },
-  };
+            setCallParticipants(prev => [...prev, randomUser]);
+            toast(`${randomUser.name} joined the call`);
+        }
+    },
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
-      ;
+      
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
           <div className="flex gap-2">
             {isInCall && (<Button variant="destructive" className="flex items-center gap-2">
                 <X className="h-4 w-4"/>
-                End Call;
+                End Call
               </Button>)}
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
-        ;
+        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
@@ -96,7 +91,7 @@ const mockUsers = [
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
-          ;
+          
           <TabsContent value="chat" className="space-y-4">
             <Card>
               <CardHeader>
@@ -110,7 +105,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="files" className="space-y-4">
             <Card>
               <CardHeader>
@@ -124,7 +119,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="video" className="space-y-4">
             <Card>
               <CardHeader>
@@ -134,9 +129,8 @@ const mockUsers = [
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (<div className="space-y-4">
                     <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>
-                    ;
-                    {{/* This button is just for demo/testing purposes */},
-  };
+                    
+                    {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
                         Simulate user joining (demo only)
@@ -147,7 +141,7 @@ const mockUsers = [
                     <div className="flex gap-2">
                       <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
                         <Video className="h-4 w-4"/>
-                        Start Video Call;
+                        Start Video Call
                       </Button>
                     </div>
                     <div className="text-xs text-muted-foreground mt-4">
@@ -158,7 +152,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="calendar" className="space-y-4">
             <Card>
               <CardHeader>
@@ -172,7 +166,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="team" className="space-y-4">
             <Card>
               <CardHeader>
@@ -186,7 +180,7 @@ const mockUsers = [
               </CardContent>
             </Card>
           </TabsContent>
-          ;
+          
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>
@@ -202,6 +196,6 @@ const mockUsers = [
           </TabsContent>
         </Tabs>
       </main>
-      ;
-    </>)
-};
+      
+    </>);
+}

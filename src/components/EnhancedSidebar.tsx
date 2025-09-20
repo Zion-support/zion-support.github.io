@@ -46,19 +46,19 @@ import {
 } from "lucide-react";
 export const EnhancedSidebar: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-const location = useLocation();
-const toggleSection = (section: string) => {
+  const location = useLocation();
+  const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section)
     } else {
-      newExpanded.add(section)
-};
-    setExpandedSections(newExpanded)
-},
+      newExpanded.add(section);
+    }
+    setExpandedSections(newExpanded);
+  },
 
   const isActive = (path: string) => location.pathname === path;
-const navigationSections = [
+  const navigationSections = [
     {
       title: "Main",icon: Home,items: [
         { name: "Home", href: "/", icon: Home };
@@ -68,10 +68,10 @@ const navigationSections = [
         { name: "Blog", href: "/blog", icon: FileText };
         { name: "Partners", href: "/partners", icon: Handshake };
         { name: "About", href: "/about", icon: Users };
-        { name: "Contact", href: "/contact", icon: MessageCircle };
-        { name: "Careers", href: "/careers", icon: Briefcase },
-  ],
-  };
+        { name: "Contact", href: "/contact", icon: MessageCircle },
+        { name: "Careers", href: "/careers", icon: Briefcase }
+      ]
+    };
     {
       title: "Service Areas",icon: Zap,items: [
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud };
@@ -82,10 +82,10 @@ const navigationSections = [
         { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain };
         { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users };
         { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar };
-        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp };
-        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code },
-  ],
-  };
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
+        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
+      ]
+    };
     {
       title: "Resources",icon: BookOpen,items: [
         { name: "Documentation", href: "/documentation", icon: FileText };
@@ -95,15 +95,15 @@ const navigationSections = [
         { name: "FAQ", href: "/faq", icon: HelpCircle };
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle };
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 };
-        { name: "Login", href: "/login", icon: User };
-        { name: "Support", href: "/support", icon: HelpCircle },
-  ],
-  },
+        { name: "Login", href: "/login", icon: User },
+        { name: "Support", href: "/support", icon: HelpCircle }
+      ]
+    }
   ];
-const quickActions = [
+  const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" };
-    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" };
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" },
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
+    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
   return (
     <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
@@ -111,12 +111,9 @@ const quickActions = [
         {/* Logo Section */}
         <motion.div
           className="mb-8"
-          initial={{ opacity: 0, y: -20 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.5 },
-  };
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
@@ -137,24 +134,18 @@ const quickActions = [
         {/* Quick Actions */}
         <motion.div
           className="mb-8"
-          initial={{ opacity: 0, y: -20 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.5, delay: 0.1 },
-  };
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
           <div className="space-y-2">
             {quickActions.map((action, index) => (
               <motion.div
                 key={action.name}
-                initial={{ opacity: 0, x: -20 },
-  };
-                animate={{ opacity: 1, x: 0 },
-  };
-                transition={{ duration: 0.3, delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <Link
                   to={action.href}
@@ -177,12 +168,9 @@ const quickActions = [
           {navigationSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-              initial={{ opacity: 0, y: -20 },
-  };
-              animate={{ opacity: 1, y: 0 },
-  };
-              transition={{ duration: 0.5, delay: sectionIndex * 0.1 },
-  };
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
             >
               <button
                 onClick={() => toggleSection(section.title)}
@@ -202,25 +190,18 @@ const quickActions = [
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 },
-  };
-                    animate={{ opacity: 1, height: 'auto' },
-  };
-                    exit={{ opacity: 0, height: 0 },
-  };
-                    transition={{ duration: 0.3 },
-  };
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
                     className="ml-7 mt-2 space-y-1"
                   >
                     {section.items.map((item, itemIndex) => (
                       <motion.div
                         key={item.name}
-                        initial={{ opacity: 0, x: -20 },
-  };
-                        animate={{ opacity: 1, x: 0 },
-  };
-                        transition={{ duration: 0.2, delay: itemIndex * 0.05 },
-  };
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
                       >
                         <Link
                           to={item.href}
@@ -245,12 +226,9 @@ const quickActions = [
         {/* Contact Info */}
         <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.5, delay: 0.5 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
           <div className="space-y-2 text-xs text-zion-slate-light">
@@ -270,4 +248,5 @@ const quickActions = [
         </motion.div>
       </div>
     </aside>
-  ),
+  );
+};

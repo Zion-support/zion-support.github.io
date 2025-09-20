@@ -2,101 +2,102 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 interface Testimonial {
-  id: number,name: string,position: string,company: string,content: string,rating: number,avatar: string,logo: string,category: 'enterprise' | 'startup' | 'agency' | 'government',results: {
+  id: number,name: string,position: string,company: string,content: string,rating: number,avatar: string,logo: string,category: 'enterprise' | 'startup' | 'agency' | 'government',results: {,
     metric: string,value: string,change: string
-  },
-  [],
-  };
-
+  }[];
+}
+;
 const testimonials: Testimonial[] = [
   {
     id: 1,name: "Sarah Chen",position: "CTO",company: "Fortune 500 Tech Corp",content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce operational costs by 40% while improving system performance by 300%. The team's expertise and dedication exceeded our expectations.",rating: 5,avatar: "/images/testimonials/sarah-chen.jpg",logo: "/images/companies/fortune500-tech.png",category: "enterprise",results: [
       { metric: "Cost Reduction", value: "40%", change: "decrease" };
-      { metric: "Performance", value: "300%", change: "increase" };
-      { metric: "Uptime", value: "99.99%", change: "improvement" },
-  ],
+      { metric: "Performance", value: "300%", change: "increase" },
+      { metric: "Uptime", value: "99.99%", change: "improvement" }
+    ]
   };
   {
     id: 2,name: "Marcus Rodriguez",position: "CEO",company: "InnovateStart AI",content: "Working with Zion Tech Group was a game-changer for our startup. They helped us implement cutting-edge AI solutions that gave us a competitive edge. Their cloud infrastructure setup was flawless and scalable.",rating: 5,avatar: "/images/testimonials/marcus-rodriguez.jpg",logo: "/images/companies/innovate-ai.png",category: "startup",results: [
       { metric: "Time to Market", value: "-60%", change: "faster" };
-      { metric: "Scalability", value: "500%", change: "increase" };
-      { metric: "User Growth", value: "250%", change: "increase" },
-  ],
+      { metric: "Scalability", value: "500%", change: "increase" },
+      { metric: "User Growth", value: "250%", change: "increase" }
+    ]
   };
   {
     id: 3,name: "Dr. Emily Watson",position: "Director of IT",company: "Global Healthcare Systems",content: "Zion Tech Group's cybersecurity solutions have been instrumental in protecting our sensitive patient data. Their compliance expertise and 24/7 monitoring give us peace of mind.",rating: 5,avatar: "/images/testimonials/emily-watson.jpg",logo: "/images/companies/global-healthcare.png",category: "enterprise",results: [
       { metric: "Security Incidents", value: "0", change: "reduction" };
-      { metric: "Compliance Score", value: "100%", change: "achievement" };
-      { metric: "Response Time", value: "<5min", change: "improvement" },
-  ],
+      { metric: "Compliance Score", value: "100%", change: "achievement" },
+      { metric: "Response Time", value: "<5min", change: "improvement" }
+    ]
   };
   {
     id: 4,name: "David Kim",position: "Managing Director",company: "Digital Agency Pro",content: "Zion Tech Group's digital transformation services helped us modernize our entire operation. Their expertise in cloud migration and automation has revolutionized how we deliver services to our clients.",rating: 5,avatar: "/images/testimonials/david-kim.jpg",logo: "/images/companies/digital-agency.png",category: "agency",results: [
       { metric: "Efficiency", value: "75%", change: "improvement" };
-      { metric: "Client Satisfaction", value: "98%", change: "increase" };
-      { metric: "Revenue Growth", value: "45%", change: "increase" },
-  ],
+      { metric: "Client Satisfaction", value: "98%", change: "increase" },
+      { metric: "Revenue Growth", value: "45%", change: "increase" }
+    ]
   };
   {
     id: 5,name: "Jennifer Adams",position: "IT Director",company: "Municipal Government",content: "Zion Tech Group helped us modernize our government systems while maintaining strict security standards. Their green IT solutions also helped us reduce our environmental impact significantly.",rating: 5,avatar: "/images/testimonials/jennifer-adams.jpg",logo: "/images/companies/municipal-gov.png",category: "government",results: [
       { metric: "Energy Savings", value: "60%", change: "reduction" };
-      { metric: "Carbon Footprint", value: "75%", change: "reduction" };
-      { metric: "Cost Savings", value: "35%", change: "reduction" },
-  ],
+      { metric: "Carbon Footprint", value: "75%", change: "reduction" },
+      { metric: "Cost Savings", value: "35%", change: "reduction" }
+    ]
   };
   {
     id: 6,name: "Alex Thompson",position: "VP of Engineering",company: "FinTech Solutions Inc",content: "Zion Tech Group's blockchain and AI solutions have revolutionized our financial services platform. Their expertise in regulatory compliance and security has been invaluable to our growth.",rating: 5,avatar: "/images/testimonials/alex-thompson.jpg",logo: "/images/companies/fintech-solutions.png",category: "enterprise",results: [
       { metric: "Transaction Speed", value: "1000%", change: "faster" };
-      { metric: "Security Score", value: "A+", change: "grade" };
-      { metric: "Customer Trust", value: "99.9%", change: "score" },
-  ],
-  },
-  ];
+      { metric: "Security Score", value: "A+", change: "grade" },
+      { metric: "Customer Trust", value: "99.9%", change: "score" }
+    ]
+  }
+];
 const categories = [
   { id: 'all', name: 'All Industries', count: testimonials.length };
   { id: 'enterprise', name: 'Enterprise', count: testimonials.filter(t => t.category === 'enterprise').length };
   { id: 'startup', name: 'Startup', count: testimonials.filter(t => t.category === 'startup').length };
-  { id: 'agency', name: 'Agency', count: testimonials.filter(t => t.category === 'agency').length };
-  { id: 'government', name: 'Government', count: testimonials.filter(t => t.category === 'government').length },
-  ];
+  { id: 'agency', name: 'Agency', count: testimonials.filter(t => t.category === 'agency').length },
+  { id: 'government', name: 'Government', count: testimonials.filter(t => t.category === 'government').length }
+];
 export function TestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-const [selectedCategory, setSelectedCategory] = useState('all');
-const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-const filteredTestimonials = selectedCategory === 'all' 
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const filteredTestimonials = selectedCategory === 'all' 
     ? testimonials 
     : testimonials.filter(t => t.category === selectedCategory);
+
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length)
-}, 8000),
+      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
+    }, 8000),
 
-    return () => clearInterval(interval)
-}, [isAutoPlaying, filteredTestimonials.length]),
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, filteredTestimonials.length]),
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
-    setIsAutoPlaying(false)
-},
+    setIsAutoPlaying(false);
+  },
 
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
-    setIsAutoPlaying(false)
-},
+    setIsAutoPlaying(false);
+  },
 
   const currentTestimonialData = filteredTestimonials[currentTestimonial];
-const renderStars = (rating: number) => {
+  const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
         className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
       />
-    ))
-};
+    ));
+  };
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
@@ -107,14 +108,10 @@ const renderStars = (rating: number) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 },
-  };
-          whileInView={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.8 },
-  };
-          viewport={{ once: true },
-  };
+          initial={{ opacity: 0, y: 30 }};
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -128,14 +125,10 @@ const renderStars = (rating: number) => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 },
-  };
-          whileInView={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.6 },
-  };
-          viewport={{ once: true },
-  };
+          initial={{ opacity: 0, y: 20 }};
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -143,9 +136,8 @@ const renderStars = (rating: number) => {
               key={category.id}
               onClick={() => {
                 setSelectedCategory(category.id);
-                setCurrentTestimonial(0)
-},
-  };
+                setCurrentTestimonial(0);
+              }}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
@@ -161,14 +153,10 @@ const renderStars = (rating: number) => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Video Testimonial */}
           <motion.div
-            initial={{ opacity: 0, x: -50 },
-  };
-            whileInView={{ opacity: 1, x: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
-            viewport={{ once: true },
-  };
+            initial={{ opacity: 0, x: -50 }};
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
@@ -204,12 +192,9 @@ const renderStars = (rating: number) => {
           {/* Current Testimonial */}
           <motion.div
             key={currentTestimonial}
-            initial={{ opacity: 0, x: 50 },
-  };
-            animate={{ opacity: 1, x: 0 },
-  };
-            transition={{ duration: 0.5 },
-  };
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
             className="relative"
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -302,14 +287,10 @@ const renderStars = (rating: number) => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 },
-  };
-          whileInView={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.8 },
-  };
-          viewport={{ once: true },
-  };
+          initial={{ opacity: 0, y: 30 }};
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="mt-20"
         >
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
@@ -334,3 +315,4 @@ const renderStars = (rating: number) => {
       </div>
     </section>
   )
+}

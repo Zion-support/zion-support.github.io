@@ -4,23 +4,26 @@ interface SecurityEvent {
   ipAddress?: string,
   payload?: string,
   blocked: boolean
-};
+}
 
 interface SecurityConfig {
   enableXSSProtection: boolean,enableCSRFProtection: boolean,enableInputValidation: boolean,enableRateLimiting: boolean,enableSecurityHeaders: boolean,enableContentSecurityPolicy: boolean
+}
 
 export const SecurityEnhancer: React.FC = () => {
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
-const [config, setConfig] = useState<SecurityConfig>({
+  const [config, setConfig] = useState<SecurityConfig>({
     enableXSSProtection: true,enableCSRFProtection: true,enableInputValidation: true,enableRateLimiting: true,enableSecurityHeaders: true,enableContentSecurityPolicy: true
   });
-const [isActive, setIsActive] = useState(false);
-const [threatLevel, setThreatLevel] = useState<'low' | 'medium' | 'high'>('low'),
+  const [isActive, setIsActive] = useState(false);
+  const [threatLevel, setThreatLevel] = useState<'low' | 'medium' | 'high'>('low');
   const [blockedRequests, setBlockedRequests] = useState(0);
-const [allowedRequests, setAllowedRequests] = useState(0);
-const rateLimitMap = useRef<Map<string, { count: number, resetTime: number }>>(new Map());
-const suspiciousPatterns = useRef<RegExp[]>([]);
-const xssPatterns = useRef<RegExp[]>([]);
+  const [allowedRequests, setAllowedRequests] = useState(0);
+  
+  const rateLimitMap = useRef<Map<string, { count: number, resetTime: number }>>(new Map());
+  const suspiciousPatterns = useRef<RegExp[]>([]);
+  const xssPatterns = useRef<RegExp[]>([]);
+
   // Initialize security patterns
   useEffect(() => {
     // XSS patterns
@@ -57,39 +60,44 @@ const xssPatterns = useRef<RegExp[]>([]);
 
   // Generate unique event ID
   const generateEventId = useCallback(() => {
-    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-}, []),
+    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }, []),
 
   // Log security event
   const logSecurityEvent = useCallback((event: Omit<SecurityEvent, 'id' | 'timestamp'>) => {
     const securityEvent: SecurityEvent = {
       ...event,
-      id: generateEventId();timestamp: Date.now()
+      id: generateEventId(),timestamp: Date.now()
     };
     setSecurityEvents(prev => [...prev, securityEvent]);
+    
     // Update threat level based on severity
     if (event.severity === 'critical' || event.severity === 'high') {
-      setThreatLevel('high')
-} else if (event.severity === 'medium') {
-      setThreatLevel('medium')
+      setThreatLevel('high');
+    } else if (event.severity === 'medium') {
+      setThreatLevel('medium');
+    }
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.warn('Security Event:', securityEvent)
+      console.warn('Security Event:', securityEvent);
+    }
 
     // Store security event locally instead of sending to non-existent API
     try {
       const storedEvents = localStorage.getItem('security-events') || '[]';
-const events = JSON.parse(storedEvents);
+      const events = JSON.parse(storedEvents);
       events.push(securityEvent);
+      
       // Keep only last 100 events
       if (events.length > 100) {
-        events.splice(0, events.length - 100)
+        events.splice(0, events.length - 100);
+      }
       
       localStorage.setItem('security-events', JSON.stringify(events)),
     } catch (error) {
-      console.warn('Error storing security event locally:', error)
-},
+      console.warn('Error storing security event locally:', error);
+    }
   }, [generateEventId]),
 
   // Send event to security service
@@ -98,32 +106,34 @@ const events = JSON.parse(storedEvents);
       // Store security event locally instead of sending to non-existent API
       // TODO: Implement actual security service when available
       const storedEvents = localStorage.getItem('security-events') || '[]';
-const events = JSON.parse(storedEvents);
+      const events = JSON.parse(storedEvents);
       events.push(event);
+      
       // Keep only last 100 events
       if (events.length > 100) {
-        events.splice(0, events.length - 100)
+        events.splice(0, events.length - 100);
+      }
       
       localStorage.setItem('security-events', JSON.stringify(events)),
       
       // Log event for debugging (remove in production)
       if (process.env['NODE_ENV'] === 'development') {
-        console.log('Security event stored locally:', event)
-},
-  } catch (error) {
-      console.warn('Error storing security event locally:', error)
-},
+        console.log('Security event stored locally:', event);
+      }
+    } catch (error) {
+      console.warn('Error storing security event locally:', error);
+    }
   }, []),
 
   // XSS Protection
   const sanitizeInput = useCallback((input: string): string => {
     if (!config.enableXSSProtection) return input;
-let sanitized = input,
+    let sanitized = input;
     
     // Remove dangerous HTML tags and attributes
     xssPatterns.current.forEach(pattern => {
-      sanitized = sanitized.replace(pattern, '')
-}),
+      sanitized = sanitized.replace(pattern, '');
+    }),
 
     // Encode HTML entities
     sanitized = sanitized
@@ -132,20 +142,22 @@ let sanitized = input,
       .replace(/>/g, '&gt,')
       .replace(/"/g, '&quot,')
       .replace(/'/g, '&#x27,');
+
     // Check if input was modified
     if (sanitized !== input) {
       logSecurityEvent({
         type: 'xss_attempt',severity: 'high',description: 'XSS attempt detected and sanitized',userAgent: navigator.userAgent,payload: input,blocked: true
       });
-      setBlockedRequests(prev => prev + 1)
-
-    return sanitized
-}, [config.enableXSSProtection, logSecurityEvent]),
+      setBlockedRequests(prev => prev + 1);
+    }
+;
+    return sanitized,
+  }, [config.enableXSSProtection, logSecurityEvent]);
 
   // Input validation
   const validateInput = useCallback((input: string, type: 'text' | 'email' | 'url' | 'number'): boolean => {
     if (!config.enableInputValidation) return true;
-let isValid = true,
+    let isValid = true;
     let validationPattern: RegExp;
     switch (type) {
       case 'email':
@@ -160,14 +172,15 @@ let isValid = true,
       default:
         validationPattern = /^[\w\s\-.,!?()]+$/,
     }
-
+;
     if (!validationPattern.test(input)) {
       isValid = false,
       logSecurityEvent({
-        type: 'injection_attempt',severity: 'medium',description: `Invalid input format for type: ${type}`;
+        type: 'injection_attempt',severity: 'medium',description: `Invalid input format for type: ${type}`,
         userAgent: navigator.userAgent,payload: input,blocked: true
       });
-      setBlockedRequests(prev => prev + 1)
+      setBlockedRequests(prev => prev + 1);
+    }
 
     // Check for suspicious patterns
     suspiciousPatterns.current.forEach(pattern => {
@@ -176,63 +189,69 @@ let isValid = true,
         logSecurityEvent({
           type: 'injection_attempt',severity: 'critical',description: 'Suspicious injection pattern detected',userAgent: navigator.userAgent,payload: input,blocked: true
         });
-        setBlockedRequests(prev => prev + 1)
-},
-  }),
+        setBlockedRequests(prev => prev + 1);
+      }
+    }),
 
     if (isValid) {
-      setAllowedRequests(prev => prev + 1)
-
-    return isValid
-}, [config.enableInputValidation, logSecurityEvent]),
+      setAllowedRequests(prev => prev + 1);
+    }
+;
+    return isValid,
+  }, [config.enableInputValidation, logSecurityEvent]);
 
   // Rate limiting
   const checkRateLimit = useCallback((identifier: string, limit: number, windowMs: number): boolean => {
     if (!config.enableRateLimiting) return true;
-const now = Date.now();
-const current = rateLimitMap.current.get(identifier);
+    const now = Date.now();
+    const current = rateLimitMap.current.get(identifier);
+
     if (!current || now > current.resetTime) {
       rateLimitMap.current.set(identifier, {
         count: 1,resetTime: now + windowMs
       });
-      return true
-
+      return true;
+    }
+;
     if (current.count >= limit) {
       logSecurityEvent({
-        type: 'suspicious_activity',severity: 'medium',description: `Rate limit exceeded for identifier: ${identifier}`;
+        type: 'suspicious_activity',severity: 'medium',description: `Rate limit exceeded for identifier: ${identifier}`,
         userAgent: navigator.userAgent,blocked: true
       });
       setBlockedRequests(prev => prev + 1);
-      return false
+      return false,
+    }
 
     current.count++,
-    return true
-}, [config.enableRateLimiting, logSecurityEvent]),
+    return true,
+  }, [config.enableRateLimiting, logSecurityEvent]);
 
   // CSRF Protection
   const generateCSRFToken = useCallback((): string => {
     if (!config.enableCSRFProtection) return '';
-const token = Math.random().toString(36).substr(2, 15) + Date.now().toString(36);
+
+    const token = Math.random().toString(36).substr(2, 15) + Date.now().toString(36);
     sessionStorage.setItem('csrf_token', token);
-    return token
-}, [config.enableCSRFProtection]),
+    return token,
+  }, [config.enableCSRFProtection]);
 
   const validateCSRFToken = useCallback((token: string): boolean => {
     if (!config.enableCSRFProtection) return true;
-const storedToken = sessionStorage.getItem('csrf_token');
+    const storedToken = sessionStorage.getItem('csrf_token');
     if (!storedToken || storedToken !== token) {
       logSecurityEvent({
         type: 'security_violation',severity: 'high',description: 'CSRF token validation failed',userAgent: navigator.userAgent,blocked: true
       });
       setBlockedRequests(prev => prev + 1);
-      return false
-
-    return true
-}, [config.enableCSRFProtection, logSecurityEvent]),
+      return false;
+    }
+;
+    return true,
+  }, [config.enableCSRFProtection, logSecurityEvent]),
 
   // Set security headers
   useEffect(() => {
-    if (!config.enableSecurityHeaders) return,
+    if (!config.enableSecurityHeaders) return;
 
     // Note: Security headers should be set via HTTP headers, not meta tags
     // These are handled by the server configuration (netlify.toml and _headers)
@@ -241,8 +260,8 @@ const storedToken = sessionStorage.getItem('csrf_token');
     const meta = document.createElement('meta');
     meta.name = 'security-version',
     meta.content = 'v1.0.0',
-    document.head.appendChild(meta)
-}, [config.enableSecurityHeaders]),
+    document.head.appendChild(meta);
+  }, [config.enableSecurityHeaders]),
 
   // Content Security Policy - handled by server headers
   useEffect(() => {
@@ -255,8 +274,8 @@ const storedToken = sessionStorage.getItem('csrf_token');
     const cspMeta = document.createElement('meta');
     cspMeta.name = 'csp-version',
     cspMeta.content = 'v1.0.0',
-    document.head.appendChild(cspMeta)
-}, [config.enableContentSecurityPolicy]),
+    document.head.appendChild(cspMeta);
+  }, [config.enableContentSecurityPolicy]),
 
   // Monitor form submissions
   useEffect(() => {
@@ -264,7 +283,8 @@ const storedToken = sessionStorage.getItem('csrf_token');
 
     const handleFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
-const formData = new FormData(form);
+      const formData = new FormData(form);
+      
       // Rate limiting for form submissions
       const clientId = navigator.userAgent + window.location.hostname;
       if (!checkRateLimit(clientId, 10, 60000)) { // 10 submissions per minute
@@ -273,7 +293,7 @@ const formData = new FormData(form);
       }
 
       // Validate all form inputs
-      let isValid = true,
+      let isValid = true;
       formData.forEach((value, key) => {
         if (typeof value === 'string') {
           const sanitized = sanitizeInput(value);
@@ -287,22 +307,22 @@ const formData = new FormData(form);
             const inputType = input.type || 'text';
             if (!validateInput(value as string, inputType as any)) {
               isValid = false,
-            },
-  },
-  },
-  }),
+            }
+          }
+        }
+      }),
 
       if (!isValid) {
         event.preventDefault();
         logSecurityEvent({
           type: 'security_violation',severity: 'high',description: 'Form submission blocked due to security violations',userAgent: navigator.userAgent,blocked: true
-        })
-},
-  },
+        });
+      }
+    },
 
     document.addEventListener('submit', handleFormSubmit);
-    return () => document.removeEventListener('submit', handleFormSubmit)
-}, [isActive, checkRateLimit, sanitizeInput, validateInput, logSecurityEvent]),
+    return () => document.removeEventListener('submit', handleFormSubmit);
+  }, [isActive, checkRateLimit, sanitizeInput, validateInput, logSecurityEvent]),
 
   // Monitor input changes
   useEffect(() => {
@@ -310,33 +330,35 @@ const formData = new FormData(form);
 
     const handleInput = (event: Event) => {
       const input = event.target as HTMLInputElement;
-const value = input.value;
+      const value = input.value;
+
       // Real-time validation
       if (value) {
         const inputType = input.type || 'text';
-        validateInput(value, inputType as any)
-},
-  },
+        validateInput(value, inputType as any);
+      }
+    },
 
     document.addEventListener('input', handleInput);
-    return () => document.removeEventListener('input', handleInput)
-}, [isActive, validateInput]),
+    return () => document.removeEventListener('input', handleInput);
+  }, [isActive, validateInput]),
 
   // Start security monitoring
   useEffect(() => {
     setIsActive(true);
+    
     // Log security system activation
     logSecurityEvent({
       type: 'security_violation',severity: 'low',description: 'Security system activated',userAgent: navigator.userAgent,blocked: false
-    })
-}, [logSecurityEvent]),
+    });
+  }, [logSecurityEvent]),
 
   // Toggle security features
   const toggleFeature = useCallback((feature: keyof SecurityConfig) => {
     setConfig(prev => ({
       ...prev;
-      [feature]: !prev[feature],
-  })),
+      [feature]: !prev[feature]
+    })),
   }, []),
 
   // Clear security events
@@ -344,29 +366,29 @@ const value = input.value;
     setSecurityEvents([]);
     setBlockedRequests(0);
     setAllowedRequests(0);
-    setThreatLevel('low')
-}, []),
+    setThreatLevel('low');
+  }, []),
 
   // Export security report
   const exportReport = useCallback(() => {
     const report = {
-      config;
+      config,
       events: securityEvents,statistics: {
-        blockedRequests;
+        blockedRequests,
         allowedRequests,
         threatLevel,
         totalEvents: securityEvents.length
-      };
+      },
       timestamp: new Date().toISOString()
     };
-const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-const url = URL.createObjectURL(blob);
-const a = document.createElement('a');
+    const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url,
     a.download = `security-report-${Date.now()}.json`,
     a.click();
-    URL.revokeObjectURL(url)
-}, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]),
+    URL.revokeObjectURL(url);
+  }, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]),
 
   return (
     <div className="fixed top-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">
@@ -445,4 +467,5 @@ const a = document.createElement('a');
         </div>
       </div>
     </div>
-  ),
+  );
+};

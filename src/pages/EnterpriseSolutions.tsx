@@ -1,7 +1,6 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-const,
-  EnterpriseSolution: s: React.FC = () () => {
+import React from "react";
+import { SEO } from "@/components/SEO";
+const EnterpriseSolutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
@@ -15,7 +14,7 @@ const,
         </p>
       </div>
     </div>
-  )
+  ),
 };
 
-export default EnterpriseSolutions
+export default EnterpriseSolutions;

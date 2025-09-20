@@ -16,21 +16,21 @@ import {
 } from "lucide-react";
 interface PerformanceMetric {
   name: string,value: number,unit: string,trend: 'up' | 'down' | 'stable',status: 'good' | 'warning' | 'critical',icon: React.ComponentType<any>
-};
+}
 
 interface PerformanceData {
-  timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[],
-  };
-
+  timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[]
+}
+;
 const PerformanceAnalytics: React.FC = () => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),
+  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
 
   // Simulated performance data
   const generatePerformanceData = useCallback((): PerformanceData => {
     const now = Date.now();
-const metrics: PerformanceMetric[] = [
+    const metrics: PerformanceMetric[] = [
       {
         name: 'Page Load Time',value: Math.random() * 2000 + 500,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Clock
       };
@@ -45,17 +45,17 @@ const metrics: PerformanceMetric[] = [
       };
       {
         name: 'Error Rate',value: Math.random() * 2,unit: '%',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',icon: AlertTriangle
-      };
+      },
       {
         name: 'Response Time',value: Math.random() * 500 + 100,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Zap
-      },
-  ];
-const alerts = [
-      'High memory usage detectedNetwork latency increased by 15%';
+      }
+    ];
+    const alerts = [
+      'High memory usage detectedNetwork latency increased by 15%',
       'CPU usage spike at 14: 30'
     ].filter(() => Math.random() > 0.7);
-const recommendations = [
-      'Consider implementing lazy loading for imagesOptimize database queries';
+    const recommendations = [
+      'Consider implementing lazy loading for imagesOptimize database queries',
       'Enable CDN for static assetsImplement caching strategy'
     ].filter(() => Math.random() > 0.6),
 
@@ -70,41 +70,41 @@ const recommendations = [
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(() => {
-        setPerformanceData(generatePerformanceData())
-}, 5000),
+        setPerformanceData(generatePerformanceData());
+      }, 5000),
 
-      return () => clearInterval(interval)
-},
+      return () => clearInterval(interval);
+    }
   }, [isMonitoring, generatePerformanceData]),
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
+      case 'warning': return 'text-yellow-400',
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400'
-    },
+    }
   };
-const getStatusBgColor = (status: string) => {
+  const getStatusBgColor = (status: string) => {
     switch (status) {
       case 'good': return 'bg-green-500/20';
-      case 'warning': return 'bg-yellow-500/20';
+      case 'warning': return 'bg-yellow-500/20',
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'
-    },
+    }
   };
-const getTrendIcon = (trend: string) => {
+  const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
       default: return <Activity className="w-4 h-4 text-blue-400" />
-    },
+    }
   };
-const formatValue = (value: number, unit: string) => {
+  const formatValue = (value: number, unit: string) => {
     if (unit === '%') return `${value.toFixed(1)}%`;
-    if (unit === 'ms') return `${Math.round(value)}ms`;
-    return `${value.toFixed(2)}${unit}`
-},
+    if (unit === 'ms') return `${Math.round(value)}ms`,
+    return `${value.toFixed(2)}${unit}`,
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -112,12 +112,9 @@ const formatValue = (value: number, unit: string) => {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            animate={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Monitor className="w-4 h-4 mr-2" />
@@ -138,12 +135,9 @@ const formatValue = (value: number, unit: string) => {
 
           {/* Controls */}
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            animate={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8, delay: 0.2 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <button
@@ -181,28 +175,22 @@ const formatValue = (value: number, unit: string) => {
         </div>
       </section>
 
-      {/* Performance Metrics Grid */},
-  {performanceData && (
+      {/* Performance Metrics Grid */}
+      {performanceData && (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0 },
-  };
-              animate={{ opacity: 1 },
-  };
-              transition={{ duration: 0.5 },
-  };
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
             >
               {performanceData.metrics.map((metric, index) => (
                 <motion.div
                   key={metric.name}
-                  initial={{ opacity: 0, y: 20 },
-  };
-                  animate={{ opacity: 1, y: 0 },
-  };
-                  transition={{ duration: 0.5, delay: index * 0.1 },
-  };
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -232,8 +220,7 @@ const formatValue = (value: number, unit: string) => {
                           metric.status === 'good' ? 'bg-green-500' : 
                           metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
                         }`}
-                        style={{ width: `${Math.min(metric.value, 100)}%` },
-  };
+                        style={{ width: `${Math.min(metric.value, 100)}%` }}
                       />
                     </div>
                   </div>
@@ -245,12 +232,9 @@ const formatValue = (value: number, unit: string) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Alerts */}
               <motion.div
-                initial={{ opacity: 0, x: -20 },
-  };
-                animate={{ opacity: 1, x: 0 },
-  };
-                transition={{ duration: 0.5, delay: 0.3 },
-  };
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -276,12 +260,9 @@ const formatValue = (value: number, unit: string) => {
 
               {/* Recommendations */}
               <motion.div
-                initial={{ opacity: 0, x: 20 },
-  };
-                animate={{ opacity: 1, x: 0 },
-  };
-                transition={{ duration: 0.5, delay: 0.4 },
-  };
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -307,19 +288,16 @@ const formatValue = (value: number, unit: string) => {
             </div>
           </div>
         </section>
-      )},
-  {/* Call to Action */}
+      )}
+
+      {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            whileInView={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
-            viewport={{ once: true },
-  };
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Optimize Your Application Performance
@@ -339,4 +317,5 @@ const formatValue = (value: number, unit: string) => {
       </section>
     </div>
   )
+};
 export default PerformanceAnalytics;

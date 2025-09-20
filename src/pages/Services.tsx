@@ -58,10 +58,10 @@ import { COMPREHENSIVE_SERVICES_2030 } from "../data/comprehensiveServices2030";
 import { COMPREHENSIVE_PRICING_GUIDE_2030 } from "../data/comprehensivePricingGuide2030";
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-const [sortBy, setSortBy] = useState('rating');
-const [currentPage, setCurrentPage] = useState(1);
-const [itemsPerPage] = useState(12);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(12);
   // Get unique categories from services
   const categories = [
     { id: 'all', name: 'All Services', count: COMPREHENSIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
@@ -88,17 +88,18 @@ const [itemsPerPage] = useState(12);
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
     { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
-const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
+  const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch
-});
-const sortedServices = [...filteredServices].sort((a, b) => {
+    return matchesCategory && matchesSearch;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
@@ -108,20 +109,21 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title);
-      default: 
-        return 0;
+      default: return 0;
     }
   });
   // Pagination logic
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
-const startIndex = (currentPage - 1) * itemsPerPage;
-const endIndex = startIndex + itemsPerPage;
-const currentServices = sortedServices.slice(startIndex, endIndex);
-const handlePageChange = (page: number) => {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = sortedServices.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-};
-const getCategoryIcon = (category: string) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Business Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -174,6 +176,7 @@ const getCategoryIcon = (category: string) => {
       default:
         return <Zap className="w-6 h-6" />;
     }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -312,8 +315,9 @@ const getCategoryIcon = (category: string) => {
                             Featured
                           </div>
                         </div>
-                      )},
-  {/* Service Image */}
+                      )}
+
+                      {/* Service Image */}
                       <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -351,8 +355,8 @@ const getCategoryIcon = (category: string) => {
                             >
                               {tag}
                             </span>
-                          ))},
-  {service.tags.length > 3 && (
+                          ))}
+                          {service.tags.length > 3 && (
                             <span className="text-xs text-gray-500">+{service.tags.length - 3} more</span>
                           )}
                         </div>
@@ -361,8 +365,7 @@ const getCategoryIcon = (category: string) => {
                         <div className="flex items-center justify-between">
                           <div>
                             <div className="text-2xl font-bold text-white">
-                              {service.currency},
-  {service.price.toLocaleString()}
+                              {service.currency}{service.price.toLocaleString()}
                             </div>
                             <div className="text-sm text-gray-400">
                               {service.marketPrice}
@@ -398,8 +401,8 @@ const getCategoryIcon = (category: string) => {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Pagination */},
-  {totalPages > 1 && (
+              {/* Pagination */}
+              {totalPages > 1 && (
                 <div className="mt-16 flex justify-center">
                   <div className="flex items-center space-x-2">
                     <button
@@ -467,5 +470,5 @@ const getCategoryIcon = (category: string) => {
         </div>
       </section>
     </div>
-  );
+  )
 }

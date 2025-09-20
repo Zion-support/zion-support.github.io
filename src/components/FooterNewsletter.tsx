@@ -2,26 +2,28 @@ import React, { useState } from "react";
 import { Mail, Send, CheckCircle } from "lucide-react";
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [isSubmitted, setIsSubmitted] = useState(false);
-const handleSubmit = async (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return,
 
     setIsSubmitting(true);
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
 
       setIsSubmitted(true);
       setEmail('');
+
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000),
     } catch (error) {
-      console.error('Newsletter subscription failed:', error)
-} finally {
-      setIsSubmitting(false)
-},
+      console.error('Newsletter subscription failed:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   },
 
   return (
@@ -80,5 +82,5 @@ const handleSubmit = async (e: React.FormEvent) => {
         </p>
       </div>
     </div>
-  )
+  );
 };

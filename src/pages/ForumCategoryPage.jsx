@@ -9,45 +9,47 @@ import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons";
-// Mock category data;
-const const categoriesInfo = {
-  = {
+// Mock category data
+const categoriesInfo = {
     "getting-hired": {
-  id: "getting-hired",name: "Getting Hired",description: "Tips, strategies, and questions about getting hired on the platform.";
+        id: "getting-hired",name: "Getting Hired",description: "Tips, strategies, and questions about getting hired on the platform.",
         postCount: 45,adminOnly: false,icon: "Briefcase"
-};
+    };
     "project-help": {
-  id: "project-help",name: "Project Help",description: "Get help with your ongoing projects and collaboration.",postCount: 67,adminOnly: false,icon: "MessageSquare"
+        id: "project-help",name: "Project Help",description: "Get help with your ongoing projects and collaboration.",postCount: 67,adminOnly: false,icon: "MessageSquare"
+    };
     "ai-tools": {
-  id: "ai-tools",name: "AI Tools Discussion",description: "Discuss AI tools, frameworks, and best practices.";
+        id: "ai-tools",name: "AI Tools Discussion",description: "Discuss AI tools, frameworks, and best practices.",
         postCount: 89,adminOnly: false,icon: "Code"
+    };
     "feedback": {
-  id: "feedback",name: "Feedback & Feature Requests",description: "Share your feedback and suggest new features.",postCount: 23,adminOnly: false,icon: "FileText"
+        id: "feedback",name: "Feedback & Feature Requests",description: "Share your feedback and suggest new features.",postCount: 23,adminOnly: false,icon: "FileText"
+    };
     "announcements": {
-  id: "announcements",name: "Announcements",description: "Official announcements from the Zion team.",postCount: 12,adminOnly: true,icon: "Megaphone"
-},
-  };
-const const iconMap = {
-  = {
+        id: "announcements",name: "Announcements",description: "Official announcements from the Zion team.",postCount: 12,adminOnly: true,icon: "Megaphone"
+    }
+};
+const iconMap = {
     "Briefcase": Briefcase;
-    "MessageSquare": MessageSquare;
-    "Code": Code;
-    "FileText": FileText;
+    "MessageSquare": MessageSquare,
+    "Code": Code,
+    "FileText": FileText,
     "Megaphone": Megaphone
+},
 function CategoryContent({ categoryId, category, IconComponent, user }) {
-  const [searchQuery, setSearchQuery] = useState("")
-    const { posts = [], loading } = usePostsByCategory(categoryId)
+    const [searchQuery, setSearchQuery] = useState("");
+    const { posts = [], loading } = usePostsByCategory(categoryId);
     const errorMessage = null;
-const filteredPosts = searchQuery;
-        ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-            post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    const filteredPosts = searchQuery
+        ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
             post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
         : posts;
-const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin")
+    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
     return (<div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
         <Link to="/community" className="text-sm text-muted-foreground hover: text-foreground">
-          Forum;
+          Forum
         </Link>
         <span className="text-muted-foreground">/</span>
         <span className="font-medium">{category.name}</span>
@@ -82,16 +84,15 @@ const canCreatePost = categoryId !== "announcements" || (user?.userType === "adm
 
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
-    </div>)
+    </div>);
+}
 export default function ForumCategoryPage() {
-  const { categoryId } = useParams()
-    const { user } = useAuth()
-    if (if (!categoryId || !categoriesInfo[categoryId]) {
-  ) {
-        return <NotFound />
-    }
-    const category = categoriesInfo[[categoryId],
-  ]
+    const { categoryId } = useParams();
+    const { user } = useAuth();
+    if (!categoryId || !categoriesInfo[categoryId]) {
+        return <NotFound />;
+    };
+    const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
@@ -99,4 +100,5 @@ export default function ForumCategoryPage() {
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
-    </>)
+    </>);
+}

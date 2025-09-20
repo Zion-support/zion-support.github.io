@@ -18,7 +18,7 @@ import {
 interface FloatingAction {
   id: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   label: string,action: () => void,color: string,priority: 'high' | 'medium' | 'low'
-};
+}
 
 interface FloatingActionButtonProps {
   actions?: FloatingAction[];
@@ -27,7 +27,8 @@ interface FloatingActionButtonProps {
   showScrollToTop?: boolean,
   showContactActions?: boolean,
   showUtilityActions?: boolean,
-
+}
+;
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   actions = [];
   position = 'bottom-right',
@@ -37,33 +38,34 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   showUtilityActions = true
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-const [showScrollButton, setShowScrollButton] = useState(false);
-const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 
   // Detect theme
   useEffect(() => {
     if (theme === 'auto') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
-const handleChange = (e: MediaQueryListEvent) => {
+      
+      const handleChange = (e: MediaQueryListEvent) => {
         setCurrentTheme(e.matches ? 'dark' : 'light')
       };
       mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange)
-} else {
-      setCurrentTheme(theme)
-},
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      setCurrentTheme(theme);
+    }
   }, [theme]),
 
   // Show scroll to top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300)
-},
+      setShowScrollButton(window.scrollY > 300);
+    },
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-}, []),
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []),
 
   // Default actions
   const defaultActions: FloatingAction[] = [
@@ -73,29 +75,29 @@ const handleChange = (e: MediaQueryListEvent) => {
         id: 'contact',icon: MessageCircle,label: 'Contact Us',action: () => {
           const contactSection = document.getElementById('contact');
           if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' })
-},
-  },
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        },
         color: 'bg-blue-500 hover:bg-blue-600',priority: 'high' as const
       };
       {
         id: 'phone',icon: Phone,label: 'Call Now',action: () => {
           window.location.href = 'tel:+1234567890'
-        };
+        },
         color: 'bg-green-500 hover:bg-green-600',priority: 'high' as const
       };
       {
         id: 'email',icon: Mail,label: 'Send Email',action: () => {
           window.location.href = 'mailto:info@ziontechgroup.com'
-        };
+        },
         color: 'bg-purple-500 hover:bg-purple-600',priority: 'medium' as const
-      };
+      },
       {
         id: 'location',icon: MapPin,label: 'Get Directions',action: () => {
           window.open('https: //maps.google.com/?q=Zion+Tech+Group_blank')},
         color: 'bg-red-500 hover:bg-red-600',priority: 'medium' as const
-      },
-  ] : []);
+      }
+    ] : []);
     // Utility actions
     ...(showUtilityActions ? [
       {
@@ -103,16 +105,16 @@ const handleChange = (e: MediaQueryListEvent) => {
           if (navigator.share) {
             navigator.share({
               title: document.title,url: window.location.href
-            })
-} else {
+            });
+          } else {
             // Fallback for browsers without share API
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
               // Show success message
-              showNotification('Page URL copied to clipboard!')
-}),
-          },
-  },
+              showNotification('Page URL copied to clipboard!');
+            }),
+          }
+        },
         color: 'bg-yellow-500 hover:bg-yellow-600',priority: 'low' as const
       };
       {
@@ -120,15 +122,15 @@ const handleChange = (e: MediaQueryListEvent) => {
           if (navigator.share) {
             navigator.share({
               title: document.title,url: window.location.href
-            })
-} else {
+            });
+          } else {
             // Fallback for browsers without share API
             const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
-              showNotification('Page URL copied to clipboard!')
-}),
-          },
-  },
+              showNotification('Page URL copied to clipboard!');
+            }),
+          }
+        },
         color: 'bg-indigo-500 hover:bg-indigo-600',priority: 'low' as const
       };
       {
@@ -142,14 +144,14 @@ const handleChange = (e: MediaQueryListEvent) => {
           document.body.removeChild(link)
         },
         color: 'bg-teal-500 hover:bg-teal-600',priority: 'low' as const
-      };
+      },
       {
         id: 'print',icon: Printer,label: 'Print Page',action: () => {
           window.print()
-        };
+        },
         color: 'bg-gray-500 hover:bg-gray-600',priority: 'low' as const
-      },
-  ] : []);
+      }
+    ] : []);
     // Custom actions
     ...actions
   ],
@@ -158,17 +160,17 @@ const handleChange = (e: MediaQueryListEvent) => {
   const sortedActions = defaultActions.sort((a, b) => {
     const priorityOrder = { high: 3, medium: 2, low: 1 };
     return priorityOrder[b.priority] - priorityOrder[a.priority],
-  }),
+  });
 
   // Toggle expansion
   const toggleExpansion = useCallback(() => {
-    setIsExpanded(prev => !prev)
-}, []),
+    setIsExpanded(prev => !prev);
+  }, []),
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-}, []),
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []),
 
   // Show notification
   const showNotification = useCallback((message: string) => {
@@ -181,6 +183,7 @@ const handleChange = (e: MediaQueryListEvent) => {
     notification.textContent = message,
     
     document.body.appendChild(notification);
+    
     // Animate in
     setTimeout(() => {
       notification.classList.remove('translate-x-full')
@@ -190,8 +193,8 @@ const handleChange = (e: MediaQueryListEvent) => {
     setTimeout(() => {
       notification.classList.add('translate-x-full');
       setTimeout(() => {
-        document.body.removeChild(notification)
-}, 300),
+        document.body.removeChild(notification);
+      }, 300),
     }, 3000),
   }, []),
 
@@ -201,18 +204,18 @@ const handleChange = (e: MediaQueryListEvent) => {
       case 'bottom-left':
         return 'bottom-6 left-6';
       case 'top-right':
-        return 'top-6 right-6';
+        return 'top-6 right-6',
       case 'top-left':
         return 'top-6 left-6';
       default: return 'bottom-6 right-6'
-    },
+    }
   };
   // Get theme classes
   const getThemeClasses = () => {
     return currentTheme === 'dark' 
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
-      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20'
-},
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';
+  },
 
   return (
     <>
@@ -231,10 +234,9 @@ const handleChange = (e: MediaQueryListEvent) => {
                     hover: scale-105 focus:outline-none focus:ring-2 focus:ring-white/50
                   `}
                   style={{
-                    animationDelay: `${index * 100}ms`;
+                    animationDelay: `${index * 100}ms`,
                     animation: 'slideInUp 0.3s ease-out forwards'
-                  },
-  };
+                  }}
                 >
                   <action.icon size={20} />
                   <span className="whitespace-nowrap text-sm font-medium">
@@ -243,8 +245,9 @@ const handleChange = (e: MediaQueryListEvent) => {
                 </div>
               ))}
             </div>
-          )},
-  {/* Main Button */}
+          )}
+          
+          {/* Main Button */}
           <button
             onClick={toggleExpansion}
             className={`
@@ -261,8 +264,8 @@ const handleChange = (e: MediaQueryListEvent) => {
         </div>
       </div>
 
-      {/* Scroll to Top Button */},
-  {showScrollToTop && showScrollButton && (
+      {/* Scroll to Top Button */}
+      {showScrollToTop && showScrollButton && (
         <button
           onClick={scrollToTop}
           className={`
@@ -275,8 +278,9 @@ const handleChange = (e: MediaQueryListEvent) => {
         >
           <ArrowUp size={24} />
         </button>
-      )},
-  {/* CSS Animations */}
+      )}
+
+      {/* CSS Animations */}
       <style jsx>{`
         @keyframes slideInUp {
           from {
@@ -284,27 +288,30 @@ const handleChange = (e: MediaQueryListEvent) => {
           }
           to {
             opacity: 1,transform: translateY(0) scale(1)
-          },
-  };
+          }
+        }
         
         @keyframes bounce {
           0%, 20%, 53%, 80%, 100% {
-            transform: translate3d(0,0,0)
+            transform: translate3d(0,0,0);
+          }
           40%, 43% {
-            transform: translate3d(0, -30px, 0)
+            transform: translate3d(0, -30px, 0);
+          }
           70% {
-            transform: translate3d(0, -15px, 0)
+            transform: translate3d(0, -15px, 0);
+          }
           90% {
-            transform: translate3d(0, -4px, 0)
-},
-  };
+            transform: translate3d(0, -4px, 0);
+          }
+        }
         
         .animate-bounce {
           animation: bounce 2s infinite
         }
       `}</style>
     </>
-  )
+  );
 },
 
 export default FloatingActionButton;

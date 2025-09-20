@@ -48,13 +48,14 @@ import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "../data/additionalInnovativ
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-const [sortBy, setSortBy] = useState('innovation');
-const [viewMode, setViewMode] = useState('grid');
-const [selectedService, setSelectedService] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [viewMode, setViewMode] = useState('grid');
+  const [selectedService, setSelectedService] = useState(null);
+
   // Combine all services
   const allServices = [
-    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025,
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ],
@@ -78,59 +79,59 @@ const [selectedService, setSelectedService] = useState(null);
     { id: 'Quantum Finance', name: 'Quantum Finance', count: allServices.filter(s => s.category === 'Quantum Finance').length, icon: '💰', color: 'from-yellow-600 to-orange-500' };
     { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🤖', color: 'from-blue-600 to-green-500' };
     { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length, icon: '🧠', color: 'from-purple-600 to-blue-500' };
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' };
-    { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-600 to-purple-500' },
+    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' },
+    { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-600 to-purple-500' }
   ];
-const filteredServices = allServices.filter(service => {
+  const filteredServices = allServices.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch
-}),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1,
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'roi':
         return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
       case 'name':
         return a.title.localeCompare(b.title);
       default: return 0
-    },
+    }
   });
-const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1
-      },
-  },
+      }
+    }
   };
-const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {,
+      y: 0,opacity: 1,transition: {,
         duration: 0.5
-      },
-  },
+      }
+    }
   };
-const getInnovationColor = (level) => {
+      const getInnovationColor = (level) => {
     switch (level) {
       case 'Revolutionary': return 'text-purple-600 bg-purple-100';
-      case 'Cutting-edge': return 'text-blue-600 bg-blue-100';
+      case 'Cutting-edge': return 'text-blue-600 bg-blue-100',
       case 'Advanced': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100'
-    },
+    }
   };
-const getCategoryIcon = (category) => {
+      const getCategoryIcon = (category) => {
     const categoryData = categories.find(c => c.id === category);
-    return categoryData?.icon || '🚀'
-},
+    return categoryData?.icon || '🚀',
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -138,34 +139,25 @@ const getCategoryIcon = (category) => {
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
-            initial={{ y: 30, opacity: 0 },
-  };
-            animate={{ y: 0, opacity: 1 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
             Revolutionary AI & Tech Services
           </motion.h1>
           <motion.p 
-            initial={{ y: 30, opacity: 0 },
-  };
-            animate={{ y: 0, opacity: 1 },
-  };
-            transition={{ duration: 0.8, delay: 0.2 },
-  };
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto"
           >
             Discover cutting-edge micro SAAS solutions, IT services, and AI innovations that transform businesses and drive exponential growth
           </motion.p>
           <motion.div 
-            initial={{ y: 30, opacity: 0 },
-  };
-            animate={{ y: 0, opacity: 1 },
-  };
-            transition={{ duration: 0.8, delay: 0.4 },
-  };
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
@@ -198,48 +190,36 @@ const getCategoryIcon = (category) => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 },
-  };
-            whileInView={{ scale: 1, opacity: 1 },
-  };
-            transition={{ duration: 0.5 },
-  };
+            initial={{ scale: 0.8, opacity: 0 }};
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-blue-600 mb-2">{allServices.length}+</div>
             <div className="text-gray-600">Innovative Services</div>
           </motion.div>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 },
-  };
-            whileInView={{ scale: 1, opacity: 1 },
-  };
-            transition={{ duration: 0.5, delay: 0.1 },
-  };
+            initial={{ scale: 0.8, opacity: 0 }};
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-purple-600 mb-2">25+</div>
             <div className="text-gray-600">Technology Categories</div>
           </motion.div>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 },
-  };
-            whileInView={{ scale: 1, opacity: 1 },
-  };
-            transition={{ duration: 0.5, delay: 0.2 },
-  };
+            initial={{ scale: 0.8, opacity: 0 }};
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-green-600 mb-2">99.9%</div>
             <div className="text-gray-600">Uptime Guarantee</div>
           </motion.div>
           <motion.div 
-            initial={{ scale: 0.8, opacity: 0 },
-  };
-            whileInView={{ scale: 1, opacity: 1 },
-  };
-            transition={{ duration: 0.5, delay: 0.3 },
-  };
+            initial={{ scale: 0.8, opacity: 0 }};
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
@@ -299,11 +279,9 @@ const getCategoryIcon = (category) => {
             {categories.map((category) => (
               <motion.button
                 key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                whileHover={{ scale: 1.05 },
-  };
-                whileTap={{ scale: 0.95 },
-  };
+                onClick={() => setActiveCategory(category.id)};
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category.id
                     ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
@@ -326,10 +304,9 @@ const getCategoryIcon = (category) => {
         >
           {sortedServices.map((service, index) => (
             <motion.div
-              key={service.id}
-              variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 },
-  };
+              key={service.id};
+              variants={itemVariants};
+              whileHover={{ y: -5, scale: 1.02 }}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
                 viewMode === 'list' ? 'flex' : ''
               }`}
@@ -348,8 +325,7 @@ const getCategoryIcon = (category) => {
                   
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-blue-600">
-                      {service.currency},
-  {service.price.toLocaleString()}
+                      {service.currency}{service.price.toLocaleString()}
                       <span className="text-sm text-gray-500">/month</span>
                     </div>
                     <div className="text-sm text-green-600 font-medium">
@@ -401,8 +377,7 @@ const getCategoryIcon = (category) => {
                   <div className="grid grid-cols-4 gap-4 mb-4">
                     <div>
                       <div className="text-2xl font-bold text-blue-600">
-                        {service.currency},
-  {service.price.toLocaleString()}
+                        {service.currency}{service.price.toLocaleString()}
                       </div>
                       <div className="text-sm text-gray-500">Monthly</div>
                     </div>
@@ -481,22 +456,16 @@ const getCategoryIcon = (category) => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0 },
-  };
-            animate={{ opacity: 1 },
-  };
-            exit={{ opacity: 0 },
-  };
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 },
-  };
-              animate={{ scale: 1, opacity: 1 },
-  };
-              exit={{ scale: 0.8, opacity: 0 },
-  };
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
               className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -531,8 +500,7 @@ const getCategoryIcon = (category) => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Price:</span>
-                        <span className="font-medium text-blue-600">{selectedService.currency},
-  {selectedService.price.toLocaleString()}/month</span>
+                        <span className="font-medium text-blue-600">{selectedService.currency}{selectedService.price.toLocaleString()}/month</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">ROI:</span>
@@ -673,7 +641,7 @@ const getCategoryIcon = (category) => {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 },
 
 export default ComprehensiveServicesShowcase2025;

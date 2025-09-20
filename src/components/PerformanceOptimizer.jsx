@@ -36,7 +36,7 @@ const PerformanceOptimizer = ({ children }) => {
                     import('../pages/Services');
                     import('../pages/About');
                 }
-            },
+            }
         };
     }, [location.pathname]);
 

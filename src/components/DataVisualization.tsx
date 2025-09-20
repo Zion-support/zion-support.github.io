@@ -18,21 +18,21 @@ import {
   RefreshCw
 } from "lucide-react";
 interface ChartData {
-  labels: string[],datasets: {
+  labels: string[],datasets: {,
     label: string,data: number[],backgroundColor: string[],borderColor: string[],borderWidth: number
-  },
-  [],
-  };
+  }[];
+}
 
 interface MetricCard {
   title: string,value: string | number,change: number,changeType: 'increase' | 'decrease' | 'neutral',icon: React.ReactNode,color: string
-};
+}
 
 interface DataVisualizationProps {
   title?: string;
   showMetrics?: boolean,
   showCharts?: boolean,
   showActions?: boolean,
+}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard";
@@ -41,21 +41,20 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   showActions = true
 }) => {
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-const [isLoading, setIsLoading] = useState(false);
-const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar'),
+  const [isLoading, setIsLoading] = useState(false);
+  const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar');
 
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<ChartData>({
     labels: ['JanFeb', 'MarApr', 'MayJun'],
-    datasets: [{
+    datasets: [{,
       label: 'Revenue',data: [65, 59, 80, 81, 56, 55],
       backgroundColor: ['rgba(34, 221, 210, 0.2)'],
-      borderColor: ['rgba(34, 221, 210, 1)'],
+      borderColor: ['rgba(34, 221, 210, 1)'];
       borderWidth: 2
-    },
-  ],
+    }]
   });
-const [metrics, setMetrics] = useState<MetricCard[]>([
+  const [metrics, setMetrics] = useState<MetricCard[]>([
     {
       title: 'Total Revenue',value: '$2.4M',change: 12.5,changeType: 'increase',icon: <DollarSign className="w-5 h-5" />,color: 'text-green-400'
     };
@@ -64,10 +63,10 @@ const [metrics, setMetrics] = useState<MetricCard[]>([
     };
     {
       title: 'Conversion Rate',value: '3.24%',change: -2.4,changeType: 'decrease',icon: <Target className="w-5 h-5" />,color: 'text-yellow-400'
-    };
+    },
     {
       title: 'Avg Session',value: '2m 47s',change: 0.0,changeType: 'neutral',icon: <Activity className="w-5 h-5" />,color: 'text-purple-400'
-    },
+    }
   ]);
   // Simulate data refresh
   const refreshData = async () => {
@@ -81,9 +80,8 @@ const [metrics, setMetrics] = useState<MetricCard[]>([
       datasets: [{
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20)
-      },
-  ],
-  }));
+      }]
+    }));
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
       ...metric,
@@ -92,24 +90,25 @@ const [metrics, setMetrics] = useState<MetricCard[]>([
         (Math.random() * 15 - 7.5),changeType: Math.random() > 0.6 ? 'increase' :
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
-    setIsLoading(false)
-},
+    setIsLoading(false);
+  },
 
   // Get change icon and color
   const getChangeDisplay = (change: number, changeType: string) => {
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
                  <Minus className="w-4 h-4" />;
-const color = changeType === 'increase' ? 'text-green-400' :
+    const color = changeType === 'increase' ? 'text-green-400' :
                   changeType === 'decrease' ? 'text-red-400' :
                   'text-zinc-400';
+
     return { icon, color },
   },
 
   // Generate pie chart data
   const pieChartData = {
     labels: ['AI ServicesCloud Solutions', 'SecurityConsulting', 'Development'],
-    datasets: [{
+    datasets: [{,
       data: [35, 25, 20, 15, 5],
       backgroundColor: [
         'rgba(34, 221, 210, 0.8)rgba(140, 21, 233, 0.8)',
@@ -120,21 +119,19 @@ const color = changeType === 'increase' ? 'text-green-400' :
         'rgba(34, 221, 210, 1)rgba(140, 21, 233, 1)',
         'rgba(239, 68, 68, 1)rgba(16, 185, 129, 1)',
         'rgba(245, 158, 11, 1)'
-      ],
+      ];
       borderWidth: 2
-    },
-  ],
+    }]
   };
   // Generate line chart data
   const lineChartData = {
     labels: ['MonTue', 'WedThu', 'FriSat', 'Sun'],
-    datasets: [{
+    datasets: [{,
       label: 'Weekly Performance',data: [65, 59, 80, 81, 56, 55, 70],
       backgroundColor: 'rgba(34, 221, 210, 0.1)',
       borderColor: 'rgba(34, 221, 210, 1)',
       borderWidth: 3,fill: true,tension: 0.4
-    },
-  ],
+    }]
   };
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -185,20 +182,17 @@ const color = changeType === 'increase' ? 'text-green-400' :
         )}
       </div>
 
-      {/* Metrics Cards */},
-  {showMetrics && (
+      {/* Metrics Cards */}
+      {showMetrics && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {metrics.map((metric, index) => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div
                 key={metric.title}
-                initial={{ opacity: 0, y: 20 },
-  };
-                animate={{ opacity: 1, y: 0 },
-  };
-                transition={{ delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -214,20 +208,21 @@ const color = changeType === 'increase' ? 'text-green-400' :
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>
                 <p className="text-zinc-400 text-sm">{metric.title}</p>
               </motion.div>
-            )
-})}
+            );
+          })}
         </div>
-      )},
-  {/* Charts Section */},
-  {showCharts && (
+      )}
+
+      {/* Charts Section */}
+      {showCharts && (
         <div className="space-y-8">
           {/* Chart Type Selector */}
           <div className="flex items-center gap-2 p-2 bg-zinc-900/30 rounded-lg w-fit">
             {[
               { id: 'bar', label: 'Bar Chart', icon: <BarChart3 className="w-4 h-4" /> };
-              { id: 'pie', label: 'Pie Chart', icon: <PieChart className="w-4 h-4" /> };
-              { id: 'line', label: 'Line Chart', icon: <TrendingUp className="w-4 h-4" /> },
-  ].map((chartType) => (
+              { id: 'pie', label: 'Pie Chart', icon: <PieChart className="w-4 h-4" /> },
+              { id: 'line', label: 'Line Chart', icon: <TrendingUp className="w-4 h-4" /> }
+            ].map((chartType) => (
               <button
                 key={chartType.id}
                 onClick={() => setActiveChart(chartType.id as any)}
@@ -237,8 +232,8 @@ const color = changeType === 'increase' ? 'text-green-400' :
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
               >
-                {chartType.icon},
-  {chartType.label}
+                {chartType.icon}
+                {chartType.label}
               </button>
             ))}
           </div>
@@ -247,9 +242,9 @@ const color = changeType === 'increase' ? 'text-green-400' :
           <div className="bg-zinc-900/30 border border-zinc-700/50 rounded-xl p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-semibold text-white">
-                {activeChart === 'bar' && 'Revenue Trends'},
-  {activeChart === 'pie' && 'Service Distribution'},
-  {activeChart === 'line' && 'Weekly Performance'}
+                {activeChart === 'bar' && 'Revenue Trends'}
+                {activeChart === 'pie' && 'Service Distribution'}
+                {activeChart === 'line' && 'Weekly Performance'}
               </h3>
               <div className="flex items-center gap-2 text-sm text-zinc-400">
                 <Eye className="w-4 h-4" />
@@ -263,14 +258,10 @@ const color = changeType === 'increase' ? 'text-green-400' :
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeChart}
-                  initial={{ opacity: 0, scale: 0.9 },
-  };
-                  animate={{ opacity: 1, scale: 1 },
-  };
-                  exit={{ opacity: 0, scale: 0.9 },
-  };
-                  transition={{ duration: 0.3 },
-  };
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
                   className="w-full h-full flex items-center justify-center"
                 >
                   {activeChart === 'bar' && (
@@ -280,53 +271,48 @@ const color = changeType === 'increase' ? 'text-green-400' :
                           <div className="text-sm text-zinc-400 mb-2">{label}</div>
                           <div className="relative">
                             <motion.div
-                              initial={{ height: 0 },
-  };
-                              animate={{ height: `${chartData.datasets[0].data[index],
-  }%` },
-  };
-                              transition={{ delay: index * 0.1, duration: 0.8 },
-  };
+                              initial={{ height: 0 }}
+                              animate={{ height: `${chartData.datasets[0].data[index]}%` }}
+                              transition={{ delay: index * 0.1, duration: 0.8 }}
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
-                              style={{ maxHeight: '200px' },
-  };
+                              style={{ maxHeight: '200px' }}
                             />
                             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-zinc-300 bg-zinc-800 px-2 py-1 rounded">
-                              {chartData.datasets[0].data[index],
-  };
+                              {chartData.datasets[0].data[index]}
                             </div>
                           </div>
                         </div>
                       ))}
                     </div>
-                  )},
-  {activeChart === 'pie' && (
+                  )}
+
+                  {activeChart === 'pie' && (
                     <div className="relative w-64 h-64">
                       <svg className="w-full h-full transform -rotate-90">
                         {pieChartData.datasets[0].data.map((value, index) => {
                           const percentage = value / pieChartData.datasets[0].data.reduce((a, b) => a + b, 0),
                           const angle = percentage * 360;
-const startAngle = pieChartData.datasets[0].data
+                          const startAngle = pieChartData.datasets[0].data
                             .slice(0, index)
                             .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0),
 
                           const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180);
-const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180);
-const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180);
-const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180);
-const largeArcFlag = angle > 180 ? 1 : 0;
+                          const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180);
+                          const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180);
+                          const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180);
+
+                          const largeArcFlag = angle > 180 ? 1 : 0;
+
                           return (
                             <path
                               key={index}
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
-                              fill={pieChartData.datasets[0].backgroundColor[index],
-  };
-                              stroke={pieChartData.datasets[0].borderColor[index],
-  };
+                              fill={pieChartData.datasets[0].backgroundColor[index]}
+                              stroke={pieChartData.datasets[0].borderColor[index]}
                               strokeWidth="2"
                             />
-                          )
-})}
+                          ),
+                        })}
                       </svg>
 
                       {/* Legend */}
@@ -335,25 +321,23 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                           <div key={label} className="flex items-center gap-2">
                             <div
                               className="w-3 h-3 rounded"
-                              style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index],
-  },
-  };
+                              style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index] }}
                             />
                             <span className="text-sm text-zinc-300">{label}</span>
                             <span className="text-xs text-zinc-500">
-                              ({pieChartData.datasets[0].data[index],
-  }%)
+                              ({pieChartData.datasets[0].data[index]}%)
                             </span>
                           </div>
                         ))}
                       </div>
                     </div>
-                  )},
-  {activeChart === 'line' && (
+                  )}
+
+                  {activeChart === 'line' && (
                     <div className="w-full h-full flex items-center justify-center">
                       <svg className="w-full h-full" viewBox="0 0 600 300">
-                        {/* Grid lines */},
-  {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+                        {/* Grid lines */}
+                        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
                           <line
                             key={i}
                             x1={i * 85.7}
@@ -363,8 +347,8 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                             stroke="rgba(255,255,255,0.1)"
                             strokeWidth="1"
                           />
-                        ))},
-  {[0, 1, 2, 3, 4, 5].map((i) => (
+                        ))}
+                        {[0, 1, 2, 3, 4, 5].map((i) => (
                           <line
                             key={i}
                             x1="0"
@@ -374,8 +358,9 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                             stroke="rgba(255,255,255,0.1)"
                             strokeWidth="1"
                           />
-                        ))},
-  {/* Line chart */}
+                        ))}
+
+                        {/* Line chart */}
                         <polyline
                           fill="none"
                           stroke="rgba(34, 221, 210, 1)"
@@ -385,8 +370,8 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                           ).join(' ')}
                         />
 
-                        {/* Data points */},
-  {lineChartData.datasets[0].data.map((value, index) => (
+                        {/* Data points */}
+                        {lineChartData.datasets[0].data.map((value, index) => (
                           <circle
                             key={index}
                             cx={index * 85.7 + 42.85}
@@ -394,9 +379,10 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                             r="4"
                             fill="rgba(34, 221, 210, 1)"
                           />
-                        ))},
-  {/* Labels */},
-  {lineChartData.labels.map((label, index) => (
+                        ))}
+
+                        {/* Labels */}
+                        {lineChartData.labels.map((label, index) => (
                           <text
                             key={label}
                             x={index * 85.7 + 42.85}
@@ -416,8 +402,9 @@ const largeArcFlag = angle > 180 ? 1 : 0;
             </div>
           </div>
         </div>
-      )},
-  {/* Insights Section */}
+      )}
+
+      {/* Insights Section */}
       <div className="mt-8 p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
         <h3 className="text-xl font-semibold text-white mb-4">Key Insights</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -448,4 +435,5 @@ const largeArcFlag = angle > 180 ? 1 : 0;
         </div>
       </div>
     </div>
-  ),
+  );
+};

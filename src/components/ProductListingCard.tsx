@@ -20,7 +20,7 @@ interface ProductListingCardProps {
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string
-};
+}
 
 export function ProductListingCard({
   listing,
@@ -29,38 +29,42 @@ export function ProductListingCard({
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
   const isGrid = view === 'grid';
-const navigate = useNavigate();
-const [loading, setLoading] = useState(false);
-const [imageSrc, setImageSrc] = useState(
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0
     ? listing.images[0]
     : '/placeholder.svg'
   );
-const [imageError, setImageError] = useState(false);
-const formatPrice = () => {
+  const [imageError, setImageError] = useState(false);
+
+  const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`
-},
+    return `${listing.currency}${listing.price.toLocaleString()}`,
+  };
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg');
-      setImageError(true)
-},
+      setImageError(true);
+    }
   };
-const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`)
-const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleViewListing = () => {
+    navigate(`${detailBasePath}/${listing.id}`);
+  };
+  const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
-      navigate(`/request-quote?listing=${listing.id}`)
-},
+      navigate(`/request-quote?listing=${listing.id}`);
+    }
   },
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+
   return (
     <div
       data-testid="equipment-link"
@@ -71,10 +75,9 @@ const handleRequestQuote = (e: React.MouseEvent) => {
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleViewListing()
-},
-  },
-  };
+          handleViewListing();
+        }
+      }}
     >
       {/* Image */}
       <div
@@ -85,10 +88,9 @@ const handleRequestQuote = (e: React.MouseEvent) => {
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            handleViewListing()
-},
-  },
-  };
+            handleViewListing();
+          }
+        }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img
@@ -129,8 +131,8 @@ const handleRequestQuote = (e: React.MouseEvent) => {
             {listing.description}
           </p>
 
-          {/* Tags */},
-  {listing.tags && listing.tags.length > 0 && (
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
                 <span
@@ -165,9 +167,8 @@ const handleRequestQuote = (e: React.MouseEvent) => {
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`)
-},
-  };
+                navigate(`${detailBasePath}/${listing.id}`);
+              }}
               disabled={loading}
             >
               {loading ? (
@@ -196,6 +197,7 @@ const handleRequestQuote = (e: React.MouseEvent) => {
         </div>
       </div>
     </div>
-  )
+  );
+}
 
 export default React.memo(ProductListingCard);
