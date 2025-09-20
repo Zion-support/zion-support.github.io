@@ -1,32 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
-<<<<<<< HEAD
-import SEO from '../../components/SEO'
-import Card from '../../components/ui/Card'
-=======
 import { Metadata } from 'next'
->>>>>>> 0b8e930208f4fd485a28e26b2cb3221e2adac7f1
 
-export const metadata = {
-  title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
-  description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
-  keywords: ['AI 2026', 'artificial intelligence breakthrough', 'machine learning revolution', 'neural networks', 'quantum AI'],
+export const metadata: Metadata = {
+  title: 'AI 2026 Breakthrough Revolution - Zion Holdings',
+  description: 'Revolutionary AI breakthroughs that will change everything in 2026'
 }
 
 export default function AI2026BreakthroughRevolution() {
   return (
     <div>
-<<<<<<< HEAD
-      <SEO
-        title="AI 2026 Breakthrough Revolution"
-        description="Experience the revolutionary AI breakthrough technologies of 2026"
-        keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
-        url="/ai-2026-breakthrough-revolution"
-      />
-      <div>
-        <h1>AI 2026 Breakthrough Revolution</h1>
-        <p>Coming soon...</p>
-=======
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold mb-8">AI 2026 Breakthrough Revolution</h1>
@@ -56,7 +39,6 @@ export default function AI2026BreakthroughRevolution() {
             </Link>
           </div>
         </div>
->>>>>>> 0b8e930208f4fd485a28e26b2cb3221e2adac7f1
       </div>
     </div>
   )

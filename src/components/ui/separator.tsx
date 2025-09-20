@@ -1,10 +1,12 @@
+import React from "react";
+
 ,
 ,
 ,
 }
-      {...props},
-    />,
-  ),
+{...props},
+/>,
+),
 ),
 Separator.displayName = SeparatorPrimitive.Root.displayName,
 ,
@@ -14,4 +16,4 @@ export { Separator }
 </typeof>,
 </typeof>,
 export { Separator };
-,;<//typeof><///typeof>
+,;<//typeof><///typeof>;
