@@ -1,5 +1,8 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
+@tailwind utilities;
+=======
 @tailwind utilities;
 
 /* Enhanced Futuristic Design System with Superior Contrast */
@@ -1163,3 +1166,4 @@ pre code {
 /* Improve link contrast on dark bg */
 .prose a { color: #67e8f9; }
 .prose a:hover { color: #a5f3fc; }
+>>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
